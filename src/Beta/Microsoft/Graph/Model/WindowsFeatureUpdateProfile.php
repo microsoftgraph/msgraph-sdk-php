@@ -42,7 +42,7 @@ class WindowsFeatureUpdateProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date time that the profile was created.
@@ -56,7 +56,7 @@ class WindowsFeatureUpdateProfile extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deployableContentDisplayName
     * Friendly display name of the quality update profile deployable content
@@ -71,7 +71,7 @@ class WindowsFeatureUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deployableContentDisplayName
     * Friendly display name of the quality update profile deployable content
@@ -85,7 +85,7 @@ class WindowsFeatureUpdateProfile extends Entity
         $this->_propDict["deployableContentDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description of the profile which is specified by the user.
@@ -100,7 +100,7 @@ class WindowsFeatureUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description of the profile which is specified by the user.
@@ -114,7 +114,7 @@ class WindowsFeatureUpdateProfile extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name of the profile.
@@ -129,7 +129,7 @@ class WindowsFeatureUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the profile.
@@ -143,7 +143,7 @@ class WindowsFeatureUpdateProfile extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the endOfSupportDate
     * The last supported date for a feature update
@@ -162,7 +162,7 @@ class WindowsFeatureUpdateProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the endOfSupportDate
     * The last supported date for a feature update
@@ -176,7 +176,7 @@ class WindowsFeatureUpdateProfile extends Entity
         $this->_propDict["endOfSupportDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the featureUpdateVersion
     * The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
@@ -191,7 +191,7 @@ class WindowsFeatureUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the featureUpdateVersion
     * The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
@@ -205,7 +205,7 @@ class WindowsFeatureUpdateProfile extends Entity
         $this->_propDict["featureUpdateVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date time that the profile was last modified.
@@ -224,7 +224,7 @@ class WindowsFeatureUpdateProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date time that the profile was last modified.
@@ -238,7 +238,7 @@ class WindowsFeatureUpdateProfile extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Feature Update entity.
@@ -253,7 +253,7 @@ class WindowsFeatureUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleScopeTagIds
     * List of Scope Tags for this Feature Update entity.
@@ -267,7 +267,7 @@ class WindowsFeatureUpdateProfile extends Entity
         $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the rolloutSettings
     * The windows update rollout settings, including offer start date time, offer end date time, and days between each set of offers.
@@ -286,7 +286,7 @@ class WindowsFeatureUpdateProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the rolloutSettings
     * The windows update rollout settings, including offer start date time, offer end date time, and days between each set of offers.
@@ -300,9 +300,9 @@ class WindowsFeatureUpdateProfile extends Entity
         $this->_propDict["rolloutSettings"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The list of group assignments of the profile.
      *
@@ -316,12 +316,12 @@ class WindowsFeatureUpdateProfile extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The list of group assignments of the profile.
     *
-    * @param WindowsFeatureUpdateProfileAssignment $val The assignments
+    * @param WindowsFeatureUpdateProfileAssignment[] $val The assignments
     *
     * @return WindowsFeatureUpdateProfile
     */
@@ -330,5 +330,5 @@ class WindowsFeatureUpdateProfile extends Entity
         $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
+
 }

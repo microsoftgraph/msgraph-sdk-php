@@ -38,7 +38,7 @@ class GroupPolicyPresentationValueDecimal extends GroupPolicyPresentationValue
             return null;
         }
     }
-    
+
     /**
     * Sets the value
     * An unsigned integer value for the associated presentation.
@@ -52,5 +52,5 @@ class GroupPolicyPresentationValueDecimal extends GroupPolicyPresentationValue
         $this->_propDict["value"] = intval($val);
         return $this;
     }
-    
+
 }

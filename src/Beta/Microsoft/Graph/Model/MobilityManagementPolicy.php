@@ -42,7 +42,7 @@ class MobilityManagementPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the appliesTo
     * Indicates the user scope of the mobility management policy. Possible values are: none, all, selected.
@@ -56,7 +56,7 @@ class MobilityManagementPolicy extends Entity
         $this->_propDict["appliesTo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the complianceUrl
     * Compliance URL of the mobility management application.
@@ -71,7 +71,7 @@ class MobilityManagementPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the complianceUrl
     * Compliance URL of the mobility management application.
@@ -85,7 +85,7 @@ class MobilityManagementPolicy extends Entity
         $this->_propDict["complianceUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description of the mobility management application.
@@ -100,7 +100,7 @@ class MobilityManagementPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the mobility management application.
@@ -114,7 +114,7 @@ class MobilityManagementPolicy extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the discoveryUrl
     * Discovery URL of the mobility management application.
@@ -129,7 +129,7 @@ class MobilityManagementPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the discoveryUrl
     * Discovery URL of the mobility management application.
@@ -143,7 +143,7 @@ class MobilityManagementPolicy extends Entity
         $this->_propDict["discoveryUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Display name of the mobility management application.
@@ -158,7 +158,7 @@ class MobilityManagementPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display name of the mobility management application.
@@ -172,7 +172,7 @@ class MobilityManagementPolicy extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isValid
     * Whether policy is valid. Invalid policies may not be updated and should be deleted.
@@ -187,7 +187,7 @@ class MobilityManagementPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isValid
     * Whether policy is valid. Invalid policies may not be updated and should be deleted.
@@ -201,7 +201,7 @@ class MobilityManagementPolicy extends Entity
         $this->_propDict["isValid"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the termsOfUseUrl
     * Terms of Use URL of the mobility management application.
@@ -216,7 +216,7 @@ class MobilityManagementPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the termsOfUseUrl
     * Terms of Use URL of the mobility management application.
@@ -230,9 +230,9 @@ class MobilityManagementPolicy extends Entity
         $this->_propDict["termsOfUseUrl"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the includedGroups
     * Azure AD groups under the scope of the mobility management application if appliesTo is selected
      *
@@ -246,12 +246,12 @@ class MobilityManagementPolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the includedGroups
     * Azure AD groups under the scope of the mobility management application if appliesTo is selected
     *
-    * @param Group $val The includedGroups
+    * @param Group[] $val The includedGroups
     *
     * @return MobilityManagementPolicy
     */
@@ -260,5 +260,5 @@ class MobilityManagementPolicy extends Entity
         $this->_propDict["includedGroups"] = $val;
         return $this;
     }
-    
+
 }

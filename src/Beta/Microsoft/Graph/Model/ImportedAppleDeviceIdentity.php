@@ -42,7 +42,7 @@ class ImportedAppleDeviceIdentity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Created Date Time of the device
@@ -56,7 +56,7 @@ class ImportedAppleDeviceIdentity extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description of the device
@@ -71,7 +71,7 @@ class ImportedAppleDeviceIdentity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description of the device
@@ -85,7 +85,7 @@ class ImportedAppleDeviceIdentity extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the discoverySource
     * Apple device discovery source. Possible values are: unknown, adminImport, deviceEnrollmentProgram.
@@ -104,7 +104,7 @@ class ImportedAppleDeviceIdentity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the discoverySource
     * Apple device discovery source. Possible values are: unknown, adminImport, deviceEnrollmentProgram.
@@ -118,7 +118,7 @@ class ImportedAppleDeviceIdentity extends Entity
         $this->_propDict["discoverySource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enrollmentState
     * The state of the device in Intune. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
@@ -137,7 +137,7 @@ class ImportedAppleDeviceIdentity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the enrollmentState
     * The state of the device in Intune. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
@@ -151,7 +151,7 @@ class ImportedAppleDeviceIdentity extends Entity
         $this->_propDict["enrollmentState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isDeleted
     * Indicates if the device is deleted from Apple Business Manager
@@ -166,7 +166,7 @@ class ImportedAppleDeviceIdentity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDeleted
     * Indicates if the device is deleted from Apple Business Manager
@@ -180,7 +180,7 @@ class ImportedAppleDeviceIdentity extends Entity
         $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isSupervised
     * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
@@ -195,7 +195,7 @@ class ImportedAppleDeviceIdentity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isSupervised
     * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
@@ -209,7 +209,7 @@ class ImportedAppleDeviceIdentity extends Entity
         $this->_propDict["isSupervised"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastContactedDateTime
     * Last Contacted Date Time of the device
@@ -228,7 +228,7 @@ class ImportedAppleDeviceIdentity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastContactedDateTime
     * Last Contacted Date Time of the device
@@ -242,7 +242,7 @@ class ImportedAppleDeviceIdentity extends Entity
         $this->_propDict["lastContactedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the platform
     * The platform of the Device. Possible values are: unknown, ios, android, windows, windowsMobile, macOS.
@@ -261,7 +261,7 @@ class ImportedAppleDeviceIdentity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the platform
     * The platform of the Device. Possible values are: unknown, ios, android, windows, windowsMobile, macOS.
@@ -275,7 +275,7 @@ class ImportedAppleDeviceIdentity extends Entity
         $this->_propDict["platform"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requestedEnrollmentProfileAssignmentDateTime
     * The time enrollment profile was assigned to the device
@@ -294,7 +294,7 @@ class ImportedAppleDeviceIdentity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the requestedEnrollmentProfileAssignmentDateTime
     * The time enrollment profile was assigned to the device
@@ -308,7 +308,7 @@ class ImportedAppleDeviceIdentity extends Entity
         $this->_propDict["requestedEnrollmentProfileAssignmentDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requestedEnrollmentProfileId
     * Enrollment profile Id admin intends to apply to the device during next enrollment
@@ -323,7 +323,7 @@ class ImportedAppleDeviceIdentity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the requestedEnrollmentProfileId
     * Enrollment profile Id admin intends to apply to the device during next enrollment
@@ -337,7 +337,7 @@ class ImportedAppleDeviceIdentity extends Entity
         $this->_propDict["requestedEnrollmentProfileId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the serialNumber
     * Device serial number
@@ -352,7 +352,7 @@ class ImportedAppleDeviceIdentity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the serialNumber
     * Device serial number
@@ -366,5 +366,5 @@ class ImportedAppleDeviceIdentity extends Entity
         $this->_propDict["serialNumber"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the deploymentChannel
     * Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel. Possible values are: deviceChannel, userChannel.
@@ -56,7 +56,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
         $this->_propDict["deploymentChannel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the payload
     * Payload. (UTF8 encoded byte array)
@@ -75,7 +75,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the payload
     * Payload. (UTF8 encoded byte array)
@@ -89,7 +89,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
         $this->_propDict["payload"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the payloadFileName
     * Payload file name (.mobileconfig
@@ -104,7 +104,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the payloadFileName
     * Payload file name (.mobileconfig
@@ -118,7 +118,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
         $this->_propDict["payloadFileName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the payloadName
     * Name that is displayed to the user.
@@ -133,7 +133,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the payloadName
     * Name that is displayed to the user.
@@ -147,5 +147,5 @@ class MacOSCustomConfiguration extends DeviceConfiguration
         $this->_propDict["payloadName"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class DeviceManagementDomainJoinConnector extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The connector display name.
@@ -52,7 +52,7 @@ class DeviceManagementDomainJoinConnector extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastConnectionDateTime
     * Last time connector contacted Intune.
@@ -71,7 +71,7 @@ class DeviceManagementDomainJoinConnector extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastConnectionDateTime
     * Last time connector contacted Intune.
@@ -85,7 +85,7 @@ class DeviceManagementDomainJoinConnector extends Entity
         $this->_propDict["lastConnectionDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     * The connector state. Possible values are: active, error, inactive.
@@ -104,7 +104,7 @@ class DeviceManagementDomainJoinConnector extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     * The connector state. Possible values are: active, error, inactive.
@@ -118,7 +118,7 @@ class DeviceManagementDomainJoinConnector extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * The version of the connector.
@@ -133,7 +133,7 @@ class DeviceManagementDomainJoinConnector extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * The version of the connector.
@@ -147,5 +147,5 @@ class DeviceManagementDomainJoinConnector extends Entity
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
+
 }

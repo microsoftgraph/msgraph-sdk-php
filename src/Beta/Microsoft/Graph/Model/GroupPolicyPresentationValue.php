@@ -42,7 +42,7 @@ class GroupPolicyPresentationValue extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time the object was created.
@@ -56,7 +56,7 @@ class GroupPolicyPresentationValue extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time the object was last modified.
@@ -75,7 +75,7 @@ class GroupPolicyPresentationValue extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time the object was last modified.
@@ -89,7 +89,7 @@ class GroupPolicyPresentationValue extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the definitionValue
     * The group policy definition value associated with the presentation value.
@@ -108,7 +108,7 @@ class GroupPolicyPresentationValue extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the definitionValue
     * The group policy definition value associated with the presentation value.
@@ -122,7 +122,7 @@ class GroupPolicyPresentationValue extends Entity
         $this->_propDict["definitionValue"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the presentation
     * The group policy presentation associated with the presentation value.
@@ -141,7 +141,7 @@ class GroupPolicyPresentationValue extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the presentation
     * The group policy presentation associated with the presentation value.
@@ -155,5 +155,5 @@ class GroupPolicyPresentationValue extends Entity
         $this->_propDict["presentation"] = $val;
         return $this;
     }
-    
+
 }

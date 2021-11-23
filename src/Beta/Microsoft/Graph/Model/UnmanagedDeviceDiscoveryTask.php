@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask
 {
 
-     /** 
+     /**
      * Gets the unmanagedDevices
     * Unmanaged devices discovered in the network.
      *
@@ -39,12 +39,12 @@ class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the unmanagedDevices
     * Unmanaged devices discovered in the network.
     *
-    * @param UnmanagedDevice $val The unmanagedDevices
+    * @param UnmanagedDevice[] $val The unmanagedDevices
     *
     * @return UnmanagedDeviceDiscoveryTask
     */
@@ -53,5 +53,5 @@ class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask
         $this->_propDict["unmanagedDevices"] = $val;
         return $this;
     }
-    
+
 }

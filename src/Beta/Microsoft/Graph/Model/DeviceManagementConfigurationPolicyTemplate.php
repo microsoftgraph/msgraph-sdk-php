@@ -38,7 +38,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the allowUnmanagedSettings
     * Allow unmanaged setting templates
@@ -52,7 +52,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
         $this->_propDict["allowUnmanagedSettings"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the baseId
     * Template base identifier
@@ -67,7 +67,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the baseId
     * Template base identifier
@@ -81,7 +81,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
         $this->_propDict["baseId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Template description
@@ -96,7 +96,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Template description
@@ -110,7 +110,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Template display name
@@ -125,7 +125,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Template display name
@@ -139,7 +139,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayVersion
     * Description of template version
@@ -154,7 +154,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayVersion
     * Description of template version
@@ -168,7 +168,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
         $this->_propDict["displayVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lifecycleState
     * Indicate current lifecycle state of template. Possible values are: invalid, draft, active, superseded, deprecated, retired.
@@ -187,7 +187,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lifecycleState
     * Indicate current lifecycle state of template. Possible values are: invalid, draft, active, superseded, deprecated, retired.
@@ -201,7 +201,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
         $this->_propDict["lifecycleState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the platforms
     * Platforms for this template. Possible values are: none, android, iOS, macOS, windows10X, windows10.
@@ -220,7 +220,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the platforms
     * Platforms for this template. Possible values are: none, android, iOS, macOS, windows10X, windows10.
@@ -234,7 +234,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
         $this->_propDict["platforms"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settingTemplateCount
     * Number of setting templates. Valid values 0 to 2147483647. This property is read-only.
@@ -249,7 +249,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the settingTemplateCount
     * Number of setting templates. Valid values 0 to 2147483647. This property is read-only.
@@ -263,7 +263,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
         $this->_propDict["settingTemplateCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the technologies
     * Technologies for this template. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue.
@@ -282,7 +282,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the technologies
     * Technologies for this template. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue.
@@ -296,7 +296,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
         $this->_propDict["technologies"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the templateFamily
     * TemplateFamily for this template. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl, baseline.
@@ -315,7 +315,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the templateFamily
     * TemplateFamily for this template. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl, baseline.
@@ -329,7 +329,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
         $this->_propDict["templateFamily"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Template version. Valid values 1 to 2147483647. This property is read-only.
@@ -344,7 +344,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Template version. Valid values 1 to 2147483647. This property is read-only.
@@ -358,9 +358,9 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the settingTemplates
     * Setting templates
      *
@@ -374,12 +374,12 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the settingTemplates
     * Setting templates
     *
-    * @param DeviceManagementConfigurationSettingTemplate $val The settingTemplates
+    * @param DeviceManagementConfigurationSettingTemplate[] $val The settingTemplates
     *
     * @return DeviceManagementConfigurationPolicyTemplate
     */
@@ -388,5 +388,5 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
         $this->_propDict["settingTemplates"] = $val;
         return $this;
     }
-    
+
 }

@@ -37,7 +37,7 @@ class InboundSharedUserProfile extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -50,7 +50,7 @@ class InboundSharedUserProfile extends DirectoryObject
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the homeTenantId
     *
@@ -64,7 +64,7 @@ class InboundSharedUserProfile extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the homeTenantId
     *
@@ -77,7 +77,7 @@ class InboundSharedUserProfile extends DirectoryObject
         $this->_propDict["homeTenantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     *
@@ -91,7 +91,7 @@ class InboundSharedUserProfile extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     *
@@ -104,7 +104,7 @@ class InboundSharedUserProfile extends DirectoryObject
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     *
@@ -118,7 +118,7 @@ class InboundSharedUserProfile extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     *
@@ -131,5 +131,5 @@ class InboundSharedUserProfile extends DirectoryObject
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

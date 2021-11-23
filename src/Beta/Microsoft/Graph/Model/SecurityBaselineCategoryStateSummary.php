@@ -38,7 +38,7 @@ class SecurityBaselineCategoryStateSummary extends SecurityBaselineStateSummary
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The category name
@@ -52,5 +52,5 @@ class SecurityBaselineCategoryStateSummary extends SecurityBaselineStateSummary
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
 }

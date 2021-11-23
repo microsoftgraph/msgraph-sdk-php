@@ -42,7 +42,7 @@ class ThumbnailSet extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the large
     * A 1920x1920 scaled thumbnail.
@@ -56,7 +56,7 @@ class ThumbnailSet extends Entity
         $this->_propDict["large"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the medium
     * A 176x176 scaled thumbnail.
@@ -75,7 +75,7 @@ class ThumbnailSet extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the medium
     * A 176x176 scaled thumbnail.
@@ -89,7 +89,7 @@ class ThumbnailSet extends Entity
         $this->_propDict["medium"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the small
     * A 48x48 cropped thumbnail.
@@ -108,7 +108,7 @@ class ThumbnailSet extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the small
     * A 48x48 cropped thumbnail.
@@ -122,7 +122,7 @@ class ThumbnailSet extends Entity
         $this->_propDict["small"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the source
     * A custom thumbnail image or the original image used to generate other thumbnails.
@@ -141,7 +141,7 @@ class ThumbnailSet extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the source
     * A custom thumbnail image or the original image used to generate other thumbnails.
@@ -155,5 +155,5 @@ class ThumbnailSet extends Entity
         $this->_propDict["source"] = $val;
         return $this;
     }
-    
+
 }

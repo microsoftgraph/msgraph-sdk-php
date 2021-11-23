@@ -38,7 +38,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appReliabilityScore
     * The user experience analytics device app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
         $this->_propDict["appReliabilityScore"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deviceName
     * The user experience analytics device name.
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceName
     * The user experience analytics device name.
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the endpointAnalyticsScore
     * The user experience analytics device score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the endpointAnalyticsScore
     * The user experience analytics device score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
         $this->_propDict["endpointAnalyticsScore"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the healthStatus
     * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
@@ -129,7 +129,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the healthStatus
     * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
@@ -143,7 +143,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
         $this->_propDict["healthStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the manufacturer
     * The user experience analytics device manufacturer.
@@ -158,7 +158,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the manufacturer
     * The user experience analytics device manufacturer.
@@ -172,7 +172,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
         $this->_propDict["manufacturer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the model
     * The user experience analytics device model.
@@ -187,7 +187,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the model
     * The user experience analytics device model.
@@ -201,7 +201,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
         $this->_propDict["model"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startupPerformanceScore
     * The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -216,7 +216,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the startupPerformanceScore
     * The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -230,7 +230,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
         $this->_propDict["startupPerformanceScore"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the workFromAnywhereScore
     * The user experience analytics device work From anywhere score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -245,7 +245,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the workFromAnywhereScore
     * The user experience analytics device work From anywhere score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -259,5 +259,5 @@ class UserExperienceAnalyticsDeviceScores extends Entity
         $this->_propDict["workFromAnywhereScore"] = floatval($val);
         return $this;
     }
-    
+
 }

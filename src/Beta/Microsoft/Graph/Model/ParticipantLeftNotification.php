@@ -38,7 +38,7 @@ class ParticipantLeftNotification extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the participantId
     * ID of the participant under the policy who has left the meeting.
@@ -52,7 +52,7 @@ class ParticipantLeftNotification extends Entity
         $this->_propDict["participantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the call
     *
@@ -70,7 +70,7 @@ class ParticipantLeftNotification extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the call
     *
@@ -83,5 +83,5 @@ class ParticipantLeftNotification extends Entity
         $this->_propDict["call"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
         }
         return null;
     }
-    
+
     /**
     * Sets the deploymentStatus
     * The deployment state of the policy. Possible values are: unknown, success, tokenError, notAuthorizedByToken, policyNotFound.
@@ -56,7 +56,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
         $this->_propDict["deploymentStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceId
     * Device ID.
@@ -71,7 +71,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * Device ID.
@@ -85,7 +85,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceName
     * Device name.
@@ -100,7 +100,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceName
     * Device name.
@@ -114,7 +114,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastSyncDateTime
     * Last sync date time.
@@ -133,7 +133,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSyncDateTime
     * Last sync date time.
@@ -147,7 +147,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
         $this->_propDict["lastSyncDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osDescription
     * Windows OS Version Description.
@@ -162,7 +162,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
             return null;
         }
     }
-    
+
     /**
     * Sets the osDescription
     * Windows OS Version Description.
@@ -176,7 +176,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
         $this->_propDict["osDescription"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osVersion
     * Windows OS Version.
@@ -191,7 +191,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
             return null;
         }
     }
-    
+
     /**
     * Sets the osVersion
     * Windows OS Version.
@@ -205,7 +205,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
         $this->_propDict["osVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the policyVersion
     * Human readable version of the WindowsDefenderApplicationControl supplemental policy.
@@ -220,7 +220,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
             return null;
         }
     }
-    
+
     /**
     * Sets the policyVersion
     * Human readable version of the WindowsDefenderApplicationControl supplemental policy.
@@ -234,7 +234,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
         $this->_propDict["policyVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userName
     * The name of the user of this device.
@@ -249,7 +249,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
             return null;
         }
     }
-    
+
     /**
     * Sets the userName
     * The name of the user of this device.
@@ -263,7 +263,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
         $this->_propDict["userName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * User Principal Name.
@@ -278,7 +278,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * User Principal Name.
@@ -292,7 +292,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the policy
     * The navigation link to the WindowsDefenderApplicationControl supplemental policy.
@@ -311,7 +311,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
         }
         return null;
     }
-    
+
     /**
     * Sets the policy
     * The navigation link to the WindowsDefenderApplicationControl supplemental policy.
@@ -325,5 +325,5 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
         $this->_propDict["policy"] = $val;
         return $this;
     }
-    
+
 }

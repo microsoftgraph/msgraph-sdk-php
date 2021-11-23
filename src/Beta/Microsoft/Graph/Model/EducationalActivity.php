@@ -42,7 +42,7 @@ class EducationalActivity extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the completionMonthYear
     * The month and year the user graduated or completed the activity.
@@ -56,7 +56,7 @@ class EducationalActivity extends ItemFacet
         $this->_propDict["completionMonthYear"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the endMonthYear
     * The month and year the user completed the educational activity referenced.
@@ -75,7 +75,7 @@ class EducationalActivity extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the endMonthYear
     * The month and year the user completed the educational activity referenced.
@@ -89,7 +89,7 @@ class EducationalActivity extends ItemFacet
         $this->_propDict["endMonthYear"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the institution
     * Contains details of the institution studied at.
@@ -108,7 +108,7 @@ class EducationalActivity extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the institution
     * Contains details of the institution studied at.
@@ -122,7 +122,7 @@ class EducationalActivity extends ItemFacet
         $this->_propDict["institution"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the program
     * Contains extended information about the program or course.
@@ -141,7 +141,7 @@ class EducationalActivity extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the program
     * Contains extended information about the program or course.
@@ -155,7 +155,7 @@ class EducationalActivity extends ItemFacet
         $this->_propDict["program"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startMonthYear
     * The month and year the user commenced the activity referenced.
@@ -174,7 +174,7 @@ class EducationalActivity extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the startMonthYear
     * The month and year the user commenced the activity referenced.
@@ -188,5 +188,5 @@ class EducationalActivity extends ItemFacet
         $this->_propDict["startMonthYear"] = $val;
         return $this;
     }
-    
+
 }

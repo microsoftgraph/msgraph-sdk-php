@@ -24,39 +24,75 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class MeetingAttendanceReport extends Entity
 {
-
-     /** 
-     * Gets the attendanceRecords
-    * The list of attendance records.
-     *
-     * @return array|null The attendanceRecords
-     */
-    public function getAttendanceRecords()
-    {
-        if (array_key_exists("attendanceRecords", $this->_propDict)) {
-           return $this->_propDict["attendanceRecords"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the attendanceRecords
-    * The list of attendance records.
+    /**
+    * Gets the meetingEndDateTime
+    * UTC time when the meeting ended. Read-only.
     *
-    * @param AttendanceRecord $val The attendanceRecords
+    * @return \DateTime|null The meetingEndDateTime
+    */
+    public function getMeetingEndDateTime()
+    {
+        if (array_key_exists("meetingEndDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["meetingEndDateTime"], "\DateTime") || is_null($this->_propDict["meetingEndDateTime"])) {
+                return $this->_propDict["meetingEndDateTime"];
+            } else {
+                $this->_propDict["meetingEndDateTime"] = new \DateTime($this->_propDict["meetingEndDateTime"]);
+                return $this->_propDict["meetingEndDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the meetingEndDateTime
+    * UTC time when the meeting ended. Read-only.
+    *
+    * @param \DateTime $val The meetingEndDateTime
     *
     * @return MeetingAttendanceReport
     */
-    public function setAttendanceRecords($val)
+    public function setMeetingEndDateTime($val)
     {
-        $this->_propDict["attendanceRecords"] = $val;
+        $this->_propDict["meetingEndDateTime"] = $val;
         return $this;
     }
-    
+
+    /**
+    * Gets the meetingStartDateTime
+    * UTC time when the meeting started. Read-only.
+    *
+    * @return \DateTime|null The meetingStartDateTime
+    */
+    public function getMeetingStartDateTime()
+    {
+        if (array_key_exists("meetingStartDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["meetingStartDateTime"], "\DateTime") || is_null($this->_propDict["meetingStartDateTime"])) {
+                return $this->_propDict["meetingStartDateTime"];
+            } else {
+                $this->_propDict["meetingStartDateTime"] = new \DateTime($this->_propDict["meetingStartDateTime"]);
+                return $this->_propDict["meetingStartDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the meetingStartDateTime
+    * UTC time when the meeting started. Read-only.
+    *
+    * @param \DateTime $val The meetingStartDateTime
+    *
+    * @return MeetingAttendanceReport
+    */
+    public function setMeetingStartDateTime($val)
+    {
+        $this->_propDict["meetingStartDateTime"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the totalParticipantCount
-    * Total number of participants.
+    * Total number of participants. Read-only.
     *
     * @return int|null The totalParticipantCount
     */
@@ -68,10 +104,10 @@ class MeetingAttendanceReport extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the totalParticipantCount
-    * Total number of participants.
+    * Total number of participants. Read-only.
     *
     * @param int $val The totalParticipantCount
     *
@@ -82,5 +118,35 @@ class MeetingAttendanceReport extends Entity
         $this->_propDict["totalParticipantCount"] = intval($val);
         return $this;
     }
-    
+
+
+     /**
+     * Gets the attendanceRecords
+    * List of attendance records of an attendance report. Read-only.
+     *
+     * @return array|null The attendanceRecords
+     */
+    public function getAttendanceRecords()
+    {
+        if (array_key_exists("attendanceRecords", $this->_propDict)) {
+           return $this->_propDict["attendanceRecords"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the attendanceRecords
+    * List of attendance records of an attendance report. Read-only.
+    *
+    * @param AttendanceRecord[] $val The attendanceRecords
+    *
+    * @return MeetingAttendanceReport
+    */
+    public function setAttendanceRecords($val)
+    {
+        $this->_propDict["attendanceRecords"] = $val;
+        return $this;
+    }
+
 }

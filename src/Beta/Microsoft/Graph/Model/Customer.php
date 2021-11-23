@@ -41,7 +41,7 @@ class Customer extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the address
     *
@@ -54,7 +54,7 @@ class Customer extends Entity
         $this->_propDict["address"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the blocked
     *
@@ -68,7 +68,7 @@ class Customer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the blocked
     *
@@ -81,7 +81,7 @@ class Customer extends Entity
         $this->_propDict["blocked"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currencyCode
     *
@@ -95,7 +95,7 @@ class Customer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the currencyCode
     *
@@ -108,7 +108,7 @@ class Customer extends Entity
         $this->_propDict["currencyCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currencyId
     *
@@ -122,7 +122,7 @@ class Customer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the currencyId
     *
@@ -135,7 +135,7 @@ class Customer extends Entity
         $this->_propDict["currencyId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -149,7 +149,7 @@ class Customer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -162,7 +162,7 @@ class Customer extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the email
     *
@@ -176,7 +176,7 @@ class Customer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the email
     *
@@ -189,7 +189,7 @@ class Customer extends Entity
         $this->_propDict["email"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -207,7 +207,7 @@ class Customer extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -220,7 +220,7 @@ class Customer extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the number
     *
@@ -234,7 +234,7 @@ class Customer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the number
     *
@@ -247,7 +247,7 @@ class Customer extends Entity
         $this->_propDict["number"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the paymentMethodId
     *
@@ -261,7 +261,7 @@ class Customer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the paymentMethodId
     *
@@ -274,7 +274,7 @@ class Customer extends Entity
         $this->_propDict["paymentMethodId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the paymentTermsId
     *
@@ -288,7 +288,7 @@ class Customer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the paymentTermsId
     *
@@ -301,7 +301,7 @@ class Customer extends Entity
         $this->_propDict["paymentTermsId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the phoneNumber
     *
@@ -315,7 +315,7 @@ class Customer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the phoneNumber
     *
@@ -328,7 +328,7 @@ class Customer extends Entity
         $this->_propDict["phoneNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the shipmentMethodId
     *
@@ -342,7 +342,7 @@ class Customer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the shipmentMethodId
     *
@@ -355,7 +355,7 @@ class Customer extends Entity
         $this->_propDict["shipmentMethodId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the taxAreaDisplayName
     *
@@ -369,7 +369,7 @@ class Customer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the taxAreaDisplayName
     *
@@ -382,7 +382,7 @@ class Customer extends Entity
         $this->_propDict["taxAreaDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the taxAreaId
     *
@@ -396,7 +396,7 @@ class Customer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the taxAreaId
     *
@@ -409,7 +409,7 @@ class Customer extends Entity
         $this->_propDict["taxAreaId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the taxLiable
     *
@@ -423,7 +423,7 @@ class Customer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the taxLiable
     *
@@ -436,7 +436,7 @@ class Customer extends Entity
         $this->_propDict["taxLiable"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the taxRegistrationNumber
     *
@@ -450,7 +450,7 @@ class Customer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the taxRegistrationNumber
     *
@@ -463,7 +463,7 @@ class Customer extends Entity
         $this->_propDict["taxRegistrationNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     *
@@ -477,7 +477,7 @@ class Customer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the type
     *
@@ -490,7 +490,7 @@ class Customer extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the website
     *
@@ -504,7 +504,7 @@ class Customer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the website
     *
@@ -517,7 +517,7 @@ class Customer extends Entity
         $this->_propDict["website"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currency
     *
@@ -535,7 +535,7 @@ class Customer extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the currency
     *
@@ -548,7 +548,7 @@ class Customer extends Entity
         $this->_propDict["currency"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the paymentMethod
     *
@@ -566,7 +566,7 @@ class Customer extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the paymentMethod
     *
@@ -579,7 +579,7 @@ class Customer extends Entity
         $this->_propDict["paymentMethod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the paymentTerm
     *
@@ -597,7 +597,7 @@ class Customer extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the paymentTerm
     *
@@ -610,9 +610,9 @@ class Customer extends Entity
         $this->_propDict["paymentTerm"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the picture
      *
      * @return array|null The picture
@@ -625,11 +625,11 @@ class Customer extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the picture
     *
-    * @param Picture $val The picture
+    * @param Picture[] $val The picture
     *
     * @return Customer
     */
@@ -638,7 +638,7 @@ class Customer extends Entity
         $this->_propDict["picture"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the shipmentMethod
     *
@@ -656,7 +656,7 @@ class Customer extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the shipmentMethod
     *
@@ -669,5 +669,5 @@ class Customer extends Entity
         $this->_propDict["shipmentMethod"] = $val;
         return $this;
     }
-    
+
 }

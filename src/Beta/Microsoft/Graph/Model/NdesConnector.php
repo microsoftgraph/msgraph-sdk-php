@@ -38,7 +38,7 @@ class NdesConnector extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The friendly name of the Ndes Connector.
@@ -52,7 +52,7 @@ class NdesConnector extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastConnectionDateTime
     * Last connection time for the Ndes Connector
@@ -71,7 +71,7 @@ class NdesConnector extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastConnectionDateTime
     * Last connection time for the Ndes Connector
@@ -85,7 +85,7 @@ class NdesConnector extends Entity
         $this->_propDict["lastConnectionDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     * Ndes Connector Status. Possible values are: none, active, inactive.
@@ -104,7 +104,7 @@ class NdesConnector extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     * Ndes Connector Status. Possible values are: none, active, inactive.
@@ -118,5 +118,5 @@ class NdesConnector extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
 }

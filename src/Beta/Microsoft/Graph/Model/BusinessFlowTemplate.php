@@ -38,7 +38,7 @@ class BusinessFlowTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the business flow template
@@ -52,5 +52,5 @@ class BusinessFlowTemplate extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
 }

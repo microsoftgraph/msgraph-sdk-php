@@ -41,7 +41,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the assignedTo
     *
@@ -54,7 +54,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
         $this->_propDict["assignedTo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managerActionDateTime
     *
@@ -72,7 +72,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the managerActionDateTime
     *
@@ -85,7 +85,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
         $this->_propDict["managerActionDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managerActionMessage
     *
@@ -99,7 +99,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the managerActionMessage
     *
@@ -112,7 +112,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
         $this->_propDict["managerActionMessage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managerUserId
     *
@@ -126,7 +126,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the managerUserId
     *
@@ -139,7 +139,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
         $this->_propDict["managerUserId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the senderDateTime
     *
@@ -157,7 +157,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the senderDateTime
     *
@@ -170,7 +170,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
         $this->_propDict["senderDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the senderMessage
     *
@@ -184,7 +184,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the senderMessage
     *
@@ -197,7 +197,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
         $this->_propDict["senderMessage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the senderUserId
     *
@@ -211,7 +211,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the senderUserId
     *
@@ -224,7 +224,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
         $this->_propDict["senderUserId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     *
@@ -242,7 +242,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     *
@@ -255,5 +255,5 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
 }

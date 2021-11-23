@@ -42,7 +42,7 @@ class PersonAnnotation extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the detail
     * Contains the detail of the note itself.
@@ -56,7 +56,7 @@ class PersonAnnotation extends ItemFacet
         $this->_propDict["detail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Contains a friendly name for the note.
@@ -71,7 +71,7 @@ class PersonAnnotation extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Contains a friendly name for the note.
@@ -85,7 +85,7 @@ class PersonAnnotation extends ItemFacet
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the thumbnailUrl
     *
@@ -99,7 +99,7 @@ class PersonAnnotation extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the thumbnailUrl
     *
@@ -112,5 +112,5 @@ class PersonAnnotation extends ItemFacet
         $this->_propDict["thumbnailUrl"] = $val;
         return $this;
     }
-    
+
 }

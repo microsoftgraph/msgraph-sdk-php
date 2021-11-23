@@ -42,7 +42,7 @@ class DeviceManagementReusablePolicySetting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * reusable setting creation date and time. This property is read-only.
@@ -56,7 +56,7 @@ class DeviceManagementReusablePolicySetting extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * reusable setting description supplied by user.
@@ -71,7 +71,7 @@ class DeviceManagementReusablePolicySetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * reusable setting description supplied by user.
@@ -85,7 +85,7 @@ class DeviceManagementReusablePolicySetting extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * reusable setting display name supplied by user.
@@ -100,7 +100,7 @@ class DeviceManagementReusablePolicySetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * reusable setting display name supplied by user.
@@ -114,7 +114,7 @@ class DeviceManagementReusablePolicySetting extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * date and time when reusable setting was last modified. This property is read-only.
@@ -133,7 +133,7 @@ class DeviceManagementReusablePolicySetting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * date and time when reusable setting was last modified. This property is read-only.
@@ -147,7 +147,7 @@ class DeviceManagementReusablePolicySetting extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the referencingConfigurationPolicyCount
     * count of configuration policies referencing the current reusable setting. Valid values 0 to 2147483647. This property is read-only.
@@ -162,7 +162,7 @@ class DeviceManagementReusablePolicySetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the referencingConfigurationPolicyCount
     * count of configuration policies referencing the current reusable setting. Valid values 0 to 2147483647. This property is read-only.
@@ -176,7 +176,7 @@ class DeviceManagementReusablePolicySetting extends Entity
         $this->_propDict["referencingConfigurationPolicyCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the settingDefinitionId
     * setting definition id associated with this reusable setting.
@@ -191,7 +191,7 @@ class DeviceManagementReusablePolicySetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the settingDefinitionId
     * setting definition id associated with this reusable setting.
@@ -205,7 +205,7 @@ class DeviceManagementReusablePolicySetting extends Entity
         $this->_propDict["settingDefinitionId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settingInstance
     * reusable setting configuration instance
@@ -224,7 +224,7 @@ class DeviceManagementReusablePolicySetting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the settingInstance
     * reusable setting configuration instance
@@ -238,7 +238,7 @@ class DeviceManagementReusablePolicySetting extends Entity
         $this->_propDict["settingInstance"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * version number for reusable setting. Valid values 0 to 2147483647. This property is read-only.
@@ -253,7 +253,7 @@ class DeviceManagementReusablePolicySetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * version number for reusable setting. Valid values 0 to 2147483647. This property is read-only.
@@ -267,9 +267,9 @@ class DeviceManagementReusablePolicySetting extends Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the referencingConfigurationPolicies
     * configuration policies referencing the current reusable setting. This property is read-only.
      *
@@ -283,12 +283,12 @@ class DeviceManagementReusablePolicySetting extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the referencingConfigurationPolicies
     * configuration policies referencing the current reusable setting. This property is read-only.
     *
-    * @param DeviceManagementConfigurationPolicy $val The referencingConfigurationPolicies
+    * @param DeviceManagementConfigurationPolicy[] $val The referencingConfigurationPolicies
     *
     * @return DeviceManagementReusablePolicySetting
     */
@@ -297,5 +297,5 @@ class DeviceManagementReusablePolicySetting extends Entity
         $this->_propDict["referencingConfigurationPolicies"] = $val;
         return $this;
     }
-    
+
 }

@@ -37,7 +37,7 @@ class JournalLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the accountId
     *
@@ -50,7 +50,7 @@ class JournalLine extends Entity
         $this->_propDict["accountId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the accountNumber
     *
@@ -64,7 +64,7 @@ class JournalLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the accountNumber
     *
@@ -77,7 +77,7 @@ class JournalLine extends Entity
         $this->_propDict["accountNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the amount
     *
@@ -95,7 +95,7 @@ class JournalLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the amount
     *
@@ -108,7 +108,7 @@ class JournalLine extends Entity
         $this->_propDict["amount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the comment
     *
@@ -122,7 +122,7 @@ class JournalLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the comment
     *
@@ -135,7 +135,7 @@ class JournalLine extends Entity
         $this->_propDict["comment"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     *
@@ -149,7 +149,7 @@ class JournalLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -162,7 +162,7 @@ class JournalLine extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the documentNumber
     *
@@ -176,7 +176,7 @@ class JournalLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the documentNumber
     *
@@ -189,7 +189,7 @@ class JournalLine extends Entity
         $this->_propDict["documentNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalDocumentNumber
     *
@@ -203,7 +203,7 @@ class JournalLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the externalDocumentNumber
     *
@@ -216,7 +216,7 @@ class JournalLine extends Entity
         $this->_propDict["externalDocumentNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the journalDisplayName
     *
@@ -230,7 +230,7 @@ class JournalLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the journalDisplayName
     *
@@ -243,7 +243,7 @@ class JournalLine extends Entity
         $this->_propDict["journalDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -261,7 +261,7 @@ class JournalLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -274,7 +274,7 @@ class JournalLine extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lineNumber
     *
@@ -288,7 +288,7 @@ class JournalLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the lineNumber
     *
@@ -301,7 +301,7 @@ class JournalLine extends Entity
         $this->_propDict["lineNumber"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the postingDate
     *
@@ -319,7 +319,7 @@ class JournalLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the postingDate
     *
@@ -332,7 +332,7 @@ class JournalLine extends Entity
         $this->_propDict["postingDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the account
     *
@@ -350,7 +350,7 @@ class JournalLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the account
     *
@@ -363,5 +363,5 @@ class JournalLine extends Entity
         $this->_propDict["account"] = $val;
         return $this;
     }
-    
+
 }

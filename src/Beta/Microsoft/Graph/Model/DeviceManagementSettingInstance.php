@@ -38,7 +38,7 @@ class DeviceManagementSettingInstance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the definitionId
     * The ID of the setting definition for this instance
@@ -52,7 +52,7 @@ class DeviceManagementSettingInstance extends Entity
         $this->_propDict["definitionId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the valueJson
     * JSON representation of the value
@@ -67,7 +67,7 @@ class DeviceManagementSettingInstance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the valueJson
     * JSON representation of the value
@@ -81,5 +81,5 @@ class DeviceManagementSettingInstance extends Entity
         $this->_propDict["valueJson"] = $val;
         return $this;
     }
-    
+
 }

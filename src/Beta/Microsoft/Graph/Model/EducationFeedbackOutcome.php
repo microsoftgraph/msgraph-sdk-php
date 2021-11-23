@@ -42,7 +42,7 @@ class EducationFeedbackOutcome extends EducationOutcome
         }
         return null;
     }
-    
+
     /**
     * Sets the feedback
     * Teacher's written feedback to the student.
@@ -56,7 +56,7 @@ class EducationFeedbackOutcome extends EducationOutcome
         $this->_propDict["feedback"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publishedFeedback
     * A copy of the feedback property that is made when the grade is released to the student.
@@ -75,7 +75,7 @@ class EducationFeedbackOutcome extends EducationOutcome
         }
         return null;
     }
-    
+
     /**
     * Sets the publishedFeedback
     * A copy of the feedback property that is made when the grade is released to the student.
@@ -89,5 +89,5 @@ class EducationFeedbackOutcome extends EducationOutcome
         $this->_propDict["publishedFeedback"] = $val;
         return $this;
     }
-    
+
 }

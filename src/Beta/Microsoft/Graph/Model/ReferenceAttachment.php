@@ -38,7 +38,7 @@ class ReferenceAttachment extends Attachment
             return null;
         }
     }
-    
+
     /**
     * Sets the isFolder
     * Specifies whether the attachment is a link to a folder. Must set this to true if sourceUrl is a link to a folder. Optional.
@@ -52,7 +52,7 @@ class ReferenceAttachment extends Attachment
         $this->_propDict["isFolder"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the permission
     * Specifies the permissions granted for the attachment by the type of provider in providerType. Possible values are: other, view, edit, anonymousView, anonymousEdit, organizationView, organizationEdit. Optional.
@@ -71,7 +71,7 @@ class ReferenceAttachment extends Attachment
         }
         return null;
     }
-    
+
     /**
     * Sets the permission
     * Specifies the permissions granted for the attachment by the type of provider in providerType. Possible values are: other, view, edit, anonymousView, anonymousEdit, organizationView, organizationEdit. Optional.
@@ -85,7 +85,7 @@ class ReferenceAttachment extends Attachment
         $this->_propDict["permission"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the previewUrl
     * Applies to only a reference attachment of an image - URL to get a preview image. Use thumbnailUrl and previewUrl only when sourceUrl identifies an image file. Optional.
@@ -100,7 +100,7 @@ class ReferenceAttachment extends Attachment
             return null;
         }
     }
-    
+
     /**
     * Sets the previewUrl
     * Applies to only a reference attachment of an image - URL to get a preview image. Use thumbnailUrl and previewUrl only when sourceUrl identifies an image file. Optional.
@@ -114,7 +114,7 @@ class ReferenceAttachment extends Attachment
         $this->_propDict["previewUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the providerType
     * The type of provider that supports an attachment of this contentType. Possible values are: other, oneDriveBusiness, oneDriveConsumer, dropbox. Optional.
@@ -133,7 +133,7 @@ class ReferenceAttachment extends Attachment
         }
         return null;
     }
-    
+
     /**
     * Sets the providerType
     * The type of provider that supports an attachment of this contentType. Possible values are: other, oneDriveBusiness, oneDriveConsumer, dropbox. Optional.
@@ -147,7 +147,7 @@ class ReferenceAttachment extends Attachment
         $this->_propDict["providerType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sourceUrl
     * URL to get the attachment content. If this is a URL to a folder, then for the folder to be displayed correctly in Outlook or Outlook on the web, set isFolder to true. Required.
@@ -162,7 +162,7 @@ class ReferenceAttachment extends Attachment
             return null;
         }
     }
-    
+
     /**
     * Sets the sourceUrl
     * URL to get the attachment content. If this is a URL to a folder, then for the folder to be displayed correctly in Outlook or Outlook on the web, set isFolder to true. Required.
@@ -176,7 +176,7 @@ class ReferenceAttachment extends Attachment
         $this->_propDict["sourceUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the thumbnailUrl
     * Applies to only a reference attachment of an image - URL to get a thumbnail image. Use thumbnailUrl and previewUrl only when sourceUrl identifies an image file. Optional.
@@ -191,7 +191,7 @@ class ReferenceAttachment extends Attachment
             return null;
         }
     }
-    
+
     /**
     * Sets the thumbnailUrl
     * Applies to only a reference attachment of an image - URL to get a thumbnail image. Use thumbnailUrl and previewUrl only when sourceUrl identifies an image file. Optional.
@@ -205,5 +205,5 @@ class ReferenceAttachment extends Attachment
         $this->_propDict["thumbnailUrl"] = $val;
         return $this;
     }
-    
+
 }

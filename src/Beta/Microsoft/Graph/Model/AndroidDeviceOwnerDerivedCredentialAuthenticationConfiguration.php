@@ -42,7 +42,7 @@ class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration extends Dev
         }
         return null;
     }
-    
+
     /**
     * Sets the derivedCredentialSettings
     * Tenant level settings for the Derived Credentials to be used for authentication.
@@ -56,5 +56,5 @@ class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration extends Dev
         $this->_propDict["derivedCredentialSettings"] = $val;
         return $this;
     }
-    
+
 }

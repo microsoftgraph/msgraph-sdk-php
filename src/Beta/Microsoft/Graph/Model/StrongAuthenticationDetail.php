@@ -41,7 +41,7 @@ class StrongAuthenticationDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the encryptedPinHashHistory
     *
@@ -54,7 +54,7 @@ class StrongAuthenticationDetail extends Entity
         $this->_propDict["encryptedPinHashHistory"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the proofupTime
     *
@@ -68,7 +68,7 @@ class StrongAuthenticationDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the proofupTime
     *
@@ -81,5 +81,5 @@ class StrongAuthenticationDetail extends Entity
         $this->_propDict["proofupTime"] = intval($val);
         return $this;
     }
-    
+
 }

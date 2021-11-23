@@ -42,7 +42,7 @@ class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnrollmentC
         }
         return null;
     }
-    
+
     /**
     * Sets the platformRestriction
     * Restrictions based on platform, platform operating system version, and device ownership
@@ -56,7 +56,7 @@ class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnrollmentC
         $this->_propDict["platformRestriction"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the platformType
     * Type of platform for which this restriction applies. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, androidAosp, mac.
@@ -75,7 +75,7 @@ class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnrollmentC
         }
         return null;
     }
-    
+
     /**
     * Sets the platformType
     * Type of platform for which this restriction applies. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, androidAosp, mac.
@@ -89,5 +89,5 @@ class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnrollmentC
         $this->_propDict["platformType"] = $val;
         return $this;
     }
-    
+
 }

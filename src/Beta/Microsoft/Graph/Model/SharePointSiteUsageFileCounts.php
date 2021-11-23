@@ -37,7 +37,7 @@ class SharePointSiteUsageFileCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the active
     *
@@ -50,7 +50,7 @@ class SharePointSiteUsageFileCounts extends Entity
         $this->_propDict["active"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportDate
     *
@@ -68,7 +68,7 @@ class SharePointSiteUsageFileCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportDate
     *
@@ -81,7 +81,7 @@ class SharePointSiteUsageFileCounts extends Entity
         $this->_propDict["reportDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -95,7 +95,7 @@ class SharePointSiteUsageFileCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -108,7 +108,7 @@ class SharePointSiteUsageFileCounts extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -126,7 +126,7 @@ class SharePointSiteUsageFileCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -139,7 +139,7 @@ class SharePointSiteUsageFileCounts extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the siteType
     *
@@ -153,7 +153,7 @@ class SharePointSiteUsageFileCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the siteType
     *
@@ -166,7 +166,7 @@ class SharePointSiteUsageFileCounts extends Entity
         $this->_propDict["siteType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the total
     *
@@ -180,7 +180,7 @@ class SharePointSiteUsageFileCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the total
     *
@@ -193,5 +193,5 @@ class SharePointSiteUsageFileCounts extends Entity
         $this->_propDict["total"] = intval($val);
         return $this;
     }
-    
+
 }

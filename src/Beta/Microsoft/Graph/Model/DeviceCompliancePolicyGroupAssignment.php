@@ -38,7 +38,7 @@ class DeviceCompliancePolicyGroupAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the excludeGroup
     * Indicates if this group is should be excluded. Defaults that the group should be included
@@ -52,7 +52,7 @@ class DeviceCompliancePolicyGroupAssignment extends Entity
         $this->_propDict["excludeGroup"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the targetGroupId
     * The Id of the AAD group we are targeting the device compliance policy to.
@@ -67,7 +67,7 @@ class DeviceCompliancePolicyGroupAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetGroupId
     * The Id of the AAD group we are targeting the device compliance policy to.
@@ -81,7 +81,7 @@ class DeviceCompliancePolicyGroupAssignment extends Entity
         $this->_propDict["targetGroupId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceCompliancePolicy
     * The navigation link to the  device compliance polic targeted.
@@ -100,7 +100,7 @@ class DeviceCompliancePolicyGroupAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceCompliancePolicy
     * The navigation link to the  device compliance polic targeted.
@@ -114,5 +114,5 @@ class DeviceCompliancePolicyGroupAssignment extends Entity
         $this->_propDict["deviceCompliancePolicy"] = $val;
         return $this;
     }
-    
+
 }

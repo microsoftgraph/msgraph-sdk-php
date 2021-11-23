@@ -38,7 +38,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
             return null;
         }
     }
-    
+
     /**
     * Sets the isDefaultRecipientsEnabled
     * Whether default recipient is receiving the email or not.
@@ -52,7 +52,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
         $this->_propDict["isDefaultRecipientsEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the notificationLevel
     * The level of notification. One of None, Critical, All.
@@ -67,7 +67,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
             return null;
         }
     }
-    
+
     /**
     * Sets the notificationLevel
     * The level of notification. One of None, Critical, All.
@@ -81,7 +81,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
         $this->_propDict["notificationLevel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the notificationRecipients
     * The list of notification recepients like email.
@@ -96,7 +96,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
             return null;
         }
     }
-    
+
     /**
     * Sets the notificationRecipients
     * The list of notification recepients like email.
@@ -110,7 +110,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
         $this->_propDict["notificationRecipients"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the notificationType
     * The type of notification. One of Email.
@@ -125,7 +125,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
             return null;
         }
     }
-    
+
     /**
     * Sets the notificationType
     * The type of notification. One of Email.
@@ -139,7 +139,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
         $this->_propDict["notificationType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recipientType
     * The type of recipient. One of Requestor, Approver, Admin.
@@ -154,7 +154,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
             return null;
         }
     }
-    
+
     /**
     * Sets the recipientType
     * The type of recipient. One of Requestor, Approver, Admin.
@@ -168,5 +168,5 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
         $this->_propDict["recipientType"] = $val;
         return $this;
     }
-    
+
 }

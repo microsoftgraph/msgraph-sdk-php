@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementCollectionSettingInstance extends DeviceManagementSettingInstance
 {
 
-     /** 
+     /**
      * Gets the value
     * The collection of values
      *
@@ -39,12 +39,12 @@ class DeviceManagementCollectionSettingInstance extends DeviceManagementSettingI
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the value
     * The collection of values
     *
-    * @param DeviceManagementSettingInstance $val The value
+    * @param DeviceManagementSettingInstance[] $val The value
     *
     * @return DeviceManagementCollectionSettingInstance
     */
@@ -53,5 +53,5 @@ class DeviceManagementCollectionSettingInstance extends DeviceManagementSettingI
         $this->_propDict["value"] = $val;
         return $this;
     }
-    
+
 }

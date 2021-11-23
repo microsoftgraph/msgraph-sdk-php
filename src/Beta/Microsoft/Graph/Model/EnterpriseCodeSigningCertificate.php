@@ -42,7 +42,7 @@ class EnterpriseCodeSigningCertificate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the content
     * The Windows Enterprise Code-Signing Certificate in the raw data format.
@@ -56,7 +56,7 @@ class EnterpriseCodeSigningCertificate extends Entity
         $this->_propDict["content"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expirationDateTime
     * The Cert Expiration Date.
@@ -75,7 +75,7 @@ class EnterpriseCodeSigningCertificate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expirationDateTime
     * The Cert Expiration Date.
@@ -89,7 +89,7 @@ class EnterpriseCodeSigningCertificate extends Entity
         $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the issuer
     * The Issuer value for the cert.
@@ -104,7 +104,7 @@ class EnterpriseCodeSigningCertificate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the issuer
     * The Issuer value for the cert.
@@ -118,7 +118,7 @@ class EnterpriseCodeSigningCertificate extends Entity
         $this->_propDict["issuer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the issuerName
     * The Issuer Name for the cert.
@@ -133,7 +133,7 @@ class EnterpriseCodeSigningCertificate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the issuerName
     * The Issuer Name for the cert.
@@ -147,7 +147,7 @@ class EnterpriseCodeSigningCertificate extends Entity
         $this->_propDict["issuerName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The Certificate Status Provisioned or not Provisioned. Possible values are: notProvisioned, provisioned.
@@ -166,7 +166,7 @@ class EnterpriseCodeSigningCertificate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The Certificate Status Provisioned or not Provisioned. Possible values are: notProvisioned, provisioned.
@@ -180,7 +180,7 @@ class EnterpriseCodeSigningCertificate extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subject
     * The Subject Value for the cert.
@@ -195,7 +195,7 @@ class EnterpriseCodeSigningCertificate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the subject
     * The Subject Value for the cert.
@@ -209,7 +209,7 @@ class EnterpriseCodeSigningCertificate extends Entity
         $this->_propDict["subject"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subjectName
     * The Subject Name for the cert.
@@ -224,7 +224,7 @@ class EnterpriseCodeSigningCertificate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the subjectName
     * The Subject Name for the cert.
@@ -238,7 +238,7 @@ class EnterpriseCodeSigningCertificate extends Entity
         $this->_propDict["subjectName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the uploadDateTime
     * The date time of CodeSigning Cert when it is uploaded.
@@ -257,7 +257,7 @@ class EnterpriseCodeSigningCertificate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the uploadDateTime
     * The date time of CodeSigning Cert when it is uploaded.
@@ -271,5 +271,5 @@ class EnterpriseCodeSigningCertificate extends Entity
         $this->_propDict["uploadDateTime"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class AccessReviewInstanceDecisionItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the accessReviewId
     * The identifier of the accessReviewInstance parent. Supports $select. Read-only.
@@ -52,7 +52,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["accessReviewId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appliedBy
     * The identifier of the user who applied the decision. Read-only.
@@ -71,7 +71,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the appliedBy
     * The identifier of the user who applied the decision. Read-only.
@@ -85,7 +85,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["appliedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appliedDateTime
     * The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
@@ -104,7 +104,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the appliedDateTime
     * The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
@@ -118,7 +118,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["appliedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the applyResult
     * The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
@@ -133,7 +133,7 @@ class AccessReviewInstanceDecisionItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the applyResult
     * The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
@@ -147,7 +147,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["applyResult"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the decision
     * Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow. Supports $select, $orderby, and $filter (eq only).
@@ -162,7 +162,7 @@ class AccessReviewInstanceDecisionItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the decision
     * Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow. Supports $select, $orderby, and $filter (eq only).
@@ -176,7 +176,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["decision"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the justification
     * Justification left by the reviewer when they made the decision.
@@ -191,7 +191,7 @@ class AccessReviewInstanceDecisionItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the justification
     * Justification left by the reviewer when they made the decision.
@@ -205,7 +205,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["justification"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the principal
     * Every decision item in an access review represents a principal's access to a resource. This property represents details of the principal. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is 'Bob' and the resource is 'Sales'. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.
@@ -224,7 +224,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the principal
     * Every decision item in an access review represents a principal's access to a resource. This property represents details of the principal. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is 'Bob' and the resource is 'Sales'. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.
@@ -238,7 +238,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["principal"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the principalLink
     * A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
@@ -253,7 +253,7 @@ class AccessReviewInstanceDecisionItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the principalLink
     * A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
@@ -267,7 +267,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["principalLink"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recommendation
     * A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only.
@@ -282,7 +282,7 @@ class AccessReviewInstanceDecisionItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the recommendation
     * A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only.
@@ -296,7 +296,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["recommendation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resource
     * Every decision item in an access review represents a principal's access to a resource. This property represents details of the resource. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is Bob and the resource is 'Sales'. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource. Read-only.
@@ -315,7 +315,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resource
     * Every decision item in an access review represents a principal's access to a resource. This property represents details of the resource. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is Bob and the resource is 'Sales'. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource. Read-only.
@@ -329,7 +329,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["resource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceLink
     * A link to the resource. For example, https://graph.microsoft.com/v1.0/servicePrincipals/c86300f3-8695-4320-9f6e-32a2555f5ff8. Supports $select. Read-only.
@@ -344,7 +344,7 @@ class AccessReviewInstanceDecisionItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceLink
     * A link to the resource. For example, https://graph.microsoft.com/v1.0/servicePrincipals/c86300f3-8695-4320-9f6e-32a2555f5ff8. Supports $select. Read-only.
@@ -358,7 +358,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["resourceLink"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reviewedBy
     * The identifier of the reviewer. Supports $select. Read-only.
@@ -377,7 +377,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reviewedBy
     * The identifier of the reviewer. Supports $select. Read-only.
@@ -391,7 +391,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["reviewedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reviewedDateTime
     * The timestamp when the review decision occurred. Supports $select. Read-only.
@@ -410,7 +410,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reviewedDateTime
     * The timestamp when the review decision occurred. Supports $select. Read-only.
@@ -424,7 +424,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["reviewedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the target
     * The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.
@@ -443,7 +443,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.
@@ -457,9 +457,9 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the insights
      *
      * @return array|null The insights
@@ -472,11 +472,11 @@ class AccessReviewInstanceDecisionItem extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the insights
     *
-    * @param GovernanceInsight $val The insights
+    * @param GovernanceInsight[] $val The insights
     *
     * @return AccessReviewInstanceDecisionItem
     */
@@ -485,5 +485,5 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["insights"] = $val;
         return $this;
     }
-    
+
 }

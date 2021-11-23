@@ -38,7 +38,7 @@ class ItemPublication extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the publication.
@@ -52,7 +52,7 @@ class ItemPublication extends ItemFacet
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Title of the publication.
@@ -67,7 +67,7 @@ class ItemPublication extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Title of the publication.
@@ -81,7 +81,7 @@ class ItemPublication extends ItemFacet
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publishedDate
     * The date that the publication was published.
@@ -100,7 +100,7 @@ class ItemPublication extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the publishedDate
     * The date that the publication was published.
@@ -114,7 +114,7 @@ class ItemPublication extends ItemFacet
         $this->_propDict["publishedDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publisher
     * Publication or publisher for the publication.
@@ -129,7 +129,7 @@ class ItemPublication extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the publisher
     * Publication or publisher for the publication.
@@ -143,7 +143,7 @@ class ItemPublication extends ItemFacet
         $this->_propDict["publisher"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the thumbnailUrl
     * URL referencing a thumbnail of the publication.
@@ -158,7 +158,7 @@ class ItemPublication extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the thumbnailUrl
     * URL referencing a thumbnail of the publication.
@@ -172,7 +172,7 @@ class ItemPublication extends ItemFacet
         $this->_propDict["thumbnailUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the webUrl
     * URL referencing the publication.
@@ -187,7 +187,7 @@ class ItemPublication extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the webUrl
     * URL referencing the publication.
@@ -201,5 +201,5 @@ class ItemPublication extends ItemFacet
         $this->_propDict["webUrl"] = $val;
         return $this;
     }
-    
+
 }

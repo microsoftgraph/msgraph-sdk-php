@@ -42,7 +42,7 @@ class DeviceComplianceScript extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The timestamp of when the device compliance script was created. This property is read-only.
@@ -56,7 +56,7 @@ class DeviceComplianceScript extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description of the device compliance script
@@ -71,7 +71,7 @@ class DeviceComplianceScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the device compliance script
@@ -85,7 +85,7 @@ class DeviceComplianceScript extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the detectionScriptContent
     * The entire content of the detection powershell script
@@ -104,7 +104,7 @@ class DeviceComplianceScript extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the detectionScriptContent
     * The entire content of the detection powershell script
@@ -118,7 +118,7 @@ class DeviceComplianceScript extends Entity
         $this->_propDict["detectionScriptContent"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Name of the device compliance script
@@ -133,7 +133,7 @@ class DeviceComplianceScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Name of the device compliance script
@@ -147,7 +147,7 @@ class DeviceComplianceScript extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enforceSignatureCheck
     * Indicate whether the script signature needs be checked
@@ -162,7 +162,7 @@ class DeviceComplianceScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the enforceSignatureCheck
     * Indicate whether the script signature needs be checked
@@ -176,7 +176,7 @@ class DeviceComplianceScript extends Entity
         $this->_propDict["enforceSignatureCheck"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The timestamp of when the device compliance script was modified. This property is read-only.
@@ -195,7 +195,7 @@ class DeviceComplianceScript extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The timestamp of when the device compliance script was modified. This property is read-only.
@@ -209,7 +209,7 @@ class DeviceComplianceScript extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publisher
     * Name of the device compliance script publisher
@@ -224,7 +224,7 @@ class DeviceComplianceScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the publisher
     * Name of the device compliance script publisher
@@ -238,7 +238,7 @@ class DeviceComplianceScript extends Entity
         $this->_propDict["publisher"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleScopeTagIds
     * List of Scope Tag IDs for the device compliance script
@@ -253,7 +253,7 @@ class DeviceComplianceScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleScopeTagIds
     * List of Scope Tag IDs for the device compliance script
@@ -267,7 +267,7 @@ class DeviceComplianceScript extends Entity
         $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the runAs32Bit
     * Indicate whether PowerShell script(s) should run as 32-bit
@@ -282,7 +282,7 @@ class DeviceComplianceScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the runAs32Bit
     * Indicate whether PowerShell script(s) should run as 32-bit
@@ -296,7 +296,7 @@ class DeviceComplianceScript extends Entity
         $this->_propDict["runAs32Bit"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the runAsAccount
     * Indicates the type of execution context. Possible values are: system, user.
@@ -315,7 +315,7 @@ class DeviceComplianceScript extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the runAsAccount
     * Indicates the type of execution context. Possible values are: system, user.
@@ -329,7 +329,7 @@ class DeviceComplianceScript extends Entity
         $this->_propDict["runAsAccount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Version of the device compliance script
@@ -344,7 +344,7 @@ class DeviceComplianceScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Version of the device compliance script
@@ -358,9 +358,9 @@ class DeviceComplianceScript extends Entity
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The list of group assignments for the device compliance script
      *
@@ -374,12 +374,12 @@ class DeviceComplianceScript extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The list of group assignments for the device compliance script
     *
-    * @param DeviceHealthScriptAssignment $val The assignments
+    * @param DeviceHealthScriptAssignment[] $val The assignments
     *
     * @return DeviceComplianceScript
     */
@@ -388,9 +388,9 @@ class DeviceComplianceScript extends Entity
         $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceRunStates
     * List of run states for the device compliance script across all devices
      *
@@ -404,12 +404,12 @@ class DeviceComplianceScript extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deviceRunStates
     * List of run states for the device compliance script across all devices
     *
-    * @param DeviceComplianceScriptDeviceState $val The deviceRunStates
+    * @param DeviceComplianceScriptDeviceState[] $val The deviceRunStates
     *
     * @return DeviceComplianceScript
     */
@@ -418,7 +418,7 @@ class DeviceComplianceScript extends Entity
         $this->_propDict["deviceRunStates"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the runSummary
     * High level run summary for device compliance script.
@@ -437,7 +437,7 @@ class DeviceComplianceScript extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the runSummary
     * High level run summary for device compliance script.
@@ -451,5 +451,5 @@ class DeviceComplianceScript extends Entity
         $this->_propDict["runSummary"] = $val;
         return $this;
     }
-    
+
 }

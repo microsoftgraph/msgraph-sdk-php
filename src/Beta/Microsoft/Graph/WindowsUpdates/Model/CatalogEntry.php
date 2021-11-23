@@ -42,7 +42,7 @@ class CatalogEntry extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deployableUntilDateTime
     * The date on which the content is no longer available to deploy using the service. Read-only.
@@ -56,7 +56,7 @@ class CatalogEntry extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["deployableUntilDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name of the content. Read-only.
@@ -71,7 +71,7 @@ class CatalogEntry extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the content. Read-only.
@@ -85,7 +85,7 @@ class CatalogEntry extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the releaseDateTime
     * The release date for the content. Read-only.
@@ -104,7 +104,7 @@ class CatalogEntry extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the releaseDateTime
     * The release date for the content. Read-only.
@@ -118,5 +118,5 @@ class CatalogEntry extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["releaseDateTime"] = $val;
         return $this;
     }
-    
+
 }

@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\WindowsUpdates\Model;
 class Catalog extends \Beta\Microsoft\Graph\Model\Entity
 {
 
-     /** 
+     /**
      * Gets the entries
     * Lists the content that you can approve for deployment. Read-only.
      *
@@ -39,12 +39,12 @@ class Catalog extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the entries
     * Lists the content that you can approve for deployment. Read-only.
     *
-    * @param CatalogEntry $val The entries
+    * @param CatalogEntry[] $val The entries
     *
     * @return Catalog
     */
@@ -53,5 +53,5 @@ class Catalog extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["entries"] = $val;
         return $this;
     }
-    
+
 }

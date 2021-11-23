@@ -37,7 +37,7 @@ class TenantReference extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the tenantId
     *
@@ -50,5 +50,5 @@ class TenantReference extends DirectoryObject
         $this->_propDict["tenantId"] = $val;
         return $this;
     }
-    
+
 }

@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class MeetingRegistrant extends Entity
 {
 
-     /** 
+     /**
      * Gets the customQuestionAnswers
     * The registrant's answer to custom questions.
      *
@@ -39,12 +39,12 @@ class MeetingRegistrant extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the customQuestionAnswers
     * The registrant's answer to custom questions.
     *
-    * @param CustomQuestionAnswer $val The customQuestionAnswers
+    * @param CustomQuestionAnswer[] $val The customQuestionAnswers
     *
     * @return MeetingRegistrant
     */
@@ -53,7 +53,7 @@ class MeetingRegistrant extends Entity
         $this->_propDict["customQuestionAnswers"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the email
     * The email address of the registrant.
@@ -68,7 +68,7 @@ class MeetingRegistrant extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the email
     * The email address of the registrant.
@@ -82,7 +82,7 @@ class MeetingRegistrant extends Entity
         $this->_propDict["email"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the firstName
     * The first name of the registrant.
@@ -97,7 +97,7 @@ class MeetingRegistrant extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the firstName
     * The first name of the registrant.
@@ -111,7 +111,7 @@ class MeetingRegistrant extends Entity
         $this->_propDict["firstName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the joinWebUrl
     * A unique web URL for the registrant to join the meeting. Read-only.
@@ -126,7 +126,7 @@ class MeetingRegistrant extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the joinWebUrl
     * A unique web URL for the registrant to join the meeting. Read-only.
@@ -140,7 +140,7 @@ class MeetingRegistrant extends Entity
         $this->_propDict["joinWebUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastName
     * The last name of the registrant.
@@ -155,7 +155,7 @@ class MeetingRegistrant extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the lastName
     * The last name of the registrant.
@@ -169,7 +169,7 @@ class MeetingRegistrant extends Entity
         $this->_propDict["lastName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the registrationDateTime
     * Time in UTC when the registrant registers for the meeting. Read-only.
@@ -188,7 +188,7 @@ class MeetingRegistrant extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the registrationDateTime
     * Time in UTC when the registrant registers for the meeting. Read-only.
@@ -202,7 +202,7 @@ class MeetingRegistrant extends Entity
         $this->_propDict["registrationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The registration status of the registrant. Read-only.
@@ -221,7 +221,7 @@ class MeetingRegistrant extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The registration status of the registrant. Read-only.
@@ -235,5 +235,5 @@ class MeetingRegistrant extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

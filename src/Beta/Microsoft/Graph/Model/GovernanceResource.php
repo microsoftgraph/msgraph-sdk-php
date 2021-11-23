@@ -38,7 +38,7 @@ class GovernanceResource extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the resource.
@@ -52,7 +52,7 @@ class GovernanceResource extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalId
     * The external id of the resource, representing its original id in the external system. For example, a subscription resource's external id can be '/subscriptions/c14ae696-5e0c-4e5d-88cc-bef6637737ac'.
@@ -67,7 +67,7 @@ class GovernanceResource extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the externalId
     * The external id of the resource, representing its original id in the external system. For example, a subscription resource's external id can be '/subscriptions/c14ae696-5e0c-4e5d-88cc-bef6637737ac'.
@@ -81,7 +81,7 @@ class GovernanceResource extends Entity
         $this->_propDict["externalId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the registeredDateTime
     * Represents the date time when the resource is registered in PIM.
@@ -100,7 +100,7 @@ class GovernanceResource extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the registeredDateTime
     * Represents the date time when the resource is registered in PIM.
@@ -114,7 +114,7 @@ class GovernanceResource extends Entity
         $this->_propDict["registeredDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the registeredRoot
     * The externalId of the resource's root scope that is registered in PIM. The root scope can be the parent, grandparent, or higher ancestor resources.
@@ -129,7 +129,7 @@ class GovernanceResource extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the registeredRoot
     * The externalId of the resource's root scope that is registered in PIM. The root scope can be the parent, grandparent, or higher ancestor resources.
@@ -143,7 +143,7 @@ class GovernanceResource extends Entity
         $this->_propDict["registeredRoot"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The status of a given resource. For example, it could represent whether the resource is locked or not (values: Active/Locked). Note: This property may be extended in the future to support more scenarios.
@@ -158,7 +158,7 @@ class GovernanceResource extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the status
     * The status of a given resource. For example, it could represent whether the resource is locked or not (values: Active/Locked). Note: This property may be extended in the future to support more scenarios.
@@ -172,7 +172,7 @@ class GovernanceResource extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     * Required. Resource type. For example, for Azure resources, the type could be 'Subscription', 'ResourceGroup', 'Microsoft.Sql/server', etc.
@@ -187,7 +187,7 @@ class GovernanceResource extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the type
     * Required. Resource type. For example, for Azure resources, the type could be 'Subscription', 'ResourceGroup', 'Microsoft.Sql/server', etc.
@@ -201,7 +201,7 @@ class GovernanceResource extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the parent
     * Read-only. The parent resource. for pimforazurerbac scenario, it can represent the subscription the resource belongs to.
@@ -220,7 +220,7 @@ class GovernanceResource extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the parent
     * Read-only. The parent resource. for pimforazurerbac scenario, it can represent the subscription the resource belongs to.
@@ -234,9 +234,9 @@ class GovernanceResource extends Entity
         $this->_propDict["parent"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleAssignmentRequests
     * The collection of role assignment requests for the resource.
      *
@@ -250,12 +250,12 @@ class GovernanceResource extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleAssignmentRequests
     * The collection of role assignment requests for the resource.
     *
-    * @param GovernanceRoleAssignmentRequest $val The roleAssignmentRequests
+    * @param GovernanceRoleAssignmentRequest[] $val The roleAssignmentRequests
     *
     * @return GovernanceResource
     */
@@ -264,9 +264,9 @@ class GovernanceResource extends Entity
         $this->_propDict["roleAssignmentRequests"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleAssignments
     * The collection of role assignments for the resource.
      *
@@ -280,12 +280,12 @@ class GovernanceResource extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleAssignments
     * The collection of role assignments for the resource.
     *
-    * @param GovernanceRoleAssignment $val The roleAssignments
+    * @param GovernanceRoleAssignment[] $val The roleAssignments
     *
     * @return GovernanceResource
     */
@@ -294,9 +294,9 @@ class GovernanceResource extends Entity
         $this->_propDict["roleAssignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleDefinitions
     * The collection of role defintions for the resource.
      *
@@ -310,12 +310,12 @@ class GovernanceResource extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleDefinitions
     * The collection of role defintions for the resource.
     *
-    * @param GovernanceRoleDefinition $val The roleDefinitions
+    * @param GovernanceRoleDefinition[] $val The roleDefinitions
     *
     * @return GovernanceResource
     */
@@ -324,9 +324,9 @@ class GovernanceResource extends Entity
         $this->_propDict["roleDefinitions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleSettings
     * The collection of role settings for the resource.
      *
@@ -340,12 +340,12 @@ class GovernanceResource extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleSettings
     * The collection of role settings for the resource.
     *
-    * @param GovernanceRoleSetting $val The roleSettings
+    * @param GovernanceRoleSetting[] $val The roleSettings
     *
     * @return GovernanceResource
     */
@@ -354,5 +354,5 @@ class GovernanceResource extends Entity
         $this->_propDict["roleSettings"] = $val;
         return $this;
     }
-    
+
 }

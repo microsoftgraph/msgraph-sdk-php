@@ -38,7 +38,7 @@ class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activeDevices
     * Number of active devices for using that app over a 14-day period. Valid values -2147483648 to 2147483647
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity
         $this->_propDict["activeDevices"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the appDisplayName
     * User friendly display name for the app. Eg: Outlook
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appDisplayName
     * User friendly display name for the app. Eg: Outlook
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity
         $this->_propDict["appDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appName
     * App name. Eg: oltk.exe
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appName
     * App name. Eg: oltk.exe
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity
         $this->_propDict["appName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appPublisher
     * App publisher. Eg: Microsoft Corporation
@@ -125,7 +125,7 @@ class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appPublisher
     * App publisher. Eg: Microsoft Corporation
@@ -139,7 +139,7 @@ class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity
         $this->_propDict["appPublisher"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the batteryUsagePercentage
     * The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days computed across all devices in the tenant. Unit in percentage. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -154,7 +154,7 @@ class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the batteryUsagePercentage
     * The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days computed across all devices in the tenant. Unit in percentage. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -168,7 +168,7 @@ class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity
         $this->_propDict["batteryUsagePercentage"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isForegroundApp
     * true if the user had active interaction with the app.
@@ -183,7 +183,7 @@ class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isForegroundApp
     * true if the user had active interaction with the app.
@@ -197,5 +197,5 @@ class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity
         $this->_propDict["isForegroundApp"] = boolval($val);
         return $this;
     }
-    
+
 }

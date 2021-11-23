@@ -42,7 +42,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
         }
         return null;
     }
-    
+
     /**
     * Sets the endDateTime
     * Time that the roleEligibilityScheduleInstance will expire.
@@ -56,7 +56,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
         $this->_propDict["endDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the memberType
     * Membership type of the assignment. It can either be Inherited, Direct, or Group.
@@ -71,7 +71,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
             return null;
         }
     }
-    
+
     /**
     * Sets the memberType
     * Membership type of the assignment. It can either be Inherited, Direct, or Group.
@@ -85,7 +85,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
         $this->_propDict["memberType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleEligibilityScheduleId
     * Identifier of the parent roleEligibilitySchedule for this instance.
@@ -100,7 +100,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
             return null;
         }
     }
-    
+
     /**
     * Sets the roleEligibilityScheduleId
     * Identifier of the parent roleEligibilitySchedule for this instance.
@@ -114,7 +114,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
         $this->_propDict["roleEligibilityScheduleId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startDateTime
     * Time that the roleEligibilityScheduleInstance will start.
@@ -133,7 +133,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
         }
         return null;
     }
-    
+
     /**
     * Sets the startDateTime
     * Time that the roleEligibilityScheduleInstance will start.
@@ -147,5 +147,5 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
         $this->_propDict["startDateTime"] = $val;
         return $this;
     }
-    
+
 }

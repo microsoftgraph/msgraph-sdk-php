@@ -41,7 +41,7 @@ class GovernanceInsight extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the insightCreatedDateTime
     *
@@ -54,5 +54,5 @@ class GovernanceInsight extends Entity
         $this->_propDict["insightCreatedDateTime"] = $val;
         return $this;
     }
-    
+
 }

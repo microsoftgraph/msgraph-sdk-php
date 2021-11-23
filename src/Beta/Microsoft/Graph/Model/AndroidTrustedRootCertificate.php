@@ -38,7 +38,7 @@ class AndroidTrustedRootCertificate extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the certFileName
     * File name to display in UI.
@@ -52,7 +52,7 @@ class AndroidTrustedRootCertificate extends DeviceConfiguration
         $this->_propDict["certFileName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the trustedRootCertificate
     * Trusted Root Certificate
@@ -71,7 +71,7 @@ class AndroidTrustedRootCertificate extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the trustedRootCertificate
     * Trusted Root Certificate
@@ -85,5 +85,5 @@ class AndroidTrustedRootCertificate extends DeviceConfiguration
         $this->_propDict["trustedRootCertificate"] = $val;
         return $this;
     }
-    
+
 }

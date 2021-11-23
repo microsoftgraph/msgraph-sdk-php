@@ -42,7 +42,7 @@ class WindowsHealthMonitoringConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the allowDeviceHealthMonitoring
     * Enables device health monitoring on the device. Possible values are: notConfigured, enabled, disabled.
@@ -56,7 +56,7 @@ class WindowsHealthMonitoringConfiguration extends DeviceConfiguration
         $this->_propDict["allowDeviceHealthMonitoring"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the configDeviceHealthMonitoringCustomScope
     * Specifies custom set of events collected from the device where health monitoring is enabled
@@ -71,7 +71,7 @@ class WindowsHealthMonitoringConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the configDeviceHealthMonitoringCustomScope
     * Specifies custom set of events collected from the device where health monitoring is enabled
@@ -85,7 +85,7 @@ class WindowsHealthMonitoringConfiguration extends DeviceConfiguration
         $this->_propDict["configDeviceHealthMonitoringCustomScope"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the configDeviceHealthMonitoringScope
     * Specifies set of events collected from the device where health monitoring is enabled. Possible values are: undefined, healthMonitoring, bootPerformance, windowsUpdates.
@@ -104,7 +104,7 @@ class WindowsHealthMonitoringConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the configDeviceHealthMonitoringScope
     * Specifies set of events collected from the device where health monitoring is enabled. Possible values are: undefined, healthMonitoring, bootPerformance, windowsUpdates.
@@ -118,5 +118,5 @@ class WindowsHealthMonitoringConfiguration extends DeviceConfiguration
         $this->_propDict["configDeviceHealthMonitoringScope"] = $val;
         return $this;
     }
-    
+
 }

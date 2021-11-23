@@ -41,7 +41,7 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the category
     *
@@ -54,7 +54,7 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["category"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     *
@@ -68,7 +68,7 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -81,7 +81,7 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -95,7 +95,7 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -108,7 +108,7 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managementPortal
     *
@@ -122,7 +122,7 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managementPortal
     *
@@ -135,7 +135,7 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["managementPortal"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the portalLink
     *
@@ -149,7 +149,7 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the portalLink
     *
@@ -162,7 +162,7 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["portalLink"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the priority
     *
@@ -176,7 +176,7 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the priority
     *
@@ -189,7 +189,7 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["priority"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the provider
     *
@@ -207,7 +207,7 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the provider
     *
@@ -220,7 +220,7 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["provider"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managementTemplate
     *
@@ -238,7 +238,7 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the managementTemplate
     *
@@ -251,9 +251,9 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["managementTemplate"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the stepVersions
      *
      * @return array|null The stepVersions
@@ -266,11 +266,11 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the stepVersions
     *
-    * @param ManagementTemplateStepVersion $val The stepVersions
+    * @param ManagementTemplateStepVersion[] $val The stepVersions
     *
     * @return ManagementTemplateStep
     */
@@ -279,5 +279,5 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["stepVersions"] = $val;
         return $this;
     }
-    
+
 }

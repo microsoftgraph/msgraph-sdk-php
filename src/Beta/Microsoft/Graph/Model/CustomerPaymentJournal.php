@@ -37,7 +37,7 @@ class CustomerPaymentJournal extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the balancingAccountId
     *
@@ -50,7 +50,7 @@ class CustomerPaymentJournal extends Entity
         $this->_propDict["balancingAccountId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the balancingAccountNumber
     *
@@ -64,7 +64,7 @@ class CustomerPaymentJournal extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the balancingAccountNumber
     *
@@ -77,7 +77,7 @@ class CustomerPaymentJournal extends Entity
         $this->_propDict["balancingAccountNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the code
     *
@@ -91,7 +91,7 @@ class CustomerPaymentJournal extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the code
     *
@@ -104,7 +104,7 @@ class CustomerPaymentJournal extends Entity
         $this->_propDict["code"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -118,7 +118,7 @@ class CustomerPaymentJournal extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -131,7 +131,7 @@ class CustomerPaymentJournal extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -149,7 +149,7 @@ class CustomerPaymentJournal extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -162,7 +162,7 @@ class CustomerPaymentJournal extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the account
     *
@@ -180,7 +180,7 @@ class CustomerPaymentJournal extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the account
     *
@@ -193,9 +193,9 @@ class CustomerPaymentJournal extends Entity
         $this->_propDict["account"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the customerPayments
      *
      * @return array|null The customerPayments
@@ -208,11 +208,11 @@ class CustomerPaymentJournal extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the customerPayments
     *
-    * @param CustomerPayment $val The customerPayments
+    * @param CustomerPayment[] $val The customerPayments
     *
     * @return CustomerPaymentJournal
     */
@@ -221,5 +221,5 @@ class CustomerPaymentJournal extends Entity
         $this->_propDict["customerPayments"] = $val;
         return $this;
     }
-    
+
 }

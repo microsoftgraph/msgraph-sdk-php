@@ -38,7 +38,7 @@ class GroupPolicyDefinitionFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The localized description of the policy settings in the ADMX file. The default value is empty.
@@ -52,7 +52,7 @@ class GroupPolicyDefinitionFile extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The localized friendly name of the ADMX file.
@@ -67,7 +67,7 @@ class GroupPolicyDefinitionFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The localized friendly name of the ADMX file.
@@ -81,7 +81,7 @@ class GroupPolicyDefinitionFile extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the languageCodes
     * The supported language codes for the ADMX file.
@@ -96,7 +96,7 @@ class GroupPolicyDefinitionFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the languageCodes
     * The supported language codes for the ADMX file.
@@ -110,7 +110,7 @@ class GroupPolicyDefinitionFile extends Entity
         $this->_propDict["languageCodes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time the entity was last modified.
@@ -129,7 +129,7 @@ class GroupPolicyDefinitionFile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time the entity was last modified.
@@ -143,7 +143,7 @@ class GroupPolicyDefinitionFile extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the policyType
     * Specifies the type of group policy. Possible values are: admxBacked, admxIngested.
@@ -162,7 +162,7 @@ class GroupPolicyDefinitionFile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the policyType
     * Specifies the type of group policy. Possible values are: admxBacked, admxIngested.
@@ -176,7 +176,7 @@ class GroupPolicyDefinitionFile extends Entity
         $this->_propDict["policyType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the revision
     * The revision version associated with the file.
@@ -191,7 +191,7 @@ class GroupPolicyDefinitionFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the revision
     * The revision version associated with the file.
@@ -205,7 +205,7 @@ class GroupPolicyDefinitionFile extends Entity
         $this->_propDict["revision"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetNamespace
     * Specifies the URI used to identify the namespace within the ADMX file.
@@ -220,7 +220,7 @@ class GroupPolicyDefinitionFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetNamespace
     * Specifies the URI used to identify the namespace within the ADMX file.
@@ -234,7 +234,7 @@ class GroupPolicyDefinitionFile extends Entity
         $this->_propDict["targetNamespace"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetPrefix
     * Specifies the logical name that refers to the namespace within the ADMX file.
@@ -249,7 +249,7 @@ class GroupPolicyDefinitionFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetPrefix
     * Specifies the logical name that refers to the namespace within the ADMX file.
@@ -263,9 +263,9 @@ class GroupPolicyDefinitionFile extends Entity
         $this->_propDict["targetPrefix"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the definitions
     * The group policy definitions associated with the file.
      *
@@ -279,12 +279,12 @@ class GroupPolicyDefinitionFile extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the definitions
     * The group policy definitions associated with the file.
     *
-    * @param GroupPolicyDefinition $val The definitions
+    * @param GroupPolicyDefinition[] $val The definitions
     *
     * @return GroupPolicyDefinitionFile
     */
@@ -293,5 +293,5 @@ class GroupPolicyDefinitionFile extends Entity
         $this->_propDict["definitions"] = $val;
         return $this;
     }
-    
+
 }

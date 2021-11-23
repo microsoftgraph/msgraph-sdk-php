@@ -42,7 +42,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the contract
     * The relationship details for the tenant with the managing entity.
@@ -56,7 +56,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["contract"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The date and time the tenant was created in the multi-tenant management platform. Optional. Read-only.
@@ -75,7 +75,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time the tenant was created in the multi-tenant management platform. Optional. Read-only.
@@ -89,7 +89,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name for the tenant. Required. Read-only.
@@ -104,7 +104,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name for the tenant. Required. Read-only.
@@ -118,7 +118,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastUpdatedDateTime
     * The date and time the tenant was last updated within the multi-tenant management platform. Optional. Read-only.
@@ -137,7 +137,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastUpdatedDateTime
     * The date and time the tenant was last updated within the multi-tenant management platform. Optional. Read-only.
@@ -151,7 +151,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastUpdatedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantId
     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
@@ -166,7 +166,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tenantId
     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
@@ -180,7 +180,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["tenantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantStatusInformation
     * The onboarding status information for the tenant. Optional. Read-only.
@@ -199,7 +199,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the tenantStatusInformation
     * The onboarding status information for the tenant. Optional. Read-only.
@@ -213,5 +213,5 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["tenantStatusInformation"] = $val;
         return $this;
     }
-    
+
 }

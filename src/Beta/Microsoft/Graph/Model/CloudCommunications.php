@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class CloudCommunications extends Entity
 {
 
-     /** 
+     /**
      * Gets the calls
      *
      * @return array|null The calls
@@ -38,11 +38,11 @@ class CloudCommunications extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the calls
     *
-    * @param Call $val The calls
+    * @param Call[] $val The calls
     *
     * @return CloudCommunications
     */
@@ -51,9 +51,9 @@ class CloudCommunications extends Entity
         $this->_propDict["calls"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the callRecords
      *
      * @return array|null The callRecords
@@ -66,11 +66,11 @@ class CloudCommunications extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the callRecords
     *
-    * @param \Beta\Microsoft\Graph\CallRecords\Model\CallRecord $val The callRecords
+    * @param \Beta\Microsoft\Graph\CallRecords\Model\CallRecord[] $val The callRecords
     *
     * @return CloudCommunications
     */
@@ -79,9 +79,9 @@ class CloudCommunications extends Entity
         $this->_propDict["callRecords"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the onlineMeetings
      *
      * @return array|null The onlineMeetings
@@ -94,11 +94,11 @@ class CloudCommunications extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the onlineMeetings
     *
-    * @param OnlineMeeting $val The onlineMeetings
+    * @param OnlineMeeting[] $val The onlineMeetings
     *
     * @return CloudCommunications
     */
@@ -107,9 +107,9 @@ class CloudCommunications extends Entity
         $this->_propDict["onlineMeetings"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the presences
      *
      * @return array|null The presences
@@ -122,11 +122,11 @@ class CloudCommunications extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the presences
     *
-    * @param Presence $val The presences
+    * @param Presence[] $val The presences
     *
     * @return CloudCommunications
     */
@@ -135,5 +135,5 @@ class CloudCommunications extends Entity
         $this->_propDict["presences"] = $val;
         return $this;
     }
-    
+
 }

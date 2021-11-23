@@ -38,7 +38,7 @@ class Office365ActiveUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the exchange
     * The number of active users in Exchange. Any user who can read and send email is considered an active user.
@@ -52,7 +52,7 @@ class Office365ActiveUserCounts extends Entity
         $this->_propDict["exchange"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the office365
     * The number of active users in Microsoft 365. This number includes all the active users in Exchange, OneDrive, SharePoint, Skype For Business, Yammer, and Microsoft Teams. You can find the definition of active user for each product in the respective property description.
@@ -67,7 +67,7 @@ class Office365ActiveUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the office365
     * The number of active users in Microsoft 365. This number includes all the active users in Exchange, OneDrive, SharePoint, Skype For Business, Yammer, and Microsoft Teams. You can find the definition of active user for each product in the respective property description.
@@ -81,7 +81,7 @@ class Office365ActiveUserCounts extends Entity
         $this->_propDict["office365"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the oneDrive
     * The number of active users in OneDrive. Any user who viewed or edited files, shared files internally or externally, or synced files is considered an active user.
@@ -96,7 +96,7 @@ class Office365ActiveUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the oneDrive
     * The number of active users in OneDrive. Any user who viewed or edited files, shared files internally or externally, or synced files is considered an active user.
@@ -110,7 +110,7 @@ class Office365ActiveUserCounts extends Entity
         $this->_propDict["oneDrive"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportDate
     * The date on which a number of users were active.
@@ -129,7 +129,7 @@ class Office365ActiveUserCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportDate
     * The date on which a number of users were active.
@@ -143,7 +143,7 @@ class Office365ActiveUserCounts extends Entity
         $this->_propDict["reportDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     * The number of days the report covers.
@@ -158,7 +158,7 @@ class Office365ActiveUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     * The number of days the report covers.
@@ -172,7 +172,7 @@ class Office365ActiveUserCounts extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     * The latest date of the content.
@@ -191,7 +191,7 @@ class Office365ActiveUserCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     * The latest date of the content.
@@ -205,7 +205,7 @@ class Office365ActiveUserCounts extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sharePoint
     * The number of active users in SharePoint. Any user who viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages is considered an active user.
@@ -220,7 +220,7 @@ class Office365ActiveUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sharePoint
     * The number of active users in SharePoint. Any user who viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages is considered an active user.
@@ -234,7 +234,7 @@ class Office365ActiveUserCounts extends Entity
         $this->_propDict["sharePoint"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the skypeForBusiness
     * The number of active users in Skype For Business. Any user who organized or participated in conferences, or joined peer-to-peer sessions is considered an active user.
@@ -249,7 +249,7 @@ class Office365ActiveUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the skypeForBusiness
     * The number of active users in Skype For Business. Any user who organized or participated in conferences, or joined peer-to-peer sessions is considered an active user.
@@ -263,7 +263,7 @@ class Office365ActiveUserCounts extends Entity
         $this->_propDict["skypeForBusiness"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the teams
     * The number of active users in Microsoft Teams. Any user who posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls is considered an active user.
@@ -278,7 +278,7 @@ class Office365ActiveUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the teams
     * The number of active users in Microsoft Teams. Any user who posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls is considered an active user.
@@ -292,7 +292,7 @@ class Office365ActiveUserCounts extends Entity
         $this->_propDict["teams"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the yammer
     * The number of active users in Yammer. Any user who can post, read, or like messages is considered an active user.
@@ -307,7 +307,7 @@ class Office365ActiveUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the yammer
     * The number of active users in Yammer. Any user who can post, read, or like messages is considered an active user.
@@ -321,5 +321,5 @@ class Office365ActiveUserCounts extends Entity
         $this->_propDict["yammer"] = intval($val);
         return $this;
     }
-    
+
 }

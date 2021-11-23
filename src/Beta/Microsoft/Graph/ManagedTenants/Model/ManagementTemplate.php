@@ -42,7 +42,7 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the category
     * The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
@@ -56,7 +56,7 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["category"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description for the management template. Optional. Read-only.
@@ -71,7 +71,7 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description for the management template. Optional. Read-only.
@@ -85,7 +85,7 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name for the management template. Required. Read-only.
@@ -100,7 +100,7 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name for the management template. Required. Read-only.
@@ -114,9 +114,9 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the parameters
     * The collection of parameters used by the management template. Optional. Read-only.
      *
@@ -130,12 +130,12 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the parameters
     * The collection of parameters used by the management template. Optional. Read-only.
     *
-    * @param TemplateParameter $val The parameters
+    * @param TemplateParameter[] $val The parameters
     *
     * @return ManagementTemplate
     */
@@ -144,7 +144,7 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["parameters"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     *
@@ -158,7 +158,7 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     *
@@ -171,9 +171,9 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the workloadActions
     * The collection of workload actions associated with the management template. Optional. Read-only.
      *
@@ -187,12 +187,12 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the workloadActions
     * The collection of workload actions associated with the management template. Optional. Read-only.
     *
-    * @param WorkloadAction $val The workloadActions
+    * @param WorkloadAction[] $val The workloadActions
     *
     * @return ManagementTemplate
     */
@@ -201,9 +201,9 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["workloadActions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managementTemplateCollections
      *
      * @return array|null The managementTemplateCollections
@@ -216,11 +216,11 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managementTemplateCollections
     *
-    * @param ManagementTemplateCollection $val The managementTemplateCollections
+    * @param ManagementTemplateCollection[] $val The managementTemplateCollections
     *
     * @return ManagementTemplate
     */
@@ -229,9 +229,9 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["managementTemplateCollections"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managementTemplateSteps
      *
      * @return array|null The managementTemplateSteps
@@ -244,11 +244,11 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managementTemplateSteps
     *
-    * @param ManagementTemplateStep $val The managementTemplateSteps
+    * @param ManagementTemplateStep[] $val The managementTemplateSteps
     *
     * @return ManagementTemplate
     */
@@ -257,5 +257,5 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["managementTemplateSteps"] = $val;
         return $this;
     }
-    
+
 }

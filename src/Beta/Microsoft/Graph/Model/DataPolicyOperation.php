@@ -42,7 +42,7 @@ class DataPolicyOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the completedDateTime
     * Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Null until the operation completes.
@@ -56,7 +56,7 @@ class DataPolicyOperation extends Entity
         $this->_propDict["completedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the progress
     * Specifies the progress of an operation.
@@ -71,7 +71,7 @@ class DataPolicyOperation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the progress
     * Specifies the progress of an operation.
@@ -85,7 +85,7 @@ class DataPolicyOperation extends Entity
         $this->_propDict["progress"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Possible values are: notStarted, running, complete, failed, unknownFutureValue.
@@ -104,7 +104,7 @@ class DataPolicyOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Possible values are: notStarted, running, complete, failed, unknownFutureValue.
@@ -118,7 +118,7 @@ class DataPolicyOperation extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the storageLocation
     * The URL location to where data is being exported for export requests.
@@ -133,7 +133,7 @@ class DataPolicyOperation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the storageLocation
     * The URL location to where data is being exported for export requests.
@@ -147,7 +147,7 @@ class DataPolicyOperation extends Entity
         $this->_propDict["storageLocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the submittedDateTime
     * Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -166,7 +166,7 @@ class DataPolicyOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the submittedDateTime
     * Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -180,7 +180,7 @@ class DataPolicyOperation extends Entity
         $this->_propDict["submittedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * The id for the user on whom the operation is performed.
@@ -195,7 +195,7 @@ class DataPolicyOperation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * The id for the user on whom the operation is performed.
@@ -209,5 +209,5 @@ class DataPolicyOperation extends Entity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
 }

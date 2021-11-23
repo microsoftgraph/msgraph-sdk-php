@@ -38,7 +38,7 @@ class AccessPackageResourceScope extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description of the scope.
@@ -52,7 +52,7 @@ class AccessPackageResourceScope extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name of the scope.
@@ -67,7 +67,7 @@ class AccessPackageResourceScope extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the scope.
@@ -81,7 +81,7 @@ class AccessPackageResourceScope extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isRootScope
     * True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
@@ -96,7 +96,7 @@ class AccessPackageResourceScope extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isRootScope
     * True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
@@ -110,7 +110,7 @@ class AccessPackageResourceScope extends Entity
         $this->_propDict["isRootScope"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the originId
     * The unique identifier for the scope in the resource as defined in the origin system.
@@ -125,7 +125,7 @@ class AccessPackageResourceScope extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the originId
     * The unique identifier for the scope in the resource as defined in the origin system.
@@ -139,7 +139,7 @@ class AccessPackageResourceScope extends Entity
         $this->_propDict["originId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the originSystem
     * The origin system for the scope.
@@ -154,7 +154,7 @@ class AccessPackageResourceScope extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the originSystem
     * The origin system for the scope.
@@ -168,7 +168,7 @@ class AccessPackageResourceScope extends Entity
         $this->_propDict["originSystem"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleOriginId
     * The origin system for the role, if different.
@@ -183,7 +183,7 @@ class AccessPackageResourceScope extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleOriginId
     * The origin system for the role, if different.
@@ -197,7 +197,7 @@ class AccessPackageResourceScope extends Entity
         $this->_propDict["roleOriginId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the url
     * A resource locator for the scope.
@@ -212,7 +212,7 @@ class AccessPackageResourceScope extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the url
     * A resource locator for the scope.
@@ -226,7 +226,7 @@ class AccessPackageResourceScope extends Entity
         $this->_propDict["url"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the accessPackageResource
     * Read-only. Nullable.
@@ -245,7 +245,7 @@ class AccessPackageResourceScope extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the accessPackageResource
     * Read-only. Nullable.
@@ -259,5 +259,5 @@ class AccessPackageResourceScope extends Entity
         $this->_propDict["accessPackageResource"] = $val;
         return $this;
     }
-    
+
 }

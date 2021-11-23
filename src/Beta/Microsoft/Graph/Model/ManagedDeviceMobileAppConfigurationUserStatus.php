@@ -38,7 +38,7 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the devicesCount
     * Devices count for that user.
@@ -52,7 +52,7 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity
         $this->_propDict["devicesCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastReportedDateTime
     * Last modified date time of the policy report.
@@ -71,7 +71,7 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastReportedDateTime
     * Last modified date time of the policy report.
@@ -85,7 +85,7 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity
         $this->_propDict["lastReportedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
@@ -104,7 +104,7 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
@@ -118,7 +118,7 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userDisplayName
     * User name of the DevicePolicyStatus.
@@ -133,7 +133,7 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userDisplayName
     * User name of the DevicePolicyStatus.
@@ -147,7 +147,7 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity
         $this->_propDict["userDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * UserPrincipalName.
@@ -162,7 +162,7 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * UserPrincipalName.
@@ -176,5 +176,5 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

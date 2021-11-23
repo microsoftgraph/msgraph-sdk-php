@@ -38,7 +38,7 @@ class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfigu
             return null;
         }
     }
-    
+
     /**
     * Sets the connectedAppsEnabled
     * Setting to specify whether to allow ConnectedApps experience for this app.
@@ -52,7 +52,7 @@ class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfigu
         $this->_propDict["connectedAppsEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the packageId
     * Android For Work app configuration package id.
@@ -67,7 +67,7 @@ class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfigu
             return null;
         }
     }
-    
+
     /**
     * Sets the packageId
     * Android For Work app configuration package id.
@@ -81,7 +81,7 @@ class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfigu
         $this->_propDict["packageId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the payloadJson
     * Android For Work app configuration JSON payload.
@@ -96,7 +96,7 @@ class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfigu
             return null;
         }
     }
-    
+
     /**
     * Sets the payloadJson
     * Android For Work app configuration JSON payload.
@@ -110,9 +110,9 @@ class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfigu
         $this->_propDict["payloadJson"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the permissionActions
     * List of Android app permissions and corresponding permission actions.
      *
@@ -126,12 +126,12 @@ class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfigu
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the permissionActions
     * List of Android app permissions and corresponding permission actions.
     *
-    * @param AndroidPermissionAction $val The permissionActions
+    * @param AndroidPermissionAction[] $val The permissionActions
     *
     * @return AndroidForWorkMobileAppConfiguration
     */
@@ -140,7 +140,7 @@ class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfigu
         $this->_propDict["permissionActions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the profileApplicability
     * Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)). Possible values are: default, androidWorkProfile, androidDeviceOwner.
@@ -159,7 +159,7 @@ class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfigu
         }
         return null;
     }
-    
+
     /**
     * Sets the profileApplicability
     * Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)). Possible values are: default, androidWorkProfile, androidDeviceOwner.
@@ -173,5 +173,5 @@ class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfigu
         $this->_propDict["profileApplicability"] = $val;
         return $this;
     }
-    
+
 }

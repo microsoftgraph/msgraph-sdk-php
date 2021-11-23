@@ -38,7 +38,7 @@ class DeviceManagementConfigurationSettingGroupCollectionDefinition extends Devi
             return null;
         }
     }
-    
+
     /**
     * Sets the maximumCount
     * Maximum number of setting group count in the collection. Valid values 1 to 100
@@ -52,7 +52,7 @@ class DeviceManagementConfigurationSettingGroupCollectionDefinition extends Devi
         $this->_propDict["maximumCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the minimumCount
     * Minimum number of setting group count in the collection. Valid values 1 to 100
@@ -67,7 +67,7 @@ class DeviceManagementConfigurationSettingGroupCollectionDefinition extends Devi
             return null;
         }
     }
-    
+
     /**
     * Sets the minimumCount
     * Minimum number of setting group count in the collection. Valid values 1 to 100
@@ -81,5 +81,5 @@ class DeviceManagementConfigurationSettingGroupCollectionDefinition extends Devi
         $this->_propDict["minimumCount"] = intval($val);
         return $this;
     }
-    
+
 }

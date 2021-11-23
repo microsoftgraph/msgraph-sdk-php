@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class ManagementConditionStatement extends Entity
 {
 
-     /** 
+     /**
      * Gets the applicablePlatforms
     * This is calculated from looking the management conditions associated to the management condition statement and finding the intersection of applicable platforms.
      *
@@ -39,12 +39,12 @@ class ManagementConditionStatement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the applicablePlatforms
     * This is calculated from looking the management conditions associated to the management condition statement and finding the intersection of applicable platforms.
     *
-    * @param DevicePlatformType $val The applicablePlatforms
+    * @param DevicePlatformType[] $val The applicablePlatforms
     *
     * @return ManagementConditionStatement
     */
@@ -53,7 +53,7 @@ class ManagementConditionStatement extends Entity
         $this->_propDict["applicablePlatforms"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The time the management condition statement was created. Generated service side.
@@ -72,7 +72,7 @@ class ManagementConditionStatement extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The time the management condition statement was created. Generated service side.
@@ -86,7 +86,7 @@ class ManagementConditionStatement extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The admin defined description of the management condition statement.
@@ -101,7 +101,7 @@ class ManagementConditionStatement extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The admin defined description of the management condition statement.
@@ -115,7 +115,7 @@ class ManagementConditionStatement extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The admin defined name of the management condition statement.
@@ -130,7 +130,7 @@ class ManagementConditionStatement extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The admin defined name of the management condition statement.
@@ -144,7 +144,7 @@ class ManagementConditionStatement extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the eTag
     * ETag of the management condition statement. Updated service side.
@@ -159,7 +159,7 @@ class ManagementConditionStatement extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the eTag
     * ETag of the management condition statement. Updated service side.
@@ -173,7 +173,7 @@ class ManagementConditionStatement extends Entity
         $this->_propDict["eTag"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expression
     * The management condition statement expression used to evaluate if a management condition statement was activated/deactivated.
@@ -192,7 +192,7 @@ class ManagementConditionStatement extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expression
     * The management condition statement expression used to evaluate if a management condition statement was activated/deactivated.
@@ -206,7 +206,7 @@ class ManagementConditionStatement extends Entity
         $this->_propDict["expression"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the modifiedDateTime
     * The time the management condition statement was last modified. Updated service side.
@@ -225,7 +225,7 @@ class ManagementConditionStatement extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the modifiedDateTime
     * The time the management condition statement was last modified. Updated service side.
@@ -239,9 +239,9 @@ class ManagementConditionStatement extends Entity
         $this->_propDict["modifiedDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managementConditions
     * The management conditions associated to the management condition statement.
      *
@@ -255,12 +255,12 @@ class ManagementConditionStatement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managementConditions
     * The management conditions associated to the management condition statement.
     *
-    * @param ManagementCondition $val The managementConditions
+    * @param ManagementCondition[] $val The managementConditions
     *
     * @return ManagementConditionStatement
     */
@@ -269,5 +269,5 @@ class ManagementConditionStatement extends Entity
         $this->_propDict["managementConditions"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class AccessPackageResourceEnvironment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the connectionInfo
     * Connection information of an environment used to connect to a resource.
@@ -56,7 +56,7 @@ class AccessPackageResourceEnvironment extends Entity
         $this->_propDict["connectionInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     * The display name of the user that created this object.
@@ -71,7 +71,7 @@ class AccessPackageResourceEnvironment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the createdBy
     * The display name of the user that created this object.
@@ -85,7 +85,7 @@ class AccessPackageResourceEnvironment extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The date and time that this object was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -104,7 +104,7 @@ class AccessPackageResourceEnvironment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time that this object was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -118,7 +118,7 @@ class AccessPackageResourceEnvironment extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description of this accessPackageResourceEnvironment object.
@@ -133,7 +133,7 @@ class AccessPackageResourceEnvironment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description of this accessPackageResourceEnvironment object.
@@ -147,7 +147,7 @@ class AccessPackageResourceEnvironment extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name of this object.
@@ -162,7 +162,7 @@ class AccessPackageResourceEnvironment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of this object.
@@ -176,7 +176,7 @@ class AccessPackageResourceEnvironment extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isDefaultEnvironment
     * Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
@@ -191,7 +191,7 @@ class AccessPackageResourceEnvironment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDefaultEnvironment
     * Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
@@ -205,7 +205,7 @@ class AccessPackageResourceEnvironment extends Entity
         $this->_propDict["isDefaultEnvironment"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the modifiedBy
     * The display name of the entity that last modified this object.
@@ -220,7 +220,7 @@ class AccessPackageResourceEnvironment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the modifiedBy
     * The display name of the entity that last modified this object.
@@ -234,7 +234,7 @@ class AccessPackageResourceEnvironment extends Entity
         $this->_propDict["modifiedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the modifiedDateTime
     * The date and time that this object was last modified. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -253,7 +253,7 @@ class AccessPackageResourceEnvironment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the modifiedDateTime
     * The date and time that this object was last modified. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -267,7 +267,7 @@ class AccessPackageResourceEnvironment extends Entity
         $this->_propDict["modifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the originId
     * The unique identifier of this environment in the origin system.
@@ -282,7 +282,7 @@ class AccessPackageResourceEnvironment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the originId
     * The unique identifier of this environment in the origin system.
@@ -296,7 +296,7 @@ class AccessPackageResourceEnvironment extends Entity
         $this->_propDict["originId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the originSystem
     * The type of the resource in the origin system such as SharePointOnline. Supports $filter.
@@ -311,7 +311,7 @@ class AccessPackageResourceEnvironment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the originSystem
     * The type of the resource in the origin system such as SharePointOnline. Supports $filter.
@@ -325,9 +325,9 @@ class AccessPackageResourceEnvironment extends Entity
         $this->_propDict["originSystem"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the accessPackageResources
     * Read-only. Required.
      *
@@ -341,12 +341,12 @@ class AccessPackageResourceEnvironment extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the accessPackageResources
     * Read-only. Required.
     *
-    * @param AccessPackageResource $val The accessPackageResources
+    * @param AccessPackageResource[] $val The accessPackageResources
     *
     * @return AccessPackageResourceEnvironment
     */
@@ -355,5 +355,5 @@ class AccessPackageResourceEnvironment extends Entity
         $this->_propDict["accessPackageResources"] = $val;
         return $this;
     }
-    
+
 }

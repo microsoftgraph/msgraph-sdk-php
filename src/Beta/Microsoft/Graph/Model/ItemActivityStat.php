@@ -42,7 +42,7 @@ class ItemActivityStat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the access
     * Statistics about the access actions in this interval. Read-only.
@@ -56,7 +56,7 @@ class ItemActivityStat extends Entity
         $this->_propDict["access"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the create
     * Statistics about the create actions in this interval. Read-only.
@@ -75,7 +75,7 @@ class ItemActivityStat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the create
     * Statistics about the create actions in this interval. Read-only.
@@ -89,7 +89,7 @@ class ItemActivityStat extends Entity
         $this->_propDict["create"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the delete
     * Statistics about the delete actions in this interval. Read-only.
@@ -108,7 +108,7 @@ class ItemActivityStat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the delete
     * Statistics about the delete actions in this interval. Read-only.
@@ -122,7 +122,7 @@ class ItemActivityStat extends Entity
         $this->_propDict["delete"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the edit
     * Statistics about the edit actions in this interval. Read-only.
@@ -141,7 +141,7 @@ class ItemActivityStat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the edit
     * Statistics about the edit actions in this interval. Read-only.
@@ -155,7 +155,7 @@ class ItemActivityStat extends Entity
         $this->_propDict["edit"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the endDateTime
     * When the interval ends. Read-only.
@@ -174,7 +174,7 @@ class ItemActivityStat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the endDateTime
     * When the interval ends. Read-only.
@@ -188,7 +188,7 @@ class ItemActivityStat extends Entity
         $this->_propDict["endDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the incompleteData
     * Indicates that the statistics in this interval are based on incomplete data. Read-only.
@@ -207,7 +207,7 @@ class ItemActivityStat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the incompleteData
     * Indicates that the statistics in this interval are based on incomplete data. Read-only.
@@ -221,7 +221,7 @@ class ItemActivityStat extends Entity
         $this->_propDict["incompleteData"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isTrending
     * Indicates whether the item is 'trending.' Read-only.
@@ -236,7 +236,7 @@ class ItemActivityStat extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isTrending
     * Indicates whether the item is 'trending.' Read-only.
@@ -250,7 +250,7 @@ class ItemActivityStat extends Entity
         $this->_propDict["isTrending"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the move
     * Statistics about the move actions in this interval. Read-only.
@@ -269,7 +269,7 @@ class ItemActivityStat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the move
     * Statistics about the move actions in this interval. Read-only.
@@ -283,7 +283,7 @@ class ItemActivityStat extends Entity
         $this->_propDict["move"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startDateTime
     * When the interval starts. Read-only.
@@ -302,7 +302,7 @@ class ItemActivityStat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startDateTime
     * When the interval starts. Read-only.
@@ -316,9 +316,9 @@ class ItemActivityStat extends Entity
         $this->_propDict["startDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the activities
     * Exposes the itemActivities represented in this itemActivityStat resource.
      *
@@ -332,12 +332,12 @@ class ItemActivityStat extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the activities
     * Exposes the itemActivities represented in this itemActivityStat resource.
     *
-    * @param ItemActivity $val The activities
+    * @param ItemActivity[] $val The activities
     *
     * @return ItemActivityStat
     */
@@ -346,5 +346,5 @@ class ItemActivityStat extends Entity
         $this->_propDict["activities"] = $val;
         return $this;
     }
-    
+
 }

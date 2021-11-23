@@ -38,7 +38,7 @@ class MicrosoftTunnelServer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the agentImageDigest
     * The digest of the current agent image running on this server
@@ -52,7 +52,7 @@ class MicrosoftTunnelServer extends Entity
         $this->_propDict["agentImageDigest"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The MicrosoftTunnelServer's display name
@@ -67,7 +67,7 @@ class MicrosoftTunnelServer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The MicrosoftTunnelServer's display name
@@ -81,7 +81,7 @@ class MicrosoftTunnelServer extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastCheckinDateTime
     * When the MicrosoftTunnelServer last checked in
@@ -100,7 +100,7 @@ class MicrosoftTunnelServer extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastCheckinDateTime
     * When the MicrosoftTunnelServer last checked in
@@ -114,7 +114,7 @@ class MicrosoftTunnelServer extends Entity
         $this->_propDict["lastCheckinDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the serverImageDigest
     * The digest of the current server image running on this server
@@ -129,7 +129,7 @@ class MicrosoftTunnelServer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the serverImageDigest
     * The digest of the current server image running on this server
@@ -143,7 +143,7 @@ class MicrosoftTunnelServer extends Entity
         $this->_propDict["serverImageDigest"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tunnelServerHealthStatus
     * The MicrosoftTunnelServer's health status. Possible values are: unknown, healthy, unhealthy, warning, offline, upgradeInProgress, upgradeFailed.
@@ -162,7 +162,7 @@ class MicrosoftTunnelServer extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the tunnelServerHealthStatus
     * The MicrosoftTunnelServer's health status. Possible values are: unknown, healthy, unhealthy, warning, offline, upgradeInProgress, upgradeFailed.
@@ -176,5 +176,5 @@ class MicrosoftTunnelServer extends Entity
         $this->_propDict["tunnelServerHealthStatus"] = $val;
         return $this;
     }
-    
+
 }

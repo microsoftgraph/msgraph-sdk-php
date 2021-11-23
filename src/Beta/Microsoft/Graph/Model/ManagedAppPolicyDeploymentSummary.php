@@ -38,7 +38,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the configurationDeployedUserCount
     * Not yet documented
@@ -52,9 +52,9 @@ class ManagedAppPolicyDeploymentSummary extends Entity
         $this->_propDict["configurationDeployedUserCount"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the configurationDeploymentSummaryPerApp
     * Not yet documented
      *
@@ -68,12 +68,12 @@ class ManagedAppPolicyDeploymentSummary extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the configurationDeploymentSummaryPerApp
     * Not yet documented
     *
-    * @param ManagedAppPolicyDeploymentSummaryPerApp $val The configurationDeploymentSummaryPerApp
+    * @param ManagedAppPolicyDeploymentSummaryPerApp[] $val The configurationDeploymentSummaryPerApp
     *
     * @return ManagedAppPolicyDeploymentSummary
     */
@@ -82,7 +82,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity
         $this->_propDict["configurationDeploymentSummaryPerApp"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Not yet documented
@@ -97,7 +97,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Not yet documented
@@ -111,7 +111,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastRefreshTime
     * Not yet documented
@@ -130,7 +130,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastRefreshTime
     * Not yet documented
@@ -144,7 +144,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity
         $this->_propDict["lastRefreshTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Version of the entity.
@@ -159,7 +159,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Version of the entity.
@@ -173,5 +173,5 @@ class ManagedAppPolicyDeploymentSummary extends Entity
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
+
 }

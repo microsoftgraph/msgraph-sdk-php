@@ -42,7 +42,7 @@ class DeviceManagementScriptAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The Id of the Azure Active Directory group we are targeting the script to.
@@ -56,5 +56,5 @@ class DeviceManagementScriptAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class EducationSynchronizationError extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the entryType
     * Represents the sync entity (school, section, student, teacher).
@@ -52,7 +52,7 @@ class EducationSynchronizationError extends Entity
         $this->_propDict["entryType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the errorCode
     * Represents the error code for this error.
@@ -67,7 +67,7 @@ class EducationSynchronizationError extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorCode
     * Represents the error code for this error.
@@ -81,7 +81,7 @@ class EducationSynchronizationError extends Entity
         $this->_propDict["errorCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the errorMessage
     * Contains a description of the error.
@@ -96,7 +96,7 @@ class EducationSynchronizationError extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorMessage
     * Contains a description of the error.
@@ -110,7 +110,7 @@ class EducationSynchronizationError extends Entity
         $this->_propDict["errorMessage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the joiningValue
     * The unique identifier for the entry.
@@ -125,7 +125,7 @@ class EducationSynchronizationError extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the joiningValue
     * The unique identifier for the entry.
@@ -139,7 +139,7 @@ class EducationSynchronizationError extends Entity
         $this->_propDict["joiningValue"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recordedDateTime
     * The time of occurrence of this error.
@@ -158,7 +158,7 @@ class EducationSynchronizationError extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the recordedDateTime
     * The time of occurrence of this error.
@@ -172,7 +172,7 @@ class EducationSynchronizationError extends Entity
         $this->_propDict["recordedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportableIdentifier
     * The identifier of this error entry.
@@ -187,7 +187,7 @@ class EducationSynchronizationError extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportableIdentifier
     * The identifier of this error entry.
@@ -201,5 +201,5 @@ class EducationSynchronizationError extends Entity
         $this->_propDict["reportableIdentifier"] = $val;
         return $this;
     }
-    
+
 }

@@ -41,7 +41,7 @@ class Vendor extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the address
     *
@@ -54,7 +54,7 @@ class Vendor extends Entity
         $this->_propDict["address"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the balance
     *
@@ -72,7 +72,7 @@ class Vendor extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the balance
     *
@@ -85,7 +85,7 @@ class Vendor extends Entity
         $this->_propDict["balance"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the blocked
     *
@@ -99,7 +99,7 @@ class Vendor extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the blocked
     *
@@ -112,7 +112,7 @@ class Vendor extends Entity
         $this->_propDict["blocked"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currencyCode
     *
@@ -126,7 +126,7 @@ class Vendor extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the currencyCode
     *
@@ -139,7 +139,7 @@ class Vendor extends Entity
         $this->_propDict["currencyCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currencyId
     *
@@ -153,7 +153,7 @@ class Vendor extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the currencyId
     *
@@ -166,7 +166,7 @@ class Vendor extends Entity
         $this->_propDict["currencyId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -180,7 +180,7 @@ class Vendor extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -193,7 +193,7 @@ class Vendor extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the email
     *
@@ -207,7 +207,7 @@ class Vendor extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the email
     *
@@ -220,7 +220,7 @@ class Vendor extends Entity
         $this->_propDict["email"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -238,7 +238,7 @@ class Vendor extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -251,7 +251,7 @@ class Vendor extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the number
     *
@@ -265,7 +265,7 @@ class Vendor extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the number
     *
@@ -278,7 +278,7 @@ class Vendor extends Entity
         $this->_propDict["number"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the paymentMethodId
     *
@@ -292,7 +292,7 @@ class Vendor extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the paymentMethodId
     *
@@ -305,7 +305,7 @@ class Vendor extends Entity
         $this->_propDict["paymentMethodId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the paymentTermsId
     *
@@ -319,7 +319,7 @@ class Vendor extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the paymentTermsId
     *
@@ -332,7 +332,7 @@ class Vendor extends Entity
         $this->_propDict["paymentTermsId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the phoneNumber
     *
@@ -346,7 +346,7 @@ class Vendor extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the phoneNumber
     *
@@ -359,7 +359,7 @@ class Vendor extends Entity
         $this->_propDict["phoneNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the taxLiable
     *
@@ -373,7 +373,7 @@ class Vendor extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the taxLiable
     *
@@ -386,7 +386,7 @@ class Vendor extends Entity
         $this->_propDict["taxLiable"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the taxRegistrationNumber
     *
@@ -400,7 +400,7 @@ class Vendor extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the taxRegistrationNumber
     *
@@ -413,7 +413,7 @@ class Vendor extends Entity
         $this->_propDict["taxRegistrationNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the website
     *
@@ -427,7 +427,7 @@ class Vendor extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the website
     *
@@ -440,7 +440,7 @@ class Vendor extends Entity
         $this->_propDict["website"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currency
     *
@@ -458,7 +458,7 @@ class Vendor extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the currency
     *
@@ -471,7 +471,7 @@ class Vendor extends Entity
         $this->_propDict["currency"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the paymentMethod
     *
@@ -489,7 +489,7 @@ class Vendor extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the paymentMethod
     *
@@ -502,7 +502,7 @@ class Vendor extends Entity
         $this->_propDict["paymentMethod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the paymentTerm
     *
@@ -520,7 +520,7 @@ class Vendor extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the paymentTerm
     *
@@ -533,9 +533,9 @@ class Vendor extends Entity
         $this->_propDict["paymentTerm"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the picture
      *
      * @return array|null The picture
@@ -548,11 +548,11 @@ class Vendor extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the picture
     *
-    * @param Picture $val The picture
+    * @param Picture[] $val The picture
     *
     * @return Vendor
     */
@@ -561,5 +561,5 @@ class Vendor extends Entity
         $this->_propDict["picture"] = $val;
         return $this;
     }
-    
+
 }

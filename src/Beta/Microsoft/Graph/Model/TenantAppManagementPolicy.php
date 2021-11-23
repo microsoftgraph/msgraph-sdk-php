@@ -42,7 +42,7 @@ class TenantAppManagementPolicy extends PolicyBase
         }
         return null;
     }
-    
+
     /**
     * Sets the applicationRestrictions
     * Restrictions that apply as default to all application objects in the tenant.
@@ -56,7 +56,7 @@ class TenantAppManagementPolicy extends PolicyBase
         $this->_propDict["applicationRestrictions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isEnabled
     * Denotes whether the policy is enabled. Default value is false.
@@ -71,7 +71,7 @@ class TenantAppManagementPolicy extends PolicyBase
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabled
     * Denotes whether the policy is enabled. Default value is false.
@@ -85,7 +85,7 @@ class TenantAppManagementPolicy extends PolicyBase
         $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the servicePrincipalRestrictions
     * Restrictions that apply as default to all service principal objects in the tenant.
@@ -104,7 +104,7 @@ class TenantAppManagementPolicy extends PolicyBase
         }
         return null;
     }
-    
+
     /**
     * Sets the servicePrincipalRestrictions
     * Restrictions that apply as default to all service principal objects in the tenant.
@@ -118,5 +118,5 @@ class TenantAppManagementPolicy extends PolicyBase
         $this->_propDict["servicePrincipalRestrictions"] = $val;
         return $this;
     }
-    
+
 }

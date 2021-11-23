@@ -38,7 +38,7 @@ class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activeDevices
     * Number of active devices within the tenant. Valid values -2147483648 to 2147483647
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity
         $this->_propDict["activeDevices"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the batteryRuntimeFair
     * Number of devices whose active runtime is greater than 3 hours but lesser than 5 hours. Valid values -2147483648 to 2147483647
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the batteryRuntimeFair
     * Number of devices whose active runtime is greater than 3 hours but lesser than 5 hours. Valid values -2147483648 to 2147483647
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity
         $this->_propDict["batteryRuntimeFair"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the batteryRuntimeGood
     * Number of devices  whose active runtime is greater than 5 hours. Valid values -2147483648 to 2147483647
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the batteryRuntimeGood
     * Number of devices  whose active runtime is greater than 5 hours. Valid values -2147483648 to 2147483647
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity
         $this->_propDict["batteryRuntimeGood"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the batteryRuntimePoor
     * Number of devices whose active runtime is lesser than 3 hours. Valid values -2147483648 to 2147483647
@@ -125,7 +125,7 @@ class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the batteryRuntimePoor
     * Number of devices whose active runtime is lesser than 3 hours. Valid values -2147483648 to 2147483647
@@ -139,5 +139,5 @@ class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity
         $this->_propDict["batteryRuntimePoor"] = intval($val);
         return $this;
     }
-    
+
 }

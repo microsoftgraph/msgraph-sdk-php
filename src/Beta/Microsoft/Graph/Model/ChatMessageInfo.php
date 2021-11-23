@@ -42,7 +42,7 @@ class ChatMessageInfo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the body
     * Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object does not return @mentions and attachments.
@@ -56,7 +56,7 @@ class ChatMessageInfo extends Entity
         $this->_propDict["body"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * Date time object representing the time at which message was created.
@@ -75,7 +75,7 @@ class ChatMessageInfo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Date time object representing the time at which message was created.
@@ -89,7 +89,7 @@ class ChatMessageInfo extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the eventDetail
     * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
@@ -108,7 +108,7 @@ class ChatMessageInfo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the eventDetail
     * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
@@ -122,7 +122,7 @@ class ChatMessageInfo extends Entity
         $this->_propDict["eventDetail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the from
     * Information about the sender of the message.
@@ -141,7 +141,7 @@ class ChatMessageInfo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the from
     * Information about the sender of the message.
@@ -155,7 +155,7 @@ class ChatMessageInfo extends Entity
         $this->_propDict["from"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isDeleted
     * If set to true, the original message has been deleted.
@@ -170,7 +170,7 @@ class ChatMessageInfo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDeleted
     * If set to true, the original message has been deleted.
@@ -184,7 +184,7 @@ class ChatMessageInfo extends Entity
         $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the messageType
     * The type of chat message. The possible values are: message, unknownFutureValue, systemEventMessage.
@@ -203,7 +203,7 @@ class ChatMessageInfo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the messageType
     * The type of chat message. The possible values are: message, unknownFutureValue, systemEventMessage.
@@ -217,5 +217,5 @@ class ChatMessageInfo extends Entity
         $this->_propDict["messageType"] = $val;
         return $this;
     }
-    
+
 }

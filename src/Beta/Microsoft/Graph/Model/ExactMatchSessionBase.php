@@ -37,7 +37,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
             return null;
         }
     }
-    
+
     /**
     * Sets the dataStoreId
     *
@@ -50,7 +50,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
         $this->_propDict["dataStoreId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the processingCompletionDateTime
     *
@@ -68,7 +68,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
         }
         return null;
     }
-    
+
     /**
     * Sets the processingCompletionDateTime
     *
@@ -81,7 +81,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
         $this->_propDict["processingCompletionDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the remainingBlockCount
     *
@@ -95,7 +95,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
             return null;
         }
     }
-    
+
     /**
     * Sets the remainingBlockCount
     *
@@ -108,7 +108,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
         $this->_propDict["remainingBlockCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the remainingJobCount
     *
@@ -122,7 +122,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
             return null;
         }
     }
-    
+
     /**
     * Sets the remainingJobCount
     *
@@ -135,7 +135,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
         $this->_propDict["remainingJobCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the state
     *
@@ -149,7 +149,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
             return null;
         }
     }
-    
+
     /**
     * Sets the state
     *
@@ -162,7 +162,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the totalBlockCount
     *
@@ -176,7 +176,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
             return null;
         }
     }
-    
+
     /**
     * Sets the totalBlockCount
     *
@@ -189,7 +189,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
         $this->_propDict["totalBlockCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the totalJobCount
     *
@@ -203,7 +203,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
             return null;
         }
     }
-    
+
     /**
     * Sets the totalJobCount
     *
@@ -216,7 +216,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
         $this->_propDict["totalJobCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the uploadCompletionDateTime
     *
@@ -234,7 +234,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
         }
         return null;
     }
-    
+
     /**
     * Sets the uploadCompletionDateTime
     *
@@ -247,5 +247,5 @@ class ExactMatchSessionBase extends ExactMatchJobBase
         $this->_propDict["uploadCompletionDateTime"] = $val;
         return $this;
     }
-    
+
 }

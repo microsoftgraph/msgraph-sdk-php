@@ -42,7 +42,7 @@ class MacOSImportedPFXCertificateProfile extends MacOSCertificateProfileBase
         }
         return null;
     }
-    
+
     /**
     * Sets the intendedPurpose
     * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
@@ -56,9 +56,9 @@ class MacOSImportedPFXCertificateProfile extends MacOSCertificateProfileBase
         $this->_propDict["intendedPurpose"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managedDeviceCertificateStates
     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      *
@@ -72,12 +72,12 @@ class MacOSImportedPFXCertificateProfile extends MacOSCertificateProfileBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managedDeviceCertificateStates
     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
     *
-    * @param ManagedDeviceCertificateState $val The managedDeviceCertificateStates
+    * @param ManagedDeviceCertificateState[] $val The managedDeviceCertificateStates
     *
     * @return MacOSImportedPFXCertificateProfile
     */
@@ -86,5 +86,5 @@ class MacOSImportedPFXCertificateProfile extends MacOSCertificateProfileBase
         $this->_propDict["managedDeviceCertificateStates"] = $val;
         return $this;
     }
-    
+
 }

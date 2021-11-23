@@ -38,7 +38,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the allowedAndroidDeviceManufacturers
     * Semicolon seperated list of device manufacturers allowed, as a string, for the managed app to work. (Android only)
@@ -52,7 +52,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["allowedAndroidDeviceManufacturers"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the allowedAndroidDeviceModels
     * List of device models allowed, as a string, for the managed app to work. (Android Only)
@@ -67,7 +67,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the allowedAndroidDeviceModels
     * List of device models allowed, as a string, for the managed app to work. (Android Only)
@@ -81,7 +81,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["allowedAndroidDeviceModels"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the allowedIosDeviceModels
     * Semicolon seperated list of device models allowed, as a string, for the managed app to work. (iOS Only)
@@ -96,7 +96,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the allowedIosDeviceModels
     * Semicolon seperated list of device models allowed, as a string, for the managed app to work. (iOS Only)
@@ -110,7 +110,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["allowedIosDeviceModels"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appActionIfAndroidDeviceManufacturerNotAllowed
     * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. (Android only). Possible values are: block, wipe, warn.
@@ -129,7 +129,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         }
         return null;
     }
-    
+
     /**
     * Sets the appActionIfAndroidDeviceManufacturerNotAllowed
     * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. (Android only). Possible values are: block, wipe, warn.
@@ -143,7 +143,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appActionIfAndroidDeviceModelNotAllowed
     * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (Android Only). Possible values are: block, wipe, warn.
@@ -162,7 +162,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         }
         return null;
     }
-    
+
     /**
     * Sets the appActionIfAndroidDeviceModelNotAllowed
     * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (Android Only). Possible values are: block, wipe, warn.
@@ -176,7 +176,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["appActionIfAndroidDeviceModelNotAllowed"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appActionIfAndroidSafetyNetAppsVerificationFailed
     * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirement fails. Possible values are: block, wipe, warn.
@@ -195,7 +195,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         }
         return null;
     }
-    
+
     /**
     * Sets the appActionIfAndroidSafetyNetAppsVerificationFailed
     * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirement fails. Possible values are: block, wipe, warn.
@@ -209,7 +209,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appActionIfAndroidSafetyNetDeviceAttestationFailed
     * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirement fails. Possible values are: block, wipe, warn.
@@ -228,7 +228,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         }
         return null;
     }
-    
+
     /**
     * Sets the appActionIfAndroidSafetyNetDeviceAttestationFailed
     * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirement fails. Possible values are: block, wipe, warn.
@@ -242,7 +242,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appActionIfDeviceLockNotSet
     * Defines a managed app behavior, either warn, block or wipe, if the screen lock is required on device but is not set. (android only). Possible values are: block, wipe, warn.
@@ -261,7 +261,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         }
         return null;
     }
-    
+
     /**
     * Sets the appActionIfDeviceLockNotSet
     * Defines a managed app behavior, either warn, block or wipe, if the screen lock is required on device but is not set. (android only). Possible values are: block, wipe, warn.
@@ -275,7 +275,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["appActionIfDeviceLockNotSet"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appActionIfIosDeviceModelNotAllowed
     * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (iOS Only). Possible values are: block, wipe, warn.
@@ -294,7 +294,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         }
         return null;
     }
-    
+
     /**
     * Sets the appActionIfIosDeviceModelNotAllowed
     * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (iOS Only). Possible values are: block, wipe, warn.
@@ -308,7 +308,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["appActionIfIosDeviceModelNotAllowed"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appDataEncryptionType
     * Type of encryption which should be used for data in a managed app. (iOS Only). Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
@@ -327,7 +327,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         }
         return null;
     }
-    
+
     /**
     * Sets the appDataEncryptionType
     * Type of encryption which should be used for data in a managed app. (iOS Only). Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
@@ -341,7 +341,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["appDataEncryptionType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the biometricAuthenticationBlocked
     * Indicates whether use of the biometric authentication is allowed in place of a pin if PinRequired is set to True. (Android Only)
@@ -356,7 +356,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the biometricAuthenticationBlocked
     * Indicates whether use of the biometric authentication is allowed in place of a pin if PinRequired is set to True. (Android Only)
@@ -370,7 +370,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["biometricAuthenticationBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the blockAfterCompanyPortalUpdateDeferralInDays
     * Maximum number of days Company Portal update can be deferred on the device or app access will be blocked.
@@ -385,7 +385,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the blockAfterCompanyPortalUpdateDeferralInDays
     * Maximum number of days Company Portal update can be deferred on the device or app access will be blocked.
@@ -399,7 +399,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["blockAfterCompanyPortalUpdateDeferralInDays"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the connectToVpnOnLaunch
     * Whether the app should connect to the configured VPN on launch (Android only).
@@ -414,7 +414,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the connectToVpnOnLaunch
     * Whether the app should connect to the configured VPN on launch (Android only).
@@ -428,7 +428,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["connectToVpnOnLaunch"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the customBrowserDisplayName
     * Friendly name of the preferred custom browser to open weblink on Android. (Android only)
@@ -443,7 +443,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the customBrowserDisplayName
     * Friendly name of the preferred custom browser to open weblink on Android. (Android only)
@@ -457,7 +457,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["customBrowserDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customBrowserPackageId
     * Unique identifier of a custom browser to open weblink on Android. (Android only)
@@ -472,7 +472,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the customBrowserPackageId
     * Unique identifier of a custom browser to open weblink on Android. (Android only)
@@ -486,7 +486,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["customBrowserPackageId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customBrowserProtocol
     * A custom browser protocol to open weblink on iOS. (iOS only)
@@ -501,7 +501,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the customBrowserProtocol
     * A custom browser protocol to open weblink on iOS. (iOS only)
@@ -515,7 +515,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["customBrowserProtocol"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customDialerAppDisplayName
     * Friendly name of a custom dialer app to click-to-open a phone number on Android.
@@ -530,7 +530,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the customDialerAppDisplayName
     * Friendly name of a custom dialer app to click-to-open a phone number on Android.
@@ -544,7 +544,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["customDialerAppDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customDialerAppPackageId
     * PackageId of a custom dialer app to click-to-open a phone number on Android.
@@ -559,7 +559,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the customDialerAppPackageId
     * PackageId of a custom dialer app to click-to-open a phone number on Android.
@@ -573,7 +573,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["customDialerAppPackageId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customDialerAppProtocol
     * Protocol of a custom dialer app to click-to-open a phone number on iOS, for example, skype:.
@@ -588,7 +588,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the customDialerAppProtocol
     * Protocol of a custom dialer app to click-to-open a phone number on iOS, for example, skype:.
@@ -602,9 +602,9 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["customDialerAppProtocol"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the customSettings
     * A set of string key and string value pairs to be sent to the affected users, unalterned by this service
      *
@@ -618,12 +618,12 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the customSettings
     * A set of string key and string value pairs to be sent to the affected users, unalterned by this service
     *
-    * @param KeyValuePair $val The customSettings
+    * @param KeyValuePair[] $val The customSettings
     *
     * @return DefaultManagedAppProtection
     */
@@ -632,7 +632,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["customSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deployedAppCount
     * Count of apps to which the current policy is deployed.
@@ -647,7 +647,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the deployedAppCount
     * Count of apps to which the current policy is deployed.
@@ -661,7 +661,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["deployedAppCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deviceLockRequired
     * Defines if any kind of lock must be required on device. (android only)
@@ -676,7 +676,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceLockRequired
     * Defines if any kind of lock must be required on device. (android only)
@@ -690,7 +690,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["deviceLockRequired"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the disableAppEncryptionIfDeviceEncryptionIsEnabled
     * When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
@@ -705,7 +705,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the disableAppEncryptionIfDeviceEncryptionIsEnabled
     * When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
@@ -719,7 +719,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["disableAppEncryptionIfDeviceEncryptionIsEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the disableProtectionOfManagedOutboundOpenInData
     * Disable protection of data transferred to other apps through IOS OpenIn option. This setting is only allowed to be True when AllowedOutboundDataTransferDestinations is set to ManagedApps. (iOS Only)
@@ -734,7 +734,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the disableProtectionOfManagedOutboundOpenInData
     * Disable protection of data transferred to other apps through IOS OpenIn option. This setting is only allowed to be True when AllowedOutboundDataTransferDestinations is set to ManagedApps. (iOS Only)
@@ -748,7 +748,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["disableProtectionOfManagedOutboundOpenInData"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the encryptAppData
     * Indicates whether managed-app data should be encrypted. (Android only)
@@ -763,7 +763,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the encryptAppData
     * Indicates whether managed-app data should be encrypted. (Android only)
@@ -777,9 +777,9 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["encryptAppData"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the exemptedAppPackages
     * Android App packages in this list will be exempt from the policy and will be able to receive data from managed apps. (Android only)
      *
@@ -793,12 +793,12 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the exemptedAppPackages
     * Android App packages in this list will be exempt from the policy and will be able to receive data from managed apps. (Android only)
     *
-    * @param KeyValuePair $val The exemptedAppPackages
+    * @param KeyValuePair[] $val The exemptedAppPackages
     *
     * @return DefaultManagedAppProtection
     */
@@ -807,9 +807,9 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["exemptedAppPackages"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the exemptedAppProtocols
     * iOS Apps in this list will be exempt from the policy and will be able to receive data from managed apps. (iOS Only)
      *
@@ -823,12 +823,12 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the exemptedAppProtocols
     * iOS Apps in this list will be exempt from the policy and will be able to receive data from managed apps. (iOS Only)
     *
-    * @param KeyValuePair $val The exemptedAppProtocols
+    * @param KeyValuePair[] $val The exemptedAppProtocols
     *
     * @return DefaultManagedAppProtection
     */
@@ -837,7 +837,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["exemptedAppProtocols"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the faceIdBlocked
     * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
@@ -852,7 +852,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the faceIdBlocked
     * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
@@ -866,7 +866,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["faceIdBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the filterOpenInToOnlyManagedApps
     * Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False. (iOS Only)
@@ -881,7 +881,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the filterOpenInToOnlyManagedApps
     * Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False. (iOS Only)
@@ -895,7 +895,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["filterOpenInToOnlyManagedApps"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the minimumRequiredCompanyPortalVersion
     * Minimum version of the Company portal that must be installed on the device or app access will be blocked
@@ -910,7 +910,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the minimumRequiredCompanyPortalVersion
     * Minimum version of the Company portal that must be installed on the device or app access will be blocked
@@ -924,7 +924,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["minimumRequiredCompanyPortalVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minimumRequiredPatchVersion
     * Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
@@ -939,7 +939,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the minimumRequiredPatchVersion
     * Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
@@ -953,7 +953,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["minimumRequiredPatchVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minimumRequiredSdkVersion
     * Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
@@ -968,7 +968,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the minimumRequiredSdkVersion
     * Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
@@ -982,7 +982,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["minimumRequiredSdkVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minimumWarningCompanyPortalVersion
     * Minimum version of the Company portal that must be installed on the device or the user will receive a warning
@@ -997,7 +997,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the minimumWarningCompanyPortalVersion
     * Minimum version of the Company portal that must be installed on the device or the user will receive a warning
@@ -1011,7 +1011,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["minimumWarningCompanyPortalVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minimumWarningPatchVersion
     * Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
@@ -1026,7 +1026,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the minimumWarningPatchVersion
     * Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
@@ -1040,7 +1040,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["minimumWarningPatchVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minimumWipeCompanyPortalVersion
     * Minimum version of the Company portal that must be installed on the device or the company data on the app will be wiped
@@ -1055,7 +1055,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the minimumWipeCompanyPortalVersion
     * Minimum version of the Company portal that must be installed on the device or the company data on the app will be wiped
@@ -1069,7 +1069,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["minimumWipeCompanyPortalVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minimumWipePatchVersion
     * Android security patch level  less than or equal to the specified value will wipe the managed app and the associated company data. (Android only)
@@ -1084,7 +1084,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the minimumWipePatchVersion
     * Android security patch level  less than or equal to the specified value will wipe the managed app and the associated company data. (Android only)
@@ -1098,7 +1098,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["minimumWipePatchVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minimumWipeSdkVersion
     * Versions less than the specified version will block the managed app from accessing company data.
@@ -1113,7 +1113,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the minimumWipeSdkVersion
     * Versions less than the specified version will block the managed app from accessing company data.
@@ -1127,7 +1127,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["minimumWipeSdkVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the protectInboundDataFromUnknownSources
     * Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps. (iOS Only)
@@ -1142,7 +1142,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the protectInboundDataFromUnknownSources
     * Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps. (iOS Only)
@@ -1156,7 +1156,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["protectInboundDataFromUnknownSources"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the requiredAndroidSafetyNetAppsVerificationType
     * Defines the Android SafetyNet Apps Verification requirement for a managed app to work. Possible values are: none, enabled.
@@ -1175,7 +1175,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         }
         return null;
     }
-    
+
     /**
     * Sets the requiredAndroidSafetyNetAppsVerificationType
     * Defines the Android SafetyNet Apps Verification requirement for a managed app to work. Possible values are: none, enabled.
@@ -1189,7 +1189,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["requiredAndroidSafetyNetAppsVerificationType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requiredAndroidSafetyNetDeviceAttestationType
     * Defines the Android SafetyNet Device Attestation requirement for a managed app to work. Possible values are: none, basicIntegrity, basicIntegrityAndDeviceCertification.
@@ -1208,7 +1208,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         }
         return null;
     }
-    
+
     /**
     * Sets the requiredAndroidSafetyNetDeviceAttestationType
     * Defines the Android SafetyNet Device Attestation requirement for a managed app to work. Possible values are: none, basicIntegrity, basicIntegrityAndDeviceCertification.
@@ -1222,7 +1222,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requiredAndroidSafetyNetEvaluationType
     * Defines the Android SafetyNet evaluation type requirement for a managed app to work. (Android Only). Possible values are: basic, hardwareBacked.
@@ -1241,7 +1241,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         }
         return null;
     }
-    
+
     /**
     * Sets the requiredAndroidSafetyNetEvaluationType
     * Defines the Android SafetyNet evaluation type requirement for a managed app to work. (Android Only). Possible values are: basic, hardwareBacked.
@@ -1255,7 +1255,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["requiredAndroidSafetyNetEvaluationType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the screenCaptureBlocked
     * Indicates whether screen capture is blocked. (Android only)
@@ -1270,7 +1270,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the screenCaptureBlocked
     * Indicates whether screen capture is blocked. (Android only)
@@ -1284,7 +1284,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["screenCaptureBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the thirdPartyKeyboardsBlocked
     * Defines if third party keyboards are allowed while accessing a managed app. (iOS Only)
@@ -1299,7 +1299,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the thirdPartyKeyboardsBlocked
     * Defines if third party keyboards are allowed while accessing a managed app. (iOS Only)
@@ -1313,7 +1313,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["thirdPartyKeyboardsBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the warnAfterCompanyPortalUpdateDeferralInDays
     * Maximum number of days Company Portal update can be deferred on the device or the user will receive the warning
@@ -1328,7 +1328,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the warnAfterCompanyPortalUpdateDeferralInDays
     * Maximum number of days Company Portal update can be deferred on the device or the user will receive the warning
@@ -1342,7 +1342,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["warnAfterCompanyPortalUpdateDeferralInDays"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the wipeAfterCompanyPortalUpdateDeferralInDays
     * Maximum number of days Company Portal update can be deferred on the device or the company data on the app will be wiped
@@ -1357,7 +1357,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the wipeAfterCompanyPortalUpdateDeferralInDays
     * Maximum number of days Company Portal update can be deferred on the device or the company data on the app will be wiped
@@ -1371,9 +1371,9 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["wipeAfterCompanyPortalUpdateDeferralInDays"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the apps
     * List of apps to which the policy is deployed.
      *
@@ -1387,12 +1387,12 @@ class DefaultManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the apps
     * List of apps to which the policy is deployed.
     *
-    * @param ManagedMobileApp $val The apps
+    * @param ManagedMobileApp[] $val The apps
     *
     * @return DefaultManagedAppProtection
     */
@@ -1401,7 +1401,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["apps"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deploymentSummary
     * Navigation property to deployment summary of the configuration.
@@ -1420,7 +1420,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         }
         return null;
     }
-    
+
     /**
     * Sets the deploymentSummary
     * Navigation property to deployment summary of the configuration.
@@ -1434,5 +1434,5 @@ class DefaultManagedAppProtection extends ManagedAppProtection
         $this->_propDict["deploymentSummary"] = $val;
         return $this;
     }
-    
+
 }

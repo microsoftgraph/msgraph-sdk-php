@@ -38,7 +38,7 @@ class AccessReviewPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description for this policy. Read-only.
@@ -52,7 +52,7 @@ class AccessReviewPolicy extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Display name for this policy. Read-only.
@@ -67,7 +67,7 @@ class AccessReviewPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display name for this policy. Read-only.
@@ -81,7 +81,7 @@ class AccessReviewPolicy extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isGroupOwnerManagementEnabled
     * If true, group owners can create and manage access reviews on groups they own.
@@ -96,7 +96,7 @@ class AccessReviewPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isGroupOwnerManagementEnabled
     * If true, group owners can create and manage access reviews on groups they own.
@@ -110,5 +110,5 @@ class AccessReviewPolicy extends Entity
         $this->_propDict["isGroupOwnerManagementEnabled"] = boolval($val);
         return $this;
     }
-    
+
 }

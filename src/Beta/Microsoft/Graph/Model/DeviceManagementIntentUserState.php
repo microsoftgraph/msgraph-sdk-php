@@ -38,7 +38,7 @@ class DeviceManagementIntentUserState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceCount
     * Count of Devices that belongs to a user for an intent
@@ -52,7 +52,7 @@ class DeviceManagementIntentUserState extends Entity
         $this->_propDict["deviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastReportedDateTime
     * Last modified date time of an intent report
@@ -71,7 +71,7 @@ class DeviceManagementIntentUserState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastReportedDateTime
     * Last modified date time of an intent report
@@ -85,7 +85,7 @@ class DeviceManagementIntentUserState extends Entity
         $this->_propDict["lastReportedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     * User state for an intent. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
@@ -104,7 +104,7 @@ class DeviceManagementIntentUserState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     * User state for an intent. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
@@ -118,7 +118,7 @@ class DeviceManagementIntentUserState extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userName
     * The user name that is being reported on a device
@@ -133,7 +133,7 @@ class DeviceManagementIntentUserState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userName
     * The user name that is being reported on a device
@@ -147,7 +147,7 @@ class DeviceManagementIntentUserState extends Entity
         $this->_propDict["userName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * The user principal name that is being reported on a device
@@ -162,7 +162,7 @@ class DeviceManagementIntentUserState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * The user principal name that is being reported on a device
@@ -176,5 +176,5 @@ class DeviceManagementIntentUserState extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

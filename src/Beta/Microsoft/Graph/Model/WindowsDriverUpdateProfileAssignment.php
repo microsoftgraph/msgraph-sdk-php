@@ -42,7 +42,7 @@ class WindowsDriverUpdateProfileAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The assignment target that the driver update profile is assigned to.
@@ -56,5 +56,5 @@ class WindowsDriverUpdateProfileAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

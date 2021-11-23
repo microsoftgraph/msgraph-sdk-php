@@ -41,7 +41,7 @@ class SharedEmailDomainInvitation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expiryTime
     *
@@ -54,7 +54,7 @@ class SharedEmailDomainInvitation extends Entity
         $this->_propDict["expiryTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the invitationDomain
     *
@@ -68,7 +68,7 @@ class SharedEmailDomainInvitation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the invitationDomain
     *
@@ -81,7 +81,7 @@ class SharedEmailDomainInvitation extends Entity
         $this->_propDict["invitationDomain"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the invitationStatus
     *
@@ -95,7 +95,7 @@ class SharedEmailDomainInvitation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the invitationStatus
     *
@@ -108,5 +108,5 @@ class SharedEmailDomainInvitation extends Entity
         $this->_propDict["invitationStatus"] = $val;
         return $this;
     }
-    
+
 }

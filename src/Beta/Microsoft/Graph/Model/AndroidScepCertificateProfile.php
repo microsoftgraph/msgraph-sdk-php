@@ -42,7 +42,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
         }
         return null;
     }
-    
+
     /**
     * Sets the hashAlgorithm
     * SCEP Hash Algorithm. Possible values are: sha1, sha2.
@@ -56,7 +56,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
         $this->_propDict["hashAlgorithm"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the keySize
     * SCEP Key Size. Possible values are: size1024, size2048, size4096.
@@ -75,7 +75,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
         }
         return null;
     }
-    
+
     /**
     * Sets the keySize
     * SCEP Key Size. Possible values are: size1024, size2048, size4096.
@@ -89,7 +89,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
         $this->_propDict["keySize"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the keyUsage
     * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
@@ -108,7 +108,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
         }
         return null;
     }
-    
+
     /**
     * Sets the keyUsage
     * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
@@ -122,7 +122,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
         $this->_propDict["keyUsage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scepServerUrls
     * SCEP Server Url(s)
@@ -137,7 +137,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
             return null;
         }
     }
-    
+
     /**
     * Sets the scepServerUrls
     * SCEP Server Url(s)
@@ -151,7 +151,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
         $this->_propDict["scepServerUrls"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subjectAlternativeNameFormatString
     * Custom String that defines the AAD Attribute.
@@ -166,7 +166,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
             return null;
         }
     }
-    
+
     /**
     * Sets the subjectAlternativeNameFormatString
     * Custom String that defines the AAD Attribute.
@@ -180,7 +180,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
         $this->_propDict["subjectAlternativeNameFormatString"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subjectNameFormatString
     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
@@ -195,7 +195,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
             return null;
         }
     }
-    
+
     /**
     * Sets the subjectNameFormatString
     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
@@ -209,9 +209,9 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
         $this->_propDict["subjectNameFormatString"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managedDeviceCertificateStates
     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      *
@@ -225,12 +225,12 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managedDeviceCertificateStates
     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
     *
-    * @param ManagedDeviceCertificateState $val The managedDeviceCertificateStates
+    * @param ManagedDeviceCertificateState[] $val The managedDeviceCertificateStates
     *
     * @return AndroidScepCertificateProfile
     */
@@ -239,5 +239,5 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
         $this->_propDict["managedDeviceCertificateStates"] = $val;
         return $this;
     }
-    
+
 }

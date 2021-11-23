@@ -38,7 +38,7 @@ class UserInsightsSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabled
     * true if user's itemInsights and meeting hours insights are enabled; false if user's itemInsights and meeting hours insights are disabled. Default is true. Optional.
@@ -52,5 +52,5 @@ class UserInsightsSettings extends Entity
         $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
-    
+
 }

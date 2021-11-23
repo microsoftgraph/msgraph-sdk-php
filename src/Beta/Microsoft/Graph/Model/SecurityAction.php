@@ -38,7 +38,7 @@ class SecurityAction extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the actionReason
     * Reason for invoking this action.
@@ -52,7 +52,7 @@ class SecurityAction extends Entity
         $this->_propDict["actionReason"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appId
     * The Application ID of the calling application that submitted (POST) the action. The appId should be extracted from the auth token and not entered manually by the calling application.
@@ -67,7 +67,7 @@ class SecurityAction extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appId
     * The Application ID of the calling application that submitted (POST) the action. The appId should be extracted from the auth token and not entered manually by the calling application.
@@ -81,7 +81,7 @@ class SecurityAction extends Entity
         $this->_propDict["appId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the azureTenantId
     * Azure tenant ID of the entity to determine which tenant the entity belongs to (multi-tenancy support). The azureTenantId should be extracted from the auth token and not entered manually by the calling application.
@@ -96,7 +96,7 @@ class SecurityAction extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureTenantId
     * Azure tenant ID of the entity to determine which tenant the entity belongs to (multi-tenancy support). The azureTenantId should be extracted from the auth token and not entered manually by the calling application.
@@ -110,7 +110,7 @@ class SecurityAction extends Entity
         $this->_propDict["azureTenantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the clientContext
     *
@@ -124,7 +124,7 @@ class SecurityAction extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the clientContext
     *
@@ -137,7 +137,7 @@ class SecurityAction extends Entity
         $this->_propDict["clientContext"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the completedDateTime
     * Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -156,7 +156,7 @@ class SecurityAction extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the completedDateTime
     * Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -170,7 +170,7 @@ class SecurityAction extends Entity
         $this->_propDict["completedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -189,7 +189,7 @@ class SecurityAction extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -203,7 +203,7 @@ class SecurityAction extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the errorInfo
     * Error info when the action fails.
@@ -222,7 +222,7 @@ class SecurityAction extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the errorInfo
     * Error info when the action fails.
@@ -236,7 +236,7 @@ class SecurityAction extends Entity
         $this->_propDict["errorInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastActionDateTime
     * Timestamp when this action was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -255,7 +255,7 @@ class SecurityAction extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActionDateTime
     * Timestamp when this action was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -269,7 +269,7 @@ class SecurityAction extends Entity
         $this->_propDict["lastActionDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     * Action name.
@@ -284,7 +284,7 @@ class SecurityAction extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * Action name.
@@ -298,9 +298,9 @@ class SecurityAction extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the parameters
     * Collection of parameters (key-value pairs) necessary to invoke the action, for example, URL or fileHash to block.). Required.
      *
@@ -314,12 +314,12 @@ class SecurityAction extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the parameters
     * Collection of parameters (key-value pairs) necessary to invoke the action, for example, URL or fileHash to block.). Required.
     *
-    * @param KeyValuePair $val The parameters
+    * @param KeyValuePair[] $val The parameters
     *
     * @return SecurityAction
     */
@@ -328,9 +328,9 @@ class SecurityAction extends Entity
         $this->_propDict["parameters"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the states
     * Collection of securityActionState to keep the history of an action.
      *
@@ -344,12 +344,12 @@ class SecurityAction extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the states
     * Collection of securityActionState to keep the history of an action.
     *
-    * @param SecurityActionState $val The states
+    * @param SecurityActionState[] $val The states
     *
     * @return SecurityAction
     */
@@ -358,7 +358,7 @@ class SecurityAction extends Entity
         $this->_propDict["states"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Status of the action. Possible values are: NotStarted, Running, Completed, Failed.
@@ -377,7 +377,7 @@ class SecurityAction extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Status of the action. Possible values are: NotStarted, Running, Completed, Failed.
@@ -391,7 +391,7 @@ class SecurityAction extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the user
     * The user principal name of the signed-in user that submitted  (POST) the action. The user should be extracted from the auth token and not entered manually by the calling application.
@@ -406,7 +406,7 @@ class SecurityAction extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the user
     * The user principal name of the signed-in user that submitted  (POST) the action. The user should be extracted from the auth token and not entered manually by the calling application.
@@ -420,7 +420,7 @@ class SecurityAction extends Entity
         $this->_propDict["user"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the vendorInformation
     * Complex Type containing details about the Security product/service vendor, provider, and sub-provider (for example, vendor=Microsoft; provider=Windows Defender ATP; sub-provider=AppLocker).
@@ -439,7 +439,7 @@ class SecurityAction extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the vendorInformation
     * Complex Type containing details about the Security product/service vendor, provider, and sub-provider (for example, vendor=Microsoft; provider=Windows Defender ATP; sub-provider=AppLocker).
@@ -453,5 +453,5 @@ class SecurityAction extends Entity
         $this->_propDict["vendorInformation"] = $val;
         return $this;
     }
-    
+
 }

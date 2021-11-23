@@ -42,7 +42,7 @@ class VpnConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the authenticationMethod
     * Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
@@ -56,7 +56,7 @@ class VpnConfiguration extends DeviceConfiguration
         $this->_propDict["authenticationMethod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the connectionName
     * Connection name displayed to the user.
@@ -71,7 +71,7 @@ class VpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the connectionName
     * Connection name displayed to the user.
@@ -85,7 +85,7 @@ class VpnConfiguration extends DeviceConfiguration
         $this->_propDict["connectionName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the realm
     * Realm when connection type is set to Pulse Secure.
@@ -100,7 +100,7 @@ class VpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the realm
     * Realm when connection type is set to Pulse Secure.
@@ -114,7 +114,7 @@ class VpnConfiguration extends DeviceConfiguration
         $this->_propDict["realm"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the role
     * Role when connection type is set to Pulse Secure.
@@ -129,7 +129,7 @@ class VpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the role
     * Role when connection type is set to Pulse Secure.
@@ -143,9 +143,9 @@ class VpnConfiguration extends DeviceConfiguration
         $this->_propDict["role"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the servers
     * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
      *
@@ -159,12 +159,12 @@ class VpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the servers
     * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
     *
-    * @param VpnServer $val The servers
+    * @param VpnServer[] $val The servers
     *
     * @return VpnConfiguration
     */
@@ -173,5 +173,5 @@ class VpnConfiguration extends DeviceConfiguration
         $this->_propDict["servers"] = $val;
         return $this;
     }
-    
+
 }

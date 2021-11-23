@@ -41,7 +41,7 @@ class EvaluateLabelJobResponse extends JobResponseBase
         }
         return null;
     }
-    
+
     /**
     * Sets the result
     *
@@ -54,5 +54,5 @@ class EvaluateLabelJobResponse extends JobResponseBase
         $this->_propDict["result"] = $val;
         return $this;
     }
-    
+
 }

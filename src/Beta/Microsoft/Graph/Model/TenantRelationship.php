@@ -42,7 +42,7 @@ class TenantRelationship extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the managedTenants
     * The operations available to interact with the multi-tenant management platform.
@@ -56,5 +56,5 @@ class TenantRelationship extends Entity
         $this->_propDict["managedTenants"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the cloudName
     * Zscaler only. Zscaler cloud which the user is assigned to.
@@ -52,7 +52,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
         $this->_propDict["cloudName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the excludeList
     * Zscaler only. List of network addresses which are not sent through the Zscaler cloud.
@@ -67,7 +67,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the excludeList
     * Zscaler only. List of network addresses which are not sent through the Zscaler cloud.
@@ -81,7 +81,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
         $this->_propDict["excludeList"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the microsoftTunnelSiteId
     * Microsoft Tunnel site ID.
@@ -96,7 +96,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the microsoftTunnelSiteId
     * Microsoft Tunnel site ID.
@@ -110,7 +110,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
         $this->_propDict["microsoftTunnelSiteId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the strictEnforcement
     * Zscaler only. Blocks network traffic until the user signs into Zscaler app. 'True' means traffic is blocked.
@@ -125,7 +125,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the strictEnforcement
     * Zscaler only. Blocks network traffic until the user signs into Zscaler app. 'True' means traffic is blocked.
@@ -139,9 +139,9 @@ class IosVpnConfiguration extends AppleVpnConfiguration
         $this->_propDict["strictEnforcement"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the targetedMobileApps
     * Targeted mobile apps. This collection can contain a maximum of 500 elements.
      *
@@ -155,12 +155,12 @@ class IosVpnConfiguration extends AppleVpnConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the targetedMobileApps
     * Targeted mobile apps. This collection can contain a maximum of 500 elements.
     *
-    * @param AppListItem $val The targetedMobileApps
+    * @param AppListItem[] $val The targetedMobileApps
     *
     * @return IosVpnConfiguration
     */
@@ -169,7 +169,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
         $this->_propDict["targetedMobileApps"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userDomain
     * Zscaler only. Enter a static domain to pre-populate the login field with in the Zscaler app. If this is left empty, the user's Azure Active Directory domain will be used instead.
@@ -184,7 +184,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the userDomain
     * Zscaler only. Enter a static domain to pre-populate the login field with in the Zscaler app. If this is left empty, the user's Azure Active Directory domain will be used instead.
@@ -198,7 +198,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
         $this->_propDict["userDomain"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the derivedCredentialSettings
     * Tenant level settings for the Derived Credentials to be used for authentication.
@@ -217,7 +217,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the derivedCredentialSettings
     * Tenant level settings for the Derived Credentials to be used for authentication.
@@ -231,7 +231,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
         $this->_propDict["derivedCredentialSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the identityCertificate
     * Identity certificate for client authentication when authentication method is certificate.
@@ -250,7 +250,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the identityCertificate
     * Identity certificate for client authentication when authentication method is certificate.
@@ -264,5 +264,5 @@ class IosVpnConfiguration extends AppleVpnConfiguration
         $this->_propDict["identityCertificate"] = $val;
         return $this;
     }
-    
+
 }

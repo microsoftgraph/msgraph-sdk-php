@@ -42,7 +42,7 @@ class IosEduDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceCertificateSettings
     * The Trusted Root and PFX certificates for Device
@@ -56,7 +56,7 @@ class IosEduDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["deviceCertificateSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the studentCertificateSettings
     * The Trusted Root and PFX certificates for Student
@@ -75,7 +75,7 @@ class IosEduDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the studentCertificateSettings
     * The Trusted Root and PFX certificates for Student
@@ -89,7 +89,7 @@ class IosEduDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["studentCertificateSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the teacherCertificateSettings
     * The Trusted Root and PFX certificates for Teacher
@@ -108,7 +108,7 @@ class IosEduDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the teacherCertificateSettings
     * The Trusted Root and PFX certificates for Teacher
@@ -122,5 +122,5 @@ class IosEduDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["teacherCertificateSettings"] = $val;
         return $this;
     }
-    
+
 }

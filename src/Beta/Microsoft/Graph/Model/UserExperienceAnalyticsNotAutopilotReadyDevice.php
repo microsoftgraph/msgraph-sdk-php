@@ -38,7 +38,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the autoPilotProfileAssigned
     * The intune device's autopilotProfileAssigned.
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
         $this->_propDict["autoPilotProfileAssigned"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the autoPilotRegistered
     * The intune device's autopilotRegistered.
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the autoPilotRegistered
     * The intune device's autopilotRegistered.
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
         $this->_propDict["autoPilotRegistered"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the azureAdJoinType
     * The intune device's azure Ad joinType.
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureAdJoinType
     * The intune device's azure Ad joinType.
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
         $this->_propDict["azureAdJoinType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the azureAdRegistered
     * The intune device's azureAdRegistered.
@@ -125,7 +125,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureAdRegistered
     * The intune device's azureAdRegistered.
@@ -139,7 +139,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
         $this->_propDict["azureAdRegistered"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deviceName
     * The intune device's name.
@@ -154,7 +154,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceName
     * The intune device's name.
@@ -168,7 +168,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedBy
     * The intune device's managed by.
@@ -183,7 +183,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managedBy
     * The intune device's managed by.
@@ -197,7 +197,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
         $this->_propDict["managedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the manufacturer
     * The intune device's manufacturer.
@@ -212,7 +212,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the manufacturer
     * The intune device's manufacturer.
@@ -226,7 +226,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
         $this->_propDict["manufacturer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the model
     * The intune device's model.
@@ -241,7 +241,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the model
     * The intune device's model.
@@ -255,7 +255,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
         $this->_propDict["model"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the serialNumber
     * The intune device's serial number.
@@ -270,7 +270,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the serialNumber
     * The intune device's serial number.
@@ -284,5 +284,5 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
         $this->_propDict["serialNumber"] = $val;
         return $this;
     }
-    
+
 }

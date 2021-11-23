@@ -38,7 +38,7 @@ class ScopedRoleMembership extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the administrativeUnitId
     * Unique identifier for the administrative unit that the directory role is scoped to
@@ -52,7 +52,7 @@ class ScopedRoleMembership extends Entity
         $this->_propDict["administrativeUnitId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleId
     * Unique identifier for the directory role that the member is in.
@@ -67,7 +67,7 @@ class ScopedRoleMembership extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleId
     * Unique identifier for the directory role that the member is in.
@@ -81,7 +81,7 @@ class ScopedRoleMembership extends Entity
         $this->_propDict["roleId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleMemberInfo
     * Role member identity information. Represents the user that is a member of this scoped-role.
@@ -100,7 +100,7 @@ class ScopedRoleMembership extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the roleMemberInfo
     * Role member identity information. Represents the user that is a member of this scoped-role.
@@ -114,5 +114,5 @@ class ScopedRoleMembership extends Entity
         $this->_propDict["roleMemberInfo"] = $val;
         return $this;
     }
-    
+
 }

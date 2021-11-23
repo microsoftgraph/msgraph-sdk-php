@@ -38,7 +38,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the policy for this policyBase
@@ -52,7 +52,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the platformType
     * Platform type that the policy applies to
@@ -71,7 +71,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the platformType
     * Platform type that the policy applies to
@@ -85,7 +85,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
         $this->_propDict["platformType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settingCount
     * Count of how many setting a policy holds
@@ -100,7 +100,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the settingCount
     * Count of how many setting a policy holds
@@ -114,9 +114,9 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
         $this->_propDict["settingCount"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the settingStates
      *
      * @return array|null The settingStates
@@ -129,11 +129,11 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the settingStates
     *
-    * @param ManagedDeviceMobileAppConfigurationSettingState $val The settingStates
+    * @param ManagedDeviceMobileAppConfigurationSettingState[] $val The settingStates
     *
     * @return ManagedDeviceMobileAppConfigurationState
     */
@@ -142,7 +142,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
         $this->_propDict["settingStates"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     * The compliance state of the policy
@@ -161,7 +161,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     * The compliance state of the policy
@@ -175,7 +175,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * User unique identifier, must be Guid
@@ -190,7 +190,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * User unique identifier, must be Guid
@@ -204,7 +204,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * User Principal Name
@@ -219,7 +219,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * User Principal Name
@@ -233,7 +233,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * The version of the policy
@@ -248,7 +248,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * The version of the policy
@@ -262,5 +262,5 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
+
 }

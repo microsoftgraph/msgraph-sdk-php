@@ -37,7 +37,7 @@ class ExactMatchSession extends ExactMatchSessionBase
             return null;
         }
     }
-    
+
     /**
     * Sets the checksum
     *
@@ -50,7 +50,7 @@ class ExactMatchSession extends ExactMatchSessionBase
         $this->_propDict["checksum"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the dataUploadURI
     *
@@ -64,7 +64,7 @@ class ExactMatchSession extends ExactMatchSessionBase
             return null;
         }
     }
-    
+
     /**
     * Sets the dataUploadURI
     *
@@ -77,7 +77,7 @@ class ExactMatchSession extends ExactMatchSessionBase
         $this->_propDict["dataUploadURI"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fields
     *
@@ -91,7 +91,7 @@ class ExactMatchSession extends ExactMatchSessionBase
             return null;
         }
     }
-    
+
     /**
     * Sets the fields
     *
@@ -104,7 +104,7 @@ class ExactMatchSession extends ExactMatchSessionBase
         $this->_propDict["fields"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileName
     *
@@ -118,7 +118,7 @@ class ExactMatchSession extends ExactMatchSessionBase
             return null;
         }
     }
-    
+
     /**
     * Sets the fileName
     *
@@ -131,7 +131,7 @@ class ExactMatchSession extends ExactMatchSessionBase
         $this->_propDict["fileName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the rowsPerBlock
     *
@@ -145,7 +145,7 @@ class ExactMatchSession extends ExactMatchSessionBase
             return null;
         }
     }
-    
+
     /**
     * Sets the rowsPerBlock
     *
@@ -158,7 +158,7 @@ class ExactMatchSession extends ExactMatchSessionBase
         $this->_propDict["rowsPerBlock"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the salt
     *
@@ -172,7 +172,7 @@ class ExactMatchSession extends ExactMatchSessionBase
             return null;
         }
     }
-    
+
     /**
     * Sets the salt
     *
@@ -185,7 +185,7 @@ class ExactMatchSession extends ExactMatchSessionBase
         $this->_propDict["salt"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the uploadAgentId
     *
@@ -199,7 +199,7 @@ class ExactMatchSession extends ExactMatchSessionBase
             return null;
         }
     }
-    
+
     /**
     * Sets the uploadAgentId
     *
@@ -212,7 +212,7 @@ class ExactMatchSession extends ExactMatchSessionBase
         $this->_propDict["uploadAgentId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the uploadAgent
     *
@@ -230,7 +230,7 @@ class ExactMatchSession extends ExactMatchSessionBase
         }
         return null;
     }
-    
+
     /**
     * Sets the uploadAgent
     *
@@ -243,5 +243,5 @@ class ExactMatchSession extends ExactMatchSessionBase
         $this->_propDict["uploadAgent"] = $val;
         return $this;
     }
-    
+
 }

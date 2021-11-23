@@ -38,7 +38,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the associatedDomains
     * Associated Domains
@@ -52,7 +52,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["associatedDomains"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the authenticationMethod
     * Authentication method for this VPN connection. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
@@ -71,7 +71,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the authenticationMethod
     * Authentication method for this VPN connection. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
@@ -85,7 +85,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["authenticationMethod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the connectionName
     * Connection name displayed to the user.
@@ -100,7 +100,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the connectionName
     * Connection name displayed to the user.
@@ -114,7 +114,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["connectionName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the connectionType
     * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, customVpn, ciscoIPSec, citrix, ciscoAnyConnectV2, paloAltoGlobalProtect, zscalerPrivateAccess, f5Access2018, citrixSso, paloAltoGlobalProtectV2, ikEv2, alwaysOn, microsoftTunnel, netMotionMobility, microsoftProtect.
@@ -133,7 +133,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the connectionType
     * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, customVpn, ciscoIPSec, citrix, ciscoAnyConnectV2, paloAltoGlobalProtect, zscalerPrivateAccess, f5Access2018, citrixSso, paloAltoGlobalProtectV2, ikEv2, alwaysOn, microsoftTunnel, netMotionMobility, microsoftProtect.
@@ -147,9 +147,9 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["connectionType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the customData
     * Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
      *
@@ -163,12 +163,12 @@ class AppleVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the customData
     * Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
     *
-    * @param KeyValue $val The customData
+    * @param KeyValue[] $val The customData
     *
     * @return AppleVpnConfiguration
     */
@@ -177,9 +177,9 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["customData"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the customKeyValueData
     * Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
      *
@@ -193,12 +193,12 @@ class AppleVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the customKeyValueData
     * Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
     *
-    * @param KeyValuePair $val The customKeyValueData
+    * @param KeyValuePair[] $val The customKeyValueData
     *
     * @return AppleVpnConfiguration
     */
@@ -207,7 +207,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["customKeyValueData"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the disableOnDemandUserOverride
     * Toggle to prevent user from disabling automatic VPN in the Settings app
@@ -222,7 +222,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the disableOnDemandUserOverride
     * Toggle to prevent user from disabling automatic VPN in the Settings app
@@ -236,7 +236,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["disableOnDemandUserOverride"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the disconnectOnIdle
     * Whether to disconnect after on-demand connection idles
@@ -251,7 +251,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the disconnectOnIdle
     * Whether to disconnect after on-demand connection idles
@@ -265,7 +265,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["disconnectOnIdle"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the disconnectOnIdleTimerInSeconds
     * The length of time in seconds to wait before disconnecting an on-demand connection. Valid values 0 to 65535
@@ -280,7 +280,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the disconnectOnIdleTimerInSeconds
     * The length of time in seconds to wait before disconnecting an on-demand connection. Valid values 0 to 65535
@@ -294,7 +294,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["disconnectOnIdleTimerInSeconds"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the enablePerApp
     * Setting this to true creates Per-App VPN payload which can later be associated with Apps that can trigger this VPN conneciton on the end user's iOS device.
@@ -309,7 +309,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the enablePerApp
     * Setting this to true creates Per-App VPN payload which can later be associated with Apps that can trigger this VPN conneciton on the end user's iOS device.
@@ -323,7 +323,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["enablePerApp"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the enableSplitTunneling
     * Send all network traffic through VPN.
@@ -338,7 +338,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the enableSplitTunneling
     * Send all network traffic through VPN.
@@ -352,7 +352,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["enableSplitTunneling"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the excludedDomains
     * Domains that are accessed through the public internet instead of through VPN, even when per-app VPN is activated
@@ -367,7 +367,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the excludedDomains
     * Domains that are accessed through the public internet instead of through VPN, even when per-app VPN is activated
@@ -381,7 +381,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["excludedDomains"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the identifier
     * Identifier provided by VPN vendor when connection type is set to Custom VPN. For example: Cisco AnyConnect uses an identifier of the form com.cisco.anyconnect.applevpn.plugin
@@ -396,7 +396,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the identifier
     * Identifier provided by VPN vendor when connection type is set to Custom VPN. For example: Cisco AnyConnect uses an identifier of the form com.cisco.anyconnect.applevpn.plugin
@@ -410,7 +410,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["identifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the loginGroupOrDomain
     * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
@@ -425,7 +425,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the loginGroupOrDomain
     * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
@@ -439,9 +439,9 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["loginGroupOrDomain"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the onDemandRules
     * On-Demand Rules. This collection can contain a maximum of 500 elements.
      *
@@ -455,12 +455,12 @@ class AppleVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the onDemandRules
     * On-Demand Rules. This collection can contain a maximum of 500 elements.
     *
-    * @param VpnOnDemandRule $val The onDemandRules
+    * @param VpnOnDemandRule[] $val The onDemandRules
     *
     * @return AppleVpnConfiguration
     */
@@ -469,7 +469,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["onDemandRules"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the optInToDeviceIdSharing
     * Opt-In to sharing the device's Id to third-party vpn clients for use during network access control validation.
@@ -484,7 +484,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the optInToDeviceIdSharing
     * Opt-In to sharing the device's Id to third-party vpn clients for use during network access control validation.
@@ -498,7 +498,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["optInToDeviceIdSharing"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the providerType
     * Provider type for per-app VPN. Possible values are: notConfigured, appProxy, packetTunnel.
@@ -517,7 +517,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the providerType
     * Provider type for per-app VPN. Possible values are: notConfigured, appProxy, packetTunnel.
@@ -531,7 +531,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["providerType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the proxyServer
     * Proxy Server.
@@ -550,7 +550,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the proxyServer
     * Proxy Server.
@@ -564,7 +564,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["proxyServer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the realm
     * Realm when connection type is set to Pulse Secure.
@@ -579,7 +579,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the realm
     * Realm when connection type is set to Pulse Secure.
@@ -593,7 +593,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["realm"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the role
     * Role when connection type is set to Pulse Secure.
@@ -608,7 +608,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the role
     * Role when connection type is set to Pulse Secure.
@@ -622,7 +622,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["role"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the safariDomains
     * Safari domains when this VPN per App setting is enabled. In addition to the apps associated with this VPN, Safari domains specified here will also be able to trigger this VPN connection.
@@ -637,7 +637,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the safariDomains
     * Safari domains when this VPN per App setting is enabled. In addition to the apps associated with this VPN, Safari domains specified here will also be able to trigger this VPN connection.
@@ -651,7 +651,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["safariDomains"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the server
     * VPN Server on the network. Make sure end users can access this network location.
@@ -670,7 +670,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the server
     * VPN Server on the network. Make sure end users can access this network location.
@@ -684,5 +684,5 @@ class AppleVpnConfiguration extends DeviceConfiguration
         $this->_propDict["server"] = $val;
         return $this;
     }
-    
+
 }

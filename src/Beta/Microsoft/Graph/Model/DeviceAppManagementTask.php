@@ -38,7 +38,7 @@ class DeviceAppManagementTask extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the assignedTo
     * The name or email of the admin this task is assigned to.
@@ -52,7 +52,7 @@ class DeviceAppManagementTask extends Entity
         $this->_propDict["assignedTo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the category
     * The category. Possible values are: unknown, advancedThreatProtection.
@@ -71,7 +71,7 @@ class DeviceAppManagementTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the category
     * The category. Possible values are: unknown, advancedThreatProtection.
@@ -85,7 +85,7 @@ class DeviceAppManagementTask extends Entity
         $this->_propDict["category"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The created date.
@@ -104,7 +104,7 @@ class DeviceAppManagementTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The created date.
@@ -118,7 +118,7 @@ class DeviceAppManagementTask extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the creator
     * The email address of the creator.
@@ -133,7 +133,7 @@ class DeviceAppManagementTask extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the creator
     * The email address of the creator.
@@ -147,7 +147,7 @@ class DeviceAppManagementTask extends Entity
         $this->_propDict["creator"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the creatorNotes
     * Notes from the creator.
@@ -162,7 +162,7 @@ class DeviceAppManagementTask extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the creatorNotes
     * Notes from the creator.
@@ -176,7 +176,7 @@ class DeviceAppManagementTask extends Entity
         $this->_propDict["creatorNotes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description.
@@ -191,7 +191,7 @@ class DeviceAppManagementTask extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description.
@@ -205,7 +205,7 @@ class DeviceAppManagementTask extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name.
@@ -220,7 +220,7 @@ class DeviceAppManagementTask extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name.
@@ -234,7 +234,7 @@ class DeviceAppManagementTask extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the dueDateTime
     * The due date.
@@ -253,7 +253,7 @@ class DeviceAppManagementTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the dueDateTime
     * The due date.
@@ -267,7 +267,7 @@ class DeviceAppManagementTask extends Entity
         $this->_propDict["dueDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the priority
     * The priority. Possible values are: none, high, low.
@@ -286,7 +286,7 @@ class DeviceAppManagementTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the priority
     * The priority. Possible values are: none, high, low.
@@ -300,7 +300,7 @@ class DeviceAppManagementTask extends Entity
         $this->_propDict["priority"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The status. Possible values are: unknown, pending, active, completed, rejected.
@@ -319,7 +319,7 @@ class DeviceAppManagementTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The status. Possible values are: unknown, pending, active, completed, rejected.
@@ -333,5 +333,5 @@ class DeviceAppManagementTask extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }
