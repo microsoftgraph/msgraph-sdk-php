@@ -26,6 +26,62 @@ class Directory extends Entity
 {
 
      /** 
+     * Gets the impactedResources
+     *
+     * @return array|null The impactedResources
+     */
+    public function getImpactedResources()
+    {
+        if (array_key_exists("impactedResources", $this->_propDict)) {
+           return $this->_propDict["impactedResources"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the impactedResources
+    *
+    * @param RecommendationResource $val The impactedResources
+    *
+    * @return Directory
+    */
+    public function setImpactedResources($val)
+    {
+        $this->_propDict["impactedResources"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the recommendations
+     *
+     * @return array|null The recommendations
+     */
+    public function getRecommendations()
+    {
+        if (array_key_exists("recommendations", $this->_propDict)) {
+           return $this->_propDict["recommendations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the recommendations
+    *
+    * @param Recommendation $val The recommendations
+    *
+    * @return Directory
+    */
+    public function setRecommendations($val)
+    {
+        $this->_propDict["recommendations"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the administrativeUnits
     * Conceptual container for user and group directory objects.
      *
@@ -57,6 +113,7 @@ class Directory extends Entity
 
      /** 
      * Gets the attributeSets
+    * Group of related custom security attribute definitions.
      *
      * @return array|null The attributeSets
      */
@@ -71,6 +128,7 @@ class Directory extends Entity
     
     /** 
     * Sets the attributeSets
+    * Group of related custom security attribute definitions.
     *
     * @param AttributeSet $val The attributeSets
     *
@@ -85,6 +143,7 @@ class Directory extends Entity
 
      /** 
      * Gets the customSecurityAttributeDefinitions
+    * Schema of a custom security attributes (key-value pairs).
      *
      * @return array|null The customSecurityAttributeDefinitions
      */
@@ -99,6 +158,7 @@ class Directory extends Entity
     
     /** 
     * Sets the customSecurityAttributeDefinitions
+    * Schema of a custom security attributes (key-value pairs).
     *
     * @param CustomSecurityAttributeDefinition $val The customSecurityAttributeDefinitions
     *
