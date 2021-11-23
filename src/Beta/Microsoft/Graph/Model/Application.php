@@ -118,7 +118,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the createdDateTime
-    * The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, NOT, ge, le, in, and eq on null values) and $orderBy.
+    * The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -137,7 +137,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the createdDateTime
-    * The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, NOT, ge, le, in, and eq on null values) and $orderBy.
+    * The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -180,7 +180,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the description
-    * An optional description of the application. Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.
+    * An optional description of the application. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
     *
     * @return string|null The description
     */
@@ -195,7 +195,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the description
-    * An optional description of the application. Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.
+    * An optional description of the application. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
     *
     * @param string $val The description
     *
@@ -209,7 +209,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the disabledByMicrosoftStatus
-    * Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, NOT).
+    * Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
     *
     * @return string|null The disabledByMicrosoftStatus
     */
@@ -224,7 +224,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the disabledByMicrosoftStatus
-    * Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, NOT).
+    * Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
     *
     * @param string $val The disabledByMicrosoftStatus
     *
@@ -238,7 +238,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the displayName
-    * The display name for the application. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+    * The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
     *
     * @return string|null The displayName
     */
@@ -253,7 +253,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the displayName
-    * The display name for the application. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+    * The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
     *
     * @param string $val The displayName
     *
@@ -325,7 +325,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the info
-    * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, NOT, ge, le, and eq on null values).
+    * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
     *
     * @return InformationalUrl|null The info
     */
@@ -344,7 +344,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the info
-    * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, NOT, ge, le, and eq on null values).
+    * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
     *
     * @param InformationalUrl $val The info
     *
@@ -417,7 +417,7 @@ class Application extends DirectoryObject
 
      /** 
      * Gets the keyCredentials
-    * The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, NOT, ge, le).
+    * The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le).
      *
      * @return array|null The keyCredentials
      */
@@ -432,7 +432,7 @@ class Application extends DirectoryObject
     
     /** 
     * Sets the keyCredentials
-    * The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, NOT, ge, le).
+    * The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le).
     *
     * @param KeyCredential $val The keyCredentials
     *
@@ -667,7 +667,7 @@ class Application extends DirectoryObject
 
      /** 
      * Gets the requiredResourceAccess
-    * Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, NOT, ge, le).
+    * Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le).
      *
      * @return array|null The requiredResourceAccess
      */
@@ -682,7 +682,7 @@ class Application extends DirectoryObject
     
     /** 
     * Sets the requiredResourceAccess
-    * Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, NOT, ge, le).
+    * Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le).
     *
     * @param RequiredResourceAccess $val The requiredResourceAccess
     *
@@ -696,7 +696,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the signInAudience
-    * Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, NOT).
+    * Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, not).
     *
     * @return string|null The signInAudience
     */
@@ -711,7 +711,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the signInAudience
-    * Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, NOT).
+    * Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, not).
     *
     * @param string $val The signInAudience
     *
@@ -758,7 +758,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the tags
-    * Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, NOT, ge, le, startsWith).
+    * Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
     *
     * @return string|null The tags
     */
@@ -773,7 +773,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the tags
-    * Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, NOT, ge, le, startsWith).
+    * Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
     *
     * @param string $val The tags
     *
