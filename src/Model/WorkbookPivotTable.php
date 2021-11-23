@@ -38,7 +38,7 @@ class WorkbookPivotTable extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * Name of the PivotTable.
@@ -52,7 +52,7 @@ class WorkbookPivotTable extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the worksheet
     * The worksheet containing the current PivotTable. Read-only.
@@ -71,7 +71,7 @@ class WorkbookPivotTable extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the worksheet
     * The worksheet containing the current PivotTable. Read-only.
@@ -85,5 +85,5 @@ class WorkbookPivotTable extends Entity
         $this->_propDict["worksheet"] = $val;
         return $this;
     }
-    
+
 }

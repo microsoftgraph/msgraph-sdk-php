@@ -38,7 +38,7 @@ class IdentityProviderBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the identity provider.
@@ -52,5 +52,5 @@ class IdentityProviderBase extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
 }

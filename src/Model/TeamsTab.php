@@ -42,7 +42,7 @@ class TeamsTab extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the configuration
     * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
@@ -56,7 +56,7 @@ class TeamsTab extends Entity
         $this->_propDict["configuration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Name of the tab.
@@ -71,7 +71,7 @@ class TeamsTab extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Name of the tab.
@@ -85,7 +85,7 @@ class TeamsTab extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the webUrl
     * Deep link URL of the tab instance. Read only.
@@ -100,7 +100,7 @@ class TeamsTab extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the webUrl
     * Deep link URL of the tab instance. Read only.
@@ -114,7 +114,7 @@ class TeamsTab extends Entity
         $this->_propDict["webUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the teamsApp
     * The application that is linked to the tab. This cannot be changed after tab creation.
@@ -133,7 +133,7 @@ class TeamsTab extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the teamsApp
     * The application that is linked to the tab. This cannot be changed after tab creation.
@@ -147,5 +147,5 @@ class TeamsTab extends Entity
         $this->_propDict["teamsApp"] = $val;
         return $this;
     }
-    
+
 }

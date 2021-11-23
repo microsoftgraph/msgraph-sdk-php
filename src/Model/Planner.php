@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class Planner extends Entity
 {
 
-     /** 
+     /**
      * Gets the buckets
     * Read-only. Nullable. Returns a collection of the specified buckets
      *
@@ -39,12 +39,12 @@ class Planner extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the buckets
     * Read-only. Nullable. Returns a collection of the specified buckets
     *
-    * @param PlannerBucket $val The buckets
+    * @param PlannerBucket[] $val The buckets
     *
     * @return Planner
     */
@@ -53,9 +53,9 @@ class Planner extends Entity
         $this->_propDict["buckets"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the plans
     * Read-only. Nullable. Returns a collection of the specified plans
      *
@@ -69,12 +69,12 @@ class Planner extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the plans
     * Read-only. Nullable. Returns a collection of the specified plans
     *
-    * @param PlannerPlan $val The plans
+    * @param PlannerPlan[] $val The plans
     *
     * @return Planner
     */
@@ -83,9 +83,9 @@ class Planner extends Entity
         $this->_propDict["plans"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tasks
     * Read-only. Nullable. Returns a collection of the specified tasks
      *
@@ -99,12 +99,12 @@ class Planner extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tasks
     * Read-only. Nullable. Returns a collection of the specified tasks
     *
-    * @param PlannerTask $val The tasks
+    * @param PlannerTask[] $val The tasks
     *
     * @return Planner
     */
@@ -113,5 +113,5 @@ class Planner extends Entity
         $this->_propDict["tasks"] = $val;
         return $this;
     }
-    
+
 }

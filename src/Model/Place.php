@@ -42,7 +42,7 @@ class Place extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the address
     * The street address of the place.
@@ -56,7 +56,7 @@ class Place extends Entity
         $this->_propDict["address"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name associated with the place.
@@ -71,7 +71,7 @@ class Place extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name associated with the place.
@@ -85,7 +85,7 @@ class Place extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the geoCoordinates
     * Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
@@ -104,7 +104,7 @@ class Place extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the geoCoordinates
     * Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
@@ -118,7 +118,7 @@ class Place extends Entity
         $this->_propDict["geoCoordinates"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the phone
     * The phone number of the place.
@@ -133,7 +133,7 @@ class Place extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the phone
     * The phone number of the place.
@@ -147,5 +147,5 @@ class Place extends Entity
         $this->_propDict["phone"] = $val;
         return $this;
     }
-    
+
 }

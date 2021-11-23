@@ -42,7 +42,7 @@ class DirectoryAudit extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the activityDateTime
     * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -56,7 +56,7 @@ class DirectoryAudit extends Entity
         $this->_propDict["activityDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activityDisplayName
     * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
@@ -71,7 +71,7 @@ class DirectoryAudit extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activityDisplayName
     * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
@@ -85,9 +85,9 @@ class DirectoryAudit extends Entity
         $this->_propDict["activityDisplayName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the additionalDetails
     * Indicates additional details on the activity.
      *
@@ -101,12 +101,12 @@ class DirectoryAudit extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the additionalDetails
     * Indicates additional details on the activity.
     *
-    * @param KeyValue $val The additionalDetails
+    * @param KeyValue[] $val The additionalDetails
     *
     * @return DirectoryAudit
     */
@@ -115,7 +115,7 @@ class DirectoryAudit extends Entity
         $this->_propDict["additionalDetails"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the category
     * Indicates which resource category that's targeted by the activity. (For example: User Management, Group Management etc..)
@@ -130,7 +130,7 @@ class DirectoryAudit extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the category
     * Indicates which resource category that's targeted by the activity. (For example: User Management, Group Management etc..)
@@ -144,7 +144,7 @@ class DirectoryAudit extends Entity
         $this->_propDict["category"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the correlationId
     * Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services.
@@ -159,7 +159,7 @@ class DirectoryAudit extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the correlationId
     * Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services.
@@ -173,7 +173,7 @@ class DirectoryAudit extends Entity
         $this->_propDict["correlationId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the initiatedBy
     * Indicates information about the user or app initiated the activity.
@@ -192,7 +192,7 @@ class DirectoryAudit extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the initiatedBy
     * Indicates information about the user or app initiated the activity.
@@ -206,7 +206,7 @@ class DirectoryAudit extends Entity
         $this->_propDict["initiatedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the loggedByService
     * Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management.
@@ -221,7 +221,7 @@ class DirectoryAudit extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the loggedByService
     * Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management.
@@ -235,7 +235,7 @@ class DirectoryAudit extends Entity
         $this->_propDict["loggedByService"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the operationType
     *
@@ -249,7 +249,7 @@ class DirectoryAudit extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the operationType
     *
@@ -262,7 +262,7 @@ class DirectoryAudit extends Entity
         $this->_propDict["operationType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the result
     * Indicates the result of the activity. Possible values are: success, failure, timeout, unknownFutureValue.
@@ -281,7 +281,7 @@ class DirectoryAudit extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the result
     * Indicates the result of the activity. Possible values are: success, failure, timeout, unknownFutureValue.
@@ -295,7 +295,7 @@ class DirectoryAudit extends Entity
         $this->_propDict["result"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resultReason
     * Indicates the reason for failure if the result is failure or timeout.
@@ -310,7 +310,7 @@ class DirectoryAudit extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the resultReason
     * Indicates the reason for failure if the result is failure or timeout.
@@ -324,9 +324,9 @@ class DirectoryAudit extends Entity
         $this->_propDict["resultReason"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the targetResources
     * Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy or Other.
      *
@@ -340,12 +340,12 @@ class DirectoryAudit extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the targetResources
     * Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy or Other.
     *
-    * @param TargetResource $val The targetResources
+    * @param TargetResource[] $val The targetResources
     *
     * @return DirectoryAudit
     */
@@ -354,5 +354,5 @@ class DirectoryAudit extends Entity
         $this->_propDict["targetResources"] = $val;
         return $this;
     }
-    
+
 }

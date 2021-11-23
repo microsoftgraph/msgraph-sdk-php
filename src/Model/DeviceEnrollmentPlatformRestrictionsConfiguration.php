@@ -42,7 +42,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
         }
         return null;
     }
-    
+
     /**
     * Sets the androidRestriction
     * Android restrictions based on platform, platform operating system version, and device ownership
@@ -56,7 +56,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
         $this->_propDict["androidRestriction"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the iosRestriction
     * Ios restrictions based on platform, platform operating system version, and device ownership
@@ -75,7 +75,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
         }
         return null;
     }
-    
+
     /**
     * Sets the iosRestriction
     * Ios restrictions based on platform, platform operating system version, and device ownership
@@ -89,7 +89,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
         $this->_propDict["iosRestriction"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the macOSRestriction
     * Mac restrictions based on platform, platform operating system version, and device ownership
@@ -108,7 +108,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
         }
         return null;
     }
-    
+
     /**
     * Sets the macOSRestriction
     * Mac restrictions based on platform, platform operating system version, and device ownership
@@ -122,7 +122,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
         $this->_propDict["macOSRestriction"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the windowsMobileRestriction
     * Windows mobile restrictions based on platform, platform operating system version, and device ownership
@@ -141,7 +141,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
         }
         return null;
     }
-    
+
     /**
     * Sets the windowsMobileRestriction
     * Windows mobile restrictions based on platform, platform operating system version, and device ownership
@@ -155,7 +155,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
         $this->_propDict["windowsMobileRestriction"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the windowsRestriction
     * Windows restrictions based on platform, platform operating system version, and device ownership
@@ -174,7 +174,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
         }
         return null;
     }
-    
+
     /**
     * Sets the windowsRestriction
     * Windows restrictions based on platform, platform operating system version, and device ownership
@@ -188,5 +188,5 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
         $this->_propDict["windowsRestriction"] = $val;
         return $this;
     }
-    
+
 }

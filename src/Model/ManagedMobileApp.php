@@ -42,7 +42,7 @@ class ManagedMobileApp extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the mobileAppIdentifier
     * The identifier for an app with it's operating system type.
@@ -56,7 +56,7 @@ class ManagedMobileApp extends Entity
         $this->_propDict["mobileAppIdentifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Version of the entity.
@@ -71,7 +71,7 @@ class ManagedMobileApp extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Version of the entity.
@@ -85,5 +85,5 @@ class ManagedMobileApp extends Entity
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
+
 }

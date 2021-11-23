@@ -42,7 +42,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the endDateTime
     * UTC time when the last user left the call. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -56,7 +56,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
         $this->_propDict["endDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the joinWebUrl
     * Meeting URL associated to the call. May not be available for a peerToPeer call record type.
@@ -71,7 +71,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the joinWebUrl
     * Meeting URL associated to the call. May not be available for a peerToPeer call record type.
@@ -85,7 +85,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
         $this->_propDict["joinWebUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * UTC time when the call record was created. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -104,7 +104,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * UTC time when the call record was created. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -118,9 +118,9 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the modalities
     * List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      *
@@ -134,12 +134,12 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the modalities
     * List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
     *
-    * @param Modality $val The modalities
+    * @param Modality[] $val The modalities
     *
     * @return CallRecord
     */
@@ -148,7 +148,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
         $this->_propDict["modalities"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the organizer
     * The organizing party's identity.
@@ -167,7 +167,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the organizer
     * The organizing party's identity.
@@ -181,9 +181,9 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
         $this->_propDict["organizer"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the participants
     * List of distinct identities involved in the call.
      *
@@ -197,12 +197,12 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the participants
     * List of distinct identities involved in the call.
     *
-    * @param \Microsoft\Graph\Model\IdentitySet $val The participants
+    * @param \Microsoft\Graph\Model\IdentitySet[] $val The participants
     *
     * @return CallRecord
     */
@@ -211,7 +211,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
         $this->_propDict["participants"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startDateTime
     * UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -230,7 +230,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startDateTime
     * UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -244,7 +244,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
         $this->_propDict["startDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     * Indicates the type of the call. Possible values are: unknown, groupCall, peerToPeer, unknownFutureValue.
@@ -263,7 +263,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the type
     * Indicates the type of the call. Possible values are: unknown, groupCall, peerToPeer, unknownFutureValue.
@@ -277,7 +277,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
@@ -292,7 +292,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
@@ -306,9 +306,9 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the sessions
     * List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.
      *
@@ -322,12 +322,12 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the sessions
     * List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.
     *
-    * @param Session $val The sessions
+    * @param Session[] $val The sessions
     *
     * @return CallRecord
     */
@@ -336,5 +336,5 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
         $this->_propDict["sessions"] = $val;
         return $this;
     }
-    
+
 }

@@ -25,7 +25,7 @@ namespace Microsoft\Graph\ExternalConnectors\Model;
 class ExternalItem extends \Microsoft\Graph\Model\Entity
 {
 
-     /** 
+     /**
      * Gets the acl
     * An array of access control entries. Each entry specifies the access granted to a user or group. Required.
      *
@@ -39,12 +39,12 @@ class ExternalItem extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the acl
     * An array of access control entries. Each entry specifies the access granted to a user or group. Required.
     *
-    * @param Acl $val The acl
+    * @param Acl[] $val The acl
     *
     * @return ExternalItem
     */
@@ -53,7 +53,7 @@ class ExternalItem extends \Microsoft\Graph\Model\Entity
         $this->_propDict["acl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the content
     * A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
@@ -72,7 +72,7 @@ class ExternalItem extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the content
     * A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
@@ -86,7 +86,7 @@ class ExternalItem extends \Microsoft\Graph\Model\Entity
         $this->_propDict["content"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalItemProperties
     * A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required.
@@ -105,7 +105,7 @@ class ExternalItem extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the externalItemProperties
     * A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required.
@@ -119,5 +119,5 @@ class ExternalItem extends \Microsoft\Graph\Model\Entity
         $this->_propDict["properties"] = $val;
         return $this;
     }
-    
+
 }

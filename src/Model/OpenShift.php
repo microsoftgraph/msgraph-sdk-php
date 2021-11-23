@@ -42,7 +42,7 @@ class OpenShift extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the draftOpenShift
     * An unpublished open shift.
@@ -56,7 +56,7 @@ class OpenShift extends ChangeTrackedEntity
         $this->_propDict["draftOpenShift"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the schedulingGroupId
     * ID for the scheduling group that the open shift belongs to.
@@ -71,7 +71,7 @@ class OpenShift extends ChangeTrackedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the schedulingGroupId
     * ID for the scheduling group that the open shift belongs to.
@@ -85,7 +85,7 @@ class OpenShift extends ChangeTrackedEntity
         $this->_propDict["schedulingGroupId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sharedOpenShift
     * A published open shift.
@@ -104,7 +104,7 @@ class OpenShift extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the sharedOpenShift
     * A published open shift.
@@ -118,5 +118,5 @@ class OpenShift extends ChangeTrackedEntity
         $this->_propDict["sharedOpenShift"] = $val;
         return $this;
     }
-    
+
 }

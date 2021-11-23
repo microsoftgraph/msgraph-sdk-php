@@ -41,7 +41,7 @@ class InformationProtection extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the bitlocker
     *
@@ -54,9 +54,9 @@ class InformationProtection extends Entity
         $this->_propDict["bitlocker"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the threatAssessmentRequests
      *
      * @return array|null The threatAssessmentRequests
@@ -69,11 +69,11 @@ class InformationProtection extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the threatAssessmentRequests
     *
-    * @param ThreatAssessmentRequest $val The threatAssessmentRequests
+    * @param ThreatAssessmentRequest[] $val The threatAssessmentRequests
     *
     * @return InformationProtection
     */
@@ -82,5 +82,5 @@ class InformationProtection extends Entity
         $this->_propDict["threatAssessmentRequests"] = $val;
         return $this;
     }
-    
+
 }

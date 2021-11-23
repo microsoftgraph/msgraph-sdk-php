@@ -42,7 +42,7 @@ class SharedDriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the owner
     * Information about the owner of the shared item being referenced.
@@ -56,7 +56,7 @@ class SharedDriveItem extends BaseItem
         $this->_propDict["owner"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the driveItem
     * Used to access the underlying driveItem
@@ -75,7 +75,7 @@ class SharedDriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the driveItem
     * Used to access the underlying driveItem
@@ -89,9 +89,9 @@ class SharedDriveItem extends BaseItem
         $this->_propDict["driveItem"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the items
     * All driveItems contained in the sharing root. This collection cannot be enumerated.
      *
@@ -105,12 +105,12 @@ class SharedDriveItem extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the items
     * All driveItems contained in the sharing root. This collection cannot be enumerated.
     *
-    * @param DriveItem $val The items
+    * @param DriveItem[] $val The items
     *
     * @return SharedDriveItem
     */
@@ -119,7 +119,7 @@ class SharedDriveItem extends BaseItem
         $this->_propDict["items"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the list
     * Used to access the underlying list
@@ -138,7 +138,7 @@ class SharedDriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the list
     * Used to access the underlying list
@@ -152,7 +152,7 @@ class SharedDriveItem extends BaseItem
         $this->_propDict["list"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the listItem
     * Used to access the underlying listItem
@@ -171,7 +171,7 @@ class SharedDriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the listItem
     * Used to access the underlying listItem
@@ -185,7 +185,7 @@ class SharedDriveItem extends BaseItem
         $this->_propDict["listItem"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the permission
     * Used to access the permission representing the underlying sharing link
@@ -204,7 +204,7 @@ class SharedDriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the permission
     * Used to access the permission representing the underlying sharing link
@@ -218,7 +218,7 @@ class SharedDriveItem extends BaseItem
         $this->_propDict["permission"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the root
     * Used to access the underlying driveItem. Deprecated -- use driveItem instead.
@@ -237,7 +237,7 @@ class SharedDriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the root
     * Used to access the underlying driveItem. Deprecated -- use driveItem instead.
@@ -251,7 +251,7 @@ class SharedDriveItem extends BaseItem
         $this->_propDict["root"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the site
     * Used to access the underlying site
@@ -270,7 +270,7 @@ class SharedDriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the site
     * Used to access the underlying site
@@ -284,5 +284,5 @@ class SharedDriveItem extends BaseItem
         $this->_propDict["site"] = $val;
         return $this;
     }
-    
+
 }

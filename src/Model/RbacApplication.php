@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class RbacApplication extends Entity
 {
 
-     /** 
+     /**
      * Gets the roleAssignments
     * Resource to grant access to users or groups.
      *
@@ -39,12 +39,12 @@ class RbacApplication extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleAssignments
     * Resource to grant access to users or groups.
     *
-    * @param UnifiedRoleAssignment $val The roleAssignments
+    * @param UnifiedRoleAssignment[] $val The roleAssignments
     *
     * @return RbacApplication
     */
@@ -53,9 +53,9 @@ class RbacApplication extends Entity
         $this->_propDict["roleAssignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleDefinitions
     * Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
      *
@@ -69,12 +69,12 @@ class RbacApplication extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleDefinitions
     * Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
     *
-    * @param UnifiedRoleDefinition $val The roleDefinitions
+    * @param UnifiedRoleDefinition[] $val The roleDefinitions
     *
     * @return RbacApplication
     */
@@ -83,5 +83,5 @@ class RbacApplication extends Entity
         $this->_propDict["roleDefinitions"] = $val;
         return $this;
     }
-    
+
 }

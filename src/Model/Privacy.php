@@ -31,7 +31,7 @@ class Privacy implements \JsonSerializable
     * @var array $_propDict
     */
     protected $_propDict;
-    
+
     /**
     * Construct a new Privacy
     *
@@ -54,9 +54,9 @@ class Privacy implements \JsonSerializable
     {
         return $this->_propDict;
     }
-    
 
-     /** 
+
+     /**
      * Gets the subjectRightsRequests
      *
      * @return array|null The subjectRightsRequests
@@ -69,11 +69,11 @@ class Privacy implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the subjectRightsRequests
     *
-    * @param SubjectRightsRequest $val The subjectRightsRequests
+    * @param SubjectRightsRequest[] $val The subjectRightsRequests
     *
     * @return Privacy
     */
@@ -82,7 +82,7 @@ class Privacy implements \JsonSerializable
         $this->_propDict["subjectRightsRequests"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ODataType
     *
@@ -95,7 +95,7 @@ class Privacy implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the ODataType
     *
@@ -108,7 +108,7 @@ class Privacy implements \JsonSerializable
         $this->_propDict["@odata.type"] = $val;
         return $this;
     }
-    
+
     /**
     * Serializes the object by property array
     * Manually serialize DateTime into RFC3339 format

@@ -42,7 +42,7 @@ class SubjectRightsRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the assignedTo
     * Identity that the request is assigned to.
@@ -56,7 +56,7 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["assignedTo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the closedDateTime
     * The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -75,7 +75,7 @@ class SubjectRightsRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the closedDateTime
     * The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -89,7 +89,7 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["closedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     * Identity information for the entity that created the request.
@@ -108,7 +108,7 @@ class SubjectRightsRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     * Identity information for the entity that created the request.
@@ -122,7 +122,7 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -141,7 +141,7 @@ class SubjectRightsRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -155,7 +155,7 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the dataSubject
     * Information about the data subject.
@@ -174,7 +174,7 @@ class SubjectRightsRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the dataSubject
     * Information about the data subject.
@@ -188,7 +188,7 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["dataSubject"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the dataSubjectType
     * The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
@@ -207,7 +207,7 @@ class SubjectRightsRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the dataSubjectType
     * The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
@@ -221,7 +221,7 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["dataSubjectType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description for the request.
@@ -236,7 +236,7 @@ class SubjectRightsRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description for the request.
@@ -250,7 +250,7 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name of the request.
@@ -265,7 +265,7 @@ class SubjectRightsRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the request.
@@ -279,9 +279,9 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the history
     * Collection of history change events.
      *
@@ -295,12 +295,12 @@ class SubjectRightsRequest extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the history
     * Collection of history change events.
     *
-    * @param SubjectRightsRequestHistory $val The history
+    * @param SubjectRightsRequestHistory[] $val The history
     *
     * @return SubjectRightsRequest
     */
@@ -309,7 +309,7 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["history"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the insight
     * Insight about the request.
@@ -328,7 +328,7 @@ class SubjectRightsRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the insight
     * Insight about the request.
@@ -342,7 +342,7 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["insight"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the internalDueDateTime
     * The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -361,7 +361,7 @@ class SubjectRightsRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the internalDueDateTime
     * The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -375,7 +375,7 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["internalDueDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedBy
     * Identity information for the entity that last modified the request.
@@ -394,7 +394,7 @@ class SubjectRightsRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedBy
     * Identity information for the entity that last modified the request.
@@ -408,7 +408,7 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["lastModifiedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -427,7 +427,7 @@ class SubjectRightsRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -441,7 +441,7 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the regulations
     * List of regulations that this request will fulfill.
@@ -456,7 +456,7 @@ class SubjectRightsRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the regulations
     * List of regulations that this request will fulfill.
@@ -470,9 +470,9 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["regulations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the stages
     * Information about the different stages for the request.
      *
@@ -486,12 +486,12 @@ class SubjectRightsRequest extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the stages
     * Information about the different stages for the request.
     *
-    * @param SubjectRightsRequestStageDetail $val The stages
+    * @param SubjectRightsRequestStageDetail[] $val The stages
     *
     * @return SubjectRightsRequest
     */
@@ -500,7 +500,7 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["stages"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The status of the request.. Possible values are: active, closed, unknownFutureValue.
@@ -519,7 +519,7 @@ class SubjectRightsRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The status of the request.. Possible values are: active, closed, unknownFutureValue.
@@ -533,7 +533,7 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     * The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
@@ -552,7 +552,7 @@ class SubjectRightsRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the type
     * The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
@@ -566,9 +566,9 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the notes
     * List of notes associcated with the request.
      *
@@ -582,12 +582,12 @@ class SubjectRightsRequest extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the notes
     * List of notes associcated with the request.
     *
-    * @param AuthoredNote $val The notes
+    * @param AuthoredNote[] $val The notes
     *
     * @return SubjectRightsRequest
     */
@@ -596,7 +596,7 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["notes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the team
     * Information about the Microsoft Teams team that was created for the request.
@@ -615,7 +615,7 @@ class SubjectRightsRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the team
     * Information about the Microsoft Teams team that was created for the request.
@@ -629,5 +629,5 @@ class SubjectRightsRequest extends Entity
         $this->_propDict["team"] = $val;
         return $this;
     }
-    
+
 }

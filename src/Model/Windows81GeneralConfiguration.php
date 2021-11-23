@@ -38,7 +38,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the accountsBlockAddingNonMicrosoftAccountEmail
     * Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
@@ -52,7 +52,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["accountsBlockAddingNonMicrosoftAccountEmail"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the applyOnlyToWindows81
     * Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
@@ -67,7 +67,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the applyOnlyToWindows81
     * Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
@@ -81,7 +81,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["applyOnlyToWindows81"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the browserBlockAutofill
     * Indicates whether or not to block auto fill.
@@ -96,7 +96,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the browserBlockAutofill
     * Indicates whether or not to block auto fill.
@@ -110,7 +110,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["browserBlockAutofill"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the browserBlockAutomaticDetectionOfIntranetSites
     * Indicates whether or not to block automatic detection of Intranet sites.
@@ -125,7 +125,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the browserBlockAutomaticDetectionOfIntranetSites
     * Indicates whether or not to block automatic detection of Intranet sites.
@@ -139,7 +139,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["browserBlockAutomaticDetectionOfIntranetSites"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the browserBlockEnterpriseModeAccess
     * Indicates whether or not to block enterprise mode access.
@@ -154,7 +154,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the browserBlockEnterpriseModeAccess
     * Indicates whether or not to block enterprise mode access.
@@ -168,7 +168,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["browserBlockEnterpriseModeAccess"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the browserBlockJavaScript
     * Indicates whether or not to Block the user from using JavaScript.
@@ -183,7 +183,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the browserBlockJavaScript
     * Indicates whether or not to Block the user from using JavaScript.
@@ -197,7 +197,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["browserBlockJavaScript"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the browserBlockPlugins
     * Indicates whether or not to block plug-ins.
@@ -212,7 +212,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the browserBlockPlugins
     * Indicates whether or not to block plug-ins.
@@ -226,7 +226,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["browserBlockPlugins"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the browserBlockPopups
     * Indicates whether or not to block popups.
@@ -241,7 +241,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the browserBlockPopups
     * Indicates whether or not to block popups.
@@ -255,7 +255,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["browserBlockPopups"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the browserBlockSendingDoNotTrackHeader
     * Indicates whether or not to Block the user from sending the do not track header.
@@ -270,7 +270,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the browserBlockSendingDoNotTrackHeader
     * Indicates whether or not to Block the user from sending the do not track header.
@@ -284,7 +284,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["browserBlockSendingDoNotTrackHeader"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the browserBlockSingleWordEntryOnIntranetSites
     * Indicates whether or not to block a single word entry on Intranet sites.
@@ -299,7 +299,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the browserBlockSingleWordEntryOnIntranetSites
     * Indicates whether or not to block a single word entry on Intranet sites.
@@ -313,7 +313,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["browserBlockSingleWordEntryOnIntranetSites"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the browserEnterpriseModeSiteListLocation
     * The enterprise mode site list location. Could be a local file, local network or http location.
@@ -328,7 +328,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the browserEnterpriseModeSiteListLocation
     * The enterprise mode site list location. Could be a local file, local network or http location.
@@ -342,7 +342,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["browserEnterpriseModeSiteListLocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the browserInternetSecurityLevel
     * The internet security level. Possible values are: userDefined, medium, mediumHigh, high.
@@ -361,7 +361,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the browserInternetSecurityLevel
     * The internet security level. Possible values are: userDefined, medium, mediumHigh, high.
@@ -375,7 +375,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["browserInternetSecurityLevel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the browserIntranetSecurityLevel
     * The Intranet security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
@@ -394,7 +394,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the browserIntranetSecurityLevel
     * The Intranet security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
@@ -408,7 +408,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["browserIntranetSecurityLevel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the browserLoggingReportLocation
     * The logging report location.
@@ -423,7 +423,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the browserLoggingReportLocation
     * The logging report location.
@@ -437,7 +437,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["browserLoggingReportLocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the browserRequireFirewall
     * Indicates whether or not to require a firewall.
@@ -452,7 +452,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the browserRequireFirewall
     * Indicates whether or not to require a firewall.
@@ -466,7 +466,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["browserRequireFirewall"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the browserRequireFraudWarning
     * Indicates whether or not to require fraud warning.
@@ -481,7 +481,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the browserRequireFraudWarning
     * Indicates whether or not to require fraud warning.
@@ -495,7 +495,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["browserRequireFraudWarning"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the browserRequireHighSecurityForRestrictedSites
     * Indicates whether or not to require high security for restricted sites.
@@ -510,7 +510,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the browserRequireHighSecurityForRestrictedSites
     * Indicates whether or not to require high security for restricted sites.
@@ -524,7 +524,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["browserRequireHighSecurityForRestrictedSites"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the browserRequireSmartScreen
     * Indicates whether or not to require the user to use the smart screen filter.
@@ -539,7 +539,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the browserRequireSmartScreen
     * Indicates whether or not to require the user to use the smart screen filter.
@@ -553,7 +553,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["browserRequireSmartScreen"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the browserTrustedSitesSecurityLevel
     * The trusted sites security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
@@ -572,7 +572,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the browserTrustedSitesSecurityLevel
     * The trusted sites security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
@@ -586,7 +586,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["browserTrustedSitesSecurityLevel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the cellularBlockDataRoaming
     * Indicates whether or not to block data roaming.
@@ -601,7 +601,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the cellularBlockDataRoaming
     * Indicates whether or not to block data roaming.
@@ -615,7 +615,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["cellularBlockDataRoaming"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the diagnosticsBlockDataSubmission
     * Indicates whether or not to block diagnostic data submission.
@@ -630,7 +630,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the diagnosticsBlockDataSubmission
     * Indicates whether or not to block diagnostic data submission.
@@ -644,7 +644,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["diagnosticsBlockDataSubmission"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordBlockPicturePasswordAndPin
     * Indicates whether or not to Block the user from using a pictures password and pin.
@@ -659,7 +659,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordBlockPicturePasswordAndPin
     * Indicates whether or not to Block the user from using a pictures password and pin.
@@ -673,7 +673,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["passwordBlockPicturePasswordAndPin"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordExpirationDays
     * Password expiration in days.
@@ -688,7 +688,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordExpirationDays
     * Password expiration in days.
@@ -702,7 +702,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["passwordExpirationDays"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMinimumCharacterSetCount
     * The number of character sets required in the password.
@@ -717,7 +717,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMinimumCharacterSetCount
     * The number of character sets required in the password.
@@ -731,7 +731,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["passwordMinimumCharacterSetCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMinimumLength
     * The minimum password length.
@@ -746,7 +746,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMinimumLength
     * The minimum password length.
@@ -760,7 +760,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["passwordMinimumLength"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMinutesOfInactivityBeforeScreenTimeout
     * The minutes of inactivity before the screen times out.
@@ -775,7 +775,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMinutesOfInactivityBeforeScreenTimeout
     * The minutes of inactivity before the screen times out.
@@ -789,7 +789,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["passwordMinutesOfInactivityBeforeScreenTimeout"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordPreviousPasswordBlockCount
     * The number of previous passwords to prevent re-use of. Valid values 0 to 24
@@ -804,7 +804,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordPreviousPasswordBlockCount
     * The number of previous passwords to prevent re-use of. Valid values 0 to 24
@@ -818,7 +818,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["passwordPreviousPasswordBlockCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordRequiredType
     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
@@ -837,7 +837,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the passwordRequiredType
     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
@@ -851,7 +851,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["passwordRequiredType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the passwordSignInFailureCountBeforeFactoryReset
     * The number of sign in failures before factory reset.
@@ -866,7 +866,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordSignInFailureCountBeforeFactoryReset
     * The number of sign in failures before factory reset.
@@ -880,7 +880,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["passwordSignInFailureCountBeforeFactoryReset"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the storageRequireDeviceEncryption
     * Indicates whether or not to require encryption on a mobile device.
@@ -895,7 +895,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the storageRequireDeviceEncryption
     * Indicates whether or not to require encryption on a mobile device.
@@ -909,7 +909,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["storageRequireDeviceEncryption"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the updatesRequireAutomaticUpdates
     * Indicates whether or not to require automatic updates.
@@ -924,7 +924,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the updatesRequireAutomaticUpdates
     * Indicates whether or not to require automatic updates.
@@ -938,7 +938,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["updatesRequireAutomaticUpdates"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the userAccountControlSettings
     * The user account control settings. Possible values are: userDefined, alwaysNotify, notifyOnAppChanges, notifyOnAppChangesWithoutDimming, neverNotify.
@@ -957,7 +957,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the userAccountControlSettings
     * The user account control settings. Possible values are: userDefined, alwaysNotify, notifyOnAppChanges, notifyOnAppChangesWithoutDimming, neverNotify.
@@ -971,7 +971,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["userAccountControlSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the workFoldersUrl
     * The work folders url.
@@ -986,7 +986,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the workFoldersUrl
     * The work folders url.
@@ -1000,5 +1000,5 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
         $this->_propDict["workFoldersUrl"] = $val;
         return $this;
     }
-    
+
 }

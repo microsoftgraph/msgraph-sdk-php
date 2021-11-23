@@ -42,7 +42,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
         }
         return null;
     }
-    
+
     /**
     * Sets the actionRequiredByDateTime
     * The expected deadline of the action for the message.
@@ -56,7 +56,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
         $this->_propDict["actionRequiredByDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the body
     * The content type and content of the service message body.
@@ -75,7 +75,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
         }
         return null;
     }
-    
+
     /**
     * Sets the body
     * The content type and content of the service message body.
@@ -89,7 +89,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
         $this->_propDict["body"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the category
     * The service message category. Possible values are: preventOrFixIssue, planForChange, stayInformed, unknownFutureValue.
@@ -108,7 +108,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
         }
         return null;
     }
-    
+
     /**
     * Sets the category
     * The service message category. Possible values are: preventOrFixIssue, planForChange, stayInformed, unknownFutureValue.
@@ -122,7 +122,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
         $this->_propDict["category"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isMajorChange
     * Indicates whether the message describes a major update for the service.
@@ -137,7 +137,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
             return null;
         }
     }
-    
+
     /**
     * Sets the isMajorChange
     * Indicates whether the message describes a major update for the service.
@@ -151,7 +151,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
         $this->_propDict["isMajorChange"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the services
     * The affected services by the service message.
@@ -166,7 +166,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
             return null;
         }
     }
-    
+
     /**
     * Sets the services
     * The affected services by the service message.
@@ -180,7 +180,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
         $this->_propDict["services"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the severity
     * The severity of the service message. Possible values are: normal, high, critical, unknownFutureValue.
@@ -199,7 +199,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
         }
         return null;
     }
-    
+
     /**
     * Sets the severity
     * The severity of the service message. Possible values are: normal, high, critical, unknownFutureValue.
@@ -213,7 +213,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
         $this->_propDict["severity"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tags
     * A collection of tags for the service message.
@@ -228,7 +228,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
             return null;
         }
     }
-    
+
     /**
     * Sets the tags
     * A collection of tags for the service message.
@@ -242,7 +242,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
         $this->_propDict["tags"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the viewPoint
     * Represents user view points data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
@@ -261,7 +261,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
         }
         return null;
     }
-    
+
     /**
     * Sets the viewPoint
     * Represents user view points data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
@@ -275,5 +275,5 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
         $this->_propDict["viewPoint"] = $val;
         return $this;
     }
-    
+
 }

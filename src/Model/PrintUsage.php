@@ -37,7 +37,7 @@ class PrintUsage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the completedBlackAndWhiteJobCount
     *
@@ -50,7 +50,7 @@ class PrintUsage extends Entity
         $this->_propDict["completedBlackAndWhiteJobCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the completedColorJobCount
     *
@@ -64,7 +64,7 @@ class PrintUsage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the completedColorJobCount
     *
@@ -77,7 +77,7 @@ class PrintUsage extends Entity
         $this->_propDict["completedColorJobCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the incompleteJobCount
     *
@@ -91,7 +91,7 @@ class PrintUsage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the incompleteJobCount
     *
@@ -104,7 +104,7 @@ class PrintUsage extends Entity
         $this->_propDict["incompleteJobCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the usageDate
     *
@@ -122,7 +122,7 @@ class PrintUsage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the usageDate
     *
@@ -135,5 +135,5 @@ class PrintUsage extends Entity
         $this->_propDict["usageDate"] = $val;
         return $this;
     }
-    
+
 }
