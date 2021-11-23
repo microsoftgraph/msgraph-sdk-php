@@ -42,7 +42,7 @@ class AccessPackageCatalog extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the catalogType
     * One of UserManaged or ServiceDefault.
@@ -56,7 +56,7 @@ class AccessPackageCatalog extends Entity
         $this->_propDict["catalogType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -75,7 +75,7 @@ class AccessPackageCatalog extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -89,7 +89,7 @@ class AccessPackageCatalog extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description of the access package catalog.
@@ -104,7 +104,7 @@ class AccessPackageCatalog extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description of the access package catalog.
@@ -118,7 +118,7 @@ class AccessPackageCatalog extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name of the access package catalog.
@@ -133,7 +133,7 @@ class AccessPackageCatalog extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the access package catalog.
@@ -147,7 +147,7 @@ class AccessPackageCatalog extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isExternallyVisible
     * Whether the access packages in this catalog can be requested by users outside of the tenant.
@@ -162,7 +162,7 @@ class AccessPackageCatalog extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isExternallyVisible
     * Whether the access packages in this catalog can be requested by users outside of the tenant.
@@ -176,7 +176,7 @@ class AccessPackageCatalog extends Entity
         $this->_propDict["isExternallyVisible"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the modifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -195,7 +195,7 @@ class AccessPackageCatalog extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the modifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -209,7 +209,7 @@ class AccessPackageCatalog extends Entity
         $this->_propDict["modifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     *
@@ -227,7 +227,7 @@ class AccessPackageCatalog extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     *
@@ -240,9 +240,9 @@ class AccessPackageCatalog extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the accessPackages
     * The access packages in this catalog. Read-only. Nullable.
      *
@@ -256,12 +256,12 @@ class AccessPackageCatalog extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the accessPackages
     * The access packages in this catalog. Read-only. Nullable.
     *
-    * @param AccessPackage $val The accessPackages
+    * @param AccessPackage[] $val The accessPackages
     *
     * @return AccessPackageCatalog
     */
@@ -270,5 +270,5 @@ class AccessPackageCatalog extends Entity
         $this->_propDict["accessPackages"] = $val;
         return $this;
     }
-    
+
 }

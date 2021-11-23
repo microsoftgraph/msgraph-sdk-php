@@ -42,7 +42,7 @@ class WorkbookChartAxisFormat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the font
     * Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
@@ -56,7 +56,7 @@ class WorkbookChartAxisFormat extends Entity
         $this->_propDict["font"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the line
     * Represents chart line formatting. Read-only.
@@ -75,7 +75,7 @@ class WorkbookChartAxisFormat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the line
     * Represents chart line formatting. Read-only.
@@ -89,5 +89,5 @@ class WorkbookChartAxisFormat extends Entity
         $this->_propDict["line"] = $val;
         return $this;
     }
-    
+
 }

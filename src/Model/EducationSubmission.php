@@ -42,7 +42,7 @@ class EducationSubmission extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the recipient
     * Who this submission is assigned to.
@@ -56,7 +56,7 @@ class EducationSubmission extends Entity
         $this->_propDict["recipient"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourcesFolderUrl
     * Folder where all file resources for this submission need to be stored.
@@ -71,7 +71,7 @@ class EducationSubmission extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the resourcesFolderUrl
     * Folder where all file resources for this submission need to be stored.
@@ -85,7 +85,7 @@ class EducationSubmission extends Entity
         $this->_propDict["resourcesFolderUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the returnedBy
     * User who moved the status of this submission to returned.
@@ -104,7 +104,7 @@ class EducationSubmission extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the returnedBy
     * User who moved the status of this submission to returned.
@@ -118,7 +118,7 @@ class EducationSubmission extends Entity
         $this->_propDict["returnedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the returnedDateTime
     * Moment in time when the submission was returned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -137,7 +137,7 @@ class EducationSubmission extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the returnedDateTime
     * Moment in time when the submission was returned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -151,7 +151,7 @@ class EducationSubmission extends Entity
         $this->_propDict["returnedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Read-Only. Possible values are: working, submitted, released, returned.
@@ -170,7 +170,7 @@ class EducationSubmission extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Read-Only. Possible values are: working, submitted, released, returned.
@@ -184,7 +184,7 @@ class EducationSubmission extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the submittedBy
     * User who moved the resource into the submitted state.
@@ -203,7 +203,7 @@ class EducationSubmission extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the submittedBy
     * User who moved the resource into the submitted state.
@@ -217,7 +217,7 @@ class EducationSubmission extends Entity
         $this->_propDict["submittedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the submittedDateTime
     * Moment in time when the submission was moved into the submitted state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -236,7 +236,7 @@ class EducationSubmission extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the submittedDateTime
     * Moment in time when the submission was moved into the submitted state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -250,7 +250,7 @@ class EducationSubmission extends Entity
         $this->_propDict["submittedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the unsubmittedBy
     * User who moved the resource from submitted into the working state.
@@ -269,7 +269,7 @@ class EducationSubmission extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the unsubmittedBy
     * User who moved the resource from submitted into the working state.
@@ -283,7 +283,7 @@ class EducationSubmission extends Entity
         $this->_propDict["unsubmittedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the unsubmittedDateTime
     * Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -302,7 +302,7 @@ class EducationSubmission extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the unsubmittedDateTime
     * Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -316,9 +316,9 @@ class EducationSubmission extends Entity
         $this->_propDict["unsubmittedDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the outcomes
     * Read-Write. Nullable.
      *
@@ -332,12 +332,12 @@ class EducationSubmission extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the outcomes
     * Read-Write. Nullable.
     *
-    * @param EducationOutcome $val The outcomes
+    * @param EducationOutcome[] $val The outcomes
     *
     * @return EducationSubmission
     */
@@ -346,9 +346,9 @@ class EducationSubmission extends Entity
         $this->_propDict["outcomes"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the resources
     * Nullable.
      *
@@ -362,12 +362,12 @@ class EducationSubmission extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the resources
     * Nullable.
     *
-    * @param EducationSubmissionResource $val The resources
+    * @param EducationSubmissionResource[] $val The resources
     *
     * @return EducationSubmission
     */
@@ -376,9 +376,9 @@ class EducationSubmission extends Entity
         $this->_propDict["resources"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the submittedResources
     * Read-only. Nullable.
      *
@@ -392,12 +392,12 @@ class EducationSubmission extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the submittedResources
     * Read-only. Nullable.
     *
-    * @param EducationSubmissionResource $val The submittedResources
+    * @param EducationSubmissionResource[] $val The submittedResources
     *
     * @return EducationSubmission
     */
@@ -406,5 +406,5 @@ class EducationSubmission extends Entity
         $this->_propDict["submittedResources"] = $val;
         return $this;
     }
-    
+
 }

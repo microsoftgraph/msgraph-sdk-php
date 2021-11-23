@@ -41,7 +41,7 @@ class EntitlementManagementSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the durationUntilExternalUserDeletedAfterBlocked
     *
@@ -54,7 +54,7 @@ class EntitlementManagementSettings extends Entity
         $this->_propDict["durationUntilExternalUserDeletedAfterBlocked"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalUserLifecycleAction
     * One of None, BlockSignIn, or BlockSignInAndDelete.
@@ -73,7 +73,7 @@ class EntitlementManagementSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the externalUserLifecycleAction
     * One of None, BlockSignIn, or BlockSignInAndDelete.
@@ -87,5 +87,5 @@ class EntitlementManagementSettings extends Entity
         $this->_propDict["externalUserLifecycleAction"] = $val;
         return $this;
     }
-    
+
 }

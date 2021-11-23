@@ -38,7 +38,7 @@ class MailFolder extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the childFolderCount
     * The number of immediate child mailFolders in the current mailFolder.
@@ -52,7 +52,7 @@ class MailFolder extends Entity
         $this->_propDict["childFolderCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The mailFolder's display name.
@@ -67,7 +67,7 @@ class MailFolder extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The mailFolder's display name.
@@ -81,7 +81,7 @@ class MailFolder extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isHidden
     * Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
@@ -96,7 +96,7 @@ class MailFolder extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isHidden
     * Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
@@ -110,7 +110,7 @@ class MailFolder extends Entity
         $this->_propDict["isHidden"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the parentFolderId
     * The unique identifier for the mailFolder's parent mailFolder.
@@ -125,7 +125,7 @@ class MailFolder extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the parentFolderId
     * The unique identifier for the mailFolder's parent mailFolder.
@@ -139,7 +139,7 @@ class MailFolder extends Entity
         $this->_propDict["parentFolderId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the totalItemCount
     * The number of items in the mailFolder.
@@ -154,7 +154,7 @@ class MailFolder extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the totalItemCount
     * The number of items in the mailFolder.
@@ -168,7 +168,7 @@ class MailFolder extends Entity
         $this->_propDict["totalItemCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the unreadItemCount
     * The number of items in the mailFolder marked as unread.
@@ -183,7 +183,7 @@ class MailFolder extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the unreadItemCount
     * The number of items in the mailFolder marked as unread.
@@ -197,9 +197,9 @@ class MailFolder extends Entity
         $this->_propDict["unreadItemCount"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the childFolders
     * The collection of child folders in the mailFolder.
      *
@@ -213,12 +213,12 @@ class MailFolder extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the childFolders
     * The collection of child folders in the mailFolder.
     *
-    * @param MailFolder $val The childFolders
+    * @param MailFolder[] $val The childFolders
     *
     * @return MailFolder
     */
@@ -227,9 +227,9 @@ class MailFolder extends Entity
         $this->_propDict["childFolders"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the messageRules
     * The collection of rules that apply to the user's Inbox folder.
      *
@@ -243,12 +243,12 @@ class MailFolder extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the messageRules
     * The collection of rules that apply to the user's Inbox folder.
     *
-    * @param MessageRule $val The messageRules
+    * @param MessageRule[] $val The messageRules
     *
     * @return MailFolder
     */
@@ -257,9 +257,9 @@ class MailFolder extends Entity
         $this->_propDict["messageRules"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the messages
     * The collection of messages in the mailFolder.
      *
@@ -273,12 +273,12 @@ class MailFolder extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the messages
     * The collection of messages in the mailFolder.
     *
-    * @param Message $val The messages
+    * @param Message[] $val The messages
     *
     * @return MailFolder
     */
@@ -287,9 +287,9 @@ class MailFolder extends Entity
         $this->_propDict["messages"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
      *
@@ -303,12 +303,12 @@ class MailFolder extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
     *
-    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
+    * @param MultiValueLegacyExtendedProperty[] $val The multiValueExtendedProperties
     *
     * @return MailFolder
     */
@@ -317,9 +317,9 @@ class MailFolder extends Entity
         $this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
      *
@@ -333,12 +333,12 @@ class MailFolder extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
     *
-    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
+    * @param SingleValueLegacyExtendedProperty[] $val The singleValueExtendedProperties
     *
     * @return MailFolder
     */
@@ -347,5 +347,5 @@ class MailFolder extends Entity
         $this->_propDict["singleValueExtendedProperties"] = $val;
         return $this;
     }
-    
+
 }

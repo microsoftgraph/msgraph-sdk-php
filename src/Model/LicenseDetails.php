@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class LicenseDetails extends Entity
 {
 
-     /** 
+     /**
      * Gets the servicePlans
     * Information about the service plans assigned with the license. Read-only, Not nullable
      *
@@ -39,12 +39,12 @@ class LicenseDetails extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the servicePlans
     * Information about the service plans assigned with the license. Read-only, Not nullable
     *
-    * @param ServicePlanInfo $val The servicePlans
+    * @param ServicePlanInfo[] $val The servicePlans
     *
     * @return LicenseDetails
     */
@@ -53,7 +53,7 @@ class LicenseDetails extends Entity
         $this->_propDict["servicePlans"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the skuId
     * Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
@@ -68,7 +68,7 @@ class LicenseDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the skuId
     * Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
@@ -82,7 +82,7 @@ class LicenseDetails extends Entity
         $this->_propDict["skuId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the skuPartNumber
     * Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
@@ -97,7 +97,7 @@ class LicenseDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the skuPartNumber
     * Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
@@ -111,5 +111,5 @@ class LicenseDetails extends Entity
         $this->_propDict["skuPartNumber"] = $val;
         return $this;
     }
-    
+
 }

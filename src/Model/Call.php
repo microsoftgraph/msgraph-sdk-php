@@ -38,7 +38,7 @@ class Call extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the callbackUri
     * The callback URL on which callbacks will be delivered. Must be https.
@@ -52,7 +52,7 @@ class Call extends Entity
         $this->_propDict["callbackUri"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the callChainId
     * A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
@@ -67,7 +67,7 @@ class Call extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the callChainId
     * A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
@@ -81,7 +81,7 @@ class Call extends Entity
         $this->_propDict["callChainId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the callOptions
     *
@@ -99,7 +99,7 @@ class Call extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the callOptions
     *
@@ -112,9 +112,9 @@ class Call extends Entity
         $this->_propDict["callOptions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the callRoutes
     * The routing information on how the call was retargeted. Read-only.
      *
@@ -128,12 +128,12 @@ class Call extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the callRoutes
     * The routing information on how the call was retargeted. Read-only.
     *
-    * @param CallRoute $val The callRoutes
+    * @param CallRoute[] $val The callRoutes
     *
     * @return Call
     */
@@ -142,7 +142,7 @@ class Call extends Entity
         $this->_propDict["callRoutes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the chatInfo
     * The chat information. Required information for joining a meeting.
@@ -161,7 +161,7 @@ class Call extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the chatInfo
     * The chat information. Required information for joining a meeting.
@@ -175,7 +175,7 @@ class Call extends Entity
         $this->_propDict["chatInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the direction
     * The direction of the call. The possible value are incoming or outgoing. Read-only.
@@ -194,7 +194,7 @@ class Call extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the direction
     * The direction of the call. The possible value are incoming or outgoing. Read-only.
@@ -208,7 +208,7 @@ class Call extends Entity
         $this->_propDict["direction"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the incomingContext
     * The context associated with an incoming call. Read-only. Server generated.
@@ -227,7 +227,7 @@ class Call extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the incomingContext
     * The context associated with an incoming call. Read-only. Server generated.
@@ -241,7 +241,7 @@ class Call extends Entity
         $this->_propDict["incomingContext"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mediaConfig
     * The media configuration. Required.
@@ -260,7 +260,7 @@ class Call extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the mediaConfig
     * The media configuration. Required.
@@ -274,7 +274,7 @@ class Call extends Entity
         $this->_propDict["mediaConfig"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mediaState
     * Read-only. The call media state.
@@ -293,7 +293,7 @@ class Call extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the mediaState
     * Read-only. The call media state.
@@ -307,7 +307,7 @@ class Call extends Entity
         $this->_propDict["mediaState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the meetingInfo
     * The meeting information that's required for joining a meeting.
@@ -326,7 +326,7 @@ class Call extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the meetingInfo
     * The meeting information that's required for joining a meeting.
@@ -340,7 +340,7 @@ class Call extends Entity
         $this->_propDict["meetingInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the myParticipantId
     *
@@ -354,7 +354,7 @@ class Call extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the myParticipantId
     *
@@ -367,9 +367,9 @@ class Call extends Entity
         $this->_propDict["myParticipantId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the requestedModalities
      *
      * @return array|null The requestedModalities
@@ -382,11 +382,11 @@ class Call extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the requestedModalities
     *
-    * @param Modality $val The requestedModalities
+    * @param Modality[] $val The requestedModalities
     *
     * @return Call
     */
@@ -395,7 +395,7 @@ class Call extends Entity
         $this->_propDict["requestedModalities"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resultInfo
     *
@@ -413,7 +413,7 @@ class Call extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resultInfo
     *
@@ -426,7 +426,7 @@ class Call extends Entity
         $this->_propDict["resultInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the source
     *
@@ -444,7 +444,7 @@ class Call extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the source
     *
@@ -457,7 +457,7 @@ class Call extends Entity
         $this->_propDict["source"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     *
@@ -475,7 +475,7 @@ class Call extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     *
@@ -488,7 +488,7 @@ class Call extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subject
     *
@@ -502,7 +502,7 @@ class Call extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the subject
     *
@@ -515,9 +515,9 @@ class Call extends Entity
         $this->_propDict["subject"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the targets
      *
      * @return array|null The targets
@@ -530,11 +530,11 @@ class Call extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the targets
     *
-    * @param InvitationParticipantInfo $val The targets
+    * @param InvitationParticipantInfo[] $val The targets
     *
     * @return Call
     */
@@ -543,7 +543,7 @@ class Call extends Entity
         $this->_propDict["targets"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantId
     *
@@ -557,7 +557,7 @@ class Call extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tenantId
     *
@@ -570,7 +570,7 @@ class Call extends Entity
         $this->_propDict["tenantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the toneInfo
     *
@@ -588,7 +588,7 @@ class Call extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the toneInfo
     *
@@ -601,7 +601,7 @@ class Call extends Entity
         $this->_propDict["toneInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the transcription
     * The transcription information for the call. Read-only.
@@ -620,7 +620,7 @@ class Call extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the transcription
     * The transcription information for the call. Read-only.
@@ -634,9 +634,9 @@ class Call extends Entity
         $this->_propDict["transcription"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the audioRoutingGroups
     * Read-only. Nullable.
      *
@@ -650,12 +650,12 @@ class Call extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the audioRoutingGroups
     * Read-only. Nullable.
     *
-    * @param AudioRoutingGroup $val The audioRoutingGroups
+    * @param AudioRoutingGroup[] $val The audioRoutingGroups
     *
     * @return Call
     */
@@ -664,9 +664,9 @@ class Call extends Entity
         $this->_propDict["audioRoutingGroups"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the operations
     * Read-only. Nullable.
      *
@@ -680,12 +680,12 @@ class Call extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the operations
     * Read-only. Nullable.
     *
-    * @param CommsOperation $val The operations
+    * @param CommsOperation[] $val The operations
     *
     * @return Call
     */
@@ -694,9 +694,9 @@ class Call extends Entity
         $this->_propDict["operations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the participants
     * Read-only. Nullable.
      *
@@ -710,12 +710,12 @@ class Call extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the participants
     * Read-only. Nullable.
     *
-    * @param Participant $val The participants
+    * @param Participant[] $val The participants
     *
     * @return Call
     */
@@ -724,5 +724,5 @@ class Call extends Entity
         $this->_propDict["participants"] = $val;
         return $this;
     }
-    
+
 }

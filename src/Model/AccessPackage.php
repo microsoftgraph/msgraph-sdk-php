@@ -42,7 +42,7 @@ class AccessPackage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -56,7 +56,7 @@ class AccessPackage extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description of the access package.
@@ -71,7 +71,7 @@ class AccessPackage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description of the access package.
@@ -85,7 +85,7 @@ class AccessPackage extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name of the access package.
@@ -100,7 +100,7 @@ class AccessPackage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the access package.
@@ -114,7 +114,7 @@ class AccessPackage extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isHidden
     * Whether the access package is hidden from the requestor.
@@ -129,7 +129,7 @@ class AccessPackage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isHidden
     * Whether the access package is hidden from the requestor.
@@ -143,7 +143,7 @@ class AccessPackage extends Entity
         $this->_propDict["isHidden"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the modifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -162,7 +162,7 @@ class AccessPackage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the modifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -176,7 +176,7 @@ class AccessPackage extends Entity
         $this->_propDict["modifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the catalog
     *
@@ -194,7 +194,7 @@ class AccessPackage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the catalog
     *
@@ -207,5 +207,5 @@ class AccessPackage extends Entity
         $this->_propDict["catalog"] = $val;
         return $this;
     }
-    
+
 }

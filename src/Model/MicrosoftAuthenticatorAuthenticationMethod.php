@@ -42,7 +42,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
@@ -56,7 +56,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceTag
     * Tags containing app metadata.
@@ -71,7 +71,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceTag
     * Tags containing app metadata.
@@ -85,7 +85,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
         $this->_propDict["deviceTag"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name of the device on which this app is registered.
@@ -100,7 +100,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the device on which this app is registered.
@@ -114,7 +114,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the phoneAppVersion
     * Numerical version of this instance of the Authenticator app.
@@ -129,7 +129,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
             return null;
         }
     }
-    
+
     /**
     * Sets the phoneAppVersion
     * Numerical version of this instance of the Authenticator app.
@@ -143,7 +143,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
         $this->_propDict["phoneAppVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the device
     * The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
@@ -162,7 +162,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
         }
         return null;
     }
-    
+
     /**
     * Sets the device
     * The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
@@ -176,5 +176,5 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
         $this->_propDict["device"] = $val;
         return $this;
     }
-    
+
 }

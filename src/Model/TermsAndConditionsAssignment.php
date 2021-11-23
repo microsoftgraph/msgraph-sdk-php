@@ -42,7 +42,7 @@ class TermsAndConditionsAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * Assignment target that the T&amp;C policy is assigned to.
@@ -56,5 +56,5 @@ class TermsAndConditionsAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

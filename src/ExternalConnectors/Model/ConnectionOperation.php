@@ -42,7 +42,7 @@ class ConnectionOperation extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the error
     * If status is failed, provides more information about the error that caused the failure.
@@ -56,7 +56,7 @@ class ConnectionOperation extends \Microsoft\Graph\Model\Entity
         $this->_propDict["error"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
@@ -75,7 +75,7 @@ class ConnectionOperation extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
@@ -89,5 +89,5 @@ class ConnectionOperation extends \Microsoft\Graph\Model\Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the payload
     * Payload. (UTF8 encoded byte array)
@@ -56,7 +56,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
         $this->_propDict["payload"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the payloadFileName
     * Payload file name (.mobileconfig
@@ -71,7 +71,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the payloadFileName
     * Payload file name (.mobileconfig
@@ -85,7 +85,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
         $this->_propDict["payloadFileName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the payloadName
     * Name that is displayed to the user.
@@ -100,7 +100,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the payloadName
     * Name that is displayed to the user.
@@ -114,5 +114,5 @@ class MacOSCustomConfiguration extends DeviceConfiguration
         $this->_propDict["payloadName"] = $val;
         return $this;
     }
-    
+
 }

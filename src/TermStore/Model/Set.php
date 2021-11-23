@@ -42,7 +42,7 @@ class Set extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Date and time of set creation. Read-only.
@@ -56,7 +56,7 @@ class Set extends \Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description that gives details on the term usage.
@@ -71,7 +71,7 @@ class Set extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description that gives details on the term usage.
@@ -85,9 +85,9 @@ class Set extends \Microsoft\Graph\Model\Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the localizedNames
     * Name of the set for each languageTag.
      *
@@ -101,12 +101,12 @@ class Set extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the localizedNames
     * Name of the set for each languageTag.
     *
-    * @param LocalizedName $val The localizedNames
+    * @param LocalizedName[] $val The localizedNames
     *
     * @return Set
     */
@@ -115,9 +115,9 @@ class Set extends \Microsoft\Graph\Model\Entity
         $this->_propDict["localizedNames"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the setProperties
     * Custom properties for the set.
      *
@@ -131,12 +131,12 @@ class Set extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the setProperties
     * Custom properties for the set.
     *
-    * @param \Microsoft\Graph\Model\KeyValue $val The setProperties
+    * @param \Microsoft\Graph\Model\KeyValue[] $val The setProperties
     *
     * @return Set
     */
@@ -145,9 +145,9 @@ class Set extends \Microsoft\Graph\Model\Entity
         $this->_propDict["properties"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the children
     * Children terms of set in term [store].
      *
@@ -161,12 +161,12 @@ class Set extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the children
     * Children terms of set in term [store].
     *
-    * @param Term $val The children
+    * @param Term[] $val The children
     *
     * @return Set
     */
@@ -175,7 +175,7 @@ class Set extends \Microsoft\Graph\Model\Entity
         $this->_propDict["children"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the parentGroup
     * The parent [group] that contains the set.
@@ -194,7 +194,7 @@ class Set extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the parentGroup
     * The parent [group] that contains the set.
@@ -208,9 +208,9 @@ class Set extends \Microsoft\Graph\Model\Entity
         $this->_propDict["parentGroup"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the relations
     * Indicates which terms have been pinned or reused directly under the set.
      *
@@ -224,12 +224,12 @@ class Set extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the relations
     * Indicates which terms have been pinned or reused directly under the set.
     *
-    * @param Relation $val The relations
+    * @param Relation[] $val The relations
     *
     * @return Set
     */
@@ -238,9 +238,9 @@ class Set extends \Microsoft\Graph\Model\Entity
         $this->_propDict["relations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the terms
     * All the terms under the set.
      *
@@ -254,12 +254,12 @@ class Set extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the terms
     * All the terms under the set.
     *
-    * @param Term $val The terms
+    * @param Term[] $val The terms
     *
     * @return Set
     */
@@ -268,5 +268,5 @@ class Set extends \Microsoft\Graph\Model\Entity
         $this->_propDict["terms"] = $val;
         return $this;
     }
-    
+
 }

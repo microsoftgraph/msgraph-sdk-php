@@ -42,7 +42,7 @@ class FileAttachment extends Attachment
         }
         return null;
     }
-    
+
     /**
     * Sets the contentBytes
     * The base64-encoded contents of the file.
@@ -56,7 +56,7 @@ class FileAttachment extends Attachment
         $this->_propDict["contentBytes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentId
     * The ID of the attachment in the Exchange store.
@@ -71,7 +71,7 @@ class FileAttachment extends Attachment
             return null;
         }
     }
-    
+
     /**
     * Sets the contentId
     * The ID of the attachment in the Exchange store.
@@ -85,7 +85,7 @@ class FileAttachment extends Attachment
         $this->_propDict["contentId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentLocation
     * Do not use this property as it is not supported.
@@ -100,7 +100,7 @@ class FileAttachment extends Attachment
             return null;
         }
     }
-    
+
     /**
     * Sets the contentLocation
     * Do not use this property as it is not supported.
@@ -114,5 +114,5 @@ class FileAttachment extends Attachment
         $this->_propDict["contentLocation"] = $val;
         return $this;
     }
-    
+
 }

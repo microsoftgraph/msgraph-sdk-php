@@ -38,7 +38,7 @@ class WorkbookChartSeries extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * Represents the name of a series in a chart.
@@ -52,7 +52,7 @@ class WorkbookChartSeries extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the format
     * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
@@ -71,7 +71,7 @@ class WorkbookChartSeries extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the format
     * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
@@ -85,9 +85,9 @@ class WorkbookChartSeries extends Entity
         $this->_propDict["format"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the points
     * Represents a collection of all points in the series. Read-only.
      *
@@ -101,12 +101,12 @@ class WorkbookChartSeries extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the points
     * Represents a collection of all points in the series. Read-only.
     *
-    * @param WorkbookChartPoint $val The points
+    * @param WorkbookChartPoint[] $val The points
     *
     * @return WorkbookChartSeries
     */
@@ -115,5 +115,5 @@ class WorkbookChartSeries extends Entity
         $this->_propDict["points"] = $val;
         return $this;
     }
-    
+
 }

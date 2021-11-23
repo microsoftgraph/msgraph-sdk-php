@@ -42,7 +42,7 @@ class MailAssessmentRequest extends ThreatAssessmentRequest
         }
         return null;
     }
-    
+
     /**
     * Sets the destinationRoutingReason
     * The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
@@ -56,7 +56,7 @@ class MailAssessmentRequest extends ThreatAssessmentRequest
         $this->_propDict["destinationRoutingReason"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the messageUri
     * The resource URI of the mail message for assessment.
@@ -71,7 +71,7 @@ class MailAssessmentRequest extends ThreatAssessmentRequest
             return null;
         }
     }
-    
+
     /**
     * Sets the messageUri
     * The resource URI of the mail message for assessment.
@@ -85,7 +85,7 @@ class MailAssessmentRequest extends ThreatAssessmentRequest
         $this->_propDict["messageUri"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recipientEmail
     * The mail recipient whose policies are used to assess the mail.
@@ -100,7 +100,7 @@ class MailAssessmentRequest extends ThreatAssessmentRequest
             return null;
         }
     }
-    
+
     /**
     * Sets the recipientEmail
     * The mail recipient whose policies are used to assess the mail.
@@ -114,5 +114,5 @@ class MailAssessmentRequest extends ThreatAssessmentRequest
         $this->_propDict["recipientEmail"] = $val;
         return $this;
     }
-    
+
 }

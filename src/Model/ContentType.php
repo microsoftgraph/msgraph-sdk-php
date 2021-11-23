@@ -38,7 +38,7 @@ class ContentType extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the associatedHubsUrls
     * List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
@@ -52,7 +52,7 @@ class ContentType extends Entity
         $this->_propDict["associatedHubsUrls"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The descriptive text for the item.
@@ -67,7 +67,7 @@ class ContentType extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The descriptive text for the item.
@@ -81,7 +81,7 @@ class ContentType extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the documentSet
     * Document Set metadata.
@@ -100,7 +100,7 @@ class ContentType extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the documentSet
     * Document Set metadata.
@@ -114,7 +114,7 @@ class ContentType extends Entity
         $this->_propDict["documentSet"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the documentTemplate
     * Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.
@@ -133,7 +133,7 @@ class ContentType extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the documentTemplate
     * Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.
@@ -147,7 +147,7 @@ class ContentType extends Entity
         $this->_propDict["documentTemplate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the group
     * The name of the group this content type belongs to. Helps organize related content types.
@@ -162,7 +162,7 @@ class ContentType extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the group
     * The name of the group this content type belongs to. Helps organize related content types.
@@ -176,7 +176,7 @@ class ContentType extends Entity
         $this->_propDict["group"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hidden
     * Indicates whether the content type is hidden in the list's 'New' menu.
@@ -191,7 +191,7 @@ class ContentType extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hidden
     * Indicates whether the content type is hidden in the list's 'New' menu.
@@ -205,7 +205,7 @@ class ContentType extends Entity
         $this->_propDict["hidden"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the inheritedFrom
     * If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.
@@ -224,7 +224,7 @@ class ContentType extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the inheritedFrom
     * If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.
@@ -238,7 +238,7 @@ class ContentType extends Entity
         $this->_propDict["inheritedFrom"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isBuiltIn
     * Specifies if a content type is a built-in content type.
@@ -253,7 +253,7 @@ class ContentType extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isBuiltIn
     * Specifies if a content type is a built-in content type.
@@ -267,7 +267,7 @@ class ContentType extends Entity
         $this->_propDict["isBuiltIn"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the name
     * The name of the content type.
@@ -282,7 +282,7 @@ class ContentType extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * The name of the content type.
@@ -296,7 +296,7 @@ class ContentType extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the order
     * Specifies the order in which the content type appears in the selection UI.
@@ -315,7 +315,7 @@ class ContentType extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the order
     * Specifies the order in which the content type appears in the selection UI.
@@ -329,7 +329,7 @@ class ContentType extends Entity
         $this->_propDict["order"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the parentId
     * The unique identifier of the content type.
@@ -344,7 +344,7 @@ class ContentType extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the parentId
     * The unique identifier of the content type.
@@ -358,7 +358,7 @@ class ContentType extends Entity
         $this->_propDict["parentId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the propagateChanges
     * If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
@@ -373,7 +373,7 @@ class ContentType extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the propagateChanges
     * If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
@@ -387,7 +387,7 @@ class ContentType extends Entity
         $this->_propDict["propagateChanges"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the readOnly
     * If true, the content type can't be modified unless this value is first set to false.
@@ -402,7 +402,7 @@ class ContentType extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the readOnly
     * If true, the content type can't be modified unless this value is first set to false.
@@ -416,7 +416,7 @@ class ContentType extends Entity
         $this->_propDict["readOnly"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the sealed
     * If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
@@ -431,7 +431,7 @@ class ContentType extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sealed
     * If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
@@ -445,7 +445,7 @@ class ContentType extends Entity
         $this->_propDict["sealed"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the base
     * Parent contentType from which this content type is derived.
@@ -464,7 +464,7 @@ class ContentType extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the base
     * Parent contentType from which this content type is derived.
@@ -478,9 +478,9 @@ class ContentType extends Entity
         $this->_propDict["base"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the baseTypes
     * The collection of content types that are ancestors of this content type.
      *
@@ -494,12 +494,12 @@ class ContentType extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the baseTypes
     * The collection of content types that are ancestors of this content type.
     *
-    * @param ContentType $val The baseTypes
+    * @param ContentType[] $val The baseTypes
     *
     * @return ContentType
     */
@@ -508,9 +508,9 @@ class ContentType extends Entity
         $this->_propDict["baseTypes"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the columnLinks
     * The collection of columns that are required by this content type.
      *
@@ -524,12 +524,12 @@ class ContentType extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the columnLinks
     * The collection of columns that are required by this content type.
     *
-    * @param ColumnLink $val The columnLinks
+    * @param ColumnLink[] $val The columnLinks
     *
     * @return ContentType
     */
@@ -538,9 +538,9 @@ class ContentType extends Entity
         $this->_propDict["columnLinks"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the columnPositions
     * Column order information in a content type.
      *
@@ -554,12 +554,12 @@ class ContentType extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the columnPositions
     * Column order information in a content type.
     *
-    * @param ColumnDefinition $val The columnPositions
+    * @param ColumnDefinition[] $val The columnPositions
     *
     * @return ContentType
     */
@@ -568,9 +568,9 @@ class ContentType extends Entity
         $this->_propDict["columnPositions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the columns
     * The collection of column definitions for this contentType.
      *
@@ -584,12 +584,12 @@ class ContentType extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the columns
     * The collection of column definitions for this contentType.
     *
-    * @param ColumnDefinition $val The columns
+    * @param ColumnDefinition[] $val The columns
     *
     * @return ContentType
     */
@@ -598,5 +598,5 @@ class ContentType extends Entity
         $this->_propDict["columns"] = $val;
         return $this;
     }
-    
+
 }

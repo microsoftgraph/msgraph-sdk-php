@@ -42,7 +42,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the audio
     * Audio metadata, if the item is an audio file. Read-only.
@@ -56,7 +56,7 @@ class DriveItem extends BaseItem
         $this->_propDict["audio"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the bundle
     *
@@ -74,7 +74,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the bundle
     *
@@ -87,7 +87,7 @@ class DriveItem extends BaseItem
         $this->_propDict["bundle"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the content
     * The content stream, if the item represents a file.
@@ -106,7 +106,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the content
     * The content stream, if the item represents a file.
@@ -120,7 +120,7 @@ class DriveItem extends BaseItem
         $this->_propDict["content"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the cTag
     * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
@@ -135,7 +135,7 @@ class DriveItem extends BaseItem
             return null;
         }
     }
-    
+
     /**
     * Sets the cTag
     * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
@@ -149,7 +149,7 @@ class DriveItem extends BaseItem
         $this->_propDict["cTag"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deleted
     * Information about the deleted state of the item. Read-only.
@@ -168,7 +168,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the deleted
     * Information about the deleted state of the item. Read-only.
@@ -182,7 +182,7 @@ class DriveItem extends BaseItem
         $this->_propDict["deleted"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the file
     * File metadata, if the item is a file. Read-only.
@@ -201,7 +201,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the file
     * File metadata, if the item is a file. Read-only.
@@ -215,7 +215,7 @@ class DriveItem extends BaseItem
         $this->_propDict["file"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileSystemInfo
     * File system information on client. Read-write.
@@ -234,7 +234,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the fileSystemInfo
     * File system information on client. Read-write.
@@ -248,7 +248,7 @@ class DriveItem extends BaseItem
         $this->_propDict["fileSystemInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the folder
     * Folder metadata, if the item is a folder. Read-only.
@@ -267,7 +267,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the folder
     * Folder metadata, if the item is a folder. Read-only.
@@ -281,7 +281,7 @@ class DriveItem extends BaseItem
         $this->_propDict["folder"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the image
     * Image metadata, if the item is an image. Read-only.
@@ -300,7 +300,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the image
     * Image metadata, if the item is an image. Read-only.
@@ -314,7 +314,7 @@ class DriveItem extends BaseItem
         $this->_propDict["image"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the location
     * Location metadata, if the item has location data. Read-only.
@@ -333,7 +333,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the location
     * Location metadata, if the item has location data. Read-only.
@@ -347,7 +347,7 @@ class DriveItem extends BaseItem
         $this->_propDict["location"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the malware
     * Malware metadata, if the item was detected to contain malware. Read-only.
@@ -366,7 +366,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the malware
     * Malware metadata, if the item was detected to contain malware. Read-only.
@@ -380,7 +380,7 @@ class DriveItem extends BaseItem
         $this->_propDict["malware"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the package
     * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
@@ -399,7 +399,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the package
     * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
@@ -413,7 +413,7 @@ class DriveItem extends BaseItem
         $this->_propDict["package"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the pendingOperations
     * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
@@ -432,7 +432,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the pendingOperations
     * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
@@ -446,7 +446,7 @@ class DriveItem extends BaseItem
         $this->_propDict["pendingOperations"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the photo
     * Photo metadata, if the item is a photo. Read-only.
@@ -465,7 +465,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the photo
     * Photo metadata, if the item is a photo. Read-only.
@@ -479,7 +479,7 @@ class DriveItem extends BaseItem
         $this->_propDict["photo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publication
     * Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
@@ -498,7 +498,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the publication
     * Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
@@ -512,7 +512,7 @@ class DriveItem extends BaseItem
         $this->_propDict["publication"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the remoteItem
     * Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
@@ -531,7 +531,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the remoteItem
     * Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
@@ -545,7 +545,7 @@ class DriveItem extends BaseItem
         $this->_propDict["remoteItem"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the root
     * If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive.
@@ -564,7 +564,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the root
     * If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive.
@@ -578,7 +578,7 @@ class DriveItem extends BaseItem
         $this->_propDict["root"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the searchResult
     * Search metadata, if the item is from a search result. Read-only.
@@ -597,7 +597,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the searchResult
     * Search metadata, if the item is from a search result. Read-only.
@@ -611,7 +611,7 @@ class DriveItem extends BaseItem
         $this->_propDict["searchResult"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the shared
     * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
@@ -630,7 +630,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the shared
     * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
@@ -644,7 +644,7 @@ class DriveItem extends BaseItem
         $this->_propDict["shared"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sharepointIds
     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
@@ -663,7 +663,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the sharepointIds
     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
@@ -677,7 +677,7 @@ class DriveItem extends BaseItem
         $this->_propDict["sharepointIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the size
     * Size of the item in bytes. Read-only.
@@ -692,7 +692,7 @@ class DriveItem extends BaseItem
             return null;
         }
     }
-    
+
     /**
     * Sets the size
     * Size of the item in bytes. Read-only.
@@ -706,7 +706,7 @@ class DriveItem extends BaseItem
         $this->_propDict["size"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the specialFolder
     * If the current item is also available as a special folder, this facet is returned. Read-only.
@@ -725,7 +725,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the specialFolder
     * If the current item is also available as a special folder, this facet is returned. Read-only.
@@ -739,7 +739,7 @@ class DriveItem extends BaseItem
         $this->_propDict["specialFolder"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the video
     * Video metadata, if the item is a video. Read-only.
@@ -758,7 +758,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the video
     * Video metadata, if the item is a video. Read-only.
@@ -772,7 +772,7 @@ class DriveItem extends BaseItem
         $this->_propDict["video"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the webDavUrl
     * WebDAV compatible URL for the item.
@@ -787,7 +787,7 @@ class DriveItem extends BaseItem
             return null;
         }
     }
-    
+
     /**
     * Sets the webDavUrl
     * WebDAV compatible URL for the item.
@@ -801,7 +801,7 @@ class DriveItem extends BaseItem
         $this->_propDict["webDavUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the workbook
     * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
@@ -820,7 +820,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the workbook
     * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
@@ -834,7 +834,7 @@ class DriveItem extends BaseItem
         $this->_propDict["workbook"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the analytics
     * Analytics about the view activities that took place on this item.
@@ -853,7 +853,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the analytics
     * Analytics about the view activities that took place on this item.
@@ -867,9 +867,9 @@ class DriveItem extends BaseItem
         $this->_propDict["analytics"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the children
     * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
      *
@@ -883,12 +883,12 @@ class DriveItem extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the children
     * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
     *
-    * @param DriveItem $val The children
+    * @param DriveItem[] $val The children
     *
     * @return DriveItem
     */
@@ -897,7 +897,7 @@ class DriveItem extends BaseItem
         $this->_propDict["children"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the listItem
     * For drives in SharePoint, the associated document library list item. Read-only. Nullable.
@@ -916,7 +916,7 @@ class DriveItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the listItem
     * For drives in SharePoint, the associated document library list item. Read-only. Nullable.
@@ -930,9 +930,9 @@ class DriveItem extends BaseItem
         $this->_propDict["listItem"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the permissions
     * The set of permissions for the item. Read-only. Nullable.
      *
@@ -946,12 +946,12 @@ class DriveItem extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the permissions
     * The set of permissions for the item. Read-only. Nullable.
     *
-    * @param Permission $val The permissions
+    * @param Permission[] $val The permissions
     *
     * @return DriveItem
     */
@@ -960,9 +960,9 @@ class DriveItem extends BaseItem
         $this->_propDict["permissions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the subscriptions
     * The set of subscriptions on the item. Only supported on the root of a drive.
      *
@@ -976,12 +976,12 @@ class DriveItem extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the subscriptions
     * The set of subscriptions on the item. Only supported on the root of a drive.
     *
-    * @param Subscription $val The subscriptions
+    * @param Subscription[] $val The subscriptions
     *
     * @return DriveItem
     */
@@ -990,9 +990,9 @@ class DriveItem extends BaseItem
         $this->_propDict["subscriptions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the thumbnails
     * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
      *
@@ -1006,12 +1006,12 @@ class DriveItem extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the thumbnails
     * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
     *
-    * @param ThumbnailSet $val The thumbnails
+    * @param ThumbnailSet[] $val The thumbnails
     *
     * @return DriveItem
     */
@@ -1020,9 +1020,9 @@ class DriveItem extends BaseItem
         $this->_propDict["thumbnails"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the versions
     * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
      *
@@ -1036,12 +1036,12 @@ class DriveItem extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the versions
     * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
     *
-    * @param DriveItemVersion $val The versions
+    * @param DriveItemVersion[] $val The versions
     *
     * @return DriveItem
     */
@@ -1050,5 +1050,5 @@ class DriveItem extends BaseItem
         $this->_propDict["versions"] = $val;
         return $this;
     }
-    
+
 }

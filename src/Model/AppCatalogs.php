@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class AppCatalogs extends Entity
 {
 
-     /** 
+     /**
      * Gets the teamsApps
      *
      * @return array|null The teamsApps
@@ -38,11 +38,11 @@ class AppCatalogs extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the teamsApps
     *
-    * @param TeamsApp $val The teamsApps
+    * @param TeamsApp[] $val The teamsApps
     *
     * @return AppCatalogs
     */
@@ -51,5 +51,5 @@ class AppCatalogs extends Entity
         $this->_propDict["teamsApps"] = $val;
         return $this;
     }
-    
+
 }

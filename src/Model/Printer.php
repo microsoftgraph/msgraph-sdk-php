@@ -38,7 +38,7 @@ class Printer extends PrinterBase
             return null;
         }
     }
-    
+
     /**
     * Sets the hasPhysicalDevice
     * True if the printer has a physical device for printing. Read-only.
@@ -52,7 +52,7 @@ class Printer extends PrinterBase
         $this->_propDict["hasPhysicalDevice"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isShared
     * True if the printer is shared; false otherwise. Read-only.
@@ -67,7 +67,7 @@ class Printer extends PrinterBase
             return null;
         }
     }
-    
+
     /**
     * Sets the isShared
     * True if the printer is shared; false otherwise. Read-only.
@@ -81,7 +81,7 @@ class Printer extends PrinterBase
         $this->_propDict["isShared"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastSeenDateTime
     * The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
@@ -100,7 +100,7 @@ class Printer extends PrinterBase
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSeenDateTime
     * The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
@@ -114,7 +114,7 @@ class Printer extends PrinterBase
         $this->_propDict["lastSeenDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the registeredDateTime
     * The DateTimeOffset when the printer was registered. Read-only.
@@ -133,7 +133,7 @@ class Printer extends PrinterBase
         }
         return null;
     }
-    
+
     /**
     * Sets the registeredDateTime
     * The DateTimeOffset when the printer was registered. Read-only.
@@ -147,9 +147,9 @@ class Printer extends PrinterBase
         $this->_propDict["registeredDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the connectors
     * The connectors that are associated with the printer.
      *
@@ -163,12 +163,12 @@ class Printer extends PrinterBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the connectors
     * The connectors that are associated with the printer.
     *
-    * @param PrintConnector $val The connectors
+    * @param PrintConnector[] $val The connectors
     *
     * @return Printer
     */
@@ -177,9 +177,9 @@ class Printer extends PrinterBase
         $this->_propDict["connectors"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the shares
     * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
      *
@@ -193,12 +193,12 @@ class Printer extends PrinterBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the shares
     * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
     *
-    * @param PrinterShare $val The shares
+    * @param PrinterShare[] $val The shares
     *
     * @return Printer
     */
@@ -207,9 +207,9 @@ class Printer extends PrinterBase
         $this->_propDict["shares"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the taskTriggers
     * A list of task triggers that are associated with the printer.
      *
@@ -223,12 +223,12 @@ class Printer extends PrinterBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the taskTriggers
     * A list of task triggers that are associated with the printer.
     *
-    * @param PrintTaskTrigger $val The taskTriggers
+    * @param PrintTaskTrigger[] $val The taskTriggers
     *
     * @return Printer
     */
@@ -237,5 +237,5 @@ class Printer extends PrinterBase
         $this->_propDict["taskTriggers"] = $val;
         return $this;
     }
-    
+
 }

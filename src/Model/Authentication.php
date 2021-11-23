@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class Authentication extends Entity
 {
 
-     /** 
+     /**
      * Gets the fido2Methods
      *
      * @return array|null The fido2Methods
@@ -38,11 +38,11 @@ class Authentication extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the fido2Methods
     *
-    * @param Fido2AuthenticationMethod $val The fido2Methods
+    * @param Fido2AuthenticationMethod[] $val The fido2Methods
     *
     * @return Authentication
     */
@@ -51,9 +51,9 @@ class Authentication extends Entity
         $this->_propDict["fido2Methods"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the methods
      *
      * @return array|null The methods
@@ -66,11 +66,11 @@ class Authentication extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the methods
     *
-    * @param AuthenticationMethod $val The methods
+    * @param AuthenticationMethod[] $val The methods
     *
     * @return Authentication
     */
@@ -79,9 +79,9 @@ class Authentication extends Entity
         $this->_propDict["methods"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the microsoftAuthenticatorMethods
      *
      * @return array|null The microsoftAuthenticatorMethods
@@ -94,11 +94,11 @@ class Authentication extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the microsoftAuthenticatorMethods
     *
-    * @param MicrosoftAuthenticatorAuthenticationMethod $val The microsoftAuthenticatorMethods
+    * @param MicrosoftAuthenticatorAuthenticationMethod[] $val The microsoftAuthenticatorMethods
     *
     * @return Authentication
     */
@@ -107,9 +107,9 @@ class Authentication extends Entity
         $this->_propDict["microsoftAuthenticatorMethods"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the windowsHelloForBusinessMethods
      *
      * @return array|null The windowsHelloForBusinessMethods
@@ -122,11 +122,11 @@ class Authentication extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the windowsHelloForBusinessMethods
     *
-    * @param WindowsHelloForBusinessAuthenticationMethod $val The windowsHelloForBusinessMethods
+    * @param WindowsHelloForBusinessAuthenticationMethod[] $val The windowsHelloForBusinessMethods
     *
     * @return Authentication
     */
@@ -135,5 +135,5 @@ class Authentication extends Entity
         $this->_propDict["windowsHelloForBusinessMethods"] = $val;
         return $this;
     }
-    
+
 }
