@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * RecommendationResource File
 * PHP version 7
 *
@@ -41,7 +41,6 @@ class RecommendationResource extends Entity
         }
         return null;
     }
-
     /**
     * Sets the addedDateTime
     *
@@ -82,7 +81,6 @@ class RecommendationResource extends Entity
         $this->_propDict["additionalDetails"] = $val;
         return $this;
     }
-
     /**
     * Gets the apiUrl
     *
@@ -96,7 +94,6 @@ class RecommendationResource extends Entity
             return null;
         }
     }
-
     /**
     * Sets the apiUrl
     *
@@ -109,7 +106,6 @@ class RecommendationResource extends Entity
         $this->_propDict["apiUrl"] = $val;
         return $this;
     }
-
     /**
     * Gets the displayName
     *
@@ -123,7 +119,6 @@ class RecommendationResource extends Entity
             return null;
         }
     }
-
     /**
     * Sets the displayName
     *
@@ -136,7 +131,6 @@ class RecommendationResource extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-
     /**
     * Gets the owner
     *
@@ -150,7 +144,6 @@ class RecommendationResource extends Entity
             return null;
         }
     }
-
     /**
     * Sets the owner
     *
@@ -163,7 +156,6 @@ class RecommendationResource extends Entity
         $this->_propDict["owner"] = $val;
         return $this;
     }
-
     /**
     * Gets the portalUrl
     *
@@ -177,7 +169,6 @@ class RecommendationResource extends Entity
             return null;
         }
     }
-
     /**
     * Sets the portalUrl
     *
@@ -190,7 +181,6 @@ class RecommendationResource extends Entity
         $this->_propDict["portalUrl"] = $val;
         return $this;
     }
-
     /**
     * Gets the rank
     *
@@ -204,7 +194,6 @@ class RecommendationResource extends Entity
             return null;
         }
     }
-
     /**
     * Sets the rank
     *
@@ -217,7 +206,6 @@ class RecommendationResource extends Entity
         $this->_propDict["rank"] = intval($val);
         return $this;
     }
-
     /**
     * Gets the recommendationId
     *
@@ -231,7 +219,6 @@ class RecommendationResource extends Entity
             return null;
         }
     }
-
     /**
     * Sets the recommendationId
     *
@@ -244,7 +231,6 @@ class RecommendationResource extends Entity
         $this->_propDict["recommendationId"] = $val;
         return $this;
     }
-
     /**
     * Gets the resourceType
     *
@@ -258,7 +244,6 @@ class RecommendationResource extends Entity
             return null;
         }
     }
-
     /**
     * Sets the resourceType
     *
@@ -271,7 +256,6 @@ class RecommendationResource extends Entity
         $this->_propDict["resourceType"] = $val;
         return $this;
     }
-
     /**
     * Gets the status
     *
@@ -289,7 +273,6 @@ class RecommendationResource extends Entity
         }
         return null;
     }
-
     /**
     * Sets the status
     *
@@ -302,5 +285,4 @@ class RecommendationResource extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-
 }

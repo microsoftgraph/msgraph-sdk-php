@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * Recommendation File
 * PHP version 7
 *
@@ -51,7 +51,6 @@ class Recommendation extends Entity
         $this->_propDict["actionSteps"] = $val;
         return $this;
     }
-
     /**
     * Gets the benefits
     *
@@ -65,7 +64,6 @@ class Recommendation extends Entity
             return null;
         }
     }
-
     /**
     * Sets the benefits
     *
@@ -78,7 +76,6 @@ class Recommendation extends Entity
         $this->_propDict["benefits"] = $val;
         return $this;
     }
-
     /**
     * Gets the category
     *
@@ -96,7 +93,6 @@ class Recommendation extends Entity
         }
         return null;
     }
-
     /**
     * Sets the category
     *
@@ -109,7 +105,6 @@ class Recommendation extends Entity
         $this->_propDict["category"] = $val;
         return $this;
     }
-
     /**
     * Gets the createdDateTime
     *
@@ -127,7 +122,6 @@ class Recommendation extends Entity
         }
         return null;
     }
-
     /**
     * Sets the createdDateTime
     *
@@ -140,7 +134,6 @@ class Recommendation extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-
     /**
     * Gets the displayName
     *
@@ -154,7 +147,6 @@ class Recommendation extends Entity
             return null;
         }
     }
-
     /**
     * Sets the displayName
     *
@@ -167,7 +159,6 @@ class Recommendation extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-
     /**
     * Gets the impactStartDateTime
     *
@@ -185,7 +176,6 @@ class Recommendation extends Entity
         }
         return null;
     }
-
     /**
     * Sets the impactStartDateTime
     *
@@ -198,7 +188,6 @@ class Recommendation extends Entity
         $this->_propDict["impactStartDateTime"] = $val;
         return $this;
     }
-
     /**
     * Gets the impactType
     *
@@ -212,7 +201,6 @@ class Recommendation extends Entity
             return null;
         }
     }
-
     /**
     * Sets the impactType
     *
@@ -225,7 +213,6 @@ class Recommendation extends Entity
         $this->_propDict["impactType"] = $val;
         return $this;
     }
-
     /**
     * Gets the insights
     *
@@ -239,7 +226,6 @@ class Recommendation extends Entity
             return null;
         }
     }
-
     /**
     * Sets the insights
     *
@@ -252,7 +238,6 @@ class Recommendation extends Entity
         $this->_propDict["insights"] = $val;
         return $this;
     }
-
     /**
     * Gets the lastCheckedDateTime
     *
@@ -270,7 +255,6 @@ class Recommendation extends Entity
         }
         return null;
     }
-
     /**
     * Sets the lastCheckedDateTime
     *
@@ -283,7 +267,6 @@ class Recommendation extends Entity
         $this->_propDict["lastCheckedDateTime"] = $val;
         return $this;
     }
-
     /**
     * Gets the lastModifiedBy
     *
@@ -297,7 +280,6 @@ class Recommendation extends Entity
             return null;
         }
     }
-
     /**
     * Sets the lastModifiedBy
     *
@@ -310,7 +292,6 @@ class Recommendation extends Entity
         $this->_propDict["lastModifiedBy"] = $val;
         return $this;
     }
-
     /**
     * Gets the lastModifiedDateTime
     *
@@ -328,7 +309,6 @@ class Recommendation extends Entity
         }
         return null;
     }
-
     /**
     * Sets the lastModifiedDateTime
     *
@@ -341,7 +321,6 @@ class Recommendation extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-
     /**
     * Gets the postponeUntilDateTime
     *
@@ -359,7 +338,6 @@ class Recommendation extends Entity
         }
         return null;
     }
-
     /**
     * Sets the postponeUntilDateTime
     *
@@ -372,7 +350,6 @@ class Recommendation extends Entity
         $this->_propDict["postponeUntilDateTime"] = $val;
         return $this;
     }
-
     /**
     * Gets the priority
     *
@@ -390,7 +367,6 @@ class Recommendation extends Entity
         }
         return null;
     }
-
     /**
     * Sets the priority
     *
@@ -403,7 +379,6 @@ class Recommendation extends Entity
         $this->_propDict["priority"] = $val;
         return $this;
     }
-
     /**
     * Gets the status
     *
@@ -421,7 +396,6 @@ class Recommendation extends Entity
         }
         return null;
     }
-
     /**
     * Sets the status
     *
@@ -462,5 +436,4 @@ class Recommendation extends Entity
         $this->_propDict["impactedResources"] = $val;
         return $this;
     }
-
 }
