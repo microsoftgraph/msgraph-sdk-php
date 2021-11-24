@@ -42,7 +42,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
         }
         return null;
     }
-    
+
     /**
     * Sets the content
     * The page's HTML content.
@@ -56,7 +56,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
         $this->_propDict["content"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentUrl
     * The URL for the page's HTML content.  Read-only.
@@ -71,7 +71,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
             return null;
         }
     }
-    
+
     /**
     * Sets the contentUrl
     * The URL for the page's HTML content.  Read-only.
@@ -85,7 +85,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
         $this->_propDict["contentUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdByAppId
     * The unique identifier of the application that created the page. Read-only.
@@ -100,7 +100,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
             return null;
         }
     }
-    
+
     /**
     * Sets the createdByAppId
     * The unique identifier of the application that created the page. Read-only.
@@ -114,7 +114,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
         $this->_propDict["createdByAppId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -133,7 +133,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -147,7 +147,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the level
     * The indentation level of the page. Read-only.
@@ -162,7 +162,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
             return null;
         }
     }
-    
+
     /**
     * Sets the level
     * The indentation level of the page. Read-only.
@@ -176,7 +176,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
         $this->_propDict["level"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the links
     * Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
@@ -195,7 +195,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
         }
         return null;
     }
-    
+
     /**
     * Sets the links
     * Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
@@ -209,7 +209,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
         $this->_propDict["links"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the order
     * The order of the page within its parent section. Read-only.
@@ -224,7 +224,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
             return null;
         }
     }
-    
+
     /**
     * Sets the order
     * The order of the page within its parent section. Read-only.
@@ -238,7 +238,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
         $this->_propDict["order"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the title
     * The title of the page.
@@ -253,7 +253,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
             return null;
         }
     }
-    
+
     /**
     * Sets the title
     * The title of the page.
@@ -267,7 +267,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
         $this->_propDict["title"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userTags
     *
@@ -281,7 +281,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
             return null;
         }
     }
-    
+
     /**
     * Sets the userTags
     *
@@ -294,7 +294,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
         $this->_propDict["userTags"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the parentNotebook
     * The notebook that contains the page.  Read-only.
@@ -313,7 +313,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
         }
         return null;
     }
-    
+
     /**
     * Sets the parentNotebook
     * The notebook that contains the page.  Read-only.
@@ -327,7 +327,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
         $this->_propDict["parentNotebook"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the parentSection
     * The section that contains the page. Read-only.
@@ -346,7 +346,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
         }
         return null;
     }
-    
+
     /**
     * Sets the parentSection
     * The section that contains the page. Read-only.
@@ -360,5 +360,5 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
         $this->_propDict["parentSection"] = $val;
         return $this;
     }
-    
+
 }

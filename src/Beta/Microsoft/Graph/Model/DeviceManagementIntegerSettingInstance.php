@@ -38,7 +38,7 @@ class DeviceManagementIntegerSettingInstance extends DeviceManagementSettingInst
             return null;
         }
     }
-    
+
     /**
     * Sets the value
     * The integer value
@@ -52,5 +52,5 @@ class DeviceManagementIntegerSettingInstance extends DeviceManagementSettingInst
         $this->_propDict["value"] = intval($val);
         return $this;
     }
-    
+
 }

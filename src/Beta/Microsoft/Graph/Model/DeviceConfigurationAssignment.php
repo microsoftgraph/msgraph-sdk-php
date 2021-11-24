@@ -42,7 +42,7 @@ class DeviceConfigurationAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the intent
     * The admin intent to apply or remove the profile. This property is read-only. Possible values are: apply, remove.
@@ -56,7 +56,7 @@ class DeviceConfigurationAssignment extends Entity
         $this->_propDict["intent"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the source
     * The assignment source for the device configuration, direct or parcel/policySet. This property is read-only. Possible values are: direct, policySets.
@@ -75,7 +75,7 @@ class DeviceConfigurationAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the source
     * The assignment source for the device configuration, direct or parcel/policySet. This property is read-only. Possible values are: direct, policySets.
@@ -89,7 +89,7 @@ class DeviceConfigurationAssignment extends Entity
         $this->_propDict["source"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sourceId
     * The identifier of the source of the assignment. This property is read-only.
@@ -104,7 +104,7 @@ class DeviceConfigurationAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sourceId
     * The identifier of the source of the assignment. This property is read-only.
@@ -118,7 +118,7 @@ class DeviceConfigurationAssignment extends Entity
         $this->_propDict["sourceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the target
     * The assignment target for the device configuration.
@@ -137,7 +137,7 @@ class DeviceConfigurationAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The assignment target for the device configuration.
@@ -151,5 +151,5 @@ class DeviceConfigurationAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

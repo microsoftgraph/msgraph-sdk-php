@@ -38,7 +38,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
             return null;
         }
     }
-    
+
     /**
     * Sets the appCrashCount
     * The number of crashes for the app. Valid values -2147483648 to 2147483647
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
         $this->_propDict["appCrashCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the appDisplayName
     * The friendly name of the application.
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
             return null;
         }
     }
-    
+
     /**
     * Sets the appDisplayName
     * The friendly name of the application.
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
         $this->_propDict["appDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appName
     * The name of the application.
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
             return null;
         }
     }
-    
+
     /**
     * Sets the appName
     * The name of the application.
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
         $this->_propDict["appName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appPublisher
     * The publisher of the application.
@@ -125,7 +125,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
             return null;
         }
     }
-    
+
     /**
     * Sets the appPublisher
     * The publisher of the application.
@@ -139,7 +139,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
         $this->_propDict["appPublisher"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appVersion
     * The version of the application.
@@ -154,7 +154,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
             return null;
         }
     }
-    
+
     /**
     * Sets the appVersion
     * The version of the application.
@@ -168,7 +168,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
         $this->_propDict["appVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceCountWithCrashes
     * The total number of devices that have reported one or more application crashes for this application and version. Valid values -2147483648 to 2147483647
@@ -183,7 +183,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceCountWithCrashes
     * The total number of devices that have reported one or more application crashes for this application and version. Valid values -2147483648 to 2147483647
@@ -197,7 +197,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
         $this->_propDict["deviceCountWithCrashes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isLatestUsedVersion
     * Is the version of application the latest version for that app that is in use.
@@ -212,7 +212,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
             return null;
         }
     }
-    
+
     /**
     * Sets the isLatestUsedVersion
     * Is the version of application the latest version for that app that is in use.
@@ -226,7 +226,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
         $this->_propDict["isLatestUsedVersion"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isMostUsedVersion
     * Is the version of application the most used version for that app.
@@ -241,7 +241,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
             return null;
         }
     }
-    
+
     /**
     * Sets the isMostUsedVersion
     * Is the version of application the most used version for that app.
@@ -255,5 +255,5 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
         $this->_propDict["isMostUsedVersion"] = boolval($val);
         return $this;
     }
-    
+
 }

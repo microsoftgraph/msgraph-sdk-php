@@ -31,7 +31,7 @@ class EducationRoot implements \JsonSerializable
     * @var array $_propDict
     */
     protected $_propDict;
-    
+
     /**
     * Construct a new EducationRoot
     *
@@ -54,9 +54,9 @@ class EducationRoot implements \JsonSerializable
     {
         return $this->_propDict;
     }
-    
 
-     /** 
+
+     /**
      * Gets the classes
      *
      * @return array|null The classes
@@ -69,11 +69,11 @@ class EducationRoot implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the classes
     *
-    * @param EducationClass $val The classes
+    * @param EducationClass[] $val The classes
     *
     * @return EducationRoot
     */
@@ -82,7 +82,7 @@ class EducationRoot implements \JsonSerializable
         $this->_propDict["classes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the me
     *
@@ -100,7 +100,7 @@ class EducationRoot implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the me
     *
@@ -113,9 +113,9 @@ class EducationRoot implements \JsonSerializable
         $this->_propDict["me"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the schools
      *
      * @return array|null The schools
@@ -128,11 +128,11 @@ class EducationRoot implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the schools
     *
-    * @param EducationSchool $val The schools
+    * @param EducationSchool[] $val The schools
     *
     * @return EducationRoot
     */
@@ -141,9 +141,9 @@ class EducationRoot implements \JsonSerializable
         $this->_propDict["schools"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the users
      *
      * @return array|null The users
@@ -156,11 +156,11 @@ class EducationRoot implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the users
     *
-    * @param EducationUser $val The users
+    * @param EducationUser[] $val The users
     *
     * @return EducationRoot
     */
@@ -169,7 +169,7 @@ class EducationRoot implements \JsonSerializable
         $this->_propDict["users"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ODataType
     *
@@ -182,7 +182,7 @@ class EducationRoot implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the ODataType
     *
@@ -195,7 +195,7 @@ class EducationRoot implements \JsonSerializable
         $this->_propDict["@odata.type"] = $val;
         return $this;
     }
-    
+
     /**
     * Serializes the object by property array
     * Manually serialize DateTime into RFC3339 format

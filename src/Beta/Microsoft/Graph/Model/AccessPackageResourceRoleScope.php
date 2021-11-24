@@ -38,7 +38,7 @@ class AccessPackageResourceRoleScope extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the createdBy
     * Read-only.
@@ -52,7 +52,7 @@ class AccessPackageResourceRoleScope extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -71,7 +71,7 @@ class AccessPackageResourceRoleScope extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -85,7 +85,7 @@ class AccessPackageResourceRoleScope extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the modifiedBy
     * Read-only.
@@ -100,7 +100,7 @@ class AccessPackageResourceRoleScope extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the modifiedBy
     * Read-only.
@@ -114,7 +114,7 @@ class AccessPackageResourceRoleScope extends Entity
         $this->_propDict["modifiedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the modifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -133,7 +133,7 @@ class AccessPackageResourceRoleScope extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the modifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -147,7 +147,7 @@ class AccessPackageResourceRoleScope extends Entity
         $this->_propDict["modifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the accessPackageResourceRole
     * Read-only. Nullable.
@@ -166,7 +166,7 @@ class AccessPackageResourceRoleScope extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the accessPackageResourceRole
     * Read-only. Nullable.
@@ -180,7 +180,7 @@ class AccessPackageResourceRoleScope extends Entity
         $this->_propDict["accessPackageResourceRole"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the accessPackageResourceScope
     * Read-only. Nullable.
@@ -199,7 +199,7 @@ class AccessPackageResourceRoleScope extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the accessPackageResourceScope
     * Read-only. Nullable.
@@ -213,5 +213,5 @@ class AccessPackageResourceRoleScope extends Entity
         $this->_propDict["accessPackageResourceScope"] = $val;
         return $this;
     }
-    
+
 }

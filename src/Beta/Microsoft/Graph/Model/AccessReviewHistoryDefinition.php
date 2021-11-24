@@ -42,7 +42,7 @@ class AccessReviewHistoryDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     * User who created this review history definition.
@@ -56,7 +56,7 @@ class AccessReviewHistoryDefinition extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * Timestamp when the access review definition was created.
@@ -75,7 +75,7 @@ class AccessReviewHistoryDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Timestamp when the access review definition was created.
@@ -89,9 +89,9 @@ class AccessReviewHistoryDefinition extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the decisions
     * Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions will be included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
      *
@@ -105,12 +105,12 @@ class AccessReviewHistoryDefinition extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the decisions
     * Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions will be included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
     *
-    * @param AccessReviewHistoryDecisionFilter $val The decisions
+    * @param AccessReviewHistoryDecisionFilter[] $val The decisions
     *
     * @return AccessReviewHistoryDefinition
     */
@@ -119,7 +119,7 @@ class AccessReviewHistoryDefinition extends Entity
         $this->_propDict["decisions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Name for the access review history data collection. Required.
@@ -134,7 +134,7 @@ class AccessReviewHistoryDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Name for the access review history data collection. Required.
@@ -148,7 +148,7 @@ class AccessReviewHistoryDefinition extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the downloadUri
     * Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated.
@@ -163,7 +163,7 @@ class AccessReviewHistoryDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the downloadUri
     * Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated.
@@ -177,7 +177,7 @@ class AccessReviewHistoryDefinition extends Entity
         $this->_propDict["downloadUri"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fulfilledDateTime
     * Timestamp when all of the available data for this definition was collected. This will be set after this definition's status is set to done.
@@ -196,7 +196,7 @@ class AccessReviewHistoryDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the fulfilledDateTime
     * Timestamp when all of the available data for this definition was collected. This will be set after this definition's status is set to done.
@@ -210,7 +210,7 @@ class AccessReviewHistoryDefinition extends Entity
         $this->_propDict["fulfilledDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reviewHistoryPeriodEndDateTime
     * Timestamp, reviews starting on or after this date will be included in the fetched history data. Required.
@@ -229,7 +229,7 @@ class AccessReviewHistoryDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reviewHistoryPeriodEndDateTime
     * Timestamp, reviews starting on or after this date will be included in the fetched history data. Required.
@@ -243,7 +243,7 @@ class AccessReviewHistoryDefinition extends Entity
         $this->_propDict["reviewHistoryPeriodEndDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reviewHistoryPeriodStartDateTime
     * Timestamp, reviews starting on or before this date will be included in the fetched history data. Required.
@@ -262,7 +262,7 @@ class AccessReviewHistoryDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reviewHistoryPeriodStartDateTime
     * Timestamp, reviews starting on or before this date will be included in the fetched history data. Required.
@@ -276,9 +276,9 @@ class AccessReviewHistoryDefinition extends Entity
         $this->_propDict["reviewHistoryPeriodStartDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the scopes
     * Used to scope what reviews are included in the fetched history data. Fetches reviews whose scope matches with this provided scope. See accessreviewqueryscope. Required.
      *
@@ -292,12 +292,12 @@ class AccessReviewHistoryDefinition extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the scopes
     * Used to scope what reviews are included in the fetched history data. Fetches reviews whose scope matches with this provided scope. See accessreviewqueryscope. Required.
     *
-    * @param AccessReviewScope $val The scopes
+    * @param AccessReviewScope[] $val The scopes
     *
     * @return AccessReviewHistoryDefinition
     */
@@ -306,7 +306,7 @@ class AccessReviewHistoryDefinition extends Entity
         $this->_propDict["scopes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Represents the status of the review history data collection. Possible values are: done, inprogress, error, requested.
@@ -325,7 +325,7 @@ class AccessReviewHistoryDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Represents the status of the review history data collection. Possible values are: done, inprogress, error, requested.
@@ -339,5 +339,5 @@ class AccessReviewHistoryDefinition extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

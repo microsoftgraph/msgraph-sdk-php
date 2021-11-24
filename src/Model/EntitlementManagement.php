@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class EntitlementManagement extends Entity
 {
 
-     /** 
+     /**
      * Gets the accessPackageAssignmentApprovals
      *
      * @return array|null The accessPackageAssignmentApprovals
@@ -38,11 +38,11 @@ class EntitlementManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the accessPackageAssignmentApprovals
     *
-    * @param Approval $val The accessPackageAssignmentApprovals
+    * @param Approval[] $val The accessPackageAssignmentApprovals
     *
     * @return EntitlementManagement
     */
@@ -51,9 +51,9 @@ class EntitlementManagement extends Entity
         $this->_propDict["accessPackageAssignmentApprovals"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the accessPackages
      *
      * @return array|null The accessPackages
@@ -66,11 +66,11 @@ class EntitlementManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the accessPackages
     *
-    * @param AccessPackage $val The accessPackages
+    * @param AccessPackage[] $val The accessPackages
     *
     * @return EntitlementManagement
     */
@@ -79,9 +79,9 @@ class EntitlementManagement extends Entity
         $this->_propDict["accessPackages"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignmentRequests
      *
      * @return array|null The assignmentRequests
@@ -94,11 +94,11 @@ class EntitlementManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignmentRequests
     *
-    * @param AccessPackageAssignmentRequest $val The assignmentRequests
+    * @param AccessPackageAssignmentRequest[] $val The assignmentRequests
     *
     * @return EntitlementManagement
     */
@@ -107,9 +107,9 @@ class EntitlementManagement extends Entity
         $this->_propDict["assignmentRequests"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
      *
      * @return array|null The assignments
@@ -122,11 +122,11 @@ class EntitlementManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     *
-    * @param AccessPackageAssignment $val The assignments
+    * @param AccessPackageAssignment[] $val The assignments
     *
     * @return EntitlementManagement
     */
@@ -135,9 +135,9 @@ class EntitlementManagement extends Entity
         $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the catalogs
      *
      * @return array|null The catalogs
@@ -150,11 +150,11 @@ class EntitlementManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the catalogs
     *
-    * @param AccessPackageCatalog $val The catalogs
+    * @param AccessPackageCatalog[] $val The catalogs
     *
     * @return EntitlementManagement
     */
@@ -163,9 +163,9 @@ class EntitlementManagement extends Entity
         $this->_propDict["catalogs"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the connectedOrganizations
      *
      * @return array|null The connectedOrganizations
@@ -178,11 +178,11 @@ class EntitlementManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the connectedOrganizations
     *
-    * @param ConnectedOrganization $val The connectedOrganizations
+    * @param ConnectedOrganization[] $val The connectedOrganizations
     *
     * @return EntitlementManagement
     */
@@ -191,7 +191,7 @@ class EntitlementManagement extends Entity
         $this->_propDict["connectedOrganizations"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settings
     *
@@ -209,7 +209,7 @@ class EntitlementManagement extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the settings
     *
@@ -222,5 +222,5 @@ class EntitlementManagement extends Entity
         $this->_propDict["settings"] = $val;
         return $this;
     }
-    
+
 }

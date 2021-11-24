@@ -42,7 +42,7 @@ class PrintOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The DateTimeOffset when the operation was created. Read-only.
@@ -56,7 +56,7 @@ class PrintOperation extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The status of the operation. Read-only.
@@ -75,7 +75,7 @@ class PrintOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The status of the operation. Read-only.
@@ -89,5 +89,5 @@ class PrintOperation extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

@@ -37,7 +37,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the authenticationType
     *
@@ -50,7 +50,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
         $this->_propDict["authenticationType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the authenticatorFlavor
     *
@@ -64,7 +64,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the authenticatorFlavor
     *
@@ -77,7 +77,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
         $this->_propDict["authenticatorFlavor"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceId
     *
@@ -91,7 +91,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     *
@@ -104,7 +104,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceName
     *
@@ -118,7 +118,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceName
     *
@@ -131,7 +131,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceTag
     *
@@ -145,7 +145,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceTag
     *
@@ -158,7 +158,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
         $this->_propDict["deviceTag"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceToken
     *
@@ -172,7 +172,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceToken
     *
@@ -185,7 +185,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
         $this->_propDict["deviceToken"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hashFunction
     *
@@ -199,7 +199,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hashFunction
     *
@@ -212,7 +212,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
         $this->_propDict["hashFunction"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastAuthenticatedDateTime
     *
@@ -230,7 +230,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastAuthenticatedDateTime
     *
@@ -243,7 +243,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
         $this->_propDict["lastAuthenticatedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the notificationType
     *
@@ -257,7 +257,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the notificationType
     *
@@ -270,7 +270,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
         $this->_propDict["notificationType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the oathSecretKey
     *
@@ -284,7 +284,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the oathSecretKey
     *
@@ -297,7 +297,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
         $this->_propDict["oathSecretKey"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the oathTokenMetadata
     *
@@ -315,7 +315,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the oathTokenMetadata
     *
@@ -328,7 +328,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
         $this->_propDict["oathTokenMetadata"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the oathTokenTimeDriftInSeconds
     *
@@ -342,7 +342,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the oathTokenTimeDriftInSeconds
     *
@@ -355,7 +355,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
         $this->_propDict["oathTokenTimeDriftInSeconds"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the phoneAppVersion
     *
@@ -369,7 +369,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the phoneAppVersion
     *
@@ -382,7 +382,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
         $this->_propDict["phoneAppVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantDeviceId
     *
@@ -396,7 +396,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tenantDeviceId
     *
@@ -409,7 +409,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
         $this->_propDict["tenantDeviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tokenGenerationIntervalInSeconds
     *
@@ -423,7 +423,7 @@ class StrongAuthenticationPhoneAppDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tokenGenerationIntervalInSeconds
     *
@@ -436,5 +436,5 @@ class StrongAuthenticationPhoneAppDetail extends Entity
         $this->_propDict["tokenGenerationIntervalInSeconds"] = intval($val);
         return $this;
     }
-    
+
 }

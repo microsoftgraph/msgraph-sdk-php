@@ -42,7 +42,7 @@ class CloudPcUserSettingAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time this assignment was created. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
@@ -56,7 +56,7 @@ class CloudPcUserSettingAssignment extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the target
     * The assignment target for the user setting. Currently, the only target supported for this user setting is a user group. For details, see cloudPcManagementGroupAssignmentTarget.
@@ -75,7 +75,7 @@ class CloudPcUserSettingAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The assignment target for the user setting. Currently, the only target supported for this user setting is a user group. For details, see cloudPcManagementGroupAssignmentTarget.
@@ -89,5 +89,5 @@ class CloudPcUserSettingAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

@@ -37,7 +37,7 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the audioVideo
     *
@@ -50,7 +50,7 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
         $this->_propDict["audioVideo"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the dialInMicrosoft
     *
@@ -64,7 +64,7 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the dialInMicrosoft
     *
@@ -77,7 +77,7 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
         $this->_propDict["dialInMicrosoft"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the dialOutMicrosoft
     *
@@ -91,7 +91,7 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the dialOutMicrosoft
     *
@@ -104,7 +104,7 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
         $this->_propDict["dialOutMicrosoft"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportDate
     *
@@ -122,7 +122,7 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportDate
     *
@@ -135,7 +135,7 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
         $this->_propDict["reportDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -149,7 +149,7 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -162,7 +162,7 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -180,7 +180,7 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -193,5 +193,5 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
 }

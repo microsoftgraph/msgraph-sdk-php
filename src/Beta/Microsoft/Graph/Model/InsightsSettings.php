@@ -37,7 +37,7 @@ class InsightsSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the disabledForGroup
     *
@@ -50,7 +50,7 @@ class InsightsSettings extends Entity
         $this->_propDict["disabledForGroup"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isEnabledInOrganization
     *
@@ -64,7 +64,7 @@ class InsightsSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabledInOrganization
     *
@@ -77,5 +77,5 @@ class InsightsSettings extends Entity
         $this->_propDict["isEnabledInOrganization"] = boolval($val);
         return $this;
     }
-    
+
 }

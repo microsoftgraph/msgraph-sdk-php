@@ -42,7 +42,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the childSelectability
     * Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
@@ -56,7 +56,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["childSelectability"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     * The user who created the tag.
@@ -75,7 +75,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     * The user who created the tag.
@@ -89,7 +89,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description for the tag.
@@ -104,7 +104,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description for the tag.
@@ -118,7 +118,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Display name of the tag.
@@ -133,7 +133,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display name of the tag.
@@ -147,7 +147,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time the tag was last modified.
@@ -166,7 +166,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time the tag was last modified.
@@ -180,9 +180,9 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the childTags
     * Returns the tags that are a child of a tag.
      *
@@ -196,12 +196,12 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the childTags
     * Returns the tags that are a child of a tag.
     *
-    * @param Tag $val The childTags
+    * @param Tag[] $val The childTags
     *
     * @return Tag
     */
@@ -210,7 +210,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["childTags"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the parent
     * Returns the parent tag of the specified tag.
@@ -229,7 +229,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the parent
     * Returns the parent tag of the specified tag.
@@ -243,5 +243,5 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["parent"] = $val;
         return $this;
     }
-    
+
 }

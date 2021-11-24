@@ -42,7 +42,7 @@ class PolicyRoot extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the authenticationMethodsPolicy
     * The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
@@ -56,7 +56,7 @@ class PolicyRoot extends Entity
         $this->_propDict["authenticationMethodsPolicy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the authenticationFlowsPolicy
     * The policy configuration of the self-service sign-up experience of external users.
@@ -75,7 +75,7 @@ class PolicyRoot extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the authenticationFlowsPolicy
     * The policy configuration of the self-service sign-up experience of external users.
@@ -89,9 +89,9 @@ class PolicyRoot extends Entity
         $this->_propDict["authenticationFlowsPolicy"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the activityBasedTimeoutPolicies
     * The policy that controls the idle time out for web sessions for applications.
      *
@@ -105,12 +105,12 @@ class PolicyRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the activityBasedTimeoutPolicies
     * The policy that controls the idle time out for web sessions for applications.
     *
-    * @param ActivityBasedTimeoutPolicy $val The activityBasedTimeoutPolicies
+    * @param ActivityBasedTimeoutPolicy[] $val The activityBasedTimeoutPolicies
     *
     * @return PolicyRoot
     */
@@ -119,7 +119,7 @@ class PolicyRoot extends Entity
         $this->_propDict["activityBasedTimeoutPolicies"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the authorizationPolicy
     * The policy that controls Azure AD authorization settings.
@@ -138,7 +138,7 @@ class PolicyRoot extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the authorizationPolicy
     * The policy that controls Azure AD authorization settings.
@@ -152,9 +152,9 @@ class PolicyRoot extends Entity
         $this->_propDict["authorizationPolicy"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the claimsMappingPolicies
     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
      *
@@ -168,12 +168,12 @@ class PolicyRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the claimsMappingPolicies
     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
     *
-    * @param ClaimsMappingPolicy $val The claimsMappingPolicies
+    * @param ClaimsMappingPolicy[] $val The claimsMappingPolicies
     *
     * @return PolicyRoot
     */
@@ -182,9 +182,9 @@ class PolicyRoot extends Entity
         $this->_propDict["claimsMappingPolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the homeRealmDiscoveryPolicies
     * The policy to control Azure AD authentication behavior for federated users.
      *
@@ -198,12 +198,12 @@ class PolicyRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the homeRealmDiscoveryPolicies
     * The policy to control Azure AD authentication behavior for federated users.
     *
-    * @param HomeRealmDiscoveryPolicy $val The homeRealmDiscoveryPolicies
+    * @param HomeRealmDiscoveryPolicy[] $val The homeRealmDiscoveryPolicies
     *
     * @return PolicyRoot
     */
@@ -212,9 +212,9 @@ class PolicyRoot extends Entity
         $this->_propDict["homeRealmDiscoveryPolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the permissionGrantPolicies
     * The policy that specifies the conditions under which consent can be granted.
      *
@@ -228,12 +228,12 @@ class PolicyRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the permissionGrantPolicies
     * The policy that specifies the conditions under which consent can be granted.
     *
-    * @param PermissionGrantPolicy $val The permissionGrantPolicies
+    * @param PermissionGrantPolicy[] $val The permissionGrantPolicies
     *
     * @return PolicyRoot
     */
@@ -242,9 +242,9 @@ class PolicyRoot extends Entity
         $this->_propDict["permissionGrantPolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tokenIssuancePolicies
     * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
      *
@@ -258,12 +258,12 @@ class PolicyRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tokenIssuancePolicies
     * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
     *
-    * @param TokenIssuancePolicy $val The tokenIssuancePolicies
+    * @param TokenIssuancePolicy[] $val The tokenIssuancePolicies
     *
     * @return PolicyRoot
     */
@@ -272,9 +272,9 @@ class PolicyRoot extends Entity
         $this->_propDict["tokenIssuancePolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tokenLifetimePolicies
     * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
      *
@@ -288,12 +288,12 @@ class PolicyRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tokenLifetimePolicies
     * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
     *
-    * @param TokenLifetimePolicy $val The tokenLifetimePolicies
+    * @param TokenLifetimePolicy[] $val The tokenLifetimePolicies
     *
     * @return PolicyRoot
     */
@@ -302,9 +302,9 @@ class PolicyRoot extends Entity
         $this->_propDict["tokenLifetimePolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the featureRolloutPolicies
     * The feature rollout policy associated with a directory object.
      *
@@ -318,12 +318,12 @@ class PolicyRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the featureRolloutPolicies
     * The feature rollout policy associated with a directory object.
     *
-    * @param FeatureRolloutPolicy $val The featureRolloutPolicies
+    * @param FeatureRolloutPolicy[] $val The featureRolloutPolicies
     *
     * @return PolicyRoot
     */
@@ -332,7 +332,7 @@ class PolicyRoot extends Entity
         $this->_propDict["featureRolloutPolicies"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the adminConsentRequestPolicy
     * The policy by which consent requests are created and managed for the entire tenant.
@@ -351,7 +351,7 @@ class PolicyRoot extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the adminConsentRequestPolicy
     * The policy by which consent requests are created and managed for the entire tenant.
@@ -365,9 +365,9 @@ class PolicyRoot extends Entity
         $this->_propDict["adminConsentRequestPolicy"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the conditionalAccessPolicies
     * The custom rules that define an access scenario.
      *
@@ -381,12 +381,12 @@ class PolicyRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the conditionalAccessPolicies
     * The custom rules that define an access scenario.
     *
-    * @param ConditionalAccessPolicy $val The conditionalAccessPolicies
+    * @param ConditionalAccessPolicy[] $val The conditionalAccessPolicies
     *
     * @return PolicyRoot
     */
@@ -395,7 +395,7 @@ class PolicyRoot extends Entity
         $this->_propDict["conditionalAccessPolicies"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the identitySecurityDefaultsEnforcementPolicy
     * The policy that represents the security defaults that protect against common attacks.
@@ -414,7 +414,7 @@ class PolicyRoot extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the identitySecurityDefaultsEnforcementPolicy
     * The policy that represents the security defaults that protect against common attacks.
@@ -428,5 +428,5 @@ class PolicyRoot extends Entity
         $this->_propDict["identitySecurityDefaultsEnforcementPolicy"] = $val;
         return $this;
     }
-    
+
 }

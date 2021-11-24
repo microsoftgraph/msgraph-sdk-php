@@ -42,7 +42,7 @@ class CloudPcProvisioningPolicyAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The assignment target for the provisioning policy. Currently, the only target supported for this policy is a user group. For details, see cloudPcManagementGroupAssignmentTarget.
@@ -56,5 +56,5 @@ class CloudPcProvisioningPolicyAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

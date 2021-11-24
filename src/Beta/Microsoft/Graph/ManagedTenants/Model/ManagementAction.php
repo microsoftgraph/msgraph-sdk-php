@@ -42,7 +42,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the category
     * The category for the management action. Possible values are: custom, devices, identity, unknownFutureValue. Optional. Read-only.
@@ -56,7 +56,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["category"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description for the management action. Optional. Read-only.
@@ -71,7 +71,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description for the management action. Optional. Read-only.
@@ -85,7 +85,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name for the management action. Optional. Read-only.
@@ -100,7 +100,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name for the management action. Optional. Read-only.
@@ -114,7 +114,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the referenceTemplateId
     * The reference for the management template used to generate the management action. Required. Read-only.
@@ -129,7 +129,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the referenceTemplateId
     * The reference for the management template used to generate the management action. Required. Read-only.
@@ -143,7 +143,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["referenceTemplateId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the referenceTemplateVersion
     *
@@ -157,7 +157,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the referenceTemplateVersion
     *
@@ -170,9 +170,9 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["referenceTemplateVersion"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the workloadActions
     * The collection of workload actions associated with the management action. Required. Read-only.
      *
@@ -186,12 +186,12 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the workloadActions
     * The collection of workload actions associated with the management action. Required. Read-only.
     *
-    * @param WorkloadAction $val The workloadActions
+    * @param WorkloadAction[] $val The workloadActions
     *
     * @return ManagementAction
     */
@@ -200,5 +200,5 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["workloadActions"] = $val;
         return $this;
     }
-    
+
 }

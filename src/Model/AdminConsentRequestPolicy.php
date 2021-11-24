@@ -38,7 +38,7 @@ class AdminConsentRequestPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabled
     * Specifies whether the admin consent request feature is enabled or disabled. Required.
@@ -52,7 +52,7 @@ class AdminConsentRequestPolicy extends Entity
         $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the notifyReviewers
     * Specifies whether reviewers will receive notifications. Required.
@@ -67,7 +67,7 @@ class AdminConsentRequestPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the notifyReviewers
     * Specifies whether reviewers will receive notifications. Required.
@@ -81,7 +81,7 @@ class AdminConsentRequestPolicy extends Entity
         $this->_propDict["notifyReviewers"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the remindersEnabled
     * Specifies whether reviewers will receive reminder emails. Required.
@@ -96,7 +96,7 @@ class AdminConsentRequestPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the remindersEnabled
     * Specifies whether reviewers will receive reminder emails. Required.
@@ -110,7 +110,7 @@ class AdminConsentRequestPolicy extends Entity
         $this->_propDict["remindersEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the requestDurationInDays
     * Specifies the duration the request is active before it automatically expires if no decision is applied.
@@ -125,7 +125,7 @@ class AdminConsentRequestPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the requestDurationInDays
     * Specifies the duration the request is active before it automatically expires if no decision is applied.
@@ -139,9 +139,9 @@ class AdminConsentRequestPolicy extends Entity
         $this->_propDict["requestDurationInDays"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the reviewers
     * The list of reviewers for the admin consent. Required.
      *
@@ -155,12 +155,12 @@ class AdminConsentRequestPolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the reviewers
     * The list of reviewers for the admin consent. Required.
     *
-    * @param AccessReviewReviewerScope $val The reviewers
+    * @param AccessReviewReviewerScope[] $val The reviewers
     *
     * @return AdminConsentRequestPolicy
     */
@@ -169,7 +169,7 @@ class AdminConsentRequestPolicy extends Entity
         $this->_propDict["reviewers"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Specifies the version of this policy. When the policy is updated, this version is updated. Read-only.
@@ -184,7 +184,7 @@ class AdminConsentRequestPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Specifies the version of this policy. When the policy is updated, this version is updated. Read-only.
@@ -198,5 +198,5 @@ class AdminConsentRequestPolicy extends Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
+
 }

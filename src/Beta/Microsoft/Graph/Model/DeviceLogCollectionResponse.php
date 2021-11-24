@@ -38,7 +38,7 @@ class DeviceLogCollectionResponse extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorCode
     * The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
@@ -52,7 +52,7 @@ class DeviceLogCollectionResponse extends Entity
         $this->_propDict["errorCode"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the expirationDateTimeUTC
     * The DateTime of the expiration of the logs
@@ -71,7 +71,7 @@ class DeviceLogCollectionResponse extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expirationDateTimeUTC
     * The DateTime of the expiration of the logs
@@ -85,7 +85,7 @@ class DeviceLogCollectionResponse extends Entity
         $this->_propDict["expirationDateTimeUTC"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the initiatedByUserPrincipalName
     * The UPN for who initiated the request
@@ -100,7 +100,7 @@ class DeviceLogCollectionResponse extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the initiatedByUserPrincipalName
     * The UPN for who initiated the request
@@ -114,7 +114,7 @@ class DeviceLogCollectionResponse extends Entity
         $this->_propDict["initiatedByUserPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedDeviceId
     * The device Id
@@ -129,7 +129,7 @@ class DeviceLogCollectionResponse extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managedDeviceId
     * The device Id
@@ -143,7 +143,7 @@ class DeviceLogCollectionResponse extends Entity
         $this->_propDict["managedDeviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the receivedDateTimeUTC
     * The DateTime the request was received
@@ -162,7 +162,7 @@ class DeviceLogCollectionResponse extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the receivedDateTimeUTC
     * The DateTime the request was received
@@ -176,7 +176,7 @@ class DeviceLogCollectionResponse extends Entity
         $this->_propDict["receivedDateTimeUTC"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requestedDateTimeUTC
     * The DateTime of the request
@@ -195,7 +195,7 @@ class DeviceLogCollectionResponse extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the requestedDateTimeUTC
     * The DateTime of the request
@@ -209,7 +209,7 @@ class DeviceLogCollectionResponse extends Entity
         $this->_propDict["requestedDateTimeUTC"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the size
     * The size of the logs. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -224,7 +224,7 @@ class DeviceLogCollectionResponse extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the size
     * The size of the logs. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -238,7 +238,7 @@ class DeviceLogCollectionResponse extends Entity
         $this->_propDict["size"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The status of the log collection request
@@ -253,7 +253,7 @@ class DeviceLogCollectionResponse extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the status
     * The status of the log collection request
@@ -267,5 +267,5 @@ class DeviceLogCollectionResponse extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

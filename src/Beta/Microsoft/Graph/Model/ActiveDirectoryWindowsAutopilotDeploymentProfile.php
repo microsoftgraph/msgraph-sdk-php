@@ -38,7 +38,7 @@ class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAutopilotD
             return null;
         }
     }
-    
+
     /**
     * Sets the hybridAzureADJoinSkipConnectivityCheck
     * The Autopilot Hybrid Azure AD join flow will continue even if it does not establish domain controller connectivity during OOBE.
@@ -52,7 +52,7 @@ class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAutopilotD
         $this->_propDict["hybridAzureADJoinSkipConnectivityCheck"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the domainJoinConfiguration
     * Configuration to join Active Directory domain
@@ -71,7 +71,7 @@ class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAutopilotD
         }
         return null;
     }
-    
+
     /**
     * Sets the domainJoinConfiguration
     * Configuration to join Active Directory domain
@@ -85,5 +85,5 @@ class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAutopilotD
         $this->_propDict["domainJoinConfiguration"] = $val;
         return $this;
     }
-    
+
 }

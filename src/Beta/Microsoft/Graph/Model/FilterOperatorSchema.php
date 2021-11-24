@@ -42,7 +42,7 @@ class FilterOperatorSchema extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the arity
     * Arity of the operator. Possible values are: Binary, Unary. The default is Binary.
@@ -56,7 +56,7 @@ class FilterOperatorSchema extends Entity
         $this->_propDict["arity"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the multivaluedComparisonType
     * Possible values are: All, Any. Applies only to multivalued attributes. All means that all values must satisfy the condition. Any means that at least one value has to satisfy the condition. The default is All.
@@ -75,7 +75,7 @@ class FilterOperatorSchema extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the multivaluedComparisonType
     * Possible values are: All, Any. Applies only to multivalued attributes. All means that all values must satisfy the condition. Any means that at least one value has to satisfy the condition. The default is All.
@@ -89,9 +89,9 @@ class FilterOperatorSchema extends Entity
         $this->_propDict["multivaluedComparisonType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the supportedAttributeTypes
     * Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
      *
@@ -105,12 +105,12 @@ class FilterOperatorSchema extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the supportedAttributeTypes
     * Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
     *
-    * @param AttributeType $val The supportedAttributeTypes
+    * @param AttributeType[] $val The supportedAttributeTypes
     *
     * @return FilterOperatorSchema
     */
@@ -119,5 +119,5 @@ class FilterOperatorSchema extends Entity
         $this->_propDict["supportedAttributeTypes"] = $val;
         return $this;
     }
-    
+
 }

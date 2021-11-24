@@ -31,7 +31,7 @@ class GraphPrint implements \JsonSerializable
     * @var array $_propDict
     */
     protected $_propDict;
-    
+
     /**
     * Construct a new GraphPrint
     *
@@ -54,7 +54,7 @@ class GraphPrint implements \JsonSerializable
     {
         return $this->_propDict;
     }
-    
+
     /**
     * Gets the settings
     * Tenant-wide settings for the Universal Print service.
@@ -73,7 +73,7 @@ class GraphPrint implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the settings
     * Tenant-wide settings for the Universal Print service.
@@ -87,9 +87,9 @@ class GraphPrint implements \JsonSerializable
         $this->_propDict["settings"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the connectors
     * The list of available print connectors.
      *
@@ -103,12 +103,12 @@ class GraphPrint implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the connectors
     * The list of available print connectors.
     *
-    * @param PrintConnector $val The connectors
+    * @param PrintConnector[] $val The connectors
     *
     * @return GraphPrint
     */
@@ -117,9 +117,9 @@ class GraphPrint implements \JsonSerializable
         $this->_propDict["connectors"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the operations
     * The list of print long running operations.
      *
@@ -133,12 +133,12 @@ class GraphPrint implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the operations
     * The list of print long running operations.
     *
-    * @param PrintOperation $val The operations
+    * @param PrintOperation[] $val The operations
     *
     * @return GraphPrint
     */
@@ -147,9 +147,9 @@ class GraphPrint implements \JsonSerializable
         $this->_propDict["operations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the printers
     * The list of printers registered in the tenant.
      *
@@ -163,12 +163,12 @@ class GraphPrint implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the printers
     * The list of printers registered in the tenant.
     *
-    * @param Printer $val The printers
+    * @param Printer[] $val The printers
     *
     * @return GraphPrint
     */
@@ -177,9 +177,9 @@ class GraphPrint implements \JsonSerializable
         $this->_propDict["printers"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the services
     * The list of available Universal Print service endpoints.
      *
@@ -193,12 +193,12 @@ class GraphPrint implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the services
     * The list of available Universal Print service endpoints.
     *
-    * @param PrintService $val The services
+    * @param PrintService[] $val The services
     *
     * @return GraphPrint
     */
@@ -207,9 +207,9 @@ class GraphPrint implements \JsonSerializable
         $this->_propDict["services"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the shares
     * The list of printer shares registered in the tenant.
      *
@@ -223,12 +223,12 @@ class GraphPrint implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the shares
     * The list of printer shares registered in the tenant.
     *
-    * @param PrinterShare $val The shares
+    * @param PrinterShare[] $val The shares
     *
     * @return GraphPrint
     */
@@ -237,9 +237,9 @@ class GraphPrint implements \JsonSerializable
         $this->_propDict["shares"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the taskDefinitions
     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
      *
@@ -253,12 +253,12 @@ class GraphPrint implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the taskDefinitions
     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
     *
-    * @param PrintTaskDefinition $val The taskDefinitions
+    * @param PrintTaskDefinition[] $val The taskDefinitions
     *
     * @return GraphPrint
     */
@@ -267,7 +267,7 @@ class GraphPrint implements \JsonSerializable
         $this->_propDict["taskDefinitions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ODataType
     *
@@ -280,7 +280,7 @@ class GraphPrint implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the ODataType
     *
@@ -293,7 +293,7 @@ class GraphPrint implements \JsonSerializable
         $this->_propDict["@odata.type"] = $val;
         return $this;
     }
-    
+
     /**
     * Serializes the object by property array
     * Manually serialize DateTime into RFC3339 format

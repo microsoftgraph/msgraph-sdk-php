@@ -42,7 +42,7 @@ class WindowsDriverUpdateProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the approvalType
     * Driver update profile approval type. For example, manual or automatic approval. Possible values are: manual, automatic.
@@ -56,7 +56,7 @@ class WindowsDriverUpdateProfile extends Entity
         $this->_propDict["approvalType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The date time that the profile was created.
@@ -75,7 +75,7 @@ class WindowsDriverUpdateProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date time that the profile was created.
@@ -89,7 +89,7 @@ class WindowsDriverUpdateProfile extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deploymentDeferralInDays
     * Deployment deferral settings in days, only applicable when ApprovalType is set to automatic approval.
@@ -104,7 +104,7 @@ class WindowsDriverUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deploymentDeferralInDays
     * Deployment deferral settings in days, only applicable when ApprovalType is set to automatic approval.
@@ -118,7 +118,7 @@ class WindowsDriverUpdateProfile extends Entity
         $this->_propDict["deploymentDeferralInDays"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description of the profile which is specified by the user.
@@ -133,7 +133,7 @@ class WindowsDriverUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description of the profile which is specified by the user.
@@ -147,7 +147,7 @@ class WindowsDriverUpdateProfile extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceReporting
     * Number of devices reporting for this profile
@@ -162,7 +162,7 @@ class WindowsDriverUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceReporting
     * Number of devices reporting for this profile
@@ -176,7 +176,7 @@ class WindowsDriverUpdateProfile extends Entity
         $this->_propDict["deviceReporting"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name for the profile.
@@ -191,7 +191,7 @@ class WindowsDriverUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name for the profile.
@@ -205,7 +205,7 @@ class WindowsDriverUpdateProfile extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date time that the profile was last modified.
@@ -224,7 +224,7 @@ class WindowsDriverUpdateProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date time that the profile was last modified.
@@ -238,7 +238,7 @@ class WindowsDriverUpdateProfile extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the newUpdates
     * Number of new driver updates available for this profile.
@@ -253,7 +253,7 @@ class WindowsDriverUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the newUpdates
     * Number of new driver updates available for this profile.
@@ -267,7 +267,7 @@ class WindowsDriverUpdateProfile extends Entity
         $this->_propDict["newUpdates"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Driver Update entity.
@@ -282,7 +282,7 @@ class WindowsDriverUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleScopeTagIds
     * List of Scope Tags for this Driver Update entity.
@@ -296,9 +296,9 @@ class WindowsDriverUpdateProfile extends Entity
         $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The list of group assignments of the profile.
      *
@@ -312,12 +312,12 @@ class WindowsDriverUpdateProfile extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The list of group assignments of the profile.
     *
-    * @param WindowsDriverUpdateProfileAssignment $val The assignments
+    * @param WindowsDriverUpdateProfileAssignment[] $val The assignments
     *
     * @return WindowsDriverUpdateProfile
     */
@@ -326,9 +326,9 @@ class WindowsDriverUpdateProfile extends Entity
         $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the driverInventories
     * Driver inventories for this profile.
      *
@@ -342,12 +342,12 @@ class WindowsDriverUpdateProfile extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the driverInventories
     * Driver inventories for this profile.
     *
-    * @param WindowsDriverUpdateInventory $val The driverInventories
+    * @param WindowsDriverUpdateInventory[] $val The driverInventories
     *
     * @return WindowsDriverUpdateProfile
     */
@@ -356,5 +356,5 @@ class WindowsDriverUpdateProfile extends Entity
         $this->_propDict["driverInventories"] = $val;
         return $this;
     }
-    
+
 }

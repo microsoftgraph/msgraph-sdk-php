@@ -31,7 +31,7 @@ class External implements \JsonSerializable
     * @var array $_propDict
     */
     protected $_propDict;
-    
+
     /**
     * Construct a new External
     *
@@ -54,9 +54,9 @@ class External implements \JsonSerializable
     {
         return $this->_propDict;
     }
-    
 
-     /** 
+
+     /**
      * Gets the connections
      *
      * @return array|null The connections
@@ -69,11 +69,11 @@ class External implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the connections
     *
-    * @param ExternalConnection $val The connections
+    * @param ExternalConnection[] $val The connections
     *
     * @return External
     */
@@ -82,7 +82,7 @@ class External implements \JsonSerializable
         $this->_propDict["connections"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ODataType
     *
@@ -95,7 +95,7 @@ class External implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the ODataType
     *
@@ -108,7 +108,7 @@ class External implements \JsonSerializable
         $this->_propDict["@odata.type"] = $val;
         return $this;
     }
-    
+
     /**
     * Serializes the object by property array
     * Manually serialize DateTime into RFC3339 format

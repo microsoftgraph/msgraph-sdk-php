@@ -42,7 +42,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         }
         return null;
     }
-    
+
     /**
     * Sets the advancedThreatProtectionRequiredSecurityLevel
     * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
@@ -56,7 +56,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceThreatProtectionEnabled
     * Require that devices have enabled device threat protection.
@@ -71,7 +71,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceThreatProtectionEnabled
     * Require that devices have enabled device threat protection.
@@ -85,7 +85,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["deviceThreatProtectionEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deviceThreatProtectionRequiredSecurityLevel
     * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
@@ -104,7 +104,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceThreatProtectionRequiredSecurityLevel
     * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
@@ -118,7 +118,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the firewallBlockAllIncoming
     * Corresponds to the 'Block all incoming connections' option.
@@ -133,7 +133,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the firewallBlockAllIncoming
     * Corresponds to the 'Block all incoming connections' option.
@@ -147,7 +147,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["firewallBlockAllIncoming"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the firewallEnabled
     * Whether the firewall should be enabled or not.
@@ -162,7 +162,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the firewallEnabled
     * Whether the firewall should be enabled or not.
@@ -176,7 +176,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["firewallEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the firewallEnableStealthMode
     * Corresponds to 'Enable stealth mode.'
@@ -191,7 +191,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the firewallEnableStealthMode
     * Corresponds to 'Enable stealth mode.'
@@ -205,7 +205,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["firewallEnableStealthMode"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the gatekeeperAllowedAppSource
     * System and Privacy setting that determines which download locations apps can be run from on a macOS device. Possible values are: notConfigured, macAppStore, macAppStoreAndIdentifiedDevelopers, anywhere.
@@ -224,7 +224,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         }
         return null;
     }
-    
+
     /**
     * Sets the gatekeeperAllowedAppSource
     * System and Privacy setting that determines which download locations apps can be run from on a macOS device. Possible values are: notConfigured, macAppStore, macAppStoreAndIdentifiedDevelopers, anywhere.
@@ -238,7 +238,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["gatekeeperAllowedAppSource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osMaximumBuildVersion
     * Maximum MacOS build version.
@@ -253,7 +253,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the osMaximumBuildVersion
     * Maximum MacOS build version.
@@ -267,7 +267,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["osMaximumBuildVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osMaximumVersion
     * Maximum MacOS version.
@@ -282,7 +282,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the osMaximumVersion
     * Maximum MacOS version.
@@ -296,7 +296,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["osMaximumVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osMinimumBuildVersion
     * Minimum MacOS build version.
@@ -311,7 +311,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the osMinimumBuildVersion
     * Minimum MacOS build version.
@@ -325,7 +325,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["osMinimumBuildVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osMinimumVersion
     * Minimum MacOS version.
@@ -340,7 +340,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the osMinimumVersion
     * Minimum MacOS version.
@@ -354,7 +354,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["osMinimumVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the passwordBlockSimple
     * Indicates whether or not to block simple passwords.
@@ -369,7 +369,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordBlockSimple
     * Indicates whether or not to block simple passwords.
@@ -383,7 +383,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["passwordBlockSimple"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordExpirationDays
     * Number of days before the password expires. Valid values 1 to 65535
@@ -398,7 +398,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordExpirationDays
     * Number of days before the password expires. Valid values 1 to 65535
@@ -412,7 +412,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["passwordExpirationDays"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMinimumCharacterSetCount
     * The number of character sets required in the password.
@@ -427,7 +427,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMinimumCharacterSetCount
     * The number of character sets required in the password.
@@ -441,7 +441,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["passwordMinimumCharacterSetCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMinimumLength
     * Minimum length of password. Valid values 4 to 14
@@ -456,7 +456,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMinimumLength
     * Minimum length of password. Valid values 4 to 14
@@ -470,7 +470,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["passwordMinimumLength"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMinutesOfInactivityBeforeLock
     * Minutes of inactivity before a password is required.
@@ -485,7 +485,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMinutesOfInactivityBeforeLock
     * Minutes of inactivity before a password is required.
@@ -499,7 +499,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["passwordMinutesOfInactivityBeforeLock"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordPreviousPasswordBlockCount
     * Number of previous passwords to block. Valid values 1 to 24
@@ -514,7 +514,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordPreviousPasswordBlockCount
     * Number of previous passwords to block. Valid values 1 to 24
@@ -528,7 +528,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["passwordPreviousPasswordBlockCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordRequired
     * Whether or not to require a password.
@@ -543,7 +543,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordRequired
     * Whether or not to require a password.
@@ -557,7 +557,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["passwordRequired"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordRequiredType
     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
@@ -576,7 +576,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         }
         return null;
     }
-    
+
     /**
     * Sets the passwordRequiredType
     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
@@ -590,7 +590,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["passwordRequiredType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the storageRequireEncryption
     * Require encryption on Mac OS devices.
@@ -605,7 +605,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the storageRequireEncryption
     * Require encryption on Mac OS devices.
@@ -619,7 +619,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["storageRequireEncryption"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the systemIntegrityProtectionEnabled
     * Require that devices have enabled system integrity protection.
@@ -634,7 +634,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the systemIntegrityProtectionEnabled
     * Require that devices have enabled system integrity protection.
@@ -648,5 +648,5 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["systemIntegrityProtectionEnabled"] = boolval($val);
         return $this;
     }
-    
+
 }

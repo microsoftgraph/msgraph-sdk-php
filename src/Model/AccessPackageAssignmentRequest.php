@@ -41,7 +41,7 @@ class AccessPackageAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the completedDateTime
     *
@@ -54,7 +54,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["completedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -73,7 +73,7 @@ class AccessPackageAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -87,7 +87,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requestType
     * One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
@@ -106,7 +106,7 @@ class AccessPackageAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the requestType
     * One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
@@ -120,7 +120,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["requestType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the schedule
     * The range of dates that access is to be assigned to the requestor. Read-only.
@@ -139,7 +139,7 @@ class AccessPackageAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the schedule
     * The range of dates that access is to be assigned to the requestor. Read-only.
@@ -153,7 +153,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["schedule"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     *
@@ -171,7 +171,7 @@ class AccessPackageAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     *
@@ -184,7 +184,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     *
@@ -198,7 +198,7 @@ class AccessPackageAssignmentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the status
     *
@@ -211,7 +211,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the accessPackage
     * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
@@ -230,7 +230,7 @@ class AccessPackageAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the accessPackage
     * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
@@ -244,7 +244,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["accessPackage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the assignment
     *
@@ -262,7 +262,7 @@ class AccessPackageAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the assignment
     *
@@ -275,7 +275,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["assignment"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requestor
     * The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
@@ -294,7 +294,7 @@ class AccessPackageAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the requestor
     * The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
@@ -308,5 +308,5 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["requestor"] = $val;
         return $this;
     }
-    
+
 }

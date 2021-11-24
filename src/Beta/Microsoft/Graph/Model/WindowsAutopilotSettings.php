@@ -42,7 +42,7 @@ class WindowsAutopilotSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastManualSyncTriggerDateTime
     * Last data sync date time with DDS service.
@@ -56,7 +56,7 @@ class WindowsAutopilotSettings extends Entity
         $this->_propDict["lastManualSyncTriggerDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastSyncDateTime
     * Last data sync date time with DDS service.
@@ -75,7 +75,7 @@ class WindowsAutopilotSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSyncDateTime
     * Last data sync date time with DDS service.
@@ -89,7 +89,7 @@ class WindowsAutopilotSettings extends Entity
         $this->_propDict["lastSyncDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the syncStatus
     * Indicates the status of sync with Device data sync (DDS) service. Possible values are: unknown, inProgress, completed, failed.
@@ -108,7 +108,7 @@ class WindowsAutopilotSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the syncStatus
     * Indicates the status of sync with Device data sync (DDS) service. Possible values are: unknown, inProgress, completed, failed.
@@ -122,5 +122,5 @@ class WindowsAutopilotSettings extends Entity
         $this->_propDict["syncStatus"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class TeamsAppDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the allowedInstallationScopes
     * A collection of scopes where the Teams app can be installed. Possible values are:team — Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat  — Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal — Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
@@ -56,7 +56,7 @@ class TeamsAppDefinition extends Entity
         $this->_propDict["allowedInstallationScopes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the azureADAppId
     * The WebApplicationInfo.Id from the Teams app manifest.
@@ -71,7 +71,7 @@ class TeamsAppDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureADAppId
     * The WebApplicationInfo.Id from the Teams app manifest.
@@ -85,7 +85,7 @@ class TeamsAppDefinition extends Entity
         $this->_propDict["azureADAppId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     *
@@ -103,7 +103,7 @@ class TeamsAppDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     *
@@ -116,7 +116,7 @@ class TeamsAppDefinition extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Verbose description of the application.
@@ -131,7 +131,7 @@ class TeamsAppDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Verbose description of the application.
@@ -145,7 +145,7 @@ class TeamsAppDefinition extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name of the app provided by the app developer.
@@ -160,7 +160,7 @@ class TeamsAppDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the app provided by the app developer.
@@ -174,7 +174,7 @@ class TeamsAppDefinition extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -192,7 +192,7 @@ class TeamsAppDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -205,7 +205,7 @@ class TeamsAppDefinition extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publishingState
     * The published status of a specific version of a Teams app. Possible values are:submitted — The specific version of the Teams app has been submitted and is under review. published  — The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin.
@@ -224,7 +224,7 @@ class TeamsAppDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the publishingState
     * The published status of a specific version of a Teams app. Possible values are:submitted — The specific version of the Teams app has been submitted and is under review. published  — The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin.
@@ -238,7 +238,7 @@ class TeamsAppDefinition extends Entity
         $this->_propDict["publishingState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the shortdescription
     *
@@ -252,7 +252,7 @@ class TeamsAppDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the shortdescription
     *
@@ -265,7 +265,7 @@ class TeamsAppDefinition extends Entity
         $this->_propDict["shortdescription"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the teamsAppId
     * The ID from the Teams app manifest.
@@ -280,7 +280,7 @@ class TeamsAppDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the teamsAppId
     * The ID from the Teams app manifest.
@@ -294,7 +294,7 @@ class TeamsAppDefinition extends Entity
         $this->_propDict["teamsAppId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * The version number of the application.
@@ -309,7 +309,7 @@ class TeamsAppDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * The version number of the application.
@@ -323,7 +323,7 @@ class TeamsAppDefinition extends Entity
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the bot
     * The details of the bot specified in the Teams app manifest.
@@ -342,7 +342,7 @@ class TeamsAppDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the bot
     * The details of the bot specified in the Teams app manifest.
@@ -356,7 +356,7 @@ class TeamsAppDefinition extends Entity
         $this->_propDict["bot"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the colorIcon
     * The color version of the Teams app's icon.
@@ -375,7 +375,7 @@ class TeamsAppDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the colorIcon
     * The color version of the Teams app's icon.
@@ -389,7 +389,7 @@ class TeamsAppDefinition extends Entity
         $this->_propDict["colorIcon"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the outlineIcon
     * The outline version of the Teams app's icon.
@@ -408,7 +408,7 @@ class TeamsAppDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the outlineIcon
     * The outline version of the Teams app's icon.
@@ -422,5 +422,5 @@ class TeamsAppDefinition extends Entity
         $this->_propDict["outlineIcon"] = $val;
         return $this;
     }
-    
+
 }

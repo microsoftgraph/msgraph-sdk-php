@@ -41,7 +41,7 @@ class MessageEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the dateTime
     *
@@ -54,7 +54,7 @@ class MessageEvent extends Entity
         $this->_propDict["dateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     *
@@ -68,7 +68,7 @@ class MessageEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -81,7 +81,7 @@ class MessageEvent extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the eventType
     *
@@ -99,7 +99,7 @@ class MessageEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the eventType
     *
@@ -112,5 +112,5 @@ class MessageEvent extends Entity
         $this->_propDict["eventType"] = $val;
         return $this;
     }
-    
+
 }

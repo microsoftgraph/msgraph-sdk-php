@@ -42,7 +42,7 @@ class DataSource extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     * The user who created the dataSource.
@@ -56,7 +56,7 @@ class DataSource extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The date and time the dataSource was created.
@@ -75,7 +75,7 @@ class DataSource extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time the dataSource was created.
@@ -89,7 +89,7 @@ class DataSource extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name of the dataSource. This will be the name of the SharePoint site.
@@ -104,7 +104,7 @@ class DataSource extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the dataSource. This will be the name of the SharePoint site.
@@ -118,5 +118,5 @@ class DataSource extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the accountManagerPolicy
     * Specifies how accounts are managed on a shared PC. Only applies when disableAccountManager is false.
@@ -56,7 +56,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["accountManagerPolicy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the allowedAccounts
     * Indicates which type of accounts are allowed to use on a shared PC. Possible values are: guest, domain.
@@ -75,7 +75,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the allowedAccounts
     * Indicates which type of accounts are allowed to use on a shared PC. Possible values are: guest, domain.
@@ -89,7 +89,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["allowedAccounts"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the allowLocalStorage
     * Specifies whether local storage is allowed on a shared PC.
@@ -104,7 +104,7 @@ class SharedPCConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the allowLocalStorage
     * Specifies whether local storage is allowed on a shared PC.
@@ -118,7 +118,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["allowLocalStorage"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the disableAccountManager
     * Disables the account manager for shared PC mode.
@@ -133,7 +133,7 @@ class SharedPCConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the disableAccountManager
     * Disables the account manager for shared PC mode.
@@ -147,7 +147,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["disableAccountManager"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the disableEduPolicies
     * Specifies whether the default shared PC education environment policies should be disabled. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
@@ -162,7 +162,7 @@ class SharedPCConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the disableEduPolicies
     * Specifies whether the default shared PC education environment policies should be disabled. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
@@ -176,7 +176,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["disableEduPolicies"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the disablePowerPolicies
     * Specifies whether the default shared PC power policies should be disabled.
@@ -191,7 +191,7 @@ class SharedPCConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the disablePowerPolicies
     * Specifies whether the default shared PC power policies should be disabled.
@@ -205,7 +205,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["disablePowerPolicies"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the disableSignInOnResume
     * Disables the requirement to sign in whenever the device wakes up from sleep mode.
@@ -220,7 +220,7 @@ class SharedPCConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the disableSignInOnResume
     * Disables the requirement to sign in whenever the device wakes up from sleep mode.
@@ -234,7 +234,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["disableSignInOnResume"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the enabled
     * Enables shared PC mode and applies the shared pc policies.
@@ -249,7 +249,7 @@ class SharedPCConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the enabled
     * Enables shared PC mode and applies the shared pc policies.
@@ -263,7 +263,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["enabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the fastFirstSignIn
     * Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts. Possible values are: notConfigured, enabled, disabled.
@@ -282,7 +282,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the fastFirstSignIn
     * Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts. Possible values are: notConfigured, enabled, disabled.
@@ -296,7 +296,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["fastFirstSignIn"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the idleTimeBeforeSleepInSeconds
     * Specifies the time in seconds that a device must sit idle before the PC goes to sleep. Setting this value to 0 prevents the sleep timeout from occurring.
@@ -311,7 +311,7 @@ class SharedPCConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the idleTimeBeforeSleepInSeconds
     * Specifies the time in seconds that a device must sit idle before the PC goes to sleep. Setting this value to 0 prevents the sleep timeout from occurring.
@@ -325,7 +325,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["idleTimeBeforeSleepInSeconds"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskAppDisplayName
     * Specifies the display text for the account shown on the sign-in screen which launches the app specified by SetKioskAppUserModelId. Only applies when KioskAppUserModelId is set.
@@ -340,7 +340,7 @@ class SharedPCConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskAppDisplayName
     * Specifies the display text for the account shown on the sign-in screen which launches the app specified by SetKioskAppUserModelId. Only applies when KioskAppUserModelId is set.
@@ -354,7 +354,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["kioskAppDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the kioskAppUserModelId
     * Specifies the application user model ID of the app to use with assigned access.
@@ -369,7 +369,7 @@ class SharedPCConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskAppUserModelId
     * Specifies the application user model ID of the app to use with assigned access.
@@ -383,7 +383,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["kioskAppUserModelId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the localStorage
     * Specifies whether local storage is allowed on a shared PC. Possible values are: notConfigured, enabled, disabled.
@@ -402,7 +402,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the localStorage
     * Specifies whether local storage is allowed on a shared PC. Possible values are: notConfigured, enabled, disabled.
@@ -416,7 +416,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["localStorage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the maintenanceStartTime
     * Specifies the daily start time of maintenance hour.
@@ -435,7 +435,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the maintenanceStartTime
     * Specifies the daily start time of maintenance hour.
@@ -449,7 +449,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["maintenanceStartTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the setAccountManager
     * Disables the account manager for shared PC mode. Possible values are: notConfigured, enabled, disabled.
@@ -468,7 +468,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the setAccountManager
     * Disables the account manager for shared PC mode. Possible values are: notConfigured, enabled, disabled.
@@ -482,7 +482,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["setAccountManager"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the setEduPolicies
     * Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true. Possible values are: notConfigured, enabled, disabled.
@@ -501,7 +501,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the setEduPolicies
     * Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true. Possible values are: notConfigured, enabled, disabled.
@@ -515,7 +515,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["setEduPolicies"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the setPowerPolicies
     * Specifies whether the default shared PC power policies should be enabled/disabled. Possible values are: notConfigured, enabled, disabled.
@@ -534,7 +534,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the setPowerPolicies
     * Specifies whether the default shared PC power policies should be enabled/disabled. Possible values are: notConfigured, enabled, disabled.
@@ -548,7 +548,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["setPowerPolicies"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the signInOnResume
     * Specifies the requirement to sign in whenever the device wakes up from sleep mode. Possible values are: notConfigured, enabled, disabled.
@@ -567,7 +567,7 @@ class SharedPCConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the signInOnResume
     * Specifies the requirement to sign in whenever the device wakes up from sleep mode. Possible values are: notConfigured, enabled, disabled.
@@ -581,5 +581,5 @@ class SharedPCConfiguration extends DeviceConfiguration
         $this->_propDict["signInOnResume"] = $val;
         return $this;
     }
-    
+
 }

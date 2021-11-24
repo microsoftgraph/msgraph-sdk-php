@@ -38,7 +38,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
             return null;
         }
     }
-    
+
     /**
     * Sets the appCrashCount
     * The number of crashes for the app. Valid values -2147483648 to 2147483647
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
         $this->_propDict["appCrashCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the appDisplayName
     * The friendly name of the application.
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
             return null;
         }
     }
-    
+
     /**
     * Sets the appDisplayName
     * The friendly name of the application.
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
         $this->_propDict["appDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appName
     * The name of the application.
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
             return null;
         }
     }
-    
+
     /**
     * Sets the appName
     * The name of the application.
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
         $this->_propDict["appName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appPublisher
     * The publisher of the application.
@@ -125,7 +125,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
             return null;
         }
     }
-    
+
     /**
     * Sets the appPublisher
     * The publisher of the application.
@@ -139,7 +139,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
         $this->_propDict["appPublisher"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appVersion
     * The version of the application.
@@ -154,7 +154,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
             return null;
         }
     }
-    
+
     /**
     * Sets the appVersion
     * The version of the application.
@@ -168,7 +168,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
         $this->_propDict["appVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceDisplayName
     * The name of the device.
@@ -183,7 +183,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceDisplayName
     * The name of the device.
@@ -197,7 +197,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
         $this->_propDict["deviceDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceId
     * The id of the device.
@@ -212,7 +212,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * The id of the device.
@@ -226,7 +226,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the processedDateTime
     * The date and time when the statistics were last computed.
@@ -245,7 +245,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
         }
         return null;
     }
-    
+
     /**
     * Sets the processedDateTime
     * The date and time when the statistics were last computed.
@@ -259,5 +259,5 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
         $this->_propDict["processedDateTime"] = $val;
         return $this;
     }
-    
+
 }

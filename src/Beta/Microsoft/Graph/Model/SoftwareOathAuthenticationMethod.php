@@ -38,7 +38,7 @@ class SoftwareOathAuthenticationMethod extends AuthenticationMethod
             return null;
         }
     }
-    
+
     /**
     * Sets the secretKey
     * The secret key of the method. Always returns null.
@@ -52,5 +52,5 @@ class SoftwareOathAuthenticationMethod extends AuthenticationMethod
         $this->_propDict["secretKey"] = $val;
         return $this;
     }
-    
+
 }

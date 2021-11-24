@@ -42,7 +42,7 @@ class Segment extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the callee
     * Endpoint that answered this segment.
@@ -56,7 +56,7 @@ class Segment extends \Microsoft\Graph\Model\Entity
         $this->_propDict["callee"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the caller
     * Endpoint that initiated this segment.
@@ -75,7 +75,7 @@ class Segment extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the caller
     * Endpoint that initiated this segment.
@@ -89,7 +89,7 @@ class Segment extends \Microsoft\Graph\Model\Entity
         $this->_propDict["caller"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the endDateTime
     * UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -108,7 +108,7 @@ class Segment extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the endDateTime
     * UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -122,7 +122,7 @@ class Segment extends \Microsoft\Graph\Model\Entity
         $this->_propDict["endDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the failureInfo
     * Failure information associated with the segment if it failed.
@@ -141,7 +141,7 @@ class Segment extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the failureInfo
     * Failure information associated with the segment if it failed.
@@ -155,9 +155,9 @@ class Segment extends \Microsoft\Graph\Model\Entity
         $this->_propDict["failureInfo"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the media
     * Media associated with this segment.
      *
@@ -171,12 +171,12 @@ class Segment extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the media
     * Media associated with this segment.
     *
-    * @param Media $val The media
+    * @param Media[] $val The media
     *
     * @return Segment
     */
@@ -185,7 +185,7 @@ class Segment extends \Microsoft\Graph\Model\Entity
         $this->_propDict["media"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startDateTime
     * UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -204,7 +204,7 @@ class Segment extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startDateTime
     * UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -218,5 +218,5 @@ class Segment extends \Microsoft\Graph\Model\Entity
         $this->_propDict["startDateTime"] = $val;
         return $this;
     }
-    
+
 }

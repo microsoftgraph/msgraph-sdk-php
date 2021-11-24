@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class SecurityBaselineTemplate extends DeviceManagementTemplate
 {
 
-     /** 
+     /**
      * Gets the categoryDeviceStateSummaries
     * The security baseline per category device state summary
      *
@@ -39,12 +39,12 @@ class SecurityBaselineTemplate extends DeviceManagementTemplate
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the categoryDeviceStateSummaries
     * The security baseline per category device state summary
     *
-    * @param SecurityBaselineCategoryStateSummary $val The categoryDeviceStateSummaries
+    * @param SecurityBaselineCategoryStateSummary[] $val The categoryDeviceStateSummaries
     *
     * @return SecurityBaselineTemplate
     */
@@ -53,9 +53,9 @@ class SecurityBaselineTemplate extends DeviceManagementTemplate
         $this->_propDict["categoryDeviceStateSummaries"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceStates
     * The security baseline device states
      *
@@ -69,12 +69,12 @@ class SecurityBaselineTemplate extends DeviceManagementTemplate
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deviceStates
     * The security baseline device states
     *
-    * @param SecurityBaselineDeviceState $val The deviceStates
+    * @param SecurityBaselineDeviceState[] $val The deviceStates
     *
     * @return SecurityBaselineTemplate
     */
@@ -83,7 +83,7 @@ class SecurityBaselineTemplate extends DeviceManagementTemplate
         $this->_propDict["deviceStates"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceStateSummary
     * The security baseline device state summary
@@ -102,7 +102,7 @@ class SecurityBaselineTemplate extends DeviceManagementTemplate
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceStateSummary
     * The security baseline device state summary
@@ -116,5 +116,5 @@ class SecurityBaselineTemplate extends DeviceManagementTemplate
         $this->_propDict["deviceStateSummary"] = $val;
         return $this;
     }
-    
+
 }

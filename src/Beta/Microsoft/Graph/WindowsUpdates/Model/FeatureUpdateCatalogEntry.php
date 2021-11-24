@@ -38,7 +38,7 @@ class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * The version of the feature update. Read-only.
@@ -52,5 +52,5 @@ class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
+
 }

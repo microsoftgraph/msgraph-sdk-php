@@ -38,7 +38,7 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
             return null;
         }
     }
-    
+
     /**
     * Sets the allowAllAppsAccess
     * AllowAllAppsAccess setting
@@ -52,7 +52,7 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
         $this->_propDict["allowAllAppsAccess"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the certificateStore
     * Target store certificate. Possible values are: user, machine.
@@ -71,7 +71,7 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateStore
     * Target store certificate. Possible values are: user, machine.
@@ -85,7 +85,7 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
         $this->_propDict["certificateStore"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateTemplateName
     * PKCS certificate template name.
@@ -100,7 +100,7 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateTemplateName
     * PKCS certificate template name.
@@ -114,7 +114,7 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
         $this->_propDict["certificateTemplateName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificationAuthority
     * PKCS certification authority FQDN.
@@ -129,7 +129,7 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
             return null;
         }
     }
-    
+
     /**
     * Sets the certificationAuthority
     * PKCS certification authority FQDN.
@@ -143,7 +143,7 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
         $this->_propDict["certificationAuthority"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificationAuthorityName
     * PKCS certification authority Name.
@@ -158,7 +158,7 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
             return null;
         }
     }
-    
+
     /**
     * Sets the certificationAuthorityName
     * PKCS certification authority Name.
@@ -172,9 +172,9 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
         $this->_propDict["certificationAuthorityName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the customSubjectAlternativeNames
     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      *
@@ -188,12 +188,12 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the customSubjectAlternativeNames
     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
     *
-    * @param CustomSubjectAlternativeName $val The customSubjectAlternativeNames
+    * @param CustomSubjectAlternativeName[] $val The customSubjectAlternativeNames
     *
     * @return MacOSPkcsCertificateProfile
     */
@@ -202,7 +202,7 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
         $this->_propDict["customSubjectAlternativeNames"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subjectAlternativeNameFormatString
     * Format string that defines the subject alternative name.
@@ -217,7 +217,7 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
             return null;
         }
     }
-    
+
     /**
     * Sets the subjectAlternativeNameFormatString
     * Format string that defines the subject alternative name.
@@ -231,7 +231,7 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
         $this->_propDict["subjectAlternativeNameFormatString"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subjectNameFormatString
     * Format string that defines the subject name. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
@@ -246,7 +246,7 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
             return null;
         }
     }
-    
+
     /**
     * Sets the subjectNameFormatString
     * Format string that defines the subject name. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
@@ -260,9 +260,9 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
         $this->_propDict["subjectNameFormatString"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managedDeviceCertificateStates
     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      *
@@ -276,12 +276,12 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managedDeviceCertificateStates
     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
     *
-    * @param ManagedDeviceCertificateState $val The managedDeviceCertificateStates
+    * @param ManagedDeviceCertificateState[] $val The managedDeviceCertificateStates
     *
     * @return MacOSPkcsCertificateProfile
     */
@@ -290,5 +290,5 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
         $this->_propDict["managedDeviceCertificateStates"] = $val;
         return $this;
     }
-    
+
 }

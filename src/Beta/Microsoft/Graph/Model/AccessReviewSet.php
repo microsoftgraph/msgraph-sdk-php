@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class AccessReviewSet extends Entity
 {
 
-     /** 
+     /**
      * Gets the definitions
      *
      * @return array|null The definitions
@@ -38,11 +38,11 @@ class AccessReviewSet extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the definitions
     *
-    * @param AccessReviewScheduleDefinition $val The definitions
+    * @param AccessReviewScheduleDefinition[] $val The definitions
     *
     * @return AccessReviewSet
     */
@@ -51,9 +51,9 @@ class AccessReviewSet extends Entity
         $this->_propDict["definitions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the historyDefinitions
      *
      * @return array|null The historyDefinitions
@@ -66,11 +66,11 @@ class AccessReviewSet extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the historyDefinitions
     *
-    * @param AccessReviewHistoryDefinition $val The historyDefinitions
+    * @param AccessReviewHistoryDefinition[] $val The historyDefinitions
     *
     * @return AccessReviewSet
     */
@@ -79,7 +79,7 @@ class AccessReviewSet extends Entity
         $this->_propDict["historyDefinitions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the policy
     *
@@ -97,7 +97,7 @@ class AccessReviewSet extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the policy
     *
@@ -110,5 +110,5 @@ class AccessReviewSet extends Entity
         $this->_propDict["policy"] = $val;
         return $this;
     }
-    
+
 }

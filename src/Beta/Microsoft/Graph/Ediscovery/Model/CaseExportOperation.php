@@ -38,7 +38,7 @@ class CaseExportOperation extends CaseOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the azureBlobContainer
     * The name of the Azure storage location where the export will be stored. This only applies to exports stored in your own Azure storage location.
@@ -52,7 +52,7 @@ class CaseExportOperation extends CaseOperation
         $this->_propDict["azureBlobContainer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the azureBlobToken
     * The SAS token for the Azure storage location.  This only applies to exports stored in your own Azure storage location.
@@ -67,7 +67,7 @@ class CaseExportOperation extends CaseOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the azureBlobToken
     * The SAS token for the Azure storage location.  This only applies to exports stored in your own Azure storage location.
@@ -81,7 +81,7 @@ class CaseExportOperation extends CaseOperation
         $this->_propDict["azureBlobToken"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description provided for the export.
@@ -96,7 +96,7 @@ class CaseExportOperation extends CaseOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description provided for the export.
@@ -110,7 +110,7 @@ class CaseExportOperation extends CaseOperation
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the exportOptions
     * The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
@@ -129,7 +129,7 @@ class CaseExportOperation extends CaseOperation
         }
         return null;
     }
-    
+
     /**
     * Sets the exportOptions
     * The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
@@ -143,7 +143,7 @@ class CaseExportOperation extends CaseOperation
         $this->_propDict["exportOptions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the exportStructure
     * The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
@@ -162,7 +162,7 @@ class CaseExportOperation extends CaseOperation
         }
         return null;
     }
-    
+
     /**
     * Sets the exportStructure
     * The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
@@ -176,7 +176,7 @@ class CaseExportOperation extends CaseOperation
         $this->_propDict["exportStructure"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the outputFolderId
     *
@@ -190,7 +190,7 @@ class CaseExportOperation extends CaseOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the outputFolderId
     *
@@ -203,7 +203,7 @@ class CaseExportOperation extends CaseOperation
         $this->_propDict["outputFolderId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the outputName
     * The name provided for the export.
@@ -218,7 +218,7 @@ class CaseExportOperation extends CaseOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the outputName
     * The name provided for the export.
@@ -232,7 +232,7 @@ class CaseExportOperation extends CaseOperation
         $this->_propDict["outputName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reviewSet
     * The review set the content is being exported from.
@@ -251,7 +251,7 @@ class CaseExportOperation extends CaseOperation
         }
         return null;
     }
-    
+
     /**
     * Sets the reviewSet
     * The review set the content is being exported from.
@@ -265,5 +265,5 @@ class CaseExportOperation extends CaseOperation
         $this->_propDict["reviewSet"] = $val;
         return $this;
     }
-    
+
 }

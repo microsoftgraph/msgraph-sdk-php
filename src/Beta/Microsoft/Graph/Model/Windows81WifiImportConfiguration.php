@@ -42,7 +42,7 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the payload
     * Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
@@ -56,7 +56,7 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
         $this->_propDict["payload"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the payloadFileName
     * Payload file name (.xml).
@@ -71,7 +71,7 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the payloadFileName
     * Payload file name (.xml).
@@ -85,7 +85,7 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
         $this->_propDict["payloadFileName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the profileName
     * Profile name displayed in the UI.
@@ -100,7 +100,7 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the profileName
     * Profile name displayed in the UI.
@@ -114,5 +114,5 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
         $this->_propDict["profileName"] = $val;
         return $this;
     }
-    
+
 }

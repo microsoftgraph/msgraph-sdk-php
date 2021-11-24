@@ -42,7 +42,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateValidityPeriodScale
     * Scale for the Certificate Validity Period. Possible values are: days, months, years.
@@ -56,7 +56,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
         $this->_propDict["certificateValidityPeriodScale"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateValidityPeriodValue
     * Value for the Certificate Validity Period.
@@ -71,7 +71,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateValidityPeriodValue
     * Value for the Certificate Validity Period.
@@ -85,7 +85,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
         $this->_propDict["certificateValidityPeriodValue"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the renewalThresholdPercentage
     * Certificate renewal threshold percentage. Valid values 1 to 99
@@ -100,7 +100,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the renewalThresholdPercentage
     * Certificate renewal threshold percentage. Valid values 1 to 99
@@ -114,7 +114,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
         $this->_propDict["renewalThresholdPercentage"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the subjectAlternativeNameType
     * Certificate Subject Alternative Name type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
@@ -133,7 +133,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
         }
         return null;
     }
-    
+
     /**
     * Sets the subjectAlternativeNameType
     * Certificate Subject Alternative Name type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
@@ -147,7 +147,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
         $this->_propDict["subjectAlternativeNameType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subjectNameFormat
     * Certificate Subject Name Format. Possible values are: commonName, commonNameAsEmail, custom, commonNameIncludingEmail, commonNameAsIMEI, commonNameAsSerialNumber.
@@ -166,7 +166,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
         }
         return null;
     }
-    
+
     /**
     * Sets the subjectNameFormat
     * Certificate Subject Name Format. Possible values are: commonName, commonNameAsEmail, custom, commonNameIncludingEmail, commonNameAsIMEI, commonNameAsSerialNumber.
@@ -180,5 +180,5 @@ class IosCertificateProfileBase extends IosCertificateProfile
         $this->_propDict["subjectNameFormat"] = $val;
         return $this;
     }
-    
+
 }

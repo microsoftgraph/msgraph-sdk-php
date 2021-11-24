@@ -37,7 +37,7 @@ class BookingService extends BookingNamedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the additionalInformation
     *
@@ -50,7 +50,7 @@ class BookingService extends BookingNamedEntity
         $this->_propDict["additionalInformation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the defaultDuration
     * The default length of the service, represented in numbers of days, hours, minutes, and seconds. For example, P11D23H59M59.999999999999S.
@@ -69,7 +69,7 @@ class BookingService extends BookingNamedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the defaultDuration
     * The default length of the service, represented in numbers of days, hours, minutes, and seconds. For example, P11D23H59M59.999999999999S.
@@ -83,7 +83,7 @@ class BookingService extends BookingNamedEntity
         $this->_propDict["defaultDuration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the defaultLocation
     * The default physical location for the service.
@@ -102,7 +102,7 @@ class BookingService extends BookingNamedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the defaultLocation
     * The default physical location for the service.
@@ -116,7 +116,7 @@ class BookingService extends BookingNamedEntity
         $this->_propDict["defaultLocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the defaultPrice
     * The default monetary price for the service.
@@ -131,7 +131,7 @@ class BookingService extends BookingNamedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the defaultPrice
     * The default monetary price for the service.
@@ -145,7 +145,7 @@ class BookingService extends BookingNamedEntity
         $this->_propDict["defaultPrice"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the defaultPriceType
     * The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.
@@ -164,7 +164,7 @@ class BookingService extends BookingNamedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the defaultPriceType
     * The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.
@@ -178,9 +178,9 @@ class BookingService extends BookingNamedEntity
         $this->_propDict["defaultPriceType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the defaultReminders
     * The value of this property is only available when reading an individual booking service by id.
      *
@@ -194,12 +194,12 @@ class BookingService extends BookingNamedEntity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the defaultReminders
     * The value of this property is only available when reading an individual booking service by id.
     *
-    * @param BookingReminder $val The defaultReminders
+    * @param BookingReminder[] $val The defaultReminders
     *
     * @return BookingService
     */
@@ -208,7 +208,7 @@ class BookingService extends BookingNamedEntity
         $this->_propDict["defaultReminders"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * A text description for the service.
@@ -223,7 +223,7 @@ class BookingService extends BookingNamedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * A text description for the service.
@@ -237,7 +237,7 @@ class BookingService extends BookingNamedEntity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isHiddenFromCustomers
     * True means this service is not available to customers for booking.
@@ -252,7 +252,7 @@ class BookingService extends BookingNamedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the isHiddenFromCustomers
     * True means this service is not available to customers for booking.
@@ -266,7 +266,7 @@ class BookingService extends BookingNamedEntity
         $this->_propDict["isHiddenFromCustomers"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isLocationOnline
     * True indicates that the appointments for the service will be held online. Default value is false.
@@ -281,7 +281,7 @@ class BookingService extends BookingNamedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the isLocationOnline
     * True indicates that the appointments for the service will be held online. Default value is false.
@@ -295,7 +295,7 @@ class BookingService extends BookingNamedEntity
         $this->_propDict["isLocationOnline"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the notes
     * Additional information about this service.
@@ -310,7 +310,7 @@ class BookingService extends BookingNamedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the notes
     * Additional information about this service.
@@ -324,7 +324,7 @@ class BookingService extends BookingNamedEntity
         $this->_propDict["notes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the postBuffer
     * The time to buffer after an appointment for this service ends, and before the next customer appointment can be booked.
@@ -343,7 +343,7 @@ class BookingService extends BookingNamedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the postBuffer
     * The time to buffer after an appointment for this service ends, and before the next customer appointment can be booked.
@@ -357,7 +357,7 @@ class BookingService extends BookingNamedEntity
         $this->_propDict["postBuffer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the preBuffer
     * The time to buffer before an appointment for this service can start.
@@ -376,7 +376,7 @@ class BookingService extends BookingNamedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the preBuffer
     * The time to buffer before an appointment for this service can start.
@@ -390,7 +390,7 @@ class BookingService extends BookingNamedEntity
         $this->_propDict["preBuffer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the schedulingPolicy
     * The set of policies that determine how appointments for this type of service should be created and managed.
@@ -409,7 +409,7 @@ class BookingService extends BookingNamedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the schedulingPolicy
     * The set of policies that determine how appointments for this type of service should be created and managed.
@@ -423,7 +423,7 @@ class BookingService extends BookingNamedEntity
         $this->_propDict["schedulingPolicy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the smsNotificationsEnabled
     * True indicates SMS notifications can be sent to the customers for the appointment of the service. Default value is false.
@@ -438,7 +438,7 @@ class BookingService extends BookingNamedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the smsNotificationsEnabled
     * True indicates SMS notifications can be sent to the customers for the appointment of the service. Default value is false.
@@ -452,7 +452,7 @@ class BookingService extends BookingNamedEntity
         $this->_propDict["smsNotificationsEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the staffMemberIds
     * Represents those staff members who provide this service.
@@ -467,7 +467,7 @@ class BookingService extends BookingNamedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the staffMemberIds
     * Represents those staff members who provide this service.
@@ -481,7 +481,7 @@ class BookingService extends BookingNamedEntity
         $this->_propDict["staffMemberIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the webUrl
     * The URL a customer uses to access the service.
@@ -496,7 +496,7 @@ class BookingService extends BookingNamedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the webUrl
     * The URL a customer uses to access the service.
@@ -510,5 +510,5 @@ class BookingService extends BookingNamedEntity
         $this->_propDict["webUrl"] = $val;
         return $this;
     }
-    
+
 }

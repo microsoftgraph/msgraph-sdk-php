@@ -42,7 +42,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastRefreshedDateTime
     * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
@@ -56,7 +56,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastRefreshedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the numberOfCloudPcConnectionStatusFailed
     * The number of cloud PC connections that have a status of failed. Optional. Read-only.
@@ -71,7 +71,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the numberOfCloudPcConnectionStatusFailed
     * The number of cloud PC connections that have a status of failed. Optional. Read-only.
@@ -85,7 +85,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["numberOfCloudPcConnectionStatusFailed"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the numberOfCloudPcConnectionStatusPassed
     * The number of cloud PC connections that have a status of passed. Optional. Read-only.
@@ -100,7 +100,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the numberOfCloudPcConnectionStatusPassed
     * The number of cloud PC connections that have a status of passed. Optional. Read-only.
@@ -114,7 +114,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["numberOfCloudPcConnectionStatusPassed"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the numberOfCloudPcConnectionStatusPending
     * The number of cloud PC connections that have a status of pending. Optional. Read-only.
@@ -129,7 +129,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the numberOfCloudPcConnectionStatusPending
     * The number of cloud PC connections that have a status of pending. Optional. Read-only.
@@ -143,7 +143,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["numberOfCloudPcConnectionStatusPending"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the numberOfCloudPcConnectionStatusRunning
     * The number of cloud PC connections that have a status of running. Optional. Read-only.
@@ -158,7 +158,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the numberOfCloudPcConnectionStatusRunning
     * The number of cloud PC connections that have a status of running. Optional. Read-only.
@@ -172,7 +172,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["numberOfCloudPcConnectionStatusRunning"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the numberOfCloudPcConnectionStatusUnkownFutureValue
     * The number of cloud PC connections that have a status of unknownFutureValue. Optional. Read-only.
@@ -187,7 +187,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the numberOfCloudPcConnectionStatusUnkownFutureValue
     * The number of cloud PC connections that have a status of unknownFutureValue. Optional. Read-only.
@@ -201,7 +201,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["numberOfCloudPcConnectionStatusUnkownFutureValue"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the numberOfCloudPcStatusDeprovisioning
     * The number of cloud PCs that have a status of deprovisioning. Optional. Read-only.
@@ -216,7 +216,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the numberOfCloudPcStatusDeprovisioning
     * The number of cloud PCs that have a status of deprovisioning. Optional. Read-only.
@@ -230,7 +230,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["numberOfCloudPcStatusDeprovisioning"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the numberOfCloudPcStatusFailed
     * The number of cloud PCs that have a status of failed. Optional. Read-only.
@@ -245,7 +245,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the numberOfCloudPcStatusFailed
     * The number of cloud PCs that have a status of failed. Optional. Read-only.
@@ -259,7 +259,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["numberOfCloudPcStatusFailed"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the numberOfCloudPcStatusInGracePeriod
     * The number of cloud PCs that have a status of inGracePeriod. Optional. Read-only.
@@ -274,7 +274,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the numberOfCloudPcStatusInGracePeriod
     * The number of cloud PCs that have a status of inGracePeriod. Optional. Read-only.
@@ -288,7 +288,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["numberOfCloudPcStatusInGracePeriod"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the numberOfCloudPcStatusNotProvisioned
     * The number of cloud PCs that have a status of notProvisioned. Optional. Read-only.
@@ -303,7 +303,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the numberOfCloudPcStatusNotProvisioned
     * The number of cloud PCs that have a status of notProvisioned. Optional. Read-only.
@@ -317,7 +317,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["numberOfCloudPcStatusNotProvisioned"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the numberOfCloudPcStatusProvisioned
     * The number of cloud PCs that have a status of provisioned. Optional. Read-only.
@@ -332,7 +332,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the numberOfCloudPcStatusProvisioned
     * The number of cloud PCs that have a status of provisioned. Optional. Read-only.
@@ -346,7 +346,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["numberOfCloudPcStatusProvisioned"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the numberOfCloudPcStatusProvisioning
     * The number of cloud PCs that have a status of provisioning. Optional. Read-only.
@@ -361,7 +361,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the numberOfCloudPcStatusProvisioning
     * The number of cloud PCs that have a status of provisioning. Optional. Read-only.
@@ -375,7 +375,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["numberOfCloudPcStatusProvisioning"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the numberOfCloudPcStatusUnknown
     * The number of cloud PCs that have a status of unknown. Optional. Read-only.
@@ -390,7 +390,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the numberOfCloudPcStatusUnknown
     * The number of cloud PCs that have a status of unknown. Optional. Read-only.
@@ -404,7 +404,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["numberOfCloudPcStatusUnknown"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the numberOfCloudPcStatusUpgrading
     * The number of cloud PCs that have a status of upgrading. Optional. Read-only.
@@ -419,7 +419,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the numberOfCloudPcStatusUpgrading
     * The number of cloud PCs that have a status of upgrading. Optional. Read-only.
@@ -433,7 +433,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["numberOfCloudPcStatusUpgrading"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the tenantDisplayName
     * The display name for the managed tenant. Optional. Read-only.
@@ -448,7 +448,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tenantDisplayName
     * The display name for the managed tenant. Optional. Read-only.
@@ -462,7 +462,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["tenantDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantId
     *
@@ -476,7 +476,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tenantId
     *
@@ -489,7 +489,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["tenantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the totalCloudPcConnectionStatus
     * The total number of cloud PC connection statuses for the given managed tenant. Optional. Read-only.
@@ -504,7 +504,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the totalCloudPcConnectionStatus
     * The total number of cloud PC connection statuses for the given managed tenant. Optional. Read-only.
@@ -518,7 +518,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["totalCloudPcConnectionStatus"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the totalCloudPcStatus
     * The total number of cloud PC statues for the given managed tenant. Optional. Read-only.
@@ -533,7 +533,7 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the totalCloudPcStatus
     * The total number of cloud PC statues for the given managed tenant. Optional. Read-only.
@@ -547,5 +547,5 @@ class CloudPcOverview extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["totalCloudPcStatus"] = intval($val);
         return $this;
     }
-    
+
 }

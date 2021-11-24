@@ -37,7 +37,7 @@ class CalendarSharingMessage extends Message
             return null;
         }
     }
-    
+
     /**
     * Sets the canAccept
     *
@@ -50,7 +50,7 @@ class CalendarSharingMessage extends Message
         $this->_propDict["canAccept"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the sharingMessageAction
     *
@@ -68,7 +68,7 @@ class CalendarSharingMessage extends Message
         }
         return null;
     }
-    
+
     /**
     * Sets the sharingMessageAction
     *
@@ -81,9 +81,9 @@ class CalendarSharingMessage extends Message
         $this->_propDict["sharingMessageAction"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the sharingMessageActions
      *
      * @return array|null The sharingMessageActions
@@ -96,11 +96,11 @@ class CalendarSharingMessage extends Message
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the sharingMessageActions
     *
-    * @param CalendarSharingMessageAction $val The sharingMessageActions
+    * @param CalendarSharingMessageAction[] $val The sharingMessageActions
     *
     * @return CalendarSharingMessage
     */
@@ -109,7 +109,7 @@ class CalendarSharingMessage extends Message
         $this->_propDict["sharingMessageActions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the suggestedCalendarName
     *
@@ -123,7 +123,7 @@ class CalendarSharingMessage extends Message
             return null;
         }
     }
-    
+
     /**
     * Sets the suggestedCalendarName
     *
@@ -136,5 +136,5 @@ class CalendarSharingMessage extends Message
         $this->_propDict["suggestedCalendarName"] = $val;
         return $this;
     }
-    
+
 }

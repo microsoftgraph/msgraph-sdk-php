@@ -41,7 +41,7 @@ class Qna extends SearchAnswer
         }
         return null;
     }
-    
+
     /**
     * Sets the availabilityEndDateTime
     *
@@ -54,7 +54,7 @@ class Qna extends SearchAnswer
         $this->_propDict["availabilityEndDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the availabilityStartDateTime
     *
@@ -72,7 +72,7 @@ class Qna extends SearchAnswer
         }
         return null;
     }
-    
+
     /**
     * Sets the availabilityStartDateTime
     *
@@ -85,7 +85,7 @@ class Qna extends SearchAnswer
         $this->_propDict["availabilityStartDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the groupIds
     *
@@ -99,7 +99,7 @@ class Qna extends SearchAnswer
             return null;
         }
     }
-    
+
     /**
     * Sets the groupIds
     *
@@ -112,7 +112,7 @@ class Qna extends SearchAnswer
         $this->_propDict["groupIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isSuggested
     *
@@ -126,7 +126,7 @@ class Qna extends SearchAnswer
             return null;
         }
     }
-    
+
     /**
     * Sets the isSuggested
     *
@@ -139,7 +139,7 @@ class Qna extends SearchAnswer
         $this->_propDict["isSuggested"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the keywords
     *
@@ -157,7 +157,7 @@ class Qna extends SearchAnswer
         }
         return null;
     }
-    
+
     /**
     * Sets the keywords
     *
@@ -170,7 +170,7 @@ class Qna extends SearchAnswer
         $this->_propDict["keywords"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the languageTags
     *
@@ -184,7 +184,7 @@ class Qna extends SearchAnswer
             return null;
         }
     }
-    
+
     /**
     * Sets the languageTags
     *
@@ -197,9 +197,9 @@ class Qna extends SearchAnswer
         $this->_propDict["languageTags"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the platforms
      *
      * @return array|null The platforms
@@ -212,11 +212,11 @@ class Qna extends SearchAnswer
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the platforms
     *
-    * @param \Beta\Microsoft\Graph\Model\DevicePlatformType $val The platforms
+    * @param \Beta\Microsoft\Graph\Model\DevicePlatformType[] $val The platforms
     *
     * @return Qna
     */
@@ -225,7 +225,7 @@ class Qna extends SearchAnswer
         $this->_propDict["platforms"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     *
@@ -243,7 +243,7 @@ class Qna extends SearchAnswer
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     *
@@ -256,9 +256,9 @@ class Qna extends SearchAnswer
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the targetedVariations
      *
      * @return array|null The targetedVariations
@@ -271,11 +271,11 @@ class Qna extends SearchAnswer
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the targetedVariations
     *
-    * @param AnswerVariant $val The targetedVariations
+    * @param AnswerVariant[] $val The targetedVariations
     *
     * @return Qna
     */
@@ -284,5 +284,5 @@ class Qna extends SearchAnswer
         $this->_propDict["targetedVariations"] = $val;
         return $this;
     }
-    
+
 }

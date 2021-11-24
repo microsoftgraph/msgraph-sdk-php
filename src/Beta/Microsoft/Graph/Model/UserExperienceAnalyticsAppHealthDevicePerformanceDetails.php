@@ -38,7 +38,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appDisplayName
     * The friendly name of the application for which the event occurred.
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
         $this->_propDict["appDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appPublisher
     * The publisher of the application.
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appPublisher
     * The publisher of the application.
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
         $this->_propDict["appPublisher"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appVersion
     * The version of the application.
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appVersion
     * The version of the application.
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
         $this->_propDict["appVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceDisplayName
     * The name of the device.
@@ -125,7 +125,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceDisplayName
     * The name of the device.
@@ -139,7 +139,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
         $this->_propDict["deviceDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceId
     * The id of the device.
@@ -154,7 +154,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * The id of the device.
@@ -168,7 +168,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the eventDateTime
     * The time the event occurred.
@@ -187,7 +187,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the eventDateTime
     * The time the event occurred.
@@ -201,7 +201,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
         $this->_propDict["eventDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the eventType
     * The type of the event.
@@ -216,7 +216,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the eventType
     * The type of the event.
@@ -230,5 +230,5 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
         $this->_propDict["eventType"] = $val;
         return $this;
     }
-    
+
 }

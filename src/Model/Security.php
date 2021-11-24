@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class Security extends Entity
 {
 
-     /** 
+     /**
      * Gets the alerts
     * Read-only. Nullable.
      *
@@ -39,12 +39,12 @@ class Security extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the alerts
     * Read-only. Nullable.
     *
-    * @param Alert $val The alerts
+    * @param Alert[] $val The alerts
     *
     * @return Security
     */
@@ -53,9 +53,9 @@ class Security extends Entity
         $this->_propDict["alerts"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the secureScoreControlProfiles
      *
      * @return array|null The secureScoreControlProfiles
@@ -68,11 +68,11 @@ class Security extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the secureScoreControlProfiles
     *
-    * @param SecureScoreControlProfile $val The secureScoreControlProfiles
+    * @param SecureScoreControlProfile[] $val The secureScoreControlProfiles
     *
     * @return Security
     */
@@ -81,9 +81,9 @@ class Security extends Entity
         $this->_propDict["secureScoreControlProfiles"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the secureScores
      *
      * @return array|null The secureScores
@@ -96,11 +96,11 @@ class Security extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the secureScores
     *
-    * @param SecureScore $val The secureScores
+    * @param SecureScore[] $val The secureScores
     *
     * @return Security
     */
@@ -109,5 +109,5 @@ class Security extends Entity
         $this->_propDict["secureScores"] = $val;
         return $this;
     }
-    
+
 }

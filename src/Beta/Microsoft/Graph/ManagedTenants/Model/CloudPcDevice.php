@@ -38,7 +38,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the cloudPcStatus
     * The status of the cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed. Required. Read-only.
@@ -52,7 +52,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["cloudPcStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name for the cloud PC. Required. Read-only.
@@ -67,7 +67,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name for the cloud PC. Required. Read-only.
@@ -81,7 +81,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastRefreshedDateTime
     * Date and time the entity was last updated in the multi-tenant management platform. Required. Read-only.
@@ -100,7 +100,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastRefreshedDateTime
     * Date and time the entity was last updated in the multi-tenant management platform. Required. Read-only.
@@ -114,7 +114,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastRefreshedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedDeviceId
     * The managed device identifier for the cloud PC. Optional. Read-only.
@@ -129,7 +129,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managedDeviceId
     * The managed device identifier for the cloud PC. Optional. Read-only.
@@ -143,7 +143,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["managedDeviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedDeviceName
     * The managed device display name for the cloud PC. Optional. Read-only.
@@ -158,7 +158,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managedDeviceName
     * The managed device display name for the cloud PC. Optional. Read-only.
@@ -172,7 +172,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["managedDeviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the provisioningPolicyId
     * The provisioning policy identifier for the cloud PC. Required. Read-only.
@@ -187,7 +187,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the provisioningPolicyId
     * The provisioning policy identifier for the cloud PC. Required. Read-only.
@@ -201,7 +201,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["provisioningPolicyId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the servicePlanName
     * The service plan name for the cloud PC. Required. Read-only.
@@ -216,7 +216,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the servicePlanName
     * The service plan name for the cloud PC. Required. Read-only.
@@ -230,7 +230,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["servicePlanName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantDisplayName
     * The display name for the managed tenant. Required. Read-only.
@@ -245,7 +245,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tenantDisplayName
     * The display name for the managed tenant. Required. Read-only.
@@ -259,7 +259,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["tenantDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantId
     * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
@@ -274,7 +274,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tenantId
     * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
@@ -288,7 +288,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["tenantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * The user principal name (UPN) of the user assigned to the cloud PC. Required. Read-only.
@@ -303,7 +303,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * The user principal name (UPN) of the user assigned to the cloud PC. Required. Read-only.
@@ -317,5 +317,5 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

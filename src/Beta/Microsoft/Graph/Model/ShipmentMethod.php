@@ -37,7 +37,7 @@ class ShipmentMethod extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the code
     *
@@ -50,7 +50,7 @@ class ShipmentMethod extends Entity
         $this->_propDict["code"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -64,7 +64,7 @@ class ShipmentMethod extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -77,7 +77,7 @@ class ShipmentMethod extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -95,7 +95,7 @@ class ShipmentMethod extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -108,5 +108,5 @@ class ShipmentMethod extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
 }

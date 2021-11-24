@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class VirtualEndpoint extends Entity
 {
 
-     /** 
+     /**
      * Gets the auditEvents
     * Cloud PC audit event.
      *
@@ -39,12 +39,12 @@ class VirtualEndpoint extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the auditEvents
     * Cloud PC audit event.
     *
-    * @param CloudPcAuditEvent $val The auditEvents
+    * @param CloudPcAuditEvent[] $val The auditEvents
     *
     * @return VirtualEndpoint
     */
@@ -53,9 +53,9 @@ class VirtualEndpoint extends Entity
         $this->_propDict["auditEvents"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the cloudPCs
     * Cloud managed virtual desktops.
      *
@@ -69,12 +69,12 @@ class VirtualEndpoint extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the cloudPCs
     * Cloud managed virtual desktops.
     *
-    * @param CloudPC $val The cloudPCs
+    * @param CloudPC[] $val The cloudPCs
     *
     * @return VirtualEndpoint
     */
@@ -83,9 +83,9 @@ class VirtualEndpoint extends Entity
         $this->_propDict["cloudPCs"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceImages
     * The image resource on Cloud PC.
      *
@@ -99,12 +99,12 @@ class VirtualEndpoint extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deviceImages
     * The image resource on Cloud PC.
     *
-    * @param CloudPcDeviceImage $val The deviceImages
+    * @param CloudPcDeviceImage[] $val The deviceImages
     *
     * @return VirtualEndpoint
     */
@@ -113,9 +113,9 @@ class VirtualEndpoint extends Entity
         $this->_propDict["deviceImages"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the galleryImages
     * The gallery image resource on Cloud PC.
      *
@@ -129,12 +129,12 @@ class VirtualEndpoint extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the galleryImages
     * The gallery image resource on Cloud PC.
     *
-    * @param CloudPcGalleryImage $val The galleryImages
+    * @param CloudPcGalleryImage[] $val The galleryImages
     *
     * @return VirtualEndpoint
     */
@@ -143,9 +143,9 @@ class VirtualEndpoint extends Entity
         $this->_propDict["galleryImages"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the onPremisesConnections
     * A defined collection of Azure resource information that can be used to establish on-premises network connectivity for Cloud PCs.
      *
@@ -159,12 +159,12 @@ class VirtualEndpoint extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the onPremisesConnections
     * A defined collection of Azure resource information that can be used to establish on-premises network connectivity for Cloud PCs.
     *
-    * @param CloudPcOnPremisesConnection $val The onPremisesConnections
+    * @param CloudPcOnPremisesConnection[] $val The onPremisesConnections
     *
     * @return VirtualEndpoint
     */
@@ -173,9 +173,9 @@ class VirtualEndpoint extends Entity
         $this->_propDict["onPremisesConnections"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the provisioningPolicies
     * Cloud PC provisioning policy.
      *
@@ -189,12 +189,12 @@ class VirtualEndpoint extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the provisioningPolicies
     * Cloud PC provisioning policy.
     *
-    * @param CloudPcProvisioningPolicy $val The provisioningPolicies
+    * @param CloudPcProvisioningPolicy[] $val The provisioningPolicies
     *
     * @return VirtualEndpoint
     */
@@ -203,9 +203,9 @@ class VirtualEndpoint extends Entity
         $this->_propDict["provisioningPolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the servicePlans
     * Cloud PC service plans.
      *
@@ -219,12 +219,12 @@ class VirtualEndpoint extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the servicePlans
     * Cloud PC service plans.
     *
-    * @param CloudPcServicePlan $val The servicePlans
+    * @param CloudPcServicePlan[] $val The servicePlans
     *
     * @return VirtualEndpoint
     */
@@ -233,9 +233,9 @@ class VirtualEndpoint extends Entity
         $this->_propDict["servicePlans"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the supportedRegions
     * Cloud PC supported regions.
      *
@@ -249,12 +249,12 @@ class VirtualEndpoint extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the supportedRegions
     * Cloud PC supported regions.
     *
-    * @param CloudPcSupportedRegion $val The supportedRegions
+    * @param CloudPcSupportedRegion[] $val The supportedRegions
     *
     * @return VirtualEndpoint
     */
@@ -263,9 +263,9 @@ class VirtualEndpoint extends Entity
         $this->_propDict["supportedRegions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userSettings
     * Cloud PC user settings.
      *
@@ -279,12 +279,12 @@ class VirtualEndpoint extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userSettings
     * Cloud PC user settings.
     *
-    * @param CloudPcUserSetting $val The userSettings
+    * @param CloudPcUserSetting[] $val The userSettings
     *
     * @return VirtualEndpoint
     */
@@ -293,5 +293,5 @@ class VirtualEndpoint extends Entity
         $this->_propDict["userSettings"] = $val;
         return $this;
     }
-    
+
 }

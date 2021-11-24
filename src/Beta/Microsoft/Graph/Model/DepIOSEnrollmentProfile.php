@@ -38,7 +38,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the appearanceScreenDisabled
     * Indicates if Apperance screen is disabled
@@ -52,7 +52,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["appearanceScreenDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the awaitDeviceConfiguredConfirmation
     * Indicates if the device will need to wait for configured confirmation
@@ -67,7 +67,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the awaitDeviceConfiguredConfirmation
     * Indicates if the device will need to wait for configured confirmation
@@ -81,7 +81,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["awaitDeviceConfiguredConfirmation"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the carrierActivationUrl
     * Carrier URL for activating device eSIM.
@@ -96,7 +96,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the carrierActivationUrl
     * Carrier URL for activating device eSIM.
@@ -110,7 +110,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["carrierActivationUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the companyPortalVppTokenId
     * If set, indicates which Vpp token should be used to deploy the Company Portal w/ device licensing. 'enableAuthenticationViaCompanyPortal' must be set in order for this property to be set.
@@ -125,7 +125,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the companyPortalVppTokenId
     * If set, indicates which Vpp token should be used to deploy the Company Portal w/ device licensing. 'enableAuthenticationViaCompanyPortal' must be set in order for this property to be set.
@@ -139,7 +139,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["companyPortalVppTokenId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceToDeviceMigrationDisabled
     * Indicates if Device To Device Migration is disabled
@@ -154,7 +154,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceToDeviceMigrationDisabled
     * Indicates if Device To Device Migration is disabled
@@ -168,7 +168,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["deviceToDeviceMigrationDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the enableSharedIPad
     * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
@@ -183,7 +183,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the enableSharedIPad
     * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
@@ -197,7 +197,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["enableSharedIPad"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the enableSingleAppEnrollmentMode
     * Tells the device to enable single app mode and apply app-lock during enrollment. Default is false. 'enableAuthenticationViaCompanyPortal' and 'companyPortalVppTokenId' must be set for this property to be set.
@@ -212,7 +212,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the enableSingleAppEnrollmentMode
     * Tells the device to enable single app mode and apply app-lock during enrollment. Default is false. 'enableAuthenticationViaCompanyPortal' and 'companyPortalVppTokenId' must be set for this property to be set.
@@ -226,7 +226,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["enableSingleAppEnrollmentMode"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the expressLanguageScreenDisabled
     * Indicates if Express Language screen is disabled
@@ -241,7 +241,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the expressLanguageScreenDisabled
     * Indicates if Express Language screen is disabled
@@ -255,7 +255,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["expressLanguageScreenDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the forceTemporarySession
     * Indicates if temporary sessions is enabled
@@ -270,7 +270,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the forceTemporarySession
     * Indicates if temporary sessions is enabled
@@ -284,7 +284,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["forceTemporarySession"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the homeButtonScreenDisabled
     * Indicates if home button sensitivity screen is disabled
@@ -299,7 +299,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the homeButtonScreenDisabled
     * Indicates if home button sensitivity screen is disabled
@@ -313,7 +313,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["homeButtonScreenDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iMessageAndFaceTimeScreenDisabled
     * Indicates if iMessage and FaceTime screen is disabled
@@ -328,7 +328,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the iMessageAndFaceTimeScreenDisabled
     * Indicates if iMessage and FaceTime screen is disabled
@@ -342,7 +342,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["iMessageAndFaceTimeScreenDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iTunesPairingMode
     * Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
@@ -361,7 +361,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         }
         return null;
     }
-    
+
     /**
     * Sets the iTunesPairingMode
     * Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
@@ -375,9 +375,9 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["iTunesPairingMode"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managementCertificates
     * Management certificates for Apple Configurator
      *
@@ -391,12 +391,12 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managementCertificates
     * Management certificates for Apple Configurator
     *
-    * @param ManagementCertificateWithThumbprint $val The managementCertificates
+    * @param ManagementCertificateWithThumbprint[] $val The managementCertificates
     *
     * @return DepIOSEnrollmentProfile
     */
@@ -405,7 +405,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["managementCertificates"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onBoardingScreenDisabled
     * Indicates if onboarding setup screen is disabled
@@ -420,7 +420,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the onBoardingScreenDisabled
     * Indicates if onboarding setup screen is disabled
@@ -434,7 +434,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["onBoardingScreenDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passCodeDisabled
     * Indicates if Passcode setup pane is disabled
@@ -449,7 +449,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the passCodeDisabled
     * Indicates if Passcode setup pane is disabled
@@ -463,7 +463,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["passCodeDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passcodeLockGracePeriodInSeconds
     * Indicates timeout before locked screen requires the user to enter the device passocde to unlock it
@@ -478,7 +478,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the passcodeLockGracePeriodInSeconds
     * Indicates timeout before locked screen requires the user to enter the device passocde to unlock it
@@ -492,7 +492,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["passcodeLockGracePeriodInSeconds"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the preferredLanguageScreenDisabled
     * Indicates if Preferred language screen is disabled
@@ -507,7 +507,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the preferredLanguageScreenDisabled
     * Indicates if Preferred language screen is disabled
@@ -521,7 +521,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["preferredLanguageScreenDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the restoreCompletedScreenDisabled
     * Indicates if Weclome screen is disabled
@@ -536,7 +536,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the restoreCompletedScreenDisabled
     * Indicates if Weclome screen is disabled
@@ -550,7 +550,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["restoreCompletedScreenDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the restoreFromAndroidDisabled
     * Indicates if Restore from Android is disabled
@@ -565,7 +565,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the restoreFromAndroidDisabled
     * Indicates if Restore from Android is disabled
@@ -579,7 +579,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["restoreFromAndroidDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the sharedIPadMaximumUserCount
     * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
@@ -594,7 +594,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the sharedIPadMaximumUserCount
     * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
@@ -608,7 +608,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["sharedIPadMaximumUserCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the simSetupScreenDisabled
     * Indicates if the SIMSetup screen is disabled
@@ -623,7 +623,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the simSetupScreenDisabled
     * Indicates if the SIMSetup screen is disabled
@@ -637,7 +637,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["simSetupScreenDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the softwareUpdateScreenDisabled
     * Indicates if the mandatory sofware update screen is disabled
@@ -652,7 +652,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the softwareUpdateScreenDisabled
     * Indicates if the mandatory sofware update screen is disabled
@@ -666,7 +666,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["softwareUpdateScreenDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the temporarySessionTimeoutInSeconds
     * Indicates timeout of temporary session
@@ -681,7 +681,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the temporarySessionTimeoutInSeconds
     * Indicates timeout of temporary session
@@ -695,7 +695,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["temporarySessionTimeoutInSeconds"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the updateCompleteScreenDisabled
     * Indicates if Weclome screen is disabled
@@ -710,7 +710,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the updateCompleteScreenDisabled
     * Indicates if Weclome screen is disabled
@@ -724,7 +724,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["updateCompleteScreenDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the userSessionTimeoutInSeconds
     * Indicates timeout of temporary session
@@ -739,7 +739,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the userSessionTimeoutInSeconds
     * Indicates timeout of temporary session
@@ -753,7 +753,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["userSessionTimeoutInSeconds"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the watchMigrationScreenDisabled
     * Indicates if the watch migration screen is disabled
@@ -768,7 +768,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the watchMigrationScreenDisabled
     * Indicates if the watch migration screen is disabled
@@ -782,7 +782,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["watchMigrationScreenDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the welcomeScreenDisabled
     * Indicates if Weclome screen is disabled
@@ -797,7 +797,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the welcomeScreenDisabled
     * Indicates if Weclome screen is disabled
@@ -811,7 +811,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["welcomeScreenDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the zoomDisabled
     * Indicates if zoom setup pane is disabled
@@ -826,7 +826,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the zoomDisabled
     * Indicates if zoom setup pane is disabled
@@ -840,5 +840,5 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
         $this->_propDict["zoomDisabled"] = boolval($val);
         return $this;
     }
-    
+
 }

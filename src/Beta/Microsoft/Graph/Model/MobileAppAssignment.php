@@ -42,7 +42,7 @@ class MobileAppAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the intent
     * The install intent defined by the admin. Possible values are: available, required, uninstall, availableWithoutEnrollment.
@@ -56,7 +56,7 @@ class MobileAppAssignment extends Entity
         $this->_propDict["intent"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settings
     * The settings for target assignment defined by the admin.
@@ -75,7 +75,7 @@ class MobileAppAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the settings
     * The settings for target assignment defined by the admin.
@@ -89,7 +89,7 @@ class MobileAppAssignment extends Entity
         $this->_propDict["settings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the source
     * The resource type which is the source for the assignment. Possible values are: direct, policySets.
@@ -108,7 +108,7 @@ class MobileAppAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the source
     * The resource type which is the source for the assignment. Possible values are: direct, policySets.
@@ -122,7 +122,7 @@ class MobileAppAssignment extends Entity
         $this->_propDict["source"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sourceId
     * The identifier of the source of the assignment.
@@ -137,7 +137,7 @@ class MobileAppAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sourceId
     * The identifier of the source of the assignment.
@@ -151,7 +151,7 @@ class MobileAppAssignment extends Entity
         $this->_propDict["sourceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the target
     * The target group assignment defined by the admin.
@@ -170,7 +170,7 @@ class MobileAppAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The target group assignment defined by the admin.
@@ -184,5 +184,5 @@ class MobileAppAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

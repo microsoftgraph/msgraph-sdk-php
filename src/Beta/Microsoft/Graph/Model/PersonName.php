@@ -38,7 +38,7 @@ class PersonName extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Provides an ordered rendering of firstName and lastName depending on the locale of the user or their device.
@@ -52,7 +52,7 @@ class PersonName extends ItemFacet
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the first
     * First name of the user.
@@ -67,7 +67,7 @@ class PersonName extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the first
     * First name of the user.
@@ -81,7 +81,7 @@ class PersonName extends ItemFacet
         $this->_propDict["first"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the initials
     * Initials of the user.
@@ -96,7 +96,7 @@ class PersonName extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the initials
     * Initials of the user.
@@ -110,7 +110,7 @@ class PersonName extends ItemFacet
         $this->_propDict["initials"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the languageTag
     * Contains the name for the language (en-US, no-NB, en-AU) following IETF BCP47 format.
@@ -125,7 +125,7 @@ class PersonName extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the languageTag
     * Contains the name for the language (en-US, no-NB, en-AU) following IETF BCP47 format.
@@ -139,7 +139,7 @@ class PersonName extends ItemFacet
         $this->_propDict["languageTag"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the last
     * Last name of the user.
@@ -154,7 +154,7 @@ class PersonName extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the last
     * Last name of the user.
@@ -168,7 +168,7 @@ class PersonName extends ItemFacet
         $this->_propDict["last"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the maiden
     * Maiden name of the user.
@@ -183,7 +183,7 @@ class PersonName extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the maiden
     * Maiden name of the user.
@@ -197,7 +197,7 @@ class PersonName extends ItemFacet
         $this->_propDict["maiden"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the middle
     * Middle name of the user.
@@ -212,7 +212,7 @@ class PersonName extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the middle
     * Middle name of the user.
@@ -226,7 +226,7 @@ class PersonName extends ItemFacet
         $this->_propDict["middle"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the nickname
     * Nickname of the user.
@@ -241,7 +241,7 @@ class PersonName extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the nickname
     * Nickname of the user.
@@ -255,7 +255,7 @@ class PersonName extends ItemFacet
         $this->_propDict["nickname"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the pronunciation
     * Guidance on how to pronounce the users name.
@@ -274,7 +274,7 @@ class PersonName extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the pronunciation
     * Guidance on how to pronounce the users name.
@@ -288,7 +288,7 @@ class PersonName extends ItemFacet
         $this->_propDict["pronunciation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the suffix
     * Designators used after the users name (eg: PhD.)
@@ -303,7 +303,7 @@ class PersonName extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the suffix
     * Designators used after the users name (eg: PhD.)
@@ -317,7 +317,7 @@ class PersonName extends ItemFacet
         $this->_propDict["suffix"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the title
     * Honorifics used to prefix a users name (eg: Dr, Sir, Madam, Mrs.)
@@ -332,7 +332,7 @@ class PersonName extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the title
     * Honorifics used to prefix a users name (eg: Dr, Sir, Madam, Mrs.)
@@ -346,5 +346,5 @@ class PersonName extends ItemFacet
         $this->_propDict["title"] = $val;
         return $this;
     }
-    
+
 }

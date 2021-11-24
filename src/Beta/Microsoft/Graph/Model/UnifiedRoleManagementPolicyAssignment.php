@@ -38,7 +38,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the policyId
     * The id of the policy.
@@ -52,7 +52,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
         $this->_propDict["policyId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleDefinitionId
     * The id of the role definition where the policy applies. If not specified, the policy applies to all roles.
@@ -67,7 +67,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleDefinitionId
     * The id of the role definition where the policy applies. If not specified, the policy applies to all roles.
@@ -81,7 +81,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
         $this->_propDict["roleDefinitionId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scopeId
     * The id of the scope where the policy is assigned. E.g. '/', groupId, etc.
@@ -96,7 +96,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the scopeId
     * The id of the scope where the policy is assigned. E.g. '/', groupId, etc.
@@ -110,7 +110,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
         $this->_propDict["scopeId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scopeType
     * The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group.
@@ -125,7 +125,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the scopeType
     * The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group.
@@ -139,7 +139,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
         $this->_propDict["scopeType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the policy
     * The policy for the assignment.
@@ -158,7 +158,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the policy
     * The policy for the assignment.
@@ -172,5 +172,5 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
         $this->_propDict["policy"] = $val;
         return $this;
     }
-    
+
 }

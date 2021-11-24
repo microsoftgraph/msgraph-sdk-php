@@ -38,7 +38,7 @@ class Request extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the approvalId
     * The identifier of the approval of the request.
@@ -52,7 +52,7 @@ class Request extends Entity
         $this->_propDict["approvalId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the completedDateTime
     * The request completion date time.
@@ -71,7 +71,7 @@ class Request extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the completedDateTime
     * The request completion date time.
@@ -85,7 +85,7 @@ class Request extends Entity
         $this->_propDict["completedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     * The user who created this request.
@@ -104,7 +104,7 @@ class Request extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     * The user who created this request.
@@ -118,7 +118,7 @@ class Request extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The request creation date time.
@@ -137,7 +137,7 @@ class Request extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The request creation date time.
@@ -151,7 +151,7 @@ class Request extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customData
     * Free text field to define any custom data for the request. Not used.
@@ -166,7 +166,7 @@ class Request extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customData
     * Free text field to define any custom data for the request. Not used.
@@ -180,7 +180,7 @@ class Request extends Entity
         $this->_propDict["customData"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable.
@@ -195,7 +195,7 @@ class Request extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the status
     * The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable.
@@ -209,5 +209,5 @@ class Request extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

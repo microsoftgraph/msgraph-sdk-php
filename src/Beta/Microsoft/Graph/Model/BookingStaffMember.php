@@ -38,7 +38,7 @@ class BookingStaffMember extends BookingPerson
             return null;
         }
     }
-    
+
     /**
     * Sets the availabilityIsAffectedByPersonalCalendar
     * True means that if the staff member is a Microsoft 365 user, the Bookings API would verify the staff member's availability in their personal calendar in Microsoft 365, before making a booking.
@@ -52,7 +52,7 @@ class BookingStaffMember extends BookingPerson
         $this->_propDict["availabilityIsAffectedByPersonalCalendar"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the colorIndex
     * Identifies a color to represent the staff member. The color corresponds to the color palette in the Staff details page in the Bookings app.
@@ -67,7 +67,7 @@ class BookingStaffMember extends BookingPerson
             return null;
         }
     }
-    
+
     /**
     * Sets the colorIndex
     * Identifies a color to represent the staff member. The color corresponds to the color palette in the Staff details page in the Bookings app.
@@ -81,10 +81,10 @@ class BookingStaffMember extends BookingPerson
         $this->_propDict["colorIndex"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the role
-    * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest. Required.
+    * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest, scheduler, and member. Required.
     *
     * @return BookingStaffRole|null The role
     */
@@ -100,10 +100,10 @@ class BookingStaffMember extends BookingPerson
         }
         return null;
     }
-    
+
     /**
     * Sets the role
-    * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest. Required.
+    * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest, scheduler, and member. Required.
     *
     * @param BookingStaffRole $val The role
     *
@@ -114,7 +114,7 @@ class BookingStaffMember extends BookingPerson
         $this->_propDict["role"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the timeZone
     * The time zone of the staff member. For a list of possible values, see dateTimeTimeZone.
@@ -129,7 +129,7 @@ class BookingStaffMember extends BookingPerson
             return null;
         }
     }
-    
+
     /**
     * Sets the timeZone
     * The time zone of the staff member. For a list of possible values, see dateTimeTimeZone.
@@ -143,7 +143,7 @@ class BookingStaffMember extends BookingPerson
         $this->_propDict["timeZone"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the useBusinessHours
     * True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
@@ -158,7 +158,7 @@ class BookingStaffMember extends BookingPerson
             return null;
         }
     }
-    
+
     /**
     * Sets the useBusinessHours
     * True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
@@ -172,9 +172,9 @@ class BookingStaffMember extends BookingPerson
         $this->_propDict["useBusinessHours"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the workingHours
     * The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
      *
@@ -188,12 +188,12 @@ class BookingStaffMember extends BookingPerson
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the workingHours
     * The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
     *
-    * @param BookingWorkHours $val The workingHours
+    * @param BookingWorkHours[] $val The workingHours
     *
     * @return BookingStaffMember
     */
@@ -202,5 +202,5 @@ class BookingStaffMember extends BookingPerson
         $this->_propDict["workingHours"] = $val;
         return $this;
     }
-    
+
 }

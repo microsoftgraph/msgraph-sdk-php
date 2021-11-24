@@ -42,7 +42,7 @@ class WindowsAutopilotDeploymentProfileAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the source
     * Type of resource used for deployment to a group, direct or parcel/policySet. Possible values are: direct, policySets.
@@ -56,7 +56,7 @@ class WindowsAutopilotDeploymentProfileAssignment extends Entity
         $this->_propDict["source"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sourceId
     * Identifier for resource used for deployment to a group
@@ -71,7 +71,7 @@ class WindowsAutopilotDeploymentProfileAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sourceId
     * Identifier for resource used for deployment to a group
@@ -85,7 +85,7 @@ class WindowsAutopilotDeploymentProfileAssignment extends Entity
         $this->_propDict["sourceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the target
     * The assignment target for the Windows Autopilot deployment profile.
@@ -104,7 +104,7 @@ class WindowsAutopilotDeploymentProfileAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The assignment target for the Windows Autopilot deployment profile.
@@ -118,5 +118,5 @@ class WindowsAutopilotDeploymentProfileAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class ManagedAppProtectionPolicySetItem extends PolicySetItem
             return null;
         }
     }
-    
+
     /**
     * Sets the targetedAppManagementLevels
     * TargetedAppManagementLevels of the ManagedAppPolicySetItem.
@@ -52,5 +52,5 @@ class ManagedAppProtectionPolicySetItem extends PolicySetItem
         $this->_propDict["targetedAppManagementLevels"] = $val;
         return $this;
     }
-    
+
 }

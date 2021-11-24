@@ -38,7 +38,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
             return null;
         }
     }
-    
+
     /**
     * Sets the phoneNumber
     * The phone number to text or call for authentication. Phone numbers use the format '+&amp;lt;country code&amp;gt; &amp;lt;number&amp;gt;x&amp;lt;extension&amp;gt;', with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating/updating if they do not match the required format.
@@ -52,7 +52,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
         $this->_propDict["phoneNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the phoneType
     * The type of this phone. Possible values are: mobile, alternateMobile, or office.
@@ -71,7 +71,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
         }
         return null;
     }
-    
+
     /**
     * Sets the phoneType
     * The type of this phone. Possible values are: mobile, alternateMobile, or office.
@@ -85,7 +85,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
         $this->_propDict["phoneType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the smsSignInState
     * Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
@@ -104,7 +104,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
         }
         return null;
     }
-    
+
     /**
     * Sets the smsSignInState
     * Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
@@ -118,5 +118,5 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
         $this->_propDict["smsSignInState"] = $val;
         return $this;
     }
-    
+
 }

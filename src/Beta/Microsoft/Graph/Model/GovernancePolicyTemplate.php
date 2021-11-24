@@ -37,7 +37,7 @@ class GovernancePolicyTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -50,7 +50,7 @@ class GovernancePolicyTemplate extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the policy
     *
@@ -68,7 +68,7 @@ class GovernancePolicyTemplate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the policy
     *
@@ -81,7 +81,7 @@ class GovernancePolicyTemplate extends Entity
         $this->_propDict["policy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settings
     *
@@ -99,7 +99,7 @@ class GovernancePolicyTemplate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the settings
     *
@@ -112,5 +112,5 @@ class GovernancePolicyTemplate extends Entity
         $this->_propDict["settings"] = $val;
         return $this;
     }
-    
+
 }

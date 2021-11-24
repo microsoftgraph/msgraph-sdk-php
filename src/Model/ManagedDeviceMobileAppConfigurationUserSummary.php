@@ -38,7 +38,7 @@ class ManagedDeviceMobileAppConfigurationUserSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the configurationVersion
     * Version of the policy for that overview
@@ -52,7 +52,7 @@ class ManagedDeviceMobileAppConfigurationUserSummary extends Entity
         $this->_propDict["configurationVersion"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the errorCount
     * Number of error Users
@@ -67,7 +67,7 @@ class ManagedDeviceMobileAppConfigurationUserSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorCount
     * Number of error Users
@@ -81,7 +81,7 @@ class ManagedDeviceMobileAppConfigurationUserSummary extends Entity
         $this->_propDict["errorCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the failedCount
     * Number of failed Users
@@ -96,7 +96,7 @@ class ManagedDeviceMobileAppConfigurationUserSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the failedCount
     * Number of failed Users
@@ -110,7 +110,7 @@ class ManagedDeviceMobileAppConfigurationUserSummary extends Entity
         $this->_propDict["failedCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastUpdateDateTime
     * Last update time
@@ -129,7 +129,7 @@ class ManagedDeviceMobileAppConfigurationUserSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastUpdateDateTime
     * Last update time
@@ -143,7 +143,7 @@ class ManagedDeviceMobileAppConfigurationUserSummary extends Entity
         $this->_propDict["lastUpdateDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the notApplicableCount
     * Number of not applicable users
@@ -158,7 +158,7 @@ class ManagedDeviceMobileAppConfigurationUserSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the notApplicableCount
     * Number of not applicable users
@@ -172,7 +172,7 @@ class ManagedDeviceMobileAppConfigurationUserSummary extends Entity
         $this->_propDict["notApplicableCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the pendingCount
     * Number of pending Users
@@ -187,7 +187,7 @@ class ManagedDeviceMobileAppConfigurationUserSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the pendingCount
     * Number of pending Users
@@ -201,7 +201,7 @@ class ManagedDeviceMobileAppConfigurationUserSummary extends Entity
         $this->_propDict["pendingCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the successCount
     * Number of succeeded Users
@@ -216,7 +216,7 @@ class ManagedDeviceMobileAppConfigurationUserSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the successCount
     * Number of succeeded Users
@@ -230,5 +230,5 @@ class ManagedDeviceMobileAppConfigurationUserSummary extends Entity
         $this->_propDict["successCount"] = intval($val);
         return $this;
     }
-    
+
 }

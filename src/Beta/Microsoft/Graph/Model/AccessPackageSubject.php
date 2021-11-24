@@ -37,7 +37,7 @@ class AccessPackageSubject extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the altSecId
     *
@@ -50,7 +50,7 @@ class AccessPackageSubject extends Entity
         $this->_propDict["altSecId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the connectedOrganizationId
     * The identifier of the connected organization of the subject.
@@ -65,7 +65,7 @@ class AccessPackageSubject extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the connectedOrganizationId
     * The identifier of the connected organization of the subject.
@@ -79,7 +79,7 @@ class AccessPackageSubject extends Entity
         $this->_propDict["connectedOrganizationId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name of the subject.
@@ -94,7 +94,7 @@ class AccessPackageSubject extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the subject.
@@ -108,7 +108,7 @@ class AccessPackageSubject extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the email
     * The email address of the subject.
@@ -123,7 +123,7 @@ class AccessPackageSubject extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the email
     * The email address of the subject.
@@ -137,7 +137,7 @@ class AccessPackageSubject extends Entity
         $this->_propDict["email"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the objectId
     * The object identifier of the subject. null if the subject is not yet a user in the tenant.
@@ -152,7 +152,7 @@ class AccessPackageSubject extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the objectId
     * The object identifier of the subject. null if the subject is not yet a user in the tenant.
@@ -166,7 +166,7 @@ class AccessPackageSubject extends Entity
         $this->_propDict["objectId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onPremisesSecurityIdentifier
     *
@@ -180,7 +180,7 @@ class AccessPackageSubject extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the onPremisesSecurityIdentifier
     *
@@ -193,7 +193,7 @@ class AccessPackageSubject extends Entity
         $this->_propDict["onPremisesSecurityIdentifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the principalName
     * The principal name, if known, of the subject.
@@ -208,7 +208,7 @@ class AccessPackageSubject extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the principalName
     * The principal name, if known, of the subject.
@@ -222,7 +222,7 @@ class AccessPackageSubject extends Entity
         $this->_propDict["principalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     * The resource type of the subject.
@@ -237,7 +237,7 @@ class AccessPackageSubject extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the type
     * The resource type of the subject.
@@ -251,7 +251,7 @@ class AccessPackageSubject extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the connectedOrganization
     * The connected organization of the subject. Read-only. Nullable.
@@ -270,7 +270,7 @@ class AccessPackageSubject extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the connectedOrganization
     * The connected organization of the subject. Read-only. Nullable.
@@ -284,5 +284,5 @@ class AccessPackageSubject extends Entity
         $this->_propDict["connectedOrganization"] = $val;
         return $this;
     }
-    
+
 }

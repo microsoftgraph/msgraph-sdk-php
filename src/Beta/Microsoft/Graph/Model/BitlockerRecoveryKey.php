@@ -42,7 +42,7 @@ class BitlockerRecoveryKey extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time when the key was originally backed up to Azure Active Directory. Not nullable.
@@ -56,7 +56,7 @@ class BitlockerRecoveryKey extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceId
     * Identifier of the device the BitLocker key is originally backed up from. Supports $filter (eq).
@@ -71,7 +71,7 @@ class BitlockerRecoveryKey extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * Identifier of the device the BitLocker key is originally backed up from. Supports $filter (eq).
@@ -85,7 +85,7 @@ class BitlockerRecoveryKey extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the key
     * The BitLocker recovery key. Returned only on $select. Not nullable.
@@ -100,7 +100,7 @@ class BitlockerRecoveryKey extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the key
     * The BitLocker recovery key. Returned only on $select. Not nullable.
@@ -114,7 +114,7 @@ class BitlockerRecoveryKey extends Entity
         $this->_propDict["key"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the volumeType
     * Indicates the type of volume the BitLocker key is associated with. The possible values are: 1 (for operatingSystemVolume), 2 (for fixedDataVolume), 3 (for removableDataVolume), and 4 (for unknownFutureValue).
@@ -133,7 +133,7 @@ class BitlockerRecoveryKey extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the volumeType
     * Indicates the type of volume the BitLocker key is associated with. The possible values are: 1 (for operatingSystemVolume), 2 (for fixedDataVolume), 3 (for removableDataVolume), and 4 (for unknownFutureValue).
@@ -147,5 +147,5 @@ class BitlockerRecoveryKey extends Entity
         $this->_propDict["volumeType"] = $val;
         return $this;
     }
-    
+
 }

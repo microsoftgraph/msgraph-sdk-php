@@ -38,7 +38,7 @@ class OAuth2PermissionGrant extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the clientId
     * The id of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
@@ -52,7 +52,7 @@ class OAuth2PermissionGrant extends Entity
         $this->_propDict["clientId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the consentType
     * Indicates if authorization is granted for the client application to impersonate all users or only a specific user. AllPrincipals indicates authorization to impersonate all users. Principal indicates authorization to impersonate a specific user. Consent on behalf of all users can be granted by an administrator. Non-admin users may be authorized to consent on behalf of themselves in some cases, for some delegated permissions. Required. Supports $filter (eq only).
@@ -67,7 +67,7 @@ class OAuth2PermissionGrant extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the consentType
     * Indicates if authorization is granted for the client application to impersonate all users or only a specific user. AllPrincipals indicates authorization to impersonate all users. Principal indicates authorization to impersonate a specific user. Consent on behalf of all users can be granted by an administrator. Non-admin users may be authorized to consent on behalf of themselves in some cases, for some delegated permissions. Required. Supports $filter (eq only).
@@ -81,7 +81,7 @@ class OAuth2PermissionGrant extends Entity
         $this->_propDict["consentType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expiryTime
     * Currently, the end time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.
@@ -100,7 +100,7 @@ class OAuth2PermissionGrant extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expiryTime
     * Currently, the end time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.
@@ -114,7 +114,7 @@ class OAuth2PermissionGrant extends Entity
         $this->_propDict["expiryTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the principalId
     * The id of the user on behalf of whom the client is authorized to access the resource, when consentType is Principal. If consentType is AllPrincipals this value is null. Required when consentType is Principal.
@@ -129,7 +129,7 @@ class OAuth2PermissionGrant extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the principalId
     * The id of the user on behalf of whom the client is authorized to access the resource, when consentType is Principal. If consentType is AllPrincipals this value is null. Required when consentType is Principal.
@@ -143,7 +143,7 @@ class OAuth2PermissionGrant extends Entity
         $this->_propDict["principalId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceId
     * The id of the resource service principal to which access is authorized. This identifies the API which the client is authorized to attempt to call on behalf of a signed-in user.
@@ -158,7 +158,7 @@ class OAuth2PermissionGrant extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceId
     * The id of the resource service principal to which access is authorized. This identifies the API which the client is authorized to attempt to call on behalf of a signed-in user.
@@ -172,7 +172,7 @@ class OAuth2PermissionGrant extends Entity
         $this->_propDict["resourceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scope
     * A space-separated list of the claim values for delegated permissions which should be included in access tokens for the resource application (the API). For example, openid User.Read GroupMember.Read.All. Each claim value should match the value field of one of the delegated permissions defined by the API, listed in the publishedPermissionScopes property of the resource service principal.
@@ -187,7 +187,7 @@ class OAuth2PermissionGrant extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the scope
     * A space-separated list of the claim values for delegated permissions which should be included in access tokens for the resource application (the API). For example, openid User.Read GroupMember.Read.All. Each claim value should match the value field of one of the delegated permissions defined by the API, listed in the publishedPermissionScopes property of the resource service principal.
@@ -201,7 +201,7 @@ class OAuth2PermissionGrant extends Entity
         $this->_propDict["scope"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startTime
     * Currently, the start time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.
@@ -220,7 +220,7 @@ class OAuth2PermissionGrant extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startTime
     * Currently, the start time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.
@@ -234,5 +234,5 @@ class OAuth2PermissionGrant extends Entity
         $this->_propDict["startTime"] = $val;
         return $this;
     }
-    
+
 }

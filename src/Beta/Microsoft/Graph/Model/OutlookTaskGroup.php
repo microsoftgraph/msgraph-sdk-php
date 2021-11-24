@@ -38,7 +38,7 @@ class OutlookTaskGroup extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the changeKey
     * The version of the task group.
@@ -52,7 +52,7 @@ class OutlookTaskGroup extends Entity
         $this->_propDict["changeKey"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the groupKey
     * The unique GUID identifier for the task group.
@@ -67,7 +67,7 @@ class OutlookTaskGroup extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the groupKey
     * The unique GUID identifier for the task group.
@@ -81,7 +81,7 @@ class OutlookTaskGroup extends Entity
         $this->_propDict["groupKey"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isDefaultGroup
     * True if the task group is the default task group.
@@ -96,7 +96,7 @@ class OutlookTaskGroup extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDefaultGroup
     * True if the task group is the default task group.
@@ -110,7 +110,7 @@ class OutlookTaskGroup extends Entity
         $this->_propDict["isDefaultGroup"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the name
     * The name of the task group.
@@ -125,7 +125,7 @@ class OutlookTaskGroup extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * The name of the task group.
@@ -139,9 +139,9 @@ class OutlookTaskGroup extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the taskFolders
     * The collection of task folders in the task group. Read-only. Nullable.
      *
@@ -155,12 +155,12 @@ class OutlookTaskGroup extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the taskFolders
     * The collection of task folders in the task group. Read-only. Nullable.
     *
-    * @param OutlookTaskFolder $val The taskFolders
+    * @param OutlookTaskFolder[] $val The taskFolders
     *
     * @return OutlookTaskGroup
     */
@@ -169,5 +169,5 @@ class OutlookTaskGroup extends Entity
         $this->_propDict["taskFolders"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the coreBootTimeInMs
     * The user experience analytics device core boot time in milliseconds.
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         $this->_propDict["coreBootTimeInMs"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the coreLoginTimeInMs
     * The user experience analytics device core login time in milliseconds.
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the coreLoginTimeInMs
     * The user experience analytics device core login time in milliseconds.
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         $this->_propDict["coreLoginTimeInMs"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deviceId
     * The user experience analytics device id.
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * The user experience analytics device id.
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the featureUpdateBootTimeInMs
     * The user experience analytics device feature update time in milliseconds.
@@ -125,7 +125,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the featureUpdateBootTimeInMs
     * The user experience analytics device feature update time in milliseconds.
@@ -139,7 +139,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         $this->_propDict["featureUpdateBootTimeInMs"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the groupPolicyBootTimeInMs
     * The User experience analytics Device group policy boot time in milliseconds.
@@ -154,7 +154,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the groupPolicyBootTimeInMs
     * The User experience analytics Device group policy boot time in milliseconds.
@@ -168,7 +168,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         $this->_propDict["groupPolicyBootTimeInMs"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the groupPolicyLoginTimeInMs
     * The User experience analytics Device group policy login time in milliseconds.
@@ -183,7 +183,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the groupPolicyLoginTimeInMs
     * The User experience analytics Device group policy login time in milliseconds.
@@ -197,7 +197,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         $this->_propDict["groupPolicyLoginTimeInMs"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isFeatureUpdate
     * The user experience analytics device boot record is a feature update.
@@ -212,7 +212,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isFeatureUpdate
     * The user experience analytics device boot record is a feature update.
@@ -226,7 +226,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         $this->_propDict["isFeatureUpdate"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isFirstLogin
     * The user experience analytics device first login.
@@ -241,7 +241,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isFirstLogin
     * The user experience analytics device first login.
@@ -255,7 +255,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         $this->_propDict["isFirstLogin"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the operatingSystemVersion
     * The user experience analytics device boot record's operating system version.
@@ -270,7 +270,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the operatingSystemVersion
     * The user experience analytics device boot record's operating system version.
@@ -284,7 +284,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         $this->_propDict["operatingSystemVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the responsiveDesktopTimeInMs
     * The user experience analytics responsive desktop time in milliseconds.
@@ -299,7 +299,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the responsiveDesktopTimeInMs
     * The user experience analytics responsive desktop time in milliseconds.
@@ -313,7 +313,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         $this->_propDict["responsiveDesktopTimeInMs"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the restartCategory
     * OS restart category. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError, update.
@@ -332,7 +332,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the restartCategory
     * OS restart category. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError, update.
@@ -346,7 +346,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         $this->_propDict["restartCategory"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the restartFaultBucket
     * OS restart fault bucket. The fault bucket is used to find additional information about a system crash.
@@ -361,7 +361,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the restartFaultBucket
     * OS restart fault bucket. The fault bucket is used to find additional information about a system crash.
@@ -375,7 +375,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         $this->_propDict["restartFaultBucket"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the restartStopCode
     * OS restart stop code. This shows the bug check code which can be used to look up the blue screen reason.
@@ -390,7 +390,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the restartStopCode
     * OS restart stop code. This shows the bug check code which can be used to look up the blue screen reason.
@@ -404,7 +404,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         $this->_propDict["restartStopCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startTime
     * The user experience analytics device boot start time.
@@ -423,7 +423,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startTime
     * The user experience analytics device boot start time.
@@ -437,7 +437,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         $this->_propDict["startTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the totalBootTimeInMs
     * The user experience analytics device total boot time in milliseconds.
@@ -452,7 +452,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the totalBootTimeInMs
     * The user experience analytics device total boot time in milliseconds.
@@ -466,7 +466,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         $this->_propDict["totalBootTimeInMs"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the totalLoginTimeInMs
     * The user experience analytics device total login time in milliseconds.
@@ -481,7 +481,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the totalLoginTimeInMs
     * The user experience analytics device total login time in milliseconds.
@@ -495,5 +495,5 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
         $this->_propDict["totalLoginTimeInMs"] = intval($val);
         return $this;
     }
-    
+
 }

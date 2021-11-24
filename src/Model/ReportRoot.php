@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class ReportRoot extends Entity
 {
 
-     /** 
+     /**
      * Gets the dailyPrintUsageByPrinter
      *
      * @return array|null The dailyPrintUsageByPrinter
@@ -38,11 +38,11 @@ class ReportRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the dailyPrintUsageByPrinter
     *
-    * @param PrintUsageByPrinter $val The dailyPrintUsageByPrinter
+    * @param PrintUsageByPrinter[] $val The dailyPrintUsageByPrinter
     *
     * @return ReportRoot
     */
@@ -51,9 +51,9 @@ class ReportRoot extends Entity
         $this->_propDict["dailyPrintUsageByPrinter"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the dailyPrintUsageByUser
      *
      * @return array|null The dailyPrintUsageByUser
@@ -66,11 +66,11 @@ class ReportRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the dailyPrintUsageByUser
     *
-    * @param PrintUsageByUser $val The dailyPrintUsageByUser
+    * @param PrintUsageByUser[] $val The dailyPrintUsageByUser
     *
     * @return ReportRoot
     */
@@ -79,9 +79,9 @@ class ReportRoot extends Entity
         $this->_propDict["dailyPrintUsageByUser"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the monthlyPrintUsageByPrinter
      *
      * @return array|null The monthlyPrintUsageByPrinter
@@ -94,11 +94,11 @@ class ReportRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the monthlyPrintUsageByPrinter
     *
-    * @param PrintUsageByPrinter $val The monthlyPrintUsageByPrinter
+    * @param PrintUsageByPrinter[] $val The monthlyPrintUsageByPrinter
     *
     * @return ReportRoot
     */
@@ -107,9 +107,9 @@ class ReportRoot extends Entity
         $this->_propDict["monthlyPrintUsageByPrinter"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the monthlyPrintUsageByUser
      *
      * @return array|null The monthlyPrintUsageByUser
@@ -122,11 +122,11 @@ class ReportRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the monthlyPrintUsageByUser
     *
-    * @param PrintUsageByUser $val The monthlyPrintUsageByUser
+    * @param PrintUsageByUser[] $val The monthlyPrintUsageByUser
     *
     * @return ReportRoot
     */
@@ -135,5 +135,5 @@ class ReportRoot extends Entity
         $this->_propDict["monthlyPrintUsageByUser"] = $val;
         return $this;
     }
-    
+
 }

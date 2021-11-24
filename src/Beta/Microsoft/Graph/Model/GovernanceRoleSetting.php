@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class GovernanceRoleSetting extends Entity
 {
 
-     /** 
+     /**
      * Gets the adminEligibleSettings
     * The rule settings that are evaluated when an administrator tries to add an eligible role assignment.
      *
@@ -39,12 +39,12 @@ class GovernanceRoleSetting extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the adminEligibleSettings
     * The rule settings that are evaluated when an administrator tries to add an eligible role assignment.
     *
-    * @param GovernanceRuleSetting $val The adminEligibleSettings
+    * @param GovernanceRuleSetting[] $val The adminEligibleSettings
     *
     * @return GovernanceRoleSetting
     */
@@ -53,9 +53,9 @@ class GovernanceRoleSetting extends Entity
         $this->_propDict["adminEligibleSettings"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the adminMemberSettings
     * The rule settings that are evaluated when an administrator tries to add a direct member role assignment.
      *
@@ -69,12 +69,12 @@ class GovernanceRoleSetting extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the adminMemberSettings
     * The rule settings that are evaluated when an administrator tries to add a direct member role assignment.
     *
-    * @param GovernanceRuleSetting $val The adminMemberSettings
+    * @param GovernanceRuleSetting[] $val The adminMemberSettings
     *
     * @return GovernanceRoleSetting
     */
@@ -83,7 +83,7 @@ class GovernanceRoleSetting extends Entity
         $this->_propDict["adminMemberSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isDefault
     * Read-only. Indicate if the roleSetting is a default roleSetting
@@ -98,7 +98,7 @@ class GovernanceRoleSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDefault
     * Read-only. Indicate if the roleSetting is a default roleSetting
@@ -112,7 +112,7 @@ class GovernanceRoleSetting extends Entity
         $this->_propDict["isDefault"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastUpdatedBy
     * Read-only. The display name of the administrator who last updated the roleSetting.
@@ -127,7 +127,7 @@ class GovernanceRoleSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the lastUpdatedBy
     * Read-only. The display name of the administrator who last updated the roleSetting.
@@ -141,7 +141,7 @@ class GovernanceRoleSetting extends Entity
         $this->_propDict["lastUpdatedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastUpdatedDateTime
     * Read-only. The time when the role setting was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -160,7 +160,7 @@ class GovernanceRoleSetting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastUpdatedDateTime
     * Read-only. The time when the role setting was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -174,7 +174,7 @@ class GovernanceRoleSetting extends Entity
         $this->_propDict["lastUpdatedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceId
     * Required. The id of the resource that the role setting is associated with.
@@ -189,7 +189,7 @@ class GovernanceRoleSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceId
     * Required. The id of the resource that the role setting is associated with.
@@ -203,7 +203,7 @@ class GovernanceRoleSetting extends Entity
         $this->_propDict["resourceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleDefinitionId
     * Required. The id of the role definition that the role setting is associated with.
@@ -218,7 +218,7 @@ class GovernanceRoleSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleDefinitionId
     * Required. The id of the role definition that the role setting is associated with.
@@ -232,9 +232,9 @@ class GovernanceRoleSetting extends Entity
         $this->_propDict["roleDefinitionId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userEligibleSettings
     * The rule settings that are evaluated when a user tries to add an eligible role assignment. The setting is not supported for now.
      *
@@ -248,12 +248,12 @@ class GovernanceRoleSetting extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userEligibleSettings
     * The rule settings that are evaluated when a user tries to add an eligible role assignment. The setting is not supported for now.
     *
-    * @param GovernanceRuleSetting $val The userEligibleSettings
+    * @param GovernanceRuleSetting[] $val The userEligibleSettings
     *
     * @return GovernanceRoleSetting
     */
@@ -262,9 +262,9 @@ class GovernanceRoleSetting extends Entity
         $this->_propDict["userEligibleSettings"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userMemberSettings
     * The rule settings that are evaluated when a user tries to activate his role assignment.
      *
@@ -278,12 +278,12 @@ class GovernanceRoleSetting extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userMemberSettings
     * The rule settings that are evaluated when a user tries to activate his role assignment.
     *
-    * @param GovernanceRuleSetting $val The userMemberSettings
+    * @param GovernanceRuleSetting[] $val The userMemberSettings
     *
     * @return GovernanceRoleSetting
     */
@@ -292,7 +292,7 @@ class GovernanceRoleSetting extends Entity
         $this->_propDict["userMemberSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resource
     * Read-only. The associated resource for this role setting.
@@ -311,7 +311,7 @@ class GovernanceRoleSetting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resource
     * Read-only. The associated resource for this role setting.
@@ -325,7 +325,7 @@ class GovernanceRoleSetting extends Entity
         $this->_propDict["resource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleDefinition
     * Read-only. The role definition that is enforced with this role setting.
@@ -344,7 +344,7 @@ class GovernanceRoleSetting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the roleDefinition
     * Read-only. The role definition that is enforced with this role setting.
@@ -358,5 +358,5 @@ class GovernanceRoleSetting extends Entity
         $this->_propDict["roleDefinition"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class TelecomExpenseManagementPartner extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appAuthorized
     * Whether the partner's AAD app has been authorized to access Intune.
@@ -52,7 +52,7 @@ class TelecomExpenseManagementPartner extends Entity
         $this->_propDict["appAuthorized"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Display name of the TEM partner.
@@ -67,7 +67,7 @@ class TelecomExpenseManagementPartner extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display name of the TEM partner.
@@ -81,7 +81,7 @@ class TelecomExpenseManagementPartner extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enabled
     * Whether Intune's connection to the TEM service is currently enabled or disabled.
@@ -96,7 +96,7 @@ class TelecomExpenseManagementPartner extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the enabled
     * Whether Intune's connection to the TEM service is currently enabled or disabled.
@@ -110,7 +110,7 @@ class TelecomExpenseManagementPartner extends Entity
         $this->_propDict["enabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastConnectionDateTime
     * Timestamp of the last request sent to Intune by the TEM partner.
@@ -129,7 +129,7 @@ class TelecomExpenseManagementPartner extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastConnectionDateTime
     * Timestamp of the last request sent to Intune by the TEM partner.
@@ -143,7 +143,7 @@ class TelecomExpenseManagementPartner extends Entity
         $this->_propDict["lastConnectionDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the url
     * URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
@@ -158,7 +158,7 @@ class TelecomExpenseManagementPartner extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the url
     * URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
@@ -172,5 +172,5 @@ class TelecomExpenseManagementPartner extends Entity
         $this->_propDict["url"] = $val;
         return $this;
     }
-    
+
 }

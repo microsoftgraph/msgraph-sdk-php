@@ -38,7 +38,7 @@ class ItemEmail extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the address
     * The email address itself.
@@ -52,7 +52,7 @@ class ItemEmail extends ItemFacet
         $this->_propDict["address"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name or label a user has associated with a particular email address.
@@ -67,7 +67,7 @@ class ItemEmail extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name or label a user has associated with a particular email address.
@@ -81,7 +81,7 @@ class ItemEmail extends ItemFacet
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     * The type of email address. Possible values are: unknown, work, personal, main, other.
@@ -100,7 +100,7 @@ class ItemEmail extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the type
     * The type of email address. Possible values are: unknown, work, personal, main, other.
@@ -114,5 +114,5 @@ class ItemEmail extends ItemFacet
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
 }

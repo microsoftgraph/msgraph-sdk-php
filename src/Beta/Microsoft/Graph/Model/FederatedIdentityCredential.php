@@ -38,7 +38,7 @@ class FederatedIdentityCredential extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the audiences
     * Lists the audiences that can appear in the external token. This field is mandatory, and defaults to 'api://AzureADTokenExchange'. It says what Microsoft identity platform should accept in the aud claim in the incoming token. This value represents Azure AD in your external identity provider and has no fixed value across identity providers - you may need to create a new application registration in your identity provider to serve as the audience of this token. Required.
@@ -52,7 +52,7 @@ class FederatedIdentityCredential extends Entity
         $this->_propDict["audiences"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The un-validated, user-provided description of the federated identity credential. Optional.
@@ -67,7 +67,7 @@ class FederatedIdentityCredential extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The un-validated, user-provided description of the federated identity credential. Optional.
@@ -81,7 +81,7 @@ class FederatedIdentityCredential extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the issuer
     * The URL of the external identity provider and must match the issuer claim of the external token being exchanged. The combination of the values of issuer and subject must be unique on the app. Required.
@@ -96,7 +96,7 @@ class FederatedIdentityCredential extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the issuer
     * The URL of the external identity provider and must match the issuer claim of the external token being exchanged. The combination of the values of issuer and subject must be unique on the app. Required.
@@ -110,7 +110,7 @@ class FederatedIdentityCredential extends Entity
         $this->_propDict["issuer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     * is the unique identifier for the federated identity credential, which has a character limit of 120 characters and must be URL friendly. It is immutable once created. Required. Not nullable. Supports $filter (eq).
@@ -125,7 +125,7 @@ class FederatedIdentityCredential extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * is the unique identifier for the federated identity credential, which has a character limit of 120 characters and must be URL friendly. It is immutable once created. Required. Not nullable. Supports $filter (eq).
@@ -139,7 +139,7 @@ class FederatedIdentityCredential extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subject
     * Required. The identifier of the external software workload within the external identity provider. Like the audience value, it has no fixed format, as each identity provider uses their own - sometimes a GUID, sometimes a colon delimited identifier, sometimes arbitrary strings. The value here must match the sub claim within the token presented to Azure AD. The combination of issuer and subject must be unique on the app. Supports $filter (eq).
@@ -154,7 +154,7 @@ class FederatedIdentityCredential extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the subject
     * Required. The identifier of the external software workload within the external identity provider. Like the audience value, it has no fixed format, as each identity provider uses their own - sometimes a GUID, sometimes a colon delimited identifier, sometimes arbitrary strings. The value here must match the sub claim within the token presented to Azure AD. The combination of issuer and subject must be unique on the app. Supports $filter (eq).
@@ -168,5 +168,5 @@ class FederatedIdentityCredential extends Entity
         $this->_propDict["subject"] = $val;
         return $this;
     }
-    
+
 }

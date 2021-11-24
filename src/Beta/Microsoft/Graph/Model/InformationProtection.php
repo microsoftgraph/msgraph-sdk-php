@@ -41,7 +41,7 @@ class InformationProtection extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the bitlocker
     *
@@ -54,9 +54,9 @@ class InformationProtection extends Entity
         $this->_propDict["bitlocker"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the dataLossPreventionPolicies
      *
      * @return array|null The dataLossPreventionPolicies
@@ -69,11 +69,11 @@ class InformationProtection extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the dataLossPreventionPolicies
     *
-    * @param DataLossPreventionPolicy $val The dataLossPreventionPolicies
+    * @param DataLossPreventionPolicy[] $val The dataLossPreventionPolicies
     *
     * @return InformationProtection
     */
@@ -82,9 +82,9 @@ class InformationProtection extends Entity
         $this->_propDict["dataLossPreventionPolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the sensitivityLabels
      *
      * @return array|null The sensitivityLabels
@@ -97,11 +97,11 @@ class InformationProtection extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the sensitivityLabels
     *
-    * @param SensitivityLabel $val The sensitivityLabels
+    * @param SensitivityLabel[] $val The sensitivityLabels
     *
     * @return InformationProtection
     */
@@ -110,7 +110,7 @@ class InformationProtection extends Entity
         $this->_propDict["sensitivityLabels"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sensitivityPolicySettings
     *
@@ -128,7 +128,7 @@ class InformationProtection extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the sensitivityPolicySettings
     *
@@ -141,7 +141,7 @@ class InformationProtection extends Entity
         $this->_propDict["sensitivityPolicySettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the policy
     *
@@ -159,7 +159,7 @@ class InformationProtection extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the policy
     *
@@ -172,9 +172,9 @@ class InformationProtection extends Entity
         $this->_propDict["policy"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the threatAssessmentRequests
      *
      * @return array|null The threatAssessmentRequests
@@ -187,11 +187,11 @@ class InformationProtection extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the threatAssessmentRequests
     *
-    * @param ThreatAssessmentRequest $val The threatAssessmentRequests
+    * @param ThreatAssessmentRequest[] $val The threatAssessmentRequests
     *
     * @return InformationProtection
     */
@@ -200,5 +200,5 @@ class InformationProtection extends Entity
         $this->_propDict["threatAssessmentRequests"] = $val;
         return $this;
     }
-    
+
 }

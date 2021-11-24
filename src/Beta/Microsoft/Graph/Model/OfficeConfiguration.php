@@ -31,7 +31,7 @@ class OfficeConfiguration implements \JsonSerializable
     * @var array $_propDict
     */
     protected $_propDict;
-    
+
     /**
     * Construct a new OfficeConfiguration
     *
@@ -54,9 +54,9 @@ class OfficeConfiguration implements \JsonSerializable
     {
         return $this->_propDict;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tenantCheckinStatuses
     * List of office Client check-in status.
      *
@@ -70,12 +70,12 @@ class OfficeConfiguration implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tenantCheckinStatuses
     * List of office Client check-in status.
     *
-    * @param OfficeClientCheckinStatus $val The tenantCheckinStatuses
+    * @param OfficeClientCheckinStatus[] $val The tenantCheckinStatuses
     *
     * @return OfficeConfiguration
     */
@@ -84,7 +84,7 @@ class OfficeConfiguration implements \JsonSerializable
         $this->_propDict["tenantCheckinStatuses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantUserCheckinSummary
     * Entity that describes tenant check-in statues
@@ -103,7 +103,7 @@ class OfficeConfiguration implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the tenantUserCheckinSummary
     * Entity that describes tenant check-in statues
@@ -117,9 +117,9 @@ class OfficeConfiguration implements \JsonSerializable
         $this->_propDict["tenantUserCheckinSummary"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the clientConfigurations
     * List of office Client configuration.
      *
@@ -133,12 +133,12 @@ class OfficeConfiguration implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the clientConfigurations
     * List of office Client configuration.
     *
-    * @param OfficeClientConfiguration $val The clientConfigurations
+    * @param OfficeClientConfiguration[] $val The clientConfigurations
     *
     * @return OfficeConfiguration
     */
@@ -147,7 +147,7 @@ class OfficeConfiguration implements \JsonSerializable
         $this->_propDict["clientConfigurations"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ODataType
     *
@@ -160,7 +160,7 @@ class OfficeConfiguration implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the ODataType
     *
@@ -173,7 +173,7 @@ class OfficeConfiguration implements \JsonSerializable
         $this->_propDict["@odata.type"] = $val;
         return $this;
     }
-    
+
     /**
     * Serializes the object by property array
     * Manually serialize DateTime into RFC3339 format

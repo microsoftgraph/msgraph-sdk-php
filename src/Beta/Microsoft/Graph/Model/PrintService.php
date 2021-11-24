@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class PrintService extends Entity
 {
 
-     /** 
+     /**
      * Gets the endpoints
     * Endpoints that can be used to access the service. Read-only. Nullable.
      *
@@ -39,12 +39,12 @@ class PrintService extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the endpoints
     * Endpoints that can be used to access the service. Read-only. Nullable.
     *
-    * @param PrintServiceEndpoint $val The endpoints
+    * @param PrintServiceEndpoint[] $val The endpoints
     *
     * @return PrintService
     */
@@ -53,5 +53,5 @@ class PrintService extends Entity
         $this->_propDict["endpoints"] = $val;
         return $this;
     }
-    
+
 }

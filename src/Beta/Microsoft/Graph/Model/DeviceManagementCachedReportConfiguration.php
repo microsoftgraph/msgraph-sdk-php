@@ -42,7 +42,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expirationDateTime
     * Time that the cached report expires
@@ -56,7 +56,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
         $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the filter
     * Filters applied on report creation.
@@ -71,7 +71,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the filter
     * Filters applied on report creation.
@@ -85,7 +85,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
         $this->_propDict["filter"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastRefreshDateTime
     * Time that the cached report was last refreshed
@@ -104,7 +104,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastRefreshDateTime
     * Time that the cached report was last refreshed
@@ -118,7 +118,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
         $this->_propDict["lastRefreshDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the metadata
     * Caller-managed metadata associated with the report
@@ -133,7 +133,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the metadata
     * Caller-managed metadata associated with the report
@@ -147,7 +147,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
         $this->_propDict["metadata"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the orderBy
     * Ordering of columns in the report
@@ -162,7 +162,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the orderBy
     * Ordering of columns in the report
@@ -176,7 +176,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
         $this->_propDict["orderBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportName
     * Name of the report
@@ -191,7 +191,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportName
     * Name of the report
@@ -205,7 +205,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
         $this->_propDict["reportName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the select
     * Columns selected from the report
@@ -220,7 +220,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the select
     * Columns selected from the report
@@ -234,7 +234,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
         $this->_propDict["select"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Status of the cached report. Possible values are: unknown, notStarted, inProgress, completed, failed.
@@ -253,7 +253,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Status of the cached report. Possible values are: unknown, notStarted, inProgress, completed, failed.
@@ -267,5 +267,5 @@ class DeviceManagementCachedReportConfiguration extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

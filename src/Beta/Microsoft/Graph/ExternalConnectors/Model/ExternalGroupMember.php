@@ -42,7 +42,7 @@ class ExternalGroupMember extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the identitySource
     * The identity source that the member belongs to. Possible values are: azureActiveDirectory, external.
@@ -56,7 +56,7 @@ class ExternalGroupMember extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["identitySource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     * The type of member added to the external group. Possible values are: user or group when the identitySource is azureActiveDirectory and just group when the identitySource is external.
@@ -75,7 +75,7 @@ class ExternalGroupMember extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the type
     * The type of member added to the external group. Possible values are: user or group when the identitySource is azureActiveDirectory and just group when the identitySource is external.
@@ -89,5 +89,5 @@ class ExternalGroupMember extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
 }

@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class UserExperienceAnalyticsRegressionSummary extends Entity
 {
 
-     /** 
+     /**
      * Gets the manufacturerRegression
     * The metric values for the user experience analytics Manufacturer regression.
      *
@@ -39,12 +39,12 @@ class UserExperienceAnalyticsRegressionSummary extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the manufacturerRegression
     * The metric values for the user experience analytics Manufacturer regression.
     *
-    * @param UserExperienceAnalyticsMetric $val The manufacturerRegression
+    * @param UserExperienceAnalyticsMetric[] $val The manufacturerRegression
     *
     * @return UserExperienceAnalyticsRegressionSummary
     */
@@ -53,9 +53,9 @@ class UserExperienceAnalyticsRegressionSummary extends Entity
         $this->_propDict["manufacturerRegression"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the modelRegression
     * The metric values for the user experience analytics model regression.
      *
@@ -69,12 +69,12 @@ class UserExperienceAnalyticsRegressionSummary extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the modelRegression
     * The metric values for the user experience analytics model regression.
     *
-    * @param UserExperienceAnalyticsMetric $val The modelRegression
+    * @param UserExperienceAnalyticsMetric[] $val The modelRegression
     *
     * @return UserExperienceAnalyticsRegressionSummary
     */
@@ -83,9 +83,9 @@ class UserExperienceAnalyticsRegressionSummary extends Entity
         $this->_propDict["modelRegression"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the operatingSystemRegression
     * The metric values for the user experience analytics operating system regression.
      *
@@ -99,12 +99,12 @@ class UserExperienceAnalyticsRegressionSummary extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the operatingSystemRegression
     * The metric values for the user experience analytics operating system regression.
     *
-    * @param UserExperienceAnalyticsMetric $val The operatingSystemRegression
+    * @param UserExperienceAnalyticsMetric[] $val The operatingSystemRegression
     *
     * @return UserExperienceAnalyticsRegressionSummary
     */
@@ -113,5 +113,5 @@ class UserExperienceAnalyticsRegressionSummary extends Entity
         $this->_propDict["operatingSystemRegression"] = $val;
         return $this;
     }
-    
+
 }

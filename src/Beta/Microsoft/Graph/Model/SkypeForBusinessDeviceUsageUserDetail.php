@@ -41,7 +41,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActivityDate
     *
@@ -54,7 +54,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
         $this->_propDict["lastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -68,7 +68,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -81,7 +81,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -99,7 +99,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -112,7 +112,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the usedAndroidPhone
     *
@@ -126,7 +126,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usedAndroidPhone
     *
@@ -139,7 +139,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
         $this->_propDict["usedAndroidPhone"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the usediPad
     *
@@ -153,7 +153,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usediPad
     *
@@ -166,7 +166,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
         $this->_propDict["usediPad"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the usediPhone
     *
@@ -180,7 +180,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usediPhone
     *
@@ -193,7 +193,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
         $this->_propDict["usediPhone"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the usedWindows
     *
@@ -207,7 +207,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usedWindows
     *
@@ -220,7 +220,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
         $this->_propDict["usedWindows"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the usedWindowsPhone
     *
@@ -234,7 +234,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usedWindowsPhone
     *
@@ -247,7 +247,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
         $this->_propDict["usedWindowsPhone"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     *
@@ -261,7 +261,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     *
@@ -274,5 +274,5 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

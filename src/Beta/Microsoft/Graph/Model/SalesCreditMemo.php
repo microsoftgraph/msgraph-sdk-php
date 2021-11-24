@@ -41,7 +41,7 @@ class SalesCreditMemo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the billingPostalAddress
     *
@@ -54,7 +54,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["billingPostalAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the billToCustomerId
     *
@@ -68,7 +68,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the billToCustomerId
     *
@@ -81,7 +81,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["billToCustomerId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the billToCustomerNumber
     *
@@ -95,7 +95,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the billToCustomerNumber
     *
@@ -108,7 +108,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["billToCustomerNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the billToName
     *
@@ -122,7 +122,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the billToName
     *
@@ -135,7 +135,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["billToName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the creditMemoDate
     *
@@ -153,7 +153,7 @@ class SalesCreditMemo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the creditMemoDate
     *
@@ -166,7 +166,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["creditMemoDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currencyCode
     *
@@ -180,7 +180,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the currencyCode
     *
@@ -193,7 +193,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["currencyCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currencyId
     *
@@ -207,7 +207,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the currencyId
     *
@@ -220,7 +220,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["currencyId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customerId
     *
@@ -234,7 +234,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customerId
     *
@@ -247,7 +247,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["customerId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customerName
     *
@@ -261,7 +261,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customerName
     *
@@ -274,7 +274,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["customerName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customerNumber
     *
@@ -288,7 +288,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customerNumber
     *
@@ -301,7 +301,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["customerNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the discountAmount
     *
@@ -319,7 +319,7 @@ class SalesCreditMemo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the discountAmount
     *
@@ -332,7 +332,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["discountAmount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the discountAppliedBeforeTax
     *
@@ -346,7 +346,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the discountAppliedBeforeTax
     *
@@ -359,7 +359,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["discountAppliedBeforeTax"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the dueDate
     *
@@ -377,7 +377,7 @@ class SalesCreditMemo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the dueDate
     *
@@ -390,7 +390,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["dueDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the email
     *
@@ -404,7 +404,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the email
     *
@@ -417,7 +417,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["email"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalDocumentNumber
     *
@@ -431,7 +431,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the externalDocumentNumber
     *
@@ -444,7 +444,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["externalDocumentNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the invoiceId
     *
@@ -458,7 +458,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the invoiceId
     *
@@ -471,7 +471,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["invoiceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the invoiceNumber
     *
@@ -485,7 +485,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the invoiceNumber
     *
@@ -498,7 +498,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["invoiceNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -516,7 +516,7 @@ class SalesCreditMemo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -529,7 +529,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the number
     *
@@ -543,7 +543,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the number
     *
@@ -556,7 +556,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["number"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the paymentTermsId
     *
@@ -570,7 +570,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the paymentTermsId
     *
@@ -583,7 +583,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["paymentTermsId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the phoneNumber
     *
@@ -597,7 +597,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the phoneNumber
     *
@@ -610,7 +610,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["phoneNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the pricesIncludeTax
     *
@@ -624,7 +624,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the pricesIncludeTax
     *
@@ -637,7 +637,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["pricesIncludeTax"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the salesperson
     *
@@ -651,7 +651,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the salesperson
     *
@@ -664,7 +664,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["salesperson"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sellingPostalAddress
     *
@@ -682,7 +682,7 @@ class SalesCreditMemo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the sellingPostalAddress
     *
@@ -695,7 +695,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["sellingPostalAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     *
@@ -709,7 +709,7 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the status
     *
@@ -722,7 +722,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the totalAmountExcludingTax
     *
@@ -740,7 +740,7 @@ class SalesCreditMemo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the totalAmountExcludingTax
     *
@@ -753,7 +753,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["totalAmountExcludingTax"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the totalAmountIncludingTax
     *
@@ -771,7 +771,7 @@ class SalesCreditMemo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the totalAmountIncludingTax
     *
@@ -784,7 +784,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["totalAmountIncludingTax"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the totalTaxAmount
     *
@@ -802,7 +802,7 @@ class SalesCreditMemo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the totalTaxAmount
     *
@@ -815,7 +815,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["totalTaxAmount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currency
     *
@@ -833,7 +833,7 @@ class SalesCreditMemo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the currency
     *
@@ -846,7 +846,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["currency"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customer
     *
@@ -864,7 +864,7 @@ class SalesCreditMemo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the customer
     *
@@ -877,7 +877,7 @@ class SalesCreditMemo extends Entity
         $this->_propDict["customer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the paymentTerm
     *
@@ -895,7 +895,7 @@ class SalesCreditMemo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the paymentTerm
     *
@@ -908,9 +908,9 @@ class SalesCreditMemo extends Entity
         $this->_propDict["paymentTerm"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the salesCreditMemoLines
      *
      * @return array|null The salesCreditMemoLines
@@ -923,11 +923,11 @@ class SalesCreditMemo extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the salesCreditMemoLines
     *
-    * @param SalesCreditMemoLine $val The salesCreditMemoLines
+    * @param SalesCreditMemoLine[] $val The salesCreditMemoLines
     *
     * @return SalesCreditMemo
     */
@@ -936,5 +936,5 @@ class SalesCreditMemo extends Entity
         $this->_propDict["salesCreditMemoLines"] = $val;
         return $this;
     }
-    
+
 }

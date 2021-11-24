@@ -42,7 +42,7 @@ class WorkbookChartTitleFormat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the fill
     * Represents the fill format of an object, which includes background formatting information. Read-only.
@@ -56,7 +56,7 @@ class WorkbookChartTitleFormat extends Entity
         $this->_propDict["fill"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the font
     * Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
@@ -75,7 +75,7 @@ class WorkbookChartTitleFormat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the font
     * Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
@@ -89,5 +89,5 @@ class WorkbookChartTitleFormat extends Entity
         $this->_propDict["font"] = $val;
         return $this;
     }
-    
+
 }

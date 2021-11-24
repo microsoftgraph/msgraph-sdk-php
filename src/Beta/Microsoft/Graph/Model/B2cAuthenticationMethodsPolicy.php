@@ -38,7 +38,7 @@ class B2cAuthenticationMethodsPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isEmailPasswordAuthenticationEnabled
     * The tenant admin can configure local accounts using email if the email and password authentication method is enabled.
@@ -52,7 +52,7 @@ class B2cAuthenticationMethodsPolicy extends Entity
         $this->_propDict["isEmailPasswordAuthenticationEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isPhoneOneTimePasswordAuthenticationEnabled
     * The tenant admin can configure local accounts using phone number if the phone number and one-time password authentication method is enabled.
@@ -67,7 +67,7 @@ class B2cAuthenticationMethodsPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isPhoneOneTimePasswordAuthenticationEnabled
     * The tenant admin can configure local accounts using phone number if the phone number and one-time password authentication method is enabled.
@@ -81,7 +81,7 @@ class B2cAuthenticationMethodsPolicy extends Entity
         $this->_propDict["isPhoneOneTimePasswordAuthenticationEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isUserNameAuthenticationEnabled
     * The tenant admin can configure local accounts using username if the username and password authentication method is enabled.
@@ -96,7 +96,7 @@ class B2cAuthenticationMethodsPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isUserNameAuthenticationEnabled
     * The tenant admin can configure local accounts using username if the username and password authentication method is enabled.
@@ -110,5 +110,5 @@ class B2cAuthenticationMethodsPolicy extends Entity
         $this->_propDict["isUserNameAuthenticationEnabled"] = boolval($val);
         return $this;
     }
-    
+
 }

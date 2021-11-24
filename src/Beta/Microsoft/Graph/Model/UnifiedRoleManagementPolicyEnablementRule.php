@@ -38,7 +38,7 @@ class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManagementPol
             return null;
         }
     }
-    
+
     /**
     * Sets the enabledRules
     * The rules which are enabled. Allowed values are MultifactorAuthentication, Justification, Ticketing.
@@ -52,5 +52,5 @@ class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManagementPol
         $this->_propDict["enabledRules"] = $val;
         return $this;
     }
-    
+
 }

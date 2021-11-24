@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class AuditLogRoot extends Entity
 {
 
-     /** 
+     /**
      * Gets the directoryAudits
     * Read-only. Nullable.
      *
@@ -39,12 +39,12 @@ class AuditLogRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the directoryAudits
     * Read-only. Nullable.
     *
-    * @param DirectoryAudit $val The directoryAudits
+    * @param DirectoryAudit[] $val The directoryAudits
     *
     * @return AuditLogRoot
     */
@@ -53,9 +53,9 @@ class AuditLogRoot extends Entity
         $this->_propDict["directoryAudits"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the provisioning
      *
      * @return array|null The provisioning
@@ -68,11 +68,11 @@ class AuditLogRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the provisioning
     *
-    * @param ProvisioningObjectSummary $val The provisioning
+    * @param ProvisioningObjectSummary[] $val The provisioning
     *
     * @return AuditLogRoot
     */
@@ -81,9 +81,9 @@ class AuditLogRoot extends Entity
         $this->_propDict["provisioning"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the restrictedSignIns
      *
      * @return array|null The restrictedSignIns
@@ -96,11 +96,11 @@ class AuditLogRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the restrictedSignIns
     *
-    * @param RestrictedSignIn $val The restrictedSignIns
+    * @param RestrictedSignIn[] $val The restrictedSignIns
     *
     * @return AuditLogRoot
     */
@@ -109,9 +109,9 @@ class AuditLogRoot extends Entity
         $this->_propDict["restrictedSignIns"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the signIns
     * Read-only. Nullable.
      *
@@ -125,12 +125,12 @@ class AuditLogRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the signIns
     * Read-only. Nullable.
     *
-    * @param SignIn $val The signIns
+    * @param SignIn[] $val The signIns
     *
     * @return AuditLogRoot
     */
@@ -139,5 +139,5 @@ class AuditLogRoot extends Entity
         $this->_propDict["signIns"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class AppManagementPolicy extends PolicyBase
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabled
     * Denotes whether the policy is enabled.
@@ -52,7 +52,7 @@ class AppManagementPolicy extends PolicyBase
         $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the restrictions
     * Restrictions that apply to an application or service principal object.
@@ -71,7 +71,7 @@ class AppManagementPolicy extends PolicyBase
         }
         return null;
     }
-    
+
     /**
     * Sets the restrictions
     * Restrictions that apply to an application or service principal object.
@@ -85,9 +85,9 @@ class AppManagementPolicy extends PolicyBase
         $this->_propDict["restrictions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the appliesTo
     * Collection of application and service principals to which a policy is applied.
      *
@@ -101,12 +101,12 @@ class AppManagementPolicy extends PolicyBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the appliesTo
     * Collection of application and service principals to which a policy is applied.
     *
-    * @param DirectoryObject $val The appliesTo
+    * @param DirectoryObject[] $val The appliesTo
     *
     * @return AppManagementPolicy
     */
@@ -115,5 +115,5 @@ class AppManagementPolicy extends PolicyBase
         $this->_propDict["appliesTo"] = $val;
         return $this;
     }
-    
+
 }

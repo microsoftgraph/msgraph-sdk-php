@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class Approval extends Entity
 {
 
-     /** 
+     /**
      * Gets the stages
     * A collection of stages in the approval decision.
      *
@@ -39,12 +39,12 @@ class Approval extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the stages
     * A collection of stages in the approval decision.
     *
-    * @param ApprovalStage $val The stages
+    * @param ApprovalStage[] $val The stages
     *
     * @return Approval
     */
@@ -53,5 +53,5 @@ class Approval extends Entity
         $this->_propDict["stages"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class ActivityStatistics extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the activity
     * The type of activity for which statistics are returned. The possible values are: call, chat, email, focus, and meeting.
@@ -56,7 +56,7 @@ class ActivityStatistics extends Entity
         $this->_propDict["activity"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the duration
     * Total hours spent on the activity. The value is represented in ISO 8601 format for durations.
@@ -75,7 +75,7 @@ class ActivityStatistics extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the duration
     * Total hours spent on the activity. The value is represented in ISO 8601 format for durations.
@@ -89,7 +89,7 @@ class ActivityStatistics extends Entity
         $this->_propDict["duration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the endDate
     * Date when the activity ended, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-03' that follows the YYYY-MM-DD format.
@@ -108,7 +108,7 @@ class ActivityStatistics extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the endDate
     * Date when the activity ended, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-03' that follows the YYYY-MM-DD format.
@@ -122,7 +122,7 @@ class ActivityStatistics extends Entity
         $this->_propDict["endDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startDate
     * Date when the activity started, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-04' that follows the YYYY-MM-DD format.
@@ -141,7 +141,7 @@ class ActivityStatistics extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startDate
     * Date when the activity started, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-04' that follows the YYYY-MM-DD format.
@@ -155,7 +155,7 @@ class ActivityStatistics extends Entity
         $this->_propDict["startDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the timeZoneUsed
     * The time zone that the user sets in Microsoft Outlook is used for the computation. For example, the property value could be 'Pacific Standard Time.'
@@ -170,7 +170,7 @@ class ActivityStatistics extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the timeZoneUsed
     * The time zone that the user sets in Microsoft Outlook is used for the computation. For example, the property value could be 'Pacific Standard Time.'
@@ -184,5 +184,5 @@ class ActivityStatistics extends Entity
         $this->_propDict["timeZoneUsed"] = $val;
         return $this;
     }
-    
+
 }

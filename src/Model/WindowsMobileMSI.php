@@ -38,7 +38,7 @@ class WindowsMobileMSI extends MobileLobApp
             return null;
         }
     }
-    
+
     /**
     * Sets the commandLine
     * The command line.
@@ -52,7 +52,7 @@ class WindowsMobileMSI extends MobileLobApp
         $this->_propDict["commandLine"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ignoreVersionDetection
     * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
@@ -67,7 +67,7 @@ class WindowsMobileMSI extends MobileLobApp
             return null;
         }
     }
-    
+
     /**
     * Sets the ignoreVersionDetection
     * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
@@ -81,7 +81,7 @@ class WindowsMobileMSI extends MobileLobApp
         $this->_propDict["ignoreVersionDetection"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the productCode
     * The product code.
@@ -96,7 +96,7 @@ class WindowsMobileMSI extends MobileLobApp
             return null;
         }
     }
-    
+
     /**
     * Sets the productCode
     * The product code.
@@ -110,7 +110,7 @@ class WindowsMobileMSI extends MobileLobApp
         $this->_propDict["productCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the productVersion
     * The product version of Windows Mobile MSI Line of Business (LoB) app.
@@ -125,7 +125,7 @@ class WindowsMobileMSI extends MobileLobApp
             return null;
         }
     }
-    
+
     /**
     * Sets the productVersion
     * The product version of Windows Mobile MSI Line of Business (LoB) app.
@@ -139,5 +139,5 @@ class WindowsMobileMSI extends MobileLobApp
         $this->_propDict["productVersion"] = $val;
         return $this;
     }
-    
+
 }

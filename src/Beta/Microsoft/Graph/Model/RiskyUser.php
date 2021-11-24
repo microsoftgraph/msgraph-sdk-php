@@ -38,7 +38,7 @@ class RiskyUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDeleted
     * Indicates whether the user is deleted. Possible values are: true, false.
@@ -52,7 +52,7 @@ class RiskyUser extends Entity
         $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isProcessing
     * Indicates whether a user's risky state is being processed by the backend.
@@ -67,7 +67,7 @@ class RiskyUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isProcessing
     * Indicates whether a user's risky state is being processed by the backend.
@@ -81,7 +81,7 @@ class RiskyUser extends Entity
         $this->_propDict["isProcessing"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the riskDetail
     * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
@@ -100,7 +100,7 @@ class RiskyUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the riskDetail
     * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
@@ -114,7 +114,7 @@ class RiskyUser extends Entity
         $this->_propDict["riskDetail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the riskLastUpdatedDateTime
     * The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -133,7 +133,7 @@ class RiskyUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the riskLastUpdatedDateTime
     * The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -147,7 +147,7 @@ class RiskyUser extends Entity
         $this->_propDict["riskLastUpdatedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the riskLevel
     * Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
@@ -166,7 +166,7 @@ class RiskyUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the riskLevel
     * Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
@@ -180,7 +180,7 @@ class RiskyUser extends Entity
         $this->_propDict["riskLevel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the riskState
     * State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
@@ -199,7 +199,7 @@ class RiskyUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the riskState
     * State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
@@ -213,7 +213,7 @@ class RiskyUser extends Entity
         $this->_propDict["riskState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userDisplayName
     * Risky user display name.
@@ -228,7 +228,7 @@ class RiskyUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userDisplayName
     * Risky user display name.
@@ -242,7 +242,7 @@ class RiskyUser extends Entity
         $this->_propDict["userDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * Risky user principal name.
@@ -257,7 +257,7 @@ class RiskyUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * Risky user principal name.
@@ -271,9 +271,9 @@ class RiskyUser extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the history
     * The activity related to user risk level change
      *
@@ -287,12 +287,12 @@ class RiskyUser extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the history
     * The activity related to user risk level change
     *
-    * @param RiskyUserHistoryItem $val The history
+    * @param RiskyUserHistoryItem[] $val The history
     *
     * @return RiskyUser
     */
@@ -301,5 +301,5 @@ class RiskyUser extends Entity
         $this->_propDict["history"] = $val;
         return $this;
     }
-    
+
 }

@@ -37,7 +37,7 @@ class DataLossPreventionPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     *
@@ -50,5 +50,5 @@ class DataLossPreventionPolicy extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
 }

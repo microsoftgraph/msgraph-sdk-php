@@ -41,7 +41,7 @@ class JobResponseBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the creationDateTime
     *
@@ -54,7 +54,7 @@ class JobResponseBase extends Entity
         $this->_propDict["creationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the endDateTime
     *
@@ -72,7 +72,7 @@ class JobResponseBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the endDateTime
     *
@@ -85,7 +85,7 @@ class JobResponseBase extends Entity
         $this->_propDict["endDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the error
     *
@@ -103,7 +103,7 @@ class JobResponseBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the error
     *
@@ -116,7 +116,7 @@ class JobResponseBase extends Entity
         $this->_propDict["error"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startDateTime
     *
@@ -134,7 +134,7 @@ class JobResponseBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startDateTime
     *
@@ -147,7 +147,7 @@ class JobResponseBase extends Entity
         $this->_propDict["startDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     *
@@ -161,7 +161,7 @@ class JobResponseBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the status
     *
@@ -174,7 +174,7 @@ class JobResponseBase extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantId
     *
@@ -188,7 +188,7 @@ class JobResponseBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tenantId
     *
@@ -201,7 +201,7 @@ class JobResponseBase extends Entity
         $this->_propDict["tenantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     *
@@ -215,7 +215,7 @@ class JobResponseBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the type
     *
@@ -228,5 +228,5 @@ class JobResponseBase extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
 }

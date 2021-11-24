@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class AzureADLicenseUsage extends Entity
 {
 
-     /** 
+     /**
      * Gets the licenseInfoDetails
      *
      * @return array|null The licenseInfoDetails
@@ -38,11 +38,11 @@ class AzureADLicenseUsage extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the licenseInfoDetails
     *
-    * @param LicenseInfoDetail $val The licenseInfoDetails
+    * @param LicenseInfoDetail[] $val The licenseInfoDetails
     *
     * @return AzureADLicenseUsage
     */
@@ -51,7 +51,7 @@ class AzureADLicenseUsage extends Entity
         $this->_propDict["licenseInfoDetails"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the snapshotDateTime
     *
@@ -69,7 +69,7 @@ class AzureADLicenseUsage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the snapshotDateTime
     *
@@ -82,5 +82,5 @@ class AzureADLicenseUsage extends Entity
         $this->_propDict["snapshotDateTime"] = $val;
         return $this;
     }
-    
+
 }

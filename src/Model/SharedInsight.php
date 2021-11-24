@@ -42,7 +42,7 @@ class SharedInsight extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastShared
     * Details about the shared item. Read only.
@@ -56,7 +56,7 @@ class SharedInsight extends Entity
         $this->_propDict["lastShared"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceReference
     * Reference properties of the shared document, such as the url and type of the document. Read-only
@@ -75,7 +75,7 @@ class SharedInsight extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resourceReference
     * Reference properties of the shared document, such as the url and type of the document. Read-only
@@ -89,7 +89,7 @@ class SharedInsight extends Entity
         $this->_propDict["resourceReference"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceVisualization
     * Properties that you can use to visualize the document in your experience. Read-only
@@ -108,7 +108,7 @@ class SharedInsight extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resourceVisualization
     * Properties that you can use to visualize the document in your experience. Read-only
@@ -122,9 +122,9 @@ class SharedInsight extends Entity
         $this->_propDict["resourceVisualization"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the sharingHistory
      *
      * @return array|null The sharingHistory
@@ -137,11 +137,11 @@ class SharedInsight extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the sharingHistory
     *
-    * @param SharingDetail $val The sharingHistory
+    * @param SharingDetail[] $val The sharingHistory
     *
     * @return SharedInsight
     */
@@ -150,7 +150,7 @@ class SharedInsight extends Entity
         $this->_propDict["sharingHistory"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastSharedMethod
     *
@@ -168,7 +168,7 @@ class SharedInsight extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSharedMethod
     *
@@ -181,7 +181,7 @@ class SharedInsight extends Entity
         $this->_propDict["lastSharedMethod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resource
     * Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
@@ -200,7 +200,7 @@ class SharedInsight extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resource
     * Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
@@ -214,5 +214,5 @@ class SharedInsight extends Entity
         $this->_propDict["resource"] = $val;
         return $this;
     }
-    
+
 }

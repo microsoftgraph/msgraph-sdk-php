@@ -42,7 +42,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
         }
         return null;
     }
-    
+
     /**
     * Sets the authenticationMode
     * Determines which types of notifications can be used for sign-in. Possible values are: any, deviceBasedPush (passwordless only), push.
@@ -56,7 +56,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
         $this->_propDict["authenticationMode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayAppInformationRequiredState
     * Determines whether the user is shown additional context in their Authenticator app notification. In the body of the Authenticator notification, the user will be shown the app they are signing into along with the location that the authentication request originated from. Possible values are: enabled, disabled, default.
@@ -75,7 +75,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
         }
         return null;
     }
-    
+
     /**
     * Sets the displayAppInformationRequiredState
     * Determines whether the user is shown additional context in their Authenticator app notification. In the body of the Authenticator notification, the user will be shown the app they are signing into along with the location that the authentication request originated from. Possible values are: enabled, disabled, default.
@@ -89,7 +89,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
         $this->_propDict["displayAppInformationRequiredState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the numberMatchingRequiredState
     * Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications. Possible values are: enabled, disabled, default.
@@ -108,7 +108,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
         }
         return null;
     }
-    
+
     /**
     * Sets the numberMatchingRequiredState
     * Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications. Possible values are: enabled, disabled, default.
@@ -122,5 +122,5 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
         $this->_propDict["numberMatchingRequiredState"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class GroupPolicyPresentation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the label
     * Localized text label for any presentation entity. The default value is empty.
@@ -52,7 +52,7 @@ class GroupPolicyPresentation extends Entity
         $this->_propDict["label"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time the entity was last modified.
@@ -71,7 +71,7 @@ class GroupPolicyPresentation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time the entity was last modified.
@@ -85,7 +85,7 @@ class GroupPolicyPresentation extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the definition
     * The group policy definition associated with the presentation.
@@ -104,7 +104,7 @@ class GroupPolicyPresentation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the definition
     * The group policy definition associated with the presentation.
@@ -118,5 +118,5 @@ class GroupPolicyPresentation extends Entity
         $this->_propDict["definition"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
             return null;
         }
     }
-    
+
     /**
     * Sets the advancedThreatProtectionAutoPopulateOnboardingBlob
     * Auto populate onboarding blob programmatically from Advanced Threat protection service
@@ -52,7 +52,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
         $this->_propDict["advancedThreatProtectionAutoPopulateOnboardingBlob"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the advancedThreatProtectionOffboardingBlob
     * Windows Defender AdvancedThreatProtection Offboarding Blob.
@@ -67,7 +67,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
             return null;
         }
     }
-    
+
     /**
     * Sets the advancedThreatProtectionOffboardingBlob
     * Windows Defender AdvancedThreatProtection Offboarding Blob.
@@ -81,7 +81,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
         $this->_propDict["advancedThreatProtectionOffboardingBlob"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the advancedThreatProtectionOffboardingFilename
     * Name of the file from which AdvancedThreatProtectionOffboardingBlob was obtained.
@@ -96,7 +96,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
             return null;
         }
     }
-    
+
     /**
     * Sets the advancedThreatProtectionOffboardingFilename
     * Name of the file from which AdvancedThreatProtectionOffboardingBlob was obtained.
@@ -110,7 +110,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
         $this->_propDict["advancedThreatProtectionOffboardingFilename"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the advancedThreatProtectionOnboardingBlob
     * Windows Defender AdvancedThreatProtection Onboarding Blob.
@@ -125,7 +125,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
             return null;
         }
     }
-    
+
     /**
     * Sets the advancedThreatProtectionOnboardingBlob
     * Windows Defender AdvancedThreatProtection Onboarding Blob.
@@ -139,7 +139,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
         $this->_propDict["advancedThreatProtectionOnboardingBlob"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the advancedThreatProtectionOnboardingFilename
     * Name of the file from which AdvancedThreatProtectionOnboardingBlob was obtained.
@@ -154,7 +154,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
             return null;
         }
     }
-    
+
     /**
     * Sets the advancedThreatProtectionOnboardingFilename
     * Name of the file from which AdvancedThreatProtectionOnboardingBlob was obtained.
@@ -168,7 +168,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
         $this->_propDict["advancedThreatProtectionOnboardingFilename"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the allowSampleSharing
     * Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
@@ -183,7 +183,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
             return null;
         }
     }
-    
+
     /**
     * Sets the allowSampleSharing
     * Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
@@ -197,7 +197,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
         $this->_propDict["allowSampleSharing"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the enableExpeditedTelemetryReporting
     * Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
@@ -212,7 +212,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
             return null;
         }
     }
-    
+
     /**
     * Sets the enableExpeditedTelemetryReporting
     * Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
@@ -226,5 +226,5 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
         $this->_propDict["enableExpeditedTelemetryReporting"] = boolval($val);
         return $this;
     }
-    
+
 }

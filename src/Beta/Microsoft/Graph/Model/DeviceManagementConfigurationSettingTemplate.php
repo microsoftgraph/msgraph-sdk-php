@@ -42,7 +42,7 @@ class DeviceManagementConfigurationSettingTemplate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the settingInstanceTemplate
     * Setting Instance Template
@@ -56,9 +56,9 @@ class DeviceManagementConfigurationSettingTemplate extends Entity
         $this->_propDict["settingInstanceTemplate"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the settingDefinitions
     * List of related Setting Definitions
      *
@@ -72,12 +72,12 @@ class DeviceManagementConfigurationSettingTemplate extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the settingDefinitions
     * List of related Setting Definitions
     *
-    * @param DeviceManagementConfigurationSettingDefinition $val The settingDefinitions
+    * @param DeviceManagementConfigurationSettingDefinition[] $val The settingDefinitions
     *
     * @return DeviceManagementConfigurationSettingTemplate
     */
@@ -86,5 +86,5 @@ class DeviceManagementConfigurationSettingTemplate extends Entity
         $this->_propDict["settingDefinitions"] = $val;
         return $this;
     }
-    
+
 }

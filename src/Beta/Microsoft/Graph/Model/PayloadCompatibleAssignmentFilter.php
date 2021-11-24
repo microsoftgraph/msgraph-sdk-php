@@ -42,7 +42,7 @@ class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAssignment
         }
         return null;
     }
-    
+
     /**
     * Sets the payloadType
     * PayloadType of the Assignment Filter. Possible values are: notSet, enrollmentRestrictions.
@@ -56,5 +56,5 @@ class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAssignment
         $this->_propDict["payloadType"] = $val;
         return $this;
     }
-    
+
 }

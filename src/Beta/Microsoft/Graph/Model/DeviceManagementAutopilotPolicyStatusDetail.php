@@ -42,7 +42,7 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the complianceStatus
     * The policy compliance status. Possible values are: unknown, compliant, installed, notCompliant, notInstalled, error.
@@ -56,7 +56,7 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
         $this->_propDict["complianceStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The friendly name of the policy.
@@ -71,7 +71,7 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The friendly name of the policy.
@@ -85,7 +85,7 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the errorCode
     * The errorode associated with the compliance or enforcement status of the policy. Error code for enforcement status takes precedence if it exists.
@@ -100,7 +100,7 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorCode
     * The errorode associated with the compliance or enforcement status of the policy. Error code for enforcement status takes precedence if it exists.
@@ -114,7 +114,7 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
         $this->_propDict["errorCode"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastReportedDateTime
     * Timestamp of the reported policy status
@@ -133,7 +133,7 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastReportedDateTime
     * Timestamp of the reported policy status
@@ -147,7 +147,7 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
         $this->_propDict["lastReportedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the policyType
     * The type of policy. Possible values are: unknown, application, appModel, configurationPolicy.
@@ -166,7 +166,7 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the policyType
     * The type of policy. Possible values are: unknown, application, appModel, configurationPolicy.
@@ -180,7 +180,7 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
         $this->_propDict["policyType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the trackedOnEnrollmentStatus
     * Indicates if this prolicy was tracked as part of the autopilot bootstrap enrollment sync session
@@ -195,7 +195,7 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the trackedOnEnrollmentStatus
     * Indicates if this prolicy was tracked as part of the autopilot bootstrap enrollment sync session
@@ -209,5 +209,5 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
         $this->_propDict["trackedOnEnrollmentStatus"] = boolval($val);
         return $this;
     }
-    
+
 }

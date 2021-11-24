@@ -38,7 +38,7 @@ class DeviceInstallState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * Device Id.
@@ -52,7 +52,7 @@ class DeviceInstallState extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceName
     * Device name.
@@ -67,7 +67,7 @@ class DeviceInstallState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceName
     * Device name.
@@ -81,7 +81,7 @@ class DeviceInstallState extends Entity
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the errorCode
     * The error code for install failures.
@@ -96,7 +96,7 @@ class DeviceInstallState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorCode
     * The error code for install failures.
@@ -110,7 +110,7 @@ class DeviceInstallState extends Entity
         $this->_propDict["errorCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the installState
     * The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed, unknown.
@@ -129,7 +129,7 @@ class DeviceInstallState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the installState
     * The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed, unknown.
@@ -143,7 +143,7 @@ class DeviceInstallState extends Entity
         $this->_propDict["installState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastSyncDateTime
     * Last sync date and time.
@@ -162,7 +162,7 @@ class DeviceInstallState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSyncDateTime
     * Last sync date and time.
@@ -176,7 +176,7 @@ class DeviceInstallState extends Entity
         $this->_propDict["lastSyncDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osDescription
     * OS Description.
@@ -191,7 +191,7 @@ class DeviceInstallState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osDescription
     * OS Description.
@@ -205,7 +205,7 @@ class DeviceInstallState extends Entity
         $this->_propDict["osDescription"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osVersion
     * OS Version.
@@ -220,7 +220,7 @@ class DeviceInstallState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osVersion
     * OS Version.
@@ -234,7 +234,7 @@ class DeviceInstallState extends Entity
         $this->_propDict["osVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userName
     * Device User Name.
@@ -249,7 +249,7 @@ class DeviceInstallState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userName
     * Device User Name.
@@ -263,5 +263,5 @@ class DeviceInstallState extends Entity
         $this->_propDict["userName"] = $val;
         return $this;
     }
-    
+
 }

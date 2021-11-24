@@ -38,7 +38,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase
             return null;
         }
     }
-    
+
     /**
     * Sets the issuerUri
     * Issuer URI of the federation server.
@@ -52,7 +52,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase
         $this->_propDict["issuerUri"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the metadataExchangeUri
     * URI of the metadata exchange endpoint used for authentication from rich client applications.
@@ -67,7 +67,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase
             return null;
         }
     }
-    
+
     /**
     * Sets the metadataExchangeUri
     * URI of the metadata exchange endpoint used for authentication from rich client applications.
@@ -81,7 +81,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase
         $this->_propDict["metadataExchangeUri"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the passiveSignInUri
     * URI that web-based clients are directed to when signing in to Azure Active Directory (Azure AD) services.
@@ -96,7 +96,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase
             return null;
         }
     }
-    
+
     /**
     * Sets the passiveSignInUri
     * URI that web-based clients are directed to when signing in to Azure Active Directory (Azure AD) services.
@@ -110,7 +110,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase
         $this->_propDict["passiveSignInUri"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the preferredAuthenticationProtocol
     * Preferred authentication protocol. Supported values include saml or wsfed.
@@ -129,7 +129,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase
         }
         return null;
     }
-    
+
     /**
     * Sets the preferredAuthenticationProtocol
     * Preferred authentication protocol. Supported values include saml or wsfed.
@@ -143,7 +143,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase
         $this->_propDict["preferredAuthenticationProtocol"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the signingCertificate
     * Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Azure AD updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Azure AD monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
@@ -158,7 +158,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase
             return null;
         }
     }
-    
+
     /**
     * Sets the signingCertificate
     * Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Azure AD updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Azure AD monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
@@ -172,5 +172,5 @@ class SamlOrWsFedProvider extends IdentityProviderBase
         $this->_propDict["signingCertificate"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the connectAutomatically
     * Specify whether the wifi connection should connect automatically when in range.
@@ -52,7 +52,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
         $this->_propDict["connectAutomatically"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the connectToPreferredNetwork
     * Specify whether the wifi connection should connect to more preferred networks when already connected to this one.  Requires ConnectAutomatically to be true.
@@ -67,7 +67,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the connectToPreferredNetwork
     * Specify whether the wifi connection should connect to more preferred networks when already connected to this one.  Requires ConnectAutomatically to be true.
@@ -81,7 +81,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
         $this->_propDict["connectToPreferredNetwork"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the connectWhenNetworkNameIsHidden
     * Specify whether the wifi connection should connect automatically even when the SSID is not broadcasting.
@@ -96,7 +96,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the connectWhenNetworkNameIsHidden
     * Specify whether the wifi connection should connect automatically even when the SSID is not broadcasting.
@@ -110,7 +110,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
         $this->_propDict["connectWhenNetworkNameIsHidden"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the forceFIPSCompliance
     * Specify whether to force FIPS compliance.
@@ -125,7 +125,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the forceFIPSCompliance
     * Specify whether to force FIPS compliance.
@@ -139,7 +139,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
         $this->_propDict["forceFIPSCompliance"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the meteredConnectionLimit
     * Specify the metered connection limit type for the wifi connection. Possible values are: unrestricted, fixed, variable.
@@ -158,7 +158,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the meteredConnectionLimit
     * Specify the metered connection limit type for the wifi connection. Possible values are: unrestricted, fixed, variable.
@@ -172,7 +172,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
         $this->_propDict["meteredConnectionLimit"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the networkName
     * Specify the network configuration name.
@@ -187,7 +187,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the networkName
     * Specify the network configuration name.
@@ -201,7 +201,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
         $this->_propDict["networkName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the preSharedKey
     * This is the pre-shared key for WPA Personal Wi-Fi network.
@@ -216,7 +216,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the preSharedKey
     * This is the pre-shared key for WPA Personal Wi-Fi network.
@@ -230,7 +230,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
         $this->_propDict["preSharedKey"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the proxyAutomaticConfigurationUrl
     * Specify the URL for the proxy server configuration script.
@@ -245,7 +245,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the proxyAutomaticConfigurationUrl
     * Specify the URL for the proxy server configuration script.
@@ -259,7 +259,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
         $this->_propDict["proxyAutomaticConfigurationUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the proxyManualAddress
     * Specify the IP address for the proxy server.
@@ -274,7 +274,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the proxyManualAddress
     * Specify the IP address for the proxy server.
@@ -288,7 +288,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
         $this->_propDict["proxyManualAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the proxyManualPort
     * Specify the port for the proxy server.
@@ -303,7 +303,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the proxyManualPort
     * Specify the port for the proxy server.
@@ -317,7 +317,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
         $this->_propDict["proxyManualPort"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the proxySetting
     * Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic.
@@ -336,7 +336,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the proxySetting
     * Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic.
@@ -350,7 +350,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
         $this->_propDict["proxySetting"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ssid
     * Specify the SSID of the wifi connection.
@@ -365,7 +365,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the ssid
     * Specify the SSID of the wifi connection.
@@ -379,7 +379,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
         $this->_propDict["ssid"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the wifiSecurityType
     * Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
@@ -398,7 +398,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the wifiSecurityType
     * Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
@@ -412,5 +412,5 @@ class WindowsWifiConfiguration extends DeviceConfiguration
         $this->_propDict["wifiSecurityType"] = $val;
         return $this;
     }
-    
+
 }

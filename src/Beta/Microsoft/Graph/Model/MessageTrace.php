@@ -37,7 +37,7 @@ class MessageTrace extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the destinationIPAddress
     *
@@ -50,7 +50,7 @@ class MessageTrace extends Entity
         $this->_propDict["destinationIPAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the messageId
     *
@@ -64,7 +64,7 @@ class MessageTrace extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the messageId
     *
@@ -77,7 +77,7 @@ class MessageTrace extends Entity
         $this->_propDict["messageId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the receivedDateTime
     *
@@ -95,7 +95,7 @@ class MessageTrace extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the receivedDateTime
     *
@@ -108,7 +108,7 @@ class MessageTrace extends Entity
         $this->_propDict["receivedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the senderEmail
     *
@@ -122,7 +122,7 @@ class MessageTrace extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the senderEmail
     *
@@ -135,7 +135,7 @@ class MessageTrace extends Entity
         $this->_propDict["senderEmail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the size
     *
@@ -149,7 +149,7 @@ class MessageTrace extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the size
     *
@@ -162,7 +162,7 @@ class MessageTrace extends Entity
         $this->_propDict["size"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the sourceIPAddress
     *
@@ -176,7 +176,7 @@ class MessageTrace extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sourceIPAddress
     *
@@ -189,7 +189,7 @@ class MessageTrace extends Entity
         $this->_propDict["sourceIPAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subject
     *
@@ -203,7 +203,7 @@ class MessageTrace extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the subject
     *
@@ -216,9 +216,9 @@ class MessageTrace extends Entity
         $this->_propDict["subject"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the recipients
      *
      * @return array|null The recipients
@@ -231,11 +231,11 @@ class MessageTrace extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the recipients
     *
-    * @param MessageRecipient $val The recipients
+    * @param MessageRecipient[] $val The recipients
     *
     * @return MessageTrace
     */
@@ -244,5 +244,5 @@ class MessageTrace extends Entity
         $this->_propDict["recipients"] = $val;
         return $this;
     }
-    
+
 }

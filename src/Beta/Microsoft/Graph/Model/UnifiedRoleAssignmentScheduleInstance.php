@@ -38,7 +38,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
             return null;
         }
     }
-    
+
     /**
     * Sets the assignmentType
     * Type of the assignment. It can either be Assigned or Activated.
@@ -52,7 +52,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
         $this->_propDict["assignmentType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the endDateTime
     * Time that the roleAssignmentInstance will expire
@@ -71,7 +71,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
         }
         return null;
     }
-    
+
     /**
     * Sets the endDateTime
     * Time that the roleAssignmentInstance will expire
@@ -85,7 +85,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
         $this->_propDict["endDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the memberType
     * Membership type of the assignment. It can either be Inherited, Direct, or Group.
@@ -100,7 +100,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
             return null;
         }
     }
-    
+
     /**
     * Sets the memberType
     * Membership type of the assignment. It can either be Inherited, Direct, or Group.
@@ -114,7 +114,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
         $this->_propDict["memberType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleAssignmentOriginId
     * ID of the roleAssignment in the directory
@@ -129,7 +129,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
             return null;
         }
     }
-    
+
     /**
     * Sets the roleAssignmentOriginId
     * ID of the roleAssignment in the directory
@@ -143,7 +143,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
         $this->_propDict["roleAssignmentOriginId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleAssignmentScheduleId
     * ID of the parent roleAssignmentSchedule for this instance
@@ -158,7 +158,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
             return null;
         }
     }
-    
+
     /**
     * Sets the roleAssignmentScheduleId
     * ID of the parent roleAssignmentSchedule for this instance
@@ -172,7 +172,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
         $this->_propDict["roleAssignmentScheduleId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startDateTime
     * Time that the roleAssignmentInstance will start
@@ -191,7 +191,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
         }
         return null;
     }
-    
+
     /**
     * Sets the startDateTime
     * Time that the roleAssignmentInstance will start
@@ -205,7 +205,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
         $this->_propDict["startDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activatedUsing
     * If the roleAssignmentScheduleInstance is activated by a roleEligibilityScheduleRequest, this is the link to the related schedule instance.
@@ -224,7 +224,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
         }
         return null;
     }
-    
+
     /**
     * Sets the activatedUsing
     * If the roleAssignmentScheduleInstance is activated by a roleEligibilityScheduleRequest, this is the link to the related schedule instance.
@@ -238,5 +238,5 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
         $this->_propDict["activatedUsing"] = $val;
         return $this;
     }
-    
+
 }

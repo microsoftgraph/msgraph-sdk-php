@@ -42,7 +42,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the bootFromBuiltInNetworkAdapters
     * Defines whether a user is allowed to boot from built-in network adapters. Possible values are: notConfigured, enabled, disabled.
@@ -56,7 +56,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         $this->_propDict["bootFromBuiltInNetworkAdapters"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the bootFromExternalMedia
     * Defines whether a user is allowed to boot from external media. Possible values are: notConfigured, enabled, disabled.
@@ -75,7 +75,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the bootFromExternalMedia
     * Defines whether a user is allowed to boot from external media. Possible values are: notConfigured, enabled, disabled.
@@ -89,7 +89,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         $this->_propDict["bootFromExternalMedia"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the cameras
     * Defines whether built-in cameras are enabled. Possible values are: notConfigured, enabled, disabled.
@@ -108,7 +108,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the cameras
     * Defines whether built-in cameras are enabled. Possible values are: notConfigured, enabled, disabled.
@@ -122,7 +122,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         $this->_propDict["cameras"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the changeUefiSettingsPermission
     * Defines the permission level granted to users to change UEFI settings. Possible values are: notConfiguredOnly, none.
@@ -141,7 +141,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the changeUefiSettingsPermission
     * Defines the permission level granted to users to change UEFI settings. Possible values are: notConfiguredOnly, none.
@@ -155,7 +155,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         $this->_propDict["changeUefiSettingsPermission"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the microphonesAndSpeakers
     * Defines whether built-in microphones or speakers are enabled. Possible values are: notConfigured, enabled, disabled.
@@ -174,7 +174,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the microphonesAndSpeakers
     * Defines whether built-in microphones or speakers are enabled. Possible values are: notConfigured, enabled, disabled.
@@ -188,7 +188,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         $this->_propDict["microphonesAndSpeakers"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the radios
     * Defines whether built-in radios e.g. WIFI, NFC, Bluetooth, are enabled. Possible values are: notConfigured, enabled, disabled.
@@ -207,7 +207,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the radios
     * Defines whether built-in radios e.g. WIFI, NFC, Bluetooth, are enabled. Possible values are: notConfigured, enabled, disabled.
@@ -221,7 +221,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         $this->_propDict["radios"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the simultaneousMultiThreading
     * Defines whether a user is allowed to enable Simultaneous MultiThreading. Possible values are: notConfigured, enabled, disabled.
@@ -240,7 +240,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the simultaneousMultiThreading
     * Defines whether a user is allowed to enable Simultaneous MultiThreading. Possible values are: notConfigured, enabled, disabled.
@@ -254,7 +254,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         $this->_propDict["simultaneousMultiThreading"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the virtualizationOfCpuAndIO
     * Defines whether CPU and IO virtualization is enabled. Possible values are: notConfigured, enabled, disabled.
@@ -273,7 +273,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the virtualizationOfCpuAndIO
     * Defines whether CPU and IO virtualization is enabled. Possible values are: notConfigured, enabled, disabled.
@@ -287,7 +287,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         $this->_propDict["virtualizationOfCpuAndIO"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the windowsPlatformBinaryTable
     * Defines whether a user is allowed to enable Windows Platform Binary Table. Possible values are: notConfigured, enabled, disabled.
@@ -306,7 +306,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the windowsPlatformBinaryTable
     * Defines whether a user is allowed to enable Windows Platform Binary Table. Possible values are: notConfigured, enabled, disabled.
@@ -320,5 +320,5 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
         $this->_propDict["windowsPlatformBinaryTable"] = $val;
         return $this;
     }
-    
+
 }

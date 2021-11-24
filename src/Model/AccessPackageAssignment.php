@@ -42,7 +42,7 @@ class AccessPackageAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expiredDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -56,7 +56,7 @@ class AccessPackageAssignment extends Entity
         $this->_propDict["expiredDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the schedule
     * When the access assignment is to be in place. Read-only.
@@ -75,7 +75,7 @@ class AccessPackageAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the schedule
     * When the access assignment is to be in place. Read-only.
@@ -89,7 +89,7 @@ class AccessPackageAssignment extends Entity
         $this->_propDict["schedule"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     *
@@ -107,7 +107,7 @@ class AccessPackageAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     *
@@ -120,7 +120,7 @@ class AccessPackageAssignment extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     *
@@ -134,7 +134,7 @@ class AccessPackageAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the status
     *
@@ -147,7 +147,7 @@ class AccessPackageAssignment extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the accessPackage
     * Read-only. Nullable.
@@ -166,7 +166,7 @@ class AccessPackageAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the accessPackage
     * Read-only. Nullable.
@@ -180,7 +180,7 @@ class AccessPackageAssignment extends Entity
         $this->_propDict["accessPackage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the target
     * The subject of the access package assignment. Read-only. Nullable.
@@ -199,7 +199,7 @@ class AccessPackageAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The subject of the access package assignment. Read-only. Nullable.
@@ -213,5 +213,5 @@ class AccessPackageAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

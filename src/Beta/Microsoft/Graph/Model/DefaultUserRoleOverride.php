@@ -37,7 +37,7 @@ class DefaultUserRoleOverride extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDefault
     *
@@ -50,9 +50,9 @@ class DefaultUserRoleOverride extends Entity
         $this->_propDict["isDefault"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the rolePermissions
      *
      * @return array|null The rolePermissions
@@ -65,11 +65,11 @@ class DefaultUserRoleOverride extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the rolePermissions
     *
-    * @param UnifiedRolePermission $val The rolePermissions
+    * @param UnifiedRolePermission[] $val The rolePermissions
     *
     * @return DefaultUserRoleOverride
     */
@@ -78,5 +78,5 @@ class DefaultUserRoleOverride extends Entity
         $this->_propDict["rolePermissions"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class GroupSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display name of this group of settings, which comes from the associated template.
@@ -52,7 +52,7 @@ class GroupSetting extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the templateId
     * Unique identifier for the template used to create this group of settings. Read-only.
@@ -67,7 +67,7 @@ class GroupSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the templateId
     * Unique identifier for the template used to create this group of settings. Read-only.
@@ -81,9 +81,9 @@ class GroupSetting extends Entity
         $this->_propDict["templateId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the values
     * Collection of name value pairs. Must contain and set all the settings defined in the template.
      *
@@ -97,12 +97,12 @@ class GroupSetting extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the values
     * Collection of name value pairs. Must contain and set all the settings defined in the template.
     *
-    * @param SettingValue $val The values
+    * @param SettingValue[] $val The values
     *
     * @return GroupSetting
     */
@@ -111,5 +111,5 @@ class GroupSetting extends Entity
         $this->_propDict["values"] = $val;
         return $this;
     }
-    
+
 }

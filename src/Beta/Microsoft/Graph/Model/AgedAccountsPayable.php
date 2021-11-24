@@ -41,7 +41,7 @@ class AgedAccountsPayable extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the agedAsOfDate
     *
@@ -54,7 +54,7 @@ class AgedAccountsPayable extends Entity
         $this->_propDict["agedAsOfDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the balanceDue
     *
@@ -72,7 +72,7 @@ class AgedAccountsPayable extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the balanceDue
     *
@@ -85,7 +85,7 @@ class AgedAccountsPayable extends Entity
         $this->_propDict["balanceDue"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currencyCode
     *
@@ -99,7 +99,7 @@ class AgedAccountsPayable extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the currencyCode
     *
@@ -112,7 +112,7 @@ class AgedAccountsPayable extends Entity
         $this->_propDict["currencyCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currentAmount
     *
@@ -130,7 +130,7 @@ class AgedAccountsPayable extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the currentAmount
     *
@@ -143,7 +143,7 @@ class AgedAccountsPayable extends Entity
         $this->_propDict["currentAmount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     *
@@ -157,7 +157,7 @@ class AgedAccountsPayable extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     *
@@ -170,7 +170,7 @@ class AgedAccountsPayable extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the period1Amount
     *
@@ -188,7 +188,7 @@ class AgedAccountsPayable extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the period1Amount
     *
@@ -201,7 +201,7 @@ class AgedAccountsPayable extends Entity
         $this->_propDict["period1Amount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the period2Amount
     *
@@ -219,7 +219,7 @@ class AgedAccountsPayable extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the period2Amount
     *
@@ -232,7 +232,7 @@ class AgedAccountsPayable extends Entity
         $this->_propDict["period2Amount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the period3Amount
     *
@@ -250,7 +250,7 @@ class AgedAccountsPayable extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the period3Amount
     *
@@ -263,7 +263,7 @@ class AgedAccountsPayable extends Entity
         $this->_propDict["period3Amount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the periodLengthFilter
     *
@@ -277,7 +277,7 @@ class AgedAccountsPayable extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the periodLengthFilter
     *
@@ -290,7 +290,7 @@ class AgedAccountsPayable extends Entity
         $this->_propDict["periodLengthFilter"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the vendorNumber
     *
@@ -304,7 +304,7 @@ class AgedAccountsPayable extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the vendorNumber
     *
@@ -317,5 +317,5 @@ class AgedAccountsPayable extends Entity
         $this->_propDict["vendorNumber"] = $val;
         return $this;
     }
-    
+
 }

@@ -37,7 +37,7 @@ class TextClassificationRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the fileExtension
     *
@@ -50,7 +50,7 @@ class TextClassificationRequest extends Entity
         $this->_propDict["fileExtension"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the matchTolerancesToInclude
     *
@@ -68,7 +68,7 @@ class TextClassificationRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the matchTolerancesToInclude
     *
@@ -81,7 +81,7 @@ class TextClassificationRequest extends Entity
         $this->_propDict["matchTolerancesToInclude"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scopesToRun
     *
@@ -99,7 +99,7 @@ class TextClassificationRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the scopesToRun
     *
@@ -112,7 +112,7 @@ class TextClassificationRequest extends Entity
         $this->_propDict["scopesToRun"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sensitiveTypeIds
     *
@@ -126,7 +126,7 @@ class TextClassificationRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sensitiveTypeIds
     *
@@ -139,7 +139,7 @@ class TextClassificationRequest extends Entity
         $this->_propDict["sensitiveTypeIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the text
     *
@@ -153,7 +153,7 @@ class TextClassificationRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the text
     *
@@ -166,5 +166,5 @@ class TextClassificationRequest extends Entity
         $this->_propDict["text"] = $val;
         return $this;
     }
-    
+
 }

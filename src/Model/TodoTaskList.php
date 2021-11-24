@@ -38,7 +38,7 @@ class TodoTaskList extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the task list.
@@ -52,7 +52,7 @@ class TodoTaskList extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isOwner
     * True if the user is owner of the given task list.
@@ -67,7 +67,7 @@ class TodoTaskList extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isOwner
     * True if the user is owner of the given task list.
@@ -81,7 +81,7 @@ class TodoTaskList extends Entity
         $this->_propDict["isOwner"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isShared
     * True if the task list is shared with other users
@@ -96,7 +96,7 @@ class TodoTaskList extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isShared
     * True if the task list is shared with other users
@@ -110,7 +110,7 @@ class TodoTaskList extends Entity
         $this->_propDict["isShared"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the wellknownListName
     * Property indicating the list name if the given list is a well-known list. Possible values are: none, defaultList, flaggedEmails, unknownFutureValue.
@@ -129,7 +129,7 @@ class TodoTaskList extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the wellknownListName
     * Property indicating the list name if the given list is a well-known list. Possible values are: none, defaultList, flaggedEmails, unknownFutureValue.
@@ -143,9 +143,9 @@ class TodoTaskList extends Entity
         $this->_propDict["wellknownListName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the extensions
     * The collection of open extensions defined for the task list. Nullable.
      *
@@ -159,12 +159,12 @@ class TodoTaskList extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the extensions
     * The collection of open extensions defined for the task list. Nullable.
     *
-    * @param Extension $val The extensions
+    * @param Extension[] $val The extensions
     *
     * @return TodoTaskList
     */
@@ -173,9 +173,9 @@ class TodoTaskList extends Entity
         $this->_propDict["extensions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tasks
     * The tasks in this task list. Read-only. Nullable.
      *
@@ -189,12 +189,12 @@ class TodoTaskList extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tasks
     * The tasks in this task list. Read-only. Nullable.
     *
-    * @param TodoTask $val The tasks
+    * @param TodoTask[] $val The tasks
     *
     * @return TodoTaskList
     */
@@ -203,5 +203,5 @@ class TodoTaskList extends Entity
         $this->_propDict["tasks"] = $val;
         return $this;
     }
-    
+
 }

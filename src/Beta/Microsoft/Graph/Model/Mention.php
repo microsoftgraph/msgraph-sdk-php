@@ -38,7 +38,7 @@ class Mention extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the application
     * The name of the application where the mention is created. Optional. Not used and defaulted as null for message.
@@ -52,7 +52,7 @@ class Mention extends Entity
         $this->_propDict["application"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the clientReference
     * A unique identifier that represents a parent of the resource instance. Optional. Not used and defaulted as null for message.
@@ -67,7 +67,7 @@ class Mention extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the clientReference
     * A unique identifier that represents a parent of the resource instance. Optional. Not used and defaulted as null for message.
@@ -81,7 +81,7 @@ class Mention extends Entity
         $this->_propDict["clientReference"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     * The email information of the user who made the mention.
@@ -100,7 +100,7 @@ class Mention extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     * The email information of the user who made the mention.
@@ -114,7 +114,7 @@ class Mention extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The date and time that the mention is created on the client.
@@ -133,7 +133,7 @@ class Mention extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time that the mention is created on the client.
@@ -147,7 +147,7 @@ class Mention extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deepLink
     * A deep web link to the context of the mention in the resource instance. Optional. Not used and defaulted as null for message.
@@ -162,7 +162,7 @@ class Mention extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deepLink
     * A deep web link to the context of the mention in the resource instance. Optional. Not used and defaulted as null for message.
@@ -176,7 +176,7 @@ class Mention extends Entity
         $this->_propDict["deepLink"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mentioned
     * The email information of the mentioned person. Required.
@@ -195,7 +195,7 @@ class Mention extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the mentioned
     * The email information of the mentioned person. Required.
@@ -209,7 +209,7 @@ class Mention extends Entity
         $this->_propDict["mentioned"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mentionText
     * Optional. Not used and defaulted as null for message. To get the mentions in a message, see the bodyPreview property of the message instead.
@@ -224,7 +224,7 @@ class Mention extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the mentionText
     * Optional. Not used and defaulted as null for message. To get the mentions in a message, see the bodyPreview property of the message instead.
@@ -238,7 +238,7 @@ class Mention extends Entity
         $this->_propDict["mentionText"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the serverCreatedDateTime
     * The date and time that the mention is created on the server. Optional. Not used and defaulted as null for message.
@@ -257,7 +257,7 @@ class Mention extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the serverCreatedDateTime
     * The date and time that the mention is created on the server. Optional. Not used and defaulted as null for message.
@@ -271,5 +271,5 @@ class Mention extends Entity
         $this->_propDict["serverCreatedDateTime"] = $val;
         return $this;
     }
-    
+
 }

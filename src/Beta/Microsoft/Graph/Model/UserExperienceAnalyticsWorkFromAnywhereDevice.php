@@ -38,7 +38,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the autoPilotProfileAssigned
     * The user experience analytics work from anywhere intune device's autopilotProfileAssigned.
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["autoPilotProfileAssigned"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the autoPilotRegistered
     * The user experience work from anywhere intune device's autopilotRegistered.
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the autoPilotRegistered
     * The user experience work from anywhere intune device's autopilotRegistered.
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["autoPilotRegistered"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the azureAdDeviceId
     * The user experience work from anywhere azure Ad device Id.
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureAdDeviceId
     * The user experience work from anywhere azure Ad device Id.
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["azureAdDeviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the azureAdJoinType
     * The user experience work from anywhere device's azure Ad joinType.
@@ -125,7 +125,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureAdJoinType
     * The user experience work from anywhere device's azure Ad joinType.
@@ -139,7 +139,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["azureAdJoinType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the azureAdRegistered
     * The user experience work from anywhere device's azureAdRegistered.
@@ -154,7 +154,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureAdRegistered
     * The user experience work from anywhere device's azureAdRegistered.
@@ -168,7 +168,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["azureAdRegistered"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the cloudIdentityScore
     * The user experience work from anywhere per device cloud identity score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -183,7 +183,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the cloudIdentityScore
     * The user experience work from anywhere per device cloud identity score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -197,7 +197,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["cloudIdentityScore"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the cloudManagementScore
     * The user experience work from anywhere per device cloud management score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -212,7 +212,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the cloudManagementScore
     * The user experience work from anywhere per device cloud management score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -226,7 +226,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["cloudManagementScore"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the cloudProvisioningScore
     * The user experience work from anywhere per device cloud provisioning score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -241,7 +241,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the cloudProvisioningScore
     * The user experience work from anywhere per device cloud provisioning score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -255,7 +255,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["cloudProvisioningScore"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the compliancePolicySetToIntune
     * The user experience work from anywhere device's compliancePolicySetToIntune.
@@ -270,7 +270,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the compliancePolicySetToIntune
     * The user experience work from anywhere device's compliancePolicySetToIntune.
@@ -284,7 +284,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["compliancePolicySetToIntune"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deviceId
     * The user experience work from anywhere device Id.
@@ -299,7 +299,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * The user experience work from anywhere device Id.
@@ -313,7 +313,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceName
     * The work from anywhere device's name.
@@ -328,7 +328,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceName
     * The work from anywhere device's name.
@@ -342,7 +342,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the healthStatus
     * The user experience work from anywhere per device health status. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
@@ -361,7 +361,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the healthStatus
     * The user experience work from anywhere per device health status. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
@@ -375,7 +375,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["healthStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isCloudManagedGatewayEnabled
     * The user experience work from anywhere device's Cloud Management Gateway for Configuration Manager is enabled.
@@ -390,7 +390,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isCloudManagedGatewayEnabled
     * The user experience work from anywhere device's Cloud Management Gateway for Configuration Manager is enabled.
@@ -404,7 +404,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["isCloudManagedGatewayEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the managedBy
     * The user experience work from anywhere management agent of the device.
@@ -419,7 +419,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managedBy
     * The user experience work from anywhere management agent of the device.
@@ -433,7 +433,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["managedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the manufacturer
     * The user experience work from anywhere device's manufacturer.
@@ -448,7 +448,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the manufacturer
     * The user experience work from anywhere device's manufacturer.
@@ -462,7 +462,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["manufacturer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the model
     * The user experience work from anywhere device's model.
@@ -477,7 +477,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the model
     * The user experience work from anywhere device's model.
@@ -491,7 +491,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["model"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osCheckFailed
     * The user experience work from anywhere device, Is OS check failed for device to upgrade to the latest version of windows.
@@ -506,7 +506,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osCheckFailed
     * The user experience work from anywhere device, Is OS check failed for device to upgrade to the latest version of windows.
@@ -520,7 +520,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["osCheckFailed"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the osDescription
     * The user experience work from anywhere device's OS Description.
@@ -535,7 +535,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osDescription
     * The user experience work from anywhere device's OS Description.
@@ -549,7 +549,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["osDescription"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osVersion
     * The user experience work from anywhere device's OS Version.
@@ -564,7 +564,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osVersion
     * The user experience work from anywhere device's OS Version.
@@ -578,7 +578,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["osVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the otherWorkloadsSetToIntune
     * The user experience work from anywhere device's otherWorkloadsSetToIntune.
@@ -593,7 +593,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the otherWorkloadsSetToIntune
     * The user experience work from anywhere device's otherWorkloadsSetToIntune.
@@ -607,7 +607,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["otherWorkloadsSetToIntune"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the ownership
     * The user experience work from anywhere device's ownership.
@@ -622,7 +622,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ownership
     * The user experience work from anywhere device's ownership.
@@ -636,7 +636,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["ownership"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the processor64BitCheckFailed
     * The user experience work from anywhere device, Is processor hardware 64-bit architecture check failed for device to upgrade to the latest version of windows.
@@ -651,7 +651,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the processor64BitCheckFailed
     * The user experience work from anywhere device, Is processor hardware 64-bit architecture check failed for device to upgrade to the latest version of windows.
@@ -665,7 +665,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["processor64BitCheckFailed"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the processorCoreCountCheckFailed
     * The user experience work from anywhere device, Is processor hardware core count check failed for device to upgrade to the latest version of windows.
@@ -680,7 +680,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the processorCoreCountCheckFailed
     * The user experience work from anywhere device, Is processor hardware core count check failed for device to upgrade to the latest version of windows.
@@ -694,7 +694,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["processorCoreCountCheckFailed"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the processorFamilyCheckFailed
     * The user experience work from anywhere device, Is processor hardware family check failed for device to upgrade to the latest version of windows.
@@ -709,7 +709,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the processorFamilyCheckFailed
     * The user experience work from anywhere device, Is processor hardware family check failed for device to upgrade to the latest version of windows.
@@ -723,7 +723,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["processorFamilyCheckFailed"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the processorSpeedCheckFailed
     * The user experience work from anywhere device, Is processor hardware speed check failed for device to upgrade to the latest version of windows.
@@ -738,7 +738,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the processorSpeedCheckFailed
     * The user experience work from anywhere device, Is processor hardware speed check failed for device to upgrade to the latest version of windows.
@@ -752,7 +752,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["processorSpeedCheckFailed"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the ramCheckFailed
     * Is the user experience analytics work from anywhere device RAM hardware check failed for device to upgrade to the latest version of windows
@@ -767,7 +767,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ramCheckFailed
     * Is the user experience analytics work from anywhere device RAM hardware check failed for device to upgrade to the latest version of windows
@@ -781,7 +781,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["ramCheckFailed"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the secureBootCheckFailed
     * The user experience work from anywhere device, Is secure boot hardware check failed for device to upgrade to the latest version of windows.
@@ -796,7 +796,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the secureBootCheckFailed
     * The user experience work from anywhere device, Is secure boot hardware check failed for device to upgrade to the latest version of windows.
@@ -810,7 +810,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["secureBootCheckFailed"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the serialNumber
     * The user experience work from anywhere device's serial number.
@@ -825,7 +825,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the serialNumber
     * The user experience work from anywhere device's serial number.
@@ -839,7 +839,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["serialNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the storageCheckFailed
     * The user experience work from anywhere device, Is storage hardware check failed for device to upgrade to the latest version of windows.
@@ -854,7 +854,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the storageCheckFailed
     * The user experience work from anywhere device, Is storage hardware check failed for device to upgrade to the latest version of windows.
@@ -868,7 +868,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["storageCheckFailed"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the tenantAttached
     * The user experience work from anywhere device's tenantAttached.
@@ -883,7 +883,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tenantAttached
     * The user experience work from anywhere device's tenantAttached.
@@ -897,7 +897,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["tenantAttached"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the tpmCheckFailed
     * The user experience work from anywhere device, Is Trusted Platform Module (TPM) hardware check failed for device to the latest version of upgrade to windows.
@@ -912,7 +912,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tpmCheckFailed
     * The user experience work from anywhere device, Is Trusted Platform Module (TPM) hardware check failed for device to the latest version of upgrade to windows.
@@ -926,7 +926,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["tpmCheckFailed"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the upgradeEligibility
     * The user experience work from anywhere windows upgrade eligibility status of device. Possible values are: upgraded, unknown, notCapable, capable.
@@ -945,7 +945,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the upgradeEligibility
     * The user experience work from anywhere windows upgrade eligibility status of device. Possible values are: upgraded, unknown, notCapable, capable.
@@ -959,7 +959,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["upgradeEligibility"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the windowsScore
     * The user experience work from anywhere per device windows score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -974,7 +974,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the windowsScore
     * The user experience work from anywhere per device windows score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -988,7 +988,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["windowsScore"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the workFromAnywhereScore
     * The user experience work from anywhere per device overall score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -1003,7 +1003,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the workFromAnywhereScore
     * The user experience work from anywhere per device overall score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -1017,5 +1017,5 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
         $this->_propDict["workFromAnywhereScore"] = floatval($val);
         return $this;
     }
-    
+
 }

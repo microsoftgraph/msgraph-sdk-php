@@ -42,7 +42,7 @@ class DeviceManagementResourceAccessProfileAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the intent
     * The assignment intent for the resource access profile. Possible values are: apply, remove.
@@ -56,7 +56,7 @@ class DeviceManagementResourceAccessProfileAssignment extends Entity
         $this->_propDict["intent"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sourceId
     * The identifier of the source of the assignment.
@@ -71,7 +71,7 @@ class DeviceManagementResourceAccessProfileAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sourceId
     * The identifier of the source of the assignment.
@@ -85,7 +85,7 @@ class DeviceManagementResourceAccessProfileAssignment extends Entity
         $this->_propDict["sourceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the target
     * The assignment target for the resource access profile.
@@ -104,7 +104,7 @@ class DeviceManagementResourceAccessProfileAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The assignment target for the resource access profile.
@@ -118,5 +118,5 @@ class DeviceManagementResourceAccessProfileAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class Connector extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the externalIp
     * The external IP address as detected by the the connector server. Read-only.
@@ -52,7 +52,7 @@ class Connector extends Entity
         $this->_propDict["externalIp"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the machineName
     * The machine name the connector is installed and running on.
@@ -67,7 +67,7 @@ class Connector extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the machineName
     * The machine name the connector is installed and running on.
@@ -81,7 +81,7 @@ class Connector extends Entity
         $this->_propDict["machineName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Indicates the status of the connector. Possible values are: active, inactive. Read-only.
@@ -100,7 +100,7 @@ class Connector extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Indicates the status of the connector. Possible values are: active, inactive. Read-only.
@@ -114,9 +114,9 @@ class Connector extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the memberOf
     * The connectorGroup that the connector is a member of. Read-only.
      *
@@ -130,12 +130,12 @@ class Connector extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the memberOf
     * The connectorGroup that the connector is a member of. Read-only.
     *
-    * @param ConnectorGroup $val The memberOf
+    * @param ConnectorGroup[] $val The memberOf
     *
     * @return Connector
     */
@@ -144,5 +144,5 @@ class Connector extends Entity
         $this->_propDict["memberOf"] = $val;
         return $this;
     }
-    
+
 }

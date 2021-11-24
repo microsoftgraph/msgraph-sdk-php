@@ -38,7 +38,7 @@ class EducationSubmissionResource extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the assignmentResourceUrl
     * Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
@@ -52,7 +52,7 @@ class EducationSubmissionResource extends Entity
         $this->_propDict["assignmentResourceUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resource
     * Resource object.
@@ -71,7 +71,7 @@ class EducationSubmissionResource extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resource
     * Resource object.
@@ -85,5 +85,5 @@ class EducationSubmissionResource extends Entity
         $this->_propDict["resource"] = $val;
         return $this;
     }
-    
+
 }

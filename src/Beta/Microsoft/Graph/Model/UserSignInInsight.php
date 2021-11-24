@@ -41,7 +41,7 @@ class UserSignInInsight extends GovernanceInsight
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSignInDateTime
     *
@@ -54,5 +54,5 @@ class UserSignInInsight extends GovernanceInsight
         $this->_propDict["lastSignInDateTime"] = $val;
         return $this;
     }
-    
+
 }

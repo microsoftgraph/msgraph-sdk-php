@@ -42,7 +42,7 @@ class GroupPolicyConfigurationAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time the entity was last modified.
@@ -56,7 +56,7 @@ class GroupPolicyConfigurationAssignment extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the target
     * The type of groups targeted the group policy configuration.
@@ -75,7 +75,7 @@ class GroupPolicyConfigurationAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The type of groups targeted the group policy configuration.
@@ -89,5 +89,5 @@ class GroupPolicyConfigurationAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

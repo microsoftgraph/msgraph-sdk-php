@@ -38,7 +38,7 @@ class SchedulingGroup extends ChangeTrackedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name for the schedulingGroup. Required.
@@ -52,7 +52,7 @@ class SchedulingGroup extends ChangeTrackedEntity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isActive
     * Indicates whether the schedulingGroup can be used when creating new entities or updating existing ones. Required.
@@ -67,7 +67,7 @@ class SchedulingGroup extends ChangeTrackedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the isActive
     * Indicates whether the schedulingGroup can be used when creating new entities or updating existing ones. Required.
@@ -81,7 +81,7 @@ class SchedulingGroup extends ChangeTrackedEntity
         $this->_propDict["isActive"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the userIds
     * The list of user IDs that are a member of the schedulingGroup. Required.
@@ -96,7 +96,7 @@ class SchedulingGroup extends ChangeTrackedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the userIds
     * The list of user IDs that are a member of the schedulingGroup. Required.
@@ -110,5 +110,5 @@ class SchedulingGroup extends ChangeTrackedEntity
         $this->_propDict["userIds"] = $val;
         return $this;
     }
-    
+
 }

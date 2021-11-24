@@ -37,7 +37,7 @@ class PaymentTerm extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the calculateDiscountOnCreditMemos
     *
@@ -50,7 +50,7 @@ class PaymentTerm extends Entity
         $this->_propDict["calculateDiscountOnCreditMemos"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the code
     *
@@ -64,7 +64,7 @@ class PaymentTerm extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the code
     *
@@ -77,7 +77,7 @@ class PaymentTerm extends Entity
         $this->_propDict["code"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the discountDateCalculation
     *
@@ -91,7 +91,7 @@ class PaymentTerm extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the discountDateCalculation
     *
@@ -104,7 +104,7 @@ class PaymentTerm extends Entity
         $this->_propDict["discountDateCalculation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the discountPercent
     *
@@ -122,7 +122,7 @@ class PaymentTerm extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the discountPercent
     *
@@ -135,7 +135,7 @@ class PaymentTerm extends Entity
         $this->_propDict["discountPercent"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -149,7 +149,7 @@ class PaymentTerm extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -162,7 +162,7 @@ class PaymentTerm extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the dueDateCalculation
     *
@@ -176,7 +176,7 @@ class PaymentTerm extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the dueDateCalculation
     *
@@ -189,7 +189,7 @@ class PaymentTerm extends Entity
         $this->_propDict["dueDateCalculation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -207,7 +207,7 @@ class PaymentTerm extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -220,5 +220,5 @@ class PaymentTerm extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class ManagedIOSStoreApp extends ManagedApp
         }
         return null;
     }
-    
+
     /**
     * Sets the applicableDeviceType
     * The iOS architecture for which this app can run on.
@@ -56,7 +56,7 @@ class ManagedIOSStoreApp extends ManagedApp
         $this->_propDict["applicableDeviceType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appStoreUrl
     * The Apple AppStoreUrl.
@@ -71,7 +71,7 @@ class ManagedIOSStoreApp extends ManagedApp
             return null;
         }
     }
-    
+
     /**
     * Sets the appStoreUrl
     * The Apple AppStoreUrl.
@@ -85,7 +85,7 @@ class ManagedIOSStoreApp extends ManagedApp
         $this->_propDict["appStoreUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the bundleId
     * The app's Bundle ID.
@@ -100,7 +100,7 @@ class ManagedIOSStoreApp extends ManagedApp
             return null;
         }
     }
-    
+
     /**
     * Sets the bundleId
     * The app's Bundle ID.
@@ -114,7 +114,7 @@ class ManagedIOSStoreApp extends ManagedApp
         $this->_propDict["bundleId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minimumSupportedOperatingSystem
     * The value for the minimum supported operating system.
@@ -133,7 +133,7 @@ class ManagedIOSStoreApp extends ManagedApp
         }
         return null;
     }
-    
+
     /**
     * Sets the minimumSupportedOperatingSystem
     * The value for the minimum supported operating system.
@@ -147,5 +147,5 @@ class ManagedIOSStoreApp extends ManagedApp
         $this->_propDict["minimumSupportedOperatingSystem"] = $val;
         return $this;
     }
-    
+
 }

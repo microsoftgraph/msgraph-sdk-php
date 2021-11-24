@@ -42,7 +42,7 @@ class BookingBusiness extends BookingNamedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the address
     * The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
@@ -56,9 +56,9 @@ class BookingBusiness extends BookingNamedEntity
         $this->_propDict["address"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the businessHours
     * The hours of operation for the business.
      *
@@ -72,12 +72,12 @@ class BookingBusiness extends BookingNamedEntity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the businessHours
     * The hours of operation for the business.
     *
-    * @param BookingWorkHours $val The businessHours
+    * @param BookingWorkHours[] $val The businessHours
     *
     * @return BookingBusiness
     */
@@ -86,7 +86,7 @@ class BookingBusiness extends BookingNamedEntity
         $this->_propDict["businessHours"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the businessType
     * The type of business.
@@ -101,7 +101,7 @@ class BookingBusiness extends BookingNamedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the businessType
     * The type of business.
@@ -115,7 +115,7 @@ class BookingBusiness extends BookingNamedEntity
         $this->_propDict["businessType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the defaultCurrencyIso
     * The code for the currency that the business operates in on Microsoft Bookings.
@@ -130,7 +130,7 @@ class BookingBusiness extends BookingNamedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the defaultCurrencyIso
     * The code for the currency that the business operates in on Microsoft Bookings.
@@ -144,7 +144,7 @@ class BookingBusiness extends BookingNamedEntity
         $this->_propDict["defaultCurrencyIso"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the email
     * The email address for the business.
@@ -159,7 +159,7 @@ class BookingBusiness extends BookingNamedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the email
     * The email address for the business.
@@ -173,7 +173,7 @@ class BookingBusiness extends BookingNamedEntity
         $this->_propDict["email"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isPublished
     * The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.
@@ -188,7 +188,7 @@ class BookingBusiness extends BookingNamedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the isPublished
     * The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.
@@ -202,7 +202,7 @@ class BookingBusiness extends BookingNamedEntity
         $this->_propDict["isPublished"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the phone
     * The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
@@ -217,7 +217,7 @@ class BookingBusiness extends BookingNamedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the phone
     * The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
@@ -231,7 +231,7 @@ class BookingBusiness extends BookingNamedEntity
         $this->_propDict["phone"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publicUrl
     * The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
@@ -246,7 +246,7 @@ class BookingBusiness extends BookingNamedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the publicUrl
     * The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
@@ -260,7 +260,7 @@ class BookingBusiness extends BookingNamedEntity
         $this->_propDict["publicUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the schedulingPolicy
     * Specifies how bookings can be created for this business.
@@ -279,7 +279,7 @@ class BookingBusiness extends BookingNamedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the schedulingPolicy
     * Specifies how bookings can be created for this business.
@@ -293,7 +293,7 @@ class BookingBusiness extends BookingNamedEntity
         $this->_propDict["schedulingPolicy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the webSiteUrl
     * Example: https://www.contoso.com
@@ -308,7 +308,7 @@ class BookingBusiness extends BookingNamedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the webSiteUrl
     * Example: https://www.contoso.com
@@ -322,9 +322,9 @@ class BookingBusiness extends BookingNamedEntity
         $this->_propDict["webSiteUrl"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the appointments
     * All the appointments of this business. Read-only. Nullable.
      *
@@ -338,12 +338,12 @@ class BookingBusiness extends BookingNamedEntity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the appointments
     * All the appointments of this business. Read-only. Nullable.
     *
-    * @param BookingAppointment $val The appointments
+    * @param BookingAppointment[] $val The appointments
     *
     * @return BookingBusiness
     */
@@ -352,9 +352,9 @@ class BookingBusiness extends BookingNamedEntity
         $this->_propDict["appointments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the calendarView
     * The set of appointments of this business in a specified date range. Read-only. Nullable.
      *
@@ -368,12 +368,12 @@ class BookingBusiness extends BookingNamedEntity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the calendarView
     * The set of appointments of this business in a specified date range. Read-only. Nullable.
     *
-    * @param BookingAppointment $val The calendarView
+    * @param BookingAppointment[] $val The calendarView
     *
     * @return BookingBusiness
     */
@@ -382,9 +382,9 @@ class BookingBusiness extends BookingNamedEntity
         $this->_propDict["calendarView"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the customers
     * All the customers of this business. Read-only. Nullable.
      *
@@ -398,12 +398,12 @@ class BookingBusiness extends BookingNamedEntity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the customers
     * All the customers of this business. Read-only. Nullable.
     *
-    * @param BookingCustomer $val The customers
+    * @param BookingCustomer[] $val The customers
     *
     * @return BookingBusiness
     */
@@ -412,9 +412,9 @@ class BookingBusiness extends BookingNamedEntity
         $this->_propDict["customers"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the services
     * All the services offered by this business. Read-only. Nullable.
      *
@@ -428,12 +428,12 @@ class BookingBusiness extends BookingNamedEntity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the services
     * All the services offered by this business. Read-only. Nullable.
     *
-    * @param BookingService $val The services
+    * @param BookingService[] $val The services
     *
     * @return BookingBusiness
     */
@@ -442,9 +442,9 @@ class BookingBusiness extends BookingNamedEntity
         $this->_propDict["services"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the staffMembers
     * All the staff members that provide services in this business. Read-only. Nullable.
      *
@@ -458,12 +458,12 @@ class BookingBusiness extends BookingNamedEntity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the staffMembers
     * All the staff members that provide services in this business. Read-only. Nullable.
     *
-    * @param BookingStaffMember $val The staffMembers
+    * @param BookingStaffMember[] $val The staffMembers
     *
     * @return BookingBusiness
     */
@@ -472,5 +472,5 @@ class BookingBusiness extends BookingNamedEntity
         $this->_propDict["staffMembers"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class PolicySet extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Creation time of the PolicySet.
@@ -56,7 +56,7 @@ class PolicySet extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description of the PolicySet.
@@ -71,7 +71,7 @@ class PolicySet extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the PolicySet.
@@ -85,7 +85,7 @@ class PolicySet extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * DisplayName of the PolicySet.
@@ -100,7 +100,7 @@ class PolicySet extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * DisplayName of the PolicySet.
@@ -114,7 +114,7 @@ class PolicySet extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the errorCode
     * Error code if any occured. Possible values are: noError, unauthorized, notFound, deleted.
@@ -133,7 +133,7 @@ class PolicySet extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the errorCode
     * Error code if any occured. Possible values are: noError, unauthorized, notFound, deleted.
@@ -147,7 +147,7 @@ class PolicySet extends Entity
         $this->_propDict["errorCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the guidedDeploymentTags
     * Tags of the guided deployment
@@ -162,7 +162,7 @@ class PolicySet extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the guidedDeploymentTags
     * Tags of the guided deployment
@@ -176,7 +176,7 @@ class PolicySet extends Entity
         $this->_propDict["guidedDeploymentTags"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Last modified time of the PolicySet.
@@ -195,7 +195,7 @@ class PolicySet extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Last modified time of the PolicySet.
@@ -209,7 +209,7 @@ class PolicySet extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleScopeTags
     * RoleScopeTags of the PolicySet
@@ -224,7 +224,7 @@ class PolicySet extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleScopeTags
     * RoleScopeTags of the PolicySet
@@ -238,7 +238,7 @@ class PolicySet extends Entity
         $this->_propDict["roleScopeTags"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Validation/assignment status of the PolicySet. Possible values are: unknown, validating, partialSuccess, success, error, notAssigned.
@@ -257,7 +257,7 @@ class PolicySet extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Validation/assignment status of the PolicySet. Possible values are: unknown, validating, partialSuccess, success, error, notAssigned.
@@ -271,9 +271,9 @@ class PolicySet extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * Assignments of the PolicySet.
      *
@@ -287,12 +287,12 @@ class PolicySet extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * Assignments of the PolicySet.
     *
-    * @param PolicySetAssignment $val The assignments
+    * @param PolicySetAssignment[] $val The assignments
     *
     * @return PolicySet
     */
@@ -301,9 +301,9 @@ class PolicySet extends Entity
         $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the items
     * Items of the PolicySet with maximum count 100.
      *
@@ -317,12 +317,12 @@ class PolicySet extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the items
     * Items of the PolicySet with maximum count 100.
     *
-    * @param PolicySetItem $val The items
+    * @param PolicySetItem[] $val The items
     *
     * @return PolicySet
     */
@@ -331,5 +331,5 @@ class PolicySet extends Entity
         $this->_propDict["items"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class CertificateConnectorDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the connectorName
     * Connector name (set during enrollment).
@@ -52,7 +52,7 @@ class CertificateConnectorDetails extends Entity
         $this->_propDict["connectorName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enrollmentDateTime
     * Date/time when this connector was enrolled.
@@ -71,7 +71,7 @@ class CertificateConnectorDetails extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the enrollmentDateTime
     * Date/time when this connector was enrolled.
@@ -85,7 +85,7 @@ class CertificateConnectorDetails extends Entity
         $this->_propDict["enrollmentDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastCheckinDateTime
     * Date/time when this connector last connected to the service.
@@ -104,7 +104,7 @@ class CertificateConnectorDetails extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastCheckinDateTime
     * Date/time when this connector last connected to the service.
@@ -118,7 +118,7 @@ class CertificateConnectorDetails extends Entity
         $this->_propDict["lastCheckinDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the machineName
     * Name of the machine hosting this connector service.
@@ -133,7 +133,7 @@ class CertificateConnectorDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the machineName
     * Name of the machine hosting this connector service.
@@ -147,5 +147,5 @@ class CertificateConnectorDetails extends Entity
         $this->_propDict["machineName"] = $val;
         return $this;
     }
-    
+
 }

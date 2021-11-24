@@ -38,7 +38,7 @@ class PublishedResource extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display Name of the publishedResource.
@@ -52,7 +52,7 @@ class PublishedResource extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publishingType
     * Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration.
@@ -71,7 +71,7 @@ class PublishedResource extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the publishingType
     * Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration.
@@ -85,7 +85,7 @@ class PublishedResource extends Entity
         $this->_propDict["publishingType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceName
     * Name of the publishedResource.
@@ -100,7 +100,7 @@ class PublishedResource extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceName
     * Name of the publishedResource.
@@ -114,9 +114,9 @@ class PublishedResource extends Entity
         $this->_propDict["resourceName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the agentGroups
     * List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
      *
@@ -130,12 +130,12 @@ class PublishedResource extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the agentGroups
     * List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
     *
-    * @param OnPremisesAgentGroup $val The agentGroups
+    * @param OnPremisesAgentGroup[] $val The agentGroups
     *
     * @return PublishedResource
     */
@@ -144,5 +144,5 @@ class PublishedResource extends Entity
         $this->_propDict["agentGroups"] = $val;
         return $this;
     }
-    
+
 }

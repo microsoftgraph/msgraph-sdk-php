@@ -42,7 +42,7 @@ class GroupPolicyMigrationReport extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time at which the GroupPolicyMigrationReport was created.
@@ -56,7 +56,7 @@ class GroupPolicyMigrationReport extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name of Group Policy Object from the GPO Xml Content
@@ -71,7 +71,7 @@ class GroupPolicyMigrationReport extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of Group Policy Object from the GPO Xml Content
@@ -85,7 +85,7 @@ class GroupPolicyMigrationReport extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the groupPolicyCreatedDateTime
     * The date and time at which the GroupPolicyMigrationReport was created.
@@ -104,7 +104,7 @@ class GroupPolicyMigrationReport extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the groupPolicyCreatedDateTime
     * The date and time at which the GroupPolicyMigrationReport was created.
@@ -118,7 +118,7 @@ class GroupPolicyMigrationReport extends Entity
         $this->_propDict["groupPolicyCreatedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the groupPolicyLastModifiedDateTime
     * The date and time at which the GroupPolicyMigrationReport was last modified.
@@ -137,7 +137,7 @@ class GroupPolicyMigrationReport extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the groupPolicyLastModifiedDateTime
     * The date and time at which the GroupPolicyMigrationReport was last modified.
@@ -151,7 +151,7 @@ class GroupPolicyMigrationReport extends Entity
         $this->_propDict["groupPolicyLastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the groupPolicyObjectId
     * The Group Policy Object GUID from GPO Xml content
@@ -166,7 +166,7 @@ class GroupPolicyMigrationReport extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the groupPolicyObjectId
     * The Group Policy Object GUID from GPO Xml content
@@ -180,7 +180,7 @@ class GroupPolicyMigrationReport extends Entity
         $this->_propDict["groupPolicyObjectId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time at which the GroupPolicyMigrationReport was last modified.
@@ -199,7 +199,7 @@ class GroupPolicyMigrationReport extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time at which the GroupPolicyMigrationReport was last modified.
@@ -213,7 +213,7 @@ class GroupPolicyMigrationReport extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the migrationReadiness
     * The Intune coverage for the associated Group Policy Object file. Possible values are: none, partial, complete, error, notApplicable.
@@ -232,7 +232,7 @@ class GroupPolicyMigrationReport extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the migrationReadiness
     * The Intune coverage for the associated Group Policy Object file. Possible values are: none, partial, complete, error, notApplicable.
@@ -246,7 +246,7 @@ class GroupPolicyMigrationReport extends Entity
         $this->_propDict["migrationReadiness"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ouDistinguishedName
     * The distinguished name of the OU.
@@ -261,7 +261,7 @@ class GroupPolicyMigrationReport extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ouDistinguishedName
     * The distinguished name of the OU.
@@ -275,7 +275,7 @@ class GroupPolicyMigrationReport extends Entity
         $this->_propDict["ouDistinguishedName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the supportedSettingsCount
     * The number of Group Policy Settings supported by Intune.
@@ -290,7 +290,7 @@ class GroupPolicyMigrationReport extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the supportedSettingsCount
     * The number of Group Policy Settings supported by Intune.
@@ -304,7 +304,7 @@ class GroupPolicyMigrationReport extends Entity
         $this->_propDict["supportedSettingsCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the supportedSettingsPercent
     * The Percentage of Group Policy Settings supported by Intune.
@@ -319,7 +319,7 @@ class GroupPolicyMigrationReport extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the supportedSettingsPercent
     * The Percentage of Group Policy Settings supported by Intune.
@@ -333,7 +333,7 @@ class GroupPolicyMigrationReport extends Entity
         $this->_propDict["supportedSettingsPercent"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the targetedInActiveDirectory
     * The Targeted in AD property from GPO Xml Content
@@ -348,7 +348,7 @@ class GroupPolicyMigrationReport extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetedInActiveDirectory
     * The Targeted in AD property from GPO Xml Content
@@ -362,7 +362,7 @@ class GroupPolicyMigrationReport extends Entity
         $this->_propDict["targetedInActiveDirectory"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the totalSettingsCount
     * The total number of Group Policy Settings from GPO file.
@@ -377,7 +377,7 @@ class GroupPolicyMigrationReport extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the totalSettingsCount
     * The total number of Group Policy Settings from GPO file.
@@ -391,9 +391,9 @@ class GroupPolicyMigrationReport extends Entity
         $this->_propDict["totalSettingsCount"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the groupPolicySettingMappings
     * A list of group policy settings to MDM/Intune mappings.
      *
@@ -407,12 +407,12 @@ class GroupPolicyMigrationReport extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the groupPolicySettingMappings
     * A list of group policy settings to MDM/Intune mappings.
     *
-    * @param GroupPolicySettingMapping $val The groupPolicySettingMappings
+    * @param GroupPolicySettingMapping[] $val The groupPolicySettingMappings
     *
     * @return GroupPolicyMigrationReport
     */
@@ -421,9 +421,9 @@ class GroupPolicyMigrationReport extends Entity
         $this->_propDict["groupPolicySettingMappings"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the unsupportedGroupPolicyExtensions
     * A list of unsupported group policy extensions inside the Group Policy Object.
      *
@@ -437,12 +437,12 @@ class GroupPolicyMigrationReport extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the unsupportedGroupPolicyExtensions
     * A list of unsupported group policy extensions inside the Group Policy Object.
     *
-    * @param UnsupportedGroupPolicyExtension $val The unsupportedGroupPolicyExtensions
+    * @param UnsupportedGroupPolicyExtension[] $val The unsupportedGroupPolicyExtensions
     *
     * @return GroupPolicyMigrationReport
     */
@@ -451,5 +451,5 @@ class GroupPolicyMigrationReport extends Entity
         $this->_propDict["unsupportedGroupPolicyExtensions"] = $val;
         return $this;
     }
-    
+
 }

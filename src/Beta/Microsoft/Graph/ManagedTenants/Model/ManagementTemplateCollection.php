@@ -37,7 +37,7 @@ class ManagementTemplateCollection extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -50,7 +50,7 @@ class ManagementTemplateCollection extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -64,7 +64,7 @@ class ManagementTemplateCollection extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -77,9 +77,9 @@ class ManagementTemplateCollection extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managementTemplates
      *
      * @return array|null The managementTemplates
@@ -92,11 +92,11 @@ class ManagementTemplateCollection extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managementTemplates
     *
-    * @param ManagementTemplate $val The managementTemplates
+    * @param ManagementTemplate[] $val The managementTemplates
     *
     * @return ManagementTemplateCollection
     */
@@ -105,5 +105,5 @@ class ManagementTemplateCollection extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["managementTemplates"] = $val;
         return $this;
     }
-    
+
 }

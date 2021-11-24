@@ -42,7 +42,7 @@ class SynchronizationJob extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the schedule
     * Schedule used to run the job. Read-only.
@@ -56,7 +56,7 @@ class SynchronizationJob extends Entity
         $this->_propDict["schedule"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Status of the job, which includes when the job was last run, current job state, and errors.
@@ -75,7 +75,7 @@ class SynchronizationJob extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Status of the job, which includes when the job was last run, current job state, and errors.
@@ -89,9 +89,9 @@ class SynchronizationJob extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the synchronizationJobSettings
     * Settings associated with the job. Some settings are inherited from the template.
      *
@@ -105,12 +105,12 @@ class SynchronizationJob extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the synchronizationJobSettings
     * Settings associated with the job. Some settings are inherited from the template.
     *
-    * @param KeyValuePair $val The synchronizationJobSettings
+    * @param KeyValuePair[] $val The synchronizationJobSettings
     *
     * @return SynchronizationJob
     */
@@ -119,7 +119,7 @@ class SynchronizationJob extends Entity
         $this->_propDict["synchronizationJobSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the templateId
     * Identifier of the synchronization template this job is based on.
@@ -134,7 +134,7 @@ class SynchronizationJob extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the templateId
     * Identifier of the synchronization template this job is based on.
@@ -148,7 +148,7 @@ class SynchronizationJob extends Entity
         $this->_propDict["templateId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the schema
     * The synchronization schema configured for the job.
@@ -167,7 +167,7 @@ class SynchronizationJob extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the schema
     * The synchronization schema configured for the job.
@@ -181,5 +181,5 @@ class SynchronizationJob extends Entity
         $this->_propDict["schema"] = $val;
         return $this;
     }
-    
+
 }

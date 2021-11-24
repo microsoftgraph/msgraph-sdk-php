@@ -38,7 +38,7 @@ class PrivilegedRoleSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the approvalOnElevation
     * true if the approval is required when activate the role. false if the approval is not required when activate the role.
@@ -52,7 +52,7 @@ class PrivilegedRoleSettings extends Entity
         $this->_propDict["approvalOnElevation"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the approverIds
     * List of Approval ids, if approval is required for activation.
@@ -67,7 +67,7 @@ class PrivilegedRoleSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the approverIds
     * List of Approval ids, if approval is required for activation.
@@ -81,7 +81,7 @@ class PrivilegedRoleSettings extends Entity
         $this->_propDict["approverIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the elevationDuration
     * The duration when the role is activated.
@@ -100,7 +100,7 @@ class PrivilegedRoleSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the elevationDuration
     * The duration when the role is activated.
@@ -114,7 +114,7 @@ class PrivilegedRoleSettings extends Entity
         $this->_propDict["elevationDuration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isMfaOnElevationConfigurable
     * true if mfaOnElevation is configurable. false if mfaOnElevation is not configurable.
@@ -129,7 +129,7 @@ class PrivilegedRoleSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isMfaOnElevationConfigurable
     * true if mfaOnElevation is configurable. false if mfaOnElevation is not configurable.
@@ -143,7 +143,7 @@ class PrivilegedRoleSettings extends Entity
         $this->_propDict["isMfaOnElevationConfigurable"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastGlobalAdmin
     * Internal used only.
@@ -158,7 +158,7 @@ class PrivilegedRoleSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the lastGlobalAdmin
     * Internal used only.
@@ -172,7 +172,7 @@ class PrivilegedRoleSettings extends Entity
         $this->_propDict["lastGlobalAdmin"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the maxElavationDuration
     * Maximal duration for the activated role.
@@ -191,7 +191,7 @@ class PrivilegedRoleSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the maxElavationDuration
     * Maximal duration for the activated role.
@@ -205,7 +205,7 @@ class PrivilegedRoleSettings extends Entity
         $this->_propDict["maxElavationDuration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mfaOnElevation
     * true if MFA is required to activate the role. false if MFA is not required to activate the role.
@@ -220,7 +220,7 @@ class PrivilegedRoleSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the mfaOnElevation
     * true if MFA is required to activate the role. false if MFA is not required to activate the role.
@@ -234,7 +234,7 @@ class PrivilegedRoleSettings extends Entity
         $this->_propDict["mfaOnElevation"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the minElevationDuration
     * Minimal duration for the activated role.
@@ -253,7 +253,7 @@ class PrivilegedRoleSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the minElevationDuration
     * Minimal duration for the activated role.
@@ -267,7 +267,7 @@ class PrivilegedRoleSettings extends Entity
         $this->_propDict["minElevationDuration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the notificationToUserOnElevation
     * true if send notification to the end user when the role is activated. false if do not send notification when the role is activated.
@@ -282,7 +282,7 @@ class PrivilegedRoleSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the notificationToUserOnElevation
     * true if send notification to the end user when the role is activated. false if do not send notification when the role is activated.
@@ -296,7 +296,7 @@ class PrivilegedRoleSettings extends Entity
         $this->_propDict["notificationToUserOnElevation"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the ticketingInfoOnElevation
     * true if the ticketing information is required when activate the role. false if the ticketing information is not required when activate the role.
@@ -311,7 +311,7 @@ class PrivilegedRoleSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ticketingInfoOnElevation
     * true if the ticketing information is required when activate the role. false if the ticketing information is not required when activate the role.
@@ -325,5 +325,5 @@ class PrivilegedRoleSettings extends Entity
         $this->_propDict["ticketingInfoOnElevation"] = boolval($val);
         return $this;
     }
-    
+
 }
