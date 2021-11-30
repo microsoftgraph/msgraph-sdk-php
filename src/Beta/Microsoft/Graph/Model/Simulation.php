@@ -464,7 +464,6 @@ class Simulation extends Entity
 
     /**
     * Gets the mode
-    * Mode of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: real, preview, unknownFutureValue.
     *
     * @return SimulationMode|null The mode
     */
@@ -483,7 +482,6 @@ class Simulation extends Entity
 
     /**
     * Sets the mode
-    * Mode of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: real, preview, unknownFutureValue.
     *
     * @param SimulationMode $val The mode
     *
