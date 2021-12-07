@@ -26,7 +26,7 @@ class CloudPcOnPremisesConnection extends Entity
 {
     /**
     * Gets the adDomainName
-    * The fully qualified domain name (FQDN) of the Active Directory domain you want to join.
+    * The fully qualified domain name (FQDN) of the Active Directory domain you want to join. Optional.
     *
     * @return string|null The adDomainName
     */
@@ -41,7 +41,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Sets the adDomainName
-    * The fully qualified domain name (FQDN) of the Active Directory domain you want to join.
+    * The fully qualified domain name (FQDN) of the Active Directory domain you want to join. Optional.
     *
     * @param string $val The adDomainName
     *
@@ -84,7 +84,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Gets the adDomainUsername
-    * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com.
+    * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com. Optional.
     *
     * @return string|null The adDomainUsername
     */
@@ -99,7 +99,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Sets the adDomainUsername
-    * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com.
+    * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com. Optional.
     *
     * @param string $val The adDomainUsername
     *
@@ -382,6 +382,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Gets the type
+    * Specifies how the provisioned Cloud PC will be joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
     *
     * @return CloudPcOnPremisesConnectionType|null The type
     */
@@ -400,6 +401,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Sets the type
+    * Specifies how the provisioned Cloud PC will be joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
     *
     * @param CloudPcOnPremisesConnectionType $val The type
     *

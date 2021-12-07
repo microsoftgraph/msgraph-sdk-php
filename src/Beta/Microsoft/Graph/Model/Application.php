@@ -180,7 +180,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the description
-    * An optional description of the application. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
+    * Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
     *
     * @return string|null The description
     */
@@ -195,7 +195,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the description
-    * An optional description of the application. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
+    * Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
     *
     * @param string $val The description
     *
