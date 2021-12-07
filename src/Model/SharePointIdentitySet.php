@@ -26,6 +26,7 @@ class SharePointIdentitySet extends IdentitySet
 
     /**
     * Gets the group
+    * The group associated with this action. Optional.
     *
     * @return Identity|null The group
     */
@@ -44,6 +45,7 @@ class SharePointIdentitySet extends IdentitySet
 
     /**
     * Sets the group
+    * The group associated with this action. Optional.
     *
     * @param Identity $val The value to assign to the group
     *
@@ -57,6 +59,7 @@ class SharePointIdentitySet extends IdentitySet
 
     /**
     * Gets the siteGroup
+    * The SharePoint group associated with this action. Optional.
     *
     * @return SharePointIdentity|null The siteGroup
     */
@@ -75,6 +78,7 @@ class SharePointIdentitySet extends IdentitySet
 
     /**
     * Sets the siteGroup
+    * The SharePoint group associated with this action. Optional.
     *
     * @param SharePointIdentity $val The value to assign to the siteGroup
     *
@@ -88,6 +92,7 @@ class SharePointIdentitySet extends IdentitySet
 
     /**
     * Gets the siteUser
+    * The SharePoint user associated with this action. Optional.
     *
     * @return SharePointIdentity|null The siteUser
     */
@@ -106,6 +111,7 @@ class SharePointIdentitySet extends IdentitySet
 
     /**
     * Sets the siteUser
+    * The SharePoint user associated with this action. Optional.
     *
     * @param SharePointIdentity $val The value to assign to the siteUser
     *

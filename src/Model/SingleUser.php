@@ -53,6 +53,7 @@ class SingleUser extends SubjectSet
     }
     /**
     * Gets the userId
+    * The ID of the user in Azure AD.
     *
     * @return string|null The userId
     */
@@ -67,6 +68,7 @@ class SingleUser extends SubjectSet
 
     /**
     * Sets the userId
+    * The ID of the user in Azure AD.
     *
     * @param string $val The value of the userId
     *
