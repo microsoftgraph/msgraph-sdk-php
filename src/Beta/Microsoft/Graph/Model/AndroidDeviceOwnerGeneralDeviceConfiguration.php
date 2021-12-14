@@ -177,6 +177,36 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
         return $this;
     }
 
+
+     /**
+     * Gets the azureAdSharedDeviceDataClearApps
+    * A list of managed apps that will have their data cleared during a global sign-out in AAD shared device mode. This collection can contain a maximum of 500 elements.
+     *
+     * @return array|null The azureAdSharedDeviceDataClearApps
+     */
+    public function getAzureAdSharedDeviceDataClearApps()
+    {
+        if (array_key_exists("azureAdSharedDeviceDataClearApps", $this->_propDict)) {
+           return $this->_propDict["azureAdSharedDeviceDataClearApps"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the azureAdSharedDeviceDataClearApps
+    * A list of managed apps that will have their data cleared during a global sign-out in AAD shared device mode. This collection can contain a maximum of 500 elements.
+    *
+    * @param AppListItem[] $val The azureAdSharedDeviceDataClearApps
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setAzureAdSharedDeviceDataClearApps($val)
+    {
+        $this->_propDict["azureAdSharedDeviceDataClearApps"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the bluetoothBlockConfiguration
     * Indicates whether or not to block a user from configuring bluetooth.
@@ -319,6 +349,97 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function setCertificateCredentialConfigurationDisabled($val)
     {
         $this->_propDict["certificateCredentialConfigurationDisabled"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the crossProfilePoliciesAllowCopyPaste
+    * Indicates whether or not text copied from one profile (personal or work) can be pasted in the other.
+    *
+    * @return bool|null The crossProfilePoliciesAllowCopyPaste
+    */
+    public function getCrossProfilePoliciesAllowCopyPaste()
+    {
+        if (array_key_exists("crossProfilePoliciesAllowCopyPaste", $this->_propDict)) {
+            return $this->_propDict["crossProfilePoliciesAllowCopyPaste"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the crossProfilePoliciesAllowCopyPaste
+    * Indicates whether or not text copied from one profile (personal or work) can be pasted in the other.
+    *
+    * @param bool $val The crossProfilePoliciesAllowCopyPaste
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setCrossProfilePoliciesAllowCopyPaste($val)
+    {
+        $this->_propDict["crossProfilePoliciesAllowCopyPaste"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the crossProfilePoliciesAllowDataSharing
+    * Indicates whether data from one profile (personal or work) can be shared with apps in the other profile. Possible values are: notConfigured, crossProfileDataSharingBlocked, dataSharingFromWorkToPersonalBlocked, crossProfileDataSharingAllowed, unkownFutureValue.
+    *
+    * @return AndroidDeviceOwnerCrossProfileDataSharing|null The crossProfilePoliciesAllowDataSharing
+    */
+    public function getCrossProfilePoliciesAllowDataSharing()
+    {
+        if (array_key_exists("crossProfilePoliciesAllowDataSharing", $this->_propDict)) {
+            if (is_a($this->_propDict["crossProfilePoliciesAllowDataSharing"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerCrossProfileDataSharing") || is_null($this->_propDict["crossProfilePoliciesAllowDataSharing"])) {
+                return $this->_propDict["crossProfilePoliciesAllowDataSharing"];
+            } else {
+                $this->_propDict["crossProfilePoliciesAllowDataSharing"] = new AndroidDeviceOwnerCrossProfileDataSharing($this->_propDict["crossProfilePoliciesAllowDataSharing"]);
+                return $this->_propDict["crossProfilePoliciesAllowDataSharing"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the crossProfilePoliciesAllowDataSharing
+    * Indicates whether data from one profile (personal or work) can be shared with apps in the other profile. Possible values are: notConfigured, crossProfileDataSharingBlocked, dataSharingFromWorkToPersonalBlocked, crossProfileDataSharingAllowed, unkownFutureValue.
+    *
+    * @param AndroidDeviceOwnerCrossProfileDataSharing $val The crossProfilePoliciesAllowDataSharing
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setCrossProfilePoliciesAllowDataSharing($val)
+    {
+        $this->_propDict["crossProfilePoliciesAllowDataSharing"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the crossProfilePoliciesShowWorkContactsInPersonalProfile
+    * Indicates whether or not contacts stored in work profile are shown in personal profile contact searches/incoming calls.
+    *
+    * @return bool|null The crossProfilePoliciesShowWorkContactsInPersonalProfile
+    */
+    public function getCrossProfilePoliciesShowWorkContactsInPersonalProfile()
+    {
+        if (array_key_exists("crossProfilePoliciesShowWorkContactsInPersonalProfile", $this->_propDict)) {
+            return $this->_propDict["crossProfilePoliciesShowWorkContactsInPersonalProfile"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the crossProfilePoliciesShowWorkContactsInPersonalProfile
+    * Indicates whether or not contacts stored in work profile are shown in personal profile contact searches/incoming calls.
+    *
+    * @param bool $val The crossProfilePoliciesShowWorkContactsInPersonalProfile
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setCrossProfilePoliciesShowWorkContactsInPersonalProfile($val)
+    {
+        $this->_propDict["crossProfilePoliciesShowWorkContactsInPersonalProfile"] = boolval($val);
         return $this;
     }
 
@@ -2636,6 +2757,69 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
         return $this;
     }
 
+
+     /**
+     * Gets the personalProfilePersonalApplications
+    * Policy applied to applications in the personal profile. This collection can contain a maximum of 500 elements.
+     *
+     * @return array|null The personalProfilePersonalApplications
+     */
+    public function getPersonalProfilePersonalApplications()
+    {
+        if (array_key_exists("personalProfilePersonalApplications", $this->_propDict)) {
+           return $this->_propDict["personalProfilePersonalApplications"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the personalProfilePersonalApplications
+    * Policy applied to applications in the personal profile. This collection can contain a maximum of 500 elements.
+    *
+    * @param AppListItem[] $val The personalProfilePersonalApplications
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setPersonalProfilePersonalApplications($val)
+    {
+        $this->_propDict["personalProfilePersonalApplications"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the personalProfilePlayStoreMode
+    * Used together with PersonalProfilePersonalApplications to control how apps in the personal profile are allowed or blocked. Possible values are: notConfigured, blockedApps, allowedApps.
+    *
+    * @return PersonalProfilePersonalPlayStoreMode|null The personalProfilePlayStoreMode
+    */
+    public function getPersonalProfilePlayStoreMode()
+    {
+        if (array_key_exists("personalProfilePlayStoreMode", $this->_propDict)) {
+            if (is_a($this->_propDict["personalProfilePlayStoreMode"], "\Beta\Microsoft\Graph\Model\PersonalProfilePersonalPlayStoreMode") || is_null($this->_propDict["personalProfilePlayStoreMode"])) {
+                return $this->_propDict["personalProfilePlayStoreMode"];
+            } else {
+                $this->_propDict["personalProfilePlayStoreMode"] = new PersonalProfilePersonalPlayStoreMode($this->_propDict["personalProfilePlayStoreMode"]);
+                return $this->_propDict["personalProfilePlayStoreMode"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the personalProfilePlayStoreMode
+    * Used together with PersonalProfilePersonalApplications to control how apps in the personal profile are allowed or blocked. Possible values are: notConfigured, blockedApps, allowedApps.
+    *
+    * @param PersonalProfilePersonalPlayStoreMode $val The personalProfilePlayStoreMode
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setPersonalProfilePlayStoreMode($val)
+    {
+        $this->_propDict["personalProfilePlayStoreMode"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the personalProfileScreenCaptureBlocked
     * Indicates whether to disable the capability to take screenshots on the personal profile.
@@ -2699,35 +2883,6 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
 
     /**
-    * Gets the safeBootBlocked
-    * Indicates whether or not rebooting the device into safe boot is disabled.
-    *
-    * @return bool|null The safeBootBlocked
-    */
-    public function getSafeBootBlocked()
-    {
-        if (array_key_exists("safeBootBlocked", $this->_propDict)) {
-            return $this->_propDict["safeBootBlocked"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the safeBootBlocked
-    * Indicates whether or not rebooting the device into safe boot is disabled.
-    *
-    * @param bool $val The safeBootBlocked
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setSafeBootBlocked($val)
-    {
-        $this->_propDict["safeBootBlocked"] = boolval($val);
-        return $this;
-    }
-
-    /**
     * Gets the screenCaptureBlocked
     * Indicates whether or not to disable the capability to take screenshots.
     *
@@ -2753,35 +2908,6 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function setScreenCaptureBlocked($val)
     {
         $this->_propDict["screenCaptureBlocked"] = boolval($val);
-        return $this;
-    }
-
-    /**
-    * Gets the securityAllowDebuggingFeatures
-    * Indicates whether or not to block the user from enabling debugging features on the device.
-    *
-    * @return bool|null The securityAllowDebuggingFeatures
-    */
-    public function getSecurityAllowDebuggingFeatures()
-    {
-        if (array_key_exists("securityAllowDebuggingFeatures", $this->_propDict)) {
-            return $this->_propDict["securityAllowDebuggingFeatures"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the securityAllowDebuggingFeatures
-    * Indicates whether or not to block the user from enabling debugging features on the device.
-    *
-    * @param bool $val The securityAllowDebuggingFeatures
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setSecurityAllowDebuggingFeatures($val)
-    {
-        $this->_propDict["securityAllowDebuggingFeatures"] = boolval($val);
         return $this;
     }
 

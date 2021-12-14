@@ -34,6 +34,5 @@ class TrainingStatus extends Enum
     const IN_PROGRESS = "inProgress";
     const COMPLETED = "completed";
     const OVERDUE = "overdue";
-    const NOT_COMPLETED = "notCompleted";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

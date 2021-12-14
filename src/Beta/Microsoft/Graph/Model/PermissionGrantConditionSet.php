@@ -26,6 +26,7 @@ class PermissionGrantConditionSet extends Entity
 {
     /**
     * Gets the certifiedClientApplicationsOnly
+    * Set to true to only match on client applications that are Microsoft 365 certified. Set to false to match on any other client app. Default is false.
     *
     * @return bool|null The certifiedClientApplicationsOnly
     */
@@ -40,6 +41,7 @@ class PermissionGrantConditionSet extends Entity
 
     /**
     * Sets the certifiedClientApplicationsOnly
+    * Set to true to only match on client applications that are Microsoft 365 certified. Set to false to match on any other client app. Default is false.
     *
     * @param bool $val The certifiedClientApplicationsOnly
     *

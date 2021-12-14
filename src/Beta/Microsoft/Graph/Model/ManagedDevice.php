@@ -2708,7 +2708,7 @@ class ManagedDevice extends Entity
 
     /**
     * Gets the windowsProtectionState
-    * The device protection status.
+    * The device protection status. This property is read-only.
     *
     * @return WindowsProtectionState|null The windowsProtectionState
     */
@@ -2727,7 +2727,7 @@ class ManagedDevice extends Entity
 
     /**
     * Sets the windowsProtectionState
-    * The device protection status.
+    * The device protection status. This property is read-only.
     *
     * @param WindowsProtectionState $val The windowsProtectionState
     *

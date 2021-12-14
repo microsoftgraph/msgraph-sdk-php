@@ -78,32 +78,4 @@ class ExternalGroup extends Entity
         return $this;
     }
 
-
-     /**
-     * Gets the members
-     *
-     * @return array|null The members
-     */
-    public function getMembers()
-    {
-        if (array_key_exists("members", $this->_propDict)) {
-           return $this->_propDict["members"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the members
-    *
-    * @param ExternalGroupMember[] $val The members
-    *
-    * @return ExternalGroup
-    */
-    public function setMembers($val)
-    {
-        $this->_propDict["members"] = $val;
-        return $this;
-    }
-
 }

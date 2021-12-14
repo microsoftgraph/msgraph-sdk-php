@@ -800,6 +800,34 @@ class HardwareInformation extends Entity
         return $this;
     }
     /**
+    * Gets the systemManagementBIOSVersion
+    * BIOS version as reported by SMBIOS
+    *
+    * @return string|null The systemManagementBIOSVersion
+    */
+    public function getSystemManagementBIOSVersion()
+    {
+        if (array_key_exists("systemManagementBIOSVersion", $this->_propDict)) {
+            return $this->_propDict["systemManagementBIOSVersion"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the systemManagementBIOSVersion
+    * BIOS version as reported by SMBIOS
+    *
+    * @param string $val The value of the systemManagementBIOSVersion
+    *
+    * @return HardwareInformation
+    */
+    public function setSystemManagementBIOSVersion($val)
+    {
+        $this->_propDict["systemManagementBIOSVersion"] = $val;
+        return $this;
+    }
+    /**
     * Gets the totalStorageSpace
     * Total storage space of the device.
     *
@@ -828,6 +856,34 @@ class HardwareInformation extends Entity
         return $this;
     }
     /**
+    * Gets the tpmManufacturer
+    * The identifying information that uniquely names the TPM manufacturer
+    *
+    * @return string|null The tpmManufacturer
+    */
+    public function getTpmManufacturer()
+    {
+        if (array_key_exists("tpmManufacturer", $this->_propDict)) {
+            return $this->_propDict["tpmManufacturer"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tpmManufacturer
+    * The identifying information that uniquely names the TPM manufacturer
+    *
+    * @param string $val The value of the tpmManufacturer
+    *
+    * @return HardwareInformation
+    */
+    public function setTpmManufacturer($val)
+    {
+        $this->_propDict["tpmManufacturer"] = $val;
+        return $this;
+    }
+    /**
     * Gets the tpmSpecificationVersion
     * String that specifies the specification version.
     *
@@ -853,6 +909,34 @@ class HardwareInformation extends Entity
     public function setTpmSpecificationVersion($val)
     {
         $this->_propDict["tpmSpecificationVersion"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the tpmVersion
+    * The version of the TPM, as specified by the manufacturer
+    *
+    * @return string|null The tpmVersion
+    */
+    public function getTpmVersion()
+    {
+        if (array_key_exists("tpmVersion", $this->_propDict)) {
+            return $this->_propDict["tpmVersion"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tpmVersion
+    * The version of the TPM, as specified by the manufacturer
+    *
+    * @param string $val The value of the tpmVersion
+    *
+    * @return HardwareInformation
+    */
+    public function setTpmVersion($val)
+    {
+        $this->_propDict["tpmVersion"] = $val;
         return $this;
     }
     /**

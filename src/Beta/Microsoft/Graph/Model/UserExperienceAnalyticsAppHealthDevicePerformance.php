@@ -286,6 +286,39 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
     }
 
     /**
+    * Gets the healthStatus
+    * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+    *
+    * @return UserExperienceAnalyticsHealthState|null The healthStatus
+    */
+    public function getHealthStatus()
+    {
+        if (array_key_exists("healthStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["healthStatus"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsHealthState") || is_null($this->_propDict["healthStatus"])) {
+                return $this->_propDict["healthStatus"];
+            } else {
+                $this->_propDict["healthStatus"] = new UserExperienceAnalyticsHealthState($this->_propDict["healthStatus"]);
+                return $this->_propDict["healthStatus"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the healthStatus
+    * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+    *
+    * @param UserExperienceAnalyticsHealthState $val The healthStatus
+    *
+    * @return UserExperienceAnalyticsAppHealthDevicePerformance
+    */
+    public function setHealthStatus($val)
+    {
+        $this->_propDict["healthStatus"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the meanTimeToFailureInMinutes
     * The mean time to failure for the device in minutes. Valid values -2147483648 to 2147483647
     *

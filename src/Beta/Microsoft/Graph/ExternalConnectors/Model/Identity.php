@@ -12,6 +12,7 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\ExternalConnectors\Model;
+
 /**
 * Identity class
 *
@@ -23,35 +24,6 @@ namespace Beta\Microsoft\Graph\ExternalConnectors\Model;
 */
 class Identity extends \Beta\Microsoft\Graph\Model\Entity
 {
-    /**
-    * Gets the id
-    * The unique ID of the identity. It would be the objectId property in case of Azure Active Directory (Azure AD) users or groups and the id property of the externalGroup in the case of external groups.
-    *
-    * @return string|null The id
-    */
-    public function getId()
-    {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the id
-    * The unique ID of the identity. It would be the objectId property in case of Azure Active Directory (Azure AD) users or groups and the id property of the externalGroup in the case of external groups.
-    *
-    * @param string $val The value of the id
-    *
-    * @return Identity
-    */
-    public function setId($val)
-    {
-        $this->_propDict["id"] = $val;
-        return $this;
-    }
-
     /**
     * Gets the type
     * The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system.
@@ -75,13 +47,14 @@ class Identity extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the type
     * The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system.
     *
-    * @param IdentityType $val The value to assign to the type
+    * @param IdentityType $val The type
     *
-    * @return Identity The Identity
+    * @return Identity
     */
     public function setType($val)
     {
         $this->_propDict["type"] = $val;
-         return $this;
+        return $this;
     }
+
 }

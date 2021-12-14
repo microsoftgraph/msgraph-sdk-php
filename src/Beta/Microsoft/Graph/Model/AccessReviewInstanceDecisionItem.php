@@ -486,4 +486,37 @@ class AccessReviewInstanceDecisionItem extends Entity
         return $this;
     }
 
+    /**
+    * Gets the instance
+    * There is exactly one accessReviewInstance associated with each decision. The instance is the parent of the decision item, representing the recurrence of the access review the decision is made on.
+    *
+    * @return AccessReviewInstance|null The instance
+    */
+    public function getInstance()
+    {
+        if (array_key_exists("instance", $this->_propDict)) {
+            if (is_a($this->_propDict["instance"], "\Beta\Microsoft\Graph\Model\AccessReviewInstance") || is_null($this->_propDict["instance"])) {
+                return $this->_propDict["instance"];
+            } else {
+                $this->_propDict["instance"] = new AccessReviewInstance($this->_propDict["instance"]);
+                return $this->_propDict["instance"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the instance
+    * There is exactly one accessReviewInstance associated with each decision. The instance is the parent of the decision item, representing the recurrence of the access review the decision is made on.
+    *
+    * @param AccessReviewInstance $val The instance
+    *
+    * @return AccessReviewInstanceDecisionItem
+    */
+    public function setInstance($val)
+    {
+        $this->_propDict["instance"] = $val;
+        return $this;
+    }
+
 }

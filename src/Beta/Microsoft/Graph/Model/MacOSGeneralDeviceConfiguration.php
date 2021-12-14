@@ -755,6 +755,35 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     }
 
     /**
+    * Gets the iCloudPrivateRelayBlocked
+    * iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running macOS 12 and later.
+    *
+    * @return bool|null The iCloudPrivateRelayBlocked
+    */
+    public function getICloudPrivateRelayBlocked()
+    {
+        if (array_key_exists("iCloudPrivateRelayBlocked", $this->_propDict)) {
+            return $this->_propDict["iCloudPrivateRelayBlocked"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the iCloudPrivateRelayBlocked
+    * iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running macOS 12 and later.
+    *
+    * @param bool $val The iCloudPrivateRelayBlocked
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setICloudPrivateRelayBlocked($val)
+    {
+        $this->_propDict["iCloudPrivateRelayBlocked"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the iTunesBlockFileSharing
     * Indicates whether or not to block files from being transferred using iTunes.
     *
@@ -1597,6 +1626,35 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     public function setSpotlightBlockInternetResults($val)
     {
         $this->_propDict["spotlightBlockInternetResults"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the touchIdTimeoutInHours
+    * Maximum hours after which the user must enter their password to unlock the device instead of using Touch ID. Available for devices running macOS 12 and later. Valid values 0 to 2147483647
+    *
+    * @return int|null The touchIdTimeoutInHours
+    */
+    public function getTouchIdTimeoutInHours()
+    {
+        if (array_key_exists("touchIdTimeoutInHours", $this->_propDict)) {
+            return $this->_propDict["touchIdTimeoutInHours"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the touchIdTimeoutInHours
+    * Maximum hours after which the user must enter their password to unlock the device instead of using Touch ID. Available for devices running macOS 12 and later. Valid values 0 to 2147483647
+    *
+    * @param int $val The touchIdTimeoutInHours
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setTouchIdTimeoutInHours($val)
+    {
+        $this->_propDict["touchIdTimeoutInHours"] = intval($val);
         return $this;
     }
 

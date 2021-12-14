@@ -26,7 +26,7 @@ class DeviceConfigurationAssignment extends Entity
 {
     /**
     * Gets the intent
-    * The admin intent to apply or remove the profile. This property is read-only. Possible values are: apply, remove.
+    * The admin intent to apply or remove the profile. Possible values are: apply, remove.
     *
     * @return DeviceConfigAssignmentIntent|null The intent
     */
@@ -45,7 +45,7 @@ class DeviceConfigurationAssignment extends Entity
 
     /**
     * Sets the intent
-    * The admin intent to apply or remove the profile. This property is read-only. Possible values are: apply, remove.
+    * The admin intent to apply or remove the profile. Possible values are: apply, remove.
     *
     * @param DeviceConfigAssignmentIntent $val The intent
     *

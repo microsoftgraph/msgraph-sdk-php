@@ -26,7 +26,7 @@ class OrganizationSettings extends Entity
 {
     /**
     * Gets the itemInsights
-    * Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. Get itemInsightsSettings through this navigation property.
+    * Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. List itemInsights returns the settings to display or return item insights in an organization.
     *
     * @return InsightsSettings|null The itemInsights
     */
@@ -45,7 +45,7 @@ class OrganizationSettings extends Entity
 
     /**
     * Sets the itemInsights
-    * Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. Get itemInsightsSettings through this navigation property.
+    * Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. List itemInsights returns the settings to display or return item insights in an organization.
     *
     * @param InsightsSettings $val The itemInsights
     *
@@ -59,6 +59,7 @@ class OrganizationSettings extends Entity
 
     /**
     * Gets the peopleInsights
+    * Contains the properties that are configured by an administrator for the visibility of a list of people relevant and working with a user in Microsoft 365. List peopleInsights returns the settings to display or return people insights in an organization.
     *
     * @return InsightsSettings|null The peopleInsights
     */
@@ -77,6 +78,7 @@ class OrganizationSettings extends Entity
 
     /**
     * Sets the peopleInsights
+    * Contains the properties that are configured by an administrator for the visibility of a list of people relevant and working with a user in Microsoft 365. List peopleInsights returns the settings to display or return people insights in an organization.
     *
     * @param InsightsSettings $val The peopleInsights
     *
