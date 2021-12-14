@@ -25,6 +25,7 @@ class SingleServicePrincipal extends SubjectSet
 {
     /**
     * Gets the description
+    * Description of this service principal.
     *
     * @return string|null The description
     */
@@ -39,6 +40,7 @@ class SingleServicePrincipal extends SubjectSet
 
     /**
     * Sets the description
+    * Description of this service principal.
     *
     * @param string $val The value of the description
     *
@@ -51,6 +53,7 @@ class SingleServicePrincipal extends SubjectSet
     }
     /**
     * Gets the servicePrincipalId
+    * ID of the servicePrincipal.
     *
     * @return string|null The servicePrincipalId
     */
@@ -65,6 +68,7 @@ class SingleServicePrincipal extends SubjectSet
 
     /**
     * Sets the servicePrincipalId
+    * ID of the servicePrincipal.
     *
     * @param string $val The value of the servicePrincipalId
     *

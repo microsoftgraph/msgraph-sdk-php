@@ -26,6 +26,7 @@ class EntitlementManagementSettings extends Entity
 {
     /**
     * Gets the durationUntilExternalUserDeletedAfterBlocked
+    * If externalUserLifecycleAction is blockSignInAndDelete, the duration, typically a number of days, after an external user is blocked from sign in before their account is deleted.
     *
     * @return \DateInterval|null The durationUntilExternalUserDeletedAfterBlocked
     */
@@ -44,6 +45,7 @@ class EntitlementManagementSettings extends Entity
 
     /**
     * Sets the durationUntilExternalUserDeletedAfterBlocked
+    * If externalUserLifecycleAction is blockSignInAndDelete, the duration, typically a number of days, after an external user is blocked from sign in before their account is deleted.
     *
     * @param \DateInterval $val The durationUntilExternalUserDeletedAfterBlocked
     *
@@ -57,7 +59,7 @@ class EntitlementManagementSettings extends Entity
 
     /**
     * Gets the externalUserLifecycleAction
-    * One of None, BlockSignIn, or BlockSignInAndDelete.
+    * Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
     *
     * @return AccessPackageExternalUserLifecycleAction|null The externalUserLifecycleAction
     */
@@ -76,7 +78,7 @@ class EntitlementManagementSettings extends Entity
 
     /**
     * Sets the externalUserLifecycleAction
-    * One of None, BlockSignIn, or BlockSignInAndDelete.
+    * Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
     *
     * @param AccessPackageExternalUserLifecycleAction $val The externalUserLifecycleAction
     *

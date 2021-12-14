@@ -55,6 +55,7 @@ class EntitlementManagement extends Entity
 
      /**
      * Gets the accessPackages
+    * Access packages.
      *
      * @return array|null The accessPackages
      */
@@ -69,6 +70,7 @@ class EntitlementManagement extends Entity
 
     /**
     * Sets the accessPackages
+    * Access packages.
     *
     * @param AccessPackage[] $val The accessPackages
     *
@@ -83,6 +85,7 @@ class EntitlementManagement extends Entity
 
      /**
      * Gets the assignmentRequests
+    * Access package assignment requests.
      *
      * @return array|null The assignmentRequests
      */
@@ -97,6 +100,7 @@ class EntitlementManagement extends Entity
 
     /**
     * Sets the assignmentRequests
+    * Access package assignment requests.
     *
     * @param AccessPackageAssignmentRequest[] $val The assignmentRequests
     *
@@ -111,6 +115,7 @@ class EntitlementManagement extends Entity
 
      /**
      * Gets the assignments
+    * Access package assignments.
      *
      * @return array|null The assignments
      */
@@ -125,6 +130,7 @@ class EntitlementManagement extends Entity
 
     /**
     * Sets the assignments
+    * Access package assignments.
     *
     * @param AccessPackageAssignment[] $val The assignments
     *
@@ -139,6 +145,7 @@ class EntitlementManagement extends Entity
 
      /**
      * Gets the catalogs
+    * Access package catalogs.
      *
      * @return array|null The catalogs
      */
@@ -153,6 +160,7 @@ class EntitlementManagement extends Entity
 
     /**
     * Sets the catalogs
+    * Access package catalogs.
     *
     * @param AccessPackageCatalog[] $val The catalogs
     *
@@ -167,6 +175,7 @@ class EntitlementManagement extends Entity
 
      /**
      * Gets the connectedOrganizations
+    * Connected organizations.
      *
      * @return array|null The connectedOrganizations
      */
@@ -181,6 +190,7 @@ class EntitlementManagement extends Entity
 
     /**
     * Sets the connectedOrganizations
+    * Connected organizations.
     *
     * @param ConnectedOrganization[] $val The connectedOrganizations
     *
@@ -194,6 +204,7 @@ class EntitlementManagement extends Entity
 
     /**
     * Gets the settings
+    * Entitlement management settings.
     *
     * @return EntitlementManagementSettings|null The settings
     */
@@ -212,6 +223,7 @@ class EntitlementManagement extends Entity
 
     /**
     * Sets the settings
+    * Entitlement management settings.
     *
     * @param EntitlementManagementSettings $val The settings
     *
