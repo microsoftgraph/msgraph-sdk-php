@@ -26,6 +26,34 @@ class AccessReviewSet extends Entity
 {
 
      /**
+     * Gets the decisions
+     *
+     * @return array|null The decisions
+     */
+    public function getDecisions()
+    {
+        if (array_key_exists("decisions", $this->_propDict)) {
+           return $this->_propDict["decisions"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the decisions
+    *
+    * @param AccessReviewInstanceDecisionItem[] $val The decisions
+    *
+    * @return AccessReviewSet
+    */
+    public function setDecisions($val)
+    {
+        $this->_propDict["decisions"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the definitions
      *
      * @return array|null The definitions

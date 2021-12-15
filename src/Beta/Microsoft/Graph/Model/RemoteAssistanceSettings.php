@@ -55,7 +55,7 @@ class RemoteAssistanceSettings extends Entity
 
     /**
     * Gets the remoteAssistanceState
-    * The current state of remote assistance for the account. Possible values are: notConfigured, disabled, enabled. This setting is configurable by the admin. Remote assistance settings that have not yet been configured by the admin have a notConfigured state. Returned by default. Possible values are: notConfigured, disabled, enabled.
+    * The current state of remote assistance for the account. Possible values are: disabled, enabled. This setting is configurable by the admin. Remote assistance settings that have not yet been configured by the admin have a disabled state. Returned by default. Possible values are: disabled, enabled.
     *
     * @return RemoteAssistanceState|null The remoteAssistanceState
     */
@@ -74,7 +74,7 @@ class RemoteAssistanceSettings extends Entity
 
     /**
     * Sets the remoteAssistanceState
-    * The current state of remote assistance for the account. Possible values are: notConfigured, disabled, enabled. This setting is configurable by the admin. Remote assistance settings that have not yet been configured by the admin have a notConfigured state. Returned by default. Possible values are: notConfigured, disabled, enabled.
+    * The current state of remote assistance for the account. Possible values are: disabled, enabled. This setting is configurable by the admin. Remote assistance settings that have not yet been configured by the admin have a disabled state. Returned by default. Possible values are: disabled, enabled.
     *
     * @param RemoteAssistanceState $val The remoteAssistanceState
     *

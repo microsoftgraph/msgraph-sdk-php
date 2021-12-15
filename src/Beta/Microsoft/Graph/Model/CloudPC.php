@@ -26,6 +26,7 @@ class CloudPC extends Entity
 {
     /**
     * Gets the aadDeviceId
+    * The Azure Active Directory (Azure AD) device ID of the Cloud PC.
     *
     * @return string|null The aadDeviceId
     */
@@ -40,6 +41,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the aadDeviceId
+    * The Azure Active Directory (Azure AD) device ID of the Cloud PC.
     *
     * @param string $val The aadDeviceId
     *
@@ -53,7 +55,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the displayName
-    * The Cloud PC display name.
+    * The display name of the Cloud PC.
     *
     * @return string|null The displayName
     */
@@ -68,7 +70,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the displayName
-    * The Cloud PC display name.
+    * The display name of the Cloud PC.
     *
     * @param string $val The displayName
     *
@@ -82,7 +84,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the gracePeriodEndDateTime
-    * The date and time when the grace period ends and reprovisioning/deprovisioning happens. Required only if status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time when the grace period ends and reprovisioning/deprovisioning happens. Required only if the status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The gracePeriodEndDateTime
     */
@@ -101,7 +103,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the gracePeriodEndDateTime
-    * The date and time when the grace period ends and reprovisioning/deprovisioning happens. Required only if status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time when the grace period ends and reprovisioning/deprovisioning happens. Required only if the status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The gracePeriodEndDateTime
     *
@@ -144,6 +146,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the lastLoginResult
+    * The last login result of the Cloud PC. For example, { 'time': '2014-01-01T00:00:00Z'}.
     *
     * @return CloudPcLoginResult|null The lastLoginResult
     */
@@ -162,6 +165,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the lastLoginResult
+    * The last login result of the Cloud PC. For example, { 'time': '2014-01-01T00:00:00Z'}.
     *
     * @param CloudPcLoginResult $val The lastLoginResult
     *
@@ -175,7 +179,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the lastModifiedDateTime
-    * The Cloud PC's last modified date and time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The last modified date and time of the Cloud PC. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -194,7 +198,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the lastModifiedDateTime
-    * The Cloud PC's last modified date and time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The last modified date and time of the Cloud PC. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -208,6 +212,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the lastRemoteActionResult
+    * The last remote action result of the enterprise Cloud PCs. The supported remote actions are: Rename, Reboot, Reprovision, and Troubleshoot.
     *
     * @return CloudPcRemoteActionResult|null The lastRemoteActionResult
     */
@@ -226,6 +231,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the lastRemoteActionResult
+    * The last remote action result of the enterprise Cloud PCs. The supported remote actions are: Rename, Reboot, Reprovision, and Troubleshoot.
     *
     * @param CloudPcRemoteActionResult $val The lastRemoteActionResult
     *
@@ -239,7 +245,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the managedDeviceId
-    * The Cloud PC’s Intune device ID.
+    * The Intune device ID of the Cloud PC.
     *
     * @return string|null The managedDeviceId
     */
@@ -254,7 +260,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the managedDeviceId
-    * The Cloud PC’s Intune device ID.
+    * The Intune device ID of the Cloud PC.
     *
     * @param string $val The managedDeviceId
     *
@@ -268,7 +274,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the managedDeviceName
-    * The Cloud PC’s Intune device name.
+    * The Intune device name of the Cloud PC.
     *
     * @return string|null The managedDeviceName
     */
@@ -283,7 +289,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the managedDeviceName
-    * The Cloud PC’s Intune device name.
+    * The Intune device name of the Cloud PC.
     *
     * @param string $val The managedDeviceName
     *
@@ -297,7 +303,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the onPremisesConnectionName
-    * The on-premises connection that is applied during provisioning of Cloud PCs.
+    * The on-premises connection that is applied during the provisioning of Cloud PCs.
     *
     * @return string|null The onPremisesConnectionName
     */
@@ -312,7 +318,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the onPremisesConnectionName
-    * The on-premises connection that is applied during provisioning of Cloud PCs.
+    * The on-premises connection that is applied during the provisioning of Cloud PCs.
     *
     * @param string $val The onPremisesConnectionName
     *
@@ -325,8 +331,39 @@ class CloudPC extends Entity
     }
 
     /**
+    * Gets the osVersion
+    *
+    * @return CloudPcOperatingSystem|null The osVersion
+    */
+    public function getOsVersion()
+    {
+        if (array_key_exists("osVersion", $this->_propDict)) {
+            if (is_a($this->_propDict["osVersion"], "\Beta\Microsoft\Graph\Model\CloudPcOperatingSystem") || is_null($this->_propDict["osVersion"])) {
+                return $this->_propDict["osVersion"];
+            } else {
+                $this->_propDict["osVersion"] = new CloudPcOperatingSystem($this->_propDict["osVersion"]);
+                return $this->_propDict["osVersion"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the osVersion
+    *
+    * @param CloudPcOperatingSystem $val The osVersion
+    *
+    * @return CloudPC
+    */
+    public function setOsVersion($val)
+    {
+        $this->_propDict["osVersion"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the provisioningPolicyId
-    * The Cloud PC's provisioning policy ID.
+    * The provisioning policy ID of the Cloud PC.
     *
     * @return string|null The provisioningPolicyId
     */
@@ -341,7 +378,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the provisioningPolicyId
-    * The Cloud PC's provisioning policy ID.
+    * The provisioning policy ID of the Cloud PC.
     *
     * @param string $val The provisioningPolicyId
     *
@@ -355,7 +392,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the provisioningPolicyName
-    * The provisioning policy that is applied during provisioning of Cloud PCs.
+    * The provisioning policy that is applied during the provisioning of Cloud PCs.
     *
     * @return string|null The provisioningPolicyName
     */
@@ -370,7 +407,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the provisioningPolicyName
-    * The provisioning policy that is applied during provisioning of Cloud PCs.
+    * The provisioning policy that is applied during the provisioning of Cloud PCs.
     *
     * @param string $val The provisioningPolicyName
     *
@@ -384,7 +421,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the servicePlanId
-    * The Cloud PC's service plan ID.
+    * The service plan ID of the Cloud PC.
     *
     * @return string|null The servicePlanId
     */
@@ -399,7 +436,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the servicePlanId
-    * The Cloud PC's service plan ID.
+    * The service plan ID of the Cloud PC.
     *
     * @param string $val The servicePlanId
     *
@@ -413,7 +450,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the servicePlanName
-    * The Cloud PC's service plan name.
+    * The service plan name of the Cloud PC.
     *
     * @return string|null The servicePlanName
     */
@@ -428,7 +465,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the servicePlanName
-    * The Cloud PC's service plan name.
+    * The service plan name of the Cloud PC.
     *
     * @param string $val The servicePlanName
     *
@@ -442,6 +479,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the servicePlanType
+    * The service plan type of the Cloud PC.
     *
     * @return CloudPcServicePlanType|null The servicePlanType
     */
@@ -460,6 +498,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the servicePlanType
+    * The service plan type of the Cloud PC.
     *
     * @param CloudPcServicePlanType $val The servicePlanType
     *
@@ -473,7 +512,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the status
-    * Status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed.
+    * The status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed.
     *
     * @return CloudPcStatus|null The status
     */
@@ -492,7 +531,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the status
-    * Status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed.
+    * The status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed.
     *
     * @param CloudPcStatus $val The status
     *
@@ -534,6 +573,37 @@ class CloudPC extends Entity
     public function setStatusDetails($val)
     {
         $this->_propDict["statusDetails"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the userAccountType
+    *
+    * @return CloudPcUserAccountType|null The userAccountType
+    */
+    public function getUserAccountType()
+    {
+        if (array_key_exists("userAccountType", $this->_propDict)) {
+            if (is_a($this->_propDict["userAccountType"], "\Beta\Microsoft\Graph\Model\CloudPcUserAccountType") || is_null($this->_propDict["userAccountType"])) {
+                return $this->_propDict["userAccountType"];
+            } else {
+                $this->_propDict["userAccountType"] = new CloudPcUserAccountType($this->_propDict["userAccountType"]);
+                return $this->_propDict["userAccountType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userAccountType
+    *
+    * @param CloudPcUserAccountType $val The userAccountType
+    *
+    * @return CloudPC
+    */
+    public function setUserAccountType($val)
+    {
+        $this->_propDict["userAccountType"] = $val;
         return $this;
     }
 

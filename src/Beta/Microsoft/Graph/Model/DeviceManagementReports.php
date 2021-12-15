@@ -84,34 +84,4 @@ class DeviceManagementReports extends Entity
         return $this;
     }
 
-
-     /**
-     * Gets the reportSchedules
-    * Entity representing a schedule for which reports are delivered
-     *
-     * @return array|null The reportSchedules
-     */
-    public function getReportSchedules()
-    {
-        if (array_key_exists("reportSchedules", $this->_propDict)) {
-           return $this->_propDict["reportSchedules"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the reportSchedules
-    * Entity representing a schedule for which reports are delivered
-    *
-    * @param DeviceManagementReportSchedule[] $val The reportSchedules
-    *
-    * @return DeviceManagementReports
-    */
-    public function setReportSchedules($val)
-    {
-        $this->_propDict["reportSchedules"] = $val;
-        return $this;
-    }
-
 }

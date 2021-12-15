@@ -463,37 +463,6 @@ class Simulation extends Entity
     }
 
     /**
-    * Gets the mode
-    *
-    * @return SimulationMode|null The mode
-    */
-    public function getMode()
-    {
-        if (array_key_exists("mode", $this->_propDict)) {
-            if (is_a($this->_propDict["mode"], "\Beta\Microsoft\Graph\Model\SimulationMode") || is_null($this->_propDict["mode"])) {
-                return $this->_propDict["mode"];
-            } else {
-                $this->_propDict["mode"] = new SimulationMode($this->_propDict["mode"]);
-                return $this->_propDict["mode"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the mode
-    *
-    * @param SimulationMode $val The mode
-    *
-    * @return Simulation
-    */
-    public function setMode($val)
-    {
-        $this->_propDict["mode"] = $val;
-        return $this;
-    }
-
-    /**
     * Gets the payloadDeliveryPlatform
     * Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
     *

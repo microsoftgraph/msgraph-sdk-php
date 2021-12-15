@@ -25,6 +25,7 @@ class MicrosoftManagedDesktop extends Entity
 {
     /**
     * Gets the profile
+    * The name of the Microsoft Managed Desktop profile that the Windows 365 Cloud PC is associated with.
     *
     * @return string|null The profile
     */
@@ -39,6 +40,7 @@ class MicrosoftManagedDesktop extends Entity
 
     /**
     * Sets the profile
+    * The name of the Microsoft Managed Desktop profile that the Windows 365 Cloud PC is associated with.
     *
     * @param string $val The value of the profile
     *
@@ -52,6 +54,7 @@ class MicrosoftManagedDesktop extends Entity
 
     /**
     * Gets the type
+    * Indicates whether the provisioning policy enables Microsoft Managed Desktop. It indicates the type of plan under which the device is managed if the provisioning policy is enabled. Possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue.
     *
     * @return MicrosoftManagedDesktopType|null The type
     */
@@ -70,6 +73,7 @@ class MicrosoftManagedDesktop extends Entity
 
     /**
     * Sets the type
+    * Indicates whether the provisioning policy enables Microsoft Managed Desktop. It indicates the type of plan under which the device is managed if the provisioning policy is enabled. Possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue.
     *
     * @param MicrosoftManagedDesktopType $val The value to assign to the type
     *

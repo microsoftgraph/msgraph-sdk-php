@@ -26,7 +26,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the advancedThreatProtectionAutomaticSampleSubmission
-    * Determines whether or not to enable automatic file sample submission for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+    * Determines whether or not to enable automatic file sample submission for Microsoft Defender for Endpoint on macOS. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement|null The advancedThreatProtectionAutomaticSampleSubmission
     */
@@ -45,7 +45,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 
     /**
     * Sets the advancedThreatProtectionAutomaticSampleSubmission
-    * Determines whether or not to enable automatic file sample submission for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+    * Determines whether or not to enable automatic file sample submission for Microsoft Defender for Endpoint on macOS. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The advancedThreatProtectionAutomaticSampleSubmission
     *
@@ -59,7 +59,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 
     /**
     * Gets the advancedThreatProtectionCloudDelivered
-    * Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+    * Determines whether or not to enable cloud-delivered protection for Microsoft Defender for Endpoint on macOS. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement|null The advancedThreatProtectionCloudDelivered
     */
@@ -78,7 +78,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 
     /**
     * Sets the advancedThreatProtectionCloudDelivered
-    * Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+    * Determines whether or not to enable cloud-delivered protection for Microsoft Defender for Endpoint on macOS. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The advancedThreatProtectionCloudDelivered
     *
@@ -92,7 +92,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 
     /**
     * Gets the advancedThreatProtectionDiagnosticDataCollection
-    * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+    * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender for Endpoint on macOS. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement|null The advancedThreatProtectionDiagnosticDataCollection
     */
@@ -111,7 +111,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 
     /**
     * Sets the advancedThreatProtectionDiagnosticDataCollection
-    * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+    * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender for Endpoint on macOS. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The advancedThreatProtectionDiagnosticDataCollection
     *
@@ -125,7 +125,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 
     /**
     * Gets the advancedThreatProtectionExcludedExtensions
-    * A list of file extensions to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
+    * A list of file extensions to exclude from antivirus scanning for Microsoft Defender for Endpoint on macOS.
     *
     * @return string|null The advancedThreatProtectionExcludedExtensions
     */
@@ -140,7 +140,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 
     /**
     * Sets the advancedThreatProtectionExcludedExtensions
-    * A list of file extensions to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
+    * A list of file extensions to exclude from antivirus scanning for Microsoft Defender for Endpoint on macOS.
     *
     * @param string $val The advancedThreatProtectionExcludedExtensions
     *
@@ -154,7 +154,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 
     /**
     * Gets the advancedThreatProtectionExcludedFiles
-    * A list of paths to files to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
+    * A list of paths to files to exclude from antivirus scanning for Microsoft Defender for Endpoint on macOS.
     *
     * @return string|null The advancedThreatProtectionExcludedFiles
     */
@@ -169,7 +169,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 
     /**
     * Sets the advancedThreatProtectionExcludedFiles
-    * A list of paths to files to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
+    * A list of paths to files to exclude from antivirus scanning for Microsoft Defender for Endpoint on macOS.
     *
     * @param string $val The advancedThreatProtectionExcludedFiles
     *
@@ -183,7 +183,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 
     /**
     * Gets the advancedThreatProtectionExcludedFolders
-    * A list of paths to folders to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
+    * A list of paths to folders to exclude from antivirus scanning for Microsoft Defender for Endpoint on macOS.
     *
     * @return string|null The advancedThreatProtectionExcludedFolders
     */
@@ -198,7 +198,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 
     /**
     * Sets the advancedThreatProtectionExcludedFolders
-    * A list of paths to folders to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
+    * A list of paths to folders to exclude from antivirus scanning for Microsoft Defender for Endpoint on macOS.
     *
     * @param string $val The advancedThreatProtectionExcludedFolders
     *
@@ -212,7 +212,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 
     /**
     * Gets the advancedThreatProtectionExcludedProcesses
-    * A list of process names to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
+    * A list of process names to exclude from antivirus scanning for Microsoft Defender for Endpoint on macOS.
     *
     * @return string|null The advancedThreatProtectionExcludedProcesses
     */
@@ -227,7 +227,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 
     /**
     * Sets the advancedThreatProtectionExcludedProcesses
-    * A list of process names to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
+    * A list of process names to exclude from antivirus scanning for Microsoft Defender for Endpoint on macOS.
     *
     * @param string $val The advancedThreatProtectionExcludedProcesses
     *
@@ -241,7 +241,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 
     /**
     * Gets the advancedThreatProtectionRealTime
-    * Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+    * Determines whether or not to enable real-time protection for Microsoft Defender for Endpoint on macOS. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement|null The advancedThreatProtectionRealTime
     */
@@ -260,7 +260,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 
     /**
     * Sets the advancedThreatProtectionRealTime
-    * Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+    * Determines whether or not to enable real-time protection for Microsoft Defender for Endpoint on macOS. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The advancedThreatProtectionRealTime
     *

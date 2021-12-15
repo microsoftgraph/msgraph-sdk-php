@@ -2385,6 +2385,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
 
     /**
+    * Gets the iCloudPrivateRelayBlocked
+    * iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running iOS 15 and later.
+    *
+    * @return bool|null The iCloudPrivateRelayBlocked
+    */
+    public function getICloudPrivateRelayBlocked()
+    {
+        if (array_key_exists("iCloudPrivateRelayBlocked", $this->_propDict)) {
+            return $this->_propDict["iCloudPrivateRelayBlocked"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the iCloudPrivateRelayBlocked
+    * iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running iOS 15 and later.
+    *
+    * @param bool $val The iCloudPrivateRelayBlocked
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setICloudPrivateRelayBlocked($val)
+    {
+        $this->_propDict["iCloudPrivateRelayBlocked"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the iCloudRequireEncryptedBackup
     * Indicates whether or not to require backups to iCloud be encrypted.
     *

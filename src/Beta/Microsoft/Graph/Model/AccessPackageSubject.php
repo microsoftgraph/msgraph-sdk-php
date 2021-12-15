@@ -169,6 +169,7 @@ class AccessPackageSubject extends Entity
 
     /**
     * Gets the onPremisesSecurityIdentifier
+    * A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
     *
     * @return string|null The onPremisesSecurityIdentifier
     */
@@ -183,6 +184,7 @@ class AccessPackageSubject extends Entity
 
     /**
     * Sets the onPremisesSecurityIdentifier
+    * A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
     *
     * @param string $val The onPremisesSecurityIdentifier
     *

@@ -1217,6 +1217,66 @@ class DeviceManagement extends Entity
 
 
      /**
+     * Gets the hardwareConfigurations
+    * The hardware configurations for this account.
+     *
+     * @return array|null The hardwareConfigurations
+     */
+    public function getHardwareConfigurations()
+    {
+        if (array_key_exists("hardwareConfigurations", $this->_propDict)) {
+           return $this->_propDict["hardwareConfigurations"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hardwareConfigurations
+    * The hardware configurations for this account.
+    *
+    * @param HardwareConfiguration[] $val The hardwareConfigurations
+    *
+    * @return DeviceManagement
+    */
+    public function setHardwareConfigurations($val)
+    {
+        $this->_propDict["hardwareConfigurations"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the hardwarePasswordInfo
+    * The hardware password info for this account.
+     *
+     * @return array|null The hardwarePasswordInfo
+     */
+    public function getHardwarePasswordInfo()
+    {
+        if (array_key_exists("hardwarePasswordInfo", $this->_propDict)) {
+           return $this->_propDict["hardwarePasswordInfo"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hardwarePasswordInfo
+    * The hardware password info for this account.
+    *
+    * @param HardwarePasswordInfo[] $val The hardwarePasswordInfo
+    *
+    * @return DeviceManagement
+    */
+    public function setHardwarePasswordInfo($val)
+    {
+        $this->_propDict["hardwarePasswordInfo"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the iosUpdateStatuses
     * The IOS software update installation statuses for this account.
      *

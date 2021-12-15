@@ -25,31 +25,31 @@ namespace Beta\Microsoft\Graph\Model;
 class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
 {
     /**
-    * Gets the appsAllowInstallFromUnknownSources
-    * Indicates whether or not the user is allowed to enable to unknown sources setting.
+    * Gets the appsBlockInstallFromUnknownSources
+    * Indicates whether or not the user is allowed to enable unknown sources setting. When set to true, user is not allowed to enable unknown sources settings.
     *
-    * @return bool|null The appsAllowInstallFromUnknownSources
+    * @return bool|null The appsBlockInstallFromUnknownSources
     */
-    public function getAppsAllowInstallFromUnknownSources()
+    public function getAppsBlockInstallFromUnknownSources()
     {
-        if (array_key_exists("appsAllowInstallFromUnknownSources", $this->_propDict)) {
-            return $this->_propDict["appsAllowInstallFromUnknownSources"];
+        if (array_key_exists("appsBlockInstallFromUnknownSources", $this->_propDict)) {
+            return $this->_propDict["appsBlockInstallFromUnknownSources"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the appsAllowInstallFromUnknownSources
-    * Indicates whether or not the user is allowed to enable to unknown sources setting.
+    * Sets the appsBlockInstallFromUnknownSources
+    * Indicates whether or not the user is allowed to enable unknown sources setting. When set to true, user is not allowed to enable unknown sources settings.
     *
-    * @param bool $val The appsAllowInstallFromUnknownSources
+    * @param bool $val The appsBlockInstallFromUnknownSources
     *
     * @return AospDeviceOwnerDeviceConfiguration
     */
-    public function setAppsAllowInstallFromUnknownSources($val)
+    public function setAppsBlockInstallFromUnknownSources($val)
     {
-        $this->_propDict["appsAllowInstallFromUnknownSources"] = boolval($val);
+        $this->_propDict["appsBlockInstallFromUnknownSources"] = boolval($val);
         return $this;
     }
 
@@ -431,35 +431,6 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     public function setSecurityAllowDebuggingFeatures($val)
     {
         $this->_propDict["securityAllowDebuggingFeatures"] = boolval($val);
-        return $this;
-    }
-
-    /**
-    * Gets the storageAllowUsb
-    * Indicates whether or not to block USB storage.
-    *
-    * @return bool|null The storageAllowUsb
-    */
-    public function getStorageAllowUsb()
-    {
-        if (array_key_exists("storageAllowUsb", $this->_propDict)) {
-            return $this->_propDict["storageAllowUsb"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the storageAllowUsb
-    * Indicates whether or not to block USB storage.
-    *
-    * @param bool $val The storageAllowUsb
-    *
-    * @return AospDeviceOwnerDeviceConfiguration
-    */
-    public function setStorageAllowUsb($val)
-    {
-        $this->_propDict["storageAllowUsb"] = boolval($val);
         return $this;
     }
 

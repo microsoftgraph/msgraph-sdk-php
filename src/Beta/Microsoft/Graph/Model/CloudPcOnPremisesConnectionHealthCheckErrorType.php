@@ -30,6 +30,7 @@ class CloudPcOnPremisesConnectionHealthCheckErrorType extends Enum
     * The Enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     const DNS_CHECK_FQDN_NOT_FOUND = "dnsCheckFqdnNotFound";
+    const DNS_CHECK_NAME_WITH_INVALID_CHARACTER = "dnsCheckNameWithInvalidCharacter";
     const DNS_CHECK_UNKNOWN_ERROR = "dnsCheckUnknownError";
     const AD_JOIN_CHECK_FQDN_NOT_FOUND = "adJoinCheckFqdnNotFound";
     const AD_JOIN_CHECK_INCORRECT_CREDENTIALS = "adJoinCheckIncorrectCredentials";
@@ -49,6 +50,7 @@ class CloudPcOnPremisesConnectionHealthCheckErrorType extends Enum
     const AZURE_AD_DEVICE_SYNC_CHECK_LONG_SYNC_CIRCLE = "azureAdDeviceSyncCheckLongSyncCircle";
     const AZURE_AD_DEVICE_SYNC_CHECK_CONNECT_DISABLED = "azureAdDeviceSyncCheckConnectDisabled";
     const AZURE_AD_DEVICE_SYNC_CHECK_DURATION_EXCEEDED = "azureAdDeviceSyncCheckDurationExceeded";
+    const AZURE_AD_DEVICE_SYNC_CHECK_SCP_NOT_CONFIGURED = "azureAdDeviceSyncCheckScpNotConfigured";
     const AZURE_AD_DEVICE_SYNC_CHECK_TRANSIENT_SERVICE_ERROR = "azureAdDeviceSyncCheckTransientServiceError";
     const AZURE_AD_DEVICE_SYNC_CHECK_UNKNOWN_ERROR = "azureAdDeviceSyncCheckUnknownError";
     const RESOURCE_AVAILABILITY_CHECK_NO_SUBNET_IP = "resourceAvailabilityCheckNoSubnetIP";

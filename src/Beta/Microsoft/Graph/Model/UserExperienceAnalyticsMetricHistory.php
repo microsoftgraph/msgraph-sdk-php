@@ -115,37 +115,4 @@ class UserExperienceAnalyticsMetricHistory extends Entity
         return $this;
     }
 
-    /**
-    * Gets the userExperienceAnalyticsMetric
-    * User experience analytics metric.
-    *
-    * @return UserExperienceAnalyticsMetric|null The userExperienceAnalyticsMetric
-    */
-    public function getUserExperienceAnalyticsMetric()
-    {
-        if (array_key_exists("userExperienceAnalyticsMetric", $this->_propDict)) {
-            if (is_a($this->_propDict["userExperienceAnalyticsMetric"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsMetric") || is_null($this->_propDict["userExperienceAnalyticsMetric"])) {
-                return $this->_propDict["userExperienceAnalyticsMetric"];
-            } else {
-                $this->_propDict["userExperienceAnalyticsMetric"] = new UserExperienceAnalyticsMetric($this->_propDict["userExperienceAnalyticsMetric"]);
-                return $this->_propDict["userExperienceAnalyticsMetric"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the userExperienceAnalyticsMetric
-    * User experience analytics metric.
-    *
-    * @param UserExperienceAnalyticsMetric $val The userExperienceAnalyticsMetric
-    *
-    * @return UserExperienceAnalyticsMetricHistory
-    */
-    public function setUserExperienceAnalyticsMetric($val)
-    {
-        $this->_propDict["userExperienceAnalyticsMetric"] = $val;
-        return $this;
-    }
-
 }

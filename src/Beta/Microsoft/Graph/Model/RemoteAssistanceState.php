@@ -29,7 +29,6 @@ class RemoteAssistanceState extends Enum
     /**
     * The Enum RemoteAssistanceState
     */
-    const NOT_CONFIGURED = "notConfigured";
     const DISABLED = "disabled";
     const ENABLED = "enabled";
 }
