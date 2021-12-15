@@ -179,6 +179,7 @@ class AccessPackage extends Entity
 
     /**
     * Gets the catalog
+    * Read-only. Nullable.
     *
     * @return AccessPackageCatalog|null The catalog
     */
@@ -197,6 +198,7 @@ class AccessPackage extends Entity
 
     /**
     * Sets the catalog
+    * Read-only. Nullable.
     *
     * @param AccessPackageCatalog $val The catalog
     *
