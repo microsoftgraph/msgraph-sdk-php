@@ -37,5 +37,6 @@ class CloudPcStatus extends Enum
     const FAILED = "failed";
     const PROVISIONED_WITH_WARNINGS = "provisionedWithWarnings";
     const RESIZING = "resizing";
+    const PENDING_PROVISION = "pendingProvision";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

@@ -269,7 +269,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Gets the requestType
-    * One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
+    * The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set.
     *
     * @return string|null The requestType
     */
@@ -284,7 +284,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Sets the requestType
-    * One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
+    * The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set.
     *
     * @param string $val The requestType
     *
@@ -298,7 +298,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Gets the schedule
-    * The range of dates that access is to be assigned to the requestor. Read-only.
+    * The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
     *
     * @return RequestSchedule|null The schedule
     */
@@ -317,7 +317,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Sets the schedule
-    * The range of dates that access is to be assigned to the requestor. Read-only.
+    * The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
     *
     * @param RequestSchedule $val The schedule
     *

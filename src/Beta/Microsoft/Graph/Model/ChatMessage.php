@@ -246,7 +246,7 @@ class ChatMessage extends Entity
 
     /**
     * Gets the eventDetail
-    * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
+    * Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
     *
     * @return EventMessageDetail|null The eventDetail
     */
@@ -265,7 +265,7 @@ class ChatMessage extends Entity
 
     /**
     * Sets the eventDetail
-    * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
+    * Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
     *
     * @param EventMessageDetail $val The eventDetail
     *

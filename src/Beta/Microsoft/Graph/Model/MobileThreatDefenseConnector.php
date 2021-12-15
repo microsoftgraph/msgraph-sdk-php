@@ -54,6 +54,35 @@ class MobileThreatDefenseConnector extends Entity
     }
 
     /**
+    * Gets the allowPartnerToCollectIOSPersonalApplicationMetadata
+    * For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about personally installed applications from Intune
+    *
+    * @return bool|null The allowPartnerToCollectIOSPersonalApplicationMetadata
+    */
+    public function getAllowPartnerToCollectIOSPersonalApplicationMetadata()
+    {
+        if (array_key_exists("allowPartnerToCollectIOSPersonalApplicationMetadata", $this->_propDict)) {
+            return $this->_propDict["allowPartnerToCollectIOSPersonalApplicationMetadata"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the allowPartnerToCollectIOSPersonalApplicationMetadata
+    * For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about personally installed applications from Intune
+    *
+    * @param bool $val The allowPartnerToCollectIOSPersonalApplicationMetadata
+    *
+    * @return MobileThreatDefenseConnector
+    */
+    public function setAllowPartnerToCollectIOSPersonalApplicationMetadata($val)
+    {
+        $this->_propDict["allowPartnerToCollectIOSPersonalApplicationMetadata"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the androidDeviceBlockedOnMissingPartnerData
     * For Android, set whether Intune must receive data from the data sync partner prior to marking a device compliant
     *

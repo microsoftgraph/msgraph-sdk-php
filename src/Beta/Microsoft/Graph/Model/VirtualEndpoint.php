@@ -174,6 +174,37 @@ class VirtualEndpoint extends Entity
         return $this;
     }
 
+    /**
+    * Gets the organizationSettings
+    *
+    * @return CloudPcOrganizationSettings|null The organizationSettings
+    */
+    public function getOrganizationSettings()
+    {
+        if (array_key_exists("organizationSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["organizationSettings"], "\Beta\Microsoft\Graph\Model\CloudPcOrganizationSettings") || is_null($this->_propDict["organizationSettings"])) {
+                return $this->_propDict["organizationSettings"];
+            } else {
+                $this->_propDict["organizationSettings"] = new CloudPcOrganizationSettings($this->_propDict["organizationSettings"]);
+                return $this->_propDict["organizationSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the organizationSettings
+    *
+    * @param CloudPcOrganizationSettings $val The organizationSettings
+    *
+    * @return VirtualEndpoint
+    */
+    public function setOrganizationSettings($val)
+    {
+        $this->_propDict["organizationSettings"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the provisioningPolicies

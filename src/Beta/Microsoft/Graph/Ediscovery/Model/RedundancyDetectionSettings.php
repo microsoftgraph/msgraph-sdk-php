@@ -53,7 +53,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the maxWords
-    * See Minimum/maximum number of words to learn more.
+    * Specifies the maximum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
     *
     * @return int|null The maxWords
     */
@@ -68,7 +68,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the maxWords
-    * See Minimum/maximum number of words to learn more.
+    * Specifies the maximum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
     *
     * @param int $val The value of the maxWords
     *
@@ -81,7 +81,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the minWords
-    * See Minimum/maximum number of words to learn more.
+    * Specifies the minimum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
     *
     * @return int|null The minWords
     */
@@ -96,7 +96,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the minWords
-    * See Minimum/maximum number of words to learn more.
+    * Specifies the minimum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
     *
     * @param int $val The value of the minWords
     *
@@ -109,7 +109,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the similarityThreshold
-    * See Document and email similarity threshold to learn more.
+    * Specifies the similarity level for documents to be put in the same near duplicate set. To learn more, see Document and email similarity threshold.
     *
     * @return int|null The similarityThreshold
     */
@@ -124,7 +124,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the similarityThreshold
-    * See Document and email similarity threshold to learn more.
+    * Specifies the similarity level for documents to be put in the same near duplicate set. To learn more, see Document and email similarity threshold.
     *
     * @param int $val The value of the similarityThreshold
     *

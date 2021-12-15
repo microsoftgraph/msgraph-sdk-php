@@ -55,7 +55,7 @@ class EntitlementManagementSettings extends Entity
 
     /**
     * Gets the externalUserLifecycleAction
-    * One of None, BlockSignIn, or BlockSignInAndDelete.
+    * Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
     *
     * @return string|null The externalUserLifecycleAction
     */
@@ -70,7 +70,7 @@ class EntitlementManagementSettings extends Entity
 
     /**
     * Sets the externalUserLifecycleAction
-    * One of None, BlockSignIn, or BlockSignInAndDelete.
+    * Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
     *
     * @param string $val The externalUserLifecycleAction
     *

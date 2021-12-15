@@ -26,6 +26,7 @@ class CloudPcLoginResult extends Entity
 
     /**
     * Gets the time
+    * The time of the Cloud PC sign in action. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'. Read-only.
     *
     * @return \DateTime|null The time
     */
@@ -44,6 +45,7 @@ class CloudPcLoginResult extends Entity
 
     /**
     * Sets the time
+    * The time of the Cloud PC sign in action. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'. Read-only.
     *
     * @param \DateTime $val The value to assign to the time
     *

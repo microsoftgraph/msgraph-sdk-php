@@ -26,6 +26,7 @@ class InsightsSettings extends Entity
 {
     /**
     * Gets the disabledForGroup
+    * The ID of an Azure AD group, of which the specified type of insights are disabled for its members. Default is empty. Optional.
     *
     * @return string|null The disabledForGroup
     */
@@ -40,6 +41,7 @@ class InsightsSettings extends Entity
 
     /**
     * Sets the disabledForGroup
+    * The ID of an Azure AD group, of which the specified type of insights are disabled for its members. Default is empty. Optional.
     *
     * @param string $val The disabledForGroup
     *
@@ -53,6 +55,7 @@ class InsightsSettings extends Entity
 
     /**
     * Gets the isEnabledInOrganization
+    * true if the specified type of insights are enabled for the organization; false if the specified type of insights are disabled for all users without exceptions. Default is true. Optional.
     *
     * @return bool|null The isEnabledInOrganization
     */
@@ -67,6 +70,7 @@ class InsightsSettings extends Entity
 
     /**
     * Sets the isEnabledInOrganization
+    * true if the specified type of insights are enabled for the organization; false if the specified type of insights are disabled for all users without exceptions. Default is true. Optional.
     *
     * @param bool $val The isEnabledInOrganization
     *
