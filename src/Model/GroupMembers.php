@@ -53,6 +53,7 @@ class GroupMembers extends SubjectSet
     }
     /**
     * Gets the groupId
+    * The ID of the group in Azure AD.
     *
     * @return string|null The groupId
     */
@@ -67,6 +68,7 @@ class GroupMembers extends SubjectSet
 
     /**
     * Sets the groupId
+    * The ID of the group in Azure AD.
     *
     * @param string $val The value of the groupId
     *
