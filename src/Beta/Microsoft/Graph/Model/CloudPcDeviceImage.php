@@ -270,7 +270,7 @@ class CloudPcDeviceImage extends Entity
 
     /**
     * Gets the statusDetails
-    * The details of the image's status, which indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, and sourceImageInvalid.
+    * The details of the image's status, which indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, and sourceImageNotGeneralized.
     *
     * @return CloudPcDeviceImageStatusDetails|null The statusDetails
     */
@@ -289,7 +289,7 @@ class CloudPcDeviceImage extends Entity
 
     /**
     * Sets the statusDetails
-    * The details of the image's status, which indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, and sourceImageInvalid.
+    * The details of the image's status, which indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, and sourceImageNotGeneralized.
     *
     * @param CloudPcDeviceImageStatusDetails $val The statusDetails
     *

@@ -208,6 +208,7 @@ class CloudPcProvisioningPolicy extends Entity
 
     /**
     * Gets the microsoftManagedDesktop
+    * The specific settings for the Microsoft Managed Desktop, which enables customers to get a managed device experience for the Cloud PC. Before you can enable Microsoft Managed Desktop, an admin must configure it.
     *
     * @return MicrosoftManagedDesktop|null The microsoftManagedDesktop
     */
@@ -226,6 +227,7 @@ class CloudPcProvisioningPolicy extends Entity
 
     /**
     * Sets the microsoftManagedDesktop
+    * The specific settings for the Microsoft Managed Desktop, which enables customers to get a managed device experience for the Cloud PC. Before you can enable Microsoft Managed Desktop, an admin must configure it.
     *
     * @param MicrosoftManagedDesktop $val The microsoftManagedDesktop
     *

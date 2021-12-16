@@ -117,6 +117,39 @@ class Application extends DirectoryObject
     }
 
     /**
+    * Gets the certification
+    * Specifies the certification status of the application.
+    *
+    * @return Certification|null The certification
+    */
+    public function getCertification()
+    {
+        if (array_key_exists("certification", $this->_propDict)) {
+            if (is_a($this->_propDict["certification"], "\Beta\Microsoft\Graph\Model\Certification") || is_null($this->_propDict["certification"])) {
+                return $this->_propDict["certification"];
+            } else {
+                $this->_propDict["certification"] = new Certification($this->_propDict["certification"]);
+                return $this->_propDict["certification"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the certification
+    * Specifies the certification status of the application.
+    *
+    * @param Certification $val The certification
+    *
+    * @return Application
+    */
+    public function setCertification($val)
+    {
+        $this->_propDict["certification"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the createdDateTime
     * The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy.
     *
@@ -180,7 +213,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the description
-    * An optional description of the application. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
+    * Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
     *
     * @return string|null The description
     */
@@ -195,7 +228,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the description
-    * An optional description of the application. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
+    * Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
     *
     * @param string $val The description
     *

@@ -26,6 +26,7 @@ class EntitlementManagementSchedule extends Entity
 
     /**
     * Gets the expiration
+    * When the access should expire.
     *
     * @return ExpirationPattern|null The expiration
     */
@@ -44,6 +45,7 @@ class EntitlementManagementSchedule extends Entity
 
     /**
     * Sets the expiration
+    * When the access should expire.
     *
     * @param ExpirationPattern $val The value to assign to the expiration
     *
@@ -57,6 +59,7 @@ class EntitlementManagementSchedule extends Entity
 
     /**
     * Gets the recurrence
+    * For recurring access. Not used at present.
     *
     * @return PatternedRecurrence|null The recurrence
     */
@@ -75,6 +78,7 @@ class EntitlementManagementSchedule extends Entity
 
     /**
     * Sets the recurrence
+    * For recurring access. Not used at present.
     *
     * @param PatternedRecurrence $val The value to assign to the recurrence
     *
@@ -88,6 +92,7 @@ class EntitlementManagementSchedule extends Entity
 
     /**
     * Gets the startDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The startDateTime
     */
@@ -106,6 +111,7 @@ class EntitlementManagementSchedule extends Entity
 
     /**
     * Sets the startDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *

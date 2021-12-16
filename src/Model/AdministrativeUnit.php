@@ -26,7 +26,7 @@ class AdministrativeUnit extends DirectoryObject
 {
     /**
     * Gets the description
-    * An optional description for the administrative unit.
+    * An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith).
     *
     * @return string|null The description
     */
@@ -41,7 +41,7 @@ class AdministrativeUnit extends DirectoryObject
 
     /**
     * Sets the description
-    * An optional description for the administrative unit.
+    * An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith).
     *
     * @param string $val The description
     *
@@ -55,7 +55,7 @@ class AdministrativeUnit extends DirectoryObject
 
     /**
     * Gets the displayName
-    * Display name for the administrative unit.
+    * Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
     *
     * @return string|null The displayName
     */
@@ -70,7 +70,7 @@ class AdministrativeUnit extends DirectoryObject
 
     /**
     * Sets the displayName
-    * Display name for the administrative unit.
+    * Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
     *
     * @param string $val The displayName
     *
@@ -114,7 +114,7 @@ class AdministrativeUnit extends DirectoryObject
 
      /**
      * Gets the members
-    * Users and groups that are members of this Adminsitrative Unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).
+    * Users and groups that are members of this administrative unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).
      *
      * @return array|null The members
      */
@@ -129,7 +129,7 @@ class AdministrativeUnit extends DirectoryObject
 
     /**
     * Sets the members
-    * Users and groups that are members of this Adminsitrative Unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).
+    * Users and groups that are members of this administrative unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).
     *
     * @param DirectoryObject[] $val The members
     *
@@ -144,7 +144,7 @@ class AdministrativeUnit extends DirectoryObject
 
      /**
      * Gets the scopedRoleMembers
-    * Scoped-role members of this Administrative Unit.  HTTP Methods: GET (list scopedRoleMemberships), POST (add scopedRoleMembership), DELETE (remove scopedRoleMembership).
+    * Scoped-role members of this administrative unit.  HTTP Methods: GET (list scopedRoleMemberships), POST (add scopedRoleMembership), DELETE (remove scopedRoleMembership).
      *
      * @return array|null The scopedRoleMembers
      */
@@ -159,7 +159,7 @@ class AdministrativeUnit extends DirectoryObject
 
     /**
     * Sets the scopedRoleMembers
-    * Scoped-role members of this Administrative Unit.  HTTP Methods: GET (list scopedRoleMemberships), POST (add scopedRoleMembership), DELETE (remove scopedRoleMembership).
+    * Scoped-role members of this administrative unit.  HTTP Methods: GET (list scopedRoleMemberships), POST (add scopedRoleMembership), DELETE (remove scopedRoleMembership).
     *
     * @param ScopedRoleMembership[] $val The scopedRoleMembers
     *
@@ -174,7 +174,7 @@ class AdministrativeUnit extends DirectoryObject
 
      /**
      * Gets the extensions
-    * The collection of open extensions defined for this Administrative Unit. Nullable.
+    * The collection of open extensions defined for this administrative unit. Nullable.
      *
      * @return array|null The extensions
      */
@@ -189,7 +189,7 @@ class AdministrativeUnit extends DirectoryObject
 
     /**
     * Sets the extensions
-    * The collection of open extensions defined for this Administrative Unit. Nullable.
+    * The collection of open extensions defined for this administrative unit. Nullable.
     *
     * @param Extension[] $val The extensions
     *

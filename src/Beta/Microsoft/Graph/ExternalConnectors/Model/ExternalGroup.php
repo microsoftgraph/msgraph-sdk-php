@@ -102,7 +102,7 @@ class ExternalGroup extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the members
     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
     *
-    * @param ExternalGroupMember[] $val The members
+    * @param Identity[] $val The members
     *
     * @return ExternalGroup
     */

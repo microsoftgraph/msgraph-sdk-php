@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-*
+* 
 * MeetingAttendanceReport File
 * PHP version 7
 *
@@ -148,4 +148,5 @@ class MeetingAttendanceReport extends Entity
         $this->_propDict["attendanceRecords"] = $val;
         return $this;
     }
+
 }
