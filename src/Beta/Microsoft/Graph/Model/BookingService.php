@@ -26,6 +26,7 @@ class BookingService extends BookingNamedEntity
 {
     /**
     * Gets the additionalInformation
+    * Additional information that is sent to the customer when an appointment is confirmed.
     *
     * @return string|null The additionalInformation
     */
@@ -40,6 +41,7 @@ class BookingService extends BookingNamedEntity
 
     /**
     * Sets the additionalInformation
+    * Additional information that is sent to the customer when an appointment is confirmed.
     *
     * @param string $val The additionalInformation
     *
@@ -48,6 +50,36 @@ class BookingService extends BookingNamedEntity
     public function setAdditionalInformation($val)
     {
         $this->_propDict["additionalInformation"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the customQuestions
+    * Contains the set of custom questions associated with a particular service.
+     *
+     * @return array|null The customQuestions
+     */
+    public function getCustomQuestions()
+    {
+        if (array_key_exists("customQuestions", $this->_propDict)) {
+           return $this->_propDict["customQuestions"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customQuestions
+    * Contains the set of custom questions associated with a particular service.
+    *
+    * @param BookingQuestionAssignment[] $val The customQuestions
+    *
+    * @return BookingService
+    */
+    public function setCustomQuestions($val)
+    {
+        $this->_propDict["customQuestions"] = $val;
         return $this;
     }
 
@@ -148,7 +180,7 @@ class BookingService extends BookingNamedEntity
 
     /**
     * Gets the defaultPriceType
-    * The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.
+    * The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
     *
     * @return BookingPriceType|null The defaultPriceType
     */
@@ -167,7 +199,7 @@ class BookingService extends BookingNamedEntity
 
     /**
     * Sets the defaultPriceType
-    * The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.
+    * The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
     *
     * @param BookingPriceType $val The defaultPriceType
     *
@@ -293,6 +325,35 @@ class BookingService extends BookingNamedEntity
     public function setIsLocationOnline($val)
     {
         $this->_propDict["isLocationOnline"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the maximumAttendeesCount
+    * The maximum number of customers allowed in a service.
+    *
+    * @return int|null The maximumAttendeesCount
+    */
+    public function getMaximumAttendeesCount()
+    {
+        if (array_key_exists("maximumAttendeesCount", $this->_propDict)) {
+            return $this->_propDict["maximumAttendeesCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the maximumAttendeesCount
+    * The maximum number of customers allowed in a service.
+    *
+    * @param int $val The maximumAttendeesCount
+    *
+    * @return BookingService
+    */
+    public function setMaximumAttendeesCount($val)
+    {
+        $this->_propDict["maximumAttendeesCount"] = intval($val);
         return $this;
     }
 

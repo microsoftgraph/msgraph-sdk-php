@@ -3115,6 +3115,36 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
         return $this;
     }
 
+
+     /**
+     * Gets the systemUpdateFreezePeriods
+    * Indicates the annually repeating time periods during which system updates are postponed. This collection can contain a maximum of 500 elements.
+     *
+     * @return array|null The systemUpdateFreezePeriods
+     */
+    public function getSystemUpdateFreezePeriods()
+    {
+        if (array_key_exists("systemUpdateFreezePeriods", $this->_propDict)) {
+           return $this->_propDict["systemUpdateFreezePeriods"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the systemUpdateFreezePeriods
+    * Indicates the annually repeating time periods during which system updates are postponed. This collection can contain a maximum of 500 elements.
+    *
+    * @param AndroidDeviceOwnerSystemUpdateFreezePeriod[] $val The systemUpdateFreezePeriods
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setSystemUpdateFreezePeriods($val)
+    {
+        $this->_propDict["systemUpdateFreezePeriods"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the systemUpdateInstallType
     * The type of system update configuration. Possible values are: deviceDefault, postpone, windowed, automatic.

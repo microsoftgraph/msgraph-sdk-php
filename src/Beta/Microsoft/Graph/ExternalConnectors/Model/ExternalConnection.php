@@ -116,6 +116,33 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
     }
 
     /**
+    * Gets the ingestedItemsCount
+    *
+    * @return int|null The ingestedItemsCount
+    */
+    public function getIngestedItemsCount()
+    {
+        if (array_key_exists("ingestedItemsCount", $this->_propDict)) {
+            return $this->_propDict["ingestedItemsCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ingestedItemsCount
+    *
+    * @param int $val The ingestedItemsCount
+    *
+    * @return ExternalConnection
+    */
+    public function setIngestedItemsCount($val)
+    {
+        $this->_propDict["ingestedItemsCount"] = intval($val);
+        return $this;
+    }
+
+    /**
     * Gets the name
     * The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
     *
@@ -297,6 +324,37 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
     public function setOperations($val)
     {
         $this->_propDict["operations"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the quota
+    *
+    * @return ConnectionQuota|null The quota
+    */
+    public function getQuota()
+    {
+        if (array_key_exists("quota", $this->_propDict)) {
+            if (is_a($this->_propDict["quota"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\ConnectionQuota") || is_null($this->_propDict["quota"])) {
+                return $this->_propDict["quota"];
+            } else {
+                $this->_propDict["quota"] = new ConnectionQuota($this->_propDict["quota"]);
+                return $this->_propDict["quota"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the quota
+    *
+    * @param ConnectionQuota $val The quota
+    *
+    * @return ExternalConnection
+    */
+    public function setQuota($val)
+    {
+        $this->_propDict["quota"] = $val;
         return $this;
     }
 

@@ -249,7 +249,7 @@ class Chat extends Entity
 
     /**
     * Gets the webUrl
-    * A hyperlink that will go to the chat in Microsoft Teams. This URL should be treated as an opaque blob, and not parsed. Read-only.
+    * The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only.
     *
     * @return string|null The webUrl
     */
@@ -264,7 +264,7 @@ class Chat extends Entity
 
     /**
     * Sets the webUrl
-    * A hyperlink that will go to the chat in Microsoft Teams. This URL should be treated as an opaque blob, and not parsed. Read-only.
+    * The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only.
     *
     * @param string $val The webUrl
     *

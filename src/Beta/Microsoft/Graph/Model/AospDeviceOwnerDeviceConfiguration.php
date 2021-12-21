@@ -54,35 +54,6 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     }
 
     /**
-    * Gets the backupBlocked
-    * Indicates whether or not to block backup service.
-    *
-    * @return bool|null The backupBlocked
-    */
-    public function getBackupBlocked()
-    {
-        if (array_key_exists("backupBlocked", $this->_propDict)) {
-            return $this->_propDict["backupBlocked"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the backupBlocked
-    * Indicates whether or not to block backup service.
-    *
-    * @param bool $val The backupBlocked
-    *
-    * @return AospDeviceOwnerDeviceConfiguration
-    */
-    public function setBackupBlocked($val)
-    {
-        $this->_propDict["backupBlocked"] = boolval($val);
-        return $this;
-    }
-
-    /**
     * Gets the bluetoothBlockConfiguration
     * Indicates whether or not to block a user from configuring bluetooth.
     *
@@ -108,35 +79,6 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     public function setBluetoothBlockConfiguration($val)
     {
         $this->_propDict["bluetoothBlockConfiguration"] = boolval($val);
-        return $this;
-    }
-
-    /**
-    * Gets the bluetoothBlockContactSharing
-    * Indicates whether or not to block a user from sharing contacts via bluetooth.
-    *
-    * @return bool|null The bluetoothBlockContactSharing
-    */
-    public function getBluetoothBlockContactSharing()
-    {
-        if (array_key_exists("bluetoothBlockContactSharing", $this->_propDict)) {
-            return $this->_propDict["bluetoothBlockContactSharing"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the bluetoothBlockContactSharing
-    * Indicates whether or not to block a user from sharing contacts via bluetooth.
-    *
-    * @param bool $val The bluetoothBlockContactSharing
-    *
-    * @return AospDeviceOwnerDeviceConfiguration
-    */
-    public function setBluetoothBlockContactSharing($val)
-    {
-        $this->_propDict["bluetoothBlockContactSharing"] = boolval($val);
         return $this;
     }
 
@@ -195,35 +137,6 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     public function setCameraBlocked($val)
     {
         $this->_propDict["cameraBlocked"] = boolval($val);
-        return $this;
-    }
-
-    /**
-    * Gets the cellularBlockWiFiTethering
-    * Indicates whether or not to block Wi-Fi tethering.
-    *
-    * @return bool|null The cellularBlockWiFiTethering
-    */
-    public function getCellularBlockWiFiTethering()
-    {
-        if (array_key_exists("cellularBlockWiFiTethering", $this->_propDict)) {
-            return $this->_propDict["cellularBlockWiFiTethering"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the cellularBlockWiFiTethering
-    * Indicates whether or not to block Wi-Fi tethering.
-    *
-    * @param bool $val The cellularBlockWiFiTethering
-    *
-    * @return AospDeviceOwnerDeviceConfiguration
-    */
-    public function setCellularBlockWiFiTethering($val)
-    {
-        $this->_propDict["cellularBlockWiFiTethering"] = boolval($val);
         return $this;
     }
 

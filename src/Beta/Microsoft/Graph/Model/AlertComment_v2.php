@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* M365AlertComment File
+* AlertComment_v2 File
 * PHP version 7
 *
 * @category  Library
@@ -13,7 +13,7 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 /**
-* M365AlertComment class
+* AlertComment_v2 class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,7 +21,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class M365AlertComment extends Entity
+class AlertComment_v2 extends Entity
 {
     /**
     * Gets the comment
@@ -42,7 +42,7 @@ class M365AlertComment extends Entity
     *
     * @param string $val The value of the comment
     *
-    * @return M365AlertComment
+    * @return AlertComment_v2
     */
     public function setComment($val)
     {
@@ -68,7 +68,7 @@ class M365AlertComment extends Entity
     *
     * @param string $val The value of the createdByDisplayName
     *
-    * @return M365AlertComment
+    * @return AlertComment_v2
     */
     public function setCreatedByDisplayName($val)
     {
@@ -99,7 +99,7 @@ class M365AlertComment extends Entity
     *
     * @param \DateTime $val The value to assign to the createdDateTime
     *
-    * @return M365AlertComment The M365AlertComment
+    * @return AlertComment_v2 The AlertComment_v2
     */
     public function setCreatedDateTime($val)
     {

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* M365AlertDetermination File
+* ServiceSource File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* M365AlertDetermination class
+* ServiceSource class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,25 +24,19 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class M365AlertDetermination extends Enum
+class ServiceSource extends Enum
 {
     /**
-    * The Enum M365AlertDetermination
+    * The Enum ServiceSource
     */
     const UNKNOWN = "unknown";
-    const APT = "apt";
-    const MALWARE = "malware";
-    const SECURITY_PERSONNEL = "securityPersonnel";
-    const SECURITY_TESTING = "securityTesting";
-    const UNWANTED_SOFTWARE = "unwantedSoftware";
-    const OTHER = "other";
-    const MULTI_STAGED_ATTACK = "multiStagedAttack";
-    const COMPROMISED_USER = "compromisedUser";
-    const PHISHING = "phishing";
-    const MALICIOUS_USER_ACTIVITY = "maliciousUserActivity";
-    const CLEAN = "clean";
-    const INSUFFICIENT_DATA = "insufficientData";
-    const CONFIRMED_USER_ACTIVITY = "confirmedUserActivity";
-    const LINE_OF_BUSINESS_APPLICATION = "lineOfBusinessApplication";
+    const MICROSOFT_DEFENDER_FOR_ENDPOINT = "microsoftDefenderForEndpoint";
+    const MICROSOFT_DEFENDER_FOR_IDENTITY = "microsoftDefenderForIdentity";
+    const MICROSOFT_DEFENDER_FOR_CLOUD_APPS = "microsoftDefenderForCloudApps";
+    const MICROSOFT_DEFENDER_FOR_OFFICE365 = "microsoftDefenderForOffice365";
+    const MICROSOFT365_DEFENDER = "microsoft365Defender";
+    const AAD_IDENTITY_PROTECTION = "aadIdentityProtection";
+    const MICROSOFT_APP_GOVERNANCE = "microsoftAppGovernance";
+    const DATA_LOSS_PREVENTION = "dataLossPrevention";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
