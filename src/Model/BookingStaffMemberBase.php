@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* EducationSubmissionStatus File
+* BookingStaffMemberBase File
 * PHP version 7
 *
 * @category  Library
@@ -13,10 +13,8 @@
 */
 namespace Microsoft\Graph\Model;
 
-use Microsoft\Graph\Core\Enum;
-
 /**
-* EducationSubmissionStatus class
+* BookingStaffMemberBase class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +22,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class EducationSubmissionStatus extends Enum
+class BookingStaffMemberBase extends Entity
 {
-    /**
-    * The Enum EducationSubmissionStatus
-    */
-    const WORKING = "working";
-    const SUBMITTED = "submitted";
-    const RELEASED = "released";
-    const RETURNED = "returned";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const REASSIGNED = "reassigned";
 }

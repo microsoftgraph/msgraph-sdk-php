@@ -209,7 +209,7 @@ class RecurrencePattern extends Entity
 
     /**
     * Gets the type
-    * The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required.
+    * The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property.
     *
     * @return RecurrencePatternType|null The type
     */
@@ -228,7 +228,7 @@ class RecurrencePattern extends Entity
 
     /**
     * Sets the type
-    * The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required.
+    * The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property.
     *
     * @param RecurrencePatternType $val The value to assign to the type
     *
