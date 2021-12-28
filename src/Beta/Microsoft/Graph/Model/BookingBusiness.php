@@ -26,7 +26,7 @@ class BookingBusiness extends BookingNamedEntity
 {
     /**
     * Gets the address
-    * The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
+    * The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
     *
     * @return PhysicalAddress|null The address
     */
@@ -45,7 +45,7 @@ class BookingBusiness extends BookingNamedEntity
 
     /**
     * Sets the address
-    * The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
+    * The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
     *
     * @param PhysicalAddress $val The address
     *
@@ -410,6 +410,36 @@ class BookingBusiness extends BookingNamedEntity
     public function setCustomers($val)
     {
         $this->_propDict["customers"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the customQuestions
+    * All the custom questions of this business. Read-only. Nullable.
+     *
+     * @return array|null The customQuestions
+     */
+    public function getCustomQuestions()
+    {
+        if (array_key_exists("customQuestions", $this->_propDict)) {
+           return $this->_propDict["customQuestions"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customQuestions
+    * All the custom questions of this business. Read-only. Nullable.
+    *
+    * @param BookingCustomQuestion[] $val The customQuestions
+    *
+    * @return BookingBusiness
+    */
+    public function setCustomQuestions($val)
+    {
+        $this->_propDict["customQuestions"] = $val;
         return $this;
     }
 

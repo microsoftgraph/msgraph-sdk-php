@@ -995,7 +995,7 @@ class EducationUser extends Entity
 
      /**
      * Gets the assignments
-    * List of assignments for the user. Nullable.
+    * Assignments belonging to the user.
      *
      * @return array|null The assignments
      */
@@ -1010,7 +1010,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the assignments
-    * List of assignments for the user. Nullable.
+    * Assignments belonging to the user.
     *
     * @param EducationAssignment[] $val The assignments
     *

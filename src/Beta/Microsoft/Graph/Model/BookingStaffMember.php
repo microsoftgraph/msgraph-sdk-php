@@ -84,7 +84,7 @@ class BookingStaffMember extends BookingPerson
 
     /**
     * Gets the role
-    * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest, scheduler, and member. Required.
+    * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest and unknownFutureValue. Required.
     *
     * @return BookingStaffRole|null The role
     */
@@ -103,7 +103,7 @@ class BookingStaffMember extends BookingPerson
 
     /**
     * Sets the role
-    * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest, scheduler, and member. Required.
+    * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest and unknownFutureValue. Required.
     *
     * @param BookingStaffRole $val The role
     *

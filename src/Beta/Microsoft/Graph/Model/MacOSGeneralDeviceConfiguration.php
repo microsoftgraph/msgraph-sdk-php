@@ -755,6 +755,35 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     }
 
     /**
+    * Gets the iCloudDesktopAndDocumentsBlocked
+    * When TRUE the synchronization of cloud desktop and documents is blocked. When FALSE, synchronization of the cloud desktop and documents are allowed. Available for devices running macOS 10.12.4 and later.
+    *
+    * @return bool|null The iCloudDesktopAndDocumentsBlocked
+    */
+    public function getICloudDesktopAndDocumentsBlocked()
+    {
+        if (array_key_exists("iCloudDesktopAndDocumentsBlocked", $this->_propDict)) {
+            return $this->_propDict["iCloudDesktopAndDocumentsBlocked"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the iCloudDesktopAndDocumentsBlocked
+    * When TRUE the synchronization of cloud desktop and documents is blocked. When FALSE, synchronization of the cloud desktop and documents are allowed. Available for devices running macOS 10.12.4 and later.
+    *
+    * @param bool $val The iCloudDesktopAndDocumentsBlocked
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setICloudDesktopAndDocumentsBlocked($val)
+    {
+        $this->_propDict["iCloudDesktopAndDocumentsBlocked"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the iCloudPrivateRelayBlocked
     * iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running macOS 12 and later.
     *

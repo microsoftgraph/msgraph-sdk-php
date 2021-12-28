@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* MacOSSoftwareUpdateBehavior File
+* BookingCustomerInformationBase File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* MacOSSoftwareUpdateBehavior class
+* BookingCustomerInformationBase class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class MacOSSoftwareUpdateBehavior extends Enum
+class BookingCustomerInformationBase extends Entity
 {
-    /**
-    * The Enum MacOSSoftwareUpdateBehavior
-    */
-    const NOT_CONFIGURED = "notConfigured";
-    const GRAPHDEFAULT = "default";
-    const DOWNLOAD_ONLY = "downloadOnly";
-    const INSTALL_ASAP = "installASAP";
-    const NOTIFY_ONLY = "notifyOnly";
-    const INSTALL_LATER = "installLater";
 }
