@@ -293,7 +293,7 @@ class AccessPackageResourceRequest extends Entity
 
     /**
     * Gets the requestor
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $expand.
     *
     * @return AccessPackageSubject|null The requestor
     */
@@ -312,7 +312,7 @@ class AccessPackageResourceRequest extends Entity
 
     /**
     * Sets the requestor
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $expand.
     *
     * @param AccessPackageSubject $val The requestor
     *

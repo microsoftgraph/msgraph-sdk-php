@@ -203,6 +203,7 @@ class SignIn extends Entity
 
     /**
     * Gets the authenticationProtocol
+    * Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue. For authentications that use protocols other than the possible values listed, the protocol type is listed as none.
     *
     * @return ProtocolType|null The authenticationProtocol
     */
@@ -221,6 +222,7 @@ class SignIn extends Entity
 
     /**
     * Sets the authenticationProtocol
+    * Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue. For authentications that use protocols other than the possible values listed, the protocol type is listed as none.
     *
     * @param ProtocolType $val The authenticationProtocol
     *
@@ -264,6 +266,7 @@ class SignIn extends Entity
 
      /**
      * Gets the authenticationRequirementPolicies
+    * Sources of authentication requirement, such as conditional access, per-user MFA, identity protection, and security defaults.
      *
      * @return array|null The authenticationRequirementPolicies
      */
@@ -278,6 +281,7 @@ class SignIn extends Entity
 
     /**
     * Sets the authenticationRequirementPolicies
+    * Sources of authentication requirement, such as conditional access, per-user MFA, identity protection, and security defaults.
     *
     * @param AuthenticationRequirementPolicy[] $val The authenticationRequirementPolicies
     *
@@ -291,6 +295,7 @@ class SignIn extends Entity
 
     /**
     * Gets the autonomousSystemNumber
+    * The Autonomous System Number (ASN) of the network used by the actor.
     *
     * @return int|null The autonomousSystemNumber
     */
@@ -305,6 +310,7 @@ class SignIn extends Entity
 
     /**
     * Sets the autonomousSystemNumber
+    * The Autonomous System Number (ASN) of the network used by the actor.
     *
     * @param int $val The autonomousSystemNumber
     *
@@ -442,6 +448,7 @@ class SignIn extends Entity
 
     /**
     * Gets the crossTenantAccessType
+    * Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue. If the sign in did not cross tenant boundaries, the value is none.
     *
     * @return SignInAccessType|null The crossTenantAccessType
     */
@@ -460,6 +467,7 @@ class SignIn extends Entity
 
     /**
     * Sets the crossTenantAccessType
+    * Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue. If the sign in did not cross tenant boundaries, the value is none.
     *
     * @param SignInAccessType $val The crossTenantAccessType
     *
@@ -506,6 +514,7 @@ class SignIn extends Entity
 
     /**
     * Gets the flaggedForReview
+    * During a failed sign in, a user may click a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true.
     *
     * @return bool|null The flaggedForReview
     */
@@ -520,6 +529,7 @@ class SignIn extends Entity
 
     /**
     * Sets the flaggedForReview
+    * During a failed sign in, a user may click a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true.
     *
     * @param bool $val The flaggedForReview
     *
@@ -533,6 +543,7 @@ class SignIn extends Entity
 
     /**
     * Gets the homeTenantId
+    * The tenant identifier of the user initiating the sign in. Not applicable in Managed Identity or service principal sign ins.
     *
     * @return string|null The homeTenantId
     */
@@ -547,6 +558,7 @@ class SignIn extends Entity
 
     /**
     * Sets the homeTenantId
+    * The tenant identifier of the user initiating the sign in. Not applicable in Managed Identity or service principal sign ins.
     *
     * @param string $val The homeTenantId
     *
@@ -560,6 +572,7 @@ class SignIn extends Entity
 
     /**
     * Gets the homeTenantName
+    * For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content.
     *
     * @return string|null The homeTenantName
     */
@@ -574,6 +587,7 @@ class SignIn extends Entity
 
     /**
     * Sets the homeTenantName
+    * For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content.
     *
     * @param string $val The homeTenantName
     *
@@ -587,6 +601,7 @@ class SignIn extends Entity
 
     /**
     * Gets the incomingTokenType
+    * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed.
     *
     * @return IncomingTokenType|null The incomingTokenType
     */
@@ -605,6 +620,7 @@ class SignIn extends Entity
 
     /**
     * Sets the incomingTokenType
+    * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed.
     *
     * @param IncomingTokenType $val The incomingTokenType
     *
@@ -647,6 +663,7 @@ class SignIn extends Entity
 
     /**
     * Gets the ipAddressFromResourceProvider
+    * The IP address a user used to reach a resource provider, used to determine Conditional Access compliance for some policies. For example, when a user interacts with Exchange Online, the IP address Exchange receives from the user may be recorded here. This value is often null.
     *
     * @return string|null The ipAddressFromResourceProvider
     */
@@ -661,6 +678,7 @@ class SignIn extends Entity
 
     /**
     * Sets the ipAddressFromResourceProvider
+    * The IP address a user used to reach a resource provider, used to determine Conditional Access compliance for some policies. For example, when a user interacts with Exchange Online, the IP address Exchange receives from the user may be recorded here. This value is often null.
     *
     * @param string $val The ipAddressFromResourceProvider
     *
@@ -703,6 +721,7 @@ class SignIn extends Entity
 
     /**
     * Gets the isTenantRestricted
+    * Shows whether the sign in event was subject to an Azure AD tenant restriction policy.
     *
     * @return bool|null The isTenantRestricted
     */
@@ -717,6 +736,7 @@ class SignIn extends Entity
 
     /**
     * Sets the isTenantRestricted
+    * Shows whether the sign in event was subject to an Azure AD tenant restriction policy.
     *
     * @param bool $val The isTenantRestricted
     *
@@ -853,6 +873,7 @@ class SignIn extends Entity
 
     /**
     * Gets the privateLinkDetails
+    * Contains information about the Azure AD Private Link policy that is associated with the sign in event.
     *
     * @return PrivateLinkDetails|null The privateLinkDetails
     */
@@ -871,6 +892,7 @@ class SignIn extends Entity
 
     /**
     * Sets the privateLinkDetails
+    * Contains information about the Azure AD Private Link policy that is associated with the sign in event.
     *
     * @param PrivateLinkDetails $val The privateLinkDetails
     *
@@ -971,6 +993,7 @@ class SignIn extends Entity
 
     /**
     * Gets the resourceTenantId
+    * The tenant identifier of the resource referenced in the sign in.
     *
     * @return string|null The resourceTenantId
     */
@@ -985,6 +1008,7 @@ class SignIn extends Entity
 
     /**
     * Sets the resourceTenantId
+    * The tenant identifier of the resource referenced in the sign in.
     *
     * @param string $val The resourceTenantId
     *
@@ -1159,6 +1183,7 @@ class SignIn extends Entity
 
     /**
     * Gets the servicePrincipalCredentialKeyId
+    * The unique identifier of the key credential used by the service principal to authenticate.
     *
     * @return string|null The servicePrincipalCredentialKeyId
     */
@@ -1173,6 +1198,7 @@ class SignIn extends Entity
 
     /**
     * Sets the servicePrincipalCredentialKeyId
+    * The unique identifier of the key credential used by the service principal to authenticate.
     *
     * @param string $val The servicePrincipalCredentialKeyId
     *
@@ -1186,6 +1212,7 @@ class SignIn extends Entity
 
     /**
     * Gets the servicePrincipalCredentialThumbprint
+    * The certificate thumbprint of the certificate used by the service principal to authenticate.
     *
     * @return string|null The servicePrincipalCredentialThumbprint
     */
@@ -1200,6 +1227,7 @@ class SignIn extends Entity
 
     /**
     * Sets the servicePrincipalCredentialThumbprint
+    * The certificate thumbprint of the certificate used by the service principal to authenticate.
     *
     * @param string $val The servicePrincipalCredentialThumbprint
     *
@@ -1271,6 +1299,7 @@ class SignIn extends Entity
 
     /**
     * Gets the signInEventTypes
+    * Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue. Supports $filter (eq operator only).
     *
     * @return string|null The signInEventTypes
     */
@@ -1285,6 +1314,7 @@ class SignIn extends Entity
 
     /**
     * Sets the signInEventTypes
+    * Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue. Supports $filter (eq operator only).
     *
     * @param string $val The signInEventTypes
     *
@@ -1298,6 +1328,7 @@ class SignIn extends Entity
 
     /**
     * Gets the signInIdentifier
+    * The identification that the user provided to sign in. It may be the userPrincipalName but it's also populated when a user signs in using other identifiers.
     *
     * @return string|null The signInIdentifier
     */
@@ -1312,6 +1343,7 @@ class SignIn extends Entity
 
     /**
     * Sets the signInIdentifier
+    * The identification that the user provided to sign in. It may be the userPrincipalName but it's also populated when a user signs in using other identifiers.
     *
     * @param string $val The signInIdentifier
     *
@@ -1325,6 +1357,7 @@ class SignIn extends Entity
 
     /**
     * Gets the signInIdentifierType
+    * The type of sign in identifier. Possible values are: userPrincipalName, phoneNumber, proxyAddress, qrCode, onPremisesUserPrincipalName, unknownFutureValue.
     *
     * @return SignInIdentifierType|null The signInIdentifierType
     */
@@ -1343,6 +1376,7 @@ class SignIn extends Entity
 
     /**
     * Sets the signInIdentifierType
+    * The type of sign in identifier. Possible values are: userPrincipalName, phoneNumber, proxyAddress, qrCode, onPremisesUserPrincipalName, unknownFutureValue.
     *
     * @param SignInIdentifierType $val The signInIdentifierType
     *
@@ -1418,7 +1452,7 @@ class SignIn extends Entity
 
     /**
     * Gets the tokenIssuerType
-    * The type of identity provider. Possible values: AzureAD, ADFederationServices, or UnknownFutureValue.
+    * The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: AzureADBackupAuth.
     *
     * @return TokenIssuerType|null The tokenIssuerType
     */
@@ -1437,7 +1471,7 @@ class SignIn extends Entity
 
     /**
     * Sets the tokenIssuerType
-    * The type of identity provider. Possible values: AzureAD, ADFederationServices, or UnknownFutureValue.
+    * The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: AzureADBackupAuth.
     *
     * @param TokenIssuerType $val The tokenIssuerType
     *
@@ -1451,6 +1485,7 @@ class SignIn extends Entity
 
     /**
     * Gets the uniqueTokenIdentifier
+    * A unique base64 encoded request identifier used to track tokens issued by Azure AD as they are redeemed at resource providers.
     *
     * @return string|null The uniqueTokenIdentifier
     */
@@ -1465,6 +1500,7 @@ class SignIn extends Entity
 
     /**
     * Sets the uniqueTokenIdentifier
+    * A unique base64 encoded request identifier used to track tokens issued by Azure AD as they are redeemed at resource providers.
     *
     * @param string $val The uniqueTokenIdentifier
     *
@@ -1594,6 +1630,7 @@ class SignIn extends Entity
 
     /**
     * Gets the userType
+    * Identifies whether the user is a member or guest in the tenant. Possible values are: member, guest, unknownFutureValue.
     *
     * @return SignInUserType|null The userType
     */
@@ -1612,6 +1649,7 @@ class SignIn extends Entity
 
     /**
     * Sets the userType
+    * Identifies whether the user is a member or guest in the tenant. Possible values are: member, guest, unknownFutureValue.
     *
     * @param SignInUserType $val The userType
     *

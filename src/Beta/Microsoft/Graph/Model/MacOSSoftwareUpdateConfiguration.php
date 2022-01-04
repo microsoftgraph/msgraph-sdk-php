@@ -26,7 +26,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the allOtherUpdateBehavior
-    * Update behavior for all other updates. Possible values are: notConfigured, default.
+    * Update behavior for all other updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater.
     *
     * @return MacOSSoftwareUpdateBehavior|null The allOtherUpdateBehavior
     */
@@ -45,7 +45,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
 
     /**
     * Sets the allOtherUpdateBehavior
-    * Update behavior for all other updates. Possible values are: notConfigured, default.
+    * Update behavior for all other updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater.
     *
     * @param MacOSSoftwareUpdateBehavior $val The allOtherUpdateBehavior
     *
@@ -59,7 +59,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
 
     /**
     * Gets the configDataUpdateBehavior
-    * Update behavior for configuration data file updates. Possible values are: notConfigured, default.
+    * Update behavior for configuration data file updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater.
     *
     * @return MacOSSoftwareUpdateBehavior|null The configDataUpdateBehavior
     */
@@ -78,7 +78,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
 
     /**
     * Sets the configDataUpdateBehavior
-    * Update behavior for configuration data file updates. Possible values are: notConfigured, default.
+    * Update behavior for configuration data file updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater.
     *
     * @param MacOSSoftwareUpdateBehavior $val The configDataUpdateBehavior
     *
@@ -92,7 +92,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
 
     /**
     * Gets the criticalUpdateBehavior
-    * Update behavior for critical updates. Possible values are: notConfigured, default.
+    * Update behavior for critical updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater.
     *
     * @return MacOSSoftwareUpdateBehavior|null The criticalUpdateBehavior
     */
@@ -111,7 +111,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
 
     /**
     * Sets the criticalUpdateBehavior
-    * Update behavior for critical updates. Possible values are: notConfigured, default.
+    * Update behavior for critical updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater.
     *
     * @param MacOSSoftwareUpdateBehavior $val The criticalUpdateBehavior
     *
@@ -155,7 +155,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
 
     /**
     * Gets the firmwareUpdateBehavior
-    * Update behavior for firmware updates. Possible values are: notConfigured, default.
+    * Update behavior for firmware updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater.
     *
     * @return MacOSSoftwareUpdateBehavior|null The firmwareUpdateBehavior
     */
@@ -174,7 +174,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
 
     /**
     * Sets the firmwareUpdateBehavior
-    * Update behavior for firmware updates. Possible values are: notConfigured, default.
+    * Update behavior for firmware updates. Possible values are: notConfigured, default, downloadOnly, installASAP, notifyOnly, installLater.
     *
     * @param MacOSSoftwareUpdateBehavior $val The firmwareUpdateBehavior
     *

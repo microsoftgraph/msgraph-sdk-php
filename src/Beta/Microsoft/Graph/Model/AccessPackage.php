@@ -26,7 +26,7 @@ class AccessPackage extends Entity
 {
     /**
     * Gets the catalogId
-    * ID of the access package catalog referencing this access package. Read-only.
+    * Identifier of the access package catalog referencing this access package. Read-only.
     *
     * @return string|null The catalogId
     */
@@ -41,7 +41,7 @@ class AccessPackage extends Entity
 
     /**
     * Sets the catalogId
-    * ID of the access package catalog referencing this access package. Read-only.
+    * Identifier of the access package catalog referencing this access package. Read-only.
     *
     * @param string $val The catalogId
     *
@@ -55,7 +55,7 @@ class AccessPackage extends Entity
 
     /**
     * Gets the createdBy
-    * UPN of the user or identity of the subject who created this resource. Read-only.
+    * The userPrincipalName of the user or identity of the subject who created this resource. Read-only.
     *
     * @return string|null The createdBy
     */
@@ -70,7 +70,7 @@ class AccessPackage extends Entity
 
     /**
     * Sets the createdBy
-    * UPN of the user or identity of the subject who created this resource. Read-only.
+    * The userPrincipalName of the user or identity of the subject who created this resource. Read-only.
     *
     * @param string $val The createdBy
     *
@@ -146,7 +146,7 @@ class AccessPackage extends Entity
 
     /**
     * Gets the displayName
-    * The display name of the access package.
+    * The display name of the access package. Supports $filter (eq, contains).
     *
     * @return string|null The displayName
     */
@@ -161,7 +161,7 @@ class AccessPackage extends Entity
 
     /**
     * Sets the displayName
-    * The display name of the access package.
+    * The display name of the access package. Supports $filter (eq, contains).
     *
     * @param string $val The displayName
     *
@@ -233,7 +233,7 @@ class AccessPackage extends Entity
 
     /**
     * Gets the modifiedBy
-    * The UPN of the user who last modified this resource. Read-only.
+    * The userPrincipalName of the user who last modified this resource. Read-only.
     *
     * @return string|null The modifiedBy
     */
@@ -248,7 +248,7 @@ class AccessPackage extends Entity
 
     /**
     * Sets the modifiedBy
-    * The UPN of the user who last modified this resource. Read-only.
+    * The userPrincipalName of the user who last modified this resource. Read-only.
     *
     * @param string $val The modifiedBy
     *
@@ -296,7 +296,7 @@ class AccessPackage extends Entity
 
      /**
      * Gets the accessPackageAssignmentPolicies
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $expand.
      *
      * @return array|null The accessPackageAssignmentPolicies
      */
@@ -311,7 +311,7 @@ class AccessPackage extends Entity
 
     /**
     * Sets the accessPackageAssignmentPolicies
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $expand.
     *
     * @param AccessPackageAssignmentPolicy[] $val The accessPackageAssignmentPolicies
     *

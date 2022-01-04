@@ -150,7 +150,7 @@ class AccessPackageResourceRoleScope extends Entity
 
     /**
     * Gets the accessPackageResourceRole
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $expand.
     *
     * @return AccessPackageResourceRole|null The accessPackageResourceRole
     */
@@ -169,7 +169,7 @@ class AccessPackageResourceRoleScope extends Entity
 
     /**
     * Sets the accessPackageResourceRole
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $expand.
     *
     * @param AccessPackageResourceRole $val The accessPackageResourceRole
     *
