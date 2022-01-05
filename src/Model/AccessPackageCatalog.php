@@ -26,7 +26,7 @@ class AccessPackageCatalog extends Entity
 {
     /**
     * Gets the catalogType
-    * One of UserManaged or ServiceDefault.
+    * Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
     *
     * @return AccessPackageCatalogType|null The catalogType
     */
@@ -45,7 +45,7 @@ class AccessPackageCatalog extends Entity
 
     /**
     * Sets the catalogType
-    * One of UserManaged or ServiceDefault.
+    * Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
     *
     * @param AccessPackageCatalogType $val The catalogType
     *
@@ -212,6 +212,7 @@ class AccessPackageCatalog extends Entity
 
     /**
     * Gets the state
+    * Has the value published if the access packages are available for management. The possible values are: unpublished, published, unknownFutureValue.
     *
     * @return AccessPackageCatalogState|null The state
     */
@@ -230,6 +231,7 @@ class AccessPackageCatalog extends Entity
 
     /**
     * Sets the state
+    * Has the value published if the access packages are available for management. The possible values are: unpublished, published, unknownFutureValue.
     *
     * @param AccessPackageCatalogState $val The state
     *

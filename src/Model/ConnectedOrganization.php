@@ -88,7 +88,7 @@ class ConnectedOrganization extends Entity
 
     /**
     * Gets the displayName
-    * The display name of the connected organization.
+    * The display name of the connected organization. Supports $filter (eq).
     *
     * @return string|null The displayName
     */
@@ -103,7 +103,7 @@ class ConnectedOrganization extends Entity
 
     /**
     * Sets the displayName
-    * The display name of the connected organization.
+    * The display name of the connected organization. Supports $filter (eq).
     *
     * @param string $val The displayName
     *
@@ -118,6 +118,7 @@ class ConnectedOrganization extends Entity
 
      /**
      * Gets the identitySources
+    * The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Nullable.
      *
      * @return IdentitySource[]|null The identitySources
      */
@@ -139,6 +140,7 @@ class ConnectedOrganization extends Entity
 
     /**
     * Sets the identitySources
+    * The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Nullable.
     *
     * @param IdentitySource[] $val The identitySources
     *
@@ -185,7 +187,7 @@ class ConnectedOrganization extends Entity
 
     /**
     * Gets the state
-    * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
+    * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
     *
     * @return ConnectedOrganizationState|null The state
     */
@@ -204,7 +206,7 @@ class ConnectedOrganization extends Entity
 
     /**
     * Sets the state
-    * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
+    * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
     *
     * @param ConnectedOrganizationState $val The state
     *

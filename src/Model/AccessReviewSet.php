@@ -27,6 +27,7 @@ class AccessReviewSet extends Entity
 
      /**
      * Gets the definitions
+    * Represents the template and scheduling for an access review.
      *
      * @return AccessReviewScheduleDefinition[]|null The definitions
      */
@@ -48,6 +49,7 @@ class AccessReviewSet extends Entity
 
     /**
     * Sets the definitions
+    * Represents the template and scheduling for an access review.
     *
     * @param AccessReviewScheduleDefinition[] $val The definitions
     *

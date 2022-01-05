@@ -1022,6 +1022,43 @@ class EducationUser extends Entity
 
 
      /**
+     * Gets the assignments
+    * Assignments belonging to the user.
+     *
+     * @return EducationAssignment[]|null The assignments
+     */
+    public function getAssignments()
+    {
+        if (array_key_exists('assignments', $this->_propDict) && !is_null($this->_propDict['assignments'])) {
+            $assignments = [];
+            if (count($this->_propDict['assignments']) > 0 && is_a($this->_propDict['assignments'][0], 'EducationAssignment')) {
+                return $this->_propDict['assignments'];
+            }
+            foreach ($this->_propDict['assignments'] as $singleValue) {
+                $assignments []= new EducationAssignment($singleValue);
+            }
+            $this->_propDict['assignments'] = $assignments;
+            return $this->_propDict['assignments'];
+        }
+        return null;
+    }
+
+    /**
+    * Sets the assignments
+    * Assignments belonging to the user.
+    *
+    * @param EducationAssignment[] $val The assignments
+    *
+    * @return EducationUser
+    */
+    public function setAssignments($val)
+    {
+        $this->_propDict["assignments"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the rubrics
      *
      * @return EducationRubric[]|null The rubrics

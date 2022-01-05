@@ -90,7 +90,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Gets the requestType
-    * One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
+    * The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set.
     *
     * @return AccessPackageRequestType|null The requestType
     */
@@ -109,7 +109,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Sets the requestType
-    * One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
+    * The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set.
     *
     * @param AccessPackageRequestType $val The requestType
     *
@@ -123,7 +123,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Gets the schedule
-    * The range of dates that access is to be assigned to the requestor. Read-only.
+    * The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
     *
     * @return EntitlementManagementSchedule|null The schedule
     */
@@ -142,7 +142,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Sets the schedule
-    * The range of dates that access is to be assigned to the requestor. Read-only.
+    * The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
     *
     * @param EntitlementManagementSchedule $val The schedule
     *
@@ -156,6 +156,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Gets the state
+    * The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only.
     *
     * @return AccessPackageRequestState|null The state
     */
@@ -174,6 +175,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Sets the state
+    * The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only.
     *
     * @param AccessPackageRequestState $val The state
     *
@@ -187,6 +189,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Gets the status
+    * More information on the request processing status. Read-only.
     *
     * @return string|null The status
     */
@@ -201,6 +204,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Sets the status
+    * More information on the request processing status. Read-only.
     *
     * @param string $val The status
     *
@@ -247,6 +251,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Gets the assignment
+    * For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
     *
     * @return AccessPackageAssignment|null The assignment
     */
@@ -265,6 +270,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Sets the assignment
+    * For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
     *
     * @param AccessPackageAssignment $val The assignment
     *

@@ -25,6 +25,72 @@ namespace Microsoft\Graph\Model;
 class EducationSubmission extends Entity
 {
     /**
+    * Gets the reassignedBy
+    * User who moved the status of this submission to reassigned.
+    *
+    * @return IdentitySet|null The reassignedBy
+    */
+    public function getReassignedBy()
+    {
+        if (array_key_exists("reassignedBy", $this->_propDict) && !is_null($this->_propDict["reassignedBy"])) {
+            if (is_a($this->_propDict["reassignedBy"], "\Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["reassignedBy"];
+            } else {
+                $this->_propDict["reassignedBy"] = new IdentitySet($this->_propDict["reassignedBy"]);
+                return $this->_propDict["reassignedBy"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the reassignedBy
+    * User who moved the status of this submission to reassigned.
+    *
+    * @param IdentitySet $val The reassignedBy
+    *
+    * @return EducationSubmission
+    */
+    public function setReassignedBy($val)
+    {
+        $this->_propDict["reassignedBy"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the reassignedDateTime
+    * Moment in time when the submission was reassigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    *
+    * @return \DateTime|null The reassignedDateTime
+    */
+    public function getReassignedDateTime()
+    {
+        if (array_key_exists("reassignedDateTime", $this->_propDict) && !is_null($this->_propDict["reassignedDateTime"])) {
+            if (is_a($this->_propDict["reassignedDateTime"], "\DateTime")) {
+                return $this->_propDict["reassignedDateTime"];
+            } else {
+                $this->_propDict["reassignedDateTime"] = new \DateTime($this->_propDict["reassignedDateTime"]);
+                return $this->_propDict["reassignedDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the reassignedDateTime
+    * Moment in time when the submission was reassigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    *
+    * @param \DateTime $val The reassignedDateTime
+    *
+    * @return EducationSubmission
+    */
+    public function setReassignedDateTime($val)
+    {
+        $this->_propDict["reassignedDateTime"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the recipient
     * Who this submission is assigned to.
     *
@@ -154,7 +220,7 @@ class EducationSubmission extends Entity
 
     /**
     * Gets the status
-    * Read-Only. Possible values are: working, submitted, released, returned.
+    * Read-only. Possible values are: working, submitted, released, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
     *
     * @return EducationSubmissionStatus|null The status
     */
@@ -173,7 +239,7 @@ class EducationSubmission extends Entity
 
     /**
     * Sets the status
-    * Read-Only. Possible values are: working, submitted, released, returned.
+    * Read-only. Possible values are: working, submitted, released, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
     *
     * @param EducationSubmissionStatus $val The status
     *

@@ -25,6 +25,7 @@ class ConnectedOrganizationMembers extends SubjectSet
 {
     /**
     * Gets the connectedOrganizationId
+    * The ID of the connected organization in entitlement management.
     *
     * @return string|null The connectedOrganizationId
     */
@@ -39,6 +40,7 @@ class ConnectedOrganizationMembers extends SubjectSet
 
     /**
     * Sets the connectedOrganizationId
+    * The ID of the connected organization in entitlement management.
     *
     * @param string $val The value of the connectedOrganizationId
     *
@@ -51,7 +53,7 @@ class ConnectedOrganizationMembers extends SubjectSet
     }
     /**
     * Gets the description
-    * The name of the connected organization. Read only.
+    * The name of the connected organization.
     *
     * @return string|null The description
     */
@@ -66,7 +68,7 @@ class ConnectedOrganizationMembers extends SubjectSet
 
     /**
     * Sets the description
-    * The name of the connected organization. Read only.
+    * The name of the connected organization.
     *
     * @param string $val The value of the description
     *

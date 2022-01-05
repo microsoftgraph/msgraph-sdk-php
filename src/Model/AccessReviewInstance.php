@@ -228,6 +228,43 @@ class AccessReviewInstance extends Entity
 
 
      /**
+     * Gets the contactedReviewers
+    * Returns the collection of reviewers who were contacted to complete this review. While the reviewers and fallbackReviewers properties of the accessReviewScheduleDefinition might specify group owners or managers as reviewers, contactedReviewers returns their individual identities. Supports $select. Read-only.
+     *
+     * @return AccessReviewReviewer[]|null The contactedReviewers
+     */
+    public function getContactedReviewers()
+    {
+        if (array_key_exists('contactedReviewers', $this->_propDict) && !is_null($this->_propDict['contactedReviewers'])) {
+            $contactedReviewers = [];
+            if (count($this->_propDict['contactedReviewers']) > 0 && is_a($this->_propDict['contactedReviewers'][0], 'AccessReviewReviewer')) {
+                return $this->_propDict['contactedReviewers'];
+            }
+            foreach ($this->_propDict['contactedReviewers'] as $singleValue) {
+                $contactedReviewers []= new AccessReviewReviewer($singleValue);
+            }
+            $this->_propDict['contactedReviewers'] = $contactedReviewers;
+            return $this->_propDict['contactedReviewers'];
+        }
+        return null;
+    }
+
+    /**
+    * Sets the contactedReviewers
+    * Returns the collection of reviewers who were contacted to complete this review. While the reviewers and fallbackReviewers properties of the accessReviewScheduleDefinition might specify group owners or managers as reviewers, contactedReviewers returns their individual identities. Supports $select. Read-only.
+    *
+    * @param AccessReviewReviewer[] $val The contactedReviewers
+    *
+    * @return AccessReviewInstance
+    */
+    public function setContactedReviewers($val)
+    {
+        $this->_propDict["contactedReviewers"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the decisions
     * Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
      *

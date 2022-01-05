@@ -58,6 +58,39 @@ class EducationAssignment extends Entity
     }
 
     /**
+    * Gets the addToCalendarAction
+    * Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
+    *
+    * @return EducationAddToCalendarOptions|null The addToCalendarAction
+    */
+    public function getAddToCalendarAction()
+    {
+        if (array_key_exists("addToCalendarAction", $this->_propDict) && !is_null($this->_propDict["addToCalendarAction"])) {
+            if (is_a($this->_propDict["addToCalendarAction"], "\Microsoft\Graph\Model\EducationAddToCalendarOptions")) {
+                return $this->_propDict["addToCalendarAction"];
+            } else {
+                $this->_propDict["addToCalendarAction"] = new EducationAddToCalendarOptions($this->_propDict["addToCalendarAction"]);
+                return $this->_propDict["addToCalendarAction"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the addToCalendarAction
+    * Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
+    *
+    * @param EducationAddToCalendarOptions $val The addToCalendarAction
+    *
+    * @return EducationAssignment
+    */
+    public function setAddToCalendarAction($val)
+    {
+        $this->_propDict["addToCalendarAction"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the allowLateSubmissions
     * Identifies whether students can submit after the due date. If this property isn't specified during create, it defaults to true.
     *

@@ -121,7 +121,7 @@ class SignIn extends Entity
 
     /**
     * Gets the clientAppUsed
-    * Identifies the legacy client used for sign-in activity.  Includes Browser, Exchange Active Sync, modern clients, IMAP, MAPI, SMTP, and POP. Supports $filter (eq operator only).
+    * Identifies the client used for the sign-in activity. Modern authentication clients include Browser and modern clients. Legacy authentication clients include Exchange Active Sync, IMAP, MAPI, SMTP, POP, and other clients. Supports $filter (eq operator only).
     *
     * @return string|null The clientAppUsed
     */
@@ -136,7 +136,7 @@ class SignIn extends Entity
 
     /**
     * Sets the clientAppUsed
-    * Identifies the legacy client used for sign-in activity.  Includes Browser, Exchange Active Sync, modern clients, IMAP, MAPI, SMTP, and POP. Supports $filter (eq operator only).
+    * Identifies the client used for the sign-in activity. Modern authentication clients include Browser and modern clients. Legacy authentication clients include Exchange Active Sync, IMAP, MAPI, SMTP, POP, and other clients. Supports $filter (eq operator only).
     *
     * @param string $val The clientAppUsed
     *
