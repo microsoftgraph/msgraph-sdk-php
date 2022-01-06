@@ -26,6 +26,7 @@ class AgreementFileProperties extends Entity
 {
     /**
     * Gets the createdDateTime
+    * The date time representing when the file was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -44,6 +45,7 @@ class AgreementFileProperties extends Entity
 
     /**
     * Sets the createdDateTime
+    * The date time representing when the file was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -57,6 +59,7 @@ class AgreementFileProperties extends Entity
 
     /**
     * Gets the displayName
+    * Localized display name of the policy file of an agreement. The localized display name is shown to end users who view the agreement.
     *
     * @return string|null The displayName
     */
@@ -71,6 +74,7 @@ class AgreementFileProperties extends Entity
 
     /**
     * Sets the displayName
+    * Localized display name of the policy file of an agreement. The localized display name is shown to end users who view the agreement.
     *
     * @param string $val The displayName
     *
@@ -84,6 +88,7 @@ class AgreementFileProperties extends Entity
 
     /**
     * Gets the fileData
+    * Data that represents the terms of use PDF document. Read-only.
     *
     * @return AgreementFileData|null The fileData
     */
@@ -102,6 +107,7 @@ class AgreementFileProperties extends Entity
 
     /**
     * Sets the fileData
+    * Data that represents the terms of use PDF document. Read-only.
     *
     * @param AgreementFileData $val The fileData
     *
@@ -115,6 +121,7 @@ class AgreementFileProperties extends Entity
 
     /**
     * Gets the fileName
+    * Name of the agreement file (for example, TOU.pdf). Read-only.
     *
     * @return string|null The fileName
     */
@@ -129,6 +136,7 @@ class AgreementFileProperties extends Entity
 
     /**
     * Sets the fileName
+    * Name of the agreement file (for example, TOU.pdf). Read-only.
     *
     * @param string $val The fileName
     *
@@ -142,6 +150,7 @@ class AgreementFileProperties extends Entity
 
     /**
     * Gets the isDefault
+    * If none of the languages matches the client preference, indicates whether this is the default agreement file . If none of the files are marked as default, the first one is treated as the default. Read-only.
     *
     * @return bool|null The isDefault
     */
@@ -156,6 +165,7 @@ class AgreementFileProperties extends Entity
 
     /**
     * Sets the isDefault
+    * If none of the languages matches the client preference, indicates whether this is the default agreement file . If none of the files are marked as default, the first one is treated as the default. Read-only.
     *
     * @param bool $val The isDefault
     *
@@ -169,6 +179,7 @@ class AgreementFileProperties extends Entity
 
     /**
     * Gets the isMajorVersion
+    * Indicates whether the agreement file is a major version update. Major version updates invalidate the agreement's acceptances on the corresponding language.
     *
     * @return bool|null The isMajorVersion
     */
@@ -183,6 +194,7 @@ class AgreementFileProperties extends Entity
 
     /**
     * Sets the isMajorVersion
+    * Indicates whether the agreement file is a major version update. Major version updates invalidate the agreement's acceptances on the corresponding language.
     *
     * @param bool $val The isMajorVersion
     *
@@ -196,6 +208,7 @@ class AgreementFileProperties extends Entity
 
     /**
     * Gets the language
+    * The language of the agreement file in the format 'languagecode2-country/regioncode2'. 'languagecode2' is a lowercase two-letter code derived from ISO 639-1, while 'country/regioncode2' is derived from ISO 3166 and usually consists of two uppercase letters, or a BCP-47 language tag. For example, U.S. English is en-US. Read-only.
     *
     * @return string|null The language
     */
@@ -210,6 +223,7 @@ class AgreementFileProperties extends Entity
 
     /**
     * Sets the language
+    * The language of the agreement file in the format 'languagecode2-country/regioncode2'. 'languagecode2' is a lowercase two-letter code derived from ISO 639-1, while 'country/regioncode2' is derived from ISO 3166 and usually consists of two uppercase letters, or a BCP-47 language tag. For example, U.S. English is en-US. Read-only.
     *
     * @param string $val The language
     *

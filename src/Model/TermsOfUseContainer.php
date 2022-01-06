@@ -27,6 +27,7 @@ class TermsOfUseContainer extends Entity
 
      /**
      * Gets the agreementAcceptances
+    * Represents the current status of a user's response to a company's customizable terms of use agreement.
      *
      * @return array|null The agreementAcceptances
      */
@@ -41,6 +42,7 @@ class TermsOfUseContainer extends Entity
 
     /**
     * Sets the agreementAcceptances
+    * Represents the current status of a user's response to a company's customizable terms of use agreement.
     *
     * @param AgreementAcceptance[] $val The agreementAcceptances
     *
@@ -55,6 +57,7 @@ class TermsOfUseContainer extends Entity
 
      /**
      * Gets the agreements
+    * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
      *
      * @return array|null The agreements
      */
@@ -69,6 +72,7 @@ class TermsOfUseContainer extends Entity
 
     /**
     * Sets the agreements
+    * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
     *
     * @param Agreement[] $val The agreements
     *

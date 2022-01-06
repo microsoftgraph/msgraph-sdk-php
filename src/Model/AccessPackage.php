@@ -88,7 +88,7 @@ class AccessPackage extends Entity
 
     /**
     * Gets the displayName
-    * The display name of the access package.
+    * The display name of the access package. Supports $filter (eq, contains).
     *
     * @return string|null The displayName
     */
@@ -103,7 +103,7 @@ class AccessPackage extends Entity
 
     /**
     * Sets the displayName
-    * The display name of the access package.
+    * The display name of the access package. Supports $filter (eq, contains).
     *
     * @param string $val The displayName
     *

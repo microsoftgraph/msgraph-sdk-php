@@ -88,7 +88,7 @@ class ConnectedOrganization extends Entity
 
     /**
     * Gets the displayName
-    * The display name of the connected organization.
+    * The display name of the connected organization. Supports $filter (eq).
     *
     * @return string|null The displayName
     */
@@ -103,7 +103,7 @@ class ConnectedOrganization extends Entity
 
     /**
     * Sets the displayName
-    * The display name of the connected organization.
+    * The display name of the connected organization. Supports $filter (eq).
     *
     * @param string $val The displayName
     *
