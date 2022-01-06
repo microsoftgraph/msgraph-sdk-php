@@ -121,7 +121,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Gets the description
-    * The description of this accessPackageResourceEnvironment object.
+    * The description of this object.
     *
     * @return string|null The description
     */
@@ -136,7 +136,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Sets the description
-    * The description of this accessPackageResourceEnvironment object.
+    * The description of this object.
     *
     * @param string $val The description
     *
@@ -299,7 +299,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Gets the originSystem
-    * The type of the resource in the origin system such as SharePointOnline. Supports $filter.
+    * The type of the resource in the origin system, that is, SharePointOnline. Requires $filter (eq).
     *
     * @return string|null The originSystem
     */
@@ -314,7 +314,7 @@ class AccessPackageResourceEnvironment extends Entity
 
     /**
     * Sets the originSystem
-    * The type of the resource in the origin system such as SharePointOnline. Supports $filter.
+    * The type of the resource in the origin system, that is, SharePointOnline. Requires $filter (eq).
     *
     * @param string $val The originSystem
     *

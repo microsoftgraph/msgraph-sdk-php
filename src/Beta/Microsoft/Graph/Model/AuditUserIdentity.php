@@ -25,6 +25,7 @@ class AuditUserIdentity extends UserIdentity
 {
     /**
     * Gets the homeTenantId
+    * For user sign ins, the identifier of the tenant that the user is a member of.
     *
     * @return string|null The homeTenantId
     */
@@ -39,6 +40,7 @@ class AuditUserIdentity extends UserIdentity
 
     /**
     * Sets the homeTenantId
+    * For user sign ins, the identifier of the tenant that the user is a member of.
     *
     * @param string $val The value of the homeTenantId
     *
@@ -51,6 +53,7 @@ class AuditUserIdentity extends UserIdentity
     }
     /**
     * Gets the homeTenantName
+    * For user sign ins, the name of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content.
     *
     * @return string|null The homeTenantName
     */
@@ -65,6 +68,7 @@ class AuditUserIdentity extends UserIdentity
 
     /**
     * Sets the homeTenantName
+    * For user sign ins, the name of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content.
     *
     * @param string $val The value of the homeTenantName
     *

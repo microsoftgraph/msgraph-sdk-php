@@ -84,7 +84,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Gets the assignmentState
-    * The state of the access package assignment. Possible values are Delivering, Delivered, or Expired. Read-only.
+    * The state of the access package assignment. Possible values are Delivering, Delivered, or Expired. Read-only. Supports $filter (eq).
     *
     * @return string|null The assignmentState
     */
@@ -99,7 +99,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Sets the assignmentState
-    * The state of the access package assignment. Possible values are Delivering, Delivered, or Expired. Read-only.
+    * The state of the access package assignment. Possible values are Delivering, Delivered, or Expired. Read-only. Supports $filter (eq).
     *
     * @param string $val The assignmentState
     *
@@ -295,7 +295,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Gets the accessPackage
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
     *
     * @return AccessPackage|null The accessPackage
     */
@@ -314,7 +314,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Sets the accessPackage
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
     *
     * @param AccessPackage $val The accessPackage
     *
@@ -328,7 +328,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Gets the accessPackageAssignmentPolicy
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $filter (eq) on the id property
     *
     * @return AccessPackageAssignmentPolicy|null The accessPackageAssignmentPolicy
     */
@@ -347,7 +347,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Sets the accessPackageAssignmentPolicy
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $filter (eq) on the id property
     *
     * @param AccessPackageAssignmentPolicy $val The accessPackageAssignmentPolicy
     *
@@ -419,7 +419,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Gets the target
-    * The subject of the access package assignment. Read-only. Nullable.
+    * The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
     *
     * @return AccessPackageSubject|null The target
     */
@@ -438,7 +438,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Sets the target
-    * The subject of the access package assignment. Read-only. Nullable.
+    * The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
     *
     * @param AccessPackageSubject $val The target
     *
