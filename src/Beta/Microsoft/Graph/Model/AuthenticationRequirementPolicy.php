@@ -25,6 +25,7 @@ class AuthenticationRequirementPolicy extends Entity
 {
     /**
     * Gets the detail
+    * Provides additional detail on the feature identified in requirementProvider.
     *
     * @return string|null The detail
     */
@@ -39,6 +40,7 @@ class AuthenticationRequirementPolicy extends Entity
 
     /**
     * Sets the detail
+    * Provides additional detail on the feature identified in requirementProvider.
     *
     * @param string $val The value of the detail
     *
@@ -52,6 +54,7 @@ class AuthenticationRequirementPolicy extends Entity
 
     /**
     * Gets the requirementProvider
+    * Identifies what Azure AD feature requires MFA in this policy. Possible values are: user, request, servicePrincipal, v1ConditionalAccess, multiConditionalAccess, tenantSessionRiskPolicy, accountCompromisePolicies, v1ConditionalAccessDependency, v1ConditionalAccessPolicyIdRequested, mfaRegistrationRequiredByIdentityProtectionPolicy, baselineProtection, mfaRegistrationRequiredByBaselineProtection, mfaRegistrationRequiredByMultiConditionalAccess, enforcedForCspAdmins, securityDefaults, mfaRegistrationRequiredBySecurityDefaults, proofUpCodeRequest, crossTenantOutboundRule, gpsLocationCondition, riskBasedPolicy, unknownFutureValue.
     *
     * @return RequirementProvider|null The requirementProvider
     */
@@ -70,6 +73,7 @@ class AuthenticationRequirementPolicy extends Entity
 
     /**
     * Sets the requirementProvider
+    * Identifies what Azure AD feature requires MFA in this policy. Possible values are: user, request, servicePrincipal, v1ConditionalAccess, multiConditionalAccess, tenantSessionRiskPolicy, accountCompromisePolicies, v1ConditionalAccessDependency, v1ConditionalAccessPolicyIdRequested, mfaRegistrationRequiredByIdentityProtectionPolicy, baselineProtection, mfaRegistrationRequiredByBaselineProtection, mfaRegistrationRequiredByMultiConditionalAccess, enforcedForCspAdmins, securityDefaults, mfaRegistrationRequiredBySecurityDefaults, proofUpCodeRequest, crossTenantOutboundRule, gpsLocationCondition, riskBasedPolicy, unknownFutureValue.
     *
     * @param RequirementProvider $val The value to assign to the requirementProvider
     *

@@ -25,6 +25,7 @@ class AuthenticationStrength extends Entity
 {
     /**
     * Gets the authenticationStrengthId
+    * Identifier of the authentication strength.
     *
     * @return string|null The authenticationStrengthId
     */
@@ -39,6 +40,7 @@ class AuthenticationStrength extends Entity
 
     /**
     * Sets the authenticationStrengthId
+    * Identifier of the authentication strength.
     *
     * @param string $val The value of the authenticationStrengthId
     *
@@ -51,6 +53,7 @@ class AuthenticationStrength extends Entity
     }
     /**
     * Gets the displayName
+    * The name of the authentication strength.
     *
     * @return string|null The displayName
     */
@@ -65,6 +68,7 @@ class AuthenticationStrength extends Entity
 
     /**
     * Sets the displayName
+    * The name of the authentication strength.
     *
     * @param string $val The value of the displayName
     *

@@ -26,7 +26,7 @@ class AccessPackageAssignmentPolicy extends Entity
 {
     /**
     * Gets the accessPackageId
-    * ID of the access package.
+    * Identifier of the access package.
     *
     * @return string|null The accessPackageId
     */
@@ -41,7 +41,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the accessPackageId
-    * ID of the access package.
+    * Identifier of the access package.
     *
     * @param string $val The accessPackageId
     *
@@ -208,7 +208,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Gets the displayName
-    * The display name of the policy.
+    * The display name of the policy. Supports $filter (eq).
     *
     * @return string|null The displayName
     */
@@ -223,7 +223,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the displayName
-    * The display name of the policy.
+    * The display name of the policy. Supports $filter (eq).
     *
     * @param string $val The displayName
     *
@@ -457,7 +457,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Gets the accessPackage
-    * The access package with this policy. Read-only. Nullable.
+    * The access package with this policy. Read-only. Nullable. Supports $expand.
     *
     * @return AccessPackage|null The accessPackage
     */
@@ -476,7 +476,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the accessPackage
-    * The access package with this policy. Read-only. Nullable.
+    * The access package with this policy. Read-only. Nullable. Supports $expand.
     *
     * @param AccessPackage $val The accessPackage
     *

@@ -25,6 +25,7 @@ class PrivateLinkDetails extends Entity
 {
     /**
     * Gets the policyId
+    * The unique identifier for the Private Link policy.
     *
     * @return string|null The policyId
     */
@@ -39,6 +40,7 @@ class PrivateLinkDetails extends Entity
 
     /**
     * Sets the policyId
+    * The unique identifier for the Private Link policy.
     *
     * @param string $val The value of the policyId
     *
@@ -51,6 +53,7 @@ class PrivateLinkDetails extends Entity
     }
     /**
     * Gets the policyName
+    * The name of the Private Link policy in Azure AD.
     *
     * @return string|null The policyName
     */
@@ -65,6 +68,7 @@ class PrivateLinkDetails extends Entity
 
     /**
     * Sets the policyName
+    * The name of the Private Link policy in Azure AD.
     *
     * @param string $val The value of the policyName
     *
@@ -77,6 +81,7 @@ class PrivateLinkDetails extends Entity
     }
     /**
     * Gets the policyTenantId
+    * The tenant identifier of the Azure AD tenant the Private Link policy belongs to.
     *
     * @return string|null The policyTenantId
     */
@@ -91,6 +96,7 @@ class PrivateLinkDetails extends Entity
 
     /**
     * Sets the policyTenantId
+    * The tenant identifier of the Azure AD tenant the Private Link policy belongs to.
     *
     * @param string $val The value of the policyTenantId
     *
@@ -103,6 +109,7 @@ class PrivateLinkDetails extends Entity
     }
     /**
     * Gets the resourceId
+    * The Azure Resource Manager (ARM) path for the Private Link policy resource.
     *
     * @return string|null The resourceId
     */
@@ -117,6 +124,7 @@ class PrivateLinkDetails extends Entity
 
     /**
     * Sets the resourceId
+    * The Azure Resource Manager (ARM) path for the Private Link policy resource.
     *
     * @param string $val The value of the resourceId
     *
