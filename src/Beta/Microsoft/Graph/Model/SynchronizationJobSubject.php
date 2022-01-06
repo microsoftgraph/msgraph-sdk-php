@@ -23,6 +23,37 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class SynchronizationJobSubject extends Entity
 {
+
+    /**
+    * Gets the links
+    *
+    * @return SynchronizationLinkedObjects|null The links
+    */
+    public function getLinks()
+    {
+        if (array_key_exists("links", $this->_propDict)) {
+            if (is_a($this->_propDict["links"], "\Beta\Microsoft\Graph\Model\SynchronizationLinkedObjects") || is_null($this->_propDict["links"])) {
+                return $this->_propDict["links"];
+            } else {
+                $this->_propDict["links"] = new SynchronizationLinkedObjects($this->_propDict["links"]);
+                return $this->_propDict["links"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the links
+    *
+    * @param SynchronizationLinkedObjects $val The value to assign to the links
+    *
+    * @return SynchronizationJobSubject The SynchronizationJobSubject
+    */
+    public function setLinks($val)
+    {
+        $this->_propDict["links"] = $val;
+         return $this;
+    }
     /**
     * Gets the objectId
     * The identifier of an object to which a synchronizationJob  is to be applied.

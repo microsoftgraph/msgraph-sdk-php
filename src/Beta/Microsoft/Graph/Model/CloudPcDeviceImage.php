@@ -55,6 +55,7 @@ class CloudPcDeviceImage extends Entity
 
     /**
     * Gets the expirationDate
+    * The date the image became unavailable.
     *
     * @return \DateTime|null The expirationDate
     */
@@ -73,6 +74,7 @@ class CloudPcDeviceImage extends Entity
 
     /**
     * Sets the expirationDate
+    * The date the image became unavailable.
     *
     * @param \DateTime $val The expirationDate
     *
@@ -177,6 +179,7 @@ class CloudPcDeviceImage extends Entity
 
     /**
     * Gets the osStatus
+    * The OS status of this image. Possible values are: supported, supportedWithWarning, unknownFutureValue.
     *
     * @return CloudPcDeviceImageOsStatus|null The osStatus
     */
@@ -195,6 +198,7 @@ class CloudPcDeviceImage extends Entity
 
     /**
     * Sets the osStatus
+    * The OS status of this image. Possible values are: supported, supportedWithWarning, unknownFutureValue.
     *
     * @param CloudPcDeviceImageOsStatus $val The osStatus
     *

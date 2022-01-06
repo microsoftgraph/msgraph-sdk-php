@@ -27,6 +27,7 @@ class AppConsentApprovalRoute extends Entity
 
      /**
      * Gets the appConsentRequests
+    * A collection of userConsentRequest objects for a specific application.
      *
      * @return array|null The appConsentRequests
      */
@@ -41,6 +42,7 @@ class AppConsentApprovalRoute extends Entity
 
     /**
     * Sets the appConsentRequests
+    * A collection of userConsentRequest objects for a specific application.
     *
     * @param AppConsentRequest[] $val The appConsentRequests
     *

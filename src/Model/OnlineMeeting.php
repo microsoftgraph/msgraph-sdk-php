@@ -710,4 +710,34 @@ class OnlineMeeting extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the attendanceReports
+    * The attendance reports of an online meeting. Read-only.
+     *
+     * @return array|null The attendanceReports
+     */
+    public function getAttendanceReports()
+    {
+        if (array_key_exists("attendanceReports", $this->_propDict)) {
+           return $this->_propDict["attendanceReports"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the attendanceReports
+    * The attendance reports of an online meeting. Read-only.
+    *
+    * @param MeetingAttendanceReport[] $val The attendanceReports
+    *
+    * @return OnlineMeeting
+    */
+    public function setAttendanceReports($val)
+    {
+        $this->_propDict["attendanceReports"] = $val;
+        return $this;
+    }
+
 }

@@ -55,7 +55,7 @@ class Subscription extends Entity
 
     /**
     * Gets the changeType
-    * Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list.Note: Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.
+    * Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Note:  Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.
     *
     * @return string|null The changeType
     */
@@ -70,7 +70,7 @@ class Subscription extends Entity
 
     /**
     * Sets the changeType
-    * Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list.Note: Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.
+    * Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Note:  Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.
     *
     * @param string $val The changeType
     *
@@ -142,7 +142,7 @@ class Subscription extends Entity
 
     /**
     * Gets the encryptionCertificate
-    * A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional. Required when includeResourceData is true.
+    * A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional but required when includeResourceData is true.
     *
     * @return string|null The encryptionCertificate
     */
@@ -157,7 +157,7 @@ class Subscription extends Entity
 
     /**
     * Sets the encryptionCertificate
-    * A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional. Required when includeResourceData is true.
+    * A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional but required when includeResourceData is true.
     *
     * @param string $val The encryptionCertificate
     *
@@ -171,7 +171,7 @@ class Subscription extends Entity
 
     /**
     * Gets the encryptionCertificateId
-    * A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional.
+    * Optional. A custom app-provided identifier to help identify the certificate needed to decrypt resource data.
     *
     * @return string|null The encryptionCertificateId
     */
@@ -186,7 +186,7 @@ class Subscription extends Entity
 
     /**
     * Sets the encryptionCertificateId
-    * A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional.
+    * Optional. A custom app-provided identifier to help identify the certificate needed to decrypt resource data.
     *
     * @param string $val The encryptionCertificateId
     *
@@ -200,7 +200,7 @@ class Subscription extends Entity
 
     /**
     * Gets the expirationDateTime
-    * Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.
+    * Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to. For the maximum supported subscription length of time, see the table below.
     *
     * @return \DateTime|null The expirationDateTime
     */
@@ -219,7 +219,7 @@ class Subscription extends Entity
 
     /**
     * Sets the expirationDateTime
-    * Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.
+    * Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to. For the maximum supported subscription length of time, see the table below.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -233,7 +233,7 @@ class Subscription extends Entity
 
     /**
     * Gets the includeResourceData
-    * When set to true, change notifications include resource data (such as content of a chat message). Optional.
+    * Optional. When set to true, change notifications include resource data (such as content of a chat message).
     *
     * @return bool|null The includeResourceData
     */
@@ -248,7 +248,7 @@ class Subscription extends Entity
 
     /**
     * Sets the includeResourceData
-    * When set to true, change notifications include resource data (such as content of a chat message). Optional.
+    * Optional. When set to true, change notifications include resource data (such as content of a chat message).
     *
     * @param bool $val The includeResourceData
     *
@@ -291,7 +291,7 @@ class Subscription extends Entity
 
     /**
     * Gets the lifecycleNotificationUrl
-    * The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved and missed notifications. This URL must make use of the HTTPS protocol. Optional. Read more about how Outlook resources use lifecycle notifications.
+    * Optional. The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved and missed notifications. This URL must make use of the HTTPS protocol.
     *
     * @return string|null The lifecycleNotificationUrl
     */
@@ -306,7 +306,7 @@ class Subscription extends Entity
 
     /**
     * Sets the lifecycleNotificationUrl
-    * The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved and missed notifications. This URL must make use of the HTTPS protocol. Optional. Read more about how Outlook resources use lifecycle notifications.
+    * Optional. The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved and missed notifications. This URL must make use of the HTTPS protocol.
     *
     * @param string $val The lifecycleNotificationUrl
     *
@@ -320,7 +320,7 @@ class Subscription extends Entity
 
     /**
     * Gets the notificationContentType
-    * Desired content-type for MS Graph change notifications for supported resource types. The default content-type is the 'application/json' content-type.
+    * Desired content-type for Microsoft Graph change notifications for supported resource types. The default content-type is application/json.
     *
     * @return string|null The notificationContentType
     */
@@ -335,7 +335,7 @@ class Subscription extends Entity
 
     /**
     * Sets the notificationContentType
-    * Desired content-type for MS Graph change notifications for supported resource types. The default content-type is the 'application/json' content-type.
+    * Desired content-type for Microsoft Graph change notifications for supported resource types. The default content-type is application/json.
     *
     * @param string $val The notificationContentType
     *
@@ -349,7 +349,7 @@ class Subscription extends Entity
 
     /**
     * Gets the notificationQueryOptions
-    * OData Query Options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property eg  when the print job is completed, when a print job resource isFetchable property value becomes true etc.
+    * OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.
     *
     * @return string|null The notificationQueryOptions
     */
@@ -364,7 +364,7 @@ class Subscription extends Entity
 
     /**
     * Sets the notificationQueryOptions
-    * OData Query Options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property eg  when the print job is completed, when a print job resource isFetchable property value becomes true etc.
+    * OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.
     *
     * @param string $val The notificationQueryOptions
     *

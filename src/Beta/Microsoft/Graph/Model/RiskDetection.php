@@ -468,7 +468,6 @@ class RiskDetection extends Entity
 
     /**
     * Gets the riskType
-    * List of risk event types.Note: This property is deprecated. Use riskEventType instead.
     *
     * @return RiskEventType|null The riskType
     */
@@ -487,7 +486,6 @@ class RiskDetection extends Entity
 
     /**
     * Sets the riskType
-    * List of risk event types.Note: This property is deprecated. Use riskEventType instead.
     *
     * @param RiskEventType $val The riskType
     *

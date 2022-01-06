@@ -54,7 +54,7 @@ class AttendanceInterval extends Entity
 
     /**
     * Gets the joinDateTime
-    * Time attendee joined in UTC.
+    * The time the attendee joined in UTC.
     *
     * @return \DateTime|null The joinDateTime
     */
@@ -73,7 +73,7 @@ class AttendanceInterval extends Entity
 
     /**
     * Sets the joinDateTime
-    * Time attendee joined in UTC.
+    * The time the attendee joined in UTC.
     *
     * @param \DateTime $val The value to assign to the joinDateTime
     *
@@ -87,7 +87,7 @@ class AttendanceInterval extends Entity
 
     /**
     * Gets the leaveDateTime
-    * Time attendee left in UTC.
+    * The time the attendee left in UTC.
     *
     * @return \DateTime|null The leaveDateTime
     */
@@ -106,7 +106,7 @@ class AttendanceInterval extends Entity
 
     /**
     * Sets the leaveDateTime
-    * Time attendee left in UTC.
+    * The time the attendee left in UTC.
     *
     * @param \DateTime $val The value to assign to the leaveDateTime
     *

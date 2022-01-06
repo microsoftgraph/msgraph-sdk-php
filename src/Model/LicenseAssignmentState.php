@@ -107,6 +107,39 @@ class LicenseAssignmentState extends Entity
         $this->_propDict["error"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the lastUpdatedDateTime
+    * The timestamp when the state of the license assignment was last updated.
+    *
+    * @return \DateTime|null The lastUpdatedDateTime
+    */
+    public function getLastUpdatedDateTime()
+    {
+        if (array_key_exists("lastUpdatedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastUpdatedDateTime"], "\DateTime") || is_null($this->_propDict["lastUpdatedDateTime"])) {
+                return $this->_propDict["lastUpdatedDateTime"];
+            } else {
+                $this->_propDict["lastUpdatedDateTime"] = new \DateTime($this->_propDict["lastUpdatedDateTime"]);
+                return $this->_propDict["lastUpdatedDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the lastUpdatedDateTime
+    * The timestamp when the state of the license assignment was last updated.
+    *
+    * @param \DateTime $val The value to assign to the lastUpdatedDateTime
+    *
+    * @return LicenseAssignmentState The LicenseAssignmentState
+    */
+    public function setLastUpdatedDateTime($val)
+    {
+        $this->_propDict["lastUpdatedDateTime"] = $val;
+         return $this;
+    }
     /**
     * Gets the skuId
     * The unique identifier for the SKU. Read-Only.

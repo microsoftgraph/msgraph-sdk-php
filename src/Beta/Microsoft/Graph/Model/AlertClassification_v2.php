@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* M365AlertClassification File
+* AlertClassification_v2 File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* M365AlertClassification class
+* AlertClassification_v2 class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,10 +24,10 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class M365AlertClassification extends Enum
+class AlertClassification_v2 extends Enum
 {
     /**
-    * The Enum M365AlertClassification
+    * The Enum AlertClassification_v2
     */
     const UNKNOWN = "unknown";
     const FALSE_POSITIVE = "falsePositive";
