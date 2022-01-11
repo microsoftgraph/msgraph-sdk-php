@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* TokenIssuerType File
+* TeamworkSupportedClient File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* TokenIssuerType class
+* TeamworkSupportedClient class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +24,15 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class TokenIssuerType extends Enum
+class TeamworkSupportedClient extends Enum
 {
     /**
-    * The Enum TokenIssuerType
+    * The Enum TeamworkSupportedClient
     */
-    const AZURE_AD = "azureAD";
-    const AD_FEDERATION_SERVICES = "aDFederationServices";
+    const UNKNOWN = "unknown";
+    const SKYPE_DEFAULT_AND_TEAMS = "skypeDefaultAndTeams";
+    const TEAMS_DEFAULT_AND_SKYPE = "teamsDefaultAndSkype";
+    const SKYPE_ONLY = "skypeOnly";
+    const TEAMS_ONLY = "teamsOnly";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const AZURE_AD_BACKUP_AUTH = "azureADBackupAuth";
-    const AD_FEDERATION_SERVICES_MFA_ADAPTER = "aDFederationServicesMFAAdapter";
-    const NPS_EXTENSION = "nPSExtension";
 }

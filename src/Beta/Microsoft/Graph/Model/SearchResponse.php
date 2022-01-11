@@ -25,6 +25,39 @@ class SearchResponse extends Entity
 {
 
     /**
+    * Gets the hitsContainers
+    * A collection of search results.
+    *
+    * @return SearchHitsContainer|null The hitsContainers
+    */
+    public function getHitsContainers()
+    {
+        if (array_key_exists("hitsContainers", $this->_propDict)) {
+            if (is_a($this->_propDict["hitsContainers"], "\Beta\Microsoft\Graph\Model\SearchHitsContainer") || is_null($this->_propDict["hitsContainers"])) {
+                return $this->_propDict["hitsContainers"];
+            } else {
+                $this->_propDict["hitsContainers"] = new SearchHitsContainer($this->_propDict["hitsContainers"]);
+                return $this->_propDict["hitsContainers"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the hitsContainers
+    * A collection of search results.
+    *
+    * @param SearchHitsContainer $val The value to assign to the hitsContainers
+    *
+    * @return SearchResponse The SearchResponse
+    */
+    public function setHitsContainers($val)
+    {
+        $this->_propDict["hitsContainers"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the queryAlterationResponse
     * Provides details of query alteration response for spelling correction.
     *
@@ -58,35 +91,61 @@ class SearchResponse extends Entity
     }
 
     /**
-    * Gets the value
-    * Represents results from a search query, and the terms used for the query.
+    * Gets the resultTemplates
     *
-    * @return SearchResultSet|null The value
+    * @return ResultTemplateDictionary|null The resultTemplates
     */
-    public function getValue()
+    public function getResultTemplates()
     {
-        if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "\Beta\Microsoft\Graph\Model\SearchResultSet") || is_null($this->_propDict["value"])) {
-                return $this->_propDict["value"];
+        if (array_key_exists("resultTemplates", $this->_propDict)) {
+            if (is_a($this->_propDict["resultTemplates"], "\Beta\Microsoft\Graph\Model\ResultTemplateDictionary") || is_null($this->_propDict["resultTemplates"])) {
+                return $this->_propDict["resultTemplates"];
             } else {
-                $this->_propDict["value"] = new SearchResultSet($this->_propDict["value"]);
-                return $this->_propDict["value"];
+                $this->_propDict["resultTemplates"] = new ResultTemplateDictionary($this->_propDict["resultTemplates"]);
+                return $this->_propDict["resultTemplates"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the value
-    * Represents results from a search query, and the terms used for the query.
+    * Sets the resultTemplates
     *
-    * @param SearchResultSet $val The value to assign to the value
+    * @param ResultTemplateDictionary $val The value to assign to the resultTemplates
     *
     * @return SearchResponse The SearchResponse
     */
-    public function setValue($val)
+    public function setResultTemplates($val)
     {
-        $this->_propDict["value"] = $val;
+        $this->_propDict["resultTemplates"] = $val;
          return $this;
+    }
+    /**
+    * Gets the searchTerms
+    * Contains the search terms sent in the initial search query.
+    *
+    * @return string|null The searchTerms
+    */
+    public function getSearchTerms()
+    {
+        if (array_key_exists("searchTerms", $this->_propDict)) {
+            return $this->_propDict["searchTerms"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the searchTerms
+    * Contains the search terms sent in the initial search query.
+    *
+    * @param string $val The value of the searchTerms
+    *
+    * @return SearchResponse
+    */
+    public function setSearchTerms($val)
+    {
+        $this->_propDict["searchTerms"] = $val;
+        return $this;
     }
 }
