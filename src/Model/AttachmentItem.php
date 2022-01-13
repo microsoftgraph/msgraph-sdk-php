@@ -57,6 +57,32 @@ class AttachmentItem extends Entity
          return $this;
     }
     /**
+    * Gets the contentId
+    *
+    * @return string|null The contentId
+    */
+    public function getContentId()
+    {
+        if (array_key_exists("contentId", $this->_propDict)) {
+            return $this->_propDict["contentId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the contentId
+    *
+    * @param string $val The value of the contentId
+    *
+    * @return AttachmentItem
+    */
+    public function setContentId($val)
+    {
+        $this->_propDict["contentId"] = $val;
+        return $this;
+    }
+    /**
     * Gets the contentType
     * The nature of the data in the attachment. Optional.
     *
