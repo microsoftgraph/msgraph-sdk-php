@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* TokenIssuerType File
+* TeamworkConnectionStatus File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* TokenIssuerType class
+* TeamworkConnectionStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class TokenIssuerType extends Enum
+class TeamworkConnectionStatus extends Enum
 {
     /**
-    * The Enum TokenIssuerType
+    * The Enum TeamworkConnectionStatus
     */
-    const AZURE_AD = "azureAD";
-    const AD_FEDERATION_SERVICES = "aDFederationServices";
+    const UNKNOWN = "unknown";
+    const CONNECTED = "connected";
+    const DISCONNECTED = "disconnected";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const AZURE_AD_BACKUP_AUTH = "azureADBackupAuth";
-    const AD_FEDERATION_SERVICES_MFA_ADAPTER = "aDFederationServicesMFAAdapter";
-    const NPS_EXTENSION = "nPSExtension";
 }

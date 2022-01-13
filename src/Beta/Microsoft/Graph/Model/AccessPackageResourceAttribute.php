@@ -26,6 +26,7 @@ class AccessPackageResourceAttribute extends Entity
 
     /**
     * Gets the attributeDestination
+    * Information about how to set the attribute.
     *
     * @return AccessPackageResourceAttributeDestination|null The attributeDestination
     */
@@ -44,6 +45,7 @@ class AccessPackageResourceAttribute extends Entity
 
     /**
     * Sets the attributeDestination
+    * Information about how to set the attribute.
     *
     * @param AccessPackageResourceAttributeDestination $val The value to assign to the attributeDestination
     *
@@ -56,6 +58,7 @@ class AccessPackageResourceAttribute extends Entity
     }
     /**
     * Gets the attributeName
+    * The name of the attribute in the end system.
     *
     * @return string|null The attributeName
     */
@@ -70,6 +73,7 @@ class AccessPackageResourceAttribute extends Entity
 
     /**
     * Sets the attributeName
+    * The name of the attribute in the end system.
     *
     * @param string $val The value of the attributeName
     *
@@ -83,6 +87,7 @@ class AccessPackageResourceAttribute extends Entity
 
     /**
     * Gets the attributeSource
+    * Information about how to populate the attribute value when an accessPackageAssignmentRequest is being fulfilled.
     *
     * @return AccessPackageResourceAttributeSource|null The attributeSource
     */
@@ -101,6 +106,7 @@ class AccessPackageResourceAttribute extends Entity
 
     /**
     * Sets the attributeSource
+    * Information about how to populate the attribute value when an accessPackageAssignmentRequest is being fulfilled.
     *
     * @param AccessPackageResourceAttributeSource $val The value to assign to the attributeSource
     *
@@ -113,6 +119,7 @@ class AccessPackageResourceAttribute extends Entity
     }
     /**
     * Gets the id
+    * Unique identifier for the attribute.
     *
     * @return string|null The id
     */
@@ -127,6 +134,7 @@ class AccessPackageResourceAttribute extends Entity
 
     /**
     * Sets the id
+    * Unique identifier for the attribute.
     *
     * @param string $val The value of the id
     *
@@ -139,6 +147,7 @@ class AccessPackageResourceAttribute extends Entity
     }
     /**
     * Gets the isEditable
+    * Specifies whether or not an existing attribute value can be edited by the requester.
     *
     * @return bool|null The isEditable
     */
@@ -153,6 +162,7 @@ class AccessPackageResourceAttribute extends Entity
 
     /**
     * Sets the isEditable
+    * Specifies whether or not an existing attribute value can be edited by the requester.
     *
     * @param bool $val The value of the isEditable
     *
@@ -165,6 +175,7 @@ class AccessPackageResourceAttribute extends Entity
     }
     /**
     * Gets the isPersistedOnAssignmentRemoval
+    * Specifies whether the attribute will remain in the end system after an assignment ends.
     *
     * @return bool|null The isPersistedOnAssignmentRemoval
     */
@@ -179,6 +190,7 @@ class AccessPackageResourceAttribute extends Entity
 
     /**
     * Sets the isPersistedOnAssignmentRemoval
+    * Specifies whether the attribute will remain in the end system after an assignment ends.
     *
     * @param bool $val The value of the isPersistedOnAssignmentRemoval
     *

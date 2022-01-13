@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* TokenIssuerType File
+* TeamworkDeviceType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* TokenIssuerType class
+* TeamworkDeviceType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +24,20 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class TokenIssuerType extends Enum
+class TeamworkDeviceType extends Enum
 {
     /**
-    * The Enum TokenIssuerType
+    * The Enum TeamworkDeviceType
     */
-    const AZURE_AD = "azureAD";
-    const AD_FEDERATION_SERVICES = "aDFederationServices";
+    const UNKNOWN = "unknown";
+    const IP_PHONE = "ipPhone";
+    const TEAMS_ROOM = "teamsRoom";
+    const SURFACE_HUB = "surfaceHub";
+    const COLLABORATION_BAR = "collaborationBar";
+    const TEAMS_DISPLAY = "teamsDisplay";
+    const TOUCH_CONSOLE = "touchConsole";
+    const LOW_COST_PHONE = "lowCostPhone";
+    const TEAMS_PANEL = "teamsPanel";
+    const SIP = "sip";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const AZURE_AD_BACKUP_AUTH = "azureADBackupAuth";
-    const AD_FEDERATION_SERVICES_MFA_ADAPTER = "aDFederationServicesMFAAdapter";
-    const NPS_EXTENSION = "nPSExtension";
 }

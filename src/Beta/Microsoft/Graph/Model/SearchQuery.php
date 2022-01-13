@@ -51,6 +51,32 @@ class SearchQuery extends Entity
         $this->_propDict["queryString"] = $val;
         return $this;
     }
+    /**
+    * Gets the queryTemplate
+    *
+    * @return string|null The queryTemplate
+    */
+    public function getQueryTemplate()
+    {
+        if (array_key_exists("queryTemplate", $this->_propDict)) {
+            return $this->_propDict["queryTemplate"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the queryTemplate
+    *
+    * @param string $val The value of the queryTemplate
+    *
+    * @return SearchQuery
+    */
+    public function setQueryTemplate($val)
+    {
+        $this->_propDict["queryTemplate"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the query_string

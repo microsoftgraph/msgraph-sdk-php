@@ -114,6 +114,34 @@ class SignIn extends Entity
 
 
      /**
+     * Gets the authenticationContextClassReferences
+     *
+     * @return array|null The authenticationContextClassReferences
+     */
+    public function getAuthenticationContextClassReferences()
+    {
+        if (array_key_exists("authenticationContextClassReferences", $this->_propDict)) {
+           return $this->_propDict["authenticationContextClassReferences"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the authenticationContextClassReferences
+    *
+    * @param AuthenticationContext[] $val The authenticationContextClassReferences
+    *
+    * @return SignIn
+    */
+    public function setAuthenticationContextClassReferences($val)
+    {
+        $this->_propDict["authenticationContextClassReferences"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the authenticationDetails
     * The result of the authentication attempt and additional details on the authentication method.
      *
@@ -323,6 +351,33 @@ class SignIn extends Entity
     }
 
     /**
+    * Gets the azureResourceId
+    *
+    * @return string|null The azureResourceId
+    */
+    public function getAzureResourceId()
+    {
+        if (array_key_exists("azureResourceId", $this->_propDict)) {
+            return $this->_propDict["azureResourceId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the azureResourceId
+    *
+    * @param string $val The azureResourceId
+    *
+    * @return SignIn
+    */
+    public function setAzureResourceId($val)
+    {
+        $this->_propDict["azureResourceId"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the clientAppUsed
     * Identifies the client used for the sign-in activity. Modern authentication clients include Browser and modern clients. Legacy authentication clients include Exchange Active Sync, IMAP, MAPI, SMTP, POP, and other clients. Supports $filter (eq operator only).
     *
@@ -509,6 +564,33 @@ class SignIn extends Entity
     public function setDeviceDetail($val)
     {
         $this->_propDict["deviceDetail"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the federatedCredentialId
+    *
+    * @return string|null The federatedCredentialId
+    */
+    public function getFederatedCredentialId()
+    {
+        if (array_key_exists("federatedCredentialId", $this->_propDict)) {
+            return $this->_propDict["federatedCredentialId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the federatedCredentialId
+    *
+    * @param string $val The federatedCredentialId
+    *
+    * @return SignIn
+    */
+    public function setFederatedCredentialId($val)
+    {
+        $this->_propDict["federatedCredentialId"] = $val;
         return $this;
     }
 
@@ -992,6 +1074,33 @@ class SignIn extends Entity
     }
 
     /**
+    * Gets the resourceServicePrincipalId
+    *
+    * @return string|null The resourceServicePrincipalId
+    */
+    public function getResourceServicePrincipalId()
+    {
+        if (array_key_exists("resourceServicePrincipalId", $this->_propDict)) {
+            return $this->_propDict["resourceServicePrincipalId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the resourceServicePrincipalId
+    *
+    * @param string $val The resourceServicePrincipalId
+    *
+    * @return SignIn
+    */
+    public function setResourceServicePrincipalId($val)
+    {
+        $this->_propDict["resourceServicePrincipalId"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the resourceTenantId
     * The tenant identifier of the resource referenced in the sign in.
     *
@@ -1294,6 +1403,34 @@ class SignIn extends Entity
     public function setServicePrincipalName($val)
     {
         $this->_propDict["servicePrincipalName"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the sessionLifetimePolicies
+     *
+     * @return array|null The sessionLifetimePolicies
+     */
+    public function getSessionLifetimePolicies()
+    {
+        if (array_key_exists("sessionLifetimePolicies", $this->_propDict)) {
+           return $this->_propDict["sessionLifetimePolicies"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sessionLifetimePolicies
+    *
+    * @param SessionLifetimePolicy[] $val The sessionLifetimePolicies
+    *
+    * @return SignIn
+    */
+    public function setSessionLifetimePolicies($val)
+    {
+        $this->_propDict["sessionLifetimePolicies"] = $val;
         return $this;
     }
 
