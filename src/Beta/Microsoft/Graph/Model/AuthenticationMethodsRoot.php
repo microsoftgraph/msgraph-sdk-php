@@ -24,4 +24,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AuthenticationMethodsRoot extends Entity
 {
+
+     /**
+     * Gets the userRegistrationDetails
+     *
+     * @return array|null The userRegistrationDetails
+     */
+    public function getUserRegistrationDetails()
+    {
+        if (array_key_exists("userRegistrationDetails", $this->_propDict)) {
+           return $this->_propDict["userRegistrationDetails"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userRegistrationDetails
+    *
+    * @param UserRegistrationDetails[] $val The userRegistrationDetails
+    *
+    * @return AuthenticationMethodsRoot
+    */
+    public function setUserRegistrationDetails($val)
+    {
+        $this->_propDict["userRegistrationDetails"] = $val;
+        return $this;
+    }
+
 }

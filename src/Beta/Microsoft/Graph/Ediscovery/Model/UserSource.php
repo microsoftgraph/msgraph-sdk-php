@@ -86,4 +86,31 @@ class UserSource extends DataSource
         return $this;
     }
 
+    /**
+    * Gets the siteWebUrl
+    *
+    * @return string|null The siteWebUrl
+    */
+    public function getSiteWebUrl()
+    {
+        if (array_key_exists("siteWebUrl", $this->_propDict)) {
+            return $this->_propDict["siteWebUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the siteWebUrl
+    *
+    * @param string $val The siteWebUrl
+    *
+    * @return UserSource
+    */
+    public function setSiteWebUrl($val)
+    {
+        $this->_propDict["siteWebUrl"] = $val;
+        return $this;
+    }
+
 }

@@ -52,4 +52,32 @@ class Teamwork extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the devices
+     *
+     * @return array|null The devices
+     */
+    public function getDevices()
+    {
+        if (array_key_exists("devices", $this->_propDict)) {
+           return $this->_propDict["devices"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the devices
+    *
+    * @param TeamworkDevice[] $val The devices
+    *
+    * @return Teamwork
+    */
+    public function setDevices($val)
+    {
+        $this->_propDict["devices"] = $val;
+        return $this;
+    }
+
 }
