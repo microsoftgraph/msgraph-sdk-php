@@ -264,6 +264,37 @@ class SearchRequest extends Entity
     }
 
     /**
+    * Gets the queryAlterationOptions
+    *
+    * @return SearchAlterationOptions|null The queryAlterationOptions
+    */
+    public function getQueryAlterationOptions()
+    {
+        if (array_key_exists("queryAlterationOptions", $this->_propDict)) {
+            if (is_a($this->_propDict["queryAlterationOptions"], "\Beta\Microsoft\Graph\Model\SearchAlterationOptions") || is_null($this->_propDict["queryAlterationOptions"])) {
+                return $this->_propDict["queryAlterationOptions"];
+            } else {
+                $this->_propDict["queryAlterationOptions"] = new SearchAlterationOptions($this->_propDict["queryAlterationOptions"]);
+                return $this->_propDict["queryAlterationOptions"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the queryAlterationOptions
+    *
+    * @param SearchAlterationOptions $val The value to assign to the queryAlterationOptions
+    *
+    * @return SearchRequest The SearchRequest
+    */
+    public function setQueryAlterationOptions($val)
+    {
+        $this->_propDict["queryAlterationOptions"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the resultTemplateOptions
     * Provides the search result templates options for rendering connectors search results.
     *
@@ -380,6 +411,32 @@ class SearchRequest extends Entity
     public function setStored_fields($val)
     {
         $this->_propDict["storedFields"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the trimDuplicates
+    *
+    * @return bool|null The trimDuplicates
+    */
+    public function getTrimDuplicates()
+    {
+        if (array_key_exists("trimDuplicates", $this->_propDict)) {
+            return $this->_propDict["trimDuplicates"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the trimDuplicates
+    *
+    * @param bool $val The value of the trimDuplicates
+    *
+    * @return SearchRequest
+    */
+    public function setTrimDuplicates($val)
+    {
+        $this->_propDict["trimDuplicates"] = $val;
         return $this;
     }
 }
