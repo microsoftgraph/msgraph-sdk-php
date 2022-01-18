@@ -81,7 +81,7 @@ class RelatedContact extends Entity
     }
     /**
     * Gets the emailAddress
-    * Primary email address of the contact.
+    * Email address of the contact.
     *
     * @return string|null The emailAddress
     */
@@ -96,7 +96,7 @@ class RelatedContact extends Entity
 
     /**
     * Sets the emailAddress
-    * Primary email address of the contact.
+    * Email address of the contact.
     *
     * @param string $val The value of the emailAddress
     *
@@ -138,7 +138,7 @@ class RelatedContact extends Entity
 
     /**
     * Gets the relationship
-    * Relationship to the user. Possible values are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
+    * Relationship to the user. Possible values are: parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
     *
     * @return ContactRelationship|null The relationship
     */
@@ -157,7 +157,7 @@ class RelatedContact extends Entity
 
     /**
     * Sets the relationship
-    * Relationship to the user. Possible values are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
+    * Relationship to the user. Possible values are: parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
     *
     * @param ContactRelationship $val The value to assign to the relationship
     *
