@@ -58,7 +58,7 @@ class ConditionalAccessGrantControls extends Entity
     }
     /**
     * Gets the customAuthenticationFactors
-    * List of custom controls IDs required by the policy. For more information, see Custom controls.
+    * List of custom controls IDs required by the policy. To learn more about custom control, see Custom controls (preview).
     *
     * @return string|null The customAuthenticationFactors
     */
@@ -73,7 +73,7 @@ class ConditionalAccessGrantControls extends Entity
 
     /**
     * Sets the customAuthenticationFactors
-    * List of custom controls IDs required by the policy. For more information, see Custom controls.
+    * List of custom controls IDs required by the policy. To learn more about custom control, see Custom controls (preview).
     *
     * @param string $val The value of the customAuthenticationFactors
     *

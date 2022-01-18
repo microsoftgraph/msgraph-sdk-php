@@ -246,7 +246,7 @@ class ChatMessage extends Entity
 
     /**
     * Gets the eventDetail
-    * Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
+    * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
     *
     * @return EventMessageDetail|null The eventDetail
     */
@@ -265,7 +265,7 @@ class ChatMessage extends Entity
 
     /**
     * Sets the eventDetail
-    * Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
+    * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
     *
     * @param EventMessageDetail $val The eventDetail
     *
@@ -441,7 +441,7 @@ class ChatMessage extends Entity
 
      /**
      * Gets the mentions
-    * List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
+    * List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
      *
      * @return array|null The mentions
      */
@@ -456,7 +456,7 @@ class ChatMessage extends Entity
 
     /**
     * Sets the mentions
-    * List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
+    * List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
     *
     * @param ChatMessageMention[] $val The mentions
     *
@@ -498,6 +498,39 @@ class ChatMessage extends Entity
     public function setMessageType($val)
     {
         $this->_propDict["messageType"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the onBehalfOf
+    * User attribution of the message when bot sends a message on behalf of a user.
+    *
+    * @return ChatMessageFromIdentitySet|null The onBehalfOf
+    */
+    public function getOnBehalfOf()
+    {
+        if (array_key_exists("onBehalfOf", $this->_propDict)) {
+            if (is_a($this->_propDict["onBehalfOf"], "\Beta\Microsoft\Graph\Model\ChatMessageFromIdentitySet") || is_null($this->_propDict["onBehalfOf"])) {
+                return $this->_propDict["onBehalfOf"];
+            } else {
+                $this->_propDict["onBehalfOf"] = new ChatMessageFromIdentitySet($this->_propDict["onBehalfOf"]);
+                return $this->_propDict["onBehalfOf"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the onBehalfOf
+    * User attribution of the message when bot sends a message on behalf of a user.
+    *
+    * @param ChatMessageFromIdentitySet $val The onBehalfOf
+    *
+    * @return ChatMessage
+    */
+    public function setOnBehalfOf($val)
+    {
+        $this->_propDict["onBehalfOf"] = $val;
         return $this;
     }
 

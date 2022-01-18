@@ -92,7 +92,7 @@ class ExpirationPattern extends Entity
 
     /**
     * Gets the type
-    * The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
+    * The requestor's desired expiration pattern type.
     *
     * @return ExpirationPatternType|null The type
     */
@@ -111,7 +111,7 @@ class ExpirationPattern extends Entity
 
     /**
     * Sets the type
-    * The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
+    * The requestor's desired expiration pattern type.
     *
     * @param ExpirationPatternType $val The value to assign to the type
     *
