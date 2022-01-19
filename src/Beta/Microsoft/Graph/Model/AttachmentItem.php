@@ -58,6 +58,7 @@ class AttachmentItem extends Entity
     }
     /**
     * Gets the contentId
+    * The CID or Content-Id of the attachment for referencing in case of in-line attachments using &amp;lt;img src='cid:contentId'&amp;gt; tag in HTML messages. Optional.
     *
     * @return string|null The contentId
     */
@@ -72,6 +73,7 @@ class AttachmentItem extends Entity
 
     /**
     * Sets the contentId
+    * The CID or Content-Id of the attachment for referencing in case of in-line attachments using &amp;lt;img src='cid:contentId'&amp;gt; tag in HTML messages. Optional.
     *
     * @param string $val The value of the contentId
     *

@@ -149,6 +149,37 @@ class CloudPcUserSetting extends Entity
     }
 
     /**
+    * Gets the restorePointSetting
+    *
+    * @return CloudPcRestorePointSetting|null The restorePointSetting
+    */
+    public function getRestorePointSetting()
+    {
+        if (array_key_exists("restorePointSetting", $this->_propDict)) {
+            if (is_a($this->_propDict["restorePointSetting"], "\Beta\Microsoft\Graph\Model\CloudPcRestorePointSetting") || is_null($this->_propDict["restorePointSetting"])) {
+                return $this->_propDict["restorePointSetting"];
+            } else {
+                $this->_propDict["restorePointSetting"] = new CloudPcRestorePointSetting($this->_propDict["restorePointSetting"]);
+                return $this->_propDict["restorePointSetting"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the restorePointSetting
+    *
+    * @param CloudPcRestorePointSetting $val The restorePointSetting
+    *
+    * @return CloudPcUserSetting
+    */
+    public function setRestorePointSetting($val)
+    {
+        $this->_propDict["restorePointSetting"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the selfServiceEnabled
     * Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true. If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal.
     *
