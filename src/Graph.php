@@ -17,6 +17,7 @@
 
 namespace Microsoft\Graph;
 
+use GuzzleHttp\Client;
 use Microsoft\Graph\Core\GraphConstants;
 use Microsoft\Graph\Http\GraphCollectionRequest;
 use Microsoft\Graph\Http\GraphRequest;
@@ -66,6 +67,11 @@ class Graph
      * @var bool
      */
     private $_proxyVerifySSL;
+
+    /**
+     * @var Client|null
+     */
+    private $_guzzleClient;
 
     /**
     * Creates a new Graph object, which is used to call the Graph API
@@ -135,6 +141,18 @@ class Graph
         return $this;
     }
 
+    /**
+    * @param Client|null $guzzleClient
+    *
+    * @return Graph object
+    */
+    public function setGuzzleClient($guzzleClient = null)
+    {
+        $this->_guzzleClient = $guzzleClient;
+
+        return $this;
+    }
+
 	/**
 	 * Creates a new request object with the given Graph information
 	 *
@@ -154,7 +172,8 @@ class Graph
             $this->_baseUrl,
             $this->_apiVersion,
             $this->_proxyPort,
-            $this->_proxyVerifySSL
+            $this->_proxyVerifySSL,
+            $this->_guzzleClient
         );
     }
 
@@ -178,7 +197,8 @@ class Graph
             $this->_baseUrl,
             $this->_apiVersion,
             $this->_proxyPort,
-            $this->_proxyVerifySSL
+            $this->_proxyVerifySSL,
+            $this->_guzzleClient
         );
     }
 }

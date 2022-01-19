@@ -21,7 +21,6 @@ class GraphRequestTest extends TestCase
         );
 
         $this->defaultHeaders = array(
-            "Host" => "baseUrl",
             "Content-Type" => "application/json",
             "SdkVersion" => "Graph-php-" . GraphConstants::SDK_VERSION,
             "Authorization" => "Bearer token"
@@ -64,7 +63,6 @@ class GraphRequestTest extends TestCase
         $headers = $request->getHeaders();
 
         $expectedHeaders = array(
-            "Host" => "baseUrl",
             "Content-Type" => "application/json",
             "SdkVersion" => "Graph-php-" . GraphConstants::SDK_VERSION,
             "Authorization" => "Bearer token",
@@ -81,7 +79,6 @@ class GraphRequestTest extends TestCase
         $headers = $request->getHeaders();
 
         $expectedHeaders = array(
-            "Host" => "baseUrl",
             "Content-Type" => "application/x-www-form-urlencoded",
             "SdkVersion" => "Graph-php-" . GraphConstants::SDK_VERSION,
             "Authorization" => "Bearer token"

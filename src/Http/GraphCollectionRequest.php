@@ -17,6 +17,7 @@
 
 namespace Microsoft\Graph\Http;
 
+use GuzzleHttp\Client;
 use Microsoft\Graph\Exception\GraphException;
 use Microsoft\Graph\Core\GraphConstants;
 
@@ -78,9 +79,10 @@ class GraphCollectionRequest extends GraphRequest
     * @param string $apiVersion   The version of the API to call
     * @param string $proxyPort    The url where to proxy through
     * @param bool $proxyVerifySSL Whether the proxy requests should perform SSL verification
+     * @param Client|null $guzzleClient The url where to proxy through
     * @throws GraphException when no access token is provided
     */
-    public function __construct($requestType, $endpoint, $accessToken, $baseUrl, $apiVersion, $proxyPort = null, $proxyVerifySSL = false)
+    public function __construct($requestType, $endpoint, $accessToken, $baseUrl, $apiVersion, $proxyPort = null, $proxyVerifySSL = false, $guzzleClient = null)
     {
         parent::__construct(
             $requestType,
@@ -89,7 +91,8 @@ class GraphCollectionRequest extends GraphRequest
             $baseUrl,
             $apiVersion,
             $proxyPort,
-            $proxyVerifySSL
+            $proxyVerifySSL,
+            $guzzleClient
         );
         $this->end = false;
     }
