@@ -238,7 +238,7 @@ class ConnectedOrganization extends Entity
 
     /**
     * Gets the state
-    * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
+    * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
     *
     * @return ConnectedOrganizationState|null The state
     */
@@ -257,7 +257,7 @@ class ConnectedOrganization extends Entity
 
     /**
     * Sets the state
-    * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
+    * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
     *
     * @param ConnectedOrganizationState $val The state
     *

@@ -144,7 +144,7 @@ class Security extends Entity
 
      /**
      * Gets the alerts
-    * Read-only. Nullable.
+    * Notifications for suspicious or potential security issues in a customer’s tenant.
      *
      * @return array|null The alerts
      */
@@ -159,7 +159,7 @@ class Security extends Entity
 
     /**
     * Sets the alerts
-    * Read-only. Nullable.
+    * Notifications for suspicious or potential security issues in a customer’s tenant.
     *
     * @param Alert[] $val The alerts
     *
