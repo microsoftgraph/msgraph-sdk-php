@@ -58,6 +58,37 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     }
 
     /**
+    * Gets the attachmentsArchive
+    *
+    * @return \GuzzleHttp\Psr7\Stream|null The attachmentsArchive
+    */
+    public function getAttachmentsArchive()
+    {
+        if (array_key_exists("attachmentsArchive", $this->_propDict)) {
+            if (is_a($this->_propDict["attachmentsArchive"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["attachmentsArchive"])) {
+                return $this->_propDict["attachmentsArchive"];
+            } else {
+                $this->_propDict["attachmentsArchive"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["attachmentsArchive"]);
+                return $this->_propDict["attachmentsArchive"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the attachmentsArchive
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The attachmentsArchive
+    *
+    * @return ServiceUpdateMessage
+    */
+    public function setAttachmentsArchive($val)
+    {
+        $this->_propDict["attachmentsArchive"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the body
     * The content type and content of the service message body.
     *
@@ -120,6 +151,33 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     public function setCategory($val)
     {
         $this->_propDict["category"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the hasAttachments
+    *
+    * @return bool|null The hasAttachments
+    */
+    public function getHasAttachments()
+    {
+        if (array_key_exists("hasAttachments", $this->_propDict)) {
+            return $this->_propDict["hasAttachments"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hasAttachments
+    *
+    * @param bool $val The hasAttachments
+    *
+    * @return ServiceUpdateMessage
+    */
+    public function setHasAttachments($val)
+    {
+        $this->_propDict["hasAttachments"] = boolval($val);
         return $this;
     }
 
@@ -273,6 +331,34 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     public function setViewPoint($val)
     {
         $this->_propDict["viewPoint"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the attachments
+     *
+     * @return array|null The attachments
+     */
+    public function getAttachments()
+    {
+        if (array_key_exists("attachments", $this->_propDict)) {
+           return $this->_propDict["attachments"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the attachments
+    *
+    * @param ServiceAnnouncementAttachment[] $val The attachments
+    *
+    * @return ServiceUpdateMessage
+    */
+    public function setAttachments($val)
+    {
+        $this->_propDict["attachments"] = $val;
         return $this;
     }
 

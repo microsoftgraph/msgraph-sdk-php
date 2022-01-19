@@ -241,7 +241,7 @@ class AccessReviewInstanceDecisionItem extends Entity
 
     /**
     * Gets the principalLink
-    * A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
+    * Link to the principal object. For example: https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
     *
     * @return string|null The principalLink
     */
@@ -256,7 +256,7 @@ class AccessReviewInstanceDecisionItem extends Entity
 
     /**
     * Sets the principalLink
-    * A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
+    * Link to the principal object. For example: https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
     *
     * @param string $val The principalLink
     *
@@ -427,7 +427,7 @@ class AccessReviewInstanceDecisionItem extends Entity
 
     /**
     * Gets the target
-    * The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.
+    * The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0.
     *
     * @return AccessReviewInstanceDecisionItemTarget|null The target
     */
@@ -446,7 +446,7 @@ class AccessReviewInstanceDecisionItem extends Entity
 
     /**
     * Sets the target
-    * The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.
+    * The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0.
     *
     * @param AccessReviewInstanceDecisionItemTarget $val The target
     *

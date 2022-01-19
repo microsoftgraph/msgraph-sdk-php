@@ -35,4 +35,5 @@ class StagedFeatureName extends Enum
     const EMAIL_AS_ALTERNATE_ID = "emailAsAlternateId";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
     const CERTIFICATE_BASED_AUTHENTICATION = "certificateBasedAuthentication";
+    const MULTI_FACTOR_AUTHENTICATION = "multiFactorAuthentication";
 }

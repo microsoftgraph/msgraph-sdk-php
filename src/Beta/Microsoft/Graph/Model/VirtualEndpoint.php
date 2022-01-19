@@ -267,6 +267,34 @@ class VirtualEndpoint extends Entity
 
 
      /**
+     * Gets the snapshots
+     *
+     * @return array|null The snapshots
+     */
+    public function getSnapshots()
+    {
+        if (array_key_exists("snapshots", $this->_propDict)) {
+           return $this->_propDict["snapshots"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the snapshots
+    *
+    * @param CloudPcSnapshot[] $val The snapshots
+    *
+    * @return VirtualEndpoint
+    */
+    public function setSnapshots($val)
+    {
+        $this->_propDict["snapshots"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the supportedRegions
     * Cloud PC supported regions.
      *

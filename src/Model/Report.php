@@ -26,7 +26,7 @@ class Report extends Entity
 
     /**
     * Gets the content
-    * Not yet documented
+    * Report content; details vary by report type.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The content
     */
@@ -45,7 +45,7 @@ class Report extends Entity
 
     /**
     * Sets the content
-    * Not yet documented
+    * Report content; details vary by report type.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the content
     *

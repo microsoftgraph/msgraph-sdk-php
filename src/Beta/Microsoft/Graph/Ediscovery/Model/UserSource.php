@@ -88,6 +88,7 @@ class UserSource extends DataSource
 
     /**
     * Gets the siteWebUrl
+    * The URL of the user's OneDrive for Business site. Read-only.
     *
     * @return string|null The siteWebUrl
     */
@@ -102,6 +103,7 @@ class UserSource extends DataSource
 
     /**
     * Sets the siteWebUrl
+    * The URL of the user's OneDrive for Business site. Read-only.
     *
     * @param string $val The siteWebUrl
     *
