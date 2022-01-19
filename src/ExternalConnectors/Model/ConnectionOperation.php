@@ -59,7 +59,7 @@ class ConnectionOperation extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the status
-    * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
+    * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed.
     *
     * @return ConnectionOperationStatus|null The status
     */
@@ -78,7 +78,7 @@ class ConnectionOperation extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the status
-    * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
+    * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed.
     *
     * @param ConnectionOperationStatus $val The status
     *

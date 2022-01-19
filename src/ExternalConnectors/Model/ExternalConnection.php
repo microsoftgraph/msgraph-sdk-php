@@ -117,7 +117,7 @@ class ExternalConnection extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the state
-    * Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
+    * Indicates the current state of the connection. Possible values are draft, ready, obsolete, and limitExceeded. Required.
     *
     * @return ConnectionState|null The state
     */
@@ -136,7 +136,7 @@ class ExternalConnection extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the state
-    * Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
+    * Indicates the current state of the connection. Possible values are draft, ready, obsolete, and limitExceeded. Required.
     *
     * @param ConnectionState $val The state
     *

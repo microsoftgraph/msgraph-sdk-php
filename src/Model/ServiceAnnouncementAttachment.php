@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Attachment File
+* ServiceAnnouncementAttachment File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Microsoft\Graph\Model;
 
 /**
-* Attachment class
+* ServiceAnnouncementAttachment class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,11 +22,41 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Attachment extends Entity
+class ServiceAnnouncementAttachment extends Entity
 {
     /**
+    * Gets the content
+    *
+    * @return \GuzzleHttp\Psr7\Stream|null The content
+    */
+    public function getContent()
+    {
+        if (array_key_exists("content", $this->_propDict)) {
+            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["content"])) {
+                return $this->_propDict["content"];
+            } else {
+                $this->_propDict["content"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["content"]);
+                return $this->_propDict["content"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the content
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The content
+    *
+    * @return ServiceAnnouncementAttachment
+    */
+    public function setContent($val)
+    {
+        $this->_propDict["content"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the contentType
-    * The MIME type.
     *
     * @return string|null The contentType
     */
@@ -41,11 +71,10 @@ class Attachment extends Entity
 
     /**
     * Sets the contentType
-    * The MIME type.
     *
     * @param string $val The contentType
     *
-    * @return Attachment
+    * @return ServiceAnnouncementAttachment
     */
     public function setContentType($val)
     {
@@ -54,37 +83,7 @@ class Attachment extends Entity
     }
 
     /**
-    * Gets the isInline
-    * true if the attachment is an inline attachment; otherwise, false.
-    *
-    * @return bool|null The isInline
-    */
-    public function getIsInline()
-    {
-        if (array_key_exists("isInline", $this->_propDict)) {
-            return $this->_propDict["isInline"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the isInline
-    * true if the attachment is an inline attachment; otherwise, false.
-    *
-    * @param bool $val The isInline
-    *
-    * @return Attachment
-    */
-    public function setIsInline($val)
-    {
-        $this->_propDict["isInline"] = boolval($val);
-        return $this;
-    }
-
-    /**
     * Gets the lastModifiedDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -103,11 +102,10 @@ class Attachment extends Entity
 
     /**
     * Sets the lastModifiedDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
-    * @return Attachment
+    * @return ServiceAnnouncementAttachment
     */
     public function setLastModifiedDateTime($val)
     {
@@ -117,7 +115,6 @@ class Attachment extends Entity
 
     /**
     * Gets the name
-    * The display name of the attachment. This does not need to be the actual file name.
     *
     * @return string|null The name
     */
@@ -132,11 +129,10 @@ class Attachment extends Entity
 
     /**
     * Sets the name
-    * The display name of the attachment. This does not need to be the actual file name.
     *
     * @param string $val The name
     *
-    * @return Attachment
+    * @return ServiceAnnouncementAttachment
     */
     public function setName($val)
     {
@@ -146,7 +142,6 @@ class Attachment extends Entity
 
     /**
     * Gets the size
-    * The length of the attachment in bytes.
     *
     * @return int|null The size
     */
@@ -161,11 +156,10 @@ class Attachment extends Entity
 
     /**
     * Sets the size
-    * The length of the attachment in bytes.
     *
     * @param int $val The size
     *
-    * @return Attachment
+    * @return ServiceAnnouncementAttachment
     */
     public function setSize($val)
     {

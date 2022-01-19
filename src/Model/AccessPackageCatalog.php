@@ -26,7 +26,7 @@ class AccessPackageCatalog extends Entity
 {
     /**
     * Gets the catalogType
-    * Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
+    * One of UserManaged or ServiceDefault.
     *
     * @return AccessPackageCatalogType|null The catalogType
     */
@@ -45,7 +45,7 @@ class AccessPackageCatalog extends Entity
 
     /**
     * Sets the catalogType
-    * Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
+    * One of UserManaged or ServiceDefault.
     *
     * @param AccessPackageCatalogType $val The catalogType
     *
@@ -121,7 +121,7 @@ class AccessPackageCatalog extends Entity
 
     /**
     * Gets the displayName
-    * The display name of the access package catalog.
+    * The display name of the access package catalog. Supports $filter (eq, contains).
     *
     * @return string|null The displayName
     */
@@ -136,7 +136,7 @@ class AccessPackageCatalog extends Entity
 
     /**
     * Sets the displayName
-    * The display name of the access package catalog.
+    * The display name of the access package catalog. Supports $filter (eq, contains).
     *
     * @param string $val The displayName
     *
@@ -246,7 +246,7 @@ class AccessPackageCatalog extends Entity
 
      /**
      * Gets the accessPackages
-    * The access packages in this catalog. Read-only. Nullable.
+    * The access packages in this catalog. Read-only. Nullable. Supports $expand.
      *
      * @return array|null The accessPackages
      */
@@ -261,7 +261,7 @@ class AccessPackageCatalog extends Entity
 
     /**
     * Sets the accessPackages
-    * The access packages in this catalog. Read-only. Nullable.
+    * The access packages in this catalog. Read-only. Nullable. Supports $expand.
     *
     * @param AccessPackage[] $val The accessPackages
     *

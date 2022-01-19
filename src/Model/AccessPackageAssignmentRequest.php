@@ -90,7 +90,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Gets the requestType
-    * The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set.
+    * One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
     *
     * @return AccessPackageRequestType|null The requestType
     */
@@ -109,7 +109,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Sets the requestType
-    * The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set.
+    * One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
     *
     * @param AccessPackageRequestType $val The requestType
     *
@@ -123,7 +123,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Gets the schedule
-    * The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
+    * The range of dates that access is to be assigned to the requestor. Read-only.
     *
     * @return EntitlementManagementSchedule|null The schedule
     */
@@ -142,7 +142,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Sets the schedule
-    * The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
+    * The range of dates that access is to be assigned to the requestor. Read-only.
     *
     * @param EntitlementManagementSchedule $val The schedule
     *
@@ -218,7 +218,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Gets the accessPackage
-    * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
+    * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable. Supports $expand.
     *
     * @return AccessPackage|null The accessPackage
     */
@@ -237,7 +237,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Sets the accessPackage
-    * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
+    * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable. Supports $expand.
     *
     * @param AccessPackage $val The accessPackage
     *
