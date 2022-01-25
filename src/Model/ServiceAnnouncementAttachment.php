@@ -26,6 +26,7 @@ class ServiceAnnouncementAttachment extends Entity
 {
     /**
     * Gets the content
+    * The attachment content.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The content
     */
@@ -44,6 +45,7 @@ class ServiceAnnouncementAttachment extends Entity
 
     /**
     * Sets the content
+    * The attachment content.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The content
     *
