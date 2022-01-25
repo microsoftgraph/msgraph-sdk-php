@@ -332,6 +332,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the osVersion
+    * The version of the operating system (OS) to provision on Cloud PCs. Possible values are: windows10, windows11, and unknownFutureValue.
     *
     * @return CloudPcOperatingSystem|null The osVersion
     */
@@ -350,6 +351,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the osVersion
+    * The version of the operating system (OS) to provision on Cloud PCs. Possible values are: windows10, windows11, and unknownFutureValue.
     *
     * @param CloudPcOperatingSystem $val The osVersion
     *
@@ -578,6 +580,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the userAccountType
+    * The account type of the user on provisioned Cloud PCs. Possible values are: standardUser, administrator, and unknownFutureValue.
     *
     * @return CloudPcUserAccountType|null The userAccountType
     */
@@ -596,6 +599,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the userAccountType
+    * The account type of the user on provisioned Cloud PCs. Possible values are: standardUser, administrator, and unknownFutureValue.
     *
     * @param CloudPcUserAccountType $val The userAccountType
     *

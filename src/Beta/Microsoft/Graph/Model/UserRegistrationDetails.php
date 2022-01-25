@@ -26,6 +26,7 @@ class UserRegistrationDetails extends Entity
 {
     /**
     * Gets the isMfaCapable
+    * Whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
     *
     * @return bool|null The isMfaCapable
     */
@@ -40,6 +41,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the isMfaCapable
+    * Whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
     *
     * @param bool $val The isMfaCapable
     *
@@ -53,6 +55,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the isMfaRegistered
+    * Whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy.  Supports $filter (eq).
     *
     * @return bool|null The isMfaRegistered
     */
@@ -67,6 +70,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the isMfaRegistered
+    * Whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy.  Supports $filter (eq).
     *
     * @param bool $val The isMfaRegistered
     *
@@ -80,6 +84,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the isPasswordlessCapable
+    * Whether the user has registered a passwordless strong authentication method (including FIDO2, Windows Hello for Business, and Microsoft Authenticator (Passwordless)) that is allowed by the authentication methods policy. Supports $filter (eq).
     *
     * @return bool|null The isPasswordlessCapable
     */
@@ -94,6 +99,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the isPasswordlessCapable
+    * Whether the user has registered a passwordless strong authentication method (including FIDO2, Windows Hello for Business, and Microsoft Authenticator (Passwordless)) that is allowed by the authentication methods policy. Supports $filter (eq).
     *
     * @param bool $val The isPasswordlessCapable
     *
@@ -107,6 +113,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the isSsprCapable
+    * Whether the user has registered the required number of authentication methods for self-service password reset and the user is allowed to perform self-service password reset by policy. Supports $filter (eq).
     *
     * @return bool|null The isSsprCapable
     */
@@ -121,6 +128,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the isSsprCapable
+    * Whether the user has registered the required number of authentication methods for self-service password reset and the user is allowed to perform self-service password reset by policy. Supports $filter (eq).
     *
     * @param bool $val The isSsprCapable
     *
@@ -134,6 +142,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the isSsprEnabled
+    * Whether the user is allowed to perform self-service password reset by policy. The user may not necessarily have registered the required number of authentication methods for self-service password reset. Supports $filter (eq).
     *
     * @return bool|null The isSsprEnabled
     */
@@ -148,6 +157,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the isSsprEnabled
+    * Whether the user is allowed to perform self-service password reset by policy. The user may not necessarily have registered the required number of authentication methods for self-service password reset. Supports $filter (eq).
     *
     * @param bool $val The isSsprEnabled
     *
@@ -161,6 +171,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the isSsprRegistered
+    * Whether the user has registered the required number of authentication methods for self-service password reset. The user may not necessarily be allowed to perform self-service password reset by policy. Supports $filter (eq).
     *
     * @return bool|null The isSsprRegistered
     */
@@ -175,6 +186,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the isSsprRegistered
+    * Whether the user has registered the required number of authentication methods for self-service password reset. The user may not necessarily be allowed to perform self-service password reset by policy. Supports $filter (eq).
     *
     * @param bool $val The isSsprRegistered
     *
@@ -188,6 +200,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the methodsRegistered
+    * Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
     *
     * @return string|null The methodsRegistered
     */
@@ -202,6 +215,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the methodsRegistered
+    * Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
     *
     * @param string $val The methodsRegistered
     *
@@ -215,6 +229,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the userDisplayName
+    * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
     *
     * @return string|null The userDisplayName
     */
@@ -229,6 +244,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the userDisplayName
+    * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
     *
     * @param string $val The userDisplayName
     *
@@ -242,6 +258,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the userPrincipalName
+    * The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
     *
     * @return string|null The userPrincipalName
     */
@@ -256,6 +273,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the userPrincipalName
+    * The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
     *
     * @param string $val The userPrincipalName
     *

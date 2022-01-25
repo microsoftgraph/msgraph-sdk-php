@@ -463,6 +463,7 @@ class Site extends BaseItem
 
      /**
      * Gets the operations
+    * The collection of long running operations for the site.
      *
      * @return array|null The operations
      */
@@ -477,6 +478,7 @@ class Site extends BaseItem
 
     /**
     * Sets the operations
+    * The collection of long running operations for the site.
     *
     * @param RichLongRunningOperation[] $val The operations
     *

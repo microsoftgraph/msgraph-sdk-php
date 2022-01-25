@@ -26,7 +26,7 @@ class AdministrativeUnit extends DirectoryObject
 {
     /**
     * Gets the description
-    * An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith).
+    * An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith), $search.
     *
     * @return string|null The description
     */
@@ -41,7 +41,7 @@ class AdministrativeUnit extends DirectoryObject
 
     /**
     * Sets the description
-    * An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith).
+    * An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith), $search.
     *
     * @param string $val The description
     *
@@ -114,7 +114,7 @@ class AdministrativeUnit extends DirectoryObject
 
      /**
      * Gets the members
-    * Users and groups that are members of this administrative unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).
+    * Users and groups that are members of this administrative unit. Supports $expand.
      *
      * @return array|null The members
      */
@@ -129,7 +129,7 @@ class AdministrativeUnit extends DirectoryObject
 
     /**
     * Sets the members
-    * Users and groups that are members of this administrative unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).
+    * Users and groups that are members of this administrative unit. Supports $expand.
     *
     * @param DirectoryObject[] $val The members
     *
@@ -144,7 +144,7 @@ class AdministrativeUnit extends DirectoryObject
 
      /**
      * Gets the scopedRoleMembers
-    * Scoped-role members of this administrative unit.  HTTP Methods: GET (list scopedRoleMemberships), POST (add scopedRoleMembership), DELETE (remove scopedRoleMembership).
+    * Scoped-role members of this administrative unit.
      *
      * @return array|null The scopedRoleMembers
      */
@@ -159,7 +159,7 @@ class AdministrativeUnit extends DirectoryObject
 
     /**
     * Sets the scopedRoleMembers
-    * Scoped-role members of this administrative unit.  HTTP Methods: GET (list scopedRoleMemberships), POST (add scopedRoleMembership), DELETE (remove scopedRoleMembership).
+    * Scoped-role members of this administrative unit.
     *
     * @param ScopedRoleMembership[] $val The scopedRoleMembers
     *

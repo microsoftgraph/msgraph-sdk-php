@@ -176,6 +176,7 @@ class VirtualEndpoint extends Entity
 
     /**
     * Gets the organizationSettings
+    * The Cloud PC organization settings for a tenant.
     *
     * @return CloudPcOrganizationSettings|null The organizationSettings
     */
@@ -194,6 +195,7 @@ class VirtualEndpoint extends Entity
 
     /**
     * Sets the organizationSettings
+    * The Cloud PC organization settings for a tenant.
     *
     * @param CloudPcOrganizationSettings $val The organizationSettings
     *
