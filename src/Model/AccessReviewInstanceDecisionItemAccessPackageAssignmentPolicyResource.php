@@ -25,6 +25,7 @@ class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource exte
 {
     /**
     * Gets the accessPackageDisplayName
+    * Display name of the access package to which access has been granted.
     *
     * @return string|null The accessPackageDisplayName
     */
@@ -39,6 +40,7 @@ class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource exte
 
     /**
     * Sets the accessPackageDisplayName
+    * Display name of the access package to which access has been granted.
     *
     * @param string $val The value of the accessPackageDisplayName
     *
@@ -51,6 +53,7 @@ class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource exte
     }
     /**
     * Gets the accessPackageId
+    * Identifier of the access package to which access has been granted.
     *
     * @return string|null The accessPackageId
     */
@@ -65,6 +68,7 @@ class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource exte
 
     /**
     * Sets the accessPackageId
+    * Identifier of the access package to which access has been granted.
     *
     * @param string $val The value of the accessPackageId
     *
