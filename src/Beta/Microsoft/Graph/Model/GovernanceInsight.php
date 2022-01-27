@@ -26,6 +26,7 @@ class GovernanceInsight extends Entity
 {
     /**
     * Gets the insightCreatedDateTime
+    * Indicates when the insight was created.
     *
     * @return \DateTime|null The insightCreatedDateTime
     */
@@ -44,6 +45,7 @@ class GovernanceInsight extends Entity
 
     /**
     * Sets the insightCreatedDateTime
+    * Indicates when the insight was created.
     *
     * @param \DateTime $val The insightCreatedDateTime
     *

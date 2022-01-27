@@ -26,6 +26,7 @@ class AuthenticationContext extends Entity
 
     /**
     * Gets the detail
+    * Describes how the conditional access authentication context was triggered. A value of previouslySatisfied means the auth context was because the user already satisfied the requirements for that authentication context in some previous authentication event. A value of required means the user had to meet the authentication context requirement as part of the sign-in flow. The possible values are: required, previouslySatisfied, notApplicable, unknownFutureValue.
     *
     * @return AuthenticationContextDetail|null The detail
     */
@@ -44,6 +45,7 @@ class AuthenticationContext extends Entity
 
     /**
     * Sets the detail
+    * Describes how the conditional access authentication context was triggered. A value of previouslySatisfied means the auth context was because the user already satisfied the requirements for that authentication context in some previous authentication event. A value of required means the user had to meet the authentication context requirement as part of the sign-in flow. The possible values are: required, previouslySatisfied, notApplicable, unknownFutureValue.
     *
     * @param AuthenticationContextDetail $val The value to assign to the detail
     *
@@ -56,6 +58,7 @@ class AuthenticationContext extends Entity
     }
     /**
     * Gets the id
+    * The identifier of a authentication context in your tenant.
     *
     * @return string|null The id
     */
@@ -70,6 +73,7 @@ class AuthenticationContext extends Entity
 
     /**
     * Sets the id
+    * The identifier of a authentication context in your tenant.
     *
     * @param string $val The value of the id
     *

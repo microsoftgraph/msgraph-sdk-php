@@ -461,6 +461,7 @@ class AccessReviewInstanceDecisionItem extends Entity
 
      /**
      * Gets the insights
+    * Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
      *
      * @return array|null The insights
      */
@@ -475,6 +476,7 @@ class AccessReviewInstanceDecisionItem extends Entity
 
     /**
     * Sets the insights
+    * Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
     *
     * @param GovernanceInsight[] $val The insights
     *

@@ -307,6 +307,37 @@ class PolicyRoot implements \JsonSerializable
         return $this;
     }
 
+    /**
+    * Gets the externalIdentitiesPolicy
+    *
+    * @return ExternalIdentitiesPolicy|null The externalIdentitiesPolicy
+    */
+    public function getExternalIdentitiesPolicy()
+    {
+        if (array_key_exists("externalIdentitiesPolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["externalIdentitiesPolicy"], "\Beta\Microsoft\Graph\Model\ExternalIdentitiesPolicy") || is_null($this->_propDict["externalIdentitiesPolicy"])) {
+                return $this->_propDict["externalIdentitiesPolicy"];
+            } else {
+                $this->_propDict["externalIdentitiesPolicy"] = new ExternalIdentitiesPolicy($this->_propDict["externalIdentitiesPolicy"]);
+                return $this->_propDict["externalIdentitiesPolicy"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the externalIdentitiesPolicy
+    *
+    * @param ExternalIdentitiesPolicy $val The externalIdentitiesPolicy
+    *
+    * @return PolicyRoot
+    */
+    public function setExternalIdentitiesPolicy($val)
+    {
+        $this->_propDict["externalIdentitiesPolicy"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the homeRealmDiscoveryPolicies

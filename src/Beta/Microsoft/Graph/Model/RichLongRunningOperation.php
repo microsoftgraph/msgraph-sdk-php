@@ -26,6 +26,7 @@ class RichLongRunningOperation extends LongRunningOperation
 {
     /**
     * Gets the error
+    * Error due to which the operation failed.
     *
     * @return PublicError|null The error
     */
@@ -44,6 +45,7 @@ class RichLongRunningOperation extends LongRunningOperation
 
     /**
     * Sets the error
+    * Error due to which the operation failed.
     *
     * @param PublicError $val The error
     *
@@ -57,6 +59,7 @@ class RichLongRunningOperation extends LongRunningOperation
 
     /**
     * Gets the percentageComplete
+    * A value between 0 and 100 that indicates the progress of the operation.
     *
     * @return int|null The percentageComplete
     */
@@ -71,6 +74,7 @@ class RichLongRunningOperation extends LongRunningOperation
 
     /**
     * Sets the percentageComplete
+    * A value between 0 and 100 that indicates the progress of the operation.
     *
     * @param int $val The percentageComplete
     *
@@ -84,6 +88,7 @@ class RichLongRunningOperation extends LongRunningOperation
 
     /**
     * Gets the resourceId
+    * A unique identifier for the result.
     *
     * @return string|null The resourceId
     */
@@ -98,6 +103,7 @@ class RichLongRunningOperation extends LongRunningOperation
 
     /**
     * Sets the resourceId
+    * A unique identifier for the result.
     *
     * @param string $val The resourceId
     *
@@ -111,6 +117,7 @@ class RichLongRunningOperation extends LongRunningOperation
 
     /**
     * Gets the type
+    * Type of the operation.
     *
     * @return string|null The type
     */
@@ -125,6 +132,7 @@ class RichLongRunningOperation extends LongRunningOperation
 
     /**
     * Sets the type
+    * Type of the operation.
     *
     * @param string $val The type
     *
