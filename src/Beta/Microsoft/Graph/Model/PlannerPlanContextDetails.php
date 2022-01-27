@@ -84,6 +84,37 @@ class PlannerPlanContextDetails extends Entity
         $this->_propDict["displayLinkType"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the state
+    *
+    * @return PlannerContextState|null The state
+    */
+    public function getState()
+    {
+        if (array_key_exists("state", $this->_propDict)) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\PlannerContextState") || is_null($this->_propDict["state"])) {
+                return $this->_propDict["state"];
+            } else {
+                $this->_propDict["state"] = new PlannerContextState($this->_propDict["state"]);
+                return $this->_propDict["state"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the state
+    *
+    * @param PlannerContextState $val The value to assign to the state
+    *
+    * @return PlannerPlanContextDetails The PlannerPlanContextDetails
+    */
+    public function setState($val)
+    {
+        $this->_propDict["state"] = $val;
+         return $this;
+    }
     /**
     * Gets the url
     * URL of the user experience represented by the associated plannerPlanContext.
