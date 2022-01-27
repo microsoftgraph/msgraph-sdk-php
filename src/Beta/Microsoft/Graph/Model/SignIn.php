@@ -115,6 +115,7 @@ class SignIn extends Entity
 
      /**
      * Gets the authenticationContextClassReferences
+    * Contains a collection of values that represent the conditional access authentication contexts applied to the sign-in.
      *
      * @return array|null The authenticationContextClassReferences
      */
@@ -129,6 +130,7 @@ class SignIn extends Entity
 
     /**
     * Sets the authenticationContextClassReferences
+    * Contains a collection of values that represent the conditional access authentication contexts applied to the sign-in.
     *
     * @param AuthenticationContext[] $val The authenticationContextClassReferences
     *
@@ -352,6 +354,7 @@ class SignIn extends Entity
 
     /**
     * Gets the azureResourceId
+    * Contains a fully qualified Azure Resource Manager ID of an Azure resource accessed during the sign-in.
     *
     * @return string|null The azureResourceId
     */
@@ -366,6 +369,7 @@ class SignIn extends Entity
 
     /**
     * Sets the azureResourceId
+    * Contains a fully qualified Azure Resource Manager ID of an Azure resource accessed during the sign-in.
     *
     * @param string $val The azureResourceId
     *
@@ -569,6 +573,7 @@ class SignIn extends Entity
 
     /**
     * Gets the federatedCredentialId
+    * Contains the identifier of an application's federated identity credential, if a federated identity credential was used to sign in.
     *
     * @return string|null The federatedCredentialId
     */
@@ -583,6 +588,7 @@ class SignIn extends Entity
 
     /**
     * Sets the federatedCredentialId
+    * Contains the identifier of an application's federated identity credential, if a federated identity credential was used to sign in.
     *
     * @param string $val The federatedCredentialId
     *
@@ -1075,6 +1081,7 @@ class SignIn extends Entity
 
     /**
     * Gets the resourceServicePrincipalId
+    * The identifier of the service principal representing the target resource in the sign-in event.
     *
     * @return string|null The resourceServicePrincipalId
     */
@@ -1089,6 +1096,7 @@ class SignIn extends Entity
 
     /**
     * Sets the resourceServicePrincipalId
+    * The identifier of the service principal representing the target resource in the sign-in event.
     *
     * @param string $val The resourceServicePrincipalId
     *
@@ -1409,6 +1417,7 @@ class SignIn extends Entity
 
      /**
      * Gets the sessionLifetimePolicies
+    * Any conditional access session management policies that were applied during the sign-in event.
      *
      * @return array|null The sessionLifetimePolicies
      */
@@ -1423,6 +1432,7 @@ class SignIn extends Entity
 
     /**
     * Sets the sessionLifetimePolicies
+    * Any conditional access session management policies that were applied during the sign-in event.
     *
     * @param SessionLifetimePolicy[] $val The sessionLifetimePolicies
     *
@@ -1589,7 +1599,7 @@ class SignIn extends Entity
 
     /**
     * Gets the tokenIssuerType
-    * The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: AzureADBackupAuth.
+    * The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension.
     *
     * @return TokenIssuerType|null The tokenIssuerType
     */
@@ -1608,7 +1618,7 @@ class SignIn extends Entity
 
     /**
     * Sets the tokenIssuerType
-    * The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: AzureADBackupAuth.
+    * The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension.
     *
     * @param TokenIssuerType $val The tokenIssuerType
     *

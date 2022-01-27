@@ -55,7 +55,7 @@ class ServiceHealth extends Entity
 
     /**
     * Gets the status
-    * Show the overral service health status. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue.
+    * Show the overall service health status. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. For more details, see serviceHealthStatus values.
     *
     * @return ServiceHealthStatus|null The status
     */
@@ -74,7 +74,7 @@ class ServiceHealth extends Entity
 
     /**
     * Sets the status
-    * Show the overral service health status. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue.
+    * Show the overall service health status. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. For more details, see serviceHealthStatus values.
     *
     * @param ServiceHealthStatus $val The status
     *
@@ -89,7 +89,7 @@ class ServiceHealth extends Entity
 
      /**
      * Gets the issues
-    * A collection of issues happened on the service, with detailed information for each issue.
+    * A collection of issues that happened on the service, with detailed information for each issue.
      *
      * @return array|null The issues
      */
@@ -104,7 +104,7 @@ class ServiceHealth extends Entity
 
     /**
     * Sets the issues
-    * A collection of issues happened on the service, with detailed information for each issue.
+    * A collection of issues that happened on the service, with detailed information for each issue.
     *
     * @param ServiceHealthIssue[] $val The issues
     *

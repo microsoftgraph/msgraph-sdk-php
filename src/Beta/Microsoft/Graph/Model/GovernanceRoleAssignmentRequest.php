@@ -146,7 +146,7 @@ class GovernanceRoleAssignmentRequest extends Entity
 
     /**
     * Gets the resourceId
-    * Required. The id of the resource which the role assignment request is associated with.
+    * Required. The unique identifier of the Azure resource that is associated with the role assignment request. Azure resources can include subscriptions, resource groups, virtual machines, and SQL databases.
     *
     * @return string|null The resourceId
     */
@@ -161,7 +161,7 @@ class GovernanceRoleAssignmentRequest extends Entity
 
     /**
     * Sets the resourceId
-    * Required. The id of the resource which the role assignment request is associated with.
+    * Required. The unique identifier of the Azure resource that is associated with the role assignment request. Azure resources can include subscriptions, resource groups, virtual machines, and SQL databases.
     *
     * @param string $val The resourceId
     *
@@ -175,7 +175,7 @@ class GovernanceRoleAssignmentRequest extends Entity
 
     /**
     * Gets the roleDefinitionId
-    * Required. The id of the role definition which the role assignment request is associated with.
+    * Required. The identifier of the Azure role definition that the role assignment request is associated with.
     *
     * @return string|null The roleDefinitionId
     */
@@ -190,7 +190,7 @@ class GovernanceRoleAssignmentRequest extends Entity
 
     /**
     * Sets the roleDefinitionId
-    * Required. The id of the role definition which the role assignment request is associated with.
+    * Required. The identifier of the Azure role definition that the role assignment request is associated with.
     *
     * @param string $val The roleDefinitionId
     *
@@ -270,7 +270,7 @@ class GovernanceRoleAssignmentRequest extends Entity
 
     /**
     * Gets the subjectId
-    * Required. The id of the subject which the role assignment request is associated with.
+    * Required. The unique identifier of the principal or subject that the role assignment request is associated with. Principals can be users, groups, or service principals.
     *
     * @return string|null The subjectId
     */
@@ -285,7 +285,7 @@ class GovernanceRoleAssignmentRequest extends Entity
 
     /**
     * Sets the subjectId
-    * Required. The id of the subject which the role assignment request is associated with.
+    * Required. The unique identifier of the principal or subject that the role assignment request is associated with. Principals can be users, groups, or service principals.
     *
     * @param string $val The subjectId
     *
