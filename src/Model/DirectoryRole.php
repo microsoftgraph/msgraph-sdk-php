@@ -26,7 +26,7 @@ class DirectoryRole extends DirectoryObject
 {
     /**
     * Gets the description
-    * The description for the directory role. Read-only.
+    * The description for the directory role. Read-only. Supports $filter (eq), $search, $select.
     *
     * @return string|null The description
     */
@@ -41,7 +41,7 @@ class DirectoryRole extends DirectoryObject
 
     /**
     * Sets the description
-    * The description for the directory role. Read-only.
+    * The description for the directory role. Read-only. Supports $filter (eq), $search, $select.
     *
     * @param string $val The description
     *
@@ -55,7 +55,7 @@ class DirectoryRole extends DirectoryObject
 
     /**
     * Gets the displayName
-    * The display name for the directory role. Read-only.
+    * The display name for the directory role. Read-only. Supports $filter (eq), $search, $select.
     *
     * @return string|null The displayName
     */
@@ -70,7 +70,7 @@ class DirectoryRole extends DirectoryObject
 
     /**
     * Sets the displayName
-    * The display name for the directory role. Read-only.
+    * The display name for the directory role. Read-only. Supports $filter (eq), $search, $select.
     *
     * @param string $val The displayName
     *
@@ -84,7 +84,7 @@ class DirectoryRole extends DirectoryObject
 
     /**
     * Gets the roleTemplateId
-    * The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only.
+    * The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only. Supports $filter (eq), $select.
     *
     * @return string|null The roleTemplateId
     */
@@ -99,7 +99,7 @@ class DirectoryRole extends DirectoryObject
 
     /**
     * Sets the roleTemplateId
-    * The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only.
+    * The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only. Supports $filter (eq), $select.
     *
     * @param string $val The roleTemplateId
     *
@@ -114,7 +114,7 @@ class DirectoryRole extends DirectoryObject
 
      /**
      * Gets the members
-    * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.
+    * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable. Supports $expand.
      *
      * @return array|null The members
      */
@@ -129,7 +129,7 @@ class DirectoryRole extends DirectoryObject
 
     /**
     * Sets the members
-    * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.
+    * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable. Supports $expand.
     *
     * @param DirectoryObject[] $val The members
     *

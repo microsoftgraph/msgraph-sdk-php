@@ -277,6 +277,37 @@ class AccessReviewHistoryDefinition extends Entity
         return $this;
     }
 
+    /**
+    * Gets the scheduleSettings
+    *
+    * @return AccessReviewHistoryScheduleSettings|null The scheduleSettings
+    */
+    public function getScheduleSettings()
+    {
+        if (array_key_exists("scheduleSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["scheduleSettings"], "\Beta\Microsoft\Graph\Model\AccessReviewHistoryScheduleSettings") || is_null($this->_propDict["scheduleSettings"])) {
+                return $this->_propDict["scheduleSettings"];
+            } else {
+                $this->_propDict["scheduleSettings"] = new AccessReviewHistoryScheduleSettings($this->_propDict["scheduleSettings"]);
+                return $this->_propDict["scheduleSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the scheduleSettings
+    *
+    * @param AccessReviewHistoryScheduleSettings $val The scheduleSettings
+    *
+    * @return AccessReviewHistoryDefinition
+    */
+    public function setScheduleSettings($val)
+    {
+        $this->_propDict["scheduleSettings"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the scopes
@@ -337,6 +368,34 @@ class AccessReviewHistoryDefinition extends Entity
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the instances
+     *
+     * @return array|null The instances
+     */
+    public function getInstances()
+    {
+        if (array_key_exists("instances", $this->_propDict)) {
+           return $this->_propDict["instances"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the instances
+    *
+    * @param AccessReviewHistoryInstance[] $val The instances
+    *
+    * @return AccessReviewHistoryDefinition
+    */
+    public function setInstances($val)
+    {
+        $this->_propDict["instances"] = $val;
         return $this;
     }
 

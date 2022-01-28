@@ -26,6 +26,7 @@ class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessReviewInst
 
     /**
     * Gets the scope
+    * Details of the scope this role is associated with.
     *
     * @return AccessReviewInstanceDecisionItemResource|null The scope
     */
@@ -44,6 +45,7 @@ class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessReviewInst
 
     /**
     * Sets the scope
+    * Details of the scope this role is associated with.
     *
     * @param AccessReviewInstanceDecisionItemResource $val The value to assign to the scope
     *

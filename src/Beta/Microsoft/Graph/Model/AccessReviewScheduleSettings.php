@@ -227,6 +227,7 @@ class AccessReviewScheduleSettings extends Entity
 
     /**
     * Gets the recommendationInsightSettings
+    * Optional. Describes the types of insights that aid reviewers to make access review decisions.
     *
     * @return AccessReviewRecommendationInsightSetting|null The recommendationInsightSettings
     */
@@ -245,6 +246,7 @@ class AccessReviewScheduleSettings extends Entity
 
     /**
     * Sets the recommendationInsightSettings
+    * Optional. Describes the types of insights that aid reviewers to make access review decisions.
     *
     * @param AccessReviewRecommendationInsightSetting $val The value to assign to the recommendationInsightSettings
     *

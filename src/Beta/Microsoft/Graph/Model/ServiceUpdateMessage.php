@@ -59,6 +59,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
 
     /**
     * Gets the attachmentsArchive
+    * The zip file of all attachments for a message.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The attachmentsArchive
     */
@@ -77,6 +78,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
 
     /**
     * Sets the attachmentsArchive
+    * The zip file of all attachments for a message.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The attachmentsArchive
     *
@@ -156,6 +158,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
 
     /**
     * Gets the hasAttachments
+    * Indicates whether the message has any attachment.
     *
     * @return bool|null The hasAttachments
     */
@@ -170,6 +173,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
 
     /**
     * Sets the hasAttachments
+    * Indicates whether the message has any attachment.
     *
     * @param bool $val The hasAttachments
     *
@@ -274,7 +278,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
 
     /**
     * Gets the tags
-    * A collection of tags for the service message.
+    * A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.
     *
     * @return string|null The tags
     */
@@ -289,7 +293,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
 
     /**
     * Sets the tags
-    * A collection of tags for the service message.
+    * A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.
     *
     * @param string $val The tags
     *
@@ -303,7 +307,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
 
     /**
     * Gets the viewPoint
-    * Represents user view points data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
+    * Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
     *
     * @return ServiceUpdateMessageViewpoint|null The viewPoint
     */
@@ -322,7 +326,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
 
     /**
     * Sets the viewPoint
-    * Represents user view points data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
+    * Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
     *
     * @param ServiceUpdateMessageViewpoint $val The viewPoint
     *
@@ -337,6 +341,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
 
      /**
      * Gets the attachments
+    * A collection of serviceAnnouncementAttachments.
      *
      * @return array|null The attachments
      */
@@ -351,6 +356,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
 
     /**
     * Sets the attachments
+    * A collection of serviceAnnouncementAttachments.
     *
     * @param ServiceAnnouncementAttachment[] $val The attachments
     *

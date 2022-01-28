@@ -15,7 +15,7 @@ When you authenticate against Graph, you will have to specify which scopes you w
 ### I cannot add query parameters to my request
 Make sure that you either use single quotes around your endpoint or escape your "$"
 ```php
-$graph->createCollectionRequest("GET", "/me/messages?\$filter=from/emailAddress/address eq 'email@dot.com'");
+$graph->createCollectionRequest("GET", "/me/messages?\$select=subject");
 ```
 or
 ```php
