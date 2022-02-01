@@ -25,6 +25,7 @@ class TeamworkContentCameraConfiguration extends Entity
 {
     /**
     * Gets the isContentCameraInverted
+    * True if the content camera is inverted.
     *
     * @return bool|null The isContentCameraInverted
     */
@@ -39,6 +40,7 @@ class TeamworkContentCameraConfiguration extends Entity
 
     /**
     * Sets the isContentCameraInverted
+    * True if the content camera is inverted.
     *
     * @param bool $val The value of the isContentCameraInverted
     *
@@ -51,6 +53,7 @@ class TeamworkContentCameraConfiguration extends Entity
     }
     /**
     * Gets the isContentCameraOptional
+    * True if the content camera is optional.
     *
     * @return bool|null The isContentCameraOptional
     */
@@ -65,6 +68,7 @@ class TeamworkContentCameraConfiguration extends Entity
 
     /**
     * Sets the isContentCameraOptional
+    * True if the content camera is optional.
     *
     * @param bool $val The value of the isContentCameraOptional
     *
@@ -77,6 +81,7 @@ class TeamworkContentCameraConfiguration extends Entity
     }
     /**
     * Gets the isContentEnhancementEnabled
+    * True if the content enhancement is enabled.
     *
     * @return bool|null The isContentEnhancementEnabled
     */
@@ -91,6 +96,7 @@ class TeamworkContentCameraConfiguration extends Entity
 
     /**
     * Sets the isContentEnhancementEnabled
+    * True if the content enhancement is enabled.
     *
     * @param bool $val The value of the isContentEnhancementEnabled
     *

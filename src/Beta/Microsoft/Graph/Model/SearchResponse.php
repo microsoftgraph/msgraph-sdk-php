@@ -92,6 +92,7 @@ class SearchResponse extends Entity
 
     /**
     * Gets the resultTemplates
+    * A dictionary of resultTemplateIds and associated values, which include the name and JSON schema of the result templates.
     *
     * @return ResultTemplateDictionary|null The resultTemplates
     */
@@ -110,6 +111,7 @@ class SearchResponse extends Entity
 
     /**
     * Sets the resultTemplates
+    * A dictionary of resultTemplateIds and associated values, which include the name and JSON schema of the result templates.
     *
     * @param ResultTemplateDictionary $val The value to assign to the resultTemplates
     *

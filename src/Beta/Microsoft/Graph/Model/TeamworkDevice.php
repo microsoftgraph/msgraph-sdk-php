@@ -26,6 +26,7 @@ class TeamworkDevice extends Entity
 {
     /**
     * Gets the activityState
+    * The activity state of the device. The possible values are: unknown, busy, idle, unavailable, unknownFutureValue.
     *
     * @return TeamworkDeviceActivityState|null The activityState
     */
@@ -44,6 +45,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Sets the activityState
+    * The activity state of the device. The possible values are: unknown, busy, idle, unavailable, unknownFutureValue.
     *
     * @param TeamworkDeviceActivityState $val The activityState
     *
@@ -57,6 +59,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Gets the companyAssetTag
+    * The company asset tag assigned by the admin on the device.
     *
     * @return string|null The companyAssetTag
     */
@@ -71,6 +74,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Sets the companyAssetTag
+    * The company asset tag assigned by the admin on the device.
     *
     * @param string $val The companyAssetTag
     *
@@ -84,6 +88,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Gets the createdBy
+    * Identity of the user who enrolled the device to the tenant.
     *
     * @return IdentitySet|null The createdBy
     */
@@ -102,6 +107,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Sets the createdBy
+    * Identity of the user who enrolled the device to the tenant.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -115,6 +121,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Gets the createdDateTime
+    * The UTC date and time when the device was enrolled to the tenant.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -133,6 +140,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Sets the createdDateTime
+    * The UTC date and time when the device was enrolled to the tenant.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -146,6 +154,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Gets the currentUser
+    * The signed-in user on the device.
     *
     * @return TeamworkUserIdentity|null The currentUser
     */
@@ -164,6 +173,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Sets the currentUser
+    * The signed-in user on the device.
     *
     * @param TeamworkUserIdentity $val The currentUser
     *
@@ -177,6 +187,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Gets the deviceType
+    * The type of device. The possible values are: unknown, ipPhone, teamsRoom, surfaceHub, collaborationBar, teamsDisplay, touchConsole, lowCostPhone, teamsPanel, sip, unknownFutureValue.
     *
     * @return TeamworkDeviceType|null The deviceType
     */
@@ -195,6 +206,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Sets the deviceType
+    * The type of device. The possible values are: unknown, ipPhone, teamsRoom, surfaceHub, collaborationBar, teamsDisplay, touchConsole, lowCostPhone, teamsPanel, sip, unknownFutureValue.
     *
     * @param TeamworkDeviceType $val The deviceType
     *
@@ -208,6 +220,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Gets the hardwareDetail
+    * A collection of hardware-related properties. For example, oemSerialNumber and model.
     *
     * @return TeamworkHardwareDetail|null The hardwareDetail
     */
@@ -226,6 +239,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Sets the hardwareDetail
+    * A collection of hardware-related properties. For example, oemSerialNumber and model.
     *
     * @param TeamworkHardwareDetail $val The hardwareDetail
     *
@@ -239,6 +253,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Gets the healthStatus
+    * The health status of the device. The possible values are: unknown, offline, critical, nonUrgent, healthy, unknownFutureValue.
     *
     * @return TeamworkDeviceHealthStatus|null The healthStatus
     */
@@ -257,6 +272,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Sets the healthStatus
+    * The health status of the device. The possible values are: unknown, offline, critical, nonUrgent, healthy, unknownFutureValue.
     *
     * @param TeamworkDeviceHealthStatus $val The healthStatus
     *
@@ -270,6 +286,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * Identity of the user who last modified the device details.
     *
     * @return IdentitySet|null The lastModifiedBy
     */
@@ -288,6 +305,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * Identity of the user who last modified the device details.
     *
     * @param IdentitySet $val The lastModifiedBy
     *
@@ -301,6 +319,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * The UTC date and time when the device detail was last modified.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -319,6 +338,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * The UTC date and time when the device detail was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -332,6 +352,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Gets the notes
+    * The notes added by the admin to the device.
     *
     * @return string|null The notes
     */
@@ -346,6 +367,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Sets the notes
+    * The notes added by the admin to the device.
     *
     * @param string $val The notes
     *
@@ -359,6 +381,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Gets the activity
+    * The activity properties that change based on the device usage.
     *
     * @return TeamworkDeviceActivity|null The activity
     */
@@ -377,6 +400,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Sets the activity
+    * The activity properties that change based on the device usage.
     *
     * @param TeamworkDeviceActivity $val The activity
     *
@@ -390,6 +414,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Gets the configuration
+    * The configuration properties of the device.
     *
     * @return TeamworkDeviceConfiguration|null The configuration
     */
@@ -408,6 +433,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Sets the configuration
+    * The configuration properties of the device.
     *
     * @param TeamworkDeviceConfiguration $val The configuration
     *
@@ -421,6 +447,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Gets the health
+    * The health properties of the device.
     *
     * @return TeamworkDeviceHealth|null The health
     */
@@ -439,6 +466,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Sets the health
+    * The health properties of the device.
     *
     * @param TeamworkDeviceHealth $val The health
     *
@@ -453,6 +481,7 @@ class TeamworkDevice extends Entity
 
      /**
      * Gets the operations
+    * The async operations on the device.
      *
      * @return array|null The operations
      */
@@ -467,6 +496,7 @@ class TeamworkDevice extends Entity
 
     /**
     * Sets the operations
+    * The async operations on the device.
     *
     * @param TeamworkDeviceOperation[] $val The operations
     *

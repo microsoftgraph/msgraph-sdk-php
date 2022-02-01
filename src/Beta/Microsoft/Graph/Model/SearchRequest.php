@@ -265,6 +265,7 @@ class SearchRequest extends Entity
 
     /**
     * Gets the queryAlterationOptions
+    * Query alteration options formatted in a JSON blob that contains two optional flags related to spelling correction. Optional.
     *
     * @return SearchAlterationOptions|null The queryAlterationOptions
     */
@@ -283,6 +284,7 @@ class SearchRequest extends Entity
 
     /**
     * Sets the queryAlterationOptions
+    * Query alteration options formatted in a JSON blob that contains two optional flags related to spelling correction. Optional.
     *
     * @param SearchAlterationOptions $val The value to assign to the queryAlterationOptions
     *

@@ -26,6 +26,7 @@ class TeamworkAccountConfiguration extends Entity
 
     /**
     * Gets the onPremisesCalendarSyncConfiguration
+    * The account used to sync the calendar.
     *
     * @return TeamworkOnPremisesCalendarSyncConfiguration|null The onPremisesCalendarSyncConfiguration
     */
@@ -44,6 +45,7 @@ class TeamworkAccountConfiguration extends Entity
 
     /**
     * Sets the onPremisesCalendarSyncConfiguration
+    * The account used to sync the calendar.
     *
     * @param TeamworkOnPremisesCalendarSyncConfiguration $val The value to assign to the onPremisesCalendarSyncConfiguration
     *
@@ -57,6 +59,7 @@ class TeamworkAccountConfiguration extends Entity
 
     /**
     * Gets the supportedClient
+    * The supported client for Teams Rooms devices. The possible values are: unknown, skypeDefaultAndTeams, teamsDefaultAndSkype, skypeOnly, teamsOnly, unknownFutureValue.
     *
     * @return TeamworkSupportedClient|null The supportedClient
     */
@@ -75,6 +78,7 @@ class TeamworkAccountConfiguration extends Entity
 
     /**
     * Sets the supportedClient
+    * The supported client for Teams Rooms devices. The possible values are: unknown, skypeDefaultAndTeams, teamsDefaultAndSkype, skypeOnly, teamsOnly, unknownFutureValue.
     *
     * @param TeamworkSupportedClient $val The value to assign to the supportedClient
     *

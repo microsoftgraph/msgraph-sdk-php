@@ -26,6 +26,7 @@ class TeamworkPeripheralHealth extends Entity
 
     /**
     * Gets the connection
+    * The connected state and time since the peripheral device was connected.
     *
     * @return TeamworkConnection|null The connection
     */
@@ -44,6 +45,7 @@ class TeamworkPeripheralHealth extends Entity
 
     /**
     * Sets the connection
+    * The connected state and time since the peripheral device was connected.
     *
     * @param TeamworkConnection $val The value to assign to the connection
     *
@@ -56,6 +58,7 @@ class TeamworkPeripheralHealth extends Entity
     }
     /**
     * Gets the isOptional
+    * True if the peripheral is optional. Used for health computation.
     *
     * @return bool|null The isOptional
     */
@@ -70,6 +73,7 @@ class TeamworkPeripheralHealth extends Entity
 
     /**
     * Sets the isOptional
+    * True if the peripheral is optional. Used for health computation.
     *
     * @param bool $val The value of the isOptional
     *

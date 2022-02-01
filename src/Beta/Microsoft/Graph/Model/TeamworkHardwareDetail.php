@@ -25,6 +25,7 @@ class TeamworkHardwareDetail extends Entity
 {
     /**
     * Gets the macAddresses
+    * MAC address.
     *
     * @return string|null The macAddresses
     */
@@ -39,6 +40,7 @@ class TeamworkHardwareDetail extends Entity
 
     /**
     * Sets the macAddresses
+    * MAC address.
     *
     * @param string $val The value of the macAddresses
     *
@@ -51,6 +53,7 @@ class TeamworkHardwareDetail extends Entity
     }
     /**
     * Gets the manufacturer
+    * Device manufacturer.
     *
     * @return string|null The manufacturer
     */
@@ -65,6 +68,7 @@ class TeamworkHardwareDetail extends Entity
 
     /**
     * Sets the manufacturer
+    * Device manufacturer.
     *
     * @param string $val The value of the manufacturer
     *
@@ -77,6 +81,7 @@ class TeamworkHardwareDetail extends Entity
     }
     /**
     * Gets the model
+    * Devie model.
     *
     * @return string|null The model
     */
@@ -91,6 +96,7 @@ class TeamworkHardwareDetail extends Entity
 
     /**
     * Sets the model
+    * Devie model.
     *
     * @param string $val The value of the model
     *
@@ -103,6 +109,7 @@ class TeamworkHardwareDetail extends Entity
     }
     /**
     * Gets the serialNumber
+    * Device serial number.
     *
     * @return string|null The serialNumber
     */
@@ -117,6 +124,7 @@ class TeamworkHardwareDetail extends Entity
 
     /**
     * Sets the serialNumber
+    * Device serial number.
     *
     * @param string $val The value of the serialNumber
     *
@@ -129,6 +137,7 @@ class TeamworkHardwareDetail extends Entity
     }
     /**
     * Gets the uniqueId
+    * The unique identifier for the device.
     *
     * @return string|null The uniqueId
     */
@@ -143,6 +152,7 @@ class TeamworkHardwareDetail extends Entity
 
     /**
     * Sets the uniqueId
+    * The unique identifier for the device.
     *
     * @param string $val The value of the uniqueId
     *

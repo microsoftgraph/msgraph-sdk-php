@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* TrainingContentPreference File
+* DecisionItemPrincipalResourceMembershipType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* TrainingContentPreference class
+* DecisionItemPrincipalResourceMembershipType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class TrainingContentPreference extends Enum
+class DecisionItemPrincipalResourceMembershipType extends Enum
 {
     /**
-    * The Enum TrainingContentPreference
+    * The Enum DecisionItemPrincipalResourceMembershipType
     */
-    const UNKNOWN = "unknown";
-    const MICROSOFT = "microsoft";
-    const CUSTOM = "custom";
-    const NO_TRAINING = "noTraining";
+    const DIRECT = "direct";
+    const INDIRECT = "indirect";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

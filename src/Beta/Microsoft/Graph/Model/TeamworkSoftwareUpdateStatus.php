@@ -25,6 +25,7 @@ class TeamworkSoftwareUpdateStatus extends Entity
 {
     /**
     * Gets the availableVersion
+    * The available software version to update.
     *
     * @return string|null The availableVersion
     */
@@ -39,6 +40,7 @@ class TeamworkSoftwareUpdateStatus extends Entity
 
     /**
     * Sets the availableVersion
+    * The available software version to update.
     *
     * @param string $val The value of the availableVersion
     *
@@ -51,6 +53,7 @@ class TeamworkSoftwareUpdateStatus extends Entity
     }
     /**
     * Gets the currentVersion
+    * The current software version.
     *
     * @return string|null The currentVersion
     */
@@ -65,6 +68,7 @@ class TeamworkSoftwareUpdateStatus extends Entity
 
     /**
     * Sets the currentVersion
+    * The current software version.
     *
     * @param string $val The value of the currentVersion
     *
@@ -78,6 +82,7 @@ class TeamworkSoftwareUpdateStatus extends Entity
 
     /**
     * Gets the softwareFreshness
+    * The update status of the software. The possible values are: unknown, latest, updateAvailable, unknownFutureValue.
     *
     * @return TeamworkSoftwareFreshness|null The softwareFreshness
     */
@@ -96,6 +101,7 @@ class TeamworkSoftwareUpdateStatus extends Entity
 
     /**
     * Sets the softwareFreshness
+    * The update status of the software. The possible values are: unknown, latest, updateAvailable, unknownFutureValue.
     *
     * @param TeamworkSoftwareFreshness $val The value to assign to the softwareFreshness
     *

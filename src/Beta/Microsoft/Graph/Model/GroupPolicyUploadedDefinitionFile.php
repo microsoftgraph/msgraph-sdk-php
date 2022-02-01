@@ -88,7 +88,7 @@ class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
 
     /**
     * Gets the fileName
-    * The file name of the uploaded ADML file.
+    * The file name of the ADMX file without the path. For example: edge.admx Inherited from groupPolicyDefinitionFile
     *
     * @return string|null The fileName
     */
@@ -103,7 +103,7 @@ class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
 
     /**
     * Sets the fileName
-    * The file name of the uploaded ADML file.
+    * The file name of the ADMX file without the path. For example: edge.admx Inherited from groupPolicyDefinitionFile
     *
     * @param string $val The fileName
     *

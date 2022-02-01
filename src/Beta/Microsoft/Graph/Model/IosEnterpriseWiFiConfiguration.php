@@ -92,7 +92,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
 
     /**
     * Gets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast.
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap.
     *
     * @return EapType|null The eapType
     */
@@ -111,7 +111,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
 
     /**
     * Sets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast.
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap.
     *
     * @param EapType $val The eapType
     *
