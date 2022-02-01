@@ -207,7 +207,7 @@ class AuthenticationMethodsPolicy extends Entity
 
      /**
      * Gets the authenticationMethodConfigurations
-    * Represents the settings for each authentication method.
+    * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
      *
      * @return array|null The authenticationMethodConfigurations
      */
@@ -222,7 +222,7 @@ class AuthenticationMethodsPolicy extends Entity
 
     /**
     * Sets the authenticationMethodConfigurations
-    * Represents the settings for each authentication method.
+    * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
     *
     * @param AuthenticationMethodConfiguration[] $val The authenticationMethodConfigurations
     *
