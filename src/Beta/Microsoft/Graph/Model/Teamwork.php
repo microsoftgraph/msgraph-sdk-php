@@ -27,6 +27,7 @@ class Teamwork extends Entity
 
      /**
      * Gets the workforceIntegrations
+    * A workforce integration with shifts.
      *
      * @return array|null The workforceIntegrations
      */
@@ -41,6 +42,7 @@ class Teamwork extends Entity
 
     /**
     * Sets the workforceIntegrations
+    * A workforce integration with shifts.
     *
     * @param WorkforceIntegration[] $val The workforceIntegrations
     *
@@ -55,6 +57,7 @@ class Teamwork extends Entity
 
      /**
      * Gets the devices
+    * The Teams devices provisioned for the tenant.
      *
      * @return array|null The devices
      */
@@ -69,6 +72,7 @@ class Teamwork extends Entity
 
     /**
     * Sets the devices
+    * The Teams devices provisioned for the tenant.
     *
     * @param TeamworkDevice[] $val The devices
     *

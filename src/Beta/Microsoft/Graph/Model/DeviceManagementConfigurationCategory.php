@@ -229,7 +229,7 @@ class DeviceManagementConfigurationCategory extends Entity
 
     /**
     * Gets the platforms
-    * Platforms types, which settings in the category have. Possible values are: none, android, iOS, macOS, windows10X, windows10.
+    * Platforms types, which settings in the category have. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
     *
     * @return DeviceManagementConfigurationPlatforms|null The platforms
     */
@@ -248,7 +248,7 @@ class DeviceManagementConfigurationCategory extends Entity
 
     /**
     * Sets the platforms
-    * Platforms types, which settings in the category have. Possible values are: none, android, iOS, macOS, windows10X, windows10.
+    * Platforms types, which settings in the category have. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
     *
     * @param DeviceManagementConfigurationPlatforms $val The platforms
     *

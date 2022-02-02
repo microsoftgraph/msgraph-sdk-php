@@ -25,6 +25,7 @@ class TeamworkMicrophoneConfiguration extends Entity
 {
     /**
     * Gets the isMicrophoneOptional
+    * True if the configured microphone is optional. False if the microphone is not optional and the health state of the device should be computed.
     *
     * @return bool|null The isMicrophoneOptional
     */
@@ -39,6 +40,7 @@ class TeamworkMicrophoneConfiguration extends Entity
 
     /**
     * Sets the isMicrophoneOptional
+    * True if the configured microphone is optional. False if the microphone is not optional and the health state of the device should be computed.
     *
     * @param bool $val The value of the isMicrophoneOptional
     *

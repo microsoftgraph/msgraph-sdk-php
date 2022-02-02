@@ -26,6 +26,7 @@ class TeamworkDeviceActivity extends Entity
 {
     /**
     * Gets the activePeripherals
+    * The active peripheral devices attached to the device.
     *
     * @return TeamworkActivePeripherals|null The activePeripherals
     */
@@ -44,6 +45,7 @@ class TeamworkDeviceActivity extends Entity
 
     /**
     * Sets the activePeripherals
+    * The active peripheral devices attached to the device.
     *
     * @param TeamworkActivePeripherals $val The activePeripherals
     *
@@ -57,6 +59,7 @@ class TeamworkDeviceActivity extends Entity
 
     /**
     * Gets the createdBy
+    * Identity of the user who created the device activity document.
     *
     * @return IdentitySet|null The createdBy
     */
@@ -75,6 +78,7 @@ class TeamworkDeviceActivity extends Entity
 
     /**
     * Sets the createdBy
+    * Identity of the user who created the device activity document.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -88,6 +92,7 @@ class TeamworkDeviceActivity extends Entity
 
     /**
     * Gets the createdDateTime
+    * The UTC date and time when the device activity document was created.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -106,6 +111,7 @@ class TeamworkDeviceActivity extends Entity
 
     /**
     * Sets the createdDateTime
+    * The UTC date and time when the device activity document was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -119,6 +125,7 @@ class TeamworkDeviceActivity extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * Identity of the user who last modified the device activity details.
     *
     * @return IdentitySet|null The lastModifiedBy
     */
@@ -137,6 +144,7 @@ class TeamworkDeviceActivity extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * Identity of the user who last modified the device activity details.
     *
     * @param IdentitySet $val The lastModifiedBy
     *
@@ -150,6 +158,7 @@ class TeamworkDeviceActivity extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * The UTC date and time when the device activity detail was last modified.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -168,6 +177,7 @@ class TeamworkDeviceActivity extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * The UTC date and time when the device activity detail was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *

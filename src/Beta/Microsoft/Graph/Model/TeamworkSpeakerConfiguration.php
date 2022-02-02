@@ -25,6 +25,7 @@ class TeamworkSpeakerConfiguration extends Entity
 {
     /**
     * Gets the isCommunicationSpeakerOptional
+    * True if the communication speaker is optional. Used to compute the health state if the communication speaker is not optional.
     *
     * @return bool|null The isCommunicationSpeakerOptional
     */
@@ -39,6 +40,7 @@ class TeamworkSpeakerConfiguration extends Entity
 
     /**
     * Sets the isCommunicationSpeakerOptional
+    * True if the communication speaker is optional. Used to compute the health state if the communication speaker is not optional.
     *
     * @param bool $val The value of the isCommunicationSpeakerOptional
     *
@@ -51,6 +53,7 @@ class TeamworkSpeakerConfiguration extends Entity
     }
     /**
     * Gets the isSpeakerOptional
+    * True if the configured speaker is optional. Used to compute the health state if the speaker is not optional.
     *
     * @return bool|null The isSpeakerOptional
     */
@@ -65,6 +68,7 @@ class TeamworkSpeakerConfiguration extends Entity
 
     /**
     * Sets the isSpeakerOptional
+    * True if the configured speaker is optional. Used to compute the health state if the speaker is not optional.
     *
     * @param bool $val The value of the isSpeakerOptional
     *

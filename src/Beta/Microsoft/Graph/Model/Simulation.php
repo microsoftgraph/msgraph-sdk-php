@@ -91,31 +91,29 @@ class Simulation extends Entity
     }
 
     /**
-    * Gets the cleanupArtifacts
-    * Flag representing if artifacts were cleaned up in the attack simulation and training campaign.
+    * Gets the automationId
     *
-    * @return bool|null The cleanupArtifacts
+    * @return string|null The automationId
     */
-    public function getCleanupArtifacts()
+    public function getAutomationId()
     {
-        if (array_key_exists("cleanupArtifacts", $this->_propDict)) {
-            return $this->_propDict["cleanupArtifacts"];
+        if (array_key_exists("automationId", $this->_propDict)) {
+            return $this->_propDict["automationId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the cleanupArtifacts
-    * Flag representing if artifacts were cleaned up in the attack simulation and training campaign.
+    * Sets the automationId
     *
-    * @param bool $val The cleanupArtifacts
+    * @param string $val The automationId
     *
     * @return Simulation
     */
-    public function setCleanupArtifacts($val)
+    public function setAutomationId($val)
     {
-        $this->_propDict["cleanupArtifacts"] = boolval($val);
+        $this->_propDict["automationId"] = $val;
         return $this;
     }
 
@@ -273,64 +271,6 @@ class Simulation extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the enableRegionTimezoneDelivery
-    * Flag representing whether to enable or disable timezone-aware delivery of phishing payload in the attack simulation and training campaign.
-    *
-    * @return bool|null The enableRegionTimezoneDelivery
-    */
-    public function getEnableRegionTimezoneDelivery()
-    {
-        if (array_key_exists("enableRegionTimezoneDelivery", $this->_propDict)) {
-            return $this->_propDict["enableRegionTimezoneDelivery"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the enableRegionTimezoneDelivery
-    * Flag representing whether to enable or disable timezone-aware delivery of phishing payload in the attack simulation and training campaign.
-    *
-    * @param bool $val The enableRegionTimezoneDelivery
-    *
-    * @return Simulation
-    */
-    public function setEnableRegionTimezoneDelivery($val)
-    {
-        $this->_propDict["enableRegionTimezoneDelivery"] = boolval($val);
-        return $this;
-    }
-
-    /**
-    * Gets the includeAllAccountTargets
-    * Flag representing inclusion of all the users of a tenant in the attack simulation and training campaign.
-    *
-    * @return bool|null The includeAllAccountTargets
-    */
-    public function getIncludeAllAccountTargets()
-    {
-        if (array_key_exists("includeAllAccountTargets", $this->_propDict)) {
-            return $this->_propDict["includeAllAccountTargets"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the includeAllAccountTargets
-    * Flag representing inclusion of all the users of a tenant in the attack simulation and training campaign.
-    *
-    * @param bool $val The includeAllAccountTargets
-    *
-    * @return Simulation
-    */
-    public function setIncludeAllAccountTargets($val)
-    {
-        $this->_propDict["includeAllAccountTargets"] = boolval($val);
         return $this;
     }
 
@@ -496,39 +436,6 @@ class Simulation extends Entity
     }
 
     /**
-    * Gets the payloadSource
-    * Source of phishing payload in the attack simulation and training campaign. Possible values are: unknown, global, tenant, unknownFutureValue.
-    *
-    * @return PayloadSource|null The payloadSource
-    */
-    public function getPayloadSource()
-    {
-        if (array_key_exists("payloadSource", $this->_propDict)) {
-            if (is_a($this->_propDict["payloadSource"], "\Beta\Microsoft\Graph\Model\PayloadSource") || is_null($this->_propDict["payloadSource"])) {
-                return $this->_propDict["payloadSource"];
-            } else {
-                $this->_propDict["payloadSource"] = new PayloadSource($this->_propDict["payloadSource"]);
-                return $this->_propDict["payloadSource"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the payloadSource
-    * Source of phishing payload in the attack simulation and training campaign. Possible values are: unknown, global, tenant, unknownFutureValue.
-    *
-    * @param PayloadSource $val The payloadSource
-    *
-    * @return Simulation
-    */
-    public function setPayloadSource($val)
-    {
-        $this->_propDict["payloadSource"] = $val;
-        return $this;
-    }
-
-    /**
     * Gets the report
     * Report of the attack simulation and training campaign.
     *
@@ -591,105 +498,6 @@ class Simulation extends Entity
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the trainingAssignmentPreference
-    * Preference of the tenant admin to assign training to users in the attack simulation and training campaign. Possible values are: unknown, auto, manual, unknownFutureValue.
-    *
-    * @return TrainingAssignmentPreference|null The trainingAssignmentPreference
-    */
-    public function getTrainingAssignmentPreference()
-    {
-        if (array_key_exists("trainingAssignmentPreference", $this->_propDict)) {
-            if (is_a($this->_propDict["trainingAssignmentPreference"], "\Beta\Microsoft\Graph\Model\TrainingAssignmentPreference") || is_null($this->_propDict["trainingAssignmentPreference"])) {
-                return $this->_propDict["trainingAssignmentPreference"];
-            } else {
-                $this->_propDict["trainingAssignmentPreference"] = new TrainingAssignmentPreference($this->_propDict["trainingAssignmentPreference"]);
-                return $this->_propDict["trainingAssignmentPreference"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the trainingAssignmentPreference
-    * Preference of the tenant admin to assign training to users in the attack simulation and training campaign. Possible values are: unknown, auto, manual, unknownFutureValue.
-    *
-    * @param TrainingAssignmentPreference $val The trainingAssignmentPreference
-    *
-    * @return Simulation
-    */
-    public function setTrainingAssignmentPreference($val)
-    {
-        $this->_propDict["trainingAssignmentPreference"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the trainingContentPreference
-    * Preference of the tenant admin for the source of training content to assign to users in the attack simulation and training campaign. Possible values are: unknown, microsoft, custom, noTraining, unknownFutureValue.
-    *
-    * @return TrainingContentPreference|null The trainingContentPreference
-    */
-    public function getTrainingContentPreference()
-    {
-        if (array_key_exists("trainingContentPreference", $this->_propDict)) {
-            if (is_a($this->_propDict["trainingContentPreference"], "\Beta\Microsoft\Graph\Model\TrainingContentPreference") || is_null($this->_propDict["trainingContentPreference"])) {
-                return $this->_propDict["trainingContentPreference"];
-            } else {
-                $this->_propDict["trainingContentPreference"] = new TrainingContentPreference($this->_propDict["trainingContentPreference"]);
-                return $this->_propDict["trainingContentPreference"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the trainingContentPreference
-    * Preference of the tenant admin for the source of training content to assign to users in the attack simulation and training campaign. Possible values are: unknown, microsoft, custom, noTraining, unknownFutureValue.
-    *
-    * @param TrainingContentPreference $val The trainingContentPreference
-    *
-    * @return Simulation
-    */
-    public function setTrainingContentPreference($val)
-    {
-        $this->_propDict["trainingContentPreference"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the trainingDueDateTime
-    * Date and time before which the trainings need to be completed by users in the attack simulation and training campaign.
-    *
-    * @return \DateTime|null The trainingDueDateTime
-    */
-    public function getTrainingDueDateTime()
-    {
-        if (array_key_exists("trainingDueDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["trainingDueDateTime"], "\DateTime") || is_null($this->_propDict["trainingDueDateTime"])) {
-                return $this->_propDict["trainingDueDateTime"];
-            } else {
-                $this->_propDict["trainingDueDateTime"] = new \DateTime($this->_propDict["trainingDueDateTime"]);
-                return $this->_propDict["trainingDueDateTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the trainingDueDateTime
-    * Date and time before which the trainings need to be completed by users in the attack simulation and training campaign.
-    *
-    * @param \DateTime $val The trainingDueDateTime
-    *
-    * @return Simulation
-    */
-    public function setTrainingDueDateTime($val)
-    {
-        $this->_propDict["trainingDueDateTime"] = $val;
         return $this;
     }
 

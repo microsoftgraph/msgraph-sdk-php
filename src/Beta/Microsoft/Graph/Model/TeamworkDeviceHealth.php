@@ -26,6 +26,7 @@ class TeamworkDeviceHealth extends Entity
 {
     /**
     * Gets the connection
+    * Information about the connection status.
     *
     * @return TeamworkConnection|null The connection
     */
@@ -44,6 +45,7 @@ class TeamworkDeviceHealth extends Entity
 
     /**
     * Sets the connection
+    * Information about the connection status.
     *
     * @param TeamworkConnection $val The connection
     *
@@ -57,6 +59,7 @@ class TeamworkDeviceHealth extends Entity
 
     /**
     * Gets the createdBy
+    * Identity of the user who created the device health document.
     *
     * @return IdentitySet|null The createdBy
     */
@@ -75,6 +78,7 @@ class TeamworkDeviceHealth extends Entity
 
     /**
     * Sets the createdBy
+    * Identity of the user who created the device health document.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -88,6 +92,7 @@ class TeamworkDeviceHealth extends Entity
 
     /**
     * Gets the createdDateTime
+    * The UTC date and time when the device health document was created.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -106,6 +111,7 @@ class TeamworkDeviceHealth extends Entity
 
     /**
     * Sets the createdDateTime
+    * The UTC date and time when the device health document was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -119,6 +125,7 @@ class TeamworkDeviceHealth extends Entity
 
     /**
     * Gets the hardwareHealth
+    * Health details about the device hardware.
     *
     * @return TeamworkHardwareHealth|null The hardwareHealth
     */
@@ -137,6 +144,7 @@ class TeamworkDeviceHealth extends Entity
 
     /**
     * Sets the hardwareHealth
+    * Health details about the device hardware.
     *
     * @param TeamworkHardwareHealth $val The hardwareHealth
     *
@@ -150,6 +158,7 @@ class TeamworkDeviceHealth extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * Identity of the user who last modified the device health details.
     *
     * @return IdentitySet|null The lastModifiedBy
     */
@@ -168,6 +177,7 @@ class TeamworkDeviceHealth extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * Identity of the user who last modified the device health details.
     *
     * @param IdentitySet $val The lastModifiedBy
     *
@@ -181,6 +191,7 @@ class TeamworkDeviceHealth extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * The UTC date and time when the device health detail was last modified.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -199,6 +210,7 @@ class TeamworkDeviceHealth extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * The UTC date and time when the device health detail was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -212,6 +224,7 @@ class TeamworkDeviceHealth extends Entity
 
     /**
     * Gets the loginStatus
+    * The login status of Microsoft Teams, Skype for Business, and Exchange.
     *
     * @return TeamworkLoginStatus|null The loginStatus
     */
@@ -230,6 +243,7 @@ class TeamworkDeviceHealth extends Entity
 
     /**
     * Sets the loginStatus
+    * The login status of Microsoft Teams, Skype for Business, and Exchange.
     *
     * @param TeamworkLoginStatus $val The loginStatus
     *
@@ -243,6 +257,7 @@ class TeamworkDeviceHealth extends Entity
 
     /**
     * Gets the peripheralsHealth
+    * Health details about all peripherals (for example, speaker and microphone) attached to a device.
     *
     * @return TeamworkPeripheralsHealth|null The peripheralsHealth
     */
@@ -261,6 +276,7 @@ class TeamworkDeviceHealth extends Entity
 
     /**
     * Sets the peripheralsHealth
+    * Health details about all peripherals (for example, speaker and microphone) attached to a device.
     *
     * @param TeamworkPeripheralsHealth $val The peripheralsHealth
     *
@@ -274,6 +290,7 @@ class TeamworkDeviceHealth extends Entity
 
     /**
     * Gets the softwareUpdateHealth
+    * Software updates available for the device.
     *
     * @return TeamworkSoftwareUpdateHealth|null The softwareUpdateHealth
     */
@@ -292,6 +309,7 @@ class TeamworkDeviceHealth extends Entity
 
     /**
     * Sets the softwareUpdateHealth
+    * Software updates available for the device.
     *
     * @param TeamworkSoftwareUpdateHealth $val The softwareUpdateHealth
     *

@@ -26,6 +26,7 @@ class TeamworkPeripheralsHealth extends Entity
 
     /**
     * Gets the communicationSpeakerHealth
+    * The health details about the communication speaker.
     *
     * @return TeamworkPeripheralHealth|null The communicationSpeakerHealth
     */
@@ -44,6 +45,7 @@ class TeamworkPeripheralsHealth extends Entity
 
     /**
     * Sets the communicationSpeakerHealth
+    * The health details about the communication speaker.
     *
     * @param TeamworkPeripheralHealth $val The value to assign to the communicationSpeakerHealth
     *
@@ -57,6 +59,7 @@ class TeamworkPeripheralsHealth extends Entity
 
     /**
     * Gets the contentCameraHealth
+    * The health details about the content camera.
     *
     * @return TeamworkPeripheralHealth|null The contentCameraHealth
     */
@@ -75,6 +78,7 @@ class TeamworkPeripheralsHealth extends Entity
 
     /**
     * Sets the contentCameraHealth
+    * The health details about the content camera.
     *
     * @param TeamworkPeripheralHealth $val The value to assign to the contentCameraHealth
     *
@@ -88,6 +92,7 @@ class TeamworkPeripheralsHealth extends Entity
 
     /**
     * Gets the displayHealthCollection
+    * The health details about displays.
     *
     * @return TeamworkPeripheralHealth|null The displayHealthCollection
     */
@@ -106,6 +111,7 @@ class TeamworkPeripheralsHealth extends Entity
 
     /**
     * Sets the displayHealthCollection
+    * The health details about displays.
     *
     * @param TeamworkPeripheralHealth $val The value to assign to the displayHealthCollection
     *
@@ -119,6 +125,7 @@ class TeamworkPeripheralsHealth extends Entity
 
     /**
     * Gets the microphoneHealth
+    * The health details about the microphone.
     *
     * @return TeamworkPeripheralHealth|null The microphoneHealth
     */
@@ -137,6 +144,7 @@ class TeamworkPeripheralsHealth extends Entity
 
     /**
     * Sets the microphoneHealth
+    * The health details about the microphone.
     *
     * @param TeamworkPeripheralHealth $val The value to assign to the microphoneHealth
     *
@@ -150,6 +158,7 @@ class TeamworkPeripheralsHealth extends Entity
 
     /**
     * Gets the roomCameraHealth
+    * The health details about the room camera.
     *
     * @return TeamworkPeripheralHealth|null The roomCameraHealth
     */
@@ -168,6 +177,7 @@ class TeamworkPeripheralsHealth extends Entity
 
     /**
     * Sets the roomCameraHealth
+    * The health details about the room camera.
     *
     * @param TeamworkPeripheralHealth $val The value to assign to the roomCameraHealth
     *
@@ -181,6 +191,7 @@ class TeamworkPeripheralsHealth extends Entity
 
     /**
     * Gets the speakerHealth
+    * The health details about the speaker.
     *
     * @return TeamworkPeripheralHealth|null The speakerHealth
     */
@@ -199,6 +210,7 @@ class TeamworkPeripheralsHealth extends Entity
 
     /**
     * Sets the speakerHealth
+    * The health details about the speaker.
     *
     * @param TeamworkPeripheralHealth $val The value to assign to the speakerHealth
     *

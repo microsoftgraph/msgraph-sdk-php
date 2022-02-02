@@ -26,6 +26,7 @@ class TeamworkPeripheral extends Entity
 {
     /**
     * Gets the displayName
+    * Display name for the peripheral.
     *
     * @return string|null The displayName
     */
@@ -40,6 +41,7 @@ class TeamworkPeripheral extends Entity
 
     /**
     * Sets the displayName
+    * Display name for the peripheral.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class TeamworkPeripheral extends Entity
 
     /**
     * Gets the productId
+    * The product ID of the device. Each product from a vendor has its own ID.
     *
     * @return string|null The productId
     */
@@ -67,6 +70,7 @@ class TeamworkPeripheral extends Entity
 
     /**
     * Sets the productId
+    * The product ID of the device. Each product from a vendor has its own ID.
     *
     * @param string $val The productId
     *
@@ -80,6 +84,7 @@ class TeamworkPeripheral extends Entity
 
     /**
     * Gets the vendorId
+    * The unique identifier for the vendor of the device. Each vendor has a unique ID.
     *
     * @return string|null The vendorId
     */
@@ -94,6 +99,7 @@ class TeamworkPeripheral extends Entity
 
     /**
     * Sets the vendorId
+    * The unique identifier for the vendor of the device. Each vendor has a unique ID.
     *
     * @param string $val The vendorId
     *

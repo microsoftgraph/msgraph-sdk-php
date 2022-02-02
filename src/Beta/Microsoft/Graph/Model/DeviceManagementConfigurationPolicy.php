@@ -208,7 +208,7 @@ class DeviceManagementConfigurationPolicy extends Entity
 
     /**
     * Gets the platforms
-    * Platforms for this policy. Possible values are: none, android, iOS, macOS, windows10X, windows10.
+    * Platforms for this policy. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
     *
     * @return DeviceManagementConfigurationPlatforms|null The platforms
     */
@@ -227,7 +227,7 @@ class DeviceManagementConfigurationPolicy extends Entity
 
     /**
     * Sets the platforms
-    * Platforms for this policy. Possible values are: none, android, iOS, macOS, windows10X, windows10.
+    * Platforms for this policy. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
     *
     * @param DeviceManagementConfigurationPlatforms $val The platforms
     *

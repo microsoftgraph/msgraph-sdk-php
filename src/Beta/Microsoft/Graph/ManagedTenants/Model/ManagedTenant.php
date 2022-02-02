@@ -56,6 +56,34 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
 
      /**
+     * Gets the auditEvents
+     *
+     * @return array|null The auditEvents
+     */
+    public function getAuditEvents()
+    {
+        if (array_key_exists("auditEvents", $this->_propDict)) {
+           return $this->_propDict["auditEvents"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the auditEvents
+    *
+    * @param AuditEvent[] $val The auditEvents
+    *
+    * @return ManagedTenant
+    */
+    public function setAuditEvents($val)
+    {
+        $this->_propDict["auditEvents"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the cloudPcConnections
     * The collection of cloud PC connections across managed tenants.
      *

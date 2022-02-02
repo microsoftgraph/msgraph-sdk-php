@@ -26,6 +26,7 @@ class TeamworkDeviceOperation extends Entity
 {
     /**
     * Gets the completedDateTime
+    * Time at which the operation reached a final state (for example, Successful, Failed, and Cancelled).
     *
     * @return \DateTime|null The completedDateTime
     */
@@ -44,6 +45,7 @@ class TeamworkDeviceOperation extends Entity
 
     /**
     * Sets the completedDateTime
+    * Time at which the operation reached a final state (for example, Successful, Failed, and Cancelled).
     *
     * @param \DateTime $val The completedDateTime
     *
@@ -57,6 +59,7 @@ class TeamworkDeviceOperation extends Entity
 
     /**
     * Gets the createdBy
+    * Identity of the user who created the device operation.
     *
     * @return IdentitySet|null The createdBy
     */
@@ -75,6 +78,7 @@ class TeamworkDeviceOperation extends Entity
 
     /**
     * Sets the createdBy
+    * Identity of the user who created the device operation.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -88,6 +92,7 @@ class TeamworkDeviceOperation extends Entity
 
     /**
     * Gets the createdDateTime
+    * The UTC date and time when the device operation was created.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -106,6 +111,7 @@ class TeamworkDeviceOperation extends Entity
 
     /**
     * Sets the createdDateTime
+    * The UTC date and time when the device operation was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -119,6 +125,7 @@ class TeamworkDeviceOperation extends Entity
 
     /**
     * Gets the error
+    * Error details are available only in case of a failed status.
     *
     * @return OperationError|null The error
     */
@@ -137,6 +144,7 @@ class TeamworkDeviceOperation extends Entity
 
     /**
     * Sets the error
+    * Error details are available only in case of a failed status.
     *
     * @param OperationError $val The error
     *
@@ -150,6 +158,7 @@ class TeamworkDeviceOperation extends Entity
 
     /**
     * Gets the lastActionBy
+    * Identity of the user who last modified the device operation.
     *
     * @return IdentitySet|null The lastActionBy
     */
@@ -168,6 +177,7 @@ class TeamworkDeviceOperation extends Entity
 
     /**
     * Sets the lastActionBy
+    * Identity of the user who last modified the device operation.
     *
     * @param IdentitySet $val The lastActionBy
     *
@@ -181,6 +191,7 @@ class TeamworkDeviceOperation extends Entity
 
     /**
     * Gets the lastActionDateTime
+    * The UTC date and time when the device operation was last modified.
     *
     * @return \DateTime|null The lastActionDateTime
     */
@@ -199,6 +210,7 @@ class TeamworkDeviceOperation extends Entity
 
     /**
     * Sets the lastActionDateTime
+    * The UTC date and time when the device operation was last modified.
     *
     * @param \DateTime $val The lastActionDateTime
     *
@@ -212,6 +224,7 @@ class TeamworkDeviceOperation extends Entity
 
     /**
     * Gets the operationType
+    * Type of async operation on a device. The possible values are: deviceRestart, configUpdate, deviceDiagnostics, softwareUpdate, deviceManagementAgentConfigUpdate, remoteLogin, remoteLogout, unknownFutureValue.
     *
     * @return TeamworkDeviceOperationType|null The operationType
     */
@@ -230,6 +243,7 @@ class TeamworkDeviceOperation extends Entity
 
     /**
     * Sets the operationType
+    * Type of async operation on a device. The possible values are: deviceRestart, configUpdate, deviceDiagnostics, softwareUpdate, deviceManagementAgentConfigUpdate, remoteLogin, remoteLogout, unknownFutureValue.
     *
     * @param TeamworkDeviceOperationType $val The operationType
     *
@@ -243,6 +257,7 @@ class TeamworkDeviceOperation extends Entity
 
     /**
     * Gets the startedDateTime
+    * Time at which the operation was started.
     *
     * @return \DateTime|null The startedDateTime
     */
@@ -261,6 +276,7 @@ class TeamworkDeviceOperation extends Entity
 
     /**
     * Sets the startedDateTime
+    * Time at which the operation was started.
     *
     * @param \DateTime $val The startedDateTime
     *
@@ -274,6 +290,7 @@ class TeamworkDeviceOperation extends Entity
 
     /**
     * Gets the status
+    * The current status of the async operation, for example, Queued, Scheduled, InProgress,  Successful, Cancelled, and Failed.
     *
     * @return string|null The status
     */
@@ -288,6 +305,7 @@ class TeamworkDeviceOperation extends Entity
 
     /**
     * Sets the status
+    * The current status of the async operation, for example, Queued, Scheduled, InProgress,  Successful, Cancelled, and Failed.
     *
     * @param string $val The status
     *

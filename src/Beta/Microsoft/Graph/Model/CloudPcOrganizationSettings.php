@@ -26,7 +26,7 @@ class CloudPcOrganizationSettings extends Entity
 {
     /**
     * Gets the osVersion
-    * The account type of the user on provisioned Cloud PCs. The possible values are: windows10, windows11, unknownFutureValue.
+    * The version of the operating system (OS) to provision on Cloud PCs. The possible values are: windows10, windows11, unknownFutureValue.
     *
     * @return CloudPcOperatingSystem|null The osVersion
     */
@@ -45,7 +45,7 @@ class CloudPcOrganizationSettings extends Entity
 
     /**
     * Sets the osVersion
-    * The account type of the user on provisioned Cloud PCs. The possible values are: windows10, windows11, unknownFutureValue.
+    * The version of the operating system (OS) to provision on Cloud PCs. The possible values are: windows10, windows11, unknownFutureValue.
     *
     * @param CloudPcOperatingSystem $val The osVersion
     *
@@ -59,7 +59,7 @@ class CloudPcOrganizationSettings extends Entity
 
     /**
     * Gets the userAccountType
-    * The version of the operating system (OS) to provision on Cloud PCs. The possible values are: standardUser, administrator, unknownFutureValue.
+    * The account type of the user on provisioned Cloud PCs. The possible values are: standardUser, administrator, unknownFutureValue.
     *
     * @return CloudPcUserAccountType|null The userAccountType
     */
@@ -78,7 +78,7 @@ class CloudPcOrganizationSettings extends Entity
 
     /**
     * Sets the userAccountType
-    * The version of the operating system (OS) to provision on Cloud PCs. The possible values are: standardUser, administrator, unknownFutureValue.
+    * The account type of the user on provisioned Cloud PCs. The possible values are: standardUser, administrator, unknownFutureValue.
     *
     * @param CloudPcUserAccountType $val The userAccountType
     *

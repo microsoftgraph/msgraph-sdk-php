@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CaseAction File
+* SimulationAutomationRunStatus File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Ediscovery\Model;
+namespace Beta\Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* CaseAction class
+* SimulationAutomationRunStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,17 +24,15 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CaseAction extends Enum
+class SimulationAutomationRunStatus extends Enum
 {
     /**
-    * The Enum CaseAction
+    * The Enum SimulationAutomationRunStatus
     */
-    const CONTENT_EXPORT = "contentExport";
-    const APPLY_TAGS = "applyTags";
-    const CONVERT_TO_PDF = "convertToPdf";
-    const INDEX = "index";
-    const ESTIMATE_STATISTICS = "estimateStatistics";
-    const ADD_TO_REVIEW_SET = "addToReviewSet";
-    const HOLD_UPDATE = "holdUpdate";
+    const UNKNOWN = "unknown";
+    const RUNNING = "running";
+    const SUCCEEDED = "succeeded";
+    const FAILED = "failed";
+    const SKIPPED = "skipped";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

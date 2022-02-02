@@ -25,6 +25,7 @@ class TeamworkDisplayScreenConfiguration extends Entity
 {
     /**
     * Gets the backlightBrightness
+    * The brightness level on the device (0-100). Not applicable for Microsoft Teams Rooms devices.
     *
     * @return int|null The backlightBrightness
     */
@@ -39,6 +40,7 @@ class TeamworkDisplayScreenConfiguration extends Entity
 
     /**
     * Sets the backlightBrightness
+    * The brightness level on the device (0-100). Not applicable for Microsoft Teams Rooms devices.
     *
     * @param int $val The value of the backlightBrightness
     *
@@ -52,6 +54,7 @@ class TeamworkDisplayScreenConfiguration extends Entity
 
     /**
     * Gets the backlightTimeout
+    * Timeout for backlight (30-3600 secs). Not applicable for Teams Rooms devices.
     *
     * @return \DateInterval|null The backlightTimeout
     */
@@ -70,6 +73,7 @@ class TeamworkDisplayScreenConfiguration extends Entity
 
     /**
     * Sets the backlightTimeout
+    * Timeout for backlight (30-3600 secs). Not applicable for Teams Rooms devices.
     *
     * @param \DateInterval $val The value to assign to the backlightTimeout
     *
@@ -82,6 +86,7 @@ class TeamworkDisplayScreenConfiguration extends Entity
     }
     /**
     * Gets the isHighContrastEnabled
+    * True if high contrast mode is enabled. Not applicable for Teams Rooms devices.
     *
     * @return bool|null The isHighContrastEnabled
     */
@@ -96,6 +101,7 @@ class TeamworkDisplayScreenConfiguration extends Entity
 
     /**
     * Sets the isHighContrastEnabled
+    * True if high contrast mode is enabled. Not applicable for Teams Rooms devices.
     *
     * @param bool $val The value of the isHighContrastEnabled
     *
@@ -108,6 +114,7 @@ class TeamworkDisplayScreenConfiguration extends Entity
     }
     /**
     * Gets the isScreensaverEnabled
+    * True if screensaver is enabled. Not applicable for Teams Rooms devices.
     *
     * @return bool|null The isScreensaverEnabled
     */
@@ -122,6 +129,7 @@ class TeamworkDisplayScreenConfiguration extends Entity
 
     /**
     * Sets the isScreensaverEnabled
+    * True if screensaver is enabled. Not applicable for Teams Rooms devices.
     *
     * @param bool $val The value of the isScreensaverEnabled
     *
@@ -135,6 +143,7 @@ class TeamworkDisplayScreenConfiguration extends Entity
 
     /**
     * Gets the screensaverTimeout
+    * Screensaver timeout from 30 to 3600 secs. Not applicable for Teams Rooms devices.
     *
     * @return \DateInterval|null The screensaverTimeout
     */
@@ -153,6 +162,7 @@ class TeamworkDisplayScreenConfiguration extends Entity
 
     /**
     * Sets the screensaverTimeout
+    * Screensaver timeout from 30 to 3600 secs. Not applicable for Teams Rooms devices.
     *
     * @param \DateInterval $val The value to assign to the screensaverTimeout
     *

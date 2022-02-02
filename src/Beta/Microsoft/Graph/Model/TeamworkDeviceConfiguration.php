@@ -26,6 +26,7 @@ class TeamworkDeviceConfiguration extends Entity
 {
     /**
     * Gets the cameraConfiguration
+    * The camera configuration. Applicable only for Microsoft Teams Rooms-enabled devices.
     *
     * @return TeamworkCameraConfiguration|null The cameraConfiguration
     */
@@ -44,6 +45,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Sets the cameraConfiguration
+    * The camera configuration. Applicable only for Microsoft Teams Rooms-enabled devices.
     *
     * @param TeamworkCameraConfiguration $val The cameraConfiguration
     *
@@ -57,6 +59,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Gets the createdBy
+    * Identity of the user who created the device configuration document.
     *
     * @return IdentitySet|null The createdBy
     */
@@ -75,6 +78,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Sets the createdBy
+    * Identity of the user who created the device configuration document.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -88,6 +92,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Gets the createdDateTime
+    * The UTC date and time when the device configuration document was created.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -106,6 +111,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Sets the createdDateTime
+    * The UTC date and time when the device configuration document was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -119,6 +125,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Gets the displayConfiguration
+    * The display configuration.
     *
     * @return TeamworkDisplayConfiguration|null The displayConfiguration
     */
@@ -137,6 +144,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Sets the displayConfiguration
+    * The display configuration.
     *
     * @param TeamworkDisplayConfiguration $val The displayConfiguration
     *
@@ -150,6 +158,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Gets the hardwareConfiguration
+    * The hardware configuration. Applicable only for Teams Rooms-enabled devices.
     *
     * @return TeamworkHardwareConfiguration|null The hardwareConfiguration
     */
@@ -168,6 +177,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Sets the hardwareConfiguration
+    * The hardware configuration. Applicable only for Teams Rooms-enabled devices.
     *
     * @param TeamworkHardwareConfiguration $val The hardwareConfiguration
     *
@@ -181,6 +191,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * Identity of the user who last modified the device configuration.
     *
     * @return IdentitySet|null The lastModifiedBy
     */
@@ -199,6 +210,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * Identity of the user who last modified the device configuration.
     *
     * @param IdentitySet $val The lastModifiedBy
     *
@@ -212,6 +224,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * The UTC date and time when the device configuration was last modified.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -230,6 +243,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * The UTC date and time when the device configuration was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -243,6 +257,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Gets the microphoneConfiguration
+    * The microphone configuration. Applicable only for Teams Rooms-enabled devices.
     *
     * @return TeamworkMicrophoneConfiguration|null The microphoneConfiguration
     */
@@ -261,6 +276,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Sets the microphoneConfiguration
+    * The microphone configuration. Applicable only for Teams Rooms-enabled devices.
     *
     * @param TeamworkMicrophoneConfiguration $val The microphoneConfiguration
     *
@@ -274,6 +290,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Gets the softwareVersions
+    * Information related to software versions for the device, such as firmware, operating system, Teams client, and admin agent.
     *
     * @return TeamworkDeviceSoftwareVersions|null The softwareVersions
     */
@@ -292,6 +309,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Sets the softwareVersions
+    * Information related to software versions for the device, such as firmware, operating system, Teams client, and admin agent.
     *
     * @param TeamworkDeviceSoftwareVersions $val The softwareVersions
     *
@@ -305,6 +323,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Gets the speakerConfiguration
+    * The speaker configuration. Applicable only for Teams Rooms-enabled devices.
     *
     * @return TeamworkSpeakerConfiguration|null The speakerConfiguration
     */
@@ -323,6 +342,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Sets the speakerConfiguration
+    * The speaker configuration. Applicable only for Teams Rooms-enabled devices.
     *
     * @param TeamworkSpeakerConfiguration $val The speakerConfiguration
     *
@@ -336,6 +356,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Gets the systemConfiguration
+    * The system configuration. Not applicable for Teams Rooms-enabled devices.
     *
     * @return TeamworkSystemConfiguration|null The systemConfiguration
     */
@@ -354,6 +375,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Sets the systemConfiguration
+    * The system configuration. Not applicable for Teams Rooms-enabled devices.
     *
     * @param TeamworkSystemConfiguration $val The systemConfiguration
     *
@@ -367,6 +389,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Gets the teamsClientConfiguration
+    * The Teams client configuration. Applicable only for Teams Rooms-enabled devices.
     *
     * @return TeamworkTeamsClientConfiguration|null The teamsClientConfiguration
     */
@@ -385,6 +408,7 @@ class TeamworkDeviceConfiguration extends Entity
 
     /**
     * Sets the teamsClientConfiguration
+    * The Teams client configuration. Applicable only for Teams Rooms-enabled devices.
     *
     * @param TeamworkTeamsClientConfiguration $val The teamsClientConfiguration
     *

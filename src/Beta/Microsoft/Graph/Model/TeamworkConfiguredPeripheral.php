@@ -25,6 +25,7 @@ class TeamworkConfiguredPeripheral extends Entity
 {
     /**
     * Gets the isOptional
+    * True if the current peripheral is optional. If set to false, this property is also used as part of the calculation of the health state for the device.
     *
     * @return bool|null The isOptional
     */
@@ -39,6 +40,7 @@ class TeamworkConfiguredPeripheral extends Entity
 
     /**
     * Sets the isOptional
+    * True if the current peripheral is optional. If set to false, this property is also used as part of the calculation of the health state for the device.
     *
     * @param bool $val The value of the isOptional
     *
