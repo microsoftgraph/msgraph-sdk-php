@@ -26,6 +26,7 @@ class TeamworkHardwareHealth extends Entity
 
     /**
     * Gets the computeHealth
+    * The system health details for a teamworkDevice.
     *
     * @return TeamworkPeripheralHealth|null The computeHealth
     */
@@ -44,6 +45,7 @@ class TeamworkHardwareHealth extends Entity
 
     /**
     * Sets the computeHealth
+    * The system health details for a teamworkDevice.
     *
     * @param TeamworkPeripheralHealth $val The value to assign to the computeHealth
     *
@@ -57,6 +59,7 @@ class TeamworkHardwareHealth extends Entity
 
     /**
     * Gets the hdmiIngestHealth
+    * The health details about the HDMI ingest of a device.
     *
     * @return TeamworkPeripheralHealth|null The hdmiIngestHealth
     */
@@ -75,6 +78,7 @@ class TeamworkHardwareHealth extends Entity
 
     /**
     * Sets the hdmiIngestHealth
+    * The health details about the HDMI ingest of a device.
     *
     * @param TeamworkPeripheralHealth $val The value to assign to the hdmiIngestHealth
     *

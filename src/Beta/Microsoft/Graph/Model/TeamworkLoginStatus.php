@@ -26,6 +26,7 @@ class TeamworkLoginStatus extends Entity
 
     /**
     * Gets the exchangeConnection
+    * Information about the Exchange connection.
     *
     * @return TeamworkConnection|null The exchangeConnection
     */
@@ -44,6 +45,7 @@ class TeamworkLoginStatus extends Entity
 
     /**
     * Sets the exchangeConnection
+    * Information about the Exchange connection.
     *
     * @param TeamworkConnection $val The value to assign to the exchangeConnection
     *
@@ -57,6 +59,7 @@ class TeamworkLoginStatus extends Entity
 
     /**
     * Gets the skypeConnection
+    * Information about the Skype for Business connection.
     *
     * @return TeamworkConnection|null The skypeConnection
     */
@@ -75,6 +78,7 @@ class TeamworkLoginStatus extends Entity
 
     /**
     * Sets the skypeConnection
+    * Information about the Skype for Business connection.
     *
     * @param TeamworkConnection $val The value to assign to the skypeConnection
     *
@@ -88,6 +92,7 @@ class TeamworkLoginStatus extends Entity
 
     /**
     * Gets the teamsConnection
+    * Information about the Teams connection.
     *
     * @return TeamworkConnection|null The teamsConnection
     */
@@ -106,6 +111,7 @@ class TeamworkLoginStatus extends Entity
 
     /**
     * Sets the teamsConnection
+    * Information about the Teams connection.
     *
     * @param TeamworkConnection $val The value to assign to the teamsConnection
     *

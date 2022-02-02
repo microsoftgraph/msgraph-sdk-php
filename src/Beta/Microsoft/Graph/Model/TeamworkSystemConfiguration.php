@@ -26,6 +26,7 @@ class TeamworkSystemConfiguration extends Entity
 
     /**
     * Gets the dateTimeConfiguration
+    * The date and time configurations for a device.
     *
     * @return TeamworkDateTimeConfiguration|null The dateTimeConfiguration
     */
@@ -44,6 +45,7 @@ class TeamworkSystemConfiguration extends Entity
 
     /**
     * Sets the dateTimeConfiguration
+    * The date and time configurations for a device.
     *
     * @param TeamworkDateTimeConfiguration $val The value to assign to the dateTimeConfiguration
     *
@@ -56,6 +58,7 @@ class TeamworkSystemConfiguration extends Entity
     }
     /**
     * Gets the defaultPassword
+    * The default password for the device. Write-Only.
     *
     * @return string|null The defaultPassword
     */
@@ -70,6 +73,7 @@ class TeamworkSystemConfiguration extends Entity
 
     /**
     * Sets the defaultPassword
+    * The default password for the device. Write-Only.
     *
     * @param string $val The value of the defaultPassword
     *
@@ -83,6 +87,7 @@ class TeamworkSystemConfiguration extends Entity
 
     /**
     * Gets the deviceLockTimeout
+    * The device lock timeout in seconds.
     *
     * @return \DateInterval|null The deviceLockTimeout
     */
@@ -101,6 +106,7 @@ class TeamworkSystemConfiguration extends Entity
 
     /**
     * Sets the deviceLockTimeout
+    * The device lock timeout in seconds.
     *
     * @param \DateInterval $val The value to assign to the deviceLockTimeout
     *
@@ -113,6 +119,7 @@ class TeamworkSystemConfiguration extends Entity
     }
     /**
     * Gets the isDeviceLockEnabled
+    * True if the device lock is enabled.
     *
     * @return bool|null The isDeviceLockEnabled
     */
@@ -127,6 +134,7 @@ class TeamworkSystemConfiguration extends Entity
 
     /**
     * Sets the isDeviceLockEnabled
+    * True if the device lock is enabled.
     *
     * @param bool $val The value of the isDeviceLockEnabled
     *
@@ -139,6 +147,7 @@ class TeamworkSystemConfiguration extends Entity
     }
     /**
     * Gets the isLoggingEnabled
+    * True if logging is enabled.
     *
     * @return bool|null The isLoggingEnabled
     */
@@ -153,6 +162,7 @@ class TeamworkSystemConfiguration extends Entity
 
     /**
     * Sets the isLoggingEnabled
+    * True if logging is enabled.
     *
     * @param bool $val The value of the isLoggingEnabled
     *
@@ -165,6 +175,7 @@ class TeamworkSystemConfiguration extends Entity
     }
     /**
     * Gets the isPowerSavingEnabled
+    * True if power saving is enabled.
     *
     * @return bool|null The isPowerSavingEnabled
     */
@@ -179,6 +190,7 @@ class TeamworkSystemConfiguration extends Entity
 
     /**
     * Sets the isPowerSavingEnabled
+    * True if power saving is enabled.
     *
     * @param bool $val The value of the isPowerSavingEnabled
     *
@@ -191,6 +203,7 @@ class TeamworkSystemConfiguration extends Entity
     }
     /**
     * Gets the isScreenCaptureEnabled
+    * True if screen capture is enabled.
     *
     * @return bool|null The isScreenCaptureEnabled
     */
@@ -205,6 +218,7 @@ class TeamworkSystemConfiguration extends Entity
 
     /**
     * Sets the isScreenCaptureEnabled
+    * True if screen capture is enabled.
     *
     * @param bool $val The value of the isScreenCaptureEnabled
     *
@@ -217,6 +231,7 @@ class TeamworkSystemConfiguration extends Entity
     }
     /**
     * Gets the isSilentModeEnabled
+    * True if silent mode is enabled.
     *
     * @return bool|null The isSilentModeEnabled
     */
@@ -231,6 +246,7 @@ class TeamworkSystemConfiguration extends Entity
 
     /**
     * Sets the isSilentModeEnabled
+    * True if silent mode is enabled.
     *
     * @param bool $val The value of the isSilentModeEnabled
     *
@@ -243,6 +259,7 @@ class TeamworkSystemConfiguration extends Entity
     }
     /**
     * Gets the language
+    * The language option for the device.
     *
     * @return string|null The language
     */
@@ -257,6 +274,7 @@ class TeamworkSystemConfiguration extends Entity
 
     /**
     * Sets the language
+    * The language option for the device.
     *
     * @param string $val The value of the language
     *
@@ -269,6 +287,7 @@ class TeamworkSystemConfiguration extends Entity
     }
     /**
     * Gets the lockPin
+    * The pin that unlocks the device. Write-Only.
     *
     * @return string|null The lockPin
     */
@@ -283,6 +302,7 @@ class TeamworkSystemConfiguration extends Entity
 
     /**
     * Sets the lockPin
+    * The pin that unlocks the device. Write-Only.
     *
     * @param string $val The value of the lockPin
     *
@@ -295,6 +315,7 @@ class TeamworkSystemConfiguration extends Entity
     }
     /**
     * Gets the loggingLevel
+    * The logging level for the device.
     *
     * @return string|null The loggingLevel
     */
@@ -309,6 +330,7 @@ class TeamworkSystemConfiguration extends Entity
 
     /**
     * Sets the loggingLevel
+    * The logging level for the device.
     *
     * @param string $val The value of the loggingLevel
     *
@@ -322,6 +344,7 @@ class TeamworkSystemConfiguration extends Entity
 
     /**
     * Gets the networkConfiguration
+    * The network configuration for the device.
     *
     * @return TeamworkNetworkConfiguration|null The networkConfiguration
     */
@@ -340,6 +363,7 @@ class TeamworkSystemConfiguration extends Entity
 
     /**
     * Sets the networkConfiguration
+    * The network configuration for the device.
     *
     * @param TeamworkNetworkConfiguration $val The value to assign to the networkConfiguration
     *

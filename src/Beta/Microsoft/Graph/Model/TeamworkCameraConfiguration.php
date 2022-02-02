@@ -26,6 +26,7 @@ class TeamworkCameraConfiguration extends Entity
 
     /**
     * Gets the contentCameraConfiguration
+    * The configuration for the content camera.
     *
     * @return TeamworkContentCameraConfiguration|null The contentCameraConfiguration
     */
@@ -44,6 +45,7 @@ class TeamworkCameraConfiguration extends Entity
 
     /**
     * Sets the contentCameraConfiguration
+    * The configuration for the content camera.
     *
     * @param TeamworkContentCameraConfiguration $val The value to assign to the contentCameraConfiguration
     *

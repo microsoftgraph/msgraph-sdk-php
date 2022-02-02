@@ -26,6 +26,7 @@ class TeamworkTeamsClientConfiguration extends Entity
 
     /**
     * Gets the accountConfiguration
+    * The configuration of the Microsoft Teams client user account for a device.
     *
     * @return TeamworkAccountConfiguration|null The accountConfiguration
     */
@@ -44,6 +45,7 @@ class TeamworkTeamsClientConfiguration extends Entity
 
     /**
     * Sets the accountConfiguration
+    * The configuration of the Microsoft Teams client user account for a device.
     *
     * @param TeamworkAccountConfiguration $val The value to assign to the accountConfiguration
     *
@@ -57,6 +59,7 @@ class TeamworkTeamsClientConfiguration extends Entity
 
     /**
     * Gets the featuresConfiguration
+    * The configuration of Microsoft Teams client features for a device.
     *
     * @return TeamworkFeaturesConfiguration|null The featuresConfiguration
     */
@@ -75,6 +78,7 @@ class TeamworkTeamsClientConfiguration extends Entity
 
     /**
     * Sets the featuresConfiguration
+    * The configuration of Microsoft Teams client features for a device.
     *
     * @param TeamworkFeaturesConfiguration $val The value to assign to the featuresConfiguration
     *

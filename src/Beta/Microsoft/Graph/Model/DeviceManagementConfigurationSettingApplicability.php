@@ -87,7 +87,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Gets the platform
-    * Platform setting can be applied on. Possible values are: none, android, iOS, macOS, windows10X, windows10.
+    * Platform setting can be applied on. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
     *
     * @return DeviceManagementConfigurationPlatforms|null The platform
     */
@@ -106,7 +106,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Sets the platform
-    * Platform setting can be applied on. Possible values are: none, android, iOS, macOS, windows10X, windows10.
+    * Platform setting can be applied on. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
     *
     * @param DeviceManagementConfigurationPlatforms $val The value to assign to the platform
     *

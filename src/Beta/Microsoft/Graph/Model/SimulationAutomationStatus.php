@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* PayloadSource File
+* SimulationAutomationStatus File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* PayloadSource class
+* SimulationAutomationStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,15 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class PayloadSource extends Enum
+class SimulationAutomationStatus extends Enum
 {
     /**
-    * The Enum PayloadSource
+    * The Enum SimulationAutomationStatus
     */
     const UNKNOWN = "unknown";
-    const GRAPHGLOBAL = "global";
-    const TENANT = "tenant";
+    const DRAFT = "draft";
+    const NOT_RUNNING = "notRunning";
+    const RUNNING = "running";
+    const COMPLETED = "completed";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

@@ -269,6 +269,37 @@ class AccessReviewInstanceDecisionItem extends Entity
     }
 
     /**
+    * Gets the principalResourceMembership
+    *
+    * @return DecisionItemPrincipalResourceMembership|null The principalResourceMembership
+    */
+    public function getPrincipalResourceMembership()
+    {
+        if (array_key_exists("principalResourceMembership", $this->_propDict)) {
+            if (is_a($this->_propDict["principalResourceMembership"], "\Beta\Microsoft\Graph\Model\DecisionItemPrincipalResourceMembership") || is_null($this->_propDict["principalResourceMembership"])) {
+                return $this->_propDict["principalResourceMembership"];
+            } else {
+                $this->_propDict["principalResourceMembership"] = new DecisionItemPrincipalResourceMembership($this->_propDict["principalResourceMembership"]);
+                return $this->_propDict["principalResourceMembership"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the principalResourceMembership
+    *
+    * @param DecisionItemPrincipalResourceMembership $val The principalResourceMembership
+    *
+    * @return AccessReviewInstanceDecisionItem
+    */
+    public function setPrincipalResourceMembership($val)
+    {
+        $this->_propDict["principalResourceMembership"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the recommendation
     * A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only.
     *

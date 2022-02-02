@@ -25,6 +25,7 @@ class TeamworkHardwareConfiguration extends Entity
 {
     /**
     * Gets the processorModel
+    * The CPU model on the device.
     *
     * @return string|null The processorModel
     */
@@ -39,6 +40,7 @@ class TeamworkHardwareConfiguration extends Entity
 
     /**
     * Sets the processorModel
+    * The CPU model on the device.
     *
     * @param string $val The value of the processorModel
     *

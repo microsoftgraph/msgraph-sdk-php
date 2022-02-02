@@ -25,6 +25,7 @@ class TeamworkOnPremisesCalendarSyncConfiguration extends Entity
 {
     /**
     * Gets the domain
+    * The fully qualified domain name (FQDN) of the Skype for Business Server. Use the Exchange domain if the Skype for Business SIP domain is different from the Exchange domain of the user.
     *
     * @return string|null The domain
     */
@@ -39,6 +40,7 @@ class TeamworkOnPremisesCalendarSyncConfiguration extends Entity
 
     /**
     * Sets the domain
+    * The fully qualified domain name (FQDN) of the Skype for Business Server. Use the Exchange domain if the Skype for Business SIP domain is different from the Exchange domain of the user.
     *
     * @param string $val The value of the domain
     *
@@ -51,6 +53,7 @@ class TeamworkOnPremisesCalendarSyncConfiguration extends Entity
     }
     /**
     * Gets the domainUserName
+    * The domain and username of the console device, for example, Seattle/RanierConf.
     *
     * @return string|null The domainUserName
     */
@@ -65,6 +68,7 @@ class TeamworkOnPremisesCalendarSyncConfiguration extends Entity
 
     /**
     * Sets the domainUserName
+    * The domain and username of the console device, for example, Seattle/RanierConf.
     *
     * @param string $val The value of the domainUserName
     *
@@ -77,6 +81,7 @@ class TeamworkOnPremisesCalendarSyncConfiguration extends Entity
     }
     /**
     * Gets the smtpAddress
+    * The Simple Mail Transfer Protocol (SMTP) address of the user account. This is only required if a different user principal name (UPN) is used to sign in to Exchange other than Microsoft Teams and Skype for Business. This is a common scenario in a hybrid environment where an on-premises Exchange server is used.
     *
     * @return string|null The smtpAddress
     */
@@ -91,6 +96,7 @@ class TeamworkOnPremisesCalendarSyncConfiguration extends Entity
 
     /**
     * Sets the smtpAddress
+    * The Simple Mail Transfer Protocol (SMTP) address of the user account. This is only required if a different user principal name (UPN) is used to sign in to Exchange other than Microsoft Teams and Skype for Business. This is a common scenario in a hybrid environment where an on-premises Exchange server is used.
     *
     * @param string $val The value of the smtpAddress
     *

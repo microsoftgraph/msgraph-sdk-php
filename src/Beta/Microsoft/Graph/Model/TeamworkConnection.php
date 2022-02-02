@@ -26,6 +26,7 @@ class TeamworkConnection extends Entity
 
     /**
     * Gets the connectionStatus
+    * Indicates whether a component/peripheral is connected/disconnected or its state is unknown. The possible values are: unknown, connected, disconnected, unknownFutureValue.
     *
     * @return TeamworkConnectionStatus|null The connectionStatus
     */
@@ -44,6 +45,7 @@ class TeamworkConnection extends Entity
 
     /**
     * Sets the connectionStatus
+    * Indicates whether a component/peripheral is connected/disconnected or its state is unknown. The possible values are: unknown, connected, disconnected, unknownFutureValue.
     *
     * @param TeamworkConnectionStatus $val The value to assign to the connectionStatus
     *
@@ -57,6 +59,7 @@ class TeamworkConnection extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * Time at which the state was last changed. For example, indicates connected since when the state is connected and disconnected since when the state is disconnected.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -75,6 +78,7 @@ class TeamworkConnection extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * Time at which the state was last changed. For example, indicates connected since when the state is connected and disconnected since when the state is disconnected.
     *
     * @param \DateTime $val The value to assign to the lastModifiedDateTime
     *

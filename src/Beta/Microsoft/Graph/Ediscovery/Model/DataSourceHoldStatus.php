@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* TrainingAssignmentPreference File
+* DataSourceHoldStatus File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\Ediscovery\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* TrainingAssignmentPreference class
+* DataSourceHoldStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,15 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class TrainingAssignmentPreference extends Enum
+class DataSourceHoldStatus extends Enum
 {
     /**
-    * The Enum TrainingAssignmentPreference
+    * The Enum DataSourceHoldStatus
     */
-    const UNKNOWN = "unknown";
-    const AUTO = "auto";
-    const MANUAL = "manual";
+    const NOT_APPLIED = "notApplied";
+    const APPLIED = "applied";
+    const APPLYING = "applying";
+    const REMOVING = "removing";
+    const PARTIAL = "partial";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
