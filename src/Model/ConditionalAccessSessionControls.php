@@ -91,6 +91,34 @@ class ConditionalAccessSessionControls extends Entity
         $this->_propDict["cloudAppSecurity"] = $val;
          return $this;
     }
+    /**
+    * Gets the disableResilienceDefaults
+    * Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
+    *
+    * @return bool|null The disableResilienceDefaults
+    */
+    public function getDisableResilienceDefaults()
+    {
+        if (array_key_exists("disableResilienceDefaults", $this->_propDict)) {
+            return $this->_propDict["disableResilienceDefaults"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the disableResilienceDefaults
+    * Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
+    *
+    * @param bool $val The value of the disableResilienceDefaults
+    *
+    * @return ConditionalAccessSessionControls
+    */
+    public function setDisableResilienceDefaults($val)
+    {
+        $this->_propDict["disableResilienceDefaults"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the persistentBrowser

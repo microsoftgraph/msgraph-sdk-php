@@ -58,6 +58,39 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     }
 
     /**
+    * Gets the attachmentsArchive
+    * The zip file of all attachments for a message.
+    *
+    * @return \GuzzleHttp\Psr7\Stream|null The attachmentsArchive
+    */
+    public function getAttachmentsArchive()
+    {
+        if (array_key_exists("attachmentsArchive", $this->_propDict) && !is_null($this->_propDict["attachmentsArchive"])) {
+            if (is_a($this->_propDict["attachmentsArchive"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["attachmentsArchive"];
+            } else {
+                $this->_propDict["attachmentsArchive"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["attachmentsArchive"]);
+                return $this->_propDict["attachmentsArchive"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the attachmentsArchive
+    * The zip file of all attachments for a message.
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The attachmentsArchive
+    *
+    * @return ServiceUpdateMessage
+    */
+    public function setAttachmentsArchive($val)
+    {
+        $this->_propDict["attachmentsArchive"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the body
     * The content type and content of the service message body.
     *
@@ -120,6 +153,35 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     public function setCategory($val)
     {
         $this->_propDict["category"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the hasAttachments
+    * Indicates whether the message has any attachment.
+    *
+    * @return bool|null The hasAttachments
+    */
+    public function getHasAttachments()
+    {
+        if (array_key_exists("hasAttachments", $this->_propDict)) {
+            return $this->_propDict["hasAttachments"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hasAttachments
+    * Indicates whether the message has any attachment.
+    *
+    * @param bool $val The hasAttachments
+    *
+    * @return ServiceUpdateMessage
+    */
+    public function setHasAttachments($val)
+    {
+        $this->_propDict["hasAttachments"] = boolval($val);
         return $this;
     }
 
@@ -216,7 +278,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
 
     /**
     * Gets the tags
-    * A collection of tags for the service message.
+    * A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.
     *
     * @return string|null The tags
     */
@@ -231,7 +293,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
 
     /**
     * Sets the tags
-    * A collection of tags for the service message.
+    * A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.
     *
     * @param string $val The tags
     *
@@ -245,7 +307,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
 
     /**
     * Gets the viewPoint
-    * Represents user view points data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
+    * Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
     *
     * @return ServiceUpdateMessageViewpoint|null The viewPoint
     */
@@ -264,7 +326,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
 
     /**
     * Sets the viewPoint
-    * Represents user view points data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
+    * Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
     *
     * @param ServiceUpdateMessageViewpoint $val The viewPoint
     *
@@ -273,6 +335,43 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     public function setViewPoint($val)
     {
         $this->_propDict["viewPoint"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the attachments
+    * A collection of serviceAnnouncementAttachments.
+     *
+     * @return ServiceAnnouncementAttachment[]|null The attachments
+     */
+    public function getAttachments()
+    {
+        if (array_key_exists('attachments', $this->_propDict) && !is_null($this->_propDict['attachments'])) {
+            $attachments = [];
+            if (count($this->_propDict['attachments']) > 0 && is_a($this->_propDict['attachments'][0], 'ServiceAnnouncementAttachment')) {
+                return $this->_propDict['attachments'];
+            }
+            foreach ($this->_propDict['attachments'] as $singleValue) {
+                $attachments []= new ServiceAnnouncementAttachment($singleValue);
+            }
+            $this->_propDict['attachments'] = $attachments;
+            return $this->_propDict['attachments'];
+        }
+        return null;
+    }
+
+    /**
+    * Sets the attachments
+    * A collection of serviceAnnouncementAttachments.
+    *
+    * @param ServiceAnnouncementAttachment[] $val The attachments
+    *
+    * @return ServiceUpdateMessage
+    */
+    public function setAttachments($val)
+    {
+        $this->_propDict["attachments"] = $val;
         return $this;
     }
 

@@ -92,7 +92,7 @@ class WorkbookTableSort extends Entity
 
     /**
     * Gets the method
-    * Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
+    * Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.
     *
     * @return string|null The method
     */
@@ -107,7 +107,7 @@ class WorkbookTableSort extends Entity
 
     /**
     * Sets the method
-    * Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
+    * Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.
     *
     * @param string $val The method
     *

@@ -92,7 +92,7 @@ class Operation extends Entity
 
     /**
     * Gets the status
-    * The current status of the operation: notStarted, running, completed, failed
+    * Possible values are: notStarted, running, completed, failed. Read-only.
     *
     * @return OperationStatus|null The status
     */
@@ -111,7 +111,7 @@ class Operation extends Entity
 
     /**
     * Sets the status
-    * The current status of the operation: notStarted, running, completed, failed
+    * Possible values are: notStarted, running, completed, failed. Read-only.
     *
     * @param OperationStatus $val The status
     *

@@ -58,6 +58,34 @@ class AttachmentItem extends Entity
          return $this;
     }
     /**
+    * Gets the contentId
+    * The CID or Content-Id of the attachment for referencing in case of in-line attachments using &amp;lt;img src='cid:contentId'&amp;gt; tag in HTML messages. Optional.
+    *
+    * @return string|null The contentId
+    */
+    public function getContentId()
+    {
+        if (array_key_exists("contentId", $this->_propDict)) {
+            return $this->_propDict["contentId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the contentId
+    * The CID or Content-Id of the attachment for referencing in case of in-line attachments using &amp;lt;img src='cid:contentId'&amp;gt; tag in HTML messages. Optional.
+    *
+    * @param string $val The value of the contentId
+    *
+    * @return AttachmentItem
+    */
+    public function setContentId($val)
+    {
+        $this->_propDict["contentId"] = $val;
+        return $this;
+    }
+    /**
     * Gets the contentType
     * The nature of the data in the attachment. Optional.
     *

@@ -27,6 +27,7 @@ class AgreementFile extends AgreementFileProperties
 
      /**
      * Gets the localizations
+    * The localized version of the terms of use agreement files attached to the agreement.
      *
      * @return AgreementFileLocalization[]|null The localizations
      */
@@ -48,6 +49,7 @@ class AgreementFile extends AgreementFileProperties
 
     /**
     * Sets the localizations
+    * The localized version of the terms of use agreement files attached to the agreement.
     *
     * @param AgreementFileLocalization[] $val The localizations
     *

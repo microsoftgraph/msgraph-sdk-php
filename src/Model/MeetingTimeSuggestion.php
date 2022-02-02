@@ -190,7 +190,7 @@ class MeetingTimeSuggestion extends Entity
 
     /**
     * Gets the organizerAvailability
-    * Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+    * Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
     * @return FreeBusyStatus|null The organizerAvailability
     */
@@ -210,7 +210,7 @@ class MeetingTimeSuggestion extends Entity
 
     /**
     * Sets the organizerAvailability
-    * Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+    * Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
     * @param FreeBusyStatus $val The value to assign to the organizerAvailability
     *

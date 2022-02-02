@@ -122,7 +122,7 @@ class KeyCredential extends Entity
 
     /**
     * Gets the key
-    * The certificate's raw data in byte array converted to Base64 string; for example, [System.Convert]::ToBase64String($Cert.GetRawCertData()).
+    * Value for the key credential. Should be a base 64 encoded value.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The key
     */
@@ -142,7 +142,7 @@ class KeyCredential extends Entity
 
     /**
     * Sets the key
-    * The certificate's raw data in byte array converted to Base64 string; for example, [System.Convert]::ToBase64String($Cert.GetRawCertData()).
+    * Value for the key credential. Should be a base 64 encoded value.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the key
     *
@@ -155,7 +155,7 @@ class KeyCredential extends Entity
     }
     /**
     * Gets the keyId
-    * The unique identifier (GUID) for the key.
+    * The unique identifier for the key.
     *
     * @return string|null The keyId
     */
@@ -170,7 +170,7 @@ class KeyCredential extends Entity
 
     /**
     * Sets the keyId
-    * The unique identifier (GUID) for the key.
+    * The unique identifier for the key.
     *
     * @param string $val The value of the keyId
     *

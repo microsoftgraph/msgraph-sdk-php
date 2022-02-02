@@ -90,7 +90,7 @@ class ColumnValidation extends Entity
     }
     /**
     * Gets the formula
-    * The formula to validate column value. For examples, see Examples of common formulas in lists.
+    * The formula to validate column value. For examples, see Examples of common formulas in lists
     *
     * @return string|null The formula
     */
@@ -105,7 +105,7 @@ class ColumnValidation extends Entity
 
     /**
     * Sets the formula
-    * The formula to validate column value. For examples, see Examples of common formulas in lists.
+    * The formula to validate column value. For examples, see Examples of common formulas in lists
     *
     * @param string $val The value of the formula
     *

@@ -26,7 +26,7 @@ class TeamworkConversationIdentity extends Identity
 
     /**
     * Gets the conversationIdentityType
-    * Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
+    * Type of conversation. Possible values are: team, channel, and chat.
     *
     * @return TeamworkConversationIdentityType|null The conversationIdentityType
     */
@@ -46,7 +46,7 @@ class TeamworkConversationIdentity extends Identity
 
     /**
     * Sets the conversationIdentityType
-    * Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
+    * Type of conversation. Possible values are: team, channel, and chat.
     *
     * @param TeamworkConversationIdentityType $val The value to assign to the conversationIdentityType
     *

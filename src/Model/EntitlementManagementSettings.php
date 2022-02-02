@@ -26,6 +26,7 @@ class EntitlementManagementSettings extends Entity
 {
     /**
     * Gets the durationUntilExternalUserDeletedAfterBlocked
+    * If externalUserLifecycleAction is blockSignInAndDelete, the duration, typically a number of days, after an external user is blocked from sign in before their account is deleted.
     *
     * @return \DateInterval|null The durationUntilExternalUserDeletedAfterBlocked
     */
@@ -44,6 +45,7 @@ class EntitlementManagementSettings extends Entity
 
     /**
     * Sets the durationUntilExternalUserDeletedAfterBlocked
+    * If externalUserLifecycleAction is blockSignInAndDelete, the duration, typically a number of days, after an external user is blocked from sign in before their account is deleted.
     *
     * @param \DateInterval $val The durationUntilExternalUserDeletedAfterBlocked
     *

@@ -88,7 +88,7 @@ class EducationClass extends Entity
 
     /**
     * Gets the createdBy
-    * Entity who created the class
+    * Entity who created the class.
     *
     * @return IdentitySet|null The createdBy
     */
@@ -107,7 +107,7 @@ class EducationClass extends Entity
 
     /**
     * Sets the createdBy
-    * Entity who created the class
+    * Entity who created the class.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -237,7 +237,7 @@ class EducationClass extends Entity
 
     /**
     * Gets the externalSource
-    * How this class was created. Possible values are: sis, manual.
+    * The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
     *
     * @return EducationExternalSource|null The externalSource
     */
@@ -256,7 +256,7 @@ class EducationClass extends Entity
 
     /**
     * Sets the externalSource
-    * How this class was created. Possible values are: sis, manual.
+    * The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
     *
     * @param EducationExternalSource $val The externalSource
     *
@@ -357,7 +357,7 @@ class EducationClass extends Entity
 
     /**
     * Gets the term
-    * Term for this class.
+    * Term for the class.
     *
     * @return EducationTerm|null The term
     */
@@ -376,7 +376,7 @@ class EducationClass extends Entity
 
     /**
     * Sets the term
-    * Term for this class.
+    * Term for the class.
     *
     * @param EducationTerm $val The term
     *
