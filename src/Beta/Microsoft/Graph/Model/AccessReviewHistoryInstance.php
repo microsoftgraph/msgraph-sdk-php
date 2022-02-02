@@ -26,6 +26,7 @@ class AccessReviewHistoryInstance extends Entity
 {
     /**
     * Gets the downloadUri
+    * Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
     *
     * @return string|null The downloadUri
     */
@@ -40,6 +41,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Sets the downloadUri
+    * Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
     *
     * @param string $val The downloadUri
     *
@@ -53,6 +55,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Gets the expirationDateTime
+    * Timestamp when this instance and associated data expires and the history is deleted. Required.
     *
     * @return \DateTime|null The expirationDateTime
     */
@@ -71,6 +74,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Sets the expirationDateTime
+    * Timestamp when this instance and associated data expires and the history is deleted. Required.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -84,6 +88,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Gets the fulfilledDateTime
+    * Timestamp when all of the available data for this instance was collected. This will be set after this instance's status is set to done. Required.
     *
     * @return \DateTime|null The fulfilledDateTime
     */
@@ -102,6 +107,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Sets the fulfilledDateTime
+    * Timestamp when all of the available data for this instance was collected. This will be set after this instance's status is set to done. Required.
     *
     * @param \DateTime $val The fulfilledDateTime
     *
@@ -115,6 +121,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Gets the reviewHistoryPeriodEndDateTime
+    * Timestamp, reviews ending on or before this date will be included in the fetched history data.
     *
     * @return \DateTime|null The reviewHistoryPeriodEndDateTime
     */
@@ -133,6 +140,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Sets the reviewHistoryPeriodEndDateTime
+    * Timestamp, reviews ending on or before this date will be included in the fetched history data.
     *
     * @param \DateTime $val The reviewHistoryPeriodEndDateTime
     *
@@ -146,6 +154,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Gets the reviewHistoryPeriodStartDateTime
+    * Timestamp, reviews starting on or after this date will be included in the fetched history data.
     *
     * @return \DateTime|null The reviewHistoryPeriodStartDateTime
     */
@@ -164,6 +173,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Sets the reviewHistoryPeriodStartDateTime
+    * Timestamp, reviews starting on or after this date will be included in the fetched history data.
     *
     * @param \DateTime $val The reviewHistoryPeriodStartDateTime
     *
@@ -177,6 +187,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Gets the runDateTime
+    * Timestamp when the instance's history data is scheduled to be generated.
     *
     * @return \DateTime|null The runDateTime
     */
@@ -195,6 +206,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Sets the runDateTime
+    * Timestamp when the instance's history data is scheduled to be generated.
     *
     * @param \DateTime $val The runDateTime
     *
@@ -208,6 +220,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Gets the status
+    * Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status has been marked as done, a link can be generated to retrieve the instance's data by calling generateDownloadUri method.
     *
     * @return AccessReviewHistoryStatus|null The status
     */
@@ -226,6 +239,7 @@ class AccessReviewHistoryInstance extends Entity
 
     /**
     * Sets the status
+    * Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status has been marked as done, a link can be generated to retrieve the instance's data by calling generateDownloadUri method.
     *
     * @param AccessReviewHistoryStatus $val The status
     *

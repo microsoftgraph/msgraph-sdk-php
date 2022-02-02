@@ -25,6 +25,7 @@ class TeamworkFeaturesConfiguration extends Entity
 {
     /**
     * Gets the emailToSendLogsAndFeedback
+    * Email address to send logs and feedback.
     *
     * @return string|null The emailToSendLogsAndFeedback
     */
@@ -39,6 +40,7 @@ class TeamworkFeaturesConfiguration extends Entity
 
     /**
     * Sets the emailToSendLogsAndFeedback
+    * Email address to send logs and feedback.
     *
     * @param string $val The value of the emailToSendLogsAndFeedback
     *
@@ -51,6 +53,7 @@ class TeamworkFeaturesConfiguration extends Entity
     }
     /**
     * Gets the isAutoScreenShareEnabled
+    * True if auto screen shared is enabled.
     *
     * @return bool|null The isAutoScreenShareEnabled
     */
@@ -65,6 +68,7 @@ class TeamworkFeaturesConfiguration extends Entity
 
     /**
     * Sets the isAutoScreenShareEnabled
+    * True if auto screen shared is enabled.
     *
     * @param bool $val The value of the isAutoScreenShareEnabled
     *
@@ -77,6 +81,7 @@ class TeamworkFeaturesConfiguration extends Entity
     }
     /**
     * Gets the isBluetoothBeaconingEnabled
+    * True if Bluetooth beaconing is enabled.
     *
     * @return bool|null The isBluetoothBeaconingEnabled
     */
@@ -91,6 +96,7 @@ class TeamworkFeaturesConfiguration extends Entity
 
     /**
     * Sets the isBluetoothBeaconingEnabled
+    * True if Bluetooth beaconing is enabled.
     *
     * @param bool $val The value of the isBluetoothBeaconingEnabled
     *
@@ -103,6 +109,7 @@ class TeamworkFeaturesConfiguration extends Entity
     }
     /**
     * Gets the isHideMeetingNamesEnabled
+    * True if hiding meeting names is enabled.
     *
     * @return bool|null The isHideMeetingNamesEnabled
     */
@@ -117,6 +124,7 @@ class TeamworkFeaturesConfiguration extends Entity
 
     /**
     * Sets the isHideMeetingNamesEnabled
+    * True if hiding meeting names is enabled.
     *
     * @param bool $val The value of the isHideMeetingNamesEnabled
     *
@@ -129,6 +137,7 @@ class TeamworkFeaturesConfiguration extends Entity
     }
     /**
     * Gets the isSendLogsAndFeedbackEnabled
+    * True if sending logs and feedback is enabled.
     *
     * @return bool|null The isSendLogsAndFeedbackEnabled
     */
@@ -143,6 +152,7 @@ class TeamworkFeaturesConfiguration extends Entity
 
     /**
     * Sets the isSendLogsAndFeedbackEnabled
+    * True if sending logs and feedback is enabled.
     *
     * @param bool $val The value of the isSendLogsAndFeedbackEnabled
     *

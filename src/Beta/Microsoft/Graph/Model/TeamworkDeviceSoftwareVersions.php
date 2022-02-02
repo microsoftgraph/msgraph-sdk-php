@@ -25,6 +25,7 @@ class TeamworkDeviceSoftwareVersions extends Entity
 {
     /**
     * Gets the adminAgentSoftwareVersion
+    * The software version for the admin agent running on the device.
     *
     * @return string|null The adminAgentSoftwareVersion
     */
@@ -39,6 +40,7 @@ class TeamworkDeviceSoftwareVersions extends Entity
 
     /**
     * Sets the adminAgentSoftwareVersion
+    * The software version for the admin agent running on the device.
     *
     * @param string $val The value of the adminAgentSoftwareVersion
     *
@@ -51,6 +53,7 @@ class TeamworkDeviceSoftwareVersions extends Entity
     }
     /**
     * Gets the firmwareSoftwareVersion
+    * The software version for the firmware running on the device.
     *
     * @return string|null The firmwareSoftwareVersion
     */
@@ -65,6 +68,7 @@ class TeamworkDeviceSoftwareVersions extends Entity
 
     /**
     * Sets the firmwareSoftwareVersion
+    * The software version for the firmware running on the device.
     *
     * @param string $val The value of the firmwareSoftwareVersion
     *
@@ -77,6 +81,7 @@ class TeamworkDeviceSoftwareVersions extends Entity
     }
     /**
     * Gets the operatingSystemSoftwareVersion
+    * The software version for the operating system on the device.
     *
     * @return string|null The operatingSystemSoftwareVersion
     */
@@ -91,6 +96,7 @@ class TeamworkDeviceSoftwareVersions extends Entity
 
     /**
     * Sets the operatingSystemSoftwareVersion
+    * The software version for the operating system on the device.
     *
     * @param string $val The value of the operatingSystemSoftwareVersion
     *
@@ -103,6 +109,7 @@ class TeamworkDeviceSoftwareVersions extends Entity
     }
     /**
     * Gets the partnerAgentSoftwareVersion
+    * The software version for the partner agent running on the device.
     *
     * @return string|null The partnerAgentSoftwareVersion
     */
@@ -117,6 +124,7 @@ class TeamworkDeviceSoftwareVersions extends Entity
 
     /**
     * Sets the partnerAgentSoftwareVersion
+    * The software version for the partner agent running on the device.
     *
     * @param string $val The value of the partnerAgentSoftwareVersion
     *
@@ -129,6 +137,7 @@ class TeamworkDeviceSoftwareVersions extends Entity
     }
     /**
     * Gets the teamsClientSoftwareVersion
+    * The software version for the Teams client running on the device.
     *
     * @return string|null The teamsClientSoftwareVersion
     */
@@ -143,6 +152,7 @@ class TeamworkDeviceSoftwareVersions extends Entity
 
     /**
     * Sets the teamsClientSoftwareVersion
+    * The software version for the Teams client running on the device.
     *
     * @param string $val The value of the teamsClientSoftwareVersion
     *

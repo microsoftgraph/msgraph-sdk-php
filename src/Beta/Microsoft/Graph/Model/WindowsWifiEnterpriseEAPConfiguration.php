@@ -237,7 +237,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
 
     /**
     * Gets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast.
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap.
     *
     * @return EapType|null The eapType
     */
@@ -256,7 +256,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
 
     /**
     * Sets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast.
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast, teap.
     *
     * @param EapType $val The eapType
     *

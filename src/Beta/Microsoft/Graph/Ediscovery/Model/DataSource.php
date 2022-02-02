@@ -119,4 +119,35 @@ class DataSource extends \Beta\Microsoft\Graph\Model\Entity
         return $this;
     }
 
+    /**
+    * Gets the holdStatus
+    *
+    * @return DataSourceHoldStatus|null The holdStatus
+    */
+    public function getHoldStatus()
+    {
+        if (array_key_exists("holdStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["holdStatus"], "\Beta\Microsoft\Graph\Ediscovery\Model\DataSourceHoldStatus") || is_null($this->_propDict["holdStatus"])) {
+                return $this->_propDict["holdStatus"];
+            } else {
+                $this->_propDict["holdStatus"] = new DataSourceHoldStatus($this->_propDict["holdStatus"]);
+                return $this->_propDict["holdStatus"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the holdStatus
+    *
+    * @param DataSourceHoldStatus $val The holdStatus
+    *
+    * @return DataSource
+    */
+    public function setHoldStatus($val)
+    {
+        $this->_propDict["holdStatus"] = $val;
+        return $this;
+    }
+
 }

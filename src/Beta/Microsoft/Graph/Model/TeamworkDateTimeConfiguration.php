@@ -25,6 +25,7 @@ class TeamworkDateTimeConfiguration extends Entity
 {
     /**
     * Gets the dateFormat
+    * The date format for the device.
     *
     * @return string|null The dateFormat
     */
@@ -39,6 +40,7 @@ class TeamworkDateTimeConfiguration extends Entity
 
     /**
     * Sets the dateFormat
+    * The date format for the device.
     *
     * @param string $val The value of the dateFormat
     *
@@ -52,6 +54,7 @@ class TeamworkDateTimeConfiguration extends Entity
 
     /**
     * Gets the officeHoursEndTime
+    * The time of the day when the device is turned off.
     *
     * @return TimeOfDay|null The officeHoursEndTime
     */
@@ -70,6 +73,7 @@ class TeamworkDateTimeConfiguration extends Entity
 
     /**
     * Sets the officeHoursEndTime
+    * The time of the day when the device is turned off.
     *
     * @param TimeOfDay $val The value to assign to the officeHoursEndTime
     *
@@ -83,6 +87,7 @@ class TeamworkDateTimeConfiguration extends Entity
 
     /**
     * Gets the officeHoursStartTime
+    * The time of the day when the device is turned on.
     *
     * @return TimeOfDay|null The officeHoursStartTime
     */
@@ -101,6 +106,7 @@ class TeamworkDateTimeConfiguration extends Entity
 
     /**
     * Sets the officeHoursStartTime
+    * The time of the day when the device is turned on.
     *
     * @param TimeOfDay $val The value to assign to the officeHoursStartTime
     *
@@ -113,6 +119,7 @@ class TeamworkDateTimeConfiguration extends Entity
     }
     /**
     * Gets the timeFormat
+    * The time format for the device.
     *
     * @return string|null The timeFormat
     */
@@ -127,6 +134,7 @@ class TeamworkDateTimeConfiguration extends Entity
 
     /**
     * Sets the timeFormat
+    * The time format for the device.
     *
     * @param string $val The value of the timeFormat
     *
@@ -139,6 +147,7 @@ class TeamworkDateTimeConfiguration extends Entity
     }
     /**
     * Gets the timeZone
+    * The time zone to which the office hours apply.
     *
     * @return string|null The timeZone
     */
@@ -153,6 +162,7 @@ class TeamworkDateTimeConfiguration extends Entity
 
     /**
     * Sets the timeZone
+    * The time zone to which the office hours apply.
     *
     * @param string $val The value of the timeZone
     *

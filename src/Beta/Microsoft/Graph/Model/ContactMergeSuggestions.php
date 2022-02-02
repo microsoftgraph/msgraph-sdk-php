@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Teamwork File
+* ContactMergeSuggestions File
 * PHP version 7
 *
 * @category  Library
@@ -11,10 +11,10 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\Model;
 
 /**
-* Teamwork class
+* ContactMergeSuggestions class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,35 +22,32 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Teamwork extends Entity
+class ContactMergeSuggestions extends Entity
 {
-
-     /**
-     * Gets the workforceIntegrations
-    * A workforce integration with shifts.
-     *
-     * @return array|null The workforceIntegrations
-     */
-    public function getWorkforceIntegrations()
+    /**
+    * Gets the isEnabled
+    *
+    * @return bool|null The isEnabled
+    */
+    public function getIsEnabled()
     {
-        if (array_key_exists("workforceIntegrations", $this->_propDict)) {
-           return $this->_propDict["workforceIntegrations"];
+        if (array_key_exists("isEnabled", $this->_propDict)) {
+            return $this->_propDict["isEnabled"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the workforceIntegrations
-    * A workforce integration with shifts.
+    * Sets the isEnabled
     *
-    * @param WorkforceIntegration[] $val The workforceIntegrations
+    * @param bool $val The isEnabled
     *
-    * @return Teamwork
+    * @return ContactMergeSuggestions
     */
-    public function setWorkforceIntegrations($val)
+    public function setIsEnabled($val)
     {
-        $this->_propDict["workforceIntegrations"] = $val;
+        $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
 

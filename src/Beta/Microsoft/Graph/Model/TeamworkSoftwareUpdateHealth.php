@@ -26,6 +26,7 @@ class TeamworkSoftwareUpdateHealth extends Entity
 
     /**
     * Gets the adminAgentSoftwareUpdateStatus
+    * The software update available for the admin agent.
     *
     * @return TeamworkSoftwareUpdateStatus|null The adminAgentSoftwareUpdateStatus
     */
@@ -44,6 +45,7 @@ class TeamworkSoftwareUpdateHealth extends Entity
 
     /**
     * Sets the adminAgentSoftwareUpdateStatus
+    * The software update available for the admin agent.
     *
     * @param TeamworkSoftwareUpdateStatus $val The value to assign to the adminAgentSoftwareUpdateStatus
     *
@@ -57,6 +59,7 @@ class TeamworkSoftwareUpdateHealth extends Entity
 
     /**
     * Gets the companyPortalSoftwareUpdateStatus
+    * The software update available for the company portal.
     *
     * @return TeamworkSoftwareUpdateStatus|null The companyPortalSoftwareUpdateStatus
     */
@@ -75,6 +78,7 @@ class TeamworkSoftwareUpdateHealth extends Entity
 
     /**
     * Sets the companyPortalSoftwareUpdateStatus
+    * The software update available for the company portal.
     *
     * @param TeamworkSoftwareUpdateStatus $val The value to assign to the companyPortalSoftwareUpdateStatus
     *
@@ -88,6 +92,7 @@ class TeamworkSoftwareUpdateHealth extends Entity
 
     /**
     * Gets the firmwareSoftwareUpdateStatus
+    * The software update available for the firmware.
     *
     * @return TeamworkSoftwareUpdateStatus|null The firmwareSoftwareUpdateStatus
     */
@@ -106,6 +111,7 @@ class TeamworkSoftwareUpdateHealth extends Entity
 
     /**
     * Sets the firmwareSoftwareUpdateStatus
+    * The software update available for the firmware.
     *
     * @param TeamworkSoftwareUpdateStatus $val The value to assign to the firmwareSoftwareUpdateStatus
     *
@@ -119,6 +125,7 @@ class TeamworkSoftwareUpdateHealth extends Entity
 
     /**
     * Gets the operatingSystemSoftwareUpdateStatus
+    * The software update available for the operating system.
     *
     * @return TeamworkSoftwareUpdateStatus|null The operatingSystemSoftwareUpdateStatus
     */
@@ -137,6 +144,7 @@ class TeamworkSoftwareUpdateHealth extends Entity
 
     /**
     * Sets the operatingSystemSoftwareUpdateStatus
+    * The software update available for the operating system.
     *
     * @param TeamworkSoftwareUpdateStatus $val The value to assign to the operatingSystemSoftwareUpdateStatus
     *
@@ -150,6 +158,7 @@ class TeamworkSoftwareUpdateHealth extends Entity
 
     /**
     * Gets the partnerAgentSoftwareUpdateStatus
+    * The software update available for the partner agent.
     *
     * @return TeamworkSoftwareUpdateStatus|null The partnerAgentSoftwareUpdateStatus
     */
@@ -168,6 +177,7 @@ class TeamworkSoftwareUpdateHealth extends Entity
 
     /**
     * Sets the partnerAgentSoftwareUpdateStatus
+    * The software update available for the partner agent.
     *
     * @param TeamworkSoftwareUpdateStatus $val The value to assign to the partnerAgentSoftwareUpdateStatus
     *
@@ -181,6 +191,7 @@ class TeamworkSoftwareUpdateHealth extends Entity
 
     /**
     * Gets the teamsClientSoftwareUpdateStatus
+    * The software update available for the Teams client.
     *
     * @return TeamworkSoftwareUpdateStatus|null The teamsClientSoftwareUpdateStatus
     */
@@ -199,6 +210,7 @@ class TeamworkSoftwareUpdateHealth extends Entity
 
     /**
     * Sets the teamsClientSoftwareUpdateStatus
+    * The software update available for the Teams client.
     *
     * @param TeamworkSoftwareUpdateStatus $val The value to assign to the teamsClientSoftwareUpdateStatus
     *

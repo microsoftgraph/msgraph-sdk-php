@@ -25,6 +25,7 @@ class TeamworkNetworkConfiguration extends Entity
 {
     /**
     * Gets the defaultGateway
+    * The default gateway is the path used to pass information when the destination is unknown to the device.
     *
     * @return string|null The defaultGateway
     */
@@ -39,6 +40,7 @@ class TeamworkNetworkConfiguration extends Entity
 
     /**
     * Sets the defaultGateway
+    * The default gateway is the path used to pass information when the destination is unknown to the device.
     *
     * @param string $val The value of the defaultGateway
     *
@@ -51,6 +53,7 @@ class TeamworkNetworkConfiguration extends Entity
     }
     /**
     * Gets the domainName
+    * The network domain of the device, for example, contoso.com.
     *
     * @return string|null The domainName
     */
@@ -65,6 +68,7 @@ class TeamworkNetworkConfiguration extends Entity
 
     /**
     * Sets the domainName
+    * The network domain of the device, for example, contoso.com.
     *
     * @param string $val The value of the domainName
     *
@@ -77,6 +81,7 @@ class TeamworkNetworkConfiguration extends Entity
     }
     /**
     * Gets the hostName
+    * The device name on a network.
     *
     * @return string|null The hostName
     */
@@ -91,6 +96,7 @@ class TeamworkNetworkConfiguration extends Entity
 
     /**
     * Sets the hostName
+    * The device name on a network.
     *
     * @param string $val The value of the hostName
     *
@@ -103,6 +109,7 @@ class TeamworkNetworkConfiguration extends Entity
     }
     /**
     * Gets the ipAddress
+    * The IP address is a numerical label that uniquely identifies every device connected to the internet.
     *
     * @return string|null The ipAddress
     */
@@ -117,6 +124,7 @@ class TeamworkNetworkConfiguration extends Entity
 
     /**
     * Sets the ipAddress
+    * The IP address is a numerical label that uniquely identifies every device connected to the internet.
     *
     * @param string $val The value of the ipAddress
     *
@@ -129,6 +137,7 @@ class TeamworkNetworkConfiguration extends Entity
     }
     /**
     * Gets the isDhcpEnabled
+    * True if DHCP is enabled.
     *
     * @return bool|null The isDhcpEnabled
     */
@@ -143,6 +152,7 @@ class TeamworkNetworkConfiguration extends Entity
 
     /**
     * Sets the isDhcpEnabled
+    * True if DHCP is enabled.
     *
     * @param bool $val The value of the isDhcpEnabled
     *
@@ -155,6 +165,7 @@ class TeamworkNetworkConfiguration extends Entity
     }
     /**
     * Gets the isPCPortEnabled
+    * True if the PC port is enabled.
     *
     * @return bool|null The isPCPortEnabled
     */
@@ -169,6 +180,7 @@ class TeamworkNetworkConfiguration extends Entity
 
     /**
     * Sets the isPCPortEnabled
+    * True if the PC port is enabled.
     *
     * @param bool $val The value of the isPCPortEnabled
     *
@@ -181,6 +193,7 @@ class TeamworkNetworkConfiguration extends Entity
     }
     /**
     * Gets the primaryDns
+    * A primary DNS is the first point of contact for a device that translates the hostname into an IP address.
     *
     * @return string|null The primaryDns
     */
@@ -195,6 +208,7 @@ class TeamworkNetworkConfiguration extends Entity
 
     /**
     * Sets the primaryDns
+    * A primary DNS is the first point of contact for a device that translates the hostname into an IP address.
     *
     * @param string $val The value of the primaryDns
     *
@@ -207,6 +221,7 @@ class TeamworkNetworkConfiguration extends Entity
     }
     /**
     * Gets the secondaryDns
+    * A secondary DNS is used when the primary DNS is not available.
     *
     * @return string|null The secondaryDns
     */
@@ -221,6 +236,7 @@ class TeamworkNetworkConfiguration extends Entity
 
     /**
     * Sets the secondaryDns
+    * A secondary DNS is used when the primary DNS is not available.
     *
     * @param string $val The value of the secondaryDns
     *
@@ -233,6 +249,7 @@ class TeamworkNetworkConfiguration extends Entity
     }
     /**
     * Gets the subnetMask
+    * A subnet mask is a number that distinguishes the network address and the host address within an IP address.
     *
     * @return string|null The subnetMask
     */
@@ -247,6 +264,7 @@ class TeamworkNetworkConfiguration extends Entity
 
     /**
     * Sets the subnetMask
+    * A subnet mask is a number that distinguishes the network address and the host address within an IP address.
     *
     * @param string $val The value of the subnetMask
     *

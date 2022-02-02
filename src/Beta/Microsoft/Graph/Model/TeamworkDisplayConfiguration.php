@@ -26,6 +26,7 @@ class TeamworkDisplayConfiguration extends Entity
 
     /**
     * Gets the configuredDisplays
+    * The list of configured displays. Applicable only for Microsoft Teams Rooms devices.
     *
     * @return TeamworkConfiguredPeripheral|null The configuredDisplays
     */
@@ -44,6 +45,7 @@ class TeamworkDisplayConfiguration extends Entity
 
     /**
     * Sets the configuredDisplays
+    * The list of configured displays. Applicable only for Microsoft Teams Rooms devices.
     *
     * @param TeamworkConfiguredPeripheral $val The value to assign to the configuredDisplays
     *
@@ -56,6 +58,7 @@ class TeamworkDisplayConfiguration extends Entity
     }
     /**
     * Gets the displayCount
+    * Total number of connected displays, including the inbuilt display. Applicable only for Teams Rooms devices.
     *
     * @return int|null The displayCount
     */
@@ -70,6 +73,7 @@ class TeamworkDisplayConfiguration extends Entity
 
     /**
     * Sets the displayCount
+    * Total number of connected displays, including the inbuilt display. Applicable only for Teams Rooms devices.
     *
     * @param int $val The value of the displayCount
     *
@@ -83,6 +87,7 @@ class TeamworkDisplayConfiguration extends Entity
 
     /**
     * Gets the inBuiltDisplayScreenConfiguration
+    * Configuration for the inbuilt display. Not applicable for Teams Rooms devices.
     *
     * @return TeamworkDisplayScreenConfiguration|null The inBuiltDisplayScreenConfiguration
     */
@@ -101,6 +106,7 @@ class TeamworkDisplayConfiguration extends Entity
 
     /**
     * Sets the inBuiltDisplayScreenConfiguration
+    * Configuration for the inbuilt display. Not applicable for Teams Rooms devices.
     *
     * @param TeamworkDisplayScreenConfiguration $val The value to assign to the inBuiltDisplayScreenConfiguration
     *
@@ -113,6 +119,7 @@ class TeamworkDisplayConfiguration extends Entity
     }
     /**
     * Gets the isContentDuplicationAllowed
+    * True if content duplication is allowed. Applicable only for Teams Rooms devices.
     *
     * @return bool|null The isContentDuplicationAllowed
     */
@@ -127,6 +134,7 @@ class TeamworkDisplayConfiguration extends Entity
 
     /**
     * Sets the isContentDuplicationAllowed
+    * True if content duplication is allowed. Applicable only for Teams Rooms devices.
     *
     * @param bool $val The value of the isContentDuplicationAllowed
     *
@@ -139,6 +147,7 @@ class TeamworkDisplayConfiguration extends Entity
     }
     /**
     * Gets the isDualDisplayModeEnabled
+    * True if dual display mode is enabled. If isDualDisplayModeEnabled is true, then the content will be displayed on both front of room screens instead of just the one screen, when it is shared via the HDMI ingest module on the Microsoft Teams Rooms device. Applicable only for Teams Rooms devices.
     *
     * @return bool|null The isDualDisplayModeEnabled
     */
@@ -153,6 +162,7 @@ class TeamworkDisplayConfiguration extends Entity
 
     /**
     * Sets the isDualDisplayModeEnabled
+    * True if dual display mode is enabled. If isDualDisplayModeEnabled is true, then the content will be displayed on both front of room screens instead of just the one screen, when it is shared via the HDMI ingest module on the Microsoft Teams Rooms device. Applicable only for Teams Rooms devices.
     *
     * @param bool $val The value of the isDualDisplayModeEnabled
     *
