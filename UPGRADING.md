@@ -2,6 +2,23 @@
 
 This guide highlights breaking changes, bug fixes and new features introduced during major upgrades.
 
+# Upgrading from 2.0-RC2 to 2.0-RC3
+
+# Breaking Changes
+## `GraphClientException` & `GraphServerException`'s `getRawResponseBody()` returns a `StreamInterface` instead of `array`
+The SDK currently throws a `GraphClientException` 4xx responses and a `GraphServiceException` for 5xx responses from the Graph API.
+The raw payload that accompanied the 4xx/5xx status code can be retrieved by calling `getRawResponseBody()` on the exception object.
+
+This change returns a `StreamInterface` instead of an array to accommodate HTML/string response bodies.
+
+To get the response payload as an Error object, use `getError()`. To get the raw string you can now use `getResponseBodyAsString()` and to get
+the json-decoded response use `getResponseBodyJson()`.
+
+# Bug Fixes
+Adding headers to a `GraphRequest` now allows you to overwrite the default headers e.g. Content-Type. Previously,
+any new header values would be appended to the default value.
+
+
 # Upgrading from 1.x to 2.0
 - [Breaking Changes](#breaking-changes)
 - [Bug Fixes](#bug-fixes)
