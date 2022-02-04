@@ -2,12 +2,32 @@
 
 This guide highlights breaking changes, bug fixes and new features introduced during major upgrades.
 
-# Upgrading from 1.x to 2.0
-- [Breaking Changes](#breaking-changes)
-- [Bug Fixes](#bug-fixes)
-- [New Features](#new-features)
+- [2.0-RC2 ... 2.0-RC3](#upgrading-from-20-rc2-to-20-rc3)
+- [1.x ... 2.0](#upgrading-from-1x-to-20)
 
-# Breaking Changes
+# Upgrading from 2.0-RC2 to 2.0-RC3
+
+## 2.0-RC3 Breaking Changes
+### `GraphClientException` & `GraphServerException`'s `getRawResponseBody()` returns a `StreamInterface` instead of `array`
+The SDK currently throws a `GraphClientException` 4xx responses and a `GraphServiceException` for 5xx responses from the Graph API.
+The raw payload that accompanied the 4xx/5xx status code can be retrieved by calling `getRawResponseBody()` on the exception object.
+
+This change returns a `StreamInterface` instead of an array to accommodate HTML/string response bodies.
+
+To get the response payload as an Error object, use `getError()`. To get the raw string you can now use `getResponseBodyAsString()` and to get
+the json-decoded response use `getResponseBodyJson()`.
+
+## 2.0-RC3 Bug Fixes
+Adding headers to a `GraphRequest` now allows you to overwrite the default headers e.g. Content-Type. Previously,
+any new header values would be appended to the default value.
+
+
+# Upgrading from 1.x to 2.0
+- [Breaking Changes](#20-breaking-changes)
+- [Bug Fixes](#20-bug-fixes)
+- [New Features](#20-new-features)
+
+# 2.0 Breaking Changes
 The following breaking changes were introduced in v2.0.0 with more detailed upgrade steps in the following section:
 - [Moved Beta models to the Microsoft Graph Beta SDK](#moved-beta-models-to-the-microsoft-graph-beta-sdkhttpspackagistorgpackagesmicrosoftmicrosoft-graph-beta).
 - [Changes to the Graph client construction and configuration experience](#changes-to-graph-client-instantiation-and-configuration).
@@ -191,7 +211,7 @@ various methods. Where there has been a breaking change, they have been outlined
 ## Changes to the base Enum class
 `has()` and `toArray()` have been made static methods.
 
-# Bug Fixes
+# 2.0 Bug Fixes
 Model getters expected to return a collection of entities now work as expected e.g. getting meeting attendees using v1.x of the SDK
 would return a single attendee object instead of a list of attendees causing various PHP warnings and errors:
 ```php
@@ -212,7 +232,7 @@ if ($attendees) {
 ```
 Version 2, fixes such getters to return the expected list of entities (`MeetingParticipantInfo[]`).
 
-# New Features
+# 2.0 New Features
 
 ### Introducing the `PageIterator`
 The `PageIterator` allows you to asynchronously page through a collection response from the Graph API while processing each item in the collection
