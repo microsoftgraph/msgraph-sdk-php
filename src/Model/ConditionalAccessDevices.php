@@ -26,7 +26,7 @@ class ConditionalAccessDevices extends Entity
 
     /**
     * Gets the deviceFilter
-    * Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them.
+    * Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set.
     *
     * @return ConditionalAccessFilter|null The deviceFilter
     */
@@ -46,7 +46,7 @@ class ConditionalAccessDevices extends Entity
 
     /**
     * Sets the deviceFilter
-    * Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them.
+    * Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set.
     *
     * @param ConditionalAccessFilter $val The value to assign to the deviceFilter
     *

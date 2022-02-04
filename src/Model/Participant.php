@@ -183,7 +183,7 @@ class Participant extends Entity
 
     /**
     * Gets the recordingInfo
-    * Information about whether the participant has recording capability.
+    * Information on whether the participant has recording capability.
     *
     * @return RecordingInfo|null The recordingInfo
     */
@@ -202,7 +202,7 @@ class Participant extends Entity
 
     /**
     * Sets the recordingInfo
-    * Information about whether the participant has recording capability.
+    * Information on whether the participant has recording capability.
     *
     * @param RecordingInfo $val The recordingInfo
     *

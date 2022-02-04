@@ -27,7 +27,7 @@ class Approval extends Entity
 
      /**
      * Gets the stages
-    * A collection of stages in the approval decision.
+    * Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.
      *
      * @return ApprovalStage[]|null The stages
      */
@@ -49,7 +49,7 @@ class Approval extends Entity
 
     /**
     * Sets the stages
-    * A collection of stages in the approval decision.
+    * Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.
     *
     * @param ApprovalStage[] $val The stages
     *

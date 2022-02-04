@@ -96,7 +96,7 @@ class Message extends OutlookItem
 
     /**
     * Gets the bodyPreview
-    * The first 255 characters of the message body. It is in text format.
+    * The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
     *
     * @return string|null The bodyPreview
     */
@@ -111,7 +111,7 @@ class Message extends OutlookItem
 
     /**
     * Sets the bodyPreview
-    * The first 255 characters of the message body. It is in text format.
+    * The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
     *
     * @param string $val The bodyPreview
     *

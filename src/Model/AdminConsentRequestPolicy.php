@@ -143,7 +143,7 @@ class AdminConsentRequestPolicy extends Entity
 
      /**
      * Gets the reviewers
-    * The list of reviewers for the admin consent. Required.
+    * Required.
      *
      * @return AccessReviewReviewerScope[]|null The reviewers
      */
@@ -165,7 +165,7 @@ class AdminConsentRequestPolicy extends Entity
 
     /**
     * Sets the reviewers
-    * The list of reviewers for the admin consent. Required.
+    * Required.
     *
     * @param AccessReviewReviewerScope[] $val The reviewers
     *

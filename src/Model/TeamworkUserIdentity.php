@@ -26,7 +26,7 @@ class TeamworkUserIdentity extends Identity
 
     /**
     * Gets the userIdentityType
-    * Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, and unknownFutureValue.
+    * Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, and phoneUser.
     *
     * @return TeamworkUserIdentityType|null The userIdentityType
     */
@@ -46,7 +46,7 @@ class TeamworkUserIdentity extends Identity
 
     /**
     * Sets the userIdentityType
-    * Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, and unknownFutureValue.
+    * Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, and phoneUser.
     *
     * @param TeamworkUserIdentityType $val The value to assign to the userIdentityType
     *

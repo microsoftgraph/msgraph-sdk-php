@@ -27,6 +27,7 @@ class Teamwork extends Entity
 
      /**
      * Gets the workforceIntegrations
+    * A workforce integration with shifts.
      *
      * @return WorkforceIntegration[]|null The workforceIntegrations
      */
@@ -48,6 +49,7 @@ class Teamwork extends Entity
 
     /**
     * Sets the workforceIntegrations
+    * A workforce integration with shifts.
     *
     * @param WorkforceIntegration[] $val The workforceIntegrations
     *

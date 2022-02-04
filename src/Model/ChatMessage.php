@@ -253,7 +253,7 @@ class ChatMessage extends Entity
 
     /**
     * Gets the eventDetail
-    * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
+    * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
     *
     * @return EventMessageDetail|null The eventDetail
     */
@@ -272,7 +272,7 @@ class ChatMessage extends Entity
 
     /**
     * Sets the eventDetail
-    * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
+    * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
     *
     * @param EventMessageDetail $val The eventDetail
     *
@@ -448,7 +448,7 @@ class ChatMessage extends Entity
 
      /**
      * Gets the mentions
-    * List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
+    * List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
      *
      * @return ChatMessageMention[]|null The mentions
      */
@@ -470,7 +470,7 @@ class ChatMessage extends Entity
 
     /**
     * Sets the mentions
-    * List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
+    * List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
     *
     * @param ChatMessageMention[] $val The mentions
     *

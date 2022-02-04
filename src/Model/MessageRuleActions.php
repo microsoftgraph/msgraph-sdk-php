@@ -302,7 +302,7 @@ class MessageRuleActions extends Entity
 
     /**
     * Gets the redirectTo
-    * The email addresses to which a message should be redirected.
+    * The email address to which a message should be redirected.
     *
     * @return Recipient[]|null The redirectTo
     */
@@ -325,7 +325,7 @@ class MessageRuleActions extends Entity
 
     /**
     * Sets the redirectTo
-    * The email addresses to which a message should be redirected.
+    * The email address to which a message should be redirected.
     *
     * @param Recipient[] $val The value to assign to the redirectTo
     *

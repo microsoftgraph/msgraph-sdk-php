@@ -151,7 +151,7 @@ class PlannerPlan extends Entity
 
      /**
      * Gets the buckets
-    * Read-only. Nullable. Collection of buckets in the plan.
+    * Collection of buckets in the plan. Read-only. Nullable.
      *
      * @return PlannerBucket[]|null The buckets
      */
@@ -173,7 +173,7 @@ class PlannerPlan extends Entity
 
     /**
     * Sets the buckets
-    * Read-only. Nullable. Collection of buckets in the plan.
+    * Collection of buckets in the plan. Read-only. Nullable.
     *
     * @param PlannerBucket[] $val The buckets
     *
@@ -187,7 +187,7 @@ class PlannerPlan extends Entity
 
     /**
     * Gets the details
-    * Read-only. Nullable. Additional details about the plan.
+    * Additional details about the plan. Read-only. Nullable.
     *
     * @return PlannerPlanDetails|null The details
     */
@@ -206,7 +206,7 @@ class PlannerPlan extends Entity
 
     /**
     * Sets the details
-    * Read-only. Nullable. Additional details about the plan.
+    * Additional details about the plan. Read-only. Nullable.
     *
     * @param PlannerPlanDetails $val The details
     *
@@ -221,7 +221,7 @@ class PlannerPlan extends Entity
 
      /**
      * Gets the tasks
-    * Read-only. Nullable. Collection of tasks in the plan.
+    * Collection of tasks in the plan. Read-only. Nullable.
      *
      * @return PlannerTask[]|null The tasks
      */
@@ -243,7 +243,7 @@ class PlannerPlan extends Entity
 
     /**
     * Sets the tasks
-    * Read-only. Nullable. Collection of tasks in the plan.
+    * Collection of tasks in the plan. Read-only. Nullable.
     *
     * @param PlannerTask[] $val The tasks
     *

@@ -92,6 +92,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Gets the state
+    * The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq).
     *
     * @return AccessPackageAssignmentState|null The state
     */
@@ -110,6 +111,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Sets the state
+    * The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq).
     *
     * @param AccessPackageAssignmentState $val The state
     *
@@ -123,6 +125,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Gets the status
+    * More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
     *
     * @return string|null The status
     */
@@ -137,6 +140,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Sets the status
+    * More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
     *
     * @param string $val The status
     *
@@ -150,7 +154,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Gets the accessPackage
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
     *
     * @return AccessPackage|null The accessPackage
     */
@@ -169,7 +173,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Sets the accessPackage
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
     *
     * @param AccessPackage $val The accessPackage
     *
@@ -183,7 +187,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Gets the target
-    * The subject of the access package assignment. Read-only. Nullable.
+    * The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
     *
     * @return AccessPackageSubject|null The target
     */
@@ -202,7 +206,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Sets the target
-    * The subject of the access package assignment. Read-only. Nullable.
+    * The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
     *
     * @param AccessPackageSubject $val The target
     *

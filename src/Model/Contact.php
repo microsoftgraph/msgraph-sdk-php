@@ -972,7 +972,7 @@ class Contact extends OutlookItem
 
      /**
      * Gets the extensions
-    * The collection of open extensions defined for the contact. Read-only. Nullable.
+    * The collection of open extensions defined for the contact. Nullable.
      *
      * @return Extension[]|null The extensions
      */
@@ -994,7 +994,7 @@ class Contact extends OutlookItem
 
     /**
     * Sets the extensions
-    * The collection of open extensions defined for the contact. Read-only. Nullable.
+    * The collection of open extensions defined for the contact. Nullable.
     *
     * @param Extension[] $val The extensions
     *

@@ -88,7 +88,7 @@ class AccessPackage extends Entity
 
     /**
     * Gets the displayName
-    * The display name of the access package.
+    * The display name of the access package. Supports $filter (eq, contains).
     *
     * @return string|null The displayName
     */
@@ -103,7 +103,7 @@ class AccessPackage extends Entity
 
     /**
     * Sets the displayName
-    * The display name of the access package.
+    * The display name of the access package. Supports $filter (eq, contains).
     *
     * @param string $val The displayName
     *
@@ -179,6 +179,7 @@ class AccessPackage extends Entity
 
     /**
     * Gets the catalog
+    * Read-only. Nullable.
     *
     * @return AccessPackageCatalog|null The catalog
     */
@@ -197,6 +198,7 @@ class AccessPackage extends Entity
 
     /**
     * Sets the catalog
+    * Read-only. Nullable.
     *
     * @param AccessPackageCatalog $val The catalog
     *
