@@ -35,4 +35,6 @@ class DeviceManagementConfigurationPlatforms extends Enum
     const MAC_OS = "macOS";
     const WINDOWS10_X = "windows10X";
     const WINDOWS10 = "windows10";
+    const LINUX = "linux";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

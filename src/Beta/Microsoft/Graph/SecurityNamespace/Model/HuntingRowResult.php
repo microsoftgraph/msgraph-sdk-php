@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AlertStatus_v2 File
+* HuntingRowResult File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,9 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
+namespace Beta\Microsoft\Graph\Security\Model;
 /**
-* AlertStatus_v2 class
+* HuntingRowResult class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AlertStatus_v2 extends Enum
+class HuntingRowResult extends \Beta\Microsoft\Graph\Model\Entity
 {
-    /**
-    * The Enum AlertStatus_v2
-    */
-    const UNKNOWN = "unknown";
-    const GRAPHNEW = "new";
-    const IN_PROGRESS = "inProgress";
-    const RESOLVED = "resolved";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

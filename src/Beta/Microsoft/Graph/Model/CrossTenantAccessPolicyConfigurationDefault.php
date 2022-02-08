@@ -26,6 +26,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends CrossTenantAccessPolic
 {
     /**
     * Gets the isServiceDefault
+    * If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
     *
     * @return bool|null The isServiceDefault
     */
@@ -40,6 +41,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends CrossTenantAccessPolic
 
     /**
     * Sets the isServiceDefault
+    * If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
     *
     * @param bool $val The isServiceDefault
     *

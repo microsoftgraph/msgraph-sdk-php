@@ -83,6 +83,35 @@ class GroupPolicyDefinitionFile extends Entity
     }
 
     /**
+    * Gets the fileName
+    * The file name of the ADMX file without the path. For example: edge.admx
+    *
+    * @return string|null The fileName
+    */
+    public function getFileName()
+    {
+        if (array_key_exists("fileName", $this->_propDict)) {
+            return $this->_propDict["fileName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the fileName
+    * The file name of the ADMX file without the path. For example: edge.admx
+    *
+    * @param string $val The fileName
+    *
+    * @return GroupPolicyDefinitionFile
+    */
+    public function setFileName($val)
+    {
+        $this->_propDict["fileName"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the languageCodes
     * The supported language codes for the ADMX file.
     *

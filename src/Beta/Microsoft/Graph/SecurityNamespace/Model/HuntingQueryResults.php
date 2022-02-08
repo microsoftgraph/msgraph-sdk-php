@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\Security\Model;
 /**
 * HuntingQueryResults class
 *
@@ -21,7 +21,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class HuntingQueryResults extends Entity
+class HuntingQueryResults extends \Beta\Microsoft\Graph\Model\Entity
 {
 
     /**
@@ -32,7 +32,7 @@ class HuntingQueryResults extends Entity
     public function getResults()
     {
         if (array_key_exists("results", $this->_propDict)) {
-            if (is_a($this->_propDict["results"], "\Beta\Microsoft\Graph\Model\HuntingRowResult") || is_null($this->_propDict["results"])) {
+            if (is_a($this->_propDict["results"], "\Beta\Microsoft\Graph\Security\Model\HuntingRowResult") || is_null($this->_propDict["results"])) {
                 return $this->_propDict["results"];
             } else {
                 $this->_propDict["results"] = new HuntingRowResult($this->_propDict["results"]);
@@ -63,7 +63,7 @@ class HuntingQueryResults extends Entity
     public function getSchema()
     {
         if (array_key_exists("schema", $this->_propDict)) {
-            if (is_a($this->_propDict["schema"], "\Beta\Microsoft\Graph\Model\SinglePropertySchema") || is_null($this->_propDict["schema"])) {
+            if (is_a($this->_propDict["schema"], "\Beta\Microsoft\Graph\Security\Model\SinglePropertySchema") || is_null($this->_propDict["schema"])) {
                 return $this->_propDict["schema"];
             } else {
                 $this->_propDict["schema"] = new SinglePropertySchema($this->_propDict["schema"]);

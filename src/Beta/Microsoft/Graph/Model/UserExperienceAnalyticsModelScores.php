@@ -231,4 +231,33 @@ class UserExperienceAnalyticsModelScores extends Entity
         return $this;
     }
 
+    /**
+    * Gets the workFromAnywhereScore
+    * The user experience analytics model work from anywhere score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    *
+    * @return float|null The workFromAnywhereScore
+    */
+    public function getWorkFromAnywhereScore()
+    {
+        if (array_key_exists("workFromAnywhereScore", $this->_propDict)) {
+            return $this->_propDict["workFromAnywhereScore"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the workFromAnywhereScore
+    * The user experience analytics model work from anywhere score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    *
+    * @param float $val The workFromAnywhereScore
+    *
+    * @return UserExperienceAnalyticsModelScores
+    */
+    public function setWorkFromAnywhereScore($val)
+    {
+        $this->_propDict["workFromAnywhereScore"] = floatval($val);
+        return $this;
+    }
+
 }

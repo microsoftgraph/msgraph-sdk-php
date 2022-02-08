@@ -26,6 +26,7 @@ class CrossTenantAccessPolicyConfigurationBase extends Entity
 {
     /**
     * Gets the b2bCollaborationInbound
+    * Defines your configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
     *
     * @return CrossTenantAccessPolicyB2BSetting|null The b2bCollaborationInbound
     */
@@ -44,6 +45,7 @@ class CrossTenantAccessPolicyConfigurationBase extends Entity
 
     /**
     * Sets the b2bCollaborationInbound
+    * Defines your configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
     *
     * @param CrossTenantAccessPolicyB2BSetting $val The b2bCollaborationInbound
     *
@@ -57,6 +59,7 @@ class CrossTenantAccessPolicyConfigurationBase extends Entity
 
     /**
     * Gets the b2bCollaborationOutbound
+    * Defines your configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
     *
     * @return CrossTenantAccessPolicyB2BSetting|null The b2bCollaborationOutbound
     */
@@ -75,6 +78,7 @@ class CrossTenantAccessPolicyConfigurationBase extends Entity
 
     /**
     * Sets the b2bCollaborationOutbound
+    * Defines your configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
     *
     * @param CrossTenantAccessPolicyB2BSetting $val The b2bCollaborationOutbound
     *
@@ -88,6 +92,7 @@ class CrossTenantAccessPolicyConfigurationBase extends Entity
 
     /**
     * Gets the b2bDirectConnectInbound
+    * Defines your configuration for users from other organizations accessing your resources via Azure AD B2B direct connect.
     *
     * @return CrossTenantAccessPolicyB2BSetting|null The b2bDirectConnectInbound
     */
@@ -106,6 +111,7 @@ class CrossTenantAccessPolicyConfigurationBase extends Entity
 
     /**
     * Sets the b2bDirectConnectInbound
+    * Defines your configuration for users from other organizations accessing your resources via Azure AD B2B direct connect.
     *
     * @param CrossTenantAccessPolicyB2BSetting $val The b2bDirectConnectInbound
     *
@@ -119,6 +125,7 @@ class CrossTenantAccessPolicyConfigurationBase extends Entity
 
     /**
     * Gets the b2bDirectConnectOutbound
+    * Defines your configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
     *
     * @return CrossTenantAccessPolicyB2BSetting|null The b2bDirectConnectOutbound
     */
@@ -137,6 +144,7 @@ class CrossTenantAccessPolicyConfigurationBase extends Entity
 
     /**
     * Sets the b2bDirectConnectOutbound
+    * Defines your configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
     *
     * @param CrossTenantAccessPolicyB2BSetting $val The b2bDirectConnectOutbound
     *
@@ -150,6 +158,7 @@ class CrossTenantAccessPolicyConfigurationBase extends Entity
 
     /**
     * Gets the inboundTrust
+    * Determines the configuration for trusting other Conditional Access claims from external Azure AD organizations.
     *
     * @return CrossTenantAccessPolicyInboundTrust|null The inboundTrust
     */
@@ -168,6 +177,7 @@ class CrossTenantAccessPolicyConfigurationBase extends Entity
 
     /**
     * Sets the inboundTrust
+    * Determines the configuration for trusting other Conditional Access claims from external Azure AD organizations.
     *
     * @param CrossTenantAccessPolicyInboundTrust $val The inboundTrust
     *

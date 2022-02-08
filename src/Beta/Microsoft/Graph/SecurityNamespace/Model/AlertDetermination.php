@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AlertDetermination_v2 File
+* AlertDetermination File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\Security\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* AlertDetermination_v2 class
+* AlertDetermination class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,10 +24,10 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AlertDetermination_v2 extends Enum
+class AlertDetermination extends Enum
 {
     /**
-    * The Enum AlertDetermination_v2
+    * The Enum AlertDetermination
     */
     const UNKNOWN = "unknown";
     const APT = "apt";
@@ -37,12 +37,12 @@ class AlertDetermination_v2 extends Enum
     const UNWANTED_SOFTWARE = "unwantedSoftware";
     const OTHER = "other";
     const MULTI_STAGED_ATTACK = "multiStagedAttack";
-    const COMPROMISED_USER = "compromisedUser";
+    const COMPROMISED_ACCOUNT = "compromisedAccount";
     const PHISHING = "phishing";
     const MALICIOUS_USER_ACTIVITY = "maliciousUserActivity";
-    const CLEAN = "clean";
-    const INSUFFICIENT_DATA = "insufficientData";
-    const CONFIRMED_USER_ACTIVITY = "confirmedUserActivity";
+    const NOT_MALICIOUS = "notMalicious";
+    const NOT_ENOUGH_DATA_TO_VALIDATE = "notEnoughDataToValidate";
+    const CONFIRMED_ACTIVITY = "confirmedActivity";
     const LINE_OF_BUSINESS_APPLICATION = "lineOfBusinessApplication";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
