@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AlertSeverity_v2 File
+* AlertSeverity File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\Security\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* AlertSeverity_v2 class
+* AlertSeverity class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,10 +24,10 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AlertSeverity_v2 extends Enum
+class AlertSeverity extends Enum
 {
     /**
-    * The Enum AlertSeverity_v2
+    * The Enum AlertSeverity
     */
     const UNKNOWN = "unknown";
     const INFORMATIONAL = "informational";

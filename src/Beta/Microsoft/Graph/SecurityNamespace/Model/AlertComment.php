@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CallTranscript File
+* AlertComment File
 * PHP version 7
 *
 * @category  Library
@@ -11,10 +11,9 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
-
+namespace Beta\Microsoft\Graph\Security\Model;
 /**
-* CallTranscript class
+* AlertComment class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,36 +21,58 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CallTranscript extends Entity
+class AlertComment extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
-    * Gets the content
+    * Gets the comment
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The content
+    * @return string|null The comment
     */
-    public function getContent()
+    public function getComment()
     {
-        if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["content"])) {
-                return $this->_propDict["content"];
-            } else {
-                $this->_propDict["content"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["content"]);
-                return $this->_propDict["content"];
-            }
+        if (array_key_exists("comment", $this->_propDict)) {
+            return $this->_propDict["comment"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the content
+    * Sets the comment
     *
-    * @param \GuzzleHttp\Psr7\Stream $val The content
+    * @param string $val The value of the comment
     *
-    * @return CallTranscript
+    * @return AlertComment
     */
-    public function setContent($val)
+    public function setComment($val)
     {
-        $this->_propDict["content"] = $val;
+        $this->_propDict["comment"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the createdByDisplayName
+    *
+    * @return string|null The createdByDisplayName
+    */
+    public function getCreatedByDisplayName()
+    {
+        if (array_key_exists("createdByDisplayName", $this->_propDict)) {
+            return $this->_propDict["createdByDisplayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the createdByDisplayName
+    *
+    * @param string $val The value of the createdByDisplayName
+    *
+    * @return AlertComment
+    */
+    public function setCreatedByDisplayName($val)
+    {
+        $this->_propDict["createdByDisplayName"] = $val;
         return $this;
     }
 
@@ -76,14 +97,13 @@ class CallTranscript extends Entity
     /**
     * Sets the createdDateTime
     *
-    * @param \DateTime $val The createdDateTime
+    * @param \DateTime $val The value to assign to the createdDateTime
     *
-    * @return CallTranscript
+    * @return AlertComment The AlertComment
     */
     public function setCreatedDateTime($val)
     {
         $this->_propDict["createdDateTime"] = $val;
-        return $this;
+         return $this;
     }
-
 }

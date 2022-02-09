@@ -140,4 +140,37 @@ class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity
         return $this;
     }
 
+    /**
+    * Gets the lastRefreshedDateTime
+    * Recorded date time of this runtime details instance.
+    *
+    * @return \DateTime|null The lastRefreshedDateTime
+    */
+    public function getLastRefreshedDateTime()
+    {
+        if (array_key_exists("lastRefreshedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastRefreshedDateTime"], "\DateTime") || is_null($this->_propDict["lastRefreshedDateTime"])) {
+                return $this->_propDict["lastRefreshedDateTime"];
+            } else {
+                $this->_propDict["lastRefreshedDateTime"] = new \DateTime($this->_propDict["lastRefreshedDateTime"]);
+                return $this->_propDict["lastRefreshedDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the lastRefreshedDateTime
+    * Recorded date time of this runtime details instance.
+    *
+    * @param \DateTime $val The lastRefreshedDateTime
+    *
+    * @return UserExperienceAnalyticsBatteryHealthRuntimeDetails
+    */
+    public function setLastRefreshedDateTime($val)
+    {
+        $this->_propDict["lastRefreshedDateTime"] = $val;
+        return $this;
+    }
+
 }

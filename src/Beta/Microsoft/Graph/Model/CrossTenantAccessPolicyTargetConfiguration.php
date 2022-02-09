@@ -26,6 +26,7 @@ class CrossTenantAccessPolicyTargetConfiguration extends Entity
 
     /**
     * Gets the accessType
+    * Defines whether access is allowed or blocked. The possible values are: allowed, blocked, unknownFutureValue.
     *
     * @return CrossTenantAccessPolicyTargetConfigurationAccessType|null The accessType
     */
@@ -44,6 +45,7 @@ class CrossTenantAccessPolicyTargetConfiguration extends Entity
 
     /**
     * Sets the accessType
+    * Defines whether access is allowed or blocked. The possible values are: allowed, blocked, unknownFutureValue.
     *
     * @param CrossTenantAccessPolicyTargetConfigurationAccessType $val The value to assign to the accessType
     *
@@ -57,6 +59,7 @@ class CrossTenantAccessPolicyTargetConfiguration extends Entity
 
     /**
     * Gets the targets
+    * Specifies whether to target users, groups, or applications with this rule.
     *
     * @return CrossTenantAccessPolicyTarget|null The targets
     */
@@ -75,6 +78,7 @@ class CrossTenantAccessPolicyTargetConfiguration extends Entity
 
     /**
     * Sets the targets
+    * Specifies whether to target users, groups, or applications with this rule.
     *
     * @param CrossTenantAccessPolicyTarget $val The value to assign to the targets
     *

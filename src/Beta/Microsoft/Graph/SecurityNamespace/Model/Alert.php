@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Alert_v2 File
+* Alert File
 * PHP version 7
 *
 * @category  Library
@@ -11,10 +11,10 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\Security\Model;
 
 /**
-* Alert_v2 class
+* Alert class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,35 +22,8 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Alert_v2 extends Entity
+class Alert extends \Beta\Microsoft\Graph\Model\Entity
 {
-    /**
-    * Gets the aadTenantId
-    *
-    * @return string|null The aadTenantId
-    */
-    public function getAadTenantId()
-    {
-        if (array_key_exists("aadTenantId", $this->_propDict)) {
-            return $this->_propDict["aadTenantId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the aadTenantId
-    *
-    * @param string $val The aadTenantId
-    *
-    * @return Alert_v2
-    */
-    public function setAadTenantId($val)
-    {
-        $this->_propDict["aadTenantId"] = $val;
-        return $this;
-    }
-
     /**
     * Gets the actorDisplayName
     *
@@ -70,7 +43,7 @@ class Alert_v2 extends Entity
     *
     * @param string $val The actorDisplayName
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setActorDisplayName($val)
     {
@@ -97,7 +70,7 @@ class Alert_v2 extends Entity
     *
     * @param string $val The alertWebUrl
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setAlertWebUrl($val)
     {
@@ -124,7 +97,7 @@ class Alert_v2 extends Entity
     *
     * @param string $val The assignedTo
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setAssignedTo($val)
     {
@@ -151,7 +124,7 @@ class Alert_v2 extends Entity
     *
     * @param string $val The category
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setCategory($val)
     {
@@ -162,15 +135,15 @@ class Alert_v2 extends Entity
     /**
     * Gets the classification
     *
-    * @return AlertClassification_v2|null The classification
+    * @return AlertClassification|null The classification
     */
     public function getClassification()
     {
         if (array_key_exists("classification", $this->_propDict)) {
-            if (is_a($this->_propDict["classification"], "\Beta\Microsoft\Graph\Model\AlertClassification_v2") || is_null($this->_propDict["classification"])) {
+            if (is_a($this->_propDict["classification"], "\Beta\Microsoft\Graph\Security\Model\AlertClassification") || is_null($this->_propDict["classification"])) {
                 return $this->_propDict["classification"];
             } else {
-                $this->_propDict["classification"] = new AlertClassification_v2($this->_propDict["classification"]);
+                $this->_propDict["classification"] = new AlertClassification($this->_propDict["classification"]);
                 return $this->_propDict["classification"];
             }
         }
@@ -180,9 +153,9 @@ class Alert_v2 extends Entity
     /**
     * Sets the classification
     *
-    * @param AlertClassification_v2 $val The classification
+    * @param AlertClassification $val The classification
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setClassification($val)
     {
@@ -208,9 +181,9 @@ class Alert_v2 extends Entity
     /**
     * Sets the comments
     *
-    * @param AlertComment_v2[] $val The comments
+    * @param AlertComment[] $val The comments
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setComments($val)
     {
@@ -241,7 +214,7 @@ class Alert_v2 extends Entity
     *
     * @param \DateTime $val The createdDateTime
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setCreatedDateTime($val)
     {
@@ -268,11 +241,42 @@ class Alert_v2 extends Entity
     *
     * @param string $val The description
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the detectionSource
+    *
+    * @return DetectionSource|null The detectionSource
+    */
+    public function getDetectionSource()
+    {
+        if (array_key_exists("detectionSource", $this->_propDict)) {
+            if (is_a($this->_propDict["detectionSource"], "\Beta\Microsoft\Graph\Security\Model\DetectionSource") || is_null($this->_propDict["detectionSource"])) {
+                return $this->_propDict["detectionSource"];
+            } else {
+                $this->_propDict["detectionSource"] = new DetectionSource($this->_propDict["detectionSource"]);
+                return $this->_propDict["detectionSource"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the detectionSource
+    *
+    * @param DetectionSource $val The detectionSource
+    *
+    * @return Alert
+    */
+    public function setDetectionSource($val)
+    {
+        $this->_propDict["detectionSource"] = $val;
         return $this;
     }
 
@@ -295,7 +299,7 @@ class Alert_v2 extends Entity
     *
     * @param string $val The detectorId
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setDetectorId($val)
     {
@@ -306,15 +310,15 @@ class Alert_v2 extends Entity
     /**
     * Gets the determination
     *
-    * @return AlertDetermination_v2|null The determination
+    * @return AlertDetermination|null The determination
     */
     public function getDetermination()
     {
         if (array_key_exists("determination", $this->_propDict)) {
-            if (is_a($this->_propDict["determination"], "\Beta\Microsoft\Graph\Model\AlertDetermination_v2") || is_null($this->_propDict["determination"])) {
+            if (is_a($this->_propDict["determination"], "\Beta\Microsoft\Graph\Security\Model\AlertDetermination") || is_null($this->_propDict["determination"])) {
                 return $this->_propDict["determination"];
             } else {
-                $this->_propDict["determination"] = new AlertDetermination_v2($this->_propDict["determination"]);
+                $this->_propDict["determination"] = new AlertDetermination($this->_propDict["determination"]);
                 return $this->_propDict["determination"];
             }
         }
@@ -324,9 +328,9 @@ class Alert_v2 extends Entity
     /**
     * Sets the determination
     *
-    * @param AlertDetermination_v2 $val The determination
+    * @param AlertDetermination $val The determination
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setDetermination($val)
     {
@@ -357,7 +361,7 @@ class Alert_v2 extends Entity
     *
     * @param \DateTime $val The firstActivityDateTime
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setFirstActivityDateTime($val)
     {
@@ -384,7 +388,7 @@ class Alert_v2 extends Entity
     *
     * @param string $val The incidentId
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setIncidentId($val)
     {
@@ -411,7 +415,7 @@ class Alert_v2 extends Entity
     *
     * @param string $val The incidentWebUrl
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setIncidentWebUrl($val)
     {
@@ -442,7 +446,7 @@ class Alert_v2 extends Entity
     *
     * @param \DateTime $val The lastActivityDateTime
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setLastActivityDateTime($val)
     {
@@ -473,7 +477,7 @@ class Alert_v2 extends Entity
     *
     * @param \DateTime $val The lastUpdateDateTime
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setLastUpdateDateTime($val)
     {
@@ -500,7 +504,7 @@ class Alert_v2 extends Entity
     *
     * @param string $val The mitreTechniques
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setMitreTechniques($val)
     {
@@ -527,11 +531,38 @@ class Alert_v2 extends Entity
     *
     * @param string $val The providerAlertId
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setProviderAlertId($val)
     {
         $this->_propDict["providerAlertId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the recommendedActions
+    *
+    * @return string|null The recommendedActions
+    */
+    public function getRecommendedActions()
+    {
+        if (array_key_exists("recommendedActions", $this->_propDict)) {
+            return $this->_propDict["recommendedActions"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the recommendedActions
+    *
+    * @param string $val The recommendedActions
+    *
+    * @return Alert
+    */
+    public function setRecommendedActions($val)
+    {
+        $this->_propDict["recommendedActions"] = $val;
         return $this;
     }
 
@@ -558,7 +589,7 @@ class Alert_v2 extends Entity
     *
     * @param \DateTime $val The resolvedDateTime
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setResolvedDateTime($val)
     {
@@ -574,7 +605,7 @@ class Alert_v2 extends Entity
     public function getServiceSource()
     {
         if (array_key_exists("serviceSource", $this->_propDict)) {
-            if (is_a($this->_propDict["serviceSource"], "\Beta\Microsoft\Graph\Model\ServiceSource") || is_null($this->_propDict["serviceSource"])) {
+            if (is_a($this->_propDict["serviceSource"], "\Beta\Microsoft\Graph\Security\Model\ServiceSource") || is_null($this->_propDict["serviceSource"])) {
                 return $this->_propDict["serviceSource"];
             } else {
                 $this->_propDict["serviceSource"] = new ServiceSource($this->_propDict["serviceSource"]);
@@ -589,7 +620,7 @@ class Alert_v2 extends Entity
     *
     * @param ServiceSource $val The serviceSource
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setServiceSource($val)
     {
@@ -600,15 +631,15 @@ class Alert_v2 extends Entity
     /**
     * Gets the severity
     *
-    * @return AlertSeverity_v2|null The severity
+    * @return AlertSeverity|null The severity
     */
     public function getSeverity()
     {
         if (array_key_exists("severity", $this->_propDict)) {
-            if (is_a($this->_propDict["severity"], "\Beta\Microsoft\Graph\Model\AlertSeverity_v2") || is_null($this->_propDict["severity"])) {
+            if (is_a($this->_propDict["severity"], "\Beta\Microsoft\Graph\Security\Model\AlertSeverity") || is_null($this->_propDict["severity"])) {
                 return $this->_propDict["severity"];
             } else {
-                $this->_propDict["severity"] = new AlertSeverity_v2($this->_propDict["severity"]);
+                $this->_propDict["severity"] = new AlertSeverity($this->_propDict["severity"]);
                 return $this->_propDict["severity"];
             }
         }
@@ -618,9 +649,9 @@ class Alert_v2 extends Entity
     /**
     * Sets the severity
     *
-    * @param AlertSeverity_v2 $val The severity
+    * @param AlertSeverity $val The severity
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setSeverity($val)
     {
@@ -631,15 +662,15 @@ class Alert_v2 extends Entity
     /**
     * Gets the status
     *
-    * @return AlertStatus_v2|null The status
+    * @return AlertStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\AlertStatus_v2") || is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Security\Model\AlertStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
-                $this->_propDict["status"] = new AlertStatus_v2($this->_propDict["status"]);
+                $this->_propDict["status"] = new AlertStatus($this->_propDict["status"]);
                 return $this->_propDict["status"];
             }
         }
@@ -649,13 +680,40 @@ class Alert_v2 extends Entity
     /**
     * Sets the status
     *
-    * @param AlertStatus_v2 $val The status
+    * @param AlertStatus $val The status
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the tenantId
+    *
+    * @return string|null The tenantId
+    */
+    public function getTenantId()
+    {
+        if (array_key_exists("tenantId", $this->_propDict)) {
+            return $this->_propDict["tenantId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tenantId
+    *
+    * @param string $val The tenantId
+    *
+    * @return Alert
+    */
+    public function setTenantId($val)
+    {
+        $this->_propDict["tenantId"] = $val;
         return $this;
     }
 
@@ -678,7 +736,7 @@ class Alert_v2 extends Entity
     *
     * @param string $val The threatDisplayName
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setThreatDisplayName($val)
     {
@@ -705,7 +763,7 @@ class Alert_v2 extends Entity
     *
     * @param string $val The threatFamilyName
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setThreatFamilyName($val)
     {
@@ -732,7 +790,7 @@ class Alert_v2 extends Entity
     *
     * @param string $val The title
     *
-    * @return Alert_v2
+    * @return Alert
     */
     public function setTitle($val)
     {

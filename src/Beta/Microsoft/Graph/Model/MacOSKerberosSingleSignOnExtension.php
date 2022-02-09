@@ -763,34 +763,6 @@ class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtension
         return $this;
     }
     /**
-    * Gets the singleSignOnExtensionPreferredKDCs
-    * Soon to be deprecated.
-    *
-    * @return string|null The singleSignOnExtensionPreferredKDCs
-    */
-    public function getSingleSignOnExtensionPreferredKDCs()
-    {
-        if (array_key_exists("singleSignOnExtensionPreferredKDCs", $this->_propDict)) {
-            return $this->_propDict["singleSignOnExtensionPreferredKDCs"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the singleSignOnExtensionPreferredKDCs
-    * Soon to be deprecated.
-    *
-    * @param string $val The value of the singleSignOnExtensionPreferredKDCs
-    *
-    * @return MacOSKerberosSingleSignOnExtension
-    */
-    public function setSingleSignOnExtensionPreferredKDCs($val)
-    {
-        $this->_propDict["singleSignOnExtensionPreferredKDCs"] = $val;
-        return $this;
-    }
-    /**
     * Gets the tlsForLDAPRequired
     * When set to True, LDAP connections are required to use Transport Layer Security (TLS). Available for devices running macOS versions 11 and later.
     *
@@ -844,34 +816,6 @@ class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtension
     public function setUsernameLabelCustom($val)
     {
         $this->_propDict["usernameLabelCustom"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the usernameLableCustom
-    * Soon to be deprecated.
-    *
-    * @return string|null The usernameLableCustom
-    */
-    public function getUsernameLableCustom()
-    {
-        if (array_key_exists("usernameLableCustom", $this->_propDict)) {
-            return $this->_propDict["usernameLableCustom"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the usernameLableCustom
-    * Soon to be deprecated.
-    *
-    * @param string $val The value of the usernameLableCustom
-    *
-    * @return MacOSKerberosSingleSignOnExtension
-    */
-    public function setUsernameLableCustom($val)
-    {
-        $this->_propDict["usernameLableCustom"] = $val;
         return $this;
     }
     /**

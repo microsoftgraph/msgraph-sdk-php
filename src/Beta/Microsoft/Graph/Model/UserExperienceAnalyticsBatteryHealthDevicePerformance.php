@@ -173,28 +173,61 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
     * Gets the healthStatus
     * The overall battery health status of the device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
     *
-    * @return string|null The healthStatus
+    * @return UserExperienceAnalyticsHealthState|null The healthStatus
     */
     public function getHealthStatus()
     {
         if (array_key_exists("healthStatus", $this->_propDict)) {
-            return $this->_propDict["healthStatus"];
-        } else {
-            return null;
+            if (is_a($this->_propDict["healthStatus"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsHealthState") || is_null($this->_propDict["healthStatus"])) {
+                return $this->_propDict["healthStatus"];
+            } else {
+                $this->_propDict["healthStatus"] = new UserExperienceAnalyticsHealthState($this->_propDict["healthStatus"]);
+                return $this->_propDict["healthStatus"];
+            }
         }
+        return null;
     }
 
     /**
     * Sets the healthStatus
     * The overall battery health status of the device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
     *
-    * @param string $val The healthStatus
+    * @param UserExperienceAnalyticsHealthState $val The healthStatus
     *
     * @return UserExperienceAnalyticsBatteryHealthDevicePerformance
     */
     public function setHealthStatus($val)
     {
         $this->_propDict["healthStatus"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the manufacturer
+    * The manufacturer name of the device.
+    *
+    * @return string|null The manufacturer
+    */
+    public function getManufacturer()
+    {
+        if (array_key_exists("manufacturer", $this->_propDict)) {
+            return $this->_propDict["manufacturer"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the manufacturer
+    * The manufacturer name of the device.
+    *
+    * @param string $val The manufacturer
+    *
+    * @return UserExperienceAnalyticsBatteryHealthDevicePerformance
+    */
+    public function setManufacturer($val)
+    {
+        $this->_propDict["manufacturer"] = $val;
         return $this;
     }
 
