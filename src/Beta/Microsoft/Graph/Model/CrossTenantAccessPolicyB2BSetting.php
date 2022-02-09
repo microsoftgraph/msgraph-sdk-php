@@ -26,6 +26,7 @@ class CrossTenantAccessPolicyB2BSetting extends Entity
 
     /**
     * Gets the applications
+    * The list of applications targeted with your cross-tenant access policy.
     *
     * @return CrossTenantAccessPolicyTargetConfiguration|null The applications
     */
@@ -44,6 +45,7 @@ class CrossTenantAccessPolicyB2BSetting extends Entity
 
     /**
     * Sets the applications
+    * The list of applications targeted with your cross-tenant access policy.
     *
     * @param CrossTenantAccessPolicyTargetConfiguration $val The value to assign to the applications
     *
@@ -57,6 +59,7 @@ class CrossTenantAccessPolicyB2BSetting extends Entity
 
     /**
     * Gets the usersAndGroups
+    * The list of users and groups targeted with your cross-tenant access policy.
     *
     * @return CrossTenantAccessPolicyTargetConfiguration|null The usersAndGroups
     */
@@ -75,6 +78,7 @@ class CrossTenantAccessPolicyB2BSetting extends Entity
 
     /**
     * Sets the usersAndGroups
+    * The list of users and groups targeted with your cross-tenant access policy.
     *
     * @param CrossTenantAccessPolicyTargetConfiguration $val The value to assign to the usersAndGroups
     *

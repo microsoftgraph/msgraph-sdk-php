@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* HuntingRowResult File
+* AlertClassification File
 * PHP version 7
 *
 * @category  Library
@@ -11,9 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\Security\Model;
+
+use Microsoft\Graph\Core\Enum;
+
 /**
-* HuntingRowResult class
+* AlertClassification class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,6 +24,14 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class HuntingRowResult extends Entity
+class AlertClassification extends Enum
 {
+    /**
+    * The Enum AlertClassification
+    */
+    const UNKNOWN = "unknown";
+    const FALSE_POSITIVE = "falsePositive";
+    const TRUE_POSITIVE = "truePositive";
+    const INFORMATIONAL_EXPECTED_ACTIVITY = "informationalExpectedActivity";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

@@ -275,7 +275,7 @@ class AccessReviewInstance extends Entity
 
      /**
      * Gets the decisions
-    * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+    * Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
      *
      * @return array|null The decisions
      */
@@ -290,7 +290,7 @@ class AccessReviewInstance extends Entity
 
     /**
     * Sets the decisions
-    * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+    * Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
     *
     * @param AccessReviewInstanceDecisionItem[] $val The decisions
     *
@@ -332,6 +332,34 @@ class AccessReviewInstance extends Entity
     public function setDefinition($val)
     {
         $this->_propDict["definition"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the stages
+     *
+     * @return array|null The stages
+     */
+    public function getStages()
+    {
+        if (array_key_exists("stages", $this->_propDict)) {
+           return $this->_propDict["stages"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the stages
+    *
+    * @param AccessReviewStage[] $val The stages
+    *
+    * @return AccessReviewInstance
+    */
+    public function setStages($val)
+    {
+        $this->_propDict["stages"] = $val;
         return $this;
     }
 

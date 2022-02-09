@@ -519,4 +519,32 @@ class AccessPackageAssignmentPolicy extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the customExtensionHandlers
+     *
+     * @return array|null The customExtensionHandlers
+     */
+    public function getCustomExtensionHandlers()
+    {
+        if (array_key_exists("customExtensionHandlers", $this->_propDict)) {
+           return $this->_propDict["customExtensionHandlers"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customExtensionHandlers
+    *
+    * @param CustomExtensionHandler[] $val The customExtensionHandlers
+    *
+    * @return AccessPackageAssignmentPolicy
+    */
+    public function setCustomExtensionHandlers($val)
+    {
+        $this->_propDict["customExtensionHandlers"] = $val;
+        return $this;
+    }
+
 }

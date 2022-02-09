@@ -403,7 +403,7 @@ class Site extends BaseItem
 
      /**
      * Gets the items
-    * Used to address any item contained in this site. This collection cannot be enumerated.
+    * Used to address any item contained in this site. This collection can't be enumerated.
      *
      * @return array|null The items
      */
@@ -418,7 +418,7 @@ class Site extends BaseItem
 
     /**
     * Sets the items
-    * Used to address any item contained in this site. This collection cannot be enumerated.
+    * Used to address any item contained in this site. This collection can't be enumerated.
     *
     * @param BaseItem[] $val The items
     *
@@ -582,7 +582,7 @@ class Site extends BaseItem
 
     /**
     * Gets the termStore
-    * The termStore under this site.
+    * The default termStore under this site.
     *
     * @return \Beta\Microsoft\Graph\TermStore\Model\Store|null The termStore
     */
@@ -601,7 +601,7 @@ class Site extends BaseItem
 
     /**
     * Sets the termStore
-    * The termStore under this site.
+    * The default termStore under this site.
     *
     * @param \Beta\Microsoft\Graph\TermStore\Model\Store $val The termStore
     *

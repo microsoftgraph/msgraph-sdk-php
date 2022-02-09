@@ -169,6 +169,34 @@ class DeviceManagementSettings extends Entity
         return $this;
     }
     /**
+    * Gets the enableAutopilotDiagnostics
+    * Determines whether the autopilot diagnostic feature is enabled or not.
+    *
+    * @return bool|null The enableAutopilotDiagnostics
+    */
+    public function getEnableAutopilotDiagnostics()
+    {
+        if (array_key_exists("enableAutopilotDiagnostics", $this->_propDict)) {
+            return $this->_propDict["enableAutopilotDiagnostics"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the enableAutopilotDiagnostics
+    * Determines whether the autopilot diagnostic feature is enabled or not.
+    *
+    * @param bool $val The value of the enableAutopilotDiagnostics
+    *
+    * @return DeviceManagementSettings
+    */
+    public function setEnableAutopilotDiagnostics($val)
+    {
+        $this->_propDict["enableAutopilotDiagnostics"] = $val;
+        return $this;
+    }
+    /**
     * Gets the enableLogCollection
     * Determines whether the log collection feature should be available for use.
     *

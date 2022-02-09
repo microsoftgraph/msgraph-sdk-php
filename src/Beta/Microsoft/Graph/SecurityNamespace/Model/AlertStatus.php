@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* IncidentStatus File
+* AlertStatus File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\Security\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* IncidentStatus class
+* AlertStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,14 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IncidentStatus extends Enum
+class AlertStatus extends Enum
 {
     /**
-    * The Enum IncidentStatus
+    * The Enum AlertStatus
     */
-    const ACTIVE = "active";
+    const UNKNOWN = "unknown";
+    const GRAPHNEW = "new";
+    const IN_PROGRESS = "inProgress";
     const RESOLVED = "resolved";
-    const REDIRECTED = "redirected";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

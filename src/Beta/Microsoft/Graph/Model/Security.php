@@ -70,7 +70,7 @@ class Security extends Entity
     /**
     * Sets the alertsV2
     *
-    * @param Alert_v2[] $val The alertsV2
+    * @param \Beta\Microsoft\Graph\Security\Model\Alert[] $val The alertsV2
     *
     * @return Security
     */
@@ -98,7 +98,7 @@ class Security extends Entity
     /**
     * Sets the incidents
     *
-    * @param Incident[] $val The incidents
+    * @param \Beta\Microsoft\Graph\Security\Model\Incident[] $val The incidents
     *
     * @return Security
     */
@@ -144,7 +144,7 @@ class Security extends Entity
 
      /**
      * Gets the alerts
-    * Notifications for suspicious or potential security issues in a customer’s tenant.
+    * Read-only. Nullable.
      *
      * @return array|null The alerts
      */
@@ -159,7 +159,7 @@ class Security extends Entity
 
     /**
     * Sets the alerts
-    * Notifications for suspicious or potential security issues in a customer’s tenant.
+    * Read-only. Nullable.
     *
     * @param Alert[] $val The alerts
     *

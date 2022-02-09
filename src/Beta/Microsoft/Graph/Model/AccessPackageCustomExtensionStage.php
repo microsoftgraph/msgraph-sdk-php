@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ServiceSource File
+* AccessPackageCustomExtensionStage File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* ServiceSource class
+* AccessPackageCustomExtensionStage class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,19 +24,16 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ServiceSource extends Enum
+class AccessPackageCustomExtensionStage extends Enum
 {
     /**
-    * The Enum ServiceSource
+    * The Enum AccessPackageCustomExtensionStage
     */
-    const UNKNOWN = "unknown";
-    const MICROSOFT_DEFENDER_FOR_ENDPOINT = "microsoftDefenderForEndpoint";
-    const MICROSOFT_DEFENDER_FOR_IDENTITY = "microsoftDefenderForIdentity";
-    const MICROSOFT_DEFENDER_FOR_CLOUD_APPS = "microsoftDefenderForCloudApps";
-    const MICROSOFT_DEFENDER_FOR_OFFICE365 = "microsoftDefenderForOffice365";
-    const MICROSOFT365_DEFENDER = "microsoft365Defender";
-    const AAD_IDENTITY_PROTECTION = "aadIdentityProtection";
-    const MICROSOFT_APP_GOVERNANCE = "microsoftAppGovernance";
-    const DATA_LOSS_PREVENTION = "dataLossPrevention";
+    const ASSIGNMENT_REQUEST_CREATED = "assignmentRequestCreated";
+    const ASSIGNMENT_REQUEST_APPROVED = "assignmentRequestApproved";
+    const ASSIGNMENT_REQUEST_GRANTED = "assignmentRequestGranted";
+    const ASSIGNMENT_REQUEST_REMOVED = "assignmentRequestRemoved";
+    const ASSIGNMENT_FOURTEEN_DAYS_BEFORE_EXPIRATION = "assignmentFourteenDaysBeforeExpiration";
+    const ASSIGNMENT_ONE_DAY_BEFORE_EXPIRATION = "assignmentOneDayBeforeExpiration";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

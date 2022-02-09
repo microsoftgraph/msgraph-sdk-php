@@ -55,7 +55,7 @@ class AccessPackageCatalog extends Entity
 
     /**
     * Gets the catalogType
-    * One of UserManaged or ServiceDefault.
+    * Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
     *
     * @return string|null The catalogType
     */
@@ -70,7 +70,7 @@ class AccessPackageCatalog extends Entity
 
     /**
     * Sets the catalogType
-    * One of UserManaged or ServiceDefault.
+    * Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
     *
     * @param string $val The catalogType
     *
@@ -175,7 +175,7 @@ class AccessPackageCatalog extends Entity
 
     /**
     * Gets the displayName
-    * The display name of the access package catalog. Supports $filter (eq, contains).
+    * The display name of the access package catalog.
     *
     * @return string|null The displayName
     */
@@ -190,7 +190,7 @@ class AccessPackageCatalog extends Entity
 
     /**
     * Sets the displayName
-    * The display name of the access package catalog. Supports $filter (eq, contains).
+    * The display name of the access package catalog.
     *
     * @param string $val The displayName
     *
@@ -382,7 +382,7 @@ class AccessPackageCatalog extends Entity
 
      /**
      * Gets the accessPackages
-    * The access packages in this catalog. Read-only. Nullable. Supports $expand.
+    * The access packages in this catalog. Read-only. Nullable.
      *
      * @return array|null The accessPackages
      */
@@ -397,7 +397,7 @@ class AccessPackageCatalog extends Entity
 
     /**
     * Sets the accessPackages
-    * The access packages in this catalog. Read-only. Nullable. Supports $expand.
+    * The access packages in this catalog. Read-only. Nullable.
     *
     * @param AccessPackage[] $val The accessPackages
     *
@@ -406,6 +406,34 @@ class AccessPackageCatalog extends Entity
     public function setAccessPackages($val)
     {
         $this->_propDict["accessPackages"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the customAccessPackageWorkflowExtensions
+     *
+     * @return array|null The customAccessPackageWorkflowExtensions
+     */
+    public function getCustomAccessPackageWorkflowExtensions()
+    {
+        if (array_key_exists("customAccessPackageWorkflowExtensions", $this->_propDict)) {
+           return $this->_propDict["customAccessPackageWorkflowExtensions"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customAccessPackageWorkflowExtensions
+    *
+    * @param CustomAccessPackageWorkflowExtension[] $val The customAccessPackageWorkflowExtensions
+    *
+    * @return AccessPackageCatalog
+    */
+    public function setCustomAccessPackageWorkflowExtensions($val)
+    {
+        $this->_propDict["customAccessPackageWorkflowExtensions"] = $val;
         return $this;
     }
 

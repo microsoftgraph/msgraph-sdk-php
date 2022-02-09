@@ -26,6 +26,7 @@ class CrossTenantAccessPolicyConfigurationPartner extends CrossTenantAccessPolic
 {
     /**
     * Gets the isServiceProvider
+    * Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
     *
     * @return bool|null The isServiceProvider
     */
@@ -40,6 +41,7 @@ class CrossTenantAccessPolicyConfigurationPartner extends CrossTenantAccessPolic
 
     /**
     * Sets the isServiceProvider
+    * Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
     *
     * @param bool $val The isServiceProvider
     *
@@ -53,6 +55,7 @@ class CrossTenantAccessPolicyConfigurationPartner extends CrossTenantAccessPolic
 
     /**
     * Gets the tenantId
+    * The tenant identifier for the partner Azure AD organization. Read-only.
     *
     * @return string|null The tenantId
     */
@@ -67,6 +70,7 @@ class CrossTenantAccessPolicyConfigurationPartner extends CrossTenantAccessPolic
 
     /**
     * Sets the tenantId
+    * The tenant identifier for the partner Azure AD organization. Read-only.
     *
     * @param string $val The tenantId
     *
