@@ -143,7 +143,7 @@ class SchemaExtension extends Entity
 
     /**
     * Gets the targetTypes
-    * Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, or user.
+    * Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from contact, device, event, group, message, organization, post, or user.
     *
     * @return string|null The targetTypes
     */
@@ -158,7 +158,7 @@ class SchemaExtension extends Entity
 
     /**
     * Sets the targetTypes
-    * Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, or user.
+    * Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from contact, device, event, group, message, organization, post, or user.
     *
     * @param string $val The targetTypes
     *

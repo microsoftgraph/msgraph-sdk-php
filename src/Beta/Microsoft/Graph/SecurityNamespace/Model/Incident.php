@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\Security\Model;
 
 /**
 * Incident class
@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Incident extends Entity
+class Incident extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the assignedTo
@@ -54,15 +54,15 @@ class Incident extends Entity
     /**
     * Gets the classification
     *
-    * @return AlertClassification_v2|null The classification
+    * @return AlertClassification|null The classification
     */
     public function getClassification()
     {
         if (array_key_exists("classification", $this->_propDict)) {
-            if (is_a($this->_propDict["classification"], "\Beta\Microsoft\Graph\Model\AlertClassification_v2") || is_null($this->_propDict["classification"])) {
+            if (is_a($this->_propDict["classification"], "\Beta\Microsoft\Graph\Security\Model\AlertClassification") || is_null($this->_propDict["classification"])) {
                 return $this->_propDict["classification"];
             } else {
-                $this->_propDict["classification"] = new AlertClassification_v2($this->_propDict["classification"]);
+                $this->_propDict["classification"] = new AlertClassification($this->_propDict["classification"]);
                 return $this->_propDict["classification"];
             }
         }
@@ -72,7 +72,7 @@ class Incident extends Entity
     /**
     * Sets the classification
     *
-    * @param AlertClassification_v2 $val The classification
+    * @param AlertClassification $val The classification
     *
     * @return Incident
     */
@@ -100,7 +100,7 @@ class Incident extends Entity
     /**
     * Sets the comments
     *
-    * @param AlertComment_v2[] $val The comments
+    * @param AlertComment[] $val The comments
     *
     * @return Incident
     */
@@ -144,15 +144,15 @@ class Incident extends Entity
     /**
     * Gets the determination
     *
-    * @return AlertDetermination_v2|null The determination
+    * @return AlertDetermination|null The determination
     */
     public function getDetermination()
     {
         if (array_key_exists("determination", $this->_propDict)) {
-            if (is_a($this->_propDict["determination"], "\Beta\Microsoft\Graph\Model\AlertDetermination_v2") || is_null($this->_propDict["determination"])) {
+            if (is_a($this->_propDict["determination"], "\Beta\Microsoft\Graph\Security\Model\AlertDetermination") || is_null($this->_propDict["determination"])) {
                 return $this->_propDict["determination"];
             } else {
-                $this->_propDict["determination"] = new AlertDetermination_v2($this->_propDict["determination"]);
+                $this->_propDict["determination"] = new AlertDetermination($this->_propDict["determination"]);
                 return $this->_propDict["determination"];
             }
         }
@@ -162,7 +162,7 @@ class Incident extends Entity
     /**
     * Sets the determination
     *
-    * @param AlertDetermination_v2 $val The determination
+    * @param AlertDetermination $val The determination
     *
     * @return Incident
     */
@@ -287,15 +287,15 @@ class Incident extends Entity
     /**
     * Gets the severity
     *
-    * @return AlertSeverity_v2|null The severity
+    * @return AlertSeverity|null The severity
     */
     public function getSeverity()
     {
         if (array_key_exists("severity", $this->_propDict)) {
-            if (is_a($this->_propDict["severity"], "\Beta\Microsoft\Graph\Model\AlertSeverity_v2") || is_null($this->_propDict["severity"])) {
+            if (is_a($this->_propDict["severity"], "\Beta\Microsoft\Graph\Security\Model\AlertSeverity") || is_null($this->_propDict["severity"])) {
                 return $this->_propDict["severity"];
             } else {
-                $this->_propDict["severity"] = new AlertSeverity_v2($this->_propDict["severity"]);
+                $this->_propDict["severity"] = new AlertSeverity($this->_propDict["severity"]);
                 return $this->_propDict["severity"];
             }
         }
@@ -305,7 +305,7 @@ class Incident extends Entity
     /**
     * Sets the severity
     *
-    * @param AlertSeverity_v2 $val The severity
+    * @param AlertSeverity $val The severity
     *
     * @return Incident
     */
@@ -323,7 +323,7 @@ class Incident extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\IncidentStatus") || is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Security\Model\IncidentStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new IncidentStatus($this->_propDict["status"]);
@@ -373,6 +373,33 @@ class Incident extends Entity
         return $this;
     }
 
+    /**
+    * Gets the tenantId
+    *
+    * @return string|null The tenantId
+    */
+    public function getTenantId()
+    {
+        if (array_key_exists("tenantId", $this->_propDict)) {
+            return $this->_propDict["tenantId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tenantId
+    *
+    * @param string $val The tenantId
+    *
+    * @return Incident
+    */
+    public function setTenantId($val)
+    {
+        $this->_propDict["tenantId"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the alerts
@@ -391,7 +418,7 @@ class Incident extends Entity
     /**
     * Sets the alerts
     *
-    * @param Alert_v2[] $val The alerts
+    * @param Alert[] $val The alerts
     *
     * @return Incident
     */

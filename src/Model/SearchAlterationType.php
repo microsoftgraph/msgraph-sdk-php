@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ServiceSource File
+* SearchAlterationType File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* ServiceSource class
+* SearchAlterationType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,19 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ServiceSource extends Enum
+class SearchAlterationType extends Enum
 {
     /**
-    * The Enum ServiceSource
+    * The Enum SearchAlterationType
     */
-    const UNKNOWN = "unknown";
-    const MICROSOFT_DEFENDER_FOR_ENDPOINT = "microsoftDefenderForEndpoint";
-    const MICROSOFT_DEFENDER_FOR_IDENTITY = "microsoftDefenderForIdentity";
-    const MICROSOFT_DEFENDER_FOR_CLOUD_APPS = "microsoftDefenderForCloudApps";
-    const MICROSOFT_DEFENDER_FOR_OFFICE365 = "microsoftDefenderForOffice365";
-    const MICROSOFT365_DEFENDER = "microsoft365Defender";
-    const AAD_IDENTITY_PROTECTION = "aadIdentityProtection";
-    const MICROSOFT_APP_GOVERNANCE = "microsoftAppGovernance";
-    const DATA_LOSS_PREVENTION = "dataLossPrevention";
+    const SUGGESTION = "suggestion";
+    const MODIFICATION = "modification";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

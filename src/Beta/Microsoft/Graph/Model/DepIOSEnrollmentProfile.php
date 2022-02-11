@@ -726,6 +726,35 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     }
 
     /**
+    * Gets the userlessSharedAadModeEnabled
+    * Indicates that this apple device is designated to support 'shared device mode' scenarios. This is distinct from the 'shared iPad' scenario. See Shared iOS and iPadOS devices.
+    *
+    * @return bool|null The userlessSharedAadModeEnabled
+    */
+    public function getUserlessSharedAadModeEnabled()
+    {
+        if (array_key_exists("userlessSharedAadModeEnabled", $this->_propDict)) {
+            return $this->_propDict["userlessSharedAadModeEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userlessSharedAadModeEnabled
+    * Indicates that this apple device is designated to support 'shared device mode' scenarios. This is distinct from the 'shared iPad' scenario. See Shared iOS and iPadOS devices.
+    *
+    * @param bool $val The userlessSharedAadModeEnabled
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setUserlessSharedAadModeEnabled($val)
+    {
+        $this->_propDict["userlessSharedAadModeEnabled"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the userSessionTimeoutInSeconds
     * Indicates timeout of temporary session
     *

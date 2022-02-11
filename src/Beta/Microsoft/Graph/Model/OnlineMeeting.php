@@ -115,7 +115,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the allowedPresenters
-    * Specifies who can be a presenter in a meeting.
+    * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
     *
     * @return OnlineMeetingPresenters|null The allowedPresenters
     */
@@ -134,7 +134,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the allowedPresenters
-    * Specifies who can be a presenter in a meeting.
+    * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
     *
     * @param OnlineMeetingPresenters $val The allowedPresenters
     *
@@ -181,7 +181,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the allowTeamworkReactions
-    * Indicates if Teams reactions are enabled for the meeting.
+    * Indicates whether Teams reactions are enabled for the meeting.
     *
     * @return bool|null The allowTeamworkReactions
     */
@@ -196,7 +196,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the allowTeamworkReactions
-    * Indicates if Teams reactions are enabled for the meeting.
+    * Indicates whether Teams reactions are enabled for the meeting.
     *
     * @param bool $val The allowTeamworkReactions
     *
@@ -243,7 +243,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the attendeeReport
-    * The content stream of the attendee report of a Teams live event. Read-only.
+    * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The attendeeReport
     */
@@ -262,7 +262,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the attendeeReport
-    * The content stream of the attendee report of a Teams live event. Read-only.
+    * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The attendeeReport
     *
@@ -587,7 +587,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the isBroadcast
-    * Indicates whether this is a Teams live event.
+    * Indicates if this is a Teams live event.
     *
     * @return bool|null The isBroadcast
     */
@@ -602,7 +602,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the isBroadcast
-    * Indicates whether this is a Teams live event.
+    * Indicates if this is a Teams live event.
     *
     * @param bool $val The isBroadcast
     *
@@ -672,7 +672,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the joinInformation
-    * The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only.
+    * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
     *
     * @return ItemBody|null The joinInformation
     */
@@ -691,7 +691,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the joinInformation
-    * The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only.
+    * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
     *
     * @param ItemBody $val The joinInformation
     *
@@ -732,7 +732,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the lobbyBypassSettings
-    * Specifies which participants can bypass the meeting lobby.
+    * Specifies which participants can bypass the meeting   lobby.
     *
     * @return LobbyBypassSettings|null The lobbyBypassSettings
     */
@@ -751,7 +751,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the lobbyBypassSettings
-    * Specifies which participants can bypass the meeting lobby.
+    * Specifies which participants can bypass the meeting   lobby.
     *
     * @param LobbyBypassSettings $val The lobbyBypassSettings
     *
@@ -765,7 +765,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the participants
-    * The participants associated with the online meeting. This includes the organizer and the attendees.
+    * The participants associated with the online meeting.  This includes the organizer and the attendees.
     *
     * @return MeetingParticipants|null The participants
     */
@@ -784,7 +784,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the participants
-    * The participants associated with the online meeting. This includes the organizer and the attendees.
+    * The participants associated with the online meeting.  This includes the organizer and the attendees.
     *
     * @param MeetingParticipants $val The participants
     *
@@ -1040,34 +1040,6 @@ class OnlineMeeting extends Entity
     public function setRegistration($val)
     {
         $this->_propDict["registration"] = $val;
-        return $this;
-    }
-
-
-     /**
-     * Gets the transcripts
-     *
-     * @return array|null The transcripts
-     */
-    public function getTranscripts()
-    {
-        if (array_key_exists("transcripts", $this->_propDict)) {
-           return $this->_propDict["transcripts"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the transcripts
-    *
-    * @param CallTranscript[] $val The transcripts
-    *
-    * @return OnlineMeeting
-    */
-    public function setTranscripts($val)
-    {
-        $this->_propDict["transcripts"] = $val;
         return $this;
     }
 

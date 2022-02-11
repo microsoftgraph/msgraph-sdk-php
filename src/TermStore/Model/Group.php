@@ -26,7 +26,7 @@ class Group extends \Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the createdDateTime
-    * Date and time of group creation. Read-only.
+    * Date and time of the group creation. Read-only.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -45,7 +45,7 @@ class Group extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the createdDateTime
-    * Date and time of group creation. Read-only.
+    * Date and time of the group creation. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -59,7 +59,7 @@ class Group extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the description
-    * Description giving details on the term usage.
+    * Description that gives details on the term usage.
     *
     * @return string|null The description
     */
@@ -74,7 +74,7 @@ class Group extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the description
-    * Description giving details on the term usage.
+    * Description that gives details on the term usage.
     *
     * @param string $val The description
     *
@@ -88,7 +88,7 @@ class Group extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the displayName
-    * Name of group.
+    * Name of the group.
     *
     * @return string|null The displayName
     */
@@ -103,7 +103,7 @@ class Group extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the displayName
-    * Name of group.
+    * Name of the group.
     *
     * @param string $val The displayName
     *
@@ -117,7 +117,7 @@ class Group extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the parentSiteId
-    * Id of the parent site of this group.
+    * ID of the parent site of this group.
     *
     * @return string|null The parentSiteId
     */
@@ -132,7 +132,7 @@ class Group extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the parentSiteId
-    * Id of the parent site of this group.
+    * ID of the parent site of this group.
     *
     * @param string $val The parentSiteId
     *
@@ -146,7 +146,7 @@ class Group extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the scope
-    * Returns type of group. Possible values are 'global', 'system' and 'siteCollection'.
+    * Returns the type of the group. Possible values are global, system, and siteCollection.
     *
     * @return TermGroupScope|null The scope
     */
@@ -165,7 +165,7 @@ class Group extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the scope
-    * Returns type of group. Possible values are 'global', 'system' and 'siteCollection'.
+    * Returns the type of the group. Possible values are global, system, and siteCollection.
     *
     * @param TermGroupScope $val The scope
     *

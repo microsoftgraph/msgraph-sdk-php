@@ -25,7 +25,7 @@ class MailboxSettings extends Entity
 {
     /**
     * Gets the archiveFolder
-    * Folder ID of an archive folder for the user. Read only.
+    * Folder ID of an archive folder for the user.
     *
     * @return string|null The archiveFolder
     */
@@ -40,7 +40,7 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the archiveFolder
-    * Folder ID of an archive folder for the user. Read only.
+    * Folder ID of an archive folder for the user.
     *
     * @param string $val The value of the archiveFolder
     *
@@ -115,7 +115,7 @@ class MailboxSettings extends Entity
 
     /**
     * Gets the delegateMeetingMessageDeliveryOptions
-    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. The default is sendToDelegateOnly.
+    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
     *
     * @return DelegateMeetingMessageDeliveryOptions|null The delegateMeetingMessageDeliveryOptions
     */
@@ -134,7 +134,7 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the delegateMeetingMessageDeliveryOptions
-    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. The default is sendToDelegateOnly.
+    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
     *
     * @param DelegateMeetingMessageDeliveryOptions $val The value to assign to the delegateMeetingMessageDeliveryOptions
     *

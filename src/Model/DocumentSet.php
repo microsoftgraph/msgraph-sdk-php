@@ -119,7 +119,7 @@ class DocumentSet extends Entity
     }
     /**
     * Gets the shouldPrefixNameToFile
-    * Add the name of the Document Set to each file name.
+    * Add the name of the document set to each file name.
     *
     * @return bool|null The shouldPrefixNameToFile
     */
@@ -134,7 +134,7 @@ class DocumentSet extends Entity
 
     /**
     * Sets the shouldPrefixNameToFile
-    * Add the name of the Document Set to each file name.
+    * Add the name of the document set to each file name.
     *
     * @param bool $val The value of the shouldPrefixNameToFile
     *

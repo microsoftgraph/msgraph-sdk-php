@@ -54,4 +54,34 @@ class AccessReviewSet extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the historyDefinitions
+    * Represents a collection of access review history data and the scopes used to collect that data.
+     *
+     * @return array|null The historyDefinitions
+     */
+    public function getHistoryDefinitions()
+    {
+        if (array_key_exists("historyDefinitions", $this->_propDict)) {
+           return $this->_propDict["historyDefinitions"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the historyDefinitions
+    * Represents a collection of access review history data and the scopes used to collect that data.
+    *
+    * @param AccessReviewHistoryDefinition[] $val The historyDefinitions
+    *
+    * @return AccessReviewSet
+    */
+    public function setHistoryDefinitions($val)
+    {
+        $this->_propDict["historyDefinitions"] = $val;
+        return $this;
+    }
+
 }

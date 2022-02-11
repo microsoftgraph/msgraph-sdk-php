@@ -124,6 +124,68 @@ class Chat extends Entity
     }
 
     /**
+    * Gets the onlineMeetingInfo
+    * Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
+    *
+    * @return TeamworkOnlineMeetingInfo|null The onlineMeetingInfo
+    */
+    public function getOnlineMeetingInfo()
+    {
+        if (array_key_exists("onlineMeetingInfo", $this->_propDict)) {
+            if (is_a($this->_propDict["onlineMeetingInfo"], "\Microsoft\Graph\Model\TeamworkOnlineMeetingInfo") || is_null($this->_propDict["onlineMeetingInfo"])) {
+                return $this->_propDict["onlineMeetingInfo"];
+            } else {
+                $this->_propDict["onlineMeetingInfo"] = new TeamworkOnlineMeetingInfo($this->_propDict["onlineMeetingInfo"]);
+                return $this->_propDict["onlineMeetingInfo"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the onlineMeetingInfo
+    * Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
+    *
+    * @param TeamworkOnlineMeetingInfo $val The onlineMeetingInfo
+    *
+    * @return Chat
+    */
+    public function setOnlineMeetingInfo($val)
+    {
+        $this->_propDict["onlineMeetingInfo"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the tenantId
+    * The identifier of the tenant in which the chat was created. Read-only.
+    *
+    * @return string|null The tenantId
+    */
+    public function getTenantId()
+    {
+        if (array_key_exists("tenantId", $this->_propDict)) {
+            return $this->_propDict["tenantId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tenantId
+    * The identifier of the tenant in which the chat was created. Read-only.
+    *
+    * @param string $val The tenantId
+    *
+    * @return Chat
+    */
+    public function setTenantId($val)
+    {
+        $this->_propDict["tenantId"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the topic
     * (Optional) Subject or topic for the chat. Only available for group chats.
     *

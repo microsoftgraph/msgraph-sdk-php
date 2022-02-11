@@ -25,6 +25,7 @@ class CrossTenantAccessPolicyTarget extends Entity
 {
     /**
     * Gets the target
+    * The unique identifier of the user, group, or application; one of the following keywords: AllUsers and AllApplications; or for targets that are applications, you may use reserved values.
     *
     * @return string|null The target
     */
@@ -39,6 +40,7 @@ class CrossTenantAccessPolicyTarget extends Entity
 
     /**
     * Sets the target
+    * The unique identifier of the user, group, or application; one of the following keywords: AllUsers and AllApplications; or for targets that are applications, you may use reserved values.
     *
     * @param string $val The value of the target
     *
@@ -52,6 +54,7 @@ class CrossTenantAccessPolicyTarget extends Entity
 
     /**
     * Gets the targetType
+    * The type of resource that you want to target. The possible values are: user, group, application, unknownFutureValue.
     *
     * @return CrossTenantAccessPolicyTargetType|null The targetType
     */
@@ -70,6 +73,7 @@ class CrossTenantAccessPolicyTarget extends Entity
 
     /**
     * Sets the targetType
+    * The type of resource that you want to target. The possible values are: user, group, application, unknownFutureValue.
     *
     * @param CrossTenantAccessPolicyTargetType $val The value to assign to the targetType
     *

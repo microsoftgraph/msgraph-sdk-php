@@ -59,7 +59,7 @@ class DeviceManagement extends Entity
 
     /**
     * Gets the intuneAccountId
-    * Intune Account ID for given tenant
+    * Intune Account Id for given tenant
     *
     * @return string|null The intuneAccountId
     */
@@ -74,7 +74,7 @@ class DeviceManagement extends Entity
 
     /**
     * Sets the intuneAccountId
-    * Intune Account ID for given tenant
+    * Intune Account Id for given tenant
     *
     * @param string $val The intuneAccountId
     *
@@ -2492,6 +2492,36 @@ class DeviceManagement extends Entity
 
 
      /**
+     * Gets the oemWarrantyInformationOnboarding
+    * List of OEM Warranty Statuses
+     *
+     * @return array|null The oemWarrantyInformationOnboarding
+     */
+    public function getOemWarrantyInformationOnboarding()
+    {
+        if (array_key_exists("oemWarrantyInformationOnboarding", $this->_propDict)) {
+           return $this->_propDict["oemWarrantyInformationOnboarding"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the oemWarrantyInformationOnboarding
+    * List of OEM Warranty Statuses
+    *
+    * @param OemWarrantyInformationOnboarding[] $val The oemWarrantyInformationOnboarding
+    *
+    * @return DeviceManagement
+    */
+    public function setOemWarrantyInformationOnboarding($val)
+    {
+        $this->_propDict["oemWarrantyInformationOnboarding"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the remoteActionAudits
     * The list of device remote action audits with the tenant.
      *
@@ -3675,6 +3705,36 @@ class DeviceManagement extends Entity
     public function setUserExperienceAnalyticsWorkFromAnywhereMetrics($val)
     {
         $this->_propDict["userExperienceAnalyticsWorkFromAnywhereMetrics"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsWorkFromAnywhereModelPerformance
+    * The user experience analytics work from anywhere model performance
+     *
+     * @return array|null The userExperienceAnalyticsWorkFromAnywhereModelPerformance
+     */
+    public function getUserExperienceAnalyticsWorkFromAnywhereModelPerformance()
+    {
+        if (array_key_exists("userExperienceAnalyticsWorkFromAnywhereModelPerformance", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsWorkFromAnywhereModelPerformance"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsWorkFromAnywhereModelPerformance
+    * The user experience analytics work from anywhere model performance
+    *
+    * @param UserExperienceAnalyticsWorkFromAnywhereModelPerformance[] $val The userExperienceAnalyticsWorkFromAnywhereModelPerformance
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsWorkFromAnywhereModelPerformance($val)
+    {
+        $this->_propDict["userExperienceAnalyticsWorkFromAnywhereModelPerformance"] = $val;
         return $this;
     }
 

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AlertSeverity_v2 File
+* AccessPackageCustomExtensionStage File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* AlertSeverity_v2 class
+* AccessPackageCustomExtensionStage class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +24,16 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AlertSeverity_v2 extends Enum
+class AccessPackageCustomExtensionStage extends Enum
 {
     /**
-    * The Enum AlertSeverity_v2
+    * The Enum AccessPackageCustomExtensionStage
     */
-    const UNKNOWN = "unknown";
-    const INFORMATIONAL = "informational";
-    const LOW = "low";
-    const MEDIUM = "medium";
-    const HIGH = "high";
+    const ASSIGNMENT_REQUEST_CREATED = "assignmentRequestCreated";
+    const ASSIGNMENT_REQUEST_APPROVED = "assignmentRequestApproved";
+    const ASSIGNMENT_REQUEST_GRANTED = "assignmentRequestGranted";
+    const ASSIGNMENT_REQUEST_REMOVED = "assignmentRequestRemoved";
+    const ASSIGNMENT_FOURTEEN_DAYS_BEFORE_EXPIRATION = "assignmentFourteenDaysBeforeExpiration";
+    const ASSIGNMENT_ONE_DAY_BEFORE_EXPIRATION = "assignmentOneDayBeforeExpiration";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
