@@ -257,6 +257,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Gets the servicePrincipalRiskLevels
+    * Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
     *
     * @return RiskLevel|null The servicePrincipalRiskLevels
     */
@@ -275,6 +276,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Sets the servicePrincipalRiskLevels
+    * Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
     *
     * @param RiskLevel $val The value to assign to the servicePrincipalRiskLevels
     *

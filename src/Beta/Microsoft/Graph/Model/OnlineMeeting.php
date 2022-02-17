@@ -704,6 +704,37 @@ class OnlineMeeting extends Entity
     }
 
     /**
+    * Gets the joinMeetingIdSettings
+    *
+    * @return JoinMeetingIdSettings|null The joinMeetingIdSettings
+    */
+    public function getJoinMeetingIdSettings()
+    {
+        if (array_key_exists("joinMeetingIdSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["joinMeetingIdSettings"], "\Beta\Microsoft\Graph\Model\JoinMeetingIdSettings") || is_null($this->_propDict["joinMeetingIdSettings"])) {
+                return $this->_propDict["joinMeetingIdSettings"];
+            } else {
+                $this->_propDict["joinMeetingIdSettings"] = new JoinMeetingIdSettings($this->_propDict["joinMeetingIdSettings"]);
+                return $this->_propDict["joinMeetingIdSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the joinMeetingIdSettings
+    *
+    * @param JoinMeetingIdSettings $val The joinMeetingIdSettings
+    *
+    * @return OnlineMeeting
+    */
+    public function setJoinMeetingIdSettings($val)
+    {
+        $this->_propDict["joinMeetingIdSettings"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the joinUrl
     *
     * @return string|null The joinUrl

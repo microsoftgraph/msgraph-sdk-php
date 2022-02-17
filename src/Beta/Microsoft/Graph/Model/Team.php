@@ -494,7 +494,7 @@ class Team extends Entity
 
      /**
      * Gets the channels
-    * The collection of channels &amp; messages associated with the team.
+    * The collection of channels and messages associated with the team.
      *
      * @return array|null The channels
      */
@@ -509,7 +509,7 @@ class Team extends Entity
 
     /**
     * Sets the channels
-    * The collection of channels &amp; messages associated with the team.
+    * The collection of channels and messages associated with the team.
     *
     * @param Channel[] $val The channels
     *

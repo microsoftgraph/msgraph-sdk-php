@@ -26,7 +26,7 @@ class AccessPackageResourceAttribute extends Entity
 
     /**
     * Gets the attributeDestination
-    * Information about how to set the attribute.
+    * Information about how to set the attribute, currently a accessPackageUserDirectoryAttributeStore object type.
     *
     * @return AccessPackageResourceAttributeDestination|null The attributeDestination
     */
@@ -45,7 +45,7 @@ class AccessPackageResourceAttribute extends Entity
 
     /**
     * Sets the attributeDestination
-    * Information about how to set the attribute.
+    * Information about how to set the attribute, currently a accessPackageUserDirectoryAttributeStore object type.
     *
     * @param AccessPackageResourceAttributeDestination $val The value to assign to the attributeDestination
     *
@@ -58,7 +58,7 @@ class AccessPackageResourceAttribute extends Entity
     }
     /**
     * Gets the attributeName
-    * The name of the attribute in the end system.
+    * The name of the attribute in the end system. If the destination is accessPackageUserDirectoryAttributeStore, then a user property such as jobTitle or a directory schema extension for the user object type, such as extension_2b676109c7c74ae2b41549205f1947ed_personalTitle.
     *
     * @return string|null The attributeName
     */
@@ -73,7 +73,7 @@ class AccessPackageResourceAttribute extends Entity
 
     /**
     * Sets the attributeName
-    * The name of the attribute in the end system.
+    * The name of the attribute in the end system. If the destination is accessPackageUserDirectoryAttributeStore, then a user property such as jobTitle or a directory schema extension for the user object type, such as extension_2b676109c7c74ae2b41549205f1947ed_personalTitle.
     *
     * @param string $val The value of the attributeName
     *
@@ -87,7 +87,7 @@ class AccessPackageResourceAttribute extends Entity
 
     /**
     * Gets the attributeSource
-    * Information about how to populate the attribute value when an accessPackageAssignmentRequest is being fulfilled.
+    * Information about how to populate the attribute value when an accessPackageAssignmentRequest is being fulfilled, currently a accessPackageResourceAttributeQuestion object type.
     *
     * @return AccessPackageResourceAttributeSource|null The attributeSource
     */
@@ -106,7 +106,7 @@ class AccessPackageResourceAttribute extends Entity
 
     /**
     * Sets the attributeSource
-    * Information about how to populate the attribute value when an accessPackageAssignmentRequest is being fulfilled.
+    * Information about how to populate the attribute value when an accessPackageAssignmentRequest is being fulfilled, currently a accessPackageResourceAttributeQuestion object type.
     *
     * @param AccessPackageResourceAttributeSource $val The value to assign to the attributeSource
     *
@@ -119,7 +119,7 @@ class AccessPackageResourceAttribute extends Entity
     }
     /**
     * Gets the id
-    * Unique identifier for the attribute.
+    * Unique identifier for the attribute on the access package resource. Read-only.
     *
     * @return string|null The id
     */
@@ -134,7 +134,7 @@ class AccessPackageResourceAttribute extends Entity
 
     /**
     * Sets the id
-    * Unique identifier for the attribute.
+    * Unique identifier for the attribute on the access package resource. Read-only.
     *
     * @param string $val The value of the id
     *
