@@ -109,7 +109,7 @@ class AppRole extends Entity
     }
     /**
     * Gets the id
-    * Unique role identifier inside the appRoles collection. When creating a new app role, a new Guid identifier must be provided.
+    * Unique role identifier inside the appRoles collection. When creating a new app role, a new GUID identifier must be provided.
     *
     * @return string|null The id
     */
@@ -124,7 +124,7 @@ class AppRole extends Entity
 
     /**
     * Sets the id
-    * Unique role identifier inside the appRoles collection. When creating a new app role, a new Guid identifier must be provided.
+    * Unique role identifier inside the appRoles collection. When creating a new app role, a new GUID identifier must be provided.
     *
     * @param string $val The value of the id
     *
