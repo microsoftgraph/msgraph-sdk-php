@@ -270,6 +270,7 @@ class VirtualEndpoint extends Entity
 
      /**
      * Gets the snapshots
+    * Cloud PC snapshots.
      *
      * @return array|null The snapshots
      */
@@ -284,6 +285,7 @@ class VirtualEndpoint extends Entity
 
     /**
     * Sets the snapshots
+    * Cloud PC snapshots.
     *
     * @param CloudPcSnapshot[] $val The snapshots
     *

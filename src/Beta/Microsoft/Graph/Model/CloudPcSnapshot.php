@@ -26,6 +26,7 @@ class CloudPcSnapshot extends Entity
 {
     /**
     * Gets the cloudPcId
+    * The unique identifier for the Cloud PC.
     *
     * @return string|null The cloudPcId
     */
@@ -40,6 +41,7 @@ class CloudPcSnapshot extends Entity
 
     /**
     * Sets the cloudPcId
+    * The unique identifier for the Cloud PC.
     *
     * @param string $val The cloudPcId
     *
@@ -53,6 +55,7 @@ class CloudPcSnapshot extends Entity
 
     /**
     * Gets the createdDateTime
+    * The date and time at which the snapshot was taken. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -71,6 +74,7 @@ class CloudPcSnapshot extends Entity
 
     /**
     * Sets the createdDateTime
+    * The date and time at which the snapshot was taken. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -84,6 +88,7 @@ class CloudPcSnapshot extends Entity
 
     /**
     * Gets the lastRestoredDateTime
+    * The date and time at which the snapshot was last used to restore the Cloud PC device. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastRestoredDateTime
     */
@@ -102,6 +107,7 @@ class CloudPcSnapshot extends Entity
 
     /**
     * Sets the lastRestoredDateTime
+    * The date and time at which the snapshot was last used to restore the Cloud PC device. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastRestoredDateTime
     *
@@ -115,6 +121,7 @@ class CloudPcSnapshot extends Entity
 
     /**
     * Gets the status
+    * The status of the Cloud PC snapshot. The possible values are: ready, unknownFutureValue.
     *
     * @return CloudPcSnapshotStatus|null The status
     */
@@ -133,6 +140,7 @@ class CloudPcSnapshot extends Entity
 
     /**
     * Sets the status
+    * The status of the Cloud PC snapshot. The possible values are: ready, unknownFutureValue.
     *
     * @param CloudPcSnapshotStatus $val The status
     *
