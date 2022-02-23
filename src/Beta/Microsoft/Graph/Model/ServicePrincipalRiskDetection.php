@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* RiskDetection File
+* ServicePrincipalRiskDetection File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* RiskDetection class
+* ServicePrincipalRiskDetection class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,11 +22,11 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class RiskDetection extends Entity
+class ServicePrincipalRiskDetection extends Entity
 {
     /**
     * Gets the activity
-    * Indicates the activity type the detected risk is linked to. . Possible values are: signin, user, unknownFutureValue.
+    * Indicates the activity type the detected risk is linked to.  The possible values are: signin, unknownFutureValue, servicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: servicePrincipal.
     *
     * @return ActivityType|null The activity
     */
@@ -45,11 +45,11 @@ class RiskDetection extends Entity
 
     /**
     * Sets the activity
-    * Indicates the activity type the detected risk is linked to. . Possible values are: signin, user, unknownFutureValue.
+    * Indicates the activity type the detected risk is linked to.  The possible values are: signin, unknownFutureValue, servicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: servicePrincipal.
     *
     * @param ActivityType $val The activity
     *
-    * @return RiskDetection
+    * @return ServicePrincipalRiskDetection
     */
     public function setActivity($val)
     {
@@ -59,7 +59,7 @@ class RiskDetection extends Entity
 
     /**
     * Gets the activityDateTime
-    * Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
+    * Date and time when the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime|null The activityDateTime
     */
@@ -78,11 +78,11 @@ class RiskDetection extends Entity
 
     /**
     * Sets the activityDateTime
-    * Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
+    * Date and time when the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The activityDateTime
     *
-    * @return RiskDetection
+    * @return ServicePrincipalRiskDetection
     */
     public function setActivityDateTime($val)
     {
@@ -92,7 +92,7 @@ class RiskDetection extends Entity
 
     /**
     * Gets the additionalInfo
-    * Additional information associated with the risk detection in JSON format.
+    * Additional information associated with the risk detection. This string value is represented as a JSON object with the quotations escaped.
     *
     * @return string|null The additionalInfo
     */
@@ -107,11 +107,11 @@ class RiskDetection extends Entity
 
     /**
     * Sets the additionalInfo
-    * Additional information associated with the risk detection in JSON format.
+    * Additional information associated with the risk detection. This string value is represented as a JSON object with the quotations escaped.
     *
     * @param string $val The additionalInfo
     *
-    * @return RiskDetection
+    * @return ServicePrincipalRiskDetection
     */
     public function setAdditionalInfo($val)
     {
@@ -120,8 +120,37 @@ class RiskDetection extends Entity
     }
 
     /**
+    * Gets the appId
+    * The unique identifier for the associated application.
+    *
+    * @return string|null The appId
+    */
+    public function getAppId()
+    {
+        if (array_key_exists("appId", $this->_propDict)) {
+            return $this->_propDict["appId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the appId
+    * The unique identifier for the associated application.
+    *
+    * @param string $val The appId
+    *
+    * @return ServicePrincipalRiskDetection
+    */
+    public function setAppId($val)
+    {
+        $this->_propDict["appId"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the correlationId
-    * Correlation ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
+    * Correlation ID of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity.
     *
     * @return string|null The correlationId
     */
@@ -136,11 +165,11 @@ class RiskDetection extends Entity
 
     /**
     * Sets the correlationId
-    * Correlation ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
+    * Correlation ID of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity.
     *
     * @param string $val The correlationId
     *
-    * @return RiskDetection
+    * @return ServicePrincipalRiskDetection
     */
     public function setCorrelationId($val)
     {
@@ -150,7 +179,7 @@ class RiskDetection extends Entity
 
     /**
     * Gets the detectedDateTime
-    * Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
+    * Date and time when the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The detectedDateTime
     */
@@ -169,11 +198,11 @@ class RiskDetection extends Entity
 
     /**
     * Sets the detectedDateTime
-    * Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
+    * Date and time when the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The detectedDateTime
     *
-    * @return RiskDetection
+    * @return ServicePrincipalRiskDetection
     */
     public function setDetectedDateTime($val)
     {
@@ -183,7 +212,7 @@ class RiskDetection extends Entity
 
     /**
     * Gets the detectionTimingType
-    * Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
+    * Timing of the detected risk , whether real-time or offline). The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
     *
     * @return RiskDetectionTimingType|null The detectionTimingType
     */
@@ -202,11 +231,11 @@ class RiskDetection extends Entity
 
     /**
     * Sets the detectionTimingType
-    * Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
+    * Timing of the detected risk , whether real-time or offline). The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
     *
     * @param RiskDetectionTimingType $val The detectionTimingType
     *
-    * @return RiskDetection
+    * @return ServicePrincipalRiskDetection
     */
     public function setDetectionTimingType($val)
     {
@@ -235,7 +264,7 @@ class RiskDetection extends Entity
     *
     * @param string $val The ipAddress
     *
-    * @return RiskDetection
+    * @return ServicePrincipalRiskDetection
     */
     public function setIpAddress($val)
     {
@@ -244,8 +273,37 @@ class RiskDetection extends Entity
     }
 
     /**
+    * Gets the keyIds
+    * The unique identifier (GUID) for the key credential associated with the risk detection.
+    *
+    * @return string|null The keyIds
+    */
+    public function getKeyIds()
+    {
+        if (array_key_exists("keyIds", $this->_propDict)) {
+            return $this->_propDict["keyIds"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the keyIds
+    * The unique identifier (GUID) for the key credential associated with the risk detection.
+    *
+    * @param string $val The keyIds
+    *
+    * @return ServicePrincipalRiskDetection
+    */
+    public function setKeyIds($val)
+    {
+        $this->_propDict["keyIds"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the lastUpdatedDateTime
-    * Date and time that the risk detection was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
+    * Date and time when the risk detection was last updated.
     *
     * @return \DateTime|null The lastUpdatedDateTime
     */
@@ -264,11 +322,11 @@ class RiskDetection extends Entity
 
     /**
     * Sets the lastUpdatedDateTime
-    * Date and time that the risk detection was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
+    * Date and time when the risk detection was last updated.
     *
     * @param \DateTime $val The lastUpdatedDateTime
     *
-    * @return RiskDetection
+    * @return ServicePrincipalRiskDetection
     */
     public function setLastUpdatedDateTime($val)
     {
@@ -278,7 +336,7 @@ class RiskDetection extends Entity
 
     /**
     * Gets the location
-    * Location of the sign-in.
+    * Location from where the sign-in was initiated.
     *
     * @return SignInLocation|null The location
     */
@@ -297,11 +355,11 @@ class RiskDetection extends Entity
 
     /**
     * Sets the location
-    * Location of the sign-in.
+    * Location from where the sign-in was initiated.
     *
     * @param SignInLocation $val The location
     *
-    * @return RiskDetection
+    * @return ServicePrincipalRiskDetection
     */
     public function setLocation($val)
     {
@@ -311,7 +369,7 @@ class RiskDetection extends Entity
 
     /**
     * Gets the requestId
-    * Request ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
+    * Request identifier of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity. Supports $filter (eq).
     *
     * @return string|null The requestId
     */
@@ -326,11 +384,11 @@ class RiskDetection extends Entity
 
     /**
     * Sets the requestId
-    * Request ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
+    * Request identifier of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity. Supports $filter (eq).
     *
     * @param string $val The requestId
     *
-    * @return RiskDetection
+    * @return ServicePrincipalRiskDetection
     */
     public function setRequestId($val)
     {
@@ -340,7 +398,7 @@ class RiskDetection extends Entity
 
     /**
     * Gets the riskDetail
-    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+    * Details of the detected risk. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden. The possible values are: none, hidden, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
     *
     * @return RiskDetail|null The riskDetail
     */
@@ -359,11 +417,11 @@ class RiskDetection extends Entity
 
     /**
     * Sets the riskDetail
-    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+    * Details of the detected risk. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden. The possible values are: none, hidden, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
     *
     * @param RiskDetail $val The riskDetail
     *
-    * @return RiskDetection
+    * @return ServicePrincipalRiskDetection
     */
     public function setRiskDetail($val)
     {
@@ -373,7 +431,7 @@ class RiskDetection extends Entity
 
     /**
     * Gets the riskEventType
-    * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue. If the risk detection is a premium detection, will show generic. For more information about each value, see riskEventType values.
+    * The type of risk event detected. The possible values are:  investigationsThreatIntelligence, generic, adminConfirmedServicePrincipalCompromised, suspiciousSignins, leakedCredentials, unknownFutureValue. Supports $filter (eq).
     *
     * @return string|null The riskEventType
     */
@@ -388,11 +446,11 @@ class RiskDetection extends Entity
 
     /**
     * Sets the riskEventType
-    * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue. If the risk detection is a premium detection, will show generic. For more information about each value, see riskEventType values.
+    * The type of risk event detected. The possible values are:  investigationsThreatIntelligence, generic, adminConfirmedServicePrincipalCompromised, suspiciousSignins, leakedCredentials, unknownFutureValue. Supports $filter (eq).
     *
     * @param string $val The riskEventType
     *
-    * @return RiskDetection
+    * @return ServicePrincipalRiskDetection
     */
     public function setRiskEventType($val)
     {
@@ -402,7 +460,7 @@ class RiskDetection extends Entity
 
     /**
     * Gets the riskLevel
-    * Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+    * Level of the detected risk. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden. The possible values are: low, medium, high, hidden, none, unknownFutureValue.
     *
     * @return RiskLevel|null The riskLevel
     */
@@ -421,11 +479,11 @@ class RiskDetection extends Entity
 
     /**
     * Sets the riskLevel
-    * Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+    * Level of the detected risk. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden. The possible values are: low, medium, high, hidden, none, unknownFutureValue.
     *
     * @param RiskLevel $val The riskLevel
     *
-    * @return RiskDetection
+    * @return ServicePrincipalRiskDetection
     */
     public function setRiskLevel($val)
     {
@@ -435,7 +493,7 @@ class RiskDetection extends Entity
 
     /**
     * Gets the riskState
-    * The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+    * The state of a detected risky service principal or sign-in activity. The possible values are: none, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
     *
     * @return RiskState|null The riskState
     */
@@ -454,11 +512,11 @@ class RiskDetection extends Entity
 
     /**
     * Sets the riskState
-    * The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+    * The state of a detected risky service principal or sign-in activity. The possible values are: none, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
     *
     * @param RiskState $val The riskState
     *
-    * @return RiskDetection
+    * @return ServicePrincipalRiskDetection
     */
     public function setRiskState($val)
     {
@@ -467,39 +525,66 @@ class RiskDetection extends Entity
     }
 
     /**
-    * Gets the riskType
+    * Gets the servicePrincipalDisplayName
+    * The display name for the service principal.
     *
-    * @return RiskEventType|null The riskType
+    * @return string|null The servicePrincipalDisplayName
     */
-    public function getRiskType()
+    public function getServicePrincipalDisplayName()
     {
-        if (array_key_exists("riskType", $this->_propDict)) {
-            if (is_a($this->_propDict["riskType"], "\Beta\Microsoft\Graph\Model\RiskEventType") || is_null($this->_propDict["riskType"])) {
-                return $this->_propDict["riskType"];
-            } else {
-                $this->_propDict["riskType"] = new RiskEventType($this->_propDict["riskType"]);
-                return $this->_propDict["riskType"];
-            }
+        if (array_key_exists("servicePrincipalDisplayName", $this->_propDict)) {
+            return $this->_propDict["servicePrincipalDisplayName"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the riskType
+    * Sets the servicePrincipalDisplayName
+    * The display name for the service principal.
     *
-    * @param RiskEventType $val The riskType
+    * @param string $val The servicePrincipalDisplayName
     *
-    * @return RiskDetection
+    * @return ServicePrincipalRiskDetection
     */
-    public function setRiskType($val)
+    public function setServicePrincipalDisplayName($val)
     {
-        $this->_propDict["riskType"] = $val;
+        $this->_propDict["servicePrincipalDisplayName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the servicePrincipalId
+    * The unique identifier for the service principal. Supports $filter (eq).
+    *
+    * @return string|null The servicePrincipalId
+    */
+    public function getServicePrincipalId()
+    {
+        if (array_key_exists("servicePrincipalId", $this->_propDict)) {
+            return $this->_propDict["servicePrincipalId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the servicePrincipalId
+    * The unique identifier for the service principal. Supports $filter (eq).
+    *
+    * @param string $val The servicePrincipalId
+    *
+    * @return ServicePrincipalRiskDetection
+    */
+    public function setServicePrincipalId($val)
+    {
+        $this->_propDict["servicePrincipalId"] = $val;
         return $this;
     }
 
     /**
     * Gets the source
-    * Source of the risk detection. For example, activeDirectory.
+    * Source of the risk detection. For example, identityProtection.
     *
     * @return string|null The source
     */
@@ -514,11 +599,11 @@ class RiskDetection extends Entity
 
     /**
     * Sets the source
-    * Source of the risk detection. For example, activeDirectory.
+    * Source of the risk detection. For example, identityProtection.
     *
     * @param string $val The source
     *
-    * @return RiskDetection
+    * @return ServicePrincipalRiskDetection
     */
     public function setSource($val)
     {
@@ -528,7 +613,7 @@ class RiskDetection extends Entity
 
     /**
     * Gets the tokenIssuerType
-    * Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
+    * Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD, UnknownFutureValue.
     *
     * @return TokenIssuerType|null The tokenIssuerType
     */
@@ -547,102 +632,15 @@ class RiskDetection extends Entity
 
     /**
     * Sets the tokenIssuerType
-    * Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
+    * Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD, UnknownFutureValue.
     *
     * @param TokenIssuerType $val The tokenIssuerType
     *
-    * @return RiskDetection
+    * @return ServicePrincipalRiskDetection
     */
     public function setTokenIssuerType($val)
     {
         $this->_propDict["tokenIssuerType"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the userDisplayName
-    * The user principal name (UPN) of the user.
-    *
-    * @return string|null The userDisplayName
-    */
-    public function getUserDisplayName()
-    {
-        if (array_key_exists("userDisplayName", $this->_propDict)) {
-            return $this->_propDict["userDisplayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userDisplayName
-    * The user principal name (UPN) of the user.
-    *
-    * @param string $val The userDisplayName
-    *
-    * @return RiskDetection
-    */
-    public function setUserDisplayName($val)
-    {
-        $this->_propDict["userDisplayName"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the userId
-    * Unique ID of the user.
-    *
-    * @return string|null The userId
-    */
-    public function getUserId()
-    {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userId
-    * Unique ID of the user.
-    *
-    * @param string $val The userId
-    *
-    * @return RiskDetection
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the userPrincipalName
-    * The user principal name (UPN) of the user.
-    *
-    * @return string|null The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userPrincipalName
-    * The user principal name (UPN) of the user.
-    *
-    * @param string $val The userPrincipalName
-    *
-    * @return RiskDetection
-    */
-    public function setUserPrincipalName($val)
-    {
-        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
 
