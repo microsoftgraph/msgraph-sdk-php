@@ -275,6 +275,39 @@ class PolicyRoot implements \JsonSerializable
     }
 
     /**
+    * Gets the crossTenantAccessPolicy
+    * The custom rules that define an access scenario when interacting with external Azure AD tenants.
+    *
+    * @return CrossTenantAccessPolicy|null The crossTenantAccessPolicy
+    */
+    public function getCrossTenantAccessPolicy()
+    {
+        if (array_key_exists("crossTenantAccessPolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["crossTenantAccessPolicy"], "\Beta\Microsoft\Graph\Model\CrossTenantAccessPolicy") || is_null($this->_propDict["crossTenantAccessPolicy"])) {
+                return $this->_propDict["crossTenantAccessPolicy"];
+            } else {
+                $this->_propDict["crossTenantAccessPolicy"] = new CrossTenantAccessPolicy($this->_propDict["crossTenantAccessPolicy"]);
+                return $this->_propDict["crossTenantAccessPolicy"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the crossTenantAccessPolicy
+    * The custom rules that define an access scenario when interacting with external Azure AD tenants.
+    *
+    * @param CrossTenantAccessPolicy $val The crossTenantAccessPolicy
+    *
+    * @return PolicyRoot
+    */
+    public function setCrossTenantAccessPolicy($val)
+    {
+        $this->_propDict["crossTenantAccessPolicy"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the defaultAppManagementPolicy
     * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
     *

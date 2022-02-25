@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AppCredentialRestrictionType File
+* UserPurpose File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* AppCredentialRestrictionType class
+* UserPurpose class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +24,16 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AppCredentialRestrictionType extends Enum
+class UserPurpose extends Enum
 {
     /**
-    * The Enum AppCredentialRestrictionType
+    * The Enum UserPurpose
     */
-    const PASSWORD_ADDITION = "passwordAddition";
-    const PASSWORD_LIFETIME = "passwordLifetime";
-    const SYMMETRIC_KEY_ADDITION = "symmetricKeyAddition";
-    const SYMMETRIC_KEY_LIFETIME = "symmetricKeyLifetime";
-    const CUSTOM_PASSWORD_ADDITION = "customPasswordAddition";
+    const USER = "user";
+    const LINKED = "linked";
+    const SHARED = "shared";
+    const ROOM = "room";
+    const EQUIPMENT = "equipment";
+    const OTHERS = "others";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
