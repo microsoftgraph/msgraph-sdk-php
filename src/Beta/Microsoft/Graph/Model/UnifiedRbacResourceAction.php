@@ -26,6 +26,7 @@ class UnifiedRbacResourceAction extends Entity
 {
     /**
     * Gets the actionVerb
+    * HTTP method for the action, such as DELETE, GET, PATCH, POST, PUT, or null. Supports $filter (eq) but not for null values.
     *
     * @return string|null The actionVerb
     */
@@ -40,6 +41,7 @@ class UnifiedRbacResourceAction extends Entity
 
     /**
     * Sets the actionVerb
+    * HTTP method for the action, such as DELETE, GET, PATCH, POST, PUT, or null. Supports $filter (eq) but not for null values.
     *
     * @param string $val The actionVerb
     *
@@ -53,6 +55,7 @@ class UnifiedRbacResourceAction extends Entity
 
     /**
     * Gets the description
+    * Description for the action. Supports $filter (eq).
     *
     * @return string|null The description
     */
@@ -67,6 +70,7 @@ class UnifiedRbacResourceAction extends Entity
 
     /**
     * Sets the description
+    * Description for the action. Supports $filter (eq).
     *
     * @param string $val The description
     *
@@ -80,6 +84,7 @@ class UnifiedRbacResourceAction extends Entity
 
     /**
     * Gets the name
+    * Name for the action within the resource namespace, such as microsoft.insights/programs/update. Can include slash character (/). Case insensitive. Required. Supports $filter (eq).
     *
     * @return string|null The name
     */
@@ -94,6 +99,7 @@ class UnifiedRbacResourceAction extends Entity
 
     /**
     * Sets the name
+    * Name for the action within the resource namespace, such as microsoft.insights/programs/update. Can include slash character (/). Case insensitive. Required. Supports $filter (eq).
     *
     * @param string $val The name
     *
@@ -107,6 +113,7 @@ class UnifiedRbacResourceAction extends Entity
 
     /**
     * Gets the resourceScopeId
+    * Not implemented.
     *
     * @return string|null The resourceScopeId
     */
@@ -121,6 +128,7 @@ class UnifiedRbacResourceAction extends Entity
 
     /**
     * Sets the resourceScopeId
+    * Not implemented.
     *
     * @param string $val The resourceScopeId
     *

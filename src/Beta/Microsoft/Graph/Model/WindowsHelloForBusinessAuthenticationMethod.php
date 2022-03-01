@@ -121,7 +121,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
 
     /**
     * Gets the device
-    * The registered device on which this Windows Hello for Business key resides.
+    * The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
     *
     * @return Device|null The device
     */
@@ -140,7 +140,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
 
     /**
     * Sets the device
-    * The registered device on which this Windows Hello for Business key resides.
+    * The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
     *
     * @param Device $val The device
     *

@@ -123,6 +123,7 @@ class AccessPackageAssignmentRequest extends Entity
 
      /**
      * Gets the customExtensionHandlerInstances
+    * A collection of custom workflow extension instances being run on an assignment request. Read-only.
      *
      * @return array|null The customExtensionHandlerInstances
      */
@@ -137,6 +138,7 @@ class AccessPackageAssignmentRequest extends Entity
 
     /**
     * Sets the customExtensionHandlerInstances
+    * A collection of custom workflow extension instances being run on an assignment request. Read-only.
     *
     * @param CustomExtensionHandlerInstance[] $val The customExtensionHandlerInstances
     *

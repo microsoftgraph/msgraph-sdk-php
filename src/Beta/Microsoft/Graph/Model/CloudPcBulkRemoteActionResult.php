@@ -25,6 +25,7 @@ class CloudPcBulkRemoteActionResult extends Entity
 {
     /**
     * Gets the failedDeviceIds
+    * A list of all the Intune managed device IDs that completed the bulk action with a failure.
     *
     * @return string|null The failedDeviceIds
     */
@@ -39,6 +40,7 @@ class CloudPcBulkRemoteActionResult extends Entity
 
     /**
     * Sets the failedDeviceIds
+    * A list of all the Intune managed device IDs that completed the bulk action with a failure.
     *
     * @param string $val The value of the failedDeviceIds
     *
@@ -51,6 +53,7 @@ class CloudPcBulkRemoteActionResult extends Entity
     }
     /**
     * Gets the notFoundDeviceIds
+    * A list of all the Intune managed device IDs that were not found when the bulk action was attempted.
     *
     * @return string|null The notFoundDeviceIds
     */
@@ -65,6 +68,7 @@ class CloudPcBulkRemoteActionResult extends Entity
 
     /**
     * Sets the notFoundDeviceIds
+    * A list of all the Intune managed device IDs that were not found when the bulk action was attempted.
     *
     * @param string $val The value of the notFoundDeviceIds
     *
@@ -77,6 +81,7 @@ class CloudPcBulkRemoteActionResult extends Entity
     }
     /**
     * Gets the notSupportedDeviceIds
+    * A list of all the Intune managed device IDs that were identified as unsupported for the bulk action.
     *
     * @return string|null The notSupportedDeviceIds
     */
@@ -91,6 +96,7 @@ class CloudPcBulkRemoteActionResult extends Entity
 
     /**
     * Sets the notSupportedDeviceIds
+    * A list of all the Intune managed device IDs that were identified as unsupported for the bulk action.
     *
     * @param string $val The value of the notSupportedDeviceIds
     *
@@ -103,6 +109,7 @@ class CloudPcBulkRemoteActionResult extends Entity
     }
     /**
     * Gets the successfulDeviceIds
+    * A list of all the Intune managed device IDs that completed the bulk action successfully.
     *
     * @return string|null The successfulDeviceIds
     */
@@ -117,6 +124,7 @@ class CloudPcBulkRemoteActionResult extends Entity
 
     /**
     * Sets the successfulDeviceIds
+    * A list of all the Intune managed device IDs that completed the bulk action successfully.
     *
     * @param string $val The value of the successfulDeviceIds
     *

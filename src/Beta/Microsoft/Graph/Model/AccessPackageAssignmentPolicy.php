@@ -522,6 +522,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
      /**
      * Gets the customExtensionHandlers
+    * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      *
      * @return array|null The customExtensionHandlers
      */
@@ -536,6 +537,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the customExtensionHandlers
+    * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
     *
     * @param CustomExtensionHandler[] $val The customExtensionHandlers
     *

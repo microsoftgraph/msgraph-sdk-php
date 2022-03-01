@@ -25,6 +25,7 @@ class AnswerKeyword extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the keywords
+    * A collection of keywords used to trigger the search answer.
     *
     * @return string|null The keywords
     */
@@ -39,6 +40,7 @@ class AnswerKeyword extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the keywords
+    * A collection of keywords used to trigger the search answer.
     *
     * @param string $val The value of the keywords
     *
@@ -51,6 +53,7 @@ class AnswerKeyword extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the matchSimilarKeywords
+    * If true, indicates that the search term contains similar words to the keywords that should trigger the search answer.
     *
     * @return bool|null The matchSimilarKeywords
     */
@@ -65,6 +68,7 @@ class AnswerKeyword extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the matchSimilarKeywords
+    * If true, indicates that the search term contains similar words to the keywords that should trigger the search answer.
     *
     * @param bool $val The value of the matchSimilarKeywords
     *
@@ -77,6 +81,7 @@ class AnswerKeyword extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the reservedKeywords
+    * Unique keywords that will guarantee the search answer is triggered.
     *
     * @return string|null The reservedKeywords
     */
@@ -91,6 +96,7 @@ class AnswerKeyword extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the reservedKeywords
+    * Unique keywords that will guarantee the search answer is triggered.
     *
     * @param string $val The value of the reservedKeywords
     *

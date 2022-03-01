@@ -25,64 +25,172 @@ namespace Beta\Microsoft\Graph\ManagedTenants\Model;
 class ManagementTemplateStepVersion extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
-    * Gets the configurationAction
+    * Gets the contentMarkdown
     *
-    * @return TemplateAction|null The configurationAction
+    * @return string|null The contentMarkdown
     */
-    public function getConfigurationAction()
+    public function getContentMarkdown()
     {
-        if (array_key_exists("configurationAction", $this->_propDict)) {
-            if (is_a($this->_propDict["configurationAction"], "\Beta\Microsoft\Graph\ManagedTenants\Model\TemplateAction") || is_null($this->_propDict["configurationAction"])) {
-                return $this->_propDict["configurationAction"];
-            } else {
-                $this->_propDict["configurationAction"] = new TemplateAction($this->_propDict["configurationAction"]);
-                return $this->_propDict["configurationAction"];
-            }
+        if (array_key_exists("contentMarkdown", $this->_propDict)) {
+            return $this->_propDict["contentMarkdown"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the configurationAction
+    * Sets the contentMarkdown
     *
-    * @param TemplateAction $val The configurationAction
+    * @param string $val The contentMarkdown
     *
     * @return ManagementTemplateStepVersion
     */
-    public function setConfigurationAction($val)
+    public function setContentMarkdown($val)
     {
-        $this->_propDict["configurationAction"] = $val;
+        $this->_propDict["contentMarkdown"] = $val;
         return $this;
     }
 
     /**
-    * Gets the validationAction
+    * Gets the createdByUserId
     *
-    * @return TemplateAction|null The validationAction
+    * @return string|null The createdByUserId
     */
-    public function getValidationAction()
+    public function getCreatedByUserId()
     {
-        if (array_key_exists("validationAction", $this->_propDict)) {
-            if (is_a($this->_propDict["validationAction"], "\Beta\Microsoft\Graph\ManagedTenants\Model\TemplateAction") || is_null($this->_propDict["validationAction"])) {
-                return $this->_propDict["validationAction"];
+        if (array_key_exists("createdByUserId", $this->_propDict)) {
+            return $this->_propDict["createdByUserId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the createdByUserId
+    *
+    * @param string $val The createdByUserId
+    *
+    * @return ManagementTemplateStepVersion
+    */
+    public function setCreatedByUserId($val)
+    {
+        $this->_propDict["createdByUserId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the createdDateTime
+    *
+    * @return \DateTime|null The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+                return $this->_propDict["createdDateTime"];
             } else {
-                $this->_propDict["validationAction"] = new TemplateAction($this->_propDict["validationAction"]);
-                return $this->_propDict["validationAction"];
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the validationAction
+    * Sets the createdDateTime
     *
-    * @param TemplateAction $val The validationAction
+    * @param \DateTime $val The createdDateTime
     *
     * @return ManagementTemplateStepVersion
     */
-    public function setValidationAction($val)
+    public function setCreatedDateTime($val)
     {
-        $this->_propDict["validationAction"] = $val;
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the lastActionByUserId
+    *
+    * @return string|null The lastActionByUserId
+    */
+    public function getLastActionByUserId()
+    {
+        if (array_key_exists("lastActionByUserId", $this->_propDict)) {
+            return $this->_propDict["lastActionByUserId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the lastActionByUserId
+    *
+    * @param string $val The lastActionByUserId
+    *
+    * @return ManagementTemplateStepVersion
+    */
+    public function setLastActionByUserId($val)
+    {
+        $this->_propDict["lastActionByUserId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the lastActionDateTime
+    *
+    * @return \DateTime|null The lastActionDateTime
+    */
+    public function getLastActionDateTime()
+    {
+        if (array_key_exists("lastActionDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastActionDateTime"], "\DateTime") || is_null($this->_propDict["lastActionDateTime"])) {
+                return $this->_propDict["lastActionDateTime"];
+            } else {
+                $this->_propDict["lastActionDateTime"] = new \DateTime($this->_propDict["lastActionDateTime"]);
+                return $this->_propDict["lastActionDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the lastActionDateTime
+    *
+    * @param \DateTime $val The lastActionDateTime
+    *
+    * @return ManagementTemplateStepVersion
+    */
+    public function setLastActionDateTime($val)
+    {
+        $this->_propDict["lastActionDateTime"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the name
+    *
+    * @return string|null The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the name
+    *
+    * @param string $val The name
+    *
+    * @return ManagementTemplateStepVersion
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
         return $this;
     }
 
@@ -110,6 +218,64 @@ class ManagementTemplateStepVersion extends \Beta\Microsoft\Graph\Model\Entity
     public function setVersion($val)
     {
         $this->_propDict["version"] = intval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the versionInformation
+    *
+    * @return string|null The versionInformation
+    */
+    public function getVersionInformation()
+    {
+        if (array_key_exists("versionInformation", $this->_propDict)) {
+            return $this->_propDict["versionInformation"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the versionInformation
+    *
+    * @param string $val The versionInformation
+    *
+    * @return ManagementTemplateStepVersion
+    */
+    public function setVersionInformation($val)
+    {
+        $this->_propDict["versionInformation"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the acceptedFor
+    *
+    * @return ManagementTemplateStep|null The acceptedFor
+    */
+    public function getAcceptedFor()
+    {
+        if (array_key_exists("acceptedFor", $this->_propDict)) {
+            if (is_a($this->_propDict["acceptedFor"], "\Beta\Microsoft\Graph\ManagedTenants\Model\ManagementTemplateStep") || is_null($this->_propDict["acceptedFor"])) {
+                return $this->_propDict["acceptedFor"];
+            } else {
+                $this->_propDict["acceptedFor"] = new ManagementTemplateStep($this->_propDict["acceptedFor"]);
+                return $this->_propDict["acceptedFor"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the acceptedFor
+    *
+    * @param ManagementTemplateStep $val The acceptedFor
+    *
+    * @return ManagementTemplateStepVersion
+    */
+    public function setAcceptedFor($val)
+    {
+        $this->_propDict["acceptedFor"] = $val;
         return $this;
     }
 
