@@ -212,7 +212,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the lastRemoteActionResult
-    * The last remote action result of the enterprise Cloud PCs. The supported remote actions are: Rename, Reboot, Reprovision, and Troubleshoot.
+    * The last remote action result of the enterprise Cloud PCs. The supported remote actions are: Reboot, Rename, Reprovision, Restore, and Troubleshoot.
     *
     * @return CloudPcRemoteActionResult|null The lastRemoteActionResult
     */
@@ -231,7 +231,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the lastRemoteActionResult
-    * The last remote action result of the enterprise Cloud PCs. The supported remote actions are: Rename, Reboot, Reprovision, and Troubleshoot.
+    * The last remote action result of the enterprise Cloud PCs. The supported remote actions are: Reboot, Rename, Reprovision, Restore, and Troubleshoot.
     *
     * @param CloudPcRemoteActionResult $val The lastRemoteActionResult
     *
@@ -514,7 +514,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the status
-    * The status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed.
+    * The status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed, restoring.
     *
     * @return CloudPcStatus|null The status
     */
@@ -533,7 +533,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the status
-    * The status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed.
+    * The status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed, restoring.
     *
     * @param CloudPcStatus $val The status
     *

@@ -59,7 +59,7 @@ class PlannerTaskDetails extends PlannerDelta
 
     /**
     * Gets the description
-    * Description of the task
+    * Description of the task.
     *
     * @return string|null The description
     */
@@ -74,7 +74,7 @@ class PlannerTaskDetails extends PlannerDelta
 
     /**
     * Sets the description
-    * Description of the task
+    * Description of the task.
     *
     * @param string $val The description
     *

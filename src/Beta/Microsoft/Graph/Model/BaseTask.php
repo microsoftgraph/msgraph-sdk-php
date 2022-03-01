@@ -25,39 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class BaseTask extends Entity
 {
     /**
-    * Gets the body
-    * The task body that typically contains information about the task.
-    *
-    * @return ItemBody|null The body
-    */
-    public function getBody()
-    {
-        if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "\Beta\Microsoft\Graph\Model\ItemBody") || is_null($this->_propDict["body"])) {
-                return $this->_propDict["body"];
-            } else {
-                $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
-                return $this->_propDict["body"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the body
-    * The task body that typically contains information about the task.
-    *
-    * @param ItemBody $val The body
-    *
-    * @return BaseTask
-    */
-    public function setBody($val)
-    {
-        $this->_propDict["body"] = $val;
-        return $this;
-    }
-
-    /**
     * Gets the bodyLastModifiedDateTime
     * The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
     *
@@ -285,39 +252,6 @@ class BaseTask extends Entity
     }
 
     /**
-    * Gets the personalProperties
-    * Properties that are personal to a user such as reminderDateTime.
-    *
-    * @return PersonalTaskProperties|null The personalProperties
-    */
-    public function getPersonalProperties()
-    {
-        if (array_key_exists("personalProperties", $this->_propDict)) {
-            if (is_a($this->_propDict["personalProperties"], "\Beta\Microsoft\Graph\Model\PersonalTaskProperties") || is_null($this->_propDict["personalProperties"])) {
-                return $this->_propDict["personalProperties"];
-            } else {
-                $this->_propDict["personalProperties"] = new PersonalTaskProperties($this->_propDict["personalProperties"]);
-                return $this->_propDict["personalProperties"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the personalProperties
-    * Properties that are personal to a user such as reminderDateTime.
-    *
-    * @param PersonalTaskProperties $val The personalProperties
-    *
-    * @return BaseTask
-    */
-    public function setPersonalProperties($val)
-    {
-        $this->_propDict["personalProperties"] = $val;
-        return $this;
-    }
-
-    /**
     * Gets the recurrence
     * The recurrence pattern for the task.
     *
@@ -413,6 +347,64 @@ class BaseTask extends Entity
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the textBody
+    *
+    * @return string|null The textBody
+    */
+    public function getTextBody()
+    {
+        if (array_key_exists("textBody", $this->_propDict)) {
+            return $this->_propDict["textBody"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the textBody
+    *
+    * @param string $val The textBody
+    *
+    * @return BaseTask
+    */
+    public function setTextBody($val)
+    {
+        $this->_propDict["textBody"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the viewpoint
+    *
+    * @return TaskViewpoint|null The viewpoint
+    */
+    public function getViewpoint()
+    {
+        if (array_key_exists("viewpoint", $this->_propDict)) {
+            if (is_a($this->_propDict["viewpoint"], "\Beta\Microsoft\Graph\Model\TaskViewpoint") || is_null($this->_propDict["viewpoint"])) {
+                return $this->_propDict["viewpoint"];
+            } else {
+                $this->_propDict["viewpoint"] = new TaskViewpoint($this->_propDict["viewpoint"]);
+                return $this->_propDict["viewpoint"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the viewpoint
+    *
+    * @param TaskViewpoint $val The viewpoint
+    *
+    * @return BaseTask
+    */
+    public function setViewpoint($val)
+    {
+        $this->_propDict["viewpoint"] = $val;
         return $this;
     }
 

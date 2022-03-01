@@ -56,6 +56,64 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
     }
 
     /**
+    * Gets the createdByUserId
+    *
+    * @return string|null The createdByUserId
+    */
+    public function getCreatedByUserId()
+    {
+        if (array_key_exists("createdByUserId", $this->_propDict)) {
+            return $this->_propDict["createdByUserId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the createdByUserId
+    *
+    * @param string $val The createdByUserId
+    *
+    * @return ManagementTemplateStep
+    */
+    public function setCreatedByUserId($val)
+    {
+        $this->_propDict["createdByUserId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the createdDateTime
+    *
+    * @return \DateTime|null The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the createdDateTime
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return ManagementTemplateStep
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the description
     *
     * @return string|null The description
@@ -110,50 +168,85 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
     }
 
     /**
-    * Gets the managementPortal
+    * Gets the lastActionByUserId
     *
-    * @return string|null The managementPortal
+    * @return string|null The lastActionByUserId
     */
-    public function getManagementPortal()
+    public function getLastActionByUserId()
     {
-        if (array_key_exists("managementPortal", $this->_propDict)) {
-            return $this->_propDict["managementPortal"];
+        if (array_key_exists("lastActionByUserId", $this->_propDict)) {
+            return $this->_propDict["lastActionByUserId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the managementPortal
+    * Sets the lastActionByUserId
     *
-    * @param string $val The managementPortal
+    * @param string $val The lastActionByUserId
     *
     * @return ManagementTemplateStep
     */
-    public function setManagementPortal($val)
+    public function setLastActionByUserId($val)
     {
-        $this->_propDict["managementPortal"] = $val;
+        $this->_propDict["lastActionByUserId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the lastActionDateTime
+    *
+    * @return \DateTime|null The lastActionDateTime
+    */
+    public function getLastActionDateTime()
+    {
+        if (array_key_exists("lastActionDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastActionDateTime"], "\DateTime") || is_null($this->_propDict["lastActionDateTime"])) {
+                return $this->_propDict["lastActionDateTime"];
+            } else {
+                $this->_propDict["lastActionDateTime"] = new \DateTime($this->_propDict["lastActionDateTime"]);
+                return $this->_propDict["lastActionDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the lastActionDateTime
+    *
+    * @param \DateTime $val The lastActionDateTime
+    *
+    * @return ManagementTemplateStep
+    */
+    public function setLastActionDateTime($val)
+    {
+        $this->_propDict["lastActionDateTime"] = $val;
         return $this;
     }
 
     /**
     * Gets the portalLink
     *
-    * @return string|null The portalLink
+    * @return \Beta\Microsoft\Graph\Model\ActionUrl|null The portalLink
     */
     public function getPortalLink()
     {
         if (array_key_exists("portalLink", $this->_propDict)) {
-            return $this->_propDict["portalLink"];
-        } else {
-            return null;
+            if (is_a($this->_propDict["portalLink"], "\Beta\Microsoft\Graph\Model\ActionUrl") || is_null($this->_propDict["portalLink"])) {
+                return $this->_propDict["portalLink"];
+            } else {
+                $this->_propDict["portalLink"] = new \Beta\Microsoft\Graph\Model\ActionUrl($this->_propDict["portalLink"]);
+                return $this->_propDict["portalLink"];
+            }
         }
+        return null;
     }
 
     /**
     * Sets the portalLink
     *
-    * @param string $val The portalLink
+    * @param \Beta\Microsoft\Graph\Model\ActionUrl $val The portalLink
     *
     * @return ManagementTemplateStep
     */
@@ -191,33 +284,33 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
     }
 
     /**
-    * Gets the provider
+    * Gets the acceptedVersion
     *
-    * @return ManagementProvider|null The provider
+    * @return ManagementTemplateStepVersion|null The acceptedVersion
     */
-    public function getProvider()
+    public function getAcceptedVersion()
     {
-        if (array_key_exists("provider", $this->_propDict)) {
-            if (is_a($this->_propDict["provider"], "\Beta\Microsoft\Graph\ManagedTenants\Model\ManagementProvider") || is_null($this->_propDict["provider"])) {
-                return $this->_propDict["provider"];
+        if (array_key_exists("acceptedVersion", $this->_propDict)) {
+            if (is_a($this->_propDict["acceptedVersion"], "\Beta\Microsoft\Graph\ManagedTenants\Model\ManagementTemplateStepVersion") || is_null($this->_propDict["acceptedVersion"])) {
+                return $this->_propDict["acceptedVersion"];
             } else {
-                $this->_propDict["provider"] = new ManagementProvider($this->_propDict["provider"]);
-                return $this->_propDict["provider"];
+                $this->_propDict["acceptedVersion"] = new ManagementTemplateStepVersion($this->_propDict["acceptedVersion"]);
+                return $this->_propDict["acceptedVersion"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the provider
+    * Sets the acceptedVersion
     *
-    * @param ManagementProvider $val The provider
+    * @param ManagementTemplateStepVersion $val The acceptedVersion
     *
     * @return ManagementTemplateStep
     */
-    public function setProvider($val)
+    public function setAcceptedVersion($val)
     {
-        $this->_propDict["provider"] = $val;
+        $this->_propDict["acceptedVersion"] = $val;
         return $this;
     }
 
@@ -254,29 +347,29 @@ class ManagementTemplateStep extends \Beta\Microsoft\Graph\Model\Entity
 
 
      /**
-     * Gets the stepVersions
+     * Gets the versions
      *
-     * @return array|null The stepVersions
+     * @return array|null The versions
      */
-    public function getStepVersions()
+    public function getVersions()
     {
-        if (array_key_exists("stepVersions", $this->_propDict)) {
-           return $this->_propDict["stepVersions"];
+        if (array_key_exists("versions", $this->_propDict)) {
+           return $this->_propDict["versions"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the stepVersions
+    * Sets the versions
     *
-    * @param ManagementTemplateStepVersion[] $val The stepVersions
+    * @param ManagementTemplateStepVersion[] $val The versions
     *
     * @return ManagementTemplateStep
     */
-    public function setStepVersions($val)
+    public function setVersions($val)
     {
-        $this->_propDict["stepVersions"] = $val;
+        $this->_propDict["versions"] = $val;
         return $this;
     }
 

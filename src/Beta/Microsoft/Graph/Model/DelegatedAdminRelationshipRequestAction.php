@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AlertStatus File
+* DelegatedAdminRelationshipRequestAction File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Security\Model;
+namespace Beta\Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* AlertStatus class
+* DelegatedAdminRelationshipRequestAction class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AlertStatus extends Enum
+class DelegatedAdminRelationshipRequestAction extends Enum
 {
     /**
-    * The Enum AlertStatus
+    * The Enum DelegatedAdminRelationshipRequestAction
     */
-    const UNKNOWN = "unknown";
-    const GRAPHNEW = "new";
-    const IN_PROGRESS = "inProgress";
-    const RESOLVED = "resolved";
+    const LOCK_FOR_APPROVAL = "lockForApproval";
+    const APPROVE = "approve";
+    const TERMINATE = "terminate";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

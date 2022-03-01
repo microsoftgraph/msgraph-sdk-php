@@ -943,6 +943,39 @@ class Application extends DirectoryObject
     }
 
     /**
+    * Gets the windows
+    * Specifies settings for apps running Microsoft Windows and published in the Microsoft Store or Xbox games store.
+    *
+    * @return WindowsApplication|null The windows
+    */
+    public function getWindows()
+    {
+        if (array_key_exists("windows", $this->_propDict)) {
+            if (is_a($this->_propDict["windows"], "\Beta\Microsoft\Graph\Model\WindowsApplication") || is_null($this->_propDict["windows"])) {
+                return $this->_propDict["windows"];
+            } else {
+                $this->_propDict["windows"] = new WindowsApplication($this->_propDict["windows"]);
+                return $this->_propDict["windows"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the windows
+    * Specifies settings for apps running Microsoft Windows and published in the Microsoft Store or Xbox games store.
+    *
+    * @param WindowsApplication $val The windows
+    *
+    * @return Application
+    */
+    public function setWindows($val)
+    {
+        $this->_propDict["windows"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the onPremisesPublishing
     * Represents the set of properties required for configuring Application Proxy for this application. Configuring these properties allows you to publish your on-premises application for secure remote access.
     *

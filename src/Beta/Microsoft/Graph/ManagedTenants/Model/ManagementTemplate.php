@@ -58,6 +58,64 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
     }
 
     /**
+    * Gets the createdByUserId
+    *
+    * @return string|null The createdByUserId
+    */
+    public function getCreatedByUserId()
+    {
+        if (array_key_exists("createdByUserId", $this->_propDict)) {
+            return $this->_propDict["createdByUserId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the createdByUserId
+    *
+    * @param string $val The createdByUserId
+    *
+    * @return ManagementTemplate
+    */
+    public function setCreatedByUserId($val)
+    {
+        $this->_propDict["createdByUserId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the createdDateTime
+    *
+    * @return \DateTime|null The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the createdDateTime
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return ManagementTemplate
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the description
     * The description for the management template. Optional. Read-only.
     *
@@ -117,6 +175,92 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
 
 
      /**
+     * Gets the informationLinks
+     *
+     * @return array|null The informationLinks
+     */
+    public function getInformationLinks()
+    {
+        if (array_key_exists("informationLinks", $this->_propDict)) {
+           return $this->_propDict["informationLinks"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the informationLinks
+    *
+    * @param \Beta\Microsoft\Graph\Model\ActionUrl[] $val The informationLinks
+    *
+    * @return ManagementTemplate
+    */
+    public function setInformationLinks($val)
+    {
+        $this->_propDict["informationLinks"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the lastActionByUserId
+    *
+    * @return string|null The lastActionByUserId
+    */
+    public function getLastActionByUserId()
+    {
+        if (array_key_exists("lastActionByUserId", $this->_propDict)) {
+            return $this->_propDict["lastActionByUserId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the lastActionByUserId
+    *
+    * @param string $val The lastActionByUserId
+    *
+    * @return ManagementTemplate
+    */
+    public function setLastActionByUserId($val)
+    {
+        $this->_propDict["lastActionByUserId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the lastActionDateTime
+    *
+    * @return \DateTime|null The lastActionDateTime
+    */
+    public function getLastActionDateTime()
+    {
+        if (array_key_exists("lastActionDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastActionDateTime"], "\DateTime") || is_null($this->_propDict["lastActionDateTime"])) {
+                return $this->_propDict["lastActionDateTime"];
+            } else {
+                $this->_propDict["lastActionDateTime"] = new \DateTime($this->_propDict["lastActionDateTime"]);
+                return $this->_propDict["lastActionDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the lastActionDateTime
+    *
+    * @param \DateTime $val The lastActionDateTime
+    *
+    * @return ManagementTemplate
+    */
+    public function setLastActionDateTime($val)
+    {
+        $this->_propDict["lastActionDateTime"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the parameters
     * The collection of parameters used by the management template. Optional. Read-only.
      *
@@ -142,6 +286,91 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
     public function setParameters($val)
     {
         $this->_propDict["parameters"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the priority
+    *
+    * @return int|null The priority
+    */
+    public function getPriority()
+    {
+        if (array_key_exists("priority", $this->_propDict)) {
+            return $this->_propDict["priority"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the priority
+    *
+    * @param int $val The priority
+    *
+    * @return ManagementTemplate
+    */
+    public function setPriority($val)
+    {
+        $this->_propDict["priority"] = intval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the provider
+    *
+    * @return ManagementProvider|null The provider
+    */
+    public function getProvider()
+    {
+        if (array_key_exists("provider", $this->_propDict)) {
+            if (is_a($this->_propDict["provider"], "\Beta\Microsoft\Graph\ManagedTenants\Model\ManagementProvider") || is_null($this->_propDict["provider"])) {
+                return $this->_propDict["provider"];
+            } else {
+                $this->_propDict["provider"] = new ManagementProvider($this->_propDict["provider"]);
+                return $this->_propDict["provider"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the provider
+    *
+    * @param ManagementProvider $val The provider
+    *
+    * @return ManagementTemplate
+    */
+    public function setProvider($val)
+    {
+        $this->_propDict["provider"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the userImpact
+    *
+    * @return string|null The userImpact
+    */
+    public function getUserImpact()
+    {
+        if (array_key_exists("userImpact", $this->_propDict)) {
+            return $this->_propDict["userImpact"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userImpact
+    *
+    * @param string $val The userImpact
+    *
+    * @return ManagementTemplate
+    */
+    public function setUserImpact($val)
+    {
+        $this->_propDict["userImpact"] = $val;
         return $this;
     }
 
