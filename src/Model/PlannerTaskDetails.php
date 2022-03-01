@@ -59,7 +59,7 @@ class PlannerTaskDetails extends Entity
 
     /**
     * Gets the description
-    * Description of the task
+    * Description of the task.
     *
     * @return string|null The description
     */
@@ -74,7 +74,7 @@ class PlannerTaskDetails extends Entity
 
     /**
     * Sets the description
-    * Description of the task
+    * Description of the task.
     *
     * @param string $val The description
     *
