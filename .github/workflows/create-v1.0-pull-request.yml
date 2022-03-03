@@ -28,7 +28,7 @@ jobs:
   bump-minor-version:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     
     - name: Git config user
       run: |
@@ -51,7 +51,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2.3.4
+    - uses: actions/checkout@v3
 
     # Create a pull request [1]
     - name: Create PR using the GitHub REST API via hub
