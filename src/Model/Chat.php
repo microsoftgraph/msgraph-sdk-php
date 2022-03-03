@@ -336,6 +336,7 @@ class Chat extends Entity
 
      /**
      * Gets the tabs
+    * A collection of all the tabs in the chat. Nullable.
      *
      * @return array|null The tabs
      */
@@ -350,6 +351,7 @@ class Chat extends Entity
 
     /**
     * Sets the tabs
+    * A collection of all the tabs in the chat. Nullable.
     *
     * @param TeamsTab[] $val The tabs
     *
