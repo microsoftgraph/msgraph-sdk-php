@@ -26,6 +26,7 @@ class CustomAccessPackageWorkflowExtension extends CustomCalloutExtension
 {
     /**
     * Gets the createdDateTime
+    * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -44,6 +45,7 @@ class CustomAccessPackageWorkflowExtension extends CustomCalloutExtension
 
     /**
     * Sets the createdDateTime
+    * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -57,6 +59,7 @@ class CustomAccessPackageWorkflowExtension extends CustomCalloutExtension
 
     /**
     * Gets the lastModifiedDateTime
+    * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -75,6 +78,7 @@ class CustomAccessPackageWorkflowExtension extends CustomCalloutExtension
 
     /**
     * Sets the lastModifiedDateTime
+    * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *

@@ -26,6 +26,7 @@ class CustomCalloutExtension extends Entity
 {
     /**
     * Gets the authenticationConfiguration
+    * Configuration for securing the API call to the logic app. For example, using OAuth client credentials flow.
     *
     * @return CustomExtensionAuthenticationConfiguration|null The authenticationConfiguration
     */
@@ -44,6 +45,7 @@ class CustomCalloutExtension extends Entity
 
     /**
     * Sets the authenticationConfiguration
+    * Configuration for securing the API call to the logic app. For example, using OAuth client credentials flow.
     *
     * @param CustomExtensionAuthenticationConfiguration $val The authenticationConfiguration
     *
@@ -57,6 +59,7 @@ class CustomCalloutExtension extends Entity
 
     /**
     * Gets the clientConfiguration
+    * HTTP connection settings that define how long Azure AD can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
     *
     * @return CustomExtensionClientConfiguration|null The clientConfiguration
     */
@@ -75,6 +78,7 @@ class CustomCalloutExtension extends Entity
 
     /**
     * Sets the clientConfiguration
+    * HTTP connection settings that define how long Azure AD can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
     *
     * @param CustomExtensionClientConfiguration $val The clientConfiguration
     *
@@ -88,6 +92,7 @@ class CustomCalloutExtension extends Entity
 
     /**
     * Gets the description
+    * Description for the customCalloutExtension object.
     *
     * @return string|null The description
     */
@@ -102,6 +107,7 @@ class CustomCalloutExtension extends Entity
 
     /**
     * Sets the description
+    * Description for the customCalloutExtension object.
     *
     * @param string $val The description
     *
@@ -115,6 +121,7 @@ class CustomCalloutExtension extends Entity
 
     /**
     * Gets the displayName
+    * Display name for the customCalloutExtension object.
     *
     * @return string|null The displayName
     */
@@ -129,6 +136,7 @@ class CustomCalloutExtension extends Entity
 
     /**
     * Sets the displayName
+    * Display name for the customCalloutExtension object.
     *
     * @param string $val The displayName
     *
@@ -142,6 +150,7 @@ class CustomCalloutExtension extends Entity
 
     /**
     * Gets the endpointConfiguration
+    * The type and details for configuring the endpoint to call the logic app's workflow.
     *
     * @return CustomExtensionEndpointConfiguration|null The endpointConfiguration
     */
@@ -160,6 +169,7 @@ class CustomCalloutExtension extends Entity
 
     /**
     * Sets the endpointConfiguration
+    * The type and details for configuring the endpoint to call the logic app's workflow.
     *
     * @param CustomExtensionEndpointConfiguration $val The endpointConfiguration
     *

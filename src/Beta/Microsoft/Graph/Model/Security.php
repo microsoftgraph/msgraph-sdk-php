@@ -52,59 +52,34 @@ class Security extends Entity
         return $this;
     }
 
-
-     /**
-     * Gets the alertsV2
-     *
-     * @return array|null The alertsV2
-     */
-    public function getAlertsV2()
+    /**
+    * Gets the informationProtection
+    *
+    * @return \Beta\Microsoft\Graph\Security\Model\InformationProtection|null The informationProtection
+    */
+    public function getInformationProtection()
     {
-        if (array_key_exists("alertsV2", $this->_propDict)) {
-           return $this->_propDict["alertsV2"];
-        } else {
-            return null;
+        if (array_key_exists("informationProtection", $this->_propDict)) {
+            if (is_a($this->_propDict["informationProtection"], "\Beta\Microsoft\Graph\Security\Model\InformationProtection") || is_null($this->_propDict["informationProtection"])) {
+                return $this->_propDict["informationProtection"];
+            } else {
+                $this->_propDict["informationProtection"] = new \Beta\Microsoft\Graph\Security\Model\InformationProtection($this->_propDict["informationProtection"]);
+                return $this->_propDict["informationProtection"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the alertsV2
+    * Sets the informationProtection
     *
-    * @param \Beta\Microsoft\Graph\Security\Model\Alert[] $val The alertsV2
-    *
-    * @return Security
-    */
-    public function setAlertsV2($val)
-    {
-        $this->_propDict["alertsV2"] = $val;
-        return $this;
-    }
-
-
-     /**
-     * Gets the incidents
-     *
-     * @return array|null The incidents
-     */
-    public function getIncidents()
-    {
-        if (array_key_exists("incidents", $this->_propDict)) {
-           return $this->_propDict["incidents"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the incidents
-    *
-    * @param \Beta\Microsoft\Graph\Security\Model\Incident[] $val The incidents
+    * @param \Beta\Microsoft\Graph\Security\Model\InformationProtection $val The informationProtection
     *
     * @return Security
     */
-    public function setIncidents($val)
+    public function setInformationProtection($val)
     {
-        $this->_propDict["incidents"] = $val;
+        $this->_propDict["informationProtection"] = $val;
         return $this;
     }
 

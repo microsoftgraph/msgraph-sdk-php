@@ -26,6 +26,7 @@ class SearchAnswer extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the description
+    * Search answer description shown on search results page.
     *
     * @return string|null The description
     */
@@ -40,6 +41,7 @@ class SearchAnswer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the description
+    * Search answer description shown on search results page.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class SearchAnswer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the displayName
+    * Search answer name displayed in search results.
     *
     * @return string|null The displayName
     */
@@ -67,6 +70,7 @@ class SearchAnswer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the displayName
+    * Search answer name displayed in search results.
     *
     * @param string $val The displayName
     *
@@ -80,6 +84,7 @@ class SearchAnswer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastModifiedBy
+    * Details of the user that created or last modified the search answer. Read-only.
     *
     * @return IdentitySet|null The lastModifiedBy
     */
@@ -98,6 +103,7 @@ class SearchAnswer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastModifiedBy
+    * Details of the user that created or last modified the search answer. Read-only.
     *
     * @param IdentitySet $val The lastModifiedBy
     *
@@ -111,6 +117,7 @@ class SearchAnswer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * Timestamp of when the search answer is created or edited. Read-only.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -129,6 +136,7 @@ class SearchAnswer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * Timestamp of when the search answer is created or edited. Read-only.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -142,6 +150,7 @@ class SearchAnswer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the webUrl
+    * Search answer URL link. When users click this search answer in search results, they will go to this URL.
     *
     * @return string|null The webUrl
     */
@@ -156,6 +165,7 @@ class SearchAnswer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the webUrl
+    * Search answer URL link. When users click this search answer in search results, they will go to this URL.
     *
     * @param string $val The webUrl
     *

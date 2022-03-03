@@ -36,6 +36,7 @@ class AzureAdTokenAuthentication extends CustomExtensionAuthenticationConfigurat
 
     /**
     * Gets the resourceId
+    * The appID of the Azure AD application to use to authenticate a logic app with a custom access package workflow extension.
     *
     * @return string|null The resourceId
     */
@@ -50,6 +51,7 @@ class AzureAdTokenAuthentication extends CustomExtensionAuthenticationConfigurat
 
     /**
     * Sets the resourceId
+    * The appID of the Azure AD application to use to authenticate a logic app with a custom access package workflow extension.
     *
     * @param string $val The value of the resourceId
     *

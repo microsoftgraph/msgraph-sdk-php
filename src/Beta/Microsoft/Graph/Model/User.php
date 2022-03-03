@@ -3375,6 +3375,37 @@ class User extends DirectoryObject
         return $this;
     }
 
+    /**
+    * Gets the security
+    *
+    * @return \Beta\Microsoft\Graph\Security\Model\Security|null The security
+    */
+    public function getSecurity()
+    {
+        if (array_key_exists("security", $this->_propDict)) {
+            if (is_a($this->_propDict["security"], "\Beta\Microsoft\Graph\Security\Model\Security") || is_null($this->_propDict["security"])) {
+                return $this->_propDict["security"];
+            } else {
+                $this->_propDict["security"] = new \Beta\Microsoft\Graph\Security\Model\Security($this->_propDict["security"]);
+                return $this->_propDict["security"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the security
+    *
+    * @param \Beta\Microsoft\Graph\Security\Model\Security $val The security
+    *
+    * @return User
+    */
+    public function setSecurity($val)
+    {
+        $this->_propDict["security"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the deviceEnrollmentConfigurations

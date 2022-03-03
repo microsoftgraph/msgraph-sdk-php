@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* HuntingRowResult File
+* DelegatedAdminRelationshipRequestStatus File
 * PHP version 7
 *
 * @category  Library
@@ -11,9 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Security\Model;
+namespace Beta\Microsoft\Graph\Model;
+
+use Microsoft\Graph\Core\Enum;
+
 /**
-* HuntingRowResult class
+* DelegatedAdminRelationshipRequestStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,6 +24,14 @@ namespace Beta\Microsoft\Graph\Security\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class HuntingRowResult extends \Beta\Microsoft\Graph\Model\Entity
+class DelegatedAdminRelationshipRequestStatus extends Enum
 {
+    /**
+    * The Enum DelegatedAdminRelationshipRequestStatus
+    */
+    const CREATED = "created";
+    const PENDING = "pending";
+    const COMPLETE = "complete";
+    const FAILED = "failed";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

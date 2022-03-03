@@ -25,6 +25,7 @@ class CustomExtensionHandlerInstance extends Entity
 {
     /**
     * Gets the customExtensionId
+    * Identifier of the customAccessPackageWorkflowExtension triggered at this instance.
     *
     * @return string|null The customExtensionId
     */
@@ -39,6 +40,7 @@ class CustomExtensionHandlerInstance extends Entity
 
     /**
     * Sets the customExtensionId
+    * Identifier of the customAccessPackageWorkflowExtension triggered at this instance.
     *
     * @param string $val The value of the customExtensionId
     *
@@ -51,6 +53,7 @@ class CustomExtensionHandlerInstance extends Entity
     }
     /**
     * Gets the externalCorrelationId
+    * The unique run ID for the logic app.
     *
     * @return string|null The externalCorrelationId
     */
@@ -65,6 +68,7 @@ class CustomExtensionHandlerInstance extends Entity
 
     /**
     * Sets the externalCorrelationId
+    * The unique run ID for the logic app.
     *
     * @param string $val The value of the externalCorrelationId
     *
@@ -78,6 +82,7 @@ class CustomExtensionHandlerInstance extends Entity
 
     /**
     * Gets the stage
+    * Indicates the stage of the request workflow when the access package custom extension runs. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
     *
     * @return AccessPackageCustomExtensionStage|null The stage
     */
@@ -96,6 +101,7 @@ class CustomExtensionHandlerInstance extends Entity
 
     /**
     * Sets the stage
+    * Indicates the stage of the request workflow when the access package custom extension runs. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
     *
     * @param AccessPackageCustomExtensionStage $val The value to assign to the stage
     *
@@ -109,6 +115,7 @@ class CustomExtensionHandlerInstance extends Entity
 
     /**
     * Gets the status
+    * Status of the request to run the access package custom extension workflow that is associated with the logic app. The possible values are: requestSent, requestReceived, unknownFutureValue.
     *
     * @return AccessPackageCustomExtensionHandlerStatus|null The status
     */
@@ -127,6 +134,7 @@ class CustomExtensionHandlerInstance extends Entity
 
     /**
     * Sets the status
+    * Status of the request to run the access package custom extension workflow that is associated with the logic app. The possible values are: requestSent, requestReceived, unknownFutureValue.
     *
     * @param AccessPackageCustomExtensionHandlerStatus $val The value to assign to the status
     *

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* IncidentStatus File
+* ProtectDoNotForwardAction File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Security\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* IncidentStatus class
+* ProtectDoNotForwardAction class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IncidentStatus extends Enum
+class ProtectDoNotForwardAction extends InformationProtectionAction
 {
-    /**
-    * The Enum IncidentStatus
-    */
-    const ACTIVE = "active";
-    const RESOLVED = "resolved";
-    const REDIRECTED = "redirected";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

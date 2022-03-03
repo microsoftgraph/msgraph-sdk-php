@@ -57,4 +57,60 @@ class TenantRelationship extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the delegatedAdminCustomers
+     *
+     * @return array|null The delegatedAdminCustomers
+     */
+    public function getDelegatedAdminCustomers()
+    {
+        if (array_key_exists("delegatedAdminCustomers", $this->_propDict)) {
+           return $this->_propDict["delegatedAdminCustomers"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the delegatedAdminCustomers
+    *
+    * @param DelegatedAdminCustomer[] $val The delegatedAdminCustomers
+    *
+    * @return TenantRelationship
+    */
+    public function setDelegatedAdminCustomers($val)
+    {
+        $this->_propDict["delegatedAdminCustomers"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the delegatedAdminRelationships
+     *
+     * @return array|null The delegatedAdminRelationships
+     */
+    public function getDelegatedAdminRelationships()
+    {
+        if (array_key_exists("delegatedAdminRelationships", $this->_propDict)) {
+           return $this->_propDict["delegatedAdminRelationships"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the delegatedAdminRelationships
+    *
+    * @param DelegatedAdminRelationship[] $val The delegatedAdminRelationships
+    *
+    * @return TenantRelationship
+    */
+    public function setDelegatedAdminRelationships($val)
+    {
+        $this->_propDict["delegatedAdminRelationships"] = $val;
+        return $this;
+    }
+
 }
