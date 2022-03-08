@@ -53,6 +53,7 @@ class PreAuthorizedApplication extends Entity
     }
     /**
     * Gets the delegatedPermissionIds
+    * The unique identifier for the oauth2PermissionScopes the application requires.
     *
     * @return string|null The delegatedPermissionIds
     */
@@ -67,6 +68,7 @@ class PreAuthorizedApplication extends Entity
 
     /**
     * Sets the delegatedPermissionIds
+    * The unique identifier for the oauth2PermissionScopes the application requires.
     *
     * @param string $val The value of the delegatedPermissionIds
     *
