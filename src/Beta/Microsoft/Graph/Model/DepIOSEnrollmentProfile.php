@@ -727,7 +727,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
 
     /**
     * Gets the userlessSharedAadModeEnabled
-    * Indicates that this apple device is designated to support 'shared device mode' scenarios. This is distinct from the 'shared iPad' scenario. See Shared iOS and iPadOS devices.
+    * Indicates that this apple device is designated to support 'shared device mode' scenarios. This is distinct from the 'shared iPad' scenario. See Shared iOS and iPadOS devices
     *
     * @return bool|null The userlessSharedAadModeEnabled
     */
@@ -742,7 +742,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
 
     /**
     * Sets the userlessSharedAadModeEnabled
-    * Indicates that this apple device is designated to support 'shared device mode' scenarios. This is distinct from the 'shared iPad' scenario. See Shared iOS and iPadOS devices.
+    * Indicates that this apple device is designated to support 'shared device mode' scenarios. This is distinct from the 'shared iPad' scenario. See Shared iOS and iPadOS devices
     *
     * @param bool $val The userlessSharedAadModeEnabled
     *

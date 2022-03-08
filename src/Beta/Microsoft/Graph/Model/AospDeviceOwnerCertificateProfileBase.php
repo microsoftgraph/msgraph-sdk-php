@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* DiskType File
+* AospDeviceOwnerCertificateProfileBase File
 * PHP version 7
 *
 * @category  Library
@@ -13,10 +13,8 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
-use Microsoft\Graph\Core\Enum;
-
 /**
-* DiskType class
+* AospDeviceOwnerCertificateProfileBase class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +22,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class DiskType extends Enum
+class AospDeviceOwnerCertificateProfileBase extends DeviceConfiguration
 {
-    /**
-    * The Enum DiskType
-    */
-    const UNKNOWN = "unknown";
-    const HDD = "hdd";
-    const SSD = "ssd";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

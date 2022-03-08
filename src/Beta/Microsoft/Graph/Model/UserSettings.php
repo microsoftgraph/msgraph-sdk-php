@@ -117,6 +117,7 @@ class UserSettings extends Entity
 
     /**
     * Gets the contactMergeSuggestions
+    * The user's settings for the visibility of merge suggestion for the duplicate contacts in the user's contact list.
     *
     * @return ContactMergeSuggestions|null The contactMergeSuggestions
     */
@@ -135,6 +136,7 @@ class UserSettings extends Entity
 
     /**
     * Sets the contactMergeSuggestions
+    * The user's settings for the visibility of merge suggestion for the duplicate contacts in the user's contact list.
     *
     * @param ContactMergeSuggestions $val The contactMergeSuggestions
     *

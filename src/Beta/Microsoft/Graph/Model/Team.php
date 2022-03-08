@@ -430,6 +430,37 @@ class Team extends Entity
     }
 
     /**
+    * Gets the summary
+    *
+    * @return TeamSummary|null The summary
+    */
+    public function getSummary()
+    {
+        if (array_key_exists("summary", $this->_propDict)) {
+            if (is_a($this->_propDict["summary"], "\Beta\Microsoft\Graph\Model\TeamSummary") || is_null($this->_propDict["summary"])) {
+                return $this->_propDict["summary"];
+            } else {
+                $this->_propDict["summary"] = new TeamSummary($this->_propDict["summary"]);
+                return $this->_propDict["summary"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the summary
+    *
+    * @param TeamSummary $val The summary
+    *
+    * @return Team
+    */
+    public function setSummary($val)
+    {
+        $this->_propDict["summary"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the visibility
     * The visibility of the group and team. Defaults to Public.
     *

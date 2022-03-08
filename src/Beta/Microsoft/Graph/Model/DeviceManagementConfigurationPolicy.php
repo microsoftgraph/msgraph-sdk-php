@@ -26,7 +26,7 @@ class DeviceManagementConfigurationPolicy extends Entity
 {
     /**
     * Gets the createdDateTime
-    * Policy creation date and time. This property is read-only.
+    * Policy creation date and time
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -45,7 +45,7 @@ class DeviceManagementConfigurationPolicy extends Entity
 
     /**
     * Sets the createdDateTime
-    * Policy creation date and time. This property is read-only.
+    * Policy creation date and time
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -146,7 +146,7 @@ class DeviceManagementConfigurationPolicy extends Entity
 
     /**
     * Gets the lastModifiedDateTime
-    * Policy last modification date and time. This property is read-only.
+    * Policy last modification date and time
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -165,7 +165,7 @@ class DeviceManagementConfigurationPolicy extends Entity
 
     /**
     * Sets the lastModifiedDateTime
-    * Policy last modification date and time. This property is read-only.
+    * Policy last modification date and time
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -270,7 +270,7 @@ class DeviceManagementConfigurationPolicy extends Entity
 
     /**
     * Gets the settingCount
-    * Number of settings. This property is read-only.
+    * Number of settings
     *
     * @return int|null The settingCount
     */
@@ -285,7 +285,7 @@ class DeviceManagementConfigurationPolicy extends Entity
 
     /**
     * Sets the settingCount
-    * Number of settings. This property is read-only.
+    * Number of settings
     *
     * @param int $val The settingCount
     *

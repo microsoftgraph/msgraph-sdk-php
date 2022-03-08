@@ -26,7 +26,7 @@ class Subscription extends Entity
 {
     /**
     * Gets the applicationId
-    * Identifier of the application used to create the subscription. Read-only.
+    * Optional. Identifier of the application used to create the subscription. Read-only.
     *
     * @return string|null The applicationId
     */
@@ -41,7 +41,7 @@ class Subscription extends Entity
 
     /**
     * Sets the applicationId
-    * Identifier of the application used to create the subscription. Read-only.
+    * Optional. Identifier of the application used to create the subscription. Read-only.
     *
     * @param string $val The applicationId
     *
@@ -113,7 +113,7 @@ class Subscription extends Entity
 
     /**
     * Gets the creatorId
-    * Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
+    * Optional. Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
     *
     * @return string|null The creatorId
     */
@@ -128,7 +128,7 @@ class Subscription extends Entity
 
     /**
     * Sets the creatorId
-    * Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
+    * Optional. Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
     *
     * @param string $val The creatorId
     *
@@ -142,7 +142,7 @@ class Subscription extends Entity
 
     /**
     * Gets the encryptionCertificate
-    * A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional but required when includeResourceData is true.
+    * Optional. A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional but required when includeResourceData is true.
     *
     * @return string|null The encryptionCertificate
     */
@@ -157,7 +157,7 @@ class Subscription extends Entity
 
     /**
     * Sets the encryptionCertificate
-    * A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional but required when includeResourceData is true.
+    * Optional. A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional but required when includeResourceData is true.
     *
     * @param string $val The encryptionCertificate
     *
@@ -262,7 +262,7 @@ class Subscription extends Entity
 
     /**
     * Gets the latestSupportedTlsVersion
-    * Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v1_0, v1_1, v1_2, v1_3. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
+    * Optional. Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v1_0, v1_1, v1_2, v1_3. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
     *
     * @return string|null The latestSupportedTlsVersion
     */
@@ -277,7 +277,7 @@ class Subscription extends Entity
 
     /**
     * Sets the latestSupportedTlsVersion
-    * Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v1_0, v1_1, v1_2, v1_3. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
+    * Optional. Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v1_0, v1_1, v1_2, v1_3. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
     *
     * @param string $val The latestSupportedTlsVersion
     *
@@ -320,7 +320,7 @@ class Subscription extends Entity
 
     /**
     * Gets the notificationContentType
-    * Desired content-type for Microsoft Graph change notifications for supported resource types. The default content-type is application/json.
+    * Optional. Desired content-type for Microsoft Graph change notifications for supported resource types. The default content-type is application/json.
     *
     * @return string|null The notificationContentType
     */
@@ -335,7 +335,7 @@ class Subscription extends Entity
 
     /**
     * Sets the notificationContentType
-    * Desired content-type for Microsoft Graph change notifications for supported resource types. The default content-type is application/json.
+    * Optional. Desired content-type for Microsoft Graph change notifications for supported resource types. The default content-type is application/json.
     *
     * @param string $val The notificationContentType
     *
@@ -349,7 +349,7 @@ class Subscription extends Entity
 
     /**
     * Gets the notificationQueryOptions
-    * OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.
+    * Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.
     *
     * @return string|null The notificationQueryOptions
     */
@@ -364,7 +364,7 @@ class Subscription extends Entity
 
     /**
     * Sets the notificationQueryOptions
-    * OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.
+    * Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.
     *
     * @param string $val The notificationQueryOptions
     *
@@ -407,6 +407,7 @@ class Subscription extends Entity
 
     /**
     * Gets the notificationUrlAppId
+    * Optional. The app ID that the subscription service can use to generate the validation token. This allows the client to validate the authenticity of the notification received.
     *
     * @return string|null The notificationUrlAppId
     */
@@ -421,6 +422,7 @@ class Subscription extends Entity
 
     /**
     * Sets the notificationUrlAppId
+    * Optional. The app ID that the subscription service can use to generate the validation token. This allows the client to validate the authenticity of the notification received.
     *
     * @param string $val The notificationUrlAppId
     *

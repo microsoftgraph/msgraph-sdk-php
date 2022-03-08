@@ -2294,6 +2294,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the usageRights
+    * Represents the usage rights a user has been granted.
      *
      * @return array|null The usageRights
      */
@@ -2308,6 +2309,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the usageRights
+    * Represents the usage rights a user has been granted.
     *
     * @param UsageRight[] $val The usageRights
     *

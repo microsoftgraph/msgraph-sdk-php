@@ -258,7 +258,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
 
     /**
     * Gets the diskType
-    * The user experience analytics device disk type. Possible values are: hdd, ssd, unknown.
+    * The user experience analytics device disk type. Possible values are: unknown, hdd, ssd, unknownFutureValue.
     *
     * @return DiskType|null The diskType
     */
@@ -277,7 +277,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
 
     /**
     * Sets the diskType
-    * The user experience analytics device disk type. Possible values are: hdd, ssd, unknown.
+    * The user experience analytics device disk type. Possible values are: unknown, hdd, ssd, unknownFutureValue.
     *
     * @param DiskType $val The diskType
     *

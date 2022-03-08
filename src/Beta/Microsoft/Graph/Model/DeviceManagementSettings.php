@@ -197,6 +197,62 @@ class DeviceManagementSettings extends Entity
         return $this;
     }
     /**
+    * Gets the enableDeviceGroupMembershipReport
+    * Determines whether the device group membership report feature is enabled or not.
+    *
+    * @return bool|null The enableDeviceGroupMembershipReport
+    */
+    public function getEnableDeviceGroupMembershipReport()
+    {
+        if (array_key_exists("enableDeviceGroupMembershipReport", $this->_propDict)) {
+            return $this->_propDict["enableDeviceGroupMembershipReport"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the enableDeviceGroupMembershipReport
+    * Determines whether the device group membership report feature is enabled or not.
+    *
+    * @param bool $val The value of the enableDeviceGroupMembershipReport
+    *
+    * @return DeviceManagementSettings
+    */
+    public function setEnableDeviceGroupMembershipReport($val)
+    {
+        $this->_propDict["enableDeviceGroupMembershipReport"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the enableEnhancedTroubleshootingExperience
+    * Determines whether the enhanced troubleshooting UX is enabled or not.
+    *
+    * @return bool|null The enableEnhancedTroubleshootingExperience
+    */
+    public function getEnableEnhancedTroubleshootingExperience()
+    {
+        if (array_key_exists("enableEnhancedTroubleshootingExperience", $this->_propDict)) {
+            return $this->_propDict["enableEnhancedTroubleshootingExperience"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the enableEnhancedTroubleshootingExperience
+    * Determines whether the enhanced troubleshooting UX is enabled or not.
+    *
+    * @param bool $val The value of the enableEnhancedTroubleshootingExperience
+    *
+    * @return DeviceManagementSettings
+    */
+    public function setEnableEnhancedTroubleshootingExperience($val)
+    {
+        $this->_propDict["enableEnhancedTroubleshootingExperience"] = $val;
+        return $this;
+    }
+    /**
     * Gets the enableLogCollection
     * Determines whether the log collection feature should be available for use.
     *
