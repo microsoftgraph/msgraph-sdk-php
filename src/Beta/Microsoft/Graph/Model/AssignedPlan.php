@@ -86,7 +86,7 @@ class AssignedPlan extends Entity
     }
     /**
     * Gets the service
-    * The name of the service; for example, 'Exchange'.
+    * The name of the service; for example, exchange.
     *
     * @return string|null The service
     */
@@ -101,7 +101,7 @@ class AssignedPlan extends Entity
 
     /**
     * Sets the service
-    * The name of the service; for example, 'Exchange'.
+    * The name of the service; for example, exchange.
     *
     * @param string $val The value of the service
     *
@@ -114,7 +114,7 @@ class AssignedPlan extends Entity
     }
     /**
     * Gets the servicePlanId
-    * A GUID that identifies the service plan.
+    * A GUID that identifies the service plan. For a complete list of GUIDs and their equivalent friendly service names, see Product names and service plan identifiers for licensing.
     *
     * @return string|null The servicePlanId
     */
@@ -129,7 +129,7 @@ class AssignedPlan extends Entity
 
     /**
     * Sets the servicePlanId
-    * A GUID that identifies the service plan.
+    * A GUID that identifies the service plan. For a complete list of GUIDs and their equivalent friendly service names, see Product names and service plan identifiers for licensing.
     *
     * @param string $val The value of the servicePlanId
     *

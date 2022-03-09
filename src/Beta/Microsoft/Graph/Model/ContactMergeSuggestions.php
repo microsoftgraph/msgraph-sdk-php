@@ -26,6 +26,7 @@ class ContactMergeSuggestions extends Entity
 {
     /**
     * Gets the isEnabled
+    * true if the duplicate contact merge suggestions feature is enabled for the user; false if the feature is disabled. Default value is true.
     *
     * @return bool|null The isEnabled
     */
@@ -40,6 +41,7 @@ class ContactMergeSuggestions extends Entity
 
     /**
     * Sets the isEnabled
+    * true if the duplicate contact merge suggestions feature is enabled for the user; false if the feature is disabled. Default value is true.
     *
     * @param bool $val The isEnabled
     *

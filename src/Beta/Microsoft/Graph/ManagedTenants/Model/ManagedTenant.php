@@ -57,6 +57,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the auditEvents
+    * The collection of audit events across managed tenants.
      *
      * @return array|null The auditEvents
      */
@@ -71,6 +72,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the auditEvents
+    * The collection of audit events across managed tenants.
     *
     * @param AuditEvent[] $val The auditEvents
     *

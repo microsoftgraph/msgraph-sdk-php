@@ -26,6 +26,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the activity
+    * A string which uniquely represents the operation that occurred. Required. Read-only.
     *
     * @return string|null The activity
     */
@@ -40,6 +41,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the activity
+    * A string which uniquely represents the operation that occurred. Required. Read-only.
     *
     * @param string $val The activity
     *
@@ -53,6 +55,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the activityDateTime
+    * The time when the activity ocurred. Required. Read-only.
     *
     * @return \DateTime|null The activityDateTime
     */
@@ -71,6 +74,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the activityDateTime
+    * The time when the activity ocurred. Required. Read-only.
     *
     * @param \DateTime $val The activityDateTime
     *
@@ -84,6 +88,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the activityId
+    * The identifier of the activity request that made the audit event. Required. Read-only.
     *
     * @return string|null The activityId
     */
@@ -98,6 +103,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the activityId
+    * The identifier of the activity request that made the audit event. Required. Read-only.
     *
     * @param string $val The activityId
     *
@@ -111,6 +117,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the category
+    * A category which represents a logical grouping of activities. Required. Read-only.
     *
     * @return string|null The category
     */
@@ -125,6 +132,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the category
+    * A category which represents a logical grouping of activities. Required. Read-only.
     *
     * @param string $val The category
     *
@@ -138,6 +146,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the httpVerb
+    * The HTTP verb that was used when making the API request. Required. Read-only.
     *
     * @return string|null The httpVerb
     */
@@ -152,6 +161,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the httpVerb
+    * The HTTP verb that was used when making the API request. Required. Read-only.
     *
     * @param string $val The httpVerb
     *
@@ -165,6 +175,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the initiatedByAppId
+    * The identifier of the app that was used to make the request. Required. Read-only.
     *
     * @return string|null The initiatedByAppId
     */
@@ -179,6 +190,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the initiatedByAppId
+    * The identifier of the app that was used to make the request. Required. Read-only.
     *
     * @param string $val The initiatedByAppId
     *
@@ -192,6 +204,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the initiatedByUpn
+    * The UPN of the user who initiated the activity. Required. Read-only.
     *
     * @return string|null The initiatedByUpn
     */
@@ -206,6 +219,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the initiatedByUpn
+    * The UPN of the user who initiated the activity. Required. Read-only.
     *
     * @param string $val The initiatedByUpn
     *
@@ -219,6 +233,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the initiatedByUserId
+    * The identifier of the user who initiated the activity. Required. Read-only.
     *
     * @return string|null The initiatedByUserId
     */
@@ -233,6 +248,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the initiatedByUserId
+    * The identifier of the user who initiated the activity. Required. Read-only.
     *
     * @param string $val The initiatedByUserId
     *
@@ -246,6 +262,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the ipAddress
+    * The IP address of where the activity was initiated. This may be an IPv4 or IPv6 address. Required. Read-only.
     *
     * @return string|null The ipAddress
     */
@@ -260,6 +277,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the ipAddress
+    * The IP address of where the activity was initiated. This may be an IPv4 or IPv6 address. Required. Read-only.
     *
     * @param string $val The ipAddress
     *
@@ -273,6 +291,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the requestBody
+    * The raw HTTP request body. Some sensitive information may be removed.
     *
     * @return string|null The requestBody
     */
@@ -287,6 +306,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the requestBody
+    * The raw HTTP request body. Some sensitive information may be removed.
     *
     * @param string $val The requestBody
     *
@@ -300,6 +320,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the requestUrl
+    * The raw HTTP request URL. Required. Read-only.
     *
     * @return string|null The requestUrl
     */
@@ -314,6 +335,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the requestUrl
+    * The raw HTTP request URL. Required. Read-only.
     *
     * @param string $val The requestUrl
     *
@@ -327,6 +349,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the tenantIds
+    * The collection of Azure Active Directory tenant identifiers for the managed tenants that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
     *
     * @return string|null The tenantIds
     */
@@ -341,6 +364,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantIds
+    * The collection of Azure Active Directory tenant identifiers for the managed tenants that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
     *
     * @param string $val The tenantIds
     *
@@ -354,6 +378,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the tenantNames
+    * The collection of tenant names that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
     *
     * @return string|null The tenantNames
     */
@@ -368,6 +393,7 @@ class AuditEvent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantNames
+    * The collection of tenant names that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
     *
     * @param string $val The tenantNames
     *

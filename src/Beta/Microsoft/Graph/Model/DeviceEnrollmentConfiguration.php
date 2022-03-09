@@ -87,6 +87,39 @@ class DeviceEnrollmentConfiguration extends Entity
     }
 
     /**
+    * Gets the deviceEnrollmentConfigurationType
+    * Support for Enrollment Configuration Type
+    *
+    * @return DeviceEnrollmentConfigurationType|null The deviceEnrollmentConfigurationType
+    */
+    public function getDeviceEnrollmentConfigurationType()
+    {
+        if (array_key_exists("deviceEnrollmentConfigurationType", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceEnrollmentConfigurationType"], "\Beta\Microsoft\Graph\Model\DeviceEnrollmentConfigurationType") || is_null($this->_propDict["deviceEnrollmentConfigurationType"])) {
+                return $this->_propDict["deviceEnrollmentConfigurationType"];
+            } else {
+                $this->_propDict["deviceEnrollmentConfigurationType"] = new DeviceEnrollmentConfigurationType($this->_propDict["deviceEnrollmentConfigurationType"]);
+                return $this->_propDict["deviceEnrollmentConfigurationType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deviceEnrollmentConfigurationType
+    * Support for Enrollment Configuration Type
+    *
+    * @param DeviceEnrollmentConfigurationType $val The deviceEnrollmentConfigurationType
+    *
+    * @return DeviceEnrollmentConfiguration
+    */
+    public function setDeviceEnrollmentConfigurationType($val)
+    {
+        $this->_propDict["deviceEnrollmentConfigurationType"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the displayName
     * The display name of the device enrollment configuration
     *

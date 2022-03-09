@@ -35,6 +35,5 @@ class EnrollmentRestrictionPlatformType extends Enum
     const WINDOWS_PHONE = "windowsPhone";
     const ANDROID = "android";
     const ANDROID_FOR_WORK = "androidForWork";
-    const ANDROID_AOSP = "androidAosp";
     const MAC = "mac";
 }

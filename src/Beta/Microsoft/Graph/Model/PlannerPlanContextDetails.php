@@ -87,6 +87,7 @@ class PlannerPlanContextDetails extends Entity
 
     /**
     * Gets the state
+    * Indicates the state of the associated plannerPlanContext.
     *
     * @return PlannerContextState|null The state
     */
@@ -105,6 +106,7 @@ class PlannerPlanContextDetails extends Entity
 
     /**
     * Sets the state
+    * Indicates the state of the associated plannerPlanContext.
     *
     * @param PlannerContextState $val The value to assign to the state
     *

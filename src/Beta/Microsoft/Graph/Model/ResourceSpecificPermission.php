@@ -25,6 +25,7 @@ class ResourceSpecificPermission extends Entity
 {
     /**
     * Gets the description
+    * Describes the level of access that the resource-specific permission represents.
     *
     * @return string|null The description
     */
@@ -39,6 +40,7 @@ class ResourceSpecificPermission extends Entity
 
     /**
     * Sets the description
+    * Describes the level of access that the resource-specific permission represents.
     *
     * @param string $val The value of the description
     *
@@ -51,6 +53,7 @@ class ResourceSpecificPermission extends Entity
     }
     /**
     * Gets the displayName
+    * The display name for the resource-specific permission.
     *
     * @return string|null The displayName
     */
@@ -65,6 +68,7 @@ class ResourceSpecificPermission extends Entity
 
     /**
     * Sets the displayName
+    * The display name for the resource-specific permission.
     *
     * @param string $val The value of the displayName
     *
@@ -77,6 +81,7 @@ class ResourceSpecificPermission extends Entity
     }
     /**
     * Gets the id
+    * The unique identifier for the resource-specific application permission.
     *
     * @return string|null The id
     */
@@ -91,6 +96,7 @@ class ResourceSpecificPermission extends Entity
 
     /**
     * Sets the id
+    * The unique identifier for the resource-specific application permission.
     *
     * @param string $val The value of the id
     *
@@ -103,6 +109,7 @@ class ResourceSpecificPermission extends Entity
     }
     /**
     * Gets the isEnabled
+    * Indicates whether the permission is enabled.
     *
     * @return bool|null The isEnabled
     */
@@ -117,6 +124,7 @@ class ResourceSpecificPermission extends Entity
 
     /**
     * Sets the isEnabled
+    * Indicates whether the permission is enabled.
     *
     * @param bool $val The value of the isEnabled
     *
@@ -129,6 +137,7 @@ class ResourceSpecificPermission extends Entity
     }
     /**
     * Gets the value
+    * The value of the permission.
     *
     * @return string|null The value
     */
@@ -143,6 +152,7 @@ class ResourceSpecificPermission extends Entity
 
     /**
     * Sets the value
+    * The value of the permission.
     *
     * @param string $val The value of the value
     *
