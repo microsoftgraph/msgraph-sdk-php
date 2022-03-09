@@ -1363,7 +1363,7 @@ class Group extends DirectoryObject
 
      /**
      * Gets the settings
-    * Read-only. Nullable.
+    * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
      *
      * @return array|null The settings
      */
@@ -1378,7 +1378,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the settings
-    * Read-only. Nullable.
+    * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
     *
     * @param GroupSetting[] $val The settings
     *

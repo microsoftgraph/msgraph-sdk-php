@@ -55,7 +55,7 @@ class GroupSettingTemplate extends DirectoryObject
 
     /**
     * Gets the displayName
-    * Display name of the template.
+    * Display name of the template. The template named Group.Unified can be used to configure tenant-wide Microsoft 365 group settings, while the template named Group.Unified.Guest can be used to configure group-specific settings.
     *
     * @return string|null The displayName
     */
@@ -70,7 +70,7 @@ class GroupSettingTemplate extends DirectoryObject
 
     /**
     * Sets the displayName
-    * Display name of the template.
+    * Display name of the template. The template named Group.Unified can be used to configure tenant-wide Microsoft 365 group settings, while the template named Group.Unified.Guest can be used to configure group-specific settings.
     *
     * @param string $val The displayName
     *
