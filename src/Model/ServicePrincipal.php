@@ -758,6 +758,36 @@ class ServicePrincipal extends DirectoryObject
         return $this;
     }
 
+
+     /**
+     * Gets the resourceSpecificApplicationPermissions
+    * The resource-specific application permissions exposed by this application. Currently, resource-specific permissions are only supported for Teams apps accessing to specific chats and teams using Microsoft Graph. Read-only.
+     *
+     * @return array|null The resourceSpecificApplicationPermissions
+     */
+    public function getResourceSpecificApplicationPermissions()
+    {
+        if (array_key_exists("resourceSpecificApplicationPermissions", $this->_propDict)) {
+           return $this->_propDict["resourceSpecificApplicationPermissions"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the resourceSpecificApplicationPermissions
+    * The resource-specific application permissions exposed by this application. Currently, resource-specific permissions are only supported for Teams apps accessing to specific chats and teams using Microsoft Graph. Read-only.
+    *
+    * @param ResourceSpecificPermission[] $val The resourceSpecificApplicationPermissions
+    *
+    * @return ServicePrincipal
+    */
+    public function setResourceSpecificApplicationPermissions($val)
+    {
+        $this->_propDict["resourceSpecificApplicationPermissions"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the samlSingleSignOnSettings
     * The collection for settings related to saml single sign-on.
