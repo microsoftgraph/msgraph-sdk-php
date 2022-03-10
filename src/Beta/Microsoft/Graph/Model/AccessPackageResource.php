@@ -321,7 +321,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Gets the accessPackageResourceEnvironment
-    * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.
+    * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
     *
     * @return AccessPackageResourceEnvironment|null The accessPackageResourceEnvironment
     */
@@ -340,7 +340,7 @@ class AccessPackageResource extends Entity
 
     /**
     * Sets the accessPackageResourceEnvironment
-    * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.
+    * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
     *
     * @param AccessPackageResourceEnvironment $val The accessPackageResourceEnvironment
     *

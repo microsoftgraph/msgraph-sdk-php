@@ -114,6 +114,34 @@ class RbacApplication extends Entity
 
 
      /**
+     * Gets the transitiveRoleAssignments
+     *
+     * @return array|null The transitiveRoleAssignments
+     */
+    public function getTransitiveRoleAssignments()
+    {
+        if (array_key_exists("transitiveRoleAssignments", $this->_propDict)) {
+           return $this->_propDict["transitiveRoleAssignments"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the transitiveRoleAssignments
+    *
+    * @param UnifiedRoleAssignment[] $val The transitiveRoleAssignments
+    *
+    * @return RbacApplication
+    */
+    public function setTransitiveRoleAssignments($val)
+    {
+        $this->_propDict["transitiveRoleAssignments"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the roleAssignmentApprovals
      *
      * @return array|null The roleAssignmentApprovals

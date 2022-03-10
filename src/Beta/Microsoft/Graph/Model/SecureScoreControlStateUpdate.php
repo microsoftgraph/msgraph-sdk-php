@@ -25,6 +25,7 @@ class SecureScoreControlStateUpdate extends Entity
 {
     /**
     * Gets the assignedTo
+    * Assigns the control to the user who will take the action.
     *
     * @return string|null The assignedTo
     */
@@ -39,6 +40,7 @@ class SecureScoreControlStateUpdate extends Entity
 
     /**
     * Sets the assignedTo
+    * Assigns the control to the user who will take the action.
     *
     * @param string $val The value of the assignedTo
     *
@@ -51,6 +53,7 @@ class SecureScoreControlStateUpdate extends Entity
     }
     /**
     * Gets the comment
+    * Provides optional comment about the control.
     *
     * @return string|null The comment
     */
@@ -65,6 +68,7 @@ class SecureScoreControlStateUpdate extends Entity
 
     /**
     * Sets the comment
+    * Provides optional comment about the control.
     *
     * @param string $val The value of the comment
     *
@@ -77,6 +81,7 @@ class SecureScoreControlStateUpdate extends Entity
     }
     /**
     * Gets the state
+    * State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty).
     *
     * @return string|null The state
     */
@@ -91,6 +96,7 @@ class SecureScoreControlStateUpdate extends Entity
 
     /**
     * Sets the state
+    * State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty).
     *
     * @param string $val The value of the state
     *
@@ -103,6 +109,7 @@ class SecureScoreControlStateUpdate extends Entity
     }
     /**
     * Gets the updatedBy
+    * ID of the user who updated tenant state.
     *
     * @return string|null The updatedBy
     */
@@ -117,6 +124,7 @@ class SecureScoreControlStateUpdate extends Entity
 
     /**
     * Sets the updatedBy
+    * ID of the user who updated tenant state.
     *
     * @param string $val The value of the updatedBy
     *
@@ -130,6 +138,7 @@ class SecureScoreControlStateUpdate extends Entity
 
     /**
     * Gets the updatedDateTime
+    * Time at which the control state was updated.
     *
     * @return \DateTime|null The updatedDateTime
     */
@@ -148,6 +157,7 @@ class SecureScoreControlStateUpdate extends Entity
 
     /**
     * Sets the updatedDateTime
+    * Time at which the control state was updated.
     *
     * @param \DateTime $val The value to assign to the updatedDateTime
     *

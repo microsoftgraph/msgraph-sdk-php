@@ -27,6 +27,7 @@ class SearchEntity extends Entity
 
      /**
      * Gets the acronyms
+    * Administrative answer in Microsoft Search results to define common acronyms in a organization.
      *
      * @return array|null The acronyms
      */
@@ -41,6 +42,7 @@ class SearchEntity extends Entity
 
     /**
     * Sets the acronyms
+    * Administrative answer in Microsoft Search results to define common acronyms in a organization.
     *
     * @param \Beta\Microsoft\Graph\Search\Model\Acronym[] $val The acronyms
     *
@@ -55,6 +57,7 @@ class SearchEntity extends Entity
 
      /**
      * Gets the bookmarks
+    * Administrative answer in Microsoft Search results for common search queries in an organization.
      *
      * @return array|null The bookmarks
      */
@@ -69,6 +72,7 @@ class SearchEntity extends Entity
 
     /**
     * Sets the bookmarks
+    * Administrative answer in Microsoft Search results for common search queries in an organization.
     *
     * @param \Beta\Microsoft\Graph\Search\Model\Bookmark[] $val The bookmarks
     *
@@ -83,6 +87,7 @@ class SearchEntity extends Entity
 
      /**
      * Gets the qnas
+    * Administrative answer in Microsoft Search results which provide answers for specific search keywords in an organization.
      *
      * @return array|null The qnas
      */
@@ -97,6 +102,7 @@ class SearchEntity extends Entity
 
     /**
     * Sets the qnas
+    * Administrative answer in Microsoft Search results which provide answers for specific search keywords in an organization.
     *
     * @param \Beta\Microsoft\Graph\Search\Model\Qna[] $val The qnas
     *

@@ -59,7 +59,7 @@ class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnrollmentC
 
     /**
     * Gets the platformType
-    * Type of platform for which this restriction applies. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, androidAosp, mac.
+    * Type of platform for which this restriction applies. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, mac.
     *
     * @return EnrollmentRestrictionPlatformType|null The platformType
     */
@@ -78,7 +78,7 @@ class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnrollmentC
 
     /**
     * Sets the platformType
-    * Type of platform for which this restriction applies. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, androidAosp, mac.
+    * Type of platform for which this restriction applies. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, mac.
     *
     * @param EnrollmentRestrictionPlatformType $val The platformType
     *

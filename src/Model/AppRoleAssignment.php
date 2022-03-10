@@ -55,7 +55,7 @@ class AppRoleAssignment extends DirectoryObject
 
     /**
     * Gets the createdDateTime
-    * The time when the app role assignment was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+    * The time when the app role assignment was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -74,7 +74,7 @@ class AppRoleAssignment extends DirectoryObject
 
     /**
     * Sets the createdDateTime
-    * The time when the app role assignment was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+    * The time when the app role assignment was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -117,7 +117,7 @@ class AppRoleAssignment extends DirectoryObject
 
     /**
     * Gets the principalId
-    * The unique identifier (id) for the user, group or service principal being granted the app role. Required on create.
+    * The unique identifier (id) for the user, group, or service principal being granted the app role. Required on create.
     *
     * @return string|null The principalId
     */
@@ -132,7 +132,7 @@ class AppRoleAssignment extends DirectoryObject
 
     /**
     * Sets the principalId
-    * The unique identifier (id) for the user, group or service principal being granted the app role. Required on create.
+    * The unique identifier (id) for the user, group, or service principal being granted the app role. Required on create.
     *
     * @param string $val The principalId
     *
@@ -146,7 +146,7 @@ class AppRoleAssignment extends DirectoryObject
 
     /**
     * Gets the principalType
-    * The type of the assigned principal. This can either be User, Group or ServicePrincipal. Read-only.
+    * The type of the assigned principal. This can either be User, Group, or ServicePrincipal. Read-only.
     *
     * @return string|null The principalType
     */
@@ -161,7 +161,7 @@ class AppRoleAssignment extends DirectoryObject
 
     /**
     * Sets the principalType
-    * The type of the assigned principal. This can either be User, Group or ServicePrincipal. Read-only.
+    * The type of the assigned principal. This can either be User, Group, or ServicePrincipal. Read-only.
     *
     * @param string $val The principalType
     *

@@ -36,6 +36,7 @@ class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpointConfig
 
     /**
     * Gets the logicAppWorkflowName
+    * The name of the logic app.
     *
     * @return string|null The logicAppWorkflowName
     */
@@ -50,6 +51,7 @@ class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpointConfig
 
     /**
     * Sets the logicAppWorkflowName
+    * The name of the logic app.
     *
     * @param string $val The value of the logicAppWorkflowName
     *
@@ -62,6 +64,7 @@ class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpointConfig
     }
     /**
     * Gets the resourceGroupName
+    * The Azure resource group name for the logic app.
     *
     * @return string|null The resourceGroupName
     */
@@ -76,6 +79,7 @@ class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpointConfig
 
     /**
     * Sets the resourceGroupName
+    * The Azure resource group name for the logic app.
     *
     * @param string $val The value of the resourceGroupName
     *
@@ -88,6 +92,7 @@ class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpointConfig
     }
     /**
     * Gets the subscriptionId
+    * Identifier of the Azure subscription for the logic app.
     *
     * @return string|null The subscriptionId
     */
@@ -102,6 +107,7 @@ class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpointConfig
 
     /**
     * Sets the subscriptionId
+    * Identifier of the Azure subscription for the logic app.
     *
     * @param string $val The value of the subscriptionId
     *

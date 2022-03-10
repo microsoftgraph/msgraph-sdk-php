@@ -132,4 +132,31 @@ class ServicePrincipalCreationConditionSet extends Entity
         return $this;
     }
 
+    /**
+    * Gets the certifiedApplicationsOnly
+    *
+    * @return bool|null The certifiedApplicationsOnly
+    */
+    public function getCertifiedApplicationsOnly()
+    {
+        if (array_key_exists("certifiedApplicationsOnly", $this->_propDict)) {
+            return $this->_propDict["certifiedApplicationsOnly"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the certifiedApplicationsOnly
+    *
+    * @param bool $val The certifiedApplicationsOnly
+    *
+    * @return ServicePrincipalCreationConditionSet
+    */
+    public function setCertifiedApplicationsOnly($val)
+    {
+        $this->_propDict["certifiedApplicationsOnly"] = boolval($val);
+        return $this;
+    }
+
 }

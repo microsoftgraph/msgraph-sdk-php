@@ -26,6 +26,7 @@ class DirectoryObject extends Entity
 {
     /**
     * Gets the deletedDateTime
+    * Date and time when this object was deleted. Always null when the object hasn't been deleted.
     *
     * @return \DateTime|null The deletedDateTime
     */
@@ -44,6 +45,7 @@ class DirectoryObject extends Entity
 
     /**
     * Sets the deletedDateTime
+    * Date and time when this object was deleted. Always null when the object hasn't been deleted.
     *
     * @param \DateTime $val The deletedDateTime
     *

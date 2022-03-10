@@ -113,31 +113,31 @@ class MicrosoftTunnelConfiguration extends Entity
     }
 
     /**
-    * Gets the disableUDPConnections
+    * Gets the disableUdpConnections
     * When DisableUdpConnections is set, the clients and VPN server will not use DTLS connections to tansfer data.
     *
-    * @return bool|null The disableUDPConnections
+    * @return bool|null The disableUdpConnections
     */
-    public function getDisableUDPConnections()
+    public function getDisableUdpConnections()
     {
-        if (array_key_exists("disableUDPConnections", $this->_propDict)) {
-            return $this->_propDict["disableUDPConnections"];
+        if (array_key_exists("disableUdpConnections", $this->_propDict)) {
+            return $this->_propDict["disableUdpConnections"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the disableUDPConnections
+    * Sets the disableUdpConnections
     * When DisableUdpConnections is set, the clients and VPN server will not use DTLS connections to tansfer data.
     *
-    * @param bool $val The disableUDPConnections
+    * @param bool $val The disableUdpConnections
     *
     * @return MicrosoftTunnelConfiguration
     */
-    public function setDisableUDPConnections($val)
+    public function setDisableUdpConnections($val)
     {
-        $this->_propDict["disableUDPConnections"] = boolval($val);
+        $this->_propDict["disableUdpConnections"] = boolval($val);
         return $this;
     }
 

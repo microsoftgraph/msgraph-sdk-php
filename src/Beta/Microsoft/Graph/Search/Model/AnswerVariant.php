@@ -25,6 +25,7 @@ class AnswerVariant extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the description
+    * Answer variation description shown on search results page.
     *
     * @return string|null The description
     */
@@ -39,6 +40,7 @@ class AnswerVariant extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the description
+    * Answer variation description shown on search results page.
     *
     * @param string $val The value of the description
     *
@@ -51,6 +53,7 @@ class AnswerVariant extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the displayName
+    * Answer variation name displayed in search results.
     *
     * @return string|null The displayName
     */
@@ -65,6 +68,7 @@ class AnswerVariant extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the displayName
+    * Answer variation name displayed in search results.
     *
     * @param string $val The value of the displayName
     *
@@ -134,6 +138,7 @@ class AnswerVariant extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the webUrl
+    * Answer variation URL link. When users click this answer variation in search results, they will go to this URL.
     *
     * @return string|null The webUrl
     */
@@ -148,6 +153,7 @@ class AnswerVariant extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the webUrl
+    * Answer variation URL link. When users click this answer variation in search results, they will go to this URL.
     *
     * @param string $val The value of the webUrl
     *

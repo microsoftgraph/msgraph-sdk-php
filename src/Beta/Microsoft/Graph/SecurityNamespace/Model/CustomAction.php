@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SinglePropertySchema File
+* CustomAction File
 * PHP version 7
 *
 * @category  Library
@@ -13,7 +13,7 @@
 */
 namespace Beta\Microsoft\Graph\Security\Model;
 /**
-* SinglePropertySchema class
+* CustomAction class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,7 +21,7 @@ namespace Beta\Microsoft\Graph\Security\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SinglePropertySchema extends \Beta\Microsoft\Graph\Model\Entity
+class CustomAction extends InformationProtectionAction
 {
     /**
     * Gets the name
@@ -42,37 +42,42 @@ class SinglePropertySchema extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param string $val The value of the name
     *
-    * @return SinglePropertySchema
+    * @return CustomAction
     */
     public function setName($val)
     {
         $this->_propDict["name"] = $val;
         return $this;
     }
+
     /**
-    * Gets the type
+    * Gets the customActionProperties
     *
-    * @return string|null The type
+    * @return KeyValuePair|null The customActionProperties
     */
-    public function getType()
+    public function getCustomActionProperties()
     {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
-        } else {
-            return null;
+        if (array_key_exists("properties", $this->_propDict)) {
+            if (is_a($this->_propDict["properties"], "\Beta\Microsoft\Graph\Security\Model\KeyValuePair") || is_null($this->_propDict["properties"])) {
+                return $this->_propDict["properties"];
+            } else {
+                $this->_propDict["properties"] = new KeyValuePair($this->_propDict["properties"]);
+                return $this->_propDict["properties"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the type
+    * Sets the customActionProperties
     *
-    * @param string $val The value of the type
+    * @param KeyValuePair $val The value to assign to the properties
     *
-    * @return SinglePropertySchema
+    * @return CustomAction The CustomAction
     */
-    public function setType($val)
+    public function setCustomActionProperties($val)
     {
-        $this->_propDict["type"] = $val;
-        return $this;
+        $this->_propDict["properties"] = $val;
+         return $this;
     }
 }

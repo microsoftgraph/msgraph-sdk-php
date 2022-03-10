@@ -296,6 +296,7 @@ class AccessPackageCatalog extends Entity
 
      /**
      * Gets the accessPackageResourceRoles
+    * The roles in each resource in a catalog. Read-only.
      *
      * @return array|null The accessPackageResourceRoles
      */
@@ -310,6 +311,7 @@ class AccessPackageCatalog extends Entity
 
     /**
     * Sets the accessPackageResourceRoles
+    * The roles in each resource in a catalog. Read-only.
     *
     * @param AccessPackageResourceRole[] $val The accessPackageResourceRoles
     *
@@ -354,6 +356,7 @@ class AccessPackageCatalog extends Entity
 
      /**
      * Gets the accessPackageResourceScopes
+    * Read-only.
      *
      * @return array|null The accessPackageResourceScopes
      */
@@ -368,6 +371,7 @@ class AccessPackageCatalog extends Entity
 
     /**
     * Sets the accessPackageResourceScopes
+    * Read-only.
     *
     * @param AccessPackageResourceScope[] $val The accessPackageResourceScopes
     *
