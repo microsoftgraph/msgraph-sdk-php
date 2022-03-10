@@ -28,7 +28,7 @@ The Microsoft Graph SDK for PHP does not include any default authentication impl
 To authenticate as an application you can use the [Guzzle HTTP client](http://docs.guzzlephp.org/en/stable/), which comes preinstalled with this library, for example like this:
 ```php
 $guzzle = new \GuzzleHttp\Client();
-$url = 'https://login.microsoftonline.com/' . $tenantId . '/oauth2/token?api-version=1.0';
+$url = 'https://login.microsoftonline.com/' . $tenantId . '/oauth2/v2.0/token';
 $token = json_decode($guzzle->post($url, [
     'form_params' => [
         'client_id' => $clientId,
