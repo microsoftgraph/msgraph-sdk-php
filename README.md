@@ -33,7 +33,7 @@ $token = json_decode($guzzle->post($url, [
     'form_params' => [
         'client_id' => $clientId,
         'client_secret' => $clientSecret,
-        'resource' => 'https://graph.microsoft.com/',
+        'scope' => 'https://graph.microsoft.com/.default',
         'grant_type' => 'client_credentials',
     ],
 ])->getBody()->getContents());
