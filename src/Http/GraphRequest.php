@@ -484,13 +484,12 @@ class GraphRequest
     */
     private function _getDefaultHeaders()
     {
-        $headers = [
+        return [
             'Host' => $this->baseUrl,
             'Content-Type' => 'application/json',
             'SdkVersion' => 'Graph-php-' . GraphConstants::SDK_VERSION,
             'Authorization' => 'Bearer ' . $this->accessToken
         ];
-        return $headers;
     }
 
     /**
@@ -546,8 +545,10 @@ class GraphRequest
             $clientSettings['verify'] = $this->proxyVerifySSL;
             $clientSettings['proxy'] = $this->proxyPort;
         }
-        $client = new Client($clientSettings);
-
-        return $client;
+        if (curl_version()["features"] & CURL_VERSION_HTTP2 !== 0) {
+            // Enable HTTP/2 if curl lib contains it
+            $clientSettings['version'] = '2';
+        }
+        return new Client($clientSettings);
     }
 }
