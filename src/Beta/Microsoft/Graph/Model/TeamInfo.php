@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CrossTenantAccessPolicyConfigurationPartner File
+* TeamInfo File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* CrossTenantAccessPolicyConfigurationPartner class
+* TeamInfo class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,40 +22,37 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CrossTenantAccessPolicyConfigurationPartner extends CrossTenantAccessPolicyConfigurationBase
+class TeamInfo extends Entity
 {
     /**
-    * Gets the isServiceProvider
-    * Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
+    * Gets the displayName
     *
-    * @return bool|null The isServiceProvider
+    * @return string|null The displayName
     */
-    public function getIsServiceProvider()
+    public function getDisplayName()
     {
-        if (array_key_exists("isServiceProvider", $this->_propDict)) {
-            return $this->_propDict["isServiceProvider"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the isServiceProvider
-    * Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
+    * Sets the displayName
     *
-    * @param bool $val The isServiceProvider
+    * @param string $val The displayName
     *
-    * @return CrossTenantAccessPolicyConfigurationPartner
+    * @return TeamInfo
     */
-    public function setIsServiceProvider($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["isServiceProvider"] = boolval($val);
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
 
     /**
     * Gets the tenantId
-    * The tenant identifier for the partner Azure AD organization. Read-only. Key.
     *
     * @return string|null The tenantId
     */
@@ -70,15 +67,45 @@ class CrossTenantAccessPolicyConfigurationPartner extends CrossTenantAccessPolic
 
     /**
     * Sets the tenantId
-    * The tenant identifier for the partner Azure AD organization. Read-only. Key.
     *
     * @param string $val The tenantId
     *
-    * @return CrossTenantAccessPolicyConfigurationPartner
+    * @return TeamInfo
     */
     public function setTenantId($val)
     {
         $this->_propDict["tenantId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the team
+    *
+    * @return Team|null The team
+    */
+    public function getTeam()
+    {
+        if (array_key_exists("team", $this->_propDict)) {
+            if (is_a($this->_propDict["team"], "\Beta\Microsoft\Graph\Model\Team") || is_null($this->_propDict["team"])) {
+                return $this->_propDict["team"];
+            } else {
+                $this->_propDict["team"] = new Team($this->_propDict["team"]);
+                return $this->_propDict["team"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the team
+    *
+    * @param Team $val The team
+    *
+    * @return TeamInfo
+    */
+    public function setTeam($val)
+    {
+        $this->_propDict["team"] = $val;
         return $this;
     }
 

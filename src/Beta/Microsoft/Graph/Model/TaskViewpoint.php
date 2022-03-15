@@ -25,6 +25,7 @@ class TaskViewpoint extends Entity
 {
     /**
     * Gets the categories
+    * The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined.
     *
     * @return string|null The categories
     */
@@ -39,6 +40,7 @@ class TaskViewpoint extends Entity
 
     /**
     * Sets the categories
+    * The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined.
     *
     * @param string $val The value of the categories
     *
@@ -52,6 +54,7 @@ class TaskViewpoint extends Entity
 
     /**
     * Gets the reminderDateTime
+    * The date and time for a reminder alert of the task to occur.
     *
     * @return DateTimeTimeZone|null The reminderDateTime
     */
@@ -70,6 +73,7 @@ class TaskViewpoint extends Entity
 
     /**
     * Sets the reminderDateTime
+    * The date and time for a reminder alert of the task to occur.
     *
     * @param DateTimeTimeZone $val The value to assign to the reminderDateTime
     *

@@ -26,6 +26,34 @@ class UserTeamwork extends Entity
 {
 
      /**
+     * Gets the associatedTeams
+     *
+     * @return array|null The associatedTeams
+     */
+    public function getAssociatedTeams()
+    {
+        if (array_key_exists("associatedTeams", $this->_propDict)) {
+           return $this->_propDict["associatedTeams"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the associatedTeams
+    *
+    * @param AssociatedTeamInfo[] $val The associatedTeams
+    *
+    * @return UserTeamwork
+    */
+    public function setAssociatedTeams($val)
+    {
+        $this->_propDict["associatedTeams"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the installedApps
     * The apps installed in the personal scope of this user.
      *
