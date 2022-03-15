@@ -43,7 +43,7 @@ class OutlookItem extends Entity
     * Sets the categories
     * The categories associated with the item
     *
-    * @param string $val The categories
+    * @param string[] $val The categories
     *
     * @return OutlookItem
     */
