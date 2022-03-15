@@ -240,6 +240,33 @@ class Channel extends Entity
     }
 
     /**
+    * Gets the tenantId
+    *
+    * @return string|null The tenantId
+    */
+    public function getTenantId()
+    {
+        if (array_key_exists("tenantId", $this->_propDict)) {
+            return $this->_propDict["tenantId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tenantId
+    *
+    * @param string $val The tenantId
+    *
+    * @return Channel
+    */
+    public function setTenantId($val)
+    {
+        $this->_propDict["tenantId"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the webUrl
     * A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
     *
@@ -358,6 +385,34 @@ class Channel extends Entity
     public function setMessages($val)
     {
         $this->_propDict["messages"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the sharedWithTeams
+     *
+     * @return array|null The sharedWithTeams
+     */
+    public function getSharedWithTeams()
+    {
+        if (array_key_exists("sharedWithTeams", $this->_propDict)) {
+           return $this->_propDict["sharedWithTeams"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sharedWithTeams
+    *
+    * @param SharedWithChannelTeamInfo[] $val The sharedWithTeams
+    *
+    * @return Channel
+    */
+    public function setSharedWithTeams($val)
+    {
+        $this->_propDict["sharedWithTeams"] = $val;
         return $this;
     }
 

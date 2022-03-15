@@ -27,6 +27,7 @@ class EntitlementManagement extends Entity
 
      /**
      * Gets the accessPackageAssignmentApprovals
+    * Approval stages for assignment requests.
      *
      * @return array|null The accessPackageAssignmentApprovals
      */
@@ -41,6 +42,7 @@ class EntitlementManagement extends Entity
 
     /**
     * Sets the accessPackageAssignmentApprovals
+    * Approval stages for assignment requests.
     *
     * @param Approval[] $val The accessPackageAssignmentApprovals
     *

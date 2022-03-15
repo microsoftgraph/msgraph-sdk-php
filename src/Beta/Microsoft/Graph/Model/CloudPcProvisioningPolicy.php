@@ -268,6 +268,37 @@ class CloudPcProvisioningPolicy extends Entity
         return $this;
     }
 
+    /**
+    * Gets the windowsSettings
+    *
+    * @return CloudPcWindowsSettings|null The windowsSettings
+    */
+    public function getWindowsSettings()
+    {
+        if (array_key_exists("windowsSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["windowsSettings"], "\Beta\Microsoft\Graph\Model\CloudPcWindowsSettings") || is_null($this->_propDict["windowsSettings"])) {
+                return $this->_propDict["windowsSettings"];
+            } else {
+                $this->_propDict["windowsSettings"] = new CloudPcWindowsSettings($this->_propDict["windowsSettings"]);
+                return $this->_propDict["windowsSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the windowsSettings
+    *
+    * @param CloudPcWindowsSettings $val The windowsSettings
+    *
+    * @return CloudPcProvisioningPolicy
+    */
+    public function setWindowsSettings($val)
+    {
+        $this->_propDict["windowsSettings"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the assignments

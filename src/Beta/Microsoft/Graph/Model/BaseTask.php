@@ -352,6 +352,7 @@ class BaseTask extends Entity
 
     /**
     * Gets the textBody
+    * The task body in text format that typically contains information about the task.
     *
     * @return string|null The textBody
     */
@@ -366,6 +367,7 @@ class BaseTask extends Entity
 
     /**
     * Sets the textBody
+    * The task body in text format that typically contains information about the task.
     *
     * @param string $val The textBody
     *
@@ -379,6 +381,7 @@ class BaseTask extends Entity
 
     /**
     * Gets the viewpoint
+    * Properties that are personal to a user such as reminderDateTime and categories.
     *
     * @return TaskViewpoint|null The viewpoint
     */
@@ -397,6 +400,7 @@ class BaseTask extends Entity
 
     /**
     * Sets the viewpoint
+    * Properties that are personal to a user such as reminderDateTime and categories.
     *
     * @param TaskViewpoint $val The viewpoint
     *

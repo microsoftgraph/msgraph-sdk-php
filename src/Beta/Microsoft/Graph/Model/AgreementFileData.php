@@ -26,6 +26,7 @@ class AgreementFileData extends Entity
 
     /**
     * Gets the data
+    * Data that represents the terms of use PDF document. Read-only.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The data
     */
@@ -44,6 +45,7 @@ class AgreementFileData extends Entity
 
     /**
     * Sets the data
+    * Data that represents the terms of use PDF document. Read-only.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the data
     *
