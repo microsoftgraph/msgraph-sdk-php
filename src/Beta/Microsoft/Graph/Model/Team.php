@@ -431,6 +431,7 @@ class Team extends Entity
 
     /**
     * Gets the summary
+    * Contains summary information about the team, including number of owners, members, and guests.
     *
     * @return TeamSummary|null The summary
     */
@@ -449,6 +450,7 @@ class Team extends Entity
 
     /**
     * Sets the summary
+    * Contains summary information about the team, including number of owners, members, and guests.
     *
     * @param TeamSummary $val The summary
     *
@@ -457,6 +459,33 @@ class Team extends Entity
     public function setSummary($val)
     {
         $this->_propDict["summary"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the tenantId
+    *
+    * @return string|null The tenantId
+    */
+    public function getTenantId()
+    {
+        if (array_key_exists("tenantId", $this->_propDict)) {
+            return $this->_propDict["tenantId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tenantId
+    *
+    * @param string $val The tenantId
+    *
+    * @return Team
+    */
+    public function setTenantId($val)
+    {
+        $this->_propDict["tenantId"] = $val;
         return $this;
     }
 
@@ -524,6 +553,34 @@ class Team extends Entity
 
 
      /**
+     * Gets the allChannels
+     *
+     * @return array|null The allChannels
+     */
+    public function getAllChannels()
+    {
+        if (array_key_exists("allChannels", $this->_propDict)) {
+           return $this->_propDict["allChannels"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the allChannels
+    *
+    * @param Channel[] $val The allChannels
+    *
+    * @return Team
+    */
+    public function setAllChannels($val)
+    {
+        $this->_propDict["allChannels"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the channels
     * The collection of channels and messages associated with the team.
      *
@@ -580,6 +637,34 @@ class Team extends Entity
     public function setGroup($val)
     {
         $this->_propDict["group"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the incomingChannels
+     *
+     * @return array|null The incomingChannels
+     */
+    public function getIncomingChannels()
+    {
+        if (array_key_exists("incomingChannels", $this->_propDict)) {
+           return $this->_propDict["incomingChannels"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the incomingChannels
+    *
+    * @param Channel[] $val The incomingChannels
+    *
+    * @return Team
+    */
+    public function setIncomingChannels($val)
+    {
+        $this->_propDict["incomingChannels"] = $val;
         return $this;
     }
 

@@ -2293,6 +2293,34 @@ class User extends DirectoryObject
 
 
      /**
+     * Gets the cloudPCs
+     *
+     * @return array|null The cloudPCs
+     */
+    public function getCloudPCs()
+    {
+        if (array_key_exists("cloudPCs", $this->_propDict)) {
+           return $this->_propDict["cloudPCs"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the cloudPCs
+    *
+    * @param CloudPC[] $val The cloudPCs
+    *
+    * @return User
+    */
+    public function setCloudPCs($val)
+    {
+        $this->_propDict["cloudPCs"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the usageRights
     * Represents the usage rights a user has been granted.
      *

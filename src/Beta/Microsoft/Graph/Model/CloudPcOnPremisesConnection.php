@@ -236,6 +236,37 @@ class CloudPcOnPremisesConnection extends Entity
     }
 
     /**
+    * Gets the managedBy
+    *
+    * @return CloudPcManagementService|null The managedBy
+    */
+    public function getManagedBy()
+    {
+        if (array_key_exists("managedBy", $this->_propDict)) {
+            if (is_a($this->_propDict["managedBy"], "\Beta\Microsoft\Graph\Model\CloudPcManagementService") || is_null($this->_propDict["managedBy"])) {
+                return $this->_propDict["managedBy"];
+            } else {
+                $this->_propDict["managedBy"] = new CloudPcManagementService($this->_propDict["managedBy"]);
+                return $this->_propDict["managedBy"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the managedBy
+    *
+    * @param CloudPcManagementService $val The managedBy
+    *
+    * @return CloudPcOnPremisesConnection
+    */
+    public function setManagedBy($val)
+    {
+        $this->_propDict["managedBy"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the organizationalUnit
     * The organizational unit (OU) in which the computer account is created. If left null, the OU that’s configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
     *
