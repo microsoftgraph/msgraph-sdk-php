@@ -266,7 +266,7 @@ class AgreementAcceptance extends Entity
 
     /**
     * Gets the state
-    * The state of the agreement acceptance. Possible values are: accepted, declined.
+    * The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
     *
     * @return AgreementAcceptanceState|null The state
     */
@@ -285,7 +285,7 @@ class AgreementAcceptance extends Entity
 
     /**
     * Sets the state
-    * The state of the agreement acceptance. Possible values are: accepted, declined.
+    * The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
     *
     * @param AgreementAcceptanceState $val The state
     *
