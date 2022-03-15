@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* RequestorManager File
+* TargetManager File
 * PHP version 7
 *
 * @category  Library
@@ -13,7 +13,7 @@
 */
 namespace Microsoft\Graph\Model;
 /**
-* RequestorManager class
+* TargetManager class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,7 +21,7 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class RequestorManager extends SubjectSet
+class TargetManager extends SubjectSet
 {
     /**
     * Set the @odata.type since this type is immediately descended from an abstract
@@ -31,12 +31,11 @@ class RequestorManager extends SubjectSet
     public function __construct($propDict = array())
     {
         parent::__construct($propDict);
-        $this->setODataType("#microsoft.graph.requestorManager");
+        $this->setODataType("#microsoft.graph.targetManager");
     }
 
     /**
     * Gets the managerLevel
-    * The hierarchical level of the manager with respect to the requestor. For example, the direct manager of a requestor would have a managerLevel of 1, while the manager of the requestor's manager would have a managerLevel of 2. Default value for managerLevel is 1. Possible values for this property range from 1 to 2.
     *
     * @return int|null The managerLevel
     */
@@ -51,11 +50,10 @@ class RequestorManager extends SubjectSet
 
     /**
     * Sets the managerLevel
-    * The hierarchical level of the manager with respect to the requestor. For example, the direct manager of a requestor would have a managerLevel of 1, while the manager of the requestor's manager would have a managerLevel of 2. Default value for managerLevel is 1. Possible values for this property range from 1 to 2.
     *
     * @param int $val The value of the managerLevel
     *
-    * @return RequestorManager
+    * @return TargetManager
     */
     public function setManagerLevel($val)
     {

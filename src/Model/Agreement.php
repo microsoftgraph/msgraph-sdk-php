@@ -26,7 +26,7 @@ class Agreement extends Entity
 {
     /**
     * Gets the displayName
-    * Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement.
+    * Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement. Supports $filter (eq).
     *
     * @return string|null The displayName
     */
@@ -41,7 +41,7 @@ class Agreement extends Entity
 
     /**
     * Sets the displayName
-    * Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement.
+    * Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement. Supports $filter (eq).
     *
     * @param string $val The displayName
     *
@@ -55,7 +55,7 @@ class Agreement extends Entity
 
     /**
     * Gets the isPerDeviceAcceptanceRequired
-    * Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so.
+    * Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
     *
     * @return bool|null The isPerDeviceAcceptanceRequired
     */
@@ -70,7 +70,7 @@ class Agreement extends Entity
 
     /**
     * Sets the isPerDeviceAcceptanceRequired
-    * Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so.
+    * Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
     *
     * @param bool $val The isPerDeviceAcceptanceRequired
     *
@@ -84,7 +84,7 @@ class Agreement extends Entity
 
     /**
     * Gets the isViewingBeforeAcceptanceRequired
-    * Indicates whether the user has to expand the agreement before accepting.
+    * Indicates whether the user has to expand the agreement before accepting. Supports $filter (eq).
     *
     * @return bool|null The isViewingBeforeAcceptanceRequired
     */
@@ -99,7 +99,7 @@ class Agreement extends Entity
 
     /**
     * Sets the isViewingBeforeAcceptanceRequired
-    * Indicates whether the user has to expand the agreement before accepting.
+    * Indicates whether the user has to expand the agreement before accepting. Supports $filter (eq).
     *
     * @param bool $val The isViewingBeforeAcceptanceRequired
     *
@@ -113,7 +113,7 @@ class Agreement extends Entity
 
     /**
     * Gets the termsExpiration
-    * Expiration schedule and frequency of agreement for all users.
+    * Expiration schedule and frequency of agreement for all users. Supports $filter (eq).
     *
     * @return TermsExpiration|null The termsExpiration
     */
@@ -132,7 +132,7 @@ class Agreement extends Entity
 
     /**
     * Sets the termsExpiration
-    * Expiration schedule and frequency of agreement for all users.
+    * Expiration schedule and frequency of agreement for all users. Supports $filter (eq).
     *
     * @param TermsExpiration $val The termsExpiration
     *
@@ -146,7 +146,7 @@ class Agreement extends Entity
 
     /**
     * Gets the userReacceptRequiredFrequency
-    * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
+    * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
     *
     * @return \DateInterval|null The userReacceptRequiredFrequency
     */
@@ -165,7 +165,7 @@ class Agreement extends Entity
 
     /**
     * Sets the userReacceptRequiredFrequency
-    * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
+    * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
     *
     * @param \DateInterval $val The userReacceptRequiredFrequency
     *
@@ -243,7 +243,7 @@ class Agreement extends Entity
 
      /**
      * Gets the files
-    * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead.
+    * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      *
      * @return array|null The files
      */
@@ -258,7 +258,7 @@ class Agreement extends Entity
 
     /**
     * Sets the files
-    * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead.
+    * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
     *
     * @param AgreementFileLocalization[] $val The files
     *
