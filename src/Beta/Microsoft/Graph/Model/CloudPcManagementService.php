@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* InternalSponsors File
+* CloudPcManagementService File
 * PHP version 7
 *
 * @category  Library
@@ -11,9 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\Model;
+
+use Microsoft\Graph\Core\Enum;
+
 /**
-* InternalSponsors class
+* CloudPcManagementService class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,17 +24,12 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class InternalSponsors extends SubjectSet
+class CloudPcManagementService extends Enum
 {
     /**
-    * Set the @odata.type since this type is immediately descended from an abstract
-    * type that is referenced as the type in an entity.
-    * @param array $propDict The property dictionary
+    * The Enum CloudPcManagementService
     */
-    public function __construct($propDict = array())
-    {
-        parent::__construct($propDict);
-        $this->setODataType("#microsoft.graph.internalSponsors");
-    }
-
+    const WINDOWS365 = "windows365";
+    const DEV_BOX = "devBox";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

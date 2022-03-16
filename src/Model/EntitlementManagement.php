@@ -27,6 +27,7 @@ class EntitlementManagement extends Entity
 
      /**
      * Gets the accessPackageAssignmentApprovals
+    * Approval stages for assignment requests.
      *
      * @return array|null The accessPackageAssignmentApprovals
      */
@@ -41,6 +42,7 @@ class EntitlementManagement extends Entity
 
     /**
     * Sets the accessPackageAssignmentApprovals
+    * Approval stages for assignment requests.
     *
     * @param Approval[] $val The accessPackageAssignmentApprovals
     *
@@ -79,6 +81,34 @@ class EntitlementManagement extends Entity
     public function setAccessPackages($val)
     {
         $this->_propDict["accessPackages"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the assignmentPolicies
+     *
+     * @return array|null The assignmentPolicies
+     */
+    public function getAssignmentPolicies()
+    {
+        if (array_key_exists("assignmentPolicies", $this->_propDict)) {
+           return $this->_propDict["assignmentPolicies"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the assignmentPolicies
+    *
+    * @param AccessPackageAssignmentPolicy[] $val The assignmentPolicies
+    *
+    * @return EntitlementManagement
+    */
+    public function setAssignmentPolicies($val)
+    {
+        $this->_propDict["assignmentPolicies"] = $val;
         return $this;
     }
 

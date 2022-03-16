@@ -121,7 +121,7 @@ class RoleManagement implements \JsonSerializable
 
     /**
     * Gets the entitlementManagement
-    * Container for all entitlement management resources in Azure AD identity governance.
+    * Container for roles and assignments for entitlement management resources.
     *
     * @return RbacApplication|null The entitlementManagement
     */
@@ -140,7 +140,7 @@ class RoleManagement implements \JsonSerializable
 
     /**
     * Sets the entitlementManagement
-    * Container for all entitlement management resources in Azure AD identity governance.
+    * Container for roles and assignments for entitlement management resources.
     *
     * @param RbacApplication $val The entitlementManagement
     *

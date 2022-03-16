@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* InternalSponsors File
+* TargetApplicationOwners File
 * PHP version 7
 *
 * @category  Library
@@ -13,7 +13,7 @@
 */
 namespace Microsoft\Graph\Model;
 /**
-* InternalSponsors class
+* TargetApplicationOwners class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,7 +21,7 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class InternalSponsors extends SubjectSet
+class TargetApplicationOwners extends SubjectSet
 {
     /**
     * Set the @odata.type since this type is immediately descended from an abstract
@@ -31,7 +31,7 @@ class InternalSponsors extends SubjectSet
     public function __construct($propDict = array())
     {
         parent::__construct($propDict);
-        $this->setODataType("#microsoft.graph.internalSponsors");
+        $this->setODataType("#microsoft.graph.targetApplicationOwners");
     }
 
 }

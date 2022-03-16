@@ -177,6 +177,34 @@ class AccessPackage extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the assignmentPolicies
+     *
+     * @return array|null The assignmentPolicies
+     */
+    public function getAssignmentPolicies()
+    {
+        if (array_key_exists("assignmentPolicies", $this->_propDict)) {
+           return $this->_propDict["assignmentPolicies"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the assignmentPolicies
+    *
+    * @param AccessPackageAssignmentPolicy[] $val The assignmentPolicies
+    *
+    * @return AccessPackage
+    */
+    public function setAssignmentPolicies($val)
+    {
+        $this->_propDict["assignmentPolicies"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the catalog
     * Read-only. Nullable.
