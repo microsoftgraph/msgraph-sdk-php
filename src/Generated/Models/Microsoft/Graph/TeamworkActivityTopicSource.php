@@ -1,0 +1,10 @@
+<?php
+
+namespace Microsoft\Graph\Generated\Models\Microsoft\Graph;
+
+use Microsoft\Kiota\Abstractions\Enum;
+
+class TeamworkActivityTopicSource extends Enum {
+    public const ENTITY_URL = 'entityUrl';
+    public const TEXT = 'text';
+}

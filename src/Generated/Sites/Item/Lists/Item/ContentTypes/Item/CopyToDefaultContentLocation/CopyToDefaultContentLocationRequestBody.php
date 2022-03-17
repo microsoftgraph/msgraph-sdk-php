@@ -1,0 +1,107 @@
+<?php
+
+namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\CopyToDefaultContentLocation;
+
+use Microsoft\Graph\Generated\Models\Microsoft\Graph\ItemReference;
+use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
+use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+
+class CopyToDefaultContentLocationRequestBody implements AdditionalDataHolder, Parsable 
+{
+    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    private array $additionalData;
+    
+    /** @var string|null $destinationFileName  */
+    private ?string $destinationFileName = null;
+    
+    /** @var ItemReference|null $sourceFile  */
+    private ?ItemReference $sourceFile = null;
+    
+    /**
+     * Instantiates a new copyToDefaultContentLocationRequestBody and sets the default values.
+    */
+    public function __construct() {
+        $this->additionalData = [];
+    }
+
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
+     * @return CopyToDefaultContentLocationRequestBody
+    */
+    public function createFromDiscriminatorValue(ParseNode $parseNode): CopyToDefaultContentLocationRequestBody {
+        return new CopyToDefaultContentLocationRequestBody();
+    }
+
+    /**
+     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return array<string, mixed>
+    */
+    public function getAdditionalData(): array {
+        return $this->additionalData;
+    }
+
+    /**
+     * Gets the destinationFileName property value. 
+     * @return string|null
+    */
+    public function getDestinationFileName(): ?string {
+        return $this->destinationFileName;
+    }
+
+    /**
+     * The deserialization information for the current model
+     * @return array<string, callable>
+    */
+    public function getFieldDeserializers(): array {
+        return  [
+            'destinationFileName' => function (self $o, ParseNode $n) { $o->setDestinationFileName($n->getStringValue()); },
+            'sourceFile' => function (self $o, ParseNode $n) { $o->setSourceFile($n->getObjectValue(ItemReference::class)); },
+        ];
+    }
+
+    /**
+     * Gets the sourceFile property value. 
+     * @return ItemReference|null
+    */
+    public function getSourceFile(): ?ItemReference {
+        return $this->sourceFile;
+    }
+
+    /**
+     * Serializes information the current object
+     * @param SerializationWriter $writer Serialization writer to use to serialize this model
+    */
+    public function serialize(SerializationWriter $writer): void {
+        $writer->writeStringValue('destinationFileName', $this->destinationFileName);
+        $writer->writeObjectValue('sourceFile', $this->sourceFile);
+        $writer->writeAdditionalData($this->additionalData);
+    }
+
+    /**
+     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+    */
+    public function setAdditionalData(?array $value ): void {
+        $this->additionalData = $value;
+    }
+
+    /**
+     * Sets the destinationFileName property value. 
+     *  @param string|null $value Value to set for the destinationFileName property.
+    */
+    public function setDestinationFileName(?string $value ): void {
+        $this->destinationFileName = $value;
+    }
+
+    /**
+     * Sets the sourceFile property value. 
+     *  @param ItemReference|null $value Value to set for the sourceFile property.
+    */
+    public function setSourceFile(?ItemReference $value ): void {
+        $this->sourceFile = $value;
+    }
+
+}
