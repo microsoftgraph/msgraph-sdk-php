@@ -25,6 +25,7 @@ class CloudPcWindowsSettings extends Entity
 {
     /**
     * Gets the language
+    * The Windows language/region tag to use for language pack configuration and localization of the Cloud PC. The default value is en-US, which corresponds to English (United States).
     *
     * @return string|null The language
     */
@@ -39,6 +40,7 @@ class CloudPcWindowsSettings extends Entity
 
     /**
     * Sets the language
+    * The Windows language/region tag to use for language pack configuration and localization of the Cloud PC. The default value is en-US, which corresponds to English (United States).
     *
     * @param string $val The value of the language
     *

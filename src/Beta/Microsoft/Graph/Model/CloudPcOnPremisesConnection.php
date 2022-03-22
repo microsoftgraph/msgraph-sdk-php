@@ -237,6 +237,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Gets the managedBy
+    * Specifies which services manage the on-premises connection. Possible values are: windows365, devBox and unknownFutureValue. Read-only.
     *
     * @return CloudPcManagementService|null The managedBy
     */
@@ -255,6 +256,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Sets the managedBy
+    * Specifies which services manage the on-premises connection. Possible values are: windows365, devBox and unknownFutureValue. Read-only.
     *
     * @param CloudPcManagementService $val The managedBy
     *
