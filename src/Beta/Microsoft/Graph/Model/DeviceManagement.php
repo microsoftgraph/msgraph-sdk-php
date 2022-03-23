@@ -150,7 +150,7 @@ class DeviceManagement extends Entity
 
     /**
     * Gets the maximumDepTokens
-    * Maximum number of DEP tokens allowed per-tenant.
+    * Maximum number of dep tokens allowed per-tenant.
     *
     * @return int|null The maximumDepTokens
     */
@@ -165,7 +165,7 @@ class DeviceManagement extends Entity
 
     /**
     * Sets the maximumDepTokens
-    * Maximum number of DEP tokens allowed per-tenant.
+    * Maximum number of dep tokens allowed per-tenant.
     *
     * @param int $val The maximumDepTokens
     *
@@ -406,7 +406,7 @@ class DeviceManagement extends Entity
 
     /**
     * Gets the subscriptions
-    * Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB.
+    * Tenant's Subscription.
     *
     * @return DeviceManagementSubscriptions|null The subscriptions
     */
@@ -425,7 +425,7 @@ class DeviceManagement extends Entity
 
     /**
     * Sets the subscriptions
-    * Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB.
+    * Tenant's Subscription.
     *
     * @param DeviceManagementSubscriptions $val The subscriptions
     *
