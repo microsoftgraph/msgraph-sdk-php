@@ -81,6 +81,7 @@ class CloudPcSourceDeviceImage extends Entity
     }
     /**
     * Gets the subscriptionDisplayName
+    * The display name of subscription that hosts the source image.
     *
     * @return string|null The subscriptionDisplayName
     */
@@ -95,6 +96,7 @@ class CloudPcSourceDeviceImage extends Entity
 
     /**
     * Sets the subscriptionDisplayName
+    * The display name of subscription that hosts the source image.
     *
     * @param string $val The value of the subscriptionDisplayName
     *
@@ -107,6 +109,7 @@ class CloudPcSourceDeviceImage extends Entity
     }
     /**
     * Gets the subscriptionId
+    * The ID of subscription that hosts the source image.
     *
     * @return string|null The subscriptionId
     */
@@ -121,6 +124,7 @@ class CloudPcSourceDeviceImage extends Entity
 
     /**
     * Sets the subscriptionId
+    * The ID of subscription that hosts the source image.
     *
     * @param string $val The value of the subscriptionId
     *

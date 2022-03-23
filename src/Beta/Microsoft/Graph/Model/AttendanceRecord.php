@@ -117,6 +117,35 @@ class AttendanceRecord extends Entity
     }
 
     /**
+    * Gets the registrantId
+    * Unique identifier of a meetingRegistrant. Presents when the participant has registered for the meeting.
+    *
+    * @return string|null The registrantId
+    */
+    public function getRegistrantId()
+    {
+        if (array_key_exists("registrantId", $this->_propDict)) {
+            return $this->_propDict["registrantId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the registrantId
+    * Unique identifier of a meetingRegistrant. Presents when the participant has registered for the meeting.
+    *
+    * @param string $val The registrantId
+    *
+    * @return AttendanceRecord
+    */
+    public function setRegistrantId($val)
+    {
+        $this->_propDict["registrantId"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the role
     * Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
     *

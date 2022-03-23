@@ -25,6 +25,7 @@ class GovernanceRoleAssignmentRequestStatus extends Entity
 {
     /**
     * Gets the status
+    * The status of the role assignment request. The value can be InProgress or Closed.
     *
     * @return string|null The status
     */
@@ -39,6 +40,7 @@ class GovernanceRoleAssignmentRequestStatus extends Entity
 
     /**
     * Sets the status
+    * The status of the role assignment request. The value can be InProgress or Closed.
     *
     * @param string $val The value of the status
     *
@@ -52,6 +54,7 @@ class GovernanceRoleAssignmentRequestStatus extends Entity
 
     /**
     * Gets the statusDetails
+    * The details of the status of the role assignment request. It represents the evaluation results of different rules.
     *
     * @return KeyValue|null The statusDetails
     */
@@ -70,6 +73,7 @@ class GovernanceRoleAssignmentRequestStatus extends Entity
 
     /**
     * Sets the statusDetails
+    * The details of the status of the role assignment request. It represents the evaluation results of different rules.
     *
     * @param KeyValue $val The value to assign to the statusDetails
     *
@@ -82,6 +86,7 @@ class GovernanceRoleAssignmentRequestStatus extends Entity
     }
     /**
     * Gets the subStatus
+    * The sub status of the role assignment request. The values can be Accepted, PendingEvaluation, Granted, Denied, PendingProvisioning, Provisioned, PendingRevocation, Revoked, Canceled, Failed, PendingApprovalProvisioning, PendingApproval, FailedAsResourceIsLocked, PendingAdminDecision, AdminApproved, AdminDenied, TimedOut, and ProvisioningStarted.
     *
     * @return string|null The subStatus
     */
@@ -96,6 +101,7 @@ class GovernanceRoleAssignmentRequestStatus extends Entity
 
     /**
     * Sets the subStatus
+    * The sub status of the role assignment request. The values can be Accepted, PendingEvaluation, Granted, Denied, PendingProvisioning, Provisioned, PendingRevocation, Revoked, Canceled, Failed, PendingApprovalProvisioning, PendingApproval, FailedAsResourceIsLocked, PendingAdminDecision, AdminApproved, AdminDenied, TimedOut, and ProvisioningStarted.
     *
     * @param string $val The value of the subStatus
     *

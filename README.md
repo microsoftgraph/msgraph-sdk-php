@@ -11,7 +11,7 @@ You can install the PHP SDK with Composer, either run `composer require microsof
 ```
 {
     "require": {
-        "microsoft/microsoft-graph": "^1.57.1"
+        "microsoft/microsoft-graph": "^1.58.0"
     }
 }
 ```

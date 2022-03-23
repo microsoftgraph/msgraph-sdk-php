@@ -79,4 +79,66 @@ class TermColumn extends Entity
         $this->_propDict["showFullyQualifiedName"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the parentTerm
+    *
+    * @return \Beta\Microsoft\Graph\TermStore\Model\Term|null The parentTerm
+    */
+    public function getParentTerm()
+    {
+        if (array_key_exists("parentTerm", $this->_propDict)) {
+            if (is_a($this->_propDict["parentTerm"], "\Beta\Microsoft\Graph\TermStore\Model\Term") || is_null($this->_propDict["parentTerm"])) {
+                return $this->_propDict["parentTerm"];
+            } else {
+                $this->_propDict["parentTerm"] = new \Beta\Microsoft\Graph\TermStore\Model\Term($this->_propDict["parentTerm"]);
+                return $this->_propDict["parentTerm"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the parentTerm
+    *
+    * @param \Beta\Microsoft\Graph\TermStore\Model\Term $val The value to assign to the parentTerm
+    *
+    * @return TermColumn The TermColumn
+    */
+    public function setParentTerm($val)
+    {
+        $this->_propDict["parentTerm"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the termSet
+    *
+    * @return \Beta\Microsoft\Graph\TermStore\Model\Set|null The termSet
+    */
+    public function getTermSet()
+    {
+        if (array_key_exists("termSet", $this->_propDict)) {
+            if (is_a($this->_propDict["termSet"], "\Beta\Microsoft\Graph\TermStore\Model\Set") || is_null($this->_propDict["termSet"])) {
+                return $this->_propDict["termSet"];
+            } else {
+                $this->_propDict["termSet"] = new \Beta\Microsoft\Graph\TermStore\Model\Set($this->_propDict["termSet"]);
+                return $this->_propDict["termSet"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the termSet
+    *
+    * @param \Beta\Microsoft\Graph\TermStore\Model\Set $val The value to assign to the termSet
+    *
+    * @return TermColumn The TermColumn
+    */
+    public function setTermSet($val)
+    {
+        $this->_propDict["termSet"] = $val;
+         return $this;
+    }
 }

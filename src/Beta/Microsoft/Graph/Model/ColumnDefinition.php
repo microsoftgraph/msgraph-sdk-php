@@ -798,6 +798,39 @@ class ColumnDefinition extends Entity
     }
 
     /**
+    * Gets the sourceContentType
+    * ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
+    *
+    * @return ContentTypeInfo|null The sourceContentType
+    */
+    public function getSourceContentType()
+    {
+        if (array_key_exists("sourceContentType", $this->_propDict)) {
+            if (is_a($this->_propDict["sourceContentType"], "\Beta\Microsoft\Graph\Model\ContentTypeInfo") || is_null($this->_propDict["sourceContentType"])) {
+                return $this->_propDict["sourceContentType"];
+            } else {
+                $this->_propDict["sourceContentType"] = new ContentTypeInfo($this->_propDict["sourceContentType"]);
+                return $this->_propDict["sourceContentType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sourceContentType
+    * ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
+    *
+    * @param ContentTypeInfo $val The sourceContentType
+    *
+    * @return ColumnDefinition
+    */
+    public function setSourceContentType($val)
+    {
+        $this->_propDict["sourceContentType"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the term
     * This column stores taxonomy terms.
     *

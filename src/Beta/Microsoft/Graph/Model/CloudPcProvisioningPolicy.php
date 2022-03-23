@@ -270,6 +270,7 @@ class CloudPcProvisioningPolicy extends Entity
 
     /**
     * Gets the windowsSettings
+    * Specific Windows settings to configure while creating Cloud PCs for this provisioning policy.
     *
     * @return CloudPcWindowsSettings|null The windowsSettings
     */
@@ -288,6 +289,7 @@ class CloudPcProvisioningPolicy extends Entity
 
     /**
     * Sets the windowsSettings
+    * Specific Windows settings to configure while creating Cloud PCs for this provisioning policy.
     *
     * @param CloudPcWindowsSettings $val The windowsSettings
     *
