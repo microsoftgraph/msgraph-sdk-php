@@ -58,6 +58,39 @@ class ConditionalAccessConditionSet extends Entity
     }
 
     /**
+    * Gets the clientApplications
+    * Client applications (service principals and workload identities) included in and excluded from the policy. Either users or clientApplications is required.
+    *
+    * @return ConditionalAccessClientApplications|null The clientApplications
+    */
+    public function getClientApplications()
+    {
+        if (array_key_exists("clientApplications", $this->_propDict)) {
+            if (is_a($this->_propDict["clientApplications"], "\Microsoft\Graph\Model\ConditionalAccessClientApplications") || is_null($this->_propDict["clientApplications"])) {
+                return $this->_propDict["clientApplications"];
+            } else {
+                $this->_propDict["clientApplications"] = new ConditionalAccessClientApplications($this->_propDict["clientApplications"]);
+                return $this->_propDict["clientApplications"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the clientApplications
+    * Client applications (service principals and workload identities) included in and excluded from the policy. Either users or clientApplications is required.
+    *
+    * @param ConditionalAccessClientApplications $val The value to assign to the clientApplications
+    *
+    * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
+    */
+    public function setClientApplications($val)
+    {
+        $this->_propDict["clientApplications"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the clientAppTypes
     * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
     *
