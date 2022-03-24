@@ -304,6 +304,7 @@ class RiskyServicePrincipal extends Entity
 
      /**
      * Gets the history
+    * Represents the risk history of Azure AD service principals.
      *
      * @return array|null The history
      */
@@ -318,6 +319,7 @@ class RiskyServicePrincipal extends Entity
 
     /**
     * Sets the history
+    * Represents the risk history of Azure AD service principals.
     *
     * @param RiskyServicePrincipalHistoryItem[] $val The history
     *

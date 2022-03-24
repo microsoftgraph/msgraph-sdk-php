@@ -26,7 +26,7 @@ class DriveItem extends BaseItem
 {
     /**
     * Gets the audio
-    * Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal.
+    * Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
     *
     * @return Audio|null The audio
     */
@@ -45,7 +45,7 @@ class DriveItem extends BaseItem
 
     /**
     * Sets the audio
-    * Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal.
+    * Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
     *
     * @param Audio $val The audio
     *
@@ -59,6 +59,7 @@ class DriveItem extends BaseItem
 
     /**
     * Gets the bundle
+    * Bundle metadata, if the item is a bundle. Read-only.
     *
     * @return Bundle|null The bundle
     */
@@ -77,6 +78,7 @@ class DriveItem extends BaseItem
 
     /**
     * Sets the bundle
+    * Bundle metadata, if the item is a bundle. Read-only.
     *
     * @param Bundle $val The bundle
     *

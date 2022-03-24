@@ -26,6 +26,7 @@ class SelfSignedCertificate extends Entity
 
     /**
     * Gets the customKeyIdentifier
+    * Custom key identifier.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The customKeyIdentifier
     */
@@ -44,6 +45,7 @@ class SelfSignedCertificate extends Entity
 
     /**
     * Sets the customKeyIdentifier
+    * Custom key identifier.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the customKeyIdentifier
     *
@@ -56,6 +58,7 @@ class SelfSignedCertificate extends Entity
     }
     /**
     * Gets the displayName
+    * The friendly name for the key.
     *
     * @return string|null The displayName
     */
@@ -70,6 +73,7 @@ class SelfSignedCertificate extends Entity
 
     /**
     * Sets the displayName
+    * The friendly name for the key.
     *
     * @param string $val The value of the displayName
     *
@@ -83,6 +87,7 @@ class SelfSignedCertificate extends Entity
 
     /**
     * Gets the endDateTime
+    * The date and time at which the credential expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The endDateTime
     */
@@ -101,6 +106,7 @@ class SelfSignedCertificate extends Entity
 
     /**
     * Sets the endDateTime
+    * The date and time at which the credential expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the endDateTime
     *
@@ -114,6 +120,7 @@ class SelfSignedCertificate extends Entity
 
     /**
     * Gets the key
+    * The value for the key credential. Should be a base-64 encoded value.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The key
     */
@@ -132,6 +139,7 @@ class SelfSignedCertificate extends Entity
 
     /**
     * Sets the key
+    * The value for the key credential. Should be a base-64 encoded value.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the key
     *
@@ -144,6 +152,7 @@ class SelfSignedCertificate extends Entity
     }
     /**
     * Gets the keyId
+    * The unique identifier (GUID) for the key.
     *
     * @return string|null The keyId
     */
@@ -158,6 +167,7 @@ class SelfSignedCertificate extends Entity
 
     /**
     * Sets the keyId
+    * The unique identifier (GUID) for the key.
     *
     * @param string $val The value of the keyId
     *
@@ -171,6 +181,7 @@ class SelfSignedCertificate extends Entity
 
     /**
     * Gets the startDateTime
+    * The date and time at which the credential becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The startDateTime
     */
@@ -189,6 +200,7 @@ class SelfSignedCertificate extends Entity
 
     /**
     * Sets the startDateTime
+    * The date and time at which the credential becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *
@@ -201,6 +213,7 @@ class SelfSignedCertificate extends Entity
     }
     /**
     * Gets the thumbprint
+    * The thumbprint value for the key.
     *
     * @return string|null The thumbprint
     */
@@ -215,6 +228,7 @@ class SelfSignedCertificate extends Entity
 
     /**
     * Sets the thumbprint
+    * The thumbprint value for the key.
     *
     * @param string $val The value of the thumbprint
     *
@@ -227,6 +241,7 @@ class SelfSignedCertificate extends Entity
     }
     /**
     * Gets the type
+    * The type of key credential. 'AsymmetricX509Cert'.
     *
     * @return string|null The type
     */
@@ -241,6 +256,7 @@ class SelfSignedCertificate extends Entity
 
     /**
     * Sets the type
+    * The type of key credential. 'AsymmetricX509Cert'.
     *
     * @param string $val The value of the type
     *
@@ -253,6 +269,7 @@ class SelfSignedCertificate extends Entity
     }
     /**
     * Gets the usage
+    * A string that describes the purpose for which the key can be used. For example, 'Verify'.
     *
     * @return string|null The usage
     */
@@ -267,6 +284,7 @@ class SelfSignedCertificate extends Entity
 
     /**
     * Sets the usage
+    * A string that describes the purpose for which the key can be used. For example, 'Verify'.
     *
     * @param string $val The value of the usage
     *

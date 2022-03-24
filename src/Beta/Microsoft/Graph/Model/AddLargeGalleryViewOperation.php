@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* OnlineMeetingRole File
+* AddLargeGalleryViewOperation File
 * PHP version 7
 *
 * @category  Library
@@ -13,10 +13,8 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
-use Microsoft\Graph\Core\Enum;
-
 /**
-* OnlineMeetingRole class
+* AddLargeGalleryViewOperation class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +22,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class OnlineMeetingRole extends Enum
+class AddLargeGalleryViewOperation extends CommsOperation
 {
-    /**
-    * The Enum OnlineMeetingRole
-    */
-    const ATTENDEE = "attendee";
-    const PRESENTER = "presenter";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const PRODUCER = "producer";
-    const COORGANIZER = "coorganizer";
 }
