@@ -92,6 +92,7 @@ class Simulation extends Entity
 
     /**
     * Gets the automationId
+    * Unique identifier for the attack simulation automation.
     *
     * @return string|null The automationId
     */
@@ -106,6 +107,7 @@ class Simulation extends Entity
 
     /**
     * Sets the automationId
+    * Unique identifier for the attack simulation automation.
     *
     * @param string $val The automationId
     *
@@ -470,7 +472,7 @@ class Simulation extends Entity
 
     /**
     * Gets the status
-    * Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, inProgress, scheduled, completed, partiallyCompleted, failed, cancelled, excluded, deleted, included, unknownFutureValue.
+    * Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
     *
     * @return SimulationStatus|null The status
     */
@@ -489,7 +491,7 @@ class Simulation extends Entity
 
     /**
     * Sets the status
-    * Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, inProgress, scheduled, completed, partiallyCompleted, failed, cancelled, excluded, deleted, included, unknownFutureValue.
+    * Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
     *
     * @param SimulationStatus $val The status
     *
