@@ -25,6 +25,37 @@ namespace Beta\Microsoft\Graph\Model;
 class OrganizationSettings extends Entity
 {
     /**
+    * Gets the microsoftApplicationDataAccess
+    *
+    * @return MicrosoftApplicationDataAccessSettings|null The microsoftApplicationDataAccess
+    */
+    public function getMicrosoftApplicationDataAccess()
+    {
+        if (array_key_exists("microsoftApplicationDataAccess", $this->_propDict)) {
+            if (is_a($this->_propDict["microsoftApplicationDataAccess"], "\Beta\Microsoft\Graph\Model\MicrosoftApplicationDataAccessSettings") || is_null($this->_propDict["microsoftApplicationDataAccess"])) {
+                return $this->_propDict["microsoftApplicationDataAccess"];
+            } else {
+                $this->_propDict["microsoftApplicationDataAccess"] = new MicrosoftApplicationDataAccessSettings($this->_propDict["microsoftApplicationDataAccess"]);
+                return $this->_propDict["microsoftApplicationDataAccess"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the microsoftApplicationDataAccess
+    *
+    * @param MicrosoftApplicationDataAccessSettings $val The microsoftApplicationDataAccess
+    *
+    * @return OrganizationSettings
+    */
+    public function setMicrosoftApplicationDataAccess($val)
+    {
+        $this->_propDict["microsoftApplicationDataAccess"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the itemInsights
     * Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. List itemInsights returns the settings to display or return item insights in an organization.
     *

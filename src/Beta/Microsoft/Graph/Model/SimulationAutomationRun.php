@@ -26,6 +26,7 @@ class SimulationAutomationRun extends Entity
 {
     /**
     * Gets the endDateTime
+    * Date and time when the run ends in an attack simulation automation.
     *
     * @return \DateTime|null The endDateTime
     */
@@ -44,6 +45,7 @@ class SimulationAutomationRun extends Entity
 
     /**
     * Sets the endDateTime
+    * Date and time when the run ends in an attack simulation automation.
     *
     * @param \DateTime $val The endDateTime
     *
@@ -57,6 +59,7 @@ class SimulationAutomationRun extends Entity
 
     /**
     * Gets the simulationId
+    * Unique identifier for the attack simulation campaign initiated in the attack simulation automation run.
     *
     * @return string|null The simulationId
     */
@@ -71,6 +74,7 @@ class SimulationAutomationRun extends Entity
 
     /**
     * Sets the simulationId
+    * Unique identifier for the attack simulation campaign initiated in the attack simulation automation run.
     *
     * @param string $val The simulationId
     *
@@ -84,6 +88,7 @@ class SimulationAutomationRun extends Entity
 
     /**
     * Gets the startDateTime
+    * Date and time when the run starts in an attack simulation automation.
     *
     * @return \DateTime|null The startDateTime
     */
@@ -102,6 +107,7 @@ class SimulationAutomationRun extends Entity
 
     /**
     * Sets the startDateTime
+    * Date and time when the run starts in an attack simulation automation.
     *
     * @param \DateTime $val The startDateTime
     *
@@ -115,6 +121,7 @@ class SimulationAutomationRun extends Entity
 
     /**
     * Gets the status
+    * Status of the run of an attack simulation automation. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
     *
     * @return SimulationAutomationRunStatus|null The status
     */
@@ -133,6 +140,7 @@ class SimulationAutomationRun extends Entity
 
     /**
     * Sets the status
+    * Status of the run of an attack simulation automation. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
     *
     * @param SimulationAutomationRunStatus $val The status
     *

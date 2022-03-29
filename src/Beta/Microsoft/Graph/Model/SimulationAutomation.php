@@ -26,6 +26,7 @@ class SimulationAutomation extends Entity
 {
     /**
     * Gets the createdBy
+    * Identity of the user who created the attack simulation automation.
     *
     * @return EmailIdentity|null The createdBy
     */
@@ -44,6 +45,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Sets the createdBy
+    * Identity of the user who created the attack simulation automation.
     *
     * @param EmailIdentity $val The createdBy
     *
@@ -57,6 +59,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Gets the createdDateTime
+    * Date and time when the attack simulation automation was created.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -75,6 +78,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Sets the createdDateTime
+    * Date and time when the attack simulation automation was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -88,6 +92,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Gets the description
+    * Description of the attack simulation automation.
     *
     * @return string|null The description
     */
@@ -102,6 +107,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Sets the description
+    * Description of the attack simulation automation.
     *
     * @param string $val The description
     *
@@ -115,6 +121,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Gets the displayName
+    * Display name of the attack simulation automation. Supports $filter and $orderby.
     *
     * @return string|null The displayName
     */
@@ -129,6 +136,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Sets the displayName
+    * Display name of the attack simulation automation. Supports $filter and $orderby.
     *
     * @param string $val The displayName
     *
@@ -142,6 +150,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * Identity of the user who most recently modified the attack simulation automation.
     *
     * @return EmailIdentity|null The lastModifiedBy
     */
@@ -160,6 +169,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * Identity of the user who most recently modified the attack simulation automation.
     *
     * @param EmailIdentity $val The lastModifiedBy
     *
@@ -173,6 +183,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * Date and time when the attack simulation automation was most recently modified.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -191,6 +202,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * Date and time when the attack simulation automation was most recently modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -204,6 +216,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Gets the lastRunDateTime
+    * Date and time of the latest run of the attack simulation automation.
     *
     * @return \DateTime|null The lastRunDateTime
     */
@@ -222,6 +235,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Sets the lastRunDateTime
+    * Date and time of the latest run of the attack simulation automation.
     *
     * @param \DateTime $val The lastRunDateTime
     *
@@ -235,6 +249,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Gets the nextRunDateTime
+    * Date and time of the upcoming run of the attack simulation automation.
     *
     * @return \DateTime|null The nextRunDateTime
     */
@@ -253,6 +268,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Sets the nextRunDateTime
+    * Date and time of the upcoming run of the attack simulation automation.
     *
     * @param \DateTime $val The nextRunDateTime
     *
@@ -266,6 +282,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Gets the status
+    * Status of the attack simulation automation. Supports $filter and $orderby. The possible values are: unknown, draft, notRunning, running, completed, unknownFutureValue.
     *
     * @return SimulationAutomationStatus|null The status
     */
@@ -284,6 +301,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Sets the status
+    * Status of the attack simulation automation. Supports $filter and $orderby. The possible values are: unknown, draft, notRunning, running, completed, unknownFutureValue.
     *
     * @param SimulationAutomationStatus $val The status
     *
@@ -298,6 +316,7 @@ class SimulationAutomation extends Entity
 
      /**
      * Gets the runs
+    * A collection of simulation automation runs.
      *
      * @return array|null The runs
      */
@@ -312,6 +331,7 @@ class SimulationAutomation extends Entity
 
     /**
     * Sets the runs
+    * A collection of simulation automation runs.
     *
     * @param SimulationAutomationRun[] $val The runs
     *
