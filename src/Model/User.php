@@ -3334,6 +3334,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the authentication
+    * The authentication methods that are supported for the user.
     *
     * @return Authentication|null The authentication
     */
@@ -3352,6 +3353,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the authentication
+    * The authentication methods that are supported for the user.
     *
     * @param Authentication $val The authentication
     *

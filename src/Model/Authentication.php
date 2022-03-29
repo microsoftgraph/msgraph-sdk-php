@@ -27,6 +27,7 @@ class Authentication extends Entity
 
      /**
      * Gets the fido2Methods
+    * Represents the FIDO2 security keys registered to a user for authentication.
      *
      * @return array|null The fido2Methods
      */
@@ -41,6 +42,7 @@ class Authentication extends Entity
 
     /**
     * Sets the fido2Methods
+    * Represents the FIDO2 security keys registered to a user for authentication.
     *
     * @param Fido2AuthenticationMethod[] $val The fido2Methods
     *
@@ -55,6 +57,7 @@ class Authentication extends Entity
 
      /**
      * Gets the methods
+    * Represents all authentication methods registered to a user.
      *
      * @return array|null The methods
      */
@@ -69,6 +72,7 @@ class Authentication extends Entity
 
     /**
     * Sets the methods
+    * Represents all authentication methods registered to a user.
     *
     * @param AuthenticationMethod[] $val The methods
     *
@@ -83,6 +87,7 @@ class Authentication extends Entity
 
      /**
      * Gets the microsoftAuthenticatorMethods
+    * The details of the Microsoft Authenticator app registered to a user for authentication.
      *
      * @return array|null The microsoftAuthenticatorMethods
      */
@@ -97,6 +102,7 @@ class Authentication extends Entity
 
     /**
     * Sets the microsoftAuthenticatorMethods
+    * The details of the Microsoft Authenticator app registered to a user for authentication.
     *
     * @param MicrosoftAuthenticatorAuthenticationMethod[] $val The microsoftAuthenticatorMethods
     *
@@ -111,6 +117,7 @@ class Authentication extends Entity
 
      /**
      * Gets the windowsHelloForBusinessMethods
+    * Represents the Windows Hello for Business authentication method registered to a user for authentication.
      *
      * @return array|null The windowsHelloForBusinessMethods
      */
@@ -125,6 +132,7 @@ class Authentication extends Entity
 
     /**
     * Sets the windowsHelloForBusinessMethods
+    * Represents the Windows Hello for Business authentication method registered to a user for authentication.
     *
     * @param WindowsHelloForBusinessAuthenticationMethod[] $val The windowsHelloForBusinessMethods
     *
