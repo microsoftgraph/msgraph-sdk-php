@@ -27,6 +27,7 @@ class Authentication extends Entity
 
      /**
      * Gets the emailMethods
+    * Represents the email addresses registered to a user for authentication.
      *
      * @return array|null The emailMethods
      */
@@ -41,6 +42,7 @@ class Authentication extends Entity
 
     /**
     * Sets the emailMethods
+    * Represents the email addresses registered to a user for authentication.
     *
     * @param EmailAuthenticationMethod[] $val The emailMethods
     *
@@ -55,6 +57,7 @@ class Authentication extends Entity
 
      /**
      * Gets the fido2Methods
+    * Represents the FIDO2 security keys registered to a user for authentication.
      *
      * @return array|null The fido2Methods
      */
@@ -69,6 +72,7 @@ class Authentication extends Entity
 
     /**
     * Sets the fido2Methods
+    * Represents the FIDO2 security keys registered to a user for authentication.
     *
     * @param Fido2AuthenticationMethod[] $val The fido2Methods
     *
@@ -83,6 +87,7 @@ class Authentication extends Entity
 
      /**
      * Gets the methods
+    * Represents all authentication methods registered to a user.
      *
      * @return array|null The methods
      */
@@ -97,6 +102,7 @@ class Authentication extends Entity
 
     /**
     * Sets the methods
+    * Represents all authentication methods registered to a user.
     *
     * @param AuthenticationMethod[] $val The methods
     *
@@ -111,6 +117,7 @@ class Authentication extends Entity
 
      /**
      * Gets the microsoftAuthenticatorMethods
+    * The details of the Microsoft Authenticator app registered to a user for authentication.
      *
      * @return array|null The microsoftAuthenticatorMethods
      */
@@ -125,6 +132,7 @@ class Authentication extends Entity
 
     /**
     * Sets the microsoftAuthenticatorMethods
+    * The details of the Microsoft Authenticator app registered to a user for authentication.
     *
     * @param MicrosoftAuthenticatorAuthenticationMethod[] $val The microsoftAuthenticatorMethods
     *
@@ -167,6 +175,7 @@ class Authentication extends Entity
 
      /**
      * Gets the passwordlessMicrosoftAuthenticatorMethods
+    * Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
      *
      * @return array|null The passwordlessMicrosoftAuthenticatorMethods
      */
@@ -181,6 +190,7 @@ class Authentication extends Entity
 
     /**
     * Sets the passwordlessMicrosoftAuthenticatorMethods
+    * Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
     *
     * @param PasswordlessMicrosoftAuthenticatorAuthenticationMethod[] $val The passwordlessMicrosoftAuthenticatorMethods
     *
@@ -195,6 +205,7 @@ class Authentication extends Entity
 
      /**
      * Gets the passwordMethods
+    * Represents the details of the password authentication method registered to a user for authentication.
      *
      * @return array|null The passwordMethods
      */
@@ -209,6 +220,7 @@ class Authentication extends Entity
 
     /**
     * Sets the passwordMethods
+    * Represents the details of the password authentication method registered to a user for authentication.
     *
     * @param PasswordAuthenticationMethod[] $val The passwordMethods
     *
@@ -223,6 +235,7 @@ class Authentication extends Entity
 
      /**
      * Gets the phoneMethods
+    * Represents the phone registered to a user for authentication.
      *
      * @return array|null The phoneMethods
      */
@@ -237,6 +250,7 @@ class Authentication extends Entity
 
     /**
     * Sets the phoneMethods
+    * Represents the phone registered to a user for authentication.
     *
     * @param PhoneAuthenticationMethod[] $val The phoneMethods
     *
@@ -279,6 +293,7 @@ class Authentication extends Entity
 
      /**
      * Gets the temporaryAccessPassMethods
+    * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
      *
      * @return array|null The temporaryAccessPassMethods
      */
@@ -293,6 +308,7 @@ class Authentication extends Entity
 
     /**
     * Sets the temporaryAccessPassMethods
+    * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
     *
     * @param TemporaryAccessPassAuthenticationMethod[] $val The temporaryAccessPassMethods
     *
@@ -307,6 +323,7 @@ class Authentication extends Entity
 
      /**
      * Gets the windowsHelloForBusinessMethods
+    * Represents the Windows Hello for Business authentication method registered to a user for authentication.
      *
      * @return array|null The windowsHelloForBusinessMethods
      */
@@ -321,6 +338,7 @@ class Authentication extends Entity
 
     /**
     * Sets the windowsHelloForBusinessMethods
+    * Represents the Windows Hello for Business authentication method registered to a user for authentication.
     *
     * @param WindowsHelloForBusinessAuthenticationMethod[] $val The windowsHelloForBusinessMethods
     *

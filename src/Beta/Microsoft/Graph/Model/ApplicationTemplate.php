@@ -141,6 +141,37 @@ class ApplicationTemplate extends Entity
     }
 
     /**
+    * Gets the informationalUrls
+    *
+    * @return InformationalUrls|null The informationalUrls
+    */
+    public function getInformationalUrls()
+    {
+        if (array_key_exists("informationalUrls", $this->_propDict)) {
+            if (is_a($this->_propDict["informationalUrls"], "\Beta\Microsoft\Graph\Model\InformationalUrls") || is_null($this->_propDict["informationalUrls"])) {
+                return $this->_propDict["informationalUrls"];
+            } else {
+                $this->_propDict["informationalUrls"] = new InformationalUrls($this->_propDict["informationalUrls"]);
+                return $this->_propDict["informationalUrls"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the informationalUrls
+    *
+    * @param InformationalUrls $val The informationalUrls
+    *
+    * @return ApplicationTemplate
+    */
+    public function setInformationalUrls($val)
+    {
+        $this->_propDict["informationalUrls"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the logoUrl
     * The URL to get the logo for this application.
     *

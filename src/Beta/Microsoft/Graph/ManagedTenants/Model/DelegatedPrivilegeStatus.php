@@ -32,4 +32,6 @@ class DelegatedPrivilegeStatus extends Enum
     const NONE = "none";
     const DELEGATED_ADMIN_PRIVILEGES = "delegatedAdminPrivileges";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const GRANULAR_DELEGATED_ADMIN_PRIVILEGES = "granularDelegatedAdminPrivileges";
+    const DELEGATED_AND_GRANULAR_DELEGETED_ADMIN_PRIVILEGES = "delegatedAndGranularDelegetedAdminPrivileges";
 }
