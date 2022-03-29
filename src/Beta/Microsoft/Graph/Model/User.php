@@ -1963,6 +1963,37 @@ class User extends DirectoryObject
     }
 
     /**
+    * Gets the print
+    *
+    * @return UserPrint|null The print
+    */
+    public function getPrint()
+    {
+        if (array_key_exists("print", $this->_propDict)) {
+            if (is_a($this->_propDict["print"], "\Beta\Microsoft\Graph\Model\UserPrint") || is_null($this->_propDict["print"])) {
+                return $this->_propDict["print"];
+            } else {
+                $this->_propDict["print"] = new UserPrint($this->_propDict["print"]);
+                return $this->_propDict["print"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the print
+    *
+    * @param UserPrint $val The print
+    *
+    * @return User
+    */
+    public function setPrint($val)
+    {
+        $this->_propDict["print"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the aboutMe
     * A freeform text entry field for the user to describe themselves. Returned only on $select.
     *
@@ -4021,6 +4052,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the authentication
+    * The authentication methods that are supported for the user.
     *
     * @return Authentication|null The authentication
     */
@@ -4039,6 +4071,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the authentication
+    * The authentication methods that are supported for the user.
     *
     * @param Authentication $val The authentication
     *

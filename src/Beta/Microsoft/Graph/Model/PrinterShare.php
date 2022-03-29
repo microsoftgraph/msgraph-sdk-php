@@ -86,6 +86,37 @@ class PrinterShare extends PrinterBase
         return $this;
     }
 
+    /**
+    * Gets the viewPoint
+    *
+    * @return PrinterShareViewpoint|null The viewPoint
+    */
+    public function getViewPoint()
+    {
+        if (array_key_exists("viewPoint", $this->_propDict)) {
+            if (is_a($this->_propDict["viewPoint"], "\Beta\Microsoft\Graph\Model\PrinterShareViewpoint") || is_null($this->_propDict["viewPoint"])) {
+                return $this->_propDict["viewPoint"];
+            } else {
+                $this->_propDict["viewPoint"] = new PrinterShareViewpoint($this->_propDict["viewPoint"]);
+                return $this->_propDict["viewPoint"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the viewPoint
+    *
+    * @param PrinterShareViewpoint $val The viewPoint
+    *
+    * @return PrinterShare
+    */
+    public function setViewPoint($val)
+    {
+        $this->_propDict["viewPoint"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the allowedGroups
