@@ -12,4 +12,5 @@ class ConditionalAccessDevicePlatform extends Enum {
     public const MAC_O_S = 'macOS';
     public const ALL = 'all';
     public const UNKNOWN_FUTURE_VALUE = 'unknownFutureValue';
+    public const LINUX = 'linux';
 }

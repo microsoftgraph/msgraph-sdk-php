@@ -12,7 +12,7 @@ class ExternalItemContent implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var ExternalItemContentType|null $type The type of content in the value property. Possible values are: text, html, unknownFutureValue. */
+    /** @var ExternalItemContentType|null $type The type of content in the value property. Possible values are: text, html, unknownFutureValue. These are the content types that the indexer supports, and not the file extension types allowed. */
     private ?ExternalItemContentType $type = null;
     
     /** @var string|null $value The content for the externalItem. Required. */
@@ -54,7 +54,7 @@ class ExternalItemContent implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the type property value. The type of content in the value property. Possible values are: text, html, unknownFutureValue.
+     * Gets the type property value. The type of content in the value property. Possible values are: text, html, unknownFutureValue. These are the content types that the indexer supports, and not the file extension types allowed.
      * @return ExternalItemContentType|null
     */
     public function getType(): ?ExternalItemContentType {
@@ -88,7 +88,7 @@ class ExternalItemContent implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the type property value. The type of content in the value property. Possible values are: text, html, unknownFutureValue.
+     * Sets the type property value. The type of content in the value property. Possible values are: text, html, unknownFutureValue. These are the content types that the indexer supports, and not the file extension types allowed.
      *  @param ExternalItemContentType|null $value Value to set for the type property.
     */
     public function setType(?ExternalItemContentType $value ): void {

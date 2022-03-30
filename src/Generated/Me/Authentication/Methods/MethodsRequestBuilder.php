@@ -44,7 +44,7 @@ class MethodsRequestBuilder
     }
 
     /**
-     * Get methods from me
+     * Represents all authentication methods registered to a user.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options
@@ -90,7 +90,7 @@ class MethodsRequestBuilder
     }
 
     /**
-     * Get methods from me
+     * Represents all authentication methods registered to a user.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options

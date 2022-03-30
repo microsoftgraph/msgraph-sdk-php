@@ -24,7 +24,7 @@ class DocumentSet implements AdditionalDataHolder, Parsable
     /** @var array<ColumnDefinition>|null $sharedColumns  */
     private ?array $sharedColumns = null;
     
-    /** @var bool|null $shouldPrefixNameToFile Add the name of the document set to each file name. */
+    /** @var bool|null $shouldPrefixNameToFile Indicates whether to add the name of the document set to each file name. */
     private ?bool $shouldPrefixNameToFile = null;
     
     /** @var array<ColumnDefinition>|null $welcomePageColumns  */
@@ -106,7 +106,7 @@ class DocumentSet implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the shouldPrefixNameToFile property value. Add the name of the document set to each file name.
+     * Gets the shouldPrefixNameToFile property value. Indicates whether to add the name of the document set to each file name.
      * @return bool|null
     */
     public function getShouldPrefixNameToFile(): ?bool {
@@ -185,7 +185,7 @@ class DocumentSet implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the shouldPrefixNameToFile property value. Add the name of the document set to each file name.
+     * Sets the shouldPrefixNameToFile property value. Indicates whether to add the name of the document set to each file name.
      *  @param bool|null $value Value to set for the shouldPrefixNameToFile property.
     */
     public function setShouldPrefixNameToFile(?bool $value ): void {

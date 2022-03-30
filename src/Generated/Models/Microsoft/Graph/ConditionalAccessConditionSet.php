@@ -15,6 +15,9 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     /** @var ConditionalAccessApplications|null $applications Applications and user actions included in and excluded from the policy. Required. */
     private ?ConditionalAccessApplications $applications = null;
     
+    /** @var ConditionalAccessClientApplications|null $clientApplications Client applications (service principals and workload identities) included in and excluded from the policy. Either users or clientApplications is required. */
+    private ?ConditionalAccessClientApplications $clientApplications = null;
+    
     /** @var array<ConditionalAccessClientApp>|null $clientAppTypes Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required. */
     private ?array $clientAppTypes = null;
     
@@ -33,7 +36,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     /** @var array<RiskLevel>|null $userRiskLevels User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required. */
     private ?array $userRiskLevels = null;
     
-    /** @var ConditionalAccessUsers|null $users  */
+    /** @var ConditionalAccessUsers|null $users Users, groups, and roles included in and excluded from the policy. Required. */
     private ?ConditionalAccessUsers $users = null;
     
     /**
@@ -69,6 +72,14 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the clientApplications property value. Client applications (service principals and workload identities) included in and excluded from the policy. Either users or clientApplications is required.
+     * @return ConditionalAccessClientApplications|null
+    */
+    public function getClientApplications(): ?ConditionalAccessClientApplications {
+        return $this->clientApplications;
+    }
+
+    /**
      * Gets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
      * @return array<ConditionalAccessClientApp>|null
     */
@@ -91,6 +102,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         return  [
             'applications' => function (self $o, ParseNode $n) { $o->setApplications($n->getObjectValue(ConditionalAccessApplications::class)); },
+            'clientApplications' => function (self $o, ParseNode $n) { $o->setClientApplications($n->getObjectValue(ConditionalAccessClientApplications::class)); },
             'clientAppTypes' => function (self $o, ParseNode $n) { $o->setClientAppTypes($n->getCollectionOfEnumValues(ConditionalAccessClientApp::class)); },
             'devices' => function (self $o, ParseNode $n) { $o->setDevices($n->getObjectValue(ConditionalAccessDevices::class)); },
             'locations' => function (self $o, ParseNode $n) { $o->setLocations($n->getObjectValue(ConditionalAccessLocations::class)); },
@@ -134,7 +146,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the users property value. 
+     * Gets the users property value. Users, groups, and roles included in and excluded from the policy. Required.
      * @return ConditionalAccessUsers|null
     */
     public function getUsers(): ?ConditionalAccessUsers {
@@ -147,6 +159,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('applications', $this->applications);
+        $writer->writeObjectValue('clientApplications', $this->clientApplications);
         $writer->writeCollectionOfEnumValues('clientAppTypes', $this->clientAppTypes);
         $writer->writeObjectValue('devices', $this->devices);
         $writer->writeObjectValue('locations', $this->locations);
@@ -171,6 +184,14 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     */
     public function setApplications(?ConditionalAccessApplications $value ): void {
         $this->applications = $value;
+    }
+
+    /**
+     * Sets the clientApplications property value. Client applications (service principals and workload identities) included in and excluded from the policy. Either users or clientApplications is required.
+     *  @param ConditionalAccessClientApplications|null $value Value to set for the clientApplications property.
+    */
+    public function setClientApplications(?ConditionalAccessClientApplications $value ): void {
+        $this->clientApplications = $value;
     }
 
     /**
@@ -222,7 +243,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the users property value. 
+     * Sets the users property value. Users, groups, and roles included in and excluded from the policy. Required.
      *  @param ConditionalAccessUsers|null $value Value to set for the users property.
     */
     public function setUsers(?ConditionalAccessUsers $value ): void {

@@ -33,7 +33,7 @@ class User extends DirectoryObject
     /** @var array<AssignedPlan>|null $assignedPlans The plans that are assigned to the user. Read-only. Not nullable. Returned only on $select. Supports $filter (eq and not). */
     private ?array $assignedPlans = null;
     
-    /** @var Authentication|null $authentication  */
+    /** @var Authentication|null $authentication The authentication methods that are supported for the user. */
     private ?Authentication $authentication = null;
     
     /** @var DateTime|null $birthday The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select. */
@@ -435,7 +435,7 @@ class User extends DirectoryObject
     }
 
     /**
-     * Gets the authentication property value. 
+     * Gets the authentication property value. The authentication methods that are supported for the user.
      * @return Authentication|null
     */
     public function getAuthentication(): ?Authentication {
@@ -1602,7 +1602,7 @@ class User extends DirectoryObject
     }
 
     /**
-     * Sets the authentication property value. 
+     * Sets the authentication property value. The authentication methods that are supported for the user.
      *  @param Authentication|null $value Value to set for the authentication property.
     */
     public function setAuthentication(?Authentication $value ): void {

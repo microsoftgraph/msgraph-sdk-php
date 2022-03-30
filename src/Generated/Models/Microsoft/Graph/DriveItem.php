@@ -12,10 +12,10 @@ class DriveItem extends BaseItem
     /** @var ItemAnalytics|null $analytics Analytics about the view activities that took place on this item. */
     private ?ItemAnalytics $analytics = null;
     
-    /** @var Audio|null $audio Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal. */
+    /** @var Audio|null $audio Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal. */
     private ?Audio $audio = null;
     
-    /** @var Bundle|null $bundle  */
+    /** @var Bundle|null $bundle Bundle metadata, if the item is a bundle. Read-only. */
     private ?Bundle $bundle = null;
     
     /** @var array<DriveItem>|null $children Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable. */
@@ -130,7 +130,7 @@ class DriveItem extends BaseItem
     }
 
     /**
-     * Gets the audio property value. Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal.
+     * Gets the audio property value. Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
      * @return Audio|null
     */
     public function getAudio(): ?Audio {
@@ -138,7 +138,7 @@ class DriveItem extends BaseItem
     }
 
     /**
-     * Gets the bundle property value. 
+     * Gets the bundle property value. Bundle metadata, if the item is a bundle. Read-only.
      * @return Bundle|null
     */
     public function getBundle(): ?Bundle {
@@ -467,7 +467,7 @@ class DriveItem extends BaseItem
     }
 
     /**
-     * Sets the audio property value. Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal.
+     * Sets the audio property value. Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
      *  @param Audio|null $value Value to set for the audio property.
     */
     public function setAudio(?Audio $value ): void {
@@ -475,7 +475,7 @@ class DriveItem extends BaseItem
     }
 
     /**
-     * Sets the bundle property value. 
+     * Sets the bundle property value. Bundle metadata, if the item is a bundle. Read-only.
      *  @param Bundle|null $value Value to set for the bundle property.
     */
     public function setBundle(?Bundle $value ): void {

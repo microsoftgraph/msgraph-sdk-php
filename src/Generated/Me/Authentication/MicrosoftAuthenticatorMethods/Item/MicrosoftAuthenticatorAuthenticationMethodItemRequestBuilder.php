@@ -63,7 +63,7 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder
     }
 
     /**
-     * Get microsoftAuthenticatorMethods from me
+     * The details of the Microsoft Authenticator app registered to a user for authentication.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options
@@ -125,7 +125,7 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder
     }
 
     /**
-     * Get microsoftAuthenticatorMethods from me
+     * The details of the Microsoft Authenticator app registered to a user for authentication.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options

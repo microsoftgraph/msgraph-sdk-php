@@ -58,7 +58,7 @@ class Fido2AuthenticationMethodItemRequestBuilder
     }
 
     /**
-     * Get fido2Methods from me
+     * Represents the FIDO2 security keys registered to a user for authentication.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options
@@ -120,7 +120,7 @@ class Fido2AuthenticationMethodItemRequestBuilder
     }
 
     /**
-     * Get fido2Methods from me
+     * Represents the FIDO2 security keys registered to a user for authentication.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options
