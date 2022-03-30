@@ -12,10 +12,10 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<ConditionalAccessDevicePlatform>|null $excludePlatforms Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue. */
+    /** @var array<ConditionalAccessDevicePlatform>|null $excludePlatforms Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue. */
     private ?array $excludePlatforms = null;
     
-    /** @var array<ConditionalAccessDevicePlatform>|null $includePlatforms Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue. */
+    /** @var array<ConditionalAccessDevicePlatform>|null $includePlatforms Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue. */
     private ?array $includePlatforms = null;
     
     /**
@@ -43,7 +43,7 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue.
+     * Gets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      * @return array<ConditionalAccessDevicePlatform>|null
     */
     public function getExcludePlatforms(): ?array {
@@ -62,7 +62,7 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue.
+     * Gets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      * @return array<ConditionalAccessDevicePlatform>|null
     */
     public function getIncludePlatforms(): ?array {
@@ -88,7 +88,7 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue.
+     * Sets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      *  @param array<ConditionalAccessDevicePlatform>|null $value Value to set for the excludePlatforms property.
     */
     public function setExcludePlatforms(?array $value ): void {
@@ -96,7 +96,7 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue.
+     * Sets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      *  @param array<ConditionalAccessDevicePlatform>|null $value Value to set for the includePlatforms property.
     */
     public function setIncludePlatforms(?array $value ): void {

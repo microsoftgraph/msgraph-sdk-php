@@ -8,16 +8,16 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Authentication extends Entity 
 {
-    /** @var array<Fido2AuthenticationMethod>|null $fido2Methods  */
+    /** @var array<Fido2AuthenticationMethod>|null $fido2Methods Represents the FIDO2 security keys registered to a user for authentication. */
     private ?array $fido2Methods = null;
     
-    /** @var array<AuthenticationMethod>|null $methods  */
+    /** @var array<AuthenticationMethod>|null $methods Represents all authentication methods registered to a user. */
     private ?array $methods = null;
     
-    /** @var array<MicrosoftAuthenticatorAuthenticationMethod>|null $microsoftAuthenticatorMethods  */
+    /** @var array<MicrosoftAuthenticatorAuthenticationMethod>|null $microsoftAuthenticatorMethods The details of the Microsoft Authenticator app registered to a user for authentication. */
     private ?array $microsoftAuthenticatorMethods = null;
     
-    /** @var array<WindowsHelloForBusinessAuthenticationMethod>|null $windowsHelloForBusinessMethods  */
+    /** @var array<WindowsHelloForBusinessAuthenticationMethod>|null $windowsHelloForBusinessMethods Represents the Windows Hello for Business authentication method registered to a user for authentication. */
     private ?array $windowsHelloForBusinessMethods = null;
     
     /**
@@ -37,7 +37,7 @@ class Authentication extends Entity
     }
 
     /**
-     * Gets the fido2Methods property value. 
+     * Gets the fido2Methods property value. Represents the FIDO2 security keys registered to a user for authentication.
      * @return array<Fido2AuthenticationMethod>|null
     */
     public function getFido2Methods(): ?array {
@@ -58,7 +58,7 @@ class Authentication extends Entity
     }
 
     /**
-     * Gets the methods property value. 
+     * Gets the methods property value. Represents all authentication methods registered to a user.
      * @return array<AuthenticationMethod>|null
     */
     public function getMethods(): ?array {
@@ -66,7 +66,7 @@ class Authentication extends Entity
     }
 
     /**
-     * Gets the microsoftAuthenticatorMethods property value. 
+     * Gets the microsoftAuthenticatorMethods property value. The details of the Microsoft Authenticator app registered to a user for authentication.
      * @return array<MicrosoftAuthenticatorAuthenticationMethod>|null
     */
     public function getMicrosoftAuthenticatorMethods(): ?array {
@@ -74,7 +74,7 @@ class Authentication extends Entity
     }
 
     /**
-     * Gets the windowsHelloForBusinessMethods property value. 
+     * Gets the windowsHelloForBusinessMethods property value. Represents the Windows Hello for Business authentication method registered to a user for authentication.
      * @return array<WindowsHelloForBusinessAuthenticationMethod>|null
     */
     public function getWindowsHelloForBusinessMethods(): ?array {
@@ -94,7 +94,7 @@ class Authentication extends Entity
     }
 
     /**
-     * Sets the fido2Methods property value. 
+     * Sets the fido2Methods property value. Represents the FIDO2 security keys registered to a user for authentication.
      *  @param array<Fido2AuthenticationMethod>|null $value Value to set for the fido2Methods property.
     */
     public function setFido2Methods(?array $value ): void {
@@ -102,7 +102,7 @@ class Authentication extends Entity
     }
 
     /**
-     * Sets the methods property value. 
+     * Sets the methods property value. Represents all authentication methods registered to a user.
      *  @param array<AuthenticationMethod>|null $value Value to set for the methods property.
     */
     public function setMethods(?array $value ): void {
@@ -110,7 +110,7 @@ class Authentication extends Entity
     }
 
     /**
-     * Sets the microsoftAuthenticatorMethods property value. 
+     * Sets the microsoftAuthenticatorMethods property value. The details of the Microsoft Authenticator app registered to a user for authentication.
      *  @param array<MicrosoftAuthenticatorAuthenticationMethod>|null $value Value to set for the microsoftAuthenticatorMethods property.
     */
     public function setMicrosoftAuthenticatorMethods(?array $value ): void {
@@ -118,7 +118,7 @@ class Authentication extends Entity
     }
 
     /**
-     * Sets the windowsHelloForBusinessMethods property value. 
+     * Sets the windowsHelloForBusinessMethods property value. Represents the Windows Hello for Business authentication method registered to a user for authentication.
      *  @param array<WindowsHelloForBusinessAuthenticationMethod>|null $value Value to set for the windowsHelloForBusinessMethods property.
     */
     public function setWindowsHelloForBusinessMethods(?array $value ): void {

@@ -86,6 +86,9 @@ class ColumnDefinition extends Entity
     /** @var ColumnDefinition|null $sourceColumn The source column for the content type column. */
     private ?ColumnDefinition $sourceColumn = null;
     
+    /** @var ContentTypeInfo|null $sourceContentType ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only. */
+    private ?ContentTypeInfo $sourceContentType = null;
+    
     /** @var TermColumn|null $term This column stores taxonomy terms. */
     private ?TermColumn $term = null;
     
@@ -237,6 +240,7 @@ class ColumnDefinition extends Entity
             'readOnly' => function (self $o, ParseNode $n) { $o->setReadOnly($n->getBooleanValue()); },
             'required' => function (self $o, ParseNode $n) { $o->setRequired($n->getBooleanValue()); },
             'sourceColumn' => function (self $o, ParseNode $n) { $o->setSourceColumn($n->getObjectValue(ColumnDefinition::class)); },
+            'sourceContentType' => function (self $o, ParseNode $n) { $o->setSourceContentType($n->getObjectValue(ContentTypeInfo::class)); },
             'term' => function (self $o, ParseNode $n) { $o->setTerm($n->getObjectValue(TermColumn::class)); },
             'text' => function (self $o, ParseNode $n) { $o->setText($n->getObjectValue(TextColumn::class)); },
             'thumbnail' => function (self $o, ParseNode $n) { $o->setThumbnail($n->getObjectValue(ThumbnailColumn::class)); },
@@ -366,6 +370,14 @@ class ColumnDefinition extends Entity
     }
 
     /**
+     * Gets the sourceContentType property value. ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
+     * @return ContentTypeInfo|null
+    */
+    public function getSourceContentType(): ?ContentTypeInfo {
+        return $this->sourceContentType;
+    }
+
+    /**
      * Gets the term property value. This column stores taxonomy terms.
      * @return TermColumn|null
     */
@@ -437,6 +449,7 @@ class ColumnDefinition extends Entity
         $writer->writeBooleanValue('readOnly', $this->readOnly);
         $writer->writeBooleanValue('required', $this->required);
         $writer->writeObjectValue('sourceColumn', $this->sourceColumn);
+        $writer->writeObjectValue('sourceContentType', $this->sourceContentType);
         $writer->writeObjectValue('term', $this->term);
         $writer->writeObjectValue('text', $this->text);
         $writer->writeObjectValue('thumbnail', $this->thumbnail);
@@ -650,6 +663,14 @@ class ColumnDefinition extends Entity
     */
     public function setSourceColumn(?ColumnDefinition $value ): void {
         $this->sourceColumn = $value;
+    }
+
+    /**
+     * Sets the sourceContentType property value. ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
+     *  @param ContentTypeInfo|null $value Value to set for the sourceContentType property.
+    */
+    public function setSourceContentType(?ContentTypeInfo $value ): void {
+        $this->sourceContentType = $value;
     }
 
     /**

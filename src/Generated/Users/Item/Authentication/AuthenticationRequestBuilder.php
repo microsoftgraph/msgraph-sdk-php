@@ -82,7 +82,7 @@ class AuthenticationRequestBuilder
     }
 
     /**
-     * Get authentication from users
+     * The authentication methods that are supported for the user.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options
@@ -155,7 +155,7 @@ class AuthenticationRequestBuilder
     }
 
     /**
-     * Get authentication from users
+     * The authentication methods that are supported for the user.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options

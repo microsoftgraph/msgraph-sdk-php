@@ -63,7 +63,7 @@ class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder
     }
 
     /**
-     * Get windowsHelloForBusinessMethods from users
+     * Represents the Windows Hello for Business authentication method registered to a user for authentication.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options
@@ -125,7 +125,7 @@ class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder
     }
 
     /**
-     * Get windowsHelloForBusinessMethods from users
+     * Represents the Windows Hello for Business authentication method registered to a user for authentication.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options
