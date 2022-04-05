@@ -12,7 +12,7 @@ class ForceDeleteRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var bool|null $disableUserAccounts  */
+    /** @var bool|null $disableUserAccounts The disableUserAccounts property */
     private ?bool $disableUserAccounts = null;
     
     /**
@@ -40,7 +40,7 @@ class ForceDeleteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the disableUserAccounts property value. 
+     * Gets the disableUserAccounts property value. The disableUserAccounts property
      * @return bool|null
     */
     public function getDisableUserAccounts(): ?bool {
@@ -75,7 +75,7 @@ class ForceDeleteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the disableUserAccounts property value. 
+     * Sets the disableUserAccounts property value. The disableUserAccounts property
      *  @param bool|null $value Value to set for the disableUserAccounts property.
     */
     public function setDisableUserAccounts(?bool $value ): void {

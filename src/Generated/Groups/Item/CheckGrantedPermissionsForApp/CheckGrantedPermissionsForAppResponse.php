@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Groups\Item\CheckGrantedPermissionsForApp;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ResourceSpecificPermissionGrant;
+use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrant;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class CheckGrantedPermissionsForAppResponse implements AdditionalDataHolder, Par
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<ResourceSpecificPermissionGrant>|null $value  */
+    /** @var array<ResourceSpecificPermissionGrant>|null $value The value property */
     private ?array $value = null;
     
     /**
@@ -51,7 +51,7 @@ class CheckGrantedPermissionsForAppResponse implements AdditionalDataHolder, Par
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<ResourceSpecificPermissionGrant>|null
     */
     public function getValue(): ?array {
@@ -76,7 +76,7 @@ class CheckGrantedPermissionsForAppResponse implements AdditionalDataHolder, Par
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      *  @param array<ResourceSpecificPermissionGrant>|null $value Value to set for the value property.
     */
     public function setValue(?array $value ): void {

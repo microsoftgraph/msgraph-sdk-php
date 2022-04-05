@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Search\Query;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\SearchRequest;
+use Microsoft\Graph\Generated\Models\SearchRequest;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class QueryRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<SearchRequest>|null $requests  */
+    /** @var array<SearchRequest>|null $requests The requests property */
     private ?array $requests = null;
     
     /**
@@ -51,7 +51,7 @@ class QueryRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the requests property value. 
+     * Gets the requests property value. The requests property
      * @return array<SearchRequest>|null
     */
     public function getRequests(): ?array {
@@ -76,7 +76,7 @@ class QueryRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the requests property value. 
+     * Sets the requests property value. The requests property
      *  @param array<SearchRequest>|null $value Value to set for the requests property.
     */
     public function setRequests(?array $value ): void {

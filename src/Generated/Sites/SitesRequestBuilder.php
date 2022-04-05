@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Sites;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Site;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\SiteCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Site;
+use Microsoft\Graph\Generated\Models\SiteCollectionResponse;
 use Microsoft\Graph\Generated\Sites\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Remove\RemoveRequestBuilder;
@@ -21,10 +21,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SitesRequestBuilder 
 {
+    /**
+     * The add property
+    */
     public function add(): AddRequestBuilder {
         return new AddRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -32,6 +38,9 @@ class SitesRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The remove property
+    */
     public function remove(): RemoveRequestBuilder {
         return new RemoveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

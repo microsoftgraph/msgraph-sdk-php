@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\Replies;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ChatMessage;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ChatMessageCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ChatMessage;
+use Microsoft\Graph\Generated\Models\ChatMessageCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\Replies\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\Replies\Delta\DeltaRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -20,6 +20,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class RepliesRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

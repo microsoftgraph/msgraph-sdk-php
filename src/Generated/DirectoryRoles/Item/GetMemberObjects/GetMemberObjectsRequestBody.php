@@ -12,7 +12,7 @@ class GetMemberObjectsRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var bool|null $securityEnabledOnly  */
+    /** @var bool|null $securityEnabledOnly The securityEnabledOnly property */
     private ?bool $securityEnabledOnly = null;
     
     /**
@@ -50,7 +50,7 @@ class GetMemberObjectsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the securityEnabledOnly property value. 
+     * Gets the securityEnabledOnly property value. The securityEnabledOnly property
      * @return bool|null
     */
     public function getSecurityEnabledOnly(): ?bool {
@@ -75,7 +75,7 @@ class GetMemberObjectsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the securityEnabledOnly property value. 
+     * Sets the securityEnabledOnly property value. The securityEnabledOnly property
      *  @param bool|null $value Value to set for the securityEnabledOnly property.
     */
     public function setSecurityEnabledOnly(?bool $value ): void {

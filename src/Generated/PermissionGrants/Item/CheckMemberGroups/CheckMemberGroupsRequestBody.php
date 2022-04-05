@@ -12,7 +12,7 @@ class CheckMemberGroupsRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<string>|null $groupIds  */
+    /** @var array<string>|null $groupIds The groupIds property */
     private ?array $groupIds = null;
     
     /**
@@ -50,7 +50,7 @@ class CheckMemberGroupsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the groupIds property value. 
+     * Gets the groupIds property value. The groupIds property
      * @return array<string>|null
     */
     public function getGroupIds(): ?array {
@@ -75,7 +75,7 @@ class CheckMemberGroupsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the groupIds property value. 
+     * Sets the groupIds property value. The groupIds property
      *  @param array<string>|null $value Value to set for the groupIds property.
     */
     public function setGroupIds(?array $value ): void {

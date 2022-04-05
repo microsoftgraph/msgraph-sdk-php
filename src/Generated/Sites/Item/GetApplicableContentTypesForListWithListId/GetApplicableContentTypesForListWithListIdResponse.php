@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Sites\Item\GetApplicableContentTypesForListWithListId;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ContentType;
+use Microsoft\Graph\Generated\Models\ContentType;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class GetApplicableContentTypesForListWithListIdResponse implements AdditionalDa
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<ContentType>|null $value  */
+    /** @var array<ContentType>|null $value The value property */
     private ?array $value = null;
     
     /**
@@ -51,7 +51,7 @@ class GetApplicableContentTypesForListWithListIdResponse implements AdditionalDa
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<ContentType>|null
     */
     public function getValue(): ?array {
@@ -76,7 +76,7 @@ class GetApplicableContentTypesForListWithListIdResponse implements AdditionalDa
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      *  @param array<ContentType>|null $value Value to set for the value property.
     */
     public function setValue(?array $value ): void {

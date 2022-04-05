@@ -11,8 +11,8 @@ use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues\IssuesRequestBuil
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues\Item\ServiceHealthIssueItemRequestBuilder;
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Item\ServiceUpdateMessageItemRequestBuilder;
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ServiceAnnouncement;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ServiceAnnouncement;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -23,14 +23,23 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ServiceAnnouncementRequestBuilder 
 {
+    /**
+     * The healthOverviews property
+    */
     public function healthOverviews(): HealthOverviewsRequestBuilder {
         return new HealthOverviewsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The issues property
+    */
     public function issues(): IssuesRequestBuilder {
         return new IssuesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The messages property
+    */
     public function messages(): MessagesRequestBuilder {
         return new MessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

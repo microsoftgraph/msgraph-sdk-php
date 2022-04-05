@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Members\Add;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ConversationMember;
+use Microsoft\Graph\Generated\Models\ConversationMember;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class AddRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<ConversationMember>|null $values  */
+    /** @var array<ConversationMember>|null $values The values property */
     private ?array $values = null;
     
     /**
@@ -51,7 +51,7 @@ class AddRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the values property value. 
+     * Gets the values property value. The values property
      * @return array<ConversationMember>|null
     */
     public function getValues(): ?array {
@@ -76,7 +76,7 @@ class AddRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the values property value. 
+     * Sets the values property value. The values property
      *  @param array<ConversationMember>|null $value Value to set for the values property.
     */
     public function setValues(?array $value ): void {

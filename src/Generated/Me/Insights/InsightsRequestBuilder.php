@@ -11,8 +11,8 @@ use Microsoft\Graph\Generated\Me\Insights\Trending\Item\TrendingItemRequestBuild
 use Microsoft\Graph\Generated\Me\Insights\Trending\TrendingRequestBuilder;
 use Microsoft\Graph\Generated\Me\Insights\Used\Item\UsedInsightItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Insights\Used\UsedRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OfficeGraphInsights;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OfficeGraphInsights;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -29,10 +29,16 @@ class InsightsRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The shared property
+    */
     public function shared(): SharedRequestBuilder {
         return new SharedRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The trending property
+    */
     public function trending(): TrendingRequestBuilder {
         return new TrendingRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -40,6 +46,9 @@ class InsightsRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The used property
+    */
     public function used(): UsedRequestBuilder {
         return new UsedRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TodoTask;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TodoTask;
 use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Extensions\Item\ExtensionItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\LinkedResources\Item\LinkedResourceItemRequestBuilder;
@@ -21,10 +21,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class TodoTaskItemRequestBuilder 
 {
+    /**
+     * The extensions property
+    */
     public function extensions(): ExtensionsRequestBuilder {
         return new ExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The linkedResources property
+    */
     public function linkedResources(): LinkedResourcesRequestBuilder {
         return new LinkedResourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

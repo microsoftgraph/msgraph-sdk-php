@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\User;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\User;
 use Microsoft\Graph\Generated\Users\Item\Activities\ActivitiesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Activities\Item\UserActivityItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\AgreementAcceptances\AgreementAcceptancesRequestBuilder;
@@ -114,178 +114,310 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class UserItemRequestBuilder 
 {
+    /**
+     * The activities property
+    */
     public function activities(): ActivitiesRequestBuilder {
         return new ActivitiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The agreementAcceptances property
+    */
     public function agreementAcceptances(): AgreementAcceptancesRequestBuilder {
         return new AgreementAcceptancesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The appRoleAssignments property
+    */
     public function appRoleAssignments(): AppRoleAssignmentsRequestBuilder {
         return new AppRoleAssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The assignLicense property
+    */
     public function assignLicense(): AssignLicenseRequestBuilder {
         return new AssignLicenseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The authentication property
+    */
     public function authentication(): AuthenticationRequestBuilder {
         return new AuthenticationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The calendar property
+    */
     public function calendar(): CalendarRequestBuilder {
         return new CalendarRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The calendarGroups property
+    */
     public function calendarGroups(): CalendarGroupsRequestBuilder {
         return new CalendarGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The calendars property
+    */
     public function calendars(): CalendarsRequestBuilder {
         return new CalendarsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The calendarView property
+    */
     public function calendarView(): CalendarViewRequestBuilder {
         return new CalendarViewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The changePassword property
+    */
     public function changePassword(): ChangePasswordRequestBuilder {
         return new ChangePasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The chats property
+    */
     public function chats(): ChatsRequestBuilder {
         return new ChatsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The checkMemberGroups property
+    */
     public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
         return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The checkMemberObjects property
+    */
     public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
         return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The contactFolders property
+    */
     public function contactFolders(): ContactFoldersRequestBuilder {
         return new ContactFoldersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The contacts property
+    */
     public function contacts(): ContactsRequestBuilder {
         return new ContactsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The createdObjects property
+    */
     public function createdObjects(): CreatedObjectsRequestBuilder {
         return new CreatedObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deviceManagementTroubleshootingEvents property
+    */
     public function deviceManagementTroubleshootingEvents(): DeviceManagementTroubleshootingEventsRequestBuilder {
         return new DeviceManagementTroubleshootingEventsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The directReports property
+    */
     public function directReports(): DirectReportsRequestBuilder {
         return new DirectReportsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The drive property
+    */
     public function drive(): DriveRequestBuilder {
         return new DriveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The drives property
+    */
     public function drives(): DrivesRequestBuilder {
         return new DrivesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The events property
+    */
     public function events(): EventsRequestBuilder {
         return new EventsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The exportPersonalData property
+    */
     public function exportPersonalData(): ExportPersonalDataRequestBuilder {
         return new ExportPersonalDataRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The extensions property
+    */
     public function extensions(): ExtensionsRequestBuilder {
         return new ExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The findMeetingTimes property
+    */
     public function findMeetingTimes(): FindMeetingTimesRequestBuilder {
         return new FindMeetingTimesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The followedSites property
+    */
     public function followedSites(): FollowedSitesRequestBuilder {
         return new FollowedSitesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getMailTips property
+    */
     public function getMailTips(): GetMailTipsRequestBuilder {
         return new GetMailTipsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getMemberGroups property
+    */
     public function getMemberGroups(): GetMemberGroupsRequestBuilder {
         return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getMemberObjects property
+    */
     public function getMemberObjects(): GetMemberObjectsRequestBuilder {
         return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The inferenceClassification property
+    */
     public function inferenceClassification(): InferenceClassificationRequestBuilder {
         return new InferenceClassificationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The insights property
+    */
     public function insights(): InsightsRequestBuilder {
         return new InsightsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The joinedTeams property
+    */
     public function joinedTeams(): JoinedTeamsRequestBuilder {
         return new JoinedTeamsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The licenseDetails property
+    */
     public function licenseDetails(): LicenseDetailsRequestBuilder {
         return new LicenseDetailsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The mailFolders property
+    */
     public function mailFolders(): MailFoldersRequestBuilder {
         return new MailFoldersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The managedAppRegistrations property
+    */
     public function managedAppRegistrations(): ManagedAppRegistrationsRequestBuilder {
         return new ManagedAppRegistrationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The managedDevices property
+    */
     public function managedDevices(): ManagedDevicesRequestBuilder {
         return new ManagedDevicesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The manager property
+    */
     public function manager(): ManagerRequestBuilder {
         return new ManagerRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The memberOf property
+    */
     public function memberOf(): MemberOfRequestBuilder {
         return new MemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The messages property
+    */
     public function messages(): MessagesRequestBuilder {
         return new MessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The oauth2PermissionGrants property
+    */
     public function oauth2PermissionGrants(): Oauth2PermissionGrantsRequestBuilder {
         return new Oauth2PermissionGrantsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The onenote property
+    */
     public function onenote(): OnenoteRequestBuilder {
         return new OnenoteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The onlineMeetings property
+    */
     public function onlineMeetings(): OnlineMeetingsRequestBuilder {
         return new OnlineMeetingsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The outlook property
+    */
     public function outlook(): OutlookRequestBuilder {
         return new OutlookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The ownedDevices property
+    */
     public function ownedDevices(): OwnedDevicesRequestBuilder {
         return new OwnedDevicesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The ownedObjects property
+    */
     public function ownedObjects(): OwnedObjectsRequestBuilder {
         return new OwnedObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -293,34 +425,58 @@ class UserItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The people property
+    */
     public function people(): PeopleRequestBuilder {
         return new PeopleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The photo property
+    */
     public function photo(): PhotoRequestBuilder {
         return new PhotoRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The photos property
+    */
     public function photos(): PhotosRequestBuilder {
         return new PhotosRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The planner property
+    */
     public function planner(): PlannerRequestBuilder {
         return new PlannerRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The presence property
+    */
     public function presence(): PresenceRequestBuilder {
         return new PresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The registeredDevices property
+    */
     public function registeredDevices(): RegisteredDevicesRequestBuilder {
         return new RegisteredDevicesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The removeAllDevicesFromManagement property
+    */
     public function removeAllDevicesFromManagement(): RemoveAllDevicesFromManagementRequestBuilder {
         return new RemoveAllDevicesFromManagementRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The reprocessLicenseAssignment property
+    */
     public function reprocessLicenseAssignment(): ReprocessLicenseAssignmentRequestBuilder {
         return new ReprocessLicenseAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -328,38 +484,65 @@ class UserItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The restore property
+    */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The revokeSignInSessions property
+    */
     public function revokeSignInSessions(): RevokeSignInSessionsRequestBuilder {
         return new RevokeSignInSessionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The scopedRoleMemberOf property
+    */
     public function scopedRoleMemberOf(): ScopedRoleMemberOfRequestBuilder {
         return new ScopedRoleMemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The sendMail property
+    */
     public function sendMail(): SendMailRequestBuilder {
         return new SendMailRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The settings property
+    */
     public function settings(): SettingsRequestBuilder {
         return new SettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The teamwork property
+    */
     public function teamwork(): TeamworkRequestBuilder {
         return new TeamworkRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The todo property
+    */
     public function todo(): TodoRequestBuilder {
         return new TodoRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The transitiveMemberOf property
+    */
     public function transitiveMemberOf(): TransitiveMemberOfRequestBuilder {
         return new TransitiveMemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The translateExchangeIds property
+    */
     public function translateExchangeIds(): TranslateExchangeIdsRequestBuilder {
         return new TranslateExchangeIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -367,6 +550,9 @@ class UserItemRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The wipeManagedAppRegistrationsByDeviceTag property
+    */
     public function wipeManagedAppRegistrationsByDeviceTag(): WipeManagedAppRegistrationsByDeviceTagRequestBuilder {
         return new WipeManagedAppRegistrationsByDeviceTagRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

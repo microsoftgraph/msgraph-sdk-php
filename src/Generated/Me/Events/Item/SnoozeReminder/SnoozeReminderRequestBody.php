@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Me\Events\Item\SnoozeReminder;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DateTimeTimeZone;
+use Microsoft\Graph\Generated\Models\DateTimeTimeZone;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class SnoozeReminderRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var DateTimeTimeZone|null $NewReminderTime  */
+    /** @var DateTimeTimeZone|null $NewReminderTime The NewReminderTime property */
     private ?DateTimeTimeZone $newReminderTime = null;
     
     /**
@@ -51,7 +51,7 @@ class SnoozeReminderRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the newReminderTime property value. 
+     * Gets the newReminderTime property value. The NewReminderTime property
      * @return DateTimeTimeZone|null
     */
     public function getNewReminderTime(): ?DateTimeTimeZone {
@@ -76,7 +76,7 @@ class SnoozeReminderRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the newReminderTime property value. 
+     * Sets the newReminderTime property value. The NewReminderTime property
      *  @param DateTimeTimeZone|null $value Value to set for the NewReminderTime property.
     */
     public function setNewReminderTime(?DateTimeTimeZone $value ): void {

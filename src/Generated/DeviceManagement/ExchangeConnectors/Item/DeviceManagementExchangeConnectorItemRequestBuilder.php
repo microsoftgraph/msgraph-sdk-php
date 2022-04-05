@@ -6,8 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\Item\Sync\SyncRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DeviceManagementExchangeConnector;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\DeviceManagementExchangeConnector;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -24,6 +24,9 @@ class DeviceManagementExchangeConnectorItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The sync property
+    */
     public function sync(): SyncRequestBuilder {
         return new SyncRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -6,8 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\ApplicationTemplates\Item\Instantiate\InstantiateRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ApplicationTemplate;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ApplicationTemplate;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -18,6 +18,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ApplicationTemplateItemRequestBuilder 
 {
+    /**
+     * The instantiate property
+    */
     public function instantiate(): InstantiateRequestBuilder {
         return new InstantiateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

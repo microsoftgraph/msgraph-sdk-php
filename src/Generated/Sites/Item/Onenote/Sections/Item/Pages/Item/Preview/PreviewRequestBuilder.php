@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\Onenote\Sections\Item\Pages\Item\
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OnenotePagePreview;
+use Microsoft\Graph\Generated\Models\OnenotePagePreview;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

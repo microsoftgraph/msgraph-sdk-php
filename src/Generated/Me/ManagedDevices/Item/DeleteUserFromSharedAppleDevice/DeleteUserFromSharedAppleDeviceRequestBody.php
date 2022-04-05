@@ -12,7 +12,7 @@ class DeleteUserFromSharedAppleDeviceRequestBody implements AdditionalDataHolder
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $userPrincipalName  */
+    /** @var string|null $userPrincipalName The userPrincipalName property */
     private ?string $userPrincipalName = null;
     
     /**
@@ -50,7 +50,7 @@ class DeleteUserFromSharedAppleDeviceRequestBody implements AdditionalDataHolder
     }
 
     /**
-     * Gets the userPrincipalName property value. 
+     * Gets the userPrincipalName property value. The userPrincipalName property
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
@@ -75,7 +75,7 @@ class DeleteUserFromSharedAppleDeviceRequestBody implements AdditionalDataHolder
     }
 
     /**
-     * Sets the userPrincipalName property value. 
+     * Sets the userPrincipalName property value. The userPrincipalName property
      *  @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value ): void {

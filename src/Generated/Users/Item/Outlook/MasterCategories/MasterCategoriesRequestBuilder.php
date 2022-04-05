@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Outlook\MasterCategories;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OutlookCategory;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OutlookCategoryCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OutlookCategory;
+use Microsoft\Graph\Generated\Models\OutlookCategoryCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\Outlook\MasterCategories\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class MasterCategoriesRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

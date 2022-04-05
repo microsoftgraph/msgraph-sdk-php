@@ -10,19 +10,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SetPresenceRequestBody implements AdditionalDataHolder, Parsable 
 {
-    /** @var string|null $activity  */
+    /** @var string|null $activity The activity property */
     private ?string $activity = null;
     
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $availability  */
+    /** @var string|null $availability The availability property */
     private ?string $availability = null;
     
-    /** @var DateInterval|null $expirationDuration  */
+    /** @var DateInterval|null $expirationDuration The expirationDuration property */
     private ?DateInterval $expirationDuration = null;
     
-    /** @var string|null $sessionId  */
+    /** @var string|null $sessionId The sessionId property */
     private ?string $sessionId = null;
     
     /**
@@ -42,7 +42,7 @@ class SetPresenceRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the activity property value. 
+     * Gets the activity property value. The activity property
      * @return string|null
     */
     public function getActivity(): ?string {
@@ -58,7 +58,7 @@ class SetPresenceRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the availability property value. 
+     * Gets the availability property value. The availability property
      * @return string|null
     */
     public function getAvailability(): ?string {
@@ -66,7 +66,7 @@ class SetPresenceRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the expirationDuration property value. 
+     * Gets the expirationDuration property value. The expirationDuration property
      * @return DateInterval|null
     */
     public function getExpirationDuration(): ?DateInterval {
@@ -87,7 +87,7 @@ class SetPresenceRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the sessionId property value. 
+     * Gets the sessionId property value. The sessionId property
      * @return string|null
     */
     public function getSessionId(): ?string {
@@ -107,7 +107,7 @@ class SetPresenceRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the activity property value. 
+     * Sets the activity property value. The activity property
      *  @param string|null $value Value to set for the activity property.
     */
     public function setActivity(?string $value ): void {
@@ -123,7 +123,7 @@ class SetPresenceRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the availability property value. 
+     * Sets the availability property value. The availability property
      *  @param string|null $value Value to set for the availability property.
     */
     public function setAvailability(?string $value ): void {
@@ -131,7 +131,7 @@ class SetPresenceRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the expirationDuration property value. 
+     * Sets the expirationDuration property value. The expirationDuration property
      *  @param DateInterval|null $value Value to set for the expirationDuration property.
     */
     public function setExpirationDuration(?DateInterval $value ): void {
@@ -139,7 +139,7 @@ class SetPresenceRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the sessionId property value. 
+     * Sets the sessionId property value. The sessionId property
      *  @param string|null $value Value to set for the sessionId property.
     */
     public function setSessionId(?string $value ): void {

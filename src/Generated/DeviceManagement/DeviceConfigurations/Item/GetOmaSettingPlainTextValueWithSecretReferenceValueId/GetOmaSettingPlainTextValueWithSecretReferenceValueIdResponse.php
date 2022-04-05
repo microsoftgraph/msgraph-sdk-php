@@ -12,7 +12,7 @@ class GetOmaSettingPlainTextValueWithSecretReferenceValueIdResponse implements A
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $value  */
+    /** @var string|null $value The value property */
     private ?string $value = null;
     
     /**
@@ -50,7 +50,7 @@ class GetOmaSettingPlainTextValueWithSecretReferenceValueIdResponse implements A
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return string|null
     */
     public function getValue(): ?string {
@@ -75,7 +75,7 @@ class GetOmaSettingPlainTextValueWithSecretReferenceValueIdResponse implements A
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      *  @param string|null $value Value to set for the value property.
     */
     public function setValue(?string $value ): void {

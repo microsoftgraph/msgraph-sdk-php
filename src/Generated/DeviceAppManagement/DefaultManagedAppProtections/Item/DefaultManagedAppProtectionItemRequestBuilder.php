@@ -8,8 +8,8 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\DefaultManagedAppProtections\Item\Apps\AppsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\DefaultManagedAppProtections\Item\Apps\Item\ManagedMobileAppItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\DefaultManagedAppProtections\Item\DeploymentSummary\DeploymentSummaryRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DefaultManagedAppProtection;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\DefaultManagedAppProtection;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -20,10 +20,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class DefaultManagedAppProtectionItemRequestBuilder 
 {
+    /**
+     * The apps property
+    */
     public function apps(): AppsRequestBuilder {
         return new AppsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deploymentSummary property
+    */
     public function deploymentSummary(): DeploymentSummaryRequestBuilder {
         return new DeploymentSummaryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

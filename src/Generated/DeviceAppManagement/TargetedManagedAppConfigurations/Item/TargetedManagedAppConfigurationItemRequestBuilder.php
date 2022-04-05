@@ -12,8 +12,8 @@ use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfiguratio
 use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Assignments\Item\TargetedManagedAppPolicyAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\DeploymentSummary\DeploymentSummaryRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\TargetApps\TargetAppsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TargetedManagedAppConfiguration;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TargetedManagedAppConfiguration;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -24,18 +24,30 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class TargetedManagedAppConfigurationItemRequestBuilder 
 {
+    /**
+     * The apps property
+    */
     public function apps(): AppsRequestBuilder {
         return new AppsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The assign property
+    */
     public function assign(): AssignRequestBuilder {
         return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The assignments property
+    */
     public function assignments(): AssignmentsRequestBuilder {
         return new AssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deploymentSummary property
+    */
     public function deploymentSummary(): DeploymentSummaryRequestBuilder {
         return new DeploymentSummaryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -46,6 +58,9 @@ class TargetedManagedAppConfigurationItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The targetApps property
+    */
     public function targetApps(): TargetAppsRequestBuilder {
         return new TargetAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

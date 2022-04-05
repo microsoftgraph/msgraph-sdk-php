@@ -12,10 +12,10 @@ class PreviewRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $page  */
+    /** @var string|null $page The page property */
     private ?string $page = null;
     
-    /** @var float|null $zoom  */
+    /** @var float|null $zoom The zoom property */
     private ?float $zoom = null;
     
     /**
@@ -54,7 +54,7 @@ class PreviewRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the page property value. 
+     * Gets the page property value. The page property
      * @return string|null
     */
     public function getPage(): ?string {
@@ -62,7 +62,7 @@ class PreviewRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the zoom property value. 
+     * Gets the zoom property value. The zoom property
      * @return float|null
     */
     public function getZoom(): ?float {
@@ -88,7 +88,7 @@ class PreviewRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the page property value. 
+     * Sets the page property value. The page property
      *  @param string|null $value Value to set for the page property.
     */
     public function setPage(?string $value ): void {
@@ -96,7 +96,7 @@ class PreviewRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the zoom property value. 
+     * Sets the zoom property value. The zoom property
      *  @param float|null $value Value to set for the zoom property.
     */
     public function setZoom(?float $value ): void {

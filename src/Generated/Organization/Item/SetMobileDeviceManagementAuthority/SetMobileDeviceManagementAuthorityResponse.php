@@ -12,7 +12,7 @@ class SetMobileDeviceManagementAuthorityResponse implements AdditionalDataHolder
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var int|null $value  */
+    /** @var int|null $value The value property */
     private ?int $value = null;
     
     /**
@@ -50,7 +50,7 @@ class SetMobileDeviceManagementAuthorityResponse implements AdditionalDataHolder
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return int|null
     */
     public function getValue(): ?int {
@@ -75,7 +75,7 @@ class SetMobileDeviceManagementAuthorityResponse implements AdditionalDataHolder
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      *  @param int|null $value Value to set for the value property.
     */
     public function setValue(?int $value ): void {

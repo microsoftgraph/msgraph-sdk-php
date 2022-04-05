@@ -12,10 +12,10 @@ class UploadClientCertificateRequestBody implements AdditionalDataHolder, Parsab
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $password  */
+    /** @var string|null $password The password property */
     private ?string $password = null;
     
-    /** @var string|null $pkcs12Value  */
+    /** @var string|null $pkcs12Value The pkcs12Value property */
     private ?string $pkcs12Value = null;
     
     /**
@@ -54,7 +54,7 @@ class UploadClientCertificateRequestBody implements AdditionalDataHolder, Parsab
     }
 
     /**
-     * Gets the password property value. 
+     * Gets the password property value. The password property
      * @return string|null
     */
     public function getPassword(): ?string {
@@ -62,7 +62,7 @@ class UploadClientCertificateRequestBody implements AdditionalDataHolder, Parsab
     }
 
     /**
-     * Gets the pkcs12Value property value. 
+     * Gets the pkcs12Value property value. The pkcs12Value property
      * @return string|null
     */
     public function getPkcs12Value(): ?string {
@@ -88,7 +88,7 @@ class UploadClientCertificateRequestBody implements AdditionalDataHolder, Parsab
     }
 
     /**
-     * Sets the password property value. 
+     * Sets the password property value. The password property
      *  @param string|null $value Value to set for the password property.
     */
     public function setPassword(?string $value ): void {
@@ -96,7 +96,7 @@ class UploadClientCertificateRequestBody implements AdditionalDataHolder, Parsab
     }
 
     /**
-     * Sets the pkcs12Value property value. 
+     * Sets the pkcs12Value property value. The pkcs12Value property
      *  @param string|null $value Value to set for the pkcs12Value property.
     */
     public function setPkcs12Value(?string $value ): void {

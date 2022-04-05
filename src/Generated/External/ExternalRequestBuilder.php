@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\External\Connections\ConnectionsRequestBuilder;
 use Microsoft\Graph\Generated\External\Connections\Item\ExternalConnectionItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ExternalConnectors\External;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ExternalConnectors\External;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ExternalRequestBuilder 
 {
+    /**
+     * The connections property
+    */
     public function connections(): ConnectionsRequestBuilder {
         return new ConnectionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

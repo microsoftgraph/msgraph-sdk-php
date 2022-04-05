@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAss
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\UnifiedRoleAssignment;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\UnifiedRoleAssignment;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignments\Item\AppScope\AppScopeRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignments\Item\DirectoryScope\DirectoryScopeRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignments\Item\Principal\PrincipalRequestBuilder;
@@ -21,10 +21,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class UnifiedRoleAssignmentItemRequestBuilder 
 {
+    /**
+     * The appScope property
+    */
     public function appScope(): AppScopeRequestBuilder {
         return new AppScopeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The directoryScope property
+    */
     public function directoryScope(): DirectoryScopeRequestBuilder {
         return new DirectoryScopeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -32,6 +38,9 @@ class UnifiedRoleAssignmentItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The principal property
+    */
     public function principal(): PrincipalRequestBuilder {
         return new PrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -39,6 +48,9 @@ class UnifiedRoleAssignmentItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The roleDefinition property
+    */
     public function roleDefinition(): RoleDefinitionRequestBuilder {
         return new RoleDefinitionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

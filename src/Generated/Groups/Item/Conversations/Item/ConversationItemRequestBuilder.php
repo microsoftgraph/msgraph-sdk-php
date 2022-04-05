@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\ConversationThreadItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\ThreadsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Conversation;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Conversation;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -25,6 +25,9 @@ class ConversationItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The threads property
+    */
     public function threads(): ThreadsRequestBuilder {
         return new ThreadsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

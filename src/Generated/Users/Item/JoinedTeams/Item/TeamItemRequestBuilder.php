@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Team;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Team;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\ChannelsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\ChannelItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Group\GroupRequestBuilder;
@@ -29,22 +29,37 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class TeamItemRequestBuilder 
 {
+    /**
+     * The channels property
+    */
     public function channels(): ChannelsRequestBuilder {
         return new ChannelsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The group property
+    */
     public function group(): GroupRequestBuilder {
         return new GroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The installedApps property
+    */
     public function installedApps(): InstalledAppsRequestBuilder {
         return new InstalledAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The members property
+    */
     public function members(): MembersRequestBuilder {
         return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The operations property
+    */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -52,6 +67,9 @@ class TeamItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The primaryChannel property
+    */
     public function primaryChannel(): PrimaryChannelRequestBuilder {
         return new PrimaryChannelRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -59,10 +77,16 @@ class TeamItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The schedule property
+    */
     public function schedule(): ScheduleRequestBuilder {
         return new ScheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The template property
+    */
     public function template(): TemplateRequestBuilder {
         return new TemplateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

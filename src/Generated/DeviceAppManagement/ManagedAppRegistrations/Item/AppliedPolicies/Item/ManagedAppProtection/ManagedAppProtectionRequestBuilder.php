@@ -13,6 +13,9 @@ class ManagedAppProtectionRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The targetApps property
+    */
     public function targetApps(): TargetAppsRequestBuilder {
         return new TargetAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

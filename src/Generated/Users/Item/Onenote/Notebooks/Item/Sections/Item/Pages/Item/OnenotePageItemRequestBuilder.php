@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\Sections\I
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OnenotePage;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OnenotePage;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\Sections\Item\Pages\Item\Content\ContentRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\Sections\Item\Pages\Item\CopyToSection\CopyToSectionRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\Sections\Item\Pages\Item\OnenotePatchContent\OnenotePatchContentRequestBuilder;
@@ -23,22 +23,37 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class OnenotePageItemRequestBuilder 
 {
+    /**
+     * The content property
+    */
     public function content(): ContentRequestBuilder {
         return new ContentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The copyToSection property
+    */
     public function copyToSection(): CopyToSectionRequestBuilder {
         return new CopyToSectionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The onenotePatchContent property
+    */
     public function onenotePatchContent(): OnenotePatchContentRequestBuilder {
         return new OnenotePatchContentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The parentNotebook property
+    */
     public function parentNotebook(): ParentNotebookRequestBuilder {
         return new ParentNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The parentSection property
+    */
     public function parentSection(): ParentSectionRequestBuilder {
         return new ParentSectionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

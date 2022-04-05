@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Oauth2PermissionGrants;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OAuth2PermissionGrant;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OAuth2PermissionGrantCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OAuth2PermissionGrant;
+use Microsoft\Graph\Generated\Models\OAuth2PermissionGrantCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Oauth2PermissionGrants\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Oauth2PermissionGrants\Delta\DeltaRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -20,6 +20,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class Oauth2PermissionGrantsRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

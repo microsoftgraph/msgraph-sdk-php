@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item\Outlook;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OutlookUser;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OutlookUser;
 use Microsoft\Graph\Generated\Users\Item\Outlook\MasterCategories\Item\OutlookCategoryItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Outlook\MasterCategories\MasterCategoriesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Outlook\SupportedLanguages\SupportedLanguagesRequestBuilder;
@@ -22,6 +22,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class OutlookRequestBuilder 
 {
+    /**
+     * The masterCategories property
+    */
     public function masterCategories(): MasterCategoriesRequestBuilder {
         return new MasterCategoriesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

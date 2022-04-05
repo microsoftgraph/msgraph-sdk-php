@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\RequestAdapter;
 
 class WindowsInformationProtectionRequestBuilder 
 {
+    /**
+     * The assign property
+    */
     public function assign(): AssignRequestBuilder {
         return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

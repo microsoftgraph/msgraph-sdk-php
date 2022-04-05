@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\AccessPackagesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\AccessPackageItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AccessPackageCatalog;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\AccessPackageCatalog;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AccessPackageCatalogItemRequestBuilder 
 {
+    /**
+     * The accessPackages property
+    */
     public function accessPackages(): AccessPackagesRequestBuilder {
         return new AccessPackagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -75,7 +78,7 @@ class AccessPackageCatalogItemRequestBuilder
     }
 
     /**
-     * Represents a group of access packages.
+     * Represents a collection of access packages.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options
@@ -137,7 +140,7 @@ class AccessPackageCatalogItemRequestBuilder
     }
 
     /**
-     * Represents a group of access packages.
+     * Represents a collection of access packages.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options

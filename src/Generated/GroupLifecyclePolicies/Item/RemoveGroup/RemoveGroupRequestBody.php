@@ -12,7 +12,7 @@ class RemoveGroupRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $groupId  */
+    /** @var string|null $groupId The groupId property */
     private ?string $groupId = null;
     
     /**
@@ -50,7 +50,7 @@ class RemoveGroupRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the groupId property value. 
+     * Gets the groupId property value. The groupId property
      * @return string|null
     */
     public function getGroupId(): ?string {
@@ -75,7 +75,7 @@ class RemoveGroupRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the groupId property value. 
+     * Sets the groupId property value. The groupId property
      *  @param string|null $value Value to set for the groupId property.
     */
     public function setGroupId(?string $value ): void {

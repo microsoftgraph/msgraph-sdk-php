@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\AccessReviewsRequ
 use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\EntitlementManagementRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\TermsOfUseRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\IdentityGovernance;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\IdentityGovernance;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -21,14 +21,23 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class IdentityGovernanceRequestBuilder 
 {
+    /**
+     * The accessReviews property
+    */
     public function accessReviews(): AccessReviewsRequestBuilder {
         return new AccessReviewsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The appConsent property
+    */
     public function appConsent(): AppConsentRequestBuilder {
         return new AppConsentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The entitlementManagement property
+    */
     public function entitlementManagement(): EntitlementManagementRequestBuilder {
         return new EntitlementManagementRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -39,6 +48,9 @@ class IdentityGovernanceRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The termsOfUse property
+    */
     public function termsOfUse(): TermsOfUseRequestBuilder {
         return new TermsOfUseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

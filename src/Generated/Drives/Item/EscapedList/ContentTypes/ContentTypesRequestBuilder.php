@@ -7,9 +7,9 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\AddCopy\AddCopyRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ContentType;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ContentTypeCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ContentType;
+use Microsoft\Graph\Generated\Models\ContentTypeCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -20,10 +20,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ContentTypesRequestBuilder 
 {
+    /**
+     * The addCopy property
+    */
     public function addCopy(): AddCopyRequestBuilder {
         return new AddCopyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

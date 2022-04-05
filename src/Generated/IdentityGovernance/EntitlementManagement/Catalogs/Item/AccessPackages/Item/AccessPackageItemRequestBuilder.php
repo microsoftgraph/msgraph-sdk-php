@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\AssignmentPolicies\Item\AccessPackageAssignmentPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\Catalog\CatalogRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\GetApplicablePolicyRequirements\GetApplicablePolicyRequirementsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AccessPackage;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\AccessPackage;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -21,14 +21,23 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AccessPackageItemRequestBuilder 
 {
+    /**
+     * The assignmentPolicies property
+    */
     public function assignmentPolicies(): AssignmentPoliciesRequestBuilder {
         return new AssignmentPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The catalog property
+    */
     public function catalog(): CatalogRequestBuilder {
         return new CatalogRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getApplicablePolicyRequirements property
+    */
     public function getApplicablePolicyRequirements(): GetApplicablePolicyRequirementsRequestBuilder {
         return new GetApplicablePolicyRequirementsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Workbooks\Item\CreateUploadSession;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DriveItemUploadableProperties;
+use Microsoft\Graph\Generated\Models\DriveItemUploadableProperties;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class CreateUploadSessionRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var DriveItemUploadableProperties|null $item  */
+    /** @var DriveItemUploadableProperties|null $item The item property */
     private ?DriveItemUploadableProperties $item = null;
     
     /**
@@ -51,7 +51,7 @@ class CreateUploadSessionRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the item property value. 
+     * Gets the item property value. The item property
      * @return DriveItemUploadableProperties|null
     */
     public function getItem(): ?DriveItemUploadableProperties {
@@ -76,7 +76,7 @@ class CreateUploadSessionRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the item property value. 
+     * Sets the item property value. The item property
      *  @param DriveItemUploadableProperties|null $value Value to set for the item property.
     */
     public function setItem(?DriveItemUploadableProperties $value ): void {

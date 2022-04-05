@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Policies\PermissionGrantPolicies;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\PermissionGrantPolicy;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\PermissionGrantPolicyCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\PermissionGrantPolicy;
+use Microsoft\Graph\Generated\Models\PermissionGrantPolicyCollectionResponse;
 use Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class PermissionGrantPoliciesRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

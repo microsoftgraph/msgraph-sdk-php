@@ -12,8 +12,8 @@ use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Item\Relatio
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Item\Relations\RelationsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Item\Terms\Item\TermItemRequestBuilder as MicrosoftGraphGeneratedGroupsItemSitesItemTermStoreSetsItemTermsItemTermItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Item\Terms\TermsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TermStore\Set;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TermStore\Set;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -24,10 +24,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SetItemRequestBuilder 
 {
+    /**
+     * The children property
+    */
     public function children(): ChildrenRequestBuilder {
         return new ChildrenRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The parentGroup property
+    */
     public function parentGroup(): ParentGroupRequestBuilder {
         return new ParentGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -35,6 +41,9 @@ class SetItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The relations property
+    */
     public function relations(): RelationsRequestBuilder {
         return new RelationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -42,6 +51,9 @@ class SetItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The terms property
+    */
     public function terms(): TermsRequestBuilder {
         return new TermsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

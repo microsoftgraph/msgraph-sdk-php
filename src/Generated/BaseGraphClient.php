@@ -123,189 +123,328 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 use Microsoft\Kiota\Serialization\Json\JsonParseNodeFactory;
 use Microsoft\Kiota\Serialization\Json\JsonSerializationWriterFactory;
+use Psr\Http\Message\StreamInterface;
 
 class BaseGraphClient 
 {
+    /**
+     * The admin property
+    */
     public function admin(): AdminRequestBuilder {
         return new AdminRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The agreementAcceptances property
+    */
     public function agreementAcceptances(): AgreementAcceptancesRequestBuilder {
         return new AgreementAcceptancesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The agreements property
+    */
     public function agreements(): AgreementsRequestBuilder {
         return new AgreementsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The appCatalogs property
+    */
     public function appCatalogs(): AppCatalogsRequestBuilder {
         return new AppCatalogsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The applications property
+    */
     public function applications(): ApplicationsRequestBuilder {
         return new ApplicationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The applicationTemplates property
+    */
     public function applicationTemplates(): ApplicationTemplatesRequestBuilder {
         return new ApplicationTemplatesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The auditLogs property
+    */
     public function auditLogs(): AuditLogsRequestBuilder {
         return new AuditLogsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The authenticationMethodConfigurations property
+    */
     public function authenticationMethodConfigurations(): AuthenticationMethodConfigurationsRequestBuilder {
         return new AuthenticationMethodConfigurationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The authenticationMethodsPolicy property
+    */
     public function authenticationMethodsPolicy(): AuthenticationMethodsPolicyRequestBuilder {
         return new AuthenticationMethodsPolicyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The branding property
+    */
     public function branding(): BrandingRequestBuilder {
         return new BrandingRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The certificateBasedAuthConfiguration property
+    */
     public function certificateBasedAuthConfiguration(): CertificateBasedAuthConfigurationRequestBuilder {
         return new CertificateBasedAuthConfigurationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The chats property
+    */
     public function chats(): ChatsRequestBuilder {
         return new ChatsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The communications property
+    */
     public function communications(): CommunicationsRequestBuilder {
         return new CommunicationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The compliance property
+    */
     public function compliance(): ComplianceRequestBuilder {
         return new ComplianceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The connections property
+    */
     public function connections(): ConnectionsRequestBuilder {
         return new ConnectionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The contacts property
+    */
     public function contacts(): ContactsRequestBuilder {
         return new ContactsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The contracts property
+    */
     public function contracts(): ContractsRequestBuilder {
         return new ContractsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The dataPolicyOperations property
+    */
     public function dataPolicyOperations(): DataPolicyOperationsRequestBuilder {
         return new DataPolicyOperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deviceAppManagement property
+    */
     public function deviceAppManagement(): DeviceAppManagementRequestBuilder {
         return new DeviceAppManagementRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deviceManagement property
+    */
     public function deviceManagement(): DeviceManagementRequestBuilder {
         return new DeviceManagementRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The devices property
+    */
     public function devices(): DevicesRequestBuilder {
         return new DevicesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The directory property
+    */
     public function directory(): DirectoryRequestBuilder {
         return new DirectoryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The directoryObjects property
+    */
     public function directoryObjects(): DirectoryObjectsRequestBuilder {
         return new DirectoryObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The directoryRoles property
+    */
     public function directoryRoles(): DirectoryRolesRequestBuilder {
         return new DirectoryRolesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The directoryRoleTemplates property
+    */
     public function directoryRoleTemplates(): DirectoryRoleTemplatesRequestBuilder {
         return new DirectoryRoleTemplatesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The domainDnsRecords property
+    */
     public function domainDnsRecords(): DomainDnsRecordsRequestBuilder {
         return new DomainDnsRecordsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The domains property
+    */
     public function domains(): DomainsRequestBuilder {
         return new DomainsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The drive property
+    */
     public function drive(): DriveRequestBuilder {
         return new DriveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The drives property
+    */
     public function drives(): DrivesRequestBuilder {
         return new DrivesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The education property
+    */
     public function education(): EducationRequestBuilder {
         return new EducationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The print property
+    */
     public function escapedPrint(): PrintRequestBuilder {
         return new PrintRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The external property
+    */
     public function external(): ExternalRequestBuilder {
         return new ExternalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The groupLifecyclePolicies property
+    */
     public function groupLifecyclePolicies(): GroupLifecyclePoliciesRequestBuilder {
         return new GroupLifecyclePoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The groups property
+    */
     public function groups(): GroupsRequestBuilder {
         return new GroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The groupSettings property
+    */
     public function groupSettings(): GroupSettingsRequestBuilder {
         return new GroupSettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The groupSettingTemplates property
+    */
     public function groupSettingTemplates(): GroupSettingTemplatesRequestBuilder {
         return new GroupSettingTemplatesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The identity property
+    */
     public function identity(): IdentityRequestBuilder {
         return new IdentityRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The identityGovernance property
+    */
     public function identityGovernance(): IdentityGovernanceRequestBuilder {
         return new IdentityGovernanceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The identityProtection property
+    */
     public function identityProtection(): IdentityProtectionRequestBuilder {
         return new IdentityProtectionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The identityProviders property
+    */
     public function identityProviders(): IdentityProvidersRequestBuilder {
         return new IdentityProvidersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The informationProtection property
+    */
     public function informationProtection(): InformationProtectionRequestBuilder {
         return new InformationProtectionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The invitations property
+    */
     public function invitations(): InvitationsRequestBuilder {
         return new InvitationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The localizations property
+    */
     public function localizations(): LocalizationsRequestBuilder {
         return new LocalizationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The me property
+    */
     public function me(): MeRequestBuilder {
         return new MeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The oauth2PermissionGrants property
+    */
     public function oauth2PermissionGrants(): Oauth2PermissionGrantsRequestBuilder {
         return new Oauth2PermissionGrantsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The organization property
+    */
     public function organization(): OrganizationRequestBuilder {
         return new OrganizationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -313,26 +452,44 @@ class BaseGraphClient
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The permissionGrants property
+    */
     public function permissionGrants(): PermissionGrantsRequestBuilder {
         return new PermissionGrantsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The places property
+    */
     public function places(): PlacesRequestBuilder {
         return new PlacesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The planner property
+    */
     public function planner(): PlannerRequestBuilder {
         return new PlannerRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The policies property
+    */
     public function policies(): PoliciesRequestBuilder {
         return new PoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The privacy property
+    */
     public function privacy(): PrivacyRequestBuilder {
         return new PrivacyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The reports property
+    */
     public function reports(): ReportsRequestBuilder {
         return new ReportsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -340,58 +497,100 @@ class BaseGraphClient
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The roleManagement property
+    */
     public function roleManagement(): RoleManagementRequestBuilder {
         return new RoleManagementRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The schemaExtensions property
+    */
     public function schemaExtensions(): SchemaExtensionsRequestBuilder {
         return new SchemaExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The scopedRoleMemberships property
+    */
     public function scopedRoleMemberships(): ScopedRoleMembershipsRequestBuilder {
         return new ScopedRoleMembershipsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The search property
+    */
     public function search(): SearchRequestBuilder {
         return new SearchRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The security property
+    */
     public function security(): SecurityRequestBuilder {
         return new SecurityRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The servicePrincipals property
+    */
     public function servicePrincipals(): ServicePrincipalsRequestBuilder {
         return new ServicePrincipalsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The shares property
+    */
     public function shares(): SharesRequestBuilder {
         return new SharesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The sites property
+    */
     public function sites(): SitesRequestBuilder {
         return new SitesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The solutions property
+    */
     public function solutions(): SolutionsRequestBuilder {
         return new SolutionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The subscribedSkus property
+    */
     public function subscribedSkus(): SubscribedSkusRequestBuilder {
         return new SubscribedSkusRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The subscriptions property
+    */
     public function subscriptions(): SubscriptionsRequestBuilder {
         return new SubscriptionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The teams property
+    */
     public function teams(): TeamsRequestBuilder {
         return new TeamsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The teamsTemplates property
+    */
     public function teamsTemplates(): TeamsTemplatesRequestBuilder {
         return new TeamsTemplatesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The teamwork property
+    */
     public function teamwork(): TeamworkRequestBuilder {
         return new TeamworkRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -399,10 +598,16 @@ class BaseGraphClient
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The users property
+    */
     public function users(): UsersRequestBuilder {
         return new UsersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The workbooks property
+    */
     public function workbooks(): WorkbooksRequestBuilder {
         return new WorkbooksRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -505,7 +710,9 @@ class BaseGraphClient
         $this->requestAdapter = $requestAdapter;
         ApiClientBuilder::registerDefaultSerializer(JsonSerializationWriterFactory::class);
         ApiClientBuilder::registerDefaultDeserializer(JsonParseNodeFactory::class);
-        $this->requestAdapter->setBaseUrl('https://graph.microsoft.com/v1.0');
+        if (empty($this->requestAdapter->getBaseUrl())) {
+            $this->requestAdapter->setBaseUrl('https://graph.microsoft.com/v1.0');
+        }
     }
 
     /**
@@ -646,7 +853,7 @@ class BaseGraphClient
     public function get(?array $headers = null, ?array $options = null, ?ResponseHandler $responseHandler = null): Promise {
         $requestInfo = $this->createGetRequestInformation($headers, $options);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, '', $responseHandler);
+            return $this->requestAdapter->sendAsync($requestInfo, StreamInterface::class, $responseHandler);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\Buckets\Item\Tasks\
 use Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\Buckets\Item\Tasks\Item\BucketTaskBoardFormat\BucketTaskBoardFormatRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\Buckets\Item\Tasks\Item\Details\DetailsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\Buckets\Item\Tasks\Item\ProgressTaskBoardFormat\ProgressTaskBoardFormatRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\PlannerTask;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\PlannerTask;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -21,14 +21,23 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class PlannerTaskItemRequestBuilder 
 {
+    /**
+     * The assignedToTaskBoardFormat property
+    */
     public function assignedToTaskBoardFormat(): AssignedToTaskBoardFormatRequestBuilder {
         return new AssignedToTaskBoardFormatRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The bucketTaskBoardFormat property
+    */
     public function bucketTaskBoardFormat(): BucketTaskBoardFormatRequestBuilder {
         return new BucketTaskBoardFormatRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The details property
+    */
     public function details(): DetailsRequestBuilder {
         return new DetailsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -36,6 +45,9 @@ class PlannerTaskItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The progressTaskBoardFormat property
+    */
     public function progressTaskBoardFormat(): ProgressTaskBoardFormatRequestBuilder {
         return new ProgressTaskBoardFormatRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

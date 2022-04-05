@@ -12,7 +12,7 @@ class ExportPersonalDataRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $storageLocation  */
+    /** @var string|null $storageLocation The storageLocation property */
     private ?string $storageLocation = null;
     
     /**
@@ -50,7 +50,7 @@ class ExportPersonalDataRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the storageLocation property value. 
+     * Gets the storageLocation property value. The storageLocation property
      * @return string|null
     */
     public function getStorageLocation(): ?string {
@@ -75,7 +75,7 @@ class ExportPersonalDataRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the storageLocation property value. 
+     * Sets the storageLocation property value. The storageLocation property
      *  @param string|null $value Value to set for the storageLocation property.
     */
     public function setStorageLocation(?string $value ): void {

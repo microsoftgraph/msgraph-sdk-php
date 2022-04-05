@@ -12,7 +12,7 @@ class CopyRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $DestinationId  */
+    /** @var string|null $DestinationId The DestinationId property */
     private ?string $destinationId = null;
     
     /**
@@ -40,7 +40,7 @@ class CopyRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the destinationId property value. 
+     * Gets the destinationId property value. The DestinationId property
      * @return string|null
     */
     public function getDestinationId(): ?string {
@@ -75,7 +75,7 @@ class CopyRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the destinationId property value. 
+     * Sets the destinationId property value. The DestinationId property
      *  @param string|null $value Value to set for the DestinationId property.
     */
     public function setDestinationId(?string $value ): void {

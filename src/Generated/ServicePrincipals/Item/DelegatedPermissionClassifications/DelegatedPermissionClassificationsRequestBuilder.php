@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\DelegatedPermissionCl
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DelegatedPermissionClassification;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DelegatedPermissionClassificationCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\DelegatedPermissionClassification;
+use Microsoft\Graph\Generated\Models\DelegatedPermissionClassificationCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\DelegatedPermissionClassifications\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class DelegatedPermissionClassificationsRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

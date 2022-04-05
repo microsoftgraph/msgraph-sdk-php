@@ -13,8 +13,8 @@ use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceState
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\InstallSummary\InstallSummaryRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\Item\UserInstallStateSummaryItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\UserStateSummaryRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ManagedEBook;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ManagedEBook;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -25,18 +25,30 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ManagedEBookItemRequestBuilder 
 {
+    /**
+     * The assign property
+    */
     public function assign(): AssignRequestBuilder {
         return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The assignments property
+    */
     public function assignments(): AssignmentsRequestBuilder {
         return new AssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deviceStates property
+    */
     public function deviceStates(): DeviceStatesRequestBuilder {
         return new DeviceStatesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The installSummary property
+    */
     public function installSummary(): InstallSummaryRequestBuilder {
         return new InstallSummaryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -50,6 +62,9 @@ class ManagedEBookItemRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The userStateSummary property
+    */
     public function userStateSummary(): UserStateSummaryRequestBuilder {
         return new UserStateSummaryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

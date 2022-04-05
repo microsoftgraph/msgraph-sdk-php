@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Import;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ImportedWindowsAutopilotDeviceIdentity;
+use Microsoft\Graph\Generated\Models\ImportedWindowsAutopilotDeviceIdentity;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class ImportRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<ImportedWindowsAutopilotDeviceIdentity>|null $importedWindowsAutopilotDeviceIdentities  */
+    /** @var array<ImportedWindowsAutopilotDeviceIdentity>|null $importedWindowsAutopilotDeviceIdentities The importedWindowsAutopilotDeviceIdentities property */
     private ?array $importedWindowsAutopilotDeviceIdentities = null;
     
     /**
@@ -51,7 +51,7 @@ class ImportRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the importedWindowsAutopilotDeviceIdentities property value. 
+     * Gets the importedWindowsAutopilotDeviceIdentities property value. The importedWindowsAutopilotDeviceIdentities property
      * @return array<ImportedWindowsAutopilotDeviceIdentity>|null
     */
     public function getImportedWindowsAutopilotDeviceIdentities(): ?array {
@@ -76,7 +76,7 @@ class ImportRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the importedWindowsAutopilotDeviceIdentities property value. 
+     * Sets the importedWindowsAutopilotDeviceIdentities property value. The importedWindowsAutopilotDeviceIdentities property
      *  @param array<ImportedWindowsAutopilotDeviceIdentity>|null $value Value to set for the importedWindowsAutopilotDeviceIdentities property.
     */
     public function setImportedWindowsAutopilotDeviceIdentities(?array $value ): void {

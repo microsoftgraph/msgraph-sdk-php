@@ -3,9 +3,9 @@
 namespace Microsoft\Graph\Generated\Me\FindMeetingTimes;
 
 use DateInterval;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AttendeeBase;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\LocationConstraint;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TimeConstraint;
+use Microsoft\Graph\Generated\Models\AttendeeBase;
+use Microsoft\Graph\Generated\Models\LocationConstraint;
+use Microsoft\Graph\Generated\Models\TimeConstraint;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -16,28 +16,28 @@ class FindMeetingTimesRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<AttendeeBase>|null $attendees  */
+    /** @var array<AttendeeBase>|null $attendees The attendees property */
     private ?array $attendees = null;
     
-    /** @var bool|null $isOrganizerOptional  */
+    /** @var bool|null $isOrganizerOptional The isOrganizerOptional property */
     private ?bool $isOrganizerOptional = null;
     
-    /** @var LocationConstraint|null $locationConstraint  */
+    /** @var LocationConstraint|null $locationConstraint The locationConstraint property */
     private ?LocationConstraint $locationConstraint = null;
     
-    /** @var int|null $maxCandidates  */
+    /** @var int|null $maxCandidates The maxCandidates property */
     private ?int $maxCandidates = null;
     
-    /** @var DateInterval|null $meetingDuration  */
+    /** @var DateInterval|null $meetingDuration The meetingDuration property */
     private ?DateInterval $meetingDuration = null;
     
-    /** @var float|null $minimumAttendeePercentage  */
+    /** @var float|null $minimumAttendeePercentage The minimumAttendeePercentage property */
     private ?float $minimumAttendeePercentage = null;
     
-    /** @var bool|null $returnSuggestionReasons  */
+    /** @var bool|null $returnSuggestionReasons The returnSuggestionReasons property */
     private ?bool $returnSuggestionReasons = null;
     
-    /** @var TimeConstraint|null $timeConstraint  */
+    /** @var TimeConstraint|null $timeConstraint The timeConstraint property */
     private ?TimeConstraint $timeConstraint = null;
     
     /**
@@ -65,7 +65,7 @@ class FindMeetingTimesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the attendees property value. 
+     * Gets the attendees property value. The attendees property
      * @return array<AttendeeBase>|null
     */
     public function getAttendees(): ?array {
@@ -90,7 +90,7 @@ class FindMeetingTimesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the isOrganizerOptional property value. 
+     * Gets the isOrganizerOptional property value. The isOrganizerOptional property
      * @return bool|null
     */
     public function getIsOrganizerOptional(): ?bool {
@@ -98,7 +98,7 @@ class FindMeetingTimesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the locationConstraint property value. 
+     * Gets the locationConstraint property value. The locationConstraint property
      * @return LocationConstraint|null
     */
     public function getLocationConstraint(): ?LocationConstraint {
@@ -106,7 +106,7 @@ class FindMeetingTimesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the maxCandidates property value. 
+     * Gets the maxCandidates property value. The maxCandidates property
      * @return int|null
     */
     public function getMaxCandidates(): ?int {
@@ -114,7 +114,7 @@ class FindMeetingTimesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the meetingDuration property value. 
+     * Gets the meetingDuration property value. The meetingDuration property
      * @return DateInterval|null
     */
     public function getMeetingDuration(): ?DateInterval {
@@ -122,7 +122,7 @@ class FindMeetingTimesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the minimumAttendeePercentage property value. 
+     * Gets the minimumAttendeePercentage property value. The minimumAttendeePercentage property
      * @return float|null
     */
     public function getMinimumAttendeePercentage(): ?float {
@@ -130,7 +130,7 @@ class FindMeetingTimesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the returnSuggestionReasons property value. 
+     * Gets the returnSuggestionReasons property value. The returnSuggestionReasons property
      * @return bool|null
     */
     public function getReturnSuggestionReasons(): ?bool {
@@ -138,7 +138,7 @@ class FindMeetingTimesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the timeConstraint property value. 
+     * Gets the timeConstraint property value. The timeConstraint property
      * @return TimeConstraint|null
     */
     public function getTimeConstraint(): ?TimeConstraint {
@@ -170,7 +170,7 @@ class FindMeetingTimesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the attendees property value. 
+     * Sets the attendees property value. The attendees property
      *  @param array<AttendeeBase>|null $value Value to set for the attendees property.
     */
     public function setAttendees(?array $value ): void {
@@ -178,7 +178,7 @@ class FindMeetingTimesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the isOrganizerOptional property value. 
+     * Sets the isOrganizerOptional property value. The isOrganizerOptional property
      *  @param bool|null $value Value to set for the isOrganizerOptional property.
     */
     public function setIsOrganizerOptional(?bool $value ): void {
@@ -186,7 +186,7 @@ class FindMeetingTimesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the locationConstraint property value. 
+     * Sets the locationConstraint property value. The locationConstraint property
      *  @param LocationConstraint|null $value Value to set for the locationConstraint property.
     */
     public function setLocationConstraint(?LocationConstraint $value ): void {
@@ -194,7 +194,7 @@ class FindMeetingTimesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the maxCandidates property value. 
+     * Sets the maxCandidates property value. The maxCandidates property
      *  @param int|null $value Value to set for the maxCandidates property.
     */
     public function setMaxCandidates(?int $value ): void {
@@ -202,7 +202,7 @@ class FindMeetingTimesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the meetingDuration property value. 
+     * Sets the meetingDuration property value. The meetingDuration property
      *  @param DateInterval|null $value Value to set for the meetingDuration property.
     */
     public function setMeetingDuration(?DateInterval $value ): void {
@@ -210,7 +210,7 @@ class FindMeetingTimesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the minimumAttendeePercentage property value. 
+     * Sets the minimumAttendeePercentage property value. The minimumAttendeePercentage property
      *  @param float|null $value Value to set for the minimumAttendeePercentage property.
     */
     public function setMinimumAttendeePercentage(?float $value ): void {
@@ -218,7 +218,7 @@ class FindMeetingTimesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the returnSuggestionReasons property value. 
+     * Sets the returnSuggestionReasons property value. The returnSuggestionReasons property
      *  @param bool|null $value Value to set for the returnSuggestionReasons property.
     */
     public function setReturnSuggestionReasons(?bool $value ): void {
@@ -226,7 +226,7 @@ class FindMeetingTimesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the timeConstraint property value. 
+     * Sets the timeConstraint property value. The timeConstraint property
      *  @param TimeConstraint|null $value Value to set for the timeConstraint property.
     */
     public function setTimeConstraint(?TimeConstraint $value ): void {

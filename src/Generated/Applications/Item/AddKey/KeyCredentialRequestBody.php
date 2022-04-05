@@ -2,8 +2,8 @@
 
 namespace Microsoft\Graph\Generated\Applications\Item\AddKey;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\KeyCredential;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\PasswordCredential;
+use Microsoft\Graph\Generated\Models\KeyCredential;
+use Microsoft\Graph\Generated\Models\PasswordCredential;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -14,13 +14,13 @@ class KeyCredentialRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var KeyCredential|null $keyCredential  */
+    /** @var KeyCredential|null $keyCredential The keyCredential property */
     private ?KeyCredential $keyCredential = null;
     
-    /** @var PasswordCredential|null $passwordCredential  */
+    /** @var PasswordCredential|null $passwordCredential The passwordCredential property */
     private ?PasswordCredential $passwordCredential = null;
     
-    /** @var string|null $proof  */
+    /** @var string|null $proof The proof property */
     private ?string $proof = null;
     
     /**
@@ -60,7 +60,7 @@ class KeyCredentialRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the keyCredential property value. 
+     * Gets the keyCredential property value. The keyCredential property
      * @return KeyCredential|null
     */
     public function getKeyCredential(): ?KeyCredential {
@@ -68,7 +68,7 @@ class KeyCredentialRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the passwordCredential property value. 
+     * Gets the passwordCredential property value. The passwordCredential property
      * @return PasswordCredential|null
     */
     public function getPasswordCredential(): ?PasswordCredential {
@@ -76,7 +76,7 @@ class KeyCredentialRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the proof property value. 
+     * Gets the proof property value. The proof property
      * @return string|null
     */
     public function getProof(): ?string {
@@ -103,7 +103,7 @@ class KeyCredentialRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the keyCredential property value. 
+     * Sets the keyCredential property value. The keyCredential property
      *  @param KeyCredential|null $value Value to set for the keyCredential property.
     */
     public function setKeyCredential(?KeyCredential $value ): void {
@@ -111,7 +111,7 @@ class KeyCredentialRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the passwordCredential property value. 
+     * Sets the passwordCredential property value. The passwordCredential property
      *  @param PasswordCredential|null $value Value to set for the passwordCredential property.
     */
     public function setPasswordCredential(?PasswordCredential $value ): void {
@@ -119,7 +119,7 @@ class KeyCredentialRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the proof property value. 
+     * Sets the proof property value. The proof property
      *  @param string|null $value Value to set for the proof property.
     */
     public function setProof(?string $value ): void {

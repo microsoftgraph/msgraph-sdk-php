@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Search;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\SearchEntity;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\SearchEntity;
 use Microsoft\Graph\Generated\Search\Query\QueryRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -21,6 +21,9 @@ class SearchRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The query property
+    */
     public function query(): QueryRequestBuilder {
         return new QueryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

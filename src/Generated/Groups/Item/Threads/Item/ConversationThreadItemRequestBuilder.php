@@ -8,8 +8,8 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\PostItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\PostsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Reply\ReplyRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ConversationThread;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ConversationThread;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -23,10 +23,16 @@ class ConversationThreadItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The posts property
+    */
     public function posts(): PostsRequestBuilder {
         return new PostsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The reply property
+    */
     public function reply(): ReplyRequestBuilder {
         return new ReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Domains\Item\Verify;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Domain;
+use Microsoft\Graph\Generated\Models\Domain;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

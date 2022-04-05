@@ -12,7 +12,7 @@ class SetPriorityRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var int|null $priority  */
+    /** @var int|null $priority The priority property */
     private ?int $priority = null;
     
     /**
@@ -50,7 +50,7 @@ class SetPriorityRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the priority property value. 
+     * Gets the priority property value. The priority property
      * @return int|null
     */
     public function getPriority(): ?int {
@@ -75,7 +75,7 @@ class SetPriorityRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the priority property value. 
+     * Sets the priority property value. The priority property
      *  @param int|null $value Value to set for the priority property.
     */
     public function setPriority(?int $value ): void {

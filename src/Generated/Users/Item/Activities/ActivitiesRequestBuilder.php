@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Activities;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\UserActivity;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\UserActivityCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\UserActivity;
+use Microsoft\Graph\Generated\Models\UserActivityCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\Activities\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Activities\Recent\RecentRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -20,6 +20,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ActivitiesRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

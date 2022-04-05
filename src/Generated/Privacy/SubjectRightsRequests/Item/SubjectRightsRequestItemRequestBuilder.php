@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\SubjectRightsRequest;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\SubjectRightsRequest;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalAttachment\GetFinalAttachmentRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalReport\GetFinalReportRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Notes\Item\AuthoredNoteItemRequestBuilder;
@@ -22,6 +22,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SubjectRightsRequestItemRequestBuilder 
 {
+    /**
+     * The notes property
+    */
     public function notes(): NotesRequestBuilder {
         return new NotesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -32,6 +35,9 @@ class SubjectRightsRequestItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The team property
+    */
     public function team(): TeamRequestBuilder {
         return new TeamRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

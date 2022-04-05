@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\Items\Item\Permission
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Permission;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Permission;
 use Microsoft\Graph\Generated\Users\Item\Drives\Item\Items\Item\Permissions\Item\Grant\GrantRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -18,6 +18,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class PermissionItemRequestBuilder 
 {
+    /**
+     * The grant property
+    */
     public function grant(): GrantRequestBuilder {
         return new GrantRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

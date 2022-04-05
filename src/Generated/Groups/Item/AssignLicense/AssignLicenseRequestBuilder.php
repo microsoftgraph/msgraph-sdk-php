@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\AssignLicense;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Group;
+use Microsoft\Graph\Generated\Models\Group;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

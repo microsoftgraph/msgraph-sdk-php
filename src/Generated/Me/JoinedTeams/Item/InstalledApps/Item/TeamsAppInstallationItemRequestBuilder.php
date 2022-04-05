@@ -8,8 +8,8 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\InstalledApps\Item\TeamsApp\TeamsAppRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\InstalledApps\Item\TeamsAppDefinition\TeamsAppDefinitionRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\InstalledApps\Item\Upgrade\UpgradeRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TeamsAppInstallation;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TeamsAppInstallation;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -26,14 +26,23 @@ class TeamsAppInstallationItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The teamsApp property
+    */
     public function teamsApp(): TeamsAppRequestBuilder {
         return new TeamsAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The teamsAppDefinition property
+    */
     public function teamsAppDefinition(): TeamsAppDefinitionRequestBuilder {
         return new TeamsAppDefinitionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The upgrade property
+    */
     public function upgrade(): UpgradeRequestBuilder {
         return new UpgradeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

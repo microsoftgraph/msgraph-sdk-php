@@ -2,9 +2,9 @@
 
 namespace Microsoft\Graph\Generated\Communications\Calls\Item\Answer;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\IncomingCallOptions;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\MediaConfig;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Modality;
+use Microsoft\Graph\Generated\Models\IncomingCallOptions;
+use Microsoft\Graph\Generated\Models\MediaConfig;
+use Microsoft\Graph\Generated\Models\Modality;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -12,22 +12,22 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AnswerRequestBody implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<Modality>|null $acceptedModalities  */
+    /** @var array<Modality>|null $acceptedModalities The acceptedModalities property */
     private ?array $acceptedModalities = null;
     
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $callbackUri  */
+    /** @var string|null $callbackUri The callbackUri property */
     private ?string $callbackUri = null;
     
-    /** @var IncomingCallOptions|null $callOptions  */
+    /** @var IncomingCallOptions|null $callOptions The callOptions property */
     private ?IncomingCallOptions $callOptions = null;
     
-    /** @var MediaConfig|null $mediaConfig  */
+    /** @var MediaConfig|null $mediaConfig The mediaConfig property */
     private ?MediaConfig $mediaConfig = null;
     
-    /** @var int|null $participantCapacity  */
+    /** @var int|null $participantCapacity The participantCapacity property */
     private ?int $participantCapacity = null;
     
     /**
@@ -47,7 +47,7 @@ class AnswerRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the acceptedModalities property value. 
+     * Gets the acceptedModalities property value. The acceptedModalities property
      * @return array<Modality>|null
     */
     public function getAcceptedModalities(): ?array {
@@ -63,7 +63,7 @@ class AnswerRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the callbackUri property value. 
+     * Gets the callbackUri property value. The callbackUri property
      * @return string|null
     */
     public function getCallbackUri(): ?string {
@@ -71,7 +71,7 @@ class AnswerRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the callOptions property value. 
+     * Gets the callOptions property value. The callOptions property
      * @return IncomingCallOptions|null
     */
     public function getCallOptions(): ?IncomingCallOptions {
@@ -93,7 +93,7 @@ class AnswerRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the mediaConfig property value. 
+     * Gets the mediaConfig property value. The mediaConfig property
      * @return MediaConfig|null
     */
     public function getMediaConfig(): ?MediaConfig {
@@ -101,7 +101,7 @@ class AnswerRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the participantCapacity property value. 
+     * Gets the participantCapacity property value. The participantCapacity property
      * @return int|null
     */
     public function getParticipantCapacity(): ?int {
@@ -122,7 +122,7 @@ class AnswerRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the acceptedModalities property value. 
+     * Sets the acceptedModalities property value. The acceptedModalities property
      *  @param array<Modality>|null $value Value to set for the acceptedModalities property.
     */
     public function setAcceptedModalities(?array $value ): void {
@@ -138,7 +138,7 @@ class AnswerRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the callbackUri property value. 
+     * Sets the callbackUri property value. The callbackUri property
      *  @param string|null $value Value to set for the callbackUri property.
     */
     public function setCallbackUri(?string $value ): void {
@@ -146,7 +146,7 @@ class AnswerRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the callOptions property value. 
+     * Sets the callOptions property value. The callOptions property
      *  @param IncomingCallOptions|null $value Value to set for the callOptions property.
     */
     public function setCallOptions(?IncomingCallOptions $value ): void {
@@ -154,7 +154,7 @@ class AnswerRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the mediaConfig property value. 
+     * Sets the mediaConfig property value. The mediaConfig property
      *  @param MediaConfig|null $value Value to set for the mediaConfig property.
     */
     public function setMediaConfig(?MediaConfig $value ): void {
@@ -162,7 +162,7 @@ class AnswerRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the participantCapacity property value. 
+     * Sets the participantCapacity property value. The participantCapacity property
      *  @param int|null $value Value to set for the participantCapacity property.
     */
     public function setParticipantCapacity(?int $value ): void {

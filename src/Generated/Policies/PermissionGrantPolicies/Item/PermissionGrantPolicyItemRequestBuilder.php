@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\PermissionGrantPolicy;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\PermissionGrantPolicy;
 use Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Excludes\ExcludesRequestBuilder;
 use Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Excludes\Item\PermissionGrantConditionSetItemRequestBuilder as MicrosoftGraphGeneratedPoliciesPermissionGrantPoliciesItemExcludesItemPermissionGrantConditionSetItemRequestBuilder;
 use Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Includes\IncludesRequestBuilder;
@@ -21,10 +21,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class PermissionGrantPolicyItemRequestBuilder 
 {
+    /**
+     * The excludes property
+    */
     public function excludes(): ExcludesRequestBuilder {
         return new ExcludesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The includes property
+    */
     public function includes(): IncludesRequestBuilder {
         return new IncludesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

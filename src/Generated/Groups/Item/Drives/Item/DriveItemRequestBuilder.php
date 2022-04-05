@@ -15,8 +15,8 @@ use Microsoft\Graph\Generated\Groups\Item\Drives\Item\Items\ItemsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Drives\Item\Root\RootRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Drives\Item\Special\Item\DriveItemItemRequestBuilder as MicrosoftGraphGeneratedGroupsItemDrivesItemSpecialItemDriveItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Drives\Item\Special\SpecialRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Drive;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Drive;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -27,18 +27,30 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class DriveItemRequestBuilder 
 {
+    /**
+     * The bundles property
+    */
     public function bundles(): BundlesRequestBuilder {
         return new BundlesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The list property
+    */
     public function escapedList(): ListRequestBuilder {
         return new ListRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The following property
+    */
     public function following(): FollowingRequestBuilder {
         return new FollowingRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The items property
+    */
     public function items(): ItemsRequestBuilder {
         return new ItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -49,10 +61,16 @@ class DriveItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The root property
+    */
     public function root(): RootRequestBuilder {
         return new RootRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The special property
+    */
     public function special(): SpecialRequestBuilder {
         return new SpecialRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

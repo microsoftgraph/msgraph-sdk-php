@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Communications\Calls\Item\PlayPrompt;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Prompt;
+use Microsoft\Graph\Generated\Models\Prompt;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,10 +13,10 @@ class PlayPromptRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $clientContext  */
+    /** @var string|null $clientContext The clientContext property */
     private ?string $clientContext = null;
     
-    /** @var array<Prompt>|null $prompts  */
+    /** @var array<Prompt>|null $prompts The prompts property */
     private ?array $prompts = null;
     
     /**
@@ -44,7 +44,7 @@ class PlayPromptRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the clientContext property value. 
+     * Gets the clientContext property value. The clientContext property
      * @return string|null
     */
     public function getClientContext(): ?string {
@@ -63,7 +63,7 @@ class PlayPromptRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the prompts property value. 
+     * Gets the prompts property value. The prompts property
      * @return array<Prompt>|null
     */
     public function getPrompts(): ?array {
@@ -89,7 +89,7 @@ class PlayPromptRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the clientContext property value. 
+     * Sets the clientContext property value. The clientContext property
      *  @param string|null $value Value to set for the clientContext property.
     */
     public function setClientContext(?string $value ): void {
@@ -97,7 +97,7 @@ class PlayPromptRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the prompts property value. 
+     * Sets the prompts property value. The prompts property
      *  @param array<Prompt>|null $value Value to set for the prompts property.
     */
     public function setPrompts(?array $value ): void {

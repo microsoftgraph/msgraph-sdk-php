@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item\Todo;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Todo;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Todo;
 use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\TodoTaskListItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Todo\Lists\ListsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class TodoRequestBuilder 
 {
+    /**
+     * The lists property
+    */
     public function lists(): ListsRequestBuilder {
         return new ListsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

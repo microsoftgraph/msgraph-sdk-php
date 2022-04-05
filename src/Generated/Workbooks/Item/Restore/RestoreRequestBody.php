@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Workbooks\Item\Restore;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ItemReference;
+use Microsoft\Graph\Generated\Models\ItemReference;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,10 +13,10 @@ class RestoreRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $name  */
+    /** @var string|null $name The name property */
     private ?string $name = null;
     
-    /** @var ItemReference|null $parentReference  */
+    /** @var ItemReference|null $parentReference The parentReference property */
     private ?ItemReference $parentReference = null;
     
     /**
@@ -55,7 +55,7 @@ class RestoreRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the name property value. 
+     * Gets the name property value. The name property
      * @return string|null
     */
     public function getName(): ?string {
@@ -63,7 +63,7 @@ class RestoreRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the parentReference property value. 
+     * Gets the parentReference property value. The parentReference property
      * @return ItemReference|null
     */
     public function getParentReference(): ?ItemReference {
@@ -89,7 +89,7 @@ class RestoreRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the name property value. 
+     * Sets the name property value. The name property
      *  @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value ): void {
@@ -97,7 +97,7 @@ class RestoreRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the parentReference property value. 
+     * Sets the parentReference property value. The parentReference property
      *  @param ItemReference|null $value Value to set for the parentReference property.
     */
     public function setParentReference(?ItemReference $value ): void {

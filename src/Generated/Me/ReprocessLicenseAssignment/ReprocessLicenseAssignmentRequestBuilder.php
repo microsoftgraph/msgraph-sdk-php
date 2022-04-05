@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Me\ReprocessLicenseAssignment;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\User;
+use Microsoft\Graph\Generated\Models\User;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

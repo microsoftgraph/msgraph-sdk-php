@@ -28,8 +28,8 @@ use Microsoft\Graph\Generated\Applications\Item\TokenIssuancePolicies\TokenIssua
 use Microsoft\Graph\Generated\Applications\Item\TokenLifetimePolicies\Item\TokenLifetimePolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\TokenLifetimePolicies\TokenLifetimePoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\UnsetVerifiedPublisher\UnsetVerifiedPublisherRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Application;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Application;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -40,46 +40,79 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ApplicationItemRequestBuilder 
 {
+    /**
+     * The addKey property
+    */
     public function addKey(): AddKeyRequestBuilder {
         return new AddKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The addPassword property
+    */
     public function addPassword(): AddPasswordRequestBuilder {
         return new AddPasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The checkMemberGroups property
+    */
     public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
         return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The checkMemberObjects property
+    */
     public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
         return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The createdOnBehalfOf property
+    */
     public function createdOnBehalfOf(): CreatedOnBehalfOfRequestBuilder {
         return new CreatedOnBehalfOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The extensionProperties property
+    */
     public function extensionProperties(): ExtensionPropertiesRequestBuilder {
         return new ExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getMemberGroups property
+    */
     public function getMemberGroups(): GetMemberGroupsRequestBuilder {
         return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getMemberObjects property
+    */
     public function getMemberObjects(): GetMemberObjectsRequestBuilder {
         return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The homeRealmDiscoveryPolicies property
+    */
     public function homeRealmDiscoveryPolicies(): HomeRealmDiscoveryPoliciesRequestBuilder {
         return new HomeRealmDiscoveryPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The logo property
+    */
     public function logo(): LogoRequestBuilder {
         return new LogoRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The owners property
+    */
     public function owners(): OwnersRequestBuilder {
         return new OwnersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -87,10 +120,16 @@ class ApplicationItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The removeKey property
+    */
     public function removeKey(): RemoveKeyRequestBuilder {
         return new RemoveKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The removePassword property
+    */
     public function removePassword(): RemovePasswordRequestBuilder {
         return new RemovePasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -98,22 +137,37 @@ class ApplicationItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The restore property
+    */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The setVerifiedPublisher property
+    */
     public function setVerifiedPublisher(): SetVerifiedPublisherRequestBuilder {
         return new SetVerifiedPublisherRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The tokenIssuancePolicies property
+    */
     public function tokenIssuancePolicies(): TokenIssuancePoliciesRequestBuilder {
         return new TokenIssuancePoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The tokenLifetimePolicies property
+    */
     public function tokenLifetimePolicies(): TokenLifetimePoliciesRequestBuilder {
         return new TokenLifetimePoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The unsetVerifiedPublisher property
+    */
     public function unsetVerifiedPublisher(): UnsetVerifiedPublisherRequestBuilder {
         return new UnsetVerifiedPublisherRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -2,6 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Reports\GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTime;
 
+use DateTime;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
@@ -28,11 +29,11 @@ class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestB
      * Instantiates a new GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param DateTimeOffset|null $endDateTime Usage: endDateTime='{endDateTime}'
-     * @param DateTimeOffset|null $startDateTime Usage: startDateTime='{startDateTime}'
+     * @param DateTime|null $endDateTime Usage: endDateTime='{endDateTime}'
+     * @param DateTime|null $startDateTime Usage: startDateTime='{startDateTime}'
      * @param string|null $userId Usage: userId='{userId}'
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?DateTimeOffset $endDateTime = null, ?DateTimeOffset $startDateTime = null, ?string $userId = null) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?DateTime $endDateTime = null, ?DateTime $startDateTime = null, ?string $userId = null) {
         $this->urlTemplate = '{+baseurl}/reports/microsoft.graph.getUserArchivedPrintJobs(userId=\'{userId}\',startDateTime=\'{startDateTime}\',endDateTime=\'{endDateTime}\')';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;

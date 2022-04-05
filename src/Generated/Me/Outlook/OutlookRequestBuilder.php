@@ -10,8 +10,8 @@ use Microsoft\Graph\Generated\Me\Outlook\MasterCategories\MasterCategoriesReques
 use Microsoft\Graph\Generated\Me\Outlook\SupportedLanguages\SupportedLanguagesRequestBuilder;
 use Microsoft\Graph\Generated\Me\Outlook\SupportedTimeZones\SupportedTimeZonesRequestBuilder;
 use Microsoft\Graph\Generated\Me\Outlook\SupportedTimeZonesWithTimeZoneStandard\SupportedTimeZonesWithTimeZoneStandardRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OutlookUser;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OutlookUser;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -22,6 +22,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class OutlookRequestBuilder 
 {
+    /**
+     * The masterCategories property
+    */
     public function masterCategories(): MasterCategoriesRequestBuilder {
         return new MasterCategoriesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

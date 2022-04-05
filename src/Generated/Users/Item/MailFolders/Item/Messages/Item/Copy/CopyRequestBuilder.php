@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\Co
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Message;
+use Microsoft\Graph\Generated\Models\Message;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

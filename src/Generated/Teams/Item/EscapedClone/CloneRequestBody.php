@@ -2,8 +2,8 @@
 
 namespace Microsoft\Graph\Generated\Teams\Item\EscapedClone;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ClonableTeamParts;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TeamVisibilityType;
+use Microsoft\Graph\Generated\Models\ClonableTeamParts;
+use Microsoft\Graph\Generated\Models\TeamVisibilityType;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -14,22 +14,22 @@ class CloneRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $classification  */
+    /** @var string|null $classification The classification property */
     private ?string $classification = null;
     
-    /** @var string|null $description  */
+    /** @var string|null $description The description property */
     private ?string $description = null;
     
-    /** @var string|null $displayName  */
+    /** @var string|null $displayName The displayName property */
     private ?string $displayName = null;
     
-    /** @var string|null $mailNickname  */
+    /** @var string|null $mailNickname The mailNickname property */
     private ?string $mailNickname = null;
     
-    /** @var ClonableTeamParts|null $partsToClone  */
+    /** @var ClonableTeamParts|null $partsToClone The partsToClone property */
     private ?ClonableTeamParts $partsToClone = null;
     
-    /** @var TeamVisibilityType|null $visibility  */
+    /** @var TeamVisibilityType|null $visibility The visibility property */
     private ?TeamVisibilityType $visibility = null;
     
     /**
@@ -57,7 +57,7 @@ class CloneRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the classification property value. 
+     * Gets the classification property value. The classification property
      * @return string|null
     */
     public function getClassification(): ?string {
@@ -65,7 +65,7 @@ class CloneRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the description property value. 
+     * Gets the description property value. The description property
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -73,7 +73,7 @@ class CloneRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the displayName property value. 
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -96,7 +96,7 @@ class CloneRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the mailNickname property value. 
+     * Gets the mailNickname property value. The mailNickname property
      * @return string|null
     */
     public function getMailNickname(): ?string {
@@ -104,7 +104,7 @@ class CloneRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the partsToClone property value. 
+     * Gets the partsToClone property value. The partsToClone property
      * @return ClonableTeamParts|null
     */
     public function getPartsToClone(): ?ClonableTeamParts {
@@ -112,7 +112,7 @@ class CloneRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the visibility property value. 
+     * Gets the visibility property value. The visibility property
      * @return TeamVisibilityType|null
     */
     public function getVisibility(): ?TeamVisibilityType {
@@ -142,7 +142,7 @@ class CloneRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the classification property value. 
+     * Sets the classification property value. The classification property
      *  @param string|null $value Value to set for the classification property.
     */
     public function setClassification(?string $value ): void {
@@ -150,7 +150,7 @@ class CloneRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the description property value. 
+     * Sets the description property value. The description property
      *  @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value ): void {
@@ -158,7 +158,7 @@ class CloneRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the displayName property value. 
+     * Sets the displayName property value. The displayName property
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -166,7 +166,7 @@ class CloneRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the mailNickname property value. 
+     * Sets the mailNickname property value. The mailNickname property
      *  @param string|null $value Value to set for the mailNickname property.
     */
     public function setMailNickname(?string $value ): void {
@@ -174,7 +174,7 @@ class CloneRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the partsToClone property value. 
+     * Sets the partsToClone property value. The partsToClone property
      *  @param ClonableTeamParts|null $value Value to set for the partsToClone property.
     */
     public function setPartsToClone(?ClonableTeamParts $value ): void {
@@ -182,7 +182,7 @@ class CloneRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the visibility property value. 
+     * Sets the visibility property value. The visibility property
      *  @param TeamVisibilityType|null $value Value to set for the visibility property.
     */
     public function setVisibility(?TeamVisibilityType $value ): void {

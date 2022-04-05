@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\IdentityProtection\RiskDetections\Item\RiskDetecti
 use Microsoft\Graph\Generated\IdentityProtection\RiskDetections\RiskDetectionsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item\RiskyUserItemRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\RiskyUsersRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\IdentityProtectionRoot;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\IdentityProtectionRoot;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -27,10 +27,16 @@ class IdentityProtectionRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The riskDetections property
+    */
     public function riskDetections(): RiskDetectionsRequestBuilder {
         return new RiskDetectionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The riskyUsers property
+    */
     public function riskyUsers(): RiskyUsersRequestBuilder {
         return new RiskyUsersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

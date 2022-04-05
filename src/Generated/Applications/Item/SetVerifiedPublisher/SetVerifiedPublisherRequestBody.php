@@ -12,7 +12,7 @@ class SetVerifiedPublisherRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $verifiedPublisherId  */
+    /** @var string|null $verifiedPublisherId The verifiedPublisherId property */
     private ?string $verifiedPublisherId = null;
     
     /**
@@ -50,7 +50,7 @@ class SetVerifiedPublisherRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the verifiedPublisherId property value. 
+     * Gets the verifiedPublisherId property value. The verifiedPublisherId property
      * @return string|null
     */
     public function getVerifiedPublisherId(): ?string {
@@ -75,7 +75,7 @@ class SetVerifiedPublisherRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the verifiedPublisherId property value. 
+     * Sets the verifiedPublisherId property value. The verifiedPublisherId property
      *  @param string|null $value Value to set for the verifiedPublisherId property.
     */
     public function setVerifiedPublisherId(?string $value ): void {

@@ -12,7 +12,7 @@ class MarkReadRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<string>|null $messageIds  */
+    /** @var array<string>|null $messageIds The messageIds property */
     private ?array $messageIds = null;
     
     /**
@@ -50,7 +50,7 @@ class MarkReadRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the messageIds property value. 
+     * Gets the messageIds property value. The messageIds property
      * @return array<string>|null
     */
     public function getMessageIds(): ?array {
@@ -75,7 +75,7 @@ class MarkReadRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the messageIds property value. 
+     * Sets the messageIds property value. The messageIds property
      *  @param array<string>|null $value Value to set for the messageIds property.
     */
     public function setMessageIds(?array $value ): void {

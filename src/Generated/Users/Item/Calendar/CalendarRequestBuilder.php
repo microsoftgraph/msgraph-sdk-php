@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item\Calendar;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Calendar;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Calendar;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Calendar\AllowedCalendarSharingRolesWithUser\AllowedCalendarSharingRolesWithUserRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Calendar\CalendarPermissions\CalendarPermissionsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Calendar\CalendarPermissions\Item\CalendarPermissionItemRequestBuilder;
@@ -29,22 +29,37 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class CalendarRequestBuilder 
 {
+    /**
+     * The calendarPermissions property
+    */
     public function calendarPermissions(): CalendarPermissionsRequestBuilder {
         return new CalendarPermissionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The calendarView property
+    */
     public function calendarView(): CalendarViewRequestBuilder {
         return new CalendarViewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The events property
+    */
     public function events(): EventsRequestBuilder {
         return new EventsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getSchedule property
+    */
     public function getSchedule(): GetScheduleRequestBuilder {
         return new GetScheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The multiValueExtendedProperties property
+    */
     public function multiValueExtendedProperties(): MultiValueExtendedPropertiesRequestBuilder {
         return new MultiValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -55,6 +70,9 @@ class CalendarRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The singleValueExtendedProperties property
+    */
     public function singleValueExtendedProperties(): SingleValueExtendedPropertiesRequestBuilder {
         return new SingleValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

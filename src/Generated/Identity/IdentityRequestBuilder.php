@@ -14,8 +14,8 @@ use Microsoft\Graph\Generated\Identity\IdentityProviders\IdentityProvidersReques
 use Microsoft\Graph\Generated\Identity\IdentityProviders\Item\IdentityProviderBaseItemRequestBuilder;
 use Microsoft\Graph\Generated\Identity\UserFlowAttributes\Item\IdentityUserFlowAttributeItemRequestBuilder;
 use Microsoft\Graph\Generated\Identity\UserFlowAttributes\UserFlowAttributesRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\IdentityContainer;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\IdentityContainer;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -26,18 +26,30 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class IdentityRequestBuilder 
 {
+    /**
+     * The apiConnectors property
+    */
     public function apiConnectors(): ApiConnectorsRequestBuilder {
         return new ApiConnectorsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The b2xUserFlows property
+    */
     public function b2xUserFlows(): B2xUserFlowsRequestBuilder {
         return new B2xUserFlowsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The conditionalAccess property
+    */
     public function conditionalAccess(): ConditionalAccessRequestBuilder {
         return new ConditionalAccessRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The identityProviders property
+    */
     public function identityProviders(): IdentityProvidersRequestBuilder {
         return new IdentityProvidersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -51,6 +63,9 @@ class IdentityRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The userFlowAttributes property
+    */
     public function userFlowAttributes(): UserFlowAttributesRequestBuilder {
         return new UserFlowAttributesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

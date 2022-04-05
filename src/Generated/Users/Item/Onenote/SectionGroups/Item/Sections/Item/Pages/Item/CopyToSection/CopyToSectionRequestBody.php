@@ -12,16 +12,16 @@ class CopyToSectionRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $groupId  */
+    /** @var string|null $groupId The groupId property */
     private ?string $groupId = null;
     
-    /** @var string|null $id  */
+    /** @var string|null $id The id property */
     private ?string $id = null;
     
-    /** @var string|null $siteCollectionId  */
+    /** @var string|null $siteCollectionId The siteCollectionId property */
     private ?string $siteCollectionId = null;
     
-    /** @var string|null $siteId  */
+    /** @var string|null $siteId The siteId property */
     private ?string $siteId = null;
     
     /**
@@ -62,7 +62,7 @@ class CopyToSectionRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the groupId property value. 
+     * Gets the groupId property value. The groupId property
      * @return string|null
     */
     public function getGroupId(): ?string {
@@ -70,7 +70,7 @@ class CopyToSectionRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the id property value. 
+     * Gets the id property value. The id property
      * @return string|null
     */
     public function getId(): ?string {
@@ -78,7 +78,7 @@ class CopyToSectionRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the siteCollectionId property value. 
+     * Gets the siteCollectionId property value. The siteCollectionId property
      * @return string|null
     */
     public function getSiteCollectionId(): ?string {
@@ -86,7 +86,7 @@ class CopyToSectionRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the siteId property value. 
+     * Gets the siteId property value. The siteId property
      * @return string|null
     */
     public function getSiteId(): ?string {
@@ -114,7 +114,7 @@ class CopyToSectionRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the groupId property value. 
+     * Sets the groupId property value. The groupId property
      *  @param string|null $value Value to set for the groupId property.
     */
     public function setGroupId(?string $value ): void {
@@ -122,7 +122,7 @@ class CopyToSectionRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the id property value. 
+     * Sets the id property value. The id property
      *  @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value ): void {
@@ -130,7 +130,7 @@ class CopyToSectionRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the siteCollectionId property value. 
+     * Sets the siteCollectionId property value. The siteCollectionId property
      *  @param string|null $value Value to set for the siteCollectionId property.
     */
     public function setSiteCollectionId(?string $value ): void {
@@ -138,7 +138,7 @@ class CopyToSectionRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the siteId property value. 
+     * Sets the siteId property value. The siteId property
      *  @param string|null $value Value to set for the siteId property.
     */
     public function setSiteId(?string $value ): void {

@@ -6,8 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\ServiceAnnouncementRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Admin;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Admin;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -24,6 +24,9 @@ class AdminRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The serviceAnnouncement property
+    */
     public function serviceAnnouncement(): ServiceAnnouncementRequestBuilder {
         return new ServiceAnnouncementRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

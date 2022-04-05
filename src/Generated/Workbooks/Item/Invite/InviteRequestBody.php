@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Workbooks\Item\Invite;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DriveRecipient;
+use Microsoft\Graph\Generated\Models\DriveRecipient;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,28 +13,28 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $expirationDateTime  */
+    /** @var string|null $expirationDateTime The expirationDateTime property */
     private ?string $expirationDateTime = null;
     
-    /** @var string|null $message  */
+    /** @var string|null $message The message property */
     private ?string $message = null;
     
-    /** @var string|null $password  */
+    /** @var string|null $password The password property */
     private ?string $password = null;
     
-    /** @var array<DriveRecipient>|null $recipients  */
+    /** @var array<DriveRecipient>|null $recipients The recipients property */
     private ?array $recipients = null;
     
-    /** @var bool|null $requireSignIn  */
+    /** @var bool|null $requireSignIn The requireSignIn property */
     private ?bool $requireSignIn = null;
     
-    /** @var bool|null $retainInheritedPermissions  */
+    /** @var bool|null $retainInheritedPermissions The retainInheritedPermissions property */
     private ?bool $retainInheritedPermissions = null;
     
-    /** @var array<string>|null $roles  */
+    /** @var array<string>|null $roles The roles property */
     private ?array $roles = null;
     
-    /** @var bool|null $sendInvitation  */
+    /** @var bool|null $sendInvitation The sendInvitation property */
     private ?bool $sendInvitation = null;
     
     /**
@@ -62,7 +62,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the expirationDateTime property value. 
+     * Gets the expirationDateTime property value. The expirationDateTime property
      * @return string|null
     */
     public function getExpirationDateTime(): ?string {
@@ -87,7 +87,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the message property value. 
+     * Gets the message property value. The message property
      * @return string|null
     */
     public function getMessage(): ?string {
@@ -95,7 +95,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the password property value. 
+     * Gets the password property value. The password property
      * @return string|null
     */
     public function getPassword(): ?string {
@@ -103,7 +103,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the recipients property value. 
+     * Gets the recipients property value. The recipients property
      * @return array<DriveRecipient>|null
     */
     public function getRecipients(): ?array {
@@ -111,7 +111,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the requireSignIn property value. 
+     * Gets the requireSignIn property value. The requireSignIn property
      * @return bool|null
     */
     public function getRequireSignIn(): ?bool {
@@ -119,7 +119,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the retainInheritedPermissions property value. 
+     * Gets the retainInheritedPermissions property value. The retainInheritedPermissions property
      * @return bool|null
     */
     public function getRetainInheritedPermissions(): ?bool {
@@ -127,7 +127,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the roles property value. 
+     * Gets the roles property value. The roles property
      * @return array<string>|null
     */
     public function getRoles(): ?array {
@@ -135,7 +135,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the sendInvitation property value. 
+     * Gets the sendInvitation property value. The sendInvitation property
      * @return bool|null
     */
     public function getSendInvitation(): ?bool {
@@ -167,7 +167,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the expirationDateTime property value. 
+     * Sets the expirationDateTime property value. The expirationDateTime property
      *  @param string|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?string $value ): void {
@@ -175,7 +175,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the message property value. 
+     * Sets the message property value. The message property
      *  @param string|null $value Value to set for the message property.
     */
     public function setMessage(?string $value ): void {
@@ -183,7 +183,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the password property value. 
+     * Sets the password property value. The password property
      *  @param string|null $value Value to set for the password property.
     */
     public function setPassword(?string $value ): void {
@@ -191,7 +191,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the recipients property value. 
+     * Sets the recipients property value. The recipients property
      *  @param array<DriveRecipient>|null $value Value to set for the recipients property.
     */
     public function setRecipients(?array $value ): void {
@@ -199,7 +199,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the requireSignIn property value. 
+     * Sets the requireSignIn property value. The requireSignIn property
      *  @param bool|null $value Value to set for the requireSignIn property.
     */
     public function setRequireSignIn(?bool $value ): void {
@@ -207,7 +207,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the retainInheritedPermissions property value. 
+     * Sets the retainInheritedPermissions property value. The retainInheritedPermissions property
      *  @param bool|null $value Value to set for the retainInheritedPermissions property.
     */
     public function setRetainInheritedPermissions(?bool $value ): void {
@@ -215,7 +215,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the roles property value. 
+     * Sets the roles property value. The roles property
      *  @param array<string>|null $value Value to set for the roles property.
     */
     public function setRoles(?array $value ): void {
@@ -223,7 +223,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the sendInvitation property value. 
+     * Sets the sendInvitation property value. The sendInvitation property
      *  @param bool|null $value Value to set for the sendInvitation property.
     */
     public function setSendInvitation(?bool $value ): void {

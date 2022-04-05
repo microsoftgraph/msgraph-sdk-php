@@ -2,11 +2,12 @@
 
 namespace Microsoft\Graph\Generated\Reports;
 
+use DateTime;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ReportRoot;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ReportRoot;
 use Microsoft\Graph\Generated\Reports\DailyPrintUsageByPrinter\DailyPrintUsageByPrinterRequestBuilder;
 use Microsoft\Graph\Generated\Reports\DailyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder as MicrosoftGraphGeneratedReportsDailyPrintUsageByPrinterItemPrintUsageByPrinterItemRequestBuilder;
 use Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser\DailyPrintUsageByUserRequestBuilder;
@@ -114,21 +115,34 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
+use Microsoft\Kiota\Abstractions\Types\Date;
 
 class ReportsRequestBuilder 
 {
+    /**
+     * The dailyPrintUsageByPrinter property
+    */
     public function dailyPrintUsageByPrinter(): DailyPrintUsageByPrinterRequestBuilder {
         return new DailyPrintUsageByPrinterRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The dailyPrintUsageByUser property
+    */
     public function dailyPrintUsageByUser(): DailyPrintUsageByUserRequestBuilder {
         return new DailyPrintUsageByUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The monthlyPrintUsageByPrinter property
+    */
     public function monthlyPrintUsageByPrinter(): MonthlyPrintUsageByPrinterRequestBuilder {
         return new MonthlyPrintUsageByPrinterRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The monthlyPrintUsageByUser property
+    */
     public function monthlyPrintUsageByUser(): MonthlyPrintUsageByUserRequestBuilder {
         return new MonthlyPrintUsageByUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -274,10 +288,10 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getEmailActivityUserDetail method.
-     * @param DateOnly $date Usage: date={date}
+     * @param Date $date Usage: date={date}
      * @return GetEmailActivityUserDetailWithDateRequestBuilder
     */
-    public function getEmailActivityUserDetailWithDate(DateOnly $date): GetEmailActivityUserDetailWithDateRequestBuilder {
+    public function getEmailActivityUserDetailWithDate(Date $date): GetEmailActivityUserDetailWithDateRequestBuilder {
         return new GetEmailActivityUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -310,10 +324,10 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getEmailAppUsageUserDetail method.
-     * @param DateOnly $date Usage: date={date}
+     * @param Date $date Usage: date={date}
      * @return GetEmailAppUsageUserDetailWithDateRequestBuilder
     */
-    public function getEmailAppUsageUserDetailWithDate(DateOnly $date): GetEmailAppUsageUserDetailWithDateRequestBuilder {
+    public function getEmailAppUsageUserDetailWithDate(Date $date): GetEmailAppUsageUserDetailWithDateRequestBuilder {
         return new GetEmailAppUsageUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -337,12 +351,12 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getGroupArchivedPrintJobs method.
-     * @param DateTimeOffset $endDateTime Usage: endDateTime='{endDateTime}'
+     * @param DateTime $endDateTime Usage: endDateTime='{endDateTime}'
      * @param string $groupId Usage: groupId='{groupId}'
-     * @param DateTimeOffset $startDateTime Usage: startDateTime='{startDateTime}'
+     * @param DateTime $startDateTime Usage: startDateTime='{startDateTime}'
      * @return GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder
     */
-    public function getGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTime(DateTimeOffset $endDateTime, string $groupId, DateTimeOffset $startDateTime): GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder {
+    public function getGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, string $groupId, DateTime $startDateTime): GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder {
         return new GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $groupId, $startDateTime);
     }
 
@@ -417,10 +431,10 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getOffice365ActiveUserDetail method.
-     * @param DateOnly $date Usage: date={date}
+     * @param Date $date Usage: date={date}
      * @return GetOffice365ActiveUserDetailWithDateRequestBuilder
     */
-    public function getOffice365ActiveUserDetailWithDate(DateOnly $date): GetOffice365ActiveUserDetailWithDateRequestBuilder {
+    public function getOffice365ActiveUserDetailWithDate(Date $date): GetOffice365ActiveUserDetailWithDateRequestBuilder {
         return new GetOffice365ActiveUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -444,10 +458,10 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getOffice365GroupsActivityDetail method.
-     * @param DateOnly $date Usage: date={date}
+     * @param Date $date Usage: date={date}
      * @return GetOffice365GroupsActivityDetailWithDateRequestBuilder
     */
-    public function getOffice365GroupsActivityDetailWithDate(DateOnly $date): GetOffice365GroupsActivityDetailWithDateRequestBuilder {
+    public function getOffice365GroupsActivityDetailWithDate(Date $date): GetOffice365GroupsActivityDetailWithDateRequestBuilder {
         return new GetOffice365GroupsActivityDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -516,10 +530,10 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getOneDriveActivityUserDetail method.
-     * @param DateOnly $date Usage: date={date}
+     * @param Date $date Usage: date={date}
      * @return GetOneDriveActivityUserDetailWithDateRequestBuilder
     */
-    public function getOneDriveActivityUserDetailWithDate(DateOnly $date): GetOneDriveActivityUserDetailWithDateRequestBuilder {
+    public function getOneDriveActivityUserDetailWithDate(Date $date): GetOneDriveActivityUserDetailWithDateRequestBuilder {
         return new GetOneDriveActivityUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -543,10 +557,10 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getOneDriveUsageAccountDetail method.
-     * @param DateOnly $date Usage: date={date}
+     * @param Date $date Usage: date={date}
      * @return GetOneDriveUsageAccountDetailWithDateRequestBuilder
     */
-    public function getOneDriveUsageAccountDetailWithDate(DateOnly $date): GetOneDriveUsageAccountDetailWithDateRequestBuilder {
+    public function getOneDriveUsageAccountDetailWithDate(Date $date): GetOneDriveUsageAccountDetailWithDateRequestBuilder {
         return new GetOneDriveUsageAccountDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -579,12 +593,12 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getPrinterArchivedPrintJobs method.
-     * @param DateTimeOffset $endDateTime Usage: endDateTime='{endDateTime}'
+     * @param DateTime $endDateTime Usage: endDateTime='{endDateTime}'
      * @param string $printerId Usage: printerId='{printerId}'
-     * @param DateTimeOffset $startDateTime Usage: startDateTime='{startDateTime}'
+     * @param DateTime $startDateTime Usage: startDateTime='{startDateTime}'
      * @return GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder
     */
-    public function getPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTime(DateTimeOffset $endDateTime, string $printerId, DateTimeOffset $startDateTime): GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder {
+    public function getPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, string $printerId, DateTime $startDateTime): GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder {
         return new GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $printerId, $startDateTime);
     }
 
@@ -617,10 +631,10 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getSharePointActivityUserDetail method.
-     * @param DateOnly $date Usage: date={date}
+     * @param Date $date Usage: date={date}
      * @return GetSharePointActivityUserDetailWithDateRequestBuilder
     */
-    public function getSharePointActivityUserDetailWithDate(DateOnly $date): GetSharePointActivityUserDetailWithDateRequestBuilder {
+    public function getSharePointActivityUserDetailWithDate(Date $date): GetSharePointActivityUserDetailWithDateRequestBuilder {
         return new GetSharePointActivityUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -635,10 +649,10 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getSharePointSiteUsageDetail method.
-     * @param DateOnly $date Usage: date={date}
+     * @param Date $date Usage: date={date}
      * @return GetSharePointSiteUsageDetailWithDateRequestBuilder
     */
-    public function getSharePointSiteUsageDetailWithDate(DateOnly $date): GetSharePointSiteUsageDetailWithDateRequestBuilder {
+    public function getSharePointSiteUsageDetailWithDate(Date $date): GetSharePointSiteUsageDetailWithDateRequestBuilder {
         return new GetSharePointSiteUsageDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -707,10 +721,10 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getSkypeForBusinessActivityUserDetail method.
-     * @param DateOnly $date Usage: date={date}
+     * @param Date $date Usage: date={date}
      * @return GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder
     */
-    public function getSkypeForBusinessActivityUserDetailWithDate(DateOnly $date): GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder {
+    public function getSkypeForBusinessActivityUserDetailWithDate(Date $date): GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder {
         return new GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -743,10 +757,10 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getSkypeForBusinessDeviceUsageUserDetail method.
-     * @param DateOnly $date Usage: date={date}
+     * @param Date $date Usage: date={date}
      * @return GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder
     */
-    public function getSkypeForBusinessDeviceUsageUserDetailWithDate(DateOnly $date): GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder {
+    public function getSkypeForBusinessDeviceUsageUserDetailWithDate(Date $date): GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder {
         return new GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -860,10 +874,10 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getTeamsDeviceUsageUserDetail method.
-     * @param DateOnly $date Usage: date={date}
+     * @param Date $date Usage: date={date}
      * @return GetTeamsDeviceUsageUserDetailWithDateRequestBuilder
     */
-    public function getTeamsDeviceUsageUserDetailWithDate(DateOnly $date): GetTeamsDeviceUsageUserDetailWithDateRequestBuilder {
+    public function getTeamsDeviceUsageUserDetailWithDate(Date $date): GetTeamsDeviceUsageUserDetailWithDateRequestBuilder {
         return new GetTeamsDeviceUsageUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -896,10 +910,10 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getTeamsUserActivityUserDetail method.
-     * @param DateOnly $date Usage: date={date}
+     * @param Date $date Usage: date={date}
      * @return GetTeamsUserActivityUserDetailWithDateRequestBuilder
     */
-    public function getTeamsUserActivityUserDetailWithDate(DateOnly $date): GetTeamsUserActivityUserDetailWithDateRequestBuilder {
+    public function getTeamsUserActivityUserDetailWithDate(Date $date): GetTeamsUserActivityUserDetailWithDateRequestBuilder {
         return new GetTeamsUserActivityUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -914,12 +928,12 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getUserArchivedPrintJobs method.
-     * @param DateTimeOffset $endDateTime Usage: endDateTime='{endDateTime}'
-     * @param DateTimeOffset $startDateTime Usage: startDateTime='{startDateTime}'
+     * @param DateTime $endDateTime Usage: endDateTime='{endDateTime}'
+     * @param DateTime $startDateTime Usage: startDateTime='{startDateTime}'
      * @param string $userId Usage: userId='{userId}'
      * @return GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder
     */
-    public function getUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTime(DateTimeOffset $endDateTime, DateTimeOffset $startDateTime, string $userId): GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder {
+    public function getUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, DateTime $startDateTime, string $userId): GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder {
         return new GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $startDateTime, $userId);
     }
 
@@ -943,10 +957,10 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getYammerActivityUserDetail method.
-     * @param DateOnly $date Usage: date={date}
+     * @param Date $date Usage: date={date}
      * @return GetYammerActivityUserDetailWithDateRequestBuilder
     */
-    public function getYammerActivityUserDetailWithDate(DateOnly $date): GetYammerActivityUserDetailWithDateRequestBuilder {
+    public function getYammerActivityUserDetailWithDate(Date $date): GetYammerActivityUserDetailWithDateRequestBuilder {
         return new GetYammerActivityUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -979,10 +993,10 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getYammerDeviceUsageUserDetail method.
-     * @param DateOnly $date Usage: date={date}
+     * @param Date $date Usage: date={date}
      * @return GetYammerDeviceUsageUserDetailWithDateRequestBuilder
     */
-    public function getYammerDeviceUsageUserDetailWithDate(DateOnly $date): GetYammerDeviceUsageUserDetailWithDateRequestBuilder {
+    public function getYammerDeviceUsageUserDetailWithDate(Date $date): GetYammerDeviceUsageUserDetailWithDateRequestBuilder {
         return new GetYammerDeviceUsageUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -1006,10 +1020,10 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getYammerGroupsActivityDetail method.
-     * @param DateOnly $date Usage: date={date}
+     * @param Date $date Usage: date={date}
      * @return GetYammerGroupsActivityDetailWithDateRequestBuilder
     */
-    public function getYammerGroupsActivityDetailWithDate(DateOnly $date): GetYammerGroupsActivityDetailWithDateRequestBuilder {
+    public function getYammerGroupsActivityDetailWithDate(Date $date): GetYammerGroupsActivityDetailWithDateRequestBuilder {
         return new GetYammerGroupsActivityDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 

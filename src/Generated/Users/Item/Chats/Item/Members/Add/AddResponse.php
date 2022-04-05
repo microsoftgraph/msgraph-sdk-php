@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\Members\Add;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ActionResultPart;
+use Microsoft\Graph\Generated\Models\ActionResultPart;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class AddResponse implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<ActionResultPart>|null $value  */
+    /** @var array<ActionResultPart>|null $value The value property */
     private ?array $value = null;
     
     /**
@@ -51,7 +51,7 @@ class AddResponse implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<ActionResultPart>|null
     */
     public function getValue(): ?array {
@@ -76,7 +76,7 @@ class AddResponse implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      *  @param array<ActionResultPart>|null $value Value to set for the value property.
     */
     public function setValue(?array $value ): void {

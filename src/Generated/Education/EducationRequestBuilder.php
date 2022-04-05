@@ -12,8 +12,8 @@ use Microsoft\Graph\Generated\Education\Schools\Item\EducationSchoolItemRequestB
 use Microsoft\Graph\Generated\Education\Schools\SchoolsRequestBuilder;
 use Microsoft\Graph\Generated\Education\Users\Item\EducationUserItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Users\UsersRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\EducationRoot;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\EducationRoot;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -24,10 +24,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class EducationRequestBuilder 
 {
+    /**
+     * The classes property
+    */
     public function classes(): ClassesRequestBuilder {
         return new ClassesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The me property
+    */
     public function me(): MeRequestBuilder {
         return new MeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -38,6 +44,9 @@ class EducationRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The schools property
+    */
     public function schools(): SchoolsRequestBuilder {
         return new SchoolsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -45,6 +54,9 @@ class EducationRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The users property
+    */
     public function users(): UsersRequestBuilder {
         return new UsersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

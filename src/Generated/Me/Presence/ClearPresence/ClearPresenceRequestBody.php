@@ -12,7 +12,7 @@ class ClearPresenceRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $sessionId  */
+    /** @var string|null $sessionId The sessionId property */
     private ?string $sessionId = null;
     
     /**
@@ -50,7 +50,7 @@ class ClearPresenceRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the sessionId property value. 
+     * Gets the sessionId property value. The sessionId property
      * @return string|null
     */
     public function getSessionId(): ?string {
@@ -75,7 +75,7 @@ class ClearPresenceRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the sessionId property value. 
+     * Sets the sessionId property value. The sessionId property
      *  @param string|null $value Value to set for the sessionId property.
     */
     public function setSessionId(?string $value ): void {

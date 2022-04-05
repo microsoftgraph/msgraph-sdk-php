@@ -1,0 +1,149 @@
+<?php
+
+namespace Microsoft\Graph\Generated\Models;
+
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
+use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+
+class ExtensionProperty extends DirectoryObject 
+{
+    /** @var string|null $appDisplayName Display name of the application object on which this extension property is defined. Read-only. */
+    private ?string $appDisplayName = null;
+    
+    /** @var string|null $dataType Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum */
+    private ?string $dataType = null;
+    
+    /** @var bool|null $isSyncedFromOnPremises Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only. */
+    private ?bool $isSyncedFromOnPremises = null;
+    
+    /** @var string|null $name Name of the extension property. Not nullable. */
+    private ?string $name = null;
+    
+    /** @var array<string>|null $targetObjects Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication */
+    private ?array $targetObjects = null;
+    
+    /**
+     * Instantiates a new extensionProperty and sets the default values.
+    */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
+     * @return ExtensionProperty
+    */
+    public function createFromDiscriminatorValue(ParseNode $parseNode): ExtensionProperty {
+        return new ExtensionProperty();
+    }
+
+    /**
+     * Gets the appDisplayName property value. Display name of the application object on which this extension property is defined. Read-only.
+     * @return string|null
+    */
+    public function getAppDisplayName(): ?string {
+        return $this->appDisplayName;
+    }
+
+    /**
+     * Gets the dataType property value. Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum
+     * @return string|null
+    */
+    public function getDataType(): ?string {
+        return $this->dataType;
+    }
+
+    /**
+     * The deserialization information for the current model
+     * @return array<string, callable>
+    */
+    public function getFieldDeserializers(): array {
+        return array_merge(parent::getFieldDeserializers(), [
+            'appDisplayName' => function (self $o, ParseNode $n) { $o->setAppDisplayName($n->getStringValue()); },
+            'dataType' => function (self $o, ParseNode $n) { $o->setDataType($n->getStringValue()); },
+            'isSyncedFromOnPremises' => function (self $o, ParseNode $n) { $o->setIsSyncedFromOnPremises($n->getBooleanValue()); },
+            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
+            'targetObjects' => function (self $o, ParseNode $n) { $o->setTargetObjects($n->getCollectionOfPrimitiveValues()); },
+        ]);
+    }
+
+    /**
+     * Gets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
+     * @return bool|null
+    */
+    public function getIsSyncedFromOnPremises(): ?bool {
+        return $this->isSyncedFromOnPremises;
+    }
+
+    /**
+     * Gets the name property value. Name of the extension property. Not nullable.
+     * @return string|null
+    */
+    public function getName(): ?string {
+        return $this->name;
+    }
+
+    /**
+     * Gets the targetObjects property value. Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication
+     * @return array<string>|null
+    */
+    public function getTargetObjects(): ?array {
+        return $this->targetObjects;
+    }
+
+    /**
+     * Serializes information the current object
+     * @param SerializationWriter $writer Serialization writer to use to serialize this model
+    */
+    public function serialize(SerializationWriter $writer): void {
+        parent::serialize($writer);
+        $writer->writeStringValue('appDisplayName', $this->appDisplayName);
+        $writer->writeStringValue('dataType', $this->dataType);
+        $writer->writeBooleanValue('isSyncedFromOnPremises', $this->isSyncedFromOnPremises);
+        $writer->writeStringValue('name', $this->name);
+        $writer->writeCollectionOfPrimitiveValues('targetObjects', $this->targetObjects);
+    }
+
+    /**
+     * Sets the appDisplayName property value. Display name of the application object on which this extension property is defined. Read-only.
+     *  @param string|null $value Value to set for the appDisplayName property.
+    */
+    public function setAppDisplayName(?string $value ): void {
+        $this->appDisplayName = $value;
+    }
+
+    /**
+     * Sets the dataType property value. Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum
+     *  @param string|null $value Value to set for the dataType property.
+    */
+    public function setDataType(?string $value ): void {
+        $this->dataType = $value;
+    }
+
+    /**
+     * Sets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
+     *  @param bool|null $value Value to set for the isSyncedFromOnPremises property.
+    */
+    public function setIsSyncedFromOnPremises(?bool $value ): void {
+        $this->isSyncedFromOnPremises = $value;
+    }
+
+    /**
+     * Sets the name property value. Name of the extension property. Not nullable.
+     *  @param string|null $value Value to set for the name property.
+    */
+    public function setName(?string $value ): void {
+        $this->name = $value;
+    }
+
+    /**
+     * Sets the targetObjects property value. Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication
+     *  @param array<string>|null $value Value to set for the targetObjects property.
+    */
+    public function setTargetObjects(?array $value ): void {
+        $this->targetObjects = $value;
+    }
+
+}

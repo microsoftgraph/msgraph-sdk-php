@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Sites\Item\Onenote\Operations;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OnenoteOperation;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OnenoteOperationCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OnenoteOperation;
+use Microsoft\Graph\Generated\Models\OnenoteOperationCollectionResponse;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Operations\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class OperationsRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

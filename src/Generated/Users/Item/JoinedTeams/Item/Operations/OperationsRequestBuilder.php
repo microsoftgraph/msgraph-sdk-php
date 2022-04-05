@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Operations;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TeamsAsyncOperation;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TeamsAsyncOperationCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TeamsAsyncOperation;
+use Microsoft\Graph\Generated\Models\TeamsAsyncOperationCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Operations\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class OperationsRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

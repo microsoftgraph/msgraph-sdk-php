@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Users\Item\CalendarView\Item\TentativelyAccept;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TimeSlot;
+use Microsoft\Graph\Generated\Models\TimeSlot;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,13 +13,13 @@ class TentativelyAcceptRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $Comment  */
+    /** @var string|null $Comment The Comment property */
     private ?string $comment = null;
     
-    /** @var TimeSlot|null $ProposedNewTime  */
+    /** @var TimeSlot|null $ProposedNewTime The ProposedNewTime property */
     private ?TimeSlot $proposedNewTime = null;
     
-    /** @var bool|null $SendResponse  */
+    /** @var bool|null $SendResponse The SendResponse property */
     private ?bool $sendResponse = null;
     
     /**
@@ -47,7 +47,7 @@ class TentativelyAcceptRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the comment property value. 
+     * Gets the comment property value. The Comment property
      * @return string|null
     */
     public function getComment(): ?string {
@@ -67,7 +67,7 @@ class TentativelyAcceptRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the proposedNewTime property value. 
+     * Gets the proposedNewTime property value. The ProposedNewTime property
      * @return TimeSlot|null
     */
     public function getProposedNewTime(): ?TimeSlot {
@@ -75,7 +75,7 @@ class TentativelyAcceptRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the sendResponse property value. 
+     * Gets the sendResponse property value. The SendResponse property
      * @return bool|null
     */
     public function getSendResponse(): ?bool {
@@ -102,7 +102,7 @@ class TentativelyAcceptRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the comment property value. 
+     * Sets the comment property value. The Comment property
      *  @param string|null $value Value to set for the Comment property.
     */
     public function setComment(?string $value ): void {
@@ -110,7 +110,7 @@ class TentativelyAcceptRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the proposedNewTime property value. 
+     * Sets the proposedNewTime property value. The ProposedNewTime property
      *  @param TimeSlot|null $value Value to set for the ProposedNewTime property.
     */
     public function setProposedNewTime(?TimeSlot $value ): void {
@@ -118,7 +118,7 @@ class TentativelyAcceptRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the sendResponse property value. 
+     * Sets the sendResponse property value. The SendResponse property
      *  @param bool|null $value Value to set for the SendResponse property.
     */
     public function setSendResponse(?bool $value ): void {

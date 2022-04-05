@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\BeginOnboarding\BeginOnboardingRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\Disconnect\DisconnectRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\RemoteAssistancePartner;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\RemoteAssistancePartner;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,10 +19,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class RemoteAssistancePartnerItemRequestBuilder 
 {
+    /**
+     * The beginOnboarding property
+    */
     public function beginOnboarding(): BeginOnboardingRequestBuilder {
         return new BeginOnboardingRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The disconnect property
+    */
     public function disconnect(): DisconnectRequestBuilder {
         return new DisconnectRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

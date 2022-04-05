@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Organization\GetByIds;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DirectoryObject;
+use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class GetByIdsResponse implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<DirectoryObject>|null $value  */
+    /** @var array<DirectoryObject>|null $value The value property */
     private ?array $value = null;
     
     /**
@@ -51,7 +51,7 @@ class GetByIdsResponse implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<DirectoryObject>|null
     */
     public function getValue(): ?array {
@@ -76,7 +76,7 @@ class GetByIdsResponse implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      *  @param array<DirectoryObject>|null $value Value to set for the value property.
     */
     public function setValue(?array $value ): void {

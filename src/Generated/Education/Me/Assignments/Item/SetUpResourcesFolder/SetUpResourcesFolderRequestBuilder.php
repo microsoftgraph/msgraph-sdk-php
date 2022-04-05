@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item\SetUpResources
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\EducationAssignment;
+use Microsoft\Graph\Generated\Models\EducationAssignment;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

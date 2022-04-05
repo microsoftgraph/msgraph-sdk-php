@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Users\Item\ContactFolders;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ContactFolder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ContactFolderCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ContactFolder;
+use Microsoft\Graph\Generated\Models\ContactFolderCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\ContactFolders\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\ContactFolders\Delta\DeltaRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -20,6 +20,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ContactFoldersRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

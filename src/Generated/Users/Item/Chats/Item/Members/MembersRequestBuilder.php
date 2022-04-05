@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\Members;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ConversationMember;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ConversationMemberCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ConversationMember;
+use Microsoft\Graph\Generated\Models\ConversationMemberCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Members\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Members\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -20,10 +20,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class MembersRequestBuilder 
 {
+    /**
+     * The add property
+    */
     public function add(): AddRequestBuilder {
         return new AddRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

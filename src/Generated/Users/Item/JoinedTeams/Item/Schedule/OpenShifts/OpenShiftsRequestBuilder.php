@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\OpenShi
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OpenShift;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OpenShiftCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OpenShift;
+use Microsoft\Graph\Generated\Models\OpenShiftCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\OpenShifts\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class OpenShiftsRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

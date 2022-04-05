@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\GetNotebookFrom
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\CopyNotebookModel;
+use Microsoft\Graph\Generated\Models\CopyNotebookModel;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

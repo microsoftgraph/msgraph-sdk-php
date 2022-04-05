@@ -13,8 +13,8 @@ use Microsoft\Graph\Generated\AuditLogs\RestrictedSignIns\Item\RestrictedSignInI
 use Microsoft\Graph\Generated\AuditLogs\RestrictedSignIns\RestrictedSignInsRequestBuilder;
 use Microsoft\Graph\Generated\AuditLogs\SignIns\Item\SignInItemRequestBuilder;
 use Microsoft\Graph\Generated\AuditLogs\SignIns\SignInsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AuditLogRoot;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\AuditLogRoot;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -25,6 +25,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AuditLogsRequestBuilder 
 {
+    /**
+     * The directoryAudits property
+    */
     public function directoryAudits(): DirectoryAuditsRequestBuilder {
         return new DirectoryAuditsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -32,6 +35,9 @@ class AuditLogsRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The provisioning property
+    */
     public function provisioning(): ProvisioningRequestBuilder {
         return new ProvisioningRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -39,10 +45,16 @@ class AuditLogsRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The restrictedSignIns property
+    */
     public function restrictedSignIns(): RestrictedSignInsRequestBuilder {
         return new RestrictedSignInsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The signIns property
+    */
     public function signIns(): SignInsRequestBuilder {
         return new SignInsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

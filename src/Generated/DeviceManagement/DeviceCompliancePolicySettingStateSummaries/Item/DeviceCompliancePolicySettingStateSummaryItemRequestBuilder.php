@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicySettingStateSummaries\Item\DeviceComplianceSettingStates\DeviceComplianceSettingStatesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicySettingStateSummaries\Item\DeviceComplianceSettingStates\Item\DeviceComplianceSettingStateItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DeviceCompliancePolicySettingStateSummary;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\DeviceCompliancePolicySettingStateSummary;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder 
 {
+    /**
+     * The deviceComplianceSettingStates property
+    */
     public function deviceComplianceSettingStates(): DeviceComplianceSettingStatesRequestBuilder {
         return new DeviceComplianceSettingStatesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

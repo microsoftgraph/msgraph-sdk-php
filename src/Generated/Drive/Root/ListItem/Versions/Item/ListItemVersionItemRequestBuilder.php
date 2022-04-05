@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drive\Root\ListItem\Versions\Item\Fields\FieldsRequestBuilder;
 use Microsoft\Graph\Generated\Drive\Root\ListItem\Versions\Item\RestoreVersion\RestoreVersionRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ListItemVersion;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ListItemVersion;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ListItemVersionItemRequestBuilder 
 {
+    /**
+     * The fields property
+    */
     public function fields(): FieldsRequestBuilder {
         return new FieldsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -29,6 +32,9 @@ class ListItemVersionItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The restoreVersion property
+    */
     public function restoreVersion(): RestoreVersionRequestBuilder {
         return new RestoreVersionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

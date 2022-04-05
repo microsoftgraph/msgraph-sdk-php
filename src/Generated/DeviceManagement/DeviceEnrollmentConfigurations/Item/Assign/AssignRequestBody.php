@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assign;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\EnrollmentConfigurationAssignment;
+use Microsoft\Graph\Generated\Models\EnrollmentConfigurationAssignment;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class AssignRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<EnrollmentConfigurationAssignment>|null $enrollmentConfigurationAssignments  */
+    /** @var array<EnrollmentConfigurationAssignment>|null $enrollmentConfigurationAssignments The enrollmentConfigurationAssignments property */
     private ?array $enrollmentConfigurationAssignments = null;
     
     /**
@@ -41,7 +41,7 @@ class AssignRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the enrollmentConfigurationAssignments property value. 
+     * Gets the enrollmentConfigurationAssignments property value. The enrollmentConfigurationAssignments property
      * @return array<EnrollmentConfigurationAssignment>|null
     */
     public function getEnrollmentConfigurationAssignments(): ?array {
@@ -76,7 +76,7 @@ class AssignRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the enrollmentConfigurationAssignments property value. 
+     * Sets the enrollmentConfigurationAssignments property value. The enrollmentConfigurationAssignments property
      *  @param array<EnrollmentConfigurationAssignment>|null $value Value to set for the enrollmentConfigurationAssignments property.
     */
     public function setEnrollmentConfigurationAssignments(?array $value ): void {

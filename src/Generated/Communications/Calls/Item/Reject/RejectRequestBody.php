@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Communications\Calls\Item\Reject;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\RejectReason;
+use Microsoft\Graph\Generated\Models\RejectReason;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,10 +13,10 @@ class RejectRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $callbackUri  */
+    /** @var string|null $callbackUri The callbackUri property */
     private ?string $callbackUri = null;
     
-    /** @var RejectReason|null $reason  */
+    /** @var RejectReason|null $reason The reason property */
     private ?RejectReason $reason = null;
     
     /**
@@ -44,7 +44,7 @@ class RejectRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the callbackUri property value. 
+     * Gets the callbackUri property value. The callbackUri property
      * @return string|null
     */
     public function getCallbackUri(): ?string {
@@ -63,7 +63,7 @@ class RejectRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the reason property value. 
+     * Gets the reason property value. The reason property
      * @return RejectReason|null
     */
     public function getReason(): ?RejectReason {
@@ -89,7 +89,7 @@ class RejectRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the callbackUri property value. 
+     * Sets the callbackUri property value. The callbackUri property
      *  @param string|null $value Value to set for the callbackUri property.
     */
     public function setCallbackUri(?string $value ): void {
@@ -97,7 +97,7 @@ class RejectRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the reason property value. 
+     * Sets the reason property value. The reason property
      *  @param RejectReason|null $value Value to set for the reason property.
     */
     public function setReason(?RejectReason $value ): void {

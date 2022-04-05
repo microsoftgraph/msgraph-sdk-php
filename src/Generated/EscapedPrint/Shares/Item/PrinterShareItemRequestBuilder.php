@@ -10,8 +10,8 @@ use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedGroups\Item\GroupI
 use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\AllowedUsersRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item\UserItemRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\Printer\PrinterRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\PrinterShare;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\PrinterShare;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -22,10 +22,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class PrinterShareItemRequestBuilder 
 {
+    /**
+     * The allowedGroups property
+    */
     public function allowedGroups(): AllowedGroupsRequestBuilder {
         return new AllowedGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The allowedUsers property
+    */
     public function allowedUsers(): AllowedUsersRequestBuilder {
         return new AllowedUsersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -33,6 +39,9 @@ class PrinterShareItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The printer property
+    */
     public function printer(): PrinterRequestBuilder {
         return new PrinterRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

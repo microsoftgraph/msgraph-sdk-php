@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item\Insights\Shared\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\SharedInsight;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\SharedInsight;
 use Microsoft\Graph\Generated\Users\Item\Insights\Shared\Item\LastSharedMethod\LastSharedMethodRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Insights\Shared\Item\Resource\ResourceRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SharedInsightItemRequestBuilder 
 {
+    /**
+     * The lastSharedMethod property
+    */
     public function lastSharedMethod(): LastSharedMethodRequestBuilder {
         return new LastSharedMethodRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -29,6 +32,9 @@ class SharedInsightItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The resource property
+    */
     public function resource(): ResourceRequestBuilder {
         return new ResourceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

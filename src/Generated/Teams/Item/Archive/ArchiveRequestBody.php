@@ -12,7 +12,7 @@ class ArchiveRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var bool|null $shouldSetSpoSiteReadOnlyForMembers  */
+    /** @var bool|null $shouldSetSpoSiteReadOnlyForMembers The shouldSetSpoSiteReadOnlyForMembers property */
     private ?bool $shouldSetSpoSiteReadOnlyForMembers = null;
     
     /**
@@ -50,7 +50,7 @@ class ArchiveRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the shouldSetSpoSiteReadOnlyForMembers property value. 
+     * Gets the shouldSetSpoSiteReadOnlyForMembers property value. The shouldSetSpoSiteReadOnlyForMembers property
      * @return bool|null
     */
     public function getShouldSetSpoSiteReadOnlyForMembers(): ?bool {
@@ -75,7 +75,7 @@ class ArchiveRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the shouldSetSpoSiteReadOnlyForMembers property value. 
+     * Sets the shouldSetSpoSiteReadOnlyForMembers property value. The shouldSetSpoSiteReadOnlyForMembers property
      *  @param bool|null $value Value to set for the shouldSetSpoSiteReadOnlyForMembers property.
     */
     public function setShouldSetSpoSiteReadOnlyForMembers(?bool $value ): void {

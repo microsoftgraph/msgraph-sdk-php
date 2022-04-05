@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Notebook;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\NotebookCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Notebook;
+use Microsoft\Graph\Generated\Models\NotebookCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\GetNotebookFromWebUrl\GetNotebookFromWebUrlRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\GetRecentNotebooksWithIncludePersonalNotebooks\GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder;
@@ -21,10 +21,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class NotebooksRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getNotebookFromWebUrl property
+    */
     public function getNotebookFromWebUrl(): GetNotebookFromWebUrlRequestBuilder {
         return new GetNotebookFromWebUrlRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

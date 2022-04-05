@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\A
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\AppliedPolicies\Item\TargetApps\TargetAppsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\AppliedPolicies\Item\TargetedManagedAppProtection\TargetedManagedAppProtectionRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\AppliedPolicies\Item\WindowsInformationProtection\WindowsInformationProtectionRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ManagedAppPolicy;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ManagedAppPolicy;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -21,6 +21,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ManagedAppPolicyItemRequestBuilder 
 {
+    /**
+     * The managedAppProtection property
+    */
     public function managedAppProtection(): ManagedAppProtectionRequestBuilder {
         return new ManagedAppProtectionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -31,10 +34,16 @@ class ManagedAppPolicyItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The targetApps property
+    */
     public function targetApps(): TargetAppsRequestBuilder {
         return new TargetAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The targetedManagedAppProtection property
+    */
     public function targetedManagedAppProtection(): TargetedManagedAppProtectionRequestBuilder {
         return new TargetedManagedAppProtectionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -42,6 +51,9 @@ class ManagedAppPolicyItemRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The windowsInformationProtection property
+    */
     public function windowsInformationProtection(): WindowsInformationProtectionRequestBuilder {
         return new WindowsInformationProtectionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

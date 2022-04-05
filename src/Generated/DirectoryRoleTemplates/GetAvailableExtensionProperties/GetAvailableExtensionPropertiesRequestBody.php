@@ -12,7 +12,7 @@ class GetAvailableExtensionPropertiesRequestBody implements AdditionalDataHolder
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var bool|null $isSyncedFromOnPremises  */
+    /** @var bool|null $isSyncedFromOnPremises The isSyncedFromOnPremises property */
     private ?bool $isSyncedFromOnPremises = null;
     
     /**
@@ -50,7 +50,7 @@ class GetAvailableExtensionPropertiesRequestBody implements AdditionalDataHolder
     }
 
     /**
-     * Gets the isSyncedFromOnPremises property value. 
+     * Gets the isSyncedFromOnPremises property value. The isSyncedFromOnPremises property
      * @return bool|null
     */
     public function getIsSyncedFromOnPremises(): ?bool {
@@ -75,7 +75,7 @@ class GetAvailableExtensionPropertiesRequestBody implements AdditionalDataHolder
     }
 
     /**
-     * Sets the isSyncedFromOnPremises property value. 
+     * Sets the isSyncedFromOnPremises property value. The isSyncedFromOnPremises property
      *  @param bool|null $value Value to set for the isSyncedFromOnPremises property.
     */
     public function setIsSyncedFromOnPremises(?bool $value ): void {

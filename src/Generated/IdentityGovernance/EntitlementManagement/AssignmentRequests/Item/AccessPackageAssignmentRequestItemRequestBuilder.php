@@ -8,9 +8,10 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\AccessPackage\AccessPackageRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\Assignment\AssignmentRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\Cancel\CancelRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\Reprocess\ReprocessRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\Requestor\RequestorRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AccessPackageAssignmentRequest;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\AccessPackageAssignmentRequest;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -21,14 +22,23 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AccessPackageAssignmentRequestItemRequestBuilder 
 {
+    /**
+     * The accessPackage property
+    */
     public function accessPackage(): AccessPackageRequestBuilder {
         return new AccessPackageRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The assignment property
+    */
     public function assignment(): AssignmentRequestBuilder {
         return new AssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The cancel property
+    */
     public function cancel(): CancelRequestBuilder {
         return new CancelRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -36,9 +46,19 @@ class AccessPackageAssignmentRequestItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The reprocess property
+    */
+    public function reprocess(): ReprocessRequestBuilder {
+        return new ReprocessRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The requestor property
+    */
     public function requestor(): RequestorRequestBuilder {
         return new RequestorRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

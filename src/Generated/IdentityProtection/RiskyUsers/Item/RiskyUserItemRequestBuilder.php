@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item\History\HistoryRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item\History\Item\RiskyUserHistoryItemItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\RiskyUser;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\RiskyUser;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class RiskyUserItemRequestBuilder 
 {
+    /**
+     * The history property
+    */
     public function history(): HistoryRequestBuilder {
         return new HistoryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ServicePrincipal;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ServicePrincipal;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\AddKey\AddKeyRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\AddPassword\AddPasswordRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\AddTokenSigningCertificate\AddTokenSigningCertificateRequestBuilder;
@@ -55,74 +55,128 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ServicePrincipalItemRequestBuilder 
 {
+    /**
+     * The addKey property
+    */
     public function addKey(): AddKeyRequestBuilder {
         return new AddKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The addPassword property
+    */
     public function addPassword(): AddPasswordRequestBuilder {
         return new AddPasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The addTokenSigningCertificate property
+    */
     public function addTokenSigningCertificate(): AddTokenSigningCertificateRequestBuilder {
         return new AddTokenSigningCertificateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The appRoleAssignedTo property
+    */
     public function appRoleAssignedTo(): AppRoleAssignedToRequestBuilder {
         return new AppRoleAssignedToRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The appRoleAssignments property
+    */
     public function appRoleAssignments(): AppRoleAssignmentsRequestBuilder {
         return new AppRoleAssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The checkMemberGroups property
+    */
     public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
         return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The checkMemberObjects property
+    */
     public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
         return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The claimsMappingPolicies property
+    */
     public function claimsMappingPolicies(): ClaimsMappingPoliciesRequestBuilder {
         return new ClaimsMappingPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The createdObjects property
+    */
     public function createdObjects(): CreatedObjectsRequestBuilder {
         return new CreatedObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The delegatedPermissionClassifications property
+    */
     public function delegatedPermissionClassifications(): DelegatedPermissionClassificationsRequestBuilder {
         return new DelegatedPermissionClassificationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The endpoints property
+    */
     public function endpoints(): EndpointsRequestBuilder {
         return new EndpointsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getMemberGroups property
+    */
     public function getMemberGroups(): GetMemberGroupsRequestBuilder {
         return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getMemberObjects property
+    */
     public function getMemberObjects(): GetMemberObjectsRequestBuilder {
         return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The homeRealmDiscoveryPolicies property
+    */
     public function homeRealmDiscoveryPolicies(): HomeRealmDiscoveryPoliciesRequestBuilder {
         return new HomeRealmDiscoveryPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The memberOf property
+    */
     public function memberOf(): MemberOfRequestBuilder {
         return new MemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The oauth2PermissionGrants property
+    */
     public function oauth2PermissionGrants(): Oauth2PermissionGrantsRequestBuilder {
         return new Oauth2PermissionGrantsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The ownedObjects property
+    */
     public function ownedObjects(): OwnedObjectsRequestBuilder {
         return new OwnedObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The owners property
+    */
     public function owners(): OwnersRequestBuilder {
         return new OwnersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -130,10 +184,16 @@ class ServicePrincipalItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The removeKey property
+    */
     public function removeKey(): RemoveKeyRequestBuilder {
         return new RemoveKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The removePassword property
+    */
     public function removePassword(): RemovePasswordRequestBuilder {
         return new RemovePasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -141,18 +201,30 @@ class ServicePrincipalItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The restore property
+    */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The tokenIssuancePolicies property
+    */
     public function tokenIssuancePolicies(): TokenIssuancePoliciesRequestBuilder {
         return new TokenIssuancePoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The tokenLifetimePolicies property
+    */
     public function tokenLifetimePolicies(): TokenLifetimePoliciesRequestBuilder {
         return new TokenLifetimePoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The transitiveMemberOf property
+    */
     public function transitiveMemberOf(): TransitiveMemberOfRequestBuilder {
         return new TransitiveMemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

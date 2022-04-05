@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\ApiConnectors\Item\UploadClientCert
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\IdentityApiConnector;
+use Microsoft\Graph\Generated\Models\IdentityApiConnector;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

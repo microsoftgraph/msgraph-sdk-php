@@ -7,9 +7,10 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\AccessPackage\AccessPackageRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\AssignmentPolicy\AssignmentPolicyRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\Reprocess\ReprocessRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\Target\TargetRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AccessPackageAssignment;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\AccessPackageAssignment;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -20,10 +21,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AccessPackageAssignmentItemRequestBuilder 
 {
+    /**
+     * The accessPackage property
+    */
     public function accessPackage(): AccessPackageRequestBuilder {
         return new AccessPackageRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The assignmentPolicy property
+    */
     public function assignmentPolicy(): AssignmentPolicyRequestBuilder {
         return new AssignmentPolicyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -31,9 +38,19 @@ class AccessPackageAssignmentItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The reprocess property
+    */
+    public function reprocess(): ReprocessRequestBuilder {
+        return new ReprocessRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The target property
+    */
     public function target(): TargetRequestBuilder {
         return new TargetRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

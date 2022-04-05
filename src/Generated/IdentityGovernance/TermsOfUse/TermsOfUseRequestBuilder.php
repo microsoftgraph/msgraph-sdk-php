@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\AgreementAcceptances
 use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\AgreementAcceptances\Item\AgreementAcceptanceItemRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\AgreementsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\AgreementItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TermsOfUseContainer;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TermsOfUseContainer;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -21,10 +21,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class TermsOfUseRequestBuilder 
 {
+    /**
+     * The agreementAcceptances property
+    */
     public function agreementAcceptances(): AgreementAcceptancesRequestBuilder {
         return new AgreementAcceptancesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The agreements property
+    */
     public function agreements(): AgreementsRequestBuilder {
         return new AgreementsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

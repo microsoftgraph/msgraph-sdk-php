@@ -7,9 +7,9 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\GetAllMessages\GetAllMessagesRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Channel;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ChannelCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Channel;
+use Microsoft\Graph\Generated\Models\ChannelCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -20,6 +20,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ChannelsRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

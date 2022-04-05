@@ -13,8 +13,8 @@ use Microsoft\Graph\Generated\Me\Authentication\MicrosoftAuthenticatorMethods\It
 use Microsoft\Graph\Generated\Me\Authentication\MicrosoftAuthenticatorMethods\MicrosoftAuthenticatorMethodsRequestBuilder;
 use Microsoft\Graph\Generated\Me\Authentication\WindowsHelloForBusinessMethods\Item\WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Authentication\WindowsHelloForBusinessMethods\WindowsHelloForBusinessMethodsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Authentication;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Authentication;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -25,14 +25,23 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AuthenticationRequestBuilder 
 {
+    /**
+     * The fido2Methods property
+    */
     public function fido2Methods(): Fido2MethodsRequestBuilder {
         return new Fido2MethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The methods property
+    */
     public function methods(): MethodsRequestBuilder {
         return new MethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The microsoftAuthenticatorMethods property
+    */
     public function microsoftAuthenticatorMethods(): MicrosoftAuthenticatorMethodsRequestBuilder {
         return new MicrosoftAuthenticatorMethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -46,6 +55,9 @@ class AuthenticationRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The windowsHelloForBusinessMethods property
+    */
     public function windowsHelloForBusinessMethods(): WindowsHelloForBusinessMethodsRequestBuilder {
         return new WindowsHelloForBusinessMethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

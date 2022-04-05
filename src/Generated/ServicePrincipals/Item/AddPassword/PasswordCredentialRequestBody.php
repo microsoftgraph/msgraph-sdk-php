@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\ServicePrincipals\Item\AddPassword;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\PasswordCredential;
+use Microsoft\Graph\Generated\Models\PasswordCredential;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class PasswordCredentialRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var PasswordCredential|null $passwordCredential  */
+    /** @var PasswordCredential|null $passwordCredential The passwordCredential property */
     private ?PasswordCredential $passwordCredential = null;
     
     /**
@@ -51,7 +51,7 @@ class PasswordCredentialRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the passwordCredential property value. 
+     * Gets the passwordCredential property value. The passwordCredential property
      * @return PasswordCredential|null
     */
     public function getPasswordCredential(): ?PasswordCredential {
@@ -76,7 +76,7 @@ class PasswordCredentialRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the passwordCredential property value. 
+     * Sets the passwordCredential property value. The passwordCredential property
      *  @param PasswordCredential|null $value Value to set for the passwordCredential property.
     */
     public function setPasswordCredential(?PasswordCredential $value ): void {

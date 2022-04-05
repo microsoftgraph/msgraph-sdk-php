@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Assign;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\MobileAppAssignment;
+use Microsoft\Graph\Generated\Models\MobileAppAssignment;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class AssignRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<MobileAppAssignment>|null $mobileAppAssignments  */
+    /** @var array<MobileAppAssignment>|null $mobileAppAssignments The mobileAppAssignments property */
     private ?array $mobileAppAssignments = null;
     
     /**
@@ -51,7 +51,7 @@ class AssignRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the mobileAppAssignments property value. 
+     * Gets the mobileAppAssignments property value. The mobileAppAssignments property
      * @return array<MobileAppAssignment>|null
     */
     public function getMobileAppAssignments(): ?array {
@@ -76,7 +76,7 @@ class AssignRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the mobileAppAssignments property value. 
+     * Sets the mobileAppAssignments property value. The mobileAppAssignments property
      *  @param array<MobileAppAssignment>|null $value Value to set for the mobileAppAssignments property.
     */
     public function setMobileAppAssignments(?array $value ): void {

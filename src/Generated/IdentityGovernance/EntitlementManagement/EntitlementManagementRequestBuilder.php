@@ -20,8 +20,8 @@ use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\ConnectedOrganizationsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\ConnectedOrganizationItemRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Settings\SettingsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\EntitlementManagement;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\EntitlementManagement;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -32,30 +32,51 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class EntitlementManagementRequestBuilder 
 {
+    /**
+     * The accessPackageAssignmentApprovals property
+    */
     public function accessPackageAssignmentApprovals(): AccessPackageAssignmentApprovalsRequestBuilder {
         return new AccessPackageAssignmentApprovalsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The accessPackages property
+    */
     public function accessPackages(): AccessPackagesRequestBuilder {
         return new AccessPackagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The assignmentPolicies property
+    */
     public function assignmentPolicies(): AssignmentPoliciesRequestBuilder {
         return new AssignmentPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The assignmentRequests property
+    */
     public function assignmentRequests(): AssignmentRequestsRequestBuilder {
         return new AssignmentRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The assignments property
+    */
     public function assignments(): AssignmentsRequestBuilder {
         return new AssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The catalogs property
+    */
     public function catalogs(): CatalogsRequestBuilder {
         return new CatalogsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The connectedOrganizations property
+    */
     public function connectedOrganizations(): ConnectedOrganizationsRequestBuilder {
         return new ConnectedOrganizationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -66,6 +87,9 @@ class EntitlementManagementRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The settings property
+    */
     public function settings(): SettingsRequestBuilder {
         return new SettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

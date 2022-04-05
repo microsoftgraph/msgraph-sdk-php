@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Communications\Calls\Item\ChangeScreenSharingRole;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ScreenSharingRole;
+use Microsoft\Graph\Generated\Models\ScreenSharingRole;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class ChangeScreenSharingRoleRequestBody implements AdditionalDataHolder, Parsab
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var ScreenSharingRole|null $role  */
+    /** @var ScreenSharingRole|null $role The role property */
     private ?ScreenSharingRole $role = null;
     
     /**
@@ -51,7 +51,7 @@ class ChangeScreenSharingRoleRequestBody implements AdditionalDataHolder, Parsab
     }
 
     /**
-     * Gets the role property value. 
+     * Gets the role property value. The role property
      * @return ScreenSharingRole|null
     */
     public function getRole(): ?ScreenSharingRole {
@@ -76,7 +76,7 @@ class ChangeScreenSharingRoleRequestBody implements AdditionalDataHolder, Parsab
     }
 
     /**
-     * Sets the role property value. 
+     * Sets the role property value. The role property
      *  @param ScreenSharingRole|null $value Value to set for the role property.
     */
     public function setRole(?ScreenSharingRole $value ): void {

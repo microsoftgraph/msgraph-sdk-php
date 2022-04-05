@@ -13,10 +13,10 @@ class SelfSignedCertificateRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $displayName  */
+    /** @var string|null $displayName The displayName property */
     private ?string $displayName = null;
     
-    /** @var DateTime|null $endDateTime  */
+    /** @var DateTime|null $endDateTime The endDateTime property */
     private ?DateTime $endDateTime = null;
     
     /**
@@ -44,7 +44,7 @@ class SelfSignedCertificateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the displayName property value. 
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -52,7 +52,7 @@ class SelfSignedCertificateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the endDateTime property value. 
+     * Gets the endDateTime property value. The endDateTime property
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
@@ -89,7 +89,7 @@ class SelfSignedCertificateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the displayName property value. 
+     * Sets the displayName property value. The displayName property
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -97,7 +97,7 @@ class SelfSignedCertificateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the endDateTime property value. 
+     * Sets the endDateTime property value. The endDateTime property
      *  @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value ): void {

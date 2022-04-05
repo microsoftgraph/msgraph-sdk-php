@@ -12,10 +12,10 @@ class RemoveKeyRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $keyId  */
+    /** @var string|null $keyId The keyId property */
     private ?string $keyId = null;
     
-    /** @var string|null $proof  */
+    /** @var string|null $proof The proof property */
     private ?string $proof = null;
     
     /**
@@ -54,7 +54,7 @@ class RemoveKeyRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the keyId property value. 
+     * Gets the keyId property value. The keyId property
      * @return string|null
     */
     public function getKeyId(): ?string {
@@ -62,7 +62,7 @@ class RemoveKeyRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the proof property value. 
+     * Gets the proof property value. The proof property
      * @return string|null
     */
     public function getProof(): ?string {
@@ -88,7 +88,7 @@ class RemoveKeyRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the keyId property value. 
+     * Sets the keyId property value. The keyId property
      *  @param string|null $value Value to set for the keyId property.
     */
     public function setKeyId(?string $value ): void {
@@ -96,7 +96,7 @@ class RemoveKeyRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the proof property value. 
+     * Sets the proof property value. The proof property
      *  @param string|null $value Value to set for the proof property.
     */
     public function setProof(?string $value ): void {

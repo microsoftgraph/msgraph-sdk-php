@@ -11,8 +11,8 @@ use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\PagesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\ParentNotebook\ParentNotebookRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\ParentSectionGroup\ParentSectionGroupRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OnenoteSection;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OnenoteSection;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -23,22 +23,37 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class OnenoteSectionItemRequestBuilder 
 {
+    /**
+     * The copyToNotebook property
+    */
     public function copyToNotebook(): CopyToNotebookRequestBuilder {
         return new CopyToNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The copyToSectionGroup property
+    */
     public function copyToSectionGroup(): CopyToSectionGroupRequestBuilder {
         return new CopyToSectionGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The pages property
+    */
     public function pages(): PagesRequestBuilder {
         return new PagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The parentNotebook property
+    */
     public function parentNotebook(): ParentNotebookRequestBuilder {
         return new ParentNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The parentSectionGroup property
+    */
     public function parentSectionGroup(): ParentSectionGroupRequestBuilder {
         return new ParentSectionGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

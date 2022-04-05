@@ -6,8 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Drives\Item\EscapedList\Columns\Item\SourceColumn\SourceColumnRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ColumnDefinition;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ColumnDefinition;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -24,6 +24,9 @@ class ColumnDefinitionItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The sourceColumn property
+    */
     public function sourceColumn(): SourceColumnRequestBuilder {
         return new SourceColumnRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

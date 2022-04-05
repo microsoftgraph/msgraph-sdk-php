@@ -12,10 +12,10 @@ class CheckinRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $checkInAs  */
+    /** @var string|null $checkInAs The checkInAs property */
     private ?string $checkInAs = null;
     
-    /** @var string|null $comment  */
+    /** @var string|null $comment The comment property */
     private ?string $comment = null;
     
     /**
@@ -43,7 +43,7 @@ class CheckinRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the checkInAs property value. 
+     * Gets the checkInAs property value. The checkInAs property
      * @return string|null
     */
     public function getCheckInAs(): ?string {
@@ -51,7 +51,7 @@ class CheckinRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the comment property value. 
+     * Gets the comment property value. The comment property
      * @return string|null
     */
     public function getComment(): ?string {
@@ -88,7 +88,7 @@ class CheckinRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the checkInAs property value. 
+     * Sets the checkInAs property value. The checkInAs property
      *  @param string|null $value Value to set for the checkInAs property.
     */
     public function setCheckInAs(?string $value ): void {
@@ -96,7 +96,7 @@ class CheckinRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the comment property value. 
+     * Sets the comment property value. The comment property
      *  @param string|null $value Value to set for the comment property.
     */
     public function setComment(?string $value ): void {

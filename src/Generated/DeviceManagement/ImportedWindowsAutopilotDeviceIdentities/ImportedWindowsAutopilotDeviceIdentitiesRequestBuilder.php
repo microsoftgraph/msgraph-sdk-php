@@ -7,9 +7,9 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Import\ImportRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ImportedWindowsAutopilotDeviceIdentity;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ImportedWindowsAutopilotDeviceIdentityCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ImportedWindowsAutopilotDeviceIdentity;
+use Microsoft\Graph\Generated\Models\ImportedWindowsAutopilotDeviceIdentityCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -20,10 +20,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The import property
+    */
     public function import(): ImportRequestBuilder {
         return new ImportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

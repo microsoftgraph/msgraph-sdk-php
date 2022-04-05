@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Teams\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Team;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Team;
 use Microsoft\Graph\Generated\Teams\Item\Archive\ArchiveRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Channels\ChannelsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Channels\Item\ChannelItemRequestBuilder;
@@ -34,34 +34,58 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class TeamItemRequestBuilder 
 {
+    /**
+     * The archive property
+    */
     public function archive(): ArchiveRequestBuilder {
         return new ArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The channels property
+    */
     public function channels(): ChannelsRequestBuilder {
         return new ChannelsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The completeMigration property
+    */
     public function completeMigration(): CompleteMigrationRequestBuilder {
         return new CompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The clone property
+    */
     public function escapedClone(): CloneRequestBuilder {
         return new CloneRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The group property
+    */
     public function group(): GroupRequestBuilder {
         return new GroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The installedApps property
+    */
     public function installedApps(): InstalledAppsRequestBuilder {
         return new InstalledAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The members property
+    */
     public function members(): MembersRequestBuilder {
         return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The operations property
+    */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -69,6 +93,9 @@ class TeamItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The primaryChannel property
+    */
     public function primaryChannel(): PrimaryChannelRequestBuilder {
         return new PrimaryChannelRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -76,18 +103,30 @@ class TeamItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The schedule property
+    */
     public function schedule(): ScheduleRequestBuilder {
         return new ScheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The sendActivityNotification property
+    */
     public function sendActivityNotification(): SendActivityNotificationRequestBuilder {
         return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The template property
+    */
     public function template(): TemplateRequestBuilder {
         return new TemplateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The unarchive property
+    */
     public function unarchive(): UnarchiveRequestBuilder {
         return new UnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

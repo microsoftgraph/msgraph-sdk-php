@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\Services\Item\Endpoints\EndpointsRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Services\Item\Endpoints\Item\PrintServiceEndpointItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\PrintService;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\PrintService;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class PrintServiceItemRequestBuilder 
 {
+    /**
+     * The endpoints property
+    */
     public function endpoints(): EndpointsRequestBuilder {
         return new EndpointsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

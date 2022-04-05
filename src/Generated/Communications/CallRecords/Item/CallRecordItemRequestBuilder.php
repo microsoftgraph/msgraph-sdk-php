@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\Item\SessionItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\SessionsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\CallRecords\CallRecord;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\CallRecords\CallRecord;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -25,6 +25,9 @@ class CallRecordItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The sessions property
+    */
     public function sessions(): SessionsRequestBuilder {
         return new SessionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

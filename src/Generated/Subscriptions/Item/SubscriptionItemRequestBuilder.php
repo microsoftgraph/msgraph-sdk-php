@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Subscriptions\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Subscription;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Subscription;
 use Microsoft\Graph\Generated\Subscriptions\Item\Reauthorize\ReauthorizeRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -21,6 +21,9 @@ class SubscriptionItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The reauthorize property
+    */
     public function reauthorize(): ReauthorizeRequestBuilder {
         return new ReauthorizeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

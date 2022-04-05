@@ -8,8 +8,8 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\Mute\MuteRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\StartHoldMusic\StartHoldMusicRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\StopHoldMusic\StopHoldMusicRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Participant;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Participant;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -20,6 +20,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ParticipantItemRequestBuilder 
 {
+    /**
+     * The mute property
+    */
     public function mute(): MuteRequestBuilder {
         return new MuteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -30,10 +33,16 @@ class ParticipantItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The startHoldMusic property
+    */
     public function startHoldMusic(): StartHoldMusicRequestBuilder {
         return new StartHoldMusicRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The stopHoldMusic property
+    */
     public function stopHoldMusic(): StopHoldMusicRequestBuilder {
         return new StopHoldMusicRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

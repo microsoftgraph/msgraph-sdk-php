@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\UpdateWindowsDeviceAccount;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\UpdateWindowsDeviceAccountActionParameter;
+use Microsoft\Graph\Generated\Models\UpdateWindowsDeviceAccountActionParameter;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class UpdateWindowsDeviceAccountRequestBody implements AdditionalDataHolder, Par
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var UpdateWindowsDeviceAccountActionParameter|null $updateWindowsDeviceAccountActionParameter  */
+    /** @var UpdateWindowsDeviceAccountActionParameter|null $updateWindowsDeviceAccountActionParameter The updateWindowsDeviceAccountActionParameter property */
     private ?UpdateWindowsDeviceAccountActionParameter $updateWindowsDeviceAccountActionParameter = null;
     
     /**
@@ -51,7 +51,7 @@ class UpdateWindowsDeviceAccountRequestBody implements AdditionalDataHolder, Par
     }
 
     /**
-     * Gets the updateWindowsDeviceAccountActionParameter property value. 
+     * Gets the updateWindowsDeviceAccountActionParameter property value. The updateWindowsDeviceAccountActionParameter property
      * @return UpdateWindowsDeviceAccountActionParameter|null
     */
     public function getUpdateWindowsDeviceAccountActionParameter(): ?UpdateWindowsDeviceAccountActionParameter {
@@ -76,7 +76,7 @@ class UpdateWindowsDeviceAccountRequestBody implements AdditionalDataHolder, Par
     }
 
     /**
-     * Sets the updateWindowsDeviceAccountActionParameter property value. 
+     * Sets the updateWindowsDeviceAccountActionParameter property value. The updateWindowsDeviceAccountActionParameter property
      *  @param UpdateWindowsDeviceAccountActionParameter|null $value Value to set for the updateWindowsDeviceAccountActionParameter property.
     */
     public function setUpdateWindowsDeviceAccountActionParameter(?UpdateWindowsDeviceAccountActionParameter $value ): void {

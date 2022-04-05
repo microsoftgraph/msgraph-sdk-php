@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\SetOrder;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AssignmentOrder;
+use Microsoft\Graph\Generated\Models\AssignmentOrder;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class SetOrderRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var AssignmentOrder|null $newAssignmentOrder  */
+    /** @var AssignmentOrder|null $newAssignmentOrder The newAssignmentOrder property */
     private ?AssignmentOrder $newAssignmentOrder = null;
     
     /**
@@ -51,7 +51,7 @@ class SetOrderRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the newAssignmentOrder property value. 
+     * Gets the newAssignmentOrder property value. The newAssignmentOrder property
      * @return AssignmentOrder|null
     */
     public function getNewAssignmentOrder(): ?AssignmentOrder {
@@ -76,7 +76,7 @@ class SetOrderRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the newAssignmentOrder property value. 
+     * Sets the newAssignmentOrder property value. The newAssignmentOrder property
      *  @param AssignmentOrder|null $value Value to set for the newAssignmentOrder property.
     */
     public function setNewAssignmentOrder(?AssignmentOrder $value ): void {

@@ -2,8 +2,8 @@
 
 namespace Microsoft\Graph\Generated\Communications\Calls\Item\Transfer;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\InvitationParticipantInfo;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ParticipantInfo;
+use Microsoft\Graph\Generated\Models\InvitationParticipantInfo;
+use Microsoft\Graph\Generated\Models\ParticipantInfo;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -14,10 +14,10 @@ class TransferRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var ParticipantInfo|null $transferee  */
+    /** @var ParticipantInfo|null $transferee The transferee property */
     private ?ParticipantInfo $transferee = null;
     
-    /** @var InvitationParticipantInfo|null $transferTarget  */
+    /** @var InvitationParticipantInfo|null $transferTarget The transferTarget property */
     private ?InvitationParticipantInfo $transferTarget = null;
     
     /**
@@ -56,7 +56,7 @@ class TransferRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the transferee property value. 
+     * Gets the transferee property value. The transferee property
      * @return ParticipantInfo|null
     */
     public function getTransferee(): ?ParticipantInfo {
@@ -64,7 +64,7 @@ class TransferRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the transferTarget property value. 
+     * Gets the transferTarget property value. The transferTarget property
      * @return InvitationParticipantInfo|null
     */
     public function getTransferTarget(): ?InvitationParticipantInfo {
@@ -90,7 +90,7 @@ class TransferRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the transferee property value. 
+     * Sets the transferee property value. The transferee property
      *  @param ParticipantInfo|null $value Value to set for the transferee property.
     */
     public function setTransferee(?ParticipantInfo $value ): void {
@@ -98,7 +98,7 @@ class TransferRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the transferTarget property value. 
+     * Sets the transferTarget property value. The transferTarget property
      *  @param InvitationParticipantInfo|null $value Value to set for the transferTarget property.
     */
     public function setTransferTarget(?InvitationParticipantInfo $value ): void {

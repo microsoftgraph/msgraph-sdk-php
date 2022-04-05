@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Me\Drives\Item\EscapedList\ContentTypes\AddC
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ContentType;
+use Microsoft\Graph\Generated\Models\ContentType;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

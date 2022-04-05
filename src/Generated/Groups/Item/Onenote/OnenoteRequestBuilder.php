@@ -17,8 +17,8 @@ use Microsoft\Graph\Generated\Groups\Item\Onenote\SectionGroups\Item\SectionGrou
 use Microsoft\Graph\Generated\Groups\Item\Onenote\SectionGroups\SectionGroupsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Onenote\Sections\Item\OnenoteSectionItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Onenote\Sections\SectionsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Onenote;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Onenote;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -29,14 +29,23 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class OnenoteRequestBuilder 
 {
+    /**
+     * The notebooks property
+    */
     public function notebooks(): NotebooksRequestBuilder {
         return new NotebooksRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The operations property
+    */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The pages property
+    */
     public function pages(): PagesRequestBuilder {
         return new PagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -47,14 +56,23 @@ class OnenoteRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The resources property
+    */
     public function resources(): ResourcesRequestBuilder {
         return new ResourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The sectionGroups property
+    */
     public function sectionGroups(): SectionGroupsRequestBuilder {
         return new SectionGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The sections property
+    */
     public function sections(): SectionsRequestBuilder {
         return new SectionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

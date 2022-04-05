@@ -12,9 +12,9 @@ use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MarkRead\MarkRe
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MarkUnread\MarkUnreadRequestBuilder;
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Unarchive\UnarchiveRequestBuilder;
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Unfavorite\UnfavoriteRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ServiceUpdateMessage;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ServiceUpdateMessageCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ServiceUpdateMessage;
+use Microsoft\Graph\Generated\Models\ServiceUpdateMessageCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -25,22 +25,37 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class MessagesRequestBuilder 
 {
+    /**
+     * The archive property
+    */
     public function archive(): ArchiveRequestBuilder {
         return new ArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The favorite property
+    */
     public function favorite(): FavoriteRequestBuilder {
         return new FavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The markRead property
+    */
     public function markRead(): MarkReadRequestBuilder {
         return new MarkReadRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The markUnread property
+    */
     public function markUnread(): MarkUnreadRequestBuilder {
         return new MarkUnreadRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -51,10 +66,16 @@ class MessagesRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The unarchive property
+    */
     public function unarchive(): UnarchiveRequestBuilder {
         return new UnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The unfavorite property
+    */
     public function unfavorite(): UnfavoriteRequestBuilder {
         return new UnfavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\Attachments\Cr
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\UploadSession;
+use Microsoft\Graph\Generated\Models\UploadSession;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

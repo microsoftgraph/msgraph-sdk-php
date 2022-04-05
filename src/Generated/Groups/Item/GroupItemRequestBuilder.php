@@ -66,8 +66,8 @@ use Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\Item\DirectoryObject
 use Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\TransitiveMembersRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\UnsubscribeByMail\UnsubscribeByMailRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\ValidateProperties\ValidatePropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Group;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Group;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -78,94 +78,163 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class GroupItemRequestBuilder 
 {
+    /**
+     * The acceptedSenders property
+    */
     public function acceptedSenders(): AcceptedSendersRequestBuilder {
         return new AcceptedSendersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The addFavorite property
+    */
     public function addFavorite(): AddFavoriteRequestBuilder {
         return new AddFavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The appRoleAssignments property
+    */
     public function appRoleAssignments(): AppRoleAssignmentsRequestBuilder {
         return new AppRoleAssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The assignLicense property
+    */
     public function assignLicense(): AssignLicenseRequestBuilder {
         return new AssignLicenseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The calendar property
+    */
     public function calendar(): CalendarRequestBuilder {
         return new CalendarRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The calendarView property
+    */
     public function calendarView(): CalendarViewRequestBuilder {
         return new CalendarViewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The checkGrantedPermissionsForApp property
+    */
     public function checkGrantedPermissionsForApp(): CheckGrantedPermissionsForAppRequestBuilder {
         return new CheckGrantedPermissionsForAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The checkMemberGroups property
+    */
     public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
         return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The checkMemberObjects property
+    */
     public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
         return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The conversations property
+    */
     public function conversations(): ConversationsRequestBuilder {
         return new ConversationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The createdOnBehalfOf property
+    */
     public function createdOnBehalfOf(): CreatedOnBehalfOfRequestBuilder {
         return new CreatedOnBehalfOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The drive property
+    */
     public function drive(): DriveRequestBuilder {
         return new DriveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The drives property
+    */
     public function drives(): DrivesRequestBuilder {
         return new DrivesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The events property
+    */
     public function events(): EventsRequestBuilder {
         return new EventsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The extensions property
+    */
     public function extensions(): ExtensionsRequestBuilder {
         return new ExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getMemberGroups property
+    */
     public function getMemberGroups(): GetMemberGroupsRequestBuilder {
         return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getMemberObjects property
+    */
     public function getMemberObjects(): GetMemberObjectsRequestBuilder {
         return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The groupLifecyclePolicies property
+    */
     public function groupLifecyclePolicies(): GroupLifecyclePoliciesRequestBuilder {
         return new GroupLifecyclePoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The memberOf property
+    */
     public function memberOf(): MemberOfRequestBuilder {
         return new MemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The members property
+    */
     public function members(): MembersRequestBuilder {
         return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The membersWithLicenseErrors property
+    */
     public function membersWithLicenseErrors(): MembersWithLicenseErrorsRequestBuilder {
         return new MembersWithLicenseErrorsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The onenote property
+    */
     public function onenote(): OnenoteRequestBuilder {
         return new OnenoteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The owners property
+    */
     public function owners(): OwnersRequestBuilder {
         return new OwnersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -173,30 +242,51 @@ class GroupItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The permissionGrants property
+    */
     public function permissionGrants(): PermissionGrantsRequestBuilder {
         return new PermissionGrantsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The photo property
+    */
     public function photo(): PhotoRequestBuilder {
         return new PhotoRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The photos property
+    */
     public function photos(): PhotosRequestBuilder {
         return new PhotosRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The planner property
+    */
     public function planner(): PlannerRequestBuilder {
         return new PlannerRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The rejectedSenders property
+    */
     public function rejectedSenders(): RejectedSendersRequestBuilder {
         return new RejectedSendersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The removeFavorite property
+    */
     public function removeFavorite(): RemoveFavoriteRequestBuilder {
         return new RemoveFavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The renew property
+    */
     public function renew(): RenewRequestBuilder {
         return new RenewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -204,42 +294,72 @@ class GroupItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The resetUnseenCount property
+    */
     public function resetUnseenCount(): ResetUnseenCountRequestBuilder {
         return new ResetUnseenCountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The restore property
+    */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The settings property
+    */
     public function settings(): SettingsRequestBuilder {
         return new SettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The sites property
+    */
     public function sites(): SitesRequestBuilder {
         return new SitesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The subscribeByMail property
+    */
     public function subscribeByMail(): SubscribeByMailRequestBuilder {
         return new SubscribeByMailRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The team property
+    */
     public function team(): TeamRequestBuilder {
         return new TeamRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The threads property
+    */
     public function threads(): ThreadsRequestBuilder {
         return new ThreadsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The transitiveMemberOf property
+    */
     public function transitiveMemberOf(): TransitiveMemberOfRequestBuilder {
         return new TransitiveMemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The transitiveMembers property
+    */
     public function transitiveMembers(): TransitiveMembersRequestBuilder {
         return new TransitiveMembersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The unsubscribeByMail property
+    */
     public function unsubscribeByMail(): UnsubscribeByMailRequestBuilder {
         return new UnsubscribeByMailRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -247,6 +367,9 @@ class GroupItemRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The validateProperties property
+    */
     public function validateProperties(): ValidatePropertiesRequestBuilder {
         return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\PermissionGrants;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ResourceSpecificPermissionGrant;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ResourceSpecificPermissionGrantCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrant;
+use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrantCollectionResponse;
 use Microsoft\Graph\Generated\PermissionGrants\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\PermissionGrants\GetByIds\GetByIdsRequestBuilder;
 use Microsoft\Graph\Generated\PermissionGrants\ValidateProperties\ValidatePropertiesRequestBuilder;
@@ -21,10 +21,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class PermissionGrantsRequestBuilder 
 {
+    /**
+     * The getAvailableExtensionProperties property
+    */
     public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
         return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getByIds property
+    */
     public function getByIds(): GetByIdsRequestBuilder {
         return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -38,6 +44,9 @@ class PermissionGrantsRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The validateProperties property
+    */
     public function validateProperties(): ValidatePropertiesRequestBuilder {
         return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
