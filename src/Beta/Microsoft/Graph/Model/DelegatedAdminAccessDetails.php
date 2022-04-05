@@ -26,6 +26,7 @@ class DelegatedAdminAccessDetails extends Entity
 
     /**
     * Gets the unifiedRoles
+    * The directory roles that the Microsoft partner is assigned in the customer tenant.
     *
     * @return UnifiedRole|null The unifiedRoles
     */
@@ -44,6 +45,7 @@ class DelegatedAdminAccessDetails extends Entity
 
     /**
     * Sets the unifiedRoles
+    * The directory roles that the Microsoft partner is assigned in the customer tenant.
     *
     * @param UnifiedRole $val The value to assign to the unifiedRoles
     *

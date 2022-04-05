@@ -1784,6 +1784,39 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
 
     /**
+    * Gets the kioskModeUseManagedHomeScreenApp
+    * Whether or not to use single app kiosk mode or multi-app kiosk mode. Possible values are: notConfigured, singleAppMode, multiAppMode.
+    *
+    * @return KioskModeType|null The kioskModeUseManagedHomeScreenApp
+    */
+    public function getKioskModeUseManagedHomeScreenApp()
+    {
+        if (array_key_exists("kioskModeUseManagedHomeScreenApp", $this->_propDict)) {
+            if (is_a($this->_propDict["kioskModeUseManagedHomeScreenApp"], "\Beta\Microsoft\Graph\Model\KioskModeType") || is_null($this->_propDict["kioskModeUseManagedHomeScreenApp"])) {
+                return $this->_propDict["kioskModeUseManagedHomeScreenApp"];
+            } else {
+                $this->_propDict["kioskModeUseManagedHomeScreenApp"] = new KioskModeType($this->_propDict["kioskModeUseManagedHomeScreenApp"]);
+                return $this->_propDict["kioskModeUseManagedHomeScreenApp"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the kioskModeUseManagedHomeScreenApp
+    * Whether or not to use single app kiosk mode or multi-app kiosk mode. Possible values are: notConfigured, singleAppMode, multiAppMode.
+    *
+    * @param KioskModeType $val The kioskModeUseManagedHomeScreenApp
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeUseManagedHomeScreenApp($val)
+    {
+        $this->_propDict["kioskModeUseManagedHomeScreenApp"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the kioskModeVirtualHomeButtonEnabled
     * Whether or not to display a virtual home button when the device is in Kiosk Mode.
     *

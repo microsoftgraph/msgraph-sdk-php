@@ -87,7 +87,7 @@ class MembershipRuleProcessingStatus extends Entity
 
     /**
     * Gets the status
-    * Current status of a dynamic group processing. Possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.   Required. Read-only.
+    * Current status of a dynamic group processing. Possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.  Required. Read-only.
     *
     * @return MembershipRuleProcessingStatusDetails|null The status
     */
@@ -106,7 +106,7 @@ class MembershipRuleProcessingStatus extends Entity
 
     /**
     * Sets the status
-    * Current status of a dynamic group processing. Possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.   Required. Read-only.
+    * Current status of a dynamic group processing. Possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.  Required. Read-only.
     *
     * @param MembershipRuleProcessingStatusDetails $val The value to assign to the status
     *

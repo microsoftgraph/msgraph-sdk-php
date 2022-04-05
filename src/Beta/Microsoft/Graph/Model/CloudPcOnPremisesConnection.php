@@ -113,7 +113,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Gets the displayName
-    * The display name for the on-premises connection.
+    * The display name for the Azure network connection.
     *
     * @return string|null The displayName
     */
@@ -128,7 +128,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Sets the displayName
-    * The display name for the on-premises connection.
+    * The display name for the Azure network connection.
     *
     * @param string $val The displayName
     *
@@ -142,7 +142,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Gets the healthCheckStatus
-    * The status of the most recent health check done on the on-premises connection. For example, if status is 'passed', the on-premises connection has passed all checks run by the service. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
+    * The status of the most recent health check done on the Azure network connection. For example, if status is 'passed', the Azure network connection has passed all checks run by the service. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
     *
     * @return CloudPcOnPremisesConnectionStatus|null The healthCheckStatus
     */
@@ -161,7 +161,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Sets the healthCheckStatus
-    * The status of the most recent health check done on the on-premises connection. For example, if status is 'passed', the on-premises connection has passed all checks run by the service. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
+    * The status of the most recent health check done on the Azure network connection. For example, if status is 'passed', the Azure network connection has passed all checks run by the service. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
     *
     * @param CloudPcOnPremisesConnectionStatus $val The healthCheckStatus
     *
@@ -175,7 +175,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Gets the healthCheckStatusDetails
-    * The details of the connection's health checks and the corresponding results. Returned only on $select.For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
+    * The details of the connection's health checks and the corresponding results. Returned only on $select.For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
     *
     * @return CloudPcOnPremisesConnectionStatusDetails|null The healthCheckStatusDetails
     */
@@ -194,7 +194,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Sets the healthCheckStatusDetails
-    * The details of the connection's health checks and the corresponding results. Returned only on $select.For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
+    * The details of the connection's health checks and the corresponding results. Returned only on $select.For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
     *
     * @param CloudPcOnPremisesConnectionStatusDetails $val The healthCheckStatusDetails
     *
@@ -208,7 +208,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Gets the inUse
-    * When true, the on-premises connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
+    * When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
     *
     * @return bool|null The inUse
     */
@@ -223,7 +223,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Sets the inUse
-    * When true, the on-premises connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
+    * When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
     *
     * @param bool $val The inUse
     *

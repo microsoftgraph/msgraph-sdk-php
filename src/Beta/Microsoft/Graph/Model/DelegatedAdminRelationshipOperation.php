@@ -26,6 +26,7 @@ class DelegatedAdminRelationshipOperation extends Entity
 {
     /**
     * Gets the createdDateTime
+    * The time in ISO 8601 format and in UTC time when the long-running operation was created. Read-only.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -44,6 +45,7 @@ class DelegatedAdminRelationshipOperation extends Entity
 
     /**
     * Sets the createdDateTime
+    * The time in ISO 8601 format and in UTC time when the long-running operation was created. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -57,6 +59,7 @@ class DelegatedAdminRelationshipOperation extends Entity
 
     /**
     * Gets the data
+    * The data (payload) for the operation. Read-only.
     *
     * @return string|null The data
     */
@@ -71,6 +74,7 @@ class DelegatedAdminRelationshipOperation extends Entity
 
     /**
     * Sets the data
+    * The data (payload) for the operation. Read-only.
     *
     * @param string $val The data
     *
@@ -84,6 +88,7 @@ class DelegatedAdminRelationshipOperation extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * The time in ISO 8601 format and in UTC time when the long-running operation was last modified. Read-only.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -102,6 +107,7 @@ class DelegatedAdminRelationshipOperation extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * The time in ISO 8601 format and in UTC time when the long-running operation was last modified. Read-only.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -115,6 +121,7 @@ class DelegatedAdminRelationshipOperation extends Entity
 
     /**
     * Gets the operationType
+    * The type of long-running operation. The possible values are: delegatedAdminAccessAssignmentUpdate, unknownFutureValue. Read-only.
     *
     * @return DelegatedAdminRelationshipOperationType|null The operationType
     */
@@ -133,6 +140,7 @@ class DelegatedAdminRelationshipOperation extends Entity
 
     /**
     * Sets the operationType
+    * The type of long-running operation. The possible values are: delegatedAdminAccessAssignmentUpdate, unknownFutureValue. Read-only.
     *
     * @param DelegatedAdminRelationshipOperationType $val The operationType
     *
@@ -146,6 +154,7 @@ class DelegatedAdminRelationshipOperation extends Entity
 
     /**
     * Gets the status
+    * The status of the operation. Read-only. The possible values are: notStarted, running, complete, failed, unknownFutureValue. Read-only. Supports $orderBy.
     *
     * @return DelegatedAdminRelationshipOperationStatus|null The status
     */
@@ -164,6 +173,7 @@ class DelegatedAdminRelationshipOperation extends Entity
 
     /**
     * Sets the status
+    * The status of the operation. Read-only. The possible values are: notStarted, running, complete, failed, unknownFutureValue. Read-only. Supports $orderBy.
     *
     * @param DelegatedAdminRelationshipOperationStatus $val The status
     *

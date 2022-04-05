@@ -303,7 +303,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the onPremisesConnectionName
-    * The on-premises connection that is applied during the provisioning of Cloud PCs.
+    * The Azure network connection that is applied during the provisioning of Cloud PCs.
     *
     * @return string|null The onPremisesConnectionName
     */
@@ -318,7 +318,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the onPremisesConnectionName
-    * The on-premises connection that is applied during the provisioning of Cloud PCs.
+    * The Azure network connection that is applied during the provisioning of Cloud PCs.
     *
     * @param string $val The onPremisesConnectionName
     *

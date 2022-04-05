@@ -26,6 +26,7 @@ class DelegatedAdminAccessAssignment extends Entity
 {
     /**
     * Gets the accessContainer
+    * The access container through which members are assigned access. For example, a security group.
     *
     * @return DelegatedAdminAccessContainer|null The accessContainer
     */
@@ -44,6 +45,7 @@ class DelegatedAdminAccessAssignment extends Entity
 
     /**
     * Sets the accessContainer
+    * The access container through which members are assigned access. For example, a security group.
     *
     * @param DelegatedAdminAccessContainer $val The accessContainer
     *
@@ -57,6 +59,7 @@ class DelegatedAdminAccessAssignment extends Entity
 
     /**
     * Gets the accessDetails
+    * The access details containing the identifiers of the administrative roles that the partner is assigned in the customer tenant.
     *
     * @return DelegatedAdminAccessDetails|null The accessDetails
     */
@@ -75,6 +78,7 @@ class DelegatedAdminAccessAssignment extends Entity
 
     /**
     * Sets the accessDetails
+    * The access details containing the identifiers of the administrative roles that the partner is assigned in the customer tenant.
     *
     * @param DelegatedAdminAccessDetails $val The accessDetails
     *
@@ -88,6 +92,7 @@ class DelegatedAdminAccessAssignment extends Entity
 
     /**
     * Gets the createdDateTime
+    * The date and time in ISO 8601 format and in UTC time when the access assignment was created. Read-only.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -106,6 +111,7 @@ class DelegatedAdminAccessAssignment extends Entity
 
     /**
     * Sets the createdDateTime
+    * The date and time in ISO 8601 format and in UTC time when the access assignment was created. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -119,6 +125,7 @@ class DelegatedAdminAccessAssignment extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * The date and time in ISO 8601 and in UTC time when this access assignment was last modified. Read-only.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -137,6 +144,7 @@ class DelegatedAdminAccessAssignment extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * The date and time in ISO 8601 and in UTC time when this access assignment was last modified. Read-only.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -150,6 +158,7 @@ class DelegatedAdminAccessAssignment extends Entity
 
     /**
     * Gets the status
+    * The status of the access assignment. Read-only. The possible values are: pending, active, deleting, deleted, error, unknownFutureValue.
     *
     * @return DelegatedAdminAccessAssignmentStatus|null The status
     */
@@ -168,6 +177,7 @@ class DelegatedAdminAccessAssignment extends Entity
 
     /**
     * Sets the status
+    * The status of the access assignment. Read-only. The possible values are: pending, active, deleting, deleted, error, unknownFutureValue.
     *
     * @param DelegatedAdminAccessAssignmentStatus $val The status
     *

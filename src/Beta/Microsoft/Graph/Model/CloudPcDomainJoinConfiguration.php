@@ -25,7 +25,7 @@ class CloudPcDomainJoinConfiguration extends Entity
 {
     /**
     * Gets the onPremisesConnectionId
-    * The on-premises connection ID that matches the virtual network IT admins want the provisioning policy to use when they create Cloud PCs. You can use this property in both domain join types: Azure AD joined or Hybrid Azure AD joined. If you enter an onPremisesConnectionId, leave regionName as empty.
+    * The Azure network connection ID that matches the virtual network IT admins want the provisioning policy to use when they create Cloud PCs. You can use this property in both domain join types: Azure AD joined or Hybrid Azure AD joined. If you enter an onPremisesConnectionId, leave regionName as empty.
     *
     * @return string|null The onPremisesConnectionId
     */
@@ -40,7 +40,7 @@ class CloudPcDomainJoinConfiguration extends Entity
 
     /**
     * Sets the onPremisesConnectionId
-    * The on-premises connection ID that matches the virtual network IT admins want the provisioning policy to use when they create Cloud PCs. You can use this property in both domain join types: Azure AD joined or Hybrid Azure AD joined. If you enter an onPremisesConnectionId, leave regionName as empty.
+    * The Azure network connection ID that matches the virtual network IT admins want the provisioning policy to use when they create Cloud PCs. You can use this property in both domain join types: Azure AD joined or Hybrid Azure AD joined. If you enter an onPremisesConnectionId, leave regionName as empty.
     *
     * @param string $val The value of the onPremisesConnectionId
     *
