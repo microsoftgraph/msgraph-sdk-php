@@ -26,6 +26,7 @@ class AccessPackageAssignmentPolicy extends Entity
 {
     /**
     * Gets the allowedTargetScope
+    * Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
     *
     * @return AllowedTargetScope|null The allowedTargetScope
     */
@@ -44,6 +45,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the allowedTargetScope
+    * Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
     *
     * @param AllowedTargetScope $val The allowedTargetScope
     *
@@ -57,7 +59,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Gets the createdDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -76,7 +78,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the createdDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -119,7 +121,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Gets the displayName
-    * The display name of the policy. Supports $filter (eq).
+    * The display name of the policy.
     *
     * @return string|null The displayName
     */
@@ -134,7 +136,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the displayName
-    * The display name of the policy. Supports $filter (eq).
+    * The display name of the policy.
     *
     * @param string $val The displayName
     *
@@ -148,6 +150,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Gets the expiration
+    * The expiration date for assignments created in this policy.
     *
     * @return ExpirationPattern|null The expiration
     */
@@ -166,6 +169,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the expiration
+    * The expiration date for assignments created in this policy.
     *
     * @param ExpirationPattern $val The expiration
     *
@@ -179,7 +183,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Gets the modifiedDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The modifiedDateTime
     */
@@ -198,7 +202,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the modifiedDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The modifiedDateTime
     *
@@ -212,7 +216,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Gets the requestApprovalSettings
-    * Who must approve requests for access package in this policy.
+    * Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests.
     *
     * @return AccessPackageAssignmentApprovalSettings|null The requestApprovalSettings
     */
@@ -231,7 +235,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the requestApprovalSettings
-    * Who must approve requests for access package in this policy.
+    * Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests.
     *
     * @param AccessPackageAssignmentApprovalSettings $val The requestApprovalSettings
     *
@@ -245,7 +249,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Gets the requestorSettings
-    * Who can request this access package from this policy.
+    * Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request.
     *
     * @return AccessPackageAssignmentRequestorSettings|null The requestorSettings
     */
@@ -264,7 +268,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the requestorSettings
-    * Who can request this access package from this policy.
+    * Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request.
     *
     * @param AccessPackageAssignmentRequestorSettings $val The requestorSettings
     *
@@ -278,6 +282,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Gets the reviewSettings
+    * Settings for access reviews of assignments through this policy.
     *
     * @return AccessPackageAssignmentReviewSettings|null The reviewSettings
     */
@@ -296,6 +301,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the reviewSettings
+    * Settings for access reviews of assignments through this policy.
     *
     * @param AccessPackageAssignmentReviewSettings $val The reviewSettings
     *
@@ -310,6 +316,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
      /**
      * Gets the specificAllowedTargets
+    * The principals that can be assigned access from an access package through this policy.
      *
      * @return array|null The specificAllowedTargets
      */
@@ -324,6 +331,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the specificAllowedTargets
+    * The principals that can be assigned access from an access package through this policy.
     *
     * @param SubjectSet[] $val The specificAllowedTargets
     *
@@ -337,7 +345,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Gets the accessPackage
-    * The access package with this policy. Read-only. Nullable. Supports $expand.
+    * Access package containing this policy. Read-only.
     *
     * @return AccessPackage|null The accessPackage
     */
@@ -356,7 +364,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the accessPackage
-    * The access package with this policy. Read-only. Nullable. Supports $expand.
+    * Access package containing this policy. Read-only.
     *
     * @param AccessPackage $val The accessPackage
     *
@@ -370,6 +378,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Gets the catalog
+    * Catalog of the access package containing this policy. Read-only.
     *
     * @return AccessPackageCatalog|null The catalog
     */
@@ -388,6 +397,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the catalog
+    * Catalog of the access package containing this policy. Read-only.
     *
     * @param AccessPackageCatalog $val The catalog
     *

@@ -25,6 +25,7 @@ class AccessPackageAssignmentApprovalSettings extends Entity
 {
     /**
     * Gets the isApprovalRequiredForAdd
+    * If false, then approval is not required for new requests in this policy.
     *
     * @return bool|null The isApprovalRequiredForAdd
     */
@@ -39,6 +40,7 @@ class AccessPackageAssignmentApprovalSettings extends Entity
 
     /**
     * Sets the isApprovalRequiredForAdd
+    * If false, then approval is not required for new requests in this policy.
     *
     * @param bool $val The value of the isApprovalRequiredForAdd
     *
@@ -51,6 +53,7 @@ class AccessPackageAssignmentApprovalSettings extends Entity
     }
     /**
     * Gets the isApprovalRequiredForUpdate
+    * If false, then approval is not required for updates to requests in this policy.
     *
     * @return bool|null The isApprovalRequiredForUpdate
     */
@@ -65,6 +68,7 @@ class AccessPackageAssignmentApprovalSettings extends Entity
 
     /**
     * Sets the isApprovalRequiredForUpdate
+    * If false, then approval is not required for updates to requests in this policy.
     *
     * @param bool $val The value of the isApprovalRequiredForUpdate
     *
@@ -78,6 +82,7 @@ class AccessPackageAssignmentApprovalSettings extends Entity
 
     /**
     * Gets the stages
+    * If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required.
     *
     * @return AccessPackageApprovalStage|null The stages
     */
@@ -96,6 +101,7 @@ class AccessPackageAssignmentApprovalSettings extends Entity
 
     /**
     * Sets the stages
+    * If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required.
     *
     * @param AccessPackageApprovalStage $val The value to assign to the stages
     *
