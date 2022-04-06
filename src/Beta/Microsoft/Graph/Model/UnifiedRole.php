@@ -25,6 +25,7 @@ class UnifiedRole extends Entity
 {
     /**
     * Gets the roleDefinitionId
+    * The unified role definition ID of the directory role. Refer to unifiedRoleDefinition resource.
     *
     * @return string|null The roleDefinitionId
     */
@@ -39,6 +40,7 @@ class UnifiedRole extends Entity
 
     /**
     * Sets the roleDefinitionId
+    * The unified role definition ID of the directory role. Refer to unifiedRoleDefinition resource.
     *
     * @param string $val The value of the roleDefinitionId
     *

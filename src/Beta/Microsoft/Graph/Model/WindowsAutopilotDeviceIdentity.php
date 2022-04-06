@@ -211,6 +211,93 @@ class WindowsAutopilotDeviceIdentity extends Entity
     }
 
     /**
+    * Gets the deviceAccountPassword
+    * Surface Hub Device Account Password
+    *
+    * @return string|null The deviceAccountPassword
+    */
+    public function getDeviceAccountPassword()
+    {
+        if (array_key_exists("deviceAccountPassword", $this->_propDict)) {
+            return $this->_propDict["deviceAccountPassword"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceAccountPassword
+    * Surface Hub Device Account Password
+    *
+    * @param string $val The deviceAccountPassword
+    *
+    * @return WindowsAutopilotDeviceIdentity
+    */
+    public function setDeviceAccountPassword($val)
+    {
+        $this->_propDict["deviceAccountPassword"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the deviceAccountUpn
+    * Surface Hub Device Account Upn
+    *
+    * @return string|null The deviceAccountUpn
+    */
+    public function getDeviceAccountUpn()
+    {
+        if (array_key_exists("deviceAccountUpn", $this->_propDict)) {
+            return $this->_propDict["deviceAccountUpn"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceAccountUpn
+    * Surface Hub Device Account Upn
+    *
+    * @param string $val The deviceAccountUpn
+    *
+    * @return WindowsAutopilotDeviceIdentity
+    */
+    public function setDeviceAccountUpn($val)
+    {
+        $this->_propDict["deviceAccountUpn"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the deviceFriendlyName
+    * Surface Hub Device Friendly Name
+    *
+    * @return string|null The deviceFriendlyName
+    */
+    public function getDeviceFriendlyName()
+    {
+        if (array_key_exists("deviceFriendlyName", $this->_propDict)) {
+            return $this->_propDict["deviceFriendlyName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceFriendlyName
+    * Surface Hub Device Friendly Name
+    *
+    * @param string $val The deviceFriendlyName
+    *
+    * @return WindowsAutopilotDeviceIdentity
+    */
+    public function setDeviceFriendlyName($val)
+    {
+        $this->_propDict["deviceFriendlyName"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the displayName
     * Display Name
     *

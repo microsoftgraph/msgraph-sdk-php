@@ -27,7 +27,7 @@ class EducationUser extends Entity
 
      /**
      * Gets the relatedContacts
-    * Related records related to the user. Possible relationships are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue
+    * Related records associated with the user. Read-only.
      *
      * @return array|null The relatedContacts
      */
@@ -42,7 +42,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the relatedContacts
-    * Related records related to the user. Possible relationships are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue
+    * Related records associated with the user. Read-only.
     *
     * @param RelatedContact[] $val The relatedContacts
     *
@@ -174,7 +174,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the createdBy
-    * Entity who created the user.
+    * The entity who created the user.
     *
     * @return IdentitySet|null The createdBy
     */
@@ -193,7 +193,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the createdBy
-    * Entity who created the user.
+    * The entity who created the user.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -298,7 +298,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the externalSourceDetail
-    * The name of the external source this resources was generated from.
+    * The name of the external source this resource was generated from.
     *
     * @return string|null The externalSourceDetail
     */
@@ -313,7 +313,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the externalSourceDetail
-    * The name of the external source this resources was generated from.
+    * The name of the external source this resource was generated from.
     *
     * @param string $val The externalSourceDetail
     *
@@ -356,7 +356,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the mail
-    * The SMTP address for the user; for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.
+    * The SMTP address for the user, for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.
     *
     * @return string|null The mail
     */
@@ -371,7 +371,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the mail
-    * The SMTP address for the user; for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.
+    * The SMTP address for the user, for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.
     *
     * @param string $val The mail
     *
@@ -385,7 +385,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the mailingAddress
-    * Mail address of user.
+    * The mail address of the user.
     *
     * @return PhysicalAddress|null The mailingAddress
     */
@@ -404,7 +404,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the mailingAddress
-    * Mail address of user.
+    * The mail address of the user.
     *
     * @param PhysicalAddress $val The mailingAddress
     *
@@ -447,7 +447,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the middleName
-    * The middle name of user.
+    * The middle name of the user.
     *
     * @return string|null The middleName
     */
@@ -462,7 +462,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the middleName
-    * The middle name of user.
+    * The middle name of the user.
     *
     * @param string $val The middleName
     *
@@ -532,7 +532,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the onPremisesInfo
-    * Additional information used to associate the Azure AD user with its Active Directory counterpart.
+    * Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
     *
     * @return EducationOnPremisesInfo|null The onPremisesInfo
     */
@@ -551,7 +551,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the onPremisesInfo
-    * Additional information used to associate the Azure AD user with its Active Directory counterpart.
+    * Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
     *
     * @param EducationOnPremisesInfo $val The onPremisesInfo
     *
@@ -627,7 +627,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the preferredLanguage
-    * The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'.
+    * The preferred language for the user that should follow the ISO 639-1 code, for example, en-US.
     *
     * @return string|null The preferredLanguage
     */
@@ -642,7 +642,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the preferredLanguage
-    * The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'.
+    * The preferred language for the user that should follow the ISO 639-1 code, for example, en-US.
     *
     * @param string $val The preferredLanguage
     *
@@ -750,7 +750,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the residenceAddress
-    * Address where user lives.
+    * The address where the user lives.
     *
     * @return PhysicalAddress|null The residenceAddress
     */
@@ -769,7 +769,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the residenceAddress
-    * Address where user lives.
+    * The address where the user lives.
     *
     * @param PhysicalAddress $val The residenceAddress
     *
@@ -783,7 +783,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the showInAddressList
-    * true if the Outlook global address list should contain this user, otherwise false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
+    * True if the Outlook Global Address List should contain this user; otherwise, false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
     *
     * @return bool|null The showInAddressList
     */
@@ -798,7 +798,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the showInAddressList
-    * true if the Outlook global address list should contain this user, otherwise false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
+    * True if the Outlook Global Address List should contain this user; otherwise, false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
     *
     * @param bool $val The showInAddressList
     *
@@ -907,7 +907,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the usageLocation
-    * A two-letter country code (ISO standard 3166). Required for users who will be assigned licenses due to a legal requirement to check for availability of services in countries or regions. Examples include: 'US', 'JP', and 'GB'. Not nullable. Supports $filter.
+    * A two-letter country code (ISO standard 3166). Required for users who will be assigned licenses due to a legal requirement to check for availability of services in countries or regions. Examples include: US, JP, and GB. Not nullable. Supports $filter.
     *
     * @return string|null The usageLocation
     */
@@ -922,7 +922,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the usageLocation
-    * A two-letter country code (ISO standard 3166). Required for users who will be assigned licenses due to a legal requirement to check for availability of services in countries or regions. Examples include: 'US', 'JP', and 'GB'. Not nullable. Supports $filter.
+    * A two-letter country code (ISO standard 3166). Required for users who will be assigned licenses due to a legal requirement to check for availability of services in countries or regions. Examples include: US, JP, and GB. Not nullable. Supports $filter.
     *
     * @param string $val The usageLocation
     *
@@ -936,7 +936,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the userPrincipalName
-    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
+    * The user principal name (UPN) of the user. The UPN is an internet-style login name for the user based on the internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of the organization. Supports $filter and $orderby.
     *
     * @return string|null The userPrincipalName
     */
@@ -951,7 +951,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the userPrincipalName
-    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
+    * The user principal name (UPN) of the user. The UPN is an internet-style login name for the user based on the internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of the organization. Supports $filter and $orderby.
     *
     * @param string $val The userPrincipalName
     *
@@ -965,7 +965,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the userType
-    * A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports $filter.
+    * A string value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter.
     *
     * @return string|null The userType
     */
@@ -980,7 +980,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the userType
-    * A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports $filter.
+    * A string value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter.
     *
     * @param string $val The userType
     *
@@ -995,7 +995,7 @@ class EducationUser extends Entity
 
      /**
      * Gets the assignments
-    * Assignments belonging to the user.
+    * Assignments that belongs to the user.
      *
      * @return array|null The assignments
      */
@@ -1010,7 +1010,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the assignments
-    * Assignments belonging to the user.
+    * Assignments that belongs to the user.
     *
     * @param EducationAssignment[] $val The assignments
     *
@@ -1142,7 +1142,7 @@ class EducationUser extends Entity
 
     /**
     * Gets the user
-    * The directory user corresponding to this user.
+    * The directory user that corresponds to this user.
     *
     * @return User|null The user
     */
@@ -1161,7 +1161,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the user
-    * The directory user corresponding to this user.
+    * The directory user that corresponds to this user.
     *
     * @param User $val The user
     *

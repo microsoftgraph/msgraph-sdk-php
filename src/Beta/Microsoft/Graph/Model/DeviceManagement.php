@@ -150,7 +150,7 @@ class DeviceManagement extends Entity
 
     /**
     * Gets the maximumDepTokens
-    * Maximum number of dep tokens allowed per-tenant.
+    * Maximum number of DEP tokens allowed per-tenant.
     *
     * @return int|null The maximumDepTokens
     */
@@ -165,7 +165,7 @@ class DeviceManagement extends Entity
 
     /**
     * Sets the maximumDepTokens
-    * Maximum number of dep tokens allowed per-tenant.
+    * Maximum number of DEP tokens allowed per-tenant.
     *
     * @param int $val The maximumDepTokens
     *
@@ -406,7 +406,7 @@ class DeviceManagement extends Entity
 
     /**
     * Gets the subscriptions
-    * Tenant's Subscription.
+    * Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB.
     *
     * @return DeviceManagementSubscriptions|null The subscriptions
     */
@@ -425,7 +425,7 @@ class DeviceManagement extends Entity
 
     /**
     * Sets the subscriptions
-    * Tenant's Subscription.
+    * Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB.
     *
     * @param DeviceManagementSubscriptions $val The subscriptions
     *
@@ -2547,6 +2547,39 @@ class DeviceManagement extends Entity
     public function setRemoteActionAudits($val)
     {
         $this->_propDict["remoteActionAudits"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the tenantAttachRBAC
+    * TenantAttach RBAC Enablement
+    *
+    * @return TenantAttachRBAC|null The tenantAttachRBAC
+    */
+    public function getTenantAttachRBAC()
+    {
+        if (array_key_exists("tenantAttachRBAC", $this->_propDict)) {
+            if (is_a($this->_propDict["tenantAttachRBAC"], "\Beta\Microsoft\Graph\Model\TenantAttachRBAC") || is_null($this->_propDict["tenantAttachRBAC"])) {
+                return $this->_propDict["tenantAttachRBAC"];
+            } else {
+                $this->_propDict["tenantAttachRBAC"] = new TenantAttachRBAC($this->_propDict["tenantAttachRBAC"]);
+                return $this->_propDict["tenantAttachRBAC"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the tenantAttachRBAC
+    * TenantAttach RBAC Enablement
+    *
+    * @param TenantAttachRBAC $val The tenantAttachRBAC
+    *
+    * @return DeviceManagement
+    */
+    public function setTenantAttachRBAC($val)
+    {
+        $this->_propDict["tenantAttachRBAC"] = $val;
         return $this;
     }
 
