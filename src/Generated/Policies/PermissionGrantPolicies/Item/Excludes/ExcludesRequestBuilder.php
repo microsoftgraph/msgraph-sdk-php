@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Exclud
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\PermissionGrantConditionSet;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\PermissionGrantConditionSetCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\PermissionGrantConditionSet;
+use Microsoft\Graph\Generated\Models\PermissionGrantConditionSetCollectionResponse;
 use Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Excludes\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ExcludesRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

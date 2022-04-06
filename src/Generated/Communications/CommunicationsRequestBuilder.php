@@ -14,8 +14,8 @@ use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\OnlineMeetingIt
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\OnlineMeetingsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Presences\Item\PresenceItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Presences\PresencesRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\CloudCommunications;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\CloudCommunications;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -26,18 +26,30 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class CommunicationsRequestBuilder 
 {
+    /**
+     * The callRecords property
+    */
     public function callRecords(): CallRecordsRequestBuilder {
         return new CallRecordsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The calls property
+    */
     public function calls(): CallsRequestBuilder {
         return new CallsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getPresencesByUserId property
+    */
     public function getPresencesByUserId(): GetPresencesByUserIdRequestBuilder {
         return new GetPresencesByUserIdRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The onlineMeetings property
+    */
     public function onlineMeetings(): OnlineMeetingsRequestBuilder {
         return new OnlineMeetingsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -45,6 +57,9 @@ class CommunicationsRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The presences property
+    */
     public function presences(): PresencesRequestBuilder {
         return new PresencesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

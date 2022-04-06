@@ -12,6 +12,7 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
+use Microsoft\Kiota\Abstractions\Types\Date;
 
 class GetTeamsUserActivityUserDetailWithDateRequestBuilder 
 {
@@ -28,9 +29,9 @@ class GetTeamsUserActivityUserDetailWithDateRequestBuilder
      * Instantiates a new GetTeamsUserActivityUserDetailWithDateRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param DateOnly|null $date Usage: date={date}
+     * @param Date|null $date Usage: date={date}
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?DateOnly $date = null) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?Date $date = null) {
         $this->urlTemplate = '{+baseurl}/reports/microsoft.graph.getTeamsUserActivityUserDetail(date={date})';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;

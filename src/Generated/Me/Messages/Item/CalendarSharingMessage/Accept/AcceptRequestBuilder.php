@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Me\Messages\Item\CalendarSharingMessage\Acce
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Calendar;
+use Microsoft\Graph\Generated\Models\Calendar;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

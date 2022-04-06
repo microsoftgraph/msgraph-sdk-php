@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\AppConsentRequestsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Item\AppConsentRequestItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AppConsentApprovalRoute;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\AppConsentApprovalRoute;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AppConsentRequestBuilder 
 {
+    /**
+     * The appConsentRequests property
+    */
     public function appConsentRequests(): AppConsentRequestsRequestBuilder {
         return new AppConsentRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

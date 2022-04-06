@@ -12,7 +12,7 @@ class AddCopyRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $contentType  */
+    /** @var string|null $contentType The contentType property */
     private ?string $contentType = null;
     
     /**
@@ -40,7 +40,7 @@ class AddCopyRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the contentType property value. 
+     * Gets the contentType property value. The contentType property
      * @return string|null
     */
     public function getContentType(): ?string {
@@ -75,7 +75,7 @@ class AddCopyRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the contentType property value. 
+     * Sets the contentType property value. The contentType property
      *  @param string|null $value Value to set for the contentType property.
     */
     public function setContentType(?string $value ): void {

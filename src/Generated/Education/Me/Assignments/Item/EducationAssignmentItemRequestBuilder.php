@@ -14,8 +14,8 @@ use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Rubric\RubricRequest
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\SetUpResourcesFolder\SetUpResourcesFolderRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\EducationSubmissionItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\SubmissionsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\EducationAssignment;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\EducationAssignment;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -26,6 +26,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class EducationAssignmentItemRequestBuilder 
 {
+    /**
+     * The categories property
+    */
     public function categories(): CategoriesRequestBuilder {
         return new CategoriesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -33,6 +36,9 @@ class EducationAssignmentItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The publish property
+    */
     public function publish(): PublishRequestBuilder {
         return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -40,18 +46,30 @@ class EducationAssignmentItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The resources property
+    */
     public function resources(): ResourcesRequestBuilder {
         return new ResourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The rubric property
+    */
     public function rubric(): RubricRequestBuilder {
         return new RubricRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The setUpResourcesFolder property
+    */
     public function setUpResourcesFolder(): SetUpResourcesFolderRequestBuilder {
         return new SetUpResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The submissions property
+    */
     public function submissions(): SubmissionsRequestBuilder {
         return new SubmissionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -102,7 +120,7 @@ class EducationAssignmentItemRequestBuilder
     }
 
     /**
-     * Assignments belonging to the user.
+     * Assignments that belongs to the user.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options
@@ -164,7 +182,7 @@ class EducationAssignmentItemRequestBuilder
     }
 
     /**
-     * Assignments belonging to the user.
+     * Assignments that belongs to the user.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options

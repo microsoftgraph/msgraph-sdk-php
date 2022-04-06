@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointment
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\BookingAppointment;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\BookingAppointmentCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\BookingAppointment;
+use Microsoft\Graph\Generated\Models\BookingAppointmentCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AppointmentsRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

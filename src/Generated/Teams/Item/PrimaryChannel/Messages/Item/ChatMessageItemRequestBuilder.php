@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ChatMessage;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ChatMessage;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\Item\HostedContents\HostedContentsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\Item\HostedContents\Item\ChatMessageHostedContentItemRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\Item\Replies\RepliesRequestBuilder;
@@ -20,6 +20,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ChatMessageItemRequestBuilder 
 {
+    /**
+     * The hostedContents property
+    */
     public function hostedContents(): HostedContentsRequestBuilder {
         return new HostedContentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -27,6 +30,9 @@ class ChatMessageItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The replies property
+    */
     public function replies(): RepliesRequestBuilder {
         return new RepliesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

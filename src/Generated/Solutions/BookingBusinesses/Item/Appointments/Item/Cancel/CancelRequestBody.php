@@ -12,7 +12,7 @@ class CancelRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $cancellationMessage  */
+    /** @var string|null $cancellationMessage The cancellationMessage property */
     private ?string $cancellationMessage = null;
     
     /**
@@ -40,7 +40,7 @@ class CancelRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the cancellationMessage property value. 
+     * Gets the cancellationMessage property value. The cancellationMessage property
      * @return string|null
     */
     public function getCancellationMessage(): ?string {
@@ -75,7 +75,7 @@ class CancelRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the cancellationMessage property value. 
+     * Sets the cancellationMessage property value. The cancellationMessage property
      *  @param string|null $value Value to set for the cancellationMessage property.
     */
     public function setCancellationMessage(?string $value ): void {

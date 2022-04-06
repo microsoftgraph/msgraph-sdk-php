@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Policies\ConditionalAccessPolicies;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ConditionalAccessPolicy;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ConditionalAccessPolicyCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ConditionalAccessPolicy;
+use Microsoft\Graph\Generated\Models\ConditionalAccessPolicyCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Policies\ConditionalAccessPolicies\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ConditionalAccessPoliciesRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

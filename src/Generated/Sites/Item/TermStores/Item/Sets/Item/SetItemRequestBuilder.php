@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Sets\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TermStore\Set;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TermStore\Set;
 use Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Sets\Item\Children\ChildrenRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Sets\Item\Children\Item\TermItemRequestBuilder as MicrosoftGraphGeneratedSitesItemTermStoresItemSetsItemChildrenItemTermItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\ParentGroupRequestBuilder;
@@ -24,10 +24,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SetItemRequestBuilder 
 {
+    /**
+     * The children property
+    */
     public function children(): ChildrenRequestBuilder {
         return new ChildrenRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The parentGroup property
+    */
     public function parentGroup(): ParentGroupRequestBuilder {
         return new ParentGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -35,6 +41,9 @@ class SetItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The relations property
+    */
     public function relations(): RelationsRequestBuilder {
         return new RelationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -42,6 +51,9 @@ class SetItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The terms property
+    */
     public function terms(): TermsRequestBuilder {
         return new TermsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

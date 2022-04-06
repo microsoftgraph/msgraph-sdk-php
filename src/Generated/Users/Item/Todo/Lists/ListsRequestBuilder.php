@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TodoTaskList;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TodoTaskListCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TodoTaskList;
+use Microsoft\Graph\Generated\Models\TodoTaskListCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Delta\DeltaRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -20,6 +20,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ListsRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

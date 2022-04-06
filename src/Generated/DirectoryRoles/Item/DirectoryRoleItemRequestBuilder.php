@@ -14,8 +14,8 @@ use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoles\Item\Restore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoles\Item\ScopedMembers\Item\ScopedRoleMembershipItemRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoles\Item\ScopedMembers\ScopedMembersRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DirectoryRole;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\DirectoryRole;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -26,22 +26,37 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class DirectoryRoleItemRequestBuilder 
 {
+    /**
+     * The checkMemberGroups property
+    */
     public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
         return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The checkMemberObjects property
+    */
     public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
         return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getMemberGroups property
+    */
     public function getMemberGroups(): GetMemberGroupsRequestBuilder {
         return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getMemberObjects property
+    */
     public function getMemberObjects(): GetMemberObjectsRequestBuilder {
         return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The members property
+    */
     public function members(): MembersRequestBuilder {
         return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -52,10 +67,16 @@ class DirectoryRoleItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The restore property
+    */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The scopedMembers property
+    */
     public function scopedMembers(): ScopedMembersRequestBuilder {
         return new ScopedMembersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

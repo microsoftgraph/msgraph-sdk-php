@@ -6,9 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\MdmWindowsInformationProtectionPolicies\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\MdmWindowsInformationProtectionPolicy;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\MdmWindowsInformationProtectionPolicyCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\MdmWindowsInformationProtectionPolicy;
+use Microsoft\Graph\Generated\Models\MdmWindowsInformationProtectionPolicyCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class MdmWindowsInformationProtectionPoliciesRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

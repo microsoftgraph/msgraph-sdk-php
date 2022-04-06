@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Me\SendMail;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Message;
+use Microsoft\Graph\Generated\Models\Message;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,10 +13,10 @@ class SendMailRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var Message|null $Message  */
+    /** @var Message|null $Message The Message property */
     private ?Message $message = null;
     
-    /** @var bool|null $SaveToSentItems  */
+    /** @var bool|null $SaveToSentItems The SaveToSentItems property */
     private ?bool $saveToSentItems = null;
     
     /**
@@ -55,7 +55,7 @@ class SendMailRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the message property value. 
+     * Gets the message property value. The Message property
      * @return Message|null
     */
     public function getMessage(): ?Message {
@@ -63,7 +63,7 @@ class SendMailRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the saveToSentItems property value. 
+     * Gets the saveToSentItems property value. The SaveToSentItems property
      * @return bool|null
     */
     public function getSaveToSentItems(): ?bool {
@@ -89,7 +89,7 @@ class SendMailRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the message property value. 
+     * Sets the message property value. The Message property
      *  @param Message|null $value Value to set for the Message property.
     */
     public function setMessage(?Message $value ): void {
@@ -97,7 +97,7 @@ class SendMailRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the saveToSentItems property value. 
+     * Sets the saveToSentItems property value. The SaveToSentItems property
      *  @param bool|null $value Value to set for the SaveToSentItems property.
     */
     public function setSaveToSentItems(?bool $value ): void {

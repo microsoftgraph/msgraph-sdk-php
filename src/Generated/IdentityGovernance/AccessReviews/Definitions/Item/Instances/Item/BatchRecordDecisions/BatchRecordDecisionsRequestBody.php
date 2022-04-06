@@ -12,16 +12,16 @@ class BatchRecordDecisionsRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $decision  */
+    /** @var string|null $decision The decision property */
     private ?string $decision = null;
     
-    /** @var string|null $justification  */
+    /** @var string|null $justification The justification property */
     private ?string $justification = null;
     
-    /** @var string|null $principalId  */
+    /** @var string|null $principalId The principalId property */
     private ?string $principalId = null;
     
-    /** @var string|null $resourceId  */
+    /** @var string|null $resourceId The resourceId property */
     private ?string $resourceId = null;
     
     /**
@@ -49,7 +49,7 @@ class BatchRecordDecisionsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the decision property value. 
+     * Gets the decision property value. The decision property
      * @return string|null
     */
     public function getDecision(): ?string {
@@ -70,7 +70,7 @@ class BatchRecordDecisionsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the justification property value. 
+     * Gets the justification property value. The justification property
      * @return string|null
     */
     public function getJustification(): ?string {
@@ -78,7 +78,7 @@ class BatchRecordDecisionsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the principalId property value. 
+     * Gets the principalId property value. The principalId property
      * @return string|null
     */
     public function getPrincipalId(): ?string {
@@ -86,7 +86,7 @@ class BatchRecordDecisionsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the resourceId property value. 
+     * Gets the resourceId property value. The resourceId property
      * @return string|null
     */
     public function getResourceId(): ?string {
@@ -114,7 +114,7 @@ class BatchRecordDecisionsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the decision property value. 
+     * Sets the decision property value. The decision property
      *  @param string|null $value Value to set for the decision property.
     */
     public function setDecision(?string $value ): void {
@@ -122,7 +122,7 @@ class BatchRecordDecisionsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the justification property value. 
+     * Sets the justification property value. The justification property
      *  @param string|null $value Value to set for the justification property.
     */
     public function setJustification(?string $value ): void {
@@ -130,7 +130,7 @@ class BatchRecordDecisionsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the principalId property value. 
+     * Sets the principalId property value. The principalId property
      *  @param string|null $value Value to set for the principalId property.
     */
     public function setPrincipalId(?string $value ): void {
@@ -138,7 +138,7 @@ class BatchRecordDecisionsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the resourceId property value. 
+     * Sets the resourceId property value. The resourceId property
      *  @param string|null $value Value to set for the resourceId property.
     */
     public function setResourceId(?string $value ): void {

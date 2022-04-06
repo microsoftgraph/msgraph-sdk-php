@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Notebook;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Notebook;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\CopyNotebook\CopyNotebookRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\SectionGroups\Item\SectionGroupItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\SectionGroups\SectionGroupsRequestBuilder;
@@ -22,6 +22,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class NotebookItemRequestBuilder 
 {
+    /**
+     * The copyNotebook property
+    */
     public function copyNotebook(): CopyNotebookRequestBuilder {
         return new CopyNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -32,10 +35,16 @@ class NotebookItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The sectionGroups property
+    */
     public function sectionGroups(): SectionGroupsRequestBuilder {
         return new SectionGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The sections property
+    */
     public function sections(): SectionsRequestBuilder {
         return new SectionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

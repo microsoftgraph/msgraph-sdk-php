@@ -2,9 +2,9 @@
 
 namespace Microsoft\Graph\Generated\Users\Item\Teamwork\SendActivityNotification;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ItemBody;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\KeyValuePair;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TeamworkActivityTopic;
+use Microsoft\Graph\Generated\Models\ItemBody;
+use Microsoft\Graph\Generated\Models\KeyValuePair;
+use Microsoft\Graph\Generated\Models\TeamworkActivityTopic;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -12,22 +12,22 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SendActivityNotificationRequestBody implements AdditionalDataHolder, Parsable 
 {
-    /** @var string|null $activityType  */
+    /** @var string|null $activityType The activityType property */
     private ?string $activityType = null;
     
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var int|null $chainId  */
+    /** @var int|null $chainId The chainId property */
     private ?int $chainId = null;
     
-    /** @var ItemBody|null $previewText  */
+    /** @var ItemBody|null $previewText The previewText property */
     private ?ItemBody $previewText = null;
     
-    /** @var array<KeyValuePair>|null $templateParameters  */
+    /** @var array<KeyValuePair>|null $templateParameters The templateParameters property */
     private ?array $templateParameters = null;
     
-    /** @var TeamworkActivityTopic|null $topic  */
+    /** @var TeamworkActivityTopic|null $topic The topic property */
     private ?TeamworkActivityTopic $topic = null;
     
     /**
@@ -47,7 +47,7 @@ class SendActivityNotificationRequestBody implements AdditionalDataHolder, Parsa
     }
 
     /**
-     * Gets the activityType property value. 
+     * Gets the activityType property value. The activityType property
      * @return string|null
     */
     public function getActivityType(): ?string {
@@ -63,7 +63,7 @@ class SendActivityNotificationRequestBody implements AdditionalDataHolder, Parsa
     }
 
     /**
-     * Gets the chainId property value. 
+     * Gets the chainId property value. The chainId property
      * @return int|null
     */
     public function getChainId(): ?int {
@@ -85,7 +85,7 @@ class SendActivityNotificationRequestBody implements AdditionalDataHolder, Parsa
     }
 
     /**
-     * Gets the previewText property value. 
+     * Gets the previewText property value. The previewText property
      * @return ItemBody|null
     */
     public function getPreviewText(): ?ItemBody {
@@ -93,7 +93,7 @@ class SendActivityNotificationRequestBody implements AdditionalDataHolder, Parsa
     }
 
     /**
-     * Gets the templateParameters property value. 
+     * Gets the templateParameters property value. The templateParameters property
      * @return array<KeyValuePair>|null
     */
     public function getTemplateParameters(): ?array {
@@ -101,7 +101,7 @@ class SendActivityNotificationRequestBody implements AdditionalDataHolder, Parsa
     }
 
     /**
-     * Gets the topic property value. 
+     * Gets the topic property value. The topic property
      * @return TeamworkActivityTopic|null
     */
     public function getTopic(): ?TeamworkActivityTopic {
@@ -122,7 +122,7 @@ class SendActivityNotificationRequestBody implements AdditionalDataHolder, Parsa
     }
 
     /**
-     * Sets the activityType property value. 
+     * Sets the activityType property value. The activityType property
      *  @param string|null $value Value to set for the activityType property.
     */
     public function setActivityType(?string $value ): void {
@@ -138,7 +138,7 @@ class SendActivityNotificationRequestBody implements AdditionalDataHolder, Parsa
     }
 
     /**
-     * Sets the chainId property value. 
+     * Sets the chainId property value. The chainId property
      *  @param int|null $value Value to set for the chainId property.
     */
     public function setChainId(?int $value ): void {
@@ -146,7 +146,7 @@ class SendActivityNotificationRequestBody implements AdditionalDataHolder, Parsa
     }
 
     /**
-     * Sets the previewText property value. 
+     * Sets the previewText property value. The previewText property
      *  @param ItemBody|null $value Value to set for the previewText property.
     */
     public function setPreviewText(?ItemBody $value ): void {
@@ -154,7 +154,7 @@ class SendActivityNotificationRequestBody implements AdditionalDataHolder, Parsa
     }
 
     /**
-     * Sets the templateParameters property value. 
+     * Sets the templateParameters property value. The templateParameters property
      *  @param array<KeyValuePair>|null $value Value to set for the templateParameters property.
     */
     public function setTemplateParameters(?array $value ): void {
@@ -162,7 +162,7 @@ class SendActivityNotificationRequestBody implements AdditionalDataHolder, Parsa
     }
 
     /**
-     * Sets the topic property value. 
+     * Sets the topic property value. The topic property
      *  @param TeamworkActivityTopic|null $value Value to set for the topic property.
     */
     public function setTopic(?TeamworkActivityTopic $value ): void {

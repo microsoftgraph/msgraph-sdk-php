@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleDef
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\UnifiedRoleDefinition;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\UnifiedRoleDefinitionCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\UnifiedRoleDefinition;
+use Microsoft\Graph\Generated\Models\UnifiedRoleDefinitionCollectionResponse;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleDefinitions\Item\InheritsPermissionsFrom\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class InheritsPermissionsFromRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

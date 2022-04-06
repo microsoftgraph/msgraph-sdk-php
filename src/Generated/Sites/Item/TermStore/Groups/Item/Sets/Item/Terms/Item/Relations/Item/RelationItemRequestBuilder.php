@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Sites\Item\TermStore\Groups\Item\Sets\Item\T
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TermStore\Relation;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TermStore\Relation;
 use Microsoft\Graph\Generated\Sites\Item\TermStore\Groups\Item\Sets\Item\Terms\Item\Relations\Item\FromTerm\FromTermRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\TermStore\Groups\Item\Sets\Item\Terms\Item\Relations\Item\Set\SetRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\TermStore\Groups\Item\Sets\Item\Terms\Item\Relations\Item\ToTerm\ToTermRequestBuilder;
@@ -20,6 +20,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class RelationItemRequestBuilder 
 {
+    /**
+     * The fromTerm property
+    */
     public function fromTerm(): FromTermRequestBuilder {
         return new FromTermRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -30,10 +33,16 @@ class RelationItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The set property
+    */
     public function set(): SetRequestBuilder {
         return new SetRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The toTerm property
+    */
     public function toTerm(): ToTermRequestBuilder {
         return new ToTermRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

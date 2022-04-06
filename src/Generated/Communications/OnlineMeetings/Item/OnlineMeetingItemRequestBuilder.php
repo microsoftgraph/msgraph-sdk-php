@@ -8,8 +8,8 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\AttendanceReports\AttendanceReportsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\AttendanceReports\Item\MeetingAttendanceReportItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\AttendeeReport\AttendeeReportRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OnlineMeeting;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OnlineMeeting;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -20,10 +20,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class OnlineMeetingItemRequestBuilder 
 {
+    /**
+     * The attendanceReports property
+    */
     public function attendanceReports(): AttendanceReportsRequestBuilder {
         return new AttendanceReportsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The attendeeReport property
+    */
     public function attendeeReport(): AttendeeReportRequestBuilder {
         return new AttendeeReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

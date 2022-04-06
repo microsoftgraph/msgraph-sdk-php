@@ -6,9 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DeviceConfiguration;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DeviceConfigurationCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\DeviceConfiguration;
+use Microsoft\Graph\Generated\Models\DeviceConfigurationCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class DeviceConfigurationsRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

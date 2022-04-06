@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item\Presence;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Presence;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Presence;
 use Microsoft\Graph\Generated\Users\Item\Presence\ClearPresence\ClearPresenceRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Presence\SetPresence\SetPresenceRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class PresenceRequestBuilder 
 {
+    /**
+     * The clearPresence property
+    */
     public function clearPresence(): ClearPresenceRequestBuilder {
         return new ClearPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -29,6 +32,9 @@ class PresenceRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The setPresence property
+    */
     public function setPresence(): SetPresenceRequestBuilder {
         return new SetPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

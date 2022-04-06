@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Messages\Item\Replies\Delta;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ChatMessage;
+use Microsoft\Graph\Generated\Models\ChatMessage;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class DeltaResponse implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<ChatMessage>|null $value  */
+    /** @var array<ChatMessage>|null $value The value property */
     private ?array $value = null;
     
     /**
@@ -51,7 +51,7 @@ class DeltaResponse implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<ChatMessage>|null
     */
     public function getValue(): ?array {
@@ -76,7 +76,7 @@ class DeltaResponse implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      *  @param array<ChatMessage>|null $value Value to set for the value property.
     */
     public function setValue(?array $value ): void {

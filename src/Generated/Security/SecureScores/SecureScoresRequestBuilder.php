@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Security\SecureScores;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\SecureScore;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\SecureScoreCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\SecureScore;
+use Microsoft\Graph\Generated\Models\SecureScoreCollectionResponse;
 use Microsoft\Graph\Generated\Security\SecureScores\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SecureScoresRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

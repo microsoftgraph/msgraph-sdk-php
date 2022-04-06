@@ -12,10 +12,10 @@ class ChangePasswordRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $currentPassword  */
+    /** @var string|null $currentPassword The currentPassword property */
     private ?string $currentPassword = null;
     
-    /** @var string|null $newPassword  */
+    /** @var string|null $newPassword The newPassword property */
     private ?string $newPassword = null;
     
     /**
@@ -43,7 +43,7 @@ class ChangePasswordRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the currentPassword property value. 
+     * Gets the currentPassword property value. The currentPassword property
      * @return string|null
     */
     public function getCurrentPassword(): ?string {
@@ -62,7 +62,7 @@ class ChangePasswordRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the newPassword property value. 
+     * Gets the newPassword property value. The newPassword property
      * @return string|null
     */
     public function getNewPassword(): ?string {
@@ -88,7 +88,7 @@ class ChangePasswordRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the currentPassword property value. 
+     * Sets the currentPassword property value. The currentPassword property
      *  @param string|null $value Value to set for the currentPassword property.
     */
     public function setCurrentPassword(?string $value ): void {
@@ -96,7 +96,7 @@ class ChangePasswordRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the newPassword property value. 
+     * Sets the newPassword property value. The newPassword property
      *  @param string|null $value Value to set for the newPassword property.
     */
     public function setNewPassword(?string $value ): void {

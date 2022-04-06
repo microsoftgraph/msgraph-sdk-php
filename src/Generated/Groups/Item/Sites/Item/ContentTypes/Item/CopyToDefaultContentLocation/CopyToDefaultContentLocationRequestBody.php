@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\CopyToDefaultContentLocation;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ItemReference;
+use Microsoft\Graph\Generated\Models\ItemReference;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,10 +13,10 @@ class CopyToDefaultContentLocationRequestBody implements AdditionalDataHolder, P
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $destinationFileName  */
+    /** @var string|null $destinationFileName The destinationFileName property */
     private ?string $destinationFileName = null;
     
-    /** @var ItemReference|null $sourceFile  */
+    /** @var ItemReference|null $sourceFile The sourceFile property */
     private ?ItemReference $sourceFile = null;
     
     /**
@@ -44,7 +44,7 @@ class CopyToDefaultContentLocationRequestBody implements AdditionalDataHolder, P
     }
 
     /**
-     * Gets the destinationFileName property value. 
+     * Gets the destinationFileName property value. The destinationFileName property
      * @return string|null
     */
     public function getDestinationFileName(): ?string {
@@ -63,7 +63,7 @@ class CopyToDefaultContentLocationRequestBody implements AdditionalDataHolder, P
     }
 
     /**
-     * Gets the sourceFile property value. 
+     * Gets the sourceFile property value. The sourceFile property
      * @return ItemReference|null
     */
     public function getSourceFile(): ?ItemReference {
@@ -89,7 +89,7 @@ class CopyToDefaultContentLocationRequestBody implements AdditionalDataHolder, P
     }
 
     /**
-     * Sets the destinationFileName property value. 
+     * Sets the destinationFileName property value. The destinationFileName property
      *  @param string|null $value Value to set for the destinationFileName property.
     */
     public function setDestinationFileName(?string $value ): void {
@@ -97,7 +97,7 @@ class CopyToDefaultContentLocationRequestBody implements AdditionalDataHolder, P
     }
 
     /**
-     * Sets the sourceFile property value. 
+     * Sets the sourceFile property value. The sourceFile property
      *  @param ItemReference|null $value Value to set for the sourceFile property.
     */
     public function setSourceFile(?ItemReference $value ): void {

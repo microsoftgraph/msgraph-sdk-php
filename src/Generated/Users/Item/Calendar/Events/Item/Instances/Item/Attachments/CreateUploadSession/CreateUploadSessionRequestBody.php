@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Users\Item\Calendar\Events\Item\Instances\Item\Attachments\CreateUploadSession;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AttachmentItem;
+use Microsoft\Graph\Generated\Models\AttachmentItem;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class CreateUploadSessionRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var AttachmentItem|null $AttachmentItem  */
+    /** @var AttachmentItem|null $AttachmentItem The AttachmentItem property */
     private ?AttachmentItem $attachmentItem = null;
     
     /**
@@ -41,7 +41,7 @@ class CreateUploadSessionRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the attachmentItem property value. 
+     * Gets the attachmentItem property value. The AttachmentItem property
      * @return AttachmentItem|null
     */
     public function getAttachmentItem(): ?AttachmentItem {
@@ -76,7 +76,7 @@ class CreateUploadSessionRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the attachmentItem property value. 
+     * Sets the attachmentItem property value. The AttachmentItem property
      *  @param AttachmentItem|null $value Value to set for the AttachmentItem property.
     */
     public function setAttachmentItem(?AttachmentItem $value ): void {

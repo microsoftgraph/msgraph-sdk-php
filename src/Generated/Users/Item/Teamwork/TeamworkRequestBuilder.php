@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item\Teamwork;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\UserTeamwork;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\UserTeamwork;
 use Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\InstalledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\Item\UserScopeTeamsAppInstallationItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Teamwork\SendActivityNotification\SendActivityNotificationRequestBuilder;
@@ -20,6 +20,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class TeamworkRequestBuilder 
 {
+    /**
+     * The installedApps property
+    */
     public function installedApps(): InstalledAppsRequestBuilder {
         return new InstalledAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -30,6 +33,9 @@ class TeamworkRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The sendActivityNotification property
+    */
     public function sendActivityNotification(): SendActivityNotificationRequestBuilder {
         return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

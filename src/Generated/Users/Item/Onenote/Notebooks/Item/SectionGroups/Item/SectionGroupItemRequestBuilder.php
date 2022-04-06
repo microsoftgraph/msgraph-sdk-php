@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\SectionGro
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\SectionGroup;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\SectionGroup;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\SectionGroups\Item\ParentNotebook\ParentNotebookRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\SectionGroups\Item\ParentSectionGroup\ParentSectionGroupRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\SectionGroups\Item\SectionGroups\SectionGroupsRequestBuilder;
@@ -22,10 +22,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SectionGroupItemRequestBuilder 
 {
+    /**
+     * The parentNotebook property
+    */
     public function parentNotebook(): ParentNotebookRequestBuilder {
         return new ParentNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The parentSectionGroup property
+    */
     public function parentSectionGroup(): ParentSectionGroupRequestBuilder {
         return new ParentSectionGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -36,10 +42,16 @@ class SectionGroupItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The sectionGroups property
+    */
     public function sectionGroups(): SectionGroupsRequestBuilder {
         return new SectionGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The sections property
+    */
     public function sections(): SectionsRequestBuilder {
         return new SectionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

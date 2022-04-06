@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Me\MailFolders\Item\Messages\Item\CreateReply;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Message;
+use Microsoft\Graph\Generated\Models\Message;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,10 +13,10 @@ class CreateReplyRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $Comment  */
+    /** @var string|null $Comment The Comment property */
     private ?string $comment = null;
     
-    /** @var Message|null $Message  */
+    /** @var Message|null $Message The Message property */
     private ?Message $message = null;
     
     /**
@@ -44,7 +44,7 @@ class CreateReplyRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the comment property value. 
+     * Gets the comment property value. The Comment property
      * @return string|null
     */
     public function getComment(): ?string {
@@ -63,7 +63,7 @@ class CreateReplyRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the message property value. 
+     * Gets the message property value. The Message property
      * @return Message|null
     */
     public function getMessage(): ?Message {
@@ -89,7 +89,7 @@ class CreateReplyRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the comment property value. 
+     * Sets the comment property value. The Comment property
      *  @param string|null $value Value to set for the Comment property.
     */
     public function setComment(?string $value ): void {
@@ -97,7 +97,7 @@ class CreateReplyRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the message property value. 
+     * Sets the message property value. The Message property
      *  @param Message|null $value Value to set for the Message property.
     */
     public function setMessage(?Message $value ): void {

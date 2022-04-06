@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\AppCatalogs\TeamsApps\Item\AppDefinitions\AppDefinitionsRequestBuilder;
 use Microsoft\Graph\Generated\AppCatalogs\TeamsApps\Item\AppDefinitions\Item\TeamsAppDefinitionItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TeamsApp;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TeamsApp;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class TeamsAppItemRequestBuilder 
 {
+    /**
+     * The appDefinitions property
+    */
     public function appDefinitions(): AppDefinitionsRequestBuilder {
         return new AppDefinitionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

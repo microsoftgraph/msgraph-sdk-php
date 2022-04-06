@@ -2,8 +2,8 @@
 
 namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\AppliedPolicies\Item\TargetedManagedAppProtection\TargetApps;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ManagedMobileApp;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TargetedManagedAppGroupType;
+use Microsoft\Graph\Generated\Models\ManagedMobileApp;
+use Microsoft\Graph\Generated\Models\TargetedManagedAppGroupType;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -14,10 +14,10 @@ class TargetAppsRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var TargetedManagedAppGroupType|null $appGroupType  */
+    /** @var TargetedManagedAppGroupType|null $appGroupType The appGroupType property */
     private ?TargetedManagedAppGroupType $appGroupType = null;
     
-    /** @var array<ManagedMobileApp>|null $apps  */
+    /** @var array<ManagedMobileApp>|null $apps The apps property */
     private ?array $apps = null;
     
     /**
@@ -45,7 +45,7 @@ class TargetAppsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the appGroupType property value. 
+     * Gets the appGroupType property value. The appGroupType property
      * @return TargetedManagedAppGroupType|null
     */
     public function getAppGroupType(): ?TargetedManagedAppGroupType {
@@ -53,7 +53,7 @@ class TargetAppsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the apps property value. 
+     * Gets the apps property value. The apps property
      * @return array<ManagedMobileApp>|null
     */
     public function getApps(): ?array {
@@ -90,7 +90,7 @@ class TargetAppsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the appGroupType property value. 
+     * Sets the appGroupType property value. The appGroupType property
      *  @param TargetedManagedAppGroupType|null $value Value to set for the appGroupType property.
     */
     public function setAppGroupType(?TargetedManagedAppGroupType $value ): void {
@@ -98,7 +98,7 @@ class TargetAppsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the apps property value. 
+     * Sets the apps property value. The apps property
      *  @param array<ManagedMobileApp>|null $value Value to set for the apps property.
     */
     public function setApps(?array $value ): void {

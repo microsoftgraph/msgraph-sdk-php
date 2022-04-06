@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Drive\Root\Permissions\Item\Grant;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DriveRecipient;
+use Microsoft\Graph\Generated\Models\DriveRecipient;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,10 +13,10 @@ class GrantRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<DriveRecipient>|null $recipients  */
+    /** @var array<DriveRecipient>|null $recipients The recipients property */
     private ?array $recipients = null;
     
-    /** @var array<string>|null $roles  */
+    /** @var array<string>|null $roles The roles property */
     private ?array $roles = null;
     
     /**
@@ -55,7 +55,7 @@ class GrantRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the recipients property value. 
+     * Gets the recipients property value. The recipients property
      * @return array<DriveRecipient>|null
     */
     public function getRecipients(): ?array {
@@ -63,7 +63,7 @@ class GrantRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the roles property value. 
+     * Gets the roles property value. The roles property
      * @return array<string>|null
     */
     public function getRoles(): ?array {
@@ -89,7 +89,7 @@ class GrantRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the recipients property value. 
+     * Sets the recipients property value. The recipients property
      *  @param array<DriveRecipient>|null $value Value to set for the recipients property.
     */
     public function setRecipients(?array $value ): void {
@@ -97,7 +97,7 @@ class GrantRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the roles property value. 
+     * Sets the roles property value. The roles property
      *  @param array<string>|null $value Value to set for the roles property.
     */
     public function setRoles(?array $value ): void {

@@ -12,7 +12,7 @@ class DismissRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<string>|null $userIds  */
+    /** @var array<string>|null $userIds The userIds property */
     private ?array $userIds = null;
     
     /**
@@ -50,7 +50,7 @@ class DismissRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the userIds property value. 
+     * Gets the userIds property value. The userIds property
      * @return array<string>|null
     */
     public function getUserIds(): ?array {
@@ -75,7 +75,7 @@ class DismissRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the userIds property value. 
+     * Sets the userIds property value. The userIds property
      *  @param array<string>|null $value Value to set for the userIds property.
     */
     public function setUserIds(?array $value ): void {

@@ -6,9 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\ContactFolders\Item\ChildFolders\Item\MultiValueExtendedProperties\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\MultiValueLegacyExtendedProperty;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\MultiValueLegacyExtendedPropertyCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\MultiValueLegacyExtendedProperty;
+use Microsoft\Graph\Generated\Models\MultiValueLegacyExtendedPropertyCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class MultiValueExtendedPropertiesRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

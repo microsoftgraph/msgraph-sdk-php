@@ -12,7 +12,7 @@ class UnmuteRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $clientContext  */
+    /** @var string|null $clientContext The clientContext property */
     private ?string $clientContext = null;
     
     /**
@@ -40,7 +40,7 @@ class UnmuteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the clientContext property value. 
+     * Gets the clientContext property value. The clientContext property
      * @return string|null
     */
     public function getClientContext(): ?string {
@@ -75,7 +75,7 @@ class UnmuteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the clientContext property value. 
+     * Sets the clientContext property value. The clientContext property
      *  @param string|null $value Value to set for the clientContext property.
     */
     public function setClientContext(?string $value ): void {

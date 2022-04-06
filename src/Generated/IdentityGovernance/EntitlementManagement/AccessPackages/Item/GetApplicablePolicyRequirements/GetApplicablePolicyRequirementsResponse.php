@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\GetApplicablePolicyRequirements;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AccessPackageAssignmentRequestRequirements;
+use Microsoft\Graph\Generated\Models\AccessPackageAssignmentRequestRequirements;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class GetApplicablePolicyRequirementsResponse implements AdditionalDataHolder, P
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<AccessPackageAssignmentRequestRequirements>|null $value  */
+    /** @var array<AccessPackageAssignmentRequestRequirements>|null $value The value property */
     private ?array $value = null;
     
     /**
@@ -51,7 +51,7 @@ class GetApplicablePolicyRequirementsResponse implements AdditionalDataHolder, P
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<AccessPackageAssignmentRequestRequirements>|null
     */
     public function getValue(): ?array {
@@ -76,7 +76,7 @@ class GetApplicablePolicyRequirementsResponse implements AdditionalDataHolder, P
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      *  @param array<AccessPackageAssignmentRequestRequirements>|null $value Value to set for the value property.
     */
     public function setValue(?array $value ): void {

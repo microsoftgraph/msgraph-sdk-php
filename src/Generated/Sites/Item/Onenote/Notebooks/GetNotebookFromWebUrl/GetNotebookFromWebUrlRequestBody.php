@@ -12,7 +12,7 @@ class GetNotebookFromWebUrlRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $webUrl  */
+    /** @var string|null $webUrl The webUrl property */
     private ?string $webUrl = null;
     
     /**
@@ -50,7 +50,7 @@ class GetNotebookFromWebUrlRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the webUrl property value. 
+     * Gets the webUrl property value. The webUrl property
      * @return string|null
     */
     public function getWebUrl(): ?string {
@@ -75,7 +75,7 @@ class GetNotebookFromWebUrlRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the webUrl property value. 
+     * Sets the webUrl property value. The webUrl property
      *  @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value ): void {

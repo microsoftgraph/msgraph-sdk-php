@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\It
 use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\Item\EnrollmentConfigurationAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\SetPriority\SetPriorityRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DeviceEnrollmentConfiguration;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\DeviceEnrollmentConfiguration;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -21,10 +21,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class DeviceEnrollmentConfigurationItemRequestBuilder 
 {
+    /**
+     * The assign property
+    */
     public function assign(): AssignRequestBuilder {
         return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The assignments property
+    */
     public function assignments(): AssignmentsRequestBuilder {
         return new AssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -35,6 +41,9 @@ class DeviceEnrollmentConfigurationItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The setPriority property
+    */
     public function setPriority(): SetPriorityRequestBuilder {
         return new SetPriorityRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

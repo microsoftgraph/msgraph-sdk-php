@@ -7,9 +7,9 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\CreateOrGet\CreateOrGetRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OnlineMeeting;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OnlineMeetingCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OnlineMeeting;
+use Microsoft\Graph\Generated\Models\OnlineMeetingCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -20,10 +20,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class OnlineMeetingsRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The createOrGet property
+    */
     public function createOrGet(): CreateOrGetRequestBuilder {
         return new CreateOrGetRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -12,8 +12,8 @@ use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Shares\Item\PrinterShar
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Shares\SharesRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\TaskTriggers\Item\PrintTaskTriggerItemRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\TaskTriggers\TaskTriggersRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Printer;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Printer;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -24,6 +24,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class PrinterItemRequestBuilder 
 {
+    /**
+     * The connectors property
+    */
     public function connectors(): ConnectorsRequestBuilder {
         return new ConnectorsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -34,14 +37,23 @@ class PrinterItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The restoreFactoryDefaults property
+    */
     public function restoreFactoryDefaults(): RestoreFactoryDefaultsRequestBuilder {
         return new RestoreFactoryDefaultsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The shares property
+    */
     public function shares(): SharesRequestBuilder {
         return new SharesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The taskTriggers property
+    */
     public function taskTriggers(): TaskTriggersRequestBuilder {
         return new TaskTriggersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -15,8 +15,8 @@ use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\ResetDecisions\ResetDecisionsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\SendReminder\SendReminderRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Stop\StopRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AccessReviewInstance;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\AccessReviewInstance;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -27,22 +27,37 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AccessReviewInstanceItemRequestBuilder 
 {
+    /**
+     * The acceptRecommendations property
+    */
     public function acceptRecommendations(): AcceptRecommendationsRequestBuilder {
         return new AcceptRecommendationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The applyDecisions property
+    */
     public function applyDecisions(): ApplyDecisionsRequestBuilder {
         return new ApplyDecisionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The batchRecordDecisions property
+    */
     public function batchRecordDecisions(): BatchRecordDecisionsRequestBuilder {
         return new BatchRecordDecisionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The contactedReviewers property
+    */
     public function contactedReviewers(): ContactedReviewersRequestBuilder {
         return new ContactedReviewersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The decisions property
+    */
     public function decisions(): DecisionsRequestBuilder {
         return new DecisionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -53,14 +68,23 @@ class AccessReviewInstanceItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The resetDecisions property
+    */
     public function resetDecisions(): ResetDecisionsRequestBuilder {
         return new ResetDecisionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The sendReminder property
+    */
     public function sendReminder(): SendReminderRequestBuilder {
         return new SendReminderRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The stop property
+    */
     public function stop(): StopRequestBuilder {
         return new StopRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

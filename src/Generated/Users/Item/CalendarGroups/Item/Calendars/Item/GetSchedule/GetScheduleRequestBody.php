@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\GetSchedule;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DateTimeTimeZone;
+use Microsoft\Graph\Generated\Models\DateTimeTimeZone;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,16 +13,16 @@ class GetScheduleRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var int|null $AvailabilityViewInterval  */
+    /** @var int|null $AvailabilityViewInterval The AvailabilityViewInterval property */
     private ?int $availabilityViewInterval = null;
     
-    /** @var DateTimeTimeZone|null $EndTime  */
+    /** @var DateTimeTimeZone|null $EndTime The EndTime property */
     private ?DateTimeTimeZone $endTime = null;
     
-    /** @var array<string>|null $Schedules  */
+    /** @var array<string>|null $Schedules The Schedules property */
     private ?array $schedules = null;
     
-    /** @var DateTimeTimeZone|null $StartTime  */
+    /** @var DateTimeTimeZone|null $StartTime The StartTime property */
     private ?DateTimeTimeZone $startTime = null;
     
     /**
@@ -50,7 +50,7 @@ class GetScheduleRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the availabilityViewInterval property value. 
+     * Gets the availabilityViewInterval property value. The AvailabilityViewInterval property
      * @return int|null
     */
     public function getAvailabilityViewInterval(): ?int {
@@ -58,7 +58,7 @@ class GetScheduleRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the endTime property value. 
+     * Gets the endTime property value. The EndTime property
      * @return DateTimeTimeZone|null
     */
     public function getEndTime(): ?DateTimeTimeZone {
@@ -79,7 +79,7 @@ class GetScheduleRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the schedules property value. 
+     * Gets the schedules property value. The Schedules property
      * @return array<string>|null
     */
     public function getSchedules(): ?array {
@@ -87,7 +87,7 @@ class GetScheduleRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the startTime property value. 
+     * Gets the startTime property value. The StartTime property
      * @return DateTimeTimeZone|null
     */
     public function getStartTime(): ?DateTimeTimeZone {
@@ -115,7 +115,7 @@ class GetScheduleRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the availabilityViewInterval property value. 
+     * Sets the availabilityViewInterval property value. The AvailabilityViewInterval property
      *  @param int|null $value Value to set for the AvailabilityViewInterval property.
     */
     public function setAvailabilityViewInterval(?int $value ): void {
@@ -123,7 +123,7 @@ class GetScheduleRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the endTime property value. 
+     * Sets the endTime property value. The EndTime property
      *  @param DateTimeTimeZone|null $value Value to set for the EndTime property.
     */
     public function setEndTime(?DateTimeTimeZone $value ): void {
@@ -131,7 +131,7 @@ class GetScheduleRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the schedules property value. 
+     * Sets the schedules property value. The Schedules property
      *  @param array<string>|null $value Value to set for the Schedules property.
     */
     public function setSchedules(?array $value ): void {
@@ -139,7 +139,7 @@ class GetScheduleRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the startTime property value. 
+     * Sets the startTime property value. The StartTime property
      *  @param DateTimeTimeZone|null $value Value to set for the StartTime property.
     */
     public function setStartTime(?DateTimeTimeZone $value ): void {

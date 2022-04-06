@@ -12,8 +12,8 @@ use Microsoft\Graph\Generated\External\Connections\Item\Items\ItemsRequestBuilde
 use Microsoft\Graph\Generated\External\Connections\Item\Operations\Item\ConnectionOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\External\Connections\Item\Operations\OperationsRequestBuilder;
 use Microsoft\Graph\Generated\External\Connections\Item\Schema\SchemaRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ExternalConnectors\ExternalConnection;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalConnection;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -24,14 +24,23 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ExternalConnectionItemRequestBuilder 
 {
+    /**
+     * The groups property
+    */
     public function groups(): GroupsRequestBuilder {
         return new GroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The items property
+    */
     public function items(): ItemsRequestBuilder {
         return new ItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The operations property
+    */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -42,6 +51,9 @@ class ExternalConnectionItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The schema property
+    */
     public function schema(): SchemaRequestBuilder {
         return new SchemaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

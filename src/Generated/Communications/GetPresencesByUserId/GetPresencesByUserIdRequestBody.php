@@ -12,7 +12,7 @@ class GetPresencesByUserIdRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<string>|null $ids  */
+    /** @var array<string>|null $ids The ids property */
     private ?array $ids = null;
     
     /**
@@ -50,7 +50,7 @@ class GetPresencesByUserIdRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the ids property value. 
+     * Gets the ids property value. The ids property
      * @return array<string>|null
     */
     public function getIds(): ?array {
@@ -75,7 +75,7 @@ class GetPresencesByUserIdRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the ids property value. 
+     * Sets the ids property value. The ids property
      *  @param array<string>|null $value Value to set for the ids property.
     */
     public function setIds(?array $value ): void {

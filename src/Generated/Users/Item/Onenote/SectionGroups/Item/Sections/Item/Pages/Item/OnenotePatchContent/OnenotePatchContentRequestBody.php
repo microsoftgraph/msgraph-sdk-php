@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\OnenotePatchContent;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OnenotePatchContentCommand;
+use Microsoft\Graph\Generated\Models\OnenotePatchContentCommand;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class OnenotePatchContentRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<OnenotePatchContentCommand>|null $commands  */
+    /** @var array<OnenotePatchContentCommand>|null $commands The commands property */
     private ?array $commands = null;
     
     /**
@@ -41,7 +41,7 @@ class OnenotePatchContentRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the commands property value. 
+     * Gets the commands property value. The commands property
      * @return array<OnenotePatchContentCommand>|null
     */
     public function getCommands(): ?array {
@@ -76,7 +76,7 @@ class OnenotePatchContentRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the commands property value. 
+     * Sets the commands property value. The commands property
      *  @param array<OnenotePatchContentCommand>|null $value Value to set for the commands property.
     */
     public function setCommands(?array $value ): void {

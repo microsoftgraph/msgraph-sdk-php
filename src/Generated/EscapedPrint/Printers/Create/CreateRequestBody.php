@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\EscapedPrint\Printers\Create;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\PrintCertificateSigningRequest;
+use Microsoft\Graph\Generated\Models\PrintCertificateSigningRequest;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,25 +13,25 @@ class CreateRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var PrintCertificateSigningRequest|null $certificateSigningRequest  */
+    /** @var PrintCertificateSigningRequest|null $certificateSigningRequest The certificateSigningRequest property */
     private ?PrintCertificateSigningRequest $certificateSigningRequest = null;
     
-    /** @var string|null $connectorId  */
+    /** @var string|null $connectorId The connectorId property */
     private ?string $connectorId = null;
     
-    /** @var string|null $displayName  */
+    /** @var string|null $displayName The displayName property */
     private ?string $displayName = null;
     
-    /** @var bool|null $hasPhysicalDevice  */
+    /** @var bool|null $hasPhysicalDevice The hasPhysicalDevice property */
     private ?bool $hasPhysicalDevice = null;
     
-    /** @var string|null $manufacturer  */
+    /** @var string|null $manufacturer The manufacturer property */
     private ?string $manufacturer = null;
     
-    /** @var string|null $model  */
+    /** @var string|null $model The model property */
     private ?string $model = null;
     
-    /** @var string|null $physicalDeviceId  */
+    /** @var string|null $physicalDeviceId The physicalDeviceId property */
     private ?string $physicalDeviceId = null;
     
     /**
@@ -59,7 +59,7 @@ class CreateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the certificateSigningRequest property value. 
+     * Gets the certificateSigningRequest property value. The certificateSigningRequest property
      * @return PrintCertificateSigningRequest|null
     */
     public function getCertificateSigningRequest(): ?PrintCertificateSigningRequest {
@@ -67,7 +67,7 @@ class CreateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the connectorId property value. 
+     * Gets the connectorId property value. The connectorId property
      * @return string|null
     */
     public function getConnectorId(): ?string {
@@ -75,7 +75,7 @@ class CreateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the displayName property value. 
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -99,7 +99,7 @@ class CreateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the hasPhysicalDevice property value. 
+     * Gets the hasPhysicalDevice property value. The hasPhysicalDevice property
      * @return bool|null
     */
     public function getHasPhysicalDevice(): ?bool {
@@ -107,7 +107,7 @@ class CreateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the manufacturer property value. 
+     * Gets the manufacturer property value. The manufacturer property
      * @return string|null
     */
     public function getManufacturer(): ?string {
@@ -115,7 +115,7 @@ class CreateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the model property value. 
+     * Gets the model property value. The model property
      * @return string|null
     */
     public function getModel(): ?string {
@@ -123,7 +123,7 @@ class CreateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the physicalDeviceId property value. 
+     * Gets the physicalDeviceId property value. The physicalDeviceId property
      * @return string|null
     */
     public function getPhysicalDeviceId(): ?string {
@@ -154,7 +154,7 @@ class CreateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the certificateSigningRequest property value. 
+     * Sets the certificateSigningRequest property value. The certificateSigningRequest property
      *  @param PrintCertificateSigningRequest|null $value Value to set for the certificateSigningRequest property.
     */
     public function setCertificateSigningRequest(?PrintCertificateSigningRequest $value ): void {
@@ -162,7 +162,7 @@ class CreateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the connectorId property value. 
+     * Sets the connectorId property value. The connectorId property
      *  @param string|null $value Value to set for the connectorId property.
     */
     public function setConnectorId(?string $value ): void {
@@ -170,7 +170,7 @@ class CreateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the displayName property value. 
+     * Sets the displayName property value. The displayName property
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -178,7 +178,7 @@ class CreateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the hasPhysicalDevice property value. 
+     * Sets the hasPhysicalDevice property value. The hasPhysicalDevice property
      *  @param bool|null $value Value to set for the hasPhysicalDevice property.
     */
     public function setHasPhysicalDevice(?bool $value ): void {
@@ -186,7 +186,7 @@ class CreateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the manufacturer property value. 
+     * Sets the manufacturer property value. The manufacturer property
      *  @param string|null $value Value to set for the manufacturer property.
     */
     public function setManufacturer(?string $value ): void {
@@ -194,7 +194,7 @@ class CreateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the model property value. 
+     * Sets the model property value. The model property
      *  @param string|null $value Value to set for the model property.
     */
     public function setModel(?string $value ): void {
@@ -202,7 +202,7 @@ class CreateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the physicalDeviceId property value. 
+     * Sets the physicalDeviceId property value. The physicalDeviceId property
      *  @param string|null $value Value to set for the physicalDeviceId property.
     */
     public function setPhysicalDeviceId(?string $value ): void {

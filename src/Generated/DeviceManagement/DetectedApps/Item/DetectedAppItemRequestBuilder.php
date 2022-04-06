@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Item\ManagedDevices\Item\ManagedDeviceItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Item\ManagedDevices\ManagedDevicesRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DetectedApp;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\DetectedApp;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class DetectedAppItemRequestBuilder 
 {
+    /**
+     * The managedDevices property
+    */
     public function managedDevices(): ManagedDevicesRequestBuilder {
         return new ManagedDevicesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\ScheduleActionsForRules;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DeviceComplianceScheduledActionForRule;
+use Microsoft\Graph\Generated\Models\DeviceComplianceScheduledActionForRule;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class ScheduleActionsForRulesRequestBody implements AdditionalDataHolder, Parsab
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<DeviceComplianceScheduledActionForRule>|null $deviceComplianceScheduledActionForRules  */
+    /** @var array<DeviceComplianceScheduledActionForRule>|null $deviceComplianceScheduledActionForRules The deviceComplianceScheduledActionForRules property */
     private ?array $deviceComplianceScheduledActionForRules = null;
     
     /**
@@ -41,7 +41,7 @@ class ScheduleActionsForRulesRequestBody implements AdditionalDataHolder, Parsab
     }
 
     /**
-     * Gets the deviceComplianceScheduledActionForRules property value. 
+     * Gets the deviceComplianceScheduledActionForRules property value. The deviceComplianceScheduledActionForRules property
      * @return array<DeviceComplianceScheduledActionForRule>|null
     */
     public function getDeviceComplianceScheduledActionForRules(): ?array {
@@ -76,7 +76,7 @@ class ScheduleActionsForRulesRequestBody implements AdditionalDataHolder, Parsab
     }
 
     /**
-     * Sets the deviceComplianceScheduledActionForRules property value. 
+     * Sets the deviceComplianceScheduledActionForRules property value. The deviceComplianceScheduledActionForRules property
      *  @param array<DeviceComplianceScheduledActionForRule>|null $value Value to set for the deviceComplianceScheduledActionForRules property.
     */
     public function setDeviceComplianceScheduledActionForRules(?array $value ): void {

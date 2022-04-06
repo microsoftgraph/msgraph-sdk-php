@@ -8,6 +8,9 @@ use Microsoft\Kiota\Abstractions\RequestAdapter;
 
 class TargetedManagedAppProtectionRequestBuilder 
 {
+    /**
+     * The assign property
+    */
     public function assign(): AssignRequestBuilder {
         return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -18,6 +21,9 @@ class TargetedManagedAppProtectionRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The targetApps property
+    */
     public function targetApps(): TargetAppsRequestBuilder {
         return new TargetAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

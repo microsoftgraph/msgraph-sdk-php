@@ -20,8 +20,8 @@ use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\RegisteredUsersReques
 use Microsoft\Graph\Generated\Devices\Item\Restore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedDevicesItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Device;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Device;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -32,26 +32,44 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class DeviceItemRequestBuilder 
 {
+    /**
+     * The checkMemberGroups property
+    */
     public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
         return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The checkMemberObjects property
+    */
     public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
         return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The extensions property
+    */
     public function extensions(): ExtensionsRequestBuilder {
         return new ExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getMemberGroups property
+    */
     public function getMemberGroups(): GetMemberGroupsRequestBuilder {
         return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getMemberObjects property
+    */
     public function getMemberObjects(): GetMemberObjectsRequestBuilder {
         return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The memberOf property
+    */
     public function memberOf(): MemberOfRequestBuilder {
         return new MemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -59,10 +77,16 @@ class DeviceItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The registeredOwners property
+    */
     public function registeredOwners(): RegisteredOwnersRequestBuilder {
         return new RegisteredOwnersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The registeredUsers property
+    */
     public function registeredUsers(): RegisteredUsersRequestBuilder {
         return new RegisteredUsersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -70,10 +94,16 @@ class DeviceItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The restore property
+    */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The transitiveMemberOf property
+    */
     public function transitiveMemberOf(): TransitiveMemberOfRequestBuilder {
         return new TransitiveMemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

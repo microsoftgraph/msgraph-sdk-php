@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Ass
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AccessPackageAssignmentPolicy;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\AccessPackageAssignmentPolicy;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -38,7 +38,7 @@ class AssignmentPolicyRequestBuilder
     }
 
     /**
-     * Get assignmentPolicy from identityGovernance
+     * Read-only. Supports $filter (eq) on the id property and $expand query parameters.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options
@@ -62,7 +62,7 @@ class AssignmentPolicyRequestBuilder
     }
 
     /**
-     * Get assignmentPolicy from identityGovernance
+     * Read-only. Supports $filter (eq) on the id property and $expand query parameters.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options

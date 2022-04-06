@@ -18,8 +18,8 @@ use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\CopyToDefaultC
 use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\IsPublished\IsPublishedRequestBuilder;
 use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\Publish\PublishRequestBuilder;
 use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\Unpublish\UnpublishRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ContentType;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ContentType;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -30,30 +30,51 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ContentTypeItemRequestBuilder 
 {
+    /**
+     * The associateWithHubSites property
+    */
     public function associateWithHubSites(): AssociateWithHubSitesRequestBuilder {
         return new AssociateWithHubSitesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The base property
+    */
     public function base(): BaseRequestBuilder {
         return new BaseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The baseTypes property
+    */
     public function baseTypes(): BaseTypesRequestBuilder {
         return new BaseTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The columnLinks property
+    */
     public function columnLinks(): ColumnLinksRequestBuilder {
         return new ColumnLinksRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The columnPositions property
+    */
     public function columnPositions(): ColumnPositionsRequestBuilder {
         return new ColumnPositionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The columns property
+    */
     public function columns(): ColumnsRequestBuilder {
         return new ColumnsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The copyToDefaultContentLocation property
+    */
     public function copyToDefaultContentLocation(): CopyToDefaultContentLocationRequestBuilder {
         return new CopyToDefaultContentLocationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -61,6 +82,9 @@ class ContentTypeItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The publish property
+    */
     public function publish(): PublishRequestBuilder {
         return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -68,6 +92,9 @@ class ContentTypeItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The unpublish property
+    */
     public function unpublish(): UnpublishRequestBuilder {
         return new UnpublishRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

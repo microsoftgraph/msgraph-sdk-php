@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Calendars\Item\CalendarView;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Event;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\EventCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Event;
+use Microsoft\Graph\Generated\Models\EventCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Calendars\Item\CalendarView\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Calendars\Item\CalendarView\Delta\DeltaRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -20,6 +20,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class CalendarViewRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

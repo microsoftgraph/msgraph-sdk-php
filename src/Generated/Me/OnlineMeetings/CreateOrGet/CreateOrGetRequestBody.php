@@ -3,8 +3,8 @@
 namespace Microsoft\Graph\Generated\Me\OnlineMeetings\CreateOrGet;
 
 use DateTime;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ChatInfo;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\MeetingParticipants;
+use Microsoft\Graph\Generated\Models\ChatInfo;
+use Microsoft\Graph\Generated\Models\MeetingParticipants;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -15,22 +15,22 @@ class CreateOrGetRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var ChatInfo|null $chatInfo  */
+    /** @var ChatInfo|null $chatInfo The chatInfo property */
     private ?ChatInfo $chatInfo = null;
     
-    /** @var DateTime|null $endDateTime  */
+    /** @var DateTime|null $endDateTime The endDateTime property */
     private ?DateTime $endDateTime = null;
     
-    /** @var string|null $externalId  */
+    /** @var string|null $externalId The externalId property */
     private ?string $externalId = null;
     
-    /** @var MeetingParticipants|null $participants  */
+    /** @var MeetingParticipants|null $participants The participants property */
     private ?MeetingParticipants $participants = null;
     
-    /** @var DateTime|null $startDateTime  */
+    /** @var DateTime|null $startDateTime The startDateTime property */
     private ?DateTime $startDateTime = null;
     
-    /** @var string|null $subject  */
+    /** @var string|null $subject The subject property */
     private ?string $subject = null;
     
     /**
@@ -58,7 +58,7 @@ class CreateOrGetRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the chatInfo property value. 
+     * Gets the chatInfo property value. The chatInfo property
      * @return ChatInfo|null
     */
     public function getChatInfo(): ?ChatInfo {
@@ -66,7 +66,7 @@ class CreateOrGetRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the endDateTime property value. 
+     * Gets the endDateTime property value. The endDateTime property
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
@@ -74,7 +74,7 @@ class CreateOrGetRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the externalId property value. 
+     * Gets the externalId property value. The externalId property
      * @return string|null
     */
     public function getExternalId(): ?string {
@@ -97,7 +97,7 @@ class CreateOrGetRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the participants property value. 
+     * Gets the participants property value. The participants property
      * @return MeetingParticipants|null
     */
     public function getParticipants(): ?MeetingParticipants {
@@ -105,7 +105,7 @@ class CreateOrGetRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the startDateTime property value. 
+     * Gets the startDateTime property value. The startDateTime property
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
@@ -113,7 +113,7 @@ class CreateOrGetRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the subject property value. 
+     * Gets the subject property value. The subject property
      * @return string|null
     */
     public function getSubject(): ?string {
@@ -143,7 +143,7 @@ class CreateOrGetRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the chatInfo property value. 
+     * Sets the chatInfo property value. The chatInfo property
      *  @param ChatInfo|null $value Value to set for the chatInfo property.
     */
     public function setChatInfo(?ChatInfo $value ): void {
@@ -151,7 +151,7 @@ class CreateOrGetRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the endDateTime property value. 
+     * Sets the endDateTime property value. The endDateTime property
      *  @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value ): void {
@@ -159,7 +159,7 @@ class CreateOrGetRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the externalId property value. 
+     * Sets the externalId property value. The externalId property
      *  @param string|null $value Value to set for the externalId property.
     */
     public function setExternalId(?string $value ): void {
@@ -167,7 +167,7 @@ class CreateOrGetRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the participants property value. 
+     * Sets the participants property value. The participants property
      *  @param MeetingParticipants|null $value Value to set for the participants property.
     */
     public function setParticipants(?MeetingParticipants $value ): void {
@@ -175,7 +175,7 @@ class CreateOrGetRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the startDateTime property value. 
+     * Sets the startDateTime property value. The startDateTime property
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value ): void {
@@ -183,7 +183,7 @@ class CreateOrGetRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the subject property value. 
+     * Sets the subject property value. The subject property
      *  @param string|null $value Value to set for the subject property.
     */
     public function setSubject(?string $value ): void {

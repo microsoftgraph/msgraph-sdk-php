@@ -12,7 +12,7 @@ class CleanWindowsDeviceRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var bool|null $keepUserData  */
+    /** @var bool|null $keepUserData The keepUserData property */
     private ?bool $keepUserData = null;
     
     /**
@@ -50,7 +50,7 @@ class CleanWindowsDeviceRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the keepUserData property value. 
+     * Gets the keepUserData property value. The keepUserData property
      * @return bool|null
     */
     public function getKeepUserData(): ?bool {
@@ -75,7 +75,7 @@ class CleanWindowsDeviceRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the keepUserData property value. 
+     * Sets the keepUserData property value. The keepUserData property
      *  @param bool|null $value Value to set for the keepUserData property.
     */
     public function setKeepUserData(?bool $value ): void {

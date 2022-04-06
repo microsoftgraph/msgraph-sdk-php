@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Users\Item\TranslateExchangeIds;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ExchangeIdFormat;
+use Microsoft\Graph\Generated\Models\ExchangeIdFormat;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,13 +13,13 @@ class TranslateExchangeIdsRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<string>|null $InputIds  */
+    /** @var array<string>|null $InputIds The InputIds property */
     private ?array $inputIds = null;
     
-    /** @var ExchangeIdFormat|null $SourceIdType  */
+    /** @var ExchangeIdFormat|null $SourceIdType The SourceIdType property */
     private ?ExchangeIdFormat $sourceIdType = null;
     
-    /** @var ExchangeIdFormat|null $TargetIdType  */
+    /** @var ExchangeIdFormat|null $TargetIdType The TargetIdType property */
     private ?ExchangeIdFormat $targetIdType = null;
     
     /**
@@ -59,7 +59,7 @@ class TranslateExchangeIdsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the inputIds property value. 
+     * Gets the inputIds property value. The InputIds property
      * @return array<string>|null
     */
     public function getInputIds(): ?array {
@@ -67,7 +67,7 @@ class TranslateExchangeIdsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the sourceIdType property value. 
+     * Gets the sourceIdType property value. The SourceIdType property
      * @return ExchangeIdFormat|null
     */
     public function getSourceIdType(): ?ExchangeIdFormat {
@@ -75,7 +75,7 @@ class TranslateExchangeIdsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the targetIdType property value. 
+     * Gets the targetIdType property value. The TargetIdType property
      * @return ExchangeIdFormat|null
     */
     public function getTargetIdType(): ?ExchangeIdFormat {
@@ -102,7 +102,7 @@ class TranslateExchangeIdsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the inputIds property value. 
+     * Sets the inputIds property value. The InputIds property
      *  @param array<string>|null $value Value to set for the InputIds property.
     */
     public function setInputIds(?array $value ): void {
@@ -110,7 +110,7 @@ class TranslateExchangeIdsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the sourceIdType property value. 
+     * Sets the sourceIdType property value. The SourceIdType property
      *  @param ExchangeIdFormat|null $value Value to set for the SourceIdType property.
     */
     public function setSourceIdType(?ExchangeIdFormat $value ): void {
@@ -118,7 +118,7 @@ class TranslateExchangeIdsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the targetIdType property value. 
+     * Sets the targetIdType property value. The TargetIdType property
      *  @param ExchangeIdFormat|null $value Value to set for the TargetIdType property.
     */
     public function setTargetIdType(?ExchangeIdFormat $value ): void {

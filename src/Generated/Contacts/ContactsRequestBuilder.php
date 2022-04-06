@@ -10,9 +10,9 @@ use Microsoft\Graph\Generated\Contacts\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\GetByIds\GetByIdsRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\ValidateProperties\ValidatePropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OrgContact;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OrgContactCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OrgContact;
+use Microsoft\Graph\Generated\Models\OrgContactCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -23,14 +23,23 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ContactsRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getAvailableExtensionProperties property
+    */
     public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
         return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getByIds property
+    */
     public function getByIds(): GetByIdsRequestBuilder {
         return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -44,6 +53,9 @@ class ContactsRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The validateProperties property
+    */
     public function validateProperties(): ValidatePropertiesRequestBuilder {
         return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

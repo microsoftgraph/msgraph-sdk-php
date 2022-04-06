@@ -16,8 +16,8 @@ use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\SubmittedResources\Item\EducationSubmissionResourceItemRequestBuilder as MicrosoftGraphGeneratedEducationUsersItemAssignmentsItemSubmissionsItemSubmittedResourcesItemEducationSubmissionResourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\SubmittedResources\SubmittedResourcesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\Unsubmit\UnsubmitRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\EducationSubmission;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\EducationSubmission;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -28,10 +28,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class EducationSubmissionItemRequestBuilder 
 {
+    /**
+     * The return property
+    */
     public function escapedReturn(): ReturnRequestBuilder {
         return new ReturnRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The outcomes property
+    */
     public function outcomes(): OutcomesRequestBuilder {
         return new OutcomesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -39,6 +45,9 @@ class EducationSubmissionItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The reassign property
+    */
     public function reassign(): ReassignRequestBuilder {
         return new ReassignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -46,22 +55,37 @@ class EducationSubmissionItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The resources property
+    */
     public function resources(): ResourcesRequestBuilder {
         return new ResourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The setUpResourcesFolder property
+    */
     public function setUpResourcesFolder(): SetUpResourcesFolderRequestBuilder {
         return new SetUpResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The submit property
+    */
     public function submit(): SubmitRequestBuilder {
         return new SubmitRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The submittedResources property
+    */
     public function submittedResources(): SubmittedResourcesRequestBuilder {
         return new SubmittedResourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The unsubmit property
+    */
     public function unsubmit(): UnsubmitRequestBuilder {
         return new UnsubmitRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

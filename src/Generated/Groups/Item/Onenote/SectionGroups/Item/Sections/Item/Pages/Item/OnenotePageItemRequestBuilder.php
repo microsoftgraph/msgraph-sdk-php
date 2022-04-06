@@ -11,8 +11,8 @@ use Microsoft\Graph\Generated\Groups\Item\Onenote\SectionGroups\Item\Sections\It
 use Microsoft\Graph\Generated\Groups\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\ParentNotebook\ParentNotebookRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\ParentSection\ParentSectionRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\Preview\PreviewRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OnenotePage;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OnenotePage;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -23,22 +23,37 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class OnenotePageItemRequestBuilder 
 {
+    /**
+     * The content property
+    */
     public function content(): ContentRequestBuilder {
         return new ContentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The copyToSection property
+    */
     public function copyToSection(): CopyToSectionRequestBuilder {
         return new CopyToSectionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The onenotePatchContent property
+    */
     public function onenotePatchContent(): OnenotePatchContentRequestBuilder {
         return new OnenotePatchContentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The parentNotebook property
+    */
     public function parentNotebook(): ParentNotebookRequestBuilder {
         return new ParentNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The parentSection property
+    */
     public function parentSection(): ParentSectionRequestBuilder {
         return new ParentSectionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

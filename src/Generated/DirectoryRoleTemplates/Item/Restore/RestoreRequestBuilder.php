@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DirectoryRoleTemplates\Item\Restore;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DirectoryObject;
+use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

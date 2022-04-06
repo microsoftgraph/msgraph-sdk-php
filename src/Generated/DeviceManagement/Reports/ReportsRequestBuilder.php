@@ -23,8 +23,8 @@ use Microsoft\Graph\Generated\DeviceManagement\Reports\GetPolicyNonComplianceRep
 use Microsoft\Graph\Generated\DeviceManagement\Reports\GetPolicyNonComplianceSummaryReport\GetPolicyNonComplianceSummaryReportRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\Reports\GetReportFilters\GetReportFiltersRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\Reports\GetSettingNonComplianceReport\GetSettingNonComplianceReportRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DeviceManagementReports;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\DeviceManagementReports;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -35,70 +35,121 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ReportsRequestBuilder 
 {
+    /**
+     * The exportJobs property
+    */
     public function exportJobs(): ExportJobsRequestBuilder {
         return new ExportJobsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getCachedReport property
+    */
     public function getCachedReport(): GetCachedReportRequestBuilder {
         return new GetCachedReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getCompliancePolicyNonComplianceReport property
+    */
     public function getCompliancePolicyNonComplianceReport(): GetCompliancePolicyNonComplianceReportRequestBuilder {
         return new GetCompliancePolicyNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getCompliancePolicyNonComplianceSummaryReport property
+    */
     public function getCompliancePolicyNonComplianceSummaryReport(): GetCompliancePolicyNonComplianceSummaryReportRequestBuilder {
         return new GetCompliancePolicyNonComplianceSummaryReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getComplianceSettingNonComplianceReport property
+    */
     public function getComplianceSettingNonComplianceReport(): GetComplianceSettingNonComplianceReportRequestBuilder {
         return new GetComplianceSettingNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getConfigurationPolicyNonComplianceReport property
+    */
     public function getConfigurationPolicyNonComplianceReport(): GetConfigurationPolicyNonComplianceReportRequestBuilder {
         return new GetConfigurationPolicyNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getConfigurationPolicyNonComplianceSummaryReport property
+    */
     public function getConfigurationPolicyNonComplianceSummaryReport(): GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder {
         return new GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getConfigurationSettingNonComplianceReport property
+    */
     public function getConfigurationSettingNonComplianceReport(): GetConfigurationSettingNonComplianceReportRequestBuilder {
         return new GetConfigurationSettingNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getDeviceManagementIntentPerSettingContributingProfiles property
+    */
     public function getDeviceManagementIntentPerSettingContributingProfiles(): GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder {
         return new GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getDeviceManagementIntentSettingsReport property
+    */
     public function getDeviceManagementIntentSettingsReport(): GetDeviceManagementIntentSettingsReportRequestBuilder {
         return new GetDeviceManagementIntentSettingsReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getDeviceNonComplianceReport property
+    */
     public function getDeviceNonComplianceReport(): GetDeviceNonComplianceReportRequestBuilder {
         return new GetDeviceNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getHistoricalReport property
+    */
     public function getHistoricalReport(): GetHistoricalReportRequestBuilder {
         return new GetHistoricalReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getPolicyNonComplianceMetadata property
+    */
     public function getPolicyNonComplianceMetadata(): GetPolicyNonComplianceMetadataRequestBuilder {
         return new GetPolicyNonComplianceMetadataRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getPolicyNonComplianceReport property
+    */
     public function getPolicyNonComplianceReport(): GetPolicyNonComplianceReportRequestBuilder {
         return new GetPolicyNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getPolicyNonComplianceSummaryReport property
+    */
     public function getPolicyNonComplianceSummaryReport(): GetPolicyNonComplianceSummaryReportRequestBuilder {
         return new GetPolicyNonComplianceSummaryReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getReportFilters property
+    */
     public function getReportFilters(): GetReportFiltersRequestBuilder {
         return new GetReportFiltersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getSettingNonComplianceReport property
+    */
     public function getSettingNonComplianceReport(): GetSettingNonComplianceReportRequestBuilder {
         return new GetSettingNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

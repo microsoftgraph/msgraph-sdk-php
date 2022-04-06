@@ -16,8 +16,8 @@ use Microsoft\Graph\Generated\Education\Me\Schools\SchoolsRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\TaughtClasses\Item\EducationClassItemRequestBuilder as MicrosoftGraphGeneratedEducationMeTaughtClassesItemEducationClassItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\TaughtClasses\TaughtClassesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\User\UserRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\EducationUser;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\EducationUser;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -28,10 +28,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class MeRequestBuilder 
 {
+    /**
+     * The assignments property
+    */
     public function assignments(): AssignmentsRequestBuilder {
         return new AssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The classes property
+    */
     public function classes(): ClassesRequestBuilder {
         return new ClassesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -42,14 +48,23 @@ class MeRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The rubrics property
+    */
     public function rubrics(): RubricsRequestBuilder {
         return new RubricsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The schools property
+    */
     public function schools(): SchoolsRequestBuilder {
         return new SchoolsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The taughtClasses property
+    */
     public function taughtClasses(): TaughtClassesRequestBuilder {
         return new TaughtClassesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -57,6 +72,9 @@ class MeRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The user property
+    */
     public function user(): UserRequestBuilder {
         return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item\InferenceClassification;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\InferenceClassification;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\InferenceClassification;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\InferenceClassification\Overrides\Item\InferenceClassificationOverrideItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\InferenceClassification\Overrides\OverridesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class InferenceClassificationRequestBuilder 
 {
+    /**
+     * The overrides property
+    */
     public function overrides(): OverridesRequestBuilder {
         return new OverridesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

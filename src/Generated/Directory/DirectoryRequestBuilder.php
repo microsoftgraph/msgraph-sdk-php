@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\Directory\AdministrativeUnits\AdministrativeUnitsR
 use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\AdministrativeUnitItemRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\DeletedItemsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Directory;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Directory;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -21,10 +21,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class DirectoryRequestBuilder 
 {
+    /**
+     * The administrativeUnits property
+    */
     public function administrativeUnits(): AdministrativeUnitsRequestBuilder {
         return new AdministrativeUnitsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deletedItems property
+    */
     public function deletedItems(): DeletedItemsRequestBuilder {
         return new DeletedItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -6,9 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentPolicies\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AccessPackageAssignmentPolicy;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AccessPackageAssignmentPolicyCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\AccessPackageAssignmentPolicy;
+use Microsoft\Graph\Generated\Models\AccessPackageAssignmentPolicyCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AssignmentPoliciesRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -44,7 +47,7 @@ class AssignmentPoliciesRequestBuilder
     }
 
     /**
-     * Get assignmentPolicies from identityGovernance
+     * Access package assignment policies.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options
@@ -90,7 +93,7 @@ class AssignmentPoliciesRequestBuilder
     }
 
     /**
-     * Get assignmentPolicies from identityGovernance
+     * Access package assignment policies.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options

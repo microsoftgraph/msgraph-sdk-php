@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Reports\GetYammerActivityUserDetailWithPerio
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Report;
+use Microsoft\Graph\Generated\Models\Report;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

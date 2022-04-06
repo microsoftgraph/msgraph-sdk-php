@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\RoleManagement;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\RoleManagement;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\RoleManagement;
 use Microsoft\Graph\Generated\RoleManagement\Directory\DirectoryRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\EntitlementManagementRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -19,10 +19,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class RoleManagementRequestBuilder 
 {
+    /**
+     * The directory property
+    */
     public function directory(): DirectoryRequestBuilder {
         return new DirectoryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The entitlementManagement property
+    */
     public function entitlementManagement(): EntitlementManagementRequestBuilder {
         return new EntitlementManagementRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

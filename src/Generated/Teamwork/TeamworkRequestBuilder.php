@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Teamwork;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Teamwork;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Teamwork;
 use Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\Item\WorkforceIntegrationItemRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\WorkforceIntegrationsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -28,6 +28,9 @@ class TeamworkRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The workforceIntegrations property
+    */
     public function workforceIntegrations(): WorkforceIntegrationsRequestBuilder {
         return new WorkforceIntegrationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

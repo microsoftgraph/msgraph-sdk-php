@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\BookingBusiness;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\BookingBusiness;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\AppointmentsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\Item\BookingAppointmentItemRequestBuilder as MicrosoftGraphGeneratedSolutionsBookingBusinessesItemAppointmentsItemBookingAppointmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\CalendarViewRequestBuilder;
@@ -31,18 +31,30 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class BookingBusinessItemRequestBuilder 
 {
+    /**
+     * The appointments property
+    */
     public function appointments(): AppointmentsRequestBuilder {
         return new AppointmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The calendarView property
+    */
     public function calendarView(): CalendarViewRequestBuilder {
         return new CalendarViewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The customers property
+    */
     public function customers(): CustomersRequestBuilder {
         return new CustomersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The customQuestions property
+    */
     public function customQuestions(): CustomQuestionsRequestBuilder {
         return new CustomQuestionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -50,6 +62,9 @@ class BookingBusinessItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The publish property
+    */
     public function publish(): PublishRequestBuilder {
         return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -57,14 +72,23 @@ class BookingBusinessItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The services property
+    */
     public function services(): ServicesRequestBuilder {
         return new ServicesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The staffMembers property
+    */
     public function staffMembers(): StaffMembersRequestBuilder {
         return new StaffMembersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The unpublish property
+    */
     public function unpublish(): UnpublishRequestBuilder {
         return new UnpublishRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

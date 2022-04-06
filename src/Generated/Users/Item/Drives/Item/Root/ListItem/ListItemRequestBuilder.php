@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\Root\ListItem;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ListItem;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ListItem;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Drives\Item\Root\ListItem\Analytics\AnalyticsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Drives\Item\Root\ListItem\DriveItem\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Drives\Item\Root\ListItem\Fields\FieldsRequestBuilder;
@@ -24,14 +24,23 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ListItemRequestBuilder 
 {
+    /**
+     * The analytics property
+    */
     public function analytics(): AnalyticsRequestBuilder {
         return new AnalyticsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The driveItem property
+    */
     public function driveItem(): DriveItemRequestBuilder {
         return new DriveItemRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The fields property
+    */
     public function fields(): FieldsRequestBuilder {
         return new FieldsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -45,6 +54,9 @@ class ListItemRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The versions property
+    */
     public function versions(): VersionsRequestBuilder {
         return new VersionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

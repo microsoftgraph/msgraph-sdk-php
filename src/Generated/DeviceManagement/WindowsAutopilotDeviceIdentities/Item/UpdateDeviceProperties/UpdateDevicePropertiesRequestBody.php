@@ -12,16 +12,16 @@ class UpdateDevicePropertiesRequestBody implements AdditionalDataHolder, Parsabl
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $addressableUserName  */
+    /** @var string|null $addressableUserName The addressableUserName property */
     private ?string $addressableUserName = null;
     
-    /** @var string|null $displayName  */
+    /** @var string|null $displayName The displayName property */
     private ?string $displayName = null;
     
-    /** @var string|null $groupTag  */
+    /** @var string|null $groupTag The groupTag property */
     private ?string $groupTag = null;
     
-    /** @var string|null $userPrincipalName  */
+    /** @var string|null $userPrincipalName The userPrincipalName property */
     private ?string $userPrincipalName = null;
     
     /**
@@ -49,7 +49,7 @@ class UpdateDevicePropertiesRequestBody implements AdditionalDataHolder, Parsabl
     }
 
     /**
-     * Gets the addressableUserName property value. 
+     * Gets the addressableUserName property value. The addressableUserName property
      * @return string|null
     */
     public function getAddressableUserName(): ?string {
@@ -57,7 +57,7 @@ class UpdateDevicePropertiesRequestBody implements AdditionalDataHolder, Parsabl
     }
 
     /**
-     * Gets the displayName property value. 
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -78,7 +78,7 @@ class UpdateDevicePropertiesRequestBody implements AdditionalDataHolder, Parsabl
     }
 
     /**
-     * Gets the groupTag property value. 
+     * Gets the groupTag property value. The groupTag property
      * @return string|null
     */
     public function getGroupTag(): ?string {
@@ -86,7 +86,7 @@ class UpdateDevicePropertiesRequestBody implements AdditionalDataHolder, Parsabl
     }
 
     /**
-     * Gets the userPrincipalName property value. 
+     * Gets the userPrincipalName property value. The userPrincipalName property
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
@@ -114,7 +114,7 @@ class UpdateDevicePropertiesRequestBody implements AdditionalDataHolder, Parsabl
     }
 
     /**
-     * Sets the addressableUserName property value. 
+     * Sets the addressableUserName property value. The addressableUserName property
      *  @param string|null $value Value to set for the addressableUserName property.
     */
     public function setAddressableUserName(?string $value ): void {
@@ -122,7 +122,7 @@ class UpdateDevicePropertiesRequestBody implements AdditionalDataHolder, Parsabl
     }
 
     /**
-     * Sets the displayName property value. 
+     * Sets the displayName property value. The displayName property
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -130,7 +130,7 @@ class UpdateDevicePropertiesRequestBody implements AdditionalDataHolder, Parsabl
     }
 
     /**
-     * Sets the groupTag property value. 
+     * Sets the groupTag property value. The groupTag property
      *  @param string|null $value Value to set for the groupTag property.
     */
     public function setGroupTag(?string $value ): void {
@@ -138,7 +138,7 @@ class UpdateDevicePropertiesRequestBody implements AdditionalDataHolder, Parsabl
     }
 
     /**
-     * Sets the userPrincipalName property value. 
+     * Sets the userPrincipalName property value. The userPrincipalName property
      *  @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value ): void {

@@ -2,8 +2,8 @@
 
 namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Forward;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Message;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Recipient;
+use Microsoft\Graph\Generated\Models\Message;
+use Microsoft\Graph\Generated\Models\Recipient;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -14,13 +14,13 @@ class ForwardRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $Comment  */
+    /** @var string|null $Comment The Comment property */
     private ?string $comment = null;
     
-    /** @var Message|null $Message  */
+    /** @var Message|null $Message The Message property */
     private ?Message $message = null;
     
-    /** @var array<Recipient>|null $ToRecipients  */
+    /** @var array<Recipient>|null $ToRecipients The ToRecipients property */
     private ?array $toRecipients = null;
     
     /**
@@ -48,7 +48,7 @@ class ForwardRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the comment property value. 
+     * Gets the comment property value. The Comment property
      * @return string|null
     */
     public function getComment(): ?string {
@@ -68,7 +68,7 @@ class ForwardRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the message property value. 
+     * Gets the message property value. The Message property
      * @return Message|null
     */
     public function getMessage(): ?Message {
@@ -76,7 +76,7 @@ class ForwardRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the toRecipients property value. 
+     * Gets the toRecipients property value. The ToRecipients property
      * @return array<Recipient>|null
     */
     public function getToRecipients(): ?array {
@@ -103,7 +103,7 @@ class ForwardRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the comment property value. 
+     * Sets the comment property value. The Comment property
      *  @param string|null $value Value to set for the Comment property.
     */
     public function setComment(?string $value ): void {
@@ -111,7 +111,7 @@ class ForwardRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the message property value. 
+     * Sets the message property value. The Message property
      *  @param Message|null $value Value to set for the Message property.
     */
     public function setMessage(?Message $value ): void {
@@ -119,7 +119,7 @@ class ForwardRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the toRecipients property value. 
+     * Sets the toRecipients property value. The ToRecipients property
      *  @param array<Recipient>|null $value Value to set for the ToRecipients property.
     */
     public function setToRecipients(?array $value ): void {

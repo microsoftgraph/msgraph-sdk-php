@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\StartHoldMusic;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Prompt;
+use Microsoft\Graph\Generated\Models\Prompt;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,10 +13,10 @@ class StartHoldMusicRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $clientContext  */
+    /** @var string|null $clientContext The clientContext property */
     private ?string $clientContext = null;
     
-    /** @var Prompt|null $customPrompt  */
+    /** @var Prompt|null $customPrompt The customPrompt property */
     private ?Prompt $customPrompt = null;
     
     /**
@@ -44,7 +44,7 @@ class StartHoldMusicRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the clientContext property value. 
+     * Gets the clientContext property value. The clientContext property
      * @return string|null
     */
     public function getClientContext(): ?string {
@@ -52,7 +52,7 @@ class StartHoldMusicRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the customPrompt property value. 
+     * Gets the customPrompt property value. The customPrompt property
      * @return Prompt|null
     */
     public function getCustomPrompt(): ?Prompt {
@@ -89,7 +89,7 @@ class StartHoldMusicRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the clientContext property value. 
+     * Sets the clientContext property value. The clientContext property
      *  @param string|null $value Value to set for the clientContext property.
     */
     public function setClientContext(?string $value ): void {
@@ -97,7 +97,7 @@ class StartHoldMusicRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the customPrompt property value. 
+     * Sets the customPrompt property value. The customPrompt property
      *  @param Prompt|null $value Value to set for the customPrompt property.
     */
     public function setCustomPrompt(?Prompt $value ): void {

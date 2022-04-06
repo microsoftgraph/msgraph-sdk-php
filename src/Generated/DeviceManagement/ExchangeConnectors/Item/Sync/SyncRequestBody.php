@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\Item\Sync;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DeviceManagementExchangeConnectorSyncType;
+use Microsoft\Graph\Generated\Models\DeviceManagementExchangeConnectorSyncType;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class SyncRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var DeviceManagementExchangeConnectorSyncType|null $syncType  */
+    /** @var DeviceManagementExchangeConnectorSyncType|null $syncType The syncType property */
     private ?DeviceManagementExchangeConnectorSyncType $syncType = null;
     
     /**
@@ -51,7 +51,7 @@ class SyncRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the syncType property value. 
+     * Gets the syncType property value. The syncType property
      * @return DeviceManagementExchangeConnectorSyncType|null
     */
     public function getSyncType(): ?DeviceManagementExchangeConnectorSyncType {
@@ -76,7 +76,7 @@ class SyncRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the syncType property value. 
+     * Sets the syncType property value. The syncType property
      *  @param DeviceManagementExchangeConnectorSyncType|null $value Value to set for the syncType property.
     */
     public function setSyncType(?DeviceManagementExchangeConnectorSyncType $value ): void {

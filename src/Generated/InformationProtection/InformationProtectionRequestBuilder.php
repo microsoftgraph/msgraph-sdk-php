@@ -8,8 +8,8 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\InformationProtection\Bitlocker\BitlockerRequestBuilder;
 use Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\Item\ThreatAssessmentRequestItemRequestBuilder;
 use Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\ThreatAssessmentRequestsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\InformationProtection;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\InformationProtection;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -20,6 +20,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class InformationProtectionRequestBuilder 
 {
+    /**
+     * The bitlocker property
+    */
     public function bitlocker(): BitlockerRequestBuilder {
         return new BitlockerRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -30,6 +33,9 @@ class InformationProtectionRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The threatAssessmentRequests property
+    */
     public function threatAssessmentRequests(): ThreatAssessmentRequestsRequestBuilder {
         return new ThreatAssessmentRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

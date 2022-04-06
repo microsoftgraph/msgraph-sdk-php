@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\Reply;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Post;
+use Microsoft\Graph\Generated\Models\Post;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class ReplyRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var Post|null $Post  */
+    /** @var Post|null $Post The Post property */
     private ?Post $post = null;
     
     /**
@@ -51,7 +51,7 @@ class ReplyRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the post property value. 
+     * Gets the post property value. The Post property
      * @return Post|null
     */
     public function getPost(): ?Post {
@@ -76,7 +76,7 @@ class ReplyRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the post property value. 
+     * Sets the post property value. The Post property
      *  @param Post|null $value Value to set for the Post property.
     */
     public function setPost(?Post $value ): void {

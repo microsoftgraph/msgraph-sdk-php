@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Solutions;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\SolutionsRoot;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\SolutionsRoot;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\BookingBusinessesRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\BookingBusinessItemRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingCurrencies\BookingCurrenciesRequestBuilder;
@@ -21,10 +21,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SolutionsRequestBuilder 
 {
+    /**
+     * The bookingBusinesses property
+    */
     public function bookingBusinesses(): BookingBusinessesRequestBuilder {
         return new BookingBusinessesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The bookingCurrencies property
+    */
     public function bookingCurrencies(): BookingCurrenciesRequestBuilder {
         return new BookingCurrenciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

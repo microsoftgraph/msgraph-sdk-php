@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Policies;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\PolicyRoot;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\PolicyRoot;
 use Microsoft\Graph\Generated\Policies\ActivityBasedTimeoutPolicies\ActivityBasedTimeoutPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Policies\ActivityBasedTimeoutPolicies\Item\ActivityBasedTimeoutPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\Policies\AdminConsentRequestPolicy\AdminConsentRequestPolicyRequestBuilder;
@@ -38,42 +38,72 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class PoliciesRequestBuilder 
 {
+    /**
+     * The activityBasedTimeoutPolicies property
+    */
     public function activityBasedTimeoutPolicies(): ActivityBasedTimeoutPoliciesRequestBuilder {
         return new ActivityBasedTimeoutPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The adminConsentRequestPolicy property
+    */
     public function adminConsentRequestPolicy(): AdminConsentRequestPolicyRequestBuilder {
         return new AdminConsentRequestPolicyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The authenticationFlowsPolicy property
+    */
     public function authenticationFlowsPolicy(): AuthenticationFlowsPolicyRequestBuilder {
         return new AuthenticationFlowsPolicyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The authenticationMethodsPolicy property
+    */
     public function authenticationMethodsPolicy(): AuthenticationMethodsPolicyRequestBuilder {
         return new AuthenticationMethodsPolicyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The authorizationPolicy property
+    */
     public function authorizationPolicy(): AuthorizationPolicyRequestBuilder {
         return new AuthorizationPolicyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The claimsMappingPolicies property
+    */
     public function claimsMappingPolicies(): ClaimsMappingPoliciesRequestBuilder {
         return new ClaimsMappingPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The conditionalAccessPolicies property
+    */
     public function conditionalAccessPolicies(): ConditionalAccessPoliciesRequestBuilder {
         return new ConditionalAccessPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The featureRolloutPolicies property
+    */
     public function featureRolloutPolicies(): FeatureRolloutPoliciesRequestBuilder {
         return new FeatureRolloutPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The homeRealmDiscoveryPolicies property
+    */
     public function homeRealmDiscoveryPolicies(): HomeRealmDiscoveryPoliciesRequestBuilder {
         return new HomeRealmDiscoveryPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The identitySecurityDefaultsEnforcementPolicy property
+    */
     public function identitySecurityDefaultsEnforcementPolicy(): IdentitySecurityDefaultsEnforcementPolicyRequestBuilder {
         return new IdentitySecurityDefaultsEnforcementPolicyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -81,6 +111,9 @@ class PoliciesRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The permissionGrantPolicies property
+    */
     public function permissionGrantPolicies(): PermissionGrantPoliciesRequestBuilder {
         return new PermissionGrantPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -88,10 +121,16 @@ class PoliciesRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The tokenIssuancePolicies property
+    */
     public function tokenIssuancePolicies(): TokenIssuancePoliciesRequestBuilder {
         return new TokenIssuancePoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The tokenLifetimePolicies property
+    */
     public function tokenLifetimePolicies(): TokenLifetimePoliciesRequestBuilder {
         return new TokenLifetimePoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

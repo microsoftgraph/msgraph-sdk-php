@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Invite;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\InvitationParticipantInfo;
+use Microsoft\Graph\Generated\Models\InvitationParticipantInfo;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,10 +13,10 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $clientContext  */
+    /** @var string|null $clientContext The clientContext property */
     private ?string $clientContext = null;
     
-    /** @var array<InvitationParticipantInfo>|null $participants  */
+    /** @var array<InvitationParticipantInfo>|null $participants The participants property */
     private ?array $participants = null;
     
     /**
@@ -44,7 +44,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the clientContext property value. 
+     * Gets the clientContext property value. The clientContext property
      * @return string|null
     */
     public function getClientContext(): ?string {
@@ -63,7 +63,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the participants property value. 
+     * Gets the participants property value. The participants property
      * @return array<InvitationParticipantInfo>|null
     */
     public function getParticipants(): ?array {
@@ -89,7 +89,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the clientContext property value. 
+     * Sets the clientContext property value. The clientContext property
      *  @param string|null $value Value to set for the clientContext property.
     */
     public function setClientContext(?string $value ): void {
@@ -97,7 +97,7 @@ class InviteRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the participants property value. 
+     * Sets the participants property value. The participants property
      *  @param array<InvitationParticipantInfo>|null $value Value to set for the participants property.
     */
     public function setParticipants(?array $value ): void {

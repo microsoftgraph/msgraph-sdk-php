@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\Instances\InstancesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\Instances\Item\AccessReviewHistoryInstanceItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AccessReviewHistoryDefinition;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\AccessReviewHistoryDefinition;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AccessReviewHistoryDefinitionItemRequestBuilder 
 {
+    /**
+     * The instances property
+    */
     public function instances(): InstancesRequestBuilder {
         return new InstancesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

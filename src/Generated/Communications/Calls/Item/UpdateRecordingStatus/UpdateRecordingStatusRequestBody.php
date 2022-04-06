@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Communications\Calls\Item\UpdateRecordingStatus;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\RecordingStatus;
+use Microsoft\Graph\Generated\Models\RecordingStatus;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,10 +13,10 @@ class UpdateRecordingStatusRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $clientContext  */
+    /** @var string|null $clientContext The clientContext property */
     private ?string $clientContext = null;
     
-    /** @var RecordingStatus|null $status  */
+    /** @var RecordingStatus|null $status The status property */
     private ?RecordingStatus $status = null;
     
     /**
@@ -44,7 +44,7 @@ class UpdateRecordingStatusRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the clientContext property value. 
+     * Gets the clientContext property value. The clientContext property
      * @return string|null
     */
     public function getClientContext(): ?string {
@@ -63,7 +63,7 @@ class UpdateRecordingStatusRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the status property value. 
+     * Gets the status property value. The status property
      * @return RecordingStatus|null
     */
     public function getStatus(): ?RecordingStatus {
@@ -89,7 +89,7 @@ class UpdateRecordingStatusRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the clientContext property value. 
+     * Sets the clientContext property value. The clientContext property
      *  @param string|null $value Value to set for the clientContext property.
     */
     public function setClientContext(?string $value ): void {
@@ -97,7 +97,7 @@ class UpdateRecordingStatusRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the status property value. 
+     * Sets the status property value. The status property
      *  @param RecordingStatus|null $value Value to set for the status property.
     */
     public function setStatus(?RecordingStatus $value ): void {

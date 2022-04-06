@@ -26,8 +26,8 @@ use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Sites\SitesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\TermStoreRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\StoreItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\TermStoresRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Site;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Site;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -38,38 +38,65 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SiteItemRequestBuilder 
 {
+    /**
+     * The analytics property
+    */
     public function analytics(): AnalyticsRequestBuilder {
         return new AnalyticsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The columns property
+    */
     public function columns(): ColumnsRequestBuilder {
         return new ColumnsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The contentTypes property
+    */
     public function contentTypes(): ContentTypesRequestBuilder {
         return new ContentTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The drive property
+    */
     public function drive(): DriveRequestBuilder {
         return new DriveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The drives property
+    */
     public function drives(): DrivesRequestBuilder {
         return new DrivesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The externalColumns property
+    */
     public function externalColumns(): ExternalColumnsRequestBuilder {
         return new ExternalColumnsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The items property
+    */
     public function items(): ItemsRequestBuilder {
         return new ItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The lists property
+    */
     public function lists(): ListsRequestBuilder {
         return new ListsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The onenote property
+    */
     public function onenote(): OnenoteRequestBuilder {
         return new OnenoteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -77,6 +104,9 @@ class SiteItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The permissions property
+    */
     public function permissions(): PermissionsRequestBuilder {
         return new PermissionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -84,14 +114,23 @@ class SiteItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The sites property
+    */
     public function sites(): SitesRequestBuilder {
         return new SitesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The termStore property
+    */
     public function termStore(): TermStoreRequestBuilder {
         return new TermStoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The termStores property
+    */
     public function termStores(): TermStoresRequestBuilder {
         return new TermStoresRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

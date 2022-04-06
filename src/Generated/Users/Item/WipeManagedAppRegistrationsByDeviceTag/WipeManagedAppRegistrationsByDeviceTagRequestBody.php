@@ -12,7 +12,7 @@ class WipeManagedAppRegistrationsByDeviceTagRequestBody implements AdditionalDat
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $deviceTag  */
+    /** @var string|null $deviceTag The deviceTag property */
     private ?string $deviceTag = null;
     
     /**
@@ -40,7 +40,7 @@ class WipeManagedAppRegistrationsByDeviceTagRequestBody implements AdditionalDat
     }
 
     /**
-     * Gets the deviceTag property value. 
+     * Gets the deviceTag property value. The deviceTag property
      * @return string|null
     */
     public function getDeviceTag(): ?string {
@@ -75,7 +75,7 @@ class WipeManagedAppRegistrationsByDeviceTagRequestBody implements AdditionalDat
     }
 
     /**
-     * Sets the deviceTag property value. 
+     * Sets the deviceTag property value. The deviceTag property
      *  @param string|null $value Value to set for the deviceTag property.
     */
     public function setDeviceTag(?string $value ): void {

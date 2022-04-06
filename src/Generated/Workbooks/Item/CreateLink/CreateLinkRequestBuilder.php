@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Workbooks\Item\CreateLink;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Permission;
+use Microsoft\Graph\Generated\Models\Permission;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

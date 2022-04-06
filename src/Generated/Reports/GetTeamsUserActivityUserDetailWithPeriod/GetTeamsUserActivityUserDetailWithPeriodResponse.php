@@ -13,7 +13,7 @@ class GetTeamsUserActivityUserDetailWithPeriodResponse implements AdditionalData
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var StreamInterface|null $value  */
+    /** @var StreamInterface|null $value The value property */
     private ?StreamInterface $value = null;
     
     /**
@@ -51,7 +51,7 @@ class GetTeamsUserActivityUserDetailWithPeriodResponse implements AdditionalData
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return StreamInterface|null
     */
     public function getValue(): ?StreamInterface {
@@ -76,7 +76,7 @@ class GetTeamsUserActivityUserDetailWithPeriodResponse implements AdditionalData
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      *  @param StreamInterface|null $value Value to set for the value property.
     */
     public function setValue(?StreamInterface $value ): void {

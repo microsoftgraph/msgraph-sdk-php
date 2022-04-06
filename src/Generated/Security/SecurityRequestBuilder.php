@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Security;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Security;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Security;
 use Microsoft\Graph\Generated\Security\Alerts\AlertsRequestBuilder;
 use Microsoft\Graph\Generated\Security\Alerts\Item\AlertItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\Item\SecureScoreControlProfileItemRequestBuilder;
@@ -23,6 +23,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SecurityRequestBuilder 
 {
+    /**
+     * The alerts property
+    */
     public function alerts(): AlertsRequestBuilder {
         return new AlertsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -33,10 +36,16 @@ class SecurityRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The secureScoreControlProfiles property
+    */
     public function secureScoreControlProfiles(): SecureScoreControlProfilesRequestBuilder {
         return new SecureScoreControlProfilesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The secureScores property
+    */
     public function secureScores(): SecureScoresRequestBuilder {
         return new SecureScoresRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

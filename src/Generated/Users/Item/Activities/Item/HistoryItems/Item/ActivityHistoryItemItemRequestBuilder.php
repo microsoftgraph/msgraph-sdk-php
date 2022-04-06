@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item\Activities\Item\HistoryItems\Item
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ActivityHistoryItem;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ActivityHistoryItem;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Activities\Item\HistoryItems\Item\Activity\ActivityRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -18,6 +18,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ActivityHistoryItemItemRequestBuilder 
 {
+    /**
+     * The activity property
+    */
     public function activity(): ActivityRequestBuilder {
         return new ActivityRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

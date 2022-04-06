@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Groups\Item\AssignLicense;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AssignedLicense;
+use Microsoft\Graph\Generated\Models\AssignedLicense;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,10 +13,10 @@ class AssignLicenseRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<AssignedLicense>|null $addLicenses  */
+    /** @var array<AssignedLicense>|null $addLicenses The addLicenses property */
     private ?array $addLicenses = null;
     
-    /** @var array<string>|null $removeLicenses  */
+    /** @var array<string>|null $removeLicenses The removeLicenses property */
     private ?array $removeLicenses = null;
     
     /**
@@ -44,7 +44,7 @@ class AssignLicenseRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the addLicenses property value. 
+     * Gets the addLicenses property value. The addLicenses property
      * @return array<AssignedLicense>|null
     */
     public function getAddLicenses(): ?array {
@@ -63,7 +63,7 @@ class AssignLicenseRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the removeLicenses property value. 
+     * Gets the removeLicenses property value. The removeLicenses property
      * @return array<string>|null
     */
     public function getRemoveLicenses(): ?array {
@@ -89,7 +89,7 @@ class AssignLicenseRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the addLicenses property value. 
+     * Sets the addLicenses property value. The addLicenses property
      *  @param array<AssignedLicense>|null $value Value to set for the addLicenses property.
     */
     public function setAddLicenses(?array $value ): void {
@@ -97,7 +97,7 @@ class AssignLicenseRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the removeLicenses property value. 
+     * Sets the removeLicenses property value. The removeLicenses property
      *  @param array<string>|null $value Value to set for the removeLicenses property.
     */
     public function setRemoveLicenses(?array $value ): void {

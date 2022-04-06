@@ -6,9 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\InformationProtection\Bitlocker\RecoveryKeys\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\BitlockerRecoveryKey;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\BitlockerRecoveryKeyCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\BitlockerRecoveryKey;
+use Microsoft\Graph\Generated\Models\BitlockerRecoveryKeyCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class RecoveryKeysRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

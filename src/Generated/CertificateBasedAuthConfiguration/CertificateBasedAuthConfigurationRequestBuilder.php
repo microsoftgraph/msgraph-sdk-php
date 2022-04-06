@@ -6,9 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\CertificateBasedAuthConfiguration\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\CertificateBasedAuthConfiguration;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\CertificateBasedAuthConfigurationCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\CertificateBasedAuthConfiguration;
+use Microsoft\Graph\Generated\Models\CertificateBasedAuthConfigurationCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class CertificateBasedAuthConfigurationRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

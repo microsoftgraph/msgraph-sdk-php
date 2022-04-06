@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Activities\Item\HistoryItems\HistoryItemsRequestBuilder;
 use Microsoft\Graph\Generated\Me\Activities\Item\HistoryItems\Item\ActivityHistoryItemItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\UserActivity;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\UserActivity;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class UserActivityItemRequestBuilder 
 {
+    /**
+     * The historyItems property
+    */
     public function historyItems(): HistoryItemsRequestBuilder {
         return new HistoryItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -11,8 +11,8 @@ use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\Item\Di
 use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\ScopedRoleMembers\Item\ScopedRoleMembershipItemRequestBuilder;
 use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\ScopedRoleMembers\ScopedRoleMembersRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AdministrativeUnit;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\AdministrativeUnit;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -23,10 +23,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AdministrativeUnitItemRequestBuilder 
 {
+    /**
+     * The extensions property
+    */
     public function extensions(): ExtensionsRequestBuilder {
         return new ExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The members property
+    */
     public function members(): MembersRequestBuilder {
         return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -37,6 +43,9 @@ class AdministrativeUnitItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The scopedRoleMembers property
+    */
     public function scopedRoleMembers(): ScopedRoleMembersRequestBuilder {
         return new ScopedRoleMembersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

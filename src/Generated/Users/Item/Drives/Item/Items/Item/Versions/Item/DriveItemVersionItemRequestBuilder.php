@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\Items\Item\Versions\I
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DriveItemVersion;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\DriveItemVersion;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Drives\Item\Items\Item\Versions\Item\Content\ContentRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Drives\Item\Items\Item\Versions\Item\RestoreVersion\RestoreVersionRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class DriveItemVersionItemRequestBuilder 
 {
+    /**
+     * The content property
+    */
     public function content(): ContentRequestBuilder {
         return new ContentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -29,6 +32,9 @@ class DriveItemVersionItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The restoreVersion property
+    */
     public function restoreVersion(): RestoreVersionRequestBuilder {
         return new RestoreVersionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

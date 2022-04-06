@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\AssignmentPolicies\Item\AccessPackage\AccessPackageRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\AssignmentPolicies\Item\Catalog\CatalogRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AccessPackageAssignmentPolicy;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\AccessPackageAssignmentPolicy;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,10 +19,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AccessPackageAssignmentPolicyItemRequestBuilder 
 {
+    /**
+     * The accessPackage property
+    */
     public function accessPackage(): AccessPackageRequestBuilder {
         return new AccessPackageRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The catalog property
+    */
     public function catalog(): CatalogRequestBuilder {
         return new CatalogRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -68,7 +74,7 @@ class AccessPackageAssignmentPolicyItemRequestBuilder
     }
 
     /**
-     * Get assignmentPolicies from identityGovernance
+     * Read-only. Nullable.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options
@@ -130,7 +136,7 @@ class AccessPackageAssignmentPolicyItemRequestBuilder
     }
 
     /**
-     * Get assignmentPolicies from identityGovernance
+     * Read-only. Nullable.
      * @param array|null $queryParameters Request query parameters
      * @param array<string, mixed>|null $headers Request headers
      * @param array<string, RequestOption>|null $options Request options

@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\AttendanceRep
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\MeetingAttendanceReport;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\MeetingAttendanceReportCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\MeetingAttendanceReport;
+use Microsoft\Graph\Generated\Models\MeetingAttendanceReportCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\AttendanceReports\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AttendanceReportsRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Grou
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\GroupItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\SetItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Sets\SetsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TermStore\Store;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TermStore\Store;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -21,6 +21,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class StoreItemRequestBuilder 
 {
+    /**
+     * The groups property
+    */
     public function groups(): GroupsRequestBuilder {
         return new GroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -31,6 +34,9 @@ class StoreItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The sets property
+    */
     public function sets(): SetsRequestBuilder {
         return new SetsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

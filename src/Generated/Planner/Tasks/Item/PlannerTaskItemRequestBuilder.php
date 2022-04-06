@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Planner\Tasks\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\PlannerTask;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\PlannerTask;
 use Microsoft\Graph\Generated\Planner\Tasks\Item\AssignedToTaskBoardFormat\AssignedToTaskBoardFormatRequestBuilder;
 use Microsoft\Graph\Generated\Planner\Tasks\Item\BucketTaskBoardFormat\BucketTaskBoardFormatRequestBuilder;
 use Microsoft\Graph\Generated\Planner\Tasks\Item\Details\DetailsRequestBuilder;
@@ -21,14 +21,23 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class PlannerTaskItemRequestBuilder 
 {
+    /**
+     * The assignedToTaskBoardFormat property
+    */
     public function assignedToTaskBoardFormat(): AssignedToTaskBoardFormatRequestBuilder {
         return new AssignedToTaskBoardFormatRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The bucketTaskBoardFormat property
+    */
     public function bucketTaskBoardFormat(): BucketTaskBoardFormatRequestBuilder {
         return new BucketTaskBoardFormatRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The details property
+    */
     public function details(): DetailsRequestBuilder {
         return new DetailsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -36,6 +45,9 @@ class PlannerTaskItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The progressTaskBoardFormat property
+    */
     public function progressTaskBoardFormat(): ProgressTaskBoardFormatRequestBuilder {
         return new ProgressTaskBoardFormatRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

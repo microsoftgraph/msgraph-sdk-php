@@ -12,7 +12,7 @@ class ArchiveResponse implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var bool|null $value  */
+    /** @var bool|null $value The value property */
     private ?bool $value = null;
     
     /**
@@ -50,7 +50,7 @@ class ArchiveResponse implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return bool|null
     */
     public function getValue(): ?bool {
@@ -75,7 +75,7 @@ class ArchiveResponse implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      *  @param bool|null $value Value to set for the value property.
     */
     public function setValue(?bool $value ): void {

@@ -8,8 +8,8 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\InstancesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\AccessReviewInstanceItemRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Stop\StopRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AccessReviewScheduleDefinition;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\AccessReviewScheduleDefinition;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -20,6 +20,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AccessReviewScheduleDefinitionItemRequestBuilder 
 {
+    /**
+     * The instances property
+    */
     public function instances(): InstancesRequestBuilder {
         return new InstancesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -30,6 +33,9 @@ class AccessReviewScheduleDefinitionItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The stop property
+    */
     public function stop(): StopRequestBuilder {
         return new StopRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

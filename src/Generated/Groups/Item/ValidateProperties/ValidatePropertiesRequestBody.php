@@ -12,13 +12,13 @@ class ValidatePropertiesRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $displayName  */
+    /** @var string|null $displayName The displayName property */
     private ?string $displayName = null;
     
-    /** @var string|null $mailNickname  */
+    /** @var string|null $mailNickname The mailNickname property */
     private ?string $mailNickname = null;
     
-    /** @var string|null $onBehalfOfUserId  */
+    /** @var string|null $onBehalfOfUserId The onBehalfOfUserId property */
     private ?string $onBehalfOfUserId = null;
     
     /**
@@ -46,7 +46,7 @@ class ValidatePropertiesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the displayName property value. 
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -66,7 +66,7 @@ class ValidatePropertiesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the mailNickname property value. 
+     * Gets the mailNickname property value. The mailNickname property
      * @return string|null
     */
     public function getMailNickname(): ?string {
@@ -74,7 +74,7 @@ class ValidatePropertiesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the onBehalfOfUserId property value. 
+     * Gets the onBehalfOfUserId property value. The onBehalfOfUserId property
      * @return string|null
     */
     public function getOnBehalfOfUserId(): ?string {
@@ -101,7 +101,7 @@ class ValidatePropertiesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the displayName property value. 
+     * Sets the displayName property value. The displayName property
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -109,7 +109,7 @@ class ValidatePropertiesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the mailNickname property value. 
+     * Sets the mailNickname property value. The mailNickname property
      *  @param string|null $value Value to set for the mailNickname property.
     */
     public function setMailNickname(?string $value ): void {
@@ -117,7 +117,7 @@ class ValidatePropertiesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the onBehalfOfUserId property value. 
+     * Sets the onBehalfOfUserId property value. The onBehalfOfUserId property
      *  @param string|null $value Value to set for the onBehalfOfUserId property.
     */
     public function setOnBehalfOfUserId(?string $value ): void {

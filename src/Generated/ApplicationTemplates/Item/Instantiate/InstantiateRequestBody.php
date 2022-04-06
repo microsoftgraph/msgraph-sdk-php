@@ -12,7 +12,7 @@ class InstantiateRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $displayName  */
+    /** @var string|null $displayName The displayName property */
     private ?string $displayName = null;
     
     /**
@@ -40,7 +40,7 @@ class InstantiateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the displayName property value. 
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -75,7 +75,7 @@ class InstantiateRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the displayName property value. 
+     * Sets the displayName property value. The displayName property
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {

@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item\Onenote;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Onenote;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Onenote;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\NotebookItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\NotebooksRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Operations\Item\OnenoteOperationItemRequestBuilder;
@@ -29,14 +29,23 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class OnenoteRequestBuilder 
 {
+    /**
+     * The notebooks property
+    */
     public function notebooks(): NotebooksRequestBuilder {
         return new NotebooksRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The operations property
+    */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The pages property
+    */
     public function pages(): PagesRequestBuilder {
         return new PagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -47,14 +56,23 @@ class OnenoteRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The resources property
+    */
     public function resources(): ResourcesRequestBuilder {
         return new ResourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The sectionGroups property
+    */
     public function sectionGroups(): SectionGroupsRequestBuilder {
         return new SectionGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The sections property
+    */
     public function sections(): SectionsRequestBuilder {
         return new SectionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

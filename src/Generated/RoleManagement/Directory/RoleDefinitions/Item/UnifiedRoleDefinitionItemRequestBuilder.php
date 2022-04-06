@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleDefinitions\Ite
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\UnifiedRoleDefinition;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\UnifiedRoleDefinition;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleDefinitions\Item\InheritsPermissionsFrom\InheritsPermissionsFromRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -18,6 +18,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class UnifiedRoleDefinitionItemRequestBuilder 
 {
+    /**
+     * The inheritsPermissionsFrom property
+    */
     public function inheritsPermissionsFrom(): InheritsPermissionsFromRequestBuilder {
         return new InheritsPermissionsFromRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

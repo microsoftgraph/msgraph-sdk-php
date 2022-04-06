@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Communications\Calls\Item\Redirect;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\InvitationParticipantInfo;
+use Microsoft\Graph\Generated\Models\InvitationParticipantInfo;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,13 +13,13 @@ class RedirectRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $callbackUri  */
+    /** @var string|null $callbackUri The callbackUri property */
     private ?string $callbackUri = null;
     
-    /** @var array<InvitationParticipantInfo>|null $targets  */
+    /** @var array<InvitationParticipantInfo>|null $targets The targets property */
     private ?array $targets = null;
     
-    /** @var int|null $timeout  */
+    /** @var int|null $timeout The timeout property */
     private ?int $timeout = null;
     
     /**
@@ -47,7 +47,7 @@ class RedirectRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the callbackUri property value. 
+     * Gets the callbackUri property value. The callbackUri property
      * @return string|null
     */
     public function getCallbackUri(): ?string {
@@ -67,7 +67,7 @@ class RedirectRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the targets property value. 
+     * Gets the targets property value. The targets property
      * @return array<InvitationParticipantInfo>|null
     */
     public function getTargets(): ?array {
@@ -75,7 +75,7 @@ class RedirectRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the timeout property value. 
+     * Gets the timeout property value. The timeout property
      * @return int|null
     */
     public function getTimeout(): ?int {
@@ -102,7 +102,7 @@ class RedirectRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the callbackUri property value. 
+     * Sets the callbackUri property value. The callbackUri property
      *  @param string|null $value Value to set for the callbackUri property.
     */
     public function setCallbackUri(?string $value ): void {
@@ -110,7 +110,7 @@ class RedirectRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the targets property value. 
+     * Sets the targets property value. The targets property
      *  @param array<InvitationParticipantInfo>|null $value Value to set for the targets property.
     */
     public function setTargets(?array $value ): void {
@@ -118,7 +118,7 @@ class RedirectRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the timeout property value. 
+     * Sets the timeout property value. The timeout property
      *  @param int|null $value Value to set for the timeout property.
     */
     public function setTimeout(?int $value ): void {

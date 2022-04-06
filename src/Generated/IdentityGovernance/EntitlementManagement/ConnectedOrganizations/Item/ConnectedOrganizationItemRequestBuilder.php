@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Connected
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\ExternalSponsors\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedIdentityGovernanceEntitlementManagementConnectedOrganizationsItemExternalSponsorsItemDirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\InternalSponsors\InternalSponsorsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\InternalSponsors\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedIdentityGovernanceEntitlementManagementConnectedOrganizationsItemInternalSponsorsItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ConnectedOrganization;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ConnectedOrganization;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -21,10 +21,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ConnectedOrganizationItemRequestBuilder 
 {
+    /**
+     * The externalSponsors property
+    */
     public function externalSponsors(): ExternalSponsorsRequestBuilder {
         return new ExternalSponsorsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The internalSponsors property
+    */
     public function internalSponsors(): InternalSponsorsRequestBuilder {
         return new InternalSponsorsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -12,7 +12,7 @@ class RemovePasswordRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $keyId  */
+    /** @var string|null $keyId The keyId property */
     private ?string $keyId = null;
     
     /**
@@ -50,7 +50,7 @@ class RemovePasswordRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the keyId property value. 
+     * Gets the keyId property value. The keyId property
      * @return string|null
     */
     public function getKeyId(): ?string {
@@ -75,7 +75,7 @@ class RemovePasswordRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the keyId property value. 
+     * Sets the keyId property value. The keyId property
      *  @param string|null $value Value to set for the keyId property.
     */
     public function setKeyId(?string $value ): void {

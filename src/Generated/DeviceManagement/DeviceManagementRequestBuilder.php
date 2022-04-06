@@ -62,8 +62,8 @@ use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionAppLe
 use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionAppLearningSummaries\WindowsInformationProtectionAppLearningSummariesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionNetworkLearningSummaries\Item\WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionNetworkLearningSummaries\WindowsInformationProtectionNetworkLearningSummariesRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DeviceManagement;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\DeviceManagement;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -74,78 +74,135 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class DeviceManagementRequestBuilder 
 {
+    /**
+     * The applePushNotificationCertificate property
+    */
     public function applePushNotificationCertificate(): ApplePushNotificationCertificateRequestBuilder {
         return new ApplePushNotificationCertificateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The complianceManagementPartners property
+    */
     public function complianceManagementPartners(): ComplianceManagementPartnersRequestBuilder {
         return new ComplianceManagementPartnersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The conditionalAccessSettings property
+    */
     public function conditionalAccessSettings(): ConditionalAccessSettingsRequestBuilder {
         return new ConditionalAccessSettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The detectedApps property
+    */
     public function detectedApps(): DetectedAppsRequestBuilder {
         return new DetectedAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deviceCategories property
+    */
     public function deviceCategories(): DeviceCategoriesRequestBuilder {
         return new DeviceCategoriesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deviceCompliancePolicies property
+    */
     public function deviceCompliancePolicies(): DeviceCompliancePoliciesRequestBuilder {
         return new DeviceCompliancePoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deviceCompliancePolicyDeviceStateSummary property
+    */
     public function deviceCompliancePolicyDeviceStateSummary(): DeviceCompliancePolicyDeviceStateSummaryRequestBuilder {
         return new DeviceCompliancePolicyDeviceStateSummaryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deviceCompliancePolicySettingStateSummaries property
+    */
     public function deviceCompliancePolicySettingStateSummaries(): DeviceCompliancePolicySettingStateSummariesRequestBuilder {
         return new DeviceCompliancePolicySettingStateSummariesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deviceConfigurationDeviceStateSummaries property
+    */
     public function deviceConfigurationDeviceStateSummaries(): DeviceConfigurationDeviceStateSummariesRequestBuilder {
         return new DeviceConfigurationDeviceStateSummariesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deviceConfigurations property
+    */
     public function deviceConfigurations(): DeviceConfigurationsRequestBuilder {
         return new DeviceConfigurationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deviceEnrollmentConfigurations property
+    */
     public function deviceEnrollmentConfigurations(): DeviceEnrollmentConfigurationsRequestBuilder {
         return new DeviceEnrollmentConfigurationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deviceManagementPartners property
+    */
     public function deviceManagementPartners(): DeviceManagementPartnersRequestBuilder {
         return new DeviceManagementPartnersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The exchangeConnectors property
+    */
     public function exchangeConnectors(): ExchangeConnectorsRequestBuilder {
         return new ExchangeConnectorsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The importedWindowsAutopilotDeviceIdentities property
+    */
     public function importedWindowsAutopilotDeviceIdentities(): ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder {
         return new ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The iosUpdateStatuses property
+    */
     public function iosUpdateStatuses(): IosUpdateStatusesRequestBuilder {
         return new IosUpdateStatusesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The managedDeviceOverview property
+    */
     public function managedDeviceOverview(): ManagedDeviceOverviewRequestBuilder {
         return new ManagedDeviceOverviewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The managedDevices property
+    */
     public function managedDevices(): ManagedDevicesRequestBuilder {
         return new ManagedDevicesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The mobileThreatDefenseConnectors property
+    */
     public function mobileThreatDefenseConnectors(): MobileThreatDefenseConnectorsRequestBuilder {
         return new MobileThreatDefenseConnectorsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The notificationMessageTemplates property
+    */
     public function notificationMessageTemplates(): NotificationMessageTemplatesRequestBuilder {
         return new NotificationMessageTemplatesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -153,10 +210,16 @@ class DeviceManagementRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The remoteAssistancePartners property
+    */
     public function remoteAssistancePartners(): RemoteAssistancePartnersRequestBuilder {
         return new RemoteAssistancePartnersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The reports property
+    */
     public function reports(): ReportsRequestBuilder {
         return new ReportsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -164,30 +227,51 @@ class DeviceManagementRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The resourceOperations property
+    */
     public function resourceOperations(): ResourceOperationsRequestBuilder {
         return new ResourceOperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The roleAssignments property
+    */
     public function roleAssignments(): RoleAssignmentsRequestBuilder {
         return new RoleAssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The roleDefinitions property
+    */
     public function roleDefinitions(): RoleDefinitionsRequestBuilder {
         return new RoleDefinitionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The softwareUpdateStatusSummary property
+    */
     public function softwareUpdateStatusSummary(): SoftwareUpdateStatusSummaryRequestBuilder {
         return new SoftwareUpdateStatusSummaryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The telecomExpenseManagementPartners property
+    */
     public function telecomExpenseManagementPartners(): TelecomExpenseManagementPartnersRequestBuilder {
         return new TelecomExpenseManagementPartnersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The termsAndConditions property
+    */
     public function termsAndConditions(): TermsAndConditionsRequestBuilder {
         return new TermsAndConditionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The troubleshootingEvents property
+    */
     public function troubleshootingEvents(): TroubleshootingEventsRequestBuilder {
         return new TroubleshootingEventsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -195,14 +279,23 @@ class DeviceManagementRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The windowsAutopilotDeviceIdentities property
+    */
     public function windowsAutopilotDeviceIdentities(): WindowsAutopilotDeviceIdentitiesRequestBuilder {
         return new WindowsAutopilotDeviceIdentitiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The windowsInformationProtectionAppLearningSummaries property
+    */
     public function windowsInformationProtectionAppLearningSummaries(): WindowsInformationProtectionAppLearningSummariesRequestBuilder {
         return new WindowsInformationProtectionAppLearningSummariesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The windowsInformationProtectionNetworkLearningSummaries property
+    */
     public function windowsInformationProtectionNetworkLearningSummaries(): WindowsInformationProtectionNetworkLearningSummariesRequestBuilder {
         return new WindowsInformationProtectionNetworkLearningSummariesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

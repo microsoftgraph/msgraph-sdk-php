@@ -8,8 +8,8 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Branding\Localizations\Item\BackgroundImage\BackgroundImageRequestBuilder;
 use Microsoft\Graph\Generated\Branding\Localizations\Item\BannerLogo\BannerLogoRequestBuilder;
 use Microsoft\Graph\Generated\Branding\Localizations\Item\SquareLogo\SquareLogoRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OrganizationalBrandingLocalization;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OrganizationalBrandingLocalization;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -20,10 +20,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class OrganizationalBrandingLocalizationItemRequestBuilder 
 {
+    /**
+     * The backgroundImage property
+    */
     public function backgroundImage(): BackgroundImageRequestBuilder {
         return new BackgroundImageRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The bannerLogo property
+    */
     public function bannerLogo(): BannerLogoRequestBuilder {
         return new BannerLogoRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -34,6 +40,9 @@ class OrganizationalBrandingLocalizationItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The squareLogo property
+    */
     public function squareLogo(): SquareLogoRequestBuilder {
         return new SquareLogoRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

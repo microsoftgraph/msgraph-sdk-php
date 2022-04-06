@@ -19,8 +19,8 @@ use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Sch
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\UserStatuses\Item\DeviceComplianceUserStatusItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\UserStatuses\UserStatusesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\UserStatusOverview\UserStatusOverviewRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\DeviceCompliancePolicy;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\DeviceCompliancePolicy;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -31,22 +31,37 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class DeviceCompliancePolicyItemRequestBuilder 
 {
+    /**
+     * The assign property
+    */
     public function assign(): AssignRequestBuilder {
         return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The assignments property
+    */
     public function assignments(): AssignmentsRequestBuilder {
         return new AssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deviceSettingStateSummaries property
+    */
     public function deviceSettingStateSummaries(): DeviceSettingStateSummariesRequestBuilder {
         return new DeviceSettingStateSummariesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deviceStatuses property
+    */
     public function deviceStatuses(): DeviceStatusesRequestBuilder {
         return new DeviceStatusesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The deviceStatusOverview property
+    */
     public function deviceStatusOverview(): DeviceStatusOverviewRequestBuilder {
         return new DeviceStatusOverviewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -57,10 +72,16 @@ class DeviceCompliancePolicyItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The scheduleActionsForRules property
+    */
     public function scheduleActionsForRules(): ScheduleActionsForRulesRequestBuilder {
         return new ScheduleActionsForRulesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The scheduledActionsForRule property
+    */
     public function scheduledActionsForRule(): ScheduledActionsForRuleRequestBuilder {
         return new ScheduledActionsForRuleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -68,10 +89,16 @@ class DeviceCompliancePolicyItemRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The userStatuses property
+    */
     public function userStatuses(): UserStatusesRequestBuilder {
         return new UserStatusesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The userStatusOverview property
+    */
     public function userStatusOverview(): UserStatusOverviewRequestBuilder {
         return new UserStatusOverviewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

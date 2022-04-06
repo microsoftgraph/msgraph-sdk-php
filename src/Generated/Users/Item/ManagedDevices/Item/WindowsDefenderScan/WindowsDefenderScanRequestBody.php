@@ -12,7 +12,7 @@ class WindowsDefenderScanRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var bool|null $quickScan  */
+    /** @var bool|null $quickScan The quickScan property */
     private ?bool $quickScan = null;
     
     /**
@@ -50,7 +50,7 @@ class WindowsDefenderScanRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the quickScan property value. 
+     * Gets the quickScan property value. The quickScan property
      * @return bool|null
     */
     public function getQuickScan(): ?bool {
@@ -75,7 +75,7 @@ class WindowsDefenderScanRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the quickScan property value. 
+     * Sets the quickScan property value. The quickScan property
      *  @param bool|null $value Value to set for the quickScan property.
     */
     public function setQuickScan(?bool $value ): void {

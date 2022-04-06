@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Agreements\Item\Files\Item\Versions\Item\AgreementFileVersionItemRequestBuilder;
 use Microsoft\Graph\Generated\Agreements\Item\Files\Item\Versions\VersionsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AgreementFileLocalization;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\AgreementFileLocalization;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -28,6 +28,9 @@ class AgreementFileLocalizationItemRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The versions property
+    */
     public function versions(): VersionsRequestBuilder {
         return new VersionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Me\FindMeetingTimes;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\MeetingTimeSuggestionsResult;
+use Microsoft\Graph\Generated\Models\MeetingTimeSuggestionsResult;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

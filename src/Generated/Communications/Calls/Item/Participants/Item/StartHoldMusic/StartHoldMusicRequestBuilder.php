@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\StartHoldMusicOperation;
+use Microsoft\Graph\Generated\Models\StartHoldMusicOperation;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Users;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\User;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\UserCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\User;
+use Microsoft\Graph\Generated\Models\UserCollectionResponse;
 use Microsoft\Graph\Generated\Users\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Users\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
@@ -23,14 +23,23 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class UsersRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getAvailableExtensionProperties property
+    */
     public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
         return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getByIds property
+    */
     public function getByIds(): GetByIdsRequestBuilder {
         return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -44,6 +53,9 @@ class UsersRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The validateProperties property
+    */
     public function validateProperties(): ValidatePropertiesRequestBuilder {
         return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

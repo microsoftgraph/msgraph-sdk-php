@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\Item\Tasks\Item\Definition\DefinitionRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\Item\Tasks\Item\Trigger\TriggerRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\PrintTask;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\PrintTask;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -19,6 +19,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class PrintTaskItemRequestBuilder 
 {
+    /**
+     * The definition property
+    */
     public function definition(): DefinitionRequestBuilder {
         return new DefinitionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -29,6 +32,9 @@ class PrintTaskItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The trigger property
+    */
     public function trigger(): TriggerRequestBuilder {
         return new TriggerRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

@@ -24,8 +24,8 @@ use Microsoft\Graph\Generated\Communications\Calls\Item\SubscribeToTone\Subscrib
 use Microsoft\Graph\Generated\Communications\Calls\Item\Transfer\TransferRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Unmute\UnmuteRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\UpdateRecordingStatus\UpdateRecordingStatusRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Call;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Call;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -36,34 +36,58 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class CallItemRequestBuilder 
 {
+    /**
+     * The answer property
+    */
     public function answer(): AnswerRequestBuilder {
         return new AnswerRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The audioRoutingGroups property
+    */
     public function audioRoutingGroups(): AudioRoutingGroupsRequestBuilder {
         return new AudioRoutingGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The cancelMediaProcessing property
+    */
     public function cancelMediaProcessing(): CancelMediaProcessingRequestBuilder {
         return new CancelMediaProcessingRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The changeScreenSharingRole property
+    */
     public function changeScreenSharingRole(): ChangeScreenSharingRoleRequestBuilder {
         return new ChangeScreenSharingRoleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The keepAlive property
+    */
     public function keepAlive(): KeepAliveRequestBuilder {
         return new KeepAliveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The mute property
+    */
     public function mute(): MuteRequestBuilder {
         return new MuteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The operations property
+    */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The participants property
+    */
     public function participants(): ParticipantsRequestBuilder {
         return new ParticipantsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -71,18 +95,30 @@ class CallItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The playPrompt property
+    */
     public function playPrompt(): PlayPromptRequestBuilder {
         return new PlayPromptRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The recordResponse property
+    */
     public function recordResponse(): RecordResponseRequestBuilder {
         return new RecordResponseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The redirect property
+    */
     public function redirect(): RedirectRequestBuilder {
         return new RedirectRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The reject property
+    */
     public function reject(): RejectRequestBuilder {
         return new RejectRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -90,18 +126,30 @@ class CallItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The subscribeToTone property
+    */
     public function subscribeToTone(): SubscribeToToneRequestBuilder {
         return new SubscribeToToneRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The transfer property
+    */
     public function transfer(): TransferRequestBuilder {
         return new TransferRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The unmute property
+    */
     public function unmute(): UnmuteRequestBuilder {
         return new UnmuteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The updateRecordingStatus property
+    */
     public function updateRecordingStatus(): UpdateRecordingStatusRequestBuilder {
         return new UpdateRecordingStatusRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

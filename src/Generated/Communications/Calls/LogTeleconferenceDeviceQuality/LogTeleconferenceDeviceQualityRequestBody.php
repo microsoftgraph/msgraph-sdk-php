@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Communications\Calls\LogTeleconferenceDeviceQuality;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\TeleconferenceDeviceQuality;
+use Microsoft\Graph\Generated\Models\TeleconferenceDeviceQuality;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class LogTeleconferenceDeviceQualityRequestBody implements AdditionalDataHolder,
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var TeleconferenceDeviceQuality|null $quality  */
+    /** @var TeleconferenceDeviceQuality|null $quality The quality property */
     private ?TeleconferenceDeviceQuality $quality = null;
     
     /**
@@ -51,7 +51,7 @@ class LogTeleconferenceDeviceQualityRequestBody implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the quality property value. 
+     * Gets the quality property value. The quality property
      * @return TeleconferenceDeviceQuality|null
     */
     public function getQuality(): ?TeleconferenceDeviceQuality {
@@ -76,7 +76,7 @@ class LogTeleconferenceDeviceQualityRequestBody implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the quality property value. 
+     * Sets the quality property value. The quality property
      *  @param TeleconferenceDeviceQuality|null $value Value to set for the quality property.
     */
     public function setQuality(?TeleconferenceDeviceQuality $value ): void {

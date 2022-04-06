@@ -9,9 +9,9 @@ use Microsoft\Graph\Generated\GroupSettingTemplates\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\GroupSettingTemplates\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\GroupSettingTemplates\GetByIds\GetByIdsRequestBuilder;
 use Microsoft\Graph\Generated\GroupSettingTemplates\ValidateProperties\ValidatePropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\GroupSettingTemplate;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\GroupSettingTemplateCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\GroupSettingTemplate;
+use Microsoft\Graph\Generated\Models\GroupSettingTemplateCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -22,14 +22,23 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class GroupSettingTemplatesRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getAvailableExtensionProperties property
+    */
     public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
         return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The getByIds property
+    */
     public function getByIds(): GetByIdsRequestBuilder {
         return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -43,6 +52,9 @@ class GroupSettingTemplatesRequestBuilder
     /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
     private string $urlTemplate;
     
+    /**
+     * The validateProperties property
+    */
     public function validateProperties(): ValidatePropertiesRequestBuilder {
         return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

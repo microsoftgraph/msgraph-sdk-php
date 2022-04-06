@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Shares\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\SharedDriveItem;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\SharedDriveItem;
 use Microsoft\Graph\Generated\Shares\Item\DriveItem\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\ListRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\Items\Item\DriveItemItemRequestBuilder;
@@ -25,18 +25,30 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SharedDriveItemItemRequestBuilder 
 {
+    /**
+     * The driveItem property
+    */
     public function driveItem(): DriveItemRequestBuilder {
         return new DriveItemRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The list property
+    */
     public function escapedList(): ListRequestBuilder {
         return new ListRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The items property
+    */
     public function items(): ItemsRequestBuilder {
         return new ItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The listItem property
+    */
     public function listItem(): ListItemRequestBuilder {
         return new ListItemRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -44,6 +56,9 @@ class SharedDriveItemItemRequestBuilder
     /** @var array<string, mixed> $pathParameters Path parameters for the request */
     private array $pathParameters;
     
+    /**
+     * The permission property
+    */
     public function permission(): PermissionRequestBuilder {
         return new PermissionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -51,10 +66,16 @@ class SharedDriveItemItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The root property
+    */
     public function root(): RootRequestBuilder {
         return new RootRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The site property
+    */
     public function site(): SiteRequestBuilder {
         return new SiteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

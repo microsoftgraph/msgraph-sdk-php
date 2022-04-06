@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Sites\Item\Onenote\SectionGroups\Item\Sectio
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\OnenoteSection;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OnenoteSection;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\CopyToNotebook\CopyToNotebookRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\CopyToSectionGroup\CopyToSectionGroupRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\OnenotePageItemRequestBuilder;
@@ -23,22 +23,37 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class OnenoteSectionItemRequestBuilder 
 {
+    /**
+     * The copyToNotebook property
+    */
     public function copyToNotebook(): CopyToNotebookRequestBuilder {
         return new CopyToNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The copyToSectionGroup property
+    */
     public function copyToSectionGroup(): CopyToSectionGroupRequestBuilder {
         return new CopyToSectionGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The pages property
+    */
     public function pages(): PagesRequestBuilder {
         return new PagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The parentNotebook property
+    */
     public function parentNotebook(): ParentNotebookRequestBuilder {
         return new ParentNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The parentSectionGroup property
+    */
     public function parentSectionGroup(): ParentSectionGroupRequestBuilder {
         return new ParentSectionGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

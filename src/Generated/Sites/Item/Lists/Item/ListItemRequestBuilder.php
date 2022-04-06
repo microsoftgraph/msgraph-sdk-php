@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\EscapedList;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\EscapedList;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Columns\ColumnsRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Columns\Item\ColumnDefinitionItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\ContentTypesRequestBuilder;
@@ -26,18 +26,30 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ListItemRequestBuilder 
 {
+    /**
+     * The columns property
+    */
     public function columns(): ColumnsRequestBuilder {
         return new ColumnsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The contentTypes property
+    */
     public function contentTypes(): ContentTypesRequestBuilder {
         return new ContentTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The drive property
+    */
     public function drive(): DriveRequestBuilder {
         return new DriveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The items property
+    */
     public function items(): ItemsRequestBuilder {
         return new ItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
@@ -48,6 +60,9 @@ class ListItemRequestBuilder
     /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
     private RequestAdapter $requestAdapter;
     
+    /**
+     * The subscriptions property
+    */
     public function subscriptions(): SubscriptionsRequestBuilder {
         return new SubscriptionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

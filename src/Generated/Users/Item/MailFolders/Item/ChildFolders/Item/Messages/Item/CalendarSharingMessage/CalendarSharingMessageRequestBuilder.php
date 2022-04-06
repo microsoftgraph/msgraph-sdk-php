@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\RequestAdapter;
 
 class CalendarSharingMessageRequestBuilder 
 {
+    /**
+     * The accept property
+    */
     public function accept(): AcceptRequestBuilder {
         return new AcceptRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

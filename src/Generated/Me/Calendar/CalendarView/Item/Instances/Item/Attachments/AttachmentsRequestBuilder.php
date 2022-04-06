@@ -7,9 +7,9 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\Instances\Item\Attachments\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\Instances\Item\Attachments\CreateUploadSession\CreateUploadSessionRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Attachment;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\AttachmentCollectionResponse;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Attachment;
+use Microsoft\Graph\Generated\Models\AttachmentCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -20,10 +20,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AttachmentsRequestBuilder 
 {
+    /**
+     * The count property
+    */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The createUploadSession property
+    */
     public function createUploadSession(): CreateUploadSessionRequestBuilder {
         return new CreateUploadSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

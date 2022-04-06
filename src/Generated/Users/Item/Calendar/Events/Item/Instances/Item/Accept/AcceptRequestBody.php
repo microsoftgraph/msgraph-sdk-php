@@ -12,10 +12,10 @@ class AcceptRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var string|null $Comment  */
+    /** @var string|null $Comment The Comment property */
     private ?string $comment = null;
     
-    /** @var bool|null $SendResponse  */
+    /** @var bool|null $SendResponse The SendResponse property */
     private ?bool $sendResponse = null;
     
     /**
@@ -43,7 +43,7 @@ class AcceptRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the comment property value. 
+     * Gets the comment property value. The Comment property
      * @return string|null
     */
     public function getComment(): ?string {
@@ -62,7 +62,7 @@ class AcceptRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the sendResponse property value. 
+     * Gets the sendResponse property value. The SendResponse property
      * @return bool|null
     */
     public function getSendResponse(): ?bool {
@@ -88,7 +88,7 @@ class AcceptRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the comment property value. 
+     * Sets the comment property value. The Comment property
      *  @param string|null $value Value to set for the Comment property.
     */
     public function setComment(?string $value ): void {
@@ -96,7 +96,7 @@ class AcceptRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the sendResponse property value. 
+     * Sets the sendResponse property value. The SendResponse property
      *  @param bool|null $value Value to set for the SendResponse property.
     */
     public function setSendResponse(?bool $value ): void {

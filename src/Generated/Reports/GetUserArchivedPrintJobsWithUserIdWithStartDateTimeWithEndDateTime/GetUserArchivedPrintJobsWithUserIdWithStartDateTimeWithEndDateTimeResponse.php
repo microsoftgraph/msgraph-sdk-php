@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Reports\GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTime;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ArchivedPrintJob;
+use Microsoft\Graph\Generated\Models\ArchivedPrintJob;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,7 +13,7 @@ class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeResponse
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<ArchivedPrintJob>|null $value  */
+    /** @var array<ArchivedPrintJob>|null $value The value property */
     private ?array $value = null;
     
     /**
@@ -51,7 +51,7 @@ class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeResponse
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<ArchivedPrintJob>|null
     */
     public function getValue(): ?array {
@@ -76,7 +76,7 @@ class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeResponse
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      *  @param array<ArchivedPrintJob>|null $value Value to set for the value property.
     */
     public function setValue(?array $value ): void {

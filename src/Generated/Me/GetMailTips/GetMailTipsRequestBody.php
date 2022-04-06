@@ -2,7 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Me\GetMailTips;
 
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\MailTipsType;
+use Microsoft\Graph\Generated\Models\MailTipsType;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -13,10 +13,10 @@ class GetMailTipsRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<string>|null $EmailAddresses  */
+    /** @var array<string>|null $EmailAddresses The EmailAddresses property */
     private ?array $emailAddresses = null;
     
-    /** @var MailTipsType|null $MailTipsOptions  */
+    /** @var MailTipsType|null $MailTipsOptions The MailTipsOptions property */
     private ?MailTipsType $mailTipsOptions = null;
     
     /**
@@ -44,7 +44,7 @@ class GetMailTipsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the emailAddresses property value. 
+     * Gets the emailAddresses property value. The EmailAddresses property
      * @return array<string>|null
     */
     public function getEmailAddresses(): ?array {
@@ -63,7 +63,7 @@ class GetMailTipsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the mailTipsOptions property value. 
+     * Gets the mailTipsOptions property value. The MailTipsOptions property
      * @return MailTipsType|null
     */
     public function getMailTipsOptions(): ?MailTipsType {
@@ -89,7 +89,7 @@ class GetMailTipsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the emailAddresses property value. 
+     * Sets the emailAddresses property value. The EmailAddresses property
      *  @param array<string>|null $value Value to set for the EmailAddresses property.
     */
     public function setEmailAddresses(?array $value ): void {
@@ -97,7 +97,7 @@ class GetMailTipsRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the mailTipsOptions property value. 
+     * Sets the mailTipsOptions property value. The MailTipsOptions property
      *  @param MailTipsType|null $value Value to set for the MailTipsOptions property.
     */
     public function setMailTipsOptions(?MailTipsType $value ): void {

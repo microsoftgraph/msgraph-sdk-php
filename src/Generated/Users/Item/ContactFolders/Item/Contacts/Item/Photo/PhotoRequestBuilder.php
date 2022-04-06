@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\Contacts\Item
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ProfilePhoto;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ProfilePhoto;
 use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\Contacts\Item\Photo\Value\ContentRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -18,6 +18,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class PhotoRequestBuilder 
 {
+    /**
+     * The Content property
+    */
     public function content(): ContentRequestBuilder {
         return new ContentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

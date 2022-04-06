@@ -12,10 +12,10 @@ class AssociateWithHubSitesRequestBody implements AdditionalDataHolder, Parsable
     /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private array $additionalData;
     
-    /** @var array<string>|null $hubSiteUrls  */
+    /** @var array<string>|null $hubSiteUrls The hubSiteUrls property */
     private ?array $hubSiteUrls = null;
     
-    /** @var bool|null $propagateToExistingLists  */
+    /** @var bool|null $propagateToExistingLists The propagateToExistingLists property */
     private ?bool $propagateToExistingLists = null;
     
     /**
@@ -54,7 +54,7 @@ class AssociateWithHubSitesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the hubSiteUrls property value. 
+     * Gets the hubSiteUrls property value. The hubSiteUrls property
      * @return array<string>|null
     */
     public function getHubSiteUrls(): ?array {
@@ -62,7 +62,7 @@ class AssociateWithHubSitesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the propagateToExistingLists property value. 
+     * Gets the propagateToExistingLists property value. The propagateToExistingLists property
      * @return bool|null
     */
     public function getPropagateToExistingLists(): ?bool {
@@ -88,7 +88,7 @@ class AssociateWithHubSitesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the hubSiteUrls property value. 
+     * Sets the hubSiteUrls property value. The hubSiteUrls property
      *  @param array<string>|null $value Value to set for the hubSiteUrls property.
     */
     public function setHubSiteUrls(?array $value ): void {
@@ -96,7 +96,7 @@ class AssociateWithHubSitesRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the propagateToExistingLists property value. 
+     * Sets the propagateToExistingLists property value. The propagateToExistingLists property
      *  @param bool|null $value Value to set for the propagateToExistingLists property.
     */
     public function setPropagateToExistingLists(?bool $value ): void {

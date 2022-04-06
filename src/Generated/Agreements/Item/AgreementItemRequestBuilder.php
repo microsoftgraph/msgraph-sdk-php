@@ -10,8 +10,8 @@ use Microsoft\Graph\Generated\Agreements\Item\Acceptances\Item\AgreementAcceptan
 use Microsoft\Graph\Generated\Agreements\Item\File\FileRequestBuilder;
 use Microsoft\Graph\Generated\Agreements\Item\Files\FilesRequestBuilder;
 use Microsoft\Graph\Generated\Agreements\Item\Files\Item\AgreementFileLocalizationItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\Agreement;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Agreement;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -22,14 +22,23 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AgreementItemRequestBuilder 
 {
+    /**
+     * The acceptances property
+    */
     public function acceptances(): AcceptancesRequestBuilder {
         return new AcceptancesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The file property
+    */
     public function file(): FileRequestBuilder {
         return new FileRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The files property
+    */
     public function files(): FilesRequestBuilder {
         return new FilesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }

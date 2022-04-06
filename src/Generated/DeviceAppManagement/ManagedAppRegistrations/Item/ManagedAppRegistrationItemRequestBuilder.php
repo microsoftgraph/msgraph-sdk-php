@@ -11,8 +11,8 @@ use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\I
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\IntendedPolicies\Item\ManagedAppPolicyItemRequestBuilder as MicrosoftGraphGeneratedDeviceAppManagementManagedAppRegistrationsItemIntendedPoliciesItemManagedAppPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\Operations\Item\ManagedAppOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ManagedAppRegistration;
-use Microsoft\Graph\Generated\Models\Microsoft\Graph\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ManagedAppRegistration;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -23,14 +23,23 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ManagedAppRegistrationItemRequestBuilder 
 {
+    /**
+     * The appliedPolicies property
+    */
     public function appliedPolicies(): AppliedPoliciesRequestBuilder {
         return new AppliedPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The intendedPolicies property
+    */
     public function intendedPolicies(): IntendedPoliciesRequestBuilder {
         return new IntendedPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * The operations property
+    */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
