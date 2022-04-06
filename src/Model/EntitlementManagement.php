@@ -87,6 +87,7 @@ class EntitlementManagement extends Entity
 
      /**
      * Gets the assignmentPolicies
+    * Access package assignment policies.
      *
      * @return array|null The assignmentPolicies
      */
@@ -101,6 +102,7 @@ class EntitlementManagement extends Entity
 
     /**
     * Sets the assignmentPolicies
+    * Access package assignment policies.
     *
     * @param AccessPackageAssignmentPolicy[] $val The assignmentPolicies
     *
@@ -175,7 +177,7 @@ class EntitlementManagement extends Entity
 
      /**
      * Gets the catalogs
-    * Represents a group of access packages.
+    * Represents a collection of access packages.
      *
      * @return array|null The catalogs
      */
@@ -190,7 +192,7 @@ class EntitlementManagement extends Entity
 
     /**
     * Sets the catalogs
-    * Represents a group of access packages.
+    * Represents a collection of access packages.
     *
     * @param AccessPackageCatalog[] $val The catalogs
     *

@@ -36,6 +36,7 @@ class TargetManager extends SubjectSet
 
     /**
     * Gets the managerLevel
+    * Manager level, between 1 and 4. The direct manager is 1.
     *
     * @return int|null The managerLevel
     */
@@ -50,6 +51,7 @@ class TargetManager extends SubjectSet
 
     /**
     * Sets the managerLevel
+    * Manager level, between 1 and 4. The direct manager is 1.
     *
     * @param int $val The value of the managerLevel
     *
