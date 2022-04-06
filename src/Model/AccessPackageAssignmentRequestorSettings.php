@@ -25,6 +25,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
 {
     /**
     * Gets the allowCustomAssignmentSchedule
+    * If false, the requestor is not permitted to include a schedule in their request.
     *
     * @return bool|null The allowCustomAssignmentSchedule
     */
@@ -39,6 +40,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
 
     /**
     * Sets the allowCustomAssignmentSchedule
+    * If false, the requestor is not permitted to include a schedule in their request.
     *
     * @param bool $val The value of the allowCustomAssignmentSchedule
     *
@@ -51,6 +53,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
     }
     /**
     * Gets the enableOnBehalfRequestorsToAddAccess
+    * If true, allows on-behalf-of requestors to create a request to add access for another principal.
     *
     * @return bool|null The enableOnBehalfRequestorsToAddAccess
     */
@@ -65,6 +68,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
 
     /**
     * Sets the enableOnBehalfRequestorsToAddAccess
+    * If true, allows on-behalf-of requestors to create a request to add access for another principal.
     *
     * @param bool $val The value of the enableOnBehalfRequestorsToAddAccess
     *
@@ -77,6 +81,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
     }
     /**
     * Gets the enableOnBehalfRequestorsToRemoveAccess
+    * If true, allows on-behalf-of requestors to create a request to remove access for another principal.
     *
     * @return bool|null The enableOnBehalfRequestorsToRemoveAccess
     */
@@ -91,6 +96,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
 
     /**
     * Sets the enableOnBehalfRequestorsToRemoveAccess
+    * If true, allows on-behalf-of requestors to create a request to remove access for another principal.
     *
     * @param bool $val The value of the enableOnBehalfRequestorsToRemoveAccess
     *
@@ -103,6 +109,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
     }
     /**
     * Gets the enableOnBehalfRequestorsToUpdateAccess
+    * If true, allows on-behalf-of requestors to create a request to update access for another principal.
     *
     * @return bool|null The enableOnBehalfRequestorsToUpdateAccess
     */
@@ -117,6 +124,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
 
     /**
     * Sets the enableOnBehalfRequestorsToUpdateAccess
+    * If true, allows on-behalf-of requestors to create a request to update access for another principal.
     *
     * @param bool $val The value of the enableOnBehalfRequestorsToUpdateAccess
     *
@@ -129,6 +137,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
     }
     /**
     * Gets the enableTargetsToSelfAddAccess
+    * If true, allows requestors to create a request to add access for themselves.
     *
     * @return bool|null The enableTargetsToSelfAddAccess
     */
@@ -143,6 +152,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
 
     /**
     * Sets the enableTargetsToSelfAddAccess
+    * If true, allows requestors to create a request to add access for themselves.
     *
     * @param bool $val The value of the enableTargetsToSelfAddAccess
     *
@@ -155,6 +165,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
     }
     /**
     * Gets the enableTargetsToSelfRemoveAccess
+    * If true, allows requestors to create a request to remove their access.
     *
     * @return bool|null The enableTargetsToSelfRemoveAccess
     */
@@ -169,6 +180,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
 
     /**
     * Sets the enableTargetsToSelfRemoveAccess
+    * If true, allows requestors to create a request to remove their access.
     *
     * @param bool $val The value of the enableTargetsToSelfRemoveAccess
     *
@@ -181,6 +193,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
     }
     /**
     * Gets the enableTargetsToSelfUpdateAccess
+    * If true, allows requestors to create a request to update their access.
     *
     * @return bool|null The enableTargetsToSelfUpdateAccess
     */
@@ -195,6 +208,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
 
     /**
     * Sets the enableTargetsToSelfUpdateAccess
+    * If true, allows requestors to create a request to update their access.
     *
     * @param bool $val The value of the enableTargetsToSelfUpdateAccess
     *
@@ -208,6 +222,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
 
     /**
     * Gets the onBehalfRequestors
+    * The principals who can request on-behalf-of others.
     *
     * @return SubjectSet|null The onBehalfRequestors
     */
@@ -226,6 +241,7 @@ class AccessPackageAssignmentRequestorSettings extends Entity
 
     /**
     * Sets the onBehalfRequestors
+    * The principals who can request on-behalf-of others.
     *
     * @param SubjectSet $val The value to assign to the onBehalfRequestors
     *

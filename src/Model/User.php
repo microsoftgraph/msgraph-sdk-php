@@ -1190,7 +1190,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the onPremisesSecurityIdentifier
-    * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only. Returned only on $select. Supports $filter (eq) on null values only.
+    * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only. Returned only on $select.  Supports $filter (eq including on null values).
     *
     * @return string|null The onPremisesSecurityIdentifier
     */
@@ -1205,7 +1205,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the onPremisesSecurityIdentifier
-    * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only. Returned only on $select. Supports $filter (eq) on null values only.
+    * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only. Returned only on $select.  Supports $filter (eq including on null values).
     *
     * @param string $val The onPremisesSecurityIdentifier
     *
@@ -1392,6 +1392,35 @@ class User extends DirectoryObject
     public function setPostalCode($val)
     {
         $this->_propDict["postalCode"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the preferredDataLocation
+    * The preferred data location for the user. For more information, see OneDrive Online Multi-Geo.
+    *
+    * @return string|null The preferredDataLocation
+    */
+    public function getPreferredDataLocation()
+    {
+        if (array_key_exists("preferredDataLocation", $this->_propDict)) {
+            return $this->_propDict["preferredDataLocation"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the preferredDataLocation
+    * The preferred data location for the user. For more information, see OneDrive Online Multi-Geo.
+    *
+    * @param string $val The preferredDataLocation
+    *
+    * @return User
+    */
+    public function setPreferredDataLocation($val)
+    {
+        $this->_propDict["preferredDataLocation"] = $val;
         return $this;
     }
 

@@ -26,6 +26,7 @@ class AccessPackageAssignmentReviewSettings extends Entity
 
     /**
     * Gets the expirationBehavior
+    * The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
     *
     * @return AccessReviewExpirationBehavior|null The expirationBehavior
     */
@@ -44,6 +45,7 @@ class AccessPackageAssignmentReviewSettings extends Entity
 
     /**
     * Sets the expirationBehavior
+    * The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
     *
     * @param AccessReviewExpirationBehavior $val The value to assign to the expirationBehavior
     *
@@ -57,6 +59,7 @@ class AccessPackageAssignmentReviewSettings extends Entity
 
     /**
     * Gets the fallbackReviewers
+    * This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
     *
     * @return SubjectSet|null The fallbackReviewers
     */
@@ -75,6 +78,7 @@ class AccessPackageAssignmentReviewSettings extends Entity
 
     /**
     * Sets the fallbackReviewers
+    * This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
     *
     * @param SubjectSet $val The value to assign to the fallbackReviewers
     *
@@ -87,6 +91,7 @@ class AccessPackageAssignmentReviewSettings extends Entity
     }
     /**
     * Gets the isEnabled
+    * If true, access reviews are required for assignments through this policy.
     *
     * @return bool|null The isEnabled
     */
@@ -101,6 +106,7 @@ class AccessPackageAssignmentReviewSettings extends Entity
 
     /**
     * Sets the isEnabled
+    * If true, access reviews are required for assignments through this policy.
     *
     * @param bool $val The value of the isEnabled
     *
@@ -113,6 +119,7 @@ class AccessPackageAssignmentReviewSettings extends Entity
     }
     /**
     * Gets the isRecommendationEnabled
+    * Specifies whether to display recommendations to the reviewer. The default value is true.
     *
     * @return bool|null The isRecommendationEnabled
     */
@@ -127,6 +134,7 @@ class AccessPackageAssignmentReviewSettings extends Entity
 
     /**
     * Sets the isRecommendationEnabled
+    * Specifies whether to display recommendations to the reviewer. The default value is true.
     *
     * @param bool $val The value of the isRecommendationEnabled
     *
@@ -139,6 +147,7 @@ class AccessPackageAssignmentReviewSettings extends Entity
     }
     /**
     * Gets the isReviewerJustificationRequired
+    * Specifies whether the reviewer must provide justification for the approval. The default value is true.
     *
     * @return bool|null The isReviewerJustificationRequired
     */
@@ -153,6 +162,7 @@ class AccessPackageAssignmentReviewSettings extends Entity
 
     /**
     * Sets the isReviewerJustificationRequired
+    * Specifies whether the reviewer must provide justification for the approval. The default value is true.
     *
     * @param bool $val The value of the isReviewerJustificationRequired
     *
@@ -165,6 +175,7 @@ class AccessPackageAssignmentReviewSettings extends Entity
     }
     /**
     * Gets the isSelfReview
+    * Specifies whether the principals can review their own assignments.
     *
     * @return bool|null The isSelfReview
     */
@@ -179,6 +190,7 @@ class AccessPackageAssignmentReviewSettings extends Entity
 
     /**
     * Sets the isSelfReview
+    * Specifies whether the principals can review their own assignments.
     *
     * @param bool $val The value of the isSelfReview
     *
@@ -192,6 +204,7 @@ class AccessPackageAssignmentReviewSettings extends Entity
 
     /**
     * Gets the primaryReviewers
+    * This collection specifies the users or group of users who will review the access package assignments.
     *
     * @return SubjectSet|null The primaryReviewers
     */
@@ -210,6 +223,7 @@ class AccessPackageAssignmentReviewSettings extends Entity
 
     /**
     * Sets the primaryReviewers
+    * This collection specifies the users or group of users who will review the access package assignments.
     *
     * @param SubjectSet $val The value to assign to the primaryReviewers
     *
@@ -223,6 +237,7 @@ class AccessPackageAssignmentReviewSettings extends Entity
 
     /**
     * Gets the schedule
+    * When the first review should start and how often it should recur.
     *
     * @return EntitlementManagementSchedule|null The schedule
     */
@@ -241,6 +256,7 @@ class AccessPackageAssignmentReviewSettings extends Entity
 
     /**
     * Sets the schedule
+    * When the first review should start and how often it should recur.
     *
     * @param EntitlementManagementSchedule $val The value to assign to the schedule
     *
