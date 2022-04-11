@@ -26,7 +26,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the action
-    * The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics
+    * The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
     *
     * @return CaseAction|null The action
     */
@@ -45,7 +45,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the action
-    * The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics
+    * The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
     *
     * @param CaseAction $val The action
     *

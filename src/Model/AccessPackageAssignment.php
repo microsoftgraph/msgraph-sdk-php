@@ -187,6 +187,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Gets the assignmentPolicy
+    * Read-only. Supports $filter (eq) on the id property and $expand query parameters.
     *
     * @return AccessPackageAssignmentPolicy|null The assignmentPolicy
     */
@@ -205,6 +206,7 @@ class AccessPackageAssignment extends Entity
 
     /**
     * Sets the assignmentPolicy
+    * Read-only. Supports $filter (eq) on the id property and $expand query parameters.
     *
     * @param AccessPackageAssignmentPolicy $val The assignmentPolicy
     *

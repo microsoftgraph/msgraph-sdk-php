@@ -26,7 +26,7 @@ class Endpoint extends DirectoryObject
 {
     /**
     * Gets the capability
-    * Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.)  Not nullable. Read-only.
+    * Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.
     *
     * @return string|null The capability
     */
@@ -41,7 +41,7 @@ class Endpoint extends DirectoryObject
 
     /**
     * Sets the capability
-    * Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.)  Not nullable. Read-only.
+    * Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.
     *
     * @param string $val The capability
     *

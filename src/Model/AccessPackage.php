@@ -180,6 +180,7 @@ class AccessPackage extends Entity
 
      /**
      * Gets the assignmentPolicies
+    * Read-only. Nullable.
      *
      * @return array|null The assignmentPolicies
      */
@@ -194,6 +195,7 @@ class AccessPackage extends Entity
 
     /**
     * Sets the assignmentPolicies
+    * Read-only. Nullable.
     *
     * @param AccessPackageAssignmentPolicy[] $val The assignmentPolicies
     *

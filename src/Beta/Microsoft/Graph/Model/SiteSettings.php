@@ -25,6 +25,7 @@ class SiteSettings extends Entity
 {
     /**
     * Gets the languageTag
+    * The language tag for the language used on this site.
     *
     * @return string|null The languageTag
     */
@@ -39,6 +40,7 @@ class SiteSettings extends Entity
 
     /**
     * Sets the languageTag
+    * The language tag for the language used on this site.
     *
     * @param string $val The value of the languageTag
     *
@@ -51,6 +53,7 @@ class SiteSettings extends Entity
     }
     /**
     * Gets the timeZone
+    * Indicates the time offset for the time zone of the site from Coordinated Universal Time (UTC).
     *
     * @return string|null The timeZone
     */
@@ -65,6 +68,7 @@ class SiteSettings extends Entity
 
     /**
     * Sets the timeZone
+    * Indicates the time offset for the time zone of the site from Coordinated Universal Time (UTC).
     *
     * @param string $val The value of the timeZone
     *

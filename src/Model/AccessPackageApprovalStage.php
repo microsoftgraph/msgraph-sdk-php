@@ -26,6 +26,7 @@ class AccessPackageApprovalStage extends Entity
 
     /**
     * Gets the durationBeforeAutomaticDenial
+    * The number of days that a request can be pending a response before it is automatically denied.
     *
     * @return \DateInterval|null The durationBeforeAutomaticDenial
     */
@@ -44,6 +45,7 @@ class AccessPackageApprovalStage extends Entity
 
     /**
     * Sets the durationBeforeAutomaticDenial
+    * The number of days that a request can be pending a response before it is automatically denied.
     *
     * @param \DateInterval $val The value to assign to the durationBeforeAutomaticDenial
     *
@@ -57,6 +59,7 @@ class AccessPackageApprovalStage extends Entity
 
     /**
     * Gets the durationBeforeEscalation
+    * If escalation is required, the time a request can be pending a response from a primary approver.
     *
     * @return \DateInterval|null The durationBeforeEscalation
     */
@@ -75,6 +78,7 @@ class AccessPackageApprovalStage extends Entity
 
     /**
     * Sets the durationBeforeEscalation
+    * If escalation is required, the time a request can be pending a response from a primary approver.
     *
     * @param \DateInterval $val The value to assign to the durationBeforeEscalation
     *
@@ -88,6 +92,7 @@ class AccessPackageApprovalStage extends Entity
 
     /**
     * Gets the escalationApprovers
+    * If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
     *
     * @return SubjectSet|null The escalationApprovers
     */
@@ -106,6 +111,7 @@ class AccessPackageApprovalStage extends Entity
 
     /**
     * Sets the escalationApprovers
+    * If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
     *
     * @param SubjectSet $val The value to assign to the escalationApprovers
     *
@@ -119,6 +125,7 @@ class AccessPackageApprovalStage extends Entity
 
     /**
     * Gets the fallbackEscalationApprovers
+    * The subjects, typically users, who are the fallback escalation approvers.
     *
     * @return SubjectSet|null The fallbackEscalationApprovers
     */
@@ -137,6 +144,7 @@ class AccessPackageApprovalStage extends Entity
 
     /**
     * Sets the fallbackEscalationApprovers
+    * The subjects, typically users, who are the fallback escalation approvers.
     *
     * @param SubjectSet $val The value to assign to the fallbackEscalationApprovers
     *
@@ -150,6 +158,7 @@ class AccessPackageApprovalStage extends Entity
 
     /**
     * Gets the fallbackPrimaryApprovers
+    * The subjects, typically users, who are the fallback primary approvers.
     *
     * @return SubjectSet|null The fallbackPrimaryApprovers
     */
@@ -168,6 +177,7 @@ class AccessPackageApprovalStage extends Entity
 
     /**
     * Sets the fallbackPrimaryApprovers
+    * The subjects, typically users, who are the fallback primary approvers.
     *
     * @param SubjectSet $val The value to assign to the fallbackPrimaryApprovers
     *
@@ -180,6 +190,7 @@ class AccessPackageApprovalStage extends Entity
     }
     /**
     * Gets the isApproverJustificationRequired
+    * Indicates whether the approver is required to provide a justification for approving a request.
     *
     * @return bool|null The isApproverJustificationRequired
     */
@@ -194,6 +205,7 @@ class AccessPackageApprovalStage extends Entity
 
     /**
     * Sets the isApproverJustificationRequired
+    * Indicates whether the approver is required to provide a justification for approving a request.
     *
     * @param bool $val The value of the isApproverJustificationRequired
     *
@@ -206,6 +218,7 @@ class AccessPackageApprovalStage extends Entity
     }
     /**
     * Gets the isEscalationEnabled
+    * If true, then one or more escalationApprovers are configured in this approval stage.
     *
     * @return bool|null The isEscalationEnabled
     */
@@ -220,6 +233,7 @@ class AccessPackageApprovalStage extends Entity
 
     /**
     * Sets the isEscalationEnabled
+    * If true, then one or more escalationApprovers are configured in this approval stage.
     *
     * @param bool $val The value of the isEscalationEnabled
     *
@@ -233,6 +247,7 @@ class AccessPackageApprovalStage extends Entity
 
     /**
     * Gets the primaryApprovers
+    * The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors.
     *
     * @return SubjectSet|null The primaryApprovers
     */
@@ -251,6 +266,7 @@ class AccessPackageApprovalStage extends Entity
 
     /**
     * Sets the primaryApprovers
+    * The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors.
     *
     * @param SubjectSet $val The value to assign to the primaryApprovers
     *

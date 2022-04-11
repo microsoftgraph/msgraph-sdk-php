@@ -54,6 +54,35 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     }
 
     /**
+    * Gets the autoUnlockWithWatchDisabled
+    * Indicates if UnlockWithWatch screen is disabled
+    *
+    * @return bool|null The autoUnlockWithWatchDisabled
+    */
+    public function getAutoUnlockWithWatchDisabled()
+    {
+        if (array_key_exists("autoUnlockWithWatchDisabled", $this->_propDict)) {
+            return $this->_propDict["autoUnlockWithWatchDisabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the autoUnlockWithWatchDisabled
+    * Indicates if UnlockWithWatch screen is disabled
+    *
+    * @param bool $val The autoUnlockWithWatchDisabled
+    *
+    * @return DepMacOSEnrollmentProfile
+    */
+    public function setAutoUnlockWithWatchDisabled($val)
+    {
+        $this->_propDict["autoUnlockWithWatchDisabled"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the chooseYourLockScreenDisabled
     * Indicates if iCloud Documents and Desktop screen is disabled
     *
