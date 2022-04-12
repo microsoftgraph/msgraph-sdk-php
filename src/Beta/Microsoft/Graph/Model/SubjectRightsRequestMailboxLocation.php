@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* IncomingTokenType File
+* SubjectRightsRequestMailboxLocation File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* IncomingTokenType class
+* SubjectRightsRequestMailboxLocation class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IncomingTokenType extends Enum
+class SubjectRightsRequestMailboxLocation extends Entity
 {
-    /**
-    * The Enum IncomingTokenType
-    */
-    const NONE = "none";
-    const PRIMARY_REFRESH_TOKEN = "primaryRefreshToken";
-    const SAML11 = "saml11";
-    const SAML20 = "saml20";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const REMOTE_DESKTOP_TOKEN = "remoteDesktopToken";
 }

@@ -91,6 +91,33 @@ class SubjectRightsRequest extends Entity
     }
 
     /**
+    * Gets the contentQuery
+    *
+    * @return string|null The contentQuery
+    */
+    public function getContentQuery()
+    {
+        if (array_key_exists("contentQuery", $this->_propDict)) {
+            return $this->_propDict["contentQuery"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the contentQuery
+    *
+    * @param string $val The contentQuery
+    *
+    * @return SubjectRightsRequest
+    */
+    public function setContentQuery($val)
+    {
+        $this->_propDict["contentQuery"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the createdBy
     * Identity information for the entity that created the request.
     *
@@ -280,6 +307,33 @@ class SubjectRightsRequest extends Entity
         return $this;
     }
 
+    /**
+    * Gets the externalId
+    *
+    * @return string|null The externalId
+    */
+    public function getExternalId()
+    {
+        if (array_key_exists("externalId", $this->_propDict)) {
+            return $this->_propDict["externalId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the externalId
+    *
+    * @param string $val The externalId
+    *
+    * @return SubjectRightsRequest
+    */
+    public function setExternalId($val)
+    {
+        $this->_propDict["externalId"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the history
@@ -307,6 +361,60 @@ class SubjectRightsRequest extends Entity
     public function setHistory($val)
     {
         $this->_propDict["history"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the includeAllVersions
+    *
+    * @return bool|null The includeAllVersions
+    */
+    public function getIncludeAllVersions()
+    {
+        if (array_key_exists("includeAllVersions", $this->_propDict)) {
+            return $this->_propDict["includeAllVersions"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the includeAllVersions
+    *
+    * @param bool $val The includeAllVersions
+    *
+    * @return SubjectRightsRequest
+    */
+    public function setIncludeAllVersions($val)
+    {
+        $this->_propDict["includeAllVersions"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the includeAuthoredContent
+    *
+    * @return bool|null The includeAuthoredContent
+    */
+    public function getIncludeAuthoredContent()
+    {
+        if (array_key_exists("includeAuthoredContent", $this->_propDict)) {
+            return $this->_propDict["includeAuthoredContent"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the includeAuthoredContent
+    *
+    * @param bool $val The includeAuthoredContent
+    *
+    * @return SubjectRightsRequest
+    */
+    public function setIncludeAuthoredContent($val)
+    {
+        $this->_propDict["includeAuthoredContent"] = boolval($val);
         return $this;
     }
 
@@ -443,6 +551,64 @@ class SubjectRightsRequest extends Entity
     }
 
     /**
+    * Gets the mailboxlocations
+    *
+    * @return SubjectRightsRequestMailboxLocation|null The mailboxlocations
+    */
+    public function getMailboxlocations()
+    {
+        if (array_key_exists("mailboxlocations", $this->_propDict)) {
+            if (is_a($this->_propDict["mailboxlocations"], "\Beta\Microsoft\Graph\Model\SubjectRightsRequestMailboxLocation") || is_null($this->_propDict["mailboxlocations"])) {
+                return $this->_propDict["mailboxlocations"];
+            } else {
+                $this->_propDict["mailboxlocations"] = new SubjectRightsRequestMailboxLocation($this->_propDict["mailboxlocations"]);
+                return $this->_propDict["mailboxlocations"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the mailboxlocations
+    *
+    * @param SubjectRightsRequestMailboxLocation $val The mailboxlocations
+    *
+    * @return SubjectRightsRequest
+    */
+    public function setMailboxlocations($val)
+    {
+        $this->_propDict["mailboxlocations"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the pauseAfterEstimate
+    *
+    * @return bool|null The pauseAfterEstimate
+    */
+    public function getPauseAfterEstimate()
+    {
+        if (array_key_exists("pauseAfterEstimate", $this->_propDict)) {
+            return $this->_propDict["pauseAfterEstimate"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the pauseAfterEstimate
+    *
+    * @param bool $val The pauseAfterEstimate
+    *
+    * @return SubjectRightsRequest
+    */
+    public function setPauseAfterEstimate($val)
+    {
+        $this->_propDict["pauseAfterEstimate"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the regulations
     * List of regulations that this request will fulfill.
     *
@@ -468,6 +634,37 @@ class SubjectRightsRequest extends Entity
     public function setRegulations($val)
     {
         $this->_propDict["regulations"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the sitelocations
+    *
+    * @return SubjectRightsRequestSiteLocation|null The sitelocations
+    */
+    public function getSitelocations()
+    {
+        if (array_key_exists("sitelocations", $this->_propDict)) {
+            if (is_a($this->_propDict["sitelocations"], "\Beta\Microsoft\Graph\Model\SubjectRightsRequestSiteLocation") || is_null($this->_propDict["sitelocations"])) {
+                return $this->_propDict["sitelocations"];
+            } else {
+                $this->_propDict["sitelocations"] = new SubjectRightsRequestSiteLocation($this->_propDict["sitelocations"]);
+                return $this->_propDict["sitelocations"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sitelocations
+    *
+    * @param SubjectRightsRequestSiteLocation $val The sitelocations
+    *
+    * @return SubjectRightsRequest
+    */
+    public function setSitelocations($val)
+    {
+        $this->_propDict["sitelocations"] = $val;
         return $this;
     }
 

@@ -26,6 +26,7 @@ class AvailabilityItem extends Entity
 
     /**
     * Gets the endDateTime
+    * The end time of the time slot.
     *
     * @return DateTimeTimeZone|null The endDateTime
     */
@@ -44,6 +45,7 @@ class AvailabilityItem extends Entity
 
     /**
     * Sets the endDateTime
+    * The end time of the time slot.
     *
     * @param DateTimeTimeZone $val The value to assign to the endDateTime
     *
@@ -56,6 +58,7 @@ class AvailabilityItem extends Entity
     }
     /**
     * Gets the serviceId
+    * Indicates the service ID in case of 1:n appointments. If the appointment is of type 1:n, this field will be present, otherwise, null.
     *
     * @return string|null The serviceId
     */
@@ -70,6 +73,7 @@ class AvailabilityItem extends Entity
 
     /**
     * Sets the serviceId
+    * Indicates the service ID in case of 1:n appointments. If the appointment is of type 1:n, this field will be present, otherwise, null.
     *
     * @param string $val The value of the serviceId
     *
@@ -83,6 +87,7 @@ class AvailabilityItem extends Entity
 
     /**
     * Gets the startDateTime
+    * The start time of the time slot.
     *
     * @return DateTimeTimeZone|null The startDateTime
     */
@@ -101,6 +106,7 @@ class AvailabilityItem extends Entity
 
     /**
     * Sets the startDateTime
+    * The start time of the time slot.
     *
     * @param DateTimeTimeZone $val The value to assign to the startDateTime
     *
@@ -114,6 +120,7 @@ class AvailabilityItem extends Entity
 
     /**
     * Gets the status
+    * The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
     *
     * @return BookingsAvailabilityStatus|null The status
     */
@@ -132,6 +139,7 @@ class AvailabilityItem extends Entity
 
     /**
     * Sets the status
+    * The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
     *
     * @param BookingsAvailabilityStatus $val The value to assign to the status
     *
