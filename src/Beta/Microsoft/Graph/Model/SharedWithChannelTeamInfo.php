@@ -26,6 +26,7 @@ class SharedWithChannelTeamInfo extends TeamInfo
 {
     /**
     * Gets the isHostTeam
+    * Indicates whether the team is the host of the channel.
     *
     * @return bool|null The isHostTeam
     */
@@ -40,6 +41,7 @@ class SharedWithChannelTeamInfo extends TeamInfo
 
     /**
     * Sets the isHostTeam
+    * Indicates whether the team is the host of the channel.
     *
     * @param bool $val The isHostTeam
     *
@@ -54,6 +56,7 @@ class SharedWithChannelTeamInfo extends TeamInfo
 
      /**
      * Gets the allowedMembers
+    * A collection of team members who have access to the shared channel.
      *
      * @return array|null The allowedMembers
      */
@@ -68,6 +71,7 @@ class SharedWithChannelTeamInfo extends TeamInfo
 
     /**
     * Sets the allowedMembers
+    * A collection of team members who have access to the shared channel.
     *
     * @param ConversationMember[] $val The allowedMembers
     *

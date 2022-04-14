@@ -464,6 +464,7 @@ class Team extends Entity
 
     /**
     * Gets the tenantId
+    * The ID of the Azure Active Directory tenant.
     *
     * @return string|null The tenantId
     */
@@ -478,6 +479,7 @@ class Team extends Entity
 
     /**
     * Sets the tenantId
+    * The ID of the Azure Active Directory tenant.
     *
     * @param string $val The tenantId
     *
@@ -554,6 +556,7 @@ class Team extends Entity
 
      /**
      * Gets the allChannels
+    * List of channels either hosted in or shared with the team (incoming channels).
      *
      * @return array|null The allChannels
      */
@@ -568,6 +571,7 @@ class Team extends Entity
 
     /**
     * Sets the allChannels
+    * List of channels either hosted in or shared with the team (incoming channels).
     *
     * @param Channel[] $val The allChannels
     *

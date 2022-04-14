@@ -24,6 +24,32 @@ namespace Beta\Microsoft\Graph\Model;
 class LoginPageTextVisibilitySettings extends Entity
 {
     /**
+    * Gets the hideAccountResetCredentials
+    *
+    * @return bool|null The hideAccountResetCredentials
+    */
+    public function getHideAccountResetCredentials()
+    {
+        if (array_key_exists("hideAccountResetCredentials", $this->_propDict)) {
+            return $this->_propDict["hideAccountResetCredentials"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hideAccountResetCredentials
+    *
+    * @param bool $val The value of the hideAccountResetCredentials
+    *
+    * @return LoginPageTextVisibilitySettings
+    */
+    public function setHideAccountResetCredentials($val)
+    {
+        $this->_propDict["hideAccountResetCredentials"] = $val;
+        return $this;
+    }
+    /**
     * Gets the hideCannotAccessYourAccount
     * Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form.
     *
