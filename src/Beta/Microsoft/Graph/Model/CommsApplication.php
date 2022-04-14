@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * CommsApplication File
 * PHP version 7
 *
@@ -143,7 +143,7 @@ class CommsApplication implements \JsonSerializable
     *
     * @return array The list of properties
     */
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         $serializableProperties = $this->getProperties();
         foreach ($serializableProperties as $property => $val) {
