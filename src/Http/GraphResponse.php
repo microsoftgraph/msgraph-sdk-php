@@ -79,9 +79,13 @@ class GraphResponse
     */
     private function _decodeBody()
     {
+        if (null === $this->_body) {
+            return [];
+        }
+
         $decodedBody = json_decode($this->_body, true);
         if ($decodedBody === null) {
-            $decodedBody = array();
+            $decodedBody = [];
         }
         return $decodedBody;
     }
@@ -164,8 +168,7 @@ class GraphResponse
     public function getNextLink()
     {
         if (array_key_exists("@odata.nextLink", $this->getBody())) {
-            $nextLink = $this->getBody()['@odata.nextLink'];
-            return $nextLink;
+            return $this->getBody()['@odata.nextLink'];
         }
         return null;
     }
@@ -180,8 +183,7 @@ class GraphResponse
     public function getDeltaLink()
     {
         if (array_key_exists("@odata.deltaLink", $this->getBody())) {
-            $deltaLink = $this->getBody()['@odata.deltaLink'];
-            return $deltaLink;
+            return $this->getBody()['@odata.deltaLink'];
         }
         return null;
     }
