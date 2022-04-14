@@ -995,7 +995,7 @@ class EducationUser extends Entity
 
      /**
      * Gets the assignments
-    * Assignments that belongs to the user.
+    * Assignments belonging to the user.
      *
      * @return array|null The assignments
      */
@@ -1010,7 +1010,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the assignments
-    * Assignments that belongs to the user.
+    * Assignments belonging to the user.
     *
     * @param EducationAssignment[] $val The assignments
     *
@@ -1025,6 +1025,7 @@ class EducationUser extends Entity
 
      /**
      * Gets the rubrics
+    * When set, the grading rubric attached to the assignment.
      *
      * @return array|null The rubrics
      */
@@ -1039,6 +1040,7 @@ class EducationUser extends Entity
 
     /**
     * Sets the rubrics
+    * When set, the grading rubric attached to the assignment.
     *
     * @param EducationRubric[] $val The rubrics
     *
