@@ -26,6 +26,7 @@ class TeamInfo extends Entity
 {
     /**
     * Gets the displayName
+    * The name of the team.
     *
     * @return string|null The displayName
     */
@@ -40,6 +41,7 @@ class TeamInfo extends Entity
 
     /**
     * Sets the displayName
+    * The name of the team.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class TeamInfo extends Entity
 
     /**
     * Gets the tenantId
+    * The ID of the Azure Active Directory tenant.
     *
     * @return string|null The tenantId
     */
@@ -67,6 +70,7 @@ class TeamInfo extends Entity
 
     /**
     * Sets the tenantId
+    * The ID of the Azure Active Directory tenant.
     *
     * @param string $val The tenantId
     *

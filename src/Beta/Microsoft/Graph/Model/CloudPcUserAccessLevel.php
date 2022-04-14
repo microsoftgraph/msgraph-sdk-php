@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* IncomingTokenType File
+* CloudPcUserAccessLevel File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* IncomingTokenType class
+* CloudPcUserAccessLevel class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IncomingTokenType extends Enum
+class CloudPcUserAccessLevel extends Enum
 {
     /**
-    * The Enum IncomingTokenType
+    * The Enum CloudPcUserAccessLevel
     */
-    const NONE = "none";
-    const PRIMARY_REFRESH_TOKEN = "primaryRefreshToken";
-    const SAML11 = "saml11";
-    const SAML20 = "saml20";
+    const UNRESTRICTED = "unrestricted";
+    const RESTRICTED = "restricted";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const REMOTE_DESKTOP_TOKEN = "remoteDesktopToken";
 }

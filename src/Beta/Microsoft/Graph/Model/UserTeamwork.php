@@ -27,6 +27,7 @@ class UserTeamwork extends Entity
 
      /**
      * Gets the associatedTeams
+    * The list of associatedTeamInfo objects that a user is associated with.
      *
      * @return array|null The associatedTeams
      */
@@ -41,6 +42,7 @@ class UserTeamwork extends Entity
 
     /**
     * Sets the associatedTeams
+    * The list of associatedTeamInfo objects that a user is associated with.
     *
     * @param AssociatedTeamInfo[] $val The associatedTeams
     *

@@ -90,4 +90,37 @@ class CloudPcOrganizationSettings extends Entity
         return $this;
     }
 
+    /**
+    * Gets the windowsSettings
+    * Represents the Cloud PC organization settings for a tenant. A tenant has only one cloudPcOrganizationSettings object. The default language value en-US.
+    *
+    * @return CloudPcWindowsSettings|null The windowsSettings
+    */
+    public function getWindowsSettings()
+    {
+        if (array_key_exists("windowsSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["windowsSettings"], "\Beta\Microsoft\Graph\Model\CloudPcWindowsSettings") || is_null($this->_propDict["windowsSettings"])) {
+                return $this->_propDict["windowsSettings"];
+            } else {
+                $this->_propDict["windowsSettings"] = new CloudPcWindowsSettings($this->_propDict["windowsSettings"]);
+                return $this->_propDict["windowsSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the windowsSettings
+    * Represents the Cloud PC organization settings for a tenant. A tenant has only one cloudPcOrganizationSettings object. The default language value en-US.
+    *
+    * @param CloudPcWindowsSettings $val The windowsSettings
+    *
+    * @return CloudPcOrganizationSettings
+    */
+    public function setWindowsSettings($val)
+    {
+        $this->_propDict["windowsSettings"] = $val;
+        return $this;
+    }
+
 }
