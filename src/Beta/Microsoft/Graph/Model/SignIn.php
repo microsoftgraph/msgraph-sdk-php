@@ -411,6 +411,37 @@ class SignIn extends Entity
     }
 
     /**
+    * Gets the clientCredentialType
+    *
+    * @return ClientCredentialType|null The clientCredentialType
+    */
+    public function getClientCredentialType()
+    {
+        if (array_key_exists("clientCredentialType", $this->_propDict)) {
+            if (is_a($this->_propDict["clientCredentialType"], "\Beta\Microsoft\Graph\Model\ClientCredentialType") || is_null($this->_propDict["clientCredentialType"])) {
+                return $this->_propDict["clientCredentialType"];
+            } else {
+                $this->_propDict["clientCredentialType"] = new ClientCredentialType($this->_propDict["clientCredentialType"]);
+                return $this->_propDict["clientCredentialType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the clientCredentialType
+    *
+    * @param ClientCredentialType $val The clientCredentialType
+    *
+    * @return SignIn
+    */
+    public function setClientCredentialType($val)
+    {
+        $this->_propDict["clientCredentialType"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the conditionalAccessStatus
     * Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue. Supports $filter (eq operator only).
     *

@@ -241,6 +241,7 @@ class Channel extends Entity
 
     /**
     * Gets the tenantId
+    * The ID of the Azure Active Directory tenant.
     *
     * @return string|null The tenantId
     */
@@ -255,6 +256,7 @@ class Channel extends Entity
 
     /**
     * Sets the tenantId
+    * The ID of the Azure Active Directory tenant.
     *
     * @param string $val The tenantId
     *
@@ -391,6 +393,7 @@ class Channel extends Entity
 
      /**
      * Gets the sharedWithTeams
+    * A collection of teams shared with the channel.
      *
      * @return array|null The sharedWithTeams
      */
@@ -405,6 +408,7 @@ class Channel extends Entity
 
     /**
     * Sets the sharedWithTeams
+    * A collection of teams shared with the channel.
     *
     * @param SharedWithChannelTeamInfo[] $val The sharedWithTeams
     *
