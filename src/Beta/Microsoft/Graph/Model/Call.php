@@ -147,6 +147,7 @@ class Call extends Entity
 
     /**
     * Gets the callOptions
+    * Contains the optional features for the call.
     *
     * @return CallOptions|null The callOptions
     */
@@ -165,6 +166,7 @@ class Call extends Entity
 
     /**
     * Sets the callOptions
+    * Contains the optional features for the call.
     *
     * @param CallOptions $val The callOptions
     *
@@ -846,6 +848,7 @@ class Call extends Entity
 
      /**
      * Gets the contentSharingSessions
+    * Read-only. Nullable.
      *
      * @return array|null The contentSharingSessions
      */
@@ -860,6 +863,7 @@ class Call extends Entity
 
     /**
     * Sets the contentSharingSessions
+    * Read-only. Nullable.
     *
     * @param ContentSharingSession[] $val The contentSharingSessions
     *

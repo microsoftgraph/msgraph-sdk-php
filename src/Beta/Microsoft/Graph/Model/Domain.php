@@ -380,6 +380,7 @@ class Domain extends Entity
 
      /**
      * Gets the federationConfiguration
+    * Domain settings configured by customer when federated with Azure AD.
      *
      * @return array|null The federationConfiguration
      */
@@ -394,6 +395,7 @@ class Domain extends Entity
 
     /**
     * Sets the federationConfiguration
+    * Domain settings configured by customer when federated with Azure AD.
     *
     * @param InternalDomainFederation[] $val The federationConfiguration
     *
