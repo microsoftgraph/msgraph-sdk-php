@@ -1945,6 +1945,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the team
+    * The team associated with this group.
     *
     * @return Team|null The team
     */
@@ -1963,6 +1964,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the team
+    * The team associated with this group.
     *
     * @param Team $val The team
     *
