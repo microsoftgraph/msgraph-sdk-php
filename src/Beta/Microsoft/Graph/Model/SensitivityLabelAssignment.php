@@ -26,6 +26,7 @@ class SensitivityLabelAssignment extends Entity
 
     /**
     * Gets the assignmentMethod
+    * Indicates whether the label assignment is done automatically, as a standard, or a privileged operation. The possible values are: standard, privileged, auto, unknownFutureValue.
     *
     * @return SensitivityLabelAssignmentMethod|null The assignmentMethod
     */
@@ -44,6 +45,7 @@ class SensitivityLabelAssignment extends Entity
 
     /**
     * Sets the assignmentMethod
+    * Indicates whether the label assignment is done automatically, as a standard, or a privileged operation. The possible values are: standard, privileged, auto, unknownFutureValue.
     *
     * @param SensitivityLabelAssignmentMethod $val The value to assign to the assignmentMethod
     *
@@ -56,6 +58,7 @@ class SensitivityLabelAssignment extends Entity
     }
     /**
     * Gets the sensitivityLabelId
+    * The unique identifier for the sensitivity label assigned to the file.
     *
     * @return string|null The sensitivityLabelId
     */
@@ -70,6 +73,7 @@ class SensitivityLabelAssignment extends Entity
 
     /**
     * Sets the sensitivityLabelId
+    * The unique identifier for the sensitivity label assigned to the file.
     *
     * @param string $val The value of the sensitivityLabelId
     *
@@ -82,6 +86,7 @@ class SensitivityLabelAssignment extends Entity
     }
     /**
     * Gets the tenantId
+    * The unique identifier for the tenant that hosts the file when this label is applied.
     *
     * @return string|null The tenantId
     */
@@ -96,6 +101,7 @@ class SensitivityLabelAssignment extends Entity
 
     /**
     * Sets the tenantId
+    * The unique identifier for the tenant that hosts the file when this label is applied.
     *
     * @param string $val The value of the tenantId
     *

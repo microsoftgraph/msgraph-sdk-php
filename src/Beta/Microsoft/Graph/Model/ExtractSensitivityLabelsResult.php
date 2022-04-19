@@ -26,6 +26,7 @@ class ExtractSensitivityLabelsResult extends Entity
 
     /**
     * Gets the labels
+    * List of sensitivity labels assigned to a file.
     *
     * @return SensitivityLabelAssignment|null The labels
     */
@@ -44,6 +45,7 @@ class ExtractSensitivityLabelsResult extends Entity
 
     /**
     * Sets the labels
+    * List of sensitivity labels assigned to a file.
     *
     * @param SensitivityLabelAssignment $val The value to assign to the labels
     *

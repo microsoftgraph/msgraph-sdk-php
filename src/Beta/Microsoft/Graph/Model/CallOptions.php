@@ -51,6 +51,7 @@ class CallOptions extends Entity
     }
     /**
     * Gets the isContentSharingNotificationEnabled
+    * Indicates whether content sharing notifications should be enabled for the call.
     *
     * @return bool|null The isContentSharingNotificationEnabled
     */
@@ -65,6 +66,7 @@ class CallOptions extends Entity
 
     /**
     * Sets the isContentSharingNotificationEnabled
+    * Indicates whether content sharing notifications should be enabled for the call.
     *
     * @param bool $val The value of the isContentSharingNotificationEnabled
     *
