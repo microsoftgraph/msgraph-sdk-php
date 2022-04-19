@@ -25,6 +25,7 @@ class SigningCertificateUpdateStatus extends Entity
 {
     /**
     * Gets the certificateUpdateResult
+    * Status of the last certificate update. Read-only. For a list of statuses, see certificateUpdateResult status.
     *
     * @return string|null The certificateUpdateResult
     */
@@ -39,6 +40,7 @@ class SigningCertificateUpdateStatus extends Entity
 
     /**
     * Sets the certificateUpdateResult
+    * Status of the last certificate update. Read-only. For a list of statuses, see certificateUpdateResult status.
     *
     * @param string $val The value of the certificateUpdateResult
     *
@@ -52,6 +54,7 @@ class SigningCertificateUpdateStatus extends Entity
 
     /**
     * Gets the lastRunDateTime
+    * Date and time in ISO 8601 format and in UTC time when the certificate was last updated. Read-only.
     *
     * @return \DateTime|null The lastRunDateTime
     */
@@ -70,6 +73,7 @@ class SigningCertificateUpdateStatus extends Entity
 
     /**
     * Sets the lastRunDateTime
+    * Date and time in ISO 8601 format and in UTC time when the certificate was last updated. Read-only.
     *
     * @param \DateTime $val The value to assign to the lastRunDateTime
     *
