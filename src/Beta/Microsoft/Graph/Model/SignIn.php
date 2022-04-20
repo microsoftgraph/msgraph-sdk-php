@@ -411,6 +411,39 @@ class SignIn extends Entity
     }
 
     /**
+    * Gets the clientCredentialType
+    * Describes the credential type that a user client or service principal provided to Azure AD to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
+    *
+    * @return ClientCredentialType|null The clientCredentialType
+    */
+    public function getClientCredentialType()
+    {
+        if (array_key_exists("clientCredentialType", $this->_propDict)) {
+            if (is_a($this->_propDict["clientCredentialType"], "\Beta\Microsoft\Graph\Model\ClientCredentialType") || is_null($this->_propDict["clientCredentialType"])) {
+                return $this->_propDict["clientCredentialType"];
+            } else {
+                $this->_propDict["clientCredentialType"] = new ClientCredentialType($this->_propDict["clientCredentialType"]);
+                return $this->_propDict["clientCredentialType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the clientCredentialType
+    * Describes the credential type that a user client or service principal provided to Azure AD to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
+    *
+    * @param ClientCredentialType $val The clientCredentialType
+    *
+    * @return SignIn
+    */
+    public function setClientCredentialType($val)
+    {
+        $this->_propDict["clientCredentialType"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the conditionalAccessStatus
     * Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue. Supports $filter (eq operator only).
     *
@@ -689,7 +722,7 @@ class SignIn extends Entity
 
     /**
     * Gets the incomingTokenType
-    * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed.
+    * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
     *
     * @return IncomingTokenType|null The incomingTokenType
     */
@@ -708,7 +741,7 @@ class SignIn extends Entity
 
     /**
     * Sets the incomingTokenType
-    * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed.
+    * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
     *
     * @param IncomingTokenType $val The incomingTokenType
     *

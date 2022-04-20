@@ -238,6 +238,7 @@ class DirectoryAudit extends Entity
 
     /**
     * Gets the operationType
+    * Indicates the type of operation that was performed. The possible values include but are not limited to the following: Add, Assign, Update, Unassign, and Delete.
     *
     * @return string|null The operationType
     */
@@ -252,6 +253,7 @@ class DirectoryAudit extends Entity
 
     /**
     * Sets the operationType
+    * Indicates the type of operation that was performed. The possible values include but are not limited to the following: Add, Assign, Update, Unassign, and Delete.
     *
     * @param string $val The operationType
     *

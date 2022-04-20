@@ -391,6 +391,7 @@ class EducationClass extends Entity
 
      /**
      * Gets the assignmentCategories
+    * All categories associated with this class. Nullable.
      *
      * @return array|null The assignmentCategories
      */
@@ -405,6 +406,7 @@ class EducationClass extends Entity
 
     /**
     * Sets the assignmentCategories
+    * All categories associated with this class. Nullable.
     *
     * @param EducationCategory[] $val The assignmentCategories
     *
@@ -418,6 +420,7 @@ class EducationClass extends Entity
 
     /**
     * Gets the assignmentDefaults
+    * Specifies class-level defaults respected by new assignments created in the class.
     *
     * @return EducationAssignmentDefaults|null The assignmentDefaults
     */
@@ -436,6 +439,7 @@ class EducationClass extends Entity
 
     /**
     * Sets the assignmentDefaults
+    * Specifies class-level defaults respected by new assignments created in the class.
     *
     * @param EducationAssignmentDefaults $val The assignmentDefaults
     *
@@ -479,6 +483,7 @@ class EducationClass extends Entity
 
     /**
     * Gets the assignmentSettings
+    * Specifies class-level assignments settings.
     *
     * @return EducationAssignmentSettings|null The assignmentSettings
     */
@@ -497,6 +502,7 @@ class EducationClass extends Entity
 
     /**
     * Sets the assignmentSettings
+    * Specifies class-level assignments settings.
     *
     * @param EducationAssignmentSettings $val The assignmentSettings
     *

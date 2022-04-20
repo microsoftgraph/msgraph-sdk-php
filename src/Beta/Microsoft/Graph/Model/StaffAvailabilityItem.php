@@ -26,6 +26,7 @@ class StaffAvailabilityItem extends Entity
 
     /**
     * Gets the availabilityItems
+    * Each item in this collection indicates a slot and the status of the staff member.
     *
     * @return AvailabilityItem|null The availabilityItems
     */
@@ -44,6 +45,7 @@ class StaffAvailabilityItem extends Entity
 
     /**
     * Sets the availabilityItems
+    * Each item in this collection indicates a slot and the status of the staff member.
     *
     * @param AvailabilityItem $val The value to assign to the availabilityItems
     *
@@ -56,6 +58,7 @@ class StaffAvailabilityItem extends Entity
     }
     /**
     * Gets the staffId
+    * The ID of the staff member.
     *
     * @return string|null The staffId
     */
@@ -70,6 +73,7 @@ class StaffAvailabilityItem extends Entity
 
     /**
     * Sets the staffId
+    * The ID of the staff member.
     *
     * @param string $val The value of the staffId
     *

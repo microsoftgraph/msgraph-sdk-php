@@ -275,7 +275,7 @@ class AccessReviewHistoryDefinition extends Entity
 
     /**
     * Gets the scheduleSettings
-    * The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime are not defined.
+    * The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime are not defined. Not supported yet.
     *
     * @return AccessReviewHistoryScheduleSettings|null The scheduleSettings
     */
@@ -294,7 +294,7 @@ class AccessReviewHistoryDefinition extends Entity
 
     /**
     * Sets the scheduleSettings
-    * The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime are not defined.
+    * The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime are not defined. Not supported yet.
     *
     * @param AccessReviewHistoryScheduleSettings $val The scheduleSettings
     *

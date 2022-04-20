@@ -429,4 +429,64 @@ class PolicyRoot extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the roleManagementPolicies
+    * Represents the role management policies.
+     *
+     * @return array|null The roleManagementPolicies
+     */
+    public function getRoleManagementPolicies()
+    {
+        if (array_key_exists("roleManagementPolicies", $this->_propDict)) {
+           return $this->_propDict["roleManagementPolicies"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the roleManagementPolicies
+    * Represents the role management policies.
+    *
+    * @param UnifiedRoleManagementPolicy[] $val The roleManagementPolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setRoleManagementPolicies($val)
+    {
+        $this->_propDict["roleManagementPolicies"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the roleManagementPolicyAssignments
+    * Represents the role management policy assignments.
+     *
+     * @return array|null The roleManagementPolicyAssignments
+     */
+    public function getRoleManagementPolicyAssignments()
+    {
+        if (array_key_exists("roleManagementPolicyAssignments", $this->_propDict)) {
+           return $this->_propDict["roleManagementPolicyAssignments"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the roleManagementPolicyAssignments
+    * Represents the role management policy assignments.
+    *
+    * @param UnifiedRoleManagementPolicyAssignment[] $val The roleManagementPolicyAssignments
+    *
+    * @return PolicyRoot
+    */
+    public function setRoleManagementPolicyAssignments($val)
+    {
+        $this->_propDict["roleManagementPolicyAssignments"] = $val;
+        return $this;
+    }
+
 }

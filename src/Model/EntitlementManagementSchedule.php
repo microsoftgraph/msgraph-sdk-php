@@ -59,7 +59,7 @@ class EntitlementManagementSchedule extends Entity
 
     /**
     * Gets the recurrence
-    * For recurring access. Not used at present.
+    * For recurring access reviews.  Not used in access requests.
     *
     * @return PatternedRecurrence|null The recurrence
     */
@@ -78,7 +78,7 @@ class EntitlementManagementSchedule extends Entity
 
     /**
     * Sets the recurrence
-    * For recurring access. Not used at present.
+    * For recurring access reviews.  Not used in access requests.
     *
     * @param PatternedRecurrence $val The value to assign to the recurrence
     *

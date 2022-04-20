@@ -34,4 +34,5 @@ class IncomingTokenType extends Enum
     const SAML11 = "saml11";
     const SAML20 = "saml20";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const REMOTE_DESKTOP_TOKEN = "remoteDesktopToken";
 }
