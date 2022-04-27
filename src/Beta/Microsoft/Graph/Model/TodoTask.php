@@ -91,6 +91,33 @@ class TodoTask extends Entity
     }
 
     /**
+    * Gets the categories
+    *
+    * @return string|null The categories
+    */
+    public function getCategories()
+    {
+        if (array_key_exists("categories", $this->_propDict)) {
+            return $this->_propDict["categories"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the categories
+    *
+    * @param string $val The categories
+    *
+    * @return TodoTask
+    */
+    public function setCategories($val)
+    {
+        $this->_propDict["categories"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the completedDateTime
     * The date in the specified time zone that the task was finished.
     *
@@ -409,6 +436,34 @@ class TodoTask extends Entity
     public function setTitle($val)
     {
         $this->_propDict["title"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the checklistItems
+     *
+     * @return array|null The checklistItems
+     */
+    public function getChecklistItems()
+    {
+        if (array_key_exists("checklistItems", $this->_propDict)) {
+           return $this->_propDict["checklistItems"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the checklistItems
+    *
+    * @param ChecklistItem[] $val The checklistItems
+    *
+    * @return TodoTask
+    */
+    public function setChecklistItems($val)
+    {
+        $this->_propDict["checklistItems"] = $val;
         return $this;
     }
 

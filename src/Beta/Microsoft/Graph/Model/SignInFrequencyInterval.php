@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* TeamworkUserIdentityType File
+* SignInFrequencyInterval File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* TeamworkUserIdentityType class
+* SignInFrequencyInterval class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,18 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class TeamworkUserIdentityType extends Enum
+class SignInFrequencyInterval extends Enum
 {
     /**
-    * The Enum TeamworkUserIdentityType
+    * The Enum SignInFrequencyInterval
     */
-    const AAD_USER = "aadUser";
-    const ON_PREMISE_AAD_USER = "onPremiseAadUser";
-    const ANONYMOUS_GUEST = "anonymousGuest";
-    const FEDERATED_USER = "federatedUser";
-    const PERSONAL_MICROSOFT_ACCOUNT_USER = "personalMicrosoftAccountUser";
-    const SKYPE_USER = "skypeUser";
-    const PHONE_USER = "phoneUser";
+    const TIME_BASED = "timeBased";
+    const EVERY_TIME = "everyTime";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const EMAIL_USER = "emailUser";
 }

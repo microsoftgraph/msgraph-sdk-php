@@ -26,6 +26,7 @@ class DocumentSetVersion extends ListItemVersion
 {
     /**
     * Gets the comment
+    * Comment about the captured version.
     *
     * @return string|null The comment
     */
@@ -40,6 +41,7 @@ class DocumentSetVersion extends ListItemVersion
 
     /**
     * Sets the comment
+    * Comment about the captured version.
     *
     * @param string $val The comment
     *
@@ -53,6 +55,7 @@ class DocumentSetVersion extends ListItemVersion
 
     /**
     * Gets the createdBy
+    * User who captured the version.
     *
     * @return IdentitySet|null The createdBy
     */
@@ -71,6 +74,7 @@ class DocumentSetVersion extends ListItemVersion
 
     /**
     * Sets the createdBy
+    * User who captured the version.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -84,6 +88,7 @@ class DocumentSetVersion extends ListItemVersion
 
     /**
     * Gets the createdDateTime
+    * Date and time when this version was created.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -102,6 +107,7 @@ class DocumentSetVersion extends ListItemVersion
 
     /**
     * Sets the createdDateTime
+    * Date and time when this version was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -116,6 +122,7 @@ class DocumentSetVersion extends ListItemVersion
 
      /**
      * Gets the items
+    * Items within the document set that are captured as part of this version.
      *
      * @return array|null The items
      */
@@ -130,6 +137,7 @@ class DocumentSetVersion extends ListItemVersion
 
     /**
     * Sets the items
+    * Items within the document set that are captured as part of this version.
     *
     * @param DocumentSetVersionItem[] $val The items
     *
@@ -143,6 +151,7 @@ class DocumentSetVersion extends ListItemVersion
 
     /**
     * Gets the shouldCaptureMinorVersion
+    * If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
     *
     * @return bool|null The shouldCaptureMinorVersion
     */
@@ -157,6 +166,7 @@ class DocumentSetVersion extends ListItemVersion
 
     /**
     * Sets the shouldCaptureMinorVersion
+    * If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
     *
     * @param bool $val The shouldCaptureMinorVersion
     *

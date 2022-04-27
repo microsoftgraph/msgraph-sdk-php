@@ -383,6 +383,33 @@ class Group extends DirectoryObject
     }
 
     /**
+    * Gets the isManagementRestricted
+    *
+    * @return bool|null The isManagementRestricted
+    */
+    public function getIsManagementRestricted()
+    {
+        if (array_key_exists("isManagementRestricted", $this->_propDict)) {
+            return $this->_propDict["isManagementRestricted"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isManagementRestricted
+    *
+    * @param bool $val The isManagementRestricted
+    *
+    * @return Group
+    */
+    public function setIsManagementRestricted($val)
+    {
+        $this->_propDict["isManagementRestricted"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the licenseProcessingState
     * Indicates status of the group license assignment to all members of the group. Default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Returned only on $select. Read-only.
     *
