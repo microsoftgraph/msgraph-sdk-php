@@ -295,6 +295,32 @@ class SearchRequest extends Entity
         $this->_propDict["queryAlterationOptions"] = $val;
          return $this;
     }
+    /**
+    * Gets the region
+    *
+    * @return string|null The region
+    */
+    public function getRegion()
+    {
+        if (array_key_exists("region", $this->_propDict)) {
+            return $this->_propDict["region"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the region
+    *
+    * @param string $val The value of the region
+    *
+    * @return SearchRequest
+    */
+    public function setRegion($val)
+    {
+        $this->_propDict["region"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the resultTemplateOptions

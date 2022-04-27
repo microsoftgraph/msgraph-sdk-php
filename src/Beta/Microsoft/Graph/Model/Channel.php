@@ -393,7 +393,7 @@ class Channel extends Entity
 
      /**
      * Gets the sharedWithTeams
-    * A collection of teams shared with the channel.
+    * A collection of teams with which a channel is shared.
      *
      * @return array|null The sharedWithTeams
      */
@@ -408,7 +408,7 @@ class Channel extends Entity
 
     /**
     * Sets the sharedWithTeams
-    * A collection of teams shared with the channel.
+    * A collection of teams with which a channel is shared.
     *
     * @param SharedWithChannelTeamInfo[] $val The sharedWithTeams
     *

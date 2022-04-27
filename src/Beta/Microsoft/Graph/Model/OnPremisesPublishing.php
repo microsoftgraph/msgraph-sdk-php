@@ -337,6 +337,32 @@ class OnPremisesPublishing extends Entity
         return $this;
     }
     /**
+    * Gets the isStateSessionEnabled
+    *
+    * @return bool|null The isStateSessionEnabled
+    */
+    public function getIsStateSessionEnabled()
+    {
+        if (array_key_exists("isStateSessionEnabled", $this->_propDict)) {
+            return $this->_propDict["isStateSessionEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isStateSessionEnabled
+    *
+    * @param bool $val The value of the isStateSessionEnabled
+    *
+    * @return OnPremisesPublishing
+    */
+    public function setIsStateSessionEnabled($val)
+    {
+        $this->_propDict["isStateSessionEnabled"] = $val;
+        return $this;
+    }
+    /**
     * Gets the isTranslateHostHeaderEnabled
     * Indicates if the application should translate urls in the reponse headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
     *
@@ -391,6 +417,37 @@ class OnPremisesPublishing extends Entity
     {
         $this->_propDict["isTranslateLinksInBodyEnabled"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the onPremisesApplicationSegments
+    *
+    * @return OnPremisesApplicationSegment|null The onPremisesApplicationSegments
+    */
+    public function getOnPremisesApplicationSegments()
+    {
+        if (array_key_exists("onPremisesApplicationSegments", $this->_propDict)) {
+            if (is_a($this->_propDict["onPremisesApplicationSegments"], "\Beta\Microsoft\Graph\Model\OnPremisesApplicationSegment") || is_null($this->_propDict["onPremisesApplicationSegments"])) {
+                return $this->_propDict["onPremisesApplicationSegments"];
+            } else {
+                $this->_propDict["onPremisesApplicationSegments"] = new OnPremisesApplicationSegment($this->_propDict["onPremisesApplicationSegments"]);
+                return $this->_propDict["onPremisesApplicationSegments"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the onPremisesApplicationSegments
+    *
+    * @param OnPremisesApplicationSegment $val The value to assign to the onPremisesApplicationSegments
+    *
+    * @return OnPremisesPublishing The OnPremisesPublishing
+    */
+    public function setOnPremisesApplicationSegments($val)
+    {
+        $this->_propDict["onPremisesApplicationSegments"] = $val;
+         return $this;
     }
 
     /**
