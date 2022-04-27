@@ -187,6 +187,7 @@ class ListItem extends BaseItem
 
      /**
      * Gets the documentSetVersions
+    * Version information for a document set version created by a user.
      *
      * @return array|null The documentSetVersions
      */
@@ -201,6 +202,7 @@ class ListItem extends BaseItem
 
     /**
     * Sets the documentSetVersions
+    * Version information for a document set version created by a user.
     *
     * @param DocumentSetVersion[] $val The documentSetVersions
     *

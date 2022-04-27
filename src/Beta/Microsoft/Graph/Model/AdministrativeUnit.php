@@ -83,6 +83,33 @@ class AdministrativeUnit extends DirectoryObject
     }
 
     /**
+    * Gets the isMemberManagementRestricted
+    *
+    * @return bool|null The isMemberManagementRestricted
+    */
+    public function getIsMemberManagementRestricted()
+    {
+        if (array_key_exists("isMemberManagementRestricted", $this->_propDict)) {
+            return $this->_propDict["isMemberManagementRestricted"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isMemberManagementRestricted
+    *
+    * @param bool $val The isMemberManagementRestricted
+    *
+    * @return AdministrativeUnit
+    */
+    public function setIsMemberManagementRestricted($val)
+    {
+        $this->_propDict["isMemberManagementRestricted"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the visibility
     * Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
     *

@@ -119,7 +119,7 @@ class Site extends BaseItem
 
     /**
     * Gets the settings
-    * The settings on this site. Returned only on $select. Read-only.
+    * The settings on this site. Read-only.
     *
     * @return SiteSettings|null The settings
     */
@@ -138,7 +138,7 @@ class Site extends BaseItem
 
     /**
     * Sets the settings
-    * The settings on this site. Returned only on $select. Read-only.
+    * The settings on this site. Read-only.
     *
     * @param SiteSettings $val The settings
     *

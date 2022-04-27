@@ -25,6 +25,7 @@ class DocumentSetVersionItem extends Entity
 {
     /**
     * Gets the itemId
+    * The unique identifier for the item.
     *
     * @return string|null The itemId
     */
@@ -39,6 +40,7 @@ class DocumentSetVersionItem extends Entity
 
     /**
     * Sets the itemId
+    * The unique identifier for the item.
     *
     * @param string $val The value of the itemId
     *
@@ -51,6 +53,7 @@ class DocumentSetVersionItem extends Entity
     }
     /**
     * Gets the title
+    * The title of the item.
     *
     * @return string|null The title
     */
@@ -65,6 +68,7 @@ class DocumentSetVersionItem extends Entity
 
     /**
     * Sets the title
+    * The title of the item.
     *
     * @param string $val The value of the title
     *
@@ -77,6 +81,7 @@ class DocumentSetVersionItem extends Entity
     }
     /**
     * Gets the versionId
+    * The version ID of the item.
     *
     * @return string|null The versionId
     */
@@ -91,6 +96,7 @@ class DocumentSetVersionItem extends Entity
 
     /**
     * Sets the versionId
+    * The version ID of the item.
     *
     * @param string $val The value of the versionId
     *

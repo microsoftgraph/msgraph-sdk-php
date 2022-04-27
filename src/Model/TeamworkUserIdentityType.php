@@ -37,4 +37,5 @@ class TeamworkUserIdentityType extends Enum
     const SKYPE_USER = "skypeUser";
     const PHONE_USER = "phoneUser";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const EMAIL_USER = "emailUser";
 }
