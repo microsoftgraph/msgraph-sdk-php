@@ -165,6 +165,7 @@ class ChatMessageAttachment extends Entity
     }
     /**
     * Gets the teamsAppId
+    * The ID of the Teams app that is associated with the attachment. The property is specifically used to attribute a Teams message card to the specified app.
     *
     * @return string|null The teamsAppId
     */
@@ -179,6 +180,7 @@ class ChatMessageAttachment extends Entity
 
     /**
     * Sets the teamsAppId
+    * The ID of the Teams app that is associated with the attachment. The property is specifically used to attribute a Teams message card to the specified app.
     *
     * @param string $val The value of the teamsAppId
     *
