@@ -25,6 +25,39 @@ namespace Microsoft\Graph\Model;
 class PlannerPlan extends Entity
 {
     /**
+    * Gets the container
+    * Identifies the container of the plan. After it is set, this property can’t be updated. Required.
+    *
+    * @return PlannerPlanContainer|null The container
+    */
+    public function getContainer()
+    {
+        if (array_key_exists("container", $this->_propDict)) {
+            if (is_a($this->_propDict["container"], "\Microsoft\Graph\Model\PlannerPlanContainer") || is_null($this->_propDict["container"])) {
+                return $this->_propDict["container"];
+            } else {
+                $this->_propDict["container"] = new PlannerPlanContainer($this->_propDict["container"]);
+                return $this->_propDict["container"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the container
+    * Identifies the container of the plan. After it is set, this property can’t be updated. Required.
+    *
+    * @param PlannerPlanContainer $val The container
+    *
+    * @return PlannerPlan
+    */
+    public function setContainer($val)
+    {
+        $this->_propDict["container"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the createdBy
     * Read-only. The user who created the plan.
     *
