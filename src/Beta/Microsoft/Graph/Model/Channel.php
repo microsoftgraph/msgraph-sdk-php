@@ -175,7 +175,7 @@ class Channel extends Entity
 
     /**
     * Gets the membershipType
-    * The type of the channel. Can be set during creation and can't be changed. Possible values are: standard - Channel inherits the list of members of the parent team; private - Channel can have members that are a subset of all the members on the parent team.
+    * The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
     *
     * @return ChannelMembershipType|null The membershipType
     */
@@ -194,7 +194,7 @@ class Channel extends Entity
 
     /**
     * Sets the membershipType
-    * The type of the channel. Can be set during creation and can't be changed. Possible values are: standard - Channel inherits the list of members of the parent team; private - Channel can have members that are a subset of all the members on the parent team.
+    * The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
     *
     * @param ChannelMembershipType $val The membershipType
     *

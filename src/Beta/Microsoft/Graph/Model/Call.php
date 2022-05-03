@@ -210,7 +210,7 @@ class Call extends Entity
 
     /**
     * Gets the chatInfo
-    * The chat information. Required information for joining a meeting.
+    * The chat information. Required information for meeting scenarios.
     *
     * @return ChatInfo|null The chatInfo
     */
@@ -229,7 +229,7 @@ class Call extends Entity
 
     /**
     * Sets the chatInfo
-    * The chat information. Required information for joining a meeting.
+    * The chat information. Required information for meeting scenarios.
     *
     * @param ChatInfo $val The chatInfo
     *
@@ -309,7 +309,7 @@ class Call extends Entity
 
     /**
     * Gets the mediaConfig
-    * The media configuration. Required.
+    * The media configuration. Required information for creating peer to peer calls or joining meetings.
     *
     * @return MediaConfig|null The mediaConfig
     */
@@ -328,7 +328,7 @@ class Call extends Entity
 
     /**
     * Sets the mediaConfig
-    * The media configuration. Required.
+    * The media configuration. Required information for creating peer to peer calls or joining meetings.
     *
     * @param MediaConfig $val The mediaConfig
     *
@@ -408,7 +408,7 @@ class Call extends Entity
 
     /**
     * Gets the meetingInfo
-    * The meeting information that's required for joining a meeting.
+    * The meeting information. Required information for meeting scenarios.
     *
     * @return MeetingInfo|null The meetingInfo
     */
@@ -427,7 +427,7 @@ class Call extends Entity
 
     /**
     * Sets the meetingInfo
-    * The meeting information that's required for joining a meeting.
+    * The meeting information. Required information for meeting scenarios.
     *
     * @param MeetingInfo $val The meetingInfo
     *
