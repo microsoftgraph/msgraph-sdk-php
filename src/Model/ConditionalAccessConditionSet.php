@@ -290,7 +290,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Gets the users
-    * Users, groups, and roles included in and excluded from the policy. Required.
+    * Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
     *
     * @return ConditionalAccessUsers|null The users
     */
@@ -309,7 +309,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Sets the users
-    * Users, groups, and roles included in and excluded from the policy. Required.
+    * Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
     *
     * @param ConditionalAccessUsers $val The value to assign to the users
     *
