@@ -25,6 +25,7 @@ class UnifiedApprovalStage extends Entity
 {
     /**
     * Gets the approvalStageTimeOutInDays
+    * The number of days that a request can be pending a response before it is automatically denied.
     *
     * @return int|null The approvalStageTimeOutInDays
     */
@@ -39,6 +40,7 @@ class UnifiedApprovalStage extends Entity
 
     /**
     * Sets the approvalStageTimeOutInDays
+    * The number of days that a request can be pending a response before it is automatically denied.
     *
     * @param int $val The value of the approvalStageTimeOutInDays
     *
@@ -52,6 +54,7 @@ class UnifiedApprovalStage extends Entity
 
     /**
     * Gets the escalationApprovers
+    * The escalation approvers for this stage when the primary approvers don't respond.
     *
     * @return SubjectSet|null The escalationApprovers
     */
@@ -70,6 +73,7 @@ class UnifiedApprovalStage extends Entity
 
     /**
     * Sets the escalationApprovers
+    * The escalation approvers for this stage when the primary approvers don't respond.
     *
     * @param SubjectSet $val The value to assign to the escalationApprovers
     *
@@ -82,6 +86,7 @@ class UnifiedApprovalStage extends Entity
     }
     /**
     * Gets the escalationTimeInMinutes
+    * The time a request can be pending a response from a primary approver before it can be escalated to the escalation approvers.
     *
     * @return int|null The escalationTimeInMinutes
     */
@@ -96,6 +101,7 @@ class UnifiedApprovalStage extends Entity
 
     /**
     * Sets the escalationTimeInMinutes
+    * The time a request can be pending a response from a primary approver before it can be escalated to the escalation approvers.
     *
     * @param int $val The value of the escalationTimeInMinutes
     *
@@ -108,6 +114,7 @@ class UnifiedApprovalStage extends Entity
     }
     /**
     * Gets the isApproverJustificationRequired
+    * Indicates whether the approver must provide justification for their reponse.
     *
     * @return bool|null The isApproverJustificationRequired
     */
@@ -122,6 +129,7 @@ class UnifiedApprovalStage extends Entity
 
     /**
     * Sets the isApproverJustificationRequired
+    * Indicates whether the approver must provide justification for their reponse.
     *
     * @param bool $val The value of the isApproverJustificationRequired
     *
@@ -134,6 +142,7 @@ class UnifiedApprovalStage extends Entity
     }
     /**
     * Gets the isEscalationEnabled
+    * Indicates whether escalation if enabled.
     *
     * @return bool|null The isEscalationEnabled
     */
@@ -148,6 +157,7 @@ class UnifiedApprovalStage extends Entity
 
     /**
     * Sets the isEscalationEnabled
+    * Indicates whether escalation if enabled.
     *
     * @param bool $val The value of the isEscalationEnabled
     *
@@ -161,6 +171,7 @@ class UnifiedApprovalStage extends Entity
 
     /**
     * Gets the primaryApprovers
+    * The primary approvers of this stage.
     *
     * @return SubjectSet|null The primaryApprovers
     */
@@ -179,6 +190,7 @@ class UnifiedApprovalStage extends Entity
 
     /**
     * Sets the primaryApprovers
+    * The primary approvers of this stage.
     *
     * @param SubjectSet $val The value to assign to the primaryApprovers
     *
