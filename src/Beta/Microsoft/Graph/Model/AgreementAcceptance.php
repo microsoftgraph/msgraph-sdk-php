@@ -26,7 +26,7 @@ class AgreementAcceptance extends Entity
 {
     /**
     * Gets the agreementFileId
-    * The identifier of the agreement file accepted by the user.
+    * ID of the agreement file accepted by the user.
     *
     * @return string|null The agreementFileId
     */
@@ -41,7 +41,7 @@ class AgreementAcceptance extends Entity
 
     /**
     * Sets the agreementFileId
-    * The identifier of the agreement file accepted by the user.
+    * ID of the agreement file accepted by the user.
     *
     * @param string $val The agreementFileId
     *
@@ -55,7 +55,7 @@ class AgreementAcceptance extends Entity
 
     /**
     * Gets the agreementId
-    * The identifier of the agreement.
+    * ID of the agreement.
     *
     * @return string|null The agreementId
     */
@@ -70,7 +70,7 @@ class AgreementAcceptance extends Entity
 
     /**
     * Sets the agreementId
-    * The identifier of the agreement.
+    * ID of the agreement.
     *
     * @param string $val The agreementId
     *
@@ -142,7 +142,7 @@ class AgreementAcceptance extends Entity
 
     /**
     * Gets the deviceOSType
-    * The operating system used to accept the agreement.
+    * The operating system used for accepting the agreement.
     *
     * @return string|null The deviceOSType
     */
@@ -157,7 +157,7 @@ class AgreementAcceptance extends Entity
 
     /**
     * Sets the deviceOSType
-    * The operating system used to accept the agreement.
+    * The operating system used for accepting the agreement.
     *
     * @param string $val The deviceOSType
     *
@@ -171,7 +171,7 @@ class AgreementAcceptance extends Entity
 
     /**
     * Gets the deviceOSVersion
-    * The operating system version of the device used to accept the agreement.
+    * The operating system version of the device used for accepting the agreement.
     *
     * @return string|null The deviceOSVersion
     */
@@ -186,7 +186,7 @@ class AgreementAcceptance extends Entity
 
     /**
     * Sets the deviceOSVersion
-    * The operating system version of the device used to accept the agreement.
+    * The operating system version of the device used for accepting the agreement.
     *
     * @param string $val The deviceOSVersion
     *
@@ -200,7 +200,7 @@ class AgreementAcceptance extends Entity
 
     /**
     * Gets the expirationDateTime
-    * The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime|null The expirationDateTime
     */
@@ -219,7 +219,7 @@ class AgreementAcceptance extends Entity
 
     /**
     * Sets the expirationDateTime
-    * The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -233,7 +233,7 @@ class AgreementAcceptance extends Entity
 
     /**
     * Gets the recordedDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime|null The recordedDateTime
     */
@@ -252,7 +252,7 @@ class AgreementAcceptance extends Entity
 
     /**
     * Sets the recordedDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The recordedDateTime
     *
@@ -266,7 +266,7 @@ class AgreementAcceptance extends Entity
 
     /**
     * Gets the state
-    * The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
+    * Possible values are: accepted, declined. Supports $filter (eq).
     *
     * @return AgreementAcceptanceState|null The state
     */
@@ -285,7 +285,7 @@ class AgreementAcceptance extends Entity
 
     /**
     * Sets the state
-    * The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
+    * Possible values are: accepted, declined. Supports $filter (eq).
     *
     * @param AgreementAcceptanceState $val The state
     *
@@ -357,7 +357,7 @@ class AgreementAcceptance extends Entity
 
     /**
     * Gets the userId
-    * The identifier of the user who accepted the agreement.
+    * ID of the user who accepted the agreement.
     *
     * @return string|null The userId
     */
@@ -372,7 +372,7 @@ class AgreementAcceptance extends Entity
 
     /**
     * Sets the userId
-    * The identifier of the user who accepted the agreement.
+    * ID of the user who accepted the agreement.
     *
     * @param string $val The userId
     *

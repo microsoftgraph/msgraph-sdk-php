@@ -169,7 +169,7 @@ class InvitationParticipantInfo extends Entity
     }
     /**
     * Gets the replacesCallId
-    * Optional. The call which the target identity is currently a part of. This call will be dropped once the participant is added.
+    * Optional. The call which the target idenity is currently a part of. This call will be dropped once the participant is added.
     *
     * @return string|null The replacesCallId
     */
@@ -184,7 +184,7 @@ class InvitationParticipantInfo extends Entity
 
     /**
     * Sets the replacesCallId
-    * Optional. The call which the target identity is currently a part of. This call will be dropped once the participant is added.
+    * Optional. The call which the target idenity is currently a part of. This call will be dropped once the participant is added.
     *
     * @param string $val The value of the replacesCallId
     *
