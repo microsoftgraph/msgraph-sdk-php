@@ -372,7 +372,7 @@ class Site extends BaseItem
 
      /**
      * Gets the items
-    * Used to address any item contained in this site. This collection can't be enumerated.
+    * Used to address any item contained in this site. This collection cannot be enumerated.
      *
      * @return array|null The items
      */
@@ -387,7 +387,7 @@ class Site extends BaseItem
 
     /**
     * Sets the items
-    * Used to address any item contained in this site. This collection can't be enumerated.
+    * Used to address any item contained in this site. This collection cannot be enumerated.
     *
     * @param BaseItem[] $val The items
     *
@@ -426,6 +426,36 @@ class Site extends BaseItem
     public function setLists($val)
     {
         $this->_propDict["lists"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the operations
+    * The collection of long running operations for the site.
+     *
+     * @return array|null The operations
+     */
+    public function getOperations()
+    {
+        if (array_key_exists("operations", $this->_propDict)) {
+           return $this->_propDict["operations"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the operations
+    * The collection of long running operations for the site.
+    *
+    * @param RichLongRunningOperation[] $val The operations
+    *
+    * @return Site
+    */
+    public function setOperations($val)
+    {
+        $this->_propDict["operations"] = $val;
         return $this;
     }
 
@@ -491,7 +521,7 @@ class Site extends BaseItem
 
     /**
     * Gets the termStore
-    * The default termStore under this site.
+    * The termStore under this site.
     *
     * @return \Microsoft\Graph\TermStore\Model\Store|null The termStore
     */
@@ -510,7 +540,7 @@ class Site extends BaseItem
 
     /**
     * Sets the termStore
-    * The default termStore under this site.
+    * The termStore under this site.
     *
     * @param \Microsoft\Graph\TermStore\Model\Store $val The termStore
     *

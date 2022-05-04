@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Operation File
+* LongRunningOperation File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Microsoft\Graph\Model;
 
 /**
-* Operation class
+* LongRunningOperation class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,11 +22,10 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Operation extends Entity
+class LongRunningOperation extends Entity
 {
     /**
     * Gets the createdDateTime
-    * The start time of the operation.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -45,11 +44,10 @@ class Operation extends Entity
 
     /**
     * Sets the createdDateTime
-    * The start time of the operation.
     *
     * @param \DateTime $val The createdDateTime
     *
-    * @return Operation
+    * @return LongRunningOperation
     */
     public function setCreatedDateTime($val)
     {
@@ -59,7 +57,6 @@ class Operation extends Entity
 
     /**
     * Gets the lastActionDateTime
-    * The time of the last action of the operation.
     *
     * @return \DateTime|null The lastActionDateTime
     */
@@ -78,11 +75,10 @@ class Operation extends Entity
 
     /**
     * Sets the lastActionDateTime
-    * The time of the last action of the operation.
     *
     * @param \DateTime $val The lastActionDateTime
     *
-    * @return Operation
+    * @return LongRunningOperation
     */
     public function setLastActionDateTime($val)
     {
@@ -91,18 +87,44 @@ class Operation extends Entity
     }
 
     /**
-    * Gets the status
-    * Possible values are: notStarted, running, completed, failed. Read-only.
+    * Gets the resourceLocation
     *
-    * @return OperationStatus|null The status
+    * @return string|null The resourceLocation
+    */
+    public function getResourceLocation()
+    {
+        if (array_key_exists("resourceLocation", $this->_propDict)) {
+            return $this->_propDict["resourceLocation"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the resourceLocation
+    *
+    * @param string $val The resourceLocation
+    *
+    * @return LongRunningOperation
+    */
+    public function setResourceLocation($val)
+    {
+        $this->_propDict["resourceLocation"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the status
+    *
+    * @return LongRunningOperationStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\OperationStatus") || is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\LongRunningOperationStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
-                $this->_propDict["status"] = new OperationStatus($this->_propDict["status"]);
+                $this->_propDict["status"] = new LongRunningOperationStatus($this->_propDict["status"]);
                 return $this->_propDict["status"];
             }
         }
@@ -111,15 +133,41 @@ class Operation extends Entity
 
     /**
     * Sets the status
-    * Possible values are: notStarted, running, completed, failed. Read-only.
     *
-    * @param OperationStatus $val The status
+    * @param LongRunningOperationStatus $val The status
     *
-    * @return Operation
+    * @return LongRunningOperation
     */
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the statusDetail
+    *
+    * @return string|null The statusDetail
+    */
+    public function getStatusDetail()
+    {
+        if (array_key_exists("statusDetail", $this->_propDict)) {
+            return $this->_propDict["statusDetail"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the statusDetail
+    *
+    * @param string $val The statusDetail
+    *
+    * @return LongRunningOperation
+    */
+    public function setStatusDetail($val)
+    {
+        $this->_propDict["statusDetail"] = $val;
         return $this;
     }
 
