@@ -551,7 +551,7 @@ class PlannerTask extends PlannerDelta
 
     /**
     * Gets the previewType
-    * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
+    * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
     *
     * @return PlannerPreviewType|null The previewType
     */
@@ -570,7 +570,7 @@ class PlannerTask extends PlannerDelta
 
     /**
     * Sets the previewType
-    * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
+    * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
     *
     * @param PlannerPreviewType $val The previewType
     *

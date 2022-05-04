@@ -88,7 +88,7 @@ class AccessReviewReviewer extends Entity
 
     /**
     * Gets the userPrincipalName
-    * User principal name of the reviewer.
+    * User principal name of the user.
     *
     * @return string|null The userPrincipalName
     */
@@ -103,7 +103,7 @@ class AccessReviewReviewer extends Entity
 
     /**
     * Sets the userPrincipalName
-    * User principal name of the reviewer.
+    * User principal name of the user.
     *
     * @param string $val The userPrincipalName
     *

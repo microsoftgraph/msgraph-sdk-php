@@ -26,7 +26,7 @@ class Device extends DirectoryObject
 {
     /**
     * Gets the accountEnabled
-    * true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
+    * true if the account is enabled; otherwise, false. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
     *
     * @return bool|null The accountEnabled
     */
@@ -41,7 +41,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the accountEnabled
-    * true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
+    * true if the account is enabled; otherwise, false. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
     *
     * @param bool $val The accountEnabled
     *
@@ -180,7 +180,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the deviceId
-    * Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
+    * Identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
     *
     * @return string|null The deviceId
     */
@@ -195,7 +195,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the deviceId
-    * Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
+    * Identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
     *
     * @param string $val The deviceId
     *
@@ -737,7 +737,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the operatingSystemVersion
-    * The version of the operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
+    * Operating system version of the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
     *
     * @return string|null The operatingSystemVersion
     */
@@ -752,7 +752,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the operatingSystemVersion
-    * The version of the operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
+    * Operating system version of the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
     *
     * @param string $val The operatingSystemVersion
     *
@@ -886,7 +886,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the trustType
-    * Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
+    * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
     *
     * @return string|null The trustType
     */
@@ -901,7 +901,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the trustType
-    * Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
+    * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
     *
     * @param string $val The trustType
     *
@@ -1120,7 +1120,7 @@ class Device extends DirectoryObject
 
      /**
      * Gets the memberOf
-    * Groups that this device is a member of. Read-only. Nullable. Supports $expand.
+    * Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
      *
      * @return array|null The memberOf
      */
@@ -1135,7 +1135,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the memberOf
-    * Groups that this device is a member of. Read-only. Nullable. Supports $expand.
+    * Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
     *
     * @param DirectoryObject[] $val The memberOf
     *
@@ -1210,7 +1210,7 @@ class Device extends DirectoryObject
 
      /**
      * Gets the transitiveMemberOf
-    * Groups that the device is a member of. This operation is transitive. Supports $expand.
+    * Groups and administrative units that this device is a member of. This operation is transitive. Supports $expand.
      *
      * @return array|null The transitiveMemberOf
      */
@@ -1225,7 +1225,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the transitiveMemberOf
-    * Groups that the device is a member of. This operation is transitive. Supports $expand.
+    * Groups and administrative units that this device is a member of. This operation is transitive. Supports $expand.
     *
     * @param DirectoryObject[] $val The transitiveMemberOf
     *

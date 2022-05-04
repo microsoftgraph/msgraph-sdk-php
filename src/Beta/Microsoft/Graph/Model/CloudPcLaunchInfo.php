@@ -25,6 +25,7 @@ class CloudPcLaunchInfo extends Entity
 {
     /**
     * Gets the cloudPcId
+    * The unique identifier of the Cloud PC.
     *
     * @return string|null The cloudPcId
     */
@@ -39,6 +40,7 @@ class CloudPcLaunchInfo extends Entity
 
     /**
     * Sets the cloudPcId
+    * The unique identifier of the Cloud PC.
     *
     * @param string $val The value of the cloudPcId
     *
@@ -51,6 +53,7 @@ class CloudPcLaunchInfo extends Entity
     }
     /**
     * Gets the cloudPcLaunchUrl
+    * The connect URL of the Cloud PC.
     *
     * @return string|null The cloudPcLaunchUrl
     */
@@ -65,6 +68,7 @@ class CloudPcLaunchInfo extends Entity
 
     /**
     * Sets the cloudPcLaunchUrl
+    * The connect URL of the Cloud PC.
     *
     * @param string $val The value of the cloudPcLaunchUrl
     *
