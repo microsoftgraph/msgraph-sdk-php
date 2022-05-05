@@ -328,7 +328,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
 
     /**
     * Gets the enrollmentState
-    * Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted.
+    * Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
     *
     * @return EnrollmentState|null The enrollmentState
     */
@@ -347,7 +347,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
 
     /**
     * Sets the enrollmentState
-    * Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted.
+    * Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
     *
     * @param EnrollmentState $val The enrollmentState
     *

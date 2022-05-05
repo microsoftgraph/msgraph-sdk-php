@@ -64,7 +64,7 @@ class ConnectedOrganizationMembers extends SubjectSet
     }
     /**
     * Gets the description
-    * The name of the connected organization.
+    * The name of the connected organization. Read only.
     *
     * @return string|null The description
     */
@@ -79,7 +79,7 @@ class ConnectedOrganizationMembers extends SubjectSet
 
     /**
     * Sets the description
-    * The name of the connected organization.
+    * The name of the connected organization. Read only.
     *
     * @param string $val The value of the description
     *

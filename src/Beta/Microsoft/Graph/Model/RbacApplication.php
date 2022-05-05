@@ -171,6 +171,7 @@ class RbacApplication extends Entity
 
      /**
      * Gets the roleAssignmentScheduleInstances
+    * Instances for active role assignments.
      *
      * @return array|null The roleAssignmentScheduleInstances
      */
@@ -185,6 +186,7 @@ class RbacApplication extends Entity
 
     /**
     * Sets the roleAssignmentScheduleInstances
+    * Instances for active role assignments.
     *
     * @param UnifiedRoleAssignmentScheduleInstance[] $val The roleAssignmentScheduleInstances
     *
@@ -199,6 +201,7 @@ class RbacApplication extends Entity
 
      /**
      * Gets the roleAssignmentScheduleRequests
+    * Requests for active role assignments to principals through PIM.
      *
      * @return array|null The roleAssignmentScheduleRequests
      */
@@ -213,6 +216,7 @@ class RbacApplication extends Entity
 
     /**
     * Sets the roleAssignmentScheduleRequests
+    * Requests for active role assignments to principals through PIM.
     *
     * @param UnifiedRoleAssignmentScheduleRequest[] $val The roleAssignmentScheduleRequests
     *
@@ -227,6 +231,7 @@ class RbacApplication extends Entity
 
      /**
      * Gets the roleAssignmentSchedules
+    * Schedules for active role assignment operations.
      *
      * @return array|null The roleAssignmentSchedules
      */
@@ -241,6 +246,7 @@ class RbacApplication extends Entity
 
     /**
     * Sets the roleAssignmentSchedules
+    * Schedules for active role assignment operations.
     *
     * @param UnifiedRoleAssignmentSchedule[] $val The roleAssignmentSchedules
     *
@@ -255,6 +261,7 @@ class RbacApplication extends Entity
 
      /**
      * Gets the roleEligibilityScheduleInstances
+    * Instances for role eligibility requests.
      *
      * @return array|null The roleEligibilityScheduleInstances
      */
@@ -269,6 +276,7 @@ class RbacApplication extends Entity
 
     /**
     * Sets the roleEligibilityScheduleInstances
+    * Instances for role eligibility requests.
     *
     * @param UnifiedRoleEligibilityScheduleInstance[] $val The roleEligibilityScheduleInstances
     *
@@ -283,6 +291,7 @@ class RbacApplication extends Entity
 
      /**
      * Gets the roleEligibilityScheduleRequests
+    * Requests for role eligibilities for principals through PIM.
      *
      * @return array|null The roleEligibilityScheduleRequests
      */
@@ -297,6 +306,7 @@ class RbacApplication extends Entity
 
     /**
     * Sets the roleEligibilityScheduleRequests
+    * Requests for role eligibilities for principals through PIM.
     *
     * @param UnifiedRoleEligibilityScheduleRequest[] $val The roleEligibilityScheduleRequests
     *
@@ -311,6 +321,7 @@ class RbacApplication extends Entity
 
      /**
      * Gets the roleEligibilitySchedules
+    * Schedules for role eligibility operations.
      *
      * @return array|null The roleEligibilitySchedules
      */
@@ -325,6 +336,7 @@ class RbacApplication extends Entity
 
     /**
     * Sets the roleEligibilitySchedules
+    * Schedules for role eligibility operations.
     *
     * @param UnifiedRoleEligibilitySchedule[] $val The roleEligibilitySchedules
     *

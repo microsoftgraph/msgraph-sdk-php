@@ -330,7 +330,7 @@ class BookingService extends BookingNamedEntity
 
     /**
     * Gets the maximumAttendeesCount
-    * The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
+    * The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment.  To create a customer, use the Create bookingCustomer operation.
     *
     * @return int|null The maximumAttendeesCount
     */
@@ -345,7 +345,7 @@ class BookingService extends BookingNamedEntity
 
     /**
     * Sets the maximumAttendeesCount
-    * The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
+    * The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment.  To create a customer, use the Create bookingCustomer operation.
     *
     * @param int $val The maximumAttendeesCount
     *

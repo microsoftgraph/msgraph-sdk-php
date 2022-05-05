@@ -59,7 +59,7 @@ class SearchResponse extends Entity
 
     /**
     * Gets the queryAlterationResponse
-    * Provides information related to spelling corrections in the alteration response.
+    * Provides details of query alteration response for spelling correction.
     *
     * @return AlterationResponse|null The queryAlterationResponse
     */
@@ -78,7 +78,7 @@ class SearchResponse extends Entity
 
     /**
     * Sets the queryAlterationResponse
-    * Provides information related to spelling corrections in the alteration response.
+    * Provides details of query alteration response for spelling correction.
     *
     * @param AlterationResponse $val The value to assign to the queryAlterationResponse
     *

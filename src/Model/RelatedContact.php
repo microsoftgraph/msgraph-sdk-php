@@ -81,7 +81,7 @@ class RelatedContact extends Entity
     }
     /**
     * Gets the emailAddress
-    * Primary email address of the contact. Required.
+    * Email address of the contact.
     *
     * @return string|null The emailAddress
     */
@@ -96,7 +96,7 @@ class RelatedContact extends Entity
 
     /**
     * Sets the emailAddress
-    * Primary email address of the contact. Required.
+    * Email address of the contact.
     *
     * @param string $val The value of the emailAddress
     *
