@@ -320,7 +320,7 @@ class Domain extends Entity
 
     /**
     * Gets the supportedServices
-    * The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline,SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable
+    * The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline,SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable.
     *
     * @return string|null The supportedServices
     */
@@ -335,7 +335,7 @@ class Domain extends Entity
 
     /**
     * Sets the supportedServices
-    * The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline,SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable
+    * The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline,SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable.
     *
     * @param string $val The supportedServices
     *
@@ -350,7 +350,7 @@ class Domain extends Entity
 
      /**
      * Gets the domainNameReferences
-    * Read-only, Nullable
+    * The objects such as users and groups that reference the domain ID. Read-only, Nullable. Supports $expand and $filter by the OData type of objects returned. For example /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
      *
      * @return array|null The domainNameReferences
      */
@@ -365,7 +365,7 @@ class Domain extends Entity
 
     /**
     * Sets the domainNameReferences
-    * Read-only, Nullable
+    * The objects such as users and groups that reference the domain ID. Read-only, Nullable. Supports $expand and $filter by the OData type of objects returned. For example /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
     *
     * @param DirectoryObject[] $val The domainNameReferences
     *
@@ -380,7 +380,7 @@ class Domain extends Entity
 
      /**
      * Gets the federationConfiguration
-    * Domain settings configured by customer when federated with Azure AD.
+    * Domain settings configured by customer when federated with Azure AD. Supports $expand.
      *
      * @return array|null The federationConfiguration
      */
@@ -395,7 +395,7 @@ class Domain extends Entity
 
     /**
     * Sets the federationConfiguration
-    * Domain settings configured by customer when federated with Azure AD.
+    * Domain settings configured by customer when federated with Azure AD. Supports $expand.
     *
     * @param InternalDomainFederation[] $val The federationConfiguration
     *
@@ -410,7 +410,7 @@ class Domain extends Entity
 
      /**
      * Gets the serviceConfigurationRecords
-    * DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable
+    * DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Supports $expand.
      *
      * @return array|null The serviceConfigurationRecords
      */
@@ -425,7 +425,7 @@ class Domain extends Entity
 
     /**
     * Sets the serviceConfigurationRecords
-    * DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable
+    * DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Supports $expand.
     *
     * @param DomainDnsRecord[] $val The serviceConfigurationRecords
     *
@@ -468,7 +468,7 @@ class Domain extends Entity
 
      /**
      * Gets the verificationDnsRecords
-    * DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable
+    * DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable. Supports $expand.
      *
      * @return array|null The verificationDnsRecords
      */
@@ -483,7 +483,7 @@ class Domain extends Entity
 
     /**
     * Sets the verificationDnsRecords
-    * DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable
+    * DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable. Supports $expand.
     *
     * @param DomainDnsRecord[] $val The verificationDnsRecords
     *

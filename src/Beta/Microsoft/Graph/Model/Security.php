@@ -81,6 +81,37 @@ class Security extends Entity
     }
 
     /**
+    * Gets the cases
+    *
+    * @return \Beta\Microsoft\Graph\Security\Model\CasesRoot|null The cases
+    */
+    public function getCases()
+    {
+        if (array_key_exists("cases", $this->_propDict)) {
+            if (is_a($this->_propDict["cases"], "\Beta\Microsoft\Graph\Security\Model\CasesRoot") || is_null($this->_propDict["cases"])) {
+                return $this->_propDict["cases"];
+            } else {
+                $this->_propDict["cases"] = new \Beta\Microsoft\Graph\Security\Model\CasesRoot($this->_propDict["cases"]);
+                return $this->_propDict["cases"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the cases
+    *
+    * @param \Beta\Microsoft\Graph\Security\Model\CasesRoot $val The cases
+    *
+    * @return Security
+    */
+    public function setCases($val)
+    {
+        $this->_propDict["cases"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the informationProtection
     *
     * @return \Beta\Microsoft\Graph\Security\Model\InformationProtection|null The informationProtection

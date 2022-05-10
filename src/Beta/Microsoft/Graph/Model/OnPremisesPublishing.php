@@ -338,6 +338,7 @@ class OnPremisesPublishing extends Entity
     }
     /**
     * Gets the isStateSessionEnabled
+    * Indicates whether validation of the state parameter when the client uses the OAuth 2.0 authorization code grant flow is enabled. This setting allows admins to specify whether they want to enable CSRF protection for their apps.
     *
     * @return bool|null The isStateSessionEnabled
     */
@@ -352,6 +353,7 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the isStateSessionEnabled
+    * Indicates whether validation of the state parameter when the client uses the OAuth 2.0 authorization code grant flow is enabled. This setting allows admins to specify whether they want to enable CSRF protection for their apps.
     *
     * @param bool $val The value of the isStateSessionEnabled
     *
