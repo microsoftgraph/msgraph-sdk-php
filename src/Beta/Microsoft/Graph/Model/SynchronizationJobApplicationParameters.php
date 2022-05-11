@@ -25,7 +25,7 @@ class SynchronizationJobApplicationParameters extends Entity
 {
     /**
     * Gets the ruleId
-    * The identifier of a the synchronizationRule to be applied.
+    * The identifier of the synchronizationRule to be applied. This rule ID is defined in the schema for a given synchronization job or template.
     *
     * @return string|null The ruleId
     */
@@ -40,7 +40,7 @@ class SynchronizationJobApplicationParameters extends Entity
 
     /**
     * Sets the ruleId
-    * The identifier of a the synchronizationRule to be applied.
+    * The identifier of the synchronizationRule to be applied. This rule ID is defined in the schema for a given synchronization job or template.
     *
     * @param string $val The value of the ruleId
     *

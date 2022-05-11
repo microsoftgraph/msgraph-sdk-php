@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Security\Model;
+namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 /**
 * ApplyLabelAction class
 *
@@ -32,7 +32,7 @@ class ApplyLabelAction extends InformationProtectionAction
     public function getActions()
     {
         if (array_key_exists("actions", $this->_propDict)) {
-            if (is_a($this->_propDict["actions"], "\Beta\Microsoft\Graph\Security\Model\InformationProtectionAction") || is_null($this->_propDict["actions"])) {
+            if (is_a($this->_propDict["actions"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\InformationProtectionAction") || is_null($this->_propDict["actions"])) {
                 return $this->_propDict["actions"];
             } else {
                 $this->_propDict["actions"] = new InformationProtectionAction($this->_propDict["actions"]);
@@ -63,7 +63,7 @@ class ApplyLabelAction extends InformationProtectionAction
     public function getActionSource()
     {
         if (array_key_exists("actionSource", $this->_propDict)) {
-            if (is_a($this->_propDict["actionSource"], "\Beta\Microsoft\Graph\Security\Model\ActionSource") || is_null($this->_propDict["actionSource"])) {
+            if (is_a($this->_propDict["actionSource"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\ActionSource") || is_null($this->_propDict["actionSource"])) {
                 return $this->_propDict["actionSource"];
             } else {
                 $this->_propDict["actionSource"] = new ActionSource($this->_propDict["actionSource"]);

@@ -277,6 +277,105 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     }
 
     /**
+    * Gets the appActionIfDevicePasscodeComplexityLessThanHigh
+    * If the device does not have a passcode of high complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
+    *
+    * @return ManagedAppRemediationAction|null The appActionIfDevicePasscodeComplexityLessThanHigh
+    */
+    public function getAppActionIfDevicePasscodeComplexityLessThanHigh()
+    {
+        if (array_key_exists("appActionIfDevicePasscodeComplexityLessThanHigh", $this->_propDict)) {
+            if (is_a($this->_propDict["appActionIfDevicePasscodeComplexityLessThanHigh"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction") || is_null($this->_propDict["appActionIfDevicePasscodeComplexityLessThanHigh"])) {
+                return $this->_propDict["appActionIfDevicePasscodeComplexityLessThanHigh"];
+            } else {
+                $this->_propDict["appActionIfDevicePasscodeComplexityLessThanHigh"] = new ManagedAppRemediationAction($this->_propDict["appActionIfDevicePasscodeComplexityLessThanHigh"]);
+                return $this->_propDict["appActionIfDevicePasscodeComplexityLessThanHigh"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the appActionIfDevicePasscodeComplexityLessThanHigh
+    * If the device does not have a passcode of high complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
+    *
+    * @param ManagedAppRemediationAction $val The appActionIfDevicePasscodeComplexityLessThanHigh
+    *
+    * @return DefaultManagedAppProtection
+    */
+    public function setAppActionIfDevicePasscodeComplexityLessThanHigh($val)
+    {
+        $this->_propDict["appActionIfDevicePasscodeComplexityLessThanHigh"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the appActionIfDevicePasscodeComplexityLessThanLow
+    * If the device does not have a passcode of low complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
+    *
+    * @return ManagedAppRemediationAction|null The appActionIfDevicePasscodeComplexityLessThanLow
+    */
+    public function getAppActionIfDevicePasscodeComplexityLessThanLow()
+    {
+        if (array_key_exists("appActionIfDevicePasscodeComplexityLessThanLow", $this->_propDict)) {
+            if (is_a($this->_propDict["appActionIfDevicePasscodeComplexityLessThanLow"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction") || is_null($this->_propDict["appActionIfDevicePasscodeComplexityLessThanLow"])) {
+                return $this->_propDict["appActionIfDevicePasscodeComplexityLessThanLow"];
+            } else {
+                $this->_propDict["appActionIfDevicePasscodeComplexityLessThanLow"] = new ManagedAppRemediationAction($this->_propDict["appActionIfDevicePasscodeComplexityLessThanLow"]);
+                return $this->_propDict["appActionIfDevicePasscodeComplexityLessThanLow"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the appActionIfDevicePasscodeComplexityLessThanLow
+    * If the device does not have a passcode of low complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
+    *
+    * @param ManagedAppRemediationAction $val The appActionIfDevicePasscodeComplexityLessThanLow
+    *
+    * @return DefaultManagedAppProtection
+    */
+    public function setAppActionIfDevicePasscodeComplexityLessThanLow($val)
+    {
+        $this->_propDict["appActionIfDevicePasscodeComplexityLessThanLow"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the appActionIfDevicePasscodeComplexityLessThanMedium
+    * If the device does not have a passcode of medium complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
+    *
+    * @return ManagedAppRemediationAction|null The appActionIfDevicePasscodeComplexityLessThanMedium
+    */
+    public function getAppActionIfDevicePasscodeComplexityLessThanMedium()
+    {
+        if (array_key_exists("appActionIfDevicePasscodeComplexityLessThanMedium", $this->_propDict)) {
+            if (is_a($this->_propDict["appActionIfDevicePasscodeComplexityLessThanMedium"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction") || is_null($this->_propDict["appActionIfDevicePasscodeComplexityLessThanMedium"])) {
+                return $this->_propDict["appActionIfDevicePasscodeComplexityLessThanMedium"];
+            } else {
+                $this->_propDict["appActionIfDevicePasscodeComplexityLessThanMedium"] = new ManagedAppRemediationAction($this->_propDict["appActionIfDevicePasscodeComplexityLessThanMedium"]);
+                return $this->_propDict["appActionIfDevicePasscodeComplexityLessThanMedium"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the appActionIfDevicePasscodeComplexityLessThanMedium
+    * If the device does not have a passcode of medium complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
+    *
+    * @param ManagedAppRemediationAction $val The appActionIfDevicePasscodeComplexityLessThanMedium
+    *
+    * @return DefaultManagedAppProtection
+    */
+    public function setAppActionIfDevicePasscodeComplexityLessThanMedium($val)
+    {
+        $this->_propDict["appActionIfDevicePasscodeComplexityLessThanMedium"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the appActionIfIosDeviceModelNotAllowed
     * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (iOS Only). Possible values are: block, wipe, warn.
     *

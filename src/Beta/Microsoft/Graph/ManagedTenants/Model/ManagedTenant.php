@@ -530,6 +530,34 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
 
      /**
+     * Gets the myRoles
+     *
+     * @return array|null The myRoles
+     */
+    public function getMyRoles()
+    {
+        if (array_key_exists("myRoles", $this->_propDict)) {
+           return $this->_propDict["myRoles"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the myRoles
+    *
+    * @param MyRole[] $val The myRoles
+    *
+    * @return ManagedTenant
+    */
+    public function setMyRoles($val)
+    {
+        $this->_propDict["myRoles"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the tenantGroups
     * The collection of a logical grouping of managed tenants used by the multi-tenant management platform.
      *

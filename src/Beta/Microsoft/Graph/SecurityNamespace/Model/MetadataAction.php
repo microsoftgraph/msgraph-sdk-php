@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Security\Model;
+namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 /**
 * MetadataAction class
 *
@@ -32,7 +32,7 @@ class MetadataAction extends InformationProtectionAction
     public function getMetadataToAdd()
     {
         if (array_key_exists("metadataToAdd", $this->_propDict)) {
-            if (is_a($this->_propDict["metadataToAdd"], "\Beta\Microsoft\Graph\Security\Model\KeyValuePair") || is_null($this->_propDict["metadataToAdd"])) {
+            if (is_a($this->_propDict["metadataToAdd"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\KeyValuePair") || is_null($this->_propDict["metadataToAdd"])) {
                 return $this->_propDict["metadataToAdd"];
             } else {
                 $this->_propDict["metadataToAdd"] = new KeyValuePair($this->_propDict["metadataToAdd"]);

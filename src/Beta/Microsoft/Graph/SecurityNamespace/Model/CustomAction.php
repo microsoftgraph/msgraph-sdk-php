@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Security\Model;
+namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 /**
 * CustomAction class
 *
@@ -58,7 +58,7 @@ class CustomAction extends InformationProtectionAction
     public function getCustomActionProperties()
     {
         if (array_key_exists("properties", $this->_propDict)) {
-            if (is_a($this->_propDict["properties"], "\Beta\Microsoft\Graph\Security\Model\KeyValuePair") || is_null($this->_propDict["properties"])) {
+            if (is_a($this->_propDict["properties"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\KeyValuePair") || is_null($this->_propDict["properties"])) {
                 return $this->_propDict["properties"];
             } else {
                 $this->_propDict["properties"] = new KeyValuePair($this->_propDict["properties"]);

@@ -333,4 +333,30 @@ class AppliedConditionalAccessPolicy extends Entity
         $this->_propDict["result"] = $val;
          return $this;
     }
+    /**
+    * Gets the sessionControlsNotSatisfied
+    *
+    * @return string|null The sessionControlsNotSatisfied
+    */
+    public function getSessionControlsNotSatisfied()
+    {
+        if (array_key_exists("sessionControlsNotSatisfied", $this->_propDict)) {
+            return $this->_propDict["sessionControlsNotSatisfied"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sessionControlsNotSatisfied
+    *
+    * @param string $val The value of the sessionControlsNotSatisfied
+    *
+    * @return AppliedConditionalAccessPolicy
+    */
+    public function setSessionControlsNotSatisfied($val)
+    {
+        $this->_propDict["sessionControlsNotSatisfied"] = $val;
+        return $this;
+    }
 }

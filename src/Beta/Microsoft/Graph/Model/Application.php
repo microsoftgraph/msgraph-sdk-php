@@ -729,6 +729,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the serviceManagementReference
+    * References application or service contact information from a Service or Asset Management database. Nullable.
     *
     * @return string|null The serviceManagementReference
     */
@@ -743,6 +744,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the serviceManagementReference
+    * References application or service contact information from a Service or Asset Management database. Nullable.
     *
     * @param string $val The serviceManagementReference
     *
