@@ -3252,6 +3252,69 @@ class DeviceManagement extends Entity
         return $this;
     }
 
+    /**
+    * Gets the userExperienceAnalyticsDeviceScope
+    * The user experience analytics device scope entity endpoint to trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
+    *
+    * @return UserExperienceAnalyticsDeviceScope|null The userExperienceAnalyticsDeviceScope
+    */
+    public function getUserExperienceAnalyticsDeviceScope()
+    {
+        if (array_key_exists("userExperienceAnalyticsDeviceScope", $this->_propDict)) {
+            if (is_a($this->_propDict["userExperienceAnalyticsDeviceScope"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsDeviceScope") || is_null($this->_propDict["userExperienceAnalyticsDeviceScope"])) {
+                return $this->_propDict["userExperienceAnalyticsDeviceScope"];
+            } else {
+                $this->_propDict["userExperienceAnalyticsDeviceScope"] = new UserExperienceAnalyticsDeviceScope($this->_propDict["userExperienceAnalyticsDeviceScope"]);
+                return $this->_propDict["userExperienceAnalyticsDeviceScope"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsDeviceScope
+    * The user experience analytics device scope entity endpoint to trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
+    *
+    * @param UserExperienceAnalyticsDeviceScope $val The userExperienceAnalyticsDeviceScope
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsDeviceScope($val)
+    {
+        $this->_propDict["userExperienceAnalyticsDeviceScope"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsDeviceScopes
+    * The user experience analytics device scope entity contains device scope configuration use to apply filtering on the endpoint analytics reports.
+     *
+     * @return array|null The userExperienceAnalyticsDeviceScopes
+     */
+    public function getUserExperienceAnalyticsDeviceScopes()
+    {
+        if (array_key_exists("userExperienceAnalyticsDeviceScopes", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsDeviceScopes"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsDeviceScopes
+    * The user experience analytics device scope entity contains device scope configuration use to apply filtering on the endpoint analytics reports.
+    *
+    * @param UserExperienceAnalyticsDeviceScope[] $val The userExperienceAnalyticsDeviceScopes
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsDeviceScopes($val)
+    {
+        $this->_propDict["userExperienceAnalyticsDeviceScopes"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the userExperienceAnalyticsDeviceScores
@@ -4076,61 +4139,94 @@ class DeviceManagement extends Entity
 
 
      /**
-     * Gets the managementConditions
-    * The management conditions associated with device management of the company.
+     * Gets the zebraFotaArtifacts
+    * The Collection of ZebraFotaArtifacts.
      *
-     * @return array|null The managementConditions
+     * @return array|null The zebraFotaArtifacts
      */
-    public function getManagementConditions()
+    public function getZebraFotaArtifacts()
     {
-        if (array_key_exists("managementConditions", $this->_propDict)) {
-           return $this->_propDict["managementConditions"];
+        if (array_key_exists("zebraFotaArtifacts", $this->_propDict)) {
+           return $this->_propDict["zebraFotaArtifacts"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the managementConditions
-    * The management conditions associated with device management of the company.
+    * Sets the zebraFotaArtifacts
+    * The Collection of ZebraFotaArtifacts.
     *
-    * @param ManagementCondition[] $val The managementConditions
+    * @param ZebraFotaArtifact[] $val The zebraFotaArtifacts
     *
     * @return DeviceManagement
     */
-    public function setManagementConditions($val)
+    public function setZebraFotaArtifacts($val)
     {
-        $this->_propDict["managementConditions"] = $val;
+        $this->_propDict["zebraFotaArtifacts"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the zebraFotaConnector
+    * The singleton ZebraFotaConnector associated with account.
+    *
+    * @return ZebraFotaConnector|null The zebraFotaConnector
+    */
+    public function getZebraFotaConnector()
+    {
+        if (array_key_exists("zebraFotaConnector", $this->_propDict)) {
+            if (is_a($this->_propDict["zebraFotaConnector"], "\Beta\Microsoft\Graph\Model\ZebraFotaConnector") || is_null($this->_propDict["zebraFotaConnector"])) {
+                return $this->_propDict["zebraFotaConnector"];
+            } else {
+                $this->_propDict["zebraFotaConnector"] = new ZebraFotaConnector($this->_propDict["zebraFotaConnector"]);
+                return $this->_propDict["zebraFotaConnector"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the zebraFotaConnector
+    * The singleton ZebraFotaConnector associated with account.
+    *
+    * @param ZebraFotaConnector $val The zebraFotaConnector
+    *
+    * @return DeviceManagement
+    */
+    public function setZebraFotaConnector($val)
+    {
+        $this->_propDict["zebraFotaConnector"] = $val;
         return $this;
     }
 
 
      /**
-     * Gets the managementConditionStatements
-    * The management condition statements associated with device management of the company.
+     * Gets the zebraFotaDeployments
+    * Collection of ZebraFotaDeployments associated with account.
      *
-     * @return array|null The managementConditionStatements
+     * @return array|null The zebraFotaDeployments
      */
-    public function getManagementConditionStatements()
+    public function getZebraFotaDeployments()
     {
-        if (array_key_exists("managementConditionStatements", $this->_propDict)) {
-           return $this->_propDict["managementConditionStatements"];
+        if (array_key_exists("zebraFotaDeployments", $this->_propDict)) {
+           return $this->_propDict["zebraFotaDeployments"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the managementConditionStatements
-    * The management condition statements associated with device management of the company.
+    * Sets the zebraFotaDeployments
+    * Collection of ZebraFotaDeployments associated with account.
     *
-    * @param ManagementConditionStatement[] $val The managementConditionStatements
+    * @param ZebraFotaDeployment[] $val The zebraFotaDeployments
     *
     * @return DeviceManagement
     */
-    public function setManagementConditionStatements($val)
+    public function setZebraFotaDeployments($val)
     {
-        $this->_propDict["managementConditionStatements"] = $val;
+        $this->_propDict["zebraFotaDeployments"] = $val;
         return $this;
     }
 

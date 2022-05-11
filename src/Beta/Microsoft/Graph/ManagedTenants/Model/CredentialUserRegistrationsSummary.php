@@ -116,6 +116,33 @@ class CredentialUserRegistrationsSummary extends \Beta\Microsoft\Graph\Model\Ent
     }
 
     /**
+    * Gets the mfaExcludedUserCount
+    *
+    * @return int|null The mfaExcludedUserCount
+    */
+    public function getMfaExcludedUserCount()
+    {
+        if (array_key_exists("mfaExcludedUserCount", $this->_propDict)) {
+            return $this->_propDict["mfaExcludedUserCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the mfaExcludedUserCount
+    *
+    * @param int $val The mfaExcludedUserCount
+    *
+    * @return CredentialUserRegistrationsSummary
+    */
+    public function setMfaExcludedUserCount($val)
+    {
+        $this->_propDict["mfaExcludedUserCount"] = intval($val);
+        return $this;
+    }
+
+    /**
     * Gets the mfaRegisteredUserCount
     * The number of users registered for multi-factor authentication. Optional. Read-only.
     *

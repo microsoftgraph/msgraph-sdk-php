@@ -81,17 +81,48 @@ class Security extends Entity
     }
 
     /**
+    * Gets the cases
+    *
+    * @return \Beta\Microsoft\Graph\SecurityNamespace\Model\CasesRoot|null The cases
+    */
+    public function getCases()
+    {
+        if (array_key_exists("cases", $this->_propDict)) {
+            if (is_a($this->_propDict["cases"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\CasesRoot") || is_null($this->_propDict["cases"])) {
+                return $this->_propDict["cases"];
+            } else {
+                $this->_propDict["cases"] = new \Beta\Microsoft\Graph\SecurityNamespace\Model\CasesRoot($this->_propDict["cases"]);
+                return $this->_propDict["cases"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the cases
+    *
+    * @param \Beta\Microsoft\Graph\SecurityNamespace\Model\CasesRoot $val The cases
+    *
+    * @return Security
+    */
+    public function setCases($val)
+    {
+        $this->_propDict["cases"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the informationProtection
     *
-    * @return \Beta\Microsoft\Graph\Security\Model\InformationProtection|null The informationProtection
+    * @return \Beta\Microsoft\Graph\SecurityNamespace\Model\InformationProtection|null The informationProtection
     */
     public function getInformationProtection()
     {
         if (array_key_exists("informationProtection", $this->_propDict)) {
-            if (is_a($this->_propDict["informationProtection"], "\Beta\Microsoft\Graph\Security\Model\InformationProtection") || is_null($this->_propDict["informationProtection"])) {
+            if (is_a($this->_propDict["informationProtection"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\InformationProtection") || is_null($this->_propDict["informationProtection"])) {
                 return $this->_propDict["informationProtection"];
             } else {
-                $this->_propDict["informationProtection"] = new \Beta\Microsoft\Graph\Security\Model\InformationProtection($this->_propDict["informationProtection"]);
+                $this->_propDict["informationProtection"] = new \Beta\Microsoft\Graph\SecurityNamespace\Model\InformationProtection($this->_propDict["informationProtection"]);
                 return $this->_propDict["informationProtection"];
             }
         }
@@ -101,7 +132,7 @@ class Security extends Entity
     /**
     * Sets the informationProtection
     *
-    * @param \Beta\Microsoft\Graph\Security\Model\InformationProtection $val The informationProtection
+    * @param \Beta\Microsoft\Graph\SecurityNamespace\Model\InformationProtection $val The informationProtection
     *
     * @return Security
     */

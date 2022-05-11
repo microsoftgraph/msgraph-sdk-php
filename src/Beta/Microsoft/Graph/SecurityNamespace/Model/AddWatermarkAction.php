@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Security\Model;
+namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 /**
 * AddWatermarkAction class
 *
@@ -110,7 +110,7 @@ class AddWatermarkAction extends InformationProtectionAction
     public function getLayout()
     {
         if (array_key_exists("layout", $this->_propDict)) {
-            if (is_a($this->_propDict["layout"], "\Beta\Microsoft\Graph\Security\Model\WatermarkLayout") || is_null($this->_propDict["layout"])) {
+            if (is_a($this->_propDict["layout"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\WatermarkLayout") || is_null($this->_propDict["layout"])) {
                 return $this->_propDict["layout"];
             } else {
                 $this->_propDict["layout"] = new WatermarkLayout($this->_propDict["layout"]);

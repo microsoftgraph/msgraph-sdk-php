@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Security\Model;
+namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 
 /**
 * SensitivityLabel class
@@ -275,7 +275,7 @@ class SensitivityLabel extends \Beta\Microsoft\Graph\Model\Entity
     public function getParent()
     {
         if (array_key_exists("parent", $this->_propDict)) {
-            if (is_a($this->_propDict["parent"], "\Beta\Microsoft\Graph\Security\Model\SensitivityLabel") || is_null($this->_propDict["parent"])) {
+            if (is_a($this->_propDict["parent"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\SensitivityLabel") || is_null($this->_propDict["parent"])) {
                 return $this->_propDict["parent"];
             } else {
                 $this->_propDict["parent"] = new SensitivityLabel($this->_propDict["parent"]);

@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Security\Model;
+namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 /**
 * ContentInfo class
 *
@@ -84,7 +84,7 @@ class ContentInfo extends \Beta\Microsoft\Graph\Model\Entity
     public function getMetadata()
     {
         if (array_key_exists("metadata", $this->_propDict)) {
-            if (is_a($this->_propDict["metadata"], "\Beta\Microsoft\Graph\Security\Model\KeyValuePair") || is_null($this->_propDict["metadata"])) {
+            if (is_a($this->_propDict["metadata"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\KeyValuePair") || is_null($this->_propDict["metadata"])) {
                 return $this->_propDict["metadata"];
             } else {
                 $this->_propDict["metadata"] = new KeyValuePair($this->_propDict["metadata"]);
@@ -115,7 +115,7 @@ class ContentInfo extends \Beta\Microsoft\Graph\Model\Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Security\Model\ContentState") || is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\ContentState") || is_null($this->_propDict["state"])) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ContentState($this->_propDict["state"]);

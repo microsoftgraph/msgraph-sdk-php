@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Security\Model;
+namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 /**
 * ProtectAdhocAction class
 *

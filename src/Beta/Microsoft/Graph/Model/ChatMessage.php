@@ -746,7 +746,7 @@ class ChatMessage extends Entity
 
      /**
      * Gets the replies
-    * Replies for a specified message.
+    * Replies for a specified message. Supports $expand for channel messages.
      *
      * @return array|null The replies
      */
@@ -761,7 +761,7 @@ class ChatMessage extends Entity
 
     /**
     * Sets the replies
-    * Replies for a specified message.
+    * Replies for a specified message. Supports $expand for channel messages.
     *
     * @param ChatMessage[] $val The replies
     *
