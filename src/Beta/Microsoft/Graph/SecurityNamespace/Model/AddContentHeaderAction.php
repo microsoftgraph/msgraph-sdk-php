@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Security\Model;
+namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 /**
 * AddContentHeaderAction class
 *
@@ -32,7 +32,7 @@ class AddContentHeaderAction extends InformationProtectionAction
     public function getAlignment()
     {
         if (array_key_exists("alignment", $this->_propDict)) {
-            if (is_a($this->_propDict["alignment"], "\Beta\Microsoft\Graph\Security\Model\ContentAlignment") || is_null($this->_propDict["alignment"])) {
+            if (is_a($this->_propDict["alignment"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\ContentAlignment") || is_null($this->_propDict["alignment"])) {
                 return $this->_propDict["alignment"];
             } else {
                 $this->_propDict["alignment"] = new ContentAlignment($this->_propDict["alignment"]);

@@ -502,6 +502,39 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
 
     /**
+    * Gets the detailedHelpText
+    * Represents the customized detailed help text provided to users when they attempt to modify managed settings on their device.
+    *
+    * @return AndroidDeviceOwnerUserFacingMessage|null The detailedHelpText
+    */
+    public function getDetailedHelpText()
+    {
+        if (array_key_exists("detailedHelpText", $this->_propDict)) {
+            if (is_a($this->_propDict["detailedHelpText"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerUserFacingMessage") || is_null($this->_propDict["detailedHelpText"])) {
+                return $this->_propDict["detailedHelpText"];
+            } else {
+                $this->_propDict["detailedHelpText"] = new AndroidDeviceOwnerUserFacingMessage($this->_propDict["detailedHelpText"]);
+                return $this->_propDict["detailedHelpText"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the detailedHelpText
+    * Represents the customized detailed help text provided to users when they attempt to modify managed settings on their device.
+    *
+    * @param AndroidDeviceOwnerUserFacingMessage $val The detailedHelpText
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setDetailedHelpText($val)
+    {
+        $this->_propDict["detailedHelpText"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the enrollmentProfile
     * Indicates which enrollment profile you want to configure. Possible values are: notConfigured, dedicatedDevice, fullyManaged.
     *
@@ -2704,6 +2737,39 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
 
     /**
+    * Gets the passwordRequireUnlock
+    * Indicates the timeout period after which a device must be unlocked using a form of strong authentication. Possible values are: deviceDefault, daily, unkownFutureValue.
+    *
+    * @return AndroidDeviceOwnerRequiredPasswordUnlock|null The passwordRequireUnlock
+    */
+    public function getPasswordRequireUnlock()
+    {
+        if (array_key_exists("passwordRequireUnlock", $this->_propDict)) {
+            if (is_a($this->_propDict["passwordRequireUnlock"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerRequiredPasswordUnlock") || is_null($this->_propDict["passwordRequireUnlock"])) {
+                return $this->_propDict["passwordRequireUnlock"];
+            } else {
+                $this->_propDict["passwordRequireUnlock"] = new AndroidDeviceOwnerRequiredPasswordUnlock($this->_propDict["passwordRequireUnlock"]);
+                return $this->_propDict["passwordRequireUnlock"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the passwordRequireUnlock
+    * Indicates the timeout period after which a device must be unlocked using a form of strong authentication. Possible values are: deviceDefault, daily, unkownFutureValue.
+    *
+    * @param AndroidDeviceOwnerRequiredPasswordUnlock $val The passwordRequireUnlock
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setPasswordRequireUnlock($val)
+    {
+        $this->_propDict["passwordRequireUnlock"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the passwordSignInFailureCountBeforeFactoryReset
     * Indicates the number of times a user can enter an incorrect password before the device is wiped. Valid values 4 to 11
     *
@@ -2999,6 +3065,39 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function setSecurityRequireVerifyApps($val)
     {
         $this->_propDict["securityRequireVerifyApps"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the shortHelpText
+    * Represents the customized short help text provided to users when they attempt to modify managed settings on their device.
+    *
+    * @return AndroidDeviceOwnerUserFacingMessage|null The shortHelpText
+    */
+    public function getShortHelpText()
+    {
+        if (array_key_exists("shortHelpText", $this->_propDict)) {
+            if (is_a($this->_propDict["shortHelpText"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerUserFacingMessage") || is_null($this->_propDict["shortHelpText"])) {
+                return $this->_propDict["shortHelpText"];
+            } else {
+                $this->_propDict["shortHelpText"] = new AndroidDeviceOwnerUserFacingMessage($this->_propDict["shortHelpText"]);
+                return $this->_propDict["shortHelpText"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the shortHelpText
+    * Represents the customized short help text provided to users when they attempt to modify managed settings on their device.
+    *
+    * @param AndroidDeviceOwnerUserFacingMessage $val The shortHelpText
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setShortHelpText($val)
+    {
+        $this->_propDict["shortHelpText"] = $val;
         return $this;
     }
 
