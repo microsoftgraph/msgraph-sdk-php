@@ -84,6 +84,7 @@ class InvitationParticipantInfo extends Entity
     }
     /**
     * Gets the participantId
+    * Optional. The ID of the target participant.
     *
     * @return string|null The participantId
     */
@@ -98,6 +99,7 @@ class InvitationParticipantInfo extends Entity
 
     /**
     * Sets the participantId
+    * Optional. The ID of the target participant.
     *
     * @param string $val The value of the participantId
     *
@@ -136,7 +138,7 @@ class InvitationParticipantInfo extends Entity
     }
     /**
     * Gets the replacesCallId
-    * Optional. The call which the target idenity is currently a part of. This call will be dropped once the participant is added.
+    * Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully.
     *
     * @return string|null The replacesCallId
     */
@@ -151,7 +153,7 @@ class InvitationParticipantInfo extends Entity
 
     /**
     * Sets the replacesCallId
-    * Optional. The call which the target idenity is currently a part of. This call will be dropped once the participant is added.
+    * Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully.
     *
     * @param string $val The value of the replacesCallId
     *
