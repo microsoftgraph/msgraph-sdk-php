@@ -125,7 +125,6 @@ class PlannerPlan extends Entity
 
     /**
     * Gets the owner
-    * ID of the Group that owns the plan. A valid group must exist before this field can be set. After it is set, this property can’t be updated.
     *
     * @return string|null The owner
     */
@@ -140,7 +139,6 @@ class PlannerPlan extends Entity
 
     /**
     * Sets the owner
-    * ID of the Group that owns the plan. A valid group must exist before this field can be set. After it is set, this property can’t be updated.
     *
     * @param string $val The owner
     *
