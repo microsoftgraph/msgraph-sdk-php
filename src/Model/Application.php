@@ -1002,7 +1002,7 @@ class Application extends DirectoryObject
 
      /**
      * Gets the extensionProperties
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      *
      * @return array|null The extensionProperties
      */
@@ -1017,7 +1017,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the extensionProperties
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
     *
     * @param ExtensionProperty[] $val The extensionProperties
     *
