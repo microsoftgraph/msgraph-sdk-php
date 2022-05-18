@@ -1103,7 +1103,7 @@ class Application extends DirectoryObject
 
      /**
      * Gets the extensionProperties
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      *
      * @return array|null The extensionProperties
      */
@@ -1118,7 +1118,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the extensionProperties
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
     *
     * @param ExtensionProperty[] $val The extensionProperties
     *
@@ -1133,7 +1133,7 @@ class Application extends DirectoryObject
 
      /**
      * Gets the federatedIdentityCredentials
-    * Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).
+    * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
      *
      * @return array|null The federatedIdentityCredentials
      */
@@ -1148,7 +1148,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the federatedIdentityCredentials
-    * Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).
+    * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
     *
     * @param FederatedIdentityCredential[] $val The federatedIdentityCredentials
     *
