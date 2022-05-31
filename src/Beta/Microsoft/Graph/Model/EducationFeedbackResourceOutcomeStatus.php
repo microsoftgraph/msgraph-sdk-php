@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* DelegatedAdminRelationshipOperationStatus File
+* EducationFeedbackResourceOutcomeStatus File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* DelegatedAdminRelationshipOperationStatus class
+* EducationFeedbackResourceOutcomeStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,14 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class DelegatedAdminRelationshipOperationStatus extends Enum
+class EducationFeedbackResourceOutcomeStatus extends Enum
 {
     /**
-    * The Enum DelegatedAdminRelationshipOperationStatus
+    * The Enum EducationFeedbackResourceOutcomeStatus
     */
-    const NOT_STARTED = "notStarted";
-    const RUNNING = "running";
-    const COMPLETE = "complete";
-    const FAILED = "failed";
+    const NOT_PUBLISHED = "notPublished";
+    const PENDING_PUBLISH = "pendingPublish";
+    const PUBLISHED = "published";
+    const FAILED_PUBLISH = "failedPublish";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

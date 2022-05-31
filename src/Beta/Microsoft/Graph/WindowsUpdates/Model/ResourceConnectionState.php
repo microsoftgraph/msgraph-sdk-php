@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* DelegatedAdminRelationshipRequestStatus File
+* ResourceConnectionState File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\WindowsUpdates\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* DelegatedAdminRelationshipRequestStatus class
+* ResourceConnectionState class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class DelegatedAdminRelationshipRequestStatus extends Enum
+class ResourceConnectionState extends Enum
 {
     /**
-    * The Enum DelegatedAdminRelationshipRequestStatus
+    * The Enum ResourceConnectionState
     */
-    const CREATED = "created";
-    const PENDING = "pending";
-    const SUCCEEDED = "succeeded";
-    const FAILED = "failed";
+    const CONNECTED = "connected";
+    const NOT_AUTHORIZED = "notAuthorized";
+    const NOT_FOUND = "notFound";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
