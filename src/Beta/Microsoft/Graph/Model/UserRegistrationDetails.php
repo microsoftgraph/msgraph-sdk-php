@@ -26,6 +26,7 @@ class UserRegistrationDetails extends Entity
 {
     /**
     * Gets the defaultMfaMethod
+    * The method the user or admin selected as default for performing multi-factor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue.
     *
     * @return DefaultMfaMethodType|null The defaultMfaMethod
     */
@@ -44,6 +45,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the defaultMfaMethod
+    * The method the user or admin selected as default for performing multi-factor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue.
     *
     * @param DefaultMfaMethodType $val The defaultMfaMethod
     *

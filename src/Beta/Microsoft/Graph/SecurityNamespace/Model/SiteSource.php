@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SiteSource extends \Beta\Microsoft\Graph\Ediscovery\Model\DataSource
+class SiteSource extends DataSource
 {
     /**
     * Gets the site
