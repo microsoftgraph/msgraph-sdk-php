@@ -438,6 +438,33 @@ class EducationAssignment extends Entity
     }
 
     /**
+    * Gets the feedbackResourcesFolderUrl
+    *
+    * @return string|null The feedbackResourcesFolderUrl
+    */
+    public function getFeedbackResourcesFolderUrl()
+    {
+        if (array_key_exists("feedbackResourcesFolderUrl", $this->_propDict)) {
+            return $this->_propDict["feedbackResourcesFolderUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the feedbackResourcesFolderUrl
+    *
+    * @param string $val The feedbackResourcesFolderUrl
+    *
+    * @return EducationAssignment
+    */
+    public function setFeedbackResourcesFolderUrl($val)
+    {
+        $this->_propDict["feedbackResourcesFolderUrl"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the grading
     * How the assignment will be graded.
     *
