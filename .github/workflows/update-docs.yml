@@ -5,7 +5,8 @@ name: "Update Docs"
 
 on:
   push:
-    branches: dev
+    branches:
+      - dev
 
 defaults:
   run:
