@@ -68,8 +68,7 @@
 		"microsoft/kiota-http-guzzle": "@dev",
 		"microsoft/kiota-serialization-json": "@dev",
 		"microsoft/kiota-serialization-text": "@dev",
-		"microsoft/kiota-abstractions": "@dev",
-		"psr/http-message": "^1.0"
+		"microsoft/kiota-abstractions": "@dev"
     },
 	"require-dev": {
 		"phpunit/phpunit": "^8.0 || ^9.0",
@@ -83,8 +82,7 @@
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Microsoft\\Graph\\Test\\": "tests/Functional/",
-			"Microsoft\\Graph\\Http\\Test\\": "tests/Http/"
+			"Microsoft\\Graph\\Test\\": "tests/"
 		}
 	}
 }
