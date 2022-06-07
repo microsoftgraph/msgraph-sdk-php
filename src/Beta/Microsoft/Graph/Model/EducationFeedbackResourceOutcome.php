@@ -26,6 +26,7 @@ class EducationFeedbackResourceOutcome extends EducationOutcome
 {
     /**
     * Gets the feedbackResource
+    * The actual feedback resource.
     *
     * @return EducationResource|null The feedbackResource
     */
@@ -44,6 +45,7 @@ class EducationFeedbackResourceOutcome extends EducationOutcome
 
     /**
     * Sets the feedbackResource
+    * The actual feedback resource.
     *
     * @param EducationResource $val The feedbackResource
     *
@@ -57,6 +59,7 @@ class EducationFeedbackResourceOutcome extends EducationOutcome
 
     /**
     * Gets the resourceStatus
+    * The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, and unknownFutureValue.
     *
     * @return EducationFeedbackResourceOutcomeStatus|null The resourceStatus
     */
@@ -75,6 +78,7 @@ class EducationFeedbackResourceOutcome extends EducationOutcome
 
     /**
     * Sets the resourceStatus
+    * The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, and unknownFutureValue.
     *
     * @param EducationFeedbackResourceOutcomeStatus $val The resourceStatus
     *
