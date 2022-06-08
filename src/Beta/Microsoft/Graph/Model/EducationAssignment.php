@@ -439,6 +439,7 @@ class EducationAssignment extends Entity
 
     /**
     * Gets the feedbackResourcesFolderUrl
+    * Folder URL where all the feedback file resources for this assignment are stored.
     *
     * @return string|null The feedbackResourcesFolderUrl
     */
@@ -453,6 +454,7 @@ class EducationAssignment extends Entity
 
     /**
     * Sets the feedbackResourcesFolderUrl
+    * Folder URL where all the feedback file resources for this assignment are stored.
     *
     * @param string $val The feedbackResourcesFolderUrl
     *
