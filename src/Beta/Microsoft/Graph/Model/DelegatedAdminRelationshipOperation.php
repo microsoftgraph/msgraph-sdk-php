@@ -154,7 +154,7 @@ class DelegatedAdminRelationshipOperation extends Entity
 
     /**
     * Gets the status
-    * The status of the operation. Read-only. The possible values are: notStarted, running, complete, failed, unknownFutureValue. Read-only. Supports $orderBy.
+    * The status of the operation. Read-only. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only. Supports $orderBy.
     *
     * @return LongRunningOperationStatus|null The status
     */
@@ -173,7 +173,7 @@ class DelegatedAdminRelationshipOperation extends Entity
 
     /**
     * Sets the status
-    * The status of the operation. Read-only. The possible values are: notStarted, running, complete, failed, unknownFutureValue. Read-only. Supports $orderBy.
+    * The status of the operation. Read-only. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only. Supports $orderBy.
     *
     * @param LongRunningOperationStatus $val The status
     *

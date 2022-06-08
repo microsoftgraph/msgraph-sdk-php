@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* DeviceManagementReportSchedule File
+* AccessReviewStageFilterByCurrentUserOptions File
 * PHP version 7
 *
 * @category  Library
@@ -11,10 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Microsoft\Graph\Model;
+
+use Microsoft\Graph\Core\Enum;
 
 /**
-* DeviceManagementReportSchedule class
+* AccessReviewStageFilterByCurrentUserOptions class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +24,11 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class DeviceManagementReportSchedule extends Entity
+class AccessReviewStageFilterByCurrentUserOptions extends Enum
 {
+    /**
+    * The Enum AccessReviewStageFilterByCurrentUserOptions
+    */
+    const REVIEWER = "reviewer";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
