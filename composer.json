@@ -63,7 +63,7 @@
 	],
 	"require": {
 		"php": "^8.0 || ^7.4",
-		"microsoft/microsoft-graph-core": "dev-feat/kiota-integration",
+		"microsoft/microsoft-graph-core": "@dev",
 		"microsoft/kiota-authentication-phpleague": "@dev",
 		"microsoft/kiota-http-guzzle": "@dev",
 		"microsoft/kiota-serialization-json": "@dev",

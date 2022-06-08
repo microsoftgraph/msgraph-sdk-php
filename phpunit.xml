@@ -8,7 +8,7 @@
 	<filter>
 		<whitelist addUncoveredFilesFromWhitelist="true">
 			<directory suffix=".php">src</directory>
-			<exclude><directory suffix=".php">src/Model</directory></exclude>
+			<exclude><directory suffix=".php">src/Generated</directory></exclude>
 		</whitelist>
 	</filter>
 </phpunit>
