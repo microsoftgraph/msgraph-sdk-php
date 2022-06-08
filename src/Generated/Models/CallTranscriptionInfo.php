@@ -10,13 +10,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class CallTranscriptionInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var DateTime|null $lastModifiedDateTime The state modified time in UTC. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime The state modified time in UTC.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var CallTranscriptionState|null $state Possible values are: notStarted, active, inactive. */
+    /**
+     * @var CallTranscriptionState|null $state Possible values are: notStarted, active, inactive.
+    */
     private ?CallTranscriptionState $state = null;
     
     /**
@@ -31,7 +37,7 @@ class CallTranscriptionInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return CallTranscriptionInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): CallTranscriptionInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): CallTranscriptionInfo {
         return new CallTranscriptionInfo();
     }
 
@@ -48,9 +54,10 @@ class CallTranscriptionInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getEnumValue(CallTranscriptionState::class)); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(CallTranscriptionState::class)); },
         ];
     }
 

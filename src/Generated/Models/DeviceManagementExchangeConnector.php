@@ -7,33 +7,51 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DeviceManagementExchangeConnector extends Entity 
+class DeviceManagementExchangeConnector extends Entity implements Parsable 
 {
-    /** @var string|null $connectorServerName The name of the server hosting the Exchange Connector. */
+    /**
+     * @var string|null $connectorServerName The name of the server hosting the Exchange Connector.
+    */
     private ?string $connectorServerName = null;
     
-    /** @var string|null $exchangeAlias An alias assigned to the Exchange server */
+    /**
+     * @var string|null $exchangeAlias An alias assigned to the Exchange server
+    */
     private ?string $exchangeAlias = null;
     
-    /** @var DeviceManagementExchangeConnectorType|null $exchangeConnectorType The type of Exchange Connector Configured. Possible values are: onPremises, hosted, serviceToService, dedicated. */
+    /**
+     * @var DeviceManagementExchangeConnectorType|null $exchangeConnectorType The type of Exchange Connector Configured. Possible values are: onPremises, hosted, serviceToService, dedicated.
+    */
     private ?DeviceManagementExchangeConnectorType $exchangeConnectorType = null;
     
-    /** @var string|null $exchangeOrganization Exchange Organization to the Exchange server */
+    /**
+     * @var string|null $exchangeOrganization Exchange Organization to the Exchange server
+    */
     private ?string $exchangeOrganization = null;
     
-    /** @var DateTime|null $lastSyncDateTime Last sync time for the Exchange Connector */
+    /**
+     * @var DateTime|null $lastSyncDateTime Last sync time for the Exchange Connector
+    */
     private ?DateTime $lastSyncDateTime = null;
     
-    /** @var string|null $primarySmtpAddress Email address used to configure the Service To Service Exchange Connector. */
+    /**
+     * @var string|null $primarySmtpAddress Email address used to configure the Service To Service Exchange Connector.
+    */
     private ?string $primarySmtpAddress = null;
     
-    /** @var string|null $serverName The name of the Exchange server. */
+    /**
+     * @var string|null $serverName The name of the Exchange server.
+    */
     private ?string $serverName = null;
     
-    /** @var DeviceManagementExchangeConnectorStatus|null $status Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected. */
+    /**
+     * @var DeviceManagementExchangeConnectorStatus|null $status Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected.
+    */
     private ?DeviceManagementExchangeConnectorStatus $status = null;
     
-    /** @var string|null $version The version of the ExchangeConnectorAgent */
+    /**
+     * @var string|null $version The version of the ExchangeConnectorAgent
+    */
     private ?string $version = null;
     
     /**
@@ -48,7 +66,7 @@ class DeviceManagementExchangeConnector extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceManagementExchangeConnector
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceManagementExchangeConnector {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceManagementExchangeConnector {
         return new DeviceManagementExchangeConnector();
     }
 
@@ -89,16 +107,17 @@ class DeviceManagementExchangeConnector extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'connectorServerName' => function (self $o, ParseNode $n) { $o->setConnectorServerName($n->getStringValue()); },
-            'exchangeAlias' => function (self $o, ParseNode $n) { $o->setExchangeAlias($n->getStringValue()); },
-            'exchangeConnectorType' => function (self $o, ParseNode $n) { $o->setExchangeConnectorType($n->getEnumValue(DeviceManagementExchangeConnectorType::class)); },
-            'exchangeOrganization' => function (self $o, ParseNode $n) { $o->setExchangeOrganization($n->getStringValue()); },
-            'lastSyncDateTime' => function (self $o, ParseNode $n) { $o->setLastSyncDateTime($n->getDateTimeValue()); },
-            'primarySmtpAddress' => function (self $o, ParseNode $n) { $o->setPrimarySmtpAddress($n->getStringValue()); },
-            'serverName' => function (self $o, ParseNode $n) { $o->setServerName($n->getStringValue()); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(DeviceManagementExchangeConnectorStatus::class)); },
-            'version' => function (self $o, ParseNode $n) { $o->setVersion($n->getStringValue()); },
+            'connectorServerName' => function (ParseNode $n) use ($o) { $o->setConnectorServerName($n->getStringValue()); },
+            'exchangeAlias' => function (ParseNode $n) use ($o) { $o->setExchangeAlias($n->getStringValue()); },
+            'exchangeConnectorType' => function (ParseNode $n) use ($o) { $o->setExchangeConnectorType($n->getEnumValue(DeviceManagementExchangeConnectorType::class)); },
+            'exchangeOrganization' => function (ParseNode $n) use ($o) { $o->setExchangeOrganization($n->getStringValue()); },
+            'lastSyncDateTime' => function (ParseNode $n) use ($o) { $o->setLastSyncDateTime($n->getDateTimeValue()); },
+            'primarySmtpAddress' => function (ParseNode $n) use ($o) { $o->setPrimarySmtpAddress($n->getStringValue()); },
+            'serverName' => function (ParseNode $n) use ($o) { $o->setServerName($n->getStringValue()); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(DeviceManagementExchangeConnectorStatus::class)); },
+            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getStringValue()); },
         ]);
     }
 

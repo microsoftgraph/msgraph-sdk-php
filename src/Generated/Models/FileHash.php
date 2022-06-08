@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class FileHash implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var FileHashType|null $hashType File hash type. Possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256. */
+    /**
+     * @var FileHashType|null $hashType File hash type. Possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
+    */
     private ?FileHashType $hashType = null;
     
-    /** @var string|null $hashValue Value of the file hash. */
+    /**
+     * @var string|null $hashValue Value of the file hash.
+    */
     private ?string $hashValue = null;
     
     /**
@@ -30,7 +36,7 @@ class FileHash implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return FileHash
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): FileHash {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): FileHash {
         return new FileHash();
     }
 
@@ -47,9 +53,10 @@ class FileHash implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'hashType' => function (self $o, ParseNode $n) { $o->setHashType($n->getEnumValue(FileHashType::class)); },
-            'hashValue' => function (self $o, ParseNode $n) { $o->setHashValue($n->getStringValue()); },
+            'hashType' => function (ParseNode $n) use ($o) { $o->setHashType($n->getEnumValue(FileHashType::class)); },
+            'hashValue' => function (ParseNode $n) use ($o) { $o->setHashValue($n->getStringValue()); },
         ];
     }
 

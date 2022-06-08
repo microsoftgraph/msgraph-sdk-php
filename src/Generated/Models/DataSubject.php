@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class DataSubject implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $email Email of the data subject. */
+    /**
+     * @var string|null $email Email of the data subject.
+    */
     private ?string $email = null;
     
-    /** @var string|null $firstName First name of the data subject. */
+    /**
+     * @var string|null $firstName First name of the data subject.
+    */
     private ?string $firstName = null;
     
-    /** @var string|null $lastName Last Name of the data subject. */
+    /**
+     * @var string|null $lastName Last Name of the data subject.
+    */
     private ?string $lastName = null;
     
-    /** @var string|null $residency The country/region of residency. The residency information is uesed only for internal reporting but not for the content search. */
+    /**
+     * @var string|null $residency The country/region of residency. The residency information is uesed only for internal reporting but not for the content search.
+    */
     private ?string $residency = null;
     
     /**
@@ -36,7 +46,7 @@ class DataSubject implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DataSubject
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DataSubject {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DataSubject {
         return new DataSubject();
     }
 
@@ -61,11 +71,12 @@ class DataSubject implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'email' => function (self $o, ParseNode $n) { $o->setEmail($n->getStringValue()); },
-            'firstName' => function (self $o, ParseNode $n) { $o->setFirstName($n->getStringValue()); },
-            'lastName' => function (self $o, ParseNode $n) { $o->setLastName($n->getStringValue()); },
-            'residency' => function (self $o, ParseNode $n) { $o->setResidency($n->getStringValue()); },
+            'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
+            'firstName' => function (ParseNode $n) use ($o) { $o->setFirstName($n->getStringValue()); },
+            'lastName' => function (ParseNode $n) use ($o) { $o->setLastName($n->getStringValue()); },
+            'residency' => function (ParseNode $n) use ($o) { $o->setResidency($n->getStringValue()); },
         ];
     }
 

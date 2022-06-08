@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class TextColumn implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $allowMultipleLines Whether to allow multiple lines of text. */
+    /**
+     * @var bool|null $allowMultipleLines Whether to allow multiple lines of text.
+    */
     private ?bool $allowMultipleLines = null;
     
-    /** @var bool|null $appendChangesToExistingText Whether updates to this column should replace existing text, or append to it. */
+    /**
+     * @var bool|null $appendChangesToExistingText Whether updates to this column should replace existing text, or append to it.
+    */
     private ?bool $appendChangesToExistingText = null;
     
-    /** @var int|null $linesForEditing The size of the text box. */
+    /**
+     * @var int|null $linesForEditing The size of the text box.
+    */
     private ?int $linesForEditing = null;
     
-    /** @var int|null $maxLength The maximum number of characters for the value. */
+    /**
+     * @var int|null $maxLength The maximum number of characters for the value.
+    */
     private ?int $maxLength = null;
     
-    /** @var string|null $textType The type of text being stored. Must be one of plain or richText */
+    /**
+     * @var string|null $textType The type of text being stored. Must be one of plain or richText
+    */
     private ?string $textType = null;
     
     /**
@@ -39,7 +51,7 @@ class TextColumn implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TextColumn
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TextColumn {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TextColumn {
         return new TextColumn();
     }
 
@@ -72,12 +84,13 @@ class TextColumn implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'allowMultipleLines' => function (self $o, ParseNode $n) { $o->setAllowMultipleLines($n->getBooleanValue()); },
-            'appendChangesToExistingText' => function (self $o, ParseNode $n) { $o->setAppendChangesToExistingText($n->getBooleanValue()); },
-            'linesForEditing' => function (self $o, ParseNode $n) { $o->setLinesForEditing($n->getIntegerValue()); },
-            'maxLength' => function (self $o, ParseNode $n) { $o->setMaxLength($n->getIntegerValue()); },
-            'textType' => function (self $o, ParseNode $n) { $o->setTextType($n->getStringValue()); },
+            'allowMultipleLines' => function (ParseNode $n) use ($o) { $o->setAllowMultipleLines($n->getBooleanValue()); },
+            'appendChangesToExistingText' => function (ParseNode $n) use ($o) { $o->setAppendChangesToExistingText($n->getBooleanValue()); },
+            'linesForEditing' => function (ParseNode $n) use ($o) { $o->setLinesForEditing($n->getIntegerValue()); },
+            'maxLength' => function (ParseNode $n) use ($o) { $o->setMaxLength($n->getIntegerValue()); },
+            'textType' => function (ParseNode $n) use ($o) { $o->setTextType($n->getStringValue()); },
         ];
     }
 

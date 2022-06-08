@@ -9,25 +9,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $androidCount Number of android device count. */
+    /**
+     * @var int|null $androidCount Number of android device count.
+    */
     private ?int $androidCount = null;
     
-    /** @var int|null $iosCount Number of iOS device count. */
+    /**
+     * @var int|null $iosCount Number of iOS device count.
+    */
     private ?int $iosCount = null;
     
-    /** @var int|null $macOSCount Number of Mac OS X device count. */
+    /**
+     * @var int|null $macOSCount Number of Mac OS X device count.
+    */
     private ?int $macOSCount = null;
     
-    /** @var int|null $unknownCount Number of unknown device count. */
+    /**
+     * @var int|null $unknownCount Number of unknown device count.
+    */
     private ?int $unknownCount = null;
     
-    /** @var int|null $windowsCount Number of Windows device count. */
+    /**
+     * @var int|null $windowsCount Number of Windows device count.
+    */
     private ?int $windowsCount = null;
     
-    /** @var int|null $windowsMobileCount Number of Windows mobile device count. */
+    /**
+     * @var int|null $windowsMobileCount Number of Windows mobile device count.
+    */
     private ?int $windowsMobileCount = null;
     
     /**
@@ -42,7 +56,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceOperatingSystemSummary
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceOperatingSystemSummary {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceOperatingSystemSummary {
         return new DeviceOperatingSystemSummary();
     }
 
@@ -67,13 +81,14 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'androidCount' => function (self $o, ParseNode $n) { $o->setAndroidCount($n->getIntegerValue()); },
-            'iosCount' => function (self $o, ParseNode $n) { $o->setIosCount($n->getIntegerValue()); },
-            'macOSCount' => function (self $o, ParseNode $n) { $o->setMacOSCount($n->getIntegerValue()); },
-            'unknownCount' => function (self $o, ParseNode $n) { $o->setUnknownCount($n->getIntegerValue()); },
-            'windowsCount' => function (self $o, ParseNode $n) { $o->setWindowsCount($n->getIntegerValue()); },
-            'windowsMobileCount' => function (self $o, ParseNode $n) { $o->setWindowsMobileCount($n->getIntegerValue()); },
+            'androidCount' => function (ParseNode $n) use ($o) { $o->setAndroidCount($n->getIntegerValue()); },
+            'iosCount' => function (ParseNode $n) use ($o) { $o->setIosCount($n->getIntegerValue()); },
+            'macOSCount' => function (ParseNode $n) use ($o) { $o->setMacOSCount($n->getIntegerValue()); },
+            'unknownCount' => function (ParseNode $n) use ($o) { $o->setUnknownCount($n->getIntegerValue()); },
+            'windowsCount' => function (ParseNode $n) use ($o) { $o->setWindowsCount($n->getIntegerValue()); },
+            'windowsMobileCount' => function (ParseNode $n) use ($o) { $o->setWindowsMobileCount($n->getIntegerValue()); },
         ];
     }
 

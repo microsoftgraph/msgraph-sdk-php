@@ -6,102 +6,166 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ColumnDefinition extends Entity 
+class ColumnDefinition extends Entity implements Parsable 
 {
-    /** @var BooleanColumn|null $boolean This column stores boolean values. */
+    /**
+     * @var BooleanColumn|null $boolean This column stores boolean values.
+    */
     private ?BooleanColumn $boolean = null;
     
-    /** @var CalculatedColumn|null $calculated This column's data is calculated based on other columns. */
+    /**
+     * @var CalculatedColumn|null $calculated This column's data is calculated based on other columns.
+    */
     private ?CalculatedColumn $calculated = null;
     
-    /** @var ChoiceColumn|null $choice This column stores data from a list of choices. */
+    /**
+     * @var ChoiceColumn|null $choice This column stores data from a list of choices.
+    */
     private ?ChoiceColumn $choice = null;
     
-    /** @var string|null $columnGroup For site columns, the name of the group this column belongs to. Helps organize related columns. */
+    /**
+     * @var string|null $columnGroup For site columns, the name of the group this column belongs to. Helps organize related columns.
+    */
     private ?string $columnGroup = null;
     
-    /** @var ContentApprovalStatusColumn|null $contentApprovalStatus This column stores content approval status. */
+    /**
+     * @var ContentApprovalStatusColumn|null $contentApprovalStatus This column stores content approval status.
+    */
     private ?ContentApprovalStatusColumn $contentApprovalStatus = null;
     
-    /** @var CurrencyColumn|null $currency This column stores currency values. */
+    /**
+     * @var CurrencyColumn|null $currency This column stores currency values.
+    */
     private ?CurrencyColumn $currency = null;
     
-    /** @var DateTimeColumn|null $dateTime This column stores DateTime values. */
+    /**
+     * @var DateTimeColumn|null $dateTime This column stores DateTime values.
+    */
     private ?DateTimeColumn $dateTime = null;
     
-    /** @var DefaultColumnValue|null $defaultValue The default value for this column. */
+    /**
+     * @var DefaultColumnValue|null $defaultValue The default value for this column.
+    */
     private ?DefaultColumnValue $defaultValue = null;
     
-    /** @var string|null $description The user-facing description of the column. */
+    /**
+     * @var string|null $description The user-facing description of the column.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName The user-facing name of the column. */
+    /**
+     * @var string|null $displayName The user-facing name of the column.
+    */
     private ?string $displayName = null;
     
-    /** @var bool|null $enforceUniqueValues If true, no two list items may have the same value for this column. */
+    /**
+     * @var bool|null $enforceUniqueValues If true, no two list items may have the same value for this column.
+    */
     private ?bool $enforceUniqueValues = null;
     
-    /** @var GeolocationColumn|null $geolocation This column stores a geolocation. */
+    /**
+     * @var GeolocationColumn|null $geolocation This column stores a geolocation.
+    */
     private ?GeolocationColumn $geolocation = null;
     
-    /** @var bool|null $hidden Specifies whether the column is displayed in the user interface. */
+    /**
+     * @var bool|null $hidden Specifies whether the column is displayed in the user interface.
+    */
     private ?bool $hidden = null;
     
-    /** @var HyperlinkOrPictureColumn|null $hyperlinkOrPicture This column stores hyperlink or picture values. */
+    /**
+     * @var HyperlinkOrPictureColumn|null $hyperlinkOrPicture This column stores hyperlink or picture values.
+    */
     private ?HyperlinkOrPictureColumn $hyperlinkOrPicture = null;
     
-    /** @var bool|null $indexed Specifies whether the column values can be used for sorting and searching. */
+    /**
+     * @var bool|null $indexed Specifies whether the column values can used for sorting and searching.
+    */
     private ?bool $indexed = null;
     
-    /** @var bool|null $isDeletable Indicates whether this column can be deleted. */
+    /**
+     * @var bool|null $isDeletable Indicates whether this column can be deleted.
+    */
     private ?bool $isDeletable = null;
     
-    /** @var bool|null $isReorderable Indicates whether values in the column can be reordered. Read-only. */
+    /**
+     * @var bool|null $isReorderable Indicates whether values in the column can be reordered. Read-only.
+    */
     private ?bool $isReorderable = null;
     
-    /** @var bool|null $isSealed Specifies whether the column can be changed. */
+    /**
+     * @var bool|null $isSealed Specifies whether the column can be changed.
+    */
     private ?bool $isSealed = null;
     
-    /** @var LookupColumn|null $lookup This column's data is looked up from another source in the site. */
+    /**
+     * @var LookupColumn|null $lookup This column's data is looked up from another source in the site.
+    */
     private ?LookupColumn $lookup = null;
     
-    /** @var string|null $name The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName. */
+    /**
+     * @var string|null $name The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
+    */
     private ?string $name = null;
     
-    /** @var NumberColumn|null $number This column stores number values. */
+    /**
+     * @var NumberColumn|null $number This column stores number values.
+    */
     private ?NumberColumn $number = null;
     
-    /** @var PersonOrGroupColumn|null $personOrGroup This column stores Person or Group values. */
+    /**
+     * @var PersonOrGroupColumn|null $personOrGroup This column stores Person or Group values.
+    */
     private ?PersonOrGroupColumn $personOrGroup = null;
     
-    /** @var bool|null $propagateChanges If 'true', changes to this column will be propagated to lists that implement the column. */
+    /**
+     * @var bool|null $propagateChanges If true, changes to this column will be propagated to lists that implement the column.
+    */
     private ?bool $propagateChanges = null;
     
-    /** @var bool|null $readOnly Specifies whether the column values can be modified. */
+    /**
+     * @var bool|null $readOnly Specifies whether the column values can be modified.
+    */
     private ?bool $readOnly = null;
     
-    /** @var bool|null $required Specifies whether the column value isn't optional. */
+    /**
+     * @var bool|null $required Specifies whether the column value isn't optional.
+    */
     private ?bool $required = null;
     
-    /** @var ColumnDefinition|null $sourceColumn The source column for the content type column. */
+    /**
+     * @var ColumnDefinition|null $sourceColumn The source column for content type column.
+    */
     private ?ColumnDefinition $sourceColumn = null;
     
-    /** @var ContentTypeInfo|null $sourceContentType ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only. */
+    /**
+     * @var ContentTypeInfo|null $sourceContentType ContentType from which this column is inherited from. Used only to fetch contentTypes columns.
+    */
     private ?ContentTypeInfo $sourceContentType = null;
     
-    /** @var TermColumn|null $term This column stores taxonomy terms. */
+    /**
+     * @var TermColumn|null $term This column stores taxonomy terms.
+    */
     private ?TermColumn $term = null;
     
-    /** @var TextColumn|null $text This column stores text values. */
+    /**
+     * @var TextColumn|null $text This column stores text values.
+    */
     private ?TextColumn $text = null;
     
-    /** @var ThumbnailColumn|null $thumbnail This column stores thumbnail values. */
+    /**
+     * @var ThumbnailColumn|null $thumbnail This column stores thumbnail values.
+    */
     private ?ThumbnailColumn $thumbnail = null;
     
-    /** @var ColumnTypes|null $type For site columns, the type of column. Read-only. */
+    /**
+     * @var ColumnTypes|null $type For site columns, the type of column. Read-only.
+    */
     private ?ColumnTypes $type = null;
     
-    /** @var ColumnValidation|null $validation This column stores validation formula and message for the column. */
+    /**
+     * @var ColumnValidation|null $validation This column stores validation formula and message for the column.
+    */
     private ?ColumnValidation $validation = null;
     
     /**
@@ -116,7 +180,7 @@ class ColumnDefinition extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ColumnDefinition
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ColumnDefinition {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ColumnDefinition {
         return new ColumnDefinition();
     }
 
@@ -213,39 +277,40 @@ class ColumnDefinition extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'boolean' => function (self $o, ParseNode $n) { $o->setBoolean($n->getObjectValue(BooleanColumn::class)); },
-            'calculated' => function (self $o, ParseNode $n) { $o->setCalculated($n->getObjectValue(CalculatedColumn::class)); },
-            'choice' => function (self $o, ParseNode $n) { $o->setChoice($n->getObjectValue(ChoiceColumn::class)); },
-            'columnGroup' => function (self $o, ParseNode $n) { $o->setColumnGroup($n->getStringValue()); },
-            'contentApprovalStatus' => function (self $o, ParseNode $n) { $o->setContentApprovalStatus($n->getObjectValue(ContentApprovalStatusColumn::class)); },
-            'currency' => function (self $o, ParseNode $n) { $o->setCurrency($n->getObjectValue(CurrencyColumn::class)); },
-            'dateTime' => function (self $o, ParseNode $n) { $o->setDateTime($n->getObjectValue(DateTimeColumn::class)); },
-            'defaultValue' => function (self $o, ParseNode $n) { $o->setDefaultValue($n->getObjectValue(DefaultColumnValue::class)); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'enforceUniqueValues' => function (self $o, ParseNode $n) { $o->setEnforceUniqueValues($n->getBooleanValue()); },
-            'geolocation' => function (self $o, ParseNode $n) { $o->setGeolocation($n->getObjectValue(GeolocationColumn::class)); },
-            'hidden' => function (self $o, ParseNode $n) { $o->setHidden($n->getBooleanValue()); },
-            'hyperlinkOrPicture' => function (self $o, ParseNode $n) { $o->setHyperlinkOrPicture($n->getObjectValue(HyperlinkOrPictureColumn::class)); },
-            'indexed' => function (self $o, ParseNode $n) { $o->setIndexed($n->getBooleanValue()); },
-            'isDeletable' => function (self $o, ParseNode $n) { $o->setIsDeletable($n->getBooleanValue()); },
-            'isReorderable' => function (self $o, ParseNode $n) { $o->setIsReorderable($n->getBooleanValue()); },
-            'isSealed' => function (self $o, ParseNode $n) { $o->setIsSealed($n->getBooleanValue()); },
-            'lookup' => function (self $o, ParseNode $n) { $o->setLookup($n->getObjectValue(LookupColumn::class)); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'number' => function (self $o, ParseNode $n) { $o->setNumber($n->getObjectValue(NumberColumn::class)); },
-            'personOrGroup' => function (self $o, ParseNode $n) { $o->setPersonOrGroup($n->getObjectValue(PersonOrGroupColumn::class)); },
-            'propagateChanges' => function (self $o, ParseNode $n) { $o->setPropagateChanges($n->getBooleanValue()); },
-            'readOnly' => function (self $o, ParseNode $n) { $o->setReadOnly($n->getBooleanValue()); },
-            'required' => function (self $o, ParseNode $n) { $o->setRequired($n->getBooleanValue()); },
-            'sourceColumn' => function (self $o, ParseNode $n) { $o->setSourceColumn($n->getObjectValue(ColumnDefinition::class)); },
-            'sourceContentType' => function (self $o, ParseNode $n) { $o->setSourceContentType($n->getObjectValue(ContentTypeInfo::class)); },
-            'term' => function (self $o, ParseNode $n) { $o->setTerm($n->getObjectValue(TermColumn::class)); },
-            'text' => function (self $o, ParseNode $n) { $o->setText($n->getObjectValue(TextColumn::class)); },
-            'thumbnail' => function (self $o, ParseNode $n) { $o->setThumbnail($n->getObjectValue(ThumbnailColumn::class)); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getEnumValue(ColumnTypes::class)); },
-            'validation' => function (self $o, ParseNode $n) { $o->setValidation($n->getObjectValue(ColumnValidation::class)); },
+            'boolean' => function (ParseNode $n) use ($o) { $o->setBoolean($n->getObjectValue(array(BooleanColumn::class, 'createFromDiscriminatorValue'))); },
+            'calculated' => function (ParseNode $n) use ($o) { $o->setCalculated($n->getObjectValue(array(CalculatedColumn::class, 'createFromDiscriminatorValue'))); },
+            'choice' => function (ParseNode $n) use ($o) { $o->setChoice($n->getObjectValue(array(ChoiceColumn::class, 'createFromDiscriminatorValue'))); },
+            'columnGroup' => function (ParseNode $n) use ($o) { $o->setColumnGroup($n->getStringValue()); },
+            'contentApprovalStatus' => function (ParseNode $n) use ($o) { $o->setContentApprovalStatus($n->getObjectValue(array(ContentApprovalStatusColumn::class, 'createFromDiscriminatorValue'))); },
+            'currency' => function (ParseNode $n) use ($o) { $o->setCurrency($n->getObjectValue(array(CurrencyColumn::class, 'createFromDiscriminatorValue'))); },
+            'dateTime' => function (ParseNode $n) use ($o) { $o->setDateTime($n->getObjectValue(array(DateTimeColumn::class, 'createFromDiscriminatorValue'))); },
+            'defaultValue' => function (ParseNode $n) use ($o) { $o->setDefaultValue($n->getObjectValue(array(DefaultColumnValue::class, 'createFromDiscriminatorValue'))); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'enforceUniqueValues' => function (ParseNode $n) use ($o) { $o->setEnforceUniqueValues($n->getBooleanValue()); },
+            'geolocation' => function (ParseNode $n) use ($o) { $o->setGeolocation($n->getObjectValue(array(GeolocationColumn::class, 'createFromDiscriminatorValue'))); },
+            'hidden' => function (ParseNode $n) use ($o) { $o->setHidden($n->getBooleanValue()); },
+            'hyperlinkOrPicture' => function (ParseNode $n) use ($o) { $o->setHyperlinkOrPicture($n->getObjectValue(array(HyperlinkOrPictureColumn::class, 'createFromDiscriminatorValue'))); },
+            'indexed' => function (ParseNode $n) use ($o) { $o->setIndexed($n->getBooleanValue()); },
+            'isDeletable' => function (ParseNode $n) use ($o) { $o->setIsDeletable($n->getBooleanValue()); },
+            'isReorderable' => function (ParseNode $n) use ($o) { $o->setIsReorderable($n->getBooleanValue()); },
+            'isSealed' => function (ParseNode $n) use ($o) { $o->setIsSealed($n->getBooleanValue()); },
+            'lookup' => function (ParseNode $n) use ($o) { $o->setLookup($n->getObjectValue(array(LookupColumn::class, 'createFromDiscriminatorValue'))); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'number' => function (ParseNode $n) use ($o) { $o->setNumber($n->getObjectValue(array(NumberColumn::class, 'createFromDiscriminatorValue'))); },
+            'personOrGroup' => function (ParseNode $n) use ($o) { $o->setPersonOrGroup($n->getObjectValue(array(PersonOrGroupColumn::class, 'createFromDiscriminatorValue'))); },
+            'propagateChanges' => function (ParseNode $n) use ($o) { $o->setPropagateChanges($n->getBooleanValue()); },
+            'readOnly' => function (ParseNode $n) use ($o) { $o->setReadOnly($n->getBooleanValue()); },
+            'required' => function (ParseNode $n) use ($o) { $o->setRequired($n->getBooleanValue()); },
+            'sourceColumn' => function (ParseNode $n) use ($o) { $o->setSourceColumn($n->getObjectValue(array(ColumnDefinition::class, 'createFromDiscriminatorValue'))); },
+            'sourceContentType' => function (ParseNode $n) use ($o) { $o->setSourceContentType($n->getObjectValue(array(ContentTypeInfo::class, 'createFromDiscriminatorValue'))); },
+            'term' => function (ParseNode $n) use ($o) { $o->setTerm($n->getObjectValue(array(TermColumn::class, 'createFromDiscriminatorValue'))); },
+            'text' => function (ParseNode $n) use ($o) { $o->setText($n->getObjectValue(array(TextColumn::class, 'createFromDiscriminatorValue'))); },
+            'thumbnail' => function (ParseNode $n) use ($o) { $o->setThumbnail($n->getObjectValue(array(ThumbnailColumn::class, 'createFromDiscriminatorValue'))); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(ColumnTypes::class)); },
+            'validation' => function (ParseNode $n) use ($o) { $o->setValidation($n->getObjectValue(array(ColumnValidation::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -274,7 +339,7 @@ class ColumnDefinition extends Entity
     }
 
     /**
-     * Gets the indexed property value. Specifies whether the column values can be used for sorting and searching.
+     * Gets the indexed property value. Specifies whether the column values can used for sorting and searching.
      * @return bool|null
     */
     public function getIndexed(): ?bool {
@@ -338,7 +403,7 @@ class ColumnDefinition extends Entity
     }
 
     /**
-     * Gets the propagateChanges property value. If 'true', changes to this column will be propagated to lists that implement the column.
+     * Gets the propagateChanges property value. If true, changes to this column will be propagated to lists that implement the column.
      * @return bool|null
     */
     public function getPropagateChanges(): ?bool {
@@ -362,7 +427,7 @@ class ColumnDefinition extends Entity
     }
 
     /**
-     * Gets the sourceColumn property value. The source column for the content type column.
+     * Gets the sourceColumn property value. The source column for content type column.
      * @return ColumnDefinition|null
     */
     public function getSourceColumn(): ?ColumnDefinition {
@@ -370,7 +435,7 @@ class ColumnDefinition extends Entity
     }
 
     /**
-     * Gets the sourceContentType property value. ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
+     * Gets the sourceContentType property value. ContentType from which this column is inherited from. Used only to fetch contentTypes columns.
      * @return ContentTypeInfo|null
     */
     public function getSourceContentType(): ?ContentTypeInfo {
@@ -570,7 +635,7 @@ class ColumnDefinition extends Entity
     }
 
     /**
-     * Sets the indexed property value. Specifies whether the column values can be used for sorting and searching.
+     * Sets the indexed property value. Specifies whether the column values can used for sorting and searching.
      *  @param bool|null $value Value to set for the indexed property.
     */
     public function setIndexed(?bool $value ): void {
@@ -634,7 +699,7 @@ class ColumnDefinition extends Entity
     }
 
     /**
-     * Sets the propagateChanges property value. If 'true', changes to this column will be propagated to lists that implement the column.
+     * Sets the propagateChanges property value. If true, changes to this column will be propagated to lists that implement the column.
      *  @param bool|null $value Value to set for the propagateChanges property.
     */
     public function setPropagateChanges(?bool $value ): void {
@@ -658,7 +723,7 @@ class ColumnDefinition extends Entity
     }
 
     /**
-     * Sets the sourceColumn property value. The source column for the content type column.
+     * Sets the sourceColumn property value. The source column for content type column.
      *  @param ColumnDefinition|null $value Value to set for the sourceColumn property.
     */
     public function setSourceColumn(?ColumnDefinition $value ): void {
@@ -666,7 +731,7 @@ class ColumnDefinition extends Entity
     }
 
     /**
-     * Sets the sourceContentType property value. ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
+     * Sets the sourceContentType property value. ContentType from which this column is inherited from. Used only to fetch contentTypes columns.
      *  @param ContentTypeInfo|null $value Value to set for the sourceContentType property.
     */
     public function setSourceContentType(?ContentTypeInfo $value ): void {

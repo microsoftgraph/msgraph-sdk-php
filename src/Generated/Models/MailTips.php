@@ -9,43 +9,69 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class MailTips implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var AutomaticRepliesMailTips|null $automaticReplies Mail tips for automatic reply if it has been set up by the recipient. */
+    /**
+     * @var AutomaticRepliesMailTips|null $automaticReplies Mail tips for automatic reply if it has been set up by the recipient.
+    */
     private ?AutomaticRepliesMailTips $automaticReplies = null;
     
-    /** @var string|null $customMailTip A custom mail tip that can be set on the recipient's mailbox. */
+    /**
+     * @var string|null $customMailTip A custom mail tip that can be set on the recipient's mailbox.
+    */
     private ?string $customMailTip = null;
     
-    /** @var bool|null $deliveryRestricted Whether the recipient's mailbox is restricted, for example, accepting messages from only a predefined list of senders, rejecting messages from a predefined list of senders, or accepting messages from only authenticated senders. */
+    /**
+     * @var bool|null $deliveryRestricted Whether the recipient's mailbox is restricted, for example, accepting messages from only a predefined list of senders, rejecting messages from a predefined list of senders, or accepting messages from only authenticated senders.
+    */
     private ?bool $deliveryRestricted = null;
     
-    /** @var EmailAddress|null $emailAddress The email address of the recipient to get mailtips for. */
+    /**
+     * @var EmailAddress|null $emailAddress The email address of the recipient to get mailtips for.
+    */
     private ?EmailAddress $emailAddress = null;
     
-    /** @var MailTipsError|null $error Errors that occur during the getMailTips action. */
+    /**
+     * @var MailTipsError|null $error Errors that occur during the getMailTips action.
+    */
     private ?MailTipsError $error = null;
     
-    /** @var int|null $externalMemberCount The number of external members if the recipient is a distribution list. */
+    /**
+     * @var int|null $externalMemberCount The number of external members if the recipient is a distribution list.
+    */
     private ?int $externalMemberCount = null;
     
-    /** @var bool|null $isModerated Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient's manager. */
+    /**
+     * @var bool|null $isModerated Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient's manager.
+    */
     private ?bool $isModerated = null;
     
-    /** @var bool|null $mailboxFull The mailbox full status of the recipient. */
+    /**
+     * @var bool|null $mailboxFull The mailbox full status of the recipient.
+    */
     private ?bool $mailboxFull = null;
     
-    /** @var int|null $maxMessageSize The maximum message size that has been configured for the recipient's organization or mailbox. */
+    /**
+     * @var int|null $maxMessageSize The maximum message size that has been configured for the recipient's organization or mailbox.
+    */
     private ?int $maxMessageSize = null;
     
-    /** @var RecipientScopeType|null $recipientScope The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content. */
+    /**
+     * @var RecipientScopeType|null $recipientScope The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
+    */
     private ?RecipientScopeType $recipientScope = null;
     
-    /** @var array<Recipient>|null $recipientSuggestions Recipients suggested based on previous contexts where they appear in the same message. */
+    /**
+     * @var array<Recipient>|null $recipientSuggestions Recipients suggested based on previous contexts where they appear in the same message.
+    */
     private ?array $recipientSuggestions = null;
     
-    /** @var int|null $totalMemberCount The number of members if the recipient is a distribution list. */
+    /**
+     * @var int|null $totalMemberCount The number of members if the recipient is a distribution list.
+    */
     private ?int $totalMemberCount = null;
     
     /**
@@ -60,7 +86,7 @@ class MailTips implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return MailTips
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): MailTips {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): MailTips {
         return new MailTips();
     }
 
@@ -125,19 +151,20 @@ class MailTips implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'automaticReplies' => function (self $o, ParseNode $n) { $o->setAutomaticReplies($n->getObjectValue(AutomaticRepliesMailTips::class)); },
-            'customMailTip' => function (self $o, ParseNode $n) { $o->setCustomMailTip($n->getStringValue()); },
-            'deliveryRestricted' => function (self $o, ParseNode $n) { $o->setDeliveryRestricted($n->getBooleanValue()); },
-            'emailAddress' => function (self $o, ParseNode $n) { $o->setEmailAddress($n->getObjectValue(EmailAddress::class)); },
-            'error' => function (self $o, ParseNode $n) { $o->setError($n->getObjectValue(MailTipsError::class)); },
-            'externalMemberCount' => function (self $o, ParseNode $n) { $o->setExternalMemberCount($n->getIntegerValue()); },
-            'isModerated' => function (self $o, ParseNode $n) { $o->setIsModerated($n->getBooleanValue()); },
-            'mailboxFull' => function (self $o, ParseNode $n) { $o->setMailboxFull($n->getBooleanValue()); },
-            'maxMessageSize' => function (self $o, ParseNode $n) { $o->setMaxMessageSize($n->getIntegerValue()); },
-            'recipientScope' => function (self $o, ParseNode $n) { $o->setRecipientScope($n->getEnumValue(RecipientScopeType::class)); },
-            'recipientSuggestions' => function (self $o, ParseNode $n) { $o->setRecipientSuggestions($n->getCollectionOfObjectValues(Recipient::class)); },
-            'totalMemberCount' => function (self $o, ParseNode $n) { $o->setTotalMemberCount($n->getIntegerValue()); },
+            'automaticReplies' => function (ParseNode $n) use ($o) { $o->setAutomaticReplies($n->getObjectValue(array(AutomaticRepliesMailTips::class, 'createFromDiscriminatorValue'))); },
+            'customMailTip' => function (ParseNode $n) use ($o) { $o->setCustomMailTip($n->getStringValue()); },
+            'deliveryRestricted' => function (ParseNode $n) use ($o) { $o->setDeliveryRestricted($n->getBooleanValue()); },
+            'emailAddress' => function (ParseNode $n) use ($o) { $o->setEmailAddress($n->getObjectValue(array(EmailAddress::class, 'createFromDiscriminatorValue'))); },
+            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getObjectValue(array(MailTipsError::class, 'createFromDiscriminatorValue'))); },
+            'externalMemberCount' => function (ParseNode $n) use ($o) { $o->setExternalMemberCount($n->getIntegerValue()); },
+            'isModerated' => function (ParseNode $n) use ($o) { $o->setIsModerated($n->getBooleanValue()); },
+            'mailboxFull' => function (ParseNode $n) use ($o) { $o->setMailboxFull($n->getBooleanValue()); },
+            'maxMessageSize' => function (ParseNode $n) use ($o) { $o->setMaxMessageSize($n->getIntegerValue()); },
+            'recipientScope' => function (ParseNode $n) use ($o) { $o->setRecipientScope($n->getEnumValue(RecipientScopeType::class)); },
+            'recipientSuggestions' => function (ParseNode $n) use ($o) { $o->setRecipientSuggestions($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
+            'totalMemberCount' => function (ParseNode $n) use ($o) { $o->setTotalMemberCount($n->getIntegerValue()); },
         ];
     }
 

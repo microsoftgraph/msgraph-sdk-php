@@ -6,18 +6,26 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class OnPremisesConditionalAccessSettings extends Entity 
+class OnPremisesConditionalAccessSettings extends Entity implements Parsable 
 {
-    /** @var bool|null $enabled Indicates if on premises conditional access is enabled for this organization */
+    /**
+     * @var bool|null $enabled Indicates if on premises conditional access is enabled for this organization
+    */
     private ?bool $enabled = null;
     
-    /** @var array<string>|null $excludedGroups User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy. */
+    /**
+     * @var array<string>|null $excludedGroups User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy.
+    */
     private ?array $excludedGroups = null;
     
-    /** @var array<string>|null $includedGroups User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access. */
+    /**
+     * @var array<string>|null $includedGroups User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
+    */
     private ?array $includedGroups = null;
     
-    /** @var bool|null $overrideDefaultRule Override the default access rule when allowing a device to ensure access is granted. */
+    /**
+     * @var bool|null $overrideDefaultRule Override the default access rule when allowing a device to ensure access is granted.
+    */
     private ?bool $overrideDefaultRule = null;
     
     /**
@@ -32,7 +40,7 @@ class OnPremisesConditionalAccessSettings extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return OnPremisesConditionalAccessSettings
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): OnPremisesConditionalAccessSettings {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): OnPremisesConditionalAccessSettings {
         return new OnPremisesConditionalAccessSettings();
     }
 
@@ -57,11 +65,12 @@ class OnPremisesConditionalAccessSettings extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'enabled' => function (self $o, ParseNode $n) { $o->setEnabled($n->getBooleanValue()); },
-            'excludedGroups' => function (self $o, ParseNode $n) { $o->setExcludedGroups($n->getCollectionOfPrimitiveValues()); },
-            'includedGroups' => function (self $o, ParseNode $n) { $o->setIncludedGroups($n->getCollectionOfPrimitiveValues()); },
-            'overrideDefaultRule' => function (self $o, ParseNode $n) { $o->setOverrideDefaultRule($n->getBooleanValue()); },
+            'enabled' => function (ParseNode $n) use ($o) { $o->setEnabled($n->getBooleanValue()); },
+            'excludedGroups' => function (ParseNode $n) use ($o) { $o->setExcludedGroups($n->getCollectionOfPrimitiveValues()); },
+            'includedGroups' => function (ParseNode $n) use ($o) { $o->setIncludedGroups($n->getCollectionOfPrimitiveValues()); },
+            'overrideDefaultRule' => function (ParseNode $n) use ($o) { $o->setOverrideDefaultRule($n->getBooleanValue()); },
         ]);
     }
 

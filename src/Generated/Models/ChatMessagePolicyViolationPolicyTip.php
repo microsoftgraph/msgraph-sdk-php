@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $complianceUrl The URL a user can visit to read about the data loss prevention policies for the organization. (ie, policies about what users shouldn't say in chats) */
+    /**
+     * @var string|null $complianceUrl The URL a user can visit to read about the data loss prevention policies for the organization. (ie, policies about what users shouldn't say in chats)
+    */
     private ?string $complianceUrl = null;
     
-    /** @var string|null $generalText Explanatory text shown to the sender of the message. */
+    /**
+     * @var string|null $generalText Explanatory text shown to the sender of the message.
+    */
     private ?string $generalText = null;
     
-    /** @var array<string>|null $matchedConditionDescriptions The list of improper data in the message that was detected by the data loss prevention app. Each DLP app defines its own conditions, examples include 'Credit Card Number' and 'Social Security Number'. */
+    /**
+     * @var array<string>|null $matchedConditionDescriptions The list of improper data in the message that was detected by the data loss prevention app. Each DLP app defines its own conditions, examples include 'Credit Card Number' and 'Social Security Number'.
+    */
     private ?array $matchedConditionDescriptions = null;
     
     /**
@@ -33,7 +41,7 @@ class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder, Parsa
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ChatMessagePolicyViolationPolicyTip
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ChatMessagePolicyViolationPolicyTip {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ChatMessagePolicyViolationPolicyTip {
         return new ChatMessagePolicyViolationPolicyTip();
     }
 
@@ -58,10 +66,11 @@ class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder, Parsa
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'complianceUrl' => function (self $o, ParseNode $n) { $o->setComplianceUrl($n->getStringValue()); },
-            'generalText' => function (self $o, ParseNode $n) { $o->setGeneralText($n->getStringValue()); },
-            'matchedConditionDescriptions' => function (self $o, ParseNode $n) { $o->setMatchedConditionDescriptions($n->getCollectionOfPrimitiveValues()); },
+            'complianceUrl' => function (ParseNode $n) use ($o) { $o->setComplianceUrl($n->getStringValue()); },
+            'generalText' => function (ParseNode $n) use ($o) { $o->setGeneralText($n->getStringValue()); },
+            'matchedConditionDescriptions' => function (ParseNode $n) use ($o) { $o->setMatchedConditionDescriptions($n->getCollectionOfPrimitiveValues()); },
         ];
     }
 

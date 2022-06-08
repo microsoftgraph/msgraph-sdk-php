@@ -7,21 +7,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class TermsAndConditionsAcceptanceStatus extends Entity 
+class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable 
 {
-    /** @var DateTime|null $acceptedDateTime DateTime when the terms were last accepted by the user. */
+    /**
+     * @var DateTime|null $acceptedDateTime DateTime when the terms were last accepted by the user.
+    */
     private ?DateTime $acceptedDateTime = null;
     
-    /** @var int|null $acceptedVersion Most recent version number of the T&C accepted by the user. */
+    /**
+     * @var int|null $acceptedVersion Most recent version number of the T&C accepted by the user.
+    */
     private ?int $acceptedVersion = null;
     
-    /** @var TermsAndConditions|null $termsAndConditions Navigation link to the terms and conditions that are assigned. */
+    /**
+     * @var TermsAndConditions|null $termsAndConditions Navigation link to the terms and conditions that are assigned.
+    */
     private ?TermsAndConditions $termsAndConditions = null;
     
-    /** @var string|null $userDisplayName Display name of the user whose acceptance the entity represents. */
+    /**
+     * @var string|null $userDisplayName Display name of the user whose acceptance the entity represents.
+    */
     private ?string $userDisplayName = null;
     
-    /** @var string|null $userPrincipalName The userPrincipalName of the User that accepted the term. */
+    /**
+     * @var string|null $userPrincipalName The userPrincipalName of the User that accepted the term.
+    */
     private ?string $userPrincipalName = null;
     
     /**
@@ -36,7 +46,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TermsAndConditionsAcceptanceStatus
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TermsAndConditionsAcceptanceStatus {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TermsAndConditionsAcceptanceStatus {
         return new TermsAndConditionsAcceptanceStatus();
     }
 
@@ -61,12 +71,13 @@ class TermsAndConditionsAcceptanceStatus extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'acceptedDateTime' => function (self $o, ParseNode $n) { $o->setAcceptedDateTime($n->getDateTimeValue()); },
-            'acceptedVersion' => function (self $o, ParseNode $n) { $o->setAcceptedVersion($n->getIntegerValue()); },
-            'termsAndConditions' => function (self $o, ParseNode $n) { $o->setTermsAndConditions($n->getObjectValue(TermsAndConditions::class)); },
-            'userDisplayName' => function (self $o, ParseNode $n) { $o->setUserDisplayName($n->getStringValue()); },
-            'userPrincipalName' => function (self $o, ParseNode $n) { $o->setUserPrincipalName($n->getStringValue()); },
+            'acceptedDateTime' => function (ParseNode $n) use ($o) { $o->setAcceptedDateTime($n->getDateTimeValue()); },
+            'acceptedVersion' => function (ParseNode $n) use ($o) { $o->setAcceptedVersion($n->getIntegerValue()); },
+            'termsAndConditions' => function (ParseNode $n) use ($o) { $o->setTermsAndConditions($n->getObjectValue(array(TermsAndConditions::class, 'createFromDiscriminatorValue'))); },
+            'userDisplayName' => function (ParseNode $n) use ($o) { $o->setUserDisplayName($n->getStringValue()); },
+            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
         ]);
     }
 

@@ -10,103 +10,169 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $attestationIdentityKey TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate. */
+    /**
+     * @var string|null $attestationIdentityKey TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate.
+    */
     private ?string $attestationIdentityKey = null;
     
-    /** @var string|null $bitLockerStatus On or Off of BitLocker Drive Encryption */
+    /**
+     * @var string|null $bitLockerStatus On or Off of BitLocker Drive Encryption
+    */
     private ?string $bitLockerStatus = null;
     
-    /** @var string|null $bootAppSecurityVersion The security version number of the Boot Application */
+    /**
+     * @var string|null $bootAppSecurityVersion The security version number of the Boot Application
+    */
     private ?string $bootAppSecurityVersion = null;
     
-    /** @var string|null $bootDebugging When bootDebugging is enabled, the device is used in development and testing */
+    /**
+     * @var string|null $bootDebugging When bootDebugging is enabled, the device is used in development and testing
+    */
     private ?string $bootDebugging = null;
     
-    /** @var string|null $bootManagerSecurityVersion The security version number of the Boot Application */
+    /**
+     * @var string|null $bootManagerSecurityVersion The security version number of the Boot Application
+    */
     private ?string $bootManagerSecurityVersion = null;
     
-    /** @var string|null $bootManagerVersion The version of the Boot Manager */
+    /**
+     * @var string|null $bootManagerVersion The version of the Boot Manager
+    */
     private ?string $bootManagerVersion = null;
     
-    /** @var string|null $bootRevisionListInfo The Boot Revision List that was loaded during initial boot on the attested device */
+    /**
+     * @var string|null $bootRevisionListInfo The Boot Revision List that was loaded during initial boot on the attested device
+    */
     private ?string $bootRevisionListInfo = null;
     
-    /** @var string|null $codeIntegrity When code integrity is enabled, code execution is restricted to integrity verified code */
+    /**
+     * @var string|null $codeIntegrity When code integrity is enabled, code execution is restricted to integrity verified code
+    */
     private ?string $codeIntegrity = null;
     
-    /** @var string|null $codeIntegrityCheckVersion The version of the Boot Manager */
+    /**
+     * @var string|null $codeIntegrityCheckVersion The version of the Boot Manager
+    */
     private ?string $codeIntegrityCheckVersion = null;
     
-    /** @var string|null $codeIntegrityPolicy The Code Integrity policy that is controlling the security of the boot environment */
+    /**
+     * @var string|null $codeIntegrityPolicy The Code Integrity policy that is controlling the security of the boot environment
+    */
     private ?string $codeIntegrityPolicy = null;
     
-    /** @var string|null $contentNamespaceUrl The DHA report version. (Namespace version) */
+    /**
+     * @var string|null $contentNamespaceUrl The DHA report version. (Namespace version)
+    */
     private ?string $contentNamespaceUrl = null;
     
-    /** @var string|null $contentVersion The HealthAttestation state schema version */
+    /**
+     * @var string|null $contentVersion The HealthAttestation state schema version
+    */
     private ?string $contentVersion = null;
     
-    /** @var string|null $dataExcutionPolicy DEP Policy defines a set of hardware and software technologies that perform additional checks on memory */
+    /**
+     * @var string|null $dataExcutionPolicy DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
+    */
     private ?string $dataExcutionPolicy = null;
     
-    /** @var string|null $deviceHealthAttestationStatus The DHA report version. (Namespace version) */
+    /**
+     * @var string|null $deviceHealthAttestationStatus The DHA report version. (Namespace version)
+    */
     private ?string $deviceHealthAttestationStatus = null;
     
-    /** @var string|null $earlyLaunchAntiMalwareDriverProtection ELAM provides protection for the computers in your network when they start up */
+    /**
+     * @var string|null $earlyLaunchAntiMalwareDriverProtection ELAM provides protection for the computers in your network when they start up
+    */
     private ?string $earlyLaunchAntiMalwareDriverProtection = null;
     
-    /** @var string|null $healthAttestationSupportedStatus This attribute indicates if DHA is supported for the device */
+    /**
+     * @var string|null $healthAttestationSupportedStatus This attribute indicates if DHA is supported for the device
+    */
     private ?string $healthAttestationSupportedStatus = null;
     
-    /** @var string|null $healthStatusMismatchInfo This attribute appears if DHA-Service detects an integrity issue */
+    /**
+     * @var string|null $healthStatusMismatchInfo This attribute appears if DHA-Service detects an integrity issue
+    */
     private ?string $healthStatusMismatchInfo = null;
     
-    /** @var DateTime|null $issuedDateTime The DateTime when device was evaluated or issued to MDM */
+    /**
+     * @var DateTime|null $issuedDateTime The DateTime when device was evaluated or issued to MDM
+    */
     private ?DateTime $issuedDateTime = null;
     
-    /** @var string|null $lastUpdateDateTime The Timestamp of the last update. */
+    /**
+     * @var string|null $lastUpdateDateTime The Timestamp of the last update.
+    */
     private ?string $lastUpdateDateTime = null;
     
-    /** @var string|null $operatingSystemKernelDebugging When operatingSystemKernelDebugging is enabled, the device is used in development and testing */
+    /**
+     * @var string|null $operatingSystemKernelDebugging When operatingSystemKernelDebugging is enabled, the device is used in development and testing
+    */
     private ?string $operatingSystemKernelDebugging = null;
     
-    /** @var string|null $operatingSystemRevListInfo The Operating System Revision List that was loaded during initial boot on the attested device */
+    /**
+     * @var string|null $operatingSystemRevListInfo The Operating System Revision List that was loaded during initial boot on the attested device
+    */
     private ?string $operatingSystemRevListInfo = null;
     
-    /** @var string|null $pcr0 The measurement that is captured in PCR[0] */
+    /**
+     * @var string|null $pcr0 The measurement that is captured in PCR[0]
+    */
     private ?string $pcr0 = null;
     
-    /** @var string|null $pcrHashAlgorithm Informational attribute that identifies the HASH algorithm that was used by TPM */
+    /**
+     * @var string|null $pcrHashAlgorithm Informational attribute that identifies the HASH algorithm that was used by TPM
+    */
     private ?string $pcrHashAlgorithm = null;
     
-    /** @var int|null $resetCount The number of times a PC device has hibernated or resumed */
+    /**
+     * @var int|null $resetCount The number of times a PC device has hibernated or resumed
+    */
     private ?int $resetCount = null;
     
-    /** @var int|null $restartCount The number of times a PC device has rebooted */
+    /**
+     * @var int|null $restartCount The number of times a PC device has rebooted
+    */
     private ?int $restartCount = null;
     
-    /** @var string|null $safeMode Safe mode is a troubleshooting option for Windows that starts your computer in a limited state */
+    /**
+     * @var string|null $safeMode Safe mode is a troubleshooting option for Windows that starts your computer in a limited state
+    */
     private ?string $safeMode = null;
     
-    /** @var string|null $secureBoot When Secure Boot is enabled, the core components must have the correct cryptographic signatures */
+    /**
+     * @var string|null $secureBoot When Secure Boot is enabled, the core components must have the correct cryptographic signatures
+    */
     private ?string $secureBoot = null;
     
-    /** @var string|null $secureBootConfigurationPolicyFingerPrint Fingerprint of the Custom Secure Boot Configuration Policy */
+    /**
+     * @var string|null $secureBootConfigurationPolicyFingerPrint Fingerprint of the Custom Secure Boot Configuration Policy
+    */
     private ?string $secureBootConfigurationPolicyFingerPrint = null;
     
-    /** @var string|null $testSigning When test signing is allowed, the device does not enforce signature validation during boot */
+    /**
+     * @var string|null $testSigning When test signing is allowed, the device does not enforce signature validation during boot
+    */
     private ?string $testSigning = null;
     
-    /** @var string|null $tpmVersion The security version number of the Boot Application */
+    /**
+     * @var string|null $tpmVersion The security version number of the Boot Application
+    */
     private ?string $tpmVersion = null;
     
-    /** @var string|null $virtualSecureMode VSM is a container that protects high value assets from a compromised kernel */
+    /**
+     * @var string|null $virtualSecureMode VSM is a container that protects high value assets from a compromised kernel
+    */
     private ?string $virtualSecureMode = null;
     
-    /** @var string|null $windowsPE Operating system running with limited services that is used to prepare a computer for Windows */
+    /**
+     * @var string|null $windowsPE Operating system running with limited services that is used to prepare a computer for Windows
+    */
     private ?string $windowsPE = null;
     
     /**
@@ -121,7 +187,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceHealthAttestationState
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceHealthAttestationState {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceHealthAttestationState {
         return new DeviceHealthAttestationState();
     }
 
@@ -258,39 +324,40 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'attestationIdentityKey' => function (self $o, ParseNode $n) { $o->setAttestationIdentityKey($n->getStringValue()); },
-            'bitLockerStatus' => function (self $o, ParseNode $n) { $o->setBitLockerStatus($n->getStringValue()); },
-            'bootAppSecurityVersion' => function (self $o, ParseNode $n) { $o->setBootAppSecurityVersion($n->getStringValue()); },
-            'bootDebugging' => function (self $o, ParseNode $n) { $o->setBootDebugging($n->getStringValue()); },
-            'bootManagerSecurityVersion' => function (self $o, ParseNode $n) { $o->setBootManagerSecurityVersion($n->getStringValue()); },
-            'bootManagerVersion' => function (self $o, ParseNode $n) { $o->setBootManagerVersion($n->getStringValue()); },
-            'bootRevisionListInfo' => function (self $o, ParseNode $n) { $o->setBootRevisionListInfo($n->getStringValue()); },
-            'codeIntegrity' => function (self $o, ParseNode $n) { $o->setCodeIntegrity($n->getStringValue()); },
-            'codeIntegrityCheckVersion' => function (self $o, ParseNode $n) { $o->setCodeIntegrityCheckVersion($n->getStringValue()); },
-            'codeIntegrityPolicy' => function (self $o, ParseNode $n) { $o->setCodeIntegrityPolicy($n->getStringValue()); },
-            'contentNamespaceUrl' => function (self $o, ParseNode $n) { $o->setContentNamespaceUrl($n->getStringValue()); },
-            'contentVersion' => function (self $o, ParseNode $n) { $o->setContentVersion($n->getStringValue()); },
-            'dataExcutionPolicy' => function (self $o, ParseNode $n) { $o->setDataExcutionPolicy($n->getStringValue()); },
-            'deviceHealthAttestationStatus' => function (self $o, ParseNode $n) { $o->setDeviceHealthAttestationStatus($n->getStringValue()); },
-            'earlyLaunchAntiMalwareDriverProtection' => function (self $o, ParseNode $n) { $o->setEarlyLaunchAntiMalwareDriverProtection($n->getStringValue()); },
-            'healthAttestationSupportedStatus' => function (self $o, ParseNode $n) { $o->setHealthAttestationSupportedStatus($n->getStringValue()); },
-            'healthStatusMismatchInfo' => function (self $o, ParseNode $n) { $o->setHealthStatusMismatchInfo($n->getStringValue()); },
-            'issuedDateTime' => function (self $o, ParseNode $n) { $o->setIssuedDateTime($n->getDateTimeValue()); },
-            'lastUpdateDateTime' => function (self $o, ParseNode $n) { $o->setLastUpdateDateTime($n->getStringValue()); },
-            'operatingSystemKernelDebugging' => function (self $o, ParseNode $n) { $o->setOperatingSystemKernelDebugging($n->getStringValue()); },
-            'operatingSystemRevListInfo' => function (self $o, ParseNode $n) { $o->setOperatingSystemRevListInfo($n->getStringValue()); },
-            'pcr0' => function (self $o, ParseNode $n) { $o->setPcr0($n->getStringValue()); },
-            'pcrHashAlgorithm' => function (self $o, ParseNode $n) { $o->setPcrHashAlgorithm($n->getStringValue()); },
-            'resetCount' => function (self $o, ParseNode $n) { $o->setResetCount($n->getIntegerValue()); },
-            'restartCount' => function (self $o, ParseNode $n) { $o->setRestartCount($n->getIntegerValue()); },
-            'safeMode' => function (self $o, ParseNode $n) { $o->setSafeMode($n->getStringValue()); },
-            'secureBoot' => function (self $o, ParseNode $n) { $o->setSecureBoot($n->getStringValue()); },
-            'secureBootConfigurationPolicyFingerPrint' => function (self $o, ParseNode $n) { $o->setSecureBootConfigurationPolicyFingerPrint($n->getStringValue()); },
-            'testSigning' => function (self $o, ParseNode $n) { $o->setTestSigning($n->getStringValue()); },
-            'tpmVersion' => function (self $o, ParseNode $n) { $o->setTpmVersion($n->getStringValue()); },
-            'virtualSecureMode' => function (self $o, ParseNode $n) { $o->setVirtualSecureMode($n->getStringValue()); },
-            'windowsPE' => function (self $o, ParseNode $n) { $o->setWindowsPE($n->getStringValue()); },
+            'attestationIdentityKey' => function (ParseNode $n) use ($o) { $o->setAttestationIdentityKey($n->getStringValue()); },
+            'bitLockerStatus' => function (ParseNode $n) use ($o) { $o->setBitLockerStatus($n->getStringValue()); },
+            'bootAppSecurityVersion' => function (ParseNode $n) use ($o) { $o->setBootAppSecurityVersion($n->getStringValue()); },
+            'bootDebugging' => function (ParseNode $n) use ($o) { $o->setBootDebugging($n->getStringValue()); },
+            'bootManagerSecurityVersion' => function (ParseNode $n) use ($o) { $o->setBootManagerSecurityVersion($n->getStringValue()); },
+            'bootManagerVersion' => function (ParseNode $n) use ($o) { $o->setBootManagerVersion($n->getStringValue()); },
+            'bootRevisionListInfo' => function (ParseNode $n) use ($o) { $o->setBootRevisionListInfo($n->getStringValue()); },
+            'codeIntegrity' => function (ParseNode $n) use ($o) { $o->setCodeIntegrity($n->getStringValue()); },
+            'codeIntegrityCheckVersion' => function (ParseNode $n) use ($o) { $o->setCodeIntegrityCheckVersion($n->getStringValue()); },
+            'codeIntegrityPolicy' => function (ParseNode $n) use ($o) { $o->setCodeIntegrityPolicy($n->getStringValue()); },
+            'contentNamespaceUrl' => function (ParseNode $n) use ($o) { $o->setContentNamespaceUrl($n->getStringValue()); },
+            'contentVersion' => function (ParseNode $n) use ($o) { $o->setContentVersion($n->getStringValue()); },
+            'dataExcutionPolicy' => function (ParseNode $n) use ($o) { $o->setDataExcutionPolicy($n->getStringValue()); },
+            'deviceHealthAttestationStatus' => function (ParseNode $n) use ($o) { $o->setDeviceHealthAttestationStatus($n->getStringValue()); },
+            'earlyLaunchAntiMalwareDriverProtection' => function (ParseNode $n) use ($o) { $o->setEarlyLaunchAntiMalwareDriverProtection($n->getStringValue()); },
+            'healthAttestationSupportedStatus' => function (ParseNode $n) use ($o) { $o->setHealthAttestationSupportedStatus($n->getStringValue()); },
+            'healthStatusMismatchInfo' => function (ParseNode $n) use ($o) { $o->setHealthStatusMismatchInfo($n->getStringValue()); },
+            'issuedDateTime' => function (ParseNode $n) use ($o) { $o->setIssuedDateTime($n->getDateTimeValue()); },
+            'lastUpdateDateTime' => function (ParseNode $n) use ($o) { $o->setLastUpdateDateTime($n->getStringValue()); },
+            'operatingSystemKernelDebugging' => function (ParseNode $n) use ($o) { $o->setOperatingSystemKernelDebugging($n->getStringValue()); },
+            'operatingSystemRevListInfo' => function (ParseNode $n) use ($o) { $o->setOperatingSystemRevListInfo($n->getStringValue()); },
+            'pcr0' => function (ParseNode $n) use ($o) { $o->setPcr0($n->getStringValue()); },
+            'pcrHashAlgorithm' => function (ParseNode $n) use ($o) { $o->setPcrHashAlgorithm($n->getStringValue()); },
+            'resetCount' => function (ParseNode $n) use ($o) { $o->setResetCount($n->getIntegerValue()); },
+            'restartCount' => function (ParseNode $n) use ($o) { $o->setRestartCount($n->getIntegerValue()); },
+            'safeMode' => function (ParseNode $n) use ($o) { $o->setSafeMode($n->getStringValue()); },
+            'secureBoot' => function (ParseNode $n) use ($o) { $o->setSecureBoot($n->getStringValue()); },
+            'secureBootConfigurationPolicyFingerPrint' => function (ParseNode $n) use ($o) { $o->setSecureBootConfigurationPolicyFingerPrint($n->getStringValue()); },
+            'testSigning' => function (ParseNode $n) use ($o) { $o->setTestSigning($n->getStringValue()); },
+            'tpmVersion' => function (ParseNode $n) use ($o) { $o->setTpmVersion($n->getStringValue()); },
+            'virtualSecureMode' => function (ParseNode $n) use ($o) { $o->setVirtualSecureMode($n->getStringValue()); },
+            'windowsPE' => function (ParseNode $n) use ($o) { $o->setWindowsPE($n->getStringValue()); },
         ];
     }
 

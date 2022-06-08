@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ChannelIdentity implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $channelId The identity of the channel in which the message was posted. */
+    /**
+     * @var string|null $channelId The identity of the channel in which the message was posted.
+    */
     private ?string $channelId = null;
     
-    /** @var string|null $teamId The identity of the team in which the message was posted. */
+    /**
+     * @var string|null $teamId The identity of the team in which the message was posted.
+    */
     private ?string $teamId = null;
     
     /**
@@ -30,7 +36,7 @@ class ChannelIdentity implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ChannelIdentity
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ChannelIdentity {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ChannelIdentity {
         return new ChannelIdentity();
     }
 
@@ -55,9 +61,10 @@ class ChannelIdentity implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'channelId' => function (self $o, ParseNode $n) { $o->setChannelId($n->getStringValue()); },
-            'teamId' => function (self $o, ParseNode $n) { $o->setTeamId($n->getStringValue()); },
+            'channelId' => function (ParseNode $n) use ($o) { $o->setChannelId($n->getStringValue()); },
+            'teamId' => function (ParseNode $n) use ($o) { $o->setTeamId($n->getStringValue()); },
         ];
     }
 

@@ -6,18 +6,26 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class UsedInsight extends Entity 
+class UsedInsight extends Entity implements Parsable 
 {
-    /** @var UsageDetails|null $lastUsed Information about when the item was last viewed or modified by the user. Read only. */
+    /**
+     * @var UsageDetails|null $lastUsed Information about when the item was last viewed or modified by the user. Read only.
+    */
     private ?UsageDetails $lastUsed = null;
     
-    /** @var Entity|null $resource Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem. */
+    /**
+     * @var Entity|null $resource Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
+    */
     private ?Entity $resource = null;
     
-    /** @var ResourceReference|null $resourceReference Reference properties of the used document, such as the url and type of the document. Read-only */
+    /**
+     * @var ResourceReference|null $resourceReference Reference properties of the used document, such as the url and type of the document. Read-only
+    */
     private ?ResourceReference $resourceReference = null;
     
-    /** @var ResourceVisualization|null $resourceVisualization Properties that you can use to visualize the document in your experience. Read-only */
+    /**
+     * @var ResourceVisualization|null $resourceVisualization Properties that you can use to visualize the document in your experience. Read-only
+    */
     private ?ResourceVisualization $resourceVisualization = null;
     
     /**
@@ -32,7 +40,7 @@ class UsedInsight extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return UsedInsight
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): UsedInsight {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): UsedInsight {
         return new UsedInsight();
     }
 
@@ -41,11 +49,12 @@ class UsedInsight extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'lastUsed' => function (self $o, ParseNode $n) { $o->setLastUsed($n->getObjectValue(UsageDetails::class)); },
-            'resource' => function (self $o, ParseNode $n) { $o->setResource($n->getObjectValue(Entity::class)); },
-            'resourceReference' => function (self $o, ParseNode $n) { $o->setResourceReference($n->getObjectValue(ResourceReference::class)); },
-            'resourceVisualization' => function (self $o, ParseNode $n) { $o->setResourceVisualization($n->getObjectValue(ResourceVisualization::class)); },
+            'lastUsed' => function (ParseNode $n) use ($o) { $o->setLastUsed($n->getObjectValue(array(UsageDetails::class, 'createFromDiscriminatorValue'))); },
+            'resource' => function (ParseNode $n) use ($o) { $o->setResource($n->getObjectValue(array(Entity::class, 'createFromDiscriminatorValue'))); },
+            'resourceReference' => function (ParseNode $n) use ($o) { $o->setResourceReference($n->getObjectValue(array(ResourceReference::class, 'createFromDiscriminatorValue'))); },
+            'resourceVisualization' => function (ParseNode $n) use ($o) { $o->setResourceVisualization($n->getObjectValue(array(ResourceVisualization::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

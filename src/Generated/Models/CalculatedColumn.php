@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class CalculatedColumn implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $format For dateTime output types, the format of the value. Must be one of dateOnly or dateTime. */
+    /**
+     * @var string|null $format For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.
+    */
     private ?string $format = null;
     
-    /** @var string|null $formula The formula used to compute the value for this column. */
+    /**
+     * @var string|null $formula The formula used to compute the value for this column.
+    */
     private ?string $formula = null;
     
-    /** @var string|null $outputType The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text. */
+    /**
+     * @var string|null $outputType The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.
+    */
     private ?string $outputType = null;
     
     /**
@@ -33,7 +41,7 @@ class CalculatedColumn implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return CalculatedColumn
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): CalculatedColumn {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): CalculatedColumn {
         return new CalculatedColumn();
     }
 
@@ -50,10 +58,11 @@ class CalculatedColumn implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'format' => function (self $o, ParseNode $n) { $o->setFormat($n->getStringValue()); },
-            'formula' => function (self $o, ParseNode $n) { $o->setFormula($n->getStringValue()); },
-            'outputType' => function (self $o, ParseNode $n) { $o->setOutputType($n->getStringValue()); },
+            'format' => function (ParseNode $n) use ($o) { $o->setFormat($n->getStringValue()); },
+            'formula' => function (ParseNode $n) use ($o) { $o->setFormula($n->getStringValue()); },
+            'outputType' => function (ParseNode $n) use ($o) { $o->setOutputType($n->getStringValue()); },
         ];
     }
 

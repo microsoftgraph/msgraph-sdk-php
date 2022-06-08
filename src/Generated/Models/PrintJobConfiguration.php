@@ -9,64 +9,104 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class PrintJobConfiguration implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $collate Whether the printer should collate pages wehen printing multiple copies of a multi-page document. */
+    /**
+     * @var bool|null $collate Whether the printer should collate pages wehen printing multiple copies of a multi-page document.
+    */
     private ?bool $collate = null;
     
-    /** @var PrintColorMode|null $colorMode The color mode the printer should use to print the job. Valid values are described in the table below. Read-only. */
+    /**
+     * @var PrintColorMode|null $colorMode The color mode the printer should use to print the job. Valid values are described in the table below. Read-only.
+    */
     private ?PrintColorMode $colorMode = null;
     
-    /** @var int|null $copies The number of copies that should be printed. Read-only. */
+    /**
+     * @var int|null $copies The number of copies that should be printed. Read-only.
+    */
     private ?int $copies = null;
     
-    /** @var int|null $dpi The resolution to use when printing the job, expressed in dots per inch (DPI). Read-only. */
+    /**
+     * @var int|null $dpi The resolution to use when printing the job, expressed in dots per inch (DPI). Read-only.
+    */
     private ?int $dpi = null;
     
-    /** @var PrintDuplexMode|null $duplexMode The duplex mode the printer should use when printing the job. Valid values are described in the table below. Read-only. */
+    /**
+     * @var PrintDuplexMode|null $duplexMode The duplex mode the printer should use when printing the job. Valid values are described in the table below. Read-only.
+    */
     private ?PrintDuplexMode $duplexMode = null;
     
-    /** @var PrinterFeedOrientation|null $feedOrientation The orientation to use when feeding media into the printer. Valid values are described in the following table. Read-only. */
+    /**
+     * @var PrinterFeedOrientation|null $feedOrientation The orientation to use when feeding media into the printer. Valid values are described in the following table. Read-only.
+    */
     private ?PrinterFeedOrientation $feedOrientation = null;
     
-    /** @var array<PrintFinishing>|null $finishings Finishing processes to use when printing. */
+    /**
+     * @var array<string>|null $finishings Finishing processes to use when printing.
+    */
     private ?array $finishings = null;
     
-    /** @var bool|null $fitPdfToPage The fitPdfToPage property */
+    /**
+     * @var bool|null $fitPdfToPage The fitPdfToPage property
+    */
     private ?bool $fitPdfToPage = null;
     
-    /** @var string|null $inputBin The input bin (tray) to use when printing. See the printer's capabilities for a list of supported input bins. */
+    /**
+     * @var string|null $inputBin The input bin (tray) to use when printing. See the printer's capabilities for a list of supported input bins.
+    */
     private ?string $inputBin = null;
     
-    /** @var PrintMargin|null $margin The margin settings to use when printing. */
+    /**
+     * @var PrintMargin|null $margin The margin settings to use when printing.
+    */
     private ?PrintMargin $margin = null;
     
-    /** @var string|null $mediaSize The media size to use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values listed in the printerCapabilities topic. */
+    /**
+     * @var string|null $mediaSize The media sizeto use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
+    */
     private ?string $mediaSize = null;
     
-    /** @var string|null $mediaType The default media (such as paper) type to print the document on. */
+    /**
+     * @var string|null $mediaType The default media (such as paper) type to print the document on.
+    */
     private ?string $mediaType = null;
     
-    /** @var PrintMultipageLayout|null $multipageLayout The direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table. */
+    /**
+     * @var PrintMultipageLayout|null $multipageLayout The direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
+    */
     private ?PrintMultipageLayout $multipageLayout = null;
     
-    /** @var PrintOrientation|null $orientation The orientation setting the printer should use when printing the job. Valid values are described in the following table. */
+    /**
+     * @var PrintOrientation|null $orientation The orientation setting the printer should use when printing the job. Valid values are described in the following table.
+    */
     private ?PrintOrientation $orientation = null;
     
-    /** @var string|null $outputBin The output bin to place completed prints into. See the printer's capabilities for a list of supported output bins. */
+    /**
+     * @var string|null $outputBin The output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
+    */
     private ?string $outputBin = null;
     
-    /** @var array<IntegerRange>|null $pageRanges The page ranges to print. Read-only. */
+    /**
+     * @var array<IntegerRange>|null $pageRanges The page ranges to print. Read-only.
+    */
     private ?array $pageRanges = null;
     
-    /** @var int|null $pagesPerSheet The number of document pages to print on each sheet. */
+    /**
+     * @var int|null $pagesPerSheet The number of document pages to print on each sheet.
+    */
     private ?int $pagesPerSheet = null;
     
-    /** @var PrintQuality|null $quality The print quality to use when printing the job. Valid values are described in the table below. Read-only. */
+    /**
+     * @var PrintQuality|null $quality The print quality to use when printing the job. Valid values are described in the table below. Read-only.
+    */
     private ?PrintQuality $quality = null;
     
-    /** @var PrintScaling|null $scaling Specifies how the printer should scale the document data to fit the requested media. Valid values are described in the following table. */
+    /**
+     * @var PrintScaling|null $scaling Specifies how the printer should scale the document data to fit the requested media. Valid values are described in the following table.
+    */
     private ?PrintScaling $scaling = null;
     
     /**
@@ -81,7 +121,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrintJobConfiguration
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrintJobConfiguration {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrintJobConfiguration {
         return new PrintJobConfiguration();
     }
 
@@ -146,32 +186,33 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'collate' => function (self $o, ParseNode $n) { $o->setCollate($n->getBooleanValue()); },
-            'colorMode' => function (self $o, ParseNode $n) { $o->setColorMode($n->getEnumValue(PrintColorMode::class)); },
-            'copies' => function (self $o, ParseNode $n) { $o->setCopies($n->getIntegerValue()); },
-            'dpi' => function (self $o, ParseNode $n) { $o->setDpi($n->getIntegerValue()); },
-            'duplexMode' => function (self $o, ParseNode $n) { $o->setDuplexMode($n->getEnumValue(PrintDuplexMode::class)); },
-            'feedOrientation' => function (self $o, ParseNode $n) { $o->setFeedOrientation($n->getEnumValue(PrinterFeedOrientation::class)); },
-            'finishings' => function (self $o, ParseNode $n) { $o->setFinishings($n->getCollectionOfEnumValues(PrintFinishing::class)); },
-            'fitPdfToPage' => function (self $o, ParseNode $n) { $o->setFitPdfToPage($n->getBooleanValue()); },
-            'inputBin' => function (self $o, ParseNode $n) { $o->setInputBin($n->getStringValue()); },
-            'margin' => function (self $o, ParseNode $n) { $o->setMargin($n->getObjectValue(PrintMargin::class)); },
-            'mediaSize' => function (self $o, ParseNode $n) { $o->setMediaSize($n->getStringValue()); },
-            'mediaType' => function (self $o, ParseNode $n) { $o->setMediaType($n->getStringValue()); },
-            'multipageLayout' => function (self $o, ParseNode $n) { $o->setMultipageLayout($n->getEnumValue(PrintMultipageLayout::class)); },
-            'orientation' => function (self $o, ParseNode $n) { $o->setOrientation($n->getEnumValue(PrintOrientation::class)); },
-            'outputBin' => function (self $o, ParseNode $n) { $o->setOutputBin($n->getStringValue()); },
-            'pageRanges' => function (self $o, ParseNode $n) { $o->setPageRanges($n->getCollectionOfObjectValues(IntegerRange::class)); },
-            'pagesPerSheet' => function (self $o, ParseNode $n) { $o->setPagesPerSheet($n->getIntegerValue()); },
-            'quality' => function (self $o, ParseNode $n) { $o->setQuality($n->getEnumValue(PrintQuality::class)); },
-            'scaling' => function (self $o, ParseNode $n) { $o->setScaling($n->getEnumValue(PrintScaling::class)); },
+            'collate' => function (ParseNode $n) use ($o) { $o->setCollate($n->getBooleanValue()); },
+            'colorMode' => function (ParseNode $n) use ($o) { $o->setColorMode($n->getEnumValue(PrintColorMode::class)); },
+            'copies' => function (ParseNode $n) use ($o) { $o->setCopies($n->getIntegerValue()); },
+            'dpi' => function (ParseNode $n) use ($o) { $o->setDpi($n->getIntegerValue()); },
+            'duplexMode' => function (ParseNode $n) use ($o) { $o->setDuplexMode($n->getEnumValue(PrintDuplexMode::class)); },
+            'feedOrientation' => function (ParseNode $n) use ($o) { $o->setFeedOrientation($n->getEnumValue(PrinterFeedOrientation::class)); },
+            'finishings' => function (ParseNode $n) use ($o) { $o->setFinishings($n->getCollectionOfPrimitiveValues()); },
+            'fitPdfToPage' => function (ParseNode $n) use ($o) { $o->setFitPdfToPage($n->getBooleanValue()); },
+            'inputBin' => function (ParseNode $n) use ($o) { $o->setInputBin($n->getStringValue()); },
+            'margin' => function (ParseNode $n) use ($o) { $o->setMargin($n->getObjectValue(array(PrintMargin::class, 'createFromDiscriminatorValue'))); },
+            'mediaSize' => function (ParseNode $n) use ($o) { $o->setMediaSize($n->getStringValue()); },
+            'mediaType' => function (ParseNode $n) use ($o) { $o->setMediaType($n->getStringValue()); },
+            'multipageLayout' => function (ParseNode $n) use ($o) { $o->setMultipageLayout($n->getEnumValue(PrintMultipageLayout::class)); },
+            'orientation' => function (ParseNode $n) use ($o) { $o->setOrientation($n->getEnumValue(PrintOrientation::class)); },
+            'outputBin' => function (ParseNode $n) use ($o) { $o->setOutputBin($n->getStringValue()); },
+            'pageRanges' => function (ParseNode $n) use ($o) { $o->setPageRanges($n->getCollectionOfObjectValues(array(IntegerRange::class, 'createFromDiscriminatorValue'))); },
+            'pagesPerSheet' => function (ParseNode $n) use ($o) { $o->setPagesPerSheet($n->getIntegerValue()); },
+            'quality' => function (ParseNode $n) use ($o) { $o->setQuality($n->getEnumValue(PrintQuality::class)); },
+            'scaling' => function (ParseNode $n) use ($o) { $o->setScaling($n->getEnumValue(PrintScaling::class)); },
         ];
     }
 
     /**
      * Gets the finishings property value. Finishing processes to use when printing.
-     * @return array<PrintFinishing>|null
+     * @return array<string>|null
     */
     public function getFinishings(): ?array {
         return $this->finishings;
@@ -202,7 +243,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the mediaSize property value. The media size to use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values listed in the printerCapabilities topic.
+     * Gets the mediaSize property value. The media sizeto use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
      * @return string|null
     */
     public function getMediaSize(): ?string {
@@ -284,7 +325,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
         $writer->writeIntegerValue('dpi', $this->dpi);
         $writer->writeEnumValue('duplexMode', $this->duplexMode);
         $writer->writeEnumValue('feedOrientation', $this->feedOrientation);
-        $writer->writeCollectionOfEnumValues('finishings', $this->finishings);
+        $writer->writeCollectionOfPrimitiveValues('finishings', $this->finishings);
         $writer->writeBooleanValue('fitPdfToPage', $this->fitPdfToPage);
         $writer->writeStringValue('inputBin', $this->inputBin);
         $writer->writeObjectValue('margin', $this->margin);
@@ -358,7 +399,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the finishings property value. Finishing processes to use when printing.
-     *  @param array<PrintFinishing>|null $value Value to set for the finishings property.
+     *  @param array<string>|null $value Value to set for the finishings property.
     */
     public function setFinishings(?array $value ): void {
         $this->finishings = $value;
@@ -389,7 +430,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the mediaSize property value. The media size to use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values listed in the printerCapabilities topic.
+     * Sets the mediaSize property value. The media sizeto use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
      *  @param string|null $value Value to set for the mediaSize property.
     */
     public function setMediaSize(?string $value ): void {

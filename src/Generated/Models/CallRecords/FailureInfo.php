@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class FailureInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $reason Classification of why a call or portion of a call failed. */
+    /**
+     * @var string|null $reason Classification of why a call or portion of a call failed.
+    */
     private ?string $reason = null;
     
-    /** @var FailureStage|null $stage The stage when the failure occurred. Possible values are: unknown, callSetup, midcall, unknownFutureValue. */
+    /**
+     * @var FailureStage|null $stage The stage when the failure occurred. Possible values are: unknown, callSetup, midcall, unknownFutureValue.
+    */
     private ?FailureStage $stage = null;
     
     /**
@@ -30,7 +36,7 @@ class FailureInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return FailureInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): FailureInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): FailureInfo {
         return new FailureInfo();
     }
 
@@ -47,9 +53,10 @@ class FailureInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'reason' => function (self $o, ParseNode $n) { $o->setReason($n->getStringValue()); },
-            'stage' => function (self $o, ParseNode $n) { $o->setStage($n->getEnumValue(FailureStage::class)); },
+            'reason' => function (ParseNode $n) use ($o) { $o->setReason($n->getStringValue()); },
+            'stage' => function (ParseNode $n) use ($o) { $o->setStage($n->getEnumValue(FailureStage::class)); },
         ];
     }
 

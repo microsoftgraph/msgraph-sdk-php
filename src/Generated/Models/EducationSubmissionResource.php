@@ -6,12 +6,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class EducationSubmissionResource extends Entity 
+class EducationSubmissionResource extends Entity implements Parsable 
 {
-    /** @var string|null $assignmentResourceUrl Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource. */
+    /**
+     * @var string|null $assignmentResourceUrl Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
+    */
     private ?string $assignmentResourceUrl = null;
     
-    /** @var EducationResource|null $resource Resource object. */
+    /**
+     * @var EducationResource|null $resource Resource object.
+    */
     private ?EducationResource $resource = null;
     
     /**
@@ -26,7 +30,7 @@ class EducationSubmissionResource extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return EducationSubmissionResource
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): EducationSubmissionResource {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): EducationSubmissionResource {
         return new EducationSubmissionResource();
     }
 
@@ -43,9 +47,10 @@ class EducationSubmissionResource extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignmentResourceUrl' => function (self $o, ParseNode $n) { $o->setAssignmentResourceUrl($n->getStringValue()); },
-            'resource' => function (self $o, ParseNode $n) { $o->setResource($n->getObjectValue(EducationResource::class)); },
+            'assignmentResourceUrl' => function (ParseNode $n) use ($o) { $o->setAssignmentResourceUrl($n->getStringValue()); },
+            'resource' => function (ParseNode $n) use ($o) { $o->setResource($n->getObjectValue(array(EducationResource::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

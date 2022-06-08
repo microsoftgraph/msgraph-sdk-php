@@ -6,18 +6,26 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class PlannerBucket extends Entity 
+class PlannerBucket extends Entity implements Parsable 
 {
-    /** @var string|null $name Name of the bucket. */
+    /**
+     * @var string|null $name Name of the bucket.
+    */
     private ?string $name = null;
     
-    /** @var string|null $orderHint Hint used to order items of this type in a list view. The format is defined as outlined here. */
+    /**
+     * @var string|null $orderHint Hint used to order items of this type in a list view. The format is defined as outlined here.
+    */
     private ?string $orderHint = null;
     
-    /** @var string|null $planId Plan ID to which the bucket belongs. */
+    /**
+     * @var string|null $planId Plan ID to which the bucket belongs.
+    */
     private ?string $planId = null;
     
-    /** @var array<PlannerTask>|null $tasks Read-only. Nullable. The collection of tasks in the bucket. */
+    /**
+     * @var array<PlannerTask>|null $tasks Read-only. Nullable. The collection of tasks in the bucket.
+    */
     private ?array $tasks = null;
     
     /**
@@ -32,7 +40,7 @@ class PlannerBucket extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PlannerBucket
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PlannerBucket {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PlannerBucket {
         return new PlannerBucket();
     }
 
@@ -41,11 +49,12 @@ class PlannerBucket extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'orderHint' => function (self $o, ParseNode $n) { $o->setOrderHint($n->getStringValue()); },
-            'planId' => function (self $o, ParseNode $n) { $o->setPlanId($n->getStringValue()); },
-            'tasks' => function (self $o, ParseNode $n) { $o->setTasks($n->getCollectionOfObjectValues(PlannerTask::class)); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'orderHint' => function (ParseNode $n) use ($o) { $o->setOrderHint($n->getStringValue()); },
+            'planId' => function (ParseNode $n) use ($o) { $o->setPlanId($n->getStringValue()); },
+            'tasks' => function (ParseNode $n) use ($o) { $o->setTasks($n->getCollectionOfObjectValues(array(PlannerTask::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

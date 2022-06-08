@@ -5,6 +5,6 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Enum;
 
 class FilterMode extends Enum {
-    public const ESCAPED_INCLUDE = 'EscapedInclude';
+    public const ESCAPED_INCLUDE = 'include';
     public const EXCLUDE = 'exclude';
 }

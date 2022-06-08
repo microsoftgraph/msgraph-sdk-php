@@ -10,70 +10,114 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var DateInterval|null $averageInboundJitter The average inbound stream network jitter. */
+    /**
+     * @var DateInterval|null $averageInboundJitter The average inbound stream network jitter.
+    */
     private ?DateInterval $averageInboundJitter = null;
     
-    /** @var float|null $averageInboundPacketLossRateInPercentage The average inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%. */
+    /**
+     * @var float|null $averageInboundPacketLossRateInPercentage The average inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
+    */
     private ?float $averageInboundPacketLossRateInPercentage = null;
     
-    /** @var DateInterval|null $averageInboundRoundTripDelay The average inbound stream network round trip delay. */
+    /**
+     * @var DateInterval|null $averageInboundRoundTripDelay The average inbound stream network round trip delay.
+    */
     private ?DateInterval $averageInboundRoundTripDelay = null;
     
-    /** @var DateInterval|null $averageOutboundJitter The average outbound stream network jitter. */
+    /**
+     * @var DateInterval|null $averageOutboundJitter The average outbound stream network jitter.
+    */
     private ?DateInterval $averageOutboundJitter = null;
     
-    /** @var float|null $averageOutboundPacketLossRateInPercentage The average outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%. */
+    /**
+     * @var float|null $averageOutboundPacketLossRateInPercentage The average outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
+    */
     private ?float $averageOutboundPacketLossRateInPercentage = null;
     
-    /** @var DateInterval|null $averageOutboundRoundTripDelay The average outbound stream network round trip delay. */
+    /**
+     * @var DateInterval|null $averageOutboundRoundTripDelay The average outbound stream network round trip delay.
+    */
     private ?DateInterval $averageOutboundRoundTripDelay = null;
     
-    /** @var int|null $channelIndex The channel index of media. Indexing begins with 1.  If a media session contains 3 video modalities, channel indexes will be 1, 2, and 3. */
+    /**
+     * @var int|null $channelIndex The channel index of media. Indexing begins with 1.  If a media session contains 3 video modalities, channel indexes will be 1, 2, and 3.
+    */
     private ?int $channelIndex = null;
     
-    /** @var int|null $inboundPackets The total number of the inbound packets. */
+    /**
+     * @var int|null $inboundPackets The total number of the inbound packets.
+    */
     private ?int $inboundPackets = null;
     
-    /** @var string|null $localIPAddress the local IP address for the media session. */
+    /**
+     * @var string|null $localIPAddress the local IP address for the media session.
+    */
     private ?string $localIPAddress = null;
     
-    /** @var int|null $localPort The local media port. */
+    /**
+     * @var int|null $localPort The local media port.
+    */
     private ?int $localPort = null;
     
-    /** @var DateInterval|null $maximumInboundJitter The maximum inbound stream network jitter. */
+    /**
+     * @var DateInterval|null $maximumInboundJitter The maximum inbound stream network jitter.
+    */
     private ?DateInterval $maximumInboundJitter = null;
     
-    /** @var float|null $maximumInboundPacketLossRateInPercentage The maximum inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%. */
+    /**
+     * @var float|null $maximumInboundPacketLossRateInPercentage The maximum inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
+    */
     private ?float $maximumInboundPacketLossRateInPercentage = null;
     
-    /** @var DateInterval|null $maximumInboundRoundTripDelay The maximum inbound stream network round trip delay. */
+    /**
+     * @var DateInterval|null $maximumInboundRoundTripDelay The maximum inbound stream network round trip delay.
+    */
     private ?DateInterval $maximumInboundRoundTripDelay = null;
     
-    /** @var DateInterval|null $maximumOutboundJitter The maximum outbound stream network jitter. */
+    /**
+     * @var DateInterval|null $maximumOutboundJitter The maximum outbound stream network jitter.
+    */
     private ?DateInterval $maximumOutboundJitter = null;
     
-    /** @var float|null $maximumOutboundPacketLossRateInPercentage The maximum outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%. */
+    /**
+     * @var float|null $maximumOutboundPacketLossRateInPercentage The maximum outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
+    */
     private ?float $maximumOutboundPacketLossRateInPercentage = null;
     
-    /** @var DateInterval|null $maximumOutboundRoundTripDelay The maximum outbound stream network round trip delay. */
+    /**
+     * @var DateInterval|null $maximumOutboundRoundTripDelay The maximum outbound stream network round trip delay.
+    */
     private ?DateInterval $maximumOutboundRoundTripDelay = null;
     
-    /** @var DateInterval|null $mediaDuration The total modality duration. If the media enabled and disabled multiple times, MediaDuration will the summation of all of the durations. */
+    /**
+     * @var DateInterval|null $mediaDuration The total modality duration. If the media enabled and disabled multiple times, MediaDuration will the summation of all of the durations.
+    */
     private ?DateInterval $mediaDuration = null;
     
-    /** @var int|null $networkLinkSpeedInBytes The network link speed in bytes */
+    /**
+     * @var int|null $networkLinkSpeedInBytes The network link speed in bytes
+    */
     private ?int $networkLinkSpeedInBytes = null;
     
-    /** @var int|null $outboundPackets The total number of the outbound packets. */
+    /**
+     * @var int|null $outboundPackets The total number of the outbound packets.
+    */
     private ?int $outboundPackets = null;
     
-    /** @var string|null $remoteIPAddress The remote IP address for the media session. */
+    /**
+     * @var string|null $remoteIPAddress The remote IP address for the media session.
+    */
     private ?string $remoteIPAddress = null;
     
-    /** @var int|null $remotePort The remote media port. */
+    /**
+     * @var int|null $remotePort The remote media port.
+    */
     private ?int $remotePort = null;
     
     /**
@@ -88,7 +132,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TeleconferenceDeviceMediaQuality
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TeleconferenceDeviceMediaQuality {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TeleconferenceDeviceMediaQuality {
         return new TeleconferenceDeviceMediaQuality();
     }
 
@@ -161,28 +205,29 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'averageInboundJitter' => function (self $o, ParseNode $n) { $o->setAverageInboundJitter($n->getDateIntervalValue()); },
-            'averageInboundPacketLossRateInPercentage' => function (self $o, ParseNode $n) { $o->setAverageInboundPacketLossRateInPercentage($n->getFloatValue()); },
-            'averageInboundRoundTripDelay' => function (self $o, ParseNode $n) { $o->setAverageInboundRoundTripDelay($n->getDateIntervalValue()); },
-            'averageOutboundJitter' => function (self $o, ParseNode $n) { $o->setAverageOutboundJitter($n->getDateIntervalValue()); },
-            'averageOutboundPacketLossRateInPercentage' => function (self $o, ParseNode $n) { $o->setAverageOutboundPacketLossRateInPercentage($n->getFloatValue()); },
-            'averageOutboundRoundTripDelay' => function (self $o, ParseNode $n) { $o->setAverageOutboundRoundTripDelay($n->getDateIntervalValue()); },
-            'channelIndex' => function (self $o, ParseNode $n) { $o->setChannelIndex($n->getIntegerValue()); },
-            'inboundPackets' => function (self $o, ParseNode $n) { $o->setInboundPackets($n->getIntegerValue()); },
-            'localIPAddress' => function (self $o, ParseNode $n) { $o->setLocalIPAddress($n->getStringValue()); },
-            'localPort' => function (self $o, ParseNode $n) { $o->setLocalPort($n->getIntegerValue()); },
-            'maximumInboundJitter' => function (self $o, ParseNode $n) { $o->setMaximumInboundJitter($n->getDateIntervalValue()); },
-            'maximumInboundPacketLossRateInPercentage' => function (self $o, ParseNode $n) { $o->setMaximumInboundPacketLossRateInPercentage($n->getFloatValue()); },
-            'maximumInboundRoundTripDelay' => function (self $o, ParseNode $n) { $o->setMaximumInboundRoundTripDelay($n->getDateIntervalValue()); },
-            'maximumOutboundJitter' => function (self $o, ParseNode $n) { $o->setMaximumOutboundJitter($n->getDateIntervalValue()); },
-            'maximumOutboundPacketLossRateInPercentage' => function (self $o, ParseNode $n) { $o->setMaximumOutboundPacketLossRateInPercentage($n->getFloatValue()); },
-            'maximumOutboundRoundTripDelay' => function (self $o, ParseNode $n) { $o->setMaximumOutboundRoundTripDelay($n->getDateIntervalValue()); },
-            'mediaDuration' => function (self $o, ParseNode $n) { $o->setMediaDuration($n->getDateIntervalValue()); },
-            'networkLinkSpeedInBytes' => function (self $o, ParseNode $n) { $o->setNetworkLinkSpeedInBytes($n->getIntegerValue()); },
-            'outboundPackets' => function (self $o, ParseNode $n) { $o->setOutboundPackets($n->getIntegerValue()); },
-            'remoteIPAddress' => function (self $o, ParseNode $n) { $o->setRemoteIPAddress($n->getStringValue()); },
-            'remotePort' => function (self $o, ParseNode $n) { $o->setRemotePort($n->getIntegerValue()); },
+            'averageInboundJitter' => function (ParseNode $n) use ($o) { $o->setAverageInboundJitter($n->getDateIntervalValue()); },
+            'averageInboundPacketLossRateInPercentage' => function (ParseNode $n) use ($o) { $o->setAverageInboundPacketLossRateInPercentage($n->getFloatValue()); },
+            'averageInboundRoundTripDelay' => function (ParseNode $n) use ($o) { $o->setAverageInboundRoundTripDelay($n->getDateIntervalValue()); },
+            'averageOutboundJitter' => function (ParseNode $n) use ($o) { $o->setAverageOutboundJitter($n->getDateIntervalValue()); },
+            'averageOutboundPacketLossRateInPercentage' => function (ParseNode $n) use ($o) { $o->setAverageOutboundPacketLossRateInPercentage($n->getFloatValue()); },
+            'averageOutboundRoundTripDelay' => function (ParseNode $n) use ($o) { $o->setAverageOutboundRoundTripDelay($n->getDateIntervalValue()); },
+            'channelIndex' => function (ParseNode $n) use ($o) { $o->setChannelIndex($n->getIntegerValue()); },
+            'inboundPackets' => function (ParseNode $n) use ($o) { $o->setInboundPackets($n->getIntegerValue()); },
+            'localIPAddress' => function (ParseNode $n) use ($o) { $o->setLocalIPAddress($n->getStringValue()); },
+            'localPort' => function (ParseNode $n) use ($o) { $o->setLocalPort($n->getIntegerValue()); },
+            'maximumInboundJitter' => function (ParseNode $n) use ($o) { $o->setMaximumInboundJitter($n->getDateIntervalValue()); },
+            'maximumInboundPacketLossRateInPercentage' => function (ParseNode $n) use ($o) { $o->setMaximumInboundPacketLossRateInPercentage($n->getFloatValue()); },
+            'maximumInboundRoundTripDelay' => function (ParseNode $n) use ($o) { $o->setMaximumInboundRoundTripDelay($n->getDateIntervalValue()); },
+            'maximumOutboundJitter' => function (ParseNode $n) use ($o) { $o->setMaximumOutboundJitter($n->getDateIntervalValue()); },
+            'maximumOutboundPacketLossRateInPercentage' => function (ParseNode $n) use ($o) { $o->setMaximumOutboundPacketLossRateInPercentage($n->getFloatValue()); },
+            'maximumOutboundRoundTripDelay' => function (ParseNode $n) use ($o) { $o->setMaximumOutboundRoundTripDelay($n->getDateIntervalValue()); },
+            'mediaDuration' => function (ParseNode $n) use ($o) { $o->setMediaDuration($n->getDateIntervalValue()); },
+            'networkLinkSpeedInBytes' => function (ParseNode $n) use ($o) { $o->setNetworkLinkSpeedInBytes($n->getIntegerValue()); },
+            'outboundPackets' => function (ParseNode $n) use ($o) { $o->setOutboundPackets($n->getIntegerValue()); },
+            'remoteIPAddress' => function (ParseNode $n) use ($o) { $o->setRemoteIPAddress($n->getStringValue()); },
+            'remotePort' => function (ParseNode $n) use ($o) { $o->setRemotePort($n->getIntegerValue()); },
         ];
     }
 

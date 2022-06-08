@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var ChatMessagePolicyViolationDlpActionTypes|null $dlpAction The action taken by the DLP provider on the message with sensitive content. Supported values are: NoneNotifySender -- Inform the sender of the violation but allow readers to read the message.BlockAccess -- Block readers from reading the message.BlockAccessExternal -- Block users outside the organization from reading the message, while allowing users within the organization to read the message. */
+    /**
+     * @var ChatMessagePolicyViolationDlpActionTypes|null $dlpAction The action taken by the DLP provider on the message with sensitive content. Supported values are: NoneNotifySender -- Inform the sender of the violation but allow readers to read the message.BlockAccess -- Block readers from reading the message.BlockAccessExternal -- Block users outside the organization from reading the message, while allowing users within the organization to read the message.
+    */
     private ?ChatMessagePolicyViolationDlpActionTypes $dlpAction = null;
     
-    /** @var string|null $justificationText Justification text provided by the sender of the message when overriding a policy violation. */
+    /**
+     * @var string|null $justificationText Justification text provided by the sender of the message when overriding a policy violation.
+    */
     private ?string $justificationText = null;
     
-    /** @var ChatMessagePolicyViolationPolicyTip|null $policyTip Information to display to the message sender about why the message was flagged as a violation. */
+    /**
+     * @var ChatMessagePolicyViolationPolicyTip|null $policyTip Information to display to the message sender about why the message was flagged as a violation.
+    */
     private ?ChatMessagePolicyViolationPolicyTip $policyTip = null;
     
-    /** @var ChatMessagePolicyViolationUserActionTypes|null $userAction Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction is not required. */
+    /**
+     * @var ChatMessagePolicyViolationUserActionTypes|null $userAction Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction is not required.
+    */
     private ?ChatMessagePolicyViolationUserActionTypes $userAction = null;
     
-    /** @var ChatMessagePolicyViolationVerdictDetailsTypes|null $verdictDetails Indicates what actions the sender may take in response to the policy violation. Supported values are: NoneAllowFalsePositiveOverride -- Allows the sender to declare the policyViolation to be an error in the DLP app and its rules, and allow readers to see the message again if the dlpAction had hidden it.AllowOverrideWithoutJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, without needing to provide an explanation for doing so. AllowOverrideWithJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, after providing an explanation for doing so.AllowOverrideWithoutJustification and AllowOverrideWithJustification are mutually exclusive. */
+    /**
+     * @var ChatMessagePolicyViolationVerdictDetailsTypes|null $verdictDetails Indicates what actions the sender may take in response to the policy violation. Supported values are: NoneAllowFalsePositiveOverride -- Allows the sender to declare the policyViolation to be an error in the DLP app and its rules, and allow readers to see the message again if the dlpAction had hidden it.AllowOverrideWithoutJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, without needing to provide an explanation for doing so. AllowOverrideWithJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, after providing an explanation for doing so.AllowOverrideWithoutJustification and AllowOverrideWithJustification are mutually exclusive.
+    */
     private ?ChatMessagePolicyViolationVerdictDetailsTypes $verdictDetails = null;
     
     /**
@@ -39,7 +51,7 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ChatMessagePolicyViolation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ChatMessagePolicyViolation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ChatMessagePolicyViolation {
         return new ChatMessagePolicyViolation();
     }
 
@@ -64,12 +76,13 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'dlpAction' => function (self $o, ParseNode $n) { $o->setDlpAction($n->getEnumValue(ChatMessagePolicyViolationDlpActionTypes::class)); },
-            'justificationText' => function (self $o, ParseNode $n) { $o->setJustificationText($n->getStringValue()); },
-            'policyTip' => function (self $o, ParseNode $n) { $o->setPolicyTip($n->getObjectValue(ChatMessagePolicyViolationPolicyTip::class)); },
-            'userAction' => function (self $o, ParseNode $n) { $o->setUserAction($n->getEnumValue(ChatMessagePolicyViolationUserActionTypes::class)); },
-            'verdictDetails' => function (self $o, ParseNode $n) { $o->setVerdictDetails($n->getEnumValue(ChatMessagePolicyViolationVerdictDetailsTypes::class)); },
+            'dlpAction' => function (ParseNode $n) use ($o) { $o->setDlpAction($n->getEnumValue(ChatMessagePolicyViolationDlpActionTypes::class)); },
+            'justificationText' => function (ParseNode $n) use ($o) { $o->setJustificationText($n->getStringValue()); },
+            'policyTip' => function (ParseNode $n) use ($o) { $o->setPolicyTip($n->getObjectValue(array(ChatMessagePolicyViolationPolicyTip::class, 'createFromDiscriminatorValue'))); },
+            'userAction' => function (ParseNode $n) use ($o) { $o->setUserAction($n->getEnumValue(ChatMessagePolicyViolationUserActionTypes::class)); },
+            'verdictDetails' => function (ParseNode $n) use ($o) { $o->setVerdictDetails($n->getEnumValue(ChatMessagePolicyViolationVerdictDetailsTypes::class)); },
         ];
     }
 

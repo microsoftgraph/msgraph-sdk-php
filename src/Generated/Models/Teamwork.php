@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Teamwork extends Entity 
+class Teamwork extends Entity implements Parsable 
 {
-    /** @var array<WorkforceIntegration>|null $workforceIntegrations A workforce integration with shifts. */
+    /**
+     * @var array<WorkforceIntegration>|null $workforceIntegrations A workforce integration with shifts.
+    */
     private ?array $workforceIntegrations = null;
     
     /**
@@ -23,7 +25,7 @@ class Teamwork extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Teamwork
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Teamwork {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Teamwork {
         return new Teamwork();
     }
 
@@ -32,8 +34,9 @@ class Teamwork extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'workforceIntegrations' => function (self $o, ParseNode $n) { $o->setWorkforceIntegrations($n->getCollectionOfObjectValues(WorkforceIntegration::class)); },
+            'workforceIntegrations' => function (ParseNode $n) use ($o) { $o->setWorkforceIntegrations($n->getCollectionOfObjectValues(array(WorkforceIntegration::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

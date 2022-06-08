@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class RestrictedSignIn extends SignIn 
+class RestrictedSignIn extends SignIn implements Parsable 
 {
-    /** @var string|null $targetTenantId The targetTenantId property */
+    /**
+     * @var string|null $targetTenantId The targetTenantId property
+    */
     private ?string $targetTenantId = null;
     
     /**
@@ -23,7 +25,7 @@ class RestrictedSignIn extends SignIn
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return RestrictedSignIn
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): RestrictedSignIn {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): RestrictedSignIn {
         return new RestrictedSignIn();
     }
 
@@ -32,8 +34,9 @@ class RestrictedSignIn extends SignIn
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'targetTenantId' => function (self $o, ParseNode $n) { $o->setTargetTenantId($n->getStringValue()); },
+            'targetTenantId' => function (ParseNode $n) use ($o) { $o->setTargetTenantId($n->getStringValue()); },
         ]);
     }
 

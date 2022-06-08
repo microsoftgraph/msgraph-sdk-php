@@ -7,12 +7,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class MobileAppCategory extends Entity 
+class MobileAppCategory extends Entity implements Parsable 
 {
-    /** @var string|null $displayName The name of the app category. */
+    /**
+     * @var string|null $displayName The name of the app category.
+    */
     private ?string $displayName = null;
     
-    /** @var DateTime|null $lastModifiedDateTime The date and time the mobileAppCategory was last modified. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime The date and time the mobileAppCategory was last modified.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
     /**
@@ -27,7 +31,7 @@ class MobileAppCategory extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return MobileAppCategory
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): MobileAppCategory {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): MobileAppCategory {
         return new MobileAppCategory();
     }
 
@@ -44,9 +48,10 @@ class MobileAppCategory extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
         ]);
     }
 

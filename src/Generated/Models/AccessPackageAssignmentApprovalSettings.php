@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $isApprovalRequiredForAdd If false, then approval is not required for new requests in this policy. */
+    /**
+     * @var bool|null $isApprovalRequiredForAdd If false, then approval is not required for new requests in this policy.
+    */
     private ?bool $isApprovalRequiredForAdd = null;
     
-    /** @var bool|null $isApprovalRequiredForUpdate If false, then approval is not required for updates to requests in this policy. */
+    /**
+     * @var bool|null $isApprovalRequiredForUpdate If false, then approval is not required for updates to requests in this policy.
+    */
     private ?bool $isApprovalRequiredForUpdate = null;
     
-    /** @var array<AccessPackageApprovalStage>|null $stages If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required. */
+    /**
+     * @var array<AccessPackageApprovalStage>|null $stages If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required.
+    */
     private ?array $stages = null;
     
     /**
@@ -33,7 +41,7 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, P
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AccessPackageAssignmentApprovalSettings
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageAssignmentApprovalSettings {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageAssignmentApprovalSettings {
         return new AccessPackageAssignmentApprovalSettings();
     }
 
@@ -50,10 +58,11 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, P
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'isApprovalRequiredForAdd' => function (self $o, ParseNode $n) { $o->setIsApprovalRequiredForAdd($n->getBooleanValue()); },
-            'isApprovalRequiredForUpdate' => function (self $o, ParseNode $n) { $o->setIsApprovalRequiredForUpdate($n->getBooleanValue()); },
-            'stages' => function (self $o, ParseNode $n) { $o->setStages($n->getCollectionOfObjectValues(AccessPackageApprovalStage::class)); },
+            'isApprovalRequiredForAdd' => function (ParseNode $n) use ($o) { $o->setIsApprovalRequiredForAdd($n->getBooleanValue()); },
+            'isApprovalRequiredForUpdate' => function (ParseNode $n) use ($o) { $o->setIsApprovalRequiredForUpdate($n->getBooleanValue()); },
+            'stages' => function (ParseNode $n) use ($o) { $o->setStages($n->getCollectionOfObjectValues(array(AccessPackageApprovalStage::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

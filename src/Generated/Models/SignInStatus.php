@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SignInStatus implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $additionalDetails Provides additional details on the sign-in activity */
+    /**
+     * @var string|null $additionalDetails Provides additional details on the sign-in activity
+    */
     private ?string $additionalDetails = null;
     
-    /** @var int|null $errorCode Provides the 5-6 digit error code that's generated during a sign-in failure. Check out the list of error codes and messages. */
+    /**
+     * @var int|null $errorCode Provides the 5-6 digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
+    */
     private ?int $errorCode = null;
     
-    /** @var string|null $failureReason Provides the error message or the reason for failure for the corresponding sign-in activity. Check out the list of error codes and messages. */
+    /**
+     * @var string|null $failureReason Provides the error message or the reason for failure for the corresponding sign-in activity. Check out the list of error codes and messages.
+    */
     private ?string $failureReason = null;
     
     /**
@@ -33,7 +41,7 @@ class SignInStatus implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SignInStatus
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SignInStatus {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SignInStatus {
         return new SignInStatus();
     }
 
@@ -74,10 +82,11 @@ class SignInStatus implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'additionalDetails' => function (self $o, ParseNode $n) { $o->setAdditionalDetails($n->getStringValue()); },
-            'errorCode' => function (self $o, ParseNode $n) { $o->setErrorCode($n->getIntegerValue()); },
-            'failureReason' => function (self $o, ParseNode $n) { $o->setFailureReason($n->getStringValue()); },
+            'additionalDetails' => function (ParseNode $n) use ($o) { $o->setAdditionalDetails($n->getStringValue()); },
+            'errorCode' => function (ParseNode $n) use ($o) { $o->setErrorCode($n->getIntegerValue()); },
+            'failureReason' => function (ParseNode $n) use ($o) { $o->setFailureReason($n->getStringValue()); },
         ];
     }
 

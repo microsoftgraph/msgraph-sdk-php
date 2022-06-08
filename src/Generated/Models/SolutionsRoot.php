@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SolutionsRoot implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<BookingBusiness>|null $bookingBusinesses The bookingBusinesses property */
+    /**
+     * @var array<BookingBusiness>|null $bookingBusinesses The bookingBusinesses property
+    */
     private ?array $bookingBusinesses = null;
     
-    /** @var array<BookingCurrency>|null $bookingCurrencies The bookingCurrencies property */
+    /**
+     * @var array<BookingCurrency>|null $bookingCurrencies The bookingCurrencies property
+    */
     private ?array $bookingCurrencies = null;
     
     /**
@@ -30,7 +36,7 @@ class SolutionsRoot implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SolutionsRoot
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SolutionsRoot {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SolutionsRoot {
         return new SolutionsRoot();
     }
 
@@ -63,9 +69,10 @@ class SolutionsRoot implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'bookingBusinesses' => function (self $o, ParseNode $n) { $o->setBookingBusinesses($n->getCollectionOfObjectValues(BookingBusiness::class)); },
-            'bookingCurrencies' => function (self $o, ParseNode $n) { $o->setBookingCurrencies($n->getCollectionOfObjectValues(BookingCurrency::class)); },
+            'bookingBusinesses' => function (ParseNode $n) use ($o) { $o->setBookingBusinesses($n->getCollectionOfObjectValues(array(BookingBusiness::class, 'createFromDiscriminatorValue'))); },
+            'bookingCurrencies' => function (ParseNode $n) use ($o) { $o->setBookingCurrencies($n->getCollectionOfObjectValues(array(BookingCurrency::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

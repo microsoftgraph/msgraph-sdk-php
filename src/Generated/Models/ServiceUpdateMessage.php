@@ -8,39 +8,61 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Psr\Http\Message\StreamInterface;
 
-class ServiceUpdateMessage extends ServiceAnnouncementBase 
+class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable 
 {
-    /** @var DateTime|null $actionRequiredByDateTime The expected deadline of the action for the message. */
+    /**
+     * @var DateTime|null $actionRequiredByDateTime The expected deadline of the action for the message.
+    */
     private ?DateTime $actionRequiredByDateTime = null;
     
-    /** @var array<ServiceAnnouncementAttachment>|null $attachments A collection of serviceAnnouncementAttachments. */
+    /**
+     * @var array<ServiceAnnouncementAttachment>|null $attachments A collection of serviceAnnouncementAttachments.
+    */
     private ?array $attachments = null;
     
-    /** @var StreamInterface|null $attachmentsArchive The zip file that contains all attachments for a message. */
+    /**
+     * @var StreamInterface|null $attachmentsArchive The zip file of all attachments for a message.
+    */
     private ?StreamInterface $attachmentsArchive = null;
     
-    /** @var ItemBody|null $body The body property */
+    /**
+     * @var ItemBody|null $body The body property
+    */
     private ?ItemBody $body = null;
     
-    /** @var ServiceUpdateCategory|null $category The service message category. Possible values are: preventOrFixIssue, planForChange, stayInformed, unknownFutureValue. */
+    /**
+     * @var ServiceUpdateCategory|null $category The service message category. Possible values are: preventOrFixIssue, planForChange, stayInformed, unknownFutureValue.
+    */
     private ?ServiceUpdateCategory $category = null;
     
-    /** @var bool|null $hasAttachments Indicates whether the message has any attachment. */
+    /**
+     * @var bool|null $hasAttachments Indicates whether the message has any attachment.
+    */
     private ?bool $hasAttachments = null;
     
-    /** @var bool|null $isMajorChange Indicates whether the message describes a major update for the service. */
+    /**
+     * @var bool|null $isMajorChange Indicates whether the message describes a major update for the service.
+    */
     private ?bool $isMajorChange = null;
     
-    /** @var array<string>|null $services The affected services by the service message. */
+    /**
+     * @var array<string>|null $services The affected services by the service message.
+    */
     private ?array $services = null;
     
-    /** @var ServiceUpdateSeverity|null $severity The severity of the service message. Possible values are: normal, high, critical, unknownFutureValue. */
+    /**
+     * @var ServiceUpdateSeverity|null $severity The severity of the service message. Possible values are: normal, high, critical, unknownFutureValue.
+    */
     private ?ServiceUpdateSeverity $severity = null;
     
-    /** @var array<string>|null $tags A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on. */
+    /**
+     * @var array<string>|null $tags A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.
+    */
     private ?array $tags = null;
     
-    /** @var ServiceUpdateMessageViewpoint|null $viewPoint Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions. */
+    /**
+     * @var ServiceUpdateMessageViewpoint|null $viewPoint Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
+    */
     private ?ServiceUpdateMessageViewpoint $viewPoint = null;
     
     /**
@@ -55,7 +77,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ServiceUpdateMessage
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ServiceUpdateMessage {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ServiceUpdateMessage {
         return new ServiceUpdateMessage();
     }
 
@@ -76,7 +98,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     }
 
     /**
-     * Gets the attachmentsArchive property value. The zip file that contains all attachments for a message.
+     * Gets the attachmentsArchive property value. The zip file of all attachments for a message.
      * @return StreamInterface|null
     */
     public function getAttachmentsArchive(): ?StreamInterface {
@@ -104,18 +126,19 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'actionRequiredByDateTime' => function (self $o, ParseNode $n) { $o->setActionRequiredByDateTime($n->getDateTimeValue()); },
-            'attachments' => function (self $o, ParseNode $n) { $o->setAttachments($n->getCollectionOfObjectValues(ServiceAnnouncementAttachment::class)); },
-            'attachmentsArchive' => function (self $o, ParseNode $n) { $o->setAttachmentsArchive($n->getBinaryContent()); },
-            'body' => function (self $o, ParseNode $n) { $o->setBody($n->getObjectValue(ItemBody::class)); },
-            'category' => function (self $o, ParseNode $n) { $o->setCategory($n->getEnumValue(ServiceUpdateCategory::class)); },
-            'hasAttachments' => function (self $o, ParseNode $n) { $o->setHasAttachments($n->getBooleanValue()); },
-            'isMajorChange' => function (self $o, ParseNode $n) { $o->setIsMajorChange($n->getBooleanValue()); },
-            'services' => function (self $o, ParseNode $n) { $o->setServices($n->getCollectionOfPrimitiveValues()); },
-            'severity' => function (self $o, ParseNode $n) { $o->setSeverity($n->getEnumValue(ServiceUpdateSeverity::class)); },
-            'tags' => function (self $o, ParseNode $n) { $o->setTags($n->getCollectionOfPrimitiveValues()); },
-            'viewPoint' => function (self $o, ParseNode $n) { $o->setViewPoint($n->getObjectValue(ServiceUpdateMessageViewpoint::class)); },
+            'actionRequiredByDateTime' => function (ParseNode $n) use ($o) { $o->setActionRequiredByDateTime($n->getDateTimeValue()); },
+            'attachments' => function (ParseNode $n) use ($o) { $o->setAttachments($n->getCollectionOfObjectValues(array(ServiceAnnouncementAttachment::class, 'createFromDiscriminatorValue'))); },
+            'attachmentsArchive' => function (ParseNode $n) use ($o) { $o->setAttachmentsArchive($n->getBinaryContent()); },
+            'body' => function (ParseNode $n) use ($o) { $o->setBody($n->getObjectValue(array(ItemBody::class, 'createFromDiscriminatorValue'))); },
+            'category' => function (ParseNode $n) use ($o) { $o->setCategory($n->getEnumValue(ServiceUpdateCategory::class)); },
+            'hasAttachments' => function (ParseNode $n) use ($o) { $o->setHasAttachments($n->getBooleanValue()); },
+            'isMajorChange' => function (ParseNode $n) use ($o) { $o->setIsMajorChange($n->getBooleanValue()); },
+            'services' => function (ParseNode $n) use ($o) { $o->setServices($n->getCollectionOfPrimitiveValues()); },
+            'severity' => function (ParseNode $n) use ($o) { $o->setSeverity($n->getEnumValue(ServiceUpdateSeverity::class)); },
+            'tags' => function (ParseNode $n) use ($o) { $o->setTags($n->getCollectionOfPrimitiveValues()); },
+            'viewPoint' => function (ParseNode $n) use ($o) { $o->setViewPoint($n->getObjectValue(array(ServiceUpdateMessageViewpoint::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -203,7 +226,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     }
 
     /**
-     * Sets the attachmentsArchive property value. The zip file that contains all attachments for a message.
+     * Sets the attachmentsArchive property value. The zip file of all attachments for a message.
      *  @param StreamInterface|null $value Value to set for the attachmentsArchive property.
     */
     public function setAttachmentsArchive(?StreamInterface $value ): void {

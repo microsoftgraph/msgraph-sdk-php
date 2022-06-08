@@ -6,7 +6,7 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class StartHoldMusicOperation extends CommsOperation 
+class StartHoldMusicOperation extends CommsOperation implements Parsable 
 {
     /**
      * Instantiates a new startHoldMusicOperation and sets the default values.
@@ -20,7 +20,7 @@ class StartHoldMusicOperation extends CommsOperation
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return StartHoldMusicOperation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): StartHoldMusicOperation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): StartHoldMusicOperation {
         return new StartHoldMusicOperation();
     }
 
@@ -29,6 +29,7 @@ class StartHoldMusicOperation extends CommsOperation
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

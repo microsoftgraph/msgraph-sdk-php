@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Bitlocker extends Entity 
+class Bitlocker extends Entity implements Parsable 
 {
-    /** @var array<BitlockerRecoveryKey>|null $recoveryKeys The recovery keys associated with the bitlocker entity. */
+    /**
+     * @var array<BitlockerRecoveryKey>|null $recoveryKeys The recovery keys associated with the bitlocker entity.
+    */
     private ?array $recoveryKeys = null;
     
     /**
@@ -23,7 +25,7 @@ class Bitlocker extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Bitlocker
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Bitlocker {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Bitlocker {
         return new Bitlocker();
     }
 
@@ -32,8 +34,9 @@ class Bitlocker extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'recoveryKeys' => function (self $o, ParseNode $n) { $o->setRecoveryKeys($n->getCollectionOfObjectValues(BitlockerRecoveryKey::class)); },
+            'recoveryKeys' => function (ParseNode $n) use ($o) { $o->setRecoveryKeys($n->getCollectionOfObjectValues(array(BitlockerRecoveryKey::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

@@ -6,24 +6,36 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Participant extends Entity 
+class Participant extends Entity implements Parsable 
 {
-    /** @var ParticipantInfo|null $info The info property */
+    /**
+     * @var ParticipantInfo|null $info The info property
+    */
     private ?ParticipantInfo $info = null;
     
-    /** @var bool|null $isInLobby true if the participant is in lobby. */
+    /**
+     * @var bool|null $isInLobby true if the participant is in lobby.
+    */
     private ?bool $isInLobby = null;
     
-    /** @var bool|null $isMuted true if the participant is muted (client or server muted). */
+    /**
+     * @var bool|null $isMuted true if the participant is muted (client or server muted).
+    */
     private ?bool $isMuted = null;
     
-    /** @var array<MediaStream>|null $mediaStreams The list of media streams. */
+    /**
+     * @var array<MediaStream>|null $mediaStreams The list of media streams.
+    */
     private ?array $mediaStreams = null;
     
-    /** @var string|null $metadata A blob of data provided by the participant in the roster. */
+    /**
+     * @var string|null $metadata A blob of data provided by the participant in the roster.
+    */
     private ?string $metadata = null;
     
-    /** @var RecordingInfo|null $recordingInfo Information about whether the participant has recording capability. */
+    /**
+     * @var RecordingInfo|null $recordingInfo Information on whether the participant has recording capability.
+    */
     private ?RecordingInfo $recordingInfo = null;
     
     /**
@@ -38,7 +50,7 @@ class Participant extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Participant
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Participant {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Participant {
         return new Participant();
     }
 
@@ -47,13 +59,14 @@ class Participant extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'info' => function (self $o, ParseNode $n) { $o->setInfo($n->getObjectValue(ParticipantInfo::class)); },
-            'isInLobby' => function (self $o, ParseNode $n) { $o->setIsInLobby($n->getBooleanValue()); },
-            'isMuted' => function (self $o, ParseNode $n) { $o->setIsMuted($n->getBooleanValue()); },
-            'mediaStreams' => function (self $o, ParseNode $n) { $o->setMediaStreams($n->getCollectionOfObjectValues(MediaStream::class)); },
-            'metadata' => function (self $o, ParseNode $n) { $o->setMetadata($n->getStringValue()); },
-            'recordingInfo' => function (self $o, ParseNode $n) { $o->setRecordingInfo($n->getObjectValue(RecordingInfo::class)); },
+            'info' => function (ParseNode $n) use ($o) { $o->setInfo($n->getObjectValue(array(ParticipantInfo::class, 'createFromDiscriminatorValue'))); },
+            'isInLobby' => function (ParseNode $n) use ($o) { $o->setIsInLobby($n->getBooleanValue()); },
+            'isMuted' => function (ParseNode $n) use ($o) { $o->setIsMuted($n->getBooleanValue()); },
+            'mediaStreams' => function (ParseNode $n) use ($o) { $o->setMediaStreams($n->getCollectionOfObjectValues(array(MediaStream::class, 'createFromDiscriminatorValue'))); },
+            'metadata' => function (ParseNode $n) use ($o) { $o->setMetadata($n->getStringValue()); },
+            'recordingInfo' => function (ParseNode $n) use ($o) { $o->setRecordingInfo($n->getObjectValue(array(RecordingInfo::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -98,7 +111,7 @@ class Participant extends Entity
     }
 
     /**
-     * Gets the recordingInfo property value. Information about whether the participant has recording capability.
+     * Gets the recordingInfo property value. Information on whether the participant has recording capability.
      * @return RecordingInfo|null
     */
     public function getRecordingInfo(): ?RecordingInfo {
@@ -160,7 +173,7 @@ class Participant extends Entity
     }
 
     /**
-     * Sets the recordingInfo property value. Information about whether the participant has recording capability.
+     * Sets the recordingInfo property value. Information on whether the participant has recording capability.
      *  @param RecordingInfo|null $value Value to set for the recordingInfo property.
     */
     public function setRecordingInfo(?RecordingInfo $value ): void {

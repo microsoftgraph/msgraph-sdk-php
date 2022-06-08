@@ -7,39 +7,61 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class VppToken extends Entity 
+class VppToken extends Entity implements Parsable 
 {
-    /** @var string|null $appleId The apple Id associated with the given Apple Volume Purchase Program Token. */
+    /**
+     * @var string|null $appleId The apple Id associated with the given Apple Volume Purchase Program Token.
+    */
     private ?string $appleId = null;
     
-    /** @var bool|null $automaticallyUpdateApps Whether or not apps for the VPP token will be automatically updated. */
+    /**
+     * @var bool|null $automaticallyUpdateApps Whether or not apps for the VPP token will be automatically updated.
+    */
     private ?bool $automaticallyUpdateApps = null;
     
-    /** @var string|null $countryOrRegion Whether or not apps for the VPP token will be automatically updated. */
+    /**
+     * @var string|null $countryOrRegion Whether or not apps for the VPP token will be automatically updated.
+    */
     private ?string $countryOrRegion = null;
     
-    /** @var DateTime|null $expirationDateTime The expiration date time of the Apple Volume Purchase Program Token. */
+    /**
+     * @var DateTime|null $expirationDateTime The expiration date time of the Apple Volume Purchase Program Token.
+    */
     private ?DateTime $expirationDateTime = null;
     
-    /** @var DateTime|null $lastModifiedDateTime Last modification date time associated with the Apple Volume Purchase Program Token. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime Last modification date time associated with the Apple Volume Purchase Program Token.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var DateTime|null $lastSyncDateTime The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token. */
+    /**
+     * @var DateTime|null $lastSyncDateTime The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token.
+    */
     private ?DateTime $lastSyncDateTime = null;
     
-    /** @var VppTokenSyncStatus|null $lastSyncStatus Current sync status of the last application sync which was triggered using the Apple Volume Purchase Program Token. Possible values are: none, inProgress, completed, failed. Possible values are: none, inProgress, completed, failed. */
+    /**
+     * @var VppTokenSyncStatus|null $lastSyncStatus Current sync status of the last application sync which was triggered using the Apple Volume Purchase Program Token. Possible values are: none, inProgress, completed, failed. Possible values are: none, inProgress, completed, failed.
+    */
     private ?VppTokenSyncStatus $lastSyncStatus = null;
     
-    /** @var string|null $organizationName The organization associated with the Apple Volume Purchase Program Token */
+    /**
+     * @var string|null $organizationName The organization associated with the Apple Volume Purchase Program Token
+    */
     private ?string $organizationName = null;
     
-    /** @var VppTokenState|null $state Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. */
+    /**
+     * @var VppTokenState|null $state Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM, duplicateLocationId.
+    */
     private ?VppTokenState $state = null;
     
-    /** @var string|null $token The Apple Volume Purchase Program Token string downloaded from the Apple Volume Purchase Program. */
+    /**
+     * @var string|null $token The Apple Volume Purchase Program Token string downloaded from the Apple Volume Purchase Program.
+    */
     private ?string $token = null;
     
-    /** @var VppTokenAccountType|null $vppTokenAccountType The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education. */
+    /**
+     * @var VppTokenAccountType|null $vppTokenAccountType The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
+    */
     private ?VppTokenAccountType $vppTokenAccountType = null;
     
     /**
@@ -54,7 +76,7 @@ class VppToken extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return VppToken
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): VppToken {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): VppToken {
         return new VppToken();
     }
 
@@ -95,18 +117,19 @@ class VppToken extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appleId' => function (self $o, ParseNode $n) { $o->setAppleId($n->getStringValue()); },
-            'automaticallyUpdateApps' => function (self $o, ParseNode $n) { $o->setAutomaticallyUpdateApps($n->getBooleanValue()); },
-            'countryOrRegion' => function (self $o, ParseNode $n) { $o->setCountryOrRegion($n->getStringValue()); },
-            'expirationDateTime' => function (self $o, ParseNode $n) { $o->setExpirationDateTime($n->getDateTimeValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'lastSyncDateTime' => function (self $o, ParseNode $n) { $o->setLastSyncDateTime($n->getDateTimeValue()); },
-            'lastSyncStatus' => function (self $o, ParseNode $n) { $o->setLastSyncStatus($n->getEnumValue(VppTokenSyncStatus::class)); },
-            'organizationName' => function (self $o, ParseNode $n) { $o->setOrganizationName($n->getStringValue()); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getEnumValue(VppTokenState::class)); },
-            'token' => function (self $o, ParseNode $n) { $o->setToken($n->getStringValue()); },
-            'vppTokenAccountType' => function (self $o, ParseNode $n) { $o->setVppTokenAccountType($n->getEnumValue(VppTokenAccountType::class)); },
+            'appleId' => function (ParseNode $n) use ($o) { $o->setAppleId($n->getStringValue()); },
+            'automaticallyUpdateApps' => function (ParseNode $n) use ($o) { $o->setAutomaticallyUpdateApps($n->getBooleanValue()); },
+            'countryOrRegion' => function (ParseNode $n) use ($o) { $o->setCountryOrRegion($n->getStringValue()); },
+            'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'lastSyncDateTime' => function (ParseNode $n) use ($o) { $o->setLastSyncDateTime($n->getDateTimeValue()); },
+            'lastSyncStatus' => function (ParseNode $n) use ($o) { $o->setLastSyncStatus($n->getEnumValue(VppTokenSyncStatus::class)); },
+            'organizationName' => function (ParseNode $n) use ($o) { $o->setOrganizationName($n->getStringValue()); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(VppTokenState::class)); },
+            'token' => function (ParseNode $n) use ($o) { $o->setToken($n->getStringValue()); },
+            'vppTokenAccountType' => function (ParseNode $n) use ($o) { $o->setVppTokenAccountType($n->getEnumValue(VppTokenAccountType::class)); },
         ]);
     }
 
@@ -143,7 +166,7 @@ class VppToken extends Entity
     }
 
     /**
-     * Gets the state property value. Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM.
+     * Gets the state property value. Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM, duplicateLocationId.
      * @return VppTokenState|null
     */
     public function getState(): ?VppTokenState {
@@ -250,7 +273,7 @@ class VppToken extends Entity
     }
 
     /**
-     * Sets the state property value. Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM.
+     * Sets the state property value. Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM, duplicateLocationId.
      *  @param VppTokenState|null $value Value to set for the state property.
     */
     public function setState(?VppTokenState $value ): void {

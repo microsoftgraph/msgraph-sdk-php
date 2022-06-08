@@ -6,7 +6,7 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ActivityBasedTimeoutPolicy extends StsPolicy 
+class ActivityBasedTimeoutPolicy extends StsPolicy implements Parsable 
 {
     /**
      * Instantiates a new activityBasedTimeoutPolicy and sets the default values.
@@ -20,7 +20,7 @@ class ActivityBasedTimeoutPolicy extends StsPolicy
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ActivityBasedTimeoutPolicy
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ActivityBasedTimeoutPolicy {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ActivityBasedTimeoutPolicy {
         return new ActivityBasedTimeoutPolicy();
     }
 
@@ -29,6 +29,7 @@ class ActivityBasedTimeoutPolicy extends StsPolicy
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

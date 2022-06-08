@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class MailTipsError implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $code The error code. */
+    /**
+     * @var string|null $code The error code.
+    */
     private ?string $code = null;
     
-    /** @var string|null $message The error message. */
+    /**
+     * @var string|null $message The error message.
+    */
     private ?string $message = null;
     
     /**
@@ -30,7 +36,7 @@ class MailTipsError implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return MailTipsError
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): MailTipsError {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): MailTipsError {
         return new MailTipsError();
     }
 
@@ -55,9 +61,10 @@ class MailTipsError implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'code' => function (self $o, ParseNode $n) { $o->setCode($n->getStringValue()); },
-            'message' => function (self $o, ParseNode $n) { $o->setMessage($n->getStringValue()); },
+            'code' => function (ParseNode $n) use ($o) { $o->setCode($n->getStringValue()); },
+            'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getStringValue()); },
         ];
     }
 

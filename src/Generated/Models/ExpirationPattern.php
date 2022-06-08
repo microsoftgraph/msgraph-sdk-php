@@ -11,16 +11,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ExpirationPattern implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var DateInterval|null $duration The requestor's desired duration of access represented in ISO 8601 format for durations. For example, PT3H refers to three hours.  If specified in a request, endDateTime should not be present and the type property should be set to afterDuration. */
+    /**
+     * @var DateInterval|null $duration The requestor's desired duration of access represented in ISO 8601 format for durations. For example, PT3H refers to three hours.  If specified in a request, endDateTime should not be present and the type property should be set to afterDuration.
+    */
     private ?DateInterval $duration = null;
     
-    /** @var DateTime|null $endDateTime Timestamp of date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $endDateTime Timestamp of date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    */
     private ?DateTime $endDateTime = null;
     
-    /** @var ExpirationPatternType|null $type The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration. */
+    /**
+     * @var ExpirationPatternType|null $type The requestor's desired expiration pattern type.
+    */
     private ?ExpirationPatternType $type = null;
     
     /**
@@ -35,7 +43,7 @@ class ExpirationPattern implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ExpirationPattern
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ExpirationPattern {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ExpirationPattern {
         return new ExpirationPattern();
     }
 
@@ -68,15 +76,16 @@ class ExpirationPattern implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'duration' => function (self $o, ParseNode $n) { $o->setDuration($n->getDateIntervalValue()); },
-            'endDateTime' => function (self $o, ParseNode $n) { $o->setEndDateTime($n->getDateTimeValue()); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getEnumValue(ExpirationPatternType::class)); },
+            'duration' => function (ParseNode $n) use ($o) { $o->setDuration($n->getDateIntervalValue()); },
+            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(ExpirationPatternType::class)); },
         ];
     }
 
     /**
-     * Gets the type property value. The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
+     * Gets the type property value. The requestor's desired expiration pattern type.
      * @return ExpirationPatternType|null
     */
     public function getType(): ?ExpirationPatternType {
@@ -119,7 +128,7 @@ class ExpirationPattern implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the type property value. The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
+     * Sets the type property value. The requestor's desired expiration pattern type.
      *  @param ExpirationPatternType|null $value Value to set for the type property.
     */
     public function setType(?ExpirationPatternType $value ): void {

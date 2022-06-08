@@ -6,7 +6,7 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ChatMessageFromIdentitySet extends IdentitySet 
+class ChatMessageFromIdentitySet extends IdentitySet implements Parsable 
 {
     /**
      * Instantiates a new chatMessageFromIdentitySet and sets the default values.
@@ -20,7 +20,7 @@ class ChatMessageFromIdentitySet extends IdentitySet
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ChatMessageFromIdentitySet
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ChatMessageFromIdentitySet {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ChatMessageFromIdentitySet {
         return new ChatMessageFromIdentitySet();
     }
 
@@ -29,6 +29,7 @@ class ChatMessageFromIdentitySet extends IdentitySet
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

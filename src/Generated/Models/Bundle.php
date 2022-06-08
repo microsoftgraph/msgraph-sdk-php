@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Bundle implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var Album|null $album If the bundle is an [album][], then the album property is included */
+    /**
+     * @var Album|null $album If the bundle is an [album][], then the album property is included
+    */
     private ?Album $album = null;
     
-    /** @var int|null $childCount Number of children contained immediately within this container. */
+    /**
+     * @var int|null $childCount Number of children contained immediately within this container.
+    */
     private ?int $childCount = null;
     
     /**
@@ -30,7 +36,7 @@ class Bundle implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Bundle
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Bundle {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Bundle {
         return new Bundle();
     }
 
@@ -63,9 +69,10 @@ class Bundle implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'album' => function (self $o, ParseNode $n) { $o->setAlbum($n->getObjectValue(Album::class)); },
-            'childCount' => function (self $o, ParseNode $n) { $o->setChildCount($n->getIntegerValue()); },
+            'album' => function (ParseNode $n) use ($o) { $o->setAlbum($n->getObjectValue(array(Album::class, 'createFromDiscriminatorValue'))); },
+            'childCount' => function (ParseNode $n) use ($o) { $o->setChildCount($n->getIntegerValue()); },
         ];
     }
 

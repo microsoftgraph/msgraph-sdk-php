@@ -6,36 +6,56 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AndroidManagedAppProtection extends TargetedManagedAppProtection 
+class AndroidManagedAppProtection extends TargetedManagedAppProtection implements Parsable 
 {
-    /** @var array<ManagedMobileApp>|null $apps List of apps to which the policy is deployed. */
+    /**
+     * @var array<ManagedMobileApp>|null $apps List of apps to which the policy is deployed.
+    */
     private ?array $apps = null;
     
-    /** @var string|null $customBrowserDisplayName Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. */
+    /**
+     * @var string|null $customBrowserDisplayName Friendly name of the preferred custom browser to open weblink on Android.
+    */
     private ?string $customBrowserDisplayName = null;
     
-    /** @var string|null $customBrowserPackageId Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. */
+    /**
+     * @var string|null $customBrowserPackageId Unique identifier of a custom browser to open weblink on Android.
+    */
     private ?string $customBrowserPackageId = null;
     
-    /** @var int|null $deployedAppCount Count of apps to which the current policy is deployed. */
+    /**
+     * @var int|null $deployedAppCount Count of apps to which the current policy is deployed.
+    */
     private ?int $deployedAppCount = null;
     
-    /** @var ManagedAppPolicyDeploymentSummary|null $deploymentSummary Navigation property to deployment summary of the configuration. */
+    /**
+     * @var ManagedAppPolicyDeploymentSummary|null $deploymentSummary Navigation property to deployment summary of the configuration.
+    */
     private ?ManagedAppPolicyDeploymentSummary $deploymentSummary = null;
     
-    /** @var bool|null $disableAppEncryptionIfDeviceEncryptionIsEnabled When this setting is enabled, app level encryption is disabled if device level encryption is enabled */
+    /**
+     * @var bool|null $disableAppEncryptionIfDeviceEncryptionIsEnabled When this setting is enabled, app level encryption is disabled if device level encryption is enabled
+    */
     private ?bool $disableAppEncryptionIfDeviceEncryptionIsEnabled = null;
     
-    /** @var bool|null $encryptAppData Indicates whether application data for managed apps should be encrypted */
+    /**
+     * @var bool|null $encryptAppData Indicates whether application data for managed apps should be encrypted
+    */
     private ?bool $encryptAppData = null;
     
-    /** @var string|null $minimumRequiredPatchVersion Define the oldest required Android security patch level a user can have to gain secure access to the app. */
+    /**
+     * @var string|null $minimumRequiredPatchVersion Define the oldest required Android security patch level a user can have to gain secure access to the app.
+    */
     private ?string $minimumRequiredPatchVersion = null;
     
-    /** @var string|null $minimumWarningPatchVersion Define the oldest recommended Android security patch level a user can have for secure access to the app. */
+    /**
+     * @var string|null $minimumWarningPatchVersion Define the oldest recommended Android security patch level a user can have for secure access to the app.
+    */
     private ?string $minimumWarningPatchVersion = null;
     
-    /** @var bool|null $screenCaptureBlocked Indicates whether a managed user can take screen captures of managed apps */
+    /**
+     * @var bool|null $screenCaptureBlocked Indicates whether a managed user can take screen captures of managed apps
+    */
     private ?bool $screenCaptureBlocked = null;
     
     /**
@@ -50,7 +70,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AndroidManagedAppProtection
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AndroidManagedAppProtection {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AndroidManagedAppProtection {
         return new AndroidManagedAppProtection();
     }
 
@@ -63,7 +83,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     }
 
     /**
-     * Gets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Gets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android.
      * @return string|null
     */
     public function getCustomBrowserDisplayName(): ?string {
@@ -71,7 +91,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     }
 
     /**
-     * Gets the customBrowserPackageId property value. Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Gets the customBrowserPackageId property value. Unique identifier of a custom browser to open weblink on Android.
      * @return string|null
     */
     public function getCustomBrowserPackageId(): ?string {
@@ -115,17 +135,18 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'apps' => function (self $o, ParseNode $n) { $o->setApps($n->getCollectionOfObjectValues(ManagedMobileApp::class)); },
-            'customBrowserDisplayName' => function (self $o, ParseNode $n) { $o->setCustomBrowserDisplayName($n->getStringValue()); },
-            'customBrowserPackageId' => function (self $o, ParseNode $n) { $o->setCustomBrowserPackageId($n->getStringValue()); },
-            'deployedAppCount' => function (self $o, ParseNode $n) { $o->setDeployedAppCount($n->getIntegerValue()); },
-            'deploymentSummary' => function (self $o, ParseNode $n) { $o->setDeploymentSummary($n->getObjectValue(ManagedAppPolicyDeploymentSummary::class)); },
-            'disableAppEncryptionIfDeviceEncryptionIsEnabled' => function (self $o, ParseNode $n) { $o->setDisableAppEncryptionIfDeviceEncryptionIsEnabled($n->getBooleanValue()); },
-            'encryptAppData' => function (self $o, ParseNode $n) { $o->setEncryptAppData($n->getBooleanValue()); },
-            'minimumRequiredPatchVersion' => function (self $o, ParseNode $n) { $o->setMinimumRequiredPatchVersion($n->getStringValue()); },
-            'minimumWarningPatchVersion' => function (self $o, ParseNode $n) { $o->setMinimumWarningPatchVersion($n->getStringValue()); },
-            'screenCaptureBlocked' => function (self $o, ParseNode $n) { $o->setScreenCaptureBlocked($n->getBooleanValue()); },
+            'apps' => function (ParseNode $n) use ($o) { $o->setApps($n->getCollectionOfObjectValues(array(ManagedMobileApp::class, 'createFromDiscriminatorValue'))); },
+            'customBrowserDisplayName' => function (ParseNode $n) use ($o) { $o->setCustomBrowserDisplayName($n->getStringValue()); },
+            'customBrowserPackageId' => function (ParseNode $n) use ($o) { $o->setCustomBrowserPackageId($n->getStringValue()); },
+            'deployedAppCount' => function (ParseNode $n) use ($o) { $o->setDeployedAppCount($n->getIntegerValue()); },
+            'deploymentSummary' => function (ParseNode $n) use ($o) { $o->setDeploymentSummary($n->getObjectValue(array(ManagedAppPolicyDeploymentSummary::class, 'createFromDiscriminatorValue'))); },
+            'disableAppEncryptionIfDeviceEncryptionIsEnabled' => function (ParseNode $n) use ($o) { $o->setDisableAppEncryptionIfDeviceEncryptionIsEnabled($n->getBooleanValue()); },
+            'encryptAppData' => function (ParseNode $n) use ($o) { $o->setEncryptAppData($n->getBooleanValue()); },
+            'minimumRequiredPatchVersion' => function (ParseNode $n) use ($o) { $o->setMinimumRequiredPatchVersion($n->getStringValue()); },
+            'minimumWarningPatchVersion' => function (ParseNode $n) use ($o) { $o->setMinimumWarningPatchVersion($n->getStringValue()); },
+            'screenCaptureBlocked' => function (ParseNode $n) use ($o) { $o->setScreenCaptureBlocked($n->getBooleanValue()); },
         ]);
     }
 
@@ -180,7 +201,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     }
 
     /**
-     * Sets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Sets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android.
      *  @param string|null $value Value to set for the customBrowserDisplayName property.
     */
     public function setCustomBrowserDisplayName(?string $value ): void {
@@ -188,7 +209,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     }
 
     /**
-     * Sets the customBrowserPackageId property value. Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Sets the customBrowserPackageId property value. Unique identifier of a custom browser to open weblink on Android.
      *  @param string|null $value Value to set for the customBrowserPackageId property.
     */
     public function setCustomBrowserPackageId(?string $value ): void {

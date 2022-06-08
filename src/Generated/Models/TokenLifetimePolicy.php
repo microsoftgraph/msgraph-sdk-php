@@ -6,7 +6,7 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class TokenLifetimePolicy extends StsPolicy 
+class TokenLifetimePolicy extends StsPolicy implements Parsable 
 {
     /**
      * Instantiates a new tokenLifetimePolicy and sets the default values.
@@ -20,7 +20,7 @@ class TokenLifetimePolicy extends StsPolicy
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TokenLifetimePolicy
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TokenLifetimePolicy {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TokenLifetimePolicy {
         return new TokenLifetimePolicy();
     }
 
@@ -29,6 +29,7 @@ class TokenLifetimePolicy extends StsPolicy
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

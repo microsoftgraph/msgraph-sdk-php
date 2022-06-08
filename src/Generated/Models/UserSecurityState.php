@@ -10,49 +10,79 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class UserSecurityState implements AdditionalDataHolder, Parsable 
 {
-    /** @var string|null $aadUserId AAD User object identifier (GUID) - represents the physical/multi-account user entity. */
+    /**
+     * @var string|null $aadUserId AAD User object identifier (GUID) - represents the physical/multi-account user entity.
+    */
     private ?string $aadUserId = null;
     
-    /** @var string|null $accountName Account name of user account (without Active Directory domain or DNS domain) - (also called mailNickName). */
+    /**
+     * @var string|null $accountName Account name of user account (without Active Directory domain or DNS domain) - (also called mailNickName).
+    */
     private ?string $accountName = null;
     
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $domainName NetBIOS/Active Directory domain of user account (that is, domain/account format). */
+    /**
+     * @var string|null $domainName NetBIOS/Active Directory domain of user account (that is, domain/account format).
+    */
     private ?string $domainName = null;
     
-    /** @var EmailRole|null $emailRole For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient. */
+    /**
+     * @var EmailRole|null $emailRole For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
+    */
     private ?EmailRole $emailRole = null;
     
-    /** @var bool|null $isVpn Indicates whether the user logged on through a VPN. */
+    /**
+     * @var bool|null $isVpn Indicates whether the user logged on through a VPN.
+    */
     private ?bool $isVpn = null;
     
-    /** @var DateTime|null $logonDateTime Time at which the sign-in occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $logonDateTime Time at which the sign-in occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    */
     private ?DateTime $logonDateTime = null;
     
-    /** @var string|null $logonId User sign-in ID. */
+    /**
+     * @var string|null $logonId User sign-in ID.
+    */
     private ?string $logonId = null;
     
-    /** @var string|null $logonIp IP Address the sign-in request originated from. */
+    /**
+     * @var string|null $logonIp IP Address the sign-in request originated from.
+    */
     private ?string $logonIp = null;
     
-    /** @var string|null $logonLocation Location (by IP address mapping) associated with a user sign-in event by this user. */
+    /**
+     * @var string|null $logonLocation Location (by IP address mapping) associated with a user sign-in event by this user.
+    */
     private ?string $logonLocation = null;
     
-    /** @var LogonType|null $logonType Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service. */
+    /**
+     * @var LogonType|null $logonType Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
+    */
     private ?LogonType $logonType = null;
     
-    /** @var string|null $onPremisesSecurityIdentifier Active Directory (on-premises) Security Identifier (SID) of the user. */
+    /**
+     * @var string|null $onPremisesSecurityIdentifier Active Directory (on-premises) Security Identifier (SID) of the user.
+    */
     private ?string $onPremisesSecurityIdentifier = null;
     
-    /** @var string|null $riskScore Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a percentage. */
+    /**
+     * @var string|null $riskScore Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a percentage.
+    */
     private ?string $riskScore = null;
     
-    /** @var UserAccountSecurityType|null $userAccountType User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator. */
+    /**
+     * @var UserAccountSecurityType|null $userAccountType User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
+    */
     private ?UserAccountSecurityType $userAccountType = null;
     
-    /** @var string|null $userPrincipalName User sign-in name - internet format: (user account name)@(user account DNS domain name). */
+    /**
+     * @var string|null $userPrincipalName User sign-in name - internet format: (user account name)@(user account DNS domain name).
+    */
     private ?string $userPrincipalName = null;
     
     /**
@@ -67,7 +97,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return UserSecurityState
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): UserSecurityState {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): UserSecurityState {
         return new UserSecurityState();
     }
 
@@ -116,21 +146,22 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'aadUserId' => function (self $o, ParseNode $n) { $o->setAadUserId($n->getStringValue()); },
-            'accountName' => function (self $o, ParseNode $n) { $o->setAccountName($n->getStringValue()); },
-            'domainName' => function (self $o, ParseNode $n) { $o->setDomainName($n->getStringValue()); },
-            'emailRole' => function (self $o, ParseNode $n) { $o->setEmailRole($n->getEnumValue(EmailRole::class)); },
-            'isVpn' => function (self $o, ParseNode $n) { $o->setIsVpn($n->getBooleanValue()); },
-            'logonDateTime' => function (self $o, ParseNode $n) { $o->setLogonDateTime($n->getDateTimeValue()); },
-            'logonId' => function (self $o, ParseNode $n) { $o->setLogonId($n->getStringValue()); },
-            'logonIp' => function (self $o, ParseNode $n) { $o->setLogonIp($n->getStringValue()); },
-            'logonLocation' => function (self $o, ParseNode $n) { $o->setLogonLocation($n->getStringValue()); },
-            'logonType' => function (self $o, ParseNode $n) { $o->setLogonType($n->getEnumValue(LogonType::class)); },
-            'onPremisesSecurityIdentifier' => function (self $o, ParseNode $n) { $o->setOnPremisesSecurityIdentifier($n->getStringValue()); },
-            'riskScore' => function (self $o, ParseNode $n) { $o->setRiskScore($n->getStringValue()); },
-            'userAccountType' => function (self $o, ParseNode $n) { $o->setUserAccountType($n->getEnumValue(UserAccountSecurityType::class)); },
-            'userPrincipalName' => function (self $o, ParseNode $n) { $o->setUserPrincipalName($n->getStringValue()); },
+            'aadUserId' => function (ParseNode $n) use ($o) { $o->setAadUserId($n->getStringValue()); },
+            'accountName' => function (ParseNode $n) use ($o) { $o->setAccountName($n->getStringValue()); },
+            'domainName' => function (ParseNode $n) use ($o) { $o->setDomainName($n->getStringValue()); },
+            'emailRole' => function (ParseNode $n) use ($o) { $o->setEmailRole($n->getEnumValue(EmailRole::class)); },
+            'isVpn' => function (ParseNode $n) use ($o) { $o->setIsVpn($n->getBooleanValue()); },
+            'logonDateTime' => function (ParseNode $n) use ($o) { $o->setLogonDateTime($n->getDateTimeValue()); },
+            'logonId' => function (ParseNode $n) use ($o) { $o->setLogonId($n->getStringValue()); },
+            'logonIp' => function (ParseNode $n) use ($o) { $o->setLogonIp($n->getStringValue()); },
+            'logonLocation' => function (ParseNode $n) use ($o) { $o->setLogonLocation($n->getStringValue()); },
+            'logonType' => function (ParseNode $n) use ($o) { $o->setLogonType($n->getEnumValue(LogonType::class)); },
+            'onPremisesSecurityIdentifier' => function (ParseNode $n) use ($o) { $o->setOnPremisesSecurityIdentifier($n->getStringValue()); },
+            'riskScore' => function (ParseNode $n) use ($o) { $o->setRiskScore($n->getStringValue()); },
+            'userAccountType' => function (ParseNode $n) use ($o) { $o->setUserAccountType($n->getEnumValue(UserAccountSecurityType::class)); },
+            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
         ];
     }
 

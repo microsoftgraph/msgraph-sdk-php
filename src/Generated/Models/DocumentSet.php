@@ -9,28 +9,44 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class DocumentSet implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<ContentTypeInfo>|null $allowedContentTypes Content types allowed in document set. */
+    /**
+     * @var array<ContentTypeInfo>|null $allowedContentTypes Content types allowed in document set.
+    */
     private ?array $allowedContentTypes = null;
     
-    /** @var array<DocumentSetContent>|null $defaultContents Default contents of document set. */
+    /**
+     * @var array<DocumentSetContent>|null $defaultContents Default contents of document set.
+    */
     private ?array $defaultContents = null;
     
-    /** @var bool|null $propagateWelcomePageChanges Specifies whether to push welcome page changes to inherited content types. */
+    /**
+     * @var bool|null $propagateWelcomePageChanges Indicates whether to add the name of the document set to each file name.
+    */
     private ?bool $propagateWelcomePageChanges = null;
     
-    /** @var array<ColumnDefinition>|null $sharedColumns The sharedColumns property */
+    /**
+     * @var array<ColumnDefinition>|null $sharedColumns The sharedColumns property
+    */
     private ?array $sharedColumns = null;
     
-    /** @var bool|null $shouldPrefixNameToFile Indicates whether to add the name of the document set to each file name. */
+    /**
+     * @var bool|null $shouldPrefixNameToFile Add the name of the Document Set to each file name.
+    */
     private ?bool $shouldPrefixNameToFile = null;
     
-    /** @var array<ColumnDefinition>|null $welcomePageColumns The welcomePageColumns property */
+    /**
+     * @var array<ColumnDefinition>|null $welcomePageColumns The welcomePageColumns property
+    */
     private ?array $welcomePageColumns = null;
     
-    /** @var string|null $welcomePageUrl Welcome page absolute URL. */
+    /**
+     * @var string|null $welcomePageUrl Welcome page absolute URL.
+    */
     private ?string $welcomePageUrl = null;
     
     /**
@@ -45,7 +61,7 @@ class DocumentSet implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DocumentSet
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DocumentSet {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DocumentSet {
         return new DocumentSet();
     }
 
@@ -78,19 +94,20 @@ class DocumentSet implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'allowedContentTypes' => function (self $o, ParseNode $n) { $o->setAllowedContentTypes($n->getCollectionOfObjectValues(ContentTypeInfo::class)); },
-            'defaultContents' => function (self $o, ParseNode $n) { $o->setDefaultContents($n->getCollectionOfObjectValues(DocumentSetContent::class)); },
-            'propagateWelcomePageChanges' => function (self $o, ParseNode $n) { $o->setPropagateWelcomePageChanges($n->getBooleanValue()); },
-            'sharedColumns' => function (self $o, ParseNode $n) { $o->setSharedColumns($n->getCollectionOfObjectValues(ColumnDefinition::class)); },
-            'shouldPrefixNameToFile' => function (self $o, ParseNode $n) { $o->setShouldPrefixNameToFile($n->getBooleanValue()); },
-            'welcomePageColumns' => function (self $o, ParseNode $n) { $o->setWelcomePageColumns($n->getCollectionOfObjectValues(ColumnDefinition::class)); },
-            'welcomePageUrl' => function (self $o, ParseNode $n) { $o->setWelcomePageUrl($n->getStringValue()); },
+            'allowedContentTypes' => function (ParseNode $n) use ($o) { $o->setAllowedContentTypes($n->getCollectionOfObjectValues(array(ContentTypeInfo::class, 'createFromDiscriminatorValue'))); },
+            'defaultContents' => function (ParseNode $n) use ($o) { $o->setDefaultContents($n->getCollectionOfObjectValues(array(DocumentSetContent::class, 'createFromDiscriminatorValue'))); },
+            'propagateWelcomePageChanges' => function (ParseNode $n) use ($o) { $o->setPropagateWelcomePageChanges($n->getBooleanValue()); },
+            'sharedColumns' => function (ParseNode $n) use ($o) { $o->setSharedColumns($n->getCollectionOfObjectValues(array(ColumnDefinition::class, 'createFromDiscriminatorValue'))); },
+            'shouldPrefixNameToFile' => function (ParseNode $n) use ($o) { $o->setShouldPrefixNameToFile($n->getBooleanValue()); },
+            'welcomePageColumns' => function (ParseNode $n) use ($o) { $o->setWelcomePageColumns($n->getCollectionOfObjectValues(array(ColumnDefinition::class, 'createFromDiscriminatorValue'))); },
+            'welcomePageUrl' => function (ParseNode $n) use ($o) { $o->setWelcomePageUrl($n->getStringValue()); },
         ];
     }
 
     /**
-     * Gets the propagateWelcomePageChanges property value. Specifies whether to push welcome page changes to inherited content types.
+     * Gets the propagateWelcomePageChanges property value. Indicates whether to add the name of the document set to each file name.
      * @return bool|null
     */
     public function getPropagateWelcomePageChanges(): ?bool {
@@ -106,7 +123,7 @@ class DocumentSet implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the shouldPrefixNameToFile property value. Indicates whether to add the name of the document set to each file name.
+     * Gets the shouldPrefixNameToFile property value. Add the name of the Document Set to each file name.
      * @return bool|null
     */
     public function getShouldPrefixNameToFile(): ?bool {
@@ -169,7 +186,7 @@ class DocumentSet implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the propagateWelcomePageChanges property value. Specifies whether to push welcome page changes to inherited content types.
+     * Sets the propagateWelcomePageChanges property value. Indicates whether to add the name of the document set to each file name.
      *  @param bool|null $value Value to set for the propagateWelcomePageChanges property.
     */
     public function setPropagateWelcomePageChanges(?bool $value ): void {
@@ -185,7 +202,7 @@ class DocumentSet implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the shouldPrefixNameToFile property value. Indicates whether to add the name of the document set to each file name.
+     * Sets the shouldPrefixNameToFile property value. Add the name of the Document Set to each file name.
      *  @param bool|null $value Value to set for the shouldPrefixNameToFile property.
     */
     public function setShouldPrefixNameToFile(?bool $value ): void {

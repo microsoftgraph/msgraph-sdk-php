@@ -7,33 +7,51 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class EducationRubric extends Entity 
+class EducationRubric extends Entity implements Parsable 
 {
-    /** @var IdentitySet|null $createdBy The user who created this resource. */
+    /**
+     * @var IdentitySet|null $createdBy The user who created this resource.
+    */
     private ?IdentitySet $createdBy = null;
     
-    /** @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var EducationItemBody|null $description The description of this rubric. */
+    /**
+     * @var EducationItemBody|null $description The description of this rubric.
+    */
     private ?EducationItemBody $description = null;
     
-    /** @var string|null $displayName The name of this rubric. */
+    /**
+     * @var string|null $displayName The name of this rubric.
+    */
     private ?string $displayName = null;
     
-    /** @var EducationAssignmentGradeType|null $grading The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric. */
+    /**
+     * @var EducationAssignmentGradeType|null $grading The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.
+    */
     private ?EducationAssignmentGradeType $grading = null;
     
-    /** @var IdentitySet|null $lastModifiedBy The last user to modify the resource. */
+    /**
+     * @var IdentitySet|null $lastModifiedBy The last user to modify the resource.
+    */
     private ?IdentitySet $lastModifiedBy = null;
     
-    /** @var DateTime|null $lastModifiedDateTime Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $lastModifiedDateTime Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var array<RubricLevel>|null $levels The collection of levels making up this rubric. */
+    /**
+     * @var array<RubricLevel>|null $levels The collection of levels making up this rubric.
+    */
     private ?array $levels = null;
     
-    /** @var array<RubricQuality>|null $qualities The collection of qualities making up this rubric. */
+    /**
+     * @var array<RubricQuality>|null $qualities The collection of qualities making up this rubric.
+    */
     private ?array $qualities = null;
     
     /**
@@ -48,7 +66,7 @@ class EducationRubric extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return EducationRubric
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): EducationRubric {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): EducationRubric {
         return new EducationRubric();
     }
 
@@ -89,16 +107,17 @@ class EducationRubric extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdBy' => function (self $o, ParseNode $n) { $o->setCreatedBy($n->getObjectValue(IdentitySet::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getObjectValue(EducationItemBody::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'grading' => function (self $o, ParseNode $n) { $o->setGrading($n->getObjectValue(EducationAssignmentGradeType::class)); },
-            'lastModifiedBy' => function (self $o, ParseNode $n) { $o->setLastModifiedBy($n->getObjectValue(IdentitySet::class)); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'levels' => function (self $o, ParseNode $n) { $o->setLevels($n->getCollectionOfObjectValues(RubricLevel::class)); },
-            'qualities' => function (self $o, ParseNode $n) { $o->setQualities($n->getCollectionOfObjectValues(RubricQuality::class)); },
+            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getObjectValue(array(EducationItemBody::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'grading' => function (ParseNode $n) use ($o) { $o->setGrading($n->getObjectValue(array(EducationAssignmentGradeType::class, 'createFromDiscriminatorValue'))); },
+            'lastModifiedBy' => function (ParseNode $n) use ($o) { $o->setLastModifiedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'levels' => function (ParseNode $n) use ($o) { $o->setLevels($n->getCollectionOfObjectValues(array(RubricLevel::class, 'createFromDiscriminatorValue'))); },
+            'qualities' => function (ParseNode $n) use ($o) { $o->setQualities($n->getCollectionOfObjectValues(array(RubricQuality::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

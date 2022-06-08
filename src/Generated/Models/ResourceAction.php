@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ResourceAction implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<string>|null $allowedResourceActions Allowed Actions */
+    /**
+     * @var array<string>|null $allowedResourceActions Allowed Actions
+    */
     private ?array $allowedResourceActions = null;
     
-    /** @var array<string>|null $notAllowedResourceActions Not Allowed Actions. */
+    /**
+     * @var array<string>|null $notAllowedResourceActions Not Allowed Actions.
+    */
     private ?array $notAllowedResourceActions = null;
     
     /**
@@ -30,7 +36,7 @@ class ResourceAction implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ResourceAction
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ResourceAction {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ResourceAction {
         return new ResourceAction();
     }
 
@@ -55,9 +61,10 @@ class ResourceAction implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'allowedResourceActions' => function (self $o, ParseNode $n) { $o->setAllowedResourceActions($n->getCollectionOfPrimitiveValues()); },
-            'notAllowedResourceActions' => function (self $o, ParseNode $n) { $o->setNotAllowedResourceActions($n->getCollectionOfPrimitiveValues()); },
+            'allowedResourceActions' => function (ParseNode $n) use ($o) { $o->setAllowedResourceActions($n->getCollectionOfPrimitiveValues()); },
+            'notAllowedResourceActions' => function (ParseNode $n) use ($o) { $o->setNotAllowedResourceActions($n->getCollectionOfPrimitiveValues()); },
         ];
     }
 

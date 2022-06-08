@@ -7,18 +7,26 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class CloudCommunications extends Entity 
+class CloudCommunications extends Entity implements Parsable 
 {
-    /** @var array<CallRecord>|null $callRecords The callRecords property */
+    /**
+     * @var array<CallRecord>|null $callRecords The callRecords property
+    */
     private ?array $callRecords = null;
     
-    /** @var array<Call>|null $calls The calls property */
+    /**
+     * @var array<Call>|null $calls The calls property
+    */
     private ?array $calls = null;
     
-    /** @var array<OnlineMeeting>|null $onlineMeetings The onlineMeetings property */
+    /**
+     * @var array<OnlineMeeting>|null $onlineMeetings The onlineMeetings property
+    */
     private ?array $onlineMeetings = null;
     
-    /** @var array<Presence>|null $presences The presences property */
+    /**
+     * @var array<Presence>|null $presences The presences property
+    */
     private ?array $presences = null;
     
     /**
@@ -33,7 +41,7 @@ class CloudCommunications extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return CloudCommunications
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): CloudCommunications {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): CloudCommunications {
         return new CloudCommunications();
     }
 
@@ -58,11 +66,12 @@ class CloudCommunications extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'callRecords' => function (self $o, ParseNode $n) { $o->setCallRecords($n->getCollectionOfObjectValues(CallRecord::class)); },
-            'calls' => function (self $o, ParseNode $n) { $o->setCalls($n->getCollectionOfObjectValues(Call::class)); },
-            'onlineMeetings' => function (self $o, ParseNode $n) { $o->setOnlineMeetings($n->getCollectionOfObjectValues(OnlineMeeting::class)); },
-            'presences' => function (self $o, ParseNode $n) { $o->setPresences($n->getCollectionOfObjectValues(Presence::class)); },
+            'callRecords' => function (ParseNode $n) use ($o) { $o->setCallRecords($n->getCollectionOfObjectValues(array(CallRecord::class, 'createFromDiscriminatorValue'))); },
+            'calls' => function (ParseNode $n) use ($o) { $o->setCalls($n->getCollectionOfObjectValues(array(Call::class, 'createFromDiscriminatorValue'))); },
+            'onlineMeetings' => function (ParseNode $n) use ($o) { $o->setOnlineMeetings($n->getCollectionOfObjectValues(array(OnlineMeeting::class, 'createFromDiscriminatorValue'))); },
+            'presences' => function (ParseNode $n) use ($o) { $o->setPresences($n->getCollectionOfObjectValues(array(Presence::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

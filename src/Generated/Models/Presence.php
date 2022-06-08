@@ -6,12 +6,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Presence extends Entity 
+class Presence extends Entity implements Parsable 
 {
-    /** @var string|null $activity The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive, InAMeeting, Offline, OffWork, OutOfOffice, PresenceUnknown, Presenting, UrgentInterruptionsOnly. */
+    /**
+     * @var string|null $activity The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive,InAMeeting, Offline, OffWork,OutOfOffice, PresenceUnknown,Presenting, UrgentInterruptionsOnly.
+    */
     private ?string $activity = null;
     
-    /** @var string|null $availability The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown */
+    /**
+     * @var string|null $availability The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown
+    */
     private ?string $availability = null;
     
     /**
@@ -26,12 +30,12 @@ class Presence extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Presence
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Presence {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Presence {
         return new Presence();
     }
 
     /**
-     * Gets the activity property value. The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive, InAMeeting, Offline, OffWork, OutOfOffice, PresenceUnknown, Presenting, UrgentInterruptionsOnly.
+     * Gets the activity property value. The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive,InAMeeting, Offline, OffWork,OutOfOffice, PresenceUnknown,Presenting, UrgentInterruptionsOnly.
      * @return string|null
     */
     public function getActivity(): ?string {
@@ -51,9 +55,10 @@ class Presence extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activity' => function (self $o, ParseNode $n) { $o->setActivity($n->getStringValue()); },
-            'availability' => function (self $o, ParseNode $n) { $o->setAvailability($n->getStringValue()); },
+            'activity' => function (ParseNode $n) use ($o) { $o->setActivity($n->getStringValue()); },
+            'availability' => function (ParseNode $n) use ($o) { $o->setAvailability($n->getStringValue()); },
         ]);
     }
 
@@ -68,7 +73,7 @@ class Presence extends Entity
     }
 
     /**
-     * Sets the activity property value. The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive, InAMeeting, Offline, OffWork, OutOfOffice, PresenceUnknown, Presenting, UrgentInterruptionsOnly.
+     * Sets the activity property value. The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive,InAMeeting, Offline, OffWork,OutOfOffice, PresenceUnknown,Presenting, UrgentInterruptionsOnly.
      *  @param string|null $value Value to set for the activity property.
     */
     public function setActivity(?string $value ): void {

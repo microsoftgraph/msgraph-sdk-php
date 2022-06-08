@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class PrintTaskStatus implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $description A human-readable description of the current processing state of the printTask. */
+    /**
+     * @var string|null $description A human-readable description of the current processing state of the printTask.
+    */
     private ?string $description = null;
     
-    /** @var PrintTaskProcessingState|null $state The current processing state of the printTask. Valid values are described in the following table. */
+    /**
+     * @var PrintTaskProcessingState|null $state The current processing state of the printTask. Valid values are described in the following table.
+    */
     private ?PrintTaskProcessingState $state = null;
     
     /**
@@ -30,7 +36,7 @@ class PrintTaskStatus implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrintTaskStatus
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrintTaskStatus {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrintTaskStatus {
         return new PrintTaskStatus();
     }
 
@@ -55,9 +61,10 @@ class PrintTaskStatus implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getEnumValue(PrintTaskProcessingState::class)); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(PrintTaskProcessingState::class)); },
         ];
     }
 

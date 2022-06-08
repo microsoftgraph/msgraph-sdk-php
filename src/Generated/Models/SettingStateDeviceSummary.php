@@ -6,33 +6,51 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class SettingStateDeviceSummary extends Entity 
+class SettingStateDeviceSummary extends Entity implements Parsable 
 {
-    /** @var int|null $compliantDeviceCount Device Compliant count for the setting */
+    /**
+     * @var int|null $compliantDeviceCount Device Compliant count for the setting
+    */
     private ?int $compliantDeviceCount = null;
     
-    /** @var int|null $conflictDeviceCount Device conflict error count for the setting */
+    /**
+     * @var int|null $conflictDeviceCount Device conflict error count for the setting
+    */
     private ?int $conflictDeviceCount = null;
     
-    /** @var int|null $errorDeviceCount Device error count for the setting */
+    /**
+     * @var int|null $errorDeviceCount Device error count for the setting
+    */
     private ?int $errorDeviceCount = null;
     
-    /** @var string|null $instancePath Name of the InstancePath for the setting */
+    /**
+     * @var string|null $instancePath Name of the InstancePath for the setting
+    */
     private ?string $instancePath = null;
     
-    /** @var int|null $nonCompliantDeviceCount Device NonCompliant count for the setting */
+    /**
+     * @var int|null $nonCompliantDeviceCount Device NonCompliant count for the setting
+    */
     private ?int $nonCompliantDeviceCount = null;
     
-    /** @var int|null $notApplicableDeviceCount Device Not Applicable count for the setting */
+    /**
+     * @var int|null $notApplicableDeviceCount Device Not Applicable count for the setting
+    */
     private ?int $notApplicableDeviceCount = null;
     
-    /** @var int|null $remediatedDeviceCount Device Compliant count for the setting */
+    /**
+     * @var int|null $remediatedDeviceCount Device Compliant count for the setting
+    */
     private ?int $remediatedDeviceCount = null;
     
-    /** @var string|null $settingName Name of the setting */
+    /**
+     * @var string|null $settingName Name of the setting
+    */
     private ?string $settingName = null;
     
-    /** @var int|null $unknownDeviceCount Device Unkown count for the setting */
+    /**
+     * @var int|null $unknownDeviceCount Device Unkown count for the setting
+    */
     private ?int $unknownDeviceCount = null;
     
     /**
@@ -47,7 +65,7 @@ class SettingStateDeviceSummary extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SettingStateDeviceSummary
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SettingStateDeviceSummary {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SettingStateDeviceSummary {
         return new SettingStateDeviceSummary();
     }
 
@@ -80,16 +98,17 @@ class SettingStateDeviceSummary extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'compliantDeviceCount' => function (self $o, ParseNode $n) { $o->setCompliantDeviceCount($n->getIntegerValue()); },
-            'conflictDeviceCount' => function (self $o, ParseNode $n) { $o->setConflictDeviceCount($n->getIntegerValue()); },
-            'errorDeviceCount' => function (self $o, ParseNode $n) { $o->setErrorDeviceCount($n->getIntegerValue()); },
-            'instancePath' => function (self $o, ParseNode $n) { $o->setInstancePath($n->getStringValue()); },
-            'nonCompliantDeviceCount' => function (self $o, ParseNode $n) { $o->setNonCompliantDeviceCount($n->getIntegerValue()); },
-            'notApplicableDeviceCount' => function (self $o, ParseNode $n) { $o->setNotApplicableDeviceCount($n->getIntegerValue()); },
-            'remediatedDeviceCount' => function (self $o, ParseNode $n) { $o->setRemediatedDeviceCount($n->getIntegerValue()); },
-            'settingName' => function (self $o, ParseNode $n) { $o->setSettingName($n->getStringValue()); },
-            'unknownDeviceCount' => function (self $o, ParseNode $n) { $o->setUnknownDeviceCount($n->getIntegerValue()); },
+            'compliantDeviceCount' => function (ParseNode $n) use ($o) { $o->setCompliantDeviceCount($n->getIntegerValue()); },
+            'conflictDeviceCount' => function (ParseNode $n) use ($o) { $o->setConflictDeviceCount($n->getIntegerValue()); },
+            'errorDeviceCount' => function (ParseNode $n) use ($o) { $o->setErrorDeviceCount($n->getIntegerValue()); },
+            'instancePath' => function (ParseNode $n) use ($o) { $o->setInstancePath($n->getStringValue()); },
+            'nonCompliantDeviceCount' => function (ParseNode $n) use ($o) { $o->setNonCompliantDeviceCount($n->getIntegerValue()); },
+            'notApplicableDeviceCount' => function (ParseNode $n) use ($o) { $o->setNotApplicableDeviceCount($n->getIntegerValue()); },
+            'remediatedDeviceCount' => function (ParseNode $n) use ($o) { $o->setRemediatedDeviceCount($n->getIntegerValue()); },
+            'settingName' => function (ParseNode $n) use ($o) { $o->setSettingName($n->getStringValue()); },
+            'unknownDeviceCount' => function (ParseNode $n) use ($o) { $o->setUnknownDeviceCount($n->getIntegerValue()); },
         ]);
     }
 

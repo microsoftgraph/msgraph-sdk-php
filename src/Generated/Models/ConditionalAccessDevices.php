@@ -9,10 +9,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var ConditionalAccessFilter|null $deviceFilter Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. */
+    /**
+     * @var ConditionalAccessFilter|null $deviceFilter Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set.
+    */
     private ?ConditionalAccessFilter $deviceFilter = null;
     
     /**
@@ -27,7 +31,7 @@ class ConditionalAccessDevices implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ConditionalAccessDevices
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessDevices {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessDevices {
         return new ConditionalAccessDevices();
     }
 
@@ -40,7 +44,7 @@ class ConditionalAccessDevices implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the deviceFilter property value. Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them.
+     * Gets the deviceFilter property value. Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set.
      * @return ConditionalAccessFilter|null
     */
     public function getDeviceFilter(): ?ConditionalAccessFilter {
@@ -52,8 +56,9 @@ class ConditionalAccessDevices implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'deviceFilter' => function (self $o, ParseNode $n) { $o->setDeviceFilter($n->getObjectValue(ConditionalAccessFilter::class)); },
+            'deviceFilter' => function (ParseNode $n) use ($o) { $o->setDeviceFilter($n->getObjectValue(array(ConditionalAccessFilter::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 
@@ -75,7 +80,7 @@ class ConditionalAccessDevices implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the deviceFilter property value. Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them.
+     * Sets the deviceFilter property value. Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set.
      *  @param ConditionalAccessFilter|null $value Value to set for the deviceFilter property.
     */
     public function setDeviceFilter(?ConditionalAccessFilter $value ): void {

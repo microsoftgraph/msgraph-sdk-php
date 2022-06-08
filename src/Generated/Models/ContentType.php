@@ -6,63 +6,101 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ContentType extends Entity 
+class ContentType extends Entity implements Parsable 
 {
-    /** @var array<string>|null $associatedHubsUrls List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites. */
+    /**
+     * @var array<string>|null $associatedHubsUrls List of canonical URLs for hub sites with which this content type is associated to. This will contain all hubsites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
+    */
     private ?array $associatedHubsUrls = null;
     
-    /** @var ContentType|null $base Parent contentType from which this content type is derived. */
+    /**
+     * @var ContentType|null $base Parent contentType from which this content type is derived.
+    */
     private ?ContentType $base = null;
     
-    /** @var array<ContentType>|null $baseTypes The collection of content types that are ancestors of this content type. */
+    /**
+     * @var array<ContentType>|null $baseTypes The collection of content types that are ancestors of this content type.
+    */
     private ?array $baseTypes = null;
     
-    /** @var array<ColumnLink>|null $columnLinks The collection of columns that are required by this content type. */
+    /**
+     * @var array<ColumnLink>|null $columnLinks The collection of columns that are required by this content type
+    */
     private ?array $columnLinks = null;
     
-    /** @var array<ColumnDefinition>|null $columnPositions Column order information in a content type. */
+    /**
+     * @var array<ColumnDefinition>|null $columnPositions Column order information in a content type.
+    */
     private ?array $columnPositions = null;
     
-    /** @var array<ColumnDefinition>|null $columns The collection of column definitions for this contentType. */
+    /**
+     * @var array<ColumnDefinition>|null $columns The collection of column definitions for this contentType.
+    */
     private ?array $columns = null;
     
-    /** @var string|null $description The descriptive text for the item. */
+    /**
+     * @var string|null $description The descriptive text for the item.
+    */
     private ?string $description = null;
     
-    /** @var DocumentSet|null $documentSet Document Set metadata. */
+    /**
+     * @var DocumentSet|null $documentSet Document Set metadata.
+    */
     private ?DocumentSet $documentSet = null;
     
-    /** @var DocumentSetContent|null $documentTemplate Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type. */
+    /**
+     * @var DocumentSetContent|null $documentTemplate Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.
+    */
     private ?DocumentSetContent $documentTemplate = null;
     
-    /** @var string|null $group The name of the group this content type belongs to. Helps organize related content types. */
+    /**
+     * @var string|null $group The name of the group this content type belongs to. Helps organize related content types.
+    */
     private ?string $group = null;
     
-    /** @var bool|null $hidden Indicates whether the content type is hidden in the list's 'New' menu. */
+    /**
+     * @var bool|null $hidden Indicates whether the content type is hidden in the list's 'New' menu.
+    */
     private ?bool $hidden = null;
     
-    /** @var ItemReference|null $inheritedFrom If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined. */
+    /**
+     * @var ItemReference|null $inheritedFrom If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.
+    */
     private ?ItemReference $inheritedFrom = null;
     
-    /** @var bool|null $isBuiltIn Specifies if a content type is a built-in content type. */
+    /**
+     * @var bool|null $isBuiltIn Specifies if a content type is a built-in content type.
+    */
     private ?bool $isBuiltIn = null;
     
-    /** @var string|null $name The name of the content type. */
+    /**
+     * @var string|null $name The name of the content type.
+    */
     private ?string $name = null;
     
-    /** @var ContentTypeOrder|null $order Specifies the order in which the content type appears in the selection UI. */
+    /**
+     * @var ContentTypeOrder|null $order Specifies the order in which the content type appears in the selection UI.
+    */
     private ?ContentTypeOrder $order = null;
     
-    /** @var string|null $parentId The unique identifier of the content type. */
+    /**
+     * @var string|null $parentId The unique identifier of the content type.
+    */
     private ?string $parentId = null;
     
-    /** @var bool|null $propagateChanges If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type. */
+    /**
+     * @var bool|null $propagateChanges If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
+    */
     private ?bool $propagateChanges = null;
     
-    /** @var bool|null $readOnly If true, the content type can't be modified unless this value is first set to false. */
+    /**
+     * @var bool|null $readOnly If true, the content type cannot be modified unless this value is first set to false.
+    */
     private ?bool $readOnly = null;
     
-    /** @var bool|null $sealed If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types. */
+    /**
+     * @var bool|null $sealed If true, the content type cannot be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
+    */
     private ?bool $sealed = null;
     
     /**
@@ -77,12 +115,12 @@ class ContentType extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ContentType
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ContentType {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ContentType {
         return new ContentType();
     }
 
     /**
-     * Gets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
+     * Gets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This will contain all hubsites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
      * @return array<string>|null
     */
     public function getAssociatedHubsUrls(): ?array {
@@ -106,7 +144,7 @@ class ContentType extends Entity
     }
 
     /**
-     * Gets the columnLinks property value. The collection of columns that are required by this content type.
+     * Gets the columnLinks property value. The collection of columns that are required by this content type
      * @return array<ColumnLink>|null
     */
     public function getColumnLinks(): ?array {
@@ -158,26 +196,27 @@ class ContentType extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'associatedHubsUrls' => function (self $o, ParseNode $n) { $o->setAssociatedHubsUrls($n->getCollectionOfPrimitiveValues()); },
-            'base' => function (self $o, ParseNode $n) { $o->setBase($n->getObjectValue(ContentType::class)); },
-            'baseTypes' => function (self $o, ParseNode $n) { $o->setBaseTypes($n->getCollectionOfObjectValues(ContentType::class)); },
-            'columnLinks' => function (self $o, ParseNode $n) { $o->setColumnLinks($n->getCollectionOfObjectValues(ColumnLink::class)); },
-            'columnPositions' => function (self $o, ParseNode $n) { $o->setColumnPositions($n->getCollectionOfObjectValues(ColumnDefinition::class)); },
-            'columns' => function (self $o, ParseNode $n) { $o->setColumns($n->getCollectionOfObjectValues(ColumnDefinition::class)); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'documentSet' => function (self $o, ParseNode $n) { $o->setDocumentSet($n->getObjectValue(DocumentSet::class)); },
-            'documentTemplate' => function (self $o, ParseNode $n) { $o->setDocumentTemplate($n->getObjectValue(DocumentSetContent::class)); },
-            'group' => function (self $o, ParseNode $n) { $o->setGroup($n->getStringValue()); },
-            'hidden' => function (self $o, ParseNode $n) { $o->setHidden($n->getBooleanValue()); },
-            'inheritedFrom' => function (self $o, ParseNode $n) { $o->setInheritedFrom($n->getObjectValue(ItemReference::class)); },
-            'isBuiltIn' => function (self $o, ParseNode $n) { $o->setIsBuiltIn($n->getBooleanValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'order' => function (self $o, ParseNode $n) { $o->setOrder($n->getObjectValue(ContentTypeOrder::class)); },
-            'parentId' => function (self $o, ParseNode $n) { $o->setParentId($n->getStringValue()); },
-            'propagateChanges' => function (self $o, ParseNode $n) { $o->setPropagateChanges($n->getBooleanValue()); },
-            'readOnly' => function (self $o, ParseNode $n) { $o->setReadOnly($n->getBooleanValue()); },
-            'sealed' => function (self $o, ParseNode $n) { $o->setSealed($n->getBooleanValue()); },
+            'associatedHubsUrls' => function (ParseNode $n) use ($o) { $o->setAssociatedHubsUrls($n->getCollectionOfPrimitiveValues()); },
+            'base' => function (ParseNode $n) use ($o) { $o->setBase($n->getObjectValue(array(ContentType::class, 'createFromDiscriminatorValue'))); },
+            'baseTypes' => function (ParseNode $n) use ($o) { $o->setBaseTypes($n->getCollectionOfObjectValues(array(ContentType::class, 'createFromDiscriminatorValue'))); },
+            'columnLinks' => function (ParseNode $n) use ($o) { $o->setColumnLinks($n->getCollectionOfObjectValues(array(ColumnLink::class, 'createFromDiscriminatorValue'))); },
+            'columnPositions' => function (ParseNode $n) use ($o) { $o->setColumnPositions($n->getCollectionOfObjectValues(array(ColumnDefinition::class, 'createFromDiscriminatorValue'))); },
+            'columns' => function (ParseNode $n) use ($o) { $o->setColumns($n->getCollectionOfObjectValues(array(ColumnDefinition::class, 'createFromDiscriminatorValue'))); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'documentSet' => function (ParseNode $n) use ($o) { $o->setDocumentSet($n->getObjectValue(array(DocumentSet::class, 'createFromDiscriminatorValue'))); },
+            'documentTemplate' => function (ParseNode $n) use ($o) { $o->setDocumentTemplate($n->getObjectValue(array(DocumentSetContent::class, 'createFromDiscriminatorValue'))); },
+            'group' => function (ParseNode $n) use ($o) { $o->setGroup($n->getStringValue()); },
+            'hidden' => function (ParseNode $n) use ($o) { $o->setHidden($n->getBooleanValue()); },
+            'inheritedFrom' => function (ParseNode $n) use ($o) { $o->setInheritedFrom($n->getObjectValue(array(ItemReference::class, 'createFromDiscriminatorValue'))); },
+            'isBuiltIn' => function (ParseNode $n) use ($o) { $o->setIsBuiltIn($n->getBooleanValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'order' => function (ParseNode $n) use ($o) { $o->setOrder($n->getObjectValue(array(ContentTypeOrder::class, 'createFromDiscriminatorValue'))); },
+            'parentId' => function (ParseNode $n) use ($o) { $o->setParentId($n->getStringValue()); },
+            'propagateChanges' => function (ParseNode $n) use ($o) { $o->setPropagateChanges($n->getBooleanValue()); },
+            'readOnly' => function (ParseNode $n) use ($o) { $o->setReadOnly($n->getBooleanValue()); },
+            'sealed' => function (ParseNode $n) use ($o) { $o->setSealed($n->getBooleanValue()); },
         ]);
     }
 
@@ -246,7 +285,7 @@ class ContentType extends Entity
     }
 
     /**
-     * Gets the readOnly property value. If true, the content type can't be modified unless this value is first set to false.
+     * Gets the readOnly property value. If true, the content type cannot be modified unless this value is first set to false.
      * @return bool|null
     */
     public function getReadOnly(): ?bool {
@@ -254,7 +293,7 @@ class ContentType extends Entity
     }
 
     /**
-     * Gets the sealed property value. If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
+     * Gets the sealed property value. If true, the content type cannot be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
      * @return bool|null
     */
     public function getSealed(): ?bool {
@@ -289,7 +328,7 @@ class ContentType extends Entity
     }
 
     /**
-     * Sets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
+     * Sets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This will contain all hubsites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
      *  @param array<string>|null $value Value to set for the associatedHubsUrls property.
     */
     public function setAssociatedHubsUrls(?array $value ): void {
@@ -313,7 +352,7 @@ class ContentType extends Entity
     }
 
     /**
-     * Sets the columnLinks property value. The collection of columns that are required by this content type.
+     * Sets the columnLinks property value. The collection of columns that are required by this content type
      *  @param array<ColumnLink>|null $value Value to set for the columnLinks property.
     */
     public function setColumnLinks(?array $value ): void {
@@ -425,7 +464,7 @@ class ContentType extends Entity
     }
 
     /**
-     * Sets the readOnly property value. If true, the content type can't be modified unless this value is first set to false.
+     * Sets the readOnly property value. If true, the content type cannot be modified unless this value is first set to false.
      *  @param bool|null $value Value to set for the readOnly property.
     */
     public function setReadOnly(?bool $value ): void {
@@ -433,7 +472,7 @@ class ContentType extends Entity
     }
 
     /**
-     * Sets the sealed property value. If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
+     * Sets the sealed property value. If true, the content type cannot be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
      *  @param bool|null $value Value to set for the sealed property.
     */
     public function setSealed(?bool $value ): void {

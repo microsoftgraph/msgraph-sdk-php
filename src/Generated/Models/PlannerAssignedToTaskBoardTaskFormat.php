@@ -6,12 +6,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class PlannerAssignedToTaskBoardTaskFormat extends Entity 
+class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Parsable 
 {
-    /** @var PlannerOrderHintsByAssignee|null $orderHintsByAssignee Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here. */
+    /**
+     * @var PlannerOrderHintsByAssignee|null $orderHintsByAssignee Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here.
+    */
     private ?PlannerOrderHintsByAssignee $orderHintsByAssignee = null;
     
-    /** @var string|null $unassignedOrderHint Hint value used to order the task on the AssignedTo view of the Task Board when the task is not assigned to anyone, or if the orderHintsByAssignee dictionary does not provide an order hint for the user the task is assigned to. The format is defined as outlined here. */
+    /**
+     * @var string|null $unassignedOrderHint Hint value used to order the task on the AssignedTo view of the Task Board when the task is not assigned to anyone, or if the orderHintsByAssignee dictionary does not provide an order hint for the user the task is assigned to. The format is defined as outlined here.
+    */
     private ?string $unassignedOrderHint = null;
     
     /**
@@ -26,7 +30,7 @@ class PlannerAssignedToTaskBoardTaskFormat extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PlannerAssignedToTaskBoardTaskFormat
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PlannerAssignedToTaskBoardTaskFormat {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PlannerAssignedToTaskBoardTaskFormat {
         return new PlannerAssignedToTaskBoardTaskFormat();
     }
 
@@ -35,9 +39,10 @@ class PlannerAssignedToTaskBoardTaskFormat extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'orderHintsByAssignee' => function (self $o, ParseNode $n) { $o->setOrderHintsByAssignee($n->getObjectValue(PlannerOrderHintsByAssignee::class)); },
-            'unassignedOrderHint' => function (self $o, ParseNode $n) { $o->setUnassignedOrderHint($n->getStringValue()); },
+            'orderHintsByAssignee' => function (ParseNode $n) use ($o) { $o->setOrderHintsByAssignee($n->getObjectValue(array(PlannerOrderHintsByAssignee::class, 'createFromDiscriminatorValue'))); },
+            'unassignedOrderHint' => function (ParseNode $n) use ($o) { $o->setUnassignedOrderHint($n->getStringValue()); },
         ]);
     }
 

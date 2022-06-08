@@ -9,28 +9,44 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class RecurrencePattern implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $dayOfMonth The day of the month on which the event occurs. Required if type is absoluteMonthly or absoluteYearly. */
+    /**
+     * @var int|null $dayOfMonth The day of the month on which the event occurs. Required if type is absoluteMonthly or absoluteYearly.
+    */
     private ?int $dayOfMonth = null;
     
-    /** @var array<DayOfWeek>|null $daysOfWeek A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly. */
+    /**
+     * @var array<string>|null $daysOfWeek A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
+    */
     private ?array $daysOfWeek = null;
     
-    /** @var DayOfWeek|null $firstDayOfWeek The first day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly. */
+    /**
+     * @var DayOfWeek|null $firstDayOfWeek The first day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly.
+    */
     private ?DayOfWeek $firstDayOfWeek = null;
     
-    /** @var WeekIndex|null $index Specifies on which instance of the allowed days specified in daysOfWeek the event occurs, counted from the first instance in the month. The possible values are: first, second, third, fourth, last. Default is first. Optional and used if type is relativeMonthly or relativeYearly. */
+    /**
+     * @var WeekIndex|null $index Specifies on which instance of the allowed days specified in daysOfWeek the event occurs, counted from the first instance in the month. The possible values are: first, second, third, fourth, last. Default is first. Optional and used if type is relativeMonthly or relativeYearly.
+    */
     private ?WeekIndex $index = null;
     
-    /** @var int|null $interval The number of units between occurrences, where units can be in days, weeks, months, or years, depending on the type. Required. */
+    /**
+     * @var int|null $interval The number of units between occurrences, where units can be in days, weeks, months, or years, depending on the type. Required.
+    */
     private ?int $interval = null;
     
-    /** @var int|null $month The month in which the event occurs.  This is a number from 1 to 12. */
+    /**
+     * @var int|null $month The month in which the event occurs.  This is a number from 1 to 12.
+    */
     private ?int $month = null;
     
-    /** @var RecurrencePatternType|null $type The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property. */
+    /**
+     * @var RecurrencePatternType|null $type The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property.
+    */
     private ?RecurrencePatternType $type = null;
     
     /**
@@ -45,7 +61,7 @@ class RecurrencePattern implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return RecurrencePattern
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): RecurrencePattern {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): RecurrencePattern {
         return new RecurrencePattern();
     }
 
@@ -67,7 +83,7 @@ class RecurrencePattern implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the daysOfWeek property value. A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
-     * @return array<DayOfWeek>|null
+     * @return array<string>|null
     */
     public function getDaysOfWeek(): ?array {
         return $this->daysOfWeek;
@@ -78,14 +94,15 @@ class RecurrencePattern implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'dayOfMonth' => function (self $o, ParseNode $n) { $o->setDayOfMonth($n->getIntegerValue()); },
-            'daysOfWeek' => function (self $o, ParseNode $n) { $o->setDaysOfWeek($n->getCollectionOfEnumValues(DayOfWeek::class)); },
-            'firstDayOfWeek' => function (self $o, ParseNode $n) { $o->setFirstDayOfWeek($n->getEnumValue(DayOfWeek::class)); },
-            'index' => function (self $o, ParseNode $n) { $o->setIndex($n->getEnumValue(WeekIndex::class)); },
-            'interval' => function (self $o, ParseNode $n) { $o->setInterval($n->getIntegerValue()); },
-            'month' => function (self $o, ParseNode $n) { $o->setMonth($n->getIntegerValue()); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getEnumValue(RecurrencePatternType::class)); },
+            'dayOfMonth' => function (ParseNode $n) use ($o) { $o->setDayOfMonth($n->getIntegerValue()); },
+            'daysOfWeek' => function (ParseNode $n) use ($o) { $o->setDaysOfWeek($n->getCollectionOfPrimitiveValues()); },
+            'firstDayOfWeek' => function (ParseNode $n) use ($o) { $o->setFirstDayOfWeek($n->getEnumValue(DayOfWeek::class)); },
+            'index' => function (ParseNode $n) use ($o) { $o->setIndex($n->getEnumValue(WeekIndex::class)); },
+            'interval' => function (ParseNode $n) use ($o) { $o->setInterval($n->getIntegerValue()); },
+            'month' => function (ParseNode $n) use ($o) { $o->setMonth($n->getIntegerValue()); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(RecurrencePatternType::class)); },
         ];
     }
 
@@ -135,7 +152,7 @@ class RecurrencePattern implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeIntegerValue('dayOfMonth', $this->dayOfMonth);
-        $writer->writeCollectionOfEnumValues('daysOfWeek', $this->daysOfWeek);
+        $writer->writeCollectionOfPrimitiveValues('daysOfWeek', $this->daysOfWeek);
         $writer->writeEnumValue('firstDayOfWeek', $this->firstDayOfWeek);
         $writer->writeEnumValue('index', $this->index);
         $writer->writeIntegerValue('interval', $this->interval);
@@ -162,7 +179,7 @@ class RecurrencePattern implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the daysOfWeek property value. A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
-     *  @param array<DayOfWeek>|null $value Value to set for the daysOfWeek property.
+     *  @param array<string>|null $value Value to set for the daysOfWeek property.
     */
     public function setDaysOfWeek(?array $value ): void {
         $this->daysOfWeek = $value;

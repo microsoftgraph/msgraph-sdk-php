@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class PrinterStatus implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $description A human-readable description of the printer's current processing state. Read-only. */
+    /**
+     * @var string|null $description A human-readable description of the printer's current processing state. Read-only.
+    */
     private ?string $description = null;
     
-    /** @var array<PrinterProcessingStateDetail>|null $details The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only. */
+    /**
+     * @var array<string>|null $details The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
+    */
     private ?array $details = null;
     
-    /** @var PrinterProcessingState|null $state The current processing state. Valid values are described in the following table. Read-only. */
+    /**
+     * @var PrinterProcessingState|null $state The current processing state. Valid values are described in the following table. Read-only.
+    */
     private ?PrinterProcessingState $state = null;
     
     /**
@@ -33,7 +41,7 @@ class PrinterStatus implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrinterStatus
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrinterStatus {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrinterStatus {
         return new PrinterStatus();
     }
 
@@ -55,7 +63,7 @@ class PrinterStatus implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the details property value. The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
-     * @return array<PrinterProcessingStateDetail>|null
+     * @return array<string>|null
     */
     public function getDetails(): ?array {
         return $this->details;
@@ -66,10 +74,11 @@ class PrinterStatus implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'details' => function (self $o, ParseNode $n) { $o->setDetails($n->getCollectionOfEnumValues(PrinterProcessingStateDetail::class)); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getEnumValue(PrinterProcessingState::class)); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'details' => function (ParseNode $n) use ($o) { $o->setDetails($n->getCollectionOfPrimitiveValues()); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(PrinterProcessingState::class)); },
         ];
     }
 
@@ -87,7 +96,7 @@ class PrinterStatus implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('description', $this->description);
-        $writer->writeCollectionOfEnumValues('details', $this->details);
+        $writer->writeCollectionOfPrimitiveValues('details', $this->details);
         $writer->writeEnumValue('state', $this->state);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -110,7 +119,7 @@ class PrinterStatus implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the details property value. The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
-     *  @param array<PrinterProcessingStateDetail>|null $value Value to set for the details property.
+     *  @param array<string>|null $value Value to set for the details property.
     */
     public function setDetails(?array $value ): void {
         $this->details = $value;

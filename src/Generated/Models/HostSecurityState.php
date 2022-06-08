@@ -9,34 +9,54 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class HostSecurityState implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $fqdn Host FQDN (Fully Qualified Domain Name) (for example, machine.company.com). */
+    /**
+     * @var string|null $fqdn Host FQDN (Fully Qualified Domain Name) (for example, machine.company.com).
+    */
     private ?string $fqdn = null;
     
-    /** @var bool|null $isAzureAdJoined The isAzureAdJoined property */
+    /**
+     * @var bool|null $isAzureAdJoined The isAzureAdJoined property
+    */
     private ?bool $isAzureAdJoined = null;
     
-    /** @var bool|null $isAzureAdRegistered The isAzureAdRegistered property */
+    /**
+     * @var bool|null $isAzureAdRegistered The isAzureAdRegistered property
+    */
     private ?bool $isAzureAdRegistered = null;
     
-    /** @var bool|null $isHybridAzureDomainJoined True if the host is domain joined to an on-premises Active Directory domain. */
+    /**
+     * @var bool|null $isHybridAzureDomainJoined True if the host is domain joined to an on-premises Active Directory domain.
+    */
     private ?bool $isHybridAzureDomainJoined = null;
     
-    /** @var string|null $netBiosName The local host name, without the DNS domain name. */
+    /**
+     * @var string|null $netBiosName The local host name, without the DNS domain name.
+    */
     private ?string $netBiosName = null;
     
-    /** @var string|null $os Host Operating System. (For example, Windows10, MacOS, RHEL, etc.). */
+    /**
+     * @var string|null $os Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
+    */
     private ?string $os = null;
     
-    /** @var string|null $privateIpAddress Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert. */
+    /**
+     * @var string|null $privateIpAddress Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert.
+    */
     private ?string $privateIpAddress = null;
     
-    /** @var string|null $publicIpAddress Publicly routable IPv4 or IPv6 address (see RFC 1918) at time of the alert. */
+    /**
+     * @var string|null $publicIpAddress Publicly routable IPv4 or IPv6 address (see RFC 1918) at time of the alert.
+    */
     private ?string $publicIpAddress = null;
     
-    /** @var string|null $riskScore Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage. */
+    /**
+     * @var string|null $riskScore Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage.
+    */
     private ?string $riskScore = null;
     
     /**
@@ -51,7 +71,7 @@ class HostSecurityState implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return HostSecurityState
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): HostSecurityState {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): HostSecurityState {
         return new HostSecurityState();
     }
 
@@ -68,16 +88,17 @@ class HostSecurityState implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'fqdn' => function (self $o, ParseNode $n) { $o->setFqdn($n->getStringValue()); },
-            'isAzureAdJoined' => function (self $o, ParseNode $n) { $o->setIsAzureAdJoined($n->getBooleanValue()); },
-            'isAzureAdRegistered' => function (self $o, ParseNode $n) { $o->setIsAzureAdRegistered($n->getBooleanValue()); },
-            'isHybridAzureDomainJoined' => function (self $o, ParseNode $n) { $o->setIsHybridAzureDomainJoined($n->getBooleanValue()); },
-            'netBiosName' => function (self $o, ParseNode $n) { $o->setNetBiosName($n->getStringValue()); },
-            'os' => function (self $o, ParseNode $n) { $o->setOs($n->getStringValue()); },
-            'privateIpAddress' => function (self $o, ParseNode $n) { $o->setPrivateIpAddress($n->getStringValue()); },
-            'publicIpAddress' => function (self $o, ParseNode $n) { $o->setPublicIpAddress($n->getStringValue()); },
-            'riskScore' => function (self $o, ParseNode $n) { $o->setRiskScore($n->getStringValue()); },
+            'fqdn' => function (ParseNode $n) use ($o) { $o->setFqdn($n->getStringValue()); },
+            'isAzureAdJoined' => function (ParseNode $n) use ($o) { $o->setIsAzureAdJoined($n->getBooleanValue()); },
+            'isAzureAdRegistered' => function (ParseNode $n) use ($o) { $o->setIsAzureAdRegistered($n->getBooleanValue()); },
+            'isHybridAzureDomainJoined' => function (ParseNode $n) use ($o) { $o->setIsHybridAzureDomainJoined($n->getBooleanValue()); },
+            'netBiosName' => function (ParseNode $n) use ($o) { $o->setNetBiosName($n->getStringValue()); },
+            'os' => function (ParseNode $n) use ($o) { $o->setOs($n->getStringValue()); },
+            'privateIpAddress' => function (ParseNode $n) use ($o) { $o->setPrivateIpAddress($n->getStringValue()); },
+            'publicIpAddress' => function (ParseNode $n) use ($o) { $o->setPublicIpAddress($n->getStringValue()); },
+            'riskScore' => function (ParseNode $n) use ($o) { $o->setRiskScore($n->getStringValue()); },
         ];
     }
 

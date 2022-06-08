@@ -9,10 +9,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Recipient implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var EmailAddress|null $emailAddress The recipient's email address. */
+    /**
+     * @var EmailAddress|null $emailAddress The recipient's email address.
+    */
     private ?EmailAddress $emailAddress = null;
     
     /**
@@ -27,7 +31,7 @@ class Recipient implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Recipient
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Recipient {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Recipient {
         return new Recipient();
     }
 
@@ -52,8 +56,9 @@ class Recipient implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'emailAddress' => function (self $o, ParseNode $n) { $o->setEmailAddress($n->getObjectValue(EmailAddress::class)); },
+            'emailAddress' => function (ParseNode $n) use ($o) { $o->setEmailAddress($n->getObjectValue(array(EmailAddress::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

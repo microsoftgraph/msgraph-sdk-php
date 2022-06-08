@@ -7,18 +7,26 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Relation extends Entity 
+class Relation extends Entity implements Parsable 
 {
-    /** @var Term|null $fromTerm The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set]. */
+    /**
+     * @var Term|null $fromTerm The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
+    */
     private ?Term $fromTerm = null;
     
-    /** @var RelationType|null $relationship The type of relation. Possible values are: pin, reuse. */
+    /**
+     * @var RelationType|null $relationship The type of relation. Possible values are: pin, reuse.
+    */
     private ?RelationType $relationship = null;
     
-    /** @var Set|null $set The [set] in which the relation is relevant. */
+    /**
+     * @var Set|null $set The [set] in which the relation is relevant.
+    */
     private ?Set $set = null;
     
-    /** @var Term|null $toTerm The to [term] of the relation. The term to which the relationship is defined. */
+    /**
+     * @var Term|null $toTerm The to [term] of the relation. The term to which the relationship is defined.
+    */
     private ?Term $toTerm = null;
     
     /**
@@ -33,7 +41,7 @@ class Relation extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Relation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Relation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Relation {
         return new Relation();
     }
 
@@ -42,11 +50,12 @@ class Relation extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'fromTerm' => function (self $o, ParseNode $n) { $o->setFromTerm($n->getObjectValue(Term::class)); },
-            'relationship' => function (self $o, ParseNode $n) { $o->setRelationship($n->getEnumValue(RelationType::class)); },
-            'set' => function (self $o, ParseNode $n) { $o->setSet($n->getObjectValue(Set::class)); },
-            'toTerm' => function (self $o, ParseNode $n) { $o->setToTerm($n->getObjectValue(Term::class)); },
+            'fromTerm' => function (ParseNode $n) use ($o) { $o->setFromTerm($n->getObjectValue(array(Term::class, 'createFromDiscriminatorValue'))); },
+            'relationship' => function (ParseNode $n) use ($o) { $o->setRelationship($n->getEnumValue(RelationType::class)); },
+            'set' => function (ParseNode $n) use ($o) { $o->setSet($n->getObjectValue(array(Set::class, 'createFromDiscriminatorValue'))); },
+            'toTerm' => function (ParseNode $n) use ($o) { $o->setToTerm($n->getObjectValue(array(Term::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

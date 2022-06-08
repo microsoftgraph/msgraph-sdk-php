@@ -7,30 +7,46 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DeviceInstallState extends Entity 
+class DeviceInstallState extends Entity implements Parsable 
 {
-    /** @var string|null $deviceId Device Id. */
+    /**
+     * @var string|null $deviceId Device Id.
+    */
     private ?string $deviceId = null;
     
-    /** @var string|null $deviceName Device name. */
+    /**
+     * @var string|null $deviceName Device name.
+    */
     private ?string $deviceName = null;
     
-    /** @var string|null $errorCode The error code for install failures. */
+    /**
+     * @var string|null $errorCode The error code for install failures.
+    */
     private ?string $errorCode = null;
     
-    /** @var InstallState|null $installState The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed, unknown. */
+    /**
+     * @var InstallState|null $installState The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed, unknown.
+    */
     private ?InstallState $installState = null;
     
-    /** @var DateTime|null $lastSyncDateTime Last sync date and time. */
+    /**
+     * @var DateTime|null $lastSyncDateTime Last sync date and time.
+    */
     private ?DateTime $lastSyncDateTime = null;
     
-    /** @var string|null $osDescription OS Description. */
+    /**
+     * @var string|null $osDescription OS Description.
+    */
     private ?string $osDescription = null;
     
-    /** @var string|null $osVersion OS Version. */
+    /**
+     * @var string|null $osVersion OS Version.
+    */
     private ?string $osVersion = null;
     
-    /** @var string|null $userName Device User Name. */
+    /**
+     * @var string|null $userName Device User Name.
+    */
     private ?string $userName = null;
     
     /**
@@ -45,7 +61,7 @@ class DeviceInstallState extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceInstallState
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceInstallState {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceInstallState {
         return new DeviceInstallState();
     }
 
@@ -78,15 +94,16 @@ class DeviceInstallState extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'deviceId' => function (self $o, ParseNode $n) { $o->setDeviceId($n->getStringValue()); },
-            'deviceName' => function (self $o, ParseNode $n) { $o->setDeviceName($n->getStringValue()); },
-            'errorCode' => function (self $o, ParseNode $n) { $o->setErrorCode($n->getStringValue()); },
-            'installState' => function (self $o, ParseNode $n) { $o->setInstallState($n->getEnumValue(InstallState::class)); },
-            'lastSyncDateTime' => function (self $o, ParseNode $n) { $o->setLastSyncDateTime($n->getDateTimeValue()); },
-            'osDescription' => function (self $o, ParseNode $n) { $o->setOsDescription($n->getStringValue()); },
-            'osVersion' => function (self $o, ParseNode $n) { $o->setOsVersion($n->getStringValue()); },
-            'userName' => function (self $o, ParseNode $n) { $o->setUserName($n->getStringValue()); },
+            'deviceId' => function (ParseNode $n) use ($o) { $o->setDeviceId($n->getStringValue()); },
+            'deviceName' => function (ParseNode $n) use ($o) { $o->setDeviceName($n->getStringValue()); },
+            'errorCode' => function (ParseNode $n) use ($o) { $o->setErrorCode($n->getStringValue()); },
+            'installState' => function (ParseNode $n) use ($o) { $o->setInstallState($n->getEnumValue(InstallState::class)); },
+            'lastSyncDateTime' => function (ParseNode $n) use ($o) { $o->setLastSyncDateTime($n->getDateTimeValue()); },
+            'osDescription' => function (ParseNode $n) use ($o) { $o->setOsDescription($n->getStringValue()); },
+            'osVersion' => function (ParseNode $n) use ($o) { $o->setOsVersion($n->getStringValue()); },
+            'userName' => function (ParseNode $n) use ($o) { $o->setUserName($n->getStringValue()); },
         ]);
     }
 

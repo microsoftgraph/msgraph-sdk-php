@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ChoiceColumn implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $allowTextEntry If true, allows custom values that aren't in the configured choices. */
+    /**
+     * @var bool|null $allowTextEntry If true, allows custom values that aren't in the configured choices.
+    */
     private ?bool $allowTextEntry = null;
     
-    /** @var array<string>|null $choices The list of values available for this column. */
+    /**
+     * @var array<string>|null $choices The list of values available for this column.
+    */
     private ?array $choices = null;
     
-    /** @var string|null $displayAs How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons */
+    /**
+     * @var string|null $displayAs How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons
+    */
     private ?string $displayAs = null;
     
     /**
@@ -33,7 +41,7 @@ class ChoiceColumn implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ChoiceColumn
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ChoiceColumn {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ChoiceColumn {
         return new ChoiceColumn();
     }
 
@@ -74,10 +82,11 @@ class ChoiceColumn implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'allowTextEntry' => function (self $o, ParseNode $n) { $o->setAllowTextEntry($n->getBooleanValue()); },
-            'choices' => function (self $o, ParseNode $n) { $o->setChoices($n->getCollectionOfPrimitiveValues()); },
-            'displayAs' => function (self $o, ParseNode $n) { $o->setDisplayAs($n->getStringValue()); },
+            'allowTextEntry' => function (ParseNode $n) use ($o) { $o->setAllowTextEntry($n->getBooleanValue()); },
+            'choices' => function (ParseNode $n) use ($o) { $o->setChoices($n->getCollectionOfPrimitiveValues()); },
+            'displayAs' => function (ParseNode $n) use ($o) { $o->setDisplayAs($n->getStringValue()); },
         ];
     }
 

@@ -6,7 +6,7 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WorkbookFunctions extends Entity 
+class WorkbookFunctions extends Entity implements Parsable 
 {
     /**
      * Instantiates a new workbookFunctions and sets the default values.
@@ -20,7 +20,7 @@ class WorkbookFunctions extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookFunctions
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookFunctions {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookFunctions {
         return new WorkbookFunctions();
     }
 
@@ -29,6 +29,7 @@ class WorkbookFunctions extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

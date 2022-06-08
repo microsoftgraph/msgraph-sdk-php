@@ -6,33 +6,51 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WorkbookChartDataLabels extends Entity 
+class WorkbookChartDataLabels extends Entity implements Parsable 
 {
-    /** @var WorkbookChartDataLabelFormat|null $format Represents the format of chart data labels, which includes fill and font formatting. Read-only. */
+    /**
+     * @var WorkbookChartDataLabelFormat|null $format Represents the format of chart data labels, which includes fill and font formatting. Read-only.
+    */
     private ?WorkbookChartDataLabelFormat $format = null;
     
-    /** @var string|null $position DataLabelPosition value that represents the position of the data label. The possible values are: None, Center, InsideEnd, InsideBase, OutsideEnd, Left, Right, Top, Bottom, BestFit, Callout. */
+    /**
+     * @var string|null $position DataLabelPosition value that represents the position of the data label. The possible values are: None, Center, InsideEnd, InsideBase, OutsideEnd, Left, Right, Top, Bottom, BestFit, Callout.
+    */
     private ?string $position = null;
     
-    /** @var string|null $separator String representing the separator used for the data labels on a chart. */
+    /**
+     * @var string|null $separator String representing the separator used for the data labels on a chart.
+    */
     private ?string $separator = null;
     
-    /** @var bool|null $showBubbleSize Boolean value representing if the data label bubble size is visible or not. */
+    /**
+     * @var bool|null $showBubbleSize Boolean value representing if the data label bubble size is visible or not.
+    */
     private ?bool $showBubbleSize = null;
     
-    /** @var bool|null $showCategoryName Boolean value representing if the data label category name is visible or not. */
+    /**
+     * @var bool|null $showCategoryName Boolean value representing if the data label category name is visible or not.
+    */
     private ?bool $showCategoryName = null;
     
-    /** @var bool|null $showLegendKey Boolean value representing if the data label legend key is visible or not. */
+    /**
+     * @var bool|null $showLegendKey Boolean value representing if the data label legend key is visible or not.
+    */
     private ?bool $showLegendKey = null;
     
-    /** @var bool|null $showPercentage Boolean value representing if the data label percentage is visible or not. */
+    /**
+     * @var bool|null $showPercentage Boolean value representing if the data label percentage is visible or not.
+    */
     private ?bool $showPercentage = null;
     
-    /** @var bool|null $showSeriesName Boolean value representing if the data label series name is visible or not. */
+    /**
+     * @var bool|null $showSeriesName Boolean value representing if the data label series name is visible or not.
+    */
     private ?bool $showSeriesName = null;
     
-    /** @var bool|null $showValue Boolean value representing if the data label value is visible or not. */
+    /**
+     * @var bool|null $showValue Boolean value representing if the data label value is visible or not.
+    */
     private ?bool $showValue = null;
     
     /**
@@ -47,7 +65,7 @@ class WorkbookChartDataLabels extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookChartDataLabels
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookChartDataLabels {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookChartDataLabels {
         return new WorkbookChartDataLabels();
     }
 
@@ -56,16 +74,17 @@ class WorkbookChartDataLabels extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'format' => function (self $o, ParseNode $n) { $o->setFormat($n->getObjectValue(WorkbookChartDataLabelFormat::class)); },
-            'position' => function (self $o, ParseNode $n) { $o->setPosition($n->getStringValue()); },
-            'separator' => function (self $o, ParseNode $n) { $o->setSeparator($n->getStringValue()); },
-            'showBubbleSize' => function (self $o, ParseNode $n) { $o->setShowBubbleSize($n->getBooleanValue()); },
-            'showCategoryName' => function (self $o, ParseNode $n) { $o->setShowCategoryName($n->getBooleanValue()); },
-            'showLegendKey' => function (self $o, ParseNode $n) { $o->setShowLegendKey($n->getBooleanValue()); },
-            'showPercentage' => function (self $o, ParseNode $n) { $o->setShowPercentage($n->getBooleanValue()); },
-            'showSeriesName' => function (self $o, ParseNode $n) { $o->setShowSeriesName($n->getBooleanValue()); },
-            'showValue' => function (self $o, ParseNode $n) { $o->setShowValue($n->getBooleanValue()); },
+            'format' => function (ParseNode $n) use ($o) { $o->setFormat($n->getObjectValue(array(WorkbookChartDataLabelFormat::class, 'createFromDiscriminatorValue'))); },
+            'position' => function (ParseNode $n) use ($o) { $o->setPosition($n->getStringValue()); },
+            'separator' => function (ParseNode $n) use ($o) { $o->setSeparator($n->getStringValue()); },
+            'showBubbleSize' => function (ParseNode $n) use ($o) { $o->setShowBubbleSize($n->getBooleanValue()); },
+            'showCategoryName' => function (ParseNode $n) use ($o) { $o->setShowCategoryName($n->getBooleanValue()); },
+            'showLegendKey' => function (ParseNode $n) use ($o) { $o->setShowLegendKey($n->getBooleanValue()); },
+            'showPercentage' => function (ParseNode $n) use ($o) { $o->setShowPercentage($n->getBooleanValue()); },
+            'showSeriesName' => function (ParseNode $n) use ($o) { $o->setShowSeriesName($n->getBooleanValue()); },
+            'showValue' => function (ParseNode $n) use ($o) { $o->setShowValue($n->getBooleanValue()); },
         ]);
     }
 

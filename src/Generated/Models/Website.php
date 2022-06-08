@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Website implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $address The URL of the website. */
+    /**
+     * @var string|null $address The URL of the website.
+    */
     private ?string $address = null;
     
-    /** @var string|null $displayName The display name of the web site. */
+    /**
+     * @var string|null $displayName The display name of the web site.
+    */
     private ?string $displayName = null;
     
-    /** @var WebsiteType|null $type The possible values are: other, home, work, blog, profile. */
+    /**
+     * @var WebsiteType|null $type Possible values are: other, home, work, blog, profile.
+    */
     private ?WebsiteType $type = null;
     
     /**
@@ -33,7 +41,7 @@ class Website implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Website
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Website {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Website {
         return new Website();
     }
 
@@ -66,15 +74,16 @@ class Website implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'address' => function (self $o, ParseNode $n) { $o->setAddress($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getEnumValue(WebsiteType::class)); },
+            'address' => function (ParseNode $n) use ($o) { $o->setAddress($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(WebsiteType::class)); },
         ];
     }
 
     /**
-     * Gets the type property value. The possible values are: other, home, work, blog, profile.
+     * Gets the type property value. Possible values are: other, home, work, blog, profile.
      * @return WebsiteType|null
     */
     public function getType(): ?WebsiteType {
@@ -117,7 +126,7 @@ class Website implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the type property value. The possible values are: other, home, work, blog, profile.
+     * Sets the type property value. Possible values are: other, home, work, blog, profile.
      *  @param WebsiteType|null $value Value to set for the type property.
     */
     public function setType(?WebsiteType $value ): void {

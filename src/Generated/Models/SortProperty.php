@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SortProperty implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $isDescending True if the sort order is descending. Default is false, with the sort order as ascending. Optional. */
+    /**
+     * @var bool|null $isDescending True if the sort order is descending. Default is false, with the sort order as ascending. Optional.
+    */
     private ?bool $isDescending = null;
     
-    /** @var string|null $name The name of the property to sort on. Required. */
+    /**
+     * @var string|null $name The name of the property to sort on. Required.
+    */
     private ?string $name = null;
     
     /**
@@ -30,7 +36,7 @@ class SortProperty implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SortProperty
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SortProperty {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SortProperty {
         return new SortProperty();
     }
 
@@ -47,9 +53,10 @@ class SortProperty implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'isDescending' => function (self $o, ParseNode $n) { $o->setIsDescending($n->getBooleanValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
+            'isDescending' => function (ParseNode $n) use ($o) { $o->setIsDescending($n->getBooleanValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
         ];
     }
 

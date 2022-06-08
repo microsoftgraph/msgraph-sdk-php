@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class CertificationControl implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $name Certification control name */
+    /**
+     * @var string|null $name Certification control name
+    */
     private ?string $name = null;
     
-    /** @var string|null $url URL for the Microsoft Service Trust Portal */
+    /**
+     * @var string|null $url URL for the Microsoft Service Trust Portal
+    */
     private ?string $url = null;
     
     /**
@@ -30,7 +36,7 @@ class CertificationControl implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return CertificationControl
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): CertificationControl {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): CertificationControl {
         return new CertificationControl();
     }
 
@@ -47,9 +53,10 @@ class CertificationControl implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'url' => function (self $o, ParseNode $n) { $o->setUrl($n->getStringValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'url' => function (ParseNode $n) use ($o) { $o->setUrl($n->getStringValue()); },
         ];
     }
 

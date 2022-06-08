@@ -9,43 +9,69 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SearchRequest implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<string>|null $aggregationFilters Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses. */
+    /**
+     * @var array<string>|null $aggregationFilters Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
+    */
     private ?array $aggregationFilters = null;
     
-    /** @var array<AggregationOption>|null $aggregations Specifies aggregations (also known as refiners) to be returned alongside search results. Optional. */
+    /**
+     * @var array<AggregationOption>|null $aggregations Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
+    */
     private ?array $aggregations = null;
     
-    /** @var array<string>|null $contentSources Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note: contentSource is only applicable when entityType=externalItem. Optional. */
+    /**
+     * @var array<string>|null $contentSources Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note: contentSource is only applicable when entityType=externalItem. Optional.
+    */
     private ?array $contentSources = null;
     
-    /** @var bool|null $enableTopResults This triggers hybrid sort for messages: the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional. */
+    /**
+     * @var bool|null $enableTopResults This triggers hybrid sort for messages: the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional.
+    */
     private ?bool $enableTopResults = null;
     
-    /** @var array<EntityType>|null $entityTypes One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required. */
+    /**
+     * @var array<string>|null $entityTypes One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
+    */
     private ?array $entityTypes = null;
     
-    /** @var array<string>|null $fields Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft Graph connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is label as title, you can retrieve it using the following syntax : label_title.Optional. */
+    /**
+     * @var array<string>|null $fields Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft Graph connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is label as title, you can retrieve it using the following syntax : label_title.Optional.
+    */
     private ?array $fields = null;
     
-    /** @var int|null $from Specifies the offset for the search results. Offset 0 returns the very first result. Optional. */
+    /**
+     * @var int|null $from Specifies the offset for the search results. Offset 0 returns the very first result. Optional.
+    */
     private ?int $from = null;
     
-    /** @var SearchQuery|null $query The query property */
+    /**
+     * @var SearchQuery|null $query The query property
+    */
     private ?SearchQuery $query = null;
     
-    /** @var SearchAlterationOptions|null $queryAlterationOptions Provides query alteration options formatted as a JSON blob that contains two optional flags related to spelling correction. Optional. */
+    /**
+     * @var SearchAlterationOptions|null $queryAlterationOptions Provides query alteration options formatted as a JSON blob that contains two optional flags related to spelling correction. Optional.
+    */
     private ?SearchAlterationOptions $queryAlterationOptions = null;
     
-    /** @var ResultTemplateOption|null $resultTemplateOptions Provides the search result templates options for rendering connectors search results. */
+    /**
+     * @var ResultTemplateOption|null $resultTemplateOptions Provides the search result templates options for rendering connectors search results.
+    */
     private ?ResultTemplateOption $resultTemplateOptions = null;
     
-    /** @var int|null $size The size of the page to be retrieved. Optional. */
+    /**
+     * @var int|null $size The size of the page to be retrieved. Optional.
+    */
     private ?int $size = null;
     
-    /** @var array<SortProperty>|null $sortProperties Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional. */
+    /**
+     * @var array<SortProperty>|null $sortProperties Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
+    */
     private ?array $sortProperties = null;
     
     /**
@@ -60,7 +86,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SearchRequest
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SearchRequest {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SearchRequest {
         return new SearchRequest();
     }
 
@@ -106,7 +132,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the entityTypes property value. One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
-     * @return array<EntityType>|null
+     * @return array<string>|null
     */
     public function getEntityTypes(): ?array {
         return $this->entityTypes;
@@ -117,19 +143,20 @@ class SearchRequest implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'aggregationFilters' => function (self $o, ParseNode $n) { $o->setAggregationFilters($n->getCollectionOfPrimitiveValues()); },
-            'aggregations' => function (self $o, ParseNode $n) { $o->setAggregations($n->getCollectionOfObjectValues(AggregationOption::class)); },
-            'contentSources' => function (self $o, ParseNode $n) { $o->setContentSources($n->getCollectionOfPrimitiveValues()); },
-            'enableTopResults' => function (self $o, ParseNode $n) { $o->setEnableTopResults($n->getBooleanValue()); },
-            'entityTypes' => function (self $o, ParseNode $n) { $o->setEntityTypes($n->getCollectionOfEnumValues(EntityType::class)); },
-            'fields' => function (self $o, ParseNode $n) { $o->setFields($n->getCollectionOfPrimitiveValues()); },
-            'from' => function (self $o, ParseNode $n) { $o->setFrom($n->getIntegerValue()); },
-            'query' => function (self $o, ParseNode $n) { $o->setQuery($n->getObjectValue(SearchQuery::class)); },
-            'queryAlterationOptions' => function (self $o, ParseNode $n) { $o->setQueryAlterationOptions($n->getObjectValue(SearchAlterationOptions::class)); },
-            'resultTemplateOptions' => function (self $o, ParseNode $n) { $o->setResultTemplateOptions($n->getObjectValue(ResultTemplateOption::class)); },
-            'size' => function (self $o, ParseNode $n) { $o->setSize($n->getIntegerValue()); },
-            'sortProperties' => function (self $o, ParseNode $n) { $o->setSortProperties($n->getCollectionOfObjectValues(SortProperty::class)); },
+            'aggregationFilters' => function (ParseNode $n) use ($o) { $o->setAggregationFilters($n->getCollectionOfPrimitiveValues()); },
+            'aggregations' => function (ParseNode $n) use ($o) { $o->setAggregations($n->getCollectionOfObjectValues(array(AggregationOption::class, 'createFromDiscriminatorValue'))); },
+            'contentSources' => function (ParseNode $n) use ($o) { $o->setContentSources($n->getCollectionOfPrimitiveValues()); },
+            'enableTopResults' => function (ParseNode $n) use ($o) { $o->setEnableTopResults($n->getBooleanValue()); },
+            'entityTypes' => function (ParseNode $n) use ($o) { $o->setEntityTypes($n->getCollectionOfPrimitiveValues()); },
+            'fields' => function (ParseNode $n) use ($o) { $o->setFields($n->getCollectionOfPrimitiveValues()); },
+            'from' => function (ParseNode $n) use ($o) { $o->setFrom($n->getIntegerValue()); },
+            'query' => function (ParseNode $n) use ($o) { $o->setQuery($n->getObjectValue(array(SearchQuery::class, 'createFromDiscriminatorValue'))); },
+            'queryAlterationOptions' => function (ParseNode $n) use ($o) { $o->setQueryAlterationOptions($n->getObjectValue(array(SearchAlterationOptions::class, 'createFromDiscriminatorValue'))); },
+            'resultTemplateOptions' => function (ParseNode $n) use ($o) { $o->setResultTemplateOptions($n->getObjectValue(array(ResultTemplateOption::class, 'createFromDiscriminatorValue'))); },
+            'size' => function (ParseNode $n) use ($o) { $o->setSize($n->getIntegerValue()); },
+            'sortProperties' => function (ParseNode $n) use ($o) { $o->setSortProperties($n->getCollectionOfObjectValues(array(SortProperty::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 
@@ -198,7 +225,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
         $writer->writeCollectionOfObjectValues('aggregations', $this->aggregations);
         $writer->writeCollectionOfPrimitiveValues('contentSources', $this->contentSources);
         $writer->writeBooleanValue('enableTopResults', $this->enableTopResults);
-        $writer->writeCollectionOfEnumValues('entityTypes', $this->entityTypes);
+        $writer->writeCollectionOfPrimitiveValues('entityTypes', $this->entityTypes);
         $writer->writeCollectionOfPrimitiveValues('fields', $this->fields);
         $writer->writeIntegerValue('from', $this->from);
         $writer->writeObjectValue('query', $this->query);
@@ -251,7 +278,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the entityTypes property value. One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
-     *  @param array<EntityType>|null $value Value to set for the entityTypes property.
+     *  @param array<string>|null $value Value to set for the entityTypes property.
     */
     public function setEntityTypes(?array $value ): void {
         $this->entityTypes = $value;

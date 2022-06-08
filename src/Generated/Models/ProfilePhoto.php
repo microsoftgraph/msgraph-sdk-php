@@ -6,12 +6,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ProfilePhoto extends Entity 
+class ProfilePhoto extends Entity implements Parsable 
 {
-    /** @var int|null $height The height of the photo. Read-only. */
+    /**
+     * @var int|null $height The height of the photo. Read-only.
+    */
     private ?int $height = null;
     
-    /** @var int|null $width The width of the photo. Read-only. */
+    /**
+     * @var int|null $width The width of the photo. Read-only.
+    */
     private ?int $width = null;
     
     /**
@@ -26,7 +30,7 @@ class ProfilePhoto extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ProfilePhoto
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ProfilePhoto {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ProfilePhoto {
         return new ProfilePhoto();
     }
 
@@ -35,9 +39,10 @@ class ProfilePhoto extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'height' => function (self $o, ParseNode $n) { $o->setHeight($n->getIntegerValue()); },
-            'width' => function (self $o, ParseNode $n) { $o->setWidth($n->getIntegerValue()); },
+            'height' => function (ParseNode $n) use ($o) { $o->setHeight($n->getIntegerValue()); },
+            'width' => function (ParseNode $n) use ($o) { $o->setWidth($n->getIntegerValue()); },
         ]);
     }
 

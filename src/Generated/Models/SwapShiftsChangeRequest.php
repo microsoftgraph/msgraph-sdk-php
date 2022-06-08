@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class SwapShiftsChangeRequest extends OfferShiftRequest 
+class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsable 
 {
-    /** @var string|null $recipientShiftId ShiftId for the recipient user with whom the request is to swap. */
+    /**
+     * @var string|null $recipientShiftId Shift ID for the recipient user with whom the request is to swap.
+    */
     private ?string $recipientShiftId = null;
     
     /**
@@ -23,7 +25,7 @@ class SwapShiftsChangeRequest extends OfferShiftRequest
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SwapShiftsChangeRequest
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SwapShiftsChangeRequest {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SwapShiftsChangeRequest {
         return new SwapShiftsChangeRequest();
     }
 
@@ -32,13 +34,14 @@ class SwapShiftsChangeRequest extends OfferShiftRequest
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'recipientShiftId' => function (self $o, ParseNode $n) { $o->setRecipientShiftId($n->getStringValue()); },
+            'recipientShiftId' => function (ParseNode $n) use ($o) { $o->setRecipientShiftId($n->getStringValue()); },
         ]);
     }
 
     /**
-     * Gets the recipientShiftId property value. ShiftId for the recipient user with whom the request is to swap.
+     * Gets the recipientShiftId property value. Shift ID for the recipient user with whom the request is to swap.
      * @return string|null
     */
     public function getRecipientShiftId(): ?string {
@@ -55,7 +58,7 @@ class SwapShiftsChangeRequest extends OfferShiftRequest
     }
 
     /**
-     * Sets the recipientShiftId property value. ShiftId for the recipient user with whom the request is to swap.
+     * Sets the recipientShiftId property value. Shift ID for the recipient user with whom the request is to swap.
      *  @param string|null $value Value to set for the recipientShiftId property.
     */
     public function setRecipientShiftId(?string $value ): void {

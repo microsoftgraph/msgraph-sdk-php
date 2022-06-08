@@ -9,10 +9,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class CurrencyColumn implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $locale Specifies the locale from which to infer the currency symbol. */
+    /**
+     * @var string|null $locale Specifies the locale from which to infer the currency symbol.
+    */
     private ?string $locale = null;
     
     /**
@@ -27,7 +31,7 @@ class CurrencyColumn implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return CurrencyColumn
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): CurrencyColumn {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): CurrencyColumn {
         return new CurrencyColumn();
     }
 
@@ -44,8 +48,9 @@ class CurrencyColumn implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'locale' => function (self $o, ParseNode $n) { $o->setLocale($n->getStringValue()); },
+            'locale' => function (ParseNode $n) use ($o) { $o->setLocale($n->getStringValue()); },
         ];
     }
 

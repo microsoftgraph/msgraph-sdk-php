@@ -6,7 +6,7 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ApplicationEnforcedRestrictionsSessionControl extends ConditionalAccessSessionControl 
+class ApplicationEnforcedRestrictionsSessionControl extends ConditionalAccessSessionControl implements Parsable 
 {
     /**
      * Instantiates a new applicationEnforcedRestrictionsSessionControl and sets the default values.
@@ -20,7 +20,7 @@ class ApplicationEnforcedRestrictionsSessionControl extends ConditionalAccessSes
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ApplicationEnforcedRestrictionsSessionControl
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ApplicationEnforcedRestrictionsSessionControl {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ApplicationEnforcedRestrictionsSessionControl {
         return new ApplicationEnforcedRestrictionsSessionControl();
     }
 
@@ -29,6 +29,7 @@ class ApplicationEnforcedRestrictionsSessionControl extends ConditionalAccessSes
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

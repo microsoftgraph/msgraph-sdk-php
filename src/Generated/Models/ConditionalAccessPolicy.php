@@ -7,30 +7,46 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ConditionalAccessPolicy extends Entity 
+class ConditionalAccessPolicy extends Entity implements Parsable 
 {
-    /** @var ConditionalAccessConditionSet|null $conditions The conditions property */
+    /**
+     * @var ConditionalAccessConditionSet|null $conditions The conditions property
+    */
     private ?ConditionalAccessConditionSet $conditions = null;
     
-    /** @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly. */
+    /**
+     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $description Not used. */
+    /**
+     * @var string|null $description Not used.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName Specifies a display name for the conditionalAccessPolicy object. */
+    /**
+     * @var string|null $displayName Specifies a display name for the conditionalAccessPolicy object.
+    */
     private ?string $displayName = null;
     
-    /** @var ConditionalAccessGrantControls|null $grantControls Specifies the grant controls that must be fulfilled to pass the policy. */
+    /**
+     * @var ConditionalAccessGrantControls|null $grantControls Specifies the grant controls that must be fulfilled to pass the policy.
+    */
     private ?ConditionalAccessGrantControls $grantControls = null;
     
-    /** @var DateTime|null $modifiedDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly. */
+    /**
+     * @var DateTime|null $modifiedDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
+    */
     private ?DateTime $modifiedDateTime = null;
     
-    /** @var ConditionalAccessSessionControls|null $sessionControls Specifies the session controls that are enforced after sign-in. */
+    /**
+     * @var ConditionalAccessSessionControls|null $sessionControls Specifies the session controls that are enforced after sign-in.
+    */
     private ?ConditionalAccessSessionControls $sessionControls = null;
     
-    /** @var ConditionalAccessPolicyState|null $state Specifies the state of the conditionalAccessPolicy object. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required. */
+    /**
+     * @var ConditionalAccessPolicyState|null $state Specifies the state of the conditionalAccessPolicy object. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required.
+    */
     private ?ConditionalAccessPolicyState $state = null;
     
     /**
@@ -45,7 +61,7 @@ class ConditionalAccessPolicy extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ConditionalAccessPolicy
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessPolicy {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessPolicy {
         return new ConditionalAccessPolicy();
     }
 
@@ -86,15 +102,16 @@ class ConditionalAccessPolicy extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'conditions' => function (self $o, ParseNode $n) { $o->setConditions($n->getObjectValue(ConditionalAccessConditionSet::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'grantControls' => function (self $o, ParseNode $n) { $o->setGrantControls($n->getObjectValue(ConditionalAccessGrantControls::class)); },
-            'modifiedDateTime' => function (self $o, ParseNode $n) { $o->setModifiedDateTime($n->getDateTimeValue()); },
-            'sessionControls' => function (self $o, ParseNode $n) { $o->setSessionControls($n->getObjectValue(ConditionalAccessSessionControls::class)); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getEnumValue(ConditionalAccessPolicyState::class)); },
+            'conditions' => function (ParseNode $n) use ($o) { $o->setConditions($n->getObjectValue(array(ConditionalAccessConditionSet::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'grantControls' => function (ParseNode $n) use ($o) { $o->setGrantControls($n->getObjectValue(array(ConditionalAccessGrantControls::class, 'createFromDiscriminatorValue'))); },
+            'modifiedDateTime' => function (ParseNode $n) use ($o) { $o->setModifiedDateTime($n->getDateTimeValue()); },
+            'sessionControls' => function (ParseNode $n) use ($o) { $o->setSessionControls($n->getObjectValue(array(ConditionalAccessSessionControls::class, 'createFromDiscriminatorValue'))); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(ConditionalAccessPolicyState::class)); },
         ]);
     }
 

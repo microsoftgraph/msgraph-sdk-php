@@ -10,19 +10,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class OnPremisesProvisioningError implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $category Category of the provisioning error. Note: Currently, there is only one possible value. Possible value: PropertyConflict - indicates a property value is not unique. Other objects contain the same value for the property. */
+    /**
+     * @var string|null $category Category of the provisioning error. Note: Currently, there is only one possible value. Possible value: PropertyConflict - indicates a property value is not unique. Other objects contain the same value for the property.
+    */
     private ?string $category = null;
     
-    /** @var DateTime|null $occurredDateTime The date and time at which the error occurred. */
+    /**
+     * @var DateTime|null $occurredDateTime The date and time at which the error occurred.
+    */
     private ?DateTime $occurredDateTime = null;
     
-    /** @var string|null $propertyCausingError Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress */
+    /**
+     * @var string|null $propertyCausingError Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress
+    */
     private ?string $propertyCausingError = null;
     
-    /** @var string|null $value Value of the property causing the error. */
+    /**
+     * @var string|null $value Value of the property causing the error.
+    */
     private ?string $value = null;
     
     /**
@@ -37,7 +47,7 @@ class OnPremisesProvisioningError implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return OnPremisesProvisioningError
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): OnPremisesProvisioningError {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): OnPremisesProvisioningError {
         return new OnPremisesProvisioningError();
     }
 
@@ -62,11 +72,12 @@ class OnPremisesProvisioningError implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'category' => function (self $o, ParseNode $n) { $o->setCategory($n->getStringValue()); },
-            'occurredDateTime' => function (self $o, ParseNode $n) { $o->setOccurredDateTime($n->getDateTimeValue()); },
-            'propertyCausingError' => function (self $o, ParseNode $n) { $o->setPropertyCausingError($n->getStringValue()); },
-            'value' => function (self $o, ParseNode $n) { $o->setValue($n->getStringValue()); },
+            'category' => function (ParseNode $n) use ($o) { $o->setCategory($n->getStringValue()); },
+            'occurredDateTime' => function (ParseNode $n) use ($o) { $o->setOccurredDateTime($n->getDateTimeValue()); },
+            'propertyCausingError' => function (ParseNode $n) use ($o) { $o->setPropertyCausingError($n->getStringValue()); },
+            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getStringValue()); },
         ];
     }
 

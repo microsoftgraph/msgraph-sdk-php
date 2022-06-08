@@ -7,18 +7,26 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ManagedAppOperation extends Entity 
+class ManagedAppOperation extends Entity implements Parsable 
 {
-    /** @var string|null $displayName The operation name. */
+    /**
+     * @var string|null $displayName The operation name.
+    */
     private ?string $displayName = null;
     
-    /** @var DateTime|null $lastModifiedDateTime The last time the app operation was modified. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime The last time the app operation was modified.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var string|null $state The current state of the operation */
+    /**
+     * @var string|null $state The current state of the operation
+    */
     private ?string $state = null;
     
-    /** @var string|null $version Version of the entity. */
+    /**
+     * @var string|null $version Version of the entity.
+    */
     private ?string $version = null;
     
     /**
@@ -33,7 +41,7 @@ class ManagedAppOperation extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ManagedAppOperation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ManagedAppOperation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedAppOperation {
         return new ManagedAppOperation();
     }
 
@@ -50,11 +58,12 @@ class ManagedAppOperation extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getStringValue()); },
-            'version' => function (self $o, ParseNode $n) { $o->setVersion($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getStringValue()); },
+            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getStringValue()); },
         ]);
     }
 

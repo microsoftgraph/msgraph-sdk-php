@@ -6,30 +6,46 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class SharedDriveItem extends BaseItem 
+class SharedDriveItem extends BaseItem implements Parsable 
 {
-    /** @var DriveItem|null $driveItem Used to access the underlying driveItem */
+    /**
+     * @var DriveItem|null $driveItem Used to access the underlying driveItem
+    */
     private ?DriveItem $driveItem = null;
     
-    /** @var EscapedList|null $EscapedList Used to access the underlying list */
+    /**
+     * @var EscapedList|null $EscapedList Used to access the underlying list
+    */
     private ?EscapedList $escapedList = null;
     
-    /** @var array<DriveItem>|null $items All driveItems contained in the sharing root. This collection cannot be enumerated. */
+    /**
+     * @var array<DriveItem>|null $items All driveItems contained in the sharing root. This collection cannot be enumerated.
+    */
     private ?array $items = null;
     
-    /** @var ListItem|null $listItem Used to access the underlying listItem */
+    /**
+     * @var ListItem|null $listItem Used to access the underlying listItem
+    */
     private ?ListItem $listItem = null;
     
-    /** @var IdentitySet|null $owner Information about the owner of the shared item being referenced. */
+    /**
+     * @var IdentitySet|null $owner Information about the owner of the shared item being referenced.
+    */
     private ?IdentitySet $owner = null;
     
-    /** @var Permission|null $permission Used to access the permission representing the underlying sharing link */
+    /**
+     * @var Permission|null $permission Used to access the permission representing the underlying sharing link
+    */
     private ?Permission $permission = null;
     
-    /** @var DriveItem|null $root Used to access the underlying driveItem. Deprecated -- use driveItem instead. */
+    /**
+     * @var DriveItem|null $root Used to access the underlying driveItem. Deprecated -- use driveItem instead.
+    */
     private ?DriveItem $root = null;
     
-    /** @var Site|null $site Used to access the underlying site */
+    /**
+     * @var Site|null $site Used to access the underlying site
+    */
     private ?Site $site = null;
     
     /**
@@ -44,7 +60,7 @@ class SharedDriveItem extends BaseItem
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SharedDriveItem
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SharedDriveItem {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SharedDriveItem {
         return new SharedDriveItem();
     }
 
@@ -61,15 +77,16 @@ class SharedDriveItem extends BaseItem
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'driveItem' => function (self $o, ParseNode $n) { $o->setDriveItem($n->getObjectValue(DriveItem::class)); },
-            'list' => function (self $o, ParseNode $n) { $o->setEscapedList($n->getObjectValue(EscapedList::class)); },
-            'items' => function (self $o, ParseNode $n) { $o->setItems($n->getCollectionOfObjectValues(DriveItem::class)); },
-            'listItem' => function (self $o, ParseNode $n) { $o->setListItem($n->getObjectValue(ListItem::class)); },
-            'owner' => function (self $o, ParseNode $n) { $o->setOwner($n->getObjectValue(IdentitySet::class)); },
-            'permission' => function (self $o, ParseNode $n) { $o->setPermission($n->getObjectValue(Permission::class)); },
-            'root' => function (self $o, ParseNode $n) { $o->setRoot($n->getObjectValue(DriveItem::class)); },
-            'site' => function (self $o, ParseNode $n) { $o->setSite($n->getObjectValue(Site::class)); },
+            'driveItem' => function (ParseNode $n) use ($o) { $o->setDriveItem($n->getObjectValue(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
+            'list' => function (ParseNode $n) use ($o) { $o->setList($n->getObjectValue(array(EscapedList::class, 'createFromDiscriminatorValue'))); },
+            'items' => function (ParseNode $n) use ($o) { $o->setItems($n->getCollectionOfObjectValues(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
+            'listItem' => function (ParseNode $n) use ($o) { $o->setListItem($n->getObjectValue(array(ListItem::class, 'createFromDiscriminatorValue'))); },
+            'owner' => function (ParseNode $n) use ($o) { $o->setOwner($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'permission' => function (ParseNode $n) use ($o) { $o->setPermission($n->getObjectValue(array(Permission::class, 'createFromDiscriminatorValue'))); },
+            'root' => function (ParseNode $n) use ($o) { $o->setRoot($n->getObjectValue(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
+            'site' => function (ParseNode $n) use ($o) { $o->setSite($n->getObjectValue(array(Site::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

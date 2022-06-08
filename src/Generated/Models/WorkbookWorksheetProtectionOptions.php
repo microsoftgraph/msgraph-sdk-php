@@ -9,40 +9,64 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $allowAutoFilter Represents the worksheet protection option of allowing using auto filter feature. */
+    /**
+     * @var bool|null $allowAutoFilter Represents the worksheet protection option of allowing using auto filter feature.
+    */
     private ?bool $allowAutoFilter = null;
     
-    /** @var bool|null $allowDeleteColumns Represents the worksheet protection option of allowing deleting columns. */
+    /**
+     * @var bool|null $allowDeleteColumns Represents the worksheet protection option of allowing deleting columns.
+    */
     private ?bool $allowDeleteColumns = null;
     
-    /** @var bool|null $allowDeleteRows Represents the worksheet protection option of allowing deleting rows. */
+    /**
+     * @var bool|null $allowDeleteRows Represents the worksheet protection option of allowing deleting rows.
+    */
     private ?bool $allowDeleteRows = null;
     
-    /** @var bool|null $allowFormatCells Represents the worksheet protection option of allowing formatting cells. */
+    /**
+     * @var bool|null $allowFormatCells Represents the worksheet protection option of allowing formatting cells.
+    */
     private ?bool $allowFormatCells = null;
     
-    /** @var bool|null $allowFormatColumns Represents the worksheet protection option of allowing formatting columns. */
+    /**
+     * @var bool|null $allowFormatColumns Represents the worksheet protection option of allowing formatting columns.
+    */
     private ?bool $allowFormatColumns = null;
     
-    /** @var bool|null $allowFormatRows Represents the worksheet protection option of allowing formatting rows. */
+    /**
+     * @var bool|null $allowFormatRows Represents the worksheet protection option of allowing formatting rows.
+    */
     private ?bool $allowFormatRows = null;
     
-    /** @var bool|null $allowInsertColumns Represents the worksheet protection option of allowing inserting columns. */
+    /**
+     * @var bool|null $allowInsertColumns Represents the worksheet protection option of allowing inserting columns.
+    */
     private ?bool $allowInsertColumns = null;
     
-    /** @var bool|null $allowInsertHyperlinks Represents the worksheet protection option of allowing inserting hyperlinks. */
+    /**
+     * @var bool|null $allowInsertHyperlinks Represents the worksheet protection option of allowing inserting hyperlinks.
+    */
     private ?bool $allowInsertHyperlinks = null;
     
-    /** @var bool|null $allowInsertRows Represents the worksheet protection option of allowing inserting rows. */
+    /**
+     * @var bool|null $allowInsertRows Represents the worksheet protection option of allowing inserting rows.
+    */
     private ?bool $allowInsertRows = null;
     
-    /** @var bool|null $allowPivotTables Represents the worksheet protection option of allowing using pivot table feature. */
+    /**
+     * @var bool|null $allowPivotTables Represents the worksheet protection option of allowing using pivot table feature.
+    */
     private ?bool $allowPivotTables = null;
     
-    /** @var bool|null $allowSort Represents the worksheet protection option of allowing using sort feature. */
+    /**
+     * @var bool|null $allowSort Represents the worksheet protection option of allowing using sort feature.
+    */
     private ?bool $allowSort = null;
     
     /**
@@ -57,7 +81,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookWorksheetProtectionOptions
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookWorksheetProtectionOptions {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookWorksheetProtectionOptions {
         return new WorkbookWorksheetProtectionOptions();
     }
 
@@ -162,18 +186,19 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'allowAutoFilter' => function (self $o, ParseNode $n) { $o->setAllowAutoFilter($n->getBooleanValue()); },
-            'allowDeleteColumns' => function (self $o, ParseNode $n) { $o->setAllowDeleteColumns($n->getBooleanValue()); },
-            'allowDeleteRows' => function (self $o, ParseNode $n) { $o->setAllowDeleteRows($n->getBooleanValue()); },
-            'allowFormatCells' => function (self $o, ParseNode $n) { $o->setAllowFormatCells($n->getBooleanValue()); },
-            'allowFormatColumns' => function (self $o, ParseNode $n) { $o->setAllowFormatColumns($n->getBooleanValue()); },
-            'allowFormatRows' => function (self $o, ParseNode $n) { $o->setAllowFormatRows($n->getBooleanValue()); },
-            'allowInsertColumns' => function (self $o, ParseNode $n) { $o->setAllowInsertColumns($n->getBooleanValue()); },
-            'allowInsertHyperlinks' => function (self $o, ParseNode $n) { $o->setAllowInsertHyperlinks($n->getBooleanValue()); },
-            'allowInsertRows' => function (self $o, ParseNode $n) { $o->setAllowInsertRows($n->getBooleanValue()); },
-            'allowPivotTables' => function (self $o, ParseNode $n) { $o->setAllowPivotTables($n->getBooleanValue()); },
-            'allowSort' => function (self $o, ParseNode $n) { $o->setAllowSort($n->getBooleanValue()); },
+            'allowAutoFilter' => function (ParseNode $n) use ($o) { $o->setAllowAutoFilter($n->getBooleanValue()); },
+            'allowDeleteColumns' => function (ParseNode $n) use ($o) { $o->setAllowDeleteColumns($n->getBooleanValue()); },
+            'allowDeleteRows' => function (ParseNode $n) use ($o) { $o->setAllowDeleteRows($n->getBooleanValue()); },
+            'allowFormatCells' => function (ParseNode $n) use ($o) { $o->setAllowFormatCells($n->getBooleanValue()); },
+            'allowFormatColumns' => function (ParseNode $n) use ($o) { $o->setAllowFormatColumns($n->getBooleanValue()); },
+            'allowFormatRows' => function (ParseNode $n) use ($o) { $o->setAllowFormatRows($n->getBooleanValue()); },
+            'allowInsertColumns' => function (ParseNode $n) use ($o) { $o->setAllowInsertColumns($n->getBooleanValue()); },
+            'allowInsertHyperlinks' => function (ParseNode $n) use ($o) { $o->setAllowInsertHyperlinks($n->getBooleanValue()); },
+            'allowInsertRows' => function (ParseNode $n) use ($o) { $o->setAllowInsertRows($n->getBooleanValue()); },
+            'allowPivotTables' => function (ParseNode $n) use ($o) { $o->setAllowPivotTables($n->getBooleanValue()); },
+            'allowSort' => function (ParseNode $n) use ($o) { $o->setAllowSort($n->getBooleanValue()); },
         ];
     }
 

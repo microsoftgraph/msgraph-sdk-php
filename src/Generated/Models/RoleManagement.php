@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class RoleManagement implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var RbacApplication|null $directory Read-only. Nullable. */
+    /**
+     * @var RbacApplication|null $directory Read-only. Nullable.
+    */
     private ?RbacApplication $directory = null;
     
-    /** @var RbacApplication|null $entitlementManagement Container for roles and assignments for entitlement management resources. */
+    /**
+     * @var RbacApplication|null $entitlementManagement Container for roles and assignments for entitlement management resources.
+    */
     private ?RbacApplication $entitlementManagement = null;
     
     /**
@@ -30,7 +36,7 @@ class RoleManagement implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return RoleManagement
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): RoleManagement {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): RoleManagement {
         return new RoleManagement();
     }
 
@@ -63,9 +69,10 @@ class RoleManagement implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'directory' => function (self $o, ParseNode $n) { $o->setDirectory($n->getObjectValue(RbacApplication::class)); },
-            'entitlementManagement' => function (self $o, ParseNode $n) { $o->setEntitlementManagement($n->getObjectValue(RbacApplication::class)); },
+            'directory' => function (ParseNode $n) use ($o) { $o->setDirectory($n->getObjectValue(array(RbacApplication::class, 'createFromDiscriminatorValue'))); },
+            'entitlementManagement' => function (ParseNode $n) use ($o) { $o->setEntitlementManagement($n->getObjectValue(array(RbacApplication::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

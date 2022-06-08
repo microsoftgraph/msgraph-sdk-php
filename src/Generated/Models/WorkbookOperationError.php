@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class WorkbookOperationError implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $code The error code. */
+    /**
+     * @var string|null $code The error code.
+    */
     private ?string $code = null;
     
-    /** @var WorkbookOperationError|null $innerError The innerError property */
+    /**
+     * @var WorkbookOperationError|null $innerError The innerError property
+    */
     private ?WorkbookOperationError $innerError = null;
     
-    /** @var string|null $message The error message. */
+    /**
+     * @var string|null $message The error message.
+    */
     private ?string $message = null;
     
     /**
@@ -33,7 +41,7 @@ class WorkbookOperationError implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookOperationError
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookOperationError {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookOperationError {
         return new WorkbookOperationError();
     }
 
@@ -58,10 +66,11 @@ class WorkbookOperationError implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'code' => function (self $o, ParseNode $n) { $o->setCode($n->getStringValue()); },
-            'innerError' => function (self $o, ParseNode $n) { $o->setInnerError($n->getObjectValue(WorkbookOperationError::class)); },
-            'message' => function (self $o, ParseNode $n) { $o->setMessage($n->getStringValue()); },
+            'code' => function (ParseNode $n) use ($o) { $o->setCode($n->getStringValue()); },
+            'innerError' => function (ParseNode $n) use ($o) { $o->setInnerError($n->getObjectValue(array(WorkbookOperationError::class, 'createFromDiscriminatorValue'))); },
+            'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getStringValue()); },
         ];
     }
 

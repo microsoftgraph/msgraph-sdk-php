@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class TeamFunSettings implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $allowCustomMemes If set to true, enables users to include custom memes. */
+    /**
+     * @var bool|null $allowCustomMemes If set to true, enables users to include custom memes.
+    */
     private ?bool $allowCustomMemes = null;
     
-    /** @var bool|null $allowGiphy If set to true, enables Giphy use. */
+    /**
+     * @var bool|null $allowGiphy If set to true, enables Giphy use.
+    */
     private ?bool $allowGiphy = null;
     
-    /** @var bool|null $allowStickersAndMemes If set to true, enables users to include stickers and memes. */
+    /**
+     * @var bool|null $allowStickersAndMemes If set to true, enables users to include stickers and memes.
+    */
     private ?bool $allowStickersAndMemes = null;
     
-    /** @var GiphyRatingType|null $giphyContentRating Giphy content rating. Possible values are: moderate, strict. */
+    /**
+     * @var GiphyRatingType|null $giphyContentRating Giphy content rating. Possible values are: moderate, strict.
+    */
     private ?GiphyRatingType $giphyContentRating = null;
     
     /**
@@ -36,7 +46,7 @@ class TeamFunSettings implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TeamFunSettings
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TeamFunSettings {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TeamFunSettings {
         return new TeamFunSettings();
     }
 
@@ -77,11 +87,12 @@ class TeamFunSettings implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'allowCustomMemes' => function (self $o, ParseNode $n) { $o->setAllowCustomMemes($n->getBooleanValue()); },
-            'allowGiphy' => function (self $o, ParseNode $n) { $o->setAllowGiphy($n->getBooleanValue()); },
-            'allowStickersAndMemes' => function (self $o, ParseNode $n) { $o->setAllowStickersAndMemes($n->getBooleanValue()); },
-            'giphyContentRating' => function (self $o, ParseNode $n) { $o->setGiphyContentRating($n->getEnumValue(GiphyRatingType::class)); },
+            'allowCustomMemes' => function (ParseNode $n) use ($o) { $o->setAllowCustomMemes($n->getBooleanValue()); },
+            'allowGiphy' => function (ParseNode $n) use ($o) { $o->setAllowGiphy($n->getBooleanValue()); },
+            'allowStickersAndMemes' => function (ParseNode $n) use ($o) { $o->setAllowStickersAndMemes($n->getBooleanValue()); },
+            'giphyContentRating' => function (ParseNode $n) use ($o) { $o->setGiphyContentRating($n->getEnumValue(GiphyRatingType::class)); },
         ];
     }
 

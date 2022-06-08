@@ -6,18 +6,26 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ReportRoot extends Entity 
+class ReportRoot extends Entity implements Parsable 
 {
-    /** @var array<PrintUsageByPrinter>|null $dailyPrintUsageByPrinter The dailyPrintUsageByPrinter property */
+    /**
+     * @var array<PrintUsageByPrinter>|null $dailyPrintUsageByPrinter The dailyPrintUsageByPrinter property
+    */
     private ?array $dailyPrintUsageByPrinter = null;
     
-    /** @var array<PrintUsageByUser>|null $dailyPrintUsageByUser The dailyPrintUsageByUser property */
+    /**
+     * @var array<PrintUsageByUser>|null $dailyPrintUsageByUser The dailyPrintUsageByUser property
+    */
     private ?array $dailyPrintUsageByUser = null;
     
-    /** @var array<PrintUsageByPrinter>|null $monthlyPrintUsageByPrinter The monthlyPrintUsageByPrinter property */
+    /**
+     * @var array<PrintUsageByPrinter>|null $monthlyPrintUsageByPrinter The monthlyPrintUsageByPrinter property
+    */
     private ?array $monthlyPrintUsageByPrinter = null;
     
-    /** @var array<PrintUsageByUser>|null $monthlyPrintUsageByUser The monthlyPrintUsageByUser property */
+    /**
+     * @var array<PrintUsageByUser>|null $monthlyPrintUsageByUser The monthlyPrintUsageByUser property
+    */
     private ?array $monthlyPrintUsageByUser = null;
     
     /**
@@ -32,7 +40,7 @@ class ReportRoot extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ReportRoot
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ReportRoot {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ReportRoot {
         return new ReportRoot();
     }
 
@@ -57,11 +65,12 @@ class ReportRoot extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'dailyPrintUsageByPrinter' => function (self $o, ParseNode $n) { $o->setDailyPrintUsageByPrinter($n->getCollectionOfObjectValues(PrintUsageByPrinter::class)); },
-            'dailyPrintUsageByUser' => function (self $o, ParseNode $n) { $o->setDailyPrintUsageByUser($n->getCollectionOfObjectValues(PrintUsageByUser::class)); },
-            'monthlyPrintUsageByPrinter' => function (self $o, ParseNode $n) { $o->setMonthlyPrintUsageByPrinter($n->getCollectionOfObjectValues(PrintUsageByPrinter::class)); },
-            'monthlyPrintUsageByUser' => function (self $o, ParseNode $n) { $o->setMonthlyPrintUsageByUser($n->getCollectionOfObjectValues(PrintUsageByUser::class)); },
+            'dailyPrintUsageByPrinter' => function (ParseNode $n) use ($o) { $o->setDailyPrintUsageByPrinter($n->getCollectionOfObjectValues(array(PrintUsageByPrinter::class, 'createFromDiscriminatorValue'))); },
+            'dailyPrintUsageByUser' => function (ParseNode $n) use ($o) { $o->setDailyPrintUsageByUser($n->getCollectionOfObjectValues(array(PrintUsageByUser::class, 'createFromDiscriminatorValue'))); },
+            'monthlyPrintUsageByPrinter' => function (ParseNode $n) use ($o) { $o->setMonthlyPrintUsageByPrinter($n->getCollectionOfObjectValues(array(PrintUsageByPrinter::class, 'createFromDiscriminatorValue'))); },
+            'monthlyPrintUsageByUser' => function (ParseNode $n) use ($o) { $o->setMonthlyPrintUsageByUser($n->getCollectionOfObjectValues(array(PrintUsageByUser::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

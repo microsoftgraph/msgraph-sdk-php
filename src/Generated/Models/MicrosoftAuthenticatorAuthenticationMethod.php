@@ -7,21 +7,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod 
+class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod implements Parsable 
 {
-    /** @var DateTime|null $createdDateTime The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In. */
+    /**
+     * @var DateTime|null $createdDateTime The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var Device|null $device The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In. */
+    /**
+     * @var Device|null $device The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
+    */
     private ?Device $device = null;
     
-    /** @var string|null $deviceTag Tags containing app metadata. */
+    /**
+     * @var string|null $deviceTag Tags containing app metadata.
+    */
     private ?string $deviceTag = null;
     
-    /** @var string|null $displayName The name of the device on which this app is registered. */
+    /**
+     * @var string|null $displayName The name of the device on which this app is registered.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $phoneAppVersion Numerical version of this instance of the Authenticator app. */
+    /**
+     * @var string|null $phoneAppVersion Numerical version of this instance of the Authenticator app.
+    */
     private ?string $phoneAppVersion = null;
     
     /**
@@ -36,7 +46,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return MicrosoftAuthenticatorAuthenticationMethod
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): MicrosoftAuthenticatorAuthenticationMethod {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): MicrosoftAuthenticatorAuthenticationMethod {
         return new MicrosoftAuthenticatorAuthenticationMethod();
     }
 
@@ -77,12 +87,13 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'device' => function (self $o, ParseNode $n) { $o->setDevice($n->getObjectValue(Device::class)); },
-            'deviceTag' => function (self $o, ParseNode $n) { $o->setDeviceTag($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'phoneAppVersion' => function (self $o, ParseNode $n) { $o->setPhoneAppVersion($n->getStringValue()); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'device' => function (ParseNode $n) use ($o) { $o->setDevice($n->getObjectValue(array(Device::class, 'createFromDiscriminatorValue'))); },
+            'deviceTag' => function (ParseNode $n) use ($o) { $o->setDeviceTag($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'phoneAppVersion' => function (ParseNode $n) use ($o) { $o->setPhoneAppVersion($n->getStringValue()); },
         ]);
     }
 

@@ -7,24 +7,36 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Request extends Entity 
+class Request extends Entity implements Parsable 
 {
-    /** @var string|null $approvalId The identifier of the approval of the request. */
+    /**
+     * @var string|null $approvalId The identifier of the approval of the request.
+    */
     private ?string $approvalId = null;
     
-    /** @var DateTime|null $completedDateTime The request completion date time. */
+    /**
+     * @var DateTime|null $completedDateTime The request completion date time.
+    */
     private ?DateTime $completedDateTime = null;
     
-    /** @var IdentitySet|null $createdBy The user who created this request. */
+    /**
+     * @var IdentitySet|null $createdBy The principal that created the request.
+    */
     private ?IdentitySet $createdBy = null;
     
-    /** @var DateTime|null $createdDateTime The request creation date time. */
+    /**
+     * @var DateTime|null $createdDateTime The request creation date time.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $customData Free text field to define any custom data for the request. Not used. */
+    /**
+     * @var string|null $customData Free text field to define any custom data for the request. Not used.
+    */
     private ?string $customData = null;
     
-    /** @var string|null $status The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable. */
+    /**
+     * @var string|null $status The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable.
+    */
     private ?string $status = null;
     
     /**
@@ -39,7 +51,14 @@ class Request extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Request
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Request {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Request {
+        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.request': return new Request();
+            }
+        }
         return new Request();
     }
 
@@ -60,7 +79,7 @@ class Request extends Entity
     }
 
     /**
-     * Gets the createdBy property value. The user who created this request.
+     * Gets the createdBy property value. The principal that created the request.
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
@@ -88,13 +107,14 @@ class Request extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'approvalId' => function (self $o, ParseNode $n) { $o->setApprovalId($n->getStringValue()); },
-            'completedDateTime' => function (self $o, ParseNode $n) { $o->setCompletedDateTime($n->getDateTimeValue()); },
-            'createdBy' => function (self $o, ParseNode $n) { $o->setCreatedBy($n->getObjectValue(IdentitySet::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'customData' => function (self $o, ParseNode $n) { $o->setCustomData($n->getStringValue()); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getStringValue()); },
+            'approvalId' => function (ParseNode $n) use ($o) { $o->setApprovalId($n->getStringValue()); },
+            'completedDateTime' => function (ParseNode $n) use ($o) { $o->setCompletedDateTime($n->getDateTimeValue()); },
+            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'customData' => function (ParseNode $n) use ($o) { $o->setCustomData($n->getStringValue()); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getStringValue()); },
         ]);
     }
 
@@ -137,7 +157,7 @@ class Request extends Entity
     }
 
     /**
-     * Sets the createdBy property value. The user who created this request.
+     * Sets the createdBy property value. The principal that created the request.
      *  @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value ): void {

@@ -10,25 +10,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class UriClickSecurityState implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $clickAction The clickAction property */
+    /**
+     * @var string|null $clickAction The clickAction property
+    */
     private ?string $clickAction = null;
     
-    /** @var DateTime|null $clickDateTime The clickDateTime property */
+    /**
+     * @var DateTime|null $clickDateTime The clickDateTime property
+    */
     private ?DateTime $clickDateTime = null;
     
-    /** @var string|null $id The id property */
+    /**
+     * @var string|null $id The id property
+    */
     private ?string $id = null;
     
-    /** @var string|null $sourceId The sourceId property */
+    /**
+     * @var string|null $sourceId The sourceId property
+    */
     private ?string $sourceId = null;
     
-    /** @var string|null $uriDomain The uriDomain property */
+    /**
+     * @var string|null $uriDomain The uriDomain property
+    */
     private ?string $uriDomain = null;
     
-    /** @var string|null $verdict The verdict property */
+    /**
+     * @var string|null $verdict The verdict property
+    */
     private ?string $verdict = null;
     
     /**
@@ -43,7 +57,7 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return UriClickSecurityState
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): UriClickSecurityState {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): UriClickSecurityState {
         return new UriClickSecurityState();
     }
 
@@ -76,13 +90,14 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'clickAction' => function (self $o, ParseNode $n) { $o->setClickAction($n->getStringValue()); },
-            'clickDateTime' => function (self $o, ParseNode $n) { $o->setClickDateTime($n->getDateTimeValue()); },
-            'id' => function (self $o, ParseNode $n) { $o->setId($n->getStringValue()); },
-            'sourceId' => function (self $o, ParseNode $n) { $o->setSourceId($n->getStringValue()); },
-            'uriDomain' => function (self $o, ParseNode $n) { $o->setUriDomain($n->getStringValue()); },
-            'verdict' => function (self $o, ParseNode $n) { $o->setVerdict($n->getStringValue()); },
+            'clickAction' => function (ParseNode $n) use ($o) { $o->setClickAction($n->getStringValue()); },
+            'clickDateTime' => function (ParseNode $n) use ($o) { $o->setClickDateTime($n->getDateTimeValue()); },
+            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            'sourceId' => function (ParseNode $n) use ($o) { $o->setSourceId($n->getStringValue()); },
+            'uriDomain' => function (ParseNode $n) use ($o) { $o->setUriDomain($n->getStringValue()); },
+            'verdict' => function (ParseNode $n) use ($o) { $o->setVerdict($n->getStringValue()); },
         ];
     }
 

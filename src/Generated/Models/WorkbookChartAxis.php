@@ -6,30 +6,46 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WorkbookChartAxis extends Entity 
+class WorkbookChartAxis extends Entity implements Parsable 
 {
-    /** @var WorkbookChartAxisFormat|null $format Represents the formatting of a chart object, which includes line and font formatting. Read-only. */
+    /**
+     * @var WorkbookChartAxisFormat|null $format Represents the formatting of a chart object, which includes line and font formatting. Read-only.
+    */
     private ?WorkbookChartAxisFormat $format = null;
     
-    /** @var WorkbookChartGridlines|null $majorGridlines Returns a gridlines object that represents the major gridlines for the specified axis. Read-only. */
+    /**
+     * @var WorkbookChartGridlines|null $majorGridlines Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
+    */
     private ?WorkbookChartGridlines $majorGridlines = null;
     
-    /** @var Json|null $majorUnit Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number. */
+    /**
+     * @var Json|null $majorUnit Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
+    */
     private ?Json $majorUnit = null;
     
-    /** @var Json|null $maximum Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number. */
+    /**
+     * @var Json|null $maximum Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
+    */
     private ?Json $maximum = null;
     
-    /** @var Json|null $minimum Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number. */
+    /**
+     * @var Json|null $minimum Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
+    */
     private ?Json $minimum = null;
     
-    /** @var WorkbookChartGridlines|null $minorGridlines Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only. */
+    /**
+     * @var WorkbookChartGridlines|null $minorGridlines Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
+    */
     private ?WorkbookChartGridlines $minorGridlines = null;
     
-    /** @var Json|null $minorUnit Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number. */
+    /**
+     * @var Json|null $minorUnit Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
+    */
     private ?Json $minorUnit = null;
     
-    /** @var WorkbookChartAxisTitle|null $title Represents the axis title. Read-only. */
+    /**
+     * @var WorkbookChartAxisTitle|null $title Represents the axis title. Read-only.
+    */
     private ?WorkbookChartAxisTitle $title = null;
     
     /**
@@ -44,7 +60,7 @@ class WorkbookChartAxis extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookChartAxis
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookChartAxis {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookChartAxis {
         return new WorkbookChartAxis();
     }
 
@@ -53,15 +69,16 @@ class WorkbookChartAxis extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'format' => function (self $o, ParseNode $n) { $o->setFormat($n->getObjectValue(WorkbookChartAxisFormat::class)); },
-            'majorGridlines' => function (self $o, ParseNode $n) { $o->setMajorGridlines($n->getObjectValue(WorkbookChartGridlines::class)); },
-            'majorUnit' => function (self $o, ParseNode $n) { $o->setMajorUnit($n->getObjectValue(Json::class)); },
-            'maximum' => function (self $o, ParseNode $n) { $o->setMaximum($n->getObjectValue(Json::class)); },
-            'minimum' => function (self $o, ParseNode $n) { $o->setMinimum($n->getObjectValue(Json::class)); },
-            'minorGridlines' => function (self $o, ParseNode $n) { $o->setMinorGridlines($n->getObjectValue(WorkbookChartGridlines::class)); },
-            'minorUnit' => function (self $o, ParseNode $n) { $o->setMinorUnit($n->getObjectValue(Json::class)); },
-            'title' => function (self $o, ParseNode $n) { $o->setTitle($n->getObjectValue(WorkbookChartAxisTitle::class)); },
+            'format' => function (ParseNode $n) use ($o) { $o->setFormat($n->getObjectValue(array(WorkbookChartAxisFormat::class, 'createFromDiscriminatorValue'))); },
+            'majorGridlines' => function (ParseNode $n) use ($o) { $o->setMajorGridlines($n->getObjectValue(array(WorkbookChartGridlines::class, 'createFromDiscriminatorValue'))); },
+            'majorUnit' => function (ParseNode $n) use ($o) { $o->setMajorUnit($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
+            'maximum' => function (ParseNode $n) use ($o) { $o->setMaximum($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
+            'minimum' => function (ParseNode $n) use ($o) { $o->setMinimum($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
+            'minorGridlines' => function (ParseNode $n) use ($o) { $o->setMinorGridlines($n->getObjectValue(array(WorkbookChartGridlines::class, 'createFromDiscriminatorValue'))); },
+            'minorUnit' => function (ParseNode $n) use ($o) { $o->setMinorUnit($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
+            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getObjectValue(array(WorkbookChartAxisTitle::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

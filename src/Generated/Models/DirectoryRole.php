@@ -6,21 +6,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DirectoryRole extends DirectoryObject 
+class DirectoryRole extends DirectoryObject implements Parsable 
 {
-    /** @var string|null $description The description for the directory role. Read-only. Supports $filter (eq), $search, $select. */
+    /**
+     * @var string|null $description The description for the directory role. Read-only. Supports $filter (eq), $search, $select.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName The display name for the directory role. Read-only. Supports $filter (eq), $search, $select. */
+    /**
+     * @var string|null $displayName The display name for the directory role. Read-only. Supports $filter (eq), $search, $select.
+    */
     private ?string $displayName = null;
     
-    /** @var array<DirectoryObject>|null $members Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable. Supports $expand. */
+    /**
+     * @var array<DirectoryObject>|null $members Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable. Supports $expand.
+    */
     private ?array $members = null;
     
-    /** @var string|null $roleTemplateId The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only. Supports $filter (eq), $select. */
+    /**
+     * @var string|null $roleTemplateId The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only. Supports $filter (eq), $select.
+    */
     private ?string $roleTemplateId = null;
     
-    /** @var array<ScopedRoleMembership>|null $scopedMembers Members of this directory role that are scoped to administrative units. Read-only. Nullable. */
+    /**
+     * @var array<ScopedRoleMembership>|null $scopedMembers Members of this directory role that are scoped to administrative units. Read-only. Nullable.
+    */
     private ?array $scopedMembers = null;
     
     /**
@@ -35,7 +45,7 @@ class DirectoryRole extends DirectoryObject
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DirectoryRole
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DirectoryRole {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DirectoryRole {
         return new DirectoryRole();
     }
 
@@ -60,12 +70,13 @@ class DirectoryRole extends DirectoryObject
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'members' => function (self $o, ParseNode $n) { $o->setMembers($n->getCollectionOfObjectValues(DirectoryObject::class)); },
-            'roleTemplateId' => function (self $o, ParseNode $n) { $o->setRoleTemplateId($n->getStringValue()); },
-            'scopedMembers' => function (self $o, ParseNode $n) { $o->setScopedMembers($n->getCollectionOfObjectValues(ScopedRoleMembership::class)); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'members' => function (ParseNode $n) use ($o) { $o->setMembers($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
+            'roleTemplateId' => function (ParseNode $n) use ($o) { $o->setRoleTemplateId($n->getStringValue()); },
+            'scopedMembers' => function (ParseNode $n) use ($o) { $o->setScopedMembers($n->getCollectionOfObjectValues(array(ScopedRoleMembership::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

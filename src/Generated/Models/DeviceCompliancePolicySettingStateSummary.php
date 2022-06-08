@@ -6,39 +6,61 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DeviceCompliancePolicySettingStateSummary extends Entity 
+class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsable 
 {
-    /** @var int|null $compliantDeviceCount Number of compliant devices */
+    /**
+     * @var int|null $compliantDeviceCount Number of compliant devices
+    */
     private ?int $compliantDeviceCount = null;
     
-    /** @var int|null $conflictDeviceCount Number of conflict devices */
+    /**
+     * @var int|null $conflictDeviceCount Number of conflict devices
+    */
     private ?int $conflictDeviceCount = null;
     
-    /** @var array<DeviceComplianceSettingState>|null $deviceComplianceSettingStates Not yet documented */
+    /**
+     * @var array<DeviceComplianceSettingState>|null $deviceComplianceSettingStates Not yet documented
+    */
     private ?array $deviceComplianceSettingStates = null;
     
-    /** @var int|null $errorDeviceCount Number of error devices */
+    /**
+     * @var int|null $errorDeviceCount Number of error devices
+    */
     private ?int $errorDeviceCount = null;
     
-    /** @var int|null $nonCompliantDeviceCount Number of NonCompliant devices */
+    /**
+     * @var int|null $nonCompliantDeviceCount Number of NonCompliant devices
+    */
     private ?int $nonCompliantDeviceCount = null;
     
-    /** @var int|null $notApplicableDeviceCount Number of not applicable devices */
+    /**
+     * @var int|null $notApplicableDeviceCount Number of not applicable devices
+    */
     private ?int $notApplicableDeviceCount = null;
     
-    /** @var PolicyPlatformType|null $platformType Setting platform. Possible values are: android, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, all. */
+    /**
+     * @var PolicyPlatformType|null $platformType Setting platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, androidAOSP, all.
+    */
     private ?PolicyPlatformType $platformType = null;
     
-    /** @var int|null $remediatedDeviceCount Number of remediated devices */
+    /**
+     * @var int|null $remediatedDeviceCount Number of remediated devices
+    */
     private ?int $remediatedDeviceCount = null;
     
-    /** @var string|null $setting The setting class name and property name. */
+    /**
+     * @var string|null $setting The setting class name and property name.
+    */
     private ?string $setting = null;
     
-    /** @var string|null $settingName Name of the setting. */
+    /**
+     * @var string|null $settingName Name of the setting.
+    */
     private ?string $settingName = null;
     
-    /** @var int|null $unknownDeviceCount Number of unknown devices */
+    /**
+     * @var int|null $unknownDeviceCount Number of unknown devices
+    */
     private ?int $unknownDeviceCount = null;
     
     /**
@@ -53,7 +75,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceCompliancePolicySettingStateSummary
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceCompliancePolicySettingStateSummary {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceCompliancePolicySettingStateSummary {
         return new DeviceCompliancePolicySettingStateSummary();
     }
 
@@ -94,18 +116,19 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'compliantDeviceCount' => function (self $o, ParseNode $n) { $o->setCompliantDeviceCount($n->getIntegerValue()); },
-            'conflictDeviceCount' => function (self $o, ParseNode $n) { $o->setConflictDeviceCount($n->getIntegerValue()); },
-            'deviceComplianceSettingStates' => function (self $o, ParseNode $n) { $o->setDeviceComplianceSettingStates($n->getCollectionOfObjectValues(DeviceComplianceSettingState::class)); },
-            'errorDeviceCount' => function (self $o, ParseNode $n) { $o->setErrorDeviceCount($n->getIntegerValue()); },
-            'nonCompliantDeviceCount' => function (self $o, ParseNode $n) { $o->setNonCompliantDeviceCount($n->getIntegerValue()); },
-            'notApplicableDeviceCount' => function (self $o, ParseNode $n) { $o->setNotApplicableDeviceCount($n->getIntegerValue()); },
-            'platformType' => function (self $o, ParseNode $n) { $o->setPlatformType($n->getEnumValue(PolicyPlatformType::class)); },
-            'remediatedDeviceCount' => function (self $o, ParseNode $n) { $o->setRemediatedDeviceCount($n->getIntegerValue()); },
-            'setting' => function (self $o, ParseNode $n) { $o->setSetting($n->getStringValue()); },
-            'settingName' => function (self $o, ParseNode $n) { $o->setSettingName($n->getStringValue()); },
-            'unknownDeviceCount' => function (self $o, ParseNode $n) { $o->setUnknownDeviceCount($n->getIntegerValue()); },
+            'compliantDeviceCount' => function (ParseNode $n) use ($o) { $o->setCompliantDeviceCount($n->getIntegerValue()); },
+            'conflictDeviceCount' => function (ParseNode $n) use ($o) { $o->setConflictDeviceCount($n->getIntegerValue()); },
+            'deviceComplianceSettingStates' => function (ParseNode $n) use ($o) { $o->setDeviceComplianceSettingStates($n->getCollectionOfObjectValues(array(DeviceComplianceSettingState::class, 'createFromDiscriminatorValue'))); },
+            'errorDeviceCount' => function (ParseNode $n) use ($o) { $o->setErrorDeviceCount($n->getIntegerValue()); },
+            'nonCompliantDeviceCount' => function (ParseNode $n) use ($o) { $o->setNonCompliantDeviceCount($n->getIntegerValue()); },
+            'notApplicableDeviceCount' => function (ParseNode $n) use ($o) { $o->setNotApplicableDeviceCount($n->getIntegerValue()); },
+            'platformType' => function (ParseNode $n) use ($o) { $o->setPlatformType($n->getEnumValue(PolicyPlatformType::class)); },
+            'remediatedDeviceCount' => function (ParseNode $n) use ($o) { $o->setRemediatedDeviceCount($n->getIntegerValue()); },
+            'setting' => function (ParseNode $n) use ($o) { $o->setSetting($n->getStringValue()); },
+            'settingName' => function (ParseNode $n) use ($o) { $o->setSettingName($n->getStringValue()); },
+            'unknownDeviceCount' => function (ParseNode $n) use ($o) { $o->setUnknownDeviceCount($n->getIntegerValue()); },
         ]);
     }
 
@@ -126,7 +149,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     }
 
     /**
-     * Gets the platformType property value. Setting platform. Possible values are: android, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, all.
+     * Gets the platformType property value. Setting platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, androidAOSP, all.
      * @return PolicyPlatformType|null
     */
     public function getPlatformType(): ?PolicyPlatformType {
@@ -233,7 +256,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     }
 
     /**
-     * Sets the platformType property value. Setting platform. Possible values are: android, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, all.
+     * Sets the platformType property value. Setting platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, androidAOSP, all.
      *  @param PolicyPlatformType|null $value Value to set for the platformType property.
     */
     public function setPlatformType(?PolicyPlatformType $value ): void {

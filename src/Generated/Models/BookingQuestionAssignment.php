@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class BookingQuestionAssignment implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $isRequired The ID of the custom question. */
+    /**
+     * @var bool|null $isRequired Indicates whether it is mandatory to answer the custom question.
+    */
     private ?bool $isRequired = null;
     
-    /** @var string|null $questionId Indicates whether it is mandatory to answer the custom question. */
+    /**
+     * @var string|null $questionId If it is mandatory to answer the custom question.
+    */
     private ?string $questionId = null;
     
     /**
@@ -30,7 +36,7 @@ class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return BookingQuestionAssignment
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): BookingQuestionAssignment {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): BookingQuestionAssignment {
         return new BookingQuestionAssignment();
     }
 
@@ -47,14 +53,15 @@ class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'isRequired' => function (self $o, ParseNode $n) { $o->setIsRequired($n->getBooleanValue()); },
-            'questionId' => function (self $o, ParseNode $n) { $o->setQuestionId($n->getStringValue()); },
+            'isRequired' => function (ParseNode $n) use ($o) { $o->setIsRequired($n->getBooleanValue()); },
+            'questionId' => function (ParseNode $n) use ($o) { $o->setQuestionId($n->getStringValue()); },
         ];
     }
 
     /**
-     * Gets the isRequired property value. The ID of the custom question.
+     * Gets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
      * @return bool|null
     */
     public function getIsRequired(): ?bool {
@@ -62,7 +69,7 @@ class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the questionId property value. Indicates whether it is mandatory to answer the custom question.
+     * Gets the questionId property value. If it is mandatory to answer the custom question.
      * @return string|null
     */
     public function getQuestionId(): ?string {
@@ -88,7 +95,7 @@ class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the isRequired property value. The ID of the custom question.
+     * Sets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
      *  @param bool|null $value Value to set for the isRequired property.
     */
     public function setIsRequired(?bool $value ): void {
@@ -96,7 +103,7 @@ class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the questionId property value. Indicates whether it is mandatory to answer the custom question.
+     * Sets the questionId property value. If it is mandatory to answer the custom question.
      *  @param string|null $value Value to set for the questionId property.
     */
     public function setQuestionId(?string $value ): void {

@@ -6,27 +6,41 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WorkbookNamedItem extends Entity 
+class WorkbookNamedItem extends Entity implements Parsable 
 {
-    /** @var string|null $comment Represents the comment associated with this name. */
+    /**
+     * @var string|null $comment Represents the comment associated with this name.
+    */
     private ?string $comment = null;
     
-    /** @var string|null $name The name of the object. Read-only. */
+    /**
+     * @var string|null $name The name of the object. Read-only.
+    */
     private ?string $name = null;
     
-    /** @var string|null $scope Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only. */
+    /**
+     * @var string|null $scope Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only.
+    */
     private ?string $scope = null;
     
-    /** @var string|null $type Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only. */
+    /**
+     * @var string|null $type Indicates what type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only.
+    */
     private ?string $type = null;
     
-    /** @var Json|null $value Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only. */
+    /**
+     * @var Json|null $value Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
+    */
     private ?Json $value = null;
     
-    /** @var bool|null $visible Specifies whether the object is visible or not. */
+    /**
+     * @var bool|null $visible Specifies whether the object is visible or not.
+    */
     private ?bool $visible = null;
     
-    /** @var WorkbookWorksheet|null $worksheet Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only. */
+    /**
+     * @var WorkbookWorksheet|null $worksheet Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
+    */
     private ?WorkbookWorksheet $worksheet = null;
     
     /**
@@ -41,7 +55,7 @@ class WorkbookNamedItem extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookNamedItem
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookNamedItem {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookNamedItem {
         return new WorkbookNamedItem();
     }
 
@@ -58,14 +72,15 @@ class WorkbookNamedItem extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'comment' => function (self $o, ParseNode $n) { $o->setComment($n->getStringValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'scope' => function (self $o, ParseNode $n) { $o->setScope($n->getStringValue()); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getStringValue()); },
-            'value' => function (self $o, ParseNode $n) { $o->setValue($n->getObjectValue(Json::class)); },
-            'visible' => function (self $o, ParseNode $n) { $o->setVisible($n->getBooleanValue()); },
-            'worksheet' => function (self $o, ParseNode $n) { $o->setWorksheet($n->getObjectValue(WorkbookWorksheet::class)); },
+            'comment' => function (ParseNode $n) use ($o) { $o->setComment($n->getStringValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'scope' => function (ParseNode $n) use ($o) { $o->setScope($n->getStringValue()); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
+            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
+            'visible' => function (ParseNode $n) use ($o) { $o->setVisible($n->getBooleanValue()); },
+            'worksheet' => function (ParseNode $n) use ($o) { $o->setWorksheet($n->getObjectValue(array(WorkbookWorksheet::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -86,7 +101,7 @@ class WorkbookNamedItem extends Entity
     }
 
     /**
-     * Gets the type property value. Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
+     * Gets the type property value. Indicates what type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only.
      * @return string|null
     */
     public function getType(): ?string {
@@ -157,7 +172,7 @@ class WorkbookNamedItem extends Entity
     }
 
     /**
-     * Sets the type property value. Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
+     * Sets the type property value. Indicates what type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only.
      *  @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value ): void {

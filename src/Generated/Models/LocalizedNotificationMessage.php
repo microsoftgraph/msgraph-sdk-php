@@ -7,21 +7,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class LocalizedNotificationMessage extends Entity 
+class LocalizedNotificationMessage extends Entity implements Parsable 
 {
-    /** @var bool|null $isDefault Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message. */
+    /**
+     * @var bool|null $isDefault Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
+    */
     private ?bool $isDefault = null;
     
-    /** @var DateTime|null $lastModifiedDateTime DateTime the object was last modified. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime DateTime the object was last modified.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var string|null $locale The Locale for which this message is destined. */
+    /**
+     * @var string|null $locale The Locale for which this message is destined.
+    */
     private ?string $locale = null;
     
-    /** @var string|null $messageTemplate The Message Template content. */
+    /**
+     * @var string|null $messageTemplate The Message Template content.
+    */
     private ?string $messageTemplate = null;
     
-    /** @var string|null $subject The Message Template Subject. */
+    /**
+     * @var string|null $subject The Message Template Subject.
+    */
     private ?string $subject = null;
     
     /**
@@ -36,7 +46,7 @@ class LocalizedNotificationMessage extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return LocalizedNotificationMessage
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): LocalizedNotificationMessage {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): LocalizedNotificationMessage {
         return new LocalizedNotificationMessage();
     }
 
@@ -45,12 +55,13 @@ class LocalizedNotificationMessage extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'isDefault' => function (self $o, ParseNode $n) { $o->setIsDefault($n->getBooleanValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'locale' => function (self $o, ParseNode $n) { $o->setLocale($n->getStringValue()); },
-            'messageTemplate' => function (self $o, ParseNode $n) { $o->setMessageTemplate($n->getStringValue()); },
-            'subject' => function (self $o, ParseNode $n) { $o->setSubject($n->getStringValue()); },
+            'isDefault' => function (ParseNode $n) use ($o) { $o->setIsDefault($n->getBooleanValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'locale' => function (ParseNode $n) use ($o) { $o->setLocale($n->getStringValue()); },
+            'messageTemplate' => function (ParseNode $n) use ($o) { $o->setMessageTemplate($n->getStringValue()); },
+            'subject' => function (ParseNode $n) use ($o) { $o->setSubject($n->getStringValue()); },
         ]);
     }
 

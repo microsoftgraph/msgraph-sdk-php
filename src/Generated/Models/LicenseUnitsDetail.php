@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class LicenseUnitsDetail implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $enabled The number of units that are enabled for the active subscription of the service SKU. */
+    /**
+     * @var int|null $enabled The number of units that are enabled for the active subscription of the service SKU.
+    */
     private ?int $enabled = null;
     
-    /** @var int|null $suspended The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted. */
+    /**
+     * @var int|null $suspended The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
+    */
     private ?int $suspended = null;
     
-    /** @var int|null $warning The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state). */
+    /**
+     * @var int|null $warning The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state).
+    */
     private ?int $warning = null;
     
     /**
@@ -33,7 +41,7 @@ class LicenseUnitsDetail implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return LicenseUnitsDetail
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): LicenseUnitsDetail {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): LicenseUnitsDetail {
         return new LicenseUnitsDetail();
     }
 
@@ -58,10 +66,11 @@ class LicenseUnitsDetail implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'enabled' => function (self $o, ParseNode $n) { $o->setEnabled($n->getIntegerValue()); },
-            'suspended' => function (self $o, ParseNode $n) { $o->setSuspended($n->getIntegerValue()); },
-            'warning' => function (self $o, ParseNode $n) { $o->setWarning($n->getIntegerValue()); },
+            'enabled' => function (ParseNode $n) use ($o) { $o->setEnabled($n->getIntegerValue()); },
+            'suspended' => function (ParseNode $n) use ($o) { $o->setSuspended($n->getIntegerValue()); },
+            'warning' => function (ParseNode $n) use ($o) { $o->setWarning($n->getIntegerValue()); },
         ];
     }
 

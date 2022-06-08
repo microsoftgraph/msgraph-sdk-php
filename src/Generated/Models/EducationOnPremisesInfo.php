@@ -9,10 +9,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class EducationOnPremisesInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $immutableId Unique identifier for the user object in Active Directory. */
+    /**
+     * @var string|null $immutableId Unique identifier for the user object in Active Directory.
+    */
     private ?string $immutableId = null;
     
     /**
@@ -27,7 +31,7 @@ class EducationOnPremisesInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return EducationOnPremisesInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): EducationOnPremisesInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): EducationOnPremisesInfo {
         return new EducationOnPremisesInfo();
     }
 
@@ -44,8 +48,9 @@ class EducationOnPremisesInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'immutableId' => function (self $o, ParseNode $n) { $o->setImmutableId($n->getStringValue()); },
+            'immutableId' => function (ParseNode $n) use ($o) { $o->setImmutableId($n->getStringValue()); },
         ];
     }
 

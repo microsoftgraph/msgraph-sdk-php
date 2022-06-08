@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DeviceCompliancePolicyAssignment extends Entity 
+class DeviceCompliancePolicyAssignment extends Entity implements Parsable 
 {
-    /** @var DeviceAndAppManagementAssignmentTarget|null $target Target for the compliance policy assignment. */
+    /**
+     * @var DeviceAndAppManagementAssignmentTarget|null $target Target for the compliance policy assignment.
+    */
     private ?DeviceAndAppManagementAssignmentTarget $target = null;
     
     /**
@@ -23,7 +25,7 @@ class DeviceCompliancePolicyAssignment extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceCompliancePolicyAssignment
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceCompliancePolicyAssignment {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceCompliancePolicyAssignment {
         return new DeviceCompliancePolicyAssignment();
     }
 
@@ -32,8 +34,9 @@ class DeviceCompliancePolicyAssignment extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'target' => function (self $o, ParseNode $n) { $o->setTarget($n->getObjectValue(DeviceAndAppManagementAssignmentTarget::class)); },
+            'target' => function (ParseNode $n) use ($o) { $o->setTarget($n->getObjectValue(array(DeviceAndAppManagementAssignmentTarget::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

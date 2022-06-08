@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class SingleValueLegacyExtendedProperty extends Entity 
+class SingleValueLegacyExtendedProperty extends Entity implements Parsable 
 {
-    /** @var string|null $value A property value. */
+    /**
+     * @var string|null $value A property value.
+    */
     private ?string $value = null;
     
     /**
@@ -23,7 +25,7 @@ class SingleValueLegacyExtendedProperty extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SingleValueLegacyExtendedProperty
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SingleValueLegacyExtendedProperty {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SingleValueLegacyExtendedProperty {
         return new SingleValueLegacyExtendedProperty();
     }
 
@@ -32,8 +34,9 @@ class SingleValueLegacyExtendedProperty extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (self $o, ParseNode $n) { $o->setValue($n->getStringValue()); },
+            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getStringValue()); },
         ]);
     }
 

@@ -10,43 +10,69 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Process implements AdditionalDataHolder, Parsable 
 {
-    /** @var string|null $accountName User account identifier (user account context the process ran under) for example, AccountName, SID, and so on. */
+    /**
+     * @var string|null $accountName User account identifier (user account context the process ran under) for example, AccountName, SID, and so on.
+    */
     private ?string $accountName = null;
     
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $commandLine The full process invocation commandline including all parameters. */
+    /**
+     * @var string|null $commandLine The full process invocation commandline including all parameters.
+    */
     private ?string $commandLine = null;
     
-    /** @var DateTime|null $createdDateTime Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $createdDateTime Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var FileHash|null $fileHash Complex type containing file hashes (cryptographic and location-sensitive). */
+    /**
+     * @var FileHash|null $fileHash Complex type containing file hashes (cryptographic and location-sensitive).
+    */
     private ?FileHash $fileHash = null;
     
-    /** @var ProcessIntegrityLevel|null $integrityLevel The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system. */
+    /**
+     * @var ProcessIntegrityLevel|null $integrityLevel The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
+    */
     private ?ProcessIntegrityLevel $integrityLevel = null;
     
-    /** @var bool|null $isElevated True if the process is elevated. */
+    /**
+     * @var bool|null $isElevated True if the process is elevated.
+    */
     private ?bool $isElevated = null;
     
-    /** @var string|null $name The name of the process' Image file. */
+    /**
+     * @var string|null $name The name of the process' Image file.
+    */
     private ?string $name = null;
     
-    /** @var DateTime|null $parentProcessCreatedDateTime DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $parentProcessCreatedDateTime DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    */
     private ?DateTime $parentProcessCreatedDateTime = null;
     
-    /** @var int|null $parentProcessId The Process ID (PID) of the parent process. */
+    /**
+     * @var int|null $parentProcessId The Process ID (PID) of the parent process.
+    */
     private ?int $parentProcessId = null;
     
-    /** @var string|null $parentProcessName The name of the image file of the parent process. */
+    /**
+     * @var string|null $parentProcessName The name of the image file of the parent process.
+    */
     private ?string $parentProcessName = null;
     
-    /** @var string|null $path Full path, including filename. */
+    /**
+     * @var string|null $path Full path, including filename.
+    */
     private ?string $path = null;
     
-    /** @var int|null $processId The Process ID (PID) of the process. */
+    /**
+     * @var int|null $processId The Process ID (PID) of the process.
+    */
     private ?int $processId = null;
     
     /**
@@ -61,7 +87,7 @@ class Process implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Process
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Process {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Process {
         return new Process();
     }
 
@@ -102,19 +128,20 @@ class Process implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'accountName' => function (self $o, ParseNode $n) { $o->setAccountName($n->getStringValue()); },
-            'commandLine' => function (self $o, ParseNode $n) { $o->setCommandLine($n->getStringValue()); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'fileHash' => function (self $o, ParseNode $n) { $o->setFileHash($n->getObjectValue(FileHash::class)); },
-            'integrityLevel' => function (self $o, ParseNode $n) { $o->setIntegrityLevel($n->getEnumValue(ProcessIntegrityLevel::class)); },
-            'isElevated' => function (self $o, ParseNode $n) { $o->setIsElevated($n->getBooleanValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'parentProcessCreatedDateTime' => function (self $o, ParseNode $n) { $o->setParentProcessCreatedDateTime($n->getDateTimeValue()); },
-            'parentProcessId' => function (self $o, ParseNode $n) { $o->setParentProcessId($n->getIntegerValue()); },
-            'parentProcessName' => function (self $o, ParseNode $n) { $o->setParentProcessName($n->getStringValue()); },
-            'path' => function (self $o, ParseNode $n) { $o->setPath($n->getStringValue()); },
-            'processId' => function (self $o, ParseNode $n) { $o->setProcessId($n->getIntegerValue()); },
+            'accountName' => function (ParseNode $n) use ($o) { $o->setAccountName($n->getStringValue()); },
+            'commandLine' => function (ParseNode $n) use ($o) { $o->setCommandLine($n->getStringValue()); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'fileHash' => function (ParseNode $n) use ($o) { $o->setFileHash($n->getObjectValue(array(FileHash::class, 'createFromDiscriminatorValue'))); },
+            'integrityLevel' => function (ParseNode $n) use ($o) { $o->setIntegrityLevel($n->getEnumValue(ProcessIntegrityLevel::class)); },
+            'isElevated' => function (ParseNode $n) use ($o) { $o->setIsElevated($n->getBooleanValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'parentProcessCreatedDateTime' => function (ParseNode $n) use ($o) { $o->setParentProcessCreatedDateTime($n->getDateTimeValue()); },
+            'parentProcessId' => function (ParseNode $n) use ($o) { $o->setParentProcessId($n->getIntegerValue()); },
+            'parentProcessName' => function (ParseNode $n) use ($o) { $o->setParentProcessName($n->getStringValue()); },
+            'path' => function (ParseNode $n) use ($o) { $o->setPath($n->getStringValue()); },
+            'processId' => function (ParseNode $n) use ($o) { $o->setProcessId($n->getIntegerValue()); },
         ];
     }
 

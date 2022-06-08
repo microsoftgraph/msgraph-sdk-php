@@ -9,25 +9,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var ExternalAudienceScope|null $externalAudience The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all. */
+    /**
+     * @var ExternalAudienceScope|null $externalAudience The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. Possible values are: none, contactsOnly, all.
+    */
     private ?ExternalAudienceScope $externalAudience = null;
     
-    /** @var string|null $externalReplyMessage The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled. */
+    /**
+     * @var string|null $externalReplyMessage The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
+    */
     private ?string $externalReplyMessage = null;
     
-    /** @var string|null $internalReplyMessage The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled. */
+    /**
+     * @var string|null $internalReplyMessage The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
+    */
     private ?string $internalReplyMessage = null;
     
-    /** @var DateTimeTimeZone|null $scheduledEndDateTime The date and time that automatic replies are set to end, if Status is set to Scheduled. */
+    /**
+     * @var DateTimeTimeZone|null $scheduledEndDateTime The date and time that automatic replies are set to end, if Status is set to Scheduled.
+    */
     private ?DateTimeTimeZone $scheduledEndDateTime = null;
     
-    /** @var DateTimeTimeZone|null $scheduledStartDateTime The date and time that automatic replies are set to begin, if Status is set to Scheduled. */
+    /**
+     * @var DateTimeTimeZone|null $scheduledStartDateTime The date and time that automatic replies are set to begin, if Status is set to Scheduled.
+    */
     private ?DateTimeTimeZone $scheduledStartDateTime = null;
     
-    /** @var AutomaticRepliesStatus|null $status Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled. */
+    /**
+     * @var AutomaticRepliesStatus|null $status Configurations status for automatic replies. Possible values are: disabled, alwaysEnabled, scheduled.
+    */
     private ?AutomaticRepliesStatus $status = null;
     
     /**
@@ -42,7 +56,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AutomaticRepliesSetting
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AutomaticRepliesSetting {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AutomaticRepliesSetting {
         return new AutomaticRepliesSetting();
     }
 
@@ -55,7 +69,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
+     * Gets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. Possible values are: none, contactsOnly, all.
      * @return ExternalAudienceScope|null
     */
     public function getExternalAudience(): ?ExternalAudienceScope {
@@ -75,13 +89,14 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'externalAudience' => function (self $o, ParseNode $n) { $o->setExternalAudience($n->getEnumValue(ExternalAudienceScope::class)); },
-            'externalReplyMessage' => function (self $o, ParseNode $n) { $o->setExternalReplyMessage($n->getStringValue()); },
-            'internalReplyMessage' => function (self $o, ParseNode $n) { $o->setInternalReplyMessage($n->getStringValue()); },
-            'scheduledEndDateTime' => function (self $o, ParseNode $n) { $o->setScheduledEndDateTime($n->getObjectValue(DateTimeTimeZone::class)); },
-            'scheduledStartDateTime' => function (self $o, ParseNode $n) { $o->setScheduledStartDateTime($n->getObjectValue(DateTimeTimeZone::class)); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(AutomaticRepliesStatus::class)); },
+            'externalAudience' => function (ParseNode $n) use ($o) { $o->setExternalAudience($n->getEnumValue(ExternalAudienceScope::class)); },
+            'externalReplyMessage' => function (ParseNode $n) use ($o) { $o->setExternalReplyMessage($n->getStringValue()); },
+            'internalReplyMessage' => function (ParseNode $n) use ($o) { $o->setInternalReplyMessage($n->getStringValue()); },
+            'scheduledEndDateTime' => function (ParseNode $n) use ($o) { $o->setScheduledEndDateTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
+            'scheduledStartDateTime' => function (ParseNode $n) use ($o) { $o->setScheduledStartDateTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(AutomaticRepliesStatus::class)); },
         ];
     }
 
@@ -110,7 +125,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the status property value. Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
+     * Gets the status property value. Configurations status for automatic replies. Possible values are: disabled, alwaysEnabled, scheduled.
      * @return AutomaticRepliesStatus|null
     */
     public function getStatus(): ?AutomaticRepliesStatus {
@@ -140,7 +155,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
+     * Sets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. Possible values are: none, contactsOnly, all.
      *  @param ExternalAudienceScope|null $value Value to set for the externalAudience property.
     */
     public function setExternalAudience(?ExternalAudienceScope $value ): void {
@@ -180,7 +195,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the status property value. Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
+     * Sets the status property value. Configurations status for automatic replies. Possible values are: disabled, alwaysEnabled, scheduled.
      *  @param AutomaticRepliesStatus|null $value Value to set for the status property.
     */
     public function setStatus(?AutomaticRepliesStatus $value ): void {

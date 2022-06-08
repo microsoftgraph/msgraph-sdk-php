@@ -7,39 +7,61 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DeviceComplianceSettingState extends Entity 
+class DeviceComplianceSettingState extends Entity implements Parsable 
 {
-    /** @var DateTime|null $complianceGracePeriodExpirationDateTime The DateTime when device compliance grace period expires */
+    /**
+     * @var DateTime|null $complianceGracePeriodExpirationDateTime The DateTime when device compliance grace period expires
+    */
     private ?DateTime $complianceGracePeriodExpirationDateTime = null;
     
-    /** @var string|null $deviceId The Device Id that is being reported */
+    /**
+     * @var string|null $deviceId The Device Id that is being reported
+    */
     private ?string $deviceId = null;
     
-    /** @var string|null $deviceModel The device model that is being reported */
+    /**
+     * @var string|null $deviceModel The device model that is being reported
+    */
     private ?string $deviceModel = null;
     
-    /** @var string|null $deviceName The Device Name that is being reported */
+    /**
+     * @var string|null $deviceName The Device Name that is being reported
+    */
     private ?string $deviceName = null;
     
-    /** @var string|null $setting The setting class name and property name. */
+    /**
+     * @var string|null $setting The setting class name and property name.
+    */
     private ?string $setting = null;
     
-    /** @var string|null $settingName The Setting Name that is being reported */
+    /**
+     * @var string|null $settingName The Setting Name that is being reported
+    */
     private ?string $settingName = null;
     
-    /** @var ComplianceStatus|null $state The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned. */
+    /**
+     * @var ComplianceStatus|null $state The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+    */
     private ?ComplianceStatus $state = null;
     
-    /** @var string|null $userEmail The User email address that is being reported */
+    /**
+     * @var string|null $userEmail The User email address that is being reported
+    */
     private ?string $userEmail = null;
     
-    /** @var string|null $userId The user Id that is being reported */
+    /**
+     * @var string|null $userId The user Id that is being reported
+    */
     private ?string $userId = null;
     
-    /** @var string|null $userName The User Name that is being reported */
+    /**
+     * @var string|null $userName The User Name that is being reported
+    */
     private ?string $userName = null;
     
-    /** @var string|null $userPrincipalName The User PrincipalName that is being reported */
+    /**
+     * @var string|null $userPrincipalName The User PrincipalName that is being reported
+    */
     private ?string $userPrincipalName = null;
     
     /**
@@ -54,7 +76,7 @@ class DeviceComplianceSettingState extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceComplianceSettingState
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceComplianceSettingState {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceComplianceSettingState {
         return new DeviceComplianceSettingState();
     }
 
@@ -95,18 +117,19 @@ class DeviceComplianceSettingState extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'complianceGracePeriodExpirationDateTime' => function (self $o, ParseNode $n) { $o->setComplianceGracePeriodExpirationDateTime($n->getDateTimeValue()); },
-            'deviceId' => function (self $o, ParseNode $n) { $o->setDeviceId($n->getStringValue()); },
-            'deviceModel' => function (self $o, ParseNode $n) { $o->setDeviceModel($n->getStringValue()); },
-            'deviceName' => function (self $o, ParseNode $n) { $o->setDeviceName($n->getStringValue()); },
-            'setting' => function (self $o, ParseNode $n) { $o->setSetting($n->getStringValue()); },
-            'settingName' => function (self $o, ParseNode $n) { $o->setSettingName($n->getStringValue()); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getEnumValue(ComplianceStatus::class)); },
-            'userEmail' => function (self $o, ParseNode $n) { $o->setUserEmail($n->getStringValue()); },
-            'userId' => function (self $o, ParseNode $n) { $o->setUserId($n->getStringValue()); },
-            'userName' => function (self $o, ParseNode $n) { $o->setUserName($n->getStringValue()); },
-            'userPrincipalName' => function (self $o, ParseNode $n) { $o->setUserPrincipalName($n->getStringValue()); },
+            'complianceGracePeriodExpirationDateTime' => function (ParseNode $n) use ($o) { $o->setComplianceGracePeriodExpirationDateTime($n->getDateTimeValue()); },
+            'deviceId' => function (ParseNode $n) use ($o) { $o->setDeviceId($n->getStringValue()); },
+            'deviceModel' => function (ParseNode $n) use ($o) { $o->setDeviceModel($n->getStringValue()); },
+            'deviceName' => function (ParseNode $n) use ($o) { $o->setDeviceName($n->getStringValue()); },
+            'setting' => function (ParseNode $n) use ($o) { $o->setSetting($n->getStringValue()); },
+            'settingName' => function (ParseNode $n) use ($o) { $o->setSettingName($n->getStringValue()); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(ComplianceStatus::class)); },
+            'userEmail' => function (ParseNode $n) use ($o) { $o->setUserEmail($n->getStringValue()); },
+            'userId' => function (ParseNode $n) use ($o) { $o->setUserId($n->getStringValue()); },
+            'userName' => function (ParseNode $n) use ($o) { $o->setUserName($n->getStringValue()); },
+            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
         ]);
     }
 

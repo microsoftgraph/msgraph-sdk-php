@@ -6,24 +6,36 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Onenote extends Entity 
+class Onenote extends Entity implements Parsable 
 {
-    /** @var array<Notebook>|null $notebooks The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable. */
+    /**
+     * @var array<Notebook>|null $notebooks The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+    */
     private ?array $notebooks = null;
     
-    /** @var array<OnenoteOperation>|null $operations The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable. */
+    /**
+     * @var array<OnenoteOperation>|null $operations The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
+    */
     private ?array $operations = null;
     
-    /** @var array<OnenotePage>|null $pages The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable. */
+    /**
+     * @var array<OnenotePage>|null $pages The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+    */
     private ?array $pages = null;
     
-    /** @var array<OnenoteResource>|null $resources The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable. */
+    /**
+     * @var array<OnenoteResource>|null $resources The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
+    */
     private ?array $resources = null;
     
-    /** @var array<SectionGroup>|null $sectionGroups The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable. */
+    /**
+     * @var array<SectionGroup>|null $sectionGroups The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+    */
     private ?array $sectionGroups = null;
     
-    /** @var array<OnenoteSection>|null $sections The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable. */
+    /**
+     * @var array<OnenoteSection>|null $sections The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+    */
     private ?array $sections = null;
     
     /**
@@ -38,7 +50,7 @@ class Onenote extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Onenote
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Onenote {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Onenote {
         return new Onenote();
     }
 
@@ -47,13 +59,14 @@ class Onenote extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'notebooks' => function (self $o, ParseNode $n) { $o->setNotebooks($n->getCollectionOfObjectValues(Notebook::class)); },
-            'operations' => function (self $o, ParseNode $n) { $o->setOperations($n->getCollectionOfObjectValues(OnenoteOperation::class)); },
-            'pages' => function (self $o, ParseNode $n) { $o->setPages($n->getCollectionOfObjectValues(OnenotePage::class)); },
-            'resources' => function (self $o, ParseNode $n) { $o->setResources($n->getCollectionOfObjectValues(OnenoteResource::class)); },
-            'sectionGroups' => function (self $o, ParseNode $n) { $o->setSectionGroups($n->getCollectionOfObjectValues(SectionGroup::class)); },
-            'sections' => function (self $o, ParseNode $n) { $o->setSections($n->getCollectionOfObjectValues(OnenoteSection::class)); },
+            'notebooks' => function (ParseNode $n) use ($o) { $o->setNotebooks($n->getCollectionOfObjectValues(array(Notebook::class, 'createFromDiscriminatorValue'))); },
+            'operations' => function (ParseNode $n) use ($o) { $o->setOperations($n->getCollectionOfObjectValues(array(OnenoteOperation::class, 'createFromDiscriminatorValue'))); },
+            'pages' => function (ParseNode $n) use ($o) { $o->setPages($n->getCollectionOfObjectValues(array(OnenotePage::class, 'createFromDiscriminatorValue'))); },
+            'resources' => function (ParseNode $n) use ($o) { $o->setResources($n->getCollectionOfObjectValues(array(OnenoteResource::class, 'createFromDiscriminatorValue'))); },
+            'sectionGroups' => function (ParseNode $n) use ($o) { $o->setSectionGroups($n->getCollectionOfObjectValues(array(SectionGroup::class, 'createFromDiscriminatorValue'))); },
+            'sections' => function (ParseNode $n) use ($o) { $o->setSections($n->getCollectionOfObjectValues(array(OnenoteSection::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

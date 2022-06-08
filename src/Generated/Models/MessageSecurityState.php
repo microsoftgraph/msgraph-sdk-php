@@ -10,34 +10,54 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class MessageSecurityState implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $connectingIP The connectingIP property */
+    /**
+     * @var string|null $connectingIP The connectingIP property
+    */
     private ?string $connectingIP = null;
     
-    /** @var string|null $deliveryAction The deliveryAction property */
+    /**
+     * @var string|null $deliveryAction The deliveryAction property
+    */
     private ?string $deliveryAction = null;
     
-    /** @var string|null $deliveryLocation The deliveryLocation property */
+    /**
+     * @var string|null $deliveryLocation The deliveryLocation property
+    */
     private ?string $deliveryLocation = null;
     
-    /** @var string|null $directionality The directionality property */
+    /**
+     * @var string|null $directionality The directionality property
+    */
     private ?string $directionality = null;
     
-    /** @var string|null $internetMessageId The internetMessageId property */
+    /**
+     * @var string|null $internetMessageId The internetMessageId property
+    */
     private ?string $internetMessageId = null;
     
-    /** @var string|null $messageFingerprint The messageFingerprint property */
+    /**
+     * @var string|null $messageFingerprint The messageFingerprint property
+    */
     private ?string $messageFingerprint = null;
     
-    /** @var DateTime|null $messageReceivedDateTime The messageReceivedDateTime property */
+    /**
+     * @var DateTime|null $messageReceivedDateTime The messageReceivedDateTime property
+    */
     private ?DateTime $messageReceivedDateTime = null;
     
-    /** @var string|null $messageSubject The messageSubject property */
+    /**
+     * @var string|null $messageSubject The messageSubject property
+    */
     private ?string $messageSubject = null;
     
-    /** @var string|null $networkMessageId The networkMessageId property */
+    /**
+     * @var string|null $networkMessageId The networkMessageId property
+    */
     private ?string $networkMessageId = null;
     
     /**
@@ -52,7 +72,7 @@ class MessageSecurityState implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return MessageSecurityState
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): MessageSecurityState {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): MessageSecurityState {
         return new MessageSecurityState();
     }
 
@@ -101,16 +121,17 @@ class MessageSecurityState implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'connectingIP' => function (self $o, ParseNode $n) { $o->setConnectingIP($n->getStringValue()); },
-            'deliveryAction' => function (self $o, ParseNode $n) { $o->setDeliveryAction($n->getStringValue()); },
-            'deliveryLocation' => function (self $o, ParseNode $n) { $o->setDeliveryLocation($n->getStringValue()); },
-            'directionality' => function (self $o, ParseNode $n) { $o->setDirectionality($n->getStringValue()); },
-            'internetMessageId' => function (self $o, ParseNode $n) { $o->setInternetMessageId($n->getStringValue()); },
-            'messageFingerprint' => function (self $o, ParseNode $n) { $o->setMessageFingerprint($n->getStringValue()); },
-            'messageReceivedDateTime' => function (self $o, ParseNode $n) { $o->setMessageReceivedDateTime($n->getDateTimeValue()); },
-            'messageSubject' => function (self $o, ParseNode $n) { $o->setMessageSubject($n->getStringValue()); },
-            'networkMessageId' => function (self $o, ParseNode $n) { $o->setNetworkMessageId($n->getStringValue()); },
+            'connectingIP' => function (ParseNode $n) use ($o) { $o->setConnectingIP($n->getStringValue()); },
+            'deliveryAction' => function (ParseNode $n) use ($o) { $o->setDeliveryAction($n->getStringValue()); },
+            'deliveryLocation' => function (ParseNode $n) use ($o) { $o->setDeliveryLocation($n->getStringValue()); },
+            'directionality' => function (ParseNode $n) use ($o) { $o->setDirectionality($n->getStringValue()); },
+            'internetMessageId' => function (ParseNode $n) use ($o) { $o->setInternetMessageId($n->getStringValue()); },
+            'messageFingerprint' => function (ParseNode $n) use ($o) { $o->setMessageFingerprint($n->getStringValue()); },
+            'messageReceivedDateTime' => function (ParseNode $n) use ($o) { $o->setMessageReceivedDateTime($n->getDateTimeValue()); },
+            'messageSubject' => function (ParseNode $n) use ($o) { $o->setMessageSubject($n->getStringValue()); },
+            'networkMessageId' => function (ParseNode $n) use ($o) { $o->setNetworkMessageId($n->getStringValue()); },
         ];
     }
 

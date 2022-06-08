@@ -9,17 +9,23 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class OnenotePagePreview implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var OnenotePagePreviewLinks|null $links The links property */
+    /**
+     * @var OnenotePagePreviewLinks|null $links The links property
+    */
     private ?OnenotePagePreviewLinks $links = null;
     
-    /** @var string|null $previewText The previewText property */
+    /**
+     * @var string|null $previewText The previewText property
+    */
     private ?string $previewText = null;
     
     /**
-     * Instantiates a new onenotePagePreview and sets the default values.
+     * Instantiates a new OnenotePagePreview and sets the default values.
     */
     public function __construct() {
         $this->additionalData = [];
@@ -30,7 +36,7 @@ class OnenotePagePreview implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return OnenotePagePreview
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): OnenotePagePreview {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): OnenotePagePreview {
         return new OnenotePagePreview();
     }
 
@@ -47,9 +53,10 @@ class OnenotePagePreview implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'links' => function (self $o, ParseNode $n) { $o->setLinks($n->getObjectValue(OnenotePagePreviewLinks::class)); },
-            'previewText' => function (self $o, ParseNode $n) { $o->setPreviewText($n->getStringValue()); },
+            'links' => function (ParseNode $n) use ($o) { $o->setLinks($n->getObjectValue(array(OnenotePagePreviewLinks::class, 'createFromDiscriminatorValue'))); },
+            'previewText' => function (ParseNode $n) use ($o) { $o->setPreviewText($n->getStringValue()); },
         ];
     }
 

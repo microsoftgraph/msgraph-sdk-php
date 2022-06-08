@@ -6,21 +6,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ResourceSpecificPermissionGrant extends DirectoryObject 
+class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsable 
 {
-    /** @var string|null $clientAppId ID of the service principal of the Azure AD app that has been granted access. Read-only. */
+    /**
+     * @var string|null $clientAppId ID of the service principal of the Azure AD app that has been granted access. Read-only.
+    */
     private ?string $clientAppId = null;
     
-    /** @var string|null $clientId ID of the Azure AD app that has been granted access. Read-only. */
+    /**
+     * @var string|null $clientId ID of the Azure AD app that has been granted access. Read-only.
+    */
     private ?string $clientId = null;
     
-    /** @var string|null $permission The name of the resource-specific permission. Read-only. */
+    /**
+     * @var string|null $permission The name of the resource-specific permission. Read-only.
+    */
     private ?string $permission = null;
     
-    /** @var string|null $permissionType The type of permission. Possible values are: Application, Delegated. Read-only. */
+    /**
+     * @var string|null $permissionType The type of permission. Possible values are: Application, Delegated. Read-only.
+    */
     private ?string $permissionType = null;
     
-    /** @var string|null $resourceAppId ID of the Azure AD app that is hosting the resource. Read-only. */
+    /**
+     * @var string|null $resourceAppId ID of the Azure AD app that is hosting the resource. Read-only.
+    */
     private ?string $resourceAppId = null;
     
     /**
@@ -35,7 +45,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ResourceSpecificPermissionGrant
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ResourceSpecificPermissionGrant {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ResourceSpecificPermissionGrant {
         return new ResourceSpecificPermissionGrant();
     }
 
@@ -60,12 +70,13 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'clientAppId' => function (self $o, ParseNode $n) { $o->setClientAppId($n->getStringValue()); },
-            'clientId' => function (self $o, ParseNode $n) { $o->setClientId($n->getStringValue()); },
-            'permission' => function (self $o, ParseNode $n) { $o->setPermission($n->getStringValue()); },
-            'permissionType' => function (self $o, ParseNode $n) { $o->setPermissionType($n->getStringValue()); },
-            'resourceAppId' => function (self $o, ParseNode $n) { $o->setResourceAppId($n->getStringValue()); },
+            'clientAppId' => function (ParseNode $n) use ($o) { $o->setClientAppId($n->getStringValue()); },
+            'clientId' => function (ParseNode $n) use ($o) { $o->setClientId($n->getStringValue()); },
+            'permission' => function (ParseNode $n) use ($o) { $o->setPermission($n->getStringValue()); },
+            'permissionType' => function (ParseNode $n) use ($o) { $o->setPermissionType($n->getStringValue()); },
+            'resourceAppId' => function (ParseNode $n) use ($o) { $o->setResourceAppId($n->getStringValue()); },
         ]);
     }
 

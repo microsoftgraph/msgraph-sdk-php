@@ -10,20 +10,28 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class UploadSession implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var DateTime|null $expirationDateTime The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached. */
+    /**
+     * @var DateTime|null $expirationDateTime The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached.
+    */
     private ?DateTime $expirationDateTime = null;
     
-    /** @var array<string>|null $nextExpectedRanges A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format 'start-end' (e.g. '0-26' to indicate the first 27 bytes of the file). When uploading files as Outlook attachments, instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file where the next upload should begin. */
+    /**
+     * @var array<string>|null $nextExpectedRanges When uploading files to document libraries, this is a collection of byte ranges that the server is missing for the file. These ranges are zero-indexed and of the format, '{start}-{end}' (e.g. '0-26' to indicate the first 27 bytes of the file). When uploading files as Outlook attachments, instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file where the next upload should begin.
+    */
     private ?array $nextExpectedRanges = null;
     
-    /** @var string|null $uploadUrl The URL endpoint that accepts PUT requests for byte ranges of the file. */
+    /**
+     * @var string|null $uploadUrl The URL endpoint that accepts PUT requests for byte ranges of the file.
+    */
     private ?string $uploadUrl = null;
     
     /**
-     * Instantiates a new uploadSession and sets the default values.
+     * Instantiates a new UploadSession and sets the default values.
     */
     public function __construct() {
         $this->additionalData = [];
@@ -34,7 +42,7 @@ class UploadSession implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return UploadSession
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): UploadSession {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): UploadSession {
         return new UploadSession();
     }
 
@@ -59,15 +67,16 @@ class UploadSession implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'expirationDateTime' => function (self $o, ParseNode $n) { $o->setExpirationDateTime($n->getDateTimeValue()); },
-            'nextExpectedRanges' => function (self $o, ParseNode $n) { $o->setNextExpectedRanges($n->getCollectionOfPrimitiveValues()); },
-            'uploadUrl' => function (self $o, ParseNode $n) { $o->setUploadUrl($n->getStringValue()); },
+            'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
+            'nextExpectedRanges' => function (ParseNode $n) use ($o) { $o->setNextExpectedRanges($n->getCollectionOfPrimitiveValues()); },
+            'uploadUrl' => function (ParseNode $n) use ($o) { $o->setUploadUrl($n->getStringValue()); },
         ];
     }
 
     /**
-     * Gets the nextExpectedRanges property value. A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format 'start-end' (e.g. '0-26' to indicate the first 27 bytes of the file). When uploading files as Outlook attachments, instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file where the next upload should begin.
+     * Gets the nextExpectedRanges property value. When uploading files to document libraries, this is a collection of byte ranges that the server is missing for the file. These ranges are zero-indexed and of the format, '{start}-{end}' (e.g. '0-26' to indicate the first 27 bytes of the file). When uploading files as Outlook attachments, instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file where the next upload should begin.
      * @return array<string>|null
     */
     public function getNextExpectedRanges(): ?array {
@@ -110,7 +119,7 @@ class UploadSession implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the nextExpectedRanges property value. A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format 'start-end' (e.g. '0-26' to indicate the first 27 bytes of the file). When uploading files as Outlook attachments, instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file where the next upload should begin.
+     * Sets the nextExpectedRanges property value. When uploading files to document libraries, this is a collection of byte ranges that the server is missing for the file. These ranges are zero-indexed and of the format, '{start}-{end}' (e.g. '0-26' to indicate the first 27 bytes of the file). When uploading files as Outlook attachments, instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file where the next upload should begin.
      *  @param array<string>|null $value Value to set for the nextExpectedRanges property.
     */
     public function setNextExpectedRanges(?array $value ): void {

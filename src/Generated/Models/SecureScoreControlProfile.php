@@ -7,63 +7,101 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class SecureScoreControlProfile extends Entity 
+class SecureScoreControlProfile extends Entity implements Parsable 
 {
-    /** @var string|null $actionType Control action type (Config, Review, Behavior). */
+    /**
+     * @var string|null $actionType Control action type (Config, Review, Behavior).
+    */
     private ?string $actionType = null;
     
-    /** @var string|null $actionUrl URL to where the control can be actioned. */
+    /**
+     * @var string|null $actionUrl URL to where the control can be actioned.
+    */
     private ?string $actionUrl = null;
     
-    /** @var string|null $azureTenantId GUID string for tenant ID. */
+    /**
+     * @var string|null $azureTenantId GUID string for tenant ID.
+    */
     private ?string $azureTenantId = null;
     
-    /** @var array<ComplianceInformation>|null $complianceInformation The collection of compliance information associated with secure score control */
+    /**
+     * @var array<ComplianceInformation>|null $complianceInformation The collection of compliance information associated with secure score control
+    */
     private ?array $complianceInformation = null;
     
-    /** @var string|null $controlCategory Control action category (Identity, Data, Device, Apps, Infrastructure). */
+    /**
+     * @var string|null $controlCategory Control action category (Account, Data, Device, Apps, Infrastructure).
+    */
     private ?string $controlCategory = null;
     
-    /** @var array<SecureScoreControlStateUpdate>|null $controlStateUpdates Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update). */
+    /**
+     * @var array<SecureScoreControlStateUpdate>|null $controlStateUpdates Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update).
+    */
     private ?array $controlStateUpdates = null;
     
-    /** @var bool|null $deprecated Flag to indicate if a control is depreciated. */
+    /**
+     * @var bool|null $deprecated Flag to indicate if a control is depreciated.
+    */
     private ?bool $deprecated = null;
     
-    /** @var string|null $implementationCost Resource cost of implemmentating control (low, moderate, high). */
+    /**
+     * @var string|null $implementationCost Resource cost of implemmentating control (low, moderate, high).
+    */
     private ?string $implementationCost = null;
     
-    /** @var DateTime|null $lastModifiedDateTime Time at which the control profile entity was last modified. The Timestamp type represents date and time */
+    /**
+     * @var DateTime|null $lastModifiedDateTime Time at which the control profile entity was last modified. The Timestamp type represents date and time
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var float|null $maxScore max attainable score for the control. */
+    /**
+     * @var float|null $maxScore Current obtained max score on specified date.
+    */
     private ?float $maxScore = null;
     
-    /** @var int|null $rank Microsoft's stack ranking of control. */
+    /**
+     * @var int|null $rank Microsoft's stack ranking of control.
+    */
     private ?int $rank = null;
     
-    /** @var string|null $remediation Description of what the control will help remediate. */
+    /**
+     * @var string|null $remediation Description of what the control will help remediate.
+    */
     private ?string $remediation = null;
     
-    /** @var string|null $remediationImpact Description of the impact on users of the remediation. */
+    /**
+     * @var string|null $remediationImpact Description of the impact on users of the remediation.
+    */
     private ?string $remediationImpact = null;
     
-    /** @var string|null $service Service that owns the control (Exchange, Sharepoint, Azure AD). */
+    /**
+     * @var string|null $service Service that owns the control (Exchange, Sharepoint, Azure AD).
+    */
     private ?string $service = null;
     
-    /** @var array<string>|null $threats List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage, */
+    /**
+     * @var array<string>|null $threats List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing).
+    */
     private ?array $threats = null;
     
-    /** @var string|null $tier Control tier (Core, Defense in Depth, Advanced.) */
+    /**
+     * @var string|null $tier Control tier (Core, Defense in Depth, Advanced.)
+    */
     private ?string $tier = null;
     
-    /** @var string|null $title Title of the control. */
+    /**
+     * @var string|null $title Title of the control.
+    */
     private ?string $title = null;
     
-    /** @var string|null $userImpact User impact of implementing control (low, moderate, high). */
+    /**
+     * @var string|null $userImpact User impact of implementing control (low, moderate, high).
+    */
     private ?string $userImpact = null;
     
-    /** @var SecurityVendorInformation|null $vendorInformation The vendorInformation property */
+    /**
+     * @var SecurityVendorInformation|null $vendorInformation The vendorInformation property
+    */
     private ?SecurityVendorInformation $vendorInformation = null;
     
     /**
@@ -78,7 +116,7 @@ class SecureScoreControlProfile extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SecureScoreControlProfile
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SecureScoreControlProfile {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SecureScoreControlProfile {
         return new SecureScoreControlProfile();
     }
 
@@ -115,7 +153,7 @@ class SecureScoreControlProfile extends Entity
     }
 
     /**
-     * Gets the controlCategory property value. Control action category (Identity, Data, Device, Apps, Infrastructure).
+     * Gets the controlCategory property value. Control action category (Account, Data, Device, Apps, Infrastructure).
      * @return string|null
     */
     public function getControlCategory(): ?string {
@@ -143,26 +181,27 @@ class SecureScoreControlProfile extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'actionType' => function (self $o, ParseNode $n) { $o->setActionType($n->getStringValue()); },
-            'actionUrl' => function (self $o, ParseNode $n) { $o->setActionUrl($n->getStringValue()); },
-            'azureTenantId' => function (self $o, ParseNode $n) { $o->setAzureTenantId($n->getStringValue()); },
-            'complianceInformation' => function (self $o, ParseNode $n) { $o->setComplianceInformation($n->getCollectionOfObjectValues(ComplianceInformation::class)); },
-            'controlCategory' => function (self $o, ParseNode $n) { $o->setControlCategory($n->getStringValue()); },
-            'controlStateUpdates' => function (self $o, ParseNode $n) { $o->setControlStateUpdates($n->getCollectionOfObjectValues(SecureScoreControlStateUpdate::class)); },
-            'deprecated' => function (self $o, ParseNode $n) { $o->setDeprecated($n->getBooleanValue()); },
-            'implementationCost' => function (self $o, ParseNode $n) { $o->setImplementationCost($n->getStringValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'maxScore' => function (self $o, ParseNode $n) { $o->setMaxScore($n->getFloatValue()); },
-            'rank' => function (self $o, ParseNode $n) { $o->setRank($n->getIntegerValue()); },
-            'remediation' => function (self $o, ParseNode $n) { $o->setRemediation($n->getStringValue()); },
-            'remediationImpact' => function (self $o, ParseNode $n) { $o->setRemediationImpact($n->getStringValue()); },
-            'service' => function (self $o, ParseNode $n) { $o->setService($n->getStringValue()); },
-            'threats' => function (self $o, ParseNode $n) { $o->setThreats($n->getCollectionOfPrimitiveValues()); },
-            'tier' => function (self $o, ParseNode $n) { $o->setTier($n->getStringValue()); },
-            'title' => function (self $o, ParseNode $n) { $o->setTitle($n->getStringValue()); },
-            'userImpact' => function (self $o, ParseNode $n) { $o->setUserImpact($n->getStringValue()); },
-            'vendorInformation' => function (self $o, ParseNode $n) { $o->setVendorInformation($n->getObjectValue(SecurityVendorInformation::class)); },
+            'actionType' => function (ParseNode $n) use ($o) { $o->setActionType($n->getStringValue()); },
+            'actionUrl' => function (ParseNode $n) use ($o) { $o->setActionUrl($n->getStringValue()); },
+            'azureTenantId' => function (ParseNode $n) use ($o) { $o->setAzureTenantId($n->getStringValue()); },
+            'complianceInformation' => function (ParseNode $n) use ($o) { $o->setComplianceInformation($n->getCollectionOfObjectValues(array(ComplianceInformation::class, 'createFromDiscriminatorValue'))); },
+            'controlCategory' => function (ParseNode $n) use ($o) { $o->setControlCategory($n->getStringValue()); },
+            'controlStateUpdates' => function (ParseNode $n) use ($o) { $o->setControlStateUpdates($n->getCollectionOfObjectValues(array(SecureScoreControlStateUpdate::class, 'createFromDiscriminatorValue'))); },
+            'deprecated' => function (ParseNode $n) use ($o) { $o->setDeprecated($n->getBooleanValue()); },
+            'implementationCost' => function (ParseNode $n) use ($o) { $o->setImplementationCost($n->getStringValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'maxScore' => function (ParseNode $n) use ($o) { $o->setMaxScore($n->getFloatValue()); },
+            'rank' => function (ParseNode $n) use ($o) { $o->setRank($n->getIntegerValue()); },
+            'remediation' => function (ParseNode $n) use ($o) { $o->setRemediation($n->getStringValue()); },
+            'remediationImpact' => function (ParseNode $n) use ($o) { $o->setRemediationImpact($n->getStringValue()); },
+            'service' => function (ParseNode $n) use ($o) { $o->setService($n->getStringValue()); },
+            'threats' => function (ParseNode $n) use ($o) { $o->setThreats($n->getCollectionOfPrimitiveValues()); },
+            'tier' => function (ParseNode $n) use ($o) { $o->setTier($n->getStringValue()); },
+            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getStringValue()); },
+            'userImpact' => function (ParseNode $n) use ($o) { $o->setUserImpact($n->getStringValue()); },
+            'vendorInformation' => function (ParseNode $n) use ($o) { $o->setVendorInformation($n->getObjectValue(array(SecurityVendorInformation::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -183,7 +222,7 @@ class SecureScoreControlProfile extends Entity
     }
 
     /**
-     * Gets the maxScore property value. max attainable score for the control.
+     * Gets the maxScore property value. Current obtained max score on specified date.
      * @return float|null
     */
     public function getMaxScore(): ?float {
@@ -223,7 +262,7 @@ class SecureScoreControlProfile extends Entity
     }
 
     /**
-     * Gets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
+     * Gets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing).
      * @return array<string>|null
     */
     public function getThreats(): ?array {
@@ -322,7 +361,7 @@ class SecureScoreControlProfile extends Entity
     }
 
     /**
-     * Sets the controlCategory property value. Control action category (Identity, Data, Device, Apps, Infrastructure).
+     * Sets the controlCategory property value. Control action category (Account, Data, Device, Apps, Infrastructure).
      *  @param string|null $value Value to set for the controlCategory property.
     */
     public function setControlCategory(?string $value ): void {
@@ -362,7 +401,7 @@ class SecureScoreControlProfile extends Entity
     }
 
     /**
-     * Sets the maxScore property value. max attainable score for the control.
+     * Sets the maxScore property value. Current obtained max score on specified date.
      *  @param float|null $value Value to set for the maxScore property.
     */
     public function setMaxScore(?float $value ): void {
@@ -402,7 +441,7 @@ class SecureScoreControlProfile extends Entity
     }
 
     /**
-     * Sets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
+     * Sets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing).
      *  @param array<string>|null $value Value to set for the threats property.
     */
     public function setThreats(?array $value ): void {

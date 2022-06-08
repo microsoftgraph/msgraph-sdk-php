@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Approval extends Entity 
+class Approval extends Entity implements Parsable 
 {
-    /** @var array<ApprovalStage>|null $stages A collection of stages in the approval decision. */
+    /**
+     * @var array<ApprovalStage>|null $stages Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.
+    */
     private ?array $stages = null;
     
     /**
@@ -23,7 +25,7 @@ class Approval extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Approval
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Approval {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Approval {
         return new Approval();
     }
 
@@ -32,13 +34,14 @@ class Approval extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'stages' => function (self $o, ParseNode $n) { $o->setStages($n->getCollectionOfObjectValues(ApprovalStage::class)); },
+            'stages' => function (ParseNode $n) use ($o) { $o->setStages($n->getCollectionOfObjectValues(array(ApprovalStage::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
     /**
-     * Gets the stages property value. A collection of stages in the approval decision.
+     * Gets the stages property value. Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.
      * @return array<ApprovalStage>|null
     */
     public function getStages(): ?array {
@@ -55,7 +58,7 @@ class Approval extends Entity
     }
 
     /**
-     * Sets the stages property value. A collection of stages in the approval decision.
+     * Sets the stages property value. Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.
      *  @param array<ApprovalStage>|null $value Value to set for the stages property.
     */
     public function setStages(?array $value ): void {

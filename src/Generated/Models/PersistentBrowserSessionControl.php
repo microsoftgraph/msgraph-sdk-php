@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class PersistentBrowserSessionControl extends ConditionalAccessSessionControl 
+class PersistentBrowserSessionControl extends ConditionalAccessSessionControl implements Parsable 
 {
-    /** @var PersistentBrowserSessionMode|null $mode Possible values are: always, never. */
+    /**
+     * @var PersistentBrowserSessionMode|null $mode Possible values are: always, never.
+    */
     private ?PersistentBrowserSessionMode $mode = null;
     
     /**
@@ -23,7 +25,7 @@ class PersistentBrowserSessionControl extends ConditionalAccessSessionControl
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PersistentBrowserSessionControl
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PersistentBrowserSessionControl {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PersistentBrowserSessionControl {
         return new PersistentBrowserSessionControl();
     }
 
@@ -32,8 +34,9 @@ class PersistentBrowserSessionControl extends ConditionalAccessSessionControl
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'mode' => function (self $o, ParseNode $n) { $o->setMode($n->getEnumValue(PersistentBrowserSessionMode::class)); },
+            'mode' => function (ParseNode $n) use ($o) { $o->setMode($n->getEnumValue(PersistentBrowserSessionMode::class)); },
         ]);
     }
 

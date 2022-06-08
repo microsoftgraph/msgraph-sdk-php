@@ -10,22 +10,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SecureScoreControlStateUpdate implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $assignedTo Assigns the control to the user who will take the action. */
+    /**
+     * @var string|null $assignedTo Assigns the control to the user who will take the action.
+    */
     private ?string $assignedTo = null;
     
-    /** @var string|null $comment Provides optional comment about the control. */
+    /**
+     * @var string|null $comment Provides optional comment about the control.
+    */
     private ?string $comment = null;
     
-    /** @var string|null $state State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty). */
+    /**
+     * @var string|null $state State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty).
+    */
     private ?string $state = null;
     
-    /** @var string|null $updatedBy ID of the user who updated tenant state. */
+    /**
+     * @var string|null $updatedBy ID of the user who updated tenant state.
+    */
     private ?string $updatedBy = null;
     
-    /** @var DateTime|null $updatedDateTime Time at which the control state was updated. */
+    /**
+     * @var DateTime|null $updatedDateTime Time at which the control state was updated.
+    */
     private ?DateTime $updatedDateTime = null;
     
     /**
@@ -40,7 +52,7 @@ class SecureScoreControlStateUpdate implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SecureScoreControlStateUpdate
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SecureScoreControlStateUpdate {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SecureScoreControlStateUpdate {
         return new SecureScoreControlStateUpdate();
     }
 
@@ -73,12 +85,13 @@ class SecureScoreControlStateUpdate implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'assignedTo' => function (self $o, ParseNode $n) { $o->setAssignedTo($n->getStringValue()); },
-            'comment' => function (self $o, ParseNode $n) { $o->setComment($n->getStringValue()); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getStringValue()); },
-            'updatedBy' => function (self $o, ParseNode $n) { $o->setUpdatedBy($n->getStringValue()); },
-            'updatedDateTime' => function (self $o, ParseNode $n) { $o->setUpdatedDateTime($n->getDateTimeValue()); },
+            'assignedTo' => function (ParseNode $n) use ($o) { $o->setAssignedTo($n->getStringValue()); },
+            'comment' => function (ParseNode $n) use ($o) { $o->setComment($n->getStringValue()); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getStringValue()); },
+            'updatedBy' => function (ParseNode $n) use ($o) { $o->setUpdatedBy($n->getStringValue()); },
+            'updatedDateTime' => function (ParseNode $n) use ($o) { $o->setUpdatedDateTime($n->getDateTimeValue()); },
         ];
     }
 

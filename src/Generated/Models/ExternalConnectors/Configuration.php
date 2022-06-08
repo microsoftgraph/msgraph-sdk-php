@@ -9,10 +9,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Configuration implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<string>|null $authorizedAppIds A collection of application IDs for registered Azure Active Directory apps that are allowed to manage the externalConnection and to index content in the externalConnection. */
+    /**
+     * @var array<string>|null $authorizedAppIds A collection of application IDs for registered Azure Active Directory apps that are allowed to manage the externalConnection and to index content in the externalConnection.
+    */
     private ?array $authorizedAppIds = null;
     
     /**
@@ -27,7 +31,7 @@ class Configuration implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Configuration
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Configuration {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Configuration {
         return new Configuration();
     }
 
@@ -52,8 +56,9 @@ class Configuration implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'authorizedAppIds' => function (self $o, ParseNode $n) { $o->setAuthorizedAppIds($n->getCollectionOfPrimitiveValues()); },
+            'authorizedAppIds' => function (ParseNode $n) use ($o) { $o->setAuthorizedAppIds($n->getCollectionOfPrimitiveValues()); },
         ];
     }
 

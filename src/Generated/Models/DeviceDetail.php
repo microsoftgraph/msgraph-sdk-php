@@ -9,28 +9,44 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class DeviceDetail implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $browser Indicates the browser information of the used for signing in. */
+    /**
+     * @var string|null $browser Indicates the browser information of the used for signing-in.
+    */
     private ?string $browser = null;
     
-    /** @var string|null $deviceId Refers to the UniqueID of the device used for signing in. */
+    /**
+     * @var string|null $deviceId Refers to the UniqueID of the device used for signing-in.
+    */
     private ?string $deviceId = null;
     
-    /** @var string|null $displayName Refers to the name of the device used for signing in. */
+    /**
+     * @var string|null $displayName Refers to the name of the device used for signing-in.
+    */
     private ?string $displayName = null;
     
-    /** @var bool|null $isCompliant Indicates whether the device is compliant. */
+    /**
+     * @var bool|null $isCompliant Indicates whether the device is compliant or not.
+    */
     private ?bool $isCompliant = null;
     
-    /** @var bool|null $isManaged Indicates whether the device is managed. */
+    /**
+     * @var bool|null $isManaged Indicates if the device is managed or not.
+    */
     private ?bool $isManaged = null;
     
-    /** @var string|null $operatingSystem Indicates the operating system name and version used for signing in. */
+    /**
+     * @var string|null $operatingSystem Indicates the OS name and version used for signing-in.
+    */
     private ?string $operatingSystem = null;
     
-    /** @var string|null $trustType Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined. */
+    /**
+     * @var string|null $trustType Indicates information on whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
+    */
     private ?string $trustType = null;
     
     /**
@@ -45,7 +61,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceDetail
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceDetail {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceDetail {
         return new DeviceDetail();
     }
 
@@ -58,7 +74,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the browser property value. Indicates the browser information of the used for signing in.
+     * Gets the browser property value. Indicates the browser information of the used for signing-in.
      * @return string|null
     */
     public function getBrowser(): ?string {
@@ -66,7 +82,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the deviceId property value. Refers to the UniqueID of the device used for signing in.
+     * Gets the deviceId property value. Refers to the UniqueID of the device used for signing-in.
      * @return string|null
     */
     public function getDeviceId(): ?string {
@@ -74,7 +90,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the displayName property value. Refers to the name of the device used for signing in.
+     * Gets the displayName property value. Refers to the name of the device used for signing-in.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -86,19 +102,20 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'browser' => function (self $o, ParseNode $n) { $o->setBrowser($n->getStringValue()); },
-            'deviceId' => function (self $o, ParseNode $n) { $o->setDeviceId($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'isCompliant' => function (self $o, ParseNode $n) { $o->setIsCompliant($n->getBooleanValue()); },
-            'isManaged' => function (self $o, ParseNode $n) { $o->setIsManaged($n->getBooleanValue()); },
-            'operatingSystem' => function (self $o, ParseNode $n) { $o->setOperatingSystem($n->getStringValue()); },
-            'trustType' => function (self $o, ParseNode $n) { $o->setTrustType($n->getStringValue()); },
+            'browser' => function (ParseNode $n) use ($o) { $o->setBrowser($n->getStringValue()); },
+            'deviceId' => function (ParseNode $n) use ($o) { $o->setDeviceId($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'isCompliant' => function (ParseNode $n) use ($o) { $o->setIsCompliant($n->getBooleanValue()); },
+            'isManaged' => function (ParseNode $n) use ($o) { $o->setIsManaged($n->getBooleanValue()); },
+            'operatingSystem' => function (ParseNode $n) use ($o) { $o->setOperatingSystem($n->getStringValue()); },
+            'trustType' => function (ParseNode $n) use ($o) { $o->setTrustType($n->getStringValue()); },
         ];
     }
 
     /**
-     * Gets the isCompliant property value. Indicates whether the device is compliant.
+     * Gets the isCompliant property value. Indicates whether the device is compliant or not.
      * @return bool|null
     */
     public function getIsCompliant(): ?bool {
@@ -106,7 +123,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the isManaged property value. Indicates whether the device is managed.
+     * Gets the isManaged property value. Indicates if the device is managed or not.
      * @return bool|null
     */
     public function getIsManaged(): ?bool {
@@ -114,7 +131,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the operatingSystem property value. Indicates the operating system name and version used for signing in.
+     * Gets the operatingSystem property value. Indicates the OS name and version used for signing-in.
      * @return string|null
     */
     public function getOperatingSystem(): ?string {
@@ -122,7 +139,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the trustType property value. Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
+     * Gets the trustType property value. Indicates information on whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
      * @return string|null
     */
     public function getTrustType(): ?string {
@@ -153,7 +170,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the browser property value. Indicates the browser information of the used for signing in.
+     * Sets the browser property value. Indicates the browser information of the used for signing-in.
      *  @param string|null $value Value to set for the browser property.
     */
     public function setBrowser(?string $value ): void {
@@ -161,7 +178,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the deviceId property value. Refers to the UniqueID of the device used for signing in.
+     * Sets the deviceId property value. Refers to the UniqueID of the device used for signing-in.
      *  @param string|null $value Value to set for the deviceId property.
     */
     public function setDeviceId(?string $value ): void {
@@ -169,7 +186,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the displayName property value. Refers to the name of the device used for signing in.
+     * Sets the displayName property value. Refers to the name of the device used for signing-in.
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -177,7 +194,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the isCompliant property value. Indicates whether the device is compliant.
+     * Sets the isCompliant property value. Indicates whether the device is compliant or not.
      *  @param bool|null $value Value to set for the isCompliant property.
     */
     public function setIsCompliant(?bool $value ): void {
@@ -185,7 +202,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the isManaged property value. Indicates whether the device is managed.
+     * Sets the isManaged property value. Indicates if the device is managed or not.
      *  @param bool|null $value Value to set for the isManaged property.
     */
     public function setIsManaged(?bool $value ): void {
@@ -193,7 +210,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the operatingSystem property value. Indicates the operating system name and version used for signing in.
+     * Sets the operatingSystem property value. Indicates the OS name and version used for signing-in.
      *  @param string|null $value Value to set for the operatingSystem property.
     */
     public function setOperatingSystem(?string $value ): void {
@@ -201,7 +218,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the trustType property value. Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
+     * Sets the trustType property value. Indicates information on whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
      *  @param string|null $value Value to set for the trustType property.
     */
     public function setTrustType(?string $value ): void {

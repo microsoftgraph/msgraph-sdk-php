@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Image implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $height Optional. Height of the image, in pixels. Read-only. */
+    /**
+     * @var int|null $height Optional. Height of the image, in pixels. Read-only.
+    */
     private ?int $height = null;
     
-    /** @var int|null $width Optional. Width of the image, in pixels. Read-only. */
+    /**
+     * @var int|null $width Optional. Width of the image, in pixels. Read-only.
+    */
     private ?int $width = null;
     
     /**
@@ -30,7 +36,7 @@ class Image implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Image
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Image {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Image {
         return new Image();
     }
 
@@ -47,9 +53,10 @@ class Image implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'height' => function (self $o, ParseNode $n) { $o->setHeight($n->getIntegerValue()); },
-            'width' => function (self $o, ParseNode $n) { $o->setWidth($n->getIntegerValue()); },
+            'height' => function (ParseNode $n) use ($o) { $o->setHeight($n->getIntegerValue()); },
+            'width' => function (ParseNode $n) use ($o) { $o->setWidth($n->getIntegerValue()); },
         ];
     }
 

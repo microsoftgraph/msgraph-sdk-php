@@ -6,24 +6,36 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WorkbookChartFont extends Entity 
+class WorkbookChartFont extends Entity implements Parsable 
 {
-    /** @var bool|null $bold Represents the bold status of font. */
+    /**
+     * @var bool|null $bold Represents the bold status of font.
+    */
     private ?bool $bold = null;
     
-    /** @var string|null $color HTML color code representation of the text color. E.g. #FF0000 represents Red. */
+    /**
+     * @var string|null $color HTML color code representation of the text color. E.g. #FF0000 represents Red.
+    */
     private ?string $color = null;
     
-    /** @var bool|null $italic Represents the italic status of the font. */
+    /**
+     * @var bool|null $italic Represents the italic status of the font.
+    */
     private ?bool $italic = null;
     
-    /** @var string|null $name Font name (e.g. 'Calibri') */
+    /**
+     * @var string|null $name Font name (e.g. 'Calibri')
+    */
     private ?string $name = null;
     
-    /** @var float|null $size Size of the font (e.g. 11) */
+    /**
+     * @var float|null $size Size of the font (e.g. 11)
+    */
     private ?float $size = null;
     
-    /** @var string|null $underline Type of underline applied to the font. The possible values are: None, Single. */
+    /**
+     * @var string|null $underline Type of underline applied to the font. The possible values are: None, Single.
+    */
     private ?string $underline = null;
     
     /**
@@ -38,7 +50,7 @@ class WorkbookChartFont extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookChartFont
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookChartFont {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookChartFont {
         return new WorkbookChartFont();
     }
 
@@ -63,13 +75,14 @@ class WorkbookChartFont extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'bold' => function (self $o, ParseNode $n) { $o->setBold($n->getBooleanValue()); },
-            'color' => function (self $o, ParseNode $n) { $o->setColor($n->getStringValue()); },
-            'italic' => function (self $o, ParseNode $n) { $o->setItalic($n->getBooleanValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'size' => function (self $o, ParseNode $n) { $o->setSize($n->getFloatValue()); },
-            'underline' => function (self $o, ParseNode $n) { $o->setUnderline($n->getStringValue()); },
+            'bold' => function (ParseNode $n) use ($o) { $o->setBold($n->getBooleanValue()); },
+            'color' => function (ParseNode $n) use ($o) { $o->setColor($n->getStringValue()); },
+            'italic' => function (ParseNode $n) use ($o) { $o->setItalic($n->getBooleanValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'size' => function (ParseNode $n) use ($o) { $o->setSize($n->getFloatValue()); },
+            'underline' => function (ParseNode $n) use ($o) { $o->setUnderline($n->getStringValue()); },
         ]);
     }
 

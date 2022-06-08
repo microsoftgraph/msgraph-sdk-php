@@ -8,96 +8,156 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Psr\Http\Message\StreamInterface;
 
-class Message extends OutlookItem 
+class Message extends OutlookItem implements Parsable 
 {
-    /** @var array<Attachment>|null $attachments The fileAttachment and itemAttachment attachments for the message. */
+    /**
+     * @var array<Attachment>|null $attachments The fileAttachment and itemAttachment attachments for the message.
+    */
     private ?array $attachments = null;
     
-    /** @var array<Recipient>|null $bccRecipients The Bcc: recipients for the message. */
+    /**
+     * @var array<Recipient>|null $bccRecipients The Bcc: recipients for the message.
+    */
     private ?array $bccRecipients = null;
     
-    /** @var ItemBody|null $body The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body. */
+    /**
+     * @var ItemBody|null $body The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body.
+    */
     private ?ItemBody $body = null;
     
-    /** @var string|null $bodyPreview The first 255 characters of the message body. It is in text format. */
+    /**
+     * @var string|null $bodyPreview The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
+    */
     private ?string $bodyPreview = null;
     
-    /** @var array<Recipient>|null $ccRecipients The Cc: recipients for the message. */
+    /**
+     * @var array<Recipient>|null $ccRecipients The Cc: recipients for the message.
+    */
     private ?array $ccRecipients = null;
     
-    /** @var string|null $conversationId The ID of the conversation the email belongs to. */
+    /**
+     * @var string|null $conversationId The ID of the conversation the email belongs to.
+    */
     private ?string $conversationId = null;
     
-    /** @var StreamInterface|null $conversationIndex Indicates the position of the message within the conversation. */
+    /**
+     * @var StreamInterface|null $conversationIndex Indicates the position of the message within the conversation.
+    */
     private ?StreamInterface $conversationIndex = null;
     
-    /** @var array<Extension>|null $extensions The collection of open extensions defined for the message. Nullable. */
+    /**
+     * @var array<Extension>|null $extensions The collection of open extensions defined for the message. Nullable.
+    */
     private ?array $extensions = null;
     
-    /** @var FollowupFlag|null $flag The flag value that indicates the status, start date, due date, or completion date for the message. */
+    /**
+     * @var FollowupFlag|null $flag The flag value that indicates the status, start date, due date, or completion date for the message.
+    */
     private ?FollowupFlag $flag = null;
     
-    /** @var Recipient|null $from The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message. */
+    /**
+     * @var Recipient|null $from The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
+    */
     private ?Recipient $from = null;
     
-    /** @var bool|null $hasAttachments Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src='cid:image001.jpg@01D26CD8.6C05F070'>. */
+    /**
+     * @var bool|null $hasAttachments Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src='cid:image001.jpg@01D26CD8.6C05F070'>.
+    */
     private ?bool $hasAttachments = null;
     
-    /** @var Importance|null $importance The importance property */
+    /**
+     * @var Importance|null $importance The importance property
+    */
     private ?Importance $importance = null;
     
-    /** @var InferenceClassificationType|null $inferenceClassification The inferenceClassification property */
+    /**
+     * @var InferenceClassificationType|null $inferenceClassification The inferenceClassification property
+    */
     private ?InferenceClassificationType $inferenceClassification = null;
     
-    /** @var array<InternetMessageHeader>|null $internetMessageHeaders The internetMessageHeaders property */
+    /**
+     * @var array<InternetMessageHeader>|null $internetMessageHeaders The internetMessageHeaders property
+    */
     private ?array $internetMessageHeaders = null;
     
-    /** @var string|null $internetMessageId The internetMessageId property */
+    /**
+     * @var string|null $internetMessageId The internetMessageId property
+    */
     private ?string $internetMessageId = null;
     
-    /** @var bool|null $isDeliveryReceiptRequested The isDeliveryReceiptRequested property */
+    /**
+     * @var bool|null $isDeliveryReceiptRequested The isDeliveryReceiptRequested property
+    */
     private ?bool $isDeliveryReceiptRequested = null;
     
-    /** @var bool|null $isDraft The isDraft property */
+    /**
+     * @var bool|null $isDraft The isDraft property
+    */
     private ?bool $isDraft = null;
     
-    /** @var bool|null $isRead The isRead property */
+    /**
+     * @var bool|null $isRead The isRead property
+    */
     private ?bool $isRead = null;
     
-    /** @var bool|null $isReadReceiptRequested The isReadReceiptRequested property */
+    /**
+     * @var bool|null $isReadReceiptRequested The isReadReceiptRequested property
+    */
     private ?bool $isReadReceiptRequested = null;
     
-    /** @var array<MultiValueLegacyExtendedProperty>|null $multiValueExtendedProperties The collection of multi-value extended properties defined for the message. Nullable. */
+    /**
+     * @var array<MultiValueLegacyExtendedProperty>|null $multiValueExtendedProperties The collection of multi-value extended properties defined for the message. Nullable.
+    */
     private ?array $multiValueExtendedProperties = null;
     
-    /** @var string|null $parentFolderId The parentFolderId property */
+    /**
+     * @var string|null $parentFolderId The parentFolderId property
+    */
     private ?string $parentFolderId = null;
     
-    /** @var DateTime|null $receivedDateTime The receivedDateTime property */
+    /**
+     * @var DateTime|null $receivedDateTime The receivedDateTime property
+    */
     private ?DateTime $receivedDateTime = null;
     
-    /** @var array<Recipient>|null $replyTo The replyTo property */
+    /**
+     * @var array<Recipient>|null $replyTo The replyTo property
+    */
     private ?array $replyTo = null;
     
-    /** @var Recipient|null $sender The sender property */
+    /**
+     * @var Recipient|null $sender The sender property
+    */
     private ?Recipient $sender = null;
     
-    /** @var DateTime|null $sentDateTime The sentDateTime property */
+    /**
+     * @var DateTime|null $sentDateTime The sentDateTime property
+    */
     private ?DateTime $sentDateTime = null;
     
-    /** @var array<SingleValueLegacyExtendedProperty>|null $singleValueExtendedProperties The collection of single-value extended properties defined for the message. Nullable. */
+    /**
+     * @var array<SingleValueLegacyExtendedProperty>|null $singleValueExtendedProperties The collection of single-value extended properties defined for the message. Nullable.
+    */
     private ?array $singleValueExtendedProperties = null;
     
-    /** @var string|null $subject The subject property */
+    /**
+     * @var string|null $subject The subject property
+    */
     private ?string $subject = null;
     
-    /** @var array<Recipient>|null $toRecipients The toRecipients property */
+    /**
+     * @var array<Recipient>|null $toRecipients The toRecipients property
+    */
     private ?array $toRecipients = null;
     
-    /** @var ItemBody|null $uniqueBody The uniqueBody property */
+    /**
+     * @var ItemBody|null $uniqueBody The uniqueBody property
+    */
     private ?ItemBody $uniqueBody = null;
     
-    /** @var string|null $webLink The webLink property */
+    /**
+     * @var string|null $webLink The webLink property
+    */
     private ?string $webLink = null;
     
     /**
@@ -112,7 +172,14 @@ class Message extends OutlookItem
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Message
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Message {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Message {
+        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.message': return new Message();
+            }
+        }
         return new Message();
     }
 
@@ -141,7 +208,7 @@ class Message extends OutlookItem
     }
 
     /**
-     * Gets the bodyPreview property value. The first 255 characters of the message body. It is in text format.
+     * Gets the bodyPreview property value. The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
      * @return string|null
     */
     public function getBodyPreview(): ?string {
@@ -185,37 +252,38 @@ class Message extends OutlookItem
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'attachments' => function (self $o, ParseNode $n) { $o->setAttachments($n->getCollectionOfObjectValues(Attachment::class)); },
-            'bccRecipients' => function (self $o, ParseNode $n) { $o->setBccRecipients($n->getCollectionOfObjectValues(Recipient::class)); },
-            'body' => function (self $o, ParseNode $n) { $o->setBody($n->getObjectValue(ItemBody::class)); },
-            'bodyPreview' => function (self $o, ParseNode $n) { $o->setBodyPreview($n->getStringValue()); },
-            'ccRecipients' => function (self $o, ParseNode $n) { $o->setCcRecipients($n->getCollectionOfObjectValues(Recipient::class)); },
-            'conversationId' => function (self $o, ParseNode $n) { $o->setConversationId($n->getStringValue()); },
-            'conversationIndex' => function (self $o, ParseNode $n) { $o->setConversationIndex($n->getBinaryContent()); },
-            'extensions' => function (self $o, ParseNode $n) { $o->setExtensions($n->getCollectionOfObjectValues(Extension::class)); },
-            'flag' => function (self $o, ParseNode $n) { $o->setFlag($n->getObjectValue(FollowupFlag::class)); },
-            'from' => function (self $o, ParseNode $n) { $o->setFrom($n->getObjectValue(Recipient::class)); },
-            'hasAttachments' => function (self $o, ParseNode $n) { $o->setHasAttachments($n->getBooleanValue()); },
-            'importance' => function (self $o, ParseNode $n) { $o->setImportance($n->getEnumValue(Importance::class)); },
-            'inferenceClassification' => function (self $o, ParseNode $n) { $o->setInferenceClassification($n->getEnumValue(InferenceClassificationType::class)); },
-            'internetMessageHeaders' => function (self $o, ParseNode $n) { $o->setInternetMessageHeaders($n->getCollectionOfObjectValues(InternetMessageHeader::class)); },
-            'internetMessageId' => function (self $o, ParseNode $n) { $o->setInternetMessageId($n->getStringValue()); },
-            'isDeliveryReceiptRequested' => function (self $o, ParseNode $n) { $o->setIsDeliveryReceiptRequested($n->getBooleanValue()); },
-            'isDraft' => function (self $o, ParseNode $n) { $o->setIsDraft($n->getBooleanValue()); },
-            'isRead' => function (self $o, ParseNode $n) { $o->setIsRead($n->getBooleanValue()); },
-            'isReadReceiptRequested' => function (self $o, ParseNode $n) { $o->setIsReadReceiptRequested($n->getBooleanValue()); },
-            'multiValueExtendedProperties' => function (self $o, ParseNode $n) { $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::class)); },
-            'parentFolderId' => function (self $o, ParseNode $n) { $o->setParentFolderId($n->getStringValue()); },
-            'receivedDateTime' => function (self $o, ParseNode $n) { $o->setReceivedDateTime($n->getDateTimeValue()); },
-            'replyTo' => function (self $o, ParseNode $n) { $o->setReplyTo($n->getCollectionOfObjectValues(Recipient::class)); },
-            'sender' => function (self $o, ParseNode $n) { $o->setSender($n->getObjectValue(Recipient::class)); },
-            'sentDateTime' => function (self $o, ParseNode $n) { $o->setSentDateTime($n->getDateTimeValue()); },
-            'singleValueExtendedProperties' => function (self $o, ParseNode $n) { $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::class)); },
-            'subject' => function (self $o, ParseNode $n) { $o->setSubject($n->getStringValue()); },
-            'toRecipients' => function (self $o, ParseNode $n) { $o->setToRecipients($n->getCollectionOfObjectValues(Recipient::class)); },
-            'uniqueBody' => function (self $o, ParseNode $n) { $o->setUniqueBody($n->getObjectValue(ItemBody::class)); },
-            'webLink' => function (self $o, ParseNode $n) { $o->setWebLink($n->getStringValue()); },
+            'attachments' => function (ParseNode $n) use ($o) { $o->setAttachments($n->getCollectionOfObjectValues(array(Attachment::class, 'createFromDiscriminatorValue'))); },
+            'bccRecipients' => function (ParseNode $n) use ($o) { $o->setBccRecipients($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
+            'body' => function (ParseNode $n) use ($o) { $o->setBody($n->getObjectValue(array(ItemBody::class, 'createFromDiscriminatorValue'))); },
+            'bodyPreview' => function (ParseNode $n) use ($o) { $o->setBodyPreview($n->getStringValue()); },
+            'ccRecipients' => function (ParseNode $n) use ($o) { $o->setCcRecipients($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
+            'conversationId' => function (ParseNode $n) use ($o) { $o->setConversationId($n->getStringValue()); },
+            'conversationIndex' => function (ParseNode $n) use ($o) { $o->setConversationIndex($n->getBinaryContent()); },
+            'extensions' => function (ParseNode $n) use ($o) { $o->setExtensions($n->getCollectionOfObjectValues(array(Extension::class, 'createFromDiscriminatorValue'))); },
+            'flag' => function (ParseNode $n) use ($o) { $o->setFlag($n->getObjectValue(array(FollowupFlag::class, 'createFromDiscriminatorValue'))); },
+            'from' => function (ParseNode $n) use ($o) { $o->setFrom($n->getObjectValue(array(Recipient::class, 'createFromDiscriminatorValue'))); },
+            'hasAttachments' => function (ParseNode $n) use ($o) { $o->setHasAttachments($n->getBooleanValue()); },
+            'importance' => function (ParseNode $n) use ($o) { $o->setImportance($n->getEnumValue(Importance::class)); },
+            'inferenceClassification' => function (ParseNode $n) use ($o) { $o->setInferenceClassification($n->getEnumValue(InferenceClassificationType::class)); },
+            'internetMessageHeaders' => function (ParseNode $n) use ($o) { $o->setInternetMessageHeaders($n->getCollectionOfObjectValues(array(InternetMessageHeader::class, 'createFromDiscriminatorValue'))); },
+            'internetMessageId' => function (ParseNode $n) use ($o) { $o->setInternetMessageId($n->getStringValue()); },
+            'isDeliveryReceiptRequested' => function (ParseNode $n) use ($o) { $o->setIsDeliveryReceiptRequested($n->getBooleanValue()); },
+            'isDraft' => function (ParseNode $n) use ($o) { $o->setIsDraft($n->getBooleanValue()); },
+            'isRead' => function (ParseNode $n) use ($o) { $o->setIsRead($n->getBooleanValue()); },
+            'isReadReceiptRequested' => function (ParseNode $n) use ($o) { $o->setIsReadReceiptRequested($n->getBooleanValue()); },
+            'multiValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues(array(MultiValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
+            'parentFolderId' => function (ParseNode $n) use ($o) { $o->setParentFolderId($n->getStringValue()); },
+            'receivedDateTime' => function (ParseNode $n) use ($o) { $o->setReceivedDateTime($n->getDateTimeValue()); },
+            'replyTo' => function (ParseNode $n) use ($o) { $o->setReplyTo($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
+            'sender' => function (ParseNode $n) use ($o) { $o->setSender($n->getObjectValue(array(Recipient::class, 'createFromDiscriminatorValue'))); },
+            'sentDateTime' => function (ParseNode $n) use ($o) { $o->setSentDateTime($n->getDateTimeValue()); },
+            'singleValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues(array(SingleValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
+            'subject' => function (ParseNode $n) use ($o) { $o->setSubject($n->getStringValue()); },
+            'toRecipients' => function (ParseNode $n) use ($o) { $o->setToRecipients($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
+            'uniqueBody' => function (ParseNode $n) use ($o) { $o->setUniqueBody($n->getObjectValue(array(ItemBody::class, 'createFromDiscriminatorValue'))); },
+            'webLink' => function (ParseNode $n) use ($o) { $o->setWebLink($n->getStringValue()); },
         ]);
     }
 
@@ -458,7 +526,7 @@ class Message extends OutlookItem
     }
 
     /**
-     * Sets the bodyPreview property value. The first 255 characters of the message body. It is in text format.
+     * Sets the bodyPreview property value. The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
      *  @param string|null $value Value to set for the bodyPreview property.
     */
     public function setBodyPreview(?string $value ): void {

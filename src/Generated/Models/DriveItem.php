@@ -7,102 +7,166 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Psr\Http\Message\StreamInterface;
 
-class DriveItem extends BaseItem 
+class DriveItem extends BaseItem implements Parsable 
 {
-    /** @var ItemAnalytics|null $analytics Analytics about the view activities that took place on this item. */
+    /**
+     * @var ItemAnalytics|null $analytics Analytics about the view activities that took place on this item.
+    */
     private ?ItemAnalytics $analytics = null;
     
-    /** @var Audio|null $audio Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal. */
+    /**
+     * @var Audio|null $audio Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal.
+    */
     private ?Audio $audio = null;
     
-    /** @var Bundle|null $bundle Bundle metadata, if the item is a bundle. Read-only. */
+    /**
+     * @var Bundle|null $bundle Bundle metadata, if the item is a bundle. Read-only.
+    */
     private ?Bundle $bundle = null;
     
-    /** @var array<DriveItem>|null $children Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable. */
+    /**
+     * @var array<DriveItem>|null $children Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
+    */
     private ?array $children = null;
     
-    /** @var StreamInterface|null $content The content stream, if the item represents a file. */
+    /**
+     * @var StreamInterface|null $content The content stream, if the item represents a file.
+    */
     private ?StreamInterface $content = null;
     
-    /** @var string|null $cTag An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only. */
+    /**
+     * @var string|null $cTag An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+    */
     private ?string $cTag = null;
     
-    /** @var Deleted|null $deleted Information about the deleted state of the item. Read-only. */
+    /**
+     * @var Deleted|null $deleted Information about the deleted state of the item. Read-only.
+    */
     private ?Deleted $deleted = null;
     
-    /** @var File|null $file File metadata, if the item is a file. Read-only. */
+    /**
+     * @var File|null $file File metadata, if the item is a file. Read-only.
+    */
     private ?File $file = null;
     
-    /** @var FileSystemInfo|null $fileSystemInfo File system information on client. Read-write. */
+    /**
+     * @var FileSystemInfo|null $fileSystemInfo File system information on client. Read-write.
+    */
     private ?FileSystemInfo $fileSystemInfo = null;
     
-    /** @var Folder|null $folder Folder metadata, if the item is a folder. Read-only. */
+    /**
+     * @var Folder|null $folder Folder metadata, if the item is a folder. Read-only.
+    */
     private ?Folder $folder = null;
     
-    /** @var Image|null $image Image metadata, if the item is an image. Read-only. */
+    /**
+     * @var Image|null $image Image metadata, if the item is an image. Read-only.
+    */
     private ?Image $image = null;
     
-    /** @var ListItem|null $listItem For drives in SharePoint, the associated document library list item. Read-only. Nullable. */
+    /**
+     * @var ListItem|null $listItem For drives in SharePoint, the associated document library list item. Read-only. Nullable.
+    */
     private ?ListItem $listItem = null;
     
-    /** @var GeoCoordinates|null $location Location metadata, if the item has location data. Read-only. */
+    /**
+     * @var GeoCoordinates|null $location Location metadata, if the item has location data. Read-only.
+    */
     private ?GeoCoordinates $location = null;
     
-    /** @var Malware|null $malware Malware metadata, if the item was detected to contain malware. Read-only. */
+    /**
+     * @var Malware|null $malware Malware metadata, if the item was detected to contain malware. Read-only.
+    */
     private ?Malware $malware = null;
     
-    /** @var Package|null $package If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only. */
+    /**
+     * @var Package|null $package If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
+    */
     private ?Package $package = null;
     
-    /** @var PendingOperations|null $pendingOperations If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only. */
+    /**
+     * @var PendingOperations|null $pendingOperations If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
+    */
     private ?PendingOperations $pendingOperations = null;
     
-    /** @var array<Permission>|null $permissions The set of permissions for the item. Read-only. Nullable. */
+    /**
+     * @var array<Permission>|null $permissions The set of permissions for the item. Read-only. Nullable.
+    */
     private ?array $permissions = null;
     
-    /** @var Photo|null $photo Photo metadata, if the item is a photo. Read-only. */
+    /**
+     * @var Photo|null $photo Photo metadata, if the item is a photo. Read-only.
+    */
     private ?Photo $photo = null;
     
-    /** @var PublicationFacet|null $publication Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only. */
+    /**
+     * @var PublicationFacet|null $publication Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
+    */
     private ?PublicationFacet $publication = null;
     
-    /** @var RemoteItem|null $remoteItem Remote item data, if the item is shared from a drive other than the one being accessed. Read-only. */
+    /**
+     * @var RemoteItem|null $remoteItem Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
+    */
     private ?RemoteItem $remoteItem = null;
     
-    /** @var Root|null $root If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive. */
+    /**
+     * @var Root|null $root If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive.
+    */
     private ?Root $root = null;
     
-    /** @var SearchResult|null $searchResult Search metadata, if the item is from a search result. Read-only. */
+    /**
+     * @var SearchResult|null $searchResult Search metadata, if the item is from a search result. Read-only.
+    */
     private ?SearchResult $searchResult = null;
     
-    /** @var Shared|null $shared Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only. */
+    /**
+     * @var Shared|null $shared Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
+    */
     private ?Shared $shared = null;
     
-    /** @var SharepointIds|null $sharepointIds Returns identifiers useful for SharePoint REST compatibility. Read-only. */
+    /**
+     * @var SharepointIds|null $sharepointIds Returns identifiers useful for SharePoint REST compatibility. Read-only.
+    */
     private ?SharepointIds $sharepointIds = null;
     
-    /** @var int|null $size Size of the item in bytes. Read-only. */
+    /**
+     * @var int|null $size Size of the item in bytes. Read-only.
+    */
     private ?int $size = null;
     
-    /** @var SpecialFolder|null $specialFolder If the current item is also available as a special folder, this facet is returned. Read-only. */
+    /**
+     * @var SpecialFolder|null $specialFolder If the current item is also available as a special folder, this facet is returned. Read-only.
+    */
     private ?SpecialFolder $specialFolder = null;
     
-    /** @var array<Subscription>|null $subscriptions The set of subscriptions on the item. Only supported on the root of a drive. */
+    /**
+     * @var array<Subscription>|null $subscriptions The set of subscriptions on the item. Only supported on the root of a drive.
+    */
     private ?array $subscriptions = null;
     
-    /** @var array<ThumbnailSet>|null $thumbnails Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable. */
+    /**
+     * @var array<ThumbnailSet>|null $thumbnails Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
+    */
     private ?array $thumbnails = null;
     
-    /** @var array<DriveItemVersion>|null $versions The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable. */
+    /**
+     * @var array<DriveItemVersion>|null $versions The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
+    */
     private ?array $versions = null;
     
-    /** @var Video|null $video Video metadata, if the item is a video. Read-only. */
+    /**
+     * @var Video|null $video Video metadata, if the item is a video. Read-only.
+    */
     private ?Video $video = null;
     
-    /** @var string|null $webDavUrl WebDAV compatible URL for the item. */
+    /**
+     * @var string|null $webDavUrl WebDAV compatible URL for the item.
+    */
     private ?string $webDavUrl = null;
     
-    /** @var Workbook|null $workbook For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable. */
+    /**
+     * @var Workbook|null $workbook For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+    */
     private ?Workbook $workbook = null;
     
     /**
@@ -117,7 +181,7 @@ class DriveItem extends BaseItem
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DriveItem
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DriveItem {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DriveItem {
         return new DriveItem();
     }
 
@@ -130,7 +194,7 @@ class DriveItem extends BaseItem
     }
 
     /**
-     * Gets the audio property value. Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
+     * Gets the audio property value. Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal.
      * @return Audio|null
     */
     public function getAudio(): ?Audio {
@@ -182,39 +246,40 @@ class DriveItem extends BaseItem
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'analytics' => function (self $o, ParseNode $n) { $o->setAnalytics($n->getObjectValue(ItemAnalytics::class)); },
-            'audio' => function (self $o, ParseNode $n) { $o->setAudio($n->getObjectValue(Audio::class)); },
-            'bundle' => function (self $o, ParseNode $n) { $o->setBundle($n->getObjectValue(Bundle::class)); },
-            'children' => function (self $o, ParseNode $n) { $o->setChildren($n->getCollectionOfObjectValues(DriveItem::class)); },
-            'content' => function (self $o, ParseNode $n) { $o->setContent($n->getBinaryContent()); },
-            'cTag' => function (self $o, ParseNode $n) { $o->setCTag($n->getStringValue()); },
-            'deleted' => function (self $o, ParseNode $n) { $o->setDeleted($n->getObjectValue(Deleted::class)); },
-            'file' => function (self $o, ParseNode $n) { $o->setFile($n->getObjectValue(File::class)); },
-            'fileSystemInfo' => function (self $o, ParseNode $n) { $o->setFileSystemInfo($n->getObjectValue(FileSystemInfo::class)); },
-            'folder' => function (self $o, ParseNode $n) { $o->setFolder($n->getObjectValue(Folder::class)); },
-            'image' => function (self $o, ParseNode $n) { $o->setImage($n->getObjectValue(Image::class)); },
-            'listItem' => function (self $o, ParseNode $n) { $o->setListItem($n->getObjectValue(ListItem::class)); },
-            'location' => function (self $o, ParseNode $n) { $o->setLocation($n->getObjectValue(GeoCoordinates::class)); },
-            'malware' => function (self $o, ParseNode $n) { $o->setMalware($n->getObjectValue(Malware::class)); },
-            'package' => function (self $o, ParseNode $n) { $o->setPackage($n->getObjectValue(Package::class)); },
-            'pendingOperations' => function (self $o, ParseNode $n) { $o->setPendingOperations($n->getObjectValue(PendingOperations::class)); },
-            'permissions' => function (self $o, ParseNode $n) { $o->setPermissions($n->getCollectionOfObjectValues(Permission::class)); },
-            'photo' => function (self $o, ParseNode $n) { $o->setPhoto($n->getObjectValue(Photo::class)); },
-            'publication' => function (self $o, ParseNode $n) { $o->setPublication($n->getObjectValue(PublicationFacet::class)); },
-            'remoteItem' => function (self $o, ParseNode $n) { $o->setRemoteItem($n->getObjectValue(RemoteItem::class)); },
-            'root' => function (self $o, ParseNode $n) { $o->setRoot($n->getObjectValue(Root::class)); },
-            'searchResult' => function (self $o, ParseNode $n) { $o->setSearchResult($n->getObjectValue(SearchResult::class)); },
-            'shared' => function (self $o, ParseNode $n) { $o->setShared($n->getObjectValue(Shared::class)); },
-            'sharepointIds' => function (self $o, ParseNode $n) { $o->setSharepointIds($n->getObjectValue(SharepointIds::class)); },
-            'size' => function (self $o, ParseNode $n) { $o->setSize($n->getIntegerValue()); },
-            'specialFolder' => function (self $o, ParseNode $n) { $o->setSpecialFolder($n->getObjectValue(SpecialFolder::class)); },
-            'subscriptions' => function (self $o, ParseNode $n) { $o->setSubscriptions($n->getCollectionOfObjectValues(Subscription::class)); },
-            'thumbnails' => function (self $o, ParseNode $n) { $o->setThumbnails($n->getCollectionOfObjectValues(ThumbnailSet::class)); },
-            'versions' => function (self $o, ParseNode $n) { $o->setVersions($n->getCollectionOfObjectValues(DriveItemVersion::class)); },
-            'video' => function (self $o, ParseNode $n) { $o->setVideo($n->getObjectValue(Video::class)); },
-            'webDavUrl' => function (self $o, ParseNode $n) { $o->setWebDavUrl($n->getStringValue()); },
-            'workbook' => function (self $o, ParseNode $n) { $o->setWorkbook($n->getObjectValue(Workbook::class)); },
+            'analytics' => function (ParseNode $n) use ($o) { $o->setAnalytics($n->getObjectValue(array(ItemAnalytics::class, 'createFromDiscriminatorValue'))); },
+            'audio' => function (ParseNode $n) use ($o) { $o->setAudio($n->getObjectValue(array(Audio::class, 'createFromDiscriminatorValue'))); },
+            'bundle' => function (ParseNode $n) use ($o) { $o->setBundle($n->getObjectValue(array(Bundle::class, 'createFromDiscriminatorValue'))); },
+            'children' => function (ParseNode $n) use ($o) { $o->setChildren($n->getCollectionOfObjectValues(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
+            'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getBinaryContent()); },
+            'cTag' => function (ParseNode $n) use ($o) { $o->setCTag($n->getStringValue()); },
+            'deleted' => function (ParseNode $n) use ($o) { $o->setDeleted($n->getObjectValue(array(Deleted::class, 'createFromDiscriminatorValue'))); },
+            'file' => function (ParseNode $n) use ($o) { $o->setFile($n->getObjectValue(array(File::class, 'createFromDiscriminatorValue'))); },
+            'fileSystemInfo' => function (ParseNode $n) use ($o) { $o->setFileSystemInfo($n->getObjectValue(array(FileSystemInfo::class, 'createFromDiscriminatorValue'))); },
+            'folder' => function (ParseNode $n) use ($o) { $o->setFolder($n->getObjectValue(array(Folder::class, 'createFromDiscriminatorValue'))); },
+            'image' => function (ParseNode $n) use ($o) { $o->setImage($n->getObjectValue(array(Image::class, 'createFromDiscriminatorValue'))); },
+            'listItem' => function (ParseNode $n) use ($o) { $o->setListItem($n->getObjectValue(array(ListItem::class, 'createFromDiscriminatorValue'))); },
+            'location' => function (ParseNode $n) use ($o) { $o->setLocation($n->getObjectValue(array(GeoCoordinates::class, 'createFromDiscriminatorValue'))); },
+            'malware' => function (ParseNode $n) use ($o) { $o->setMalware($n->getObjectValue(array(Malware::class, 'createFromDiscriminatorValue'))); },
+            'package' => function (ParseNode $n) use ($o) { $o->setPackage($n->getObjectValue(array(Package::class, 'createFromDiscriminatorValue'))); },
+            'pendingOperations' => function (ParseNode $n) use ($o) { $o->setPendingOperations($n->getObjectValue(array(PendingOperations::class, 'createFromDiscriminatorValue'))); },
+            'permissions' => function (ParseNode $n) use ($o) { $o->setPermissions($n->getCollectionOfObjectValues(array(Permission::class, 'createFromDiscriminatorValue'))); },
+            'photo' => function (ParseNode $n) use ($o) { $o->setPhoto($n->getObjectValue(array(Photo::class, 'createFromDiscriminatorValue'))); },
+            'publication' => function (ParseNode $n) use ($o) { $o->setPublication($n->getObjectValue(array(PublicationFacet::class, 'createFromDiscriminatorValue'))); },
+            'remoteItem' => function (ParseNode $n) use ($o) { $o->setRemoteItem($n->getObjectValue(array(RemoteItem::class, 'createFromDiscriminatorValue'))); },
+            'root' => function (ParseNode $n) use ($o) { $o->setRoot($n->getObjectValue(array(Root::class, 'createFromDiscriminatorValue'))); },
+            'searchResult' => function (ParseNode $n) use ($o) { $o->setSearchResult($n->getObjectValue(array(SearchResult::class, 'createFromDiscriminatorValue'))); },
+            'shared' => function (ParseNode $n) use ($o) { $o->setShared($n->getObjectValue(array(Shared::class, 'createFromDiscriminatorValue'))); },
+            'sharepointIds' => function (ParseNode $n) use ($o) { $o->setSharepointIds($n->getObjectValue(array(SharepointIds::class, 'createFromDiscriminatorValue'))); },
+            'size' => function (ParseNode $n) use ($o) { $o->setSize($n->getIntegerValue()); },
+            'specialFolder' => function (ParseNode $n) use ($o) { $o->setSpecialFolder($n->getObjectValue(array(SpecialFolder::class, 'createFromDiscriminatorValue'))); },
+            'subscriptions' => function (ParseNode $n) use ($o) { $o->setSubscriptions($n->getCollectionOfObjectValues(array(Subscription::class, 'createFromDiscriminatorValue'))); },
+            'thumbnails' => function (ParseNode $n) use ($o) { $o->setThumbnails($n->getCollectionOfObjectValues(array(ThumbnailSet::class, 'createFromDiscriminatorValue'))); },
+            'versions' => function (ParseNode $n) use ($o) { $o->setVersions($n->getCollectionOfObjectValues(array(DriveItemVersion::class, 'createFromDiscriminatorValue'))); },
+            'video' => function (ParseNode $n) use ($o) { $o->setVideo($n->getObjectValue(array(Video::class, 'createFromDiscriminatorValue'))); },
+            'webDavUrl' => function (ParseNode $n) use ($o) { $o->setWebDavUrl($n->getStringValue()); },
+            'workbook' => function (ParseNode $n) use ($o) { $o->setWorkbook($n->getObjectValue(array(Workbook::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -283,7 +348,7 @@ class DriveItem extends BaseItem
     }
 
     /**
-     * Gets the pendingOperations property value. If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
+     * Gets the pendingOperations property value. If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
      * @return PendingOperations|null
     */
     public function getPendingOperations(): ?PendingOperations {
@@ -467,7 +532,7 @@ class DriveItem extends BaseItem
     }
 
     /**
-     * Sets the audio property value. Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
+     * Sets the audio property value. Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal.
      *  @param Audio|null $value Value to set for the audio property.
     */
     public function setAudio(?Audio $value ): void {
@@ -579,7 +644,7 @@ class DriveItem extends BaseItem
     }
 
     /**
-     * Sets the pendingOperations property value. If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
+     * Sets the pendingOperations property value. If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
      *  @param PendingOperations|null $value Value to set for the pendingOperations property.
     */
     public function setPendingOperations(?PendingOperations $value ): void {

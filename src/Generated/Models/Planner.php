@@ -6,15 +6,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Planner extends Entity 
+class Planner extends Entity implements Parsable 
 {
-    /** @var array<PlannerBucket>|null $buckets Read-only. Nullable. Returns a collection of the specified buckets */
+    /**
+     * @var array<PlannerBucket>|null $buckets Read-only. Nullable. Returns a collection of the specified buckets
+    */
     private ?array $buckets = null;
     
-    /** @var array<PlannerPlan>|null $plans Read-only. Nullable. Returns a collection of the specified plans */
+    /**
+     * @var array<PlannerPlan>|null $plans Read-only. Nullable. Returns a collection of the specified plans
+    */
     private ?array $plans = null;
     
-    /** @var array<PlannerTask>|null $tasks Read-only. Nullable. Returns a collection of the specified tasks */
+    /**
+     * @var array<PlannerTask>|null $tasks Read-only. Nullable. Returns a collection of the specified tasks
+    */
     private ?array $tasks = null;
     
     /**
@@ -29,7 +35,7 @@ class Planner extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Planner
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Planner {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Planner {
         return new Planner();
     }
 
@@ -46,10 +52,11 @@ class Planner extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'buckets' => function (self $o, ParseNode $n) { $o->setBuckets($n->getCollectionOfObjectValues(PlannerBucket::class)); },
-            'plans' => function (self $o, ParseNode $n) { $o->setPlans($n->getCollectionOfObjectValues(PlannerPlan::class)); },
-            'tasks' => function (self $o, ParseNode $n) { $o->setTasks($n->getCollectionOfObjectValues(PlannerTask::class)); },
+            'buckets' => function (ParseNode $n) use ($o) { $o->setBuckets($n->getCollectionOfObjectValues(array(PlannerBucket::class, 'createFromDiscriminatorValue'))); },
+            'plans' => function (ParseNode $n) use ($o) { $o->setPlans($n->getCollectionOfObjectValues(array(PlannerPlan::class, 'createFromDiscriminatorValue'))); },
+            'tasks' => function (ParseNode $n) use ($o) { $o->setTasks($n->getCollectionOfObjectValues(array(PlannerTask::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

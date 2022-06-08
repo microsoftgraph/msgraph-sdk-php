@@ -6,24 +6,36 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class SectionGroup extends OnenoteEntityHierarchyModel 
+class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable 
 {
-    /** @var Notebook|null $parentNotebook The notebook that contains the section group. Read-only. */
+    /**
+     * @var Notebook|null $parentNotebook The notebook that contains the section group. Read-only.
+    */
     private ?Notebook $parentNotebook = null;
     
-    /** @var SectionGroup|null $parentSectionGroup The section group that contains the section group. Read-only. */
+    /**
+     * @var SectionGroup|null $parentSectionGroup The section group that contains the section group. Read-only.
+    */
     private ?SectionGroup $parentSectionGroup = null;
     
-    /** @var array<SectionGroup>|null $sectionGroups The section groups in the section. Read-only. Nullable. */
+    /**
+     * @var array<SectionGroup>|null $sectionGroups The section groups in the section. Read-only. Nullable.
+    */
     private ?array $sectionGroups = null;
     
-    /** @var string|null $sectionGroupsUrl The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only. */
+    /**
+     * @var string|null $sectionGroupsUrl The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.
+    */
     private ?string $sectionGroupsUrl = null;
     
-    /** @var array<OnenoteSection>|null $sections The sections in the section group. Read-only. Nullable. */
+    /**
+     * @var array<OnenoteSection>|null $sections The sections in the section group. Read-only. Nullable.
+    */
     private ?array $sections = null;
     
-    /** @var string|null $sectionsUrl The URL for the sections navigation property, which returns all the sections in the section group. Read-only. */
+    /**
+     * @var string|null $sectionsUrl The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
+    */
     private ?string $sectionsUrl = null;
     
     /**
@@ -38,7 +50,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SectionGroup
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SectionGroup {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SectionGroup {
         return new SectionGroup();
     }
 
@@ -47,13 +59,14 @@ class SectionGroup extends OnenoteEntityHierarchyModel
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'parentNotebook' => function (self $o, ParseNode $n) { $o->setParentNotebook($n->getObjectValue(Notebook::class)); },
-            'parentSectionGroup' => function (self $o, ParseNode $n) { $o->setParentSectionGroup($n->getObjectValue(SectionGroup::class)); },
-            'sectionGroups' => function (self $o, ParseNode $n) { $o->setSectionGroups($n->getCollectionOfObjectValues(SectionGroup::class)); },
-            'sectionGroupsUrl' => function (self $o, ParseNode $n) { $o->setSectionGroupsUrl($n->getStringValue()); },
-            'sections' => function (self $o, ParseNode $n) { $o->setSections($n->getCollectionOfObjectValues(OnenoteSection::class)); },
-            'sectionsUrl' => function (self $o, ParseNode $n) { $o->setSectionsUrl($n->getStringValue()); },
+            'parentNotebook' => function (ParseNode $n) use ($o) { $o->setParentNotebook($n->getObjectValue(array(Notebook::class, 'createFromDiscriminatorValue'))); },
+            'parentSectionGroup' => function (ParseNode $n) use ($o) { $o->setParentSectionGroup($n->getObjectValue(array(SectionGroup::class, 'createFromDiscriminatorValue'))); },
+            'sectionGroups' => function (ParseNode $n) use ($o) { $o->setSectionGroups($n->getCollectionOfObjectValues(array(SectionGroup::class, 'createFromDiscriminatorValue'))); },
+            'sectionGroupsUrl' => function (ParseNode $n) use ($o) { $o->setSectionGroupsUrl($n->getStringValue()); },
+            'sections' => function (ParseNode $n) use ($o) { $o->setSections($n->getCollectionOfObjectValues(array(OnenoteSection::class, 'createFromDiscriminatorValue'))); },
+            'sectionsUrl' => function (ParseNode $n) use ($o) { $o->setSectionsUrl($n->getStringValue()); },
         ]);
     }
 

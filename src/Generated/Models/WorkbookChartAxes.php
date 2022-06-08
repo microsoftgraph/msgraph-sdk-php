@@ -6,15 +6,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WorkbookChartAxes extends Entity 
+class WorkbookChartAxes extends Entity implements Parsable 
 {
-    /** @var WorkbookChartAxis|null $categoryAxis Represents the category axis in a chart. Read-only. */
+    /**
+     * @var WorkbookChartAxis|null $categoryAxis Represents the category axis in a chart. Read-only.
+    */
     private ?WorkbookChartAxis $categoryAxis = null;
     
-    /** @var WorkbookChartAxis|null $seriesAxis Represents the series axis of a 3-dimensional chart. Read-only. */
+    /**
+     * @var WorkbookChartAxis|null $seriesAxis Represents the series axis of a 3-dimensional chart. Read-only.
+    */
     private ?WorkbookChartAxis $seriesAxis = null;
     
-    /** @var WorkbookChartAxis|null $valueAxis Represents the value axis in an axis. Read-only. */
+    /**
+     * @var WorkbookChartAxis|null $valueAxis Represents the value axis in an axis. Read-only.
+    */
     private ?WorkbookChartAxis $valueAxis = null;
     
     /**
@@ -29,7 +35,7 @@ class WorkbookChartAxes extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookChartAxes
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookChartAxes {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookChartAxes {
         return new WorkbookChartAxes();
     }
 
@@ -46,10 +52,11 @@ class WorkbookChartAxes extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'categoryAxis' => function (self $o, ParseNode $n) { $o->setCategoryAxis($n->getObjectValue(WorkbookChartAxis::class)); },
-            'seriesAxis' => function (self $o, ParseNode $n) { $o->setSeriesAxis($n->getObjectValue(WorkbookChartAxis::class)); },
-            'valueAxis' => function (self $o, ParseNode $n) { $o->setValueAxis($n->getObjectValue(WorkbookChartAxis::class)); },
+            'categoryAxis' => function (ParseNode $n) use ($o) { $o->setCategoryAxis($n->getObjectValue(array(WorkbookChartAxis::class, 'createFromDiscriminatorValue'))); },
+            'seriesAxis' => function (ParseNode $n) use ($o) { $o->setSeriesAxis($n->getObjectValue(array(WorkbookChartAxis::class, 'createFromDiscriminatorValue'))); },
+            'valueAxis' => function (ParseNode $n) use ($o) { $o->setValueAxis($n->getObjectValue(array(WorkbookChartAxis::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

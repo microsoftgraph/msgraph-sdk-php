@@ -6,7 +6,7 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ClaimsMappingPolicy extends StsPolicy 
+class ClaimsMappingPolicy extends StsPolicy implements Parsable 
 {
     /**
      * Instantiates a new claimsMappingPolicy and sets the default values.
@@ -20,7 +20,7 @@ class ClaimsMappingPolicy extends StsPolicy
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ClaimsMappingPolicy
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ClaimsMappingPolicy {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ClaimsMappingPolicy {
         return new ClaimsMappingPolicy();
     }
 
@@ -29,6 +29,7 @@ class ClaimsMappingPolicy extends StsPolicy
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

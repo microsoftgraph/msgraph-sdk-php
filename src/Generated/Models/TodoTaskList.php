@@ -6,24 +6,36 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class TodoTaskList extends Entity 
+class TodoTaskList extends Entity implements Parsable 
 {
-    /** @var string|null $displayName The name of the task list. */
+    /**
+     * @var string|null $displayName The name of the task list.
+    */
     private ?string $displayName = null;
     
-    /** @var array<Extension>|null $extensions The collection of open extensions defined for the task list. Nullable. */
+    /**
+     * @var array<Extension>|null $extensions The collection of open extensions defined for the task list. Nullable.
+    */
     private ?array $extensions = null;
     
-    /** @var bool|null $isOwner True if the user is owner of the given task list. */
+    /**
+     * @var bool|null $isOwner True if the user is owner of the given task list.
+    */
     private ?bool $isOwner = null;
     
-    /** @var bool|null $isShared True if the task list is shared with other users */
+    /**
+     * @var bool|null $isShared True if the task list is shared with other users
+    */
     private ?bool $isShared = null;
     
-    /** @var array<TodoTask>|null $tasks The tasks in this task list. Read-only. Nullable. */
+    /**
+     * @var array<TodoTask>|null $tasks The tasks in this task list. Read-only. Nullable.
+    */
     private ?array $tasks = null;
     
-    /** @var WellknownListName|null $wellknownListName Property indicating the list name if the given list is a well-known list. Possible values are: none, defaultList, flaggedEmails, unknownFutureValue. */
+    /**
+     * @var WellknownListName|null $wellknownListName Property indicating the list name if the given list is a well-known list. Possible values are: none, defaultList, flaggedEmails, unknownFutureValue.
+    */
     private ?WellknownListName $wellknownListName = null;
     
     /**
@@ -38,7 +50,7 @@ class TodoTaskList extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TodoTaskList
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TodoTaskList {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TodoTaskList {
         return new TodoTaskList();
     }
 
@@ -63,13 +75,14 @@ class TodoTaskList extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'extensions' => function (self $o, ParseNode $n) { $o->setExtensions($n->getCollectionOfObjectValues(Extension::class)); },
-            'isOwner' => function (self $o, ParseNode $n) { $o->setIsOwner($n->getBooleanValue()); },
-            'isShared' => function (self $o, ParseNode $n) { $o->setIsShared($n->getBooleanValue()); },
-            'tasks' => function (self $o, ParseNode $n) { $o->setTasks($n->getCollectionOfObjectValues(TodoTask::class)); },
-            'wellknownListName' => function (self $o, ParseNode $n) { $o->setWellknownListName($n->getEnumValue(WellknownListName::class)); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'extensions' => function (ParseNode $n) use ($o) { $o->setExtensions($n->getCollectionOfObjectValues(array(Extension::class, 'createFromDiscriminatorValue'))); },
+            'isOwner' => function (ParseNode $n) use ($o) { $o->setIsOwner($n->getBooleanValue()); },
+            'isShared' => function (ParseNode $n) use ($o) { $o->setIsShared($n->getBooleanValue()); },
+            'tasks' => function (ParseNode $n) use ($o) { $o->setTasks($n->getCollectionOfObjectValues(array(TodoTask::class, 'createFromDiscriminatorValue'))); },
+            'wellknownListName' => function (ParseNode $n) use ($o) { $o->setWellknownListName($n->getEnumValue(WellknownListName::class)); },
         ]);
     }
 
