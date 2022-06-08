@@ -6,27 +6,41 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class SubscribedSku extends Entity 
+class SubscribedSku extends Entity implements Parsable 
 {
-    /** @var string|null $appliesTo For example, 'User' or 'Company'. */
+    /**
+     * @var string|null $appliesTo For example, 'User' or 'Company'.
+    */
     private ?string $appliesTo = null;
     
-    /** @var string|null $capabilityStatus Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription. */
+    /**
+     * @var string|null $capabilityStatus Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription.
+    */
     private ?string $capabilityStatus = null;
     
-    /** @var int|null $consumedUnits The number of licenses that have been assigned. */
+    /**
+     * @var int|null $consumedUnits The number of licenses that have been assigned.
+    */
     private ?int $consumedUnits = null;
     
-    /** @var LicenseUnitsDetail|null $prepaidUnits Information about the number and status of prepaid licenses. */
+    /**
+     * @var LicenseUnitsDetail|null $prepaidUnits Information about the number and status of prepaid licenses.
+    */
     private ?LicenseUnitsDetail $prepaidUnits = null;
     
-    /** @var array<ServicePlanInfo>|null $servicePlans Information about the service plans that are available with the SKU. Not nullable */
+    /**
+     * @var array<ServicePlanInfo>|null $servicePlans Information about the service plans that are available with the SKU. Not nullable
+    */
     private ?array $servicePlans = null;
     
-    /** @var string|null $skuId The unique identifier (GUID) for the service SKU. */
+    /**
+     * @var string|null $skuId The unique identifier (GUID) for the service SKU.
+    */
     private ?string $skuId = null;
     
-    /** @var string|null $skuPartNumber The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus. */
+    /**
+     * @var string|null $skuPartNumber The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
+    */
     private ?string $skuPartNumber = null;
     
     /**
@@ -41,7 +55,7 @@ class SubscribedSku extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SubscribedSku
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SubscribedSku {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SubscribedSku {
         return new SubscribedSku();
     }
 
@@ -74,14 +88,15 @@ class SubscribedSku extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appliesTo' => function (self $o, ParseNode $n) { $o->setAppliesTo($n->getStringValue()); },
-            'capabilityStatus' => function (self $o, ParseNode $n) { $o->setCapabilityStatus($n->getStringValue()); },
-            'consumedUnits' => function (self $o, ParseNode $n) { $o->setConsumedUnits($n->getIntegerValue()); },
-            'prepaidUnits' => function (self $o, ParseNode $n) { $o->setPrepaidUnits($n->getObjectValue(LicenseUnitsDetail::class)); },
-            'servicePlans' => function (self $o, ParseNode $n) { $o->setServicePlans($n->getCollectionOfObjectValues(ServicePlanInfo::class)); },
-            'skuId' => function (self $o, ParseNode $n) { $o->setSkuId($n->getStringValue()); },
-            'skuPartNumber' => function (self $o, ParseNode $n) { $o->setSkuPartNumber($n->getStringValue()); },
+            'appliesTo' => function (ParseNode $n) use ($o) { $o->setAppliesTo($n->getStringValue()); },
+            'capabilityStatus' => function (ParseNode $n) use ($o) { $o->setCapabilityStatus($n->getStringValue()); },
+            'consumedUnits' => function (ParseNode $n) use ($o) { $o->setConsumedUnits($n->getIntegerValue()); },
+            'prepaidUnits' => function (ParseNode $n) use ($o) { $o->setPrepaidUnits($n->getObjectValue(array(LicenseUnitsDetail::class, 'createFromDiscriminatorValue'))); },
+            'servicePlans' => function (ParseNode $n) use ($o) { $o->setServicePlans($n->getCollectionOfObjectValues(array(ServicePlanInfo::class, 'createFromDiscriminatorValue'))); },
+            'skuId' => function (ParseNode $n) use ($o) { $o->setSkuId($n->getStringValue()); },
+            'skuPartNumber' => function (ParseNode $n) use ($o) { $o->setSkuPartNumber($n->getStringValue()); },
         ]);
     }
 

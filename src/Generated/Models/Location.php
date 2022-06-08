@@ -9,31 +9,49 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Location implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var PhysicalAddress|null $address The street address of the location. */
+    /**
+     * @var PhysicalAddress|null $address The street address of the location.
+    */
     private ?PhysicalAddress $address = null;
     
-    /** @var OutlookGeoCoordinates|null $coordinates The geographic coordinates and elevation of the location. */
+    /**
+     * @var OutlookGeoCoordinates|null $coordinates The geographic coordinates and elevation of the location.
+    */
     private ?OutlookGeoCoordinates $coordinates = null;
     
-    /** @var string|null $displayName The name associated with the location. */
+    /**
+     * @var string|null $displayName The name associated with the location.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $locationEmailAddress Optional email address of the location. */
+    /**
+     * @var string|null $locationEmailAddress Optional email address of the location.
+    */
     private ?string $locationEmailAddress = null;
     
-    /** @var LocationType|null $locationType The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only. */
+    /**
+     * @var LocationType|null $locationType The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
+    */
     private ?LocationType $locationType = null;
     
-    /** @var string|null $locationUri Optional URI representing the location. */
+    /**
+     * @var string|null $locationUri Optional URI representing the location.
+    */
     private ?string $locationUri = null;
     
-    /** @var string|null $uniqueId For internal use only. */
+    /**
+     * @var string|null $uniqueId For internal use only.
+    */
     private ?string $uniqueId = null;
     
-    /** @var LocationUniqueIdType|null $uniqueIdType For internal use only. */
+    /**
+     * @var LocationUniqueIdType|null $uniqueIdType For internal use only.
+    */
     private ?LocationUniqueIdType $uniqueIdType = null;
     
     /**
@@ -48,7 +66,7 @@ class Location implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Location
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Location {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Location {
         return new Location();
     }
 
@@ -89,15 +107,16 @@ class Location implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'address' => function (self $o, ParseNode $n) { $o->setAddress($n->getObjectValue(PhysicalAddress::class)); },
-            'coordinates' => function (self $o, ParseNode $n) { $o->setCoordinates($n->getObjectValue(OutlookGeoCoordinates::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'locationEmailAddress' => function (self $o, ParseNode $n) { $o->setLocationEmailAddress($n->getStringValue()); },
-            'locationType' => function (self $o, ParseNode $n) { $o->setLocationType($n->getEnumValue(LocationType::class)); },
-            'locationUri' => function (self $o, ParseNode $n) { $o->setLocationUri($n->getStringValue()); },
-            'uniqueId' => function (self $o, ParseNode $n) { $o->setUniqueId($n->getStringValue()); },
-            'uniqueIdType' => function (self $o, ParseNode $n) { $o->setUniqueIdType($n->getEnumValue(LocationUniqueIdType::class)); },
+            'address' => function (ParseNode $n) use ($o) { $o->setAddress($n->getObjectValue(array(PhysicalAddress::class, 'createFromDiscriminatorValue'))); },
+            'coordinates' => function (ParseNode $n) use ($o) { $o->setCoordinates($n->getObjectValue(array(OutlookGeoCoordinates::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'locationEmailAddress' => function (ParseNode $n) use ($o) { $o->setLocationEmailAddress($n->getStringValue()); },
+            'locationType' => function (ParseNode $n) use ($o) { $o->setLocationType($n->getEnumValue(LocationType::class)); },
+            'locationUri' => function (ParseNode $n) use ($o) { $o->setLocationUri($n->getStringValue()); },
+            'uniqueId' => function (ParseNode $n) use ($o) { $o->setUniqueId($n->getStringValue()); },
+            'uniqueIdType' => function (ParseNode $n) use ($o) { $o->setUniqueIdType($n->getEnumValue(LocationUniqueIdType::class)); },
         ];
     }
 
@@ -110,7 +129,7 @@ class Location implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the locationType property value. The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
+     * Gets the locationType property value. The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
      * @return LocationType|null
     */
     public function getLocationType(): ?LocationType {
@@ -198,7 +217,7 @@ class Location implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the locationType property value. The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
+     * Sets the locationType property value. The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
      *  @param LocationType|null $value Value to set for the locationType property.
     */
     public function setLocationType(?LocationType $value ): void {

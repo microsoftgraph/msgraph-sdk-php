@@ -10,19 +10,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class DeviceActionResult implements AdditionalDataHolder, Parsable 
 {
-    /** @var string|null $actionName Action name */
+    /**
+     * @var string|null $actionName Action name
+    */
     private ?string $actionName = null;
     
-    /** @var ActionState|null $actionState State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported. */
+    /**
+     * @var ActionState|null $actionState State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+    */
     private ?ActionState $actionState = null;
     
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var DateTime|null $lastUpdatedDateTime Time the action state was last updated */
+    /**
+     * @var DateTime|null $lastUpdatedDateTime Time the action state was last updated
+    */
     private ?DateTime $lastUpdatedDateTime = null;
     
-    /** @var DateTime|null $startDateTime Time the action was initiated */
+    /**
+     * @var DateTime|null $startDateTime Time the action was initiated
+    */
     private ?DateTime $startDateTime = null;
     
     /**
@@ -37,7 +47,7 @@ class DeviceActionResult implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceActionResult
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceActionResult {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceActionResult {
         return new DeviceActionResult();
     }
 
@@ -70,11 +80,12 @@ class DeviceActionResult implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'actionName' => function (self $o, ParseNode $n) { $o->setActionName($n->getStringValue()); },
-            'actionState' => function (self $o, ParseNode $n) { $o->setActionState($n->getEnumValue(ActionState::class)); },
-            'lastUpdatedDateTime' => function (self $o, ParseNode $n) { $o->setLastUpdatedDateTime($n->getDateTimeValue()); },
-            'startDateTime' => function (self $o, ParseNode $n) { $o->setStartDateTime($n->getDateTimeValue()); },
+            'actionName' => function (ParseNode $n) use ($o) { $o->setActionName($n->getStringValue()); },
+            'actionState' => function (ParseNode $n) use ($o) { $o->setActionState($n->getEnumValue(ActionState::class)); },
+            'lastUpdatedDateTime' => function (ParseNode $n) use ($o) { $o->setLastUpdatedDateTime($n->getDateTimeValue()); },
+            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
         ];
     }
 

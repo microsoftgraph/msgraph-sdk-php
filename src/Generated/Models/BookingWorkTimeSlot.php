@@ -10,13 +10,19 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 
 class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var Time|null $endTime The time of the day when work stops. For example, 17:00:00.0000000. */
+    /**
+     * @var Time|null $endTime The time of the day when work stops. For example, 17:00:00.0000000.
+    */
     private ?Time $endTime = null;
     
-    /** @var Time|null $startTime The time of the day when work starts. For example, 08:00:00.0000000. */
+    /**
+     * @var Time|null $startTime The time of the day when work starts. For example, 08:00:00.0000000.
+    */
     private ?Time $startTime = null;
     
     /**
@@ -31,7 +37,7 @@ class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return BookingWorkTimeSlot
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): BookingWorkTimeSlot {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): BookingWorkTimeSlot {
         return new BookingWorkTimeSlot();
     }
 
@@ -56,9 +62,10 @@ class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'endTime' => function (self $o, ParseNode $n) { $o->setEndTime($n->getTimeValue()); },
-            'startTime' => function (self $o, ParseNode $n) { $o->setStartTime($n->getTimeValue()); },
+            'endTime' => function (ParseNode $n) use ($o) { $o->setEndTime($n->getTimeValue()); },
+            'startTime' => function (ParseNode $n) use ($o) { $o->setStartTime($n->getTimeValue()); },
         ];
     }
 

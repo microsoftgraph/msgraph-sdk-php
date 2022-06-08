@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Connections\Item\Groups\Item\Members\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Identity;
+use Microsoft\Graph\Generated\Models\ExternalConnectors\Identity;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -17,13 +17,19 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class IdentityItemRequestBuilder 
 {
-    /** @var array<string, mixed> $pathParameters Path parameters for the request */
+    /**
+     * @var array<string, mixed> $pathParameters Path parameters for the request
+    */
     private array $pathParameters;
     
-    /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
+    /**
+     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+    */
     private RequestAdapter $requestAdapter;
     
-    /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
+    /**
+     * @var string $urlTemplate Url template to use to build the URL for the current request builder
+    */
     private string $urlTemplate;
     
     /**
@@ -32,51 +38,52 @@ class IdentityItemRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/connections/{externalConnection_id}/groups/{externalGroup_id}/members/{identity_id}{?select,expand}';
+        $this->urlTemplate = '{+baseurl}/connections/{externalConnection%2Did}/groups/{externalGroup%2Did}/members/{identity%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
      * Delete navigation property members for connections
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createDeleteRequestInformation(?array $headers = null, ?array $options = null): RequestInformation {
+    public function createDeleteRequestInformation(?IdentityItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
-        if ($headers !== null) {
-            $requestInfo->headers = array_merge($requestInfo->headers, $headers);
-        }
-        if ($options !== null) {
-            $requestInfo->addRequestOptions(...$options);
+        if ($requestConfiguration !== null) {
+            if ($requestConfiguration->headers !== null) {
+                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->options !== null) {
+                $requestInfo->addRequestOptions(...$requestConfiguration->options);
+            }
         }
         return $requestInfo;
     }
 
     /**
-     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
-     * @param array|null $queryParameters Request query parameters
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or other externalGroups as members.
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createGetRequestInformation(?array $queryParameters = null, ?array $headers = null, ?array $options = null): RequestInformation {
+    public function createGetRequestInformation(?IdentityItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        if ($headers !== null) {
-            $requestInfo->headers = array_merge($requestInfo->headers, $headers);
-        }
-        if ($queryParameters !== null) {
-            $requestInfo->setQueryParameters($queryParameters);
-        }
-        if ($options !== null) {
-            $requestInfo->addRequestOptions(...$options);
+        if ($requestConfiguration !== null) {
+            if ($requestConfiguration->headers !== null) {
+                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->queryParameters !== null) {
+                $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
+            }
+            if ($requestConfiguration->options !== null) {
+                $requestInfo->addRequestOptions(...$requestConfiguration->options);
+            }
         }
         return $requestInfo;
     }
@@ -84,53 +91,59 @@ class IdentityItemRequestBuilder
     /**
      * Update the navigation property members in connections
      * @param Identity $body 
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createPatchRequestInformation(Identity $body, ?array $headers = null, ?array $options = null): RequestInformation {
+    public function createPatchRequestInformation(Identity $body, ?IdentityItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
-        if ($headers !== null) {
-            $requestInfo->headers = array_merge($requestInfo->headers, $headers);
+        if ($requestConfiguration !== null) {
+            if ($requestConfiguration->headers !== null) {
+                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->options !== null) {
+                $requestInfo->addRequestOptions(...$requestConfiguration->options);
+            }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
-        if ($options !== null) {
-            $requestInfo->addRequestOptions(...$options);
-        }
         return $requestInfo;
     }
 
     /**
      * Delete navigation property members for connections
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
-    public function delete(?array $headers = null, ?array $options = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createDeleteRequestInformation($headers, $options);
+    public function delete(?IdentityItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+        $requestInfo = $this->createDeleteRequestInformation($requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, '', $responseHandler);
+            $errorMappings = [
+            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            ];
+            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
     }
 
     /**
-     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
-     * @param array|null $queryParameters Request query parameters
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or other externalGroups as members.
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
-    public function get(?array $queryParameters = null, ?array $headers = null, ?array $options = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createGetRequestInformation($queryParameters, $headers, $options);
+    public function get(?IdentityItemRequestBuilderGetRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+        $requestInfo = $this->createGetRequestInformation($requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, Identity::class, $responseHandler);
+            $errorMappings = [
+            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            ];
+            return $this->requestAdapter->sendAsync($requestInfo, array(Identity::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
@@ -139,15 +152,18 @@ class IdentityItemRequestBuilder
     /**
      * Update the navigation property members in connections
      * @param Identity $body 
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
-    public function patch(Identity $body, ?array $headers = null, ?array $options = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createPatchRequestInformation($body, $headers, $options);
+    public function patch(Identity $body, ?IdentityItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+        $requestInfo = $this->createPatchRequestInformation($body, $requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, '', $responseHandler);
+            $errorMappings = [
+            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            ];
+            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

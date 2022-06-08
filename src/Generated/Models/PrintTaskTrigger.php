@@ -6,12 +6,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class PrintTaskTrigger extends Entity 
+class PrintTaskTrigger extends Entity implements Parsable 
 {
-    /** @var PrintTaskDefinition|null $definition The definition property */
+    /**
+     * @var PrintTaskDefinition|null $definition The definition property
+    */
     private ?PrintTaskDefinition $definition = null;
     
-    /** @var PrintEvent|null $event The Universal Print event that will cause a new printTask to be triggered. Valid values are described in the following table. */
+    /**
+     * @var PrintEvent|null $event The Universal Print event that will cause a new printTask to be triggered. Valid values are described in the following table.
+    */
     private ?PrintEvent $event = null;
     
     /**
@@ -26,7 +30,7 @@ class PrintTaskTrigger extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrintTaskTrigger
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrintTaskTrigger {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrintTaskTrigger {
         return new PrintTaskTrigger();
     }
 
@@ -51,9 +55,10 @@ class PrintTaskTrigger extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'definition' => function (self $o, ParseNode $n) { $o->setDefinition($n->getObjectValue(PrintTaskDefinition::class)); },
-            'event' => function (self $o, ParseNode $n) { $o->setEvent($n->getEnumValue(PrintEvent::class)); },
+            'definition' => function (ParseNode $n) use ($o) { $o->setDefinition($n->getObjectValue(array(PrintTaskDefinition::class, 'createFromDiscriminatorValue'))); },
+            'event' => function (ParseNode $n) use ($o) { $o->setEvent($n->getEnumValue(PrintEvent::class)); },
         ]);
     }
 

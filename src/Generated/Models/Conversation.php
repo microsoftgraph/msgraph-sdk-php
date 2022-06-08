@@ -7,24 +7,36 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Conversation extends Entity 
+class Conversation extends Entity implements Parsable 
 {
-    /** @var bool|null $hasAttachments Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search. */
+    /**
+     * @var bool|null $hasAttachments Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search.
+    */
     private ?bool $hasAttachments = null;
     
-    /** @var DateTime|null $lastDeliveredDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $lastDeliveredDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, le, ge).
+    */
     private ?DateTime $lastDeliveredDateTime = null;
     
-    /** @var string|null $preview A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge). */
+    /**
+     * @var string|null $preview A short summary from the body of the latest post in this conversation.
+    */
     private ?string $preview = null;
     
-    /** @var array<ConversationThread>|null $threads A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable. */
+    /**
+     * @var array<ConversationThread>|null $threads A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
+    */
     private ?array $threads = null;
     
-    /** @var string|null $topic The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated. */
+    /**
+     * @var string|null $topic The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
+    */
     private ?string $topic = null;
     
-    /** @var array<string>|null $uniqueSenders All the users that sent a message to this Conversation. */
+    /**
+     * @var array<string>|null $uniqueSenders All the users that sent a message to this Conversation.
+    */
     private ?array $uniqueSenders = null;
     
     /**
@@ -39,7 +51,7 @@ class Conversation extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Conversation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Conversation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Conversation {
         return new Conversation();
     }
 
@@ -48,13 +60,14 @@ class Conversation extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'hasAttachments' => function (self $o, ParseNode $n) { $o->setHasAttachments($n->getBooleanValue()); },
-            'lastDeliveredDateTime' => function (self $o, ParseNode $n) { $o->setLastDeliveredDateTime($n->getDateTimeValue()); },
-            'preview' => function (self $o, ParseNode $n) { $o->setPreview($n->getStringValue()); },
-            'threads' => function (self $o, ParseNode $n) { $o->setThreads($n->getCollectionOfObjectValues(ConversationThread::class)); },
-            'topic' => function (self $o, ParseNode $n) { $o->setTopic($n->getStringValue()); },
-            'uniqueSenders' => function (self $o, ParseNode $n) { $o->setUniqueSenders($n->getCollectionOfPrimitiveValues()); },
+            'hasAttachments' => function (ParseNode $n) use ($o) { $o->setHasAttachments($n->getBooleanValue()); },
+            'lastDeliveredDateTime' => function (ParseNode $n) use ($o) { $o->setLastDeliveredDateTime($n->getDateTimeValue()); },
+            'preview' => function (ParseNode $n) use ($o) { $o->setPreview($n->getStringValue()); },
+            'threads' => function (ParseNode $n) use ($o) { $o->setThreads($n->getCollectionOfObjectValues(array(ConversationThread::class, 'createFromDiscriminatorValue'))); },
+            'topic' => function (ParseNode $n) use ($o) { $o->setTopic($n->getStringValue()); },
+            'uniqueSenders' => function (ParseNode $n) use ($o) { $o->setUniqueSenders($n->getCollectionOfPrimitiveValues()); },
         ]);
     }
 
@@ -67,7 +80,7 @@ class Conversation extends Entity
     }
 
     /**
-     * Gets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, le, ge).
      * @return DateTime|null
     */
     public function getLastDeliveredDateTime(): ?DateTime {
@@ -75,7 +88,7 @@ class Conversation extends Entity
     }
 
     /**
-     * Gets the preview property value. A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
+     * Gets the preview property value. A short summary from the body of the latest post in this conversation.
      * @return string|null
     */
     public function getPreview(): ?string {
@@ -129,7 +142,7 @@ class Conversation extends Entity
     }
 
     /**
-     * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, le, ge).
      *  @param DateTime|null $value Value to set for the lastDeliveredDateTime property.
     */
     public function setLastDeliveredDateTime(?DateTime $value ): void {
@@ -137,7 +150,7 @@ class Conversation extends Entity
     }
 
     /**
-     * Sets the preview property value. A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
+     * Sets the preview property value. A short summary from the body of the latest post in this conversation.
      *  @param string|null $value Value to set for the preview property.
     */
     public function setPreview(?string $value ): void {

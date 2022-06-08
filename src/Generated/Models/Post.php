@@ -7,45 +7,71 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Post extends OutlookItem 
+class Post extends OutlookItem implements Parsable 
 {
-    /** @var array<Attachment>|null $attachments Read-only. Nullable. Supports $expand. */
+    /**
+     * @var array<Attachment>|null $attachments The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand.
+    */
     private ?array $attachments = null;
     
-    /** @var ItemBody|null $body The contents of the post. This is a default property. This property can be null. */
+    /**
+     * @var ItemBody|null $body The contents of the post. This is a default property. This property can be null.
+    */
     private ?ItemBody $body = null;
     
-    /** @var string|null $conversationId Unique ID of the conversation. Read-only. */
+    /**
+     * @var string|null $conversationId Unique ID of the conversation. Read-only.
+    */
     private ?string $conversationId = null;
     
-    /** @var string|null $conversationThreadId Unique ID of the conversation thread. Read-only. */
+    /**
+     * @var string|null $conversationThreadId Unique ID of the conversation thread. Read-only.
+    */
     private ?string $conversationThreadId = null;
     
-    /** @var array<Extension>|null $extensions The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand. */
+    /**
+     * @var array<Extension>|null $extensions The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
+    */
     private ?array $extensions = null;
     
-    /** @var Recipient|null $from The from property */
+    /**
+     * @var Recipient|null $from The from property
+    */
     private ?Recipient $from = null;
     
-    /** @var bool|null $hasAttachments Indicates whether the post has at least one attachment. This is a default property. */
+    /**
+     * @var bool|null $hasAttachments Indicates whether the post has at least one attachment. This is a default property.
+    */
     private ?bool $hasAttachments = null;
     
-    /** @var Post|null $inReplyTo Read-only. Supports $expand. */
+    /**
+     * @var Post|null $inReplyTo The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand.
+    */
     private ?Post $inReplyTo = null;
     
-    /** @var array<MultiValueLegacyExtendedProperty>|null $multiValueExtendedProperties The collection of multi-value extended properties defined for the post. Read-only. Nullable. */
+    /**
+     * @var array<MultiValueLegacyExtendedProperty>|null $multiValueExtendedProperties The collection of multi-value extended properties defined for the post. Read-only. Nullable.
+    */
     private ?array $multiValueExtendedProperties = null;
     
-    /** @var array<Recipient>|null $newParticipants Conversation participants that were added to the thread as part of this post. */
+    /**
+     * @var array<Recipient>|null $newParticipants Conversation participants that were added to the thread as part of this post.
+    */
     private ?array $newParticipants = null;
     
-    /** @var DateTime|null $receivedDateTime Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $receivedDateTime Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $receivedDateTime = null;
     
-    /** @var Recipient|null $sender Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property. */
+    /**
+     * @var Recipient|null $sender Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
+    */
     private ?Recipient $sender = null;
     
-    /** @var array<SingleValueLegacyExtendedProperty>|null $singleValueExtendedProperties The collection of single-value extended properties defined for the post. Read-only. Nullable. */
+    /**
+     * @var array<SingleValueLegacyExtendedProperty>|null $singleValueExtendedProperties The collection of single-value extended properties defined for the post. Read-only. Nullable.
+    */
     private ?array $singleValueExtendedProperties = null;
     
     /**
@@ -60,12 +86,12 @@ class Post extends OutlookItem
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Post
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Post {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Post {
         return new Post();
     }
 
     /**
-     * Gets the attachments property value. Read-only. Nullable. Supports $expand.
+     * Gets the attachments property value. The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand.
      * @return array<Attachment>|null
     */
     public function getAttachments(): ?array {
@@ -109,20 +135,21 @@ class Post extends OutlookItem
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'attachments' => function (self $o, ParseNode $n) { $o->setAttachments($n->getCollectionOfObjectValues(Attachment::class)); },
-            'body' => function (self $o, ParseNode $n) { $o->setBody($n->getObjectValue(ItemBody::class)); },
-            'conversationId' => function (self $o, ParseNode $n) { $o->setConversationId($n->getStringValue()); },
-            'conversationThreadId' => function (self $o, ParseNode $n) { $o->setConversationThreadId($n->getStringValue()); },
-            'extensions' => function (self $o, ParseNode $n) { $o->setExtensions($n->getCollectionOfObjectValues(Extension::class)); },
-            'from' => function (self $o, ParseNode $n) { $o->setFrom($n->getObjectValue(Recipient::class)); },
-            'hasAttachments' => function (self $o, ParseNode $n) { $o->setHasAttachments($n->getBooleanValue()); },
-            'inReplyTo' => function (self $o, ParseNode $n) { $o->setInReplyTo($n->getObjectValue(Post::class)); },
-            'multiValueExtendedProperties' => function (self $o, ParseNode $n) { $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::class)); },
-            'newParticipants' => function (self $o, ParseNode $n) { $o->setNewParticipants($n->getCollectionOfObjectValues(Recipient::class)); },
-            'receivedDateTime' => function (self $o, ParseNode $n) { $o->setReceivedDateTime($n->getDateTimeValue()); },
-            'sender' => function (self $o, ParseNode $n) { $o->setSender($n->getObjectValue(Recipient::class)); },
-            'singleValueExtendedProperties' => function (self $o, ParseNode $n) { $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::class)); },
+            'attachments' => function (ParseNode $n) use ($o) { $o->setAttachments($n->getCollectionOfObjectValues(array(Attachment::class, 'createFromDiscriminatorValue'))); },
+            'body' => function (ParseNode $n) use ($o) { $o->setBody($n->getObjectValue(array(ItemBody::class, 'createFromDiscriminatorValue'))); },
+            'conversationId' => function (ParseNode $n) use ($o) { $o->setConversationId($n->getStringValue()); },
+            'conversationThreadId' => function (ParseNode $n) use ($o) { $o->setConversationThreadId($n->getStringValue()); },
+            'extensions' => function (ParseNode $n) use ($o) { $o->setExtensions($n->getCollectionOfObjectValues(array(Extension::class, 'createFromDiscriminatorValue'))); },
+            'from' => function (ParseNode $n) use ($o) { $o->setFrom($n->getObjectValue(array(Recipient::class, 'createFromDiscriminatorValue'))); },
+            'hasAttachments' => function (ParseNode $n) use ($o) { $o->setHasAttachments($n->getBooleanValue()); },
+            'inReplyTo' => function (ParseNode $n) use ($o) { $o->setInReplyTo($n->getObjectValue(array(Post::class, 'createFromDiscriminatorValue'))); },
+            'multiValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues(array(MultiValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
+            'newParticipants' => function (ParseNode $n) use ($o) { $o->setNewParticipants($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
+            'receivedDateTime' => function (ParseNode $n) use ($o) { $o->setReceivedDateTime($n->getDateTimeValue()); },
+            'sender' => function (ParseNode $n) use ($o) { $o->setSender($n->getObjectValue(array(Recipient::class, 'createFromDiscriminatorValue'))); },
+            'singleValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues(array(SingleValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -143,7 +170,7 @@ class Post extends OutlookItem
     }
 
     /**
-     * Gets the inReplyTo property value. Read-only. Supports $expand.
+     * Gets the inReplyTo property value. The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand.
      * @return Post|null
     */
     public function getInReplyTo(): ?Post {
@@ -212,7 +239,7 @@ class Post extends OutlookItem
     }
 
     /**
-     * Sets the attachments property value. Read-only. Nullable. Supports $expand.
+     * Sets the attachments property value. The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand.
      *  @param array<Attachment>|null $value Value to set for the attachments property.
     */
     public function setAttachments(?array $value ): void {
@@ -268,7 +295,7 @@ class Post extends OutlookItem
     }
 
     /**
-     * Sets the inReplyTo property value. Read-only. Supports $expand.
+     * Sets the inReplyTo property value. The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand.
      *  @param Post|null $value Value to set for the inReplyTo property.
     */
     public function setInReplyTo(?Post $value ): void {

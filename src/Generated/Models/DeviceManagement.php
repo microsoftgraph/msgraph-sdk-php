@@ -6,111 +6,181 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DeviceManagement extends Entity 
+class DeviceManagement extends Entity implements Parsable 
 {
-    /** @var ApplePushNotificationCertificate|null $applePushNotificationCertificate Apple push notification certificate. */
+    /**
+     * @var ApplePushNotificationCertificate|null $applePushNotificationCertificate Apple push notification certificate.
+    */
     private ?ApplePushNotificationCertificate $applePushNotificationCertificate = null;
     
-    /** @var array<ComplianceManagementPartner>|null $complianceManagementPartners The list of Compliance Management Partners configured by the tenant. */
+    /**
+     * @var array<ComplianceManagementPartner>|null $complianceManagementPartners The list of Compliance Management Partners configured by the tenant.
+    */
     private ?array $complianceManagementPartners = null;
     
-    /** @var OnPremisesConditionalAccessSettings|null $conditionalAccessSettings The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access */
+    /**
+     * @var OnPremisesConditionalAccessSettings|null $conditionalAccessSettings The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
+    */
     private ?OnPremisesConditionalAccessSettings $conditionalAccessSettings = null;
     
-    /** @var array<DetectedApp>|null $detectedApps The list of detected apps associated with a device. */
+    /**
+     * @var array<DetectedApp>|null $detectedApps The list of detected apps associated with a device.
+    */
     private ?array $detectedApps = null;
     
-    /** @var array<DeviceCategory>|null $deviceCategories The list of device categories with the tenant. */
+    /**
+     * @var array<DeviceCategory>|null $deviceCategories The list of device categories with the tenant.
+    */
     private ?array $deviceCategories = null;
     
-    /** @var array<DeviceCompliancePolicy>|null $deviceCompliancePolicies The device compliance policies. */
+    /**
+     * @var array<DeviceCompliancePolicy>|null $deviceCompliancePolicies The device compliance policies.
+    */
     private ?array $deviceCompliancePolicies = null;
     
-    /** @var DeviceCompliancePolicyDeviceStateSummary|null $deviceCompliancePolicyDeviceStateSummary The device compliance state summary for this account. */
+    /**
+     * @var DeviceCompliancePolicyDeviceStateSummary|null $deviceCompliancePolicyDeviceStateSummary The device compliance state summary for this account.
+    */
     private ?DeviceCompliancePolicyDeviceStateSummary $deviceCompliancePolicyDeviceStateSummary = null;
     
-    /** @var array<DeviceCompliancePolicySettingStateSummary>|null $deviceCompliancePolicySettingStateSummaries The summary states of compliance policy settings for this account. */
+    /**
+     * @var array<DeviceCompliancePolicySettingStateSummary>|null $deviceCompliancePolicySettingStateSummaries The summary states of compliance policy settings for this account.
+    */
     private ?array $deviceCompliancePolicySettingStateSummaries = null;
     
-    /** @var DeviceConfigurationDeviceStateSummary|null $deviceConfigurationDeviceStateSummaries The device configuration device state summary for this account. */
+    /**
+     * @var DeviceConfigurationDeviceStateSummary|null $deviceConfigurationDeviceStateSummaries The device configuration device state summary for this account.
+    */
     private ?DeviceConfigurationDeviceStateSummary $deviceConfigurationDeviceStateSummaries = null;
     
-    /** @var array<DeviceConfiguration>|null $deviceConfigurations The device configurations. */
+    /**
+     * @var array<DeviceConfiguration>|null $deviceConfigurations The device configurations.
+    */
     private ?array $deviceConfigurations = null;
     
-    /** @var array<DeviceEnrollmentConfiguration>|null $deviceEnrollmentConfigurations The list of device enrollment configurations */
+    /**
+     * @var array<DeviceEnrollmentConfiguration>|null $deviceEnrollmentConfigurations The list of device enrollment configurations
+    */
     private ?array $deviceEnrollmentConfigurations = null;
     
-    /** @var array<DeviceManagementPartner>|null $deviceManagementPartners The list of Device Management Partners configured by the tenant. */
+    /**
+     * @var array<DeviceManagementPartner>|null $deviceManagementPartners The list of Device Management Partners configured by the tenant.
+    */
     private ?array $deviceManagementPartners = null;
     
-    /** @var array<DeviceManagementExchangeConnector>|null $exchangeConnectors The list of Exchange Connectors configured by the tenant. */
+    /**
+     * @var array<DeviceManagementExchangeConnector>|null $exchangeConnectors The list of Exchange Connectors configured by the tenant.
+    */
     private ?array $exchangeConnectors = null;
     
-    /** @var array<ImportedWindowsAutopilotDeviceIdentity>|null $importedWindowsAutopilotDeviceIdentities Collection of imported Windows autopilot devices. */
+    /**
+     * @var array<ImportedWindowsAutopilotDeviceIdentity>|null $importedWindowsAutopilotDeviceIdentities Collection of imported Windows autopilot devices.
+    */
     private ?array $importedWindowsAutopilotDeviceIdentities = null;
     
-    /** @var string|null $intuneAccountId Intune Account Id for given tenant */
+    /**
+     * @var string|null $intuneAccountId Intune Account ID for given tenant
+    */
     private ?string $intuneAccountId = null;
     
-    /** @var IntuneBrand|null $intuneBrand intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal. */
+    /**
+     * @var IntuneBrand|null $intuneBrand intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
+    */
     private ?IntuneBrand $intuneBrand = null;
     
-    /** @var array<IosUpdateDeviceStatus>|null $iosUpdateStatuses The IOS software update installation statuses for this account. */
+    /**
+     * @var array<IosUpdateDeviceStatus>|null $iosUpdateStatuses The IOS software update installation statuses for this account.
+    */
     private ?array $iosUpdateStatuses = null;
     
-    /** @var ManagedDeviceOverview|null $managedDeviceOverview Device overview */
+    /**
+     * @var ManagedDeviceOverview|null $managedDeviceOverview Device overview
+    */
     private ?ManagedDeviceOverview $managedDeviceOverview = null;
     
-    /** @var array<ManagedDevice>|null $managedDevices The list of managed devices. */
+    /**
+     * @var array<ManagedDevice>|null $managedDevices The list of managed devices.
+    */
     private ?array $managedDevices = null;
     
-    /** @var array<MobileThreatDefenseConnector>|null $mobileThreatDefenseConnectors The list of Mobile threat Defense connectors configured by the tenant. */
+    /**
+     * @var array<MobileThreatDefenseConnector>|null $mobileThreatDefenseConnectors The list of Mobile threat Defense connectors configured by the tenant.
+    */
     private ?array $mobileThreatDefenseConnectors = null;
     
-    /** @var array<NotificationMessageTemplate>|null $notificationMessageTemplates The Notification Message Templates. */
+    /**
+     * @var array<NotificationMessageTemplate>|null $notificationMessageTemplates The Notification Message Templates.
+    */
     private ?array $notificationMessageTemplates = null;
     
-    /** @var array<RemoteAssistancePartner>|null $remoteAssistancePartners The remote assist partners. */
+    /**
+     * @var array<RemoteAssistancePartner>|null $remoteAssistancePartners The remote assist partners.
+    */
     private ?array $remoteAssistancePartners = null;
     
-    /** @var DeviceManagementReports|null $reports Reports singleton */
+    /**
+     * @var DeviceManagementReports|null $reports Reports singleton
+    */
     private ?DeviceManagementReports $reports = null;
     
-    /** @var array<ResourceOperation>|null $resourceOperations The Resource Operations. */
+    /**
+     * @var array<ResourceOperation>|null $resourceOperations The Resource Operations.
+    */
     private ?array $resourceOperations = null;
     
-    /** @var array<DeviceAndAppManagementRoleAssignment>|null $roleAssignments The Role Assignments. */
+    /**
+     * @var array<DeviceAndAppManagementRoleAssignment>|null $roleAssignments The Role Assignments.
+    */
     private ?array $roleAssignments = null;
     
-    /** @var array<RoleDefinition>|null $roleDefinitions The Role Definitions. */
+    /**
+     * @var array<RoleDefinition>|null $roleDefinitions The Role Definitions.
+    */
     private ?array $roleDefinitions = null;
     
-    /** @var DeviceManagementSettings|null $settings Account level settings. */
+    /**
+     * @var DeviceManagementSettings|null $settings Account level settings.
+    */
     private ?DeviceManagementSettings $settings = null;
     
-    /** @var SoftwareUpdateStatusSummary|null $softwareUpdateStatusSummary The software update status summary. */
+    /**
+     * @var SoftwareUpdateStatusSummary|null $softwareUpdateStatusSummary The software update status summary.
+    */
     private ?SoftwareUpdateStatusSummary $softwareUpdateStatusSummary = null;
     
-    /** @var DeviceManagementSubscriptionState|null $subscriptionState Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut. */
+    /**
+     * @var DeviceManagementSubscriptionState|null $subscriptionState Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+    */
     private ?DeviceManagementSubscriptionState $subscriptionState = null;
     
-    /** @var array<TelecomExpenseManagementPartner>|null $telecomExpenseManagementPartners The telecom expense management partners. */
+    /**
+     * @var array<TelecomExpenseManagementPartner>|null $telecomExpenseManagementPartners The telecom expense management partners.
+    */
     private ?array $telecomExpenseManagementPartners = null;
     
-    /** @var array<TermsAndConditions>|null $termsAndConditions The terms and conditions associated with device management of the company. */
+    /**
+     * @var array<TermsAndConditions>|null $termsAndConditions The terms and conditions associated with device management of the company.
+    */
     private ?array $termsAndConditions = null;
     
-    /** @var array<DeviceManagementTroubleshootingEvent>|null $troubleshootingEvents The list of troubleshooting events for the tenant. */
+    /**
+     * @var array<DeviceManagementTroubleshootingEvent>|null $troubleshootingEvents The list of troubleshooting events for the tenant.
+    */
     private ?array $troubleshootingEvents = null;
     
-    /** @var array<WindowsAutopilotDeviceIdentity>|null $windowsAutopilotDeviceIdentities The Windows autopilot device identities contained collection. */
+    /**
+     * @var array<WindowsAutopilotDeviceIdentity>|null $windowsAutopilotDeviceIdentities The Windows autopilot device identities contained collection.
+    */
     private ?array $windowsAutopilotDeviceIdentities = null;
     
-    /** @var array<WindowsInformationProtectionAppLearningSummary>|null $windowsInformationProtectionAppLearningSummaries The windows information protection app learning summaries. */
+    /**
+     * @var array<WindowsInformationProtectionAppLearningSummary>|null $windowsInformationProtectionAppLearningSummaries The windows information protection app learning summaries.
+    */
     private ?array $windowsInformationProtectionAppLearningSummaries = null;
     
-    /** @var array<WindowsInformationProtectionNetworkLearningSummary>|null $windowsInformationProtectionNetworkLearningSummaries The windows information protection network learning summaries. */
+    /**
+     * @var array<WindowsInformationProtectionNetworkLearningSummary>|null $windowsInformationProtectionNetworkLearningSummaries The windows information protection network learning summaries.
+    */
     private ?array $windowsInformationProtectionNetworkLearningSummaries = null;
     
     /**
@@ -125,7 +195,7 @@ class DeviceManagement extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceManagement
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceManagement {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceManagement {
         return new DeviceManagement();
     }
 
@@ -238,42 +308,43 @@ class DeviceManagement extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'applePushNotificationCertificate' => function (self $o, ParseNode $n) { $o->setApplePushNotificationCertificate($n->getObjectValue(ApplePushNotificationCertificate::class)); },
-            'complianceManagementPartners' => function (self $o, ParseNode $n) { $o->setComplianceManagementPartners($n->getCollectionOfObjectValues(ComplianceManagementPartner::class)); },
-            'conditionalAccessSettings' => function (self $o, ParseNode $n) { $o->setConditionalAccessSettings($n->getObjectValue(OnPremisesConditionalAccessSettings::class)); },
-            'detectedApps' => function (self $o, ParseNode $n) { $o->setDetectedApps($n->getCollectionOfObjectValues(DetectedApp::class)); },
-            'deviceCategories' => function (self $o, ParseNode $n) { $o->setDeviceCategories($n->getCollectionOfObjectValues(DeviceCategory::class)); },
-            'deviceCompliancePolicies' => function (self $o, ParseNode $n) { $o->setDeviceCompliancePolicies($n->getCollectionOfObjectValues(DeviceCompliancePolicy::class)); },
-            'deviceCompliancePolicyDeviceStateSummary' => function (self $o, ParseNode $n) { $o->setDeviceCompliancePolicyDeviceStateSummary($n->getObjectValue(DeviceCompliancePolicyDeviceStateSummary::class)); },
-            'deviceCompliancePolicySettingStateSummaries' => function (self $o, ParseNode $n) { $o->setDeviceCompliancePolicySettingStateSummaries($n->getCollectionOfObjectValues(DeviceCompliancePolicySettingStateSummary::class)); },
-            'deviceConfigurationDeviceStateSummaries' => function (self $o, ParseNode $n) { $o->setDeviceConfigurationDeviceStateSummaries($n->getObjectValue(DeviceConfigurationDeviceStateSummary::class)); },
-            'deviceConfigurations' => function (self $o, ParseNode $n) { $o->setDeviceConfigurations($n->getCollectionOfObjectValues(DeviceConfiguration::class)); },
-            'deviceEnrollmentConfigurations' => function (self $o, ParseNode $n) { $o->setDeviceEnrollmentConfigurations($n->getCollectionOfObjectValues(DeviceEnrollmentConfiguration::class)); },
-            'deviceManagementPartners' => function (self $o, ParseNode $n) { $o->setDeviceManagementPartners($n->getCollectionOfObjectValues(DeviceManagementPartner::class)); },
-            'exchangeConnectors' => function (self $o, ParseNode $n) { $o->setExchangeConnectors($n->getCollectionOfObjectValues(DeviceManagementExchangeConnector::class)); },
-            'importedWindowsAutopilotDeviceIdentities' => function (self $o, ParseNode $n) { $o->setImportedWindowsAutopilotDeviceIdentities($n->getCollectionOfObjectValues(ImportedWindowsAutopilotDeviceIdentity::class)); },
-            'intuneAccountId' => function (self $o, ParseNode $n) { $o->setIntuneAccountId($n->getStringValue()); },
-            'intuneBrand' => function (self $o, ParseNode $n) { $o->setIntuneBrand($n->getObjectValue(IntuneBrand::class)); },
-            'iosUpdateStatuses' => function (self $o, ParseNode $n) { $o->setIosUpdateStatuses($n->getCollectionOfObjectValues(IosUpdateDeviceStatus::class)); },
-            'managedDeviceOverview' => function (self $o, ParseNode $n) { $o->setManagedDeviceOverview($n->getObjectValue(ManagedDeviceOverview::class)); },
-            'managedDevices' => function (self $o, ParseNode $n) { $o->setManagedDevices($n->getCollectionOfObjectValues(ManagedDevice::class)); },
-            'mobileThreatDefenseConnectors' => function (self $o, ParseNode $n) { $o->setMobileThreatDefenseConnectors($n->getCollectionOfObjectValues(MobileThreatDefenseConnector::class)); },
-            'notificationMessageTemplates' => function (self $o, ParseNode $n) { $o->setNotificationMessageTemplates($n->getCollectionOfObjectValues(NotificationMessageTemplate::class)); },
-            'remoteAssistancePartners' => function (self $o, ParseNode $n) { $o->setRemoteAssistancePartners($n->getCollectionOfObjectValues(RemoteAssistancePartner::class)); },
-            'reports' => function (self $o, ParseNode $n) { $o->setReports($n->getObjectValue(DeviceManagementReports::class)); },
-            'resourceOperations' => function (self $o, ParseNode $n) { $o->setResourceOperations($n->getCollectionOfObjectValues(ResourceOperation::class)); },
-            'roleAssignments' => function (self $o, ParseNode $n) { $o->setRoleAssignments($n->getCollectionOfObjectValues(DeviceAndAppManagementRoleAssignment::class)); },
-            'roleDefinitions' => function (self $o, ParseNode $n) { $o->setRoleDefinitions($n->getCollectionOfObjectValues(RoleDefinition::class)); },
-            'settings' => function (self $o, ParseNode $n) { $o->setSettings($n->getObjectValue(DeviceManagementSettings::class)); },
-            'softwareUpdateStatusSummary' => function (self $o, ParseNode $n) { $o->setSoftwareUpdateStatusSummary($n->getObjectValue(SoftwareUpdateStatusSummary::class)); },
-            'subscriptionState' => function (self $o, ParseNode $n) { $o->setSubscriptionState($n->getEnumValue(DeviceManagementSubscriptionState::class)); },
-            'telecomExpenseManagementPartners' => function (self $o, ParseNode $n) { $o->setTelecomExpenseManagementPartners($n->getCollectionOfObjectValues(TelecomExpenseManagementPartner::class)); },
-            'termsAndConditions' => function (self $o, ParseNode $n) { $o->setTermsAndConditions($n->getCollectionOfObjectValues(TermsAndConditions::class)); },
-            'troubleshootingEvents' => function (self $o, ParseNode $n) { $o->setTroubleshootingEvents($n->getCollectionOfObjectValues(DeviceManagementTroubleshootingEvent::class)); },
-            'windowsAutopilotDeviceIdentities' => function (self $o, ParseNode $n) { $o->setWindowsAutopilotDeviceIdentities($n->getCollectionOfObjectValues(WindowsAutopilotDeviceIdentity::class)); },
-            'windowsInformationProtectionAppLearningSummaries' => function (self $o, ParseNode $n) { $o->setWindowsInformationProtectionAppLearningSummaries($n->getCollectionOfObjectValues(WindowsInformationProtectionAppLearningSummary::class)); },
-            'windowsInformationProtectionNetworkLearningSummaries' => function (self $o, ParseNode $n) { $o->setWindowsInformationProtectionNetworkLearningSummaries($n->getCollectionOfObjectValues(WindowsInformationProtectionNetworkLearningSummary::class)); },
+            'applePushNotificationCertificate' => function (ParseNode $n) use ($o) { $o->setApplePushNotificationCertificate($n->getObjectValue(array(ApplePushNotificationCertificate::class, 'createFromDiscriminatorValue'))); },
+            'complianceManagementPartners' => function (ParseNode $n) use ($o) { $o->setComplianceManagementPartners($n->getCollectionOfObjectValues(array(ComplianceManagementPartner::class, 'createFromDiscriminatorValue'))); },
+            'conditionalAccessSettings' => function (ParseNode $n) use ($o) { $o->setConditionalAccessSettings($n->getObjectValue(array(OnPremisesConditionalAccessSettings::class, 'createFromDiscriminatorValue'))); },
+            'detectedApps' => function (ParseNode $n) use ($o) { $o->setDetectedApps($n->getCollectionOfObjectValues(array(DetectedApp::class, 'createFromDiscriminatorValue'))); },
+            'deviceCategories' => function (ParseNode $n) use ($o) { $o->setDeviceCategories($n->getCollectionOfObjectValues(array(DeviceCategory::class, 'createFromDiscriminatorValue'))); },
+            'deviceCompliancePolicies' => function (ParseNode $n) use ($o) { $o->setDeviceCompliancePolicies($n->getCollectionOfObjectValues(array(DeviceCompliancePolicy::class, 'createFromDiscriminatorValue'))); },
+            'deviceCompliancePolicyDeviceStateSummary' => function (ParseNode $n) use ($o) { $o->setDeviceCompliancePolicyDeviceStateSummary($n->getObjectValue(array(DeviceCompliancePolicyDeviceStateSummary::class, 'createFromDiscriminatorValue'))); },
+            'deviceCompliancePolicySettingStateSummaries' => function (ParseNode $n) use ($o) { $o->setDeviceCompliancePolicySettingStateSummaries($n->getCollectionOfObjectValues(array(DeviceCompliancePolicySettingStateSummary::class, 'createFromDiscriminatorValue'))); },
+            'deviceConfigurationDeviceStateSummaries' => function (ParseNode $n) use ($o) { $o->setDeviceConfigurationDeviceStateSummaries($n->getObjectValue(array(DeviceConfigurationDeviceStateSummary::class, 'createFromDiscriminatorValue'))); },
+            'deviceConfigurations' => function (ParseNode $n) use ($o) { $o->setDeviceConfigurations($n->getCollectionOfObjectValues(array(DeviceConfiguration::class, 'createFromDiscriminatorValue'))); },
+            'deviceEnrollmentConfigurations' => function (ParseNode $n) use ($o) { $o->setDeviceEnrollmentConfigurations($n->getCollectionOfObjectValues(array(DeviceEnrollmentConfiguration::class, 'createFromDiscriminatorValue'))); },
+            'deviceManagementPartners' => function (ParseNode $n) use ($o) { $o->setDeviceManagementPartners($n->getCollectionOfObjectValues(array(DeviceManagementPartner::class, 'createFromDiscriminatorValue'))); },
+            'exchangeConnectors' => function (ParseNode $n) use ($o) { $o->setExchangeConnectors($n->getCollectionOfObjectValues(array(DeviceManagementExchangeConnector::class, 'createFromDiscriminatorValue'))); },
+            'importedWindowsAutopilotDeviceIdentities' => function (ParseNode $n) use ($o) { $o->setImportedWindowsAutopilotDeviceIdentities($n->getCollectionOfObjectValues(array(ImportedWindowsAutopilotDeviceIdentity::class, 'createFromDiscriminatorValue'))); },
+            'intuneAccountId' => function (ParseNode $n) use ($o) { $o->setIntuneAccountId($n->getStringValue()); },
+            'intuneBrand' => function (ParseNode $n) use ($o) { $o->setIntuneBrand($n->getObjectValue(array(IntuneBrand::class, 'createFromDiscriminatorValue'))); },
+            'iosUpdateStatuses' => function (ParseNode $n) use ($o) { $o->setIosUpdateStatuses($n->getCollectionOfObjectValues(array(IosUpdateDeviceStatus::class, 'createFromDiscriminatorValue'))); },
+            'managedDeviceOverview' => function (ParseNode $n) use ($o) { $o->setManagedDeviceOverview($n->getObjectValue(array(ManagedDeviceOverview::class, 'createFromDiscriminatorValue'))); },
+            'managedDevices' => function (ParseNode $n) use ($o) { $o->setManagedDevices($n->getCollectionOfObjectValues(array(ManagedDevice::class, 'createFromDiscriminatorValue'))); },
+            'mobileThreatDefenseConnectors' => function (ParseNode $n) use ($o) { $o->setMobileThreatDefenseConnectors($n->getCollectionOfObjectValues(array(MobileThreatDefenseConnector::class, 'createFromDiscriminatorValue'))); },
+            'notificationMessageTemplates' => function (ParseNode $n) use ($o) { $o->setNotificationMessageTemplates($n->getCollectionOfObjectValues(array(NotificationMessageTemplate::class, 'createFromDiscriminatorValue'))); },
+            'remoteAssistancePartners' => function (ParseNode $n) use ($o) { $o->setRemoteAssistancePartners($n->getCollectionOfObjectValues(array(RemoteAssistancePartner::class, 'createFromDiscriminatorValue'))); },
+            'reports' => function (ParseNode $n) use ($o) { $o->setReports($n->getObjectValue(array(DeviceManagementReports::class, 'createFromDiscriminatorValue'))); },
+            'resourceOperations' => function (ParseNode $n) use ($o) { $o->setResourceOperations($n->getCollectionOfObjectValues(array(ResourceOperation::class, 'createFromDiscriminatorValue'))); },
+            'roleAssignments' => function (ParseNode $n) use ($o) { $o->setRoleAssignments($n->getCollectionOfObjectValues(array(DeviceAndAppManagementRoleAssignment::class, 'createFromDiscriminatorValue'))); },
+            'roleDefinitions' => function (ParseNode $n) use ($o) { $o->setRoleDefinitions($n->getCollectionOfObjectValues(array(RoleDefinition::class, 'createFromDiscriminatorValue'))); },
+            'settings' => function (ParseNode $n) use ($o) { $o->setSettings($n->getObjectValue(array(DeviceManagementSettings::class, 'createFromDiscriminatorValue'))); },
+            'softwareUpdateStatusSummary' => function (ParseNode $n) use ($o) { $o->setSoftwareUpdateStatusSummary($n->getObjectValue(array(SoftwareUpdateStatusSummary::class, 'createFromDiscriminatorValue'))); },
+            'subscriptionState' => function (ParseNode $n) use ($o) { $o->setSubscriptionState($n->getEnumValue(DeviceManagementSubscriptionState::class)); },
+            'telecomExpenseManagementPartners' => function (ParseNode $n) use ($o) { $o->setTelecomExpenseManagementPartners($n->getCollectionOfObjectValues(array(TelecomExpenseManagementPartner::class, 'createFromDiscriminatorValue'))); },
+            'termsAndConditions' => function (ParseNode $n) use ($o) { $o->setTermsAndConditions($n->getCollectionOfObjectValues(array(TermsAndConditions::class, 'createFromDiscriminatorValue'))); },
+            'troubleshootingEvents' => function (ParseNode $n) use ($o) { $o->setTroubleshootingEvents($n->getCollectionOfObjectValues(array(DeviceManagementTroubleshootingEvent::class, 'createFromDiscriminatorValue'))); },
+            'windowsAutopilotDeviceIdentities' => function (ParseNode $n) use ($o) { $o->setWindowsAutopilotDeviceIdentities($n->getCollectionOfObjectValues(array(WindowsAutopilotDeviceIdentity::class, 'createFromDiscriminatorValue'))); },
+            'windowsInformationProtectionAppLearningSummaries' => function (ParseNode $n) use ($o) { $o->setWindowsInformationProtectionAppLearningSummaries($n->getCollectionOfObjectValues(array(WindowsInformationProtectionAppLearningSummary::class, 'createFromDiscriminatorValue'))); },
+            'windowsInformationProtectionNetworkLearningSummaries' => function (ParseNode $n) use ($o) { $o->setWindowsInformationProtectionNetworkLearningSummaries($n->getCollectionOfObjectValues(array(WindowsInformationProtectionNetworkLearningSummary::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -286,7 +357,7 @@ class DeviceManagement extends Entity
     }
 
     /**
-     * Gets the intuneAccountId property value. Intune Account Id for given tenant
+     * Gets the intuneAccountId property value. Intune Account ID for given tenant
      * @return string|null
     */
     public function getIntuneAccountId(): ?string {
@@ -609,7 +680,7 @@ class DeviceManagement extends Entity
     }
 
     /**
-     * Sets the intuneAccountId property value. Intune Account Id for given tenant
+     * Sets the intuneAccountId property value. Intune Account ID for given tenant
      *  @param string|null $value Value to set for the intuneAccountId property.
     */
     public function setIntuneAccountId(?string $value ): void {

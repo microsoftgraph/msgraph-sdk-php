@@ -7,45 +7,71 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AccessReviewInstanceDecisionItem extends Entity 
+class AccessReviewInstanceDecisionItem extends Entity implements Parsable 
 {
-    /** @var string|null $accessReviewId The identifier of the accessReviewInstance parent. Supports $select. Read-only. */
+    /**
+     * @var string|null $accessReviewId The identifier of the accessReviewInstance parent. Supports $select. Read-only.
+    */
     private ?string $accessReviewId = null;
     
-    /** @var UserIdentity|null $appliedBy The identifier of the user who applied the decision. Read-only. */
+    /**
+     * @var UserIdentity|null $appliedBy The identifier of the user who applied the decision. Read-only.
+    */
     private ?UserIdentity $appliedBy = null;
     
-    /** @var DateTime|null $appliedDateTime The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only. */
+    /**
+     * @var DateTime|null $appliedDateTime The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
+    */
     private ?DateTime $appliedDateTime = null;
     
-    /** @var string|null $applyResult The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only. */
+    /**
+     * @var string|null $applyResult The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
+    */
     private ?string $applyResult = null;
     
-    /** @var string|null $decision Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow. Supports $select, $orderby, and $filter (eq only). */
+    /**
+     * @var string|null $decision Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow. Supports $select, $orderby, and $filter (eq only).
+    */
     private ?string $decision = null;
     
-    /** @var string|null $justification Justification left by the reviewer when they made the decision. */
+    /**
+     * @var string|null $justification Justification left by the reviewer when they made the decision.
+    */
     private ?string $justification = null;
     
-    /** @var Identity|null $principal Every decision item in an access review represents a principal's access to a resource. This property represents details of the principal. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is 'Bob' and the resource is 'Sales'. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only. */
+    /**
+     * @var Identity|null $principal Every decision item in an access review represents a principal's access to a resource. This property represents details of the principal. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is 'Bob' and the resource is 'Sales'. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.
+    */
     private ?Identity $principal = null;
     
-    /** @var string|null $principalLink A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only. */
+    /**
+     * @var string|null $principalLink Link to the principal object. For example: https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
+    */
     private ?string $principalLink = null;
     
-    /** @var string|null $recommendation A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only. */
+    /**
+     * @var string|null $recommendation A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only.
+    */
     private ?string $recommendation = null;
     
-    /** @var AccessReviewInstanceDecisionItemResource|null $resource Every decision item in an access review represents a principal's access to a resource. This property represents details of the resource. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is Bob and the resource is 'Sales'. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource. Read-only. */
+    /**
+     * @var AccessReviewInstanceDecisionItemResource|null $resource Every decision item in an access review represents a principal's access to a resource. This property represents details of the resource. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is Bob and the resource is 'Sales'. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource. Read-only.
+    */
     private ?AccessReviewInstanceDecisionItemResource $resource = null;
     
-    /** @var string|null $resourceLink A link to the resource. For example, https://graph.microsoft.com/v1.0/servicePrincipals/c86300f3-8695-4320-9f6e-32a2555f5ff8. Supports $select. Read-only. */
+    /**
+     * @var string|null $resourceLink A link to the resource. For example, https://graph.microsoft.com/v1.0/servicePrincipals/c86300f3-8695-4320-9f6e-32a2555f5ff8. Supports $select. Read-only.
+    */
     private ?string $resourceLink = null;
     
-    /** @var UserIdentity|null $reviewedBy The identifier of the reviewer. Supports $select. Read-only. */
+    /**
+     * @var UserIdentity|null $reviewedBy The identifier of the reviewer. Supports $select. Read-only.
+    */
     private ?UserIdentity $reviewedBy = null;
     
-    /** @var DateTime|null $reviewedDateTime The timestamp when the review decision occurred. Supports $select. Read-only. */
+    /**
+     * @var DateTime|null $reviewedDateTime The timestamp when the review decision occurred. Supports $select. Read-only.
+    */
     private ?DateTime $reviewedDateTime = null;
     
     /**
@@ -60,7 +86,7 @@ class AccessReviewInstanceDecisionItem extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AccessReviewInstanceDecisionItem
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AccessReviewInstanceDecisionItem {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessReviewInstanceDecisionItem {
         return new AccessReviewInstanceDecisionItem();
     }
 
@@ -109,20 +135,21 @@ class AccessReviewInstanceDecisionItem extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'accessReviewId' => function (self $o, ParseNode $n) { $o->setAccessReviewId($n->getStringValue()); },
-            'appliedBy' => function (self $o, ParseNode $n) { $o->setAppliedBy($n->getObjectValue(UserIdentity::class)); },
-            'appliedDateTime' => function (self $o, ParseNode $n) { $o->setAppliedDateTime($n->getDateTimeValue()); },
-            'applyResult' => function (self $o, ParseNode $n) { $o->setApplyResult($n->getStringValue()); },
-            'decision' => function (self $o, ParseNode $n) { $o->setDecision($n->getStringValue()); },
-            'justification' => function (self $o, ParseNode $n) { $o->setJustification($n->getStringValue()); },
-            'principal' => function (self $o, ParseNode $n) { $o->setPrincipal($n->getObjectValue(Identity::class)); },
-            'principalLink' => function (self $o, ParseNode $n) { $o->setPrincipalLink($n->getStringValue()); },
-            'recommendation' => function (self $o, ParseNode $n) { $o->setRecommendation($n->getStringValue()); },
-            'resource' => function (self $o, ParseNode $n) { $o->setResource($n->getObjectValue(AccessReviewInstanceDecisionItemResource::class)); },
-            'resourceLink' => function (self $o, ParseNode $n) { $o->setResourceLink($n->getStringValue()); },
-            'reviewedBy' => function (self $o, ParseNode $n) { $o->setReviewedBy($n->getObjectValue(UserIdentity::class)); },
-            'reviewedDateTime' => function (self $o, ParseNode $n) { $o->setReviewedDateTime($n->getDateTimeValue()); },
+            'accessReviewId' => function (ParseNode $n) use ($o) { $o->setAccessReviewId($n->getStringValue()); },
+            'appliedBy' => function (ParseNode $n) use ($o) { $o->setAppliedBy($n->getObjectValue(array(UserIdentity::class, 'createFromDiscriminatorValue'))); },
+            'appliedDateTime' => function (ParseNode $n) use ($o) { $o->setAppliedDateTime($n->getDateTimeValue()); },
+            'applyResult' => function (ParseNode $n) use ($o) { $o->setApplyResult($n->getStringValue()); },
+            'decision' => function (ParseNode $n) use ($o) { $o->setDecision($n->getStringValue()); },
+            'justification' => function (ParseNode $n) use ($o) { $o->setJustification($n->getStringValue()); },
+            'principal' => function (ParseNode $n) use ($o) { $o->setPrincipal($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
+            'principalLink' => function (ParseNode $n) use ($o) { $o->setPrincipalLink($n->getStringValue()); },
+            'recommendation' => function (ParseNode $n) use ($o) { $o->setRecommendation($n->getStringValue()); },
+            'resource' => function (ParseNode $n) use ($o) { $o->setResource($n->getObjectValue(array(AccessReviewInstanceDecisionItemResource::class, 'createFromDiscriminatorValue'))); },
+            'resourceLink' => function (ParseNode $n) use ($o) { $o->setResourceLink($n->getStringValue()); },
+            'reviewedBy' => function (ParseNode $n) use ($o) { $o->setReviewedBy($n->getObjectValue(array(UserIdentity::class, 'createFromDiscriminatorValue'))); },
+            'reviewedDateTime' => function (ParseNode $n) use ($o) { $o->setReviewedDateTime($n->getDateTimeValue()); },
         ]);
     }
 
@@ -143,7 +170,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     }
 
     /**
-     * Gets the principalLink property value. A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
+     * Gets the principalLink property value. Link to the principal object. For example: https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
      * @return string|null
     */
     public function getPrincipalLink(): ?string {
@@ -268,7 +295,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     }
 
     /**
-     * Sets the principalLink property value. A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
+     * Sets the principalLink property value. Link to the principal object. For example: https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
      *  @param string|null $value Value to set for the principalLink property.
     */
     public function setPrincipalLink(?string $value ): void {

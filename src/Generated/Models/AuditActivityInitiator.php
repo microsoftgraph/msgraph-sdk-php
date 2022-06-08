@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AuditActivityInitiator implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var AppIdentity|null $app If the resource initiating the activity is an app, this property indicates all the app related information like appId, Name, servicePrincipalId, Name. */
+    /**
+     * @var AppIdentity|null $app If the actor initiating the activity is an app, this property indicates all its identification information including appId, displayName, servicePrincipalId, and servicePrincipalName.
+    */
     private ?AppIdentity $app = null;
     
-    /** @var UserIdentity|null $user If the resource initiating the activity is a user, this property Indicates all the user related information like userId, Name, UserPrinicpalName. */
+    /**
+     * @var UserIdentity|null $user If the actor initiating the activity is a user, this property indicates their identification information including their id, displayName, and userPrincipalName.
+    */
     private ?UserIdentity $user = null;
     
     /**
@@ -30,7 +36,7 @@ class AuditActivityInitiator implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AuditActivityInitiator
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AuditActivityInitiator {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AuditActivityInitiator {
         return new AuditActivityInitiator();
     }
 
@@ -43,7 +49,7 @@ class AuditActivityInitiator implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the app property value. If the resource initiating the activity is an app, this property indicates all the app related information like appId, Name, servicePrincipalId, Name.
+     * Gets the app property value. If the actor initiating the activity is an app, this property indicates all its identification information including appId, displayName, servicePrincipalId, and servicePrincipalName.
      * @return AppIdentity|null
     */
     public function getApp(): ?AppIdentity {
@@ -55,14 +61,15 @@ class AuditActivityInitiator implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'app' => function (self $o, ParseNode $n) { $o->setApp($n->getObjectValue(AppIdentity::class)); },
-            'user' => function (self $o, ParseNode $n) { $o->setUser($n->getObjectValue(UserIdentity::class)); },
+            'app' => function (ParseNode $n) use ($o) { $o->setApp($n->getObjectValue(array(AppIdentity::class, 'createFromDiscriminatorValue'))); },
+            'user' => function (ParseNode $n) use ($o) { $o->setUser($n->getObjectValue(array(UserIdentity::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 
     /**
-     * Gets the user property value. If the resource initiating the activity is a user, this property Indicates all the user related information like userId, Name, UserPrinicpalName.
+     * Gets the user property value. If the actor initiating the activity is a user, this property indicates their identification information including their id, displayName, and userPrincipalName.
      * @return UserIdentity|null
     */
     public function getUser(): ?UserIdentity {
@@ -88,7 +95,7 @@ class AuditActivityInitiator implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the app property value. If the resource initiating the activity is an app, this property indicates all the app related information like appId, Name, servicePrincipalId, Name.
+     * Sets the app property value. If the actor initiating the activity is an app, this property indicates all its identification information including appId, displayName, servicePrincipalId, and servicePrincipalName.
      *  @param AppIdentity|null $value Value to set for the app property.
     */
     public function setApp(?AppIdentity $value ): void {
@@ -96,7 +103,7 @@ class AuditActivityInitiator implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the user property value. If the resource initiating the activity is a user, this property Indicates all the user related information like userId, Name, UserPrinicpalName.
+     * Sets the user property value. If the actor initiating the activity is a user, this property indicates their identification information including their id, displayName, and userPrincipalName.
      *  @param UserIdentity|null $value Value to set for the user property.
     */
     public function setUser(?UserIdentity $value ): void {

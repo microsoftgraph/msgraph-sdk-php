@@ -10,19 +10,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Shared implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var IdentitySet|null $owner The identity of the owner of the shared item. Read-only. */
+    /**
+     * @var IdentitySet|null $owner The identity of the owner of the shared item. Read-only.
+    */
     private ?IdentitySet $owner = null;
     
-    /** @var string|null $scope Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only. */
+    /**
+     * @var string|null $scope Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
+    */
     private ?string $scope = null;
     
-    /** @var IdentitySet|null $sharedBy The identity of the user who shared the item. Read-only. */
+    /**
+     * @var IdentitySet|null $sharedBy The identity of the user who shared the item. Read-only.
+    */
     private ?IdentitySet $sharedBy = null;
     
-    /** @var DateTime|null $sharedDateTime The UTC date and time when the item was shared. Read-only. */
+    /**
+     * @var DateTime|null $sharedDateTime The UTC date and time when the item was shared. Read-only.
+    */
     private ?DateTime $sharedDateTime = null;
     
     /**
@@ -37,7 +47,7 @@ class Shared implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Shared
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Shared {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Shared {
         return new Shared();
     }
 
@@ -54,11 +64,12 @@ class Shared implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'owner' => function (self $o, ParseNode $n) { $o->setOwner($n->getObjectValue(IdentitySet::class)); },
-            'scope' => function (self $o, ParseNode $n) { $o->setScope($n->getStringValue()); },
-            'sharedBy' => function (self $o, ParseNode $n) { $o->setSharedBy($n->getObjectValue(IdentitySet::class)); },
-            'sharedDateTime' => function (self $o, ParseNode $n) { $o->setSharedDateTime($n->getDateTimeValue()); },
+            'owner' => function (ParseNode $n) use ($o) { $o->setOwner($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'scope' => function (ParseNode $n) use ($o) { $o->setScope($n->getStringValue()); },
+            'sharedBy' => function (ParseNode $n) use ($o) { $o->setSharedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'sharedDateTime' => function (ParseNode $n) use ($o) { $o->setSharedDateTime($n->getDateTimeValue()); },
         ];
     }
 

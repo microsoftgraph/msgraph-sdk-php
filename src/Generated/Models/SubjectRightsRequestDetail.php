@@ -9,28 +9,44 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $excludedItemCount Count of items that are excluded from the request. */
+    /**
+     * @var int|null $excludedItemCount Count of items that are excluded from the request.
+    */
     private ?int $excludedItemCount = null;
     
-    /** @var array<KeyValuePair>|null $insightCounts Count of items per insight. */
+    /**
+     * @var array<KeyValuePair>|null $insightCounts Count of items per insight.
+    */
     private ?array $insightCounts = null;
     
-    /** @var int|null $itemCount Count of items found. */
+    /**
+     * @var int|null $itemCount Count of items found.
+    */
     private ?int $itemCount = null;
     
-    /** @var int|null $itemNeedReview Count of item that need review. */
+    /**
+     * @var int|null $itemNeedReview Count of item that need review.
+    */
     private ?int $itemNeedReview = null;
     
-    /** @var array<KeyValuePair>|null $productItemCounts Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams. */
+    /**
+     * @var array<KeyValuePair>|null $productItemCounts Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams.
+    */
     private ?array $productItemCounts = null;
     
-    /** @var int|null $signedOffItemCount Count of items signed off by the administrator. */
+    /**
+     * @var int|null $signedOffItemCount Count of items signed off by the administrator.
+    */
     private ?int $signedOffItemCount = null;
     
-    /** @var int|null $totalItemSize Total item size in bytes. */
+    /**
+     * @var int|null $totalItemSize Total item size in bytes.
+    */
     private ?int $totalItemSize = null;
     
     /**
@@ -45,7 +61,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SubjectRightsRequestDetail
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SubjectRightsRequestDetail {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SubjectRightsRequestDetail {
         return new SubjectRightsRequestDetail();
     }
 
@@ -70,14 +86,15 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'excludedItemCount' => function (self $o, ParseNode $n) { $o->setExcludedItemCount($n->getIntegerValue()); },
-            'insightCounts' => function (self $o, ParseNode $n) { $o->setInsightCounts($n->getCollectionOfObjectValues(KeyValuePair::class)); },
-            'itemCount' => function (self $o, ParseNode $n) { $o->setItemCount($n->getIntegerValue()); },
-            'itemNeedReview' => function (self $o, ParseNode $n) { $o->setItemNeedReview($n->getIntegerValue()); },
-            'productItemCounts' => function (self $o, ParseNode $n) { $o->setProductItemCounts($n->getCollectionOfObjectValues(KeyValuePair::class)); },
-            'signedOffItemCount' => function (self $o, ParseNode $n) { $o->setSignedOffItemCount($n->getIntegerValue()); },
-            'totalItemSize' => function (self $o, ParseNode $n) { $o->setTotalItemSize($n->getIntegerValue()); },
+            'excludedItemCount' => function (ParseNode $n) use ($o) { $o->setExcludedItemCount($n->getIntegerValue()); },
+            'insightCounts' => function (ParseNode $n) use ($o) { $o->setInsightCounts($n->getCollectionOfObjectValues(array(KeyValuePair::class, 'createFromDiscriminatorValue'))); },
+            'itemCount' => function (ParseNode $n) use ($o) { $o->setItemCount($n->getIntegerValue()); },
+            'itemNeedReview' => function (ParseNode $n) use ($o) { $o->setItemNeedReview($n->getIntegerValue()); },
+            'productItemCounts' => function (ParseNode $n) use ($o) { $o->setProductItemCounts($n->getCollectionOfObjectValues(array(KeyValuePair::class, 'createFromDiscriminatorValue'))); },
+            'signedOffItemCount' => function (ParseNode $n) use ($o) { $o->setSignedOffItemCount($n->getIntegerValue()); },
+            'totalItemSize' => function (ParseNode $n) use ($o) { $o->setTotalItemSize($n->getIntegerValue()); },
         ];
     }
 

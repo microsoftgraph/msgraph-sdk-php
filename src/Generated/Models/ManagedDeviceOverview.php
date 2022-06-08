@@ -6,21 +6,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ManagedDeviceOverview extends Entity 
+class ManagedDeviceOverview extends Entity implements Parsable 
 {
-    /** @var DeviceExchangeAccessStateSummary|null $deviceExchangeAccessStateSummary Distribution of Exchange Access State in Intune */
+    /**
+     * @var DeviceExchangeAccessStateSummary|null $deviceExchangeAccessStateSummary Distribution of Exchange Access State in Intune
+    */
     private ?DeviceExchangeAccessStateSummary $deviceExchangeAccessStateSummary = null;
     
-    /** @var DeviceOperatingSystemSummary|null $deviceOperatingSystemSummary Device operating system summary. */
+    /**
+     * @var DeviceOperatingSystemSummary|null $deviceOperatingSystemSummary Device operating system summary.
+    */
     private ?DeviceOperatingSystemSummary $deviceOperatingSystemSummary = null;
     
-    /** @var int|null $dualEnrolledDeviceCount The number of devices enrolled in both MDM and EAS */
+    /**
+     * @var int|null $dualEnrolledDeviceCount The number of devices enrolled in both MDM and EAS
+    */
     private ?int $dualEnrolledDeviceCount = null;
     
-    /** @var int|null $enrolledDeviceCount Total enrolled device count. Does not include PC devices managed via Intune PC Agent */
+    /**
+     * @var int|null $enrolledDeviceCount Total enrolled device count. Does not include PC devices managed via Intune PC Agent
+    */
     private ?int $enrolledDeviceCount = null;
     
-    /** @var int|null $mdmEnrolledCount The number of devices enrolled in MDM */
+    /**
+     * @var int|null $mdmEnrolledCount The number of devices enrolled in MDM
+    */
     private ?int $mdmEnrolledCount = null;
     
     /**
@@ -35,7 +45,7 @@ class ManagedDeviceOverview extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ManagedDeviceOverview
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ManagedDeviceOverview {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedDeviceOverview {
         return new ManagedDeviceOverview();
     }
 
@@ -76,12 +86,13 @@ class ManagedDeviceOverview extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'deviceExchangeAccessStateSummary' => function (self $o, ParseNode $n) { $o->setDeviceExchangeAccessStateSummary($n->getObjectValue(DeviceExchangeAccessStateSummary::class)); },
-            'deviceOperatingSystemSummary' => function (self $o, ParseNode $n) { $o->setDeviceOperatingSystemSummary($n->getObjectValue(DeviceOperatingSystemSummary::class)); },
-            'dualEnrolledDeviceCount' => function (self $o, ParseNode $n) { $o->setDualEnrolledDeviceCount($n->getIntegerValue()); },
-            'enrolledDeviceCount' => function (self $o, ParseNode $n) { $o->setEnrolledDeviceCount($n->getIntegerValue()); },
-            'mdmEnrolledCount' => function (self $o, ParseNode $n) { $o->setMdmEnrolledCount($n->getIntegerValue()); },
+            'deviceExchangeAccessStateSummary' => function (ParseNode $n) use ($o) { $o->setDeviceExchangeAccessStateSummary($n->getObjectValue(array(DeviceExchangeAccessStateSummary::class, 'createFromDiscriminatorValue'))); },
+            'deviceOperatingSystemSummary' => function (ParseNode $n) use ($o) { $o->setDeviceOperatingSystemSummary($n->getObjectValue(array(DeviceOperatingSystemSummary::class, 'createFromDiscriminatorValue'))); },
+            'dualEnrolledDeviceCount' => function (ParseNode $n) use ($o) { $o->setDualEnrolledDeviceCount($n->getIntegerValue()); },
+            'enrolledDeviceCount' => function (ParseNode $n) use ($o) { $o->setEnrolledDeviceCount($n->getIntegerValue()); },
+            'mdmEnrolledCount' => function (ParseNode $n) use ($o) { $o->setMdmEnrolledCount($n->getIntegerValue()); },
         ]);
     }
 

@@ -7,36 +7,56 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DeviceManagementExportJob extends Entity 
+class DeviceManagementExportJob extends Entity implements Parsable 
 {
-    /** @var DateTime|null $expirationDateTime Time that the exported report expires */
+    /**
+     * @var DateTime|null $expirationDateTime Time that the exported report expires
+    */
     private ?DateTime $expirationDateTime = null;
     
-    /** @var string|null $filter Filters applied on the report */
+    /**
+     * @var string|null $filter Filters applied on the report
+    */
     private ?string $filter = null;
     
-    /** @var DeviceManagementReportFileFormat|null $format Format of the exported report. Possible values are: csv, pdf. */
+    /**
+     * @var DeviceManagementReportFileFormat|null $format Format of the exported report. Possible values are: csv, pdf.
+    */
     private ?DeviceManagementReportFileFormat $format = null;
     
-    /** @var DeviceManagementExportJobLocalizationType|null $localizationType Configures how the requested export job is localized. Possible values are: localizedValuesAsAdditionalColumn, replaceLocalizableValues. */
+    /**
+     * @var DeviceManagementExportJobLocalizationType|null $localizationType Configures how the requested export job is localized. Possible values are: localizedValuesAsAdditionalColumn, replaceLocalizableValues.
+    */
     private ?DeviceManagementExportJobLocalizationType $localizationType = null;
     
-    /** @var string|null $reportName Name of the report */
+    /**
+     * @var string|null $reportName Name of the report
+    */
     private ?string $reportName = null;
     
-    /** @var DateTime|null $requestDateTime Time that the exported report was requested */
+    /**
+     * @var DateTime|null $requestDateTime Time that the exported report was requested
+    */
     private ?DateTime $requestDateTime = null;
     
-    /** @var array<string>|null $select Columns selected from the report */
+    /**
+     * @var array<string>|null $select Columns selected from the report
+    */
     private ?array $select = null;
     
-    /** @var string|null $snapshotId A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id. */
+    /**
+     * @var string|null $snapshotId A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
+    */
     private ?string $snapshotId = null;
     
-    /** @var DeviceManagementReportStatus|null $status Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed. */
+    /**
+     * @var DeviceManagementReportStatus|null $status Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed.
+    */
     private ?DeviceManagementReportStatus $status = null;
     
-    /** @var string|null $url Temporary location of the exported report */
+    /**
+     * @var string|null $url Temporary location of the exported report
+    */
     private ?string $url = null;
     
     /**
@@ -51,7 +71,7 @@ class DeviceManagementExportJob extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceManagementExportJob
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceManagementExportJob {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceManagementExportJob {
         return new DeviceManagementExportJob();
     }
 
@@ -68,17 +88,18 @@ class DeviceManagementExportJob extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'expirationDateTime' => function (self $o, ParseNode $n) { $o->setExpirationDateTime($n->getDateTimeValue()); },
-            'filter' => function (self $o, ParseNode $n) { $o->setFilter($n->getStringValue()); },
-            'format' => function (self $o, ParseNode $n) { $o->setFormat($n->getEnumValue(DeviceManagementReportFileFormat::class)); },
-            'localizationType' => function (self $o, ParseNode $n) { $o->setLocalizationType($n->getEnumValue(DeviceManagementExportJobLocalizationType::class)); },
-            'reportName' => function (self $o, ParseNode $n) { $o->setReportName($n->getStringValue()); },
-            'requestDateTime' => function (self $o, ParseNode $n) { $o->setRequestDateTime($n->getDateTimeValue()); },
-            'select' => function (self $o, ParseNode $n) { $o->setSelect($n->getCollectionOfPrimitiveValues()); },
-            'snapshotId' => function (self $o, ParseNode $n) { $o->setSnapshotId($n->getStringValue()); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(DeviceManagementReportStatus::class)); },
-            'url' => function (self $o, ParseNode $n) { $o->setUrl($n->getStringValue()); },
+            'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
+            'filter' => function (ParseNode $n) use ($o) { $o->setFilter($n->getStringValue()); },
+            'format' => function (ParseNode $n) use ($o) { $o->setFormat($n->getEnumValue(DeviceManagementReportFileFormat::class)); },
+            'localizationType' => function (ParseNode $n) use ($o) { $o->setLocalizationType($n->getEnumValue(DeviceManagementExportJobLocalizationType::class)); },
+            'reportName' => function (ParseNode $n) use ($o) { $o->setReportName($n->getStringValue()); },
+            'requestDateTime' => function (ParseNode $n) use ($o) { $o->setRequestDateTime($n->getDateTimeValue()); },
+            'select' => function (ParseNode $n) use ($o) { $o->setSelect($n->getCollectionOfPrimitiveValues()); },
+            'snapshotId' => function (ParseNode $n) use ($o) { $o->setSnapshotId($n->getStringValue()); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(DeviceManagementReportStatus::class)); },
+            'url' => function (ParseNode $n) use ($o) { $o->setUrl($n->getStringValue()); },
         ]);
     }
 

@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ContentTypeInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $id The id of the content type. */
+    /**
+     * @var string|null $id The id of the content type.
+    */
     private ?string $id = null;
     
-    /** @var string|null $name The name of the content type. */
+    /**
+     * @var string|null $name The name of the content type.
+    */
     private ?string $name = null;
     
     /**
@@ -30,7 +36,7 @@ class ContentTypeInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ContentTypeInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ContentTypeInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ContentTypeInfo {
         return new ContentTypeInfo();
     }
 
@@ -47,9 +53,10 @@ class ContentTypeInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'id' => function (self $o, ParseNode $n) { $o->setId($n->getStringValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
+            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
         ];
     }
 

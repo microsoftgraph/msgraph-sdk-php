@@ -7,30 +7,46 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DeviceManagementPartner extends Entity 
+class DeviceManagementPartner extends Entity implements Parsable 
 {
-    /** @var string|null $displayName Partner display name */
+    /**
+     * @var string|null $displayName Partner display name
+    */
     private ?string $displayName = null;
     
-    /** @var bool|null $isConfigured Whether device management partner is configured or not */
+    /**
+     * @var bool|null $isConfigured Whether device management partner is configured or not
+    */
     private ?bool $isConfigured = null;
     
-    /** @var DateTime|null $lastHeartbeatDateTime Timestamp of last heartbeat after admin enabled option Connect to Device management Partner */
+    /**
+     * @var DateTime|null $lastHeartbeatDateTime Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
+    */
     private ?DateTime $lastHeartbeatDateTime = null;
     
-    /** @var DeviceManagementPartnerAppType|null $partnerAppType Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp. */
+    /**
+     * @var DeviceManagementPartnerAppType|null $partnerAppType Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp.
+    */
     private ?DeviceManagementPartnerAppType $partnerAppType = null;
     
-    /** @var DeviceManagementPartnerTenantState|null $partnerState Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive. */
+    /**
+     * @var DeviceManagementPartnerTenantState|null $partnerState Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
+    */
     private ?DeviceManagementPartnerTenantState $partnerState = null;
     
-    /** @var string|null $singleTenantAppId Partner Single tenant App id */
+    /**
+     * @var string|null $singleTenantAppId Partner Single tenant App id
+    */
     private ?string $singleTenantAppId = null;
     
-    /** @var DateTime|null $whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime DateTime in UTC when PartnerDevices will be marked as NonCompliant */
+    /**
+     * @var DateTime|null $whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime DateTime in UTC when PartnerDevices will be marked as NonCompliant
+    */
     private ?DateTime $whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime = null;
     
-    /** @var DateTime|null $whenPartnerDevicesWillBeRemovedDateTime DateTime in UTC when PartnerDevices will be removed */
+    /**
+     * @var DateTime|null $whenPartnerDevicesWillBeRemovedDateTime DateTime in UTC when PartnerDevices will be removed
+    */
     private ?DateTime $whenPartnerDevicesWillBeRemovedDateTime = null;
     
     /**
@@ -45,7 +61,7 @@ class DeviceManagementPartner extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceManagementPartner
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceManagementPartner {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceManagementPartner {
         return new DeviceManagementPartner();
     }
 
@@ -62,15 +78,16 @@ class DeviceManagementPartner extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'isConfigured' => function (self $o, ParseNode $n) { $o->setIsConfigured($n->getBooleanValue()); },
-            'lastHeartbeatDateTime' => function (self $o, ParseNode $n) { $o->setLastHeartbeatDateTime($n->getDateTimeValue()); },
-            'partnerAppType' => function (self $o, ParseNode $n) { $o->setPartnerAppType($n->getEnumValue(DeviceManagementPartnerAppType::class)); },
-            'partnerState' => function (self $o, ParseNode $n) { $o->setPartnerState($n->getEnumValue(DeviceManagementPartnerTenantState::class)); },
-            'singleTenantAppId' => function (self $o, ParseNode $n) { $o->setSingleTenantAppId($n->getStringValue()); },
-            'whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime' => function (self $o, ParseNode $n) { $o->setWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime($n->getDateTimeValue()); },
-            'whenPartnerDevicesWillBeRemovedDateTime' => function (self $o, ParseNode $n) { $o->setWhenPartnerDevicesWillBeRemovedDateTime($n->getDateTimeValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'isConfigured' => function (ParseNode $n) use ($o) { $o->setIsConfigured($n->getBooleanValue()); },
+            'lastHeartbeatDateTime' => function (ParseNode $n) use ($o) { $o->setLastHeartbeatDateTime($n->getDateTimeValue()); },
+            'partnerAppType' => function (ParseNode $n) use ($o) { $o->setPartnerAppType($n->getEnumValue(DeviceManagementPartnerAppType::class)); },
+            'partnerState' => function (ParseNode $n) use ($o) { $o->setPartnerState($n->getEnumValue(DeviceManagementPartnerTenantState::class)); },
+            'singleTenantAppId' => function (ParseNode $n) use ($o) { $o->setSingleTenantAppId($n->getStringValue()); },
+            'whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime' => function (ParseNode $n) use ($o) { $o->setWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime($n->getDateTimeValue()); },
+            'whenPartnerDevicesWillBeRemovedDateTime' => function (ParseNode $n) use ($o) { $o->setWhenPartnerDevicesWillBeRemovedDateTime($n->getDateTimeValue()); },
         ]);
     }
 

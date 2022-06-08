@@ -10,34 +10,54 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Photo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $cameraMake Camera manufacturer. Read-only. */
+    /**
+     * @var string|null $cameraMake Camera manufacturer. Read-only.
+    */
     private ?string $cameraMake = null;
     
-    /** @var string|null $cameraModel Camera model. Read-only. */
+    /**
+     * @var string|null $cameraModel Camera model. Read-only.
+    */
     private ?string $cameraModel = null;
     
-    /** @var float|null $exposureDenominator The denominator for the exposure time fraction from the camera. Read-only. */
+    /**
+     * @var float|null $exposureDenominator The denominator for the exposure time fraction from the camera. Read-only.
+    */
     private ?float $exposureDenominator = null;
     
-    /** @var float|null $exposureNumerator The numerator for the exposure time fraction from the camera. Read-only. */
+    /**
+     * @var float|null $exposureNumerator The numerator for the exposure time fraction from the camera. Read-only.
+    */
     private ?float $exposureNumerator = null;
     
-    /** @var float|null $fNumber The F-stop value from the camera. Read-only. */
+    /**
+     * @var float|null $fNumber The F-stop value from the camera. Read-only.
+    */
     private ?float $fNumber = null;
     
-    /** @var float|null $focalLength The focal length from the camera. Read-only. */
+    /**
+     * @var float|null $focalLength The focal length from the camera. Read-only.
+    */
     private ?float $focalLength = null;
     
-    /** @var int|null $iso The ISO value from the camera. Read-only. */
+    /**
+     * @var int|null $iso The ISO value from the camera. Read-only.
+    */
     private ?int $iso = null;
     
-    /** @var int|null $orientation The orientation value from the camera. Writable on OneDrive Personal. */
+    /**
+     * @var int|null $orientation The orientation value from the camera. Writable on OneDrive Personal.
+    */
     private ?int $orientation = null;
     
-    /** @var DateTime|null $takenDateTime Represents the date and time the photo was taken. Read-only. */
+    /**
+     * @var DateTime|null $takenDateTime The date and time the photo was taken in UTC time. Read-only.
+    */
     private ?DateTime $takenDateTime = null;
     
     /**
@@ -52,7 +72,7 @@ class Photo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Photo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Photo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Photo {
         return new Photo();
     }
 
@@ -101,16 +121,17 @@ class Photo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'cameraMake' => function (self $o, ParseNode $n) { $o->setCameraMake($n->getStringValue()); },
-            'cameraModel' => function (self $o, ParseNode $n) { $o->setCameraModel($n->getStringValue()); },
-            'exposureDenominator' => function (self $o, ParseNode $n) { $o->setExposureDenominator($n->getFloatValue()); },
-            'exposureNumerator' => function (self $o, ParseNode $n) { $o->setExposureNumerator($n->getFloatValue()); },
-            'fNumber' => function (self $o, ParseNode $n) { $o->setFNumber($n->getFloatValue()); },
-            'focalLength' => function (self $o, ParseNode $n) { $o->setFocalLength($n->getFloatValue()); },
-            'iso' => function (self $o, ParseNode $n) { $o->setIso($n->getIntegerValue()); },
-            'orientation' => function (self $o, ParseNode $n) { $o->setOrientation($n->getIntegerValue()); },
-            'takenDateTime' => function (self $o, ParseNode $n) { $o->setTakenDateTime($n->getDateTimeValue()); },
+            'cameraMake' => function (ParseNode $n) use ($o) { $o->setCameraMake($n->getStringValue()); },
+            'cameraModel' => function (ParseNode $n) use ($o) { $o->setCameraModel($n->getStringValue()); },
+            'exposureDenominator' => function (ParseNode $n) use ($o) { $o->setExposureDenominator($n->getFloatValue()); },
+            'exposureNumerator' => function (ParseNode $n) use ($o) { $o->setExposureNumerator($n->getFloatValue()); },
+            'fNumber' => function (ParseNode $n) use ($o) { $o->setFNumber($n->getFloatValue()); },
+            'focalLength' => function (ParseNode $n) use ($o) { $o->setFocalLength($n->getFloatValue()); },
+            'iso' => function (ParseNode $n) use ($o) { $o->setIso($n->getIntegerValue()); },
+            'orientation' => function (ParseNode $n) use ($o) { $o->setOrientation($n->getIntegerValue()); },
+            'takenDateTime' => function (ParseNode $n) use ($o) { $o->setTakenDateTime($n->getDateTimeValue()); },
         ];
     }
 
@@ -147,7 +168,7 @@ class Photo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the takenDateTime property value. Represents the date and time the photo was taken. Read-only.
+     * Gets the takenDateTime property value. The date and time the photo was taken in UTC time. Read-only.
      * @return DateTime|null
     */
     public function getTakenDateTime(): ?DateTime {
@@ -244,7 +265,7 @@ class Photo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the takenDateTime property value. Represents the date and time the photo was taken. Read-only.
+     * Sets the takenDateTime property value. The date and time the photo was taken in UTC time. Read-only.
      *  @param DateTime|null $value Value to set for the takenDateTime property.
     */
     public function setTakenDateTime(?DateTime $value ): void {

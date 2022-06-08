@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ShiftAvailability implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var PatternedRecurrence|null $recurrence Specifies the pattern for recurrence */
+    /**
+     * @var PatternedRecurrence|null $recurrence Specifies the pattern for recurrence
+    */
     private ?PatternedRecurrence $recurrence = null;
     
-    /** @var array<TimeRange>|null $timeSlots The time slot(s) preferred by the user. */
+    /**
+     * @var array<TimeRange>|null $timeSlots The time slot(s) preferred by the user.
+    */
     private ?array $timeSlots = null;
     
-    /** @var string|null $timeZone Specifies the time zone for the indicated time. */
+    /**
+     * @var string|null $timeZone Specifies the time zone for the indicated time.
+    */
     private ?string $timeZone = null;
     
     /**
@@ -33,7 +41,7 @@ class ShiftAvailability implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ShiftAvailability
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ShiftAvailability {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ShiftAvailability {
         return new ShiftAvailability();
     }
 
@@ -50,10 +58,11 @@ class ShiftAvailability implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'recurrence' => function (self $o, ParseNode $n) { $o->setRecurrence($n->getObjectValue(PatternedRecurrence::class)); },
-            'timeSlots' => function (self $o, ParseNode $n) { $o->setTimeSlots($n->getCollectionOfObjectValues(TimeRange::class)); },
-            'timeZone' => function (self $o, ParseNode $n) { $o->setTimeZone($n->getStringValue()); },
+            'recurrence' => function (ParseNode $n) use ($o) { $o->setRecurrence($n->getObjectValue(array(PatternedRecurrence::class, 'createFromDiscriminatorValue'))); },
+            'timeSlots' => function (ParseNode $n) use ($o) { $o->setTimeSlots($n->getCollectionOfObjectValues(array(TimeRange::class, 'createFromDiscriminatorValue'))); },
+            'timeZone' => function (ParseNode $n) use ($o) { $o->setTimeZone($n->getStringValue()); },
         ];
     }
 

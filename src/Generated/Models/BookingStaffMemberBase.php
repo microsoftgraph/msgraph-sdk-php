@@ -6,7 +6,7 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class BookingStaffMemberBase extends Entity 
+class BookingStaffMemberBase extends Entity implements Parsable 
 {
     /**
      * Instantiates a new bookingStaffMemberBase and sets the default values.
@@ -20,7 +20,14 @@ class BookingStaffMemberBase extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return BookingStaffMemberBase
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): BookingStaffMemberBase {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): BookingStaffMemberBase {
+        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.bookingStaffMemberBase': return new BookingStaffMemberBase();
+            }
+        }
         return new BookingStaffMemberBase();
     }
 
@@ -29,6 +36,7 @@ class BookingStaffMemberBase extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

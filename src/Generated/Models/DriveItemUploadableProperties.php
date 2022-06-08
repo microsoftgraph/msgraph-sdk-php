@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class DriveItemUploadableProperties implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $description Provides a user-visible description of the item. Read-write. Only on OneDrive Personal. */
+    /**
+     * @var string|null $description Provides a user-visible description of the item. Read-write. Only on OneDrive Personal.
+    */
     private ?string $description = null;
     
-    /** @var int|null $fileSize Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal. */
+    /**
+     * @var int|null $fileSize Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal.
+    */
     private ?int $fileSize = null;
     
-    /** @var FileSystemInfo|null $fileSystemInfo File system information on client. Read-write. */
+    /**
+     * @var FileSystemInfo|null $fileSystemInfo File system information on client. Read-write.
+    */
     private ?FileSystemInfo $fileSystemInfo = null;
     
-    /** @var string|null $name The name of the item (filename and extension). Read-write. */
+    /**
+     * @var string|null $name The name of the item (filename and extension). Read-write.
+    */
     private ?string $name = null;
     
     /**
@@ -36,7 +46,7 @@ class DriveItemUploadableProperties implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DriveItemUploadableProperties
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DriveItemUploadableProperties {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DriveItemUploadableProperties {
         return new DriveItemUploadableProperties();
     }
 
@@ -61,11 +71,12 @@ class DriveItemUploadableProperties implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'fileSize' => function (self $o, ParseNode $n) { $o->setFileSize($n->getIntegerValue()); },
-            'fileSystemInfo' => function (self $o, ParseNode $n) { $o->setFileSystemInfo($n->getObjectValue(FileSystemInfo::class)); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'fileSize' => function (ParseNode $n) use ($o) { $o->setFileSize($n->getIntegerValue()); },
+            'fileSystemInfo' => function (ParseNode $n) use ($o) { $o->setFileSystemInfo($n->getObjectValue(array(FileSystemInfo::class, 'createFromDiscriminatorValue'))); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
         ];
     }
 

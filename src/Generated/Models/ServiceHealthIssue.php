@@ -6,33 +6,51 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ServiceHealthIssue extends ServiceAnnouncementBase 
+class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable 
 {
-    /** @var ServiceHealthClassificationType|null $classification The type of service health issue. Possible values are: advisory, incident, unknownFutureValue. */
+    /**
+     * @var ServiceHealthClassificationType|null $classification The type of service health issue. Possible values are: advisory, incident, unknownFutureValue.
+    */
     private ?ServiceHealthClassificationType $classification = null;
     
-    /** @var string|null $feature The feature name of the service issue. */
+    /**
+     * @var string|null $feature The feature name of the service issue.
+    */
     private ?string $feature = null;
     
-    /** @var string|null $featureGroup The feature group name of the service issue. */
+    /**
+     * @var string|null $featureGroup The feature group name of the service issue.
+    */
     private ?string $featureGroup = null;
     
-    /** @var string|null $impactDescription The description of the service issue impact. */
+    /**
+     * @var string|null $impactDescription The description of the service issue impact.
+    */
     private ?string $impactDescription = null;
     
-    /** @var bool|null $isResolved Indicates whether the issue is resolved. */
+    /**
+     * @var bool|null $isResolved Indicates whether the issue is resolved.
+    */
     private ?bool $isResolved = null;
     
-    /** @var ServiceHealthOrigin|null $origin Indicates the origin of the service issue. Possible values are: microsoft, thirdParty, customer, unknownFutureValue. */
+    /**
+     * @var ServiceHealthOrigin|null $origin Indicates the origin of the service issue. Possible values are: microsoft, thirdParty, customer, unknownFutureValue.
+    */
     private ?ServiceHealthOrigin $origin = null;
     
-    /** @var array<ServiceHealthIssuePost>|null $posts Collection of historical posts for the service issue. */
+    /**
+     * @var array<ServiceHealthIssuePost>|null $posts Collection of historical posts for the service issue.
+    */
     private ?array $posts = null;
     
-    /** @var string|null $service Indicates the service affected by the issue. */
+    /**
+     * @var string|null $service Indicates the service affected by the issue.
+    */
     private ?string $service = null;
     
-    /** @var ServiceHealthStatus|null $status The status of the service issue. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. See more in the table below. */
+    /**
+     * @var ServiceHealthStatus|null $status The status of the service issue. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. For more details, see serviceHealthStatus values.
+    */
     private ?ServiceHealthStatus $status = null;
     
     /**
@@ -47,7 +65,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ServiceHealthIssue
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ServiceHealthIssue {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ServiceHealthIssue {
         return new ServiceHealthIssue();
     }
 
@@ -80,16 +98,17 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'classification' => function (self $o, ParseNode $n) { $o->setClassification($n->getEnumValue(ServiceHealthClassificationType::class)); },
-            'feature' => function (self $o, ParseNode $n) { $o->setFeature($n->getStringValue()); },
-            'featureGroup' => function (self $o, ParseNode $n) { $o->setFeatureGroup($n->getStringValue()); },
-            'impactDescription' => function (self $o, ParseNode $n) { $o->setImpactDescription($n->getStringValue()); },
-            'isResolved' => function (self $o, ParseNode $n) { $o->setIsResolved($n->getBooleanValue()); },
-            'origin' => function (self $o, ParseNode $n) { $o->setOrigin($n->getEnumValue(ServiceHealthOrigin::class)); },
-            'posts' => function (self $o, ParseNode $n) { $o->setPosts($n->getCollectionOfObjectValues(ServiceHealthIssuePost::class)); },
-            'service' => function (self $o, ParseNode $n) { $o->setService($n->getStringValue()); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(ServiceHealthStatus::class)); },
+            'classification' => function (ParseNode $n) use ($o) { $o->setClassification($n->getEnumValue(ServiceHealthClassificationType::class)); },
+            'feature' => function (ParseNode $n) use ($o) { $o->setFeature($n->getStringValue()); },
+            'featureGroup' => function (ParseNode $n) use ($o) { $o->setFeatureGroup($n->getStringValue()); },
+            'impactDescription' => function (ParseNode $n) use ($o) { $o->setImpactDescription($n->getStringValue()); },
+            'isResolved' => function (ParseNode $n) use ($o) { $o->setIsResolved($n->getBooleanValue()); },
+            'origin' => function (ParseNode $n) use ($o) { $o->setOrigin($n->getEnumValue(ServiceHealthOrigin::class)); },
+            'posts' => function (ParseNode $n) use ($o) { $o->setPosts($n->getCollectionOfObjectValues(array(ServiceHealthIssuePost::class, 'createFromDiscriminatorValue'))); },
+            'service' => function (ParseNode $n) use ($o) { $o->setService($n->getStringValue()); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(ServiceHealthStatus::class)); },
         ]);
     }
 
@@ -134,7 +153,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     }
 
     /**
-     * Gets the status property value. The status of the service issue. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. See more in the table below.
+     * Gets the status property value. The status of the service issue. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. For more details, see serviceHealthStatus values.
      * @return ServiceHealthStatus|null
     */
     public function getStatus(): ?ServiceHealthStatus {
@@ -223,7 +242,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     }
 
     /**
-     * Sets the status property value. The status of the service issue. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. See more in the table below.
+     * Sets the status property value. The status of the service issue. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. For more details, see serviceHealthStatus values.
      *  @param ServiceHealthStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ServiceHealthStatus $value ): void {

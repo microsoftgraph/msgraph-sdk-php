@@ -8,39 +8,61 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Psr\Http\Message\StreamInterface;
 
-class OnenotePage extends OnenoteEntitySchemaObjectModel 
+class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable 
 {
-    /** @var StreamInterface|null $content The page's HTML content. */
+    /**
+     * @var StreamInterface|null $content The page's HTML content.
+    */
     private ?StreamInterface $content = null;
     
-    /** @var string|null $contentUrl The URL for the page's HTML content.  Read-only. */
+    /**
+     * @var string|null $contentUrl The URL for the page's HTML content.  Read-only.
+    */
     private ?string $contentUrl = null;
     
-    /** @var string|null $createdByAppId The unique identifier of the application that created the page. Read-only. */
+    /**
+     * @var string|null $createdByAppId The unique identifier of the application that created the page. Read-only.
+    */
     private ?string $createdByAppId = null;
     
-    /** @var DateTime|null $lastModifiedDateTime The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var int|null $level The indentation level of the page. Read-only. */
+    /**
+     * @var int|null $level The indentation level of the page. Read-only.
+    */
     private ?int $level = null;
     
-    /** @var PageLinks|null $links Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only. */
+    /**
+     * @var PageLinks|null $links Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
+    */
     private ?PageLinks $links = null;
     
-    /** @var int|null $order The order of the page within its parent section. Read-only. */
+    /**
+     * @var int|null $order The order of the page within its parent section. Read-only.
+    */
     private ?int $order = null;
     
-    /** @var Notebook|null $parentNotebook The notebook that contains the page.  Read-only. */
+    /**
+     * @var Notebook|null $parentNotebook The notebook that contains the page.  Read-only.
+    */
     private ?Notebook $parentNotebook = null;
     
-    /** @var OnenoteSection|null $parentSection The section that contains the page. Read-only. */
+    /**
+     * @var OnenoteSection|null $parentSection The section that contains the page. Read-only.
+    */
     private ?OnenoteSection $parentSection = null;
     
-    /** @var string|null $title The title of the page. */
+    /**
+     * @var string|null $title The title of the page.
+    */
     private ?string $title = null;
     
-    /** @var array<string>|null $userTags The userTags property */
+    /**
+     * @var array<string>|null $userTags The userTags property
+    */
     private ?array $userTags = null;
     
     /**
@@ -55,7 +77,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return OnenotePage
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): OnenotePage {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): OnenotePage {
         return new OnenotePage();
     }
 
@@ -88,18 +110,19 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'content' => function (self $o, ParseNode $n) { $o->setContent($n->getBinaryContent()); },
-            'contentUrl' => function (self $o, ParseNode $n) { $o->setContentUrl($n->getStringValue()); },
-            'createdByAppId' => function (self $o, ParseNode $n) { $o->setCreatedByAppId($n->getStringValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'level' => function (self $o, ParseNode $n) { $o->setLevel($n->getIntegerValue()); },
-            'links' => function (self $o, ParseNode $n) { $o->setLinks($n->getObjectValue(PageLinks::class)); },
-            'order' => function (self $o, ParseNode $n) { $o->setOrder($n->getIntegerValue()); },
-            'parentNotebook' => function (self $o, ParseNode $n) { $o->setParentNotebook($n->getObjectValue(Notebook::class)); },
-            'parentSection' => function (self $o, ParseNode $n) { $o->setParentSection($n->getObjectValue(OnenoteSection::class)); },
-            'title' => function (self $o, ParseNode $n) { $o->setTitle($n->getStringValue()); },
-            'userTags' => function (self $o, ParseNode $n) { $o->setUserTags($n->getCollectionOfPrimitiveValues()); },
+            'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getBinaryContent()); },
+            'contentUrl' => function (ParseNode $n) use ($o) { $o->setContentUrl($n->getStringValue()); },
+            'createdByAppId' => function (ParseNode $n) use ($o) { $o->setCreatedByAppId($n->getStringValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'level' => function (ParseNode $n) use ($o) { $o->setLevel($n->getIntegerValue()); },
+            'links' => function (ParseNode $n) use ($o) { $o->setLinks($n->getObjectValue(array(PageLinks::class, 'createFromDiscriminatorValue'))); },
+            'order' => function (ParseNode $n) use ($o) { $o->setOrder($n->getIntegerValue()); },
+            'parentNotebook' => function (ParseNode $n) use ($o) { $o->setParentNotebook($n->getObjectValue(array(Notebook::class, 'createFromDiscriminatorValue'))); },
+            'parentSection' => function (ParseNode $n) use ($o) { $o->setParentSection($n->getObjectValue(array(OnenoteSection::class, 'createFromDiscriminatorValue'))); },
+            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getStringValue()); },
+            'userTags' => function (ParseNode $n) use ($o) { $o->setUserTags($n->getCollectionOfPrimitiveValues()); },
         ]);
     }
 

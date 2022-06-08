@@ -6,18 +6,26 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Place extends Entity 
+class Place extends Entity implements Parsable 
 {
-    /** @var PhysicalAddress|null $address The street address of the place. */
+    /**
+     * @var PhysicalAddress|null $address The street address of the place.
+    */
     private ?PhysicalAddress $address = null;
     
-    /** @var string|null $displayName The name associated with the place. */
+    /**
+     * @var string|null $displayName The name associated with the place.
+    */
     private ?string $displayName = null;
     
-    /** @var OutlookGeoCoordinates|null $geoCoordinates Specifies the place location in latitude, longitude and (optionally) altitude coordinates. */
+    /**
+     * @var OutlookGeoCoordinates|null $geoCoordinates Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
+    */
     private ?OutlookGeoCoordinates $geoCoordinates = null;
     
-    /** @var string|null $phone The phone number of the place. */
+    /**
+     * @var string|null $phone The phone number of the place.
+    */
     private ?string $phone = null;
     
     /**
@@ -32,7 +40,14 @@ class Place extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Place
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Place {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Place {
+        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.place': return new Place();
+            }
+        }
         return new Place();
     }
 
@@ -57,11 +72,12 @@ class Place extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'address' => function (self $o, ParseNode $n) { $o->setAddress($n->getObjectValue(PhysicalAddress::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'geoCoordinates' => function (self $o, ParseNode $n) { $o->setGeoCoordinates($n->getObjectValue(OutlookGeoCoordinates::class)); },
-            'phone' => function (self $o, ParseNode $n) { $o->setPhone($n->getStringValue()); },
+            'address' => function (ParseNode $n) use ($o) { $o->setAddress($n->getObjectValue(array(PhysicalAddress::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'geoCoordinates' => function (ParseNode $n) use ($o) { $o->setGeoCoordinates($n->getObjectValue(array(OutlookGeoCoordinates::class, 'createFromDiscriminatorValue'))); },
+            'phone' => function (ParseNode $n) use ($o) { $o->setPhone($n->getStringValue()); },
         ]);
     }
 

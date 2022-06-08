@@ -6,7 +6,7 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AgreementFileVersion extends AgreementFileProperties 
+class AgreementFileVersion extends AgreementFileProperties implements Parsable 
 {
     /**
      * Instantiates a new agreementFileVersion and sets the default values.
@@ -20,7 +20,7 @@ class AgreementFileVersion extends AgreementFileProperties
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AgreementFileVersion
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AgreementFileVersion {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AgreementFileVersion {
         return new AgreementFileVersion();
     }
 
@@ -29,6 +29,7 @@ class AgreementFileVersion extends AgreementFileProperties
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

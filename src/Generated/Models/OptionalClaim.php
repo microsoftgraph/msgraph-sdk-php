@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class OptionalClaim implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<string>|null $additionalProperties Additional properties of the claim. If a property exists in this collection, it modifies the behavior of the optional claim specified in the name property. */
+    /**
+     * @var array<string>|null $additionalProperties Additional properties of the claim. If a property exists in this collection, it modifies the behavior of the optional claim specified in the name property.
+    */
     private ?array $additionalProperties = null;
     
-    /** @var bool|null $essential If the value is true, the claim specified by the client is necessary to ensure a smooth authorization experience for the specific task requested by the end user. The default value is false. */
+    /**
+     * @var bool|null $essential If the value is true, the claim specified by the client is necessary to ensure a smooth authorization experience for the specific task requested by the end user. The default value is false.
+    */
     private ?bool $essential = null;
     
-    /** @var string|null $name The name of the optional claim. */
+    /**
+     * @var string|null $name The name of the optional claim.
+    */
     private ?string $name = null;
     
-    /** @var string|null $source The source (directory object) of the claim. There are predefined claims and user-defined claims from extension properties. If the source value is null, the claim is a predefined optional claim. If the source value is user, the value in the name property is the extension property from the user object. */
+    /**
+     * @var string|null $source The source (directory object) of the claim. There are predefined claims and user-defined claims from extension properties. If the source value is null, the claim is a predefined optional claim. If the source value is user, the value in the name property is the extension property from the user object.
+    */
     private ?string $source = null;
     
     /**
@@ -36,7 +46,7 @@ class OptionalClaim implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return OptionalClaim
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): OptionalClaim {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): OptionalClaim {
         return new OptionalClaim();
     }
 
@@ -69,11 +79,12 @@ class OptionalClaim implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'additionalProperties' => function (self $o, ParseNode $n) { $o->setAdditionalProperties($n->getCollectionOfPrimitiveValues()); },
-            'essential' => function (self $o, ParseNode $n) { $o->setEssential($n->getBooleanValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'source' => function (self $o, ParseNode $n) { $o->setSource($n->getStringValue()); },
+            'additionalProperties' => function (ParseNode $n) use ($o) { $o->setAdditionalProperties($n->getCollectionOfPrimitiveValues()); },
+            'essential' => function (ParseNode $n) use ($o) { $o->setEssential($n->getBooleanValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'source' => function (ParseNode $n) use ($o) { $o->setSource($n->getStringValue()); },
         ];
     }
 

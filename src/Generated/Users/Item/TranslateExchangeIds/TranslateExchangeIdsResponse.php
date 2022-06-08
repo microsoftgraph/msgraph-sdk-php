@@ -10,10 +10,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class TranslateExchangeIdsResponse implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<ConvertIdResult>|null $value The value property */
+    /**
+     * @var array<ConvertIdResult>|null $value The value property
+    */
     private ?array $value = null;
     
     /**
@@ -28,7 +32,7 @@ class TranslateExchangeIdsResponse implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TranslateExchangeIdsResponse
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TranslateExchangeIdsResponse {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TranslateExchangeIdsResponse {
         return new TranslateExchangeIdsResponse();
     }
 
@@ -45,8 +49,9 @@ class TranslateExchangeIdsResponse implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'value' => function (self $o, ParseNode $n) { $o->setValue($n->getCollectionOfObjectValues(ConvertIdResult::class)); },
+            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(ConvertIdResult::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

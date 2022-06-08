@@ -7,33 +7,51 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ConversationThread extends Entity 
+class ConversationThread extends Entity implements Parsable 
 {
-    /** @var array<Recipient>|null $ccRecipients The Cc: recipients for the thread. Returned only on $select. */
+    /**
+     * @var array<Recipient>|null $ccRecipients The Cc: recipients for the thread. Returned only on $select.
+    */
     private ?array $ccRecipients = null;
     
-    /** @var bool|null $hasAttachments Indicates whether any of the posts within this thread has at least one attachment. Returned by default. */
+    /**
+     * @var bool|null $hasAttachments Indicates whether any of the posts within this thread has at least one attachment. Returned by default.
+    */
     private ?bool $hasAttachments = null;
     
-    /** @var bool|null $isLocked Indicates if the thread is locked. Returned by default. */
+    /**
+     * @var bool|null $isLocked Indicates if the thread is locked. Returned by default.
+    */
     private ?bool $isLocked = null;
     
-    /** @var DateTime|null $lastDeliveredDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default. */
+    /**
+     * @var DateTime|null $lastDeliveredDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default.
+    */
     private ?DateTime $lastDeliveredDateTime = null;
     
-    /** @var array<Post>|null $posts Read-only. Nullable. */
+    /**
+     * @var array<Post>|null $posts Read-only. Nullable.
+    */
     private ?array $posts = null;
     
-    /** @var string|null $preview A short summary from the body of the latest post in this conversation. Returned by default. */
+    /**
+     * @var string|null $preview A short summary from the body of the latest post in this conversation. Returned by default.
+    */
     private ?string $preview = null;
     
-    /** @var string|null $topic The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated. Returned by default. */
+    /**
+     * @var string|null $topic The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated. Returned by default.
+    */
     private ?string $topic = null;
     
-    /** @var array<Recipient>|null $toRecipients The To: recipients for the thread. Returned only on $select. */
+    /**
+     * @var array<Recipient>|null $toRecipients The To: recipients for the thread. Returned only on $select.
+    */
     private ?array $toRecipients = null;
     
-    /** @var array<string>|null $uniqueSenders All the users that sent a message to this thread. Returned by default. */
+    /**
+     * @var array<string>|null $uniqueSenders All the users that sent a message to this thread. Returned by default.
+    */
     private ?array $uniqueSenders = null;
     
     /**
@@ -48,7 +66,7 @@ class ConversationThread extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ConversationThread
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ConversationThread {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ConversationThread {
         return new ConversationThread();
     }
 
@@ -65,16 +83,17 @@ class ConversationThread extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'ccRecipients' => function (self $o, ParseNode $n) { $o->setCcRecipients($n->getCollectionOfObjectValues(Recipient::class)); },
-            'hasAttachments' => function (self $o, ParseNode $n) { $o->setHasAttachments($n->getBooleanValue()); },
-            'isLocked' => function (self $o, ParseNode $n) { $o->setIsLocked($n->getBooleanValue()); },
-            'lastDeliveredDateTime' => function (self $o, ParseNode $n) { $o->setLastDeliveredDateTime($n->getDateTimeValue()); },
-            'posts' => function (self $o, ParseNode $n) { $o->setPosts($n->getCollectionOfObjectValues(Post::class)); },
-            'preview' => function (self $o, ParseNode $n) { $o->setPreview($n->getStringValue()); },
-            'topic' => function (self $o, ParseNode $n) { $o->setTopic($n->getStringValue()); },
-            'toRecipients' => function (self $o, ParseNode $n) { $o->setToRecipients($n->getCollectionOfObjectValues(Recipient::class)); },
-            'uniqueSenders' => function (self $o, ParseNode $n) { $o->setUniqueSenders($n->getCollectionOfPrimitiveValues()); },
+            'ccRecipients' => function (ParseNode $n) use ($o) { $o->setCcRecipients($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
+            'hasAttachments' => function (ParseNode $n) use ($o) { $o->setHasAttachments($n->getBooleanValue()); },
+            'isLocked' => function (ParseNode $n) use ($o) { $o->setIsLocked($n->getBooleanValue()); },
+            'lastDeliveredDateTime' => function (ParseNode $n) use ($o) { $o->setLastDeliveredDateTime($n->getDateTimeValue()); },
+            'posts' => function (ParseNode $n) use ($o) { $o->setPosts($n->getCollectionOfObjectValues(array(Post::class, 'createFromDiscriminatorValue'))); },
+            'preview' => function (ParseNode $n) use ($o) { $o->setPreview($n->getStringValue()); },
+            'topic' => function (ParseNode $n) use ($o) { $o->setTopic($n->getStringValue()); },
+            'toRecipients' => function (ParseNode $n) use ($o) { $o->setToRecipients($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
+            'uniqueSenders' => function (ParseNode $n) use ($o) { $o->setUniqueSenders($n->getCollectionOfPrimitiveValues()); },
         ]);
     }
 
@@ -95,7 +114,7 @@ class ConversationThread extends Entity
     }
 
     /**
-     * Gets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default.
+     * Gets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default.
      * @return DateTime|null
     */
     public function getLastDeliveredDateTime(): ?DateTime {
@@ -184,7 +203,7 @@ class ConversationThread extends Entity
     }
 
     /**
-     * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default.
+     * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default.
      *  @param DateTime|null $value Value to set for the lastDeliveredDateTime property.
     */
     public function setLastDeliveredDateTime(?DateTime $value ): void {

@@ -27,13 +27,19 @@ class ContactsRequestBuilder
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
-    /** @var array<string, mixed> $pathParameters Path parameters for the request */
+    /**
+     * @var array<string, mixed> $pathParameters Path parameters for the request
+    */
     private array $pathParameters;
     
-    /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
+    /**
+     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+    */
     private RequestAdapter $requestAdapter;
     
-    /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
+    /**
+     * @var string $urlTemplate Url template to use to build the URL for the current request builder
+    */
     private string $urlTemplate;
     
     /**
@@ -42,31 +48,31 @@ class ContactsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/me/contacts{?top,skip,search,filter,count,orderby,select}';
+        $this->urlTemplate = '{+baseurl}/me/contacts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
      * The user's contacts. Read-only. Nullable.
-     * @param array|null $queryParameters Request query parameters
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createGetRequestInformation(?array $queryParameters = null, ?array $headers = null, ?array $options = null): RequestInformation {
+    public function createGetRequestInformation(?ContactsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        if ($headers !== null) {
-            $requestInfo->headers = array_merge($requestInfo->headers, $headers);
-        }
-        if ($queryParameters !== null) {
-            $requestInfo->setQueryParameters($queryParameters);
-        }
-        if ($options !== null) {
-            $requestInfo->addRequestOptions(...$options);
+        if ($requestConfiguration !== null) {
+            if ($requestConfiguration->headers !== null) {
+                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->queryParameters !== null) {
+                $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
+            }
+            if ($requestConfiguration->options !== null) {
+                $requestInfo->addRequestOptions(...$requestConfiguration->options);
+            }
         }
         return $requestInfo;
     }
@@ -74,22 +80,23 @@ class ContactsRequestBuilder
     /**
      * Create new navigation property to contacts for me
      * @param Contact $body 
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createPostRequestInformation(Contact $body, ?array $headers = null, ?array $options = null): RequestInformation {
+    public function createPostRequestInformation(Contact $body, ?ContactsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
-        if ($headers !== null) {
-            $requestInfo->headers = array_merge($requestInfo->headers, $headers);
+        if ($requestConfiguration !== null) {
+            if ($requestConfiguration->headers !== null) {
+                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->options !== null) {
+                $requestInfo->addRequestOptions(...$requestConfiguration->options);
+            }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
-        if ($options !== null) {
-            $requestInfo->addRequestOptions(...$options);
-        }
         return $requestInfo;
     }
 
@@ -103,16 +110,18 @@ class ContactsRequestBuilder
 
     /**
      * The user's contacts. Read-only. Nullable.
-     * @param array|null $queryParameters Request query parameters
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
-    public function get(?array $queryParameters = null, ?array $headers = null, ?array $options = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createGetRequestInformation($queryParameters, $headers, $options);
+    public function get(?ContactsRequestBuilderGetRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+        $requestInfo = $this->createGetRequestInformation($requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, ContactCollectionResponse::class, $responseHandler);
+            $errorMappings = [
+            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            ];
+            return $this->requestAdapter->sendAsync($requestInfo, array(ContactCollectionResponse::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
@@ -121,15 +130,18 @@ class ContactsRequestBuilder
     /**
      * Create new navigation property to contacts for me
      * @param Contact $body 
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
-    public function post(Contact $body, ?array $headers = null, ?array $options = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createPostRequestInformation($body, $headers, $options);
+    public function post(Contact $body, ?ContactsRequestBuilderPostRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+        $requestInfo = $this->createPostRequestInformation($body, $requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, Contact::class, $responseHandler);
+            $errorMappings = [
+            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            ];
+            return $this->requestAdapter->sendAsync($requestInfo, array(Contact::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

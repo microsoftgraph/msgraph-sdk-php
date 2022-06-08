@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ChatMessageMention implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $id Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding <at id='{index}'> tag in the message body. */
+    /**
+     * @var int|null $id Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding <at id='{index}'> tag in the message body.
+    */
     private ?int $id = null;
     
-    /** @var ChatMessageMentionedIdentitySet|null $mentioned The entity (user, application, team, or channel) that was @mentioned. */
+    /**
+     * @var ChatMessageMentionedIdentitySet|null $mentioned The entity (user, application, team, or channel) that was @mentioned.
+    */
     private ?ChatMessageMentionedIdentitySet $mentioned = null;
     
-    /** @var string|null $mentionText String used to represent the mention. For example, a user's display name, a team name. */
+    /**
+     * @var string|null $mentionText String used to represent the mention. For example, a user's display name, a team name.
+    */
     private ?string $mentionText = null;
     
     /**
@@ -33,7 +41,7 @@ class ChatMessageMention implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ChatMessageMention
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ChatMessageMention {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ChatMessageMention {
         return new ChatMessageMention();
     }
 
@@ -50,10 +58,11 @@ class ChatMessageMention implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'id' => function (self $o, ParseNode $n) { $o->setId($n->getIntegerValue()); },
-            'mentioned' => function (self $o, ParseNode $n) { $o->setMentioned($n->getObjectValue(ChatMessageMentionedIdentitySet::class)); },
-            'mentionText' => function (self $o, ParseNode $n) { $o->setMentionText($n->getStringValue()); },
+            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getIntegerValue()); },
+            'mentioned' => function (ParseNode $n) use ($o) { $o->setMentioned($n->getObjectValue(array(ChatMessageMentionedIdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'mentionText' => function (ParseNode $n) use ($o) { $o->setMentionText($n->getStringValue()); },
         ];
     }
 

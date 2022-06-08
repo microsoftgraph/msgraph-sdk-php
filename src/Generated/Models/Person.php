@@ -6,63 +6,101 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Person extends Entity 
+class Person extends Entity implements Parsable 
 {
-    /** @var string|null $birthday The person's birthday. */
+    /**
+     * @var string|null $birthday The person's birthday.
+    */
     private ?string $birthday = null;
     
-    /** @var string|null $companyName The name of the person's company. */
+    /**
+     * @var string|null $companyName The name of the person's company.
+    */
     private ?string $companyName = null;
     
-    /** @var string|null $department The person's department. */
+    /**
+     * @var string|null $department The person's department.
+    */
     private ?string $department = null;
     
-    /** @var string|null $displayName The person's display name. */
+    /**
+     * @var string|null $displayName The person's display name.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $givenName The person's given name. */
+    /**
+     * @var string|null $givenName The person's given name.
+    */
     private ?string $givenName = null;
     
-    /** @var string|null $imAddress The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only. */
+    /**
+     * @var string|null $imAddress The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only.
+    */
     private ?string $imAddress = null;
     
-    /** @var bool|null $isFavorite true if the user has flagged this person as a favorite. */
+    /**
+     * @var bool|null $isFavorite true if the user has flagged this person as a favorite.
+    */
     private ?bool $isFavorite = null;
     
-    /** @var string|null $jobTitle The person's job title. */
+    /**
+     * @var string|null $jobTitle The person's job title.
+    */
     private ?string $jobTitle = null;
     
-    /** @var string|null $officeLocation The location of the person's office. */
+    /**
+     * @var string|null $officeLocation The location of the person's office.
+    */
     private ?string $officeLocation = null;
     
-    /** @var string|null $personNotes Free-form notes that the user has taken about this person. */
+    /**
+     * @var string|null $personNotes Free-form notes that the user has taken about this person.
+    */
     private ?string $personNotes = null;
     
-    /** @var PersonType|null $personType The type of person. */
+    /**
+     * @var PersonType|null $personType The type of person, for example distribution list.
+    */
     private ?PersonType $personType = null;
     
-    /** @var array<Phone>|null $phones The person's phone numbers. */
+    /**
+     * @var array<Phone>|null $phones The person's phone numbers.
+    */
     private ?array $phones = null;
     
-    /** @var array<Location>|null $postalAddresses The person's addresses. */
+    /**
+     * @var array<Location>|null $postalAddresses The person's addresses.
+    */
     private ?array $postalAddresses = null;
     
-    /** @var string|null $profession The person's profession. */
+    /**
+     * @var string|null $profession The person's profession.
+    */
     private ?string $profession = null;
     
-    /** @var array<ScoredEmailAddress>|null $scoredEmailAddresses The person's email addresses. */
+    /**
+     * @var array<ScoredEmailAddress>|null $scoredEmailAddresses The person's email addresses.
+    */
     private ?array $scoredEmailAddresses = null;
     
-    /** @var string|null $surname The person's surname. */
+    /**
+     * @var string|null $surname The person's surname.
+    */
     private ?string $surname = null;
     
-    /** @var string|null $userPrincipalName The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain. */
+    /**
+     * @var string|null $userPrincipalName The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain.
+    */
     private ?string $userPrincipalName = null;
     
-    /** @var array<Website>|null $websites The person's websites. */
+    /**
+     * @var array<Website>|null $websites The person's websites.
+    */
     private ?array $websites = null;
     
-    /** @var string|null $yomiCompany The phonetic Japanese name of the person's company. */
+    /**
+     * @var string|null $yomiCompany The phonetic Japanese name of the person's company.
+    */
     private ?string $yomiCompany = null;
     
     /**
@@ -77,7 +115,7 @@ class Person extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Person
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Person {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Person {
         return new Person();
     }
 
@@ -118,26 +156,27 @@ class Person extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'birthday' => function (self $o, ParseNode $n) { $o->setBirthday($n->getStringValue()); },
-            'companyName' => function (self $o, ParseNode $n) { $o->setCompanyName($n->getStringValue()); },
-            'department' => function (self $o, ParseNode $n) { $o->setDepartment($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'givenName' => function (self $o, ParseNode $n) { $o->setGivenName($n->getStringValue()); },
-            'imAddress' => function (self $o, ParseNode $n) { $o->setImAddress($n->getStringValue()); },
-            'isFavorite' => function (self $o, ParseNode $n) { $o->setIsFavorite($n->getBooleanValue()); },
-            'jobTitle' => function (self $o, ParseNode $n) { $o->setJobTitle($n->getStringValue()); },
-            'officeLocation' => function (self $o, ParseNode $n) { $o->setOfficeLocation($n->getStringValue()); },
-            'personNotes' => function (self $o, ParseNode $n) { $o->setPersonNotes($n->getStringValue()); },
-            'personType' => function (self $o, ParseNode $n) { $o->setPersonType($n->getObjectValue(PersonType::class)); },
-            'phones' => function (self $o, ParseNode $n) { $o->setPhones($n->getCollectionOfObjectValues(Phone::class)); },
-            'postalAddresses' => function (self $o, ParseNode $n) { $o->setPostalAddresses($n->getCollectionOfObjectValues(Location::class)); },
-            'profession' => function (self $o, ParseNode $n) { $o->setProfession($n->getStringValue()); },
-            'scoredEmailAddresses' => function (self $o, ParseNode $n) { $o->setScoredEmailAddresses($n->getCollectionOfObjectValues(ScoredEmailAddress::class)); },
-            'surname' => function (self $o, ParseNode $n) { $o->setSurname($n->getStringValue()); },
-            'userPrincipalName' => function (self $o, ParseNode $n) { $o->setUserPrincipalName($n->getStringValue()); },
-            'websites' => function (self $o, ParseNode $n) { $o->setWebsites($n->getCollectionOfObjectValues(Website::class)); },
-            'yomiCompany' => function (self $o, ParseNode $n) { $o->setYomiCompany($n->getStringValue()); },
+            'birthday' => function (ParseNode $n) use ($o) { $o->setBirthday($n->getStringValue()); },
+            'companyName' => function (ParseNode $n) use ($o) { $o->setCompanyName($n->getStringValue()); },
+            'department' => function (ParseNode $n) use ($o) { $o->setDepartment($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'givenName' => function (ParseNode $n) use ($o) { $o->setGivenName($n->getStringValue()); },
+            'imAddress' => function (ParseNode $n) use ($o) { $o->setImAddress($n->getStringValue()); },
+            'isFavorite' => function (ParseNode $n) use ($o) { $o->setIsFavorite($n->getBooleanValue()); },
+            'jobTitle' => function (ParseNode $n) use ($o) { $o->setJobTitle($n->getStringValue()); },
+            'officeLocation' => function (ParseNode $n) use ($o) { $o->setOfficeLocation($n->getStringValue()); },
+            'personNotes' => function (ParseNode $n) use ($o) { $o->setPersonNotes($n->getStringValue()); },
+            'personType' => function (ParseNode $n) use ($o) { $o->setPersonType($n->getObjectValue(array(PersonType::class, 'createFromDiscriminatorValue'))); },
+            'phones' => function (ParseNode $n) use ($o) { $o->setPhones($n->getCollectionOfObjectValues(array(Phone::class, 'createFromDiscriminatorValue'))); },
+            'postalAddresses' => function (ParseNode $n) use ($o) { $o->setPostalAddresses($n->getCollectionOfObjectValues(array(Location::class, 'createFromDiscriminatorValue'))); },
+            'profession' => function (ParseNode $n) use ($o) { $o->setProfession($n->getStringValue()); },
+            'scoredEmailAddresses' => function (ParseNode $n) use ($o) { $o->setScoredEmailAddresses($n->getCollectionOfObjectValues(array(ScoredEmailAddress::class, 'createFromDiscriminatorValue'))); },
+            'surname' => function (ParseNode $n) use ($o) { $o->setSurname($n->getStringValue()); },
+            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
+            'websites' => function (ParseNode $n) use ($o) { $o->setWebsites($n->getCollectionOfObjectValues(array(Website::class, 'createFromDiscriminatorValue'))); },
+            'yomiCompany' => function (ParseNode $n) use ($o) { $o->setYomiCompany($n->getStringValue()); },
         ]);
     }
 
@@ -190,7 +229,7 @@ class Person extends Entity
     }
 
     /**
-     * Gets the personType property value. The type of person.
+     * Gets the personType property value. The type of person, for example distribution list.
      * @return PersonType|null
     */
     public function getPersonType(): ?PersonType {
@@ -369,7 +408,7 @@ class Person extends Entity
     }
 
     /**
-     * Sets the personType property value. The type of person.
+     * Sets the personType property value. The type of person, for example distribution list.
      *  @param PersonType|null $value Value to set for the personType property.
     */
     public function setPersonType(?PersonType $value ): void {

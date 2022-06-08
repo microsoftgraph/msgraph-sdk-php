@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class VerifiedDomain implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $capabilities For example, 'Email', 'OfficeCommunicationsOnline'. */
+    /**
+     * @var string|null $capabilities For example, Email, OfficeCommunicationsOnline.
+    */
     private ?string $capabilities = null;
     
-    /** @var bool|null $isDefault true if this is the default domain associated with the tenant; otherwise, false. */
+    /**
+     * @var bool|null $isDefault true if this is the default domain associated with the tenant; otherwise, false.
+    */
     private ?bool $isDefault = null;
     
-    /** @var bool|null $isInitial true if this is the initial domain associated with the tenant; otherwise, false */
+    /**
+     * @var bool|null $isInitial true if this is the initial domain associated with the tenant; otherwise, false.
+    */
     private ?bool $isInitial = null;
     
-    /** @var string|null $name The domain name; for example, 'contoso.onmicrosoft.com' */
+    /**
+     * @var string|null $name The domain name; for example, contoso.onmicrosoft.com.
+    */
     private ?string $name = null;
     
-    /** @var string|null $type For example, 'Managed'. */
+    /**
+     * @var string|null $type For example, Managed.
+    */
     private ?string $type = null;
     
     /**
@@ -39,7 +51,7 @@ class VerifiedDomain implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return VerifiedDomain
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): VerifiedDomain {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): VerifiedDomain {
         return new VerifiedDomain();
     }
 
@@ -52,7 +64,7 @@ class VerifiedDomain implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the capabilities property value. For example, 'Email', 'OfficeCommunicationsOnline'.
+     * Gets the capabilities property value. For example, Email, OfficeCommunicationsOnline.
      * @return string|null
     */
     public function getCapabilities(): ?string {
@@ -64,12 +76,13 @@ class VerifiedDomain implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'capabilities' => function (self $o, ParseNode $n) { $o->setCapabilities($n->getStringValue()); },
-            'isDefault' => function (self $o, ParseNode $n) { $o->setIsDefault($n->getBooleanValue()); },
-            'isInitial' => function (self $o, ParseNode $n) { $o->setIsInitial($n->getBooleanValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getStringValue()); },
+            'capabilities' => function (ParseNode $n) use ($o) { $o->setCapabilities($n->getStringValue()); },
+            'isDefault' => function (ParseNode $n) use ($o) { $o->setIsDefault($n->getBooleanValue()); },
+            'isInitial' => function (ParseNode $n) use ($o) { $o->setIsInitial($n->getBooleanValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
         ];
     }
 
@@ -82,7 +95,7 @@ class VerifiedDomain implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the isInitial property value. true if this is the initial domain associated with the tenant; otherwise, false
+     * Gets the isInitial property value. true if this is the initial domain associated with the tenant; otherwise, false.
      * @return bool|null
     */
     public function getIsInitial(): ?bool {
@@ -90,7 +103,7 @@ class VerifiedDomain implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the name property value. The domain name; for example, 'contoso.onmicrosoft.com'
+     * Gets the name property value. The domain name; for example, contoso.onmicrosoft.com.
      * @return string|null
     */
     public function getName(): ?string {
@@ -98,7 +111,7 @@ class VerifiedDomain implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the type property value. For example, 'Managed'.
+     * Gets the type property value. For example, Managed.
      * @return string|null
     */
     public function getType(): ?string {
@@ -127,7 +140,7 @@ class VerifiedDomain implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the capabilities property value. For example, 'Email', 'OfficeCommunicationsOnline'.
+     * Sets the capabilities property value. For example, Email, OfficeCommunicationsOnline.
      *  @param string|null $value Value to set for the capabilities property.
     */
     public function setCapabilities(?string $value ): void {
@@ -143,7 +156,7 @@ class VerifiedDomain implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the isInitial property value. true if this is the initial domain associated with the tenant; otherwise, false
+     * Sets the isInitial property value. true if this is the initial domain associated with the tenant; otherwise, false.
      *  @param bool|null $value Value to set for the isInitial property.
     */
     public function setIsInitial(?bool $value ): void {
@@ -151,7 +164,7 @@ class VerifiedDomain implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the name property value. The domain name; for example, 'contoso.onmicrosoft.com'
+     * Sets the name property value. The domain name; for example, contoso.onmicrosoft.com.
      *  @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value ): void {
@@ -159,7 +172,7 @@ class VerifiedDomain implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the type property value. For example, 'Managed'.
+     * Sets the type property value. For example, Managed.
      *  @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value ): void {

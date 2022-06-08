@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class PublicationFacet implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $level The state of publication for this document. Either published or checkout. Read-only. */
+    /**
+     * @var string|null $level The state of publication for this document. Either published or checkout. Read-only.
+    */
     private ?string $level = null;
     
-    /** @var string|null $versionId The unique identifier for the version that is visible to the current caller. Read-only. */
+    /**
+     * @var string|null $versionId The unique identifier for the version that is visible to the current caller. Read-only.
+    */
     private ?string $versionId = null;
     
     /**
@@ -30,7 +36,7 @@ class PublicationFacet implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PublicationFacet
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PublicationFacet {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PublicationFacet {
         return new PublicationFacet();
     }
 
@@ -47,9 +53,10 @@ class PublicationFacet implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'level' => function (self $o, ParseNode $n) { $o->setLevel($n->getStringValue()); },
-            'versionId' => function (self $o, ParseNode $n) { $o->setVersionId($n->getStringValue()); },
+            'level' => function (ParseNode $n) use ($o) { $o->setLevel($n->getStringValue()); },
+            'versionId' => function (ParseNode $n) use ($o) { $o->setVersionId($n->getStringValue()); },
         ];
     }
 

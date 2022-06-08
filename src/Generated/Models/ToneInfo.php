@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ToneInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $sequenceId An incremental identifier used for ordering DTMF events. */
+    /**
+     * @var int|null $sequenceId An incremental identifier used for ordering DTMF events.
+    */
     private ?int $sequenceId = null;
     
-    /** @var Tone|null $tone Possible values are: tone0, tone1, tone2, tone3, tone4, tone5, tone6, tone7, tone8, tone9, star, pound, a, b, c, d, flash. */
+    /**
+     * @var Tone|null $tone Possible values are: tone0, tone1, tone2, tone3, tone4, tone5, tone6, tone7, tone8, tone9, star, pound, a, b, c, d, flash.
+    */
     private ?Tone $tone = null;
     
     /**
@@ -30,7 +36,7 @@ class ToneInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ToneInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ToneInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ToneInfo {
         return new ToneInfo();
     }
 
@@ -47,9 +53,10 @@ class ToneInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'sequenceId' => function (self $o, ParseNode $n) { $o->setSequenceId($n->getIntegerValue()); },
-            'tone' => function (self $o, ParseNode $n) { $o->setTone($n->getEnumValue(Tone::class)); },
+            'sequenceId' => function (ParseNode $n) use ($o) { $o->setSequenceId($n->getIntegerValue()); },
+            'tone' => function (ParseNode $n) use ($o) { $o->setTone($n->getEnumValue(Tone::class)); },
         ];
     }
 

@@ -41,7 +41,9 @@ class DeviceRequestBuilder
         return new MemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
-    /** @var array<string, mixed> $pathParameters Path parameters for the request */
+    /**
+     * @var array<string, mixed> $pathParameters Path parameters for the request
+    */
     private array $pathParameters;
     
     /**
@@ -58,7 +60,9 @@ class DeviceRequestBuilder
         return new RegisteredUsersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
-    /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
+    /**
+     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+    */
     private RequestAdapter $requestAdapter;
     
     /**
@@ -68,7 +72,9 @@ class DeviceRequestBuilder
         return new TransitiveMemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
-    /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
+    /**
+     * @var string $urlTemplate Url template to use to build the URL for the current request builder
+    */
     private string $urlTemplate;
     
     /**
@@ -77,51 +83,52 @@ class DeviceRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/users/{user_id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod_id}/device{?select,expand}';
+        $this->urlTemplate = '{+baseurl}/users/{user%2Did}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod%2Did}/device{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
      * Delete navigation property device for users
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createDeleteRequestInformation(?array $headers = null, ?array $options = null): RequestInformation {
+    public function createDeleteRequestInformation(?DeviceRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
-        if ($headers !== null) {
-            $requestInfo->headers = array_merge($requestInfo->headers, $headers);
-        }
-        if ($options !== null) {
-            $requestInfo->addRequestOptions(...$options);
+        if ($requestConfiguration !== null) {
+            if ($requestConfiguration->headers !== null) {
+                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->options !== null) {
+                $requestInfo->addRequestOptions(...$requestConfiguration->options);
+            }
         }
         return $requestInfo;
     }
 
     /**
      * The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
-     * @param array|null $queryParameters Request query parameters
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createGetRequestInformation(?array $queryParameters = null, ?array $headers = null, ?array $options = null): RequestInformation {
+    public function createGetRequestInformation(?DeviceRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        if ($headers !== null) {
-            $requestInfo->headers = array_merge($requestInfo->headers, $headers);
-        }
-        if ($queryParameters !== null) {
-            $requestInfo->setQueryParameters($queryParameters);
-        }
-        if ($options !== null) {
-            $requestInfo->addRequestOptions(...$options);
+        if ($requestConfiguration !== null) {
+            if ($requestConfiguration->headers !== null) {
+                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->queryParameters !== null) {
+                $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
+            }
+            if ($requestConfiguration->options !== null) {
+                $requestInfo->addRequestOptions(...$requestConfiguration->options);
+            }
         }
         return $requestInfo;
     }
@@ -129,36 +136,40 @@ class DeviceRequestBuilder
     /**
      * Update the navigation property device in users
      * @param Device $body 
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createPatchRequestInformation(Device $body, ?array $headers = null, ?array $options = null): RequestInformation {
+    public function createPatchRequestInformation(Device $body, ?DeviceRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
-        if ($headers !== null) {
-            $requestInfo->headers = array_merge($requestInfo->headers, $headers);
+        if ($requestConfiguration !== null) {
+            if ($requestConfiguration->headers !== null) {
+                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->options !== null) {
+                $requestInfo->addRequestOptions(...$requestConfiguration->options);
+            }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
-        if ($options !== null) {
-            $requestInfo->addRequestOptions(...$options);
-        }
         return $requestInfo;
     }
 
     /**
      * Delete navigation property device for users
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
-    public function delete(?array $headers = null, ?array $options = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createDeleteRequestInformation($headers, $options);
+    public function delete(?DeviceRequestBuilderDeleteRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+        $requestInfo = $this->createDeleteRequestInformation($requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, '', $responseHandler);
+            $errorMappings = [
+            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            ];
+            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
@@ -171,22 +182,24 @@ class DeviceRequestBuilder
     */
     public function extensionsById(string $id): ExtensionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
-        $urlTplParams['extension_id'] = $id;
+        $urlTplParams['extension%2Did'] = $id;
         return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
      * The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
-     * @param array|null $queryParameters Request query parameters
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
-    public function get(?array $queryParameters = null, ?array $headers = null, ?array $options = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createGetRequestInformation($queryParameters, $headers, $options);
+    public function get(?DeviceRequestBuilderGetRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+        $requestInfo = $this->createGetRequestInformation($requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, Device::class, $responseHandler);
+            $errorMappings = [
+            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            ];
+            return $this->requestAdapter->sendAsync($requestInfo, array(Device::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
@@ -199,22 +212,25 @@ class DeviceRequestBuilder
     */
     public function memberOfById(string $id): MicrosoftGraphGeneratedUsersItemAuthenticationMicrosoftAuthenticatorMethodsItemDeviceMemberOfItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
-        $urlTplParams['directoryObject_id'] = $id;
+        $urlTplParams['directoryObject%2Did'] = $id;
         return new MicrosoftGraphGeneratedUsersItemAuthenticationMicrosoftAuthenticatorMethodsItemDeviceMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
      * Update the navigation property device in users
      * @param Device $body 
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
-    public function patch(Device $body, ?array $headers = null, ?array $options = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createPatchRequestInformation($body, $headers, $options);
+    public function patch(Device $body, ?DeviceRequestBuilderPatchRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+        $requestInfo = $this->createPatchRequestInformation($body, $requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, '', $responseHandler);
+            $errorMappings = [
+            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            ];
+            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
@@ -227,7 +243,7 @@ class DeviceRequestBuilder
     */
     public function registeredOwnersById(string $id): MicrosoftGraphGeneratedUsersItemAuthenticationMicrosoftAuthenticatorMethodsItemDeviceRegisteredOwnersItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
-        $urlTplParams['directoryObject_id'] = $id;
+        $urlTplParams['directoryObject%2Did'] = $id;
         return new MicrosoftGraphGeneratedUsersItemAuthenticationMicrosoftAuthenticatorMethodsItemDeviceRegisteredOwnersItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
@@ -238,7 +254,7 @@ class DeviceRequestBuilder
     */
     public function registeredUsersById(string $id): MicrosoftGraphGeneratedUsersItemAuthenticationMicrosoftAuthenticatorMethodsItemDeviceRegisteredUsersItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
-        $urlTplParams['directoryObject_id'] = $id;
+        $urlTplParams['directoryObject%2Did'] = $id;
         return new MicrosoftGraphGeneratedUsersItemAuthenticationMicrosoftAuthenticatorMethodsItemDeviceRegisteredUsersItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
@@ -249,7 +265,7 @@ class DeviceRequestBuilder
     */
     public function transitiveMemberOfById(string $id): MicrosoftGraphGeneratedUsersItemAuthenticationMicrosoftAuthenticatorMethodsItemDeviceTransitiveMemberOfItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
-        $urlTplParams['directoryObject_id'] = $id;
+        $urlTplParams['directoryObject%2Did'] = $id;
         return new MicrosoftGraphGeneratedUsersItemAuthenticationMicrosoftAuthenticatorMethodsItemDeviceTransitiveMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 

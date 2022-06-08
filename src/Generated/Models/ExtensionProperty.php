@@ -6,21 +6,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ExtensionProperty extends DirectoryObject 
+class ExtensionProperty extends DirectoryObject implements Parsable 
 {
-    /** @var string|null $appDisplayName Display name of the application object on which this extension property is defined. Read-only. */
+    /**
+     * @var string|null $appDisplayName Display name of the application object on which this extension property is defined. Read-only.
+    */
     private ?string $appDisplayName = null;
     
-    /** @var string|null $dataType Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum */
+    /**
+     * @var string|null $dataType Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum
+    */
     private ?string $dataType = null;
     
-    /** @var bool|null $isSyncedFromOnPremises Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only. */
+    /**
+     * @var bool|null $isSyncedFromOnPremises Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
+    */
     private ?bool $isSyncedFromOnPremises = null;
     
-    /** @var string|null $name Name of the extension property. Not nullable. */
+    /**
+     * @var string|null $name Name of the extension property. Not nullable.
+    */
     private ?string $name = null;
     
-    /** @var array<string>|null $targetObjects Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication */
+    /**
+     * @var array<string>|null $targetObjects Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication
+    */
     private ?array $targetObjects = null;
     
     /**
@@ -35,7 +45,7 @@ class ExtensionProperty extends DirectoryObject
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ExtensionProperty
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ExtensionProperty {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ExtensionProperty {
         return new ExtensionProperty();
     }
 
@@ -60,12 +70,13 @@ class ExtensionProperty extends DirectoryObject
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appDisplayName' => function (self $o, ParseNode $n) { $o->setAppDisplayName($n->getStringValue()); },
-            'dataType' => function (self $o, ParseNode $n) { $o->setDataType($n->getStringValue()); },
-            'isSyncedFromOnPremises' => function (self $o, ParseNode $n) { $o->setIsSyncedFromOnPremises($n->getBooleanValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'targetObjects' => function (self $o, ParseNode $n) { $o->setTargetObjects($n->getCollectionOfPrimitiveValues()); },
+            'appDisplayName' => function (ParseNode $n) use ($o) { $o->setAppDisplayName($n->getStringValue()); },
+            'dataType' => function (ParseNode $n) use ($o) { $o->setDataType($n->getStringValue()); },
+            'isSyncedFromOnPremises' => function (ParseNode $n) use ($o) { $o->setIsSyncedFromOnPremises($n->getBooleanValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'targetObjects' => function (ParseNode $n) use ($o) { $o->setTargetObjects($n->getCollectionOfPrimitiveValues()); },
         ]);
     }
 

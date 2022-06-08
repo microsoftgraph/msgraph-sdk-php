@@ -10,19 +10,29 @@ use Microsoft\Kiota\Abstractions\Types\Date;
 
 class EducationTerm implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $displayName Display name of the term. */
+    /**
+     * @var string|null $displayName Display name of the term.
+    */
     private ?string $displayName = null;
     
-    /** @var Date|null $endDate End of the term. */
+    /**
+     * @var Date|null $endDate End of the term.
+    */
     private ?Date $endDate = null;
     
-    /** @var string|null $externalId ID of term in the syncing system. */
+    /**
+     * @var string|null $externalId ID of term in the syncing system.
+    */
     private ?string $externalId = null;
     
-    /** @var Date|null $startDate Start of the term. */
+    /**
+     * @var Date|null $startDate Start of the term.
+    */
     private ?Date $startDate = null;
     
     /**
@@ -37,7 +47,7 @@ class EducationTerm implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return EducationTerm
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): EducationTerm {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): EducationTerm {
         return new EducationTerm();
     }
 
@@ -78,11 +88,12 @@ class EducationTerm implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'endDate' => function (self $o, ParseNode $n) { $o->setEndDate($n->getDateValue()); },
-            'externalId' => function (self $o, ParseNode $n) { $o->setExternalId($n->getStringValue()); },
-            'startDate' => function (self $o, ParseNode $n) { $o->setStartDate($n->getDateValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'endDate' => function (ParseNode $n) use ($o) { $o->setEndDate($n->getDateValue()); },
+            'externalId' => function (ParseNode $n) use ($o) { $o->setExternalId($n->getStringValue()); },
+            'startDate' => function (ParseNode $n) use ($o) { $o->setStartDate($n->getDateValue()); },
         ];
     }
 

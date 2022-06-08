@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SiteCollection implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $dataLocationCode The geographic region code for where this site collection resides. Read-only. */
+    /**
+     * @var string|null $dataLocationCode The geographic region code for where this site collection resides. Read-only.
+    */
     private ?string $dataLocationCode = null;
     
-    /** @var string|null $hostname The hostname for the site collection. Read-only. */
+    /**
+     * @var string|null $hostname The hostname for the site collection. Read-only.
+    */
     private ?string $hostname = null;
     
-    /** @var Root|null $root If present, indicates that this is a root site collection in SharePoint. Read-only. */
+    /**
+     * @var Root|null $root If present, indicates that this is a root site collection in SharePoint. Read-only.
+    */
     private ?Root $root = null;
     
     /**
@@ -33,7 +41,7 @@ class SiteCollection implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SiteCollection
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SiteCollection {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SiteCollection {
         return new SiteCollection();
     }
 
@@ -58,10 +66,11 @@ class SiteCollection implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'dataLocationCode' => function (self $o, ParseNode $n) { $o->setDataLocationCode($n->getStringValue()); },
-            'hostname' => function (self $o, ParseNode $n) { $o->setHostname($n->getStringValue()); },
-            'root' => function (self $o, ParseNode $n) { $o->setRoot($n->getObjectValue(Root::class)); },
+            'dataLocationCode' => function (ParseNode $n) use ($o) { $o->setDataLocationCode($n->getStringValue()); },
+            'hostname' => function (ParseNode $n) use ($o) { $o->setHostname($n->getStringValue()); },
+            'root' => function (ParseNode $n) use ($o) { $o->setRoot($n->getObjectValue(array(Root::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

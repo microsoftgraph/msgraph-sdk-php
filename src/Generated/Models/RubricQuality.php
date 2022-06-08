@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class RubricQuality implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<RubricCriterion>|null $criteria The collection of criteria for this rubric quality. */
+    /**
+     * @var array<RubricCriterion>|null $criteria The collection of criteria for this rubric quality.
+    */
     private ?array $criteria = null;
     
-    /** @var EducationItemBody|null $description The description of this rubric quality. */
+    /**
+     * @var EducationItemBody|null $description The description of this rubric quality.
+    */
     private ?EducationItemBody $description = null;
     
-    /** @var string|null $displayName The name of this rubric quality. */
+    /**
+     * @var string|null $displayName The name of this rubric quality.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $qualityId The ID of this resource. */
+    /**
+     * @var string|null $qualityId The ID of this resource.
+    */
     private ?string $qualityId = null;
     
-    /** @var float|null $weight If present, a numerical weight for this quality.  Weights must add up to 100. */
+    /**
+     * @var float|null $weight If present, a numerical weight for this quality.  Weights must add up to 100.
+    */
     private ?float $weight = null;
     
     /**
@@ -39,7 +51,7 @@ class RubricQuality implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return RubricQuality
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): RubricQuality {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): RubricQuality {
         return new RubricQuality();
     }
 
@@ -80,12 +92,13 @@ class RubricQuality implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'criteria' => function (self $o, ParseNode $n) { $o->setCriteria($n->getCollectionOfObjectValues(RubricCriterion::class)); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getObjectValue(EducationItemBody::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'qualityId' => function (self $o, ParseNode $n) { $o->setQualityId($n->getStringValue()); },
-            'weight' => function (self $o, ParseNode $n) { $o->setWeight($n->getFloatValue()); },
+            'criteria' => function (ParseNode $n) use ($o) { $o->setCriteria($n->getCollectionOfObjectValues(array(RubricCriterion::class, 'createFromDiscriminatorValue'))); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getObjectValue(array(EducationItemBody::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'qualityId' => function (ParseNode $n) use ($o) { $o->setQualityId($n->getStringValue()); },
+            'weight' => function (ParseNode $n) use ($o) { $o->setWeight($n->getFloatValue()); },
         ];
     }
 

@@ -9,82 +9,134 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class PrinterCapabilities implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<int>|null $bottomMargins A list of supported bottom margins(in microns) for the printer. */
+    /**
+     * @var array<int>|null $bottomMargins A list of supported bottom margins(in microns) for the printer.
+    */
     private ?array $bottomMargins = null;
     
-    /** @var bool|null $collation True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise. */
+    /**
+     * @var bool|null $collation True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise.
+    */
     private ?bool $collation = null;
     
-    /** @var array<PrintColorMode>|null $colorModes The color modes supported by the printer. Valid values are described in the following table. */
+    /**
+     * @var array<string>|null $colorModes The color modes supported by the printer. Valid values are described in the following table.
+    */
     private ?array $colorModes = null;
     
-    /** @var array<string>|null $contentTypes A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types. */
+    /**
+     * @var array<string>|null $contentTypes A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types.
+    */
     private ?array $contentTypes = null;
     
-    /** @var IntegerRange|null $copiesPerJob The range of copies per job supported by the printer. */
+    /**
+     * @var IntegerRange|null $copiesPerJob The range of copies per job supported by the printer.
+    */
     private ?IntegerRange $copiesPerJob = null;
     
-    /** @var array<int>|null $dpis The list of print resolutions in DPI that are supported by the printer. */
+    /**
+     * @var array<int>|null $dpis The list of print resolutions in DPI that are supported by the printer.
+    */
     private ?array $dpis = null;
     
-    /** @var array<PrintDuplexMode>|null $duplexModes The list of duplex modes that are supported by the printer. Valid values are described in the following table. */
+    /**
+     * @var array<string>|null $duplexModes The list of duplex modes that are supported by the printer. Valid values are described in the following table.
+    */
     private ?array $duplexModes = null;
     
-    /** @var array<PrinterFeedOrientation>|null $feedOrientations The list of feed orientations that are supported by the printer. */
+    /**
+     * @var array<string>|null $feedOrientations The list of feed orientations that are supported by the printer.
+    */
     private ?array $feedOrientations = null;
     
-    /** @var array<PrintFinishing>|null $finishings Finishing processes the printer supports for a printed document. */
+    /**
+     * @var array<string>|null $finishings Finishing processes the printer supports for a printed document.
+    */
     private ?array $finishings = null;
     
-    /** @var array<string>|null $inputBins Supported input bins for the printer. */
+    /**
+     * @var array<string>|null $inputBins Supported input bins for the printer.
+    */
     private ?array $inputBins = null;
     
-    /** @var bool|null $isColorPrintingSupported True if color printing is supported by the printer; false otherwise. Read-only. */
+    /**
+     * @var bool|null $isColorPrintingSupported True if color printing is supported by the printer; false otherwise. Read-only.
+    */
     private ?bool $isColorPrintingSupported = null;
     
-    /** @var bool|null $isPageRangeSupported True if the printer supports printing by page ranges; false otherwise. */
+    /**
+     * @var bool|null $isPageRangeSupported True if the printer supports printing by page ranges; false otherwise.
+    */
     private ?bool $isPageRangeSupported = null;
     
-    /** @var array<int>|null $leftMargins A list of supported left margins(in microns) for the printer. */
+    /**
+     * @var array<int>|null $leftMargins A list of supported left margins(in microns) for the printer.
+    */
     private ?array $leftMargins = null;
     
-    /** @var array<string>|null $mediaColors The media (i.e., paper) colors supported by the printer. */
+    /**
+     * @var array<string>|null $mediaColors The media (i.e., paper) colors supported by the printer.
+    */
     private ?array $mediaColors = null;
     
-    /** @var array<string>|null $mediaSizes The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table. */
+    /**
+     * @var array<string>|null $mediaSizes The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table.
+    */
     private ?array $mediaSizes = null;
     
-    /** @var array<string>|null $mediaTypes The media types supported by the printer. */
+    /**
+     * @var array<string>|null $mediaTypes The media types supported by the printer.
+    */
     private ?array $mediaTypes = null;
     
-    /** @var array<PrintMultipageLayout>|null $multipageLayouts The presentation directions supported by the printer. Supported values are described in the following table. */
+    /**
+     * @var array<string>|null $multipageLayouts The presentation directions supported by the printer. Supported values are described in the following table.
+    */
     private ?array $multipageLayouts = null;
     
-    /** @var array<PrintOrientation>|null $orientations The print orientations supported by the printer. Valid values are described in the following table. */
+    /**
+     * @var array<string>|null $orientations The print orientations supported by the printer. Valid values are described in the following table.
+    */
     private ?array $orientations = null;
     
-    /** @var array<string>|null $outputBins The printer's supported output bins (trays). */
+    /**
+     * @var array<string>|null $outputBins The printer's supported output bins (trays).
+    */
     private ?array $outputBins = null;
     
-    /** @var array<int>|null $pagesPerSheet Supported number of Input Pages to impose upon a single Impression. */
+    /**
+     * @var array<int>|null $pagesPerSheet Supported number of Input Pages to impose upon a single Impression.
+    */
     private ?array $pagesPerSheet = null;
     
-    /** @var array<PrintQuality>|null $qualities The print qualities supported by the printer. */
+    /**
+     * @var array<string>|null $qualities The print qualities supported by the printer.
+    */
     private ?array $qualities = null;
     
-    /** @var array<int>|null $rightMargins A list of supported right margins(in microns) for the printer. */
+    /**
+     * @var array<int>|null $rightMargins A list of supported right margins(in microns) for the printer.
+    */
     private ?array $rightMargins = null;
     
-    /** @var array<PrintScaling>|null $scalings Supported print scalings. */
+    /**
+     * @var array<string>|null $scalings Supported print scalings.
+    */
     private ?array $scalings = null;
     
-    /** @var bool|null $supportsFitPdfToPage True if the printer supports scaling PDF pages to match the print media size; false otherwise. */
+    /**
+     * @var bool|null $supportsFitPdfToPage True if the printer supports scaling PDF pages to match the print media size; false otherwise.
+    */
     private ?bool $supportsFitPdfToPage = null;
     
-    /** @var array<int>|null $topMargins A list of supported top margins(in microns) for the printer. */
+    /**
+     * @var array<int>|null $topMargins A list of supported top margins(in microns) for the printer.
+    */
     private ?array $topMargins = null;
     
     /**
@@ -99,7 +151,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrinterCapabilities
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrinterCapabilities {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrinterCapabilities {
         return new PrinterCapabilities();
     }
 
@@ -129,7 +181,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the colorModes property value. The color modes supported by the printer. Valid values are described in the following table.
-     * @return array<PrintColorMode>|null
+     * @return array<string>|null
     */
     public function getColorModes(): ?array {
         return $this->colorModes;
@@ -161,7 +213,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the duplexModes property value. The list of duplex modes that are supported by the printer. Valid values are described in the following table.
-     * @return array<PrintDuplexMode>|null
+     * @return array<string>|null
     */
     public function getDuplexModes(): ?array {
         return $this->duplexModes;
@@ -169,7 +221,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the feedOrientations property value. The list of feed orientations that are supported by the printer.
-     * @return array<PrinterFeedOrientation>|null
+     * @return array<string>|null
     */
     public function getFeedOrientations(): ?array {
         return $this->feedOrientations;
@@ -180,38 +232,39 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'bottomMargins' => function (self $o, ParseNode $n) { $o->setBottomMargins($n->getCollectionOfPrimitiveValues()); },
-            'collation' => function (self $o, ParseNode $n) { $o->setCollation($n->getBooleanValue()); },
-            'colorModes' => function (self $o, ParseNode $n) { $o->setColorModes($n->getCollectionOfEnumValues(PrintColorMode::class)); },
-            'contentTypes' => function (self $o, ParseNode $n) { $o->setContentTypes($n->getCollectionOfPrimitiveValues()); },
-            'copiesPerJob' => function (self $o, ParseNode $n) { $o->setCopiesPerJob($n->getObjectValue(IntegerRange::class)); },
-            'dpis' => function (self $o, ParseNode $n) { $o->setDpis($n->getCollectionOfPrimitiveValues()); },
-            'duplexModes' => function (self $o, ParseNode $n) { $o->setDuplexModes($n->getCollectionOfEnumValues(PrintDuplexMode::class)); },
-            'feedOrientations' => function (self $o, ParseNode $n) { $o->setFeedOrientations($n->getCollectionOfEnumValues(PrinterFeedOrientation::class)); },
-            'finishings' => function (self $o, ParseNode $n) { $o->setFinishings($n->getCollectionOfEnumValues(PrintFinishing::class)); },
-            'inputBins' => function (self $o, ParseNode $n) { $o->setInputBins($n->getCollectionOfPrimitiveValues()); },
-            'isColorPrintingSupported' => function (self $o, ParseNode $n) { $o->setIsColorPrintingSupported($n->getBooleanValue()); },
-            'isPageRangeSupported' => function (self $o, ParseNode $n) { $o->setIsPageRangeSupported($n->getBooleanValue()); },
-            'leftMargins' => function (self $o, ParseNode $n) { $o->setLeftMargins($n->getCollectionOfPrimitiveValues()); },
-            'mediaColors' => function (self $o, ParseNode $n) { $o->setMediaColors($n->getCollectionOfPrimitiveValues()); },
-            'mediaSizes' => function (self $o, ParseNode $n) { $o->setMediaSizes($n->getCollectionOfPrimitiveValues()); },
-            'mediaTypes' => function (self $o, ParseNode $n) { $o->setMediaTypes($n->getCollectionOfPrimitiveValues()); },
-            'multipageLayouts' => function (self $o, ParseNode $n) { $o->setMultipageLayouts($n->getCollectionOfEnumValues(PrintMultipageLayout::class)); },
-            'orientations' => function (self $o, ParseNode $n) { $o->setOrientations($n->getCollectionOfEnumValues(PrintOrientation::class)); },
-            'outputBins' => function (self $o, ParseNode $n) { $o->setOutputBins($n->getCollectionOfPrimitiveValues()); },
-            'pagesPerSheet' => function (self $o, ParseNode $n) { $o->setPagesPerSheet($n->getCollectionOfPrimitiveValues()); },
-            'qualities' => function (self $o, ParseNode $n) { $o->setQualities($n->getCollectionOfEnumValues(PrintQuality::class)); },
-            'rightMargins' => function (self $o, ParseNode $n) { $o->setRightMargins($n->getCollectionOfPrimitiveValues()); },
-            'scalings' => function (self $o, ParseNode $n) { $o->setScalings($n->getCollectionOfEnumValues(PrintScaling::class)); },
-            'supportsFitPdfToPage' => function (self $o, ParseNode $n) { $o->setSupportsFitPdfToPage($n->getBooleanValue()); },
-            'topMargins' => function (self $o, ParseNode $n) { $o->setTopMargins($n->getCollectionOfPrimitiveValues()); },
+            'bottomMargins' => function (ParseNode $n) use ($o) { $o->setBottomMargins($n->getCollectionOfPrimitiveValues()); },
+            'collation' => function (ParseNode $n) use ($o) { $o->setCollation($n->getBooleanValue()); },
+            'colorModes' => function (ParseNode $n) use ($o) { $o->setColorModes($n->getCollectionOfPrimitiveValues()); },
+            'contentTypes' => function (ParseNode $n) use ($o) { $o->setContentTypes($n->getCollectionOfPrimitiveValues()); },
+            'copiesPerJob' => function (ParseNode $n) use ($o) { $o->setCopiesPerJob($n->getObjectValue(array(IntegerRange::class, 'createFromDiscriminatorValue'))); },
+            'dpis' => function (ParseNode $n) use ($o) { $o->setDpis($n->getCollectionOfPrimitiveValues()); },
+            'duplexModes' => function (ParseNode $n) use ($o) { $o->setDuplexModes($n->getCollectionOfPrimitiveValues()); },
+            'feedOrientations' => function (ParseNode $n) use ($o) { $o->setFeedOrientations($n->getCollectionOfPrimitiveValues()); },
+            'finishings' => function (ParseNode $n) use ($o) { $o->setFinishings($n->getCollectionOfPrimitiveValues()); },
+            'inputBins' => function (ParseNode $n) use ($o) { $o->setInputBins($n->getCollectionOfPrimitiveValues()); },
+            'isColorPrintingSupported' => function (ParseNode $n) use ($o) { $o->setIsColorPrintingSupported($n->getBooleanValue()); },
+            'isPageRangeSupported' => function (ParseNode $n) use ($o) { $o->setIsPageRangeSupported($n->getBooleanValue()); },
+            'leftMargins' => function (ParseNode $n) use ($o) { $o->setLeftMargins($n->getCollectionOfPrimitiveValues()); },
+            'mediaColors' => function (ParseNode $n) use ($o) { $o->setMediaColors($n->getCollectionOfPrimitiveValues()); },
+            'mediaSizes' => function (ParseNode $n) use ($o) { $o->setMediaSizes($n->getCollectionOfPrimitiveValues()); },
+            'mediaTypes' => function (ParseNode $n) use ($o) { $o->setMediaTypes($n->getCollectionOfPrimitiveValues()); },
+            'multipageLayouts' => function (ParseNode $n) use ($o) { $o->setMultipageLayouts($n->getCollectionOfPrimitiveValues()); },
+            'orientations' => function (ParseNode $n) use ($o) { $o->setOrientations($n->getCollectionOfPrimitiveValues()); },
+            'outputBins' => function (ParseNode $n) use ($o) { $o->setOutputBins($n->getCollectionOfPrimitiveValues()); },
+            'pagesPerSheet' => function (ParseNode $n) use ($o) { $o->setPagesPerSheet($n->getCollectionOfPrimitiveValues()); },
+            'qualities' => function (ParseNode $n) use ($o) { $o->setQualities($n->getCollectionOfPrimitiveValues()); },
+            'rightMargins' => function (ParseNode $n) use ($o) { $o->setRightMargins($n->getCollectionOfPrimitiveValues()); },
+            'scalings' => function (ParseNode $n) use ($o) { $o->setScalings($n->getCollectionOfPrimitiveValues()); },
+            'supportsFitPdfToPage' => function (ParseNode $n) use ($o) { $o->setSupportsFitPdfToPage($n->getBooleanValue()); },
+            'topMargins' => function (ParseNode $n) use ($o) { $o->setTopMargins($n->getCollectionOfPrimitiveValues()); },
         ];
     }
 
     /**
      * Gets the finishings property value. Finishing processes the printer supports for a printed document.
-     * @return array<PrintFinishing>|null
+     * @return array<string>|null
     */
     public function getFinishings(): ?array {
         return $this->finishings;
@@ -275,7 +328,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the multipageLayouts property value. The presentation directions supported by the printer. Supported values are described in the following table.
-     * @return array<PrintMultipageLayout>|null
+     * @return array<string>|null
     */
     public function getMultipageLayouts(): ?array {
         return $this->multipageLayouts;
@@ -283,7 +336,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the orientations property value. The print orientations supported by the printer. Valid values are described in the following table.
-     * @return array<PrintOrientation>|null
+     * @return array<string>|null
     */
     public function getOrientations(): ?array {
         return $this->orientations;
@@ -307,7 +360,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the qualities property value. The print qualities supported by the printer.
-     * @return array<PrintQuality>|null
+     * @return array<string>|null
     */
     public function getQualities(): ?array {
         return $this->qualities;
@@ -323,7 +376,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the scalings property value. Supported print scalings.
-     * @return array<PrintScaling>|null
+     * @return array<string>|null
     */
     public function getScalings(): ?array {
         return $this->scalings;
@@ -352,13 +405,13 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeCollectionOfPrimitiveValues('bottomMargins', $this->bottomMargins);
         $writer->writeBooleanValue('collation', $this->collation);
-        $writer->writeCollectionOfEnumValues('colorModes', $this->colorModes);
+        $writer->writeCollectionOfPrimitiveValues('colorModes', $this->colorModes);
         $writer->writeCollectionOfPrimitiveValues('contentTypes', $this->contentTypes);
         $writer->writeObjectValue('copiesPerJob', $this->copiesPerJob);
         $writer->writeCollectionOfPrimitiveValues('dpis', $this->dpis);
-        $writer->writeCollectionOfEnumValues('duplexModes', $this->duplexModes);
-        $writer->writeCollectionOfEnumValues('feedOrientations', $this->feedOrientations);
-        $writer->writeCollectionOfEnumValues('finishings', $this->finishings);
+        $writer->writeCollectionOfPrimitiveValues('duplexModes', $this->duplexModes);
+        $writer->writeCollectionOfPrimitiveValues('feedOrientations', $this->feedOrientations);
+        $writer->writeCollectionOfPrimitiveValues('finishings', $this->finishings);
         $writer->writeCollectionOfPrimitiveValues('inputBins', $this->inputBins);
         $writer->writeBooleanValue('isColorPrintingSupported', $this->isColorPrintingSupported);
         $writer->writeBooleanValue('isPageRangeSupported', $this->isPageRangeSupported);
@@ -366,13 +419,13 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
         $writer->writeCollectionOfPrimitiveValues('mediaColors', $this->mediaColors);
         $writer->writeCollectionOfPrimitiveValues('mediaSizes', $this->mediaSizes);
         $writer->writeCollectionOfPrimitiveValues('mediaTypes', $this->mediaTypes);
-        $writer->writeCollectionOfEnumValues('multipageLayouts', $this->multipageLayouts);
-        $writer->writeCollectionOfEnumValues('orientations', $this->orientations);
+        $writer->writeCollectionOfPrimitiveValues('multipageLayouts', $this->multipageLayouts);
+        $writer->writeCollectionOfPrimitiveValues('orientations', $this->orientations);
         $writer->writeCollectionOfPrimitiveValues('outputBins', $this->outputBins);
         $writer->writeCollectionOfPrimitiveValues('pagesPerSheet', $this->pagesPerSheet);
-        $writer->writeCollectionOfEnumValues('qualities', $this->qualities);
+        $writer->writeCollectionOfPrimitiveValues('qualities', $this->qualities);
         $writer->writeCollectionOfPrimitiveValues('rightMargins', $this->rightMargins);
-        $writer->writeCollectionOfEnumValues('scalings', $this->scalings);
+        $writer->writeCollectionOfPrimitiveValues('scalings', $this->scalings);
         $writer->writeBooleanValue('supportsFitPdfToPage', $this->supportsFitPdfToPage);
         $writer->writeCollectionOfPrimitiveValues('topMargins', $this->topMargins);
         $writer->writeAdditionalData($this->additionalData);
@@ -404,7 +457,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the colorModes property value. The color modes supported by the printer. Valid values are described in the following table.
-     *  @param array<PrintColorMode>|null $value Value to set for the colorModes property.
+     *  @param array<string>|null $value Value to set for the colorModes property.
     */
     public function setColorModes(?array $value ): void {
         $this->colorModes = $value;
@@ -436,7 +489,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the duplexModes property value. The list of duplex modes that are supported by the printer. Valid values are described in the following table.
-     *  @param array<PrintDuplexMode>|null $value Value to set for the duplexModes property.
+     *  @param array<string>|null $value Value to set for the duplexModes property.
     */
     public function setDuplexModes(?array $value ): void {
         $this->duplexModes = $value;
@@ -444,7 +497,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the feedOrientations property value. The list of feed orientations that are supported by the printer.
-     *  @param array<PrinterFeedOrientation>|null $value Value to set for the feedOrientations property.
+     *  @param array<string>|null $value Value to set for the feedOrientations property.
     */
     public function setFeedOrientations(?array $value ): void {
         $this->feedOrientations = $value;
@@ -452,7 +505,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the finishings property value. Finishing processes the printer supports for a printed document.
-     *  @param array<PrintFinishing>|null $value Value to set for the finishings property.
+     *  @param array<string>|null $value Value to set for the finishings property.
     */
     public function setFinishings(?array $value ): void {
         $this->finishings = $value;
@@ -516,7 +569,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the multipageLayouts property value. The presentation directions supported by the printer. Supported values are described in the following table.
-     *  @param array<PrintMultipageLayout>|null $value Value to set for the multipageLayouts property.
+     *  @param array<string>|null $value Value to set for the multipageLayouts property.
     */
     public function setMultipageLayouts(?array $value ): void {
         $this->multipageLayouts = $value;
@@ -524,7 +577,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the orientations property value. The print orientations supported by the printer. Valid values are described in the following table.
-     *  @param array<PrintOrientation>|null $value Value to set for the orientations property.
+     *  @param array<string>|null $value Value to set for the orientations property.
     */
     public function setOrientations(?array $value ): void {
         $this->orientations = $value;
@@ -548,7 +601,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the qualities property value. The print qualities supported by the printer.
-     *  @param array<PrintQuality>|null $value Value to set for the qualities property.
+     *  @param array<string>|null $value Value to set for the qualities property.
     */
     public function setQualities(?array $value ): void {
         $this->qualities = $value;
@@ -564,7 +617,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the scalings property value. Supported print scalings.
-     *  @param array<PrintScaling>|null $value Value to set for the scalings property.
+     *  @param array<string>|null $value Value to set for the scalings property.
     */
     public function setScalings(?array $value ): void {
         $this->scalings = $value;

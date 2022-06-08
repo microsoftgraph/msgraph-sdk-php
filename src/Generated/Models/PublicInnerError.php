@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class PublicInnerError implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $code The error code. */
+    /**
+     * @var string|null $code The error code.
+    */
     private ?string $code = null;
     
-    /** @var array<PublicErrorDetail>|null $details A collection of error details. */
+    /**
+     * @var array<PublicErrorDetail>|null $details A collection of error details.
+    */
     private ?array $details = null;
     
-    /** @var string|null $message The error message. */
+    /**
+     * @var string|null $message The error message.
+    */
     private ?string $message = null;
     
-    /** @var string|null $target The target of the error. */
+    /**
+     * @var string|null $target The target of the error.
+    */
     private ?string $target = null;
     
     /**
@@ -36,7 +46,7 @@ class PublicInnerError implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PublicInnerError
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PublicInnerError {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PublicInnerError {
         return new PublicInnerError();
     }
 
@@ -69,11 +79,12 @@ class PublicInnerError implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'code' => function (self $o, ParseNode $n) { $o->setCode($n->getStringValue()); },
-            'details' => function (self $o, ParseNode $n) { $o->setDetails($n->getCollectionOfObjectValues(PublicErrorDetail::class)); },
-            'message' => function (self $o, ParseNode $n) { $o->setMessage($n->getStringValue()); },
-            'target' => function (self $o, ParseNode $n) { $o->setTarget($n->getStringValue()); },
+            'code' => function (ParseNode $n) use ($o) { $o->setCode($n->getStringValue()); },
+            'details' => function (ParseNode $n) use ($o) { $o->setDetails($n->getCollectionOfObjectValues(array(PublicErrorDetail::class, 'createFromDiscriminatorValue'))); },
+            'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getStringValue()); },
+            'target' => function (ParseNode $n) use ($o) { $o->setTarget($n->getStringValue()); },
         ];
     }
 

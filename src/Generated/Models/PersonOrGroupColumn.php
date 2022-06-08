@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class PersonOrGroupColumn implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $allowMultipleSelection Indicates whether multiple values can be selected from the source. */
+    /**
+     * @var bool|null $allowMultipleSelection Indicates whether multiple values can be selected from the source.
+    */
     private ?bool $allowMultipleSelection = null;
     
-    /** @var string|null $chooseFromType Whether to allow selection of people only, or people and groups. Must be one of peopleAndGroups or peopleOnly. */
+    /**
+     * @var string|null $chooseFromType Whether to allow selection of people only, or people and groups. Must be one of peopleAndGroups or peopleOnly.
+    */
     private ?string $chooseFromType = null;
     
-    /** @var string|null $displayAs How to display the information about the person or group chosen. See below. */
+    /**
+     * @var string|null $displayAs How to display the information about the person or group chosen. See below.
+    */
     private ?string $displayAs = null;
     
     /**
@@ -33,7 +41,7 @@ class PersonOrGroupColumn implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PersonOrGroupColumn
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PersonOrGroupColumn {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PersonOrGroupColumn {
         return new PersonOrGroupColumn();
     }
 
@@ -74,10 +82,11 @@ class PersonOrGroupColumn implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'allowMultipleSelection' => function (self $o, ParseNode $n) { $o->setAllowMultipleSelection($n->getBooleanValue()); },
-            'chooseFromType' => function (self $o, ParseNode $n) { $o->setChooseFromType($n->getStringValue()); },
-            'displayAs' => function (self $o, ParseNode $n) { $o->setDisplayAs($n->getStringValue()); },
+            'allowMultipleSelection' => function (ParseNode $n) use ($o) { $o->setAllowMultipleSelection($n->getBooleanValue()); },
+            'chooseFromType' => function (ParseNode $n) use ($o) { $o->setChooseFromType($n->getStringValue()); },
+            'displayAs' => function (ParseNode $n) use ($o) { $o->setDisplayAs($n->getStringValue()); },
         ];
     }
 

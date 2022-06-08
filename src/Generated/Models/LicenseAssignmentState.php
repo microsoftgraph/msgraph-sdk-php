@@ -10,25 +10,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class LicenseAssignmentState implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $assignedByGroup The id of the group that assigns this license. If the assignment is a direct-assigned license, this field will be Null. Read-Only. */
+    /**
+     * @var string|null $assignedByGroup The id of the group that assigns this license. If the assignment is a direct-assigned license, this field will be Null. Read-Only.
+    */
     private ?string $assignedByGroup = null;
     
-    /** @var array<string>|null $disabledPlans The service plans that are disabled in this assignment. Read-Only. */
+    /**
+     * @var array<string>|null $disabledPlans The service plans that are disabled in this assignment. Read-Only.
+    */
     private ?array $disabledPlans = null;
     
-    /** @var string|null $error License assignment failure error. If the license is assigned successfully, this field will be Null. Read-Only. The possible values are CountViolation, MutuallyExclusiveViolation, DependencyViolation, ProhibitedInUsageLocationViolation, UniquenessViolation, and Other. For more information on how to identify and resolve license assignment errors see here. */
+    /**
+     * @var string|null $error License assignment failure error. If the license is assigned successfully, this field will be Null. Read-Only. The possible values are CountViolation, MutuallyExclusiveViolation, DependencyViolation, ProhibitedInUsageLocationViolation, UniquenessViolation, and Other. For more information on how to identify and resolve license assignment errors see here.
+    */
     private ?string $error = null;
     
-    /** @var DateTime|null $lastUpdatedDateTime The timestamp when the state of the license assignment was last updated. */
+    /**
+     * @var DateTime|null $lastUpdatedDateTime The timestamp when the state of the license assignment was last updated.
+    */
     private ?DateTime $lastUpdatedDateTime = null;
     
-    /** @var string|null $skuId The unique identifier for the SKU. Read-Only. */
+    /**
+     * @var string|null $skuId The unique identifier for the SKU. Read-Only.
+    */
     private ?string $skuId = null;
     
-    /** @var string|null $state Indicate the current state of this assignment. Read-Only. The possible values are Active, ActiveWithError, Disabled, and Error. */
+    /**
+     * @var string|null $state Indicate the current state of this assignment. Read-Only. The possible values are Active, ActiveWithError, Disabled, and Error.
+    */
     private ?string $state = null;
     
     /**
@@ -43,7 +57,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return LicenseAssignmentState
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): LicenseAssignmentState {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): LicenseAssignmentState {
         return new LicenseAssignmentState();
     }
 
@@ -84,13 +98,14 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'assignedByGroup' => function (self $o, ParseNode $n) { $o->setAssignedByGroup($n->getStringValue()); },
-            'disabledPlans' => function (self $o, ParseNode $n) { $o->setDisabledPlans($n->getCollectionOfPrimitiveValues()); },
-            'error' => function (self $o, ParseNode $n) { $o->setError($n->getStringValue()); },
-            'lastUpdatedDateTime' => function (self $o, ParseNode $n) { $o->setLastUpdatedDateTime($n->getDateTimeValue()); },
-            'skuId' => function (self $o, ParseNode $n) { $o->setSkuId($n->getStringValue()); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getStringValue()); },
+            'assignedByGroup' => function (ParseNode $n) use ($o) { $o->setAssignedByGroup($n->getStringValue()); },
+            'disabledPlans' => function (ParseNode $n) use ($o) { $o->setDisabledPlans($n->getCollectionOfPrimitiveValues()); },
+            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getStringValue()); },
+            'lastUpdatedDateTime' => function (ParseNode $n) use ($o) { $o->setLastUpdatedDateTime($n->getDateTimeValue()); },
+            'skuId' => function (ParseNode $n) use ($o) { $o->setSkuId($n->getStringValue()); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getStringValue()); },
         ];
     }
 

@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class PrivacyProfile implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $contactEmail A valid smtp email address for the privacy statement contact. Not required. */
+    /**
+     * @var string|null $contactEmail A valid smtp email address for the privacy statement contact. Not required.
+    */
     private ?string $contactEmail = null;
     
-    /** @var string|null $statementUrl A valid URL format that begins with http:// or https://. Maximum length is 255 characters. The URL that directs to the company's privacy statement. Not required. */
+    /**
+     * @var string|null $statementUrl A valid URL format that begins with http:// or https://. Maximum length is 255 characters. The URL that directs to the company's privacy statement. Not required.
+    */
     private ?string $statementUrl = null;
     
     /**
@@ -30,7 +36,7 @@ class PrivacyProfile implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrivacyProfile
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrivacyProfile {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrivacyProfile {
         return new PrivacyProfile();
     }
 
@@ -55,9 +61,10 @@ class PrivacyProfile implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'contactEmail' => function (self $o, ParseNode $n) { $o->setContactEmail($n->getStringValue()); },
-            'statementUrl' => function (self $o, ParseNode $n) { $o->setStatementUrl($n->getStringValue()); },
+            'contactEmail' => function (ParseNode $n) use ($o) { $o->setContactEmail($n->getStringValue()); },
+            'statementUrl' => function (ParseNode $n) use ($o) { $o->setStatementUrl($n->getStringValue()); },
         ];
     }
 

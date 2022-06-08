@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ChatInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $messageId The unique identifier of a message in a Microsoft Teams channel. */
+    /**
+     * @var string|null $messageId The unique identifier for a message in a Microsoft Teams channel.
+    */
     private ?string $messageId = null;
     
-    /** @var string|null $replyChainMessageId The ID of the reply message. */
+    /**
+     * @var string|null $replyChainMessageId The ID of the reply message.
+    */
     private ?string $replyChainMessageId = null;
     
-    /** @var string|null $threadId The unique identifier for a thread in Microsoft Teams. */
+    /**
+     * @var string|null $threadId The unique identifier for a thread in Microsoft Teams.
+    */
     private ?string $threadId = null;
     
     /**
@@ -33,7 +41,7 @@ class ChatInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ChatInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ChatInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ChatInfo {
         return new ChatInfo();
     }
 
@@ -50,15 +58,16 @@ class ChatInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'messageId' => function (self $o, ParseNode $n) { $o->setMessageId($n->getStringValue()); },
-            'replyChainMessageId' => function (self $o, ParseNode $n) { $o->setReplyChainMessageId($n->getStringValue()); },
-            'threadId' => function (self $o, ParseNode $n) { $o->setThreadId($n->getStringValue()); },
+            'messageId' => function (ParseNode $n) use ($o) { $o->setMessageId($n->getStringValue()); },
+            'replyChainMessageId' => function (ParseNode $n) use ($o) { $o->setReplyChainMessageId($n->getStringValue()); },
+            'threadId' => function (ParseNode $n) use ($o) { $o->setThreadId($n->getStringValue()); },
         ];
     }
 
     /**
-     * Gets the messageId property value. The unique identifier of a message in a Microsoft Teams channel.
+     * Gets the messageId property value. The unique identifier for a message in a Microsoft Teams channel.
      * @return string|null
     */
     public function getMessageId(): ?string {
@@ -101,7 +110,7 @@ class ChatInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the messageId property value. The unique identifier of a message in a Microsoft Teams channel.
+     * Sets the messageId property value. The unique identifier for a message in a Microsoft Teams channel.
      *  @param string|null $value Value to set for the messageId property.
     */
     public function setMessageId(?string $value ): void {

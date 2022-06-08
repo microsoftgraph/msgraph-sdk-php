@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Hashes implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $crc32Hash The CRC32 value of the file in little endian (if available). Read-only. */
+    /**
+     * @var string|null $crc32Hash The CRC32 value of the file (if available). Read-only.
+    */
     private ?string $crc32Hash = null;
     
-    /** @var string|null $quickXorHash A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only. */
+    /**
+     * @var string|null $quickXorHash A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
+    */
     private ?string $quickXorHash = null;
     
-    /** @var string|null $sha1Hash SHA1 hash for the contents of the file (if available). Read-only. */
+    /**
+     * @var string|null $sha1Hash SHA1 hash for the contents of the file (if available). Read-only.
+    */
     private ?string $sha1Hash = null;
     
-    /** @var string|null $sha256Hash SHA256 hash for the contents of the file (if available). Read-only. */
+    /**
+     * @var string|null $sha256Hash SHA256 hash for the contents of the file (if available). Read-only.
+    */
     private ?string $sha256Hash = null;
     
     /**
@@ -36,7 +46,7 @@ class Hashes implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Hashes
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Hashes {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Hashes {
         return new Hashes();
     }
 
@@ -49,7 +59,7 @@ class Hashes implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the crc32Hash property value. The CRC32 value of the file in little endian (if available). Read-only.
+     * Gets the crc32Hash property value. The CRC32 value of the file (if available). Read-only.
      * @return string|null
     */
     public function getCrc32Hash(): ?string {
@@ -61,11 +71,12 @@ class Hashes implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'crc32Hash' => function (self $o, ParseNode $n) { $o->setCrc32Hash($n->getStringValue()); },
-            'quickXorHash' => function (self $o, ParseNode $n) { $o->setQuickXorHash($n->getStringValue()); },
-            'sha1Hash' => function (self $o, ParseNode $n) { $o->setSha1Hash($n->getStringValue()); },
-            'sha256Hash' => function (self $o, ParseNode $n) { $o->setSha256Hash($n->getStringValue()); },
+            'crc32Hash' => function (ParseNode $n) use ($o) { $o->setCrc32Hash($n->getStringValue()); },
+            'quickXorHash' => function (ParseNode $n) use ($o) { $o->setQuickXorHash($n->getStringValue()); },
+            'sha1Hash' => function (ParseNode $n) use ($o) { $o->setSha1Hash($n->getStringValue()); },
+            'sha256Hash' => function (ParseNode $n) use ($o) { $o->setSha256Hash($n->getStringValue()); },
         ];
     }
 
@@ -114,7 +125,7 @@ class Hashes implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the crc32Hash property value. The CRC32 value of the file in little endian (if available). Read-only.
+     * Sets the crc32Hash property value. The CRC32 value of the file (if available). Read-only.
      *  @param string|null $value Value to set for the crc32Hash property.
     */
     public function setCrc32Hash(?string $value ): void {

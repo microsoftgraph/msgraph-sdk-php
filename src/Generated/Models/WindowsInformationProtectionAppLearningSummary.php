@@ -6,15 +6,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WindowsInformationProtectionAppLearningSummary extends Entity 
+class WindowsInformationProtectionAppLearningSummary extends Entity implements Parsable 
 {
-    /** @var string|null $applicationName Application Name */
+    /**
+     * @var string|null $applicationName Application Name
+    */
     private ?string $applicationName = null;
     
-    /** @var ApplicationType|null $applicationType Application Type. Possible values are: universal, desktop. */
+    /**
+     * @var ApplicationType|null $applicationType Application Type. Possible values are: universal, desktop.
+    */
     private ?ApplicationType $applicationType = null;
     
-    /** @var int|null $deviceCount Device Count */
+    /**
+     * @var int|null $deviceCount Device Count
+    */
     private ?int $deviceCount = null;
     
     /**
@@ -29,7 +35,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WindowsInformationProtectionAppLearningSummary
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WindowsInformationProtectionAppLearningSummary {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WindowsInformationProtectionAppLearningSummary {
         return new WindowsInformationProtectionAppLearningSummary();
     }
 
@@ -62,10 +68,11 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'applicationName' => function (self $o, ParseNode $n) { $o->setApplicationName($n->getStringValue()); },
-            'applicationType' => function (self $o, ParseNode $n) { $o->setApplicationType($n->getEnumValue(ApplicationType::class)); },
-            'deviceCount' => function (self $o, ParseNode $n) { $o->setDeviceCount($n->getIntegerValue()); },
+            'applicationName' => function (ParseNode $n) use ($o) { $o->setApplicationName($n->getStringValue()); },
+            'applicationType' => function (ParseNode $n) use ($o) { $o->setApplicationType($n->getEnumValue(ApplicationType::class)); },
+            'deviceCount' => function (ParseNode $n) use ($o) { $o->setDeviceCount($n->getIntegerValue()); },
         ]);
     }
 

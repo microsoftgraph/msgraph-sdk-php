@@ -10,16 +10,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ChatMessageReaction implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $reactionType Supported values are like, angry, sad, laugh, heart, surprised. */
+    /**
+     * @var string|null $reactionType Supported values are like, angry, sad, laugh, heart, surprised.
+    */
     private ?string $reactionType = null;
     
-    /** @var ChatMessageReactionIdentitySet|null $user The user property */
+    /**
+     * @var ChatMessageReactionIdentitySet|null $user The user property
+    */
     private ?ChatMessageReactionIdentitySet $user = null;
     
     /**
@@ -34,7 +42,7 @@ class ChatMessageReaction implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ChatMessageReaction
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ChatMessageReaction {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ChatMessageReaction {
         return new ChatMessageReaction();
     }
 
@@ -59,10 +67,11 @@ class ChatMessageReaction implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'reactionType' => function (self $o, ParseNode $n) { $o->setReactionType($n->getStringValue()); },
-            'user' => function (self $o, ParseNode $n) { $o->setUser($n->getObjectValue(ChatMessageReactionIdentitySet::class)); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'reactionType' => function (ParseNode $n) use ($o) { $o->setReactionType($n->getStringValue()); },
+            'user' => function (ParseNode $n) use ($o) { $o->setUser($n->getObjectValue(array(ChatMessageReactionIdentitySet::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

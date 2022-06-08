@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $displayName Display name of the resource */
+    /**
+     * @var string|null $displayName Display name of the resource
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $id Identifier of the resource */
+    /**
+     * @var string|null $id Resource ID
+    */
     private ?string $id = null;
     
-    /** @var string|null $type Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackageAssignmentPolicy. */
+    /**
+     * @var string|null $type Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackageAssignmentPolicy.
+    */
     private ?string $type = null;
     
     /**
@@ -33,7 +41,7 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AccessReviewInstanceDecisionItemResource
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AccessReviewInstanceDecisionItemResource {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessReviewInstanceDecisionItemResource {
         return new AccessReviewInstanceDecisionItemResource();
     }
 
@@ -58,15 +66,16 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'id' => function (self $o, ParseNode $n) { $o->setId($n->getStringValue()); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
         ];
     }
 
     /**
-     * Gets the id property value. Identifier of the resource
+     * Gets the id property value. Resource ID
      * @return string|null
     */
     public function getId(): ?string {
@@ -109,7 +118,7 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the id property value. Identifier of the resource
+     * Sets the id property value. Resource ID
      *  @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value ): void {

@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ResultInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $code The result code. */
+    /**
+     * @var int|null $code The result code.
+    */
     private ?int $code = null;
     
-    /** @var string|null $message The message. */
+    /**
+     * @var string|null $message The message.
+    */
     private ?string $message = null;
     
-    /** @var int|null $subcode The result sub-code. */
+    /**
+     * @var int|null $subcode The result sub-code.
+    */
     private ?int $subcode = null;
     
     /**
@@ -33,7 +41,7 @@ class ResultInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ResultInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ResultInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ResultInfo {
         return new ResultInfo();
     }
 
@@ -58,10 +66,11 @@ class ResultInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'code' => function (self $o, ParseNode $n) { $o->setCode($n->getIntegerValue()); },
-            'message' => function (self $o, ParseNode $n) { $o->setMessage($n->getStringValue()); },
-            'subcode' => function (self $o, ParseNode $n) { $o->setSubcode($n->getIntegerValue()); },
+            'code' => function (ParseNode $n) use ($o) { $o->setCode($n->getIntegerValue()); },
+            'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getStringValue()); },
+            'subcode' => function (ParseNode $n) use ($o) { $o->setSubcode($n->getIntegerValue()); },
         ];
     }
 

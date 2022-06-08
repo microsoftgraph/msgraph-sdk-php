@@ -7,27 +7,41 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AccessPackage extends Entity 
+class AccessPackage extends Entity implements Parsable 
 {
-    /** @var array<AccessPackageAssignmentPolicy>|null $assignmentPolicies Read-only. Nullable. */
+    /**
+     * @var array<AccessPackageAssignmentPolicy>|null $assignmentPolicies Read-only. Nullable.
+    */
     private ?array $assignmentPolicies = null;
     
-    /** @var AccessPackageCatalog|null $catalog Read-only. Nullable. */
+    /**
+     * @var AccessPackageCatalog|null $catalog Read-only. Nullable.
+    */
     private ?AccessPackageCatalog $catalog = null;
     
-    /** @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $description The description of the access package. */
+    /**
+     * @var string|null $description The description of the access package.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName The display name of the access package. Supports $filter (eq, contains). */
+    /**
+     * @var string|null $displayName The display name of the access package. Supports $filter (eq, contains).
+    */
     private ?string $displayName = null;
     
-    /** @var bool|null $isHidden Whether the access package is hidden from the requestor. */
+    /**
+     * @var bool|null $isHidden Whether the access package is hidden from the requestor.
+    */
     private ?bool $isHidden = null;
     
-    /** @var DateTime|null $modifiedDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * @var DateTime|null $modifiedDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+    */
     private ?DateTime $modifiedDateTime = null;
     
     /**
@@ -42,7 +56,7 @@ class AccessPackage extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AccessPackage
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackage {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackage {
         return new AccessPackage();
     }
 
@@ -91,14 +105,15 @@ class AccessPackage extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignmentPolicies' => function (self $o, ParseNode $n) { $o->setAssignmentPolicies($n->getCollectionOfObjectValues(AccessPackageAssignmentPolicy::class)); },
-            'catalog' => function (self $o, ParseNode $n) { $o->setCatalog($n->getObjectValue(AccessPackageCatalog::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'isHidden' => function (self $o, ParseNode $n) { $o->setIsHidden($n->getBooleanValue()); },
-            'modifiedDateTime' => function (self $o, ParseNode $n) { $o->setModifiedDateTime($n->getDateTimeValue()); },
+            'assignmentPolicies' => function (ParseNode $n) use ($o) { $o->setAssignmentPolicies($n->getCollectionOfObjectValues(array(AccessPackageAssignmentPolicy::class, 'createFromDiscriminatorValue'))); },
+            'catalog' => function (ParseNode $n) use ($o) { $o->setCatalog($n->getObjectValue(array(AccessPackageCatalog::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'isHidden' => function (ParseNode $n) use ($o) { $o->setIsHidden($n->getBooleanValue()); },
+            'modifiedDateTime' => function (ParseNode $n) use ($o) { $o->setModifiedDateTime($n->getDateTimeValue()); },
         ]);
     }
 

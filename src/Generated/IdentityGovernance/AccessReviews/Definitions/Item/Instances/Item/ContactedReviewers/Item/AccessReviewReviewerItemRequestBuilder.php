@@ -17,13 +17,19 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AccessReviewReviewerItemRequestBuilder 
 {
-    /** @var array<string, mixed> $pathParameters Path parameters for the request */
+    /**
+     * @var array<string, mixed> $pathParameters Path parameters for the request
+    */
     private array $pathParameters;
     
-    /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
+    /**
+     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+    */
     private RequestAdapter $requestAdapter;
     
-    /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
+    /**
+     * @var string $urlTemplate Url template to use to build the URL for the current request builder
+    */
     private string $urlTemplate;
     
     /**
@@ -32,51 +38,52 @@ class AccessReviewReviewerItemRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition_id}/instances/{accessReviewInstance_id}/contactedReviewers/{accessReviewReviewer_id}{?select,expand}';
+        $this->urlTemplate = '{+baseurl}/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition%2Did}/instances/{accessReviewInstance%2Did}/contactedReviewers/{accessReviewReviewer%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
      * Delete navigation property contactedReviewers for identityGovernance
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createDeleteRequestInformation(?array $headers = null, ?array $options = null): RequestInformation {
+    public function createDeleteRequestInformation(?AccessReviewReviewerItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
-        if ($headers !== null) {
-            $requestInfo->headers = array_merge($requestInfo->headers, $headers);
-        }
-        if ($options !== null) {
-            $requestInfo->addRequestOptions(...$options);
+        if ($requestConfiguration !== null) {
+            if ($requestConfiguration->headers !== null) {
+                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->options !== null) {
+                $requestInfo->addRequestOptions(...$requestConfiguration->options);
+            }
         }
         return $requestInfo;
     }
 
     /**
      * Returns the collection of reviewers who were contacted to complete this review. While the reviewers and fallbackReviewers properties of the accessReviewScheduleDefinition might specify group owners or managers as reviewers, contactedReviewers returns their individual identities. Supports $select. Read-only.
-     * @param array|null $queryParameters Request query parameters
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createGetRequestInformation(?array $queryParameters = null, ?array $headers = null, ?array $options = null): RequestInformation {
+    public function createGetRequestInformation(?AccessReviewReviewerItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        if ($headers !== null) {
-            $requestInfo->headers = array_merge($requestInfo->headers, $headers);
-        }
-        if ($queryParameters !== null) {
-            $requestInfo->setQueryParameters($queryParameters);
-        }
-        if ($options !== null) {
-            $requestInfo->addRequestOptions(...$options);
+        if ($requestConfiguration !== null) {
+            if ($requestConfiguration->headers !== null) {
+                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->queryParameters !== null) {
+                $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
+            }
+            if ($requestConfiguration->options !== null) {
+                $requestInfo->addRequestOptions(...$requestConfiguration->options);
+            }
         }
         return $requestInfo;
     }
@@ -84,36 +91,40 @@ class AccessReviewReviewerItemRequestBuilder
     /**
      * Update the navigation property contactedReviewers in identityGovernance
      * @param AccessReviewReviewer $body 
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createPatchRequestInformation(AccessReviewReviewer $body, ?array $headers = null, ?array $options = null): RequestInformation {
+    public function createPatchRequestInformation(AccessReviewReviewer $body, ?AccessReviewReviewerItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
-        if ($headers !== null) {
-            $requestInfo->headers = array_merge($requestInfo->headers, $headers);
+        if ($requestConfiguration !== null) {
+            if ($requestConfiguration->headers !== null) {
+                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->options !== null) {
+                $requestInfo->addRequestOptions(...$requestConfiguration->options);
+            }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
-        if ($options !== null) {
-            $requestInfo->addRequestOptions(...$options);
-        }
         return $requestInfo;
     }
 
     /**
      * Delete navigation property contactedReviewers for identityGovernance
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
-    public function delete(?array $headers = null, ?array $options = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createDeleteRequestInformation($headers, $options);
+    public function delete(?AccessReviewReviewerItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+        $requestInfo = $this->createDeleteRequestInformation($requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, '', $responseHandler);
+            $errorMappings = [
+            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            ];
+            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
@@ -121,16 +132,18 @@ class AccessReviewReviewerItemRequestBuilder
 
     /**
      * Returns the collection of reviewers who were contacted to complete this review. While the reviewers and fallbackReviewers properties of the accessReviewScheduleDefinition might specify group owners or managers as reviewers, contactedReviewers returns their individual identities. Supports $select. Read-only.
-     * @param array|null $queryParameters Request query parameters
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
-    public function get(?array $queryParameters = null, ?array $headers = null, ?array $options = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createGetRequestInformation($queryParameters, $headers, $options);
+    public function get(?AccessReviewReviewerItemRequestBuilderGetRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+        $requestInfo = $this->createGetRequestInformation($requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, AccessReviewReviewer::class, $responseHandler);
+            $errorMappings = [
+            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            ];
+            return $this->requestAdapter->sendAsync($requestInfo, array(AccessReviewReviewer::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
@@ -139,15 +152,18 @@ class AccessReviewReviewerItemRequestBuilder
     /**
      * Update the navigation property contactedReviewers in identityGovernance
      * @param AccessReviewReviewer $body 
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
-    public function patch(AccessReviewReviewer $body, ?array $headers = null, ?array $options = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createPatchRequestInformation($body, $headers, $options);
+    public function patch(AccessReviewReviewer $body, ?AccessReviewReviewerItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+        $requestInfo = $this->createPatchRequestInformation($body, $requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, '', $responseHandler);
+            $errorMappings = [
+            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            ];
+            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

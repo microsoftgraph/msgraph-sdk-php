@@ -6,24 +6,36 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ContactFolder extends Entity 
+class ContactFolder extends Entity implements Parsable 
 {
-    /** @var array<ContactFolder>|null $childFolders The collection of child folders in the folder. Navigation property. Read-only. Nullable. */
+    /**
+     * @var array<ContactFolder>|null $childFolders The collection of child folders in the folder. Navigation property. Read-only. Nullable.
+    */
     private ?array $childFolders = null;
     
-    /** @var array<Contact>|null $contacts The contacts in the folder. Navigation property. Read-only. Nullable. */
+    /**
+     * @var array<Contact>|null $contacts The contacts in the folder. Navigation property. Read-only. Nullable.
+    */
     private ?array $contacts = null;
     
-    /** @var string|null $displayName The folder's display name. */
+    /**
+     * @var string|null $displayName The folder's display name.
+    */
     private ?string $displayName = null;
     
-    /** @var array<MultiValueLegacyExtendedProperty>|null $multiValueExtendedProperties The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable. */
+    /**
+     * @var array<MultiValueLegacyExtendedProperty>|null $multiValueExtendedProperties The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
+    */
     private ?array $multiValueExtendedProperties = null;
     
-    /** @var string|null $parentFolderId The ID of the folder's parent folder. */
+    /**
+     * @var string|null $parentFolderId The ID of the folder's parent folder.
+    */
     private ?string $parentFolderId = null;
     
-    /** @var array<SingleValueLegacyExtendedProperty>|null $singleValueExtendedProperties The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable. */
+    /**
+     * @var array<SingleValueLegacyExtendedProperty>|null $singleValueExtendedProperties The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
+    */
     private ?array $singleValueExtendedProperties = null;
     
     /**
@@ -38,7 +50,7 @@ class ContactFolder extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ContactFolder
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ContactFolder {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ContactFolder {
         return new ContactFolder();
     }
 
@@ -71,13 +83,14 @@ class ContactFolder extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'childFolders' => function (self $o, ParseNode $n) { $o->setChildFolders($n->getCollectionOfObjectValues(ContactFolder::class)); },
-            'contacts' => function (self $o, ParseNode $n) { $o->setContacts($n->getCollectionOfObjectValues(Contact::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'multiValueExtendedProperties' => function (self $o, ParseNode $n) { $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::class)); },
-            'parentFolderId' => function (self $o, ParseNode $n) { $o->setParentFolderId($n->getStringValue()); },
-            'singleValueExtendedProperties' => function (self $o, ParseNode $n) { $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::class)); },
+            'childFolders' => function (ParseNode $n) use ($o) { $o->setChildFolders($n->getCollectionOfObjectValues(array(ContactFolder::class, 'createFromDiscriminatorValue'))); },
+            'contacts' => function (ParseNode $n) use ($o) { $o->setContacts($n->getCollectionOfObjectValues(array(Contact::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'multiValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues(array(MultiValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
+            'parentFolderId' => function (ParseNode $n) use ($o) { $o->setParentFolderId($n->getStringValue()); },
+            'singleValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues(array(SingleValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

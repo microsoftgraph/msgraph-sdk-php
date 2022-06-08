@@ -9,10 +9,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SearchResult implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $onClickTelemetryUrl A callback URL that can be used to record telemetry information. The application should issue a GET on this URL if the user interacts with this item to improve the quality of results. */
+    /**
+     * @var string|null $onClickTelemetryUrl A callback URL that can be used to record telemetry information. The application should issue a GET on this URL if the user interacts with this item to improve the quality of results.
+    */
     private ?string $onClickTelemetryUrl = null;
     
     /**
@@ -27,7 +31,7 @@ class SearchResult implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SearchResult
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SearchResult {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SearchResult {
         return new SearchResult();
     }
 
@@ -44,8 +48,9 @@ class SearchResult implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'onClickTelemetryUrl' => function (self $o, ParseNode $n) { $o->setOnClickTelemetryUrl($n->getStringValue()); },
+            'onClickTelemetryUrl' => function (ParseNode $n) use ($o) { $o->setOnClickTelemetryUrl($n->getStringValue()); },
         ];
     }
 

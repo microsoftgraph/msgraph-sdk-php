@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AuthenticationMethodConfiguration extends Entity 
+class AuthenticationMethodConfiguration extends Entity implements Parsable 
 {
-    /** @var AuthenticationMethodState|null $state The state of the policy. Possible values are: enabled, disabled. */
+    /**
+     * @var AuthenticationMethodState|null $state The state of the policy. Possible values are: enabled, disabled.
+    */
     private ?AuthenticationMethodState $state = null;
     
     /**
@@ -23,7 +25,14 @@ class AuthenticationMethodConfiguration extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AuthenticationMethodConfiguration
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AuthenticationMethodConfiguration {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AuthenticationMethodConfiguration {
+        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.authenticationMethodConfiguration': return new AuthenticationMethodConfiguration();
+            }
+        }
         return new AuthenticationMethodConfiguration();
     }
 
@@ -32,8 +41,9 @@ class AuthenticationMethodConfiguration extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getEnumValue(AuthenticationMethodState::class)); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(AuthenticationMethodState::class)); },
         ]);
     }
 

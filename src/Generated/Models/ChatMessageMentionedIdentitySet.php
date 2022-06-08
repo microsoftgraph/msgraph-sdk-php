@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ChatMessageMentionedIdentitySet extends IdentitySet 
+class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable 
 {
-    /** @var TeamworkConversationIdentity|null $conversation If present, represents a conversation (for example, team or channel) @mentioned in a message. */
+    /**
+     * @var TeamworkConversationIdentity|null $conversation If present, represents a conversation (for example, team or channel) @mentioned in a message.
+    */
     private ?TeamworkConversationIdentity $conversation = null;
     
     /**
@@ -23,7 +25,7 @@ class ChatMessageMentionedIdentitySet extends IdentitySet
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ChatMessageMentionedIdentitySet
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ChatMessageMentionedIdentitySet {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ChatMessageMentionedIdentitySet {
         return new ChatMessageMentionedIdentitySet();
     }
 
@@ -40,8 +42,9 @@ class ChatMessageMentionedIdentitySet extends IdentitySet
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'conversation' => function (self $o, ParseNode $n) { $o->setConversation($n->getObjectValue(TeamworkConversationIdentity::class)); },
+            'conversation' => function (ParseNode $n) use ($o) { $o->setConversation($n->getObjectValue(array(TeamworkConversationIdentity::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AppIdentity implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $appId Refers to the Unique GUID representing Application Id in the Azure Active Directory. */
+    /**
+     * @var string|null $appId Refers to the unique identifier representing Application Id in the Azure Active Directory.
+    */
     private ?string $appId = null;
     
-    /** @var string|null $displayName Refers to the Application Name displayed in the Azure Portal. */
+    /**
+     * @var string|null $displayName Refers to the Application Name displayed in the Azure Portal.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $servicePrincipalId Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App. */
+    /**
+     * @var string|null $servicePrincipalId Refers to the unique identifier indicating Service Principal Id in Azure Active Directory for the corresponding App.
+    */
     private ?string $servicePrincipalId = null;
     
-    /** @var string|null $servicePrincipalName Refers to the Service Principal Name is the Application name in the tenant. */
+    /**
+     * @var string|null $servicePrincipalName Refers to the Service Principal Name is the Application name in the tenant.
+    */
     private ?string $servicePrincipalName = null;
     
     /**
@@ -36,7 +46,7 @@ class AppIdentity implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AppIdentity
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AppIdentity {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AppIdentity {
         return new AppIdentity();
     }
 
@@ -49,7 +59,7 @@ class AppIdentity implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the appId property value. Refers to the Unique GUID representing Application Id in the Azure Active Directory.
+     * Gets the appId property value. Refers to the unique identifier representing Application Id in the Azure Active Directory.
      * @return string|null
     */
     public function getAppId(): ?string {
@@ -69,16 +79,17 @@ class AppIdentity implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'appId' => function (self $o, ParseNode $n) { $o->setAppId($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'servicePrincipalId' => function (self $o, ParseNode $n) { $o->setServicePrincipalId($n->getStringValue()); },
-            'servicePrincipalName' => function (self $o, ParseNode $n) { $o->setServicePrincipalName($n->getStringValue()); },
+            'appId' => function (ParseNode $n) use ($o) { $o->setAppId($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'servicePrincipalId' => function (ParseNode $n) use ($o) { $o->setServicePrincipalId($n->getStringValue()); },
+            'servicePrincipalName' => function (ParseNode $n) use ($o) { $o->setServicePrincipalName($n->getStringValue()); },
         ];
     }
 
     /**
-     * Gets the servicePrincipalId property value. Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
+     * Gets the servicePrincipalId property value. Refers to the unique identifier indicating Service Principal Id in Azure Active Directory for the corresponding App.
      * @return string|null
     */
     public function getServicePrincipalId(): ?string {
@@ -114,7 +125,7 @@ class AppIdentity implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the appId property value. Refers to the Unique GUID representing Application Id in the Azure Active Directory.
+     * Sets the appId property value. Refers to the unique identifier representing Application Id in the Azure Active Directory.
      *  @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value ): void {
@@ -130,7 +141,7 @@ class AppIdentity implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the servicePrincipalId property value. Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
+     * Sets the servicePrincipalId property value. Refers to the unique identifier indicating Service Principal Id in Azure Active Directory for the corresponding App.
      *  @param string|null $value Value to set for the servicePrincipalId property.
     */
     public function setServicePrincipalId(?string $value ): void {

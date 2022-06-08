@@ -7,33 +7,51 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ComplianceManagementPartner extends Entity 
+class ComplianceManagementPartner extends Entity implements Parsable 
 {
-    /** @var array<ComplianceManagementPartnerAssignment>|null $androidEnrollmentAssignments User groups which enroll Android devices through partner. */
+    /**
+     * @var array<ComplianceManagementPartnerAssignment>|null $androidEnrollmentAssignments User groups which enroll Android devices through partner.
+    */
     private ?array $androidEnrollmentAssignments = null;
     
-    /** @var bool|null $androidOnboarded Partner onboarded for Android devices. */
+    /**
+     * @var bool|null $androidOnboarded Partner onboarded for Android devices.
+    */
     private ?bool $androidOnboarded = null;
     
-    /** @var string|null $displayName Partner display name */
+    /**
+     * @var string|null $displayName Partner display name
+    */
     private ?string $displayName = null;
     
-    /** @var array<ComplianceManagementPartnerAssignment>|null $iosEnrollmentAssignments User groups which enroll ios devices through partner. */
+    /**
+     * @var array<ComplianceManagementPartnerAssignment>|null $iosEnrollmentAssignments User groups which enroll ios devices through partner.
+    */
     private ?array $iosEnrollmentAssignments = null;
     
-    /** @var bool|null $iosOnboarded Partner onboarded for ios devices. */
+    /**
+     * @var bool|null $iosOnboarded Partner onboarded for ios devices.
+    */
     private ?bool $iosOnboarded = null;
     
-    /** @var DateTime|null $lastHeartbeatDateTime Timestamp of last heartbeat after admin onboarded to the compliance management partner */
+    /**
+     * @var DateTime|null $lastHeartbeatDateTime Timestamp of last heartbeat after admin onboarded to the compliance management partner
+    */
     private ?DateTime $lastHeartbeatDateTime = null;
     
-    /** @var array<ComplianceManagementPartnerAssignment>|null $macOsEnrollmentAssignments User groups which enroll Mac devices through partner. */
+    /**
+     * @var array<ComplianceManagementPartnerAssignment>|null $macOsEnrollmentAssignments User groups which enroll Mac devices through partner.
+    */
     private ?array $macOsEnrollmentAssignments = null;
     
-    /** @var bool|null $macOsOnboarded Partner onboarded for Mac devices. */
+    /**
+     * @var bool|null $macOsOnboarded Partner onboarded for Mac devices.
+    */
     private ?bool $macOsOnboarded = null;
     
-    /** @var DeviceManagementPartnerTenantState|null $partnerState Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive. */
+    /**
+     * @var DeviceManagementPartnerTenantState|null $partnerState Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
+    */
     private ?DeviceManagementPartnerTenantState $partnerState = null;
     
     /**
@@ -48,7 +66,7 @@ class ComplianceManagementPartner extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ComplianceManagementPartner
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ComplianceManagementPartner {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ComplianceManagementPartner {
         return new ComplianceManagementPartner();
     }
 
@@ -81,16 +99,17 @@ class ComplianceManagementPartner extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'androidEnrollmentAssignments' => function (self $o, ParseNode $n) { $o->setAndroidEnrollmentAssignments($n->getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::class)); },
-            'androidOnboarded' => function (self $o, ParseNode $n) { $o->setAndroidOnboarded($n->getBooleanValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'iosEnrollmentAssignments' => function (self $o, ParseNode $n) { $o->setIosEnrollmentAssignments($n->getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::class)); },
-            'iosOnboarded' => function (self $o, ParseNode $n) { $o->setIosOnboarded($n->getBooleanValue()); },
-            'lastHeartbeatDateTime' => function (self $o, ParseNode $n) { $o->setLastHeartbeatDateTime($n->getDateTimeValue()); },
-            'macOsEnrollmentAssignments' => function (self $o, ParseNode $n) { $o->setMacOsEnrollmentAssignments($n->getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::class)); },
-            'macOsOnboarded' => function (self $o, ParseNode $n) { $o->setMacOsOnboarded($n->getBooleanValue()); },
-            'partnerState' => function (self $o, ParseNode $n) { $o->setPartnerState($n->getEnumValue(DeviceManagementPartnerTenantState::class)); },
+            'androidEnrollmentAssignments' => function (ParseNode $n) use ($o) { $o->setAndroidEnrollmentAssignments($n->getCollectionOfObjectValues(array(ComplianceManagementPartnerAssignment::class, 'createFromDiscriminatorValue'))); },
+            'androidOnboarded' => function (ParseNode $n) use ($o) { $o->setAndroidOnboarded($n->getBooleanValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'iosEnrollmentAssignments' => function (ParseNode $n) use ($o) { $o->setIosEnrollmentAssignments($n->getCollectionOfObjectValues(array(ComplianceManagementPartnerAssignment::class, 'createFromDiscriminatorValue'))); },
+            'iosOnboarded' => function (ParseNode $n) use ($o) { $o->setIosOnboarded($n->getBooleanValue()); },
+            'lastHeartbeatDateTime' => function (ParseNode $n) use ($o) { $o->setLastHeartbeatDateTime($n->getDateTimeValue()); },
+            'macOsEnrollmentAssignments' => function (ParseNode $n) use ($o) { $o->setMacOsEnrollmentAssignments($n->getCollectionOfObjectValues(array(ComplianceManagementPartnerAssignment::class, 'createFromDiscriminatorValue'))); },
+            'macOsOnboarded' => function (ParseNode $n) use ($o) { $o->setMacOsOnboarded($n->getBooleanValue()); },
+            'partnerState' => function (ParseNode $n) use ($o) { $o->setPartnerState($n->getEnumValue(DeviceManagementPartnerTenantState::class)); },
         ]);
     }
 

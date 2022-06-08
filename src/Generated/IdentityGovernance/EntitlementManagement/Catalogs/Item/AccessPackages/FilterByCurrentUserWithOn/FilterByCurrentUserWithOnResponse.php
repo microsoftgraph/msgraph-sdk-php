@@ -10,10 +10,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class FilterByCurrentUserWithOnResponse implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<AccessPackage>|null $value The value property */
+    /**
+     * @var array<AccessPackage>|null $value The value property
+    */
     private ?array $value = null;
     
     /**
@@ -28,7 +32,7 @@ class FilterByCurrentUserWithOnResponse implements AdditionalDataHolder, Parsabl
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return FilterByCurrentUserWithOnResponse
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): FilterByCurrentUserWithOnResponse {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): FilterByCurrentUserWithOnResponse {
         return new FilterByCurrentUserWithOnResponse();
     }
 
@@ -45,8 +49,9 @@ class FilterByCurrentUserWithOnResponse implements AdditionalDataHolder, Parsabl
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'value' => function (self $o, ParseNode $n) { $o->setValue($n->getCollectionOfObjectValues(AccessPackage::class)); },
+            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(AccessPackage::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

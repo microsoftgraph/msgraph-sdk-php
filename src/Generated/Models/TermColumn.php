@@ -11,19 +11,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class TermColumn implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $allowMultipleValues Specifies whether the column will allow more than one value. */
+    /**
+     * @var bool|null $allowMultipleValues Specifies whether the column will allow more than one value
+    */
     private ?bool $allowMultipleValues = null;
     
-    /** @var Term|null $parentTerm The parentTerm property */
+    /**
+     * @var Term|null $parentTerm The parentTerm property
+    */
     private ?Term $parentTerm = null;
     
-    /** @var bool|null $showFullyQualifiedName Specifies whether to display the entire term path or only the term label. */
+    /**
+     * @var bool|null $showFullyQualifiedName Specifies whether to display the entire term path or only the term label.
+    */
     private ?bool $showFullyQualifiedName = null;
     
-    /** @var Set|null $termSet The termSet property */
+    /**
+     * @var Set|null $termSet The termSet property
+    */
     private ?Set $termSet = null;
     
     /**
@@ -38,7 +48,7 @@ class TermColumn implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TermColumn
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TermColumn {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TermColumn {
         return new TermColumn();
     }
 
@@ -51,7 +61,7 @@ class TermColumn implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the allowMultipleValues property value. Specifies whether the column will allow more than one value.
+     * Gets the allowMultipleValues property value. Specifies whether the column will allow more than one value
      * @return bool|null
     */
     public function getAllowMultipleValues(): ?bool {
@@ -63,11 +73,12 @@ class TermColumn implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'allowMultipleValues' => function (self $o, ParseNode $n) { $o->setAllowMultipleValues($n->getBooleanValue()); },
-            'parentTerm' => function (self $o, ParseNode $n) { $o->setParentTerm($n->getObjectValue(Term::class)); },
-            'showFullyQualifiedName' => function (self $o, ParseNode $n) { $o->setShowFullyQualifiedName($n->getBooleanValue()); },
-            'termSet' => function (self $o, ParseNode $n) { $o->setTermSet($n->getObjectValue(Set::class)); },
+            'allowMultipleValues' => function (ParseNode $n) use ($o) { $o->setAllowMultipleValues($n->getBooleanValue()); },
+            'parentTerm' => function (ParseNode $n) use ($o) { $o->setParentTerm($n->getObjectValue(array(Term::class, 'createFromDiscriminatorValue'))); },
+            'showFullyQualifiedName' => function (ParseNode $n) use ($o) { $o->setShowFullyQualifiedName($n->getBooleanValue()); },
+            'termSet' => function (ParseNode $n) use ($o) { $o->setTermSet($n->getObjectValue(array(Set::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 
@@ -116,7 +127,7 @@ class TermColumn implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the allowMultipleValues property value. Specifies whether the column will allow more than one value.
+     * Sets the allowMultipleValues property value. Specifies whether the column will allow more than one value
      *  @param bool|null $value Value to set for the allowMultipleValues property.
     */
     public function setAllowMultipleValues(?bool $value ): void {

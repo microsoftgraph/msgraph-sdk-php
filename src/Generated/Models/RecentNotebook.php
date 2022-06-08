@@ -10,19 +10,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class RecentNotebook implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $displayName The name of the notebook. */
+    /**
+     * @var string|null $displayName The name of the notebook.
+    */
     private ?string $displayName = null;
     
-    /** @var DateTime|null $lastAccessedTime The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * @var DateTime|null $lastAccessedTime The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+    */
     private ?DateTime $lastAccessedTime = null;
     
-    /** @var RecentNotebookLinks|null $links Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web. */
+    /**
+     * @var RecentNotebookLinks|null $links Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
+    */
     private ?RecentNotebookLinks $links = null;
     
-    /** @var OnenoteSourceService|null $sourceService The backend store where the Notebook resides, either OneDriveForBusiness or OneDrive. */
+    /**
+     * @var OnenoteSourceService|null $sourceService The backend store where the Notebook resides, either OneDriveForBusiness or OneDrive.
+    */
     private ?OnenoteSourceService $sourceService = null;
     
     /**
@@ -37,7 +47,7 @@ class RecentNotebook implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return RecentNotebook
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): RecentNotebook {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): RecentNotebook {
         return new RecentNotebook();
     }
 
@@ -62,11 +72,12 @@ class RecentNotebook implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'lastAccessedTime' => function (self $o, ParseNode $n) { $o->setLastAccessedTime($n->getDateTimeValue()); },
-            'links' => function (self $o, ParseNode $n) { $o->setLinks($n->getObjectValue(RecentNotebookLinks::class)); },
-            'sourceService' => function (self $o, ParseNode $n) { $o->setSourceService($n->getEnumValue(OnenoteSourceService::class)); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'lastAccessedTime' => function (ParseNode $n) use ($o) { $o->setLastAccessedTime($n->getDateTimeValue()); },
+            'links' => function (ParseNode $n) use ($o) { $o->setLinks($n->getObjectValue(array(RecentNotebookLinks::class, 'createFromDiscriminatorValue'))); },
+            'sourceService' => function (ParseNode $n) use ($o) { $o->setSourceService($n->getEnumValue(OnenoteSourceService::class)); },
         ];
     }
 

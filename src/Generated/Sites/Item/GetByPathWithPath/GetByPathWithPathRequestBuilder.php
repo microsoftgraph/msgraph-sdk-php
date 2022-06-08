@@ -16,13 +16,19 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class GetByPathWithPathRequestBuilder 
 {
-    /** @var array<string, mixed> $pathParameters Path parameters for the request */
+    /**
+     * @var array<string, mixed> $pathParameters Path parameters for the request
+    */
     private array $pathParameters;
     
-    /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
+    /**
+     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+    */
     private RequestAdapter $requestAdapter;
     
-    /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
+    /**
+     * @var string $urlTemplate Url template to use to build the URL for the current request builder
+    */
     private string $urlTemplate;
     
     /**
@@ -32,7 +38,7 @@ class GetByPathWithPathRequestBuilder
      * @param string|null $path Usage: path='{path}'
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $path = null) {
-        $this->urlTemplate = '{+baseurl}/sites/{site_id}/microsoft.graph.getByPath(path=\'{path}\')';
+        $this->urlTemplate = '{+baseurl}/sites/{site%2Did}/microsoft.graph.getByPath(path=\'{path}\')';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
         $urlTplParams = $pathParameters;
@@ -42,35 +48,35 @@ class GetByPathWithPathRequestBuilder
 
     /**
      * Invoke function getByPath
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createGetRequestInformation(?array $headers = null, ?array $options = null): RequestInformation {
+    public function createGetRequestInformation(?GetByPathWithPathRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        if ($headers !== null) {
-            $requestInfo->headers = array_merge($requestInfo->headers, $headers);
-        }
-        if ($options !== null) {
-            $requestInfo->addRequestOptions(...$options);
+        if ($requestConfiguration !== null) {
+            if ($requestConfiguration->headers !== null) {
+                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->options !== null) {
+                $requestInfo->addRequestOptions(...$requestConfiguration->options);
+            }
         }
         return $requestInfo;
     }
 
     /**
      * Invoke function getByPath
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
-    public function get(?array $headers = null, ?array $options = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createGetRequestInformation($headers, $options);
+    public function get(?GetByPathWithPathRequestBuilderGetRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+        $requestInfo = $this->createGetRequestInformation($requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, Site::class, $responseHandler);
+            return $this->requestAdapter->sendAsync($requestInfo, array(Site::class, 'createFromDiscriminatorValue'), $responseHandler, null);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

@@ -7,21 +7,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class NotificationMessageTemplate extends Entity 
+class NotificationMessageTemplate extends Entity implements Parsable 
 {
-    /** @var NotificationTemplateBrandingOptions|null $brandingOptions The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation. */
+    /**
+     * @var NotificationTemplateBrandingOptions|null $brandingOptions The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink.
+    */
     private ?NotificationTemplateBrandingOptions $brandingOptions = null;
     
-    /** @var string|null $defaultLocale The default locale to fallback onto when the requested locale is not available. */
+    /**
+     * @var string|null $defaultLocale The default locale to fallback onto when the requested locale is not available.
+    */
     private ?string $defaultLocale = null;
     
-    /** @var string|null $displayName Display name for the Notification Message Template. */
+    /**
+     * @var string|null $displayName Display name for the Notification Message Template.
+    */
     private ?string $displayName = null;
     
-    /** @var DateTime|null $lastModifiedDateTime DateTime the object was last modified. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime DateTime the object was last modified.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var array<LocalizedNotificationMessage>|null $localizedNotificationMessages The list of localized messages for this Notification Message Template. */
+    /**
+     * @var array<LocalizedNotificationMessage>|null $localizedNotificationMessages The list of localized messages for this Notification Message Template.
+    */
     private ?array $localizedNotificationMessages = null;
     
     /**
@@ -36,12 +46,12 @@ class NotificationMessageTemplate extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return NotificationMessageTemplate
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): NotificationMessageTemplate {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): NotificationMessageTemplate {
         return new NotificationMessageTemplate();
     }
 
     /**
-     * Gets the brandingOptions property value. The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
+     * Gets the brandingOptions property value. The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink.
      * @return NotificationTemplateBrandingOptions|null
     */
     public function getBrandingOptions(): ?NotificationTemplateBrandingOptions {
@@ -69,12 +79,13 @@ class NotificationMessageTemplate extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'brandingOptions' => function (self $o, ParseNode $n) { $o->setBrandingOptions($n->getEnumValue(NotificationTemplateBrandingOptions::class)); },
-            'defaultLocale' => function (self $o, ParseNode $n) { $o->setDefaultLocale($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'localizedNotificationMessages' => function (self $o, ParseNode $n) { $o->setLocalizedNotificationMessages($n->getCollectionOfObjectValues(LocalizedNotificationMessage::class)); },
+            'brandingOptions' => function (ParseNode $n) use ($o) { $o->setBrandingOptions($n->getEnumValue(NotificationTemplateBrandingOptions::class)); },
+            'defaultLocale' => function (ParseNode $n) use ($o) { $o->setDefaultLocale($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'localizedNotificationMessages' => function (ParseNode $n) use ($o) { $o->setLocalizedNotificationMessages($n->getCollectionOfObjectValues(array(LocalizedNotificationMessage::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -108,7 +119,7 @@ class NotificationMessageTemplate extends Entity
     }
 
     /**
-     * Sets the brandingOptions property value. The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
+     * Sets the brandingOptions property value. The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink.
      *  @param NotificationTemplateBrandingOptions|null $value Value to set for the brandingOptions property.
     */
     public function setBrandingOptions(?NotificationTemplateBrandingOptions $value ): void {

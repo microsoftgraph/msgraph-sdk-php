@@ -9,25 +9,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Quota implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $deleted Total space consumed by files in the recycle bin, in bytes. Read-only. */
+    /**
+     * @var int|null $deleted Total space consumed by files in the recycle bin, in bytes. Read-only.
+    */
     private ?int $deleted = null;
     
-    /** @var int|null $remaining Total space remaining before reaching the quota limit, in bytes. Read-only. */
+    /**
+     * @var int|null $remaining Total space remaining before reaching the quota limit, in bytes. Read-only.
+    */
     private ?int $remaining = null;
     
-    /** @var string|null $state Enumeration value that indicates the state of the storage space. Read-only. */
+    /**
+     * @var string|null $state Enumeration value that indicates the state of the storage space. Read-only.
+    */
     private ?string $state = null;
     
-    /** @var StoragePlanInformation|null $storagePlanInformation Information about the drive's storage quota plans. Only in Personal OneDrive. */
+    /**
+     * @var StoragePlanInformation|null $storagePlanInformation Information about the drive's storage quota plans. Only in Personal OneDrive.
+    */
     private ?StoragePlanInformation $storagePlanInformation = null;
     
-    /** @var int|null $total Total allowed storage space, in bytes. Read-only. */
+    /**
+     * @var int|null $total Total allowed storage space, in bytes. Read-only.
+    */
     private ?int $total = null;
     
-    /** @var int|null $used Total space used, in bytes. Read-only. */
+    /**
+     * @var int|null $used Total space used, in bytes. Read-only.
+    */
     private ?int $used = null;
     
     /**
@@ -42,7 +56,7 @@ class Quota implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Quota
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Quota {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Quota {
         return new Quota();
     }
 
@@ -67,13 +81,14 @@ class Quota implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'deleted' => function (self $o, ParseNode $n) { $o->setDeleted($n->getIntegerValue()); },
-            'remaining' => function (self $o, ParseNode $n) { $o->setRemaining($n->getIntegerValue()); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getStringValue()); },
-            'storagePlanInformation' => function (self $o, ParseNode $n) { $o->setStoragePlanInformation($n->getObjectValue(StoragePlanInformation::class)); },
-            'total' => function (self $o, ParseNode $n) { $o->setTotal($n->getIntegerValue()); },
-            'used' => function (self $o, ParseNode $n) { $o->setUsed($n->getIntegerValue()); },
+            'deleted' => function (ParseNode $n) use ($o) { $o->setDeleted($n->getIntegerValue()); },
+            'remaining' => function (ParseNode $n) use ($o) { $o->setRemaining($n->getIntegerValue()); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getStringValue()); },
+            'storagePlanInformation' => function (ParseNode $n) use ($o) { $o->setStoragePlanInformation($n->getObjectValue(array(StoragePlanInformation::class, 'createFromDiscriminatorValue'))); },
+            'total' => function (ParseNode $n) use ($o) { $o->setTotal($n->getIntegerValue()); },
+            'used' => function (ParseNode $n) use ($o) { $o->setUsed($n->getIntegerValue()); },
         ];
     }
 

@@ -9,31 +9,49 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $allowCustomAssignmentSchedule If false, the requestor is not permitted to include a schedule in their request. */
+    /**
+     * @var bool|null $allowCustomAssignmentSchedule If false, the requestor is not permitted to include a schedule in their request.
+    */
     private ?bool $allowCustomAssignmentSchedule = null;
     
-    /** @var bool|null $enableOnBehalfRequestorsToAddAccess If true, allows on-behalf-of requestors to create a request to add access for another principal. */
+    /**
+     * @var bool|null $enableOnBehalfRequestorsToAddAccess If true, allows on-behalf-of requestors to create a request to add access for another principal.
+    */
     private ?bool $enableOnBehalfRequestorsToAddAccess = null;
     
-    /** @var bool|null $enableOnBehalfRequestorsToRemoveAccess If true, allows on-behalf-of requestors to create a request to remove access for another principal. */
+    /**
+     * @var bool|null $enableOnBehalfRequestorsToRemoveAccess If true, allows on-behalf-of requestors to create a request to remove access for another principal.
+    */
     private ?bool $enableOnBehalfRequestorsToRemoveAccess = null;
     
-    /** @var bool|null $enableOnBehalfRequestorsToUpdateAccess If true, allows on-behalf-of requestors to create a request to update access for another principal. */
+    /**
+     * @var bool|null $enableOnBehalfRequestorsToUpdateAccess If true, allows on-behalf-of requestors to create a request to update access for another principal.
+    */
     private ?bool $enableOnBehalfRequestorsToUpdateAccess = null;
     
-    /** @var bool|null $enableTargetsToSelfAddAccess If true, allows requestors to create a request to add access for themselves. */
+    /**
+     * @var bool|null $enableTargetsToSelfAddAccess If true, allows requestors to create a request to add access for themselves.
+    */
     private ?bool $enableTargetsToSelfAddAccess = null;
     
-    /** @var bool|null $enableTargetsToSelfRemoveAccess If true, allows requestors to create a request to remove their access. */
+    /**
+     * @var bool|null $enableTargetsToSelfRemoveAccess If true, allows requestors to create a request to remove their access.
+    */
     private ?bool $enableTargetsToSelfRemoveAccess = null;
     
-    /** @var bool|null $enableTargetsToSelfUpdateAccess If true, allows requestors to create a request to update their access. */
+    /**
+     * @var bool|null $enableTargetsToSelfUpdateAccess If true, allows requestors to create a request to update their access.
+    */
     private ?bool $enableTargetsToSelfUpdateAccess = null;
     
-    /** @var array<SubjectSet>|null $onBehalfRequestors The principals who can request on-behalf-of others. */
+    /**
+     * @var array<SubjectSet>|null $onBehalfRequestors The principals who can request on-behalf-of others.
+    */
     private ?array $onBehalfRequestors = null;
     
     /**
@@ -48,7 +66,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AccessPackageAssignmentRequestorSettings
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageAssignmentRequestorSettings {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageAssignmentRequestorSettings {
         return new AccessPackageAssignmentRequestorSettings();
     }
 
@@ -121,15 +139,16 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'allowCustomAssignmentSchedule' => function (self $o, ParseNode $n) { $o->setAllowCustomAssignmentSchedule($n->getBooleanValue()); },
-            'enableOnBehalfRequestorsToAddAccess' => function (self $o, ParseNode $n) { $o->setEnableOnBehalfRequestorsToAddAccess($n->getBooleanValue()); },
-            'enableOnBehalfRequestorsToRemoveAccess' => function (self $o, ParseNode $n) { $o->setEnableOnBehalfRequestorsToRemoveAccess($n->getBooleanValue()); },
-            'enableOnBehalfRequestorsToUpdateAccess' => function (self $o, ParseNode $n) { $o->setEnableOnBehalfRequestorsToUpdateAccess($n->getBooleanValue()); },
-            'enableTargetsToSelfAddAccess' => function (self $o, ParseNode $n) { $o->setEnableTargetsToSelfAddAccess($n->getBooleanValue()); },
-            'enableTargetsToSelfRemoveAccess' => function (self $o, ParseNode $n) { $o->setEnableTargetsToSelfRemoveAccess($n->getBooleanValue()); },
-            'enableTargetsToSelfUpdateAccess' => function (self $o, ParseNode $n) { $o->setEnableTargetsToSelfUpdateAccess($n->getBooleanValue()); },
-            'onBehalfRequestors' => function (self $o, ParseNode $n) { $o->setOnBehalfRequestors($n->getCollectionOfObjectValues(SubjectSet::class)); },
+            'allowCustomAssignmentSchedule' => function (ParseNode $n) use ($o) { $o->setAllowCustomAssignmentSchedule($n->getBooleanValue()); },
+            'enableOnBehalfRequestorsToAddAccess' => function (ParseNode $n) use ($o) { $o->setEnableOnBehalfRequestorsToAddAccess($n->getBooleanValue()); },
+            'enableOnBehalfRequestorsToRemoveAccess' => function (ParseNode $n) use ($o) { $o->setEnableOnBehalfRequestorsToRemoveAccess($n->getBooleanValue()); },
+            'enableOnBehalfRequestorsToUpdateAccess' => function (ParseNode $n) use ($o) { $o->setEnableOnBehalfRequestorsToUpdateAccess($n->getBooleanValue()); },
+            'enableTargetsToSelfAddAccess' => function (ParseNode $n) use ($o) { $o->setEnableTargetsToSelfAddAccess($n->getBooleanValue()); },
+            'enableTargetsToSelfRemoveAccess' => function (ParseNode $n) use ($o) { $o->setEnableTargetsToSelfRemoveAccess($n->getBooleanValue()); },
+            'enableTargetsToSelfUpdateAccess' => function (ParseNode $n) use ($o) { $o->setEnableTargetsToSelfUpdateAccess($n->getBooleanValue()); },
+            'onBehalfRequestors' => function (ParseNode $n) use ($o) { $o->setOnBehalfRequestors($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

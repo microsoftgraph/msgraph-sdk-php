@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $additionalDetails Additional details in case of error. */
+    /**
+     * @var string|null $additionalDetails Additional details in case of error.
+    */
     private ?string $additionalDetails = null;
     
-    /** @var ProvisioningStatusErrorCategory|null $errorCategory Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue */
+    /**
+     * @var ProvisioningStatusErrorCategory|null $errorCategory Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
+    */
     private ?ProvisioningStatusErrorCategory $errorCategory = null;
     
-    /** @var string|null $errorCode Unique error code if any occurred. Learn more */
+    /**
+     * @var string|null $errorCode Unique error code if any occurred. Learn more
+    */
     private ?string $errorCode = null;
     
-    /** @var string|null $reason Summarizes the status and describes why the status happened. */
+    /**
+     * @var string|null $reason Summarizes the status and describes why the status happened.
+    */
     private ?string $reason = null;
     
-    /** @var string|null $recommendedAction Provides the resolution for the corresponding error. */
+    /**
+     * @var string|null $recommendedAction Provides the resolution for the corresponding error.
+    */
     private ?string $recommendedAction = null;
     
     /**
@@ -39,7 +51,7 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ProvisioningErrorInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ProvisioningErrorInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ProvisioningErrorInfo {
         return new ProvisioningErrorInfo();
     }
 
@@ -80,12 +92,13 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'additionalDetails' => function (self $o, ParseNode $n) { $o->setAdditionalDetails($n->getStringValue()); },
-            'errorCategory' => function (self $o, ParseNode $n) { $o->setErrorCategory($n->getEnumValue(ProvisioningStatusErrorCategory::class)); },
-            'errorCode' => function (self $o, ParseNode $n) { $o->setErrorCode($n->getStringValue()); },
-            'reason' => function (self $o, ParseNode $n) { $o->setReason($n->getStringValue()); },
-            'recommendedAction' => function (self $o, ParseNode $n) { $o->setRecommendedAction($n->getStringValue()); },
+            'additionalDetails' => function (ParseNode $n) use ($o) { $o->setAdditionalDetails($n->getStringValue()); },
+            'errorCategory' => function (ParseNode $n) use ($o) { $o->setErrorCategory($n->getEnumValue(ProvisioningStatusErrorCategory::class)); },
+            'errorCode' => function (ParseNode $n) use ($o) { $o->setErrorCode($n->getStringValue()); },
+            'reason' => function (ParseNode $n) use ($o) { $o->setReason($n->getStringValue()); },
+            'recommendedAction' => function (ParseNode $n) use ($o) { $o->setRecommendedAction($n->getStringValue()); },
         ];
     }
 

@@ -10,16 +10,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class InnerError implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $clientRequestId Client request Id as sent by the client application. */
+    /**
+     * @var string|null $clientRequestId Client request Id as sent by the client application.
+    */
     private ?string $clientRequestId = null;
     
-    /** @var DateTime|null $Date Date when the error occured. */
+    /**
+     * @var DateTime|null $Date Date when the error occured.
+    */
     private ?DateTime $date = null;
     
-    /** @var string|null $requestId Request Id as tracked internally by the service */
+    /**
+     * @var string|null $requestId Request Id as tracked internally by the service
+    */
     private ?string $requestId = null;
     
     /**
@@ -34,7 +42,7 @@ class InnerError implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return InnerError
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): InnerError {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): InnerError {
         return new InnerError();
     }
 
@@ -67,10 +75,11 @@ class InnerError implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'client-request-id' => function (self $o, ParseNode $n) { $o->setClientRequestId($n->getStringValue()); },
-            'date' => function (self $o, ParseNode $n) { $o->setDate($n->getDateTimeValue()); },
-            'request-id' => function (self $o, ParseNode $n) { $o->setRequestId($n->getStringValue()); },
+            'client-request-id' => function (ParseNode $n) use ($o) { $o->setClientRequestId($n->getStringValue()); },
+            'date' => function (ParseNode $n) use ($o) { $o->setDate($n->getDateTimeValue()); },
+            'request-id' => function (ParseNode $n) use ($o) { $o->setRequestId($n->getStringValue()); },
         ];
     }
 

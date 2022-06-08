@@ -10,10 +10,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SupportedTimeZonesWithTimeZoneStandardResponse implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<TimeZoneInformation>|null $value The value property */
+    /**
+     * @var array<TimeZoneInformation>|null $value The value property
+    */
     private ?array $value = null;
     
     /**
@@ -28,7 +32,7 @@ class SupportedTimeZonesWithTimeZoneStandardResponse implements AdditionalDataHo
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SupportedTimeZonesWithTimeZoneStandardResponse
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SupportedTimeZonesWithTimeZoneStandardResponse {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SupportedTimeZonesWithTimeZoneStandardResponse {
         return new SupportedTimeZonesWithTimeZoneStandardResponse();
     }
 
@@ -45,8 +49,9 @@ class SupportedTimeZonesWithTimeZoneStandardResponse implements AdditionalDataHo
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'value' => function (self $o, ParseNode $n) { $o->setValue($n->getCollectionOfObjectValues(TimeZoneInformation::class)); },
+            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(TimeZoneInformation::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

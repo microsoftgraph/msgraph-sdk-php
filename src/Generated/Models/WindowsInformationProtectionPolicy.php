@@ -6,42 +6,66 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WindowsInformationProtectionPolicy extends WindowsInformationProtection 
+class WindowsInformationProtectionPolicy extends WindowsInformationProtection implements Parsable 
 {
-    /** @var int|null $daysWithoutContactBeforeUnenroll Offline interval before app data is wiped (days) */
+    /**
+     * @var int|null $daysWithoutContactBeforeUnenroll Offline interval before app data is wiped (days)
+    */
     private ?int $daysWithoutContactBeforeUnenroll = null;
     
-    /** @var string|null $mdmEnrollmentUrl Enrollment url for the MDM */
+    /**
+     * @var string|null $mdmEnrollmentUrl Enrollment url for the MDM
+    */
     private ?string $mdmEnrollmentUrl = null;
     
-    /** @var int|null $minutesOfInactivityBeforeDeviceLock Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 <= X <= 999. */
+    /**
+     * @var int|null $minutesOfInactivityBeforeDeviceLock Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 <= X <= 999.
+    */
     private ?int $minutesOfInactivityBeforeDeviceLock = null;
     
-    /** @var int|null $numberOfPastPinsRemembered Integer value that specifies the number of past PINs that can be associated to a user account that can't be reused. The largest number you can configure for this policy setting is 50. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then storage of previous PINs is not required. This node was added in Windows 10, version 1511. Default is 0. */
+    /**
+     * @var int|null $numberOfPastPinsRemembered Integer value that specifies the number of past PINs that can be associated to a user account that can't be reused. The largest number you can configure for this policy setting is 50. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then storage of previous PINs is not required. This node was added in Windows 10, version 1511. Default is 0.
+    */
     private ?int $numberOfPastPinsRemembered = null;
     
-    /** @var int|null $passwordMaximumAttemptCount The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 <= X <= 16 for desktop and 0 <= X <= 999 for mobile devices. */
+    /**
+     * @var int|null $passwordMaximumAttemptCount The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 <= X <= 16 for desktop and 0 <= X <= 999 for mobile devices.
+    */
     private ?int $passwordMaximumAttemptCount = null;
     
-    /** @var int|null $pinExpirationDays Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user's PIN will never expire. This node was added in Windows 10, version 1511. Default is 0. */
+    /**
+     * @var int|null $pinExpirationDays Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user's PIN will never expire. This node was added in Windows 10, version 1511. Default is 0.
+    */
     private ?int $pinExpirationDays = null;
     
-    /** @var WindowsInformationProtectionPinCharacterRequirements|null $pinLowercaseLetters Integer value that configures the use of lowercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow. */
+    /**
+     * @var WindowsInformationProtectionPinCharacterRequirements|null $pinLowercaseLetters Integer value that configures the use of lowercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
+    */
     private ?WindowsInformationProtectionPinCharacterRequirements $pinLowercaseLetters = null;
     
-    /** @var int|null $pinMinimumLength Integer value that sets the minimum number of characters required for the PIN. Default value is 4. The lowest number you can configure for this policy setting is 4. The largest number you can configure must be less than the number configured in the Maximum PIN length policy setting or the number 127, whichever is the lowest. */
+    /**
+     * @var int|null $pinMinimumLength Integer value that sets the minimum number of characters required for the PIN. Default value is 4. The lowest number you can configure for this policy setting is 4. The largest number you can configure must be less than the number configured in the Maximum PIN length policy setting or the number 127, whichever is the lowest.
+    */
     private ?int $pinMinimumLength = null;
     
-    /** @var WindowsInformationProtectionPinCharacterRequirements|null $pinSpecialCharacters Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! ' # $ % & ' ( )  + , - . / : ; < = > ? @ [ / ] ^  ` { */
+    /**
+     * @var WindowsInformationProtectionPinCharacterRequirements|null $pinSpecialCharacters Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! ' # $ % & ' ( )  + , - . / : ; < = > ? @ [ / ] ^  ` {
+    */
     private ?WindowsInformationProtectionPinCharacterRequirements $pinSpecialCharacters = null;
     
-    /** @var WindowsInformationProtectionPinCharacterRequirements|null $pinUppercaseLetters Integer value that configures the use of uppercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow. */
+    /**
+     * @var WindowsInformationProtectionPinCharacterRequirements|null $pinUppercaseLetters Integer value that configures the use of uppercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
+    */
     private ?WindowsInformationProtectionPinCharacterRequirements $pinUppercaseLetters = null;
     
-    /** @var bool|null $revokeOnMdmHandoffDisabled New property in RS2, pending documentation */
+    /**
+     * @var bool|null $revokeOnMdmHandoffDisabled New property in RS2, pending documentation
+    */
     private ?bool $revokeOnMdmHandoffDisabled = null;
     
-    /** @var bool|null $windowsHelloForBusinessBlocked Boolean value that sets Windows Hello for Business as a method for signing into Windows. */
+    /**
+     * @var bool|null $windowsHelloForBusinessBlocked Boolean value that sets Windows Hello for Business as a method for signing into Windows.
+    */
     private ?bool $windowsHelloForBusinessBlocked = null;
     
     /**
@@ -56,7 +80,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WindowsInformationProtectionPolicy
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WindowsInformationProtectionPolicy {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WindowsInformationProtectionPolicy {
         return new WindowsInformationProtectionPolicy();
     }
 
@@ -73,19 +97,20 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'daysWithoutContactBeforeUnenroll' => function (self $o, ParseNode $n) { $o->setDaysWithoutContactBeforeUnenroll($n->getIntegerValue()); },
-            'mdmEnrollmentUrl' => function (self $o, ParseNode $n) { $o->setMdmEnrollmentUrl($n->getStringValue()); },
-            'minutesOfInactivityBeforeDeviceLock' => function (self $o, ParseNode $n) { $o->setMinutesOfInactivityBeforeDeviceLock($n->getIntegerValue()); },
-            'numberOfPastPinsRemembered' => function (self $o, ParseNode $n) { $o->setNumberOfPastPinsRemembered($n->getIntegerValue()); },
-            'passwordMaximumAttemptCount' => function (self $o, ParseNode $n) { $o->setPasswordMaximumAttemptCount($n->getIntegerValue()); },
-            'pinExpirationDays' => function (self $o, ParseNode $n) { $o->setPinExpirationDays($n->getIntegerValue()); },
-            'pinLowercaseLetters' => function (self $o, ParseNode $n) { $o->setPinLowercaseLetters($n->getEnumValue(WindowsInformationProtectionPinCharacterRequirements::class)); },
-            'pinMinimumLength' => function (self $o, ParseNode $n) { $o->setPinMinimumLength($n->getIntegerValue()); },
-            'pinSpecialCharacters' => function (self $o, ParseNode $n) { $o->setPinSpecialCharacters($n->getEnumValue(WindowsInformationProtectionPinCharacterRequirements::class)); },
-            'pinUppercaseLetters' => function (self $o, ParseNode $n) { $o->setPinUppercaseLetters($n->getEnumValue(WindowsInformationProtectionPinCharacterRequirements::class)); },
-            'revokeOnMdmHandoffDisabled' => function (self $o, ParseNode $n) { $o->setRevokeOnMdmHandoffDisabled($n->getBooleanValue()); },
-            'windowsHelloForBusinessBlocked' => function (self $o, ParseNode $n) { $o->setWindowsHelloForBusinessBlocked($n->getBooleanValue()); },
+            'daysWithoutContactBeforeUnenroll' => function (ParseNode $n) use ($o) { $o->setDaysWithoutContactBeforeUnenroll($n->getIntegerValue()); },
+            'mdmEnrollmentUrl' => function (ParseNode $n) use ($o) { $o->setMdmEnrollmentUrl($n->getStringValue()); },
+            'minutesOfInactivityBeforeDeviceLock' => function (ParseNode $n) use ($o) { $o->setMinutesOfInactivityBeforeDeviceLock($n->getIntegerValue()); },
+            'numberOfPastPinsRemembered' => function (ParseNode $n) use ($o) { $o->setNumberOfPastPinsRemembered($n->getIntegerValue()); },
+            'passwordMaximumAttemptCount' => function (ParseNode $n) use ($o) { $o->setPasswordMaximumAttemptCount($n->getIntegerValue()); },
+            'pinExpirationDays' => function (ParseNode $n) use ($o) { $o->setPinExpirationDays($n->getIntegerValue()); },
+            'pinLowercaseLetters' => function (ParseNode $n) use ($o) { $o->setPinLowercaseLetters($n->getEnumValue(WindowsInformationProtectionPinCharacterRequirements::class)); },
+            'pinMinimumLength' => function (ParseNode $n) use ($o) { $o->setPinMinimumLength($n->getIntegerValue()); },
+            'pinSpecialCharacters' => function (ParseNode $n) use ($o) { $o->setPinSpecialCharacters($n->getEnumValue(WindowsInformationProtectionPinCharacterRequirements::class)); },
+            'pinUppercaseLetters' => function (ParseNode $n) use ($o) { $o->setPinUppercaseLetters($n->getEnumValue(WindowsInformationProtectionPinCharacterRequirements::class)); },
+            'revokeOnMdmHandoffDisabled' => function (ParseNode $n) use ($o) { $o->setRevokeOnMdmHandoffDisabled($n->getBooleanValue()); },
+            'windowsHelloForBusinessBlocked' => function (ParseNode $n) use ($o) { $o->setWindowsHelloForBusinessBlocked($n->getBooleanValue()); },
         ]);
     }
 

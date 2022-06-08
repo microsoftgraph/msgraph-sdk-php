@@ -6,18 +6,26 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WorkbookChartTitle extends Entity 
+class WorkbookChartTitle extends Entity implements Parsable 
 {
-    /** @var WorkbookChartTitleFormat|null $format Represents the formatting of a chart title, which includes fill and font formatting. Read-only. */
+    /**
+     * @var WorkbookChartTitleFormat|null $format Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
+    */
     private ?WorkbookChartTitleFormat $format = null;
     
-    /** @var bool|null $overlay Boolean value representing if the chart title will overlay the chart or not. */
+    /**
+     * @var bool|null $overlay Boolean value representing if the chart title will overlay the chart or not.
+    */
     private ?bool $overlay = null;
     
-    /** @var string|null $text Represents the title text of a chart. */
+    /**
+     * @var string|null $text Represents the title text of a chart.
+    */
     private ?string $text = null;
     
-    /** @var bool|null $visible A boolean value the represents the visibility of a chart title object. */
+    /**
+     * @var bool|null $visible A boolean value the represents the visibility of a chart title object.
+    */
     private ?bool $visible = null;
     
     /**
@@ -32,7 +40,7 @@ class WorkbookChartTitle extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookChartTitle
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookChartTitle {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookChartTitle {
         return new WorkbookChartTitle();
     }
 
@@ -41,11 +49,12 @@ class WorkbookChartTitle extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'format' => function (self $o, ParseNode $n) { $o->setFormat($n->getObjectValue(WorkbookChartTitleFormat::class)); },
-            'overlay' => function (self $o, ParseNode $n) { $o->setOverlay($n->getBooleanValue()); },
-            'text' => function (self $o, ParseNode $n) { $o->setText($n->getStringValue()); },
-            'visible' => function (self $o, ParseNode $n) { $o->setVisible($n->getBooleanValue()); },
+            'format' => function (ParseNode $n) use ($o) { $o->setFormat($n->getObjectValue(array(WorkbookChartTitleFormat::class, 'createFromDiscriminatorValue'))); },
+            'overlay' => function (ParseNode $n) use ($o) { $o->setOverlay($n->getBooleanValue()); },
+            'text' => function (ParseNode $n) use ($o) { $o->setText($n->getStringValue()); },
+            'visible' => function (ParseNode $n) use ($o) { $o->setVisible($n->getBooleanValue()); },
         ]);
     }
 

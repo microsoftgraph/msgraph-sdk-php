@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class MediaStream implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var MediaDirection|null $direction The direction. The possible values are inactive, sendOnly, receiveOnly, sendReceive. */
+    /**
+     * @var MediaDirection|null $direction The direction. The possible values are inactive, sendOnly, receiveOnly, sendReceive.
+    */
     private ?MediaDirection $direction = null;
     
-    /** @var string|null $label The media stream label. */
+    /**
+     * @var string|null $label The media stream label.
+    */
     private ?string $label = null;
     
-    /** @var Modality|null $mediaType The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data. */
+    /**
+     * @var Modality|null $mediaType The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
+    */
     private ?Modality $mediaType = null;
     
-    /** @var bool|null $serverMuted If the media is muted by the server. */
+    /**
+     * @var bool|null $serverMuted Indicates whether the media is muted by the server.
+    */
     private ?bool $serverMuted = null;
     
-    /** @var string|null $sourceId The source ID. */
+    /**
+     * @var string|null $sourceId The source ID.
+    */
     private ?string $sourceId = null;
     
     /**
@@ -39,7 +51,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return MediaStream
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): MediaStream {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): MediaStream {
         return new MediaStream();
     }
 
@@ -64,12 +76,13 @@ class MediaStream implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'direction' => function (self $o, ParseNode $n) { $o->setDirection($n->getEnumValue(MediaDirection::class)); },
-            'label' => function (self $o, ParseNode $n) { $o->setLabel($n->getStringValue()); },
-            'mediaType' => function (self $o, ParseNode $n) { $o->setMediaType($n->getEnumValue(Modality::class)); },
-            'serverMuted' => function (self $o, ParseNode $n) { $o->setServerMuted($n->getBooleanValue()); },
-            'sourceId' => function (self $o, ParseNode $n) { $o->setSourceId($n->getStringValue()); },
+            'direction' => function (ParseNode $n) use ($o) { $o->setDirection($n->getEnumValue(MediaDirection::class)); },
+            'label' => function (ParseNode $n) use ($o) { $o->setLabel($n->getStringValue()); },
+            'mediaType' => function (ParseNode $n) use ($o) { $o->setMediaType($n->getEnumValue(Modality::class)); },
+            'serverMuted' => function (ParseNode $n) use ($o) { $o->setServerMuted($n->getBooleanValue()); },
+            'sourceId' => function (ParseNode $n) use ($o) { $o->setSourceId($n->getStringValue()); },
         ];
     }
 
@@ -90,7 +103,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the serverMuted property value. If the media is muted by the server.
+     * Gets the serverMuted property value. Indicates whether the media is muted by the server.
      * @return bool|null
     */
     public function getServerMuted(): ?bool {
@@ -151,7 +164,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the serverMuted property value. If the media is muted by the server.
+     * Sets the serverMuted property value. Indicates whether the media is muted by the server.
      *  @param bool|null $value Value to set for the serverMuted property.
     */
     public function setServerMuted(?bool $value ): void {

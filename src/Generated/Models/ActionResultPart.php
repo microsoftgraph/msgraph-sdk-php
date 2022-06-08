@@ -9,10 +9,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ActionResultPart implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var PublicError|null $error The error that occurred, if any, during the course of the bulk operation. */
+    /**
+     * @var PublicError|null $error The error that occurred, if any, during the course of the bulk operation.
+    */
     private ?PublicError $error = null;
     
     /**
@@ -27,7 +31,7 @@ class ActionResultPart implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ActionResultPart
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ActionResultPart {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ActionResultPart {
         return new ActionResultPart();
     }
 
@@ -52,8 +56,9 @@ class ActionResultPart implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'error' => function (self $o, ParseNode $n) { $o->setError($n->getObjectValue(PublicError::class)); },
+            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getObjectValue(array(PublicError::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

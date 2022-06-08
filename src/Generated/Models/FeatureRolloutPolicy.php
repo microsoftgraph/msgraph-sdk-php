@@ -6,24 +6,36 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class FeatureRolloutPolicy extends Entity 
+class FeatureRolloutPolicy extends Entity implements Parsable 
 {
-    /** @var array<DirectoryObject>|null $appliesTo Nullable. Specifies a list of directoryObjects that feature is enabled for. */
+    /**
+     * @var array<DirectoryObject>|null $appliesTo Nullable. Specifies a list of directoryObjects that feature is enabled for.
+    */
     private ?array $appliesTo = null;
     
-    /** @var string|null $description A description for this feature rollout policy. */
+    /**
+     * @var string|null $description A description for this feature rollout policy.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName The display name for this  feature rollout policy. */
+    /**
+     * @var string|null $displayName The display name for this  feature rollout policy.
+    */
     private ?string $displayName = null;
     
-    /** @var StagedFeatureName|null $feature Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, emailAsAlternateId, unknownFutureValue. */
+    /**
+     * @var StagedFeatureName|null $feature Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, emailAsAlternateId, unknownFutureValue.
+    */
     private ?StagedFeatureName $feature = null;
     
-    /** @var bool|null $isAppliedToOrganization Indicates whether this feature rollout policy should be applied to the entire organization. */
+    /**
+     * @var bool|null $isAppliedToOrganization Indicates whether this feature rollout policy should be applied to the entire organization.
+    */
     private ?bool $isAppliedToOrganization = null;
     
-    /** @var bool|null $isEnabled Indicates whether the feature rollout is enabled. */
+    /**
+     * @var bool|null $isEnabled Indicates whether the feature rollout is enabled.
+    */
     private ?bool $isEnabled = null;
     
     /**
@@ -38,7 +50,7 @@ class FeatureRolloutPolicy extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return FeatureRolloutPolicy
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): FeatureRolloutPolicy {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): FeatureRolloutPolicy {
         return new FeatureRolloutPolicy();
     }
 
@@ -79,13 +91,14 @@ class FeatureRolloutPolicy extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appliesTo' => function (self $o, ParseNode $n) { $o->setAppliesTo($n->getCollectionOfObjectValues(DirectoryObject::class)); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'feature' => function (self $o, ParseNode $n) { $o->setFeature($n->getEnumValue(StagedFeatureName::class)); },
-            'isAppliedToOrganization' => function (self $o, ParseNode $n) { $o->setIsAppliedToOrganization($n->getBooleanValue()); },
-            'isEnabled' => function (self $o, ParseNode $n) { $o->setIsEnabled($n->getBooleanValue()); },
+            'appliesTo' => function (ParseNode $n) use ($o) { $o->setAppliesTo($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'feature' => function (ParseNode $n) use ($o) { $o->setFeature($n->getEnumValue(StagedFeatureName::class)); },
+            'isAppliedToOrganization' => function (ParseNode $n) use ($o) { $o->setIsAppliedToOrganization($n->getBooleanValue()); },
+            'isEnabled' => function (ParseNode $n) use ($o) { $o->setIsEnabled($n->getBooleanValue()); },
         ]);
     }
 

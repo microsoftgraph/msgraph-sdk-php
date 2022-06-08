@@ -9,10 +9,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class StoragePlanInformation implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $upgradeAvailable Indicates whether there are higher storage quota plans available. Read-only. */
+    /**
+     * @var bool|null $upgradeAvailable Indicates if there are higher storage quota plans available. Read-only.
+    */
     private ?bool $upgradeAvailable = null;
     
     /**
@@ -27,7 +31,7 @@ class StoragePlanInformation implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return StoragePlanInformation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): StoragePlanInformation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): StoragePlanInformation {
         return new StoragePlanInformation();
     }
 
@@ -44,13 +48,14 @@ class StoragePlanInformation implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'upgradeAvailable' => function (self $o, ParseNode $n) { $o->setUpgradeAvailable($n->getBooleanValue()); },
+            'upgradeAvailable' => function (ParseNode $n) use ($o) { $o->setUpgradeAvailable($n->getBooleanValue()); },
         ];
     }
 
     /**
-     * Gets the upgradeAvailable property value. Indicates whether there are higher storage quota plans available. Read-only.
+     * Gets the upgradeAvailable property value. Indicates if there are higher storage quota plans available. Read-only.
      * @return bool|null
     */
     public function getUpgradeAvailable(): ?bool {
@@ -75,7 +80,7 @@ class StoragePlanInformation implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the upgradeAvailable property value. Indicates whether there are higher storage quota plans available. Read-only.
+     * Sets the upgradeAvailable property value. Indicates if there are higher storage quota plans available. Read-only.
      *  @param bool|null $value Value to set for the upgradeAvailable property.
     */
     public function setUpgradeAvailable(?bool $value ): void {

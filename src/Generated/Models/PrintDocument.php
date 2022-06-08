@@ -6,15 +6,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class PrintDocument extends Entity 
+class PrintDocument extends Entity implements Parsable 
 {
-    /** @var string|null $contentType The document's content (MIME) type. Read-only. */
+    /**
+     * @var string|null $contentType The document's content (MIME) type. Read-only.
+    */
     private ?string $contentType = null;
     
-    /** @var string|null $displayName The document's name. Read-only. */
+    /**
+     * @var string|null $displayName The document's name. Read-only.
+    */
     private ?string $displayName = null;
     
-    /** @var int|null $size The document's size in bytes. Read-only. */
+    /**
+     * @var int|null $size The document's size in bytes. Read-only.
+    */
     private ?int $size = null;
     
     /**
@@ -29,7 +35,7 @@ class PrintDocument extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrintDocument
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrintDocument {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrintDocument {
         return new PrintDocument();
     }
 
@@ -54,10 +60,11 @@ class PrintDocument extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'contentType' => function (self $o, ParseNode $n) { $o->setContentType($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'size' => function (self $o, ParseNode $n) { $o->setSize($n->getIntegerValue()); },
+            'contentType' => function (ParseNode $n) use ($o) { $o->setContentType($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'size' => function (ParseNode $n) use ($o) { $o->setSize($n->getIntegerValue()); },
         ]);
     }
 

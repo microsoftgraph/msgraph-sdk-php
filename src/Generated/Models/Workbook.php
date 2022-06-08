@@ -6,27 +6,41 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Workbook extends Entity 
+class Workbook extends Entity implements Parsable 
 {
-    /** @var WorkbookApplication|null $application The application property */
+    /**
+     * @var WorkbookApplication|null $application The application property
+    */
     private ?WorkbookApplication $application = null;
     
-    /** @var array<WorkbookComment>|null $comments The comments property */
+    /**
+     * @var array<WorkbookComment>|null $comments The comments property
+    */
     private ?array $comments = null;
     
-    /** @var WorkbookFunctions|null $functions The functions property */
+    /**
+     * @var WorkbookFunctions|null $functions The functions property
+    */
     private ?WorkbookFunctions $functions = null;
     
-    /** @var array<WorkbookNamedItem>|null $names Represents a collection of workbooks scoped named items (named ranges and constants). Read-only. */
+    /**
+     * @var array<WorkbookNamedItem>|null $names Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
+    */
     private ?array $names = null;
     
-    /** @var array<WorkbookOperation>|null $operations The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. */
+    /**
+     * @var array<WorkbookOperation>|null $operations The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
+    */
     private ?array $operations = null;
     
-    /** @var array<WorkbookTable>|null $tables Represents a collection of tables associated with the workbook. Read-only. */
+    /**
+     * @var array<WorkbookTable>|null $tables Represents a collection of tables associated with the workbook. Read-only.
+    */
     private ?array $tables = null;
     
-    /** @var array<WorkbookWorksheet>|null $worksheets Represents a collection of worksheets associated with the workbook. Read-only. */
+    /**
+     * @var array<WorkbookWorksheet>|null $worksheets Represents a collection of worksheets associated with the workbook. Read-only.
+    */
     private ?array $worksheets = null;
     
     /**
@@ -41,7 +55,7 @@ class Workbook extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Workbook
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Workbook {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Workbook {
         return new Workbook();
     }
 
@@ -66,14 +80,15 @@ class Workbook extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'application' => function (self $o, ParseNode $n) { $o->setApplication($n->getObjectValue(WorkbookApplication::class)); },
-            'comments' => function (self $o, ParseNode $n) { $o->setComments($n->getCollectionOfObjectValues(WorkbookComment::class)); },
-            'functions' => function (self $o, ParseNode $n) { $o->setFunctions($n->getObjectValue(WorkbookFunctions::class)); },
-            'names' => function (self $o, ParseNode $n) { $o->setNames($n->getCollectionOfObjectValues(WorkbookNamedItem::class)); },
-            'operations' => function (self $o, ParseNode $n) { $o->setOperations($n->getCollectionOfObjectValues(WorkbookOperation::class)); },
-            'tables' => function (self $o, ParseNode $n) { $o->setTables($n->getCollectionOfObjectValues(WorkbookTable::class)); },
-            'worksheets' => function (self $o, ParseNode $n) { $o->setWorksheets($n->getCollectionOfObjectValues(WorkbookWorksheet::class)); },
+            'application' => function (ParseNode $n) use ($o) { $o->setApplication($n->getObjectValue(array(WorkbookApplication::class, 'createFromDiscriminatorValue'))); },
+            'comments' => function (ParseNode $n) use ($o) { $o->setComments($n->getCollectionOfObjectValues(array(WorkbookComment::class, 'createFromDiscriminatorValue'))); },
+            'functions' => function (ParseNode $n) use ($o) { $o->setFunctions($n->getObjectValue(array(WorkbookFunctions::class, 'createFromDiscriminatorValue'))); },
+            'names' => function (ParseNode $n) use ($o) { $o->setNames($n->getCollectionOfObjectValues(array(WorkbookNamedItem::class, 'createFromDiscriminatorValue'))); },
+            'operations' => function (ParseNode $n) use ($o) { $o->setOperations($n->getCollectionOfObjectValues(array(WorkbookOperation::class, 'createFromDiscriminatorValue'))); },
+            'tables' => function (ParseNode $n) use ($o) { $o->setTables($n->getCollectionOfObjectValues(array(WorkbookTable::class, 'createFromDiscriminatorValue'))); },
+            'worksheets' => function (ParseNode $n) use ($o) { $o->setWorksheets($n->getCollectionOfObjectValues(array(WorkbookWorksheet::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -94,7 +109,7 @@ class Workbook extends Entity
     }
 
     /**
-     * Gets the operations property value. The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
+     * Gets the operations property value. The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
      * @return array<WorkbookOperation>|null
     */
     public function getOperations(): ?array {
@@ -165,7 +180,7 @@ class Workbook extends Entity
     }
 
     /**
-     * Sets the operations property value. The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
+     * Sets the operations property value. The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
      *  @param array<WorkbookOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value ): void {

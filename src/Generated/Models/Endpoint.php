@@ -6,21 +6,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Endpoint extends DirectoryObject 
+class Endpoint extends DirectoryObject implements Parsable 
 {
-    /** @var string|null $capability Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only. */
+    /**
+     * @var string|null $capability Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.
+    */
     private ?string $capability = null;
     
-    /** @var string|null $providerId Application id of the publishing underlying service. Not nullable. Read-only. */
+    /**
+     * @var string|null $providerId Application id of the publishing underlying service. Not nullable. Read-only.
+    */
     private ?string $providerId = null;
     
-    /** @var string|null $providerName Name of the publishing underlying service. Read-only. */
+    /**
+     * @var string|null $providerName Name of the publishing underlying service. Read-only.
+    */
     private ?string $providerName = null;
     
-    /** @var string|null $providerResourceId For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only. */
+    /**
+     * @var string|null $providerResourceId For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
+    */
     private ?string $providerResourceId = null;
     
-    /** @var string|null $uri URL of the published resource. Not nullable. Read-only. */
+    /**
+     * @var string|null $uri URL of the published resource. Not nullable. Read-only.
+    */
     private ?string $uri = null;
     
     /**
@@ -35,7 +45,7 @@ class Endpoint extends DirectoryObject
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Endpoint
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Endpoint {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Endpoint {
         return new Endpoint();
     }
 
@@ -52,12 +62,13 @@ class Endpoint extends DirectoryObject
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'capability' => function (self $o, ParseNode $n) { $o->setCapability($n->getStringValue()); },
-            'providerId' => function (self $o, ParseNode $n) { $o->setProviderId($n->getStringValue()); },
-            'providerName' => function (self $o, ParseNode $n) { $o->setProviderName($n->getStringValue()); },
-            'providerResourceId' => function (self $o, ParseNode $n) { $o->setProviderResourceId($n->getStringValue()); },
-            'uri' => function (self $o, ParseNode $n) { $o->setUri($n->getStringValue()); },
+            'capability' => function (ParseNode $n) use ($o) { $o->setCapability($n->getStringValue()); },
+            'providerId' => function (ParseNode $n) use ($o) { $o->setProviderId($n->getStringValue()); },
+            'providerName' => function (ParseNode $n) use ($o) { $o->setProviderName($n->getStringValue()); },
+            'providerResourceId' => function (ParseNode $n) use ($o) { $o->setProviderResourceId($n->getStringValue()); },
+            'uri' => function (ParseNode $n) use ($o) { $o->setUri($n->getStringValue()); },
         ]);
     }
 

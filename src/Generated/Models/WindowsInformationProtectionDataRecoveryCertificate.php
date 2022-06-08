@@ -11,19 +11,29 @@ use Psr\Http\Message\StreamInterface;
 
 class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var StreamInterface|null $certificate Data recovery Certificate */
+    /**
+     * @var StreamInterface|null $certificate Data recovery Certificate
+    */
     private ?StreamInterface $certificate = null;
     
-    /** @var string|null $description Data recovery Certificate description */
+    /**
+     * @var string|null $description Data recovery Certificate description
+    */
     private ?string $description = null;
     
-    /** @var DateTime|null $expirationDateTime Data recovery Certificate expiration datetime */
+    /**
+     * @var DateTime|null $expirationDateTime Data recovery Certificate expiration datetime
+    */
     private ?DateTime $expirationDateTime = null;
     
-    /** @var string|null $subjectName Data recovery Certificate subject name */
+    /**
+     * @var string|null $subjectName Data recovery Certificate subject name
+    */
     private ?string $subjectName = null;
     
     /**
@@ -38,7 +48,7 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WindowsInformationProtectionDataRecoveryCertificate
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WindowsInformationProtectionDataRecoveryCertificate {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WindowsInformationProtectionDataRecoveryCertificate {
         return new WindowsInformationProtectionDataRecoveryCertificate();
     }
 
@@ -79,11 +89,12 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'certificate' => function (self $o, ParseNode $n) { $o->setCertificate($n->getBinaryContent()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'expirationDateTime' => function (self $o, ParseNode $n) { $o->setExpirationDateTime($n->getDateTimeValue()); },
-            'subjectName' => function (self $o, ParseNode $n) { $o->setSubjectName($n->getStringValue()); },
+            'certificate' => function (ParseNode $n) use ($o) { $o->setCertificate($n->getBinaryContent()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
+            'subjectName' => function (ParseNode $n) use ($o) { $o->setSubjectName($n->getStringValue()); },
         ];
     }
 

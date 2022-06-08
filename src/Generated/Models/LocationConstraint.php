@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class LocationConstraint implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $isRequired The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes will not return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations. */
+    /**
+     * @var bool|null $isRequired The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes will not return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations.
+    */
     private ?bool $isRequired = null;
     
-    /** @var array<LocationConstraintItem>|null $locations Constraint information for one or more locations that the client requests for the meeting. */
+    /**
+     * @var array<LocationConstraintItem>|null $locations Constraint information for one or more locations that the client requests for the meeting.
+    */
     private ?array $locations = null;
     
-    /** @var bool|null $suggestLocation The client requests the service to suggest one or more meeting locations. */
+    /**
+     * @var bool|null $suggestLocation The client requests the service to suggest one or more meeting locations.
+    */
     private ?bool $suggestLocation = null;
     
     /**
@@ -33,7 +41,7 @@ class LocationConstraint implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return LocationConstraint
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): LocationConstraint {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): LocationConstraint {
         return new LocationConstraint();
     }
 
@@ -50,10 +58,11 @@ class LocationConstraint implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'isRequired' => function (self $o, ParseNode $n) { $o->setIsRequired($n->getBooleanValue()); },
-            'locations' => function (self $o, ParseNode $n) { $o->setLocations($n->getCollectionOfObjectValues(LocationConstraintItem::class)); },
-            'suggestLocation' => function (self $o, ParseNode $n) { $o->setSuggestLocation($n->getBooleanValue()); },
+            'isRequired' => function (ParseNode $n) use ($o) { $o->setIsRequired($n->getBooleanValue()); },
+            'locations' => function (ParseNode $n) use ($o) { $o->setLocations($n->getCollectionOfObjectValues(array(LocationConstraintItem::class, 'createFromDiscriminatorValue'))); },
+            'suggestLocation' => function (ParseNode $n) use ($o) { $o->setSuggestLocation($n->getBooleanValue()); },
         ];
     }
 

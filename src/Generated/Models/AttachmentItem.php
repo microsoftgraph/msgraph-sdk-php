@@ -9,25 +9,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AttachmentItem implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var AttachmentType|null $attachmentType The type of attachment. Possible values are: file, item, reference. Required. */
+    /**
+     * @var AttachmentType|null $attachmentType The type of attachment. Possible values are: file, item, reference. Required.
+    */
     private ?AttachmentType $attachmentType = null;
     
-    /** @var string|null $contentId The CID or Content-Id of the attachment for referencing in case of in-line attachments using <img src='cid:contentId'> tag in HTML messages. Optional. */
+    /**
+     * @var string|null $contentId The CID or Content-Id of the attachment for referencing in case of in-line attachments using <img src='cid:contentId'> tag in HTML messages. Optional.
+    */
     private ?string $contentId = null;
     
-    /** @var string|null $contentType The nature of the data in the attachment. Optional. */
+    /**
+     * @var string|null $contentType The nature of the data in the attachment. Optional.
+    */
     private ?string $contentType = null;
     
-    /** @var bool|null $isInline true if the attachment is an inline attachment; otherwise, false. Optional. */
+    /**
+     * @var bool|null $isInline true if the attachment is an inline attachment; otherwise, false. Optional.
+    */
     private ?bool $isInline = null;
     
-    /** @var string|null $name The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required. */
+    /**
+     * @var string|null $name The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
+    */
     private ?string $name = null;
     
-    /** @var int|null $size The length of the attachment in bytes. Required. */
+    /**
+     * @var int|null $size The length of the attachment in bytes. Required.
+    */
     private ?int $size = null;
     
     /**
@@ -42,7 +56,7 @@ class AttachmentItem implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AttachmentItem
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AttachmentItem {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AttachmentItem {
         return new AttachmentItem();
     }
 
@@ -83,13 +97,14 @@ class AttachmentItem implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'attachmentType' => function (self $o, ParseNode $n) { $o->setAttachmentType($n->getEnumValue(AttachmentType::class)); },
-            'contentId' => function (self $o, ParseNode $n) { $o->setContentId($n->getStringValue()); },
-            'contentType' => function (self $o, ParseNode $n) { $o->setContentType($n->getStringValue()); },
-            'isInline' => function (self $o, ParseNode $n) { $o->setIsInline($n->getBooleanValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'size' => function (self $o, ParseNode $n) { $o->setSize($n->getIntegerValue()); },
+            'attachmentType' => function (ParseNode $n) use ($o) { $o->setAttachmentType($n->getEnumValue(AttachmentType::class)); },
+            'contentId' => function (ParseNode $n) use ($o) { $o->setContentId($n->getStringValue()); },
+            'contentType' => function (ParseNode $n) use ($o) { $o->setContentType($n->getStringValue()); },
+            'isInline' => function (ParseNode $n) use ($o) { $o->setIsInline($n->getBooleanValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'size' => function (ParseNode $n) use ($o) { $o->setSize($n->getIntegerValue()); },
         ];
     }
 

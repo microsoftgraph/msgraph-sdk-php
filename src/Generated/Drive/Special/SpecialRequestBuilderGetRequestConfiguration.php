@@ -1,0 +1,22 @@
+<?php
+
+namespace Microsoft\Graph\Generated\Drive\Special;
+
+class SpecialRequestBuilderGetRequestConfiguration 
+{
+    /**
+     * @var array|null $headers Request headers
+    */
+    public ?array $headers = null;
+    
+    /**
+     * @var array|null $options Request options
+    */
+    public ?array $options = null;
+    
+    /**
+     * @var SpecialRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?SpecialRequestBuilderGetQueryParameters $queryParameters = null;
+    
+}

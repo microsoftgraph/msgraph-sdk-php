@@ -7,27 +7,41 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity 
+class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity implements Parsable 
 {
-    /** @var DateTime|null $complianceGracePeriodExpirationDateTime The DateTime when device compliance grace period expires */
+    /**
+     * @var DateTime|null $complianceGracePeriodExpirationDateTime The DateTime when device compliance grace period expires
+    */
     private ?DateTime $complianceGracePeriodExpirationDateTime = null;
     
-    /** @var string|null $deviceDisplayName Device name of the DevicePolicyStatus. */
+    /**
+     * @var string|null $deviceDisplayName Device name of the DevicePolicyStatus.
+    */
     private ?string $deviceDisplayName = null;
     
-    /** @var string|null $deviceModel The device model that is being reported */
+    /**
+     * @var string|null $deviceModel The device model that is being reported
+    */
     private ?string $deviceModel = null;
     
-    /** @var DateTime|null $lastReportedDateTime Last modified date time of the policy report. */
+    /**
+     * @var DateTime|null $lastReportedDateTime Last modified date time of the policy report.
+    */
     private ?DateTime $lastReportedDateTime = null;
     
-    /** @var ComplianceStatus|null $status Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned. */
+    /**
+     * @var ComplianceStatus|null $status Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+    */
     private ?ComplianceStatus $status = null;
     
-    /** @var string|null $userName The User Name that is being reported */
+    /**
+     * @var string|null $userName The User Name that is being reported
+    */
     private ?string $userName = null;
     
-    /** @var string|null $userPrincipalName UserPrincipalName. */
+    /**
+     * @var string|null $userPrincipalName UserPrincipalName.
+    */
     private ?string $userPrincipalName = null;
     
     /**
@@ -42,7 +56,7 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ManagedDeviceMobileAppConfigurationDeviceStatus
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ManagedDeviceMobileAppConfigurationDeviceStatus {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedDeviceMobileAppConfigurationDeviceStatus {
         return new ManagedDeviceMobileAppConfigurationDeviceStatus();
     }
 
@@ -75,14 +89,15 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'complianceGracePeriodExpirationDateTime' => function (self $o, ParseNode $n) { $o->setComplianceGracePeriodExpirationDateTime($n->getDateTimeValue()); },
-            'deviceDisplayName' => function (self $o, ParseNode $n) { $o->setDeviceDisplayName($n->getStringValue()); },
-            'deviceModel' => function (self $o, ParseNode $n) { $o->setDeviceModel($n->getStringValue()); },
-            'lastReportedDateTime' => function (self $o, ParseNode $n) { $o->setLastReportedDateTime($n->getDateTimeValue()); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(ComplianceStatus::class)); },
-            'userName' => function (self $o, ParseNode $n) { $o->setUserName($n->getStringValue()); },
-            'userPrincipalName' => function (self $o, ParseNode $n) { $o->setUserPrincipalName($n->getStringValue()); },
+            'complianceGracePeriodExpirationDateTime' => function (ParseNode $n) use ($o) { $o->setComplianceGracePeriodExpirationDateTime($n->getDateTimeValue()); },
+            'deviceDisplayName' => function (ParseNode $n) use ($o) { $o->setDeviceDisplayName($n->getStringValue()); },
+            'deviceModel' => function (ParseNode $n) use ($o) { $o->setDeviceModel($n->getStringValue()); },
+            'lastReportedDateTime' => function (ParseNode $n) use ($o) { $o->setLastReportedDateTime($n->getDateTimeValue()); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(ComplianceStatus::class)); },
+            'userName' => function (ParseNode $n) use ($o) { $o->setUserName($n->getStringValue()); },
+            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
         ]);
     }
 

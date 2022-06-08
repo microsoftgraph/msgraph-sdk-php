@@ -7,27 +7,41 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DeviceEnrollmentConfiguration extends Entity 
+class DeviceEnrollmentConfiguration extends Entity implements Parsable 
 {
-    /** @var array<EnrollmentConfigurationAssignment>|null $assignments The list of group assignments for the device configuration profile */
+    /**
+     * @var array<EnrollmentConfigurationAssignment>|null $assignments The list of group assignments for the device configuration profile
+    */
     private ?array $assignments = null;
     
-    /** @var DateTime|null $createdDateTime Created date time in UTC of the device enrollment configuration */
+    /**
+     * @var DateTime|null $createdDateTime Created date time in UTC of the device enrollment configuration
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $description The description of the device enrollment configuration */
+    /**
+     * @var string|null $description The description of the device enrollment configuration
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName The display name of the device enrollment configuration */
+    /**
+     * @var string|null $displayName The display name of the device enrollment configuration
+    */
     private ?string $displayName = null;
     
-    /** @var DateTime|null $lastModifiedDateTime Last modified date time in UTC of the device enrollment configuration */
+    /**
+     * @var DateTime|null $lastModifiedDateTime Last modified date time in UTC of the device enrollment configuration
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var int|null $priority Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value. */
+    /**
+     * @var int|null $priority Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
+    */
     private ?int $priority = null;
     
-    /** @var int|null $version The version of the device enrollment configuration */
+    /**
+     * @var int|null $version The version of the device enrollment configuration
+    */
     private ?int $version = null;
     
     /**
@@ -42,7 +56,14 @@ class DeviceEnrollmentConfiguration extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceEnrollmentConfiguration
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceEnrollmentConfiguration {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceEnrollmentConfiguration {
+        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.deviceEnrollmentConfiguration': return new DeviceEnrollmentConfiguration();
+            }
+        }
         return new DeviceEnrollmentConfiguration();
     }
 
@@ -83,14 +104,15 @@ class DeviceEnrollmentConfiguration extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignments' => function (self $o, ParseNode $n) { $o->setAssignments($n->getCollectionOfObjectValues(EnrollmentConfigurationAssignment::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'priority' => function (self $o, ParseNode $n) { $o->setPriority($n->getIntegerValue()); },
-            'version' => function (self $o, ParseNode $n) { $o->setVersion($n->getIntegerValue()); },
+            'assignments' => function (ParseNode $n) use ($o) { $o->setAssignments($n->getCollectionOfObjectValues(array(EnrollmentConfigurationAssignment::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'priority' => function (ParseNode $n) use ($o) { $o->setPriority($n->getIntegerValue()); },
+            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getIntegerValue()); },
         ]);
     }
 

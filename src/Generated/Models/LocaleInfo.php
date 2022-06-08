@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class LocaleInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $displayName A name representing the user's locale in natural language, for example, 'English (United States)'. */
+    /**
+     * @var string|null $displayName A name representing the user's locale in natural language, for example, 'English (United States)'.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $locale A locale representation for the user, which includes the user's preferred language and country/region. For example, 'en-us'. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2. */
+    /**
+     * @var string|null $locale A locale representation for the user, which includes the user's preferred language and country/region. For example, 'en-us'. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2.
+    */
     private ?string $locale = null;
     
     /**
@@ -30,7 +36,7 @@ class LocaleInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return LocaleInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): LocaleInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): LocaleInfo {
         return new LocaleInfo();
     }
 
@@ -55,9 +61,10 @@ class LocaleInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'locale' => function (self $o, ParseNode $n) { $o->setLocale($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'locale' => function (ParseNode $n) use ($o) { $o->setLocale($n->getStringValue()); },
         ];
     }
 

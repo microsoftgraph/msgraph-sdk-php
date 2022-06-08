@@ -10,25 +10,39 @@ use Microsoft\Kiota\Abstractions\Types\Date;
 
 class EducationStudent implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var Date|null $birthDate Birth date of the student. */
+    /**
+     * @var Date|null $birthDate Birth date of the student.
+    */
     private ?Date $birthDate = null;
     
-    /** @var string|null $externalId ID of the student in the source system. */
+    /**
+     * @var string|null $externalId ID of the student in the source system.
+    */
     private ?string $externalId = null;
     
-    /** @var EducationGender|null $gender The possible values are: female, male, other, unknownFutureValue. */
+    /**
+     * @var EducationGender|null $gender Possible values are: female, male, other.
+    */
     private ?EducationGender $gender = null;
     
-    /** @var string|null $grade Current grade level of the student. */
+    /**
+     * @var string|null $grade Current grade level of the student.
+    */
     private ?string $grade = null;
     
-    /** @var string|null $graduationYear Year the student is graduating from the school. */
+    /**
+     * @var string|null $graduationYear Year the student is graduating from the school.
+    */
     private ?string $graduationYear = null;
     
-    /** @var string|null $studentNumber Student Number. */
+    /**
+     * @var string|null $studentNumber Student Number.
+    */
     private ?string $studentNumber = null;
     
     /**
@@ -43,7 +57,7 @@ class EducationStudent implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return EducationStudent
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): EducationStudent {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): EducationStudent {
         return new EducationStudent();
     }
 
@@ -76,18 +90,19 @@ class EducationStudent implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'birthDate' => function (self $o, ParseNode $n) { $o->setBirthDate($n->getDateValue()); },
-            'externalId' => function (self $o, ParseNode $n) { $o->setExternalId($n->getStringValue()); },
-            'gender' => function (self $o, ParseNode $n) { $o->setGender($n->getEnumValue(EducationGender::class)); },
-            'grade' => function (self $o, ParseNode $n) { $o->setGrade($n->getStringValue()); },
-            'graduationYear' => function (self $o, ParseNode $n) { $o->setGraduationYear($n->getStringValue()); },
-            'studentNumber' => function (self $o, ParseNode $n) { $o->setStudentNumber($n->getStringValue()); },
+            'birthDate' => function (ParseNode $n) use ($o) { $o->setBirthDate($n->getDateValue()); },
+            'externalId' => function (ParseNode $n) use ($o) { $o->setExternalId($n->getStringValue()); },
+            'gender' => function (ParseNode $n) use ($o) { $o->setGender($n->getEnumValue(EducationGender::class)); },
+            'grade' => function (ParseNode $n) use ($o) { $o->setGrade($n->getStringValue()); },
+            'graduationYear' => function (ParseNode $n) use ($o) { $o->setGraduationYear($n->getStringValue()); },
+            'studentNumber' => function (ParseNode $n) use ($o) { $o->setStudentNumber($n->getStringValue()); },
         ];
     }
 
     /**
-     * Gets the gender property value. The possible values are: female, male, other, unknownFutureValue.
+     * Gets the gender property value. Possible values are: female, male, other.
      * @return EducationGender|null
     */
     public function getGender(): ?EducationGender {
@@ -157,7 +172,7 @@ class EducationStudent implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the gender property value. The possible values are: female, male, other, unknownFutureValue.
+     * Sets the gender property value. Possible values are: female, male, other.
      *  @param EducationGender|null $value Value to set for the gender property.
     */
     public function setGender(?EducationGender $value ): void {

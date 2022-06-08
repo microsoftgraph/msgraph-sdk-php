@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class IncomingContext implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $observedParticipantId The ID of the participant that is under observation. Read-only. */
+    /**
+     * @var string|null $observedParticipantId The id of the participant that is under observation. Read-only.
+    */
     private ?string $observedParticipantId = null;
     
-    /** @var IdentitySet|null $onBehalfOf The identity that the call is happening on behalf of. */
+    /**
+     * @var IdentitySet|null $onBehalfOf The identity that the call is happening on behalf of.
+    */
     private ?IdentitySet $onBehalfOf = null;
     
-    /** @var string|null $sourceParticipantId The ID of the participant that triggered the incoming call. Read-only. */
+    /**
+     * @var string|null $sourceParticipantId The id of the participant that triggered the incoming call. Read-only.
+    */
     private ?string $sourceParticipantId = null;
     
-    /** @var IdentitySet|null $transferor The identity that transferred the call. */
+    /**
+     * @var IdentitySet|null $transferor The identity that transferred the call.
+    */
     private ?IdentitySet $transferor = null;
     
     /**
@@ -36,7 +46,7 @@ class IncomingContext implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return IncomingContext
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): IncomingContext {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): IncomingContext {
         return new IncomingContext();
     }
 
@@ -53,16 +63,17 @@ class IncomingContext implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'observedParticipantId' => function (self $o, ParseNode $n) { $o->setObservedParticipantId($n->getStringValue()); },
-            'onBehalfOf' => function (self $o, ParseNode $n) { $o->setOnBehalfOf($n->getObjectValue(IdentitySet::class)); },
-            'sourceParticipantId' => function (self $o, ParseNode $n) { $o->setSourceParticipantId($n->getStringValue()); },
-            'transferor' => function (self $o, ParseNode $n) { $o->setTransferor($n->getObjectValue(IdentitySet::class)); },
+            'observedParticipantId' => function (ParseNode $n) use ($o) { $o->setObservedParticipantId($n->getStringValue()); },
+            'onBehalfOf' => function (ParseNode $n) use ($o) { $o->setOnBehalfOf($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'sourceParticipantId' => function (ParseNode $n) use ($o) { $o->setSourceParticipantId($n->getStringValue()); },
+            'transferor' => function (ParseNode $n) use ($o) { $o->setTransferor($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 
     /**
-     * Gets the observedParticipantId property value. The ID of the participant that is under observation. Read-only.
+     * Gets the observedParticipantId property value. The id of the participant that is under observation. Read-only.
      * @return string|null
     */
     public function getObservedParticipantId(): ?string {
@@ -78,7 +89,7 @@ class IncomingContext implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the sourceParticipantId property value. The ID of the participant that triggered the incoming call. Read-only.
+     * Gets the sourceParticipantId property value. The id of the participant that triggered the incoming call. Read-only.
      * @return string|null
     */
     public function getSourceParticipantId(): ?string {
@@ -114,7 +125,7 @@ class IncomingContext implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the observedParticipantId property value. The ID of the participant that is under observation. Read-only.
+     * Sets the observedParticipantId property value. The id of the participant that is under observation. Read-only.
      *  @param string|null $value Value to set for the observedParticipantId property.
     */
     public function setObservedParticipantId(?string $value ): void {
@@ -130,7 +141,7 @@ class IncomingContext implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the sourceParticipantId property value. The ID of the participant that triggered the incoming call. Read-only.
+     * Sets the sourceParticipantId property value. The id of the participant that triggered the incoming call. Read-only.
      *  @param string|null $value Value to set for the sourceParticipantId property.
     */
     public function setSourceParticipantId(?string $value ): void {

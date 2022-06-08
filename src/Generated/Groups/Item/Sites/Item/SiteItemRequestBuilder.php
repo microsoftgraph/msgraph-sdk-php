@@ -20,6 +20,8 @@ use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Items\ItemsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\ListItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\ListsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\OnenoteRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Operations\Item\RichLongRunningOperationItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Operations\OperationsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Permissions\Item\PermissionItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Permissions\PermissionsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Sites\SitesRequestBuilder;
@@ -101,7 +103,16 @@ class SiteItemRequestBuilder
         return new OnenoteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
-    /** @var array<string, mixed> $pathParameters Path parameters for the request */
+    /**
+     * The operations property
+    */
+    public function operations(): OperationsRequestBuilder {
+        return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * @var array<string, mixed> $pathParameters Path parameters for the request
+    */
     private array $pathParameters;
     
     /**
@@ -111,7 +122,9 @@ class SiteItemRequestBuilder
         return new PermissionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
-    /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
+    /**
+     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+    */
     private RequestAdapter $requestAdapter;
     
     /**
@@ -135,7 +148,9 @@ class SiteItemRequestBuilder
         return new TermStoresRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
-    /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
+    /**
+     * @var string $urlTemplate Url template to use to build the URL for the current request builder
+    */
     private string $urlTemplate;
     
     /**
@@ -145,7 +160,7 @@ class SiteItemRequestBuilder
     */
     public function columnsById(string $id): MicrosoftGraphGeneratedGroupsItemSitesItemColumnsItemColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
-        $urlTplParams['columnDefinition_id'] = $id;
+        $urlTplParams['columnDefinition%2Did'] = $id;
         return new MicrosoftGraphGeneratedGroupsItemSitesItemColumnsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
@@ -155,7 +170,7 @@ class SiteItemRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/groups/{group_id}/sites/{site_id}{?select,expand}';
+        $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
@@ -167,50 +182,51 @@ class SiteItemRequestBuilder
     */
     public function contentTypesById(string $id): ContentTypeItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
-        $urlTplParams['contentType_id'] = $id;
+        $urlTplParams['contentType%2Did'] = $id;
         return new ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
      * Delete navigation property sites for groups
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createDeleteRequestInformation(?array $headers = null, ?array $options = null): RequestInformation {
+    public function createDeleteRequestInformation(?SiteItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
-        if ($headers !== null) {
-            $requestInfo->headers = array_merge($requestInfo->headers, $headers);
-        }
-        if ($options !== null) {
-            $requestInfo->addRequestOptions(...$options);
+        if ($requestConfiguration !== null) {
+            if ($requestConfiguration->headers !== null) {
+                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->options !== null) {
+                $requestInfo->addRequestOptions(...$requestConfiguration->options);
+            }
         }
         return $requestInfo;
     }
 
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
-     * @param array|null $queryParameters Request query parameters
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createGetRequestInformation(?array $queryParameters = null, ?array $headers = null, ?array $options = null): RequestInformation {
+    public function createGetRequestInformation(?SiteItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        if ($headers !== null) {
-            $requestInfo->headers = array_merge($requestInfo->headers, $headers);
-        }
-        if ($queryParameters !== null) {
-            $requestInfo->setQueryParameters($queryParameters);
-        }
-        if ($options !== null) {
-            $requestInfo->addRequestOptions(...$options);
+        if ($requestConfiguration !== null) {
+            if ($requestConfiguration->headers !== null) {
+                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->queryParameters !== null) {
+                $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
+            }
+            if ($requestConfiguration->options !== null) {
+                $requestInfo->addRequestOptions(...$requestConfiguration->options);
+            }
         }
         return $requestInfo;
     }
@@ -218,36 +234,40 @@ class SiteItemRequestBuilder
     /**
      * Update the navigation property sites in groups
      * @param Site $body 
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createPatchRequestInformation(Site $body, ?array $headers = null, ?array $options = null): RequestInformation {
+    public function createPatchRequestInformation(Site $body, ?SiteItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
-        if ($headers !== null) {
-            $requestInfo->headers = array_merge($requestInfo->headers, $headers);
+        if ($requestConfiguration !== null) {
+            if ($requestConfiguration->headers !== null) {
+                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->options !== null) {
+                $requestInfo->addRequestOptions(...$requestConfiguration->options);
+            }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
-        if ($options !== null) {
-            $requestInfo->addRequestOptions(...$options);
-        }
         return $requestInfo;
     }
 
     /**
      * Delete navigation property sites for groups
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
-    public function delete(?array $headers = null, ?array $options = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createDeleteRequestInformation($headers, $options);
+    public function delete(?SiteItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+        $requestInfo = $this->createDeleteRequestInformation($requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, '', $responseHandler);
+            $errorMappings = [
+            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            ];
+            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
@@ -260,7 +280,7 @@ class SiteItemRequestBuilder
     */
     public function drivesById(string $id): DriveItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
-        $urlTplParams['drive_id'] = $id;
+        $urlTplParams['drive%2Did'] = $id;
         return new DriveItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
@@ -271,22 +291,24 @@ class SiteItemRequestBuilder
     */
     public function externalColumnsById(string $id): MicrosoftGraphGeneratedGroupsItemSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
-        $urlTplParams['columnDefinition_id'] = $id;
+        $urlTplParams['columnDefinition%2Did'] = $id;
         return new MicrosoftGraphGeneratedGroupsItemSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
-     * @param array|null $queryParameters Request query parameters
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
-    public function get(?array $queryParameters = null, ?array $headers = null, ?array $options = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createGetRequestInformation($queryParameters, $headers, $options);
+    public function get(?SiteItemRequestBuilderGetRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+        $requestInfo = $this->createGetRequestInformation($requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, Site::class, $responseHandler);
+            $errorMappings = [
+            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            ];
+            return $this->requestAdapter->sendAsync($requestInfo, array(Site::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
@@ -299,7 +321,7 @@ class SiteItemRequestBuilder
     */
     public function itemsById(string $id): BaseItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
-        $urlTplParams['baseItem_id'] = $id;
+        $urlTplParams['baseItem%2Did'] = $id;
         return new BaseItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
@@ -310,22 +332,36 @@ class SiteItemRequestBuilder
     */
     public function listsById(string $id): ListItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
-        $urlTplParams['list_id'] = $id;
+        $urlTplParams['list%2Did'] = $id;
         return new ListItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
+     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.operations.item collection
+     * @param string $id Unique identifier of the item
+     * @return RichLongRunningOperationItemRequestBuilder
+    */
+    public function operationsById(string $id): RichLongRunningOperationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['richLongRunningOperation%2Did'] = $id;
+        return new RichLongRunningOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
      * Update the navigation property sites in groups
      * @param Site $body 
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
+     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
-    public function patch(Site $body, ?array $headers = null, ?array $options = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createPatchRequestInformation($body, $headers, $options);
+    public function patch(Site $body, ?SiteItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+        $requestInfo = $this->createPatchRequestInformation($body, $requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, '', $responseHandler);
+            $errorMappings = [
+            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            ];
+            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
@@ -338,7 +374,7 @@ class SiteItemRequestBuilder
     */
     public function permissionsById(string $id): PermissionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
-        $urlTplParams['permission_id'] = $id;
+        $urlTplParams['permission%2Did'] = $id;
         return new PermissionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
@@ -349,7 +385,7 @@ class SiteItemRequestBuilder
     */
     public function sitesById(string $id): SiteItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
-        $urlTplParams['site_id1'] = $id;
+        $urlTplParams['site%2Did1'] = $id;
         return new SiteItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
@@ -360,7 +396,7 @@ class SiteItemRequestBuilder
     */
     public function termStoresById(string $id): StoreItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
-        $urlTplParams['store_id'] = $id;
+        $urlTplParams['store%2Did'] = $id;
         return new StoreItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 

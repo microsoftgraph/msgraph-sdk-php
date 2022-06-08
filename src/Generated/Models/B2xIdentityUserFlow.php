@@ -6,21 +6,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class B2xIdentityUserFlow extends IdentityUserFlow 
+class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable 
 {
-    /** @var UserFlowApiConnectorConfiguration|null $apiConnectorConfiguration Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration. */
+    /**
+     * @var UserFlowApiConnectorConfiguration|null $apiConnectorConfiguration Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
+    */
     private ?UserFlowApiConnectorConfiguration $apiConnectorConfiguration = null;
     
-    /** @var array<IdentityProvider>|null $identityProviders The identity providers included in the user flow. */
+    /**
+     * @var array<IdentityProvider>|null $identityProviders The identity providers included in the user flow.
+    */
     private ?array $identityProviders = null;
     
-    /** @var array<UserFlowLanguageConfiguration>|null $languages The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows. */
+    /**
+     * @var array<UserFlowLanguageConfiguration>|null $languages The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows.
+    */
     private ?array $languages = null;
     
-    /** @var array<IdentityUserFlowAttributeAssignment>|null $userAttributeAssignments The user attribute assignments included in the user flow. */
+    /**
+     * @var array<IdentityUserFlowAttributeAssignment>|null $userAttributeAssignments The user attribute assignments included in the user flow.
+    */
     private ?array $userAttributeAssignments = null;
     
-    /** @var array<IdentityProviderBase>|null $userFlowIdentityProviders The userFlowIdentityProviders property */
+    /**
+     * @var array<IdentityProviderBase>|null $userFlowIdentityProviders The userFlowIdentityProviders property
+    */
     private ?array $userFlowIdentityProviders = null;
     
     /**
@@ -35,12 +45,12 @@ class B2xIdentityUserFlow extends IdentityUserFlow
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return B2xIdentityUserFlow
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): B2xIdentityUserFlow {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): B2xIdentityUserFlow {
         return new B2xIdentityUserFlow();
     }
 
     /**
-     * Gets the apiConnectorConfiguration property value. Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
+     * Gets the apiConnectorConfiguration property value. Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      * @return UserFlowApiConnectorConfiguration|null
     */
     public function getApiConnectorConfiguration(): ?UserFlowApiConnectorConfiguration {
@@ -52,12 +62,13 @@ class B2xIdentityUserFlow extends IdentityUserFlow
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'apiConnectorConfiguration' => function (self $o, ParseNode $n) { $o->setApiConnectorConfiguration($n->getObjectValue(UserFlowApiConnectorConfiguration::class)); },
-            'identityProviders' => function (self $o, ParseNode $n) { $o->setIdentityProviders($n->getCollectionOfObjectValues(IdentityProvider::class)); },
-            'languages' => function (self $o, ParseNode $n) { $o->setLanguages($n->getCollectionOfObjectValues(UserFlowLanguageConfiguration::class)); },
-            'userAttributeAssignments' => function (self $o, ParseNode $n) { $o->setUserAttributeAssignments($n->getCollectionOfObjectValues(IdentityUserFlowAttributeAssignment::class)); },
-            'userFlowIdentityProviders' => function (self $o, ParseNode $n) { $o->setUserFlowIdentityProviders($n->getCollectionOfObjectValues(IdentityProviderBase::class)); },
+            'apiConnectorConfiguration' => function (ParseNode $n) use ($o) { $o->setApiConnectorConfiguration($n->getObjectValue(array(UserFlowApiConnectorConfiguration::class, 'createFromDiscriminatorValue'))); },
+            'identityProviders' => function (ParseNode $n) use ($o) { $o->setIdentityProviders($n->getCollectionOfObjectValues(array(IdentityProvider::class, 'createFromDiscriminatorValue'))); },
+            'languages' => function (ParseNode $n) use ($o) { $o->setLanguages($n->getCollectionOfObjectValues(array(UserFlowLanguageConfiguration::class, 'createFromDiscriminatorValue'))); },
+            'userAttributeAssignments' => function (ParseNode $n) use ($o) { $o->setUserAttributeAssignments($n->getCollectionOfObjectValues(array(IdentityUserFlowAttributeAssignment::class, 'createFromDiscriminatorValue'))); },
+            'userFlowIdentityProviders' => function (ParseNode $n) use ($o) { $o->setUserFlowIdentityProviders($n->getCollectionOfObjectValues(array(IdentityProviderBase::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -70,7 +81,7 @@ class B2xIdentityUserFlow extends IdentityUserFlow
     }
 
     /**
-     * Gets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
+     * Gets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows.
      * @return array<UserFlowLanguageConfiguration>|null
     */
     public function getLanguages(): ?array {
@@ -107,7 +118,7 @@ class B2xIdentityUserFlow extends IdentityUserFlow
     }
 
     /**
-     * Sets the apiConnectorConfiguration property value. Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
+     * Sets the apiConnectorConfiguration property value. Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      *  @param UserFlowApiConnectorConfiguration|null $value Value to set for the apiConnectorConfiguration property.
     */
     public function setApiConnectorConfiguration(?UserFlowApiConnectorConfiguration $value ): void {
@@ -123,7 +134,7 @@ class B2xIdentityUserFlow extends IdentityUserFlow
     }
 
     /**
-     * Sets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
+     * Sets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows.
      *  @param array<UserFlowLanguageConfiguration>|null $value Value to set for the languages property.
     */
     public function setLanguages(?array $value ): void {

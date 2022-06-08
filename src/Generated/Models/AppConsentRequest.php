@@ -6,18 +6,26 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AppConsentRequest extends Entity 
+class AppConsentRequest extends Entity implements Parsable 
 {
-    /** @var string|null $appDisplayName The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby. */
+    /**
+     * @var string|null $appDisplayName The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby.
+    */
     private ?string $appDisplayName = null;
     
-    /** @var string|null $appId The identifier of the application. Required. Supports $filter (eq only) and $orderby. */
+    /**
+     * @var string|null $appId The identifier of the application. Required. Supports $filter (eq only) and $orderby.
+    */
     private ?string $appId = null;
     
-    /** @var array<AppConsentRequestScope>|null $pendingScopes A list of pending scopes waiting for approval. Required. */
+    /**
+     * @var array<AppConsentRequestScope>|null $pendingScopes A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required.
+    */
     private ?array $pendingScopes = null;
     
-    /** @var array<UserConsentRequest>|null $userConsentRequests A list of pending user consent requests. */
+    /**
+     * @var array<UserConsentRequest>|null $userConsentRequests A list of pending user consent requests.
+    */
     private ?array $userConsentRequests = null;
     
     /**
@@ -32,7 +40,7 @@ class AppConsentRequest extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AppConsentRequest
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AppConsentRequest {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AppConsentRequest {
         return new AppConsentRequest();
     }
 
@@ -57,16 +65,17 @@ class AppConsentRequest extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appDisplayName' => function (self $o, ParseNode $n) { $o->setAppDisplayName($n->getStringValue()); },
-            'appId' => function (self $o, ParseNode $n) { $o->setAppId($n->getStringValue()); },
-            'pendingScopes' => function (self $o, ParseNode $n) { $o->setPendingScopes($n->getCollectionOfObjectValues(AppConsentRequestScope::class)); },
-            'userConsentRequests' => function (self $o, ParseNode $n) { $o->setUserConsentRequests($n->getCollectionOfObjectValues(UserConsentRequest::class)); },
+            'appDisplayName' => function (ParseNode $n) use ($o) { $o->setAppDisplayName($n->getStringValue()); },
+            'appId' => function (ParseNode $n) use ($o) { $o->setAppId($n->getStringValue()); },
+            'pendingScopes' => function (ParseNode $n) use ($o) { $o->setPendingScopes($n->getCollectionOfObjectValues(array(AppConsentRequestScope::class, 'createFromDiscriminatorValue'))); },
+            'userConsentRequests' => function (ParseNode $n) use ($o) { $o->setUserConsentRequests($n->getCollectionOfObjectValues(array(UserConsentRequest::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
     /**
-     * Gets the pendingScopes property value. A list of pending scopes waiting for approval. Required.
+     * Gets the pendingScopes property value. A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required.
      * @return array<AppConsentRequestScope>|null
     */
     public function getPendingScopes(): ?array {
@@ -110,7 +119,7 @@ class AppConsentRequest extends Entity
     }
 
     /**
-     * Sets the pendingScopes property value. A list of pending scopes waiting for approval. Required.
+     * Sets the pendingScopes property value. A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required.
      *  @param array<AppConsentRequestScope>|null $value Value to set for the pendingScopes property.
     */
     public function setPendingScopes(?array $value ): void {

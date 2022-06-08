@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class BookingCurrency extends Entity 
+class BookingCurrency extends Entity implements Parsable 
 {
-    /** @var string|null $symbol The currency symbol. For example, the currency symbol for the US dollar and for the Australian dollar is $. */
+    /**
+     * @var string|null $symbol The currency symbol. For example, the currency symbol for the US dollar and for the Australian dollar is $.
+    */
     private ?string $symbol = null;
     
     /**
@@ -23,7 +25,7 @@ class BookingCurrency extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return BookingCurrency
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): BookingCurrency {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): BookingCurrency {
         return new BookingCurrency();
     }
 
@@ -32,8 +34,9 @@ class BookingCurrency extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'symbol' => function (self $o, ParseNode $n) { $o->setSymbol($n->getStringValue()); },
+            'symbol' => function (ParseNode $n) use ($o) { $o->setSymbol($n->getStringValue()); },
         ]);
     }
 

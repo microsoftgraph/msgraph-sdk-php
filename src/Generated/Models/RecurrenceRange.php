@@ -10,22 +10,34 @@ use Microsoft\Kiota\Abstractions\Types\Date;
 
 class RecurrenceRange implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var Date|null $endDate The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate. */
+    /**
+     * @var Date|null $endDate The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
+    */
     private ?Date $endDate = null;
     
-    /** @var int|null $numberOfOccurrences The number of times to repeat the event. Required and must be positive if type is numbered. */
+    /**
+     * @var int|null $numberOfOccurrences The number of times to repeat the event. Required and must be positive if type is numbered.
+    */
     private ?int $numberOfOccurrences = null;
     
-    /** @var string|null $recurrenceTimeZone Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used. */
+    /**
+     * @var string|null $recurrenceTimeZone Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
+    */
     private ?string $recurrenceTimeZone = null;
     
-    /** @var Date|null $startDate The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required. */
+    /**
+     * @var Date|null $startDate The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
+    */
     private ?Date $startDate = null;
     
-    /** @var RecurrenceRangeType|null $type The recurrence range. The possible values are: endDate, noEnd, numbered. Required. */
+    /**
+     * @var RecurrenceRangeType|null $type The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
+    */
     private ?RecurrenceRangeType $type = null;
     
     /**
@@ -40,7 +52,7 @@ class RecurrenceRange implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return RecurrenceRange
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): RecurrenceRange {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): RecurrenceRange {
         return new RecurrenceRange();
     }
 
@@ -65,12 +77,13 @@ class RecurrenceRange implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'endDate' => function (self $o, ParseNode $n) { $o->setEndDate($n->getDateValue()); },
-            'numberOfOccurrences' => function (self $o, ParseNode $n) { $o->setNumberOfOccurrences($n->getIntegerValue()); },
-            'recurrenceTimeZone' => function (self $o, ParseNode $n) { $o->setRecurrenceTimeZone($n->getStringValue()); },
-            'startDate' => function (self $o, ParseNode $n) { $o->setStartDate($n->getDateValue()); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getEnumValue(RecurrenceRangeType::class)); },
+            'endDate' => function (ParseNode $n) use ($o) { $o->setEndDate($n->getDateValue()); },
+            'numberOfOccurrences' => function (ParseNode $n) use ($o) { $o->setNumberOfOccurrences($n->getIntegerValue()); },
+            'recurrenceTimeZone' => function (ParseNode $n) use ($o) { $o->setRecurrenceTimeZone($n->getStringValue()); },
+            'startDate' => function (ParseNode $n) use ($o) { $o->setStartDate($n->getDateValue()); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(RecurrenceRangeType::class)); },
         ];
     }
 
@@ -99,7 +112,7 @@ class RecurrenceRange implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the type property value. The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
+     * Gets the type property value. The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
      * @return RecurrenceRangeType|null
     */
     public function getType(): ?RecurrenceRangeType {
@@ -160,7 +173,7 @@ class RecurrenceRange implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the type property value. The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
+     * Sets the type property value. The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
      *  @param RecurrenceRangeType|null $value Value to set for the type property.
     */
     public function setType(?RecurrenceRangeType $value ): void {

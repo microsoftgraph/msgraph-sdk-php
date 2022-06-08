@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class TeamworkConversationIdentity extends Identity 
+class TeamworkConversationIdentity extends Identity implements Parsable 
 {
-    /** @var TeamworkConversationIdentityType|null $conversationIdentityType Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue. */
+    /**
+     * @var TeamworkConversationIdentityType|null $conversationIdentityType Type of conversation. Possible values are: team, channel, and chat.
+    */
     private ?TeamworkConversationIdentityType $conversationIdentityType = null;
     
     /**
@@ -23,12 +25,12 @@ class TeamworkConversationIdentity extends Identity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TeamworkConversationIdentity
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TeamworkConversationIdentity {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TeamworkConversationIdentity {
         return new TeamworkConversationIdentity();
     }
 
     /**
-     * Gets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
+     * Gets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, and chat.
      * @return TeamworkConversationIdentityType|null
     */
     public function getConversationIdentityType(): ?TeamworkConversationIdentityType {
@@ -40,8 +42,9 @@ class TeamworkConversationIdentity extends Identity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'conversationIdentityType' => function (self $o, ParseNode $n) { $o->setConversationIdentityType($n->getEnumValue(TeamworkConversationIdentityType::class)); },
+            'conversationIdentityType' => function (ParseNode $n) use ($o) { $o->setConversationIdentityType($n->getEnumValue(TeamworkConversationIdentityType::class)); },
         ]);
     }
 
@@ -55,7 +58,7 @@ class TeamworkConversationIdentity extends Identity
     }
 
     /**
-     * Sets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
+     * Sets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, and chat.
      *  @param TeamworkConversationIdentityType|null $value Value to set for the conversationIdentityType property.
     */
     public function setConversationIdentityType(?TeamworkConversationIdentityType $value ): void {

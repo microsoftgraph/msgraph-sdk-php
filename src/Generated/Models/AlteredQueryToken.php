@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AlteredQueryToken implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $length Defines the length of a changed segment. */
+    /**
+     * @var int|null $length Defines the length of a changed segment.
+    */
     private ?int $length = null;
     
-    /** @var int|null $offset Defines the offset of a changed segment. */
+    /**
+     * @var int|null $offset Defines the offset of a changed segment.
+    */
     private ?int $offset = null;
     
-    /** @var string|null $suggestion Represents the corrected segment string. */
+    /**
+     * @var string|null $suggestion Represents the corrected segment string.
+    */
     private ?string $suggestion = null;
     
     /**
@@ -33,7 +41,7 @@ class AlteredQueryToken implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AlteredQueryToken
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AlteredQueryToken {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AlteredQueryToken {
         return new AlteredQueryToken();
     }
 
@@ -50,10 +58,11 @@ class AlteredQueryToken implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'length' => function (self $o, ParseNode $n) { $o->setLength($n->getIntegerValue()); },
-            'offset' => function (self $o, ParseNode $n) { $o->setOffset($n->getIntegerValue()); },
-            'suggestion' => function (self $o, ParseNode $n) { $o->setSuggestion($n->getStringValue()); },
+            'length' => function (ParseNode $n) use ($o) { $o->setLength($n->getIntegerValue()); },
+            'offset' => function (ParseNode $n) use ($o) { $o->setOffset($n->getIntegerValue()); },
+            'suggestion' => function (ParseNode $n) use ($o) { $o->setSuggestion($n->getStringValue()); },
         ];
     }
 

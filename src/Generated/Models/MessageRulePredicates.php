@@ -9,97 +9,159 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class MessageRulePredicates implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<string>|null $bodyContains Represents the strings that should appear in the body of an incoming message in order for the condition or exception to apply. */
+    /**
+     * @var array<string>|null $bodyContains Represents the strings that should appear in the body of an incoming message in order for the condition or exception to apply.
+    */
     private ?array $bodyContains = null;
     
-    /** @var array<string>|null $bodyOrSubjectContains Represents the strings that should appear in the body or subject of an incoming message in order for the condition or exception to apply. */
+    /**
+     * @var array<string>|null $bodyOrSubjectContains Represents the strings that should appear in the body or subject of an incoming message in order for the condition or exception to apply.
+    */
     private ?array $bodyOrSubjectContains = null;
     
-    /** @var array<string>|null $categories Represents the categories that an incoming message should be labeled with in order for the condition or exception to apply. */
+    /**
+     * @var array<string>|null $categories Represents the categories that an incoming message should be labeled with in order for the condition or exception to apply.
+    */
     private ?array $categories = null;
     
-    /** @var array<Recipient>|null $fromAddresses Represents the specific sender email addresses of an incoming message in order for the condition or exception to apply. */
+    /**
+     * @var array<Recipient>|null $fromAddresses Represents the specific sender email addresses of an incoming message in order for the condition or exception to apply.
+    */
     private ?array $fromAddresses = null;
     
-    /** @var bool|null $hasAttachments Indicates whether an incoming message must have attachments in order for the condition or exception to apply. */
+    /**
+     * @var bool|null $hasAttachments Indicates whether an incoming message must have attachments in order for the condition or exception to apply.
+    */
     private ?bool $hasAttachments = null;
     
-    /** @var array<string>|null $headerContains Represents the strings that appear in the headers of an incoming message in order for the condition or exception to apply. */
+    /**
+     * @var array<string>|null $headerContains Represents the strings that appear in the headers of an incoming message in order for the condition or exception to apply.
+    */
     private ?array $headerContains = null;
     
-    /** @var Importance|null $importance The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high. */
+    /**
+     * @var Importance|null $importance The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high.
+    */
     private ?Importance $importance = null;
     
-    /** @var bool|null $isApprovalRequest Indicates whether an incoming message must be an approval request in order for the condition or exception to apply. */
+    /**
+     * @var bool|null $isApprovalRequest Indicates whether an incoming message must be an approval request in order for the condition or exception to apply.
+    */
     private ?bool $isApprovalRequest = null;
     
-    /** @var bool|null $isAutomaticForward Indicates whether an incoming message must be automatically forwarded in order for the condition or exception to apply. */
+    /**
+     * @var bool|null $isAutomaticForward Indicates whether an incoming message must be automatically forwarded in order for the condition or exception to apply.
+    */
     private ?bool $isAutomaticForward = null;
     
-    /** @var bool|null $isAutomaticReply Indicates whether an incoming message must be an auto reply in order for the condition or exception to apply. */
+    /**
+     * @var bool|null $isAutomaticReply Indicates whether an incoming message must be an auto reply in order for the condition or exception to apply.
+    */
     private ?bool $isAutomaticReply = null;
     
-    /** @var bool|null $isEncrypted Indicates whether an incoming message must be encrypted in order for the condition or exception to apply. */
+    /**
+     * @var bool|null $isEncrypted Indicates whether an incoming message must be encrypted in order for the condition or exception to apply.
+    */
     private ?bool $isEncrypted = null;
     
-    /** @var bool|null $isMeetingRequest Indicates whether an incoming message must be a meeting request in order for the condition or exception to apply. */
+    /**
+     * @var bool|null $isMeetingRequest Indicates whether an incoming message must be a meeting request in order for the condition or exception to apply.
+    */
     private ?bool $isMeetingRequest = null;
     
-    /** @var bool|null $isMeetingResponse Indicates whether an incoming message must be a meeting response in order for the condition or exception to apply. */
+    /**
+     * @var bool|null $isMeetingResponse Indicates whether an incoming message must be a meeting response in order for the condition or exception to apply.
+    */
     private ?bool $isMeetingResponse = null;
     
-    /** @var bool|null $isNonDeliveryReport Indicates whether an incoming message must be a non-delivery report in order for the condition or exception to apply. */
+    /**
+     * @var bool|null $isNonDeliveryReport Indicates whether an incoming message must be a non-delivery report in order for the condition or exception to apply.
+    */
     private ?bool $isNonDeliveryReport = null;
     
-    /** @var bool|null $isPermissionControlled Indicates whether an incoming message must be permission controlled (RMS-protected) in order for the condition or exception to apply. */
+    /**
+     * @var bool|null $isPermissionControlled Indicates whether an incoming message must be permission controlled (RMS-protected) in order for the condition or exception to apply.
+    */
     private ?bool $isPermissionControlled = null;
     
-    /** @var bool|null $isReadReceipt Indicates whether an incoming message must be a read receipt in order for the condition or exception to apply. */
+    /**
+     * @var bool|null $isReadReceipt Indicates whether an incoming message must be a read receipt in order for the condition or exception to apply.
+    */
     private ?bool $isReadReceipt = null;
     
-    /** @var bool|null $isSigned Indicates whether an incoming message must be S/MIME-signed in order for the condition or exception to apply. */
+    /**
+     * @var bool|null $isSigned Indicates whether an incoming message must be S/MIME-signed in order for the condition or exception to apply.
+    */
     private ?bool $isSigned = null;
     
-    /** @var bool|null $isVoicemail Indicates whether an incoming message must be a voice mail in order for the condition or exception to apply. */
+    /**
+     * @var bool|null $isVoicemail Indicates whether an incoming message must be a voice mail in order for the condition or exception to apply.
+    */
     private ?bool $isVoicemail = null;
     
-    /** @var MessageActionFlag|null $messageActionFlag Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review. */
+    /**
+     * @var MessageActionFlag|null $messageActionFlag Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
+    */
     private ?MessageActionFlag $messageActionFlag = null;
     
-    /** @var bool|null $notSentToMe Indicates whether the owner of the mailbox must not be a recipient of an incoming message in order for the condition or exception to apply. */
+    /**
+     * @var bool|null $notSentToMe Indicates whether the owner of the mailbox must not be a recipient of an incoming message in order for the condition or exception to apply.
+    */
     private ?bool $notSentToMe = null;
     
-    /** @var array<string>|null $recipientContains Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply. */
+    /**
+     * @var array<string>|null $recipientContains Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.
+    */
     private ?array $recipientContains = null;
     
-    /** @var array<string>|null $senderContains Represents the strings that appear in the from property of an incoming message in order for the condition or exception to apply. */
+    /**
+     * @var array<string>|null $senderContains Represents the strings that appear in the from property of an incoming message in order for the condition or exception to apply.
+    */
     private ?array $senderContains = null;
     
-    /** @var Sensitivity|null $sensitivity Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential. */
+    /**
+     * @var Sensitivity|null $sensitivity Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential.
+    */
     private ?Sensitivity $sensitivity = null;
     
-    /** @var bool|null $sentCcMe Indicates whether the owner of the mailbox must be in the ccRecipients property of an incoming message in order for the condition or exception to apply. */
+    /**
+     * @var bool|null $sentCcMe Indicates whether the owner of the mailbox must be in the ccRecipients property of an incoming message in order for the condition or exception to apply.
+    */
     private ?bool $sentCcMe = null;
     
-    /** @var bool|null $sentOnlyToMe Indicates whether the owner of the mailbox must be the only recipient in an incoming message in order for the condition or exception to apply. */
+    /**
+     * @var bool|null $sentOnlyToMe Indicates whether the owner of the mailbox must be the only recipient in an incoming message in order for the condition or exception to apply.
+    */
     private ?bool $sentOnlyToMe = null;
     
-    /** @var array<Recipient>|null $sentToAddresses Represents the email addresses that an incoming message must have been sent to in order for the condition or exception to apply. */
+    /**
+     * @var array<Recipient>|null $sentToAddresses Represents the email addresses that an incoming message must have been sent to in order for the condition or exception to apply.
+    */
     private ?array $sentToAddresses = null;
     
-    /** @var bool|null $sentToMe Indicates whether the owner of the mailbox must be in the toRecipients property of an incoming message in order for the condition or exception to apply. */
+    /**
+     * @var bool|null $sentToMe Indicates whether the owner of the mailbox must be in the toRecipients property of an incoming message in order for the condition or exception to apply.
+    */
     private ?bool $sentToMe = null;
     
-    /** @var bool|null $sentToOrCcMe Indicates whether the owner of the mailbox must be in either a toRecipients or ccRecipients property of an incoming message in order for the condition or exception to apply. */
+    /**
+     * @var bool|null $sentToOrCcMe Indicates whether the owner of the mailbox must be in either a toRecipients or ccRecipients property of an incoming message in order for the condition or exception to apply.
+    */
     private ?bool $sentToOrCcMe = null;
     
-    /** @var array<string>|null $subjectContains Represents the strings that appear in the subject of an incoming message in order for the condition or exception to apply. */
+    /**
+     * @var array<string>|null $subjectContains Represents the strings that appear in the subject of an incoming message in order for the condition or exception to apply.
+    */
     private ?array $subjectContains = null;
     
-    /** @var SizeRange|null $withinSizeRange Represents the minimum and maximum sizes (in kilobytes) that an incoming message must fall in between in order for the condition or exception to apply. */
+    /**
+     * @var SizeRange|null $withinSizeRange Represents the minimum and maximum sizes (in kilobytes) that an incoming message must fall in between in order for the condition or exception to apply.
+    */
     private ?SizeRange $withinSizeRange = null;
     
     /**
@@ -114,7 +176,7 @@ class MessageRulePredicates implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return MessageRulePredicates
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): MessageRulePredicates {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): MessageRulePredicates {
         return new MessageRulePredicates();
     }
 
@@ -155,37 +217,38 @@ class MessageRulePredicates implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'bodyContains' => function (self $o, ParseNode $n) { $o->setBodyContains($n->getCollectionOfPrimitiveValues()); },
-            'bodyOrSubjectContains' => function (self $o, ParseNode $n) { $o->setBodyOrSubjectContains($n->getCollectionOfPrimitiveValues()); },
-            'categories' => function (self $o, ParseNode $n) { $o->setCategories($n->getCollectionOfPrimitiveValues()); },
-            'fromAddresses' => function (self $o, ParseNode $n) { $o->setFromAddresses($n->getCollectionOfObjectValues(Recipient::class)); },
-            'hasAttachments' => function (self $o, ParseNode $n) { $o->setHasAttachments($n->getBooleanValue()); },
-            'headerContains' => function (self $o, ParseNode $n) { $o->setHeaderContains($n->getCollectionOfPrimitiveValues()); },
-            'importance' => function (self $o, ParseNode $n) { $o->setImportance($n->getEnumValue(Importance::class)); },
-            'isApprovalRequest' => function (self $o, ParseNode $n) { $o->setIsApprovalRequest($n->getBooleanValue()); },
-            'isAutomaticForward' => function (self $o, ParseNode $n) { $o->setIsAutomaticForward($n->getBooleanValue()); },
-            'isAutomaticReply' => function (self $o, ParseNode $n) { $o->setIsAutomaticReply($n->getBooleanValue()); },
-            'isEncrypted' => function (self $o, ParseNode $n) { $o->setIsEncrypted($n->getBooleanValue()); },
-            'isMeetingRequest' => function (self $o, ParseNode $n) { $o->setIsMeetingRequest($n->getBooleanValue()); },
-            'isMeetingResponse' => function (self $o, ParseNode $n) { $o->setIsMeetingResponse($n->getBooleanValue()); },
-            'isNonDeliveryReport' => function (self $o, ParseNode $n) { $o->setIsNonDeliveryReport($n->getBooleanValue()); },
-            'isPermissionControlled' => function (self $o, ParseNode $n) { $o->setIsPermissionControlled($n->getBooleanValue()); },
-            'isReadReceipt' => function (self $o, ParseNode $n) { $o->setIsReadReceipt($n->getBooleanValue()); },
-            'isSigned' => function (self $o, ParseNode $n) { $o->setIsSigned($n->getBooleanValue()); },
-            'isVoicemail' => function (self $o, ParseNode $n) { $o->setIsVoicemail($n->getBooleanValue()); },
-            'messageActionFlag' => function (self $o, ParseNode $n) { $o->setMessageActionFlag($n->getEnumValue(MessageActionFlag::class)); },
-            'notSentToMe' => function (self $o, ParseNode $n) { $o->setNotSentToMe($n->getBooleanValue()); },
-            'recipientContains' => function (self $o, ParseNode $n) { $o->setRecipientContains($n->getCollectionOfPrimitiveValues()); },
-            'senderContains' => function (self $o, ParseNode $n) { $o->setSenderContains($n->getCollectionOfPrimitiveValues()); },
-            'sensitivity' => function (self $o, ParseNode $n) { $o->setSensitivity($n->getEnumValue(Sensitivity::class)); },
-            'sentCcMe' => function (self $o, ParseNode $n) { $o->setSentCcMe($n->getBooleanValue()); },
-            'sentOnlyToMe' => function (self $o, ParseNode $n) { $o->setSentOnlyToMe($n->getBooleanValue()); },
-            'sentToAddresses' => function (self $o, ParseNode $n) { $o->setSentToAddresses($n->getCollectionOfObjectValues(Recipient::class)); },
-            'sentToMe' => function (self $o, ParseNode $n) { $o->setSentToMe($n->getBooleanValue()); },
-            'sentToOrCcMe' => function (self $o, ParseNode $n) { $o->setSentToOrCcMe($n->getBooleanValue()); },
-            'subjectContains' => function (self $o, ParseNode $n) { $o->setSubjectContains($n->getCollectionOfPrimitiveValues()); },
-            'withinSizeRange' => function (self $o, ParseNode $n) { $o->setWithinSizeRange($n->getObjectValue(SizeRange::class)); },
+            'bodyContains' => function (ParseNode $n) use ($o) { $o->setBodyContains($n->getCollectionOfPrimitiveValues()); },
+            'bodyOrSubjectContains' => function (ParseNode $n) use ($o) { $o->setBodyOrSubjectContains($n->getCollectionOfPrimitiveValues()); },
+            'categories' => function (ParseNode $n) use ($o) { $o->setCategories($n->getCollectionOfPrimitiveValues()); },
+            'fromAddresses' => function (ParseNode $n) use ($o) { $o->setFromAddresses($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
+            'hasAttachments' => function (ParseNode $n) use ($o) { $o->setHasAttachments($n->getBooleanValue()); },
+            'headerContains' => function (ParseNode $n) use ($o) { $o->setHeaderContains($n->getCollectionOfPrimitiveValues()); },
+            'importance' => function (ParseNode $n) use ($o) { $o->setImportance($n->getEnumValue(Importance::class)); },
+            'isApprovalRequest' => function (ParseNode $n) use ($o) { $o->setIsApprovalRequest($n->getBooleanValue()); },
+            'isAutomaticForward' => function (ParseNode $n) use ($o) { $o->setIsAutomaticForward($n->getBooleanValue()); },
+            'isAutomaticReply' => function (ParseNode $n) use ($o) { $o->setIsAutomaticReply($n->getBooleanValue()); },
+            'isEncrypted' => function (ParseNode $n) use ($o) { $o->setIsEncrypted($n->getBooleanValue()); },
+            'isMeetingRequest' => function (ParseNode $n) use ($o) { $o->setIsMeetingRequest($n->getBooleanValue()); },
+            'isMeetingResponse' => function (ParseNode $n) use ($o) { $o->setIsMeetingResponse($n->getBooleanValue()); },
+            'isNonDeliveryReport' => function (ParseNode $n) use ($o) { $o->setIsNonDeliveryReport($n->getBooleanValue()); },
+            'isPermissionControlled' => function (ParseNode $n) use ($o) { $o->setIsPermissionControlled($n->getBooleanValue()); },
+            'isReadReceipt' => function (ParseNode $n) use ($o) { $o->setIsReadReceipt($n->getBooleanValue()); },
+            'isSigned' => function (ParseNode $n) use ($o) { $o->setIsSigned($n->getBooleanValue()); },
+            'isVoicemail' => function (ParseNode $n) use ($o) { $o->setIsVoicemail($n->getBooleanValue()); },
+            'messageActionFlag' => function (ParseNode $n) use ($o) { $o->setMessageActionFlag($n->getEnumValue(MessageActionFlag::class)); },
+            'notSentToMe' => function (ParseNode $n) use ($o) { $o->setNotSentToMe($n->getBooleanValue()); },
+            'recipientContains' => function (ParseNode $n) use ($o) { $o->setRecipientContains($n->getCollectionOfPrimitiveValues()); },
+            'senderContains' => function (ParseNode $n) use ($o) { $o->setSenderContains($n->getCollectionOfPrimitiveValues()); },
+            'sensitivity' => function (ParseNode $n) use ($o) { $o->setSensitivity($n->getEnumValue(Sensitivity::class)); },
+            'sentCcMe' => function (ParseNode $n) use ($o) { $o->setSentCcMe($n->getBooleanValue()); },
+            'sentOnlyToMe' => function (ParseNode $n) use ($o) { $o->setSentOnlyToMe($n->getBooleanValue()); },
+            'sentToAddresses' => function (ParseNode $n) use ($o) { $o->setSentToAddresses($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
+            'sentToMe' => function (ParseNode $n) use ($o) { $o->setSentToMe($n->getBooleanValue()); },
+            'sentToOrCcMe' => function (ParseNode $n) use ($o) { $o->setSentToOrCcMe($n->getBooleanValue()); },
+            'subjectContains' => function (ParseNode $n) use ($o) { $o->setSubjectContains($n->getCollectionOfPrimitiveValues()); },
+            'withinSizeRange' => function (ParseNode $n) use ($o) { $o->setWithinSizeRange($n->getObjectValue(array(SizeRange::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

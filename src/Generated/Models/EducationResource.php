@@ -10,22 +10,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class EducationResource implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var IdentitySet|null $createdBy The individual who created the resource. */
+    /**
+     * @var IdentitySet|null $createdBy Who created the resource.
+    */
     private ?IdentitySet $createdBy = null;
     
-    /** @var DateTime|null $createdDateTime Moment in time when the resource was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $displayName Display name of resource. */
+    /**
+     * @var string|null $displayName Display name of resource.
+    */
     private ?string $displayName = null;
     
-    /** @var IdentitySet|null $lastModifiedBy The last user to modify the resource. */
+    /**
+     * @var IdentitySet|null $lastModifiedBy Who was the last user to modify the resource.
+    */
     private ?IdentitySet $lastModifiedBy = null;
     
-    /** @var DateTime|null $lastModifiedDateTime Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
     /**
@@ -40,7 +52,7 @@ class EducationResource implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return EducationResource
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): EducationResource {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): EducationResource {
         return new EducationResource();
     }
 
@@ -53,7 +65,7 @@ class EducationResource implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the createdBy property value. The individual who created the resource.
+     * Gets the createdBy property value. Who created the resource.
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
@@ -61,7 +73,7 @@ class EducationResource implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. Moment in time when the resource was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -81,17 +93,18 @@ class EducationResource implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'createdBy' => function (self $o, ParseNode $n) { $o->setCreatedBy($n->getObjectValue(IdentitySet::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'lastModifiedBy' => function (self $o, ParseNode $n) { $o->setLastModifiedBy($n->getObjectValue(IdentitySet::class)); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'lastModifiedBy' => function (ParseNode $n) use ($o) { $o->setLastModifiedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
         ];
     }
 
     /**
-     * Gets the lastModifiedBy property value. The last user to modify the resource.
+     * Gets the lastModifiedBy property value. Who was the last user to modify the resource.
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
@@ -99,7 +112,7 @@ class EducationResource implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -128,7 +141,7 @@ class EducationResource implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the createdBy property value. The individual who created the resource.
+     * Sets the createdBy property value. Who created the resource.
      *  @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value ): void {
@@ -136,7 +149,7 @@ class EducationResource implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. Moment in time when the resource was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value ): void {
@@ -152,7 +165,7 @@ class EducationResource implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. The last user to modify the resource.
+     * Sets the lastModifiedBy property value. Who was the last user to modify the resource.
      *  @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?IdentitySet $value ): void {
@@ -160,7 +173,7 @@ class EducationResource implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value ): void {

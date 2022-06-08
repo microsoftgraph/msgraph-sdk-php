@@ -9,10 +9,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class CallOptions implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $hideBotAfterEscalation The hideBotAfterEscalation property */
+    /**
+     * @var bool|null $hideBotAfterEscalation The hideBotAfterEscalation property
+    */
     private ?bool $hideBotAfterEscalation = null;
     
     /**
@@ -27,7 +31,7 @@ class CallOptions implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return CallOptions
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): CallOptions {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): CallOptions {
         return new CallOptions();
     }
 
@@ -44,8 +48,9 @@ class CallOptions implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'hideBotAfterEscalation' => function (self $o, ParseNode $n) { $o->setHideBotAfterEscalation($n->getBooleanValue()); },
+            'hideBotAfterEscalation' => function (ParseNode $n) use ($o) { $o->setHideBotAfterEscalation($n->getBooleanValue()); },
         ];
     }
 

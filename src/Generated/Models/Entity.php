@@ -9,10 +9,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Entity implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $id Read-only. */
+    /**
+     * @var string|null $id Read-only.
+    */
     private ?string $id = null;
     
     /**
@@ -27,7 +31,7 @@ class Entity implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Entity
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Entity {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Entity {
         return new Entity();
     }
 
@@ -44,8 +48,9 @@ class Entity implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'id' => function (self $o, ParseNode $n) { $o->setId($n->getStringValue()); },
+            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
         ];
     }
 

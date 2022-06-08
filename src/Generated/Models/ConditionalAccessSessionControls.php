@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ConditionalAccessSessionControls implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var ApplicationEnforcedRestrictionsSessionControl|null $applicationEnforcedRestrictions Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control. */
+    /**
+     * @var ApplicationEnforcedRestrictionsSessionControl|null $applicationEnforcedRestrictions Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control.
+    */
     private ?ApplicationEnforcedRestrictionsSessionControl $applicationEnforcedRestrictions = null;
     
-    /** @var CloudAppSecuritySessionControl|null $cloudAppSecurity Session control to apply cloud app security. */
+    /**
+     * @var CloudAppSecuritySessionControl|null $cloudAppSecurity Session control to apply cloud app security.
+    */
     private ?CloudAppSecuritySessionControl $cloudAppSecurity = null;
     
-    /** @var bool|null $disableResilienceDefaults Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not. */
+    /**
+     * @var bool|null $disableResilienceDefaults Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
+    */
     private ?bool $disableResilienceDefaults = null;
     
-    /** @var PersistentBrowserSessionControl|null $persistentBrowser Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly. */
+    /**
+     * @var PersistentBrowserSessionControl|null $persistentBrowser Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
+    */
     private ?PersistentBrowserSessionControl $persistentBrowser = null;
     
-    /** @var SignInFrequencySessionControl|null $signInFrequency Session control to enforce signin frequency. */
+    /**
+     * @var SignInFrequencySessionControl|null $signInFrequency Session control to enforce signin frequency.
+    */
     private ?SignInFrequencySessionControl $signInFrequency = null;
     
     /**
@@ -39,7 +51,7 @@ class ConditionalAccessSessionControls implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ConditionalAccessSessionControls
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessSessionControls {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessSessionControls {
         return new ConditionalAccessSessionControls();
     }
 
@@ -80,12 +92,13 @@ class ConditionalAccessSessionControls implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'applicationEnforcedRestrictions' => function (self $o, ParseNode $n) { $o->setApplicationEnforcedRestrictions($n->getObjectValue(ApplicationEnforcedRestrictionsSessionControl::class)); },
-            'cloudAppSecurity' => function (self $o, ParseNode $n) { $o->setCloudAppSecurity($n->getObjectValue(CloudAppSecuritySessionControl::class)); },
-            'disableResilienceDefaults' => function (self $o, ParseNode $n) { $o->setDisableResilienceDefaults($n->getBooleanValue()); },
-            'persistentBrowser' => function (self $o, ParseNode $n) { $o->setPersistentBrowser($n->getObjectValue(PersistentBrowserSessionControl::class)); },
-            'signInFrequency' => function (self $o, ParseNode $n) { $o->setSignInFrequency($n->getObjectValue(SignInFrequencySessionControl::class)); },
+            'applicationEnforcedRestrictions' => function (ParseNode $n) use ($o) { $o->setApplicationEnforcedRestrictions($n->getObjectValue(array(ApplicationEnforcedRestrictionsSessionControl::class, 'createFromDiscriminatorValue'))); },
+            'cloudAppSecurity' => function (ParseNode $n) use ($o) { $o->setCloudAppSecurity($n->getObjectValue(array(CloudAppSecuritySessionControl::class, 'createFromDiscriminatorValue'))); },
+            'disableResilienceDefaults' => function (ParseNode $n) use ($o) { $o->setDisableResilienceDefaults($n->getBooleanValue()); },
+            'persistentBrowser' => function (ParseNode $n) use ($o) { $o->setPersistentBrowser($n->getObjectValue(array(PersistentBrowserSessionControl::class, 'createFromDiscriminatorValue'))); },
+            'signInFrequency' => function (ParseNode $n) use ($o) { $o->setSignInFrequency($n->getObjectValue(array(SignInFrequencySessionControl::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

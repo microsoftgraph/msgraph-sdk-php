@@ -2,29 +2,64 @@
 
 namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\Item;
 
-use Exception;
-use Http\Promise\Promise;
-use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\DirectoryObject;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Kiota\Abstractions\HttpMethod;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\Item\AppRoleAssignment\AppRoleAssignmentRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\Item\Endpoint\EndpointRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\Item\Ref\RefRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\Item\ServicePrincipal\ServicePrincipalRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\Item\User\UserRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
-use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class DirectoryObjectItemRequestBuilder 
 {
-    /** @var array<string, mixed> $pathParameters Path parameters for the request */
+    /**
+     * The appRoleAssignment property
+    */
+    public function appRoleAssignment(): AppRoleAssignmentRequestBuilder {
+        return new AppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The endpoint property
+    */
+    public function endpoint(): EndpointRequestBuilder {
+        return new EndpointRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * @var array<string, mixed> $pathParameters Path parameters for the request
+    */
     private array $pathParameters;
     
-    /** @var RequestAdapter $requestAdapter The request adapter to use to execute the requests. */
+    /**
+     * The ref property
+    */
+    public function ref(): RefRequestBuilder {
+        return new RefRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+    */
     private RequestAdapter $requestAdapter;
     
-    /** @var string $urlTemplate Url template to use to build the URL for the current request builder */
+    /**
+     * The servicePrincipal property
+    */
+    public function servicePrincipal(): ServicePrincipalRequestBuilder {
+        return new ServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * @var string $urlTemplate Url template to use to build the URL for the current request builder
+    */
     private string $urlTemplate;
+    
+    /**
+     * The user property
+    */
+    public function user(): UserRequestBuilder {
+        return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
@@ -32,50 +67,9 @@ class DirectoryObjectItemRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/servicePrincipals/{servicePrincipal_id}/owners/{directoryObject_id}{?select,expand}';
+        $this->urlTemplate = '{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/owners/{directoryObject%2Did}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
-    }
-
-    /**
-     * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand.
-     * @param array|null $queryParameters Request query parameters
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
-     * @return RequestInformation
-    */
-    public function createGetRequestInformation(?array $queryParameters = null, ?array $headers = null, ?array $options = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::GET;
-        if ($headers !== null) {
-            $requestInfo->headers = array_merge($requestInfo->headers, $headers);
-        }
-        if ($queryParameters !== null) {
-            $requestInfo->setQueryParameters($queryParameters);
-        }
-        if ($options !== null) {
-            $requestInfo->addRequestOptions(...$options);
-        }
-        return $requestInfo;
-    }
-
-    /**
-     * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand.
-     * @param array|null $queryParameters Request query parameters
-     * @param array<string, mixed>|null $headers Request headers
-     * @param array<string, RequestOption>|null $options Request options
-     * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return Promise
-    */
-    public function get(?array $queryParameters = null, ?array $headers = null, ?array $options = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createGetRequestInformation($queryParameters, $headers, $options);
-        try {
-            return $this->requestAdapter->sendAsync($requestInfo, DirectoryObject::class, $responseHandler);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
     }
 
 }

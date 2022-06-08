@@ -7,30 +7,46 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class MobileThreatDefenseConnector extends Entity 
+class MobileThreatDefenseConnector extends Entity implements Parsable 
 {
-    /** @var bool|null $androidDeviceBlockedOnMissingPartnerData For Android, set whether Intune must receive data from the data sync partner prior to marking a device compliant */
+    /**
+     * @var bool|null $androidDeviceBlockedOnMissingPartnerData For Android, set whether Intune must receive data from the data sync partner prior to marking a device compliant
+    */
     private ?bool $androidDeviceBlockedOnMissingPartnerData = null;
     
-    /** @var bool|null $androidEnabled For Android, set whether data from the data sync partner should be used during compliance evaluations */
+    /**
+     * @var bool|null $androidEnabled For Android, set whether data from the data sync partner should be used during compliance evaluations
+    */
     private ?bool $androidEnabled = null;
     
-    /** @var bool|null $iosDeviceBlockedOnMissingPartnerData For IOS, set whether Intune must receive data from the data sync partner prior to marking a device compliant */
+    /**
+     * @var bool|null $iosDeviceBlockedOnMissingPartnerData For IOS, set whether Intune must receive data from the data sync partner prior to marking a device compliant
+    */
     private ?bool $iosDeviceBlockedOnMissingPartnerData = null;
     
-    /** @var bool|null $iosEnabled For IOS, get or set whether data from the data sync partner should be used during compliance evaluations */
+    /**
+     * @var bool|null $iosEnabled For IOS, get or set whether data from the data sync partner should be used during compliance evaluations
+    */
     private ?bool $iosEnabled = null;
     
-    /** @var DateTime|null $lastHeartbeatDateTime DateTime of last Heartbeat recieved from the Data Sync Partner */
+    /**
+     * @var DateTime|null $lastHeartbeatDateTime DateTime of last Heartbeat recieved from the Data Sync Partner
+    */
     private ?DateTime $lastHeartbeatDateTime = null;
     
-    /** @var MobileThreatPartnerTenantState|null $partnerState Data Sync Partner state for this account. Possible values are: unavailable, available, enabled, unresponsive. */
+    /**
+     * @var MobileThreatPartnerTenantState|null $partnerState Data Sync Partner state for this account. Possible values are: unavailable, available, enabled, unresponsive.
+    */
     private ?MobileThreatPartnerTenantState $partnerState = null;
     
-    /** @var int|null $partnerUnresponsivenessThresholdInDays Get or Set days the per tenant tolerance to unresponsiveness for this partner integration */
+    /**
+     * @var int|null $partnerUnresponsivenessThresholdInDays Get or Set days the per tenant tolerance to unresponsiveness for this partner integration
+    */
     private ?int $partnerUnresponsivenessThresholdInDays = null;
     
-    /** @var bool|null $partnerUnsupportedOsVersionBlocked Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Data Sync Partner */
+    /**
+     * @var bool|null $partnerUnsupportedOsVersionBlocked Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Data Sync Partner
+    */
     private ?bool $partnerUnsupportedOsVersionBlocked = null;
     
     /**
@@ -45,7 +61,7 @@ class MobileThreatDefenseConnector extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return MobileThreatDefenseConnector
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): MobileThreatDefenseConnector {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): MobileThreatDefenseConnector {
         return new MobileThreatDefenseConnector();
     }
 
@@ -70,15 +86,16 @@ class MobileThreatDefenseConnector extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'androidDeviceBlockedOnMissingPartnerData' => function (self $o, ParseNode $n) { $o->setAndroidDeviceBlockedOnMissingPartnerData($n->getBooleanValue()); },
-            'androidEnabled' => function (self $o, ParseNode $n) { $o->setAndroidEnabled($n->getBooleanValue()); },
-            'iosDeviceBlockedOnMissingPartnerData' => function (self $o, ParseNode $n) { $o->setIosDeviceBlockedOnMissingPartnerData($n->getBooleanValue()); },
-            'iosEnabled' => function (self $o, ParseNode $n) { $o->setIosEnabled($n->getBooleanValue()); },
-            'lastHeartbeatDateTime' => function (self $o, ParseNode $n) { $o->setLastHeartbeatDateTime($n->getDateTimeValue()); },
-            'partnerState' => function (self $o, ParseNode $n) { $o->setPartnerState($n->getEnumValue(MobileThreatPartnerTenantState::class)); },
-            'partnerUnresponsivenessThresholdInDays' => function (self $o, ParseNode $n) { $o->setPartnerUnresponsivenessThresholdInDays($n->getIntegerValue()); },
-            'partnerUnsupportedOsVersionBlocked' => function (self $o, ParseNode $n) { $o->setPartnerUnsupportedOsVersionBlocked($n->getBooleanValue()); },
+            'androidDeviceBlockedOnMissingPartnerData' => function (ParseNode $n) use ($o) { $o->setAndroidDeviceBlockedOnMissingPartnerData($n->getBooleanValue()); },
+            'androidEnabled' => function (ParseNode $n) use ($o) { $o->setAndroidEnabled($n->getBooleanValue()); },
+            'iosDeviceBlockedOnMissingPartnerData' => function (ParseNode $n) use ($o) { $o->setIosDeviceBlockedOnMissingPartnerData($n->getBooleanValue()); },
+            'iosEnabled' => function (ParseNode $n) use ($o) { $o->setIosEnabled($n->getBooleanValue()); },
+            'lastHeartbeatDateTime' => function (ParseNode $n) use ($o) { $o->setLastHeartbeatDateTime($n->getDateTimeValue()); },
+            'partnerState' => function (ParseNode $n) use ($o) { $o->setPartnerState($n->getEnumValue(MobileThreatPartnerTenantState::class)); },
+            'partnerUnresponsivenessThresholdInDays' => function (ParseNode $n) use ($o) { $o->setPartnerUnresponsivenessThresholdInDays($n->getIntegerValue()); },
+            'partnerUnsupportedOsVersionBlocked' => function (ParseNode $n) use ($o) { $o->setPartnerUnsupportedOsVersionBlocked($n->getBooleanValue()); },
         ]);
     }
 

@@ -9,10 +9,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class DownloadApplePushNotificationCertificateSigningRequestResponse implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $value The value property */
+    /**
+     * @var string|null $value The value property
+    */
     private ?string $value = null;
     
     /**
@@ -27,7 +31,7 @@ class DownloadApplePushNotificationCertificateSigningRequestResponse implements 
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DownloadApplePushNotificationCertificateSigningRequestResponse
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DownloadApplePushNotificationCertificateSigningRequestResponse {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DownloadApplePushNotificationCertificateSigningRequestResponse {
         return new DownloadApplePushNotificationCertificateSigningRequestResponse();
     }
 
@@ -44,8 +48,9 @@ class DownloadApplePushNotificationCertificateSigningRequestResponse implements 
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'value' => function (self $o, ParseNode $n) { $o->setValue($n->getStringValue()); },
+            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getStringValue()); },
         ];
     }
 

@@ -6,15 +6,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ServiceAnnouncement extends Entity 
+class ServiceAnnouncement extends Entity implements Parsable 
 {
-    /** @var array<ServiceHealth>|null $healthOverviews A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly. */
+    /**
+     * @var array<ServiceHealth>|null $healthOverviews A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
+    */
     private ?array $healthOverviews = null;
     
-    /** @var array<ServiceHealthIssue>|null $issues A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly. */
+    /**
+     * @var array<ServiceHealthIssue>|null $issues A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
+    */
     private ?array $issues = null;
     
-    /** @var array<ServiceUpdateMessage>|null $messages A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly. */
+    /**
+     * @var array<ServiceUpdateMessage>|null $messages A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
+    */
     private ?array $messages = null;
     
     /**
@@ -29,7 +35,7 @@ class ServiceAnnouncement extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ServiceAnnouncement
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ServiceAnnouncement {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ServiceAnnouncement {
         return new ServiceAnnouncement();
     }
 
@@ -38,10 +44,11 @@ class ServiceAnnouncement extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'healthOverviews' => function (self $o, ParseNode $n) { $o->setHealthOverviews($n->getCollectionOfObjectValues(ServiceHealth::class)); },
-            'issues' => function (self $o, ParseNode $n) { $o->setIssues($n->getCollectionOfObjectValues(ServiceHealthIssue::class)); },
-            'messages' => function (self $o, ParseNode $n) { $o->setMessages($n->getCollectionOfObjectValues(ServiceUpdateMessage::class)); },
+            'healthOverviews' => function (ParseNode $n) use ($o) { $o->setHealthOverviews($n->getCollectionOfObjectValues(array(ServiceHealth::class, 'createFromDiscriminatorValue'))); },
+            'issues' => function (ParseNode $n) use ($o) { $o->setIssues($n->getCollectionOfObjectValues(array(ServiceHealthIssue::class, 'createFromDiscriminatorValue'))); },
+            'messages' => function (ParseNode $n) use ($o) { $o->setMessages($n->getCollectionOfObjectValues(array(ServiceUpdateMessage::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

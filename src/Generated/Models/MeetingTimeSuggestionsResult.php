@@ -9,17 +9,23 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $emptySuggestionsReason A reason for not returning any meeting suggestions. The possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string if the meetingTimeSuggestions property does include any meeting suggestions. */
+    /**
+     * @var string|null $emptySuggestionsReason A reason for not returning any meeting suggestions. Possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string if the meetingTimeSuggestions property does include any meeting suggestions.
+    */
     private ?string $emptySuggestionsReason = null;
     
-    /** @var array<MeetingTimeSuggestion>|null $meetingTimeSuggestions An array of meeting suggestions. */
+    /**
+     * @var array<MeetingTimeSuggestion>|null $meetingTimeSuggestions An array of meeting suggestions.
+    */
     private ?array $meetingTimeSuggestions = null;
     
     /**
-     * Instantiates a new meetingTimeSuggestionsResult and sets the default values.
+     * Instantiates a new MeetingTimeSuggestionsResult and sets the default values.
     */
     public function __construct() {
         $this->additionalData = [];
@@ -30,7 +36,7 @@ class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return MeetingTimeSuggestionsResult
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): MeetingTimeSuggestionsResult {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): MeetingTimeSuggestionsResult {
         return new MeetingTimeSuggestionsResult();
     }
 
@@ -43,7 +49,7 @@ class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the emptySuggestionsReason property value. A reason for not returning any meeting suggestions. The possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string if the meetingTimeSuggestions property does include any meeting suggestions.
+     * Gets the emptySuggestionsReason property value. A reason for not returning any meeting suggestions. Possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string if the meetingTimeSuggestions property does include any meeting suggestions.
      * @return string|null
     */
     public function getEmptySuggestionsReason(): ?string {
@@ -55,9 +61,10 @@ class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'emptySuggestionsReason' => function (self $o, ParseNode $n) { $o->setEmptySuggestionsReason($n->getStringValue()); },
-            'meetingTimeSuggestions' => function (self $o, ParseNode $n) { $o->setMeetingTimeSuggestions($n->getCollectionOfObjectValues(MeetingTimeSuggestion::class)); },
+            'emptySuggestionsReason' => function (ParseNode $n) use ($o) { $o->setEmptySuggestionsReason($n->getStringValue()); },
+            'meetingTimeSuggestions' => function (ParseNode $n) use ($o) { $o->setMeetingTimeSuggestions($n->getCollectionOfObjectValues(array(MeetingTimeSuggestion::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 
@@ -88,7 +95,7 @@ class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the emptySuggestionsReason property value. A reason for not returning any meeting suggestions. The possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string if the meetingTimeSuggestions property does include any meeting suggestions.
+     * Sets the emptySuggestionsReason property value. A reason for not returning any meeting suggestions. Possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string if the meetingTimeSuggestions property does include any meeting suggestions.
      *  @param string|null $value Value to set for the emptySuggestionsReason property.
     */
     public function setEmptySuggestionsReason(?string $value ): void {

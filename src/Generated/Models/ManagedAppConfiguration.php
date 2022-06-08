@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ManagedAppConfiguration extends ManagedAppPolicy 
+class ManagedAppConfiguration extends ManagedAppPolicy implements Parsable 
 {
-    /** @var array<KeyValuePair>|null $customSettings A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service */
+    /**
+     * @var array<KeyValuePair>|null $customSettings A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service
+    */
     private ?array $customSettings = null;
     
     /**
@@ -23,7 +25,14 @@ class ManagedAppConfiguration extends ManagedAppPolicy
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ManagedAppConfiguration
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ManagedAppConfiguration {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedAppConfiguration {
+        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.managedAppConfiguration': return new ManagedAppConfiguration();
+            }
+        }
         return new ManagedAppConfiguration();
     }
 
@@ -40,8 +49,9 @@ class ManagedAppConfiguration extends ManagedAppPolicy
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'customSettings' => function (self $o, ParseNode $n) { $o->setCustomSettings($n->getCollectionOfObjectValues(KeyValuePair::class)); },
+            'customSettings' => function (ParseNode $n) use ($o) { $o->setCustomSettings($n->getCollectionOfObjectValues(array(KeyValuePair::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

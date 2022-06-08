@@ -7,21 +7,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class TelecomExpenseManagementPartner extends Entity 
+class TelecomExpenseManagementPartner extends Entity implements Parsable 
 {
-    /** @var bool|null $appAuthorized Whether the partner's AAD app has been authorized to access Intune. */
+    /**
+     * @var bool|null $appAuthorized Whether the partner's AAD app has been authorized to access Intune.
+    */
     private ?bool $appAuthorized = null;
     
-    /** @var string|null $displayName Display name of the TEM partner. */
+    /**
+     * @var string|null $displayName Display name of the TEM partner.
+    */
     private ?string $displayName = null;
     
-    /** @var bool|null $enabled Whether Intune's connection to the TEM service is currently enabled or disabled. */
+    /**
+     * @var bool|null $enabled Whether Intune's connection to the TEM service is currently enabled or disabled.
+    */
     private ?bool $enabled = null;
     
-    /** @var DateTime|null $lastConnectionDateTime Timestamp of the last request sent to Intune by the TEM partner. */
+    /**
+     * @var DateTime|null $lastConnectionDateTime Timestamp of the last request sent to Intune by the TEM partner.
+    */
     private ?DateTime $lastConnectionDateTime = null;
     
-    /** @var string|null $url URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service. */
+    /**
+     * @var string|null $url URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
+    */
     private ?string $url = null;
     
     /**
@@ -36,7 +46,7 @@ class TelecomExpenseManagementPartner extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TelecomExpenseManagementPartner
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TelecomExpenseManagementPartner {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TelecomExpenseManagementPartner {
         return new TelecomExpenseManagementPartner();
     }
 
@@ -69,12 +79,13 @@ class TelecomExpenseManagementPartner extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appAuthorized' => function (self $o, ParseNode $n) { $o->setAppAuthorized($n->getBooleanValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'enabled' => function (self $o, ParseNode $n) { $o->setEnabled($n->getBooleanValue()); },
-            'lastConnectionDateTime' => function (self $o, ParseNode $n) { $o->setLastConnectionDateTime($n->getDateTimeValue()); },
-            'url' => function (self $o, ParseNode $n) { $o->setUrl($n->getStringValue()); },
+            'appAuthorized' => function (ParseNode $n) use ($o) { $o->setAppAuthorized($n->getBooleanValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'enabled' => function (ParseNode $n) use ($o) { $o->setEnabled($n->getBooleanValue()); },
+            'lastConnectionDateTime' => function (ParseNode $n) use ($o) { $o->setLastConnectionDateTime($n->getDateTimeValue()); },
+            'url' => function (ParseNode $n) use ($o) { $o->setUrl($n->getStringValue()); },
         ]);
     }
 

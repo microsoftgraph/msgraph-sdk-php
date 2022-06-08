@@ -10,64 +10,104 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class RemoteItem implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var IdentitySet|null $createdBy Identity of the user, device, and application which created the item. Read-only. */
+    /**
+     * @var IdentitySet|null $createdBy Identity of the user, device, and application which created the item. Read-only.
+    */
     private ?IdentitySet $createdBy = null;
     
-    /** @var DateTime|null $createdDateTime Date and time of item creation. Read-only. */
+    /**
+     * @var DateTime|null $createdDateTime Date and time of item creation. Read-only.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var File|null $file Indicates that the remote item is a file. Read-only. */
+    /**
+     * @var File|null $file Indicates that the remote item is a file. Read-only.
+    */
     private ?File $file = null;
     
-    /** @var FileSystemInfo|null $fileSystemInfo Information about the remote item from the local file system. Read-only. */
+    /**
+     * @var FileSystemInfo|null $fileSystemInfo Information about the remote item from the local file system. Read-only.
+    */
     private ?FileSystemInfo $fileSystemInfo = null;
     
-    /** @var Folder|null $folder Indicates that the remote item is a folder. Read-only. */
+    /**
+     * @var Folder|null $folder Indicates that the remote item is a folder. Read-only.
+    */
     private ?Folder $folder = null;
     
-    /** @var string|null $id Unique identifier for the remote item in its drive. Read-only. */
+    /**
+     * @var string|null $id Unique identifier for the remote item in its drive. Read-only.
+    */
     private ?string $id = null;
     
-    /** @var Image|null $image Image metadata, if the item is an image. Read-only. */
+    /**
+     * @var Image|null $image Image metadata, if the item is an image. Read-only.
+    */
     private ?Image $image = null;
     
-    /** @var IdentitySet|null $lastModifiedBy Identity of the user, device, and application which last modified the item. Read-only. */
+    /**
+     * @var IdentitySet|null $lastModifiedBy Identity of the user, device, and application which last modified the item. Read-only.
+    */
     private ?IdentitySet $lastModifiedBy = null;
     
-    /** @var DateTime|null $lastModifiedDateTime Date and time the item was last modified. Read-only. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime Date and time the item was last modified. Read-only.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var string|null $name Optional. Filename of the remote item. Read-only. */
+    /**
+     * @var string|null $name Optional. Filename of the remote item. Read-only.
+    */
     private ?string $name = null;
     
-    /** @var Package|null $package If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only. */
+    /**
+     * @var Package|null $package If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
+    */
     private ?Package $package = null;
     
-    /** @var ItemReference|null $parentReference Properties of the parent of the remote item. Read-only. */
+    /**
+     * @var ItemReference|null $parentReference Properties of the parent of the remote item. Read-only.
+    */
     private ?ItemReference $parentReference = null;
     
-    /** @var Shared|null $shared Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only. */
+    /**
+     * @var Shared|null $shared Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
+    */
     private ?Shared $shared = null;
     
-    /** @var SharepointIds|null $sharepointIds Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only. */
+    /**
+     * @var SharepointIds|null $sharepointIds Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only.
+    */
     private ?SharepointIds $sharepointIds = null;
     
-    /** @var int|null $size Size of the remote item. Read-only. */
+    /**
+     * @var int|null $size Size of the remote item. Read-only.
+    */
     private ?int $size = null;
     
-    /** @var SpecialFolder|null $specialFolder If the current item is also available as a special folder, this facet is returned. Read-only. */
+    /**
+     * @var SpecialFolder|null $specialFolder If the current item is also available as a special folder, this facet is returned. Read-only.
+    */
     private ?SpecialFolder $specialFolder = null;
     
-    /** @var Video|null $video Video metadata, if the item is a video. Read-only. */
+    /**
+     * @var Video|null $video Video metadata, if the item is a video. Read-only.
+    */
     private ?Video $video = null;
     
-    /** @var string|null $webDavUrl DAV compatible URL for the item. */
+    /**
+     * @var string|null $webDavUrl DAV compatible URL for the item.
+    */
     private ?string $webDavUrl = null;
     
-    /** @var string|null $webUrl URL that displays the resource in the browser. Read-only. */
+    /**
+     * @var string|null $webUrl URL that displays the resource in the browser. Read-only.
+    */
     private ?string $webUrl = null;
     
     /**
@@ -82,7 +122,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return RemoteItem
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): RemoteItem {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): RemoteItem {
         return new RemoteItem();
     }
 
@@ -115,26 +155,27 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'createdBy' => function (self $o, ParseNode $n) { $o->setCreatedBy($n->getObjectValue(IdentitySet::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'file' => function (self $o, ParseNode $n) { $o->setFile($n->getObjectValue(File::class)); },
-            'fileSystemInfo' => function (self $o, ParseNode $n) { $o->setFileSystemInfo($n->getObjectValue(FileSystemInfo::class)); },
-            'folder' => function (self $o, ParseNode $n) { $o->setFolder($n->getObjectValue(Folder::class)); },
-            'id' => function (self $o, ParseNode $n) { $o->setId($n->getStringValue()); },
-            'image' => function (self $o, ParseNode $n) { $o->setImage($n->getObjectValue(Image::class)); },
-            'lastModifiedBy' => function (self $o, ParseNode $n) { $o->setLastModifiedBy($n->getObjectValue(IdentitySet::class)); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'package' => function (self $o, ParseNode $n) { $o->setPackage($n->getObjectValue(Package::class)); },
-            'parentReference' => function (self $o, ParseNode $n) { $o->setParentReference($n->getObjectValue(ItemReference::class)); },
-            'shared' => function (self $o, ParseNode $n) { $o->setShared($n->getObjectValue(Shared::class)); },
-            'sharepointIds' => function (self $o, ParseNode $n) { $o->setSharepointIds($n->getObjectValue(SharepointIds::class)); },
-            'size' => function (self $o, ParseNode $n) { $o->setSize($n->getIntegerValue()); },
-            'specialFolder' => function (self $o, ParseNode $n) { $o->setSpecialFolder($n->getObjectValue(SpecialFolder::class)); },
-            'video' => function (self $o, ParseNode $n) { $o->setVideo($n->getObjectValue(Video::class)); },
-            'webDavUrl' => function (self $o, ParseNode $n) { $o->setWebDavUrl($n->getStringValue()); },
-            'webUrl' => function (self $o, ParseNode $n) { $o->setWebUrl($n->getStringValue()); },
+            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'file' => function (ParseNode $n) use ($o) { $o->setFile($n->getObjectValue(array(File::class, 'createFromDiscriminatorValue'))); },
+            'fileSystemInfo' => function (ParseNode $n) use ($o) { $o->setFileSystemInfo($n->getObjectValue(array(FileSystemInfo::class, 'createFromDiscriminatorValue'))); },
+            'folder' => function (ParseNode $n) use ($o) { $o->setFolder($n->getObjectValue(array(Folder::class, 'createFromDiscriminatorValue'))); },
+            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            'image' => function (ParseNode $n) use ($o) { $o->setImage($n->getObjectValue(array(Image::class, 'createFromDiscriminatorValue'))); },
+            'lastModifiedBy' => function (ParseNode $n) use ($o) { $o->setLastModifiedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'package' => function (ParseNode $n) use ($o) { $o->setPackage($n->getObjectValue(array(Package::class, 'createFromDiscriminatorValue'))); },
+            'parentReference' => function (ParseNode $n) use ($o) { $o->setParentReference($n->getObjectValue(array(ItemReference::class, 'createFromDiscriminatorValue'))); },
+            'shared' => function (ParseNode $n) use ($o) { $o->setShared($n->getObjectValue(array(Shared::class, 'createFromDiscriminatorValue'))); },
+            'sharepointIds' => function (ParseNode $n) use ($o) { $o->setSharepointIds($n->getObjectValue(array(SharepointIds::class, 'createFromDiscriminatorValue'))); },
+            'size' => function (ParseNode $n) use ($o) { $o->setSize($n->getIntegerValue()); },
+            'specialFolder' => function (ParseNode $n) use ($o) { $o->setSpecialFolder($n->getObjectValue(array(SpecialFolder::class, 'createFromDiscriminatorValue'))); },
+            'video' => function (ParseNode $n) use ($o) { $o->setVideo($n->getObjectValue(array(Video::class, 'createFromDiscriminatorValue'))); },
+            'webDavUrl' => function (ParseNode $n) use ($o) { $o->setWebDavUrl($n->getStringValue()); },
+            'webUrl' => function (ParseNode $n) use ($o) { $o->setWebUrl($n->getStringValue()); },
         ];
     }
 

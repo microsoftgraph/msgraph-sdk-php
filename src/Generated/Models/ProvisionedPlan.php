@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ProvisionedPlan implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $capabilityStatus For example, 'Enabled'. */
+    /**
+     * @var string|null $capabilityStatus For example, 'Enabled'.
+    */
     private ?string $capabilityStatus = null;
     
-    /** @var string|null $provisioningStatus For example, 'Success'. */
+    /**
+     * @var string|null $provisioningStatus For example, 'Success'.
+    */
     private ?string $provisioningStatus = null;
     
-    /** @var string|null $service The name of the service; for example, 'AccessControlS2S' */
+    /**
+     * @var string|null $service The name of the service; for example, 'AccessControlS2S'
+    */
     private ?string $service = null;
     
     /**
@@ -33,7 +41,7 @@ class ProvisionedPlan implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ProvisionedPlan
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ProvisionedPlan {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ProvisionedPlan {
         return new ProvisionedPlan();
     }
 
@@ -58,10 +66,11 @@ class ProvisionedPlan implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'capabilityStatus' => function (self $o, ParseNode $n) { $o->setCapabilityStatus($n->getStringValue()); },
-            'provisioningStatus' => function (self $o, ParseNode $n) { $o->setProvisioningStatus($n->getStringValue()); },
-            'service' => function (self $o, ParseNode $n) { $o->setService($n->getStringValue()); },
+            'capabilityStatus' => function (ParseNode $n) use ($o) { $o->setCapabilityStatus($n->getStringValue()); },
+            'provisioningStatus' => function (ParseNode $n) use ($o) { $o->setProvisioningStatus($n->getStringValue()); },
+            'service' => function (ParseNode $n) use ($o) { $o->setService($n->getStringValue()); },
         ];
     }
 

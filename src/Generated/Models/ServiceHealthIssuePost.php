@@ -10,16 +10,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var DateTime|null $createdDateTime The published time of the post. */
+    /**
+     * @var DateTime|null $createdDateTime The published time of the post.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var ItemBody|null $description The content of the service issue post. */
+    /**
+     * @var ItemBody|null $description The content of the service issue post.
+    */
     private ?ItemBody $description = null;
     
-    /** @var PostType|null $postType The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue. */
+    /**
+     * @var PostType|null $postType The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
+    */
     private ?PostType $postType = null;
     
     /**
@@ -34,7 +42,7 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ServiceHealthIssuePost
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ServiceHealthIssuePost {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ServiceHealthIssuePost {
         return new ServiceHealthIssuePost();
     }
 
@@ -67,10 +75,11 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getObjectValue(ItemBody::class)); },
-            'postType' => function (self $o, ParseNode $n) { $o->setPostType($n->getEnumValue(PostType::class)); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getObjectValue(array(ItemBody::class, 'createFromDiscriminatorValue'))); },
+            'postType' => function (ParseNode $n) use ($o) { $o->setPostType($n->getEnumValue(PostType::class)); },
         ];
     }
 

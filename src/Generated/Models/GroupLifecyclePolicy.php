@@ -6,15 +6,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class GroupLifecyclePolicy extends Entity 
+class GroupLifecyclePolicy extends Entity implements Parsable 
 {
-    /** @var string|null $alternateNotificationEmails List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon. */
+    /**
+     * @var string|null $alternateNotificationEmails List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon.
+    */
     private ?string $alternateNotificationEmails = null;
     
-    /** @var int|null $groupLifetimeInDays Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined. */
+    /**
+     * @var int|null $groupLifetimeInDays Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.
+    */
     private ?int $groupLifetimeInDays = null;
     
-    /** @var string|null $managedGroupTypes The group type for which the expiration policy applies. Possible values are All, Selected or None. */
+    /**
+     * @var string|null $managedGroupTypes The group type for which the expiration policy applies. Possible values are All, Selected or None.
+    */
     private ?string $managedGroupTypes = null;
     
     /**
@@ -29,7 +35,7 @@ class GroupLifecyclePolicy extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return GroupLifecyclePolicy
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): GroupLifecyclePolicy {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): GroupLifecyclePolicy {
         return new GroupLifecyclePolicy();
     }
 
@@ -46,10 +52,11 @@ class GroupLifecyclePolicy extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'alternateNotificationEmails' => function (self $o, ParseNode $n) { $o->setAlternateNotificationEmails($n->getStringValue()); },
-            'groupLifetimeInDays' => function (self $o, ParseNode $n) { $o->setGroupLifetimeInDays($n->getIntegerValue()); },
-            'managedGroupTypes' => function (self $o, ParseNode $n) { $o->setManagedGroupTypes($n->getStringValue()); },
+            'alternateNotificationEmails' => function (ParseNode $n) use ($o) { $o->setAlternateNotificationEmails($n->getStringValue()); },
+            'groupLifetimeInDays' => function (ParseNode $n) use ($o) { $o->setGroupLifetimeInDays($n->getIntegerValue()); },
+            'managedGroupTypes' => function (ParseNode $n) use ($o) { $o->setManagedGroupTypes($n->getStringValue()); },
         ]);
     }
 

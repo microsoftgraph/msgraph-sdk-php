@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AgreementFileLocalization extends AgreementFileProperties 
+class AgreementFileLocalization extends AgreementFileProperties implements Parsable 
 {
-    /** @var array<AgreementFileVersion>|null $versions Read-only. Customized versions of the terms of use agreement in the Azure AD tenant. */
+    /**
+     * @var array<AgreementFileVersion>|null $versions Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+    */
     private ?array $versions = null;
     
     /**
@@ -23,7 +25,7 @@ class AgreementFileLocalization extends AgreementFileProperties
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AgreementFileLocalization
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AgreementFileLocalization {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AgreementFileLocalization {
         return new AgreementFileLocalization();
     }
 
@@ -32,8 +34,9 @@ class AgreementFileLocalization extends AgreementFileProperties
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'versions' => function (self $o, ParseNode $n) { $o->setVersions($n->getCollectionOfObjectValues(AgreementFileVersion::class)); },
+            'versions' => function (ParseNode $n) use ($o) { $o->setVersions($n->getCollectionOfObjectValues(array(AgreementFileVersion::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

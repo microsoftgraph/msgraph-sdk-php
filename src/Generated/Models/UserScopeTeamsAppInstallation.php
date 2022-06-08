@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class UserScopeTeamsAppInstallation extends TeamsAppInstallation 
+class UserScopeTeamsAppInstallation extends TeamsAppInstallation implements Parsable 
 {
-    /** @var Chat|null $chat The chat between the user and Teams app. */
+    /**
+     * @var Chat|null $chat The chat between the user and Teams app.
+    */
     private ?Chat $chat = null;
     
     /**
@@ -23,7 +25,7 @@ class UserScopeTeamsAppInstallation extends TeamsAppInstallation
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return UserScopeTeamsAppInstallation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): UserScopeTeamsAppInstallation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): UserScopeTeamsAppInstallation {
         return new UserScopeTeamsAppInstallation();
     }
 
@@ -40,8 +42,9 @@ class UserScopeTeamsAppInstallation extends TeamsAppInstallation
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'chat' => function (self $o, ParseNode $n) { $o->setChat($n->getObjectValue(Chat::class)); },
+            'chat' => function (ParseNode $n) use ($o) { $o->setChat($n->getObjectValue(array(Chat::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

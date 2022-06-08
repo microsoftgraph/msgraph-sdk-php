@@ -7,63 +7,101 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class SubjectRightsRequest extends Entity 
+class SubjectRightsRequest extends Entity implements Parsable 
 {
-    /** @var Identity|null $assignedTo Identity that the request is assigned to. */
+    /**
+     * @var Identity|null $assignedTo Identity that the request is assigned to.
+    */
     private ?Identity $assignedTo = null;
     
-    /** @var DateTime|null $closedDateTime The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $closedDateTime The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    */
     private ?DateTime $closedDateTime = null;
     
-    /** @var IdentitySet|null $createdBy Identity information for the entity that created the request. */
+    /**
+     * @var IdentitySet|null $createdBy Identity information for the entity that created the request.
+    */
     private ?IdentitySet $createdBy = null;
     
-    /** @var DateTime|null $createdDateTime The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $createdDateTime The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var DataSubject|null $dataSubject Information about the data subject. */
+    /**
+     * @var DataSubject|null $dataSubject Information about the data subject.
+    */
     private ?DataSubject $dataSubject = null;
     
-    /** @var DataSubjectType|null $dataSubjectType The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue. */
+    /**
+     * @var DataSubjectType|null $dataSubjectType The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
+    */
     private ?DataSubjectType $dataSubjectType = null;
     
-    /** @var string|null $description Description for the request. */
+    /**
+     * @var string|null $description Description for the request.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName The name of the request. */
+    /**
+     * @var string|null $displayName The name of the request.
+    */
     private ?string $displayName = null;
     
-    /** @var array<SubjectRightsRequestHistory>|null $history Collection of history change events. */
+    /**
+     * @var array<SubjectRightsRequestHistory>|null $history Collection of history change events.
+    */
     private ?array $history = null;
     
-    /** @var SubjectRightsRequestDetail|null $insight Insight about the request. */
+    /**
+     * @var SubjectRightsRequestDetail|null $insight Insight about the request.
+    */
     private ?SubjectRightsRequestDetail $insight = null;
     
-    /** @var DateTime|null $internalDueDateTime The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $internalDueDateTime The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    */
     private ?DateTime $internalDueDateTime = null;
     
-    /** @var IdentitySet|null $lastModifiedBy Identity information for the entity that last modified the request. */
+    /**
+     * @var IdentitySet|null $lastModifiedBy Identity information for the entity that last modified the request.
+    */
     private ?IdentitySet $lastModifiedBy = null;
     
-    /** @var DateTime|null $lastModifiedDateTime The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var array<AuthoredNote>|null $notes List of notes associcated with the request. */
+    /**
+     * @var array<AuthoredNote>|null $notes List of notes associated with the request.
+    */
     private ?array $notes = null;
     
-    /** @var array<string>|null $regulations List of regulations that this request will fulfill. */
+    /**
+     * @var array<string>|null $regulations List of regulations that this request will fulfill.
+    */
     private ?array $regulations = null;
     
-    /** @var array<SubjectRightsRequestStageDetail>|null $stages Information about the different stages for the request. */
+    /**
+     * @var array<SubjectRightsRequestStageDetail>|null $stages Information about the different stages for the request.
+    */
     private ?array $stages = null;
     
-    /** @var SubjectRightsRequestStatus|null $status The status of the request.. Possible values are: active, closed, unknownFutureValue. */
+    /**
+     * @var SubjectRightsRequestStatus|null $status The status of the request. Possible values are: active, closed, unknownFutureValue.
+    */
     private ?SubjectRightsRequestStatus $status = null;
     
-    /** @var Team|null $team Information about the Microsoft Teams team that was created for the request. */
+    /**
+     * @var Team|null $team Information about the Microsoft Teams team that was created for the request.
+    */
     private ?Team $team = null;
     
-    /** @var SubjectRightsRequestType|null $type The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue. */
+    /**
+     * @var SubjectRightsRequestType|null $type The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
+    */
     private ?SubjectRightsRequestType $type = null;
     
     /**
@@ -78,7 +116,7 @@ class SubjectRightsRequest extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SubjectRightsRequest
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SubjectRightsRequest {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SubjectRightsRequest {
         return new SubjectRightsRequest();
     }
 
@@ -151,26 +189,27 @@ class SubjectRightsRequest extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignedTo' => function (self $o, ParseNode $n) { $o->setAssignedTo($n->getObjectValue(Identity::class)); },
-            'closedDateTime' => function (self $o, ParseNode $n) { $o->setClosedDateTime($n->getDateTimeValue()); },
-            'createdBy' => function (self $o, ParseNode $n) { $o->setCreatedBy($n->getObjectValue(IdentitySet::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'dataSubject' => function (self $o, ParseNode $n) { $o->setDataSubject($n->getObjectValue(DataSubject::class)); },
-            'dataSubjectType' => function (self $o, ParseNode $n) { $o->setDataSubjectType($n->getEnumValue(DataSubjectType::class)); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'history' => function (self $o, ParseNode $n) { $o->setHistory($n->getCollectionOfObjectValues(SubjectRightsRequestHistory::class)); },
-            'insight' => function (self $o, ParseNode $n) { $o->setInsight($n->getObjectValue(SubjectRightsRequestDetail::class)); },
-            'internalDueDateTime' => function (self $o, ParseNode $n) { $o->setInternalDueDateTime($n->getDateTimeValue()); },
-            'lastModifiedBy' => function (self $o, ParseNode $n) { $o->setLastModifiedBy($n->getObjectValue(IdentitySet::class)); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'notes' => function (self $o, ParseNode $n) { $o->setNotes($n->getCollectionOfObjectValues(AuthoredNote::class)); },
-            'regulations' => function (self $o, ParseNode $n) { $o->setRegulations($n->getCollectionOfPrimitiveValues()); },
-            'stages' => function (self $o, ParseNode $n) { $o->setStages($n->getCollectionOfObjectValues(SubjectRightsRequestStageDetail::class)); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(SubjectRightsRequestStatus::class)); },
-            'team' => function (self $o, ParseNode $n) { $o->setTeam($n->getObjectValue(Team::class)); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getEnumValue(SubjectRightsRequestType::class)); },
+            'assignedTo' => function (ParseNode $n) use ($o) { $o->setAssignedTo($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
+            'closedDateTime' => function (ParseNode $n) use ($o) { $o->setClosedDateTime($n->getDateTimeValue()); },
+            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'dataSubject' => function (ParseNode $n) use ($o) { $o->setDataSubject($n->getObjectValue(array(DataSubject::class, 'createFromDiscriminatorValue'))); },
+            'dataSubjectType' => function (ParseNode $n) use ($o) { $o->setDataSubjectType($n->getEnumValue(DataSubjectType::class)); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'history' => function (ParseNode $n) use ($o) { $o->setHistory($n->getCollectionOfObjectValues(array(SubjectRightsRequestHistory::class, 'createFromDiscriminatorValue'))); },
+            'insight' => function (ParseNode $n) use ($o) { $o->setInsight($n->getObjectValue(array(SubjectRightsRequestDetail::class, 'createFromDiscriminatorValue'))); },
+            'internalDueDateTime' => function (ParseNode $n) use ($o) { $o->setInternalDueDateTime($n->getDateTimeValue()); },
+            'lastModifiedBy' => function (ParseNode $n) use ($o) { $o->setLastModifiedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'notes' => function (ParseNode $n) use ($o) { $o->setNotes($n->getCollectionOfObjectValues(array(AuthoredNote::class, 'createFromDiscriminatorValue'))); },
+            'regulations' => function (ParseNode $n) use ($o) { $o->setRegulations($n->getCollectionOfPrimitiveValues()); },
+            'stages' => function (ParseNode $n) use ($o) { $o->setStages($n->getCollectionOfObjectValues(array(SubjectRightsRequestStageDetail::class, 'createFromDiscriminatorValue'))); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(SubjectRightsRequestStatus::class)); },
+            'team' => function (ParseNode $n) use ($o) { $o->setTeam($n->getObjectValue(array(Team::class, 'createFromDiscriminatorValue'))); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(SubjectRightsRequestType::class)); },
         ]);
     }
 
@@ -215,7 +254,7 @@ class SubjectRightsRequest extends Entity
     }
 
     /**
-     * Gets the notes property value. List of notes associcated with the request.
+     * Gets the notes property value. List of notes associated with the request.
      * @return array<AuthoredNote>|null
     */
     public function getNotes(): ?array {
@@ -239,7 +278,7 @@ class SubjectRightsRequest extends Entity
     }
 
     /**
-     * Gets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
+     * Gets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
      * @return SubjectRightsRequestStatus|null
     */
     public function getStatus(): ?SubjectRightsRequestStatus {
@@ -394,7 +433,7 @@ class SubjectRightsRequest extends Entity
     }
 
     /**
-     * Sets the notes property value. List of notes associcated with the request.
+     * Sets the notes property value. List of notes associated with the request.
      *  @param array<AuthoredNote>|null $value Value to set for the notes property.
     */
     public function setNotes(?array $value ): void {
@@ -418,7 +457,7 @@ class SubjectRightsRequest extends Entity
     }
 
     /**
-     * Sets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
+     * Sets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
      *  @param SubjectRightsRequestStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SubjectRightsRequestStatus $value ): void {

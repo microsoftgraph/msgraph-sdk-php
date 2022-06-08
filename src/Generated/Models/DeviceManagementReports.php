@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DeviceManagementReports extends Entity 
+class DeviceManagementReports extends Entity implements Parsable 
 {
-    /** @var array<DeviceManagementExportJob>|null $exportJobs Entity representing a job to export a report */
+    /**
+     * @var array<DeviceManagementExportJob>|null $exportJobs Entity representing a job to export a report
+    */
     private ?array $exportJobs = null;
     
     /**
@@ -23,7 +25,7 @@ class DeviceManagementReports extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceManagementReports
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceManagementReports {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceManagementReports {
         return new DeviceManagementReports();
     }
 
@@ -40,8 +42,9 @@ class DeviceManagementReports extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'exportJobs' => function (self $o, ParseNode $n) { $o->setExportJobs($n->getCollectionOfObjectValues(DeviceManagementExportJob::class)); },
+            'exportJobs' => function (ParseNode $n) use ($o) { $o->setExportJobs($n->getCollectionOfObjectValues(array(DeviceManagementExportJob::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

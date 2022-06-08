@@ -6,21 +6,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class SchemaExtension extends Entity 
+class SchemaExtension extends Entity implements Parsable 
 {
-    /** @var string|null $description Description for the schema extension. Supports $filter (eq). */
+    /**
+     * @var string|null $description Description for the schema extension. Supports $filter (eq).
+    */
     private ?string $description = null;
     
-    /** @var string|null $owner The appId of the application that is the owner of the schema extension. This property can be supplied on creation, to set the owner.  If not supplied, then the calling application's appId will be set as the owner. In either case, the signed-in user must be the owner of the application. So, for example, if creating a new schema extension definition using Graph Explorer, you must supply the owner property. Once set, this property is read-only and cannot be changed. Supports $filter (eq). */
+    /**
+     * @var string|null $owner The appId of the application that is the owner of the schema extension. This property can be supplied on creation, to set the owner.  If not supplied, then the calling application's appId will be set as the owner. In either case, the signed-in user must be the owner of the application. So, for example, if creating a new schema extension definition using Graph Explorer, you must supply the owner property. Once set, this property is read-only and cannot be changed. Supports $filter (eq).
+    */
     private ?string $owner = null;
     
-    /** @var array<ExtensionSchemaProperty>|null $properties The collection of property names and types that make up the schema extension definition. */
+    /**
+     * @var array<ExtensionSchemaProperty>|null $properties The collection of property names and types that make up the schema extension definition.
+    */
     private ?array $properties = null;
     
-    /** @var string|null $status The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. Schema extensions provides more information on the possible state transitions and behaviors. Supports $filter (eq). */
+    /**
+     * @var string|null $status The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. Schema extensions provides more information on the possible state transitions and behaviors. Supports $filter (eq).
+    */
     private ?string $status = null;
     
-    /** @var array<string>|null $targetTypes Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from contact, device, event, group, message, organization, post, or user. */
+    /**
+     * @var array<string>|null $targetTypes Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, or user.
+    */
     private ?array $targetTypes = null;
     
     /**
@@ -35,7 +45,7 @@ class SchemaExtension extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SchemaExtension
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SchemaExtension {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SchemaExtension {
         return new SchemaExtension();
     }
 
@@ -52,12 +62,13 @@ class SchemaExtension extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'owner' => function (self $o, ParseNode $n) { $o->setOwner($n->getStringValue()); },
-            'properties' => function (self $o, ParseNode $n) { $o->setProperties($n->getCollectionOfObjectValues(ExtensionSchemaProperty::class)); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getStringValue()); },
-            'targetTypes' => function (self $o, ParseNode $n) { $o->setTargetTypes($n->getCollectionOfPrimitiveValues()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'owner' => function (ParseNode $n) use ($o) { $o->setOwner($n->getStringValue()); },
+            'properties' => function (ParseNode $n) use ($o) { $o->setProperties($n->getCollectionOfObjectValues(array(ExtensionSchemaProperty::class, 'createFromDiscriminatorValue'))); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getStringValue()); },
+            'targetTypes' => function (ParseNode $n) use ($o) { $o->setTargetTypes($n->getCollectionOfPrimitiveValues()); },
         ]);
     }
 
@@ -86,7 +97,7 @@ class SchemaExtension extends Entity
     }
 
     /**
-     * Gets the targetTypes property value. Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from contact, device, event, group, message, organization, post, or user.
+     * Gets the targetTypes property value. Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, or user.
      * @return array<string>|null
     */
     public function getTargetTypes(): ?array {
@@ -139,7 +150,7 @@ class SchemaExtension extends Entity
     }
 
     /**
-     * Sets the targetTypes property value. Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from contact, device, event, group, message, organization, post, or user.
+     * Sets the targetTypes property value. Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, or user.
      *  @param array<string>|null $value Value to set for the targetTypes property.
     */
     public function setTargetTypes(?array $value ): void {

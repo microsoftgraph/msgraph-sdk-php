@@ -10,22 +10,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $allowStaffSelection True if to allow customers to choose a specific person for the booking. */
+    /**
+     * @var bool|null $allowStaffSelection True if to allow customers to choose a specific person for the booking.
+    */
     private ?bool $allowStaffSelection = null;
     
-    /** @var DateInterval|null $maximumAdvance Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format. */
+    /**
+     * @var DateInterval|null $maximumAdvance Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
+    */
     private ?DateInterval $maximumAdvance = null;
     
-    /** @var DateInterval|null $minimumLeadTime The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format. */
+    /**
+     * @var DateInterval|null $minimumLeadTime The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format.
+    */
     private ?DateInterval $minimumLeadTime = null;
     
-    /** @var bool|null $sendConfirmationsToOwner True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business. */
+    /**
+     * @var bool|null $sendConfirmationsToOwner True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
+    */
     private ?bool $sendConfirmationsToOwner = null;
     
-    /** @var DateInterval|null $timeSlotInterval Duration of each time slot, denoted in ISO 8601 format. */
+    /**
+     * @var DateInterval|null $timeSlotInterval Duration of each time slot, denoted in ISO 8601 format.
+    */
     private ?DateInterval $timeSlotInterval = null;
     
     /**
@@ -40,7 +52,7 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return BookingSchedulingPolicy
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): BookingSchedulingPolicy {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): BookingSchedulingPolicy {
         return new BookingSchedulingPolicy();
     }
 
@@ -65,12 +77,13 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'allowStaffSelection' => function (self $o, ParseNode $n) { $o->setAllowStaffSelection($n->getBooleanValue()); },
-            'maximumAdvance' => function (self $o, ParseNode $n) { $o->setMaximumAdvance($n->getDateIntervalValue()); },
-            'minimumLeadTime' => function (self $o, ParseNode $n) { $o->setMinimumLeadTime($n->getDateIntervalValue()); },
-            'sendConfirmationsToOwner' => function (self $o, ParseNode $n) { $o->setSendConfirmationsToOwner($n->getBooleanValue()); },
-            'timeSlotInterval' => function (self $o, ParseNode $n) { $o->setTimeSlotInterval($n->getDateIntervalValue()); },
+            'allowStaffSelection' => function (ParseNode $n) use ($o) { $o->setAllowStaffSelection($n->getBooleanValue()); },
+            'maximumAdvance' => function (ParseNode $n) use ($o) { $o->setMaximumAdvance($n->getDateIntervalValue()); },
+            'minimumLeadTime' => function (ParseNode $n) use ($o) { $o->setMinimumLeadTime($n->getDateIntervalValue()); },
+            'sendConfirmationsToOwner' => function (ParseNode $n) use ($o) { $o->setSendConfirmationsToOwner($n->getBooleanValue()); },
+            'timeSlotInterval' => function (ParseNode $n) use ($o) { $o->setTimeSlotInterval($n->getDateIntervalValue()); },
         ];
     }
 

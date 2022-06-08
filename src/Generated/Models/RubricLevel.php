@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class RubricLevel implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var EducationItemBody|null $description The description of this rubric level. */
+    /**
+     * @var EducationItemBody|null $description The description of this rubric level.
+    */
     private ?EducationItemBody $description = null;
     
-    /** @var string|null $displayName The name of this rubric level. */
+    /**
+     * @var string|null $displayName The name of this rubric level.
+    */
     private ?string $displayName = null;
     
-    /** @var EducationAssignmentGradeType|null $grading Null if this is a no-points rubric; educationAssignmentPointsGradeType if it is a points rubric. */
+    /**
+     * @var EducationAssignmentGradeType|null $grading Null if this is a no-points rubric; educationAssignmentPointsGradeType if it is a points rubric.
+    */
     private ?EducationAssignmentGradeType $grading = null;
     
-    /** @var string|null $levelId The ID of this resource. */
+    /**
+     * @var string|null $levelId The ID of this resource.
+    */
     private ?string $levelId = null;
     
     /**
@@ -36,7 +46,7 @@ class RubricLevel implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return RubricLevel
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): RubricLevel {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): RubricLevel {
         return new RubricLevel();
     }
 
@@ -69,11 +79,12 @@ class RubricLevel implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getObjectValue(EducationItemBody::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'grading' => function (self $o, ParseNode $n) { $o->setGrading($n->getObjectValue(EducationAssignmentGradeType::class)); },
-            'levelId' => function (self $o, ParseNode $n) { $o->setLevelId($n->getStringValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getObjectValue(array(EducationItemBody::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'grading' => function (ParseNode $n) use ($o) { $o->setGrading($n->getObjectValue(array(EducationAssignmentGradeType::class, 'createFromDiscriminatorValue'))); },
+            'levelId' => function (ParseNode $n) use ($o) { $o->setLevelId($n->getStringValue()); },
         ];
     }
 

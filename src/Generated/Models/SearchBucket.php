@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SearchBucket implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $aggregationFilterToken A token containing the encoded filter to aggregate search matches by the specific key value. To use the filter, pass the token as part of the aggregationFilter property in a searchRequest object, in the format '{field}:/'{aggregationFilterToken}/''. See an example. */
+    /**
+     * @var string|null $aggregationFilterToken A token containing the encoded filter to aggregate search matches by the specific key value. To use the filter, pass the token as part of the aggregationFilter property in a searchRequest object, in the format '{field}:/'{aggregationFilterToken}/''. See an example.
+    */
     private ?string $aggregationFilterToken = null;
     
-    /** @var int|null $count The approximate number of search matches that share the same value specified in the key property. Note that this number is not the exact number of matches. */
+    /**
+     * @var int|null $count The approximate number of search matches that share the same value specified in the key property. Note that this number is not the exact number of matches.
+    */
     private ?int $count = null;
     
-    /** @var string|null $key The discrete value of the field that an aggregation was computed on. */
+    /**
+     * @var string|null $key The discrete value of the field that an aggregation was computed on.
+    */
     private ?string $key = null;
     
     /**
@@ -33,7 +41,7 @@ class SearchBucket implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SearchBucket
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SearchBucket {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SearchBucket {
         return new SearchBucket();
     }
 
@@ -66,10 +74,11 @@ class SearchBucket implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'aggregationFilterToken' => function (self $o, ParseNode $n) { $o->setAggregationFilterToken($n->getStringValue()); },
-            'count' => function (self $o, ParseNode $n) { $o->setCount($n->getIntegerValue()); },
-            'key' => function (self $o, ParseNode $n) { $o->setKey($n->getStringValue()); },
+            'aggregationFilterToken' => function (ParseNode $n) use ($o) { $o->setAggregationFilterToken($n->getStringValue()); },
+            'count' => function (ParseNode $n) use ($o) { $o->setCount($n->getIntegerValue()); },
+            'key' => function (ParseNode $n) use ($o) { $o->setKey($n->getStringValue()); },
         ];
     }
 

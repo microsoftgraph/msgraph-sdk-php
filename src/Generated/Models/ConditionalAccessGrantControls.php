@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<ConditionalAccessGrantControl>|null $builtInControls List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue. */
+    /**
+     * @var array<string>|null $builtInControls List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
+    */
     private ?array $builtInControls = null;
     
-    /** @var array<string>|null $customAuthenticationFactors List of custom controls IDs required by the policy. For more information, see Custom controls. */
+    /**
+     * @var array<string>|null $customAuthenticationFactors List of custom controls IDs required by the policy. To learn more about custom control, see Custom controls (preview).
+    */
     private ?array $customAuthenticationFactors = null;
     
-    /** @var string|null $operator Defines the relationship of the grant controls. Possible values: AND, OR. */
+    /**
+     * @var string|null $operator Defines the relationship of the grant controls. Possible values: AND, OR.
+    */
     private ?string $operator = null;
     
-    /** @var array<string>|null $termsOfUse List of terms of use IDs required by the policy. */
+    /**
+     * @var array<string>|null $termsOfUse List of terms of use IDs required by the policy.
+    */
     private ?array $termsOfUse = null;
     
     /**
@@ -36,7 +46,7 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ConditionalAccessGrantControls
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessGrantControls {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessGrantControls {
         return new ConditionalAccessGrantControls();
     }
 
@@ -50,14 +60,14 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
-     * @return array<ConditionalAccessGrantControl>|null
+     * @return array<string>|null
     */
     public function getBuiltInControls(): ?array {
         return $this->builtInControls;
     }
 
     /**
-     * Gets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. For more information, see Custom controls.
+     * Gets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. To learn more about custom control, see Custom controls (preview).
      * @return array<string>|null
     */
     public function getCustomAuthenticationFactors(): ?array {
@@ -69,11 +79,12 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'builtInControls' => function (self $o, ParseNode $n) { $o->setBuiltInControls($n->getCollectionOfEnumValues(ConditionalAccessGrantControl::class)); },
-            'customAuthenticationFactors' => function (self $o, ParseNode $n) { $o->setCustomAuthenticationFactors($n->getCollectionOfPrimitiveValues()); },
-            'operator' => function (self $o, ParseNode $n) { $o->setOperator($n->getStringValue()); },
-            'termsOfUse' => function (self $o, ParseNode $n) { $o->setTermsOfUse($n->getCollectionOfPrimitiveValues()); },
+            'builtInControls' => function (ParseNode $n) use ($o) { $o->setBuiltInControls($n->getCollectionOfPrimitiveValues()); },
+            'customAuthenticationFactors' => function (ParseNode $n) use ($o) { $o->setCustomAuthenticationFactors($n->getCollectionOfPrimitiveValues()); },
+            'operator' => function (ParseNode $n) use ($o) { $o->setOperator($n->getStringValue()); },
+            'termsOfUse' => function (ParseNode $n) use ($o) { $o->setTermsOfUse($n->getCollectionOfPrimitiveValues()); },
         ];
     }
 
@@ -98,7 +109,7 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfEnumValues('builtInControls', $this->builtInControls);
+        $writer->writeCollectionOfPrimitiveValues('builtInControls', $this->builtInControls);
         $writer->writeCollectionOfPrimitiveValues('customAuthenticationFactors', $this->customAuthenticationFactors);
         $writer->writeStringValue('operator', $this->operator);
         $writer->writeCollectionOfPrimitiveValues('termsOfUse', $this->termsOfUse);
@@ -115,14 +126,14 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
-     *  @param array<ConditionalAccessGrantControl>|null $value Value to set for the builtInControls property.
+     *  @param array<string>|null $value Value to set for the builtInControls property.
     */
     public function setBuiltInControls(?array $value ): void {
         $this->builtInControls = $value;
     }
 
     /**
-     * Sets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. For more information, see Custom controls.
+     * Sets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. To learn more about custom control, see Custom controls (preview).
      *  @param array<string>|null $value Value to set for the customAuthenticationFactors property.
     */
     public function setCustomAuthenticationFactors(?array $value ): void {
