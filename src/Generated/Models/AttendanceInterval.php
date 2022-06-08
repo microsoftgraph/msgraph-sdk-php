@@ -10,16 +10,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AttendanceInterval implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $durationInSeconds Duration of the meeting interval in seconds; that is, the difference between joinDateTime and leaveDateTime. */
+    /**
+     * @var int|null $durationInSeconds Duration of the meeting interval in seconds; that is, the difference between joinDateTime and leaveDateTime.
+    */
     private ?int $durationInSeconds = null;
     
-    /** @var DateTime|null $joinDateTime The time the attendee joined in UTC. */
+    /**
+     * @var DateTime|null $joinDateTime The time the attendee joined in UTC.
+    */
     private ?DateTime $joinDateTime = null;
     
-    /** @var DateTime|null $leaveDateTime The time the attendee left in UTC. */
+    /**
+     * @var DateTime|null $leaveDateTime The time the attendee left in UTC.
+    */
     private ?DateTime $leaveDateTime = null;
     
     /**
@@ -34,7 +42,7 @@ class AttendanceInterval implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AttendanceInterval
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AttendanceInterval {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AttendanceInterval {
         return new AttendanceInterval();
     }
 
@@ -59,10 +67,11 @@ class AttendanceInterval implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'durationInSeconds' => function (self $o, ParseNode $n) { $o->setDurationInSeconds($n->getIntegerValue()); },
-            'joinDateTime' => function (self $o, ParseNode $n) { $o->setJoinDateTime($n->getDateTimeValue()); },
-            'leaveDateTime' => function (self $o, ParseNode $n) { $o->setLeaveDateTime($n->getDateTimeValue()); },
+            'durationInSeconds' => function (ParseNode $n) use ($o) { $o->setDurationInSeconds($n->getIntegerValue()); },
+            'joinDateTime' => function (ParseNode $n) use ($o) { $o->setJoinDateTime($n->getDateTimeValue()); },
+            'leaveDateTime' => function (ParseNode $n) use ($o) { $o->setLeaveDateTime($n->getDateTimeValue()); },
         ];
     }
 

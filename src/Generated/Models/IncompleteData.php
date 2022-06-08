@@ -10,13 +10,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class IncompleteData implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var DateTime|null $missingDataBeforeDateTime The service does not have source data before the specified time. */
+    /**
+     * @var DateTime|null $missingDataBeforeDateTime The service does not have source data before the specified time.
+    */
     private ?DateTime $missingDataBeforeDateTime = null;
     
-    /** @var bool|null $wasThrottled Some data was not recorded due to excessive activity. */
+    /**
+     * @var bool|null $wasThrottled Some data was not recorded due to excessive activity.
+    */
     private ?bool $wasThrottled = null;
     
     /**
@@ -31,7 +37,7 @@ class IncompleteData implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return IncompleteData
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): IncompleteData {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): IncompleteData {
         return new IncompleteData();
     }
 
@@ -48,9 +54,10 @@ class IncompleteData implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'missingDataBeforeDateTime' => function (self $o, ParseNode $n) { $o->setMissingDataBeforeDateTime($n->getDateTimeValue()); },
-            'wasThrottled' => function (self $o, ParseNode $n) { $o->setWasThrottled($n->getBooleanValue()); },
+            'missingDataBeforeDateTime' => function (ParseNode $n) use ($o) { $o->setMissingDataBeforeDateTime($n->getDateTimeValue()); },
+            'wasThrottled' => function (ParseNode $n) use ($o) { $o->setWasThrottled($n->getBooleanValue()); },
         ];
     }
 

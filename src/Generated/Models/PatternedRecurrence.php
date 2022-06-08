@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class PatternedRecurrence implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var RecurrencePattern|null $pattern The frequency of an event.  For access reviews: Do not specify this property for a one-time access review.  Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported. */
+    /**
+     * @var RecurrencePattern|null $pattern The frequency of an event. Do not specify for a one-time access review.  For access reviews: Do not specify this property for a one-time access review.   Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported.
+    */
     private ?RecurrencePattern $pattern = null;
     
-    /** @var RecurrenceRange|null $range The duration of an event. */
+    /**
+     * @var RecurrenceRange|null $range The duration of an event.
+    */
     private ?RecurrenceRange $range = null;
     
     /**
@@ -30,7 +36,7 @@ class PatternedRecurrence implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PatternedRecurrence
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PatternedRecurrence {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PatternedRecurrence {
         return new PatternedRecurrence();
     }
 
@@ -47,14 +53,15 @@ class PatternedRecurrence implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'pattern' => function (self $o, ParseNode $n) { $o->setPattern($n->getObjectValue(RecurrencePattern::class)); },
-            'range' => function (self $o, ParseNode $n) { $o->setRange($n->getObjectValue(RecurrenceRange::class)); },
+            'pattern' => function (ParseNode $n) use ($o) { $o->setPattern($n->getObjectValue(array(RecurrencePattern::class, 'createFromDiscriminatorValue'))); },
+            'range' => function (ParseNode $n) use ($o) { $o->setRange($n->getObjectValue(array(RecurrenceRange::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 
     /**
-     * Gets the pattern property value. The frequency of an event.  For access reviews: Do not specify this property for a one-time access review.  Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported.
+     * Gets the pattern property value. The frequency of an event. Do not specify for a one-time access review.  For access reviews: Do not specify this property for a one-time access review.   Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported.
      * @return RecurrencePattern|null
     */
     public function getPattern(): ?RecurrencePattern {
@@ -88,7 +95,7 @@ class PatternedRecurrence implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the pattern property value. The frequency of an event.  For access reviews: Do not specify this property for a one-time access review.  Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported.
+     * Sets the pattern property value. The frequency of an event. Do not specify for a one-time access review.  For access reviews: Do not specify this property for a one-time access review.   Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported.
      *  @param RecurrencePattern|null $value Value to set for the pattern property.
     */
     public function setPattern(?RecurrencePattern $value ): void {

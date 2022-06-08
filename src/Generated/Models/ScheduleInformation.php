@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ScheduleInformation implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $availabilityView Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working elsewhere. */
+    /**
+     * @var string|null $availabilityView Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working elsewhere.
+    */
     private ?string $availabilityView = null;
     
-    /** @var FreeBusyError|null $error Error information from attempting to get the availability of the user, distribution list, or resource. */
+    /**
+     * @var FreeBusyError|null $error Error information from attempting to get the availability of the user, distribution list, or resource.
+    */
     private ?FreeBusyError $error = null;
     
-    /** @var string|null $scheduleId An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation. */
+    /**
+     * @var string|null $scheduleId An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
+    */
     private ?string $scheduleId = null;
     
-    /** @var array<ScheduleItem>|null $scheduleItems Contains the items that describe the availability of the user or resource. */
+    /**
+     * @var array<ScheduleItem>|null $scheduleItems Contains the items that describe the availability of the user or resource.
+    */
     private ?array $scheduleItems = null;
     
-    /** @var WorkingHours|null $workingHours The days of the week and hours in a specific time zone that the user works. These are set as part of the user's mailboxSettings. */
+    /**
+     * @var WorkingHours|null $workingHours The days of the week and hours in a specific time zone that the user works. These are set as part of the user's mailboxSettings.
+    */
     private ?WorkingHours $workingHours = null;
     
     /**
@@ -39,7 +51,7 @@ class ScheduleInformation implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ScheduleInformation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ScheduleInformation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ScheduleInformation {
         return new ScheduleInformation();
     }
 
@@ -72,12 +84,13 @@ class ScheduleInformation implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'availabilityView' => function (self $o, ParseNode $n) { $o->setAvailabilityView($n->getStringValue()); },
-            'error' => function (self $o, ParseNode $n) { $o->setError($n->getObjectValue(FreeBusyError::class)); },
-            'scheduleId' => function (self $o, ParseNode $n) { $o->setScheduleId($n->getStringValue()); },
-            'scheduleItems' => function (self $o, ParseNode $n) { $o->setScheduleItems($n->getCollectionOfObjectValues(ScheduleItem::class)); },
-            'workingHours' => function (self $o, ParseNode $n) { $o->setWorkingHours($n->getObjectValue(WorkingHours::class)); },
+            'availabilityView' => function (ParseNode $n) use ($o) { $o->setAvailabilityView($n->getStringValue()); },
+            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getObjectValue(array(FreeBusyError::class, 'createFromDiscriminatorValue'))); },
+            'scheduleId' => function (ParseNode $n) use ($o) { $o->setScheduleId($n->getStringValue()); },
+            'scheduleItems' => function (ParseNode $n) use ($o) { $o->setScheduleItems($n->getCollectionOfObjectValues(array(ScheduleItem::class, 'createFromDiscriminatorValue'))); },
+            'workingHours' => function (ParseNode $n) use ($o) { $o->setWorkingHours($n->getObjectValue(array(WorkingHours::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

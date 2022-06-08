@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ComplianceInformation implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<CertificationControl>|null $certificationControls Collection of the certification controls associated with certification */
+    /**
+     * @var array<CertificationControl>|null $certificationControls Collection of the certification controls associated with certification
+    */
     private ?array $certificationControls = null;
     
-    /** @var string|null $certificationName Compliance certification name (for example, ISO 27018:2014, GDPR, FedRAMP, NIST 800-171) */
+    /**
+     * @var string|null $certificationName Compliance certification name (for example, ISO 27018:2014, GDPR, FedRAMP, NIST 800-171)
+    */
     private ?string $certificationName = null;
     
     /**
@@ -30,7 +36,7 @@ class ComplianceInformation implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ComplianceInformation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ComplianceInformation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ComplianceInformation {
         return new ComplianceInformation();
     }
 
@@ -63,9 +69,10 @@ class ComplianceInformation implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'certificationControls' => function (self $o, ParseNode $n) { $o->setCertificationControls($n->getCollectionOfObjectValues(CertificationControl::class)); },
-            'certificationName' => function (self $o, ParseNode $n) { $o->setCertificationName($n->getStringValue()); },
+            'certificationControls' => function (ParseNode $n) use ($o) { $o->setCertificationControls($n->getCollectionOfObjectValues(array(CertificationControl::class, 'createFromDiscriminatorValue'))); },
+            'certificationName' => function (ParseNode $n) use ($o) { $o->setCertificationName($n->getStringValue()); },
         ];
     }
 

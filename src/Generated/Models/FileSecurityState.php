@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class FileSecurityState implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var FileHash|null $fileHash Complex type containing file hashes (cryptographic and location-sensitive). */
+    /**
+     * @var FileHash|null $fileHash Complex type containing file hashes (cryptographic and location-sensitive).
+    */
     private ?FileHash $fileHash = null;
     
-    /** @var string|null $name File name (without path). */
+    /**
+     * @var string|null $name File name (without path).
+    */
     private ?string $name = null;
     
-    /** @var string|null $path Full file path of the file/imageFile. */
+    /**
+     * @var string|null $path Full file path of the file/imageFile.
+    */
     private ?string $path = null;
     
-    /** @var string|null $riskScore Provider generated/calculated risk score of the alert file. Recommended value range of 0-1, which equates to a percentage. */
+    /**
+     * @var string|null $riskScore Provider generated/calculated risk score of the alert file. Recommended value range of 0-1, which equates to a percentage.
+    */
     private ?string $riskScore = null;
     
     /**
@@ -36,7 +46,7 @@ class FileSecurityState implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return FileSecurityState
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): FileSecurityState {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): FileSecurityState {
         return new FileSecurityState();
     }
 
@@ -53,11 +63,12 @@ class FileSecurityState implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'fileHash' => function (self $o, ParseNode $n) { $o->setFileHash($n->getObjectValue(FileHash::class)); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'path' => function (self $o, ParseNode $n) { $o->setPath($n->getStringValue()); },
-            'riskScore' => function (self $o, ParseNode $n) { $o->setRiskScore($n->getStringValue()); },
+            'fileHash' => function (ParseNode $n) use ($o) { $o->setFileHash($n->getObjectValue(array(FileHash::class, 'createFromDiscriminatorValue'))); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'path' => function (ParseNode $n) use ($o) { $o->setPath($n->getStringValue()); },
+            'riskScore' => function (ParseNode $n) use ($o) { $o->setRiskScore($n->getStringValue()); },
         ];
     }
 

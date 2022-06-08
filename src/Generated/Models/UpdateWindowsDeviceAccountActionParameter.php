@@ -9,25 +9,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $calendarSyncEnabled Not yet documented */
+    /**
+     * @var bool|null $calendarSyncEnabled Not yet documented
+    */
     private ?bool $calendarSyncEnabled = null;
     
-    /** @var WindowsDeviceAccount|null $deviceAccount Not yet documented */
+    /**
+     * @var WindowsDeviceAccount|null $deviceAccount Not yet documented
+    */
     private ?WindowsDeviceAccount $deviceAccount = null;
     
-    /** @var string|null $deviceAccountEmail Not yet documented */
+    /**
+     * @var string|null $deviceAccountEmail Not yet documented
+    */
     private ?string $deviceAccountEmail = null;
     
-    /** @var string|null $exchangeServer Not yet documented */
+    /**
+     * @var string|null $exchangeServer Not yet documented
+    */
     private ?string $exchangeServer = null;
     
-    /** @var bool|null $passwordRotationEnabled Not yet documented */
+    /**
+     * @var bool|null $passwordRotationEnabled Not yet documented
+    */
     private ?bool $passwordRotationEnabled = null;
     
-    /** @var string|null $sessionInitiationProtocalAddress Not yet documented */
+    /**
+     * @var string|null $sessionInitiationProtocalAddress Not yet documented
+    */
     private ?string $sessionInitiationProtocalAddress = null;
     
     /**
@@ -42,7 +56,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return UpdateWindowsDeviceAccountActionParameter
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): UpdateWindowsDeviceAccountActionParameter {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): UpdateWindowsDeviceAccountActionParameter {
         return new UpdateWindowsDeviceAccountActionParameter();
     }
 
@@ -91,13 +105,14 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'calendarSyncEnabled' => function (self $o, ParseNode $n) { $o->setCalendarSyncEnabled($n->getBooleanValue()); },
-            'deviceAccount' => function (self $o, ParseNode $n) { $o->setDeviceAccount($n->getObjectValue(WindowsDeviceAccount::class)); },
-            'deviceAccountEmail' => function (self $o, ParseNode $n) { $o->setDeviceAccountEmail($n->getStringValue()); },
-            'exchangeServer' => function (self $o, ParseNode $n) { $o->setExchangeServer($n->getStringValue()); },
-            'passwordRotationEnabled' => function (self $o, ParseNode $n) { $o->setPasswordRotationEnabled($n->getBooleanValue()); },
-            'sessionInitiationProtocalAddress' => function (self $o, ParseNode $n) { $o->setSessionInitiationProtocalAddress($n->getStringValue()); },
+            'calendarSyncEnabled' => function (ParseNode $n) use ($o) { $o->setCalendarSyncEnabled($n->getBooleanValue()); },
+            'deviceAccount' => function (ParseNode $n) use ($o) { $o->setDeviceAccount($n->getObjectValue(array(WindowsDeviceAccount::class, 'createFromDiscriminatorValue'))); },
+            'deviceAccountEmail' => function (ParseNode $n) use ($o) { $o->setDeviceAccountEmail($n->getStringValue()); },
+            'exchangeServer' => function (ParseNode $n) use ($o) { $o->setExchangeServer($n->getStringValue()); },
+            'passwordRotationEnabled' => function (ParseNode $n) use ($o) { $o->setPasswordRotationEnabled($n->getBooleanValue()); },
+            'sessionInitiationProtocalAddress' => function (ParseNode $n) use ($o) { $o->setSessionInitiationProtocalAddress($n->getStringValue()); },
         ];
     }
 

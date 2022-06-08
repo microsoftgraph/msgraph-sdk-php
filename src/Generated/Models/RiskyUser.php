@@ -7,33 +7,51 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class RiskyUser extends Entity 
+class RiskyUser extends Entity implements Parsable 
 {
-    /** @var array<RiskyUserHistoryItem>|null $history The activity related to user risk level change */
+    /**
+     * @var array<RiskyUserHistoryItem>|null $history The activity related to user risk level change
+    */
     private ?array $history = null;
     
-    /** @var bool|null $isDeleted Indicates whether the user is deleted. Possible values are: true, false. */
+    /**
+     * @var bool|null $isDeleted Indicates whether the user is deleted. Possible values are: true, false.
+    */
     private ?bool $isDeleted = null;
     
-    /** @var bool|null $isProcessing Indicates whether a user's risky state is being processed by the backend. */
+    /**
+     * @var bool|null $isProcessing Indicates whether a user's risky state is being processed by the backend.
+    */
     private ?bool $isProcessing = null;
     
-    /** @var RiskDetail|null $riskDetail Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. */
+    /**
+     * @var RiskDetail|null $riskDetail The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+    */
     private ?RiskDetail $riskDetail = null;
     
-    /** @var DateTime|null $riskLastUpdatedDateTime The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $riskLastUpdatedDateTime The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    */
     private ?DateTime $riskLastUpdatedDateTime = null;
     
-    /** @var RiskLevel|null $riskLevel Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue. */
+    /**
+     * @var RiskLevel|null $riskLevel Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue.
+    */
     private ?RiskLevel $riskLevel = null;
     
-    /** @var RiskState|null $riskState State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. */
+    /**
+     * @var RiskState|null $riskState State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+    */
     private ?RiskState $riskState = null;
     
-    /** @var string|null $userDisplayName Risky user display name. */
+    /**
+     * @var string|null $userDisplayName Risky user display name.
+    */
     private ?string $userDisplayName = null;
     
-    /** @var string|null $userPrincipalName Risky user principal name. */
+    /**
+     * @var string|null $userPrincipalName Risky user principal name.
+    */
     private ?string $userPrincipalName = null;
     
     /**
@@ -48,7 +66,14 @@ class RiskyUser extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return RiskyUser
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): RiskyUser {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): RiskyUser {
+        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.riskyUser': return new RiskyUser();
+            }
+        }
         return new RiskyUser();
     }
 
@@ -57,16 +82,17 @@ class RiskyUser extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'history' => function (self $o, ParseNode $n) { $o->setHistory($n->getCollectionOfObjectValues(RiskyUserHistoryItem::class)); },
-            'isDeleted' => function (self $o, ParseNode $n) { $o->setIsDeleted($n->getBooleanValue()); },
-            'isProcessing' => function (self $o, ParseNode $n) { $o->setIsProcessing($n->getBooleanValue()); },
-            'riskDetail' => function (self $o, ParseNode $n) { $o->setRiskDetail($n->getEnumValue(RiskDetail::class)); },
-            'riskLastUpdatedDateTime' => function (self $o, ParseNode $n) { $o->setRiskLastUpdatedDateTime($n->getDateTimeValue()); },
-            'riskLevel' => function (self $o, ParseNode $n) { $o->setRiskLevel($n->getEnumValue(RiskLevel::class)); },
-            'riskState' => function (self $o, ParseNode $n) { $o->setRiskState($n->getEnumValue(RiskState::class)); },
-            'userDisplayName' => function (self $o, ParseNode $n) { $o->setUserDisplayName($n->getStringValue()); },
-            'userPrincipalName' => function (self $o, ParseNode $n) { $o->setUserPrincipalName($n->getStringValue()); },
+            'history' => function (ParseNode $n) use ($o) { $o->setHistory($n->getCollectionOfObjectValues(array(RiskyUserHistoryItem::class, 'createFromDiscriminatorValue'))); },
+            'isDeleted' => function (ParseNode $n) use ($o) { $o->setIsDeleted($n->getBooleanValue()); },
+            'isProcessing' => function (ParseNode $n) use ($o) { $o->setIsProcessing($n->getBooleanValue()); },
+            'riskDetail' => function (ParseNode $n) use ($o) { $o->setRiskDetail($n->getEnumValue(RiskDetail::class)); },
+            'riskLastUpdatedDateTime' => function (ParseNode $n) use ($o) { $o->setRiskLastUpdatedDateTime($n->getDateTimeValue()); },
+            'riskLevel' => function (ParseNode $n) use ($o) { $o->setRiskLevel($n->getEnumValue(RiskLevel::class)); },
+            'riskState' => function (ParseNode $n) use ($o) { $o->setRiskState($n->getEnumValue(RiskState::class)); },
+            'userDisplayName' => function (ParseNode $n) use ($o) { $o->setUserDisplayName($n->getStringValue()); },
+            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
         ]);
     }
 
@@ -95,7 +121,7 @@ class RiskyUser extends Entity
     }
 
     /**
-     * Gets the riskDetail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+     * Gets the riskDetail property value. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      * @return RiskDetail|null
     */
     public function getRiskDetail(): ?RiskDetail {
@@ -111,7 +137,7 @@ class RiskyUser extends Entity
     }
 
     /**
-     * Gets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+     * Gets the riskLevel property value. Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue.
      * @return RiskLevel|null
     */
     public function getRiskLevel(): ?RiskLevel {
@@ -184,7 +210,7 @@ class RiskyUser extends Entity
     }
 
     /**
-     * Sets the riskDetail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+     * Sets the riskDetail property value. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      *  @param RiskDetail|null $value Value to set for the riskDetail property.
     */
     public function setRiskDetail(?RiskDetail $value ): void {
@@ -200,7 +226,7 @@ class RiskyUser extends Entity
     }
 
     /**
-     * Sets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+     * Sets the riskLevel property value. Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue.
      *  @param RiskLevel|null $value Value to set for the riskLevel property.
     */
     public function setRiskLevel(?RiskLevel $value ): void {

@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $deviceComplianceCheckinThresholdDays The number of days a device is allowed to go without checking in to remain compliant. */
+    /**
+     * @var int|null $deviceComplianceCheckinThresholdDays The number of days a device is allowed to go without checking in to remain compliant.
+    */
     private ?int $deviceComplianceCheckinThresholdDays = null;
     
-    /** @var bool|null $isScheduledActionEnabled Is feature enabled or not for scheduled action for rule. */
+    /**
+     * @var bool|null $isScheduledActionEnabled Is feature enabled or not for scheduled action for rule.
+    */
     private ?bool $isScheduledActionEnabled = null;
     
-    /** @var bool|null $secureByDefault Device should be noncompliant when there is no compliance policy targeted when this is true */
+    /**
+     * @var bool|null $secureByDefault Device should be noncompliant when there is no compliance policy targeted when this is true
+    */
     private ?bool $secureByDefault = null;
     
     /**
@@ -33,7 +41,7 @@ class DeviceManagementSettings implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceManagementSettings
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceManagementSettings {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceManagementSettings {
         return new DeviceManagementSettings();
     }
 
@@ -58,10 +66,11 @@ class DeviceManagementSettings implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'deviceComplianceCheckinThresholdDays' => function (self $o, ParseNode $n) { $o->setDeviceComplianceCheckinThresholdDays($n->getIntegerValue()); },
-            'isScheduledActionEnabled' => function (self $o, ParseNode $n) { $o->setIsScheduledActionEnabled($n->getBooleanValue()); },
-            'secureByDefault' => function (self $o, ParseNode $n) { $o->setSecureByDefault($n->getBooleanValue()); },
+            'deviceComplianceCheckinThresholdDays' => function (ParseNode $n) use ($o) { $o->setDeviceComplianceCheckinThresholdDays($n->getIntegerValue()); },
+            'isScheduledActionEnabled' => function (ParseNode $n) use ($o) { $o->setIsScheduledActionEnabled($n->getBooleanValue()); },
+            'secureByDefault' => function (ParseNode $n) use ($o) { $o->setSecureByDefault($n->getBooleanValue()); },
         ];
     }
 

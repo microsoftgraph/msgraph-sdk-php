@@ -9,25 +9,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ParticipantInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $countryCode The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only. */
+    /**
+     * @var string|null $countryCode The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
+    */
     private ?string $countryCode = null;
     
-    /** @var EndpointType|null $endpointType The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only. */
+    /**
+     * @var EndpointType|null $endpointType The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
+    */
     private ?EndpointType $endpointType = null;
     
-    /** @var IdentitySet|null $identity The identity property */
+    /**
+     * @var IdentitySet|null $identity The identity property
+    */
     private ?IdentitySet $identity = null;
     
-    /** @var string|null $languageId The language culture string. Read-only. */
+    /**
+     * @var string|null $languageId The language culture string. Read-only.
+    */
     private ?string $languageId = null;
     
-    /** @var string|null $participantId The participant ID of the participant. Read-only. */
+    /**
+     * @var string|null $participantId The participant ID of the participant. Read-only.
+    */
     private ?string $participantId = null;
     
-    /** @var string|null $region The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only. */
+    /**
+     * @var string|null $region The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only.
+    */
     private ?string $region = null;
     
     /**
@@ -42,7 +56,7 @@ class ParticipantInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ParticipantInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ParticipantInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ParticipantInfo {
         return new ParticipantInfo();
     }
 
@@ -75,13 +89,14 @@ class ParticipantInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'countryCode' => function (self $o, ParseNode $n) { $o->setCountryCode($n->getStringValue()); },
-            'endpointType' => function (self $o, ParseNode $n) { $o->setEndpointType($n->getEnumValue(EndpointType::class)); },
-            'identity' => function (self $o, ParseNode $n) { $o->setIdentity($n->getObjectValue(IdentitySet::class)); },
-            'languageId' => function (self $o, ParseNode $n) { $o->setLanguageId($n->getStringValue()); },
-            'participantId' => function (self $o, ParseNode $n) { $o->setParticipantId($n->getStringValue()); },
-            'region' => function (self $o, ParseNode $n) { $o->setRegion($n->getStringValue()); },
+            'countryCode' => function (ParseNode $n) use ($o) { $o->setCountryCode($n->getStringValue()); },
+            'endpointType' => function (ParseNode $n) use ($o) { $o->setEndpointType($n->getEnumValue(EndpointType::class)); },
+            'identity' => function (ParseNode $n) use ($o) { $o->setIdentity($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'languageId' => function (ParseNode $n) use ($o) { $o->setLanguageId($n->getStringValue()); },
+            'participantId' => function (ParseNode $n) use ($o) { $o->setParticipantId($n->getStringValue()); },
+            'region' => function (ParseNode $n) use ($o) { $o->setRegion($n->getStringValue()); },
         ];
     }
 
@@ -110,7 +125,7 @@ class ParticipantInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
+     * Gets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only.
      * @return string|null
     */
     public function getRegion(): ?string {
@@ -180,7 +195,7 @@ class ParticipantInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
+     * Sets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only.
      *  @param string|null $value Value to set for the region property.
     */
     public function setRegion(?string $value ): void {

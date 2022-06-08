@@ -7,75 +7,121 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ChatMessage extends Entity 
+class ChatMessage extends Entity implements Parsable 
 {
-    /** @var array<ChatMessageAttachment>|null $attachments References to attached objects like files, tabs, meetings etc. */
+    /**
+     * @var array<ChatMessageAttachment>|null $attachments References to attached objects like files, tabs, meetings etc.
+    */
     private ?array $attachments = null;
     
-    /** @var ItemBody|null $body The body property */
+    /**
+     * @var ItemBody|null $body The body property
+    */
     private ?ItemBody $body = null;
     
-    /** @var ChannelIdentity|null $channelIdentity If the message was sent in a channel, represents identity of the channel. */
+    /**
+     * @var ChannelIdentity|null $channelIdentity If the message was sent in a channel, represents identity of the channel.
+    */
     private ?ChannelIdentity $channelIdentity = null;
     
-    /** @var string|null $chatId If the message was sent in a chat, represents the identity of the chat. */
+    /**
+     * @var string|null $chatId If the message was sent in a chat, represents the identity of the chat.
+    */
     private ?string $chatId = null;
     
-    /** @var DateTime|null $createdDateTime Timestamp of when the chat message was created. */
+    /**
+     * @var DateTime|null $createdDateTime Timestamp of when the chat message was created.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var DateTime|null $deletedDateTime Read only. Timestamp at which the chat message was deleted, or null if not deleted. */
+    /**
+     * @var DateTime|null $deletedDateTime Read only. Timestamp at which the chat message was deleted, or null if not deleted.
+    */
     private ?DateTime $deletedDateTime = null;
     
-    /** @var string|null $etag Read-only. Version number of the chat message. */
+    /**
+     * @var string|null $etag Read-only. Version number of the chat message.
+    */
     private ?string $etag = null;
     
-    /** @var EventMessageDetail|null $eventDetail Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage. */
+    /**
+     * @var EventMessageDetail|null $eventDetail Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
+    */
     private ?EventMessageDetail $eventDetail = null;
     
-    /** @var ChatMessageFromIdentitySet|null $from Details of the sender of the chat message. Can only be set during migration. */
+    /**
+     * @var ChatMessageFromIdentitySet|null $from Details of the sender of the chat message. Can only be set during migration.
+    */
     private ?ChatMessageFromIdentitySet $from = null;
     
-    /** @var array<ChatMessageHostedContent>|null $hostedContents Content in a message hosted by Microsoft Teams - for example, images or code snippets. */
+    /**
+     * @var array<ChatMessageHostedContent>|null $hostedContents Content in a message hosted by Microsoft Teams - for example, images or code snippets.
+    */
     private ?array $hostedContents = null;
     
-    /** @var ChatMessageImportance|null $importance The importance of the chat message. The possible values are: normal, high, urgent. */
+    /**
+     * @var ChatMessageImportance|null $importance The importance of the chat message. The possible values are: normal, high, urgent.
+    */
     private ?ChatMessageImportance $importance = null;
     
-    /** @var DateTime|null $lastEditedDateTime Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null. */
+    /**
+     * @var DateTime|null $lastEditedDateTime Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
+    */
     private ?DateTime $lastEditedDateTime = null;
     
-    /** @var DateTime|null $lastModifiedDateTime Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var string|null $locale Locale of the chat message set by the client. Always set to en-us. */
+    /**
+     * @var string|null $locale Locale of the chat message set by the client. Always set to en-us.
+    */
     private ?string $locale = null;
     
-    /** @var array<ChatMessageMention>|null $mentions List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel. */
+    /**
+     * @var array<ChatMessageMention>|null $mentions List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
+    */
     private ?array $mentions = null;
     
-    /** @var ChatMessageType|null $messageType The type of chat message. The possible values are: message, chatEvent, typing, unknownFutureValue, systemEventMessage. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: systemEventMessage. */
+    /**
+     * @var ChatMessageType|null $messageType The type of chat message. The possible values are: message, chatEvent, typing, unknownFutureValue, systemEventMessage. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: systemEventMessage.
+    */
     private ?ChatMessageType $messageType = null;
     
-    /** @var ChatMessagePolicyViolation|null $policyViolation Defines the properties of a policy violation set by a data loss prevention (DLP) application. */
+    /**
+     * @var ChatMessagePolicyViolation|null $policyViolation Defines the properties of a policy violation set by a data loss prevention (DLP) application.
+    */
     private ?ChatMessagePolicyViolation $policyViolation = null;
     
-    /** @var array<ChatMessageReaction>|null $reactions Reactions for this chat message (for example, Like). */
+    /**
+     * @var array<ChatMessageReaction>|null $reactions Reactions for this chat message (for example, Like).
+    */
     private ?array $reactions = null;
     
-    /** @var array<ChatMessage>|null $replies Replies for a specified message. */
+    /**
+     * @var array<ChatMessage>|null $replies Replies for a specified message. Supports $expand for channel messages.
+    */
     private ?array $replies = null;
     
-    /** @var string|null $replyToId Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.) */
+    /**
+     * @var string|null $replyToId Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
+    */
     private ?string $replyToId = null;
     
-    /** @var string|null $subject The subject of the chat message, in plaintext. */
+    /**
+     * @var string|null $subject The subject of the chat message, in plaintext.
+    */
     private ?string $subject = null;
     
-    /** @var string|null $summary Summary text of the chat message that could be used for push notifications and summary views or fall back views. Only applies to channel chat messages, not chat messages in a chat. */
+    /**
+     * @var string|null $summary Summary text of the chat message that could be used for push notifications and summary views or fall back views. Only applies to channel chat messages, not chat messages in a chat.
+    */
     private ?string $summary = null;
     
-    /** @var string|null $webUrl Read-only. Link to the message in Microsoft Teams. */
+    /**
+     * @var string|null $webUrl Read-only. Link to the message in Microsoft Teams.
+    */
     private ?string $webUrl = null;
     
     /**
@@ -90,7 +136,7 @@ class ChatMessage extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ChatMessage
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ChatMessage {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ChatMessage {
         return new ChatMessage();
     }
 
@@ -151,7 +197,7 @@ class ChatMessage extends Entity
     }
 
     /**
-     * Gets the eventDetail property value. Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
+     * Gets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
      * @return EventMessageDetail|null
     */
     public function getEventDetail(): ?EventMessageDetail {
@@ -163,30 +209,31 @@ class ChatMessage extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'attachments' => function (self $o, ParseNode $n) { $o->setAttachments($n->getCollectionOfObjectValues(ChatMessageAttachment::class)); },
-            'body' => function (self $o, ParseNode $n) { $o->setBody($n->getObjectValue(ItemBody::class)); },
-            'channelIdentity' => function (self $o, ParseNode $n) { $o->setChannelIdentity($n->getObjectValue(ChannelIdentity::class)); },
-            'chatId' => function (self $o, ParseNode $n) { $o->setChatId($n->getStringValue()); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'deletedDateTime' => function (self $o, ParseNode $n) { $o->setDeletedDateTime($n->getDateTimeValue()); },
-            'etag' => function (self $o, ParseNode $n) { $o->setEtag($n->getStringValue()); },
-            'eventDetail' => function (self $o, ParseNode $n) { $o->setEventDetail($n->getObjectValue(EventMessageDetail::class)); },
-            'from' => function (self $o, ParseNode $n) { $o->setFrom($n->getObjectValue(ChatMessageFromIdentitySet::class)); },
-            'hostedContents' => function (self $o, ParseNode $n) { $o->setHostedContents($n->getCollectionOfObjectValues(ChatMessageHostedContent::class)); },
-            'importance' => function (self $o, ParseNode $n) { $o->setImportance($n->getEnumValue(ChatMessageImportance::class)); },
-            'lastEditedDateTime' => function (self $o, ParseNode $n) { $o->setLastEditedDateTime($n->getDateTimeValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'locale' => function (self $o, ParseNode $n) { $o->setLocale($n->getStringValue()); },
-            'mentions' => function (self $o, ParseNode $n) { $o->setMentions($n->getCollectionOfObjectValues(ChatMessageMention::class)); },
-            'messageType' => function (self $o, ParseNode $n) { $o->setMessageType($n->getEnumValue(ChatMessageType::class)); },
-            'policyViolation' => function (self $o, ParseNode $n) { $o->setPolicyViolation($n->getObjectValue(ChatMessagePolicyViolation::class)); },
-            'reactions' => function (self $o, ParseNode $n) { $o->setReactions($n->getCollectionOfObjectValues(ChatMessageReaction::class)); },
-            'replies' => function (self $o, ParseNode $n) { $o->setReplies($n->getCollectionOfObjectValues(ChatMessage::class)); },
-            'replyToId' => function (self $o, ParseNode $n) { $o->setReplyToId($n->getStringValue()); },
-            'subject' => function (self $o, ParseNode $n) { $o->setSubject($n->getStringValue()); },
-            'summary' => function (self $o, ParseNode $n) { $o->setSummary($n->getStringValue()); },
-            'webUrl' => function (self $o, ParseNode $n) { $o->setWebUrl($n->getStringValue()); },
+            'attachments' => function (ParseNode $n) use ($o) { $o->setAttachments($n->getCollectionOfObjectValues(array(ChatMessageAttachment::class, 'createFromDiscriminatorValue'))); },
+            'body' => function (ParseNode $n) use ($o) { $o->setBody($n->getObjectValue(array(ItemBody::class, 'createFromDiscriminatorValue'))); },
+            'channelIdentity' => function (ParseNode $n) use ($o) { $o->setChannelIdentity($n->getObjectValue(array(ChannelIdentity::class, 'createFromDiscriminatorValue'))); },
+            'chatId' => function (ParseNode $n) use ($o) { $o->setChatId($n->getStringValue()); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'deletedDateTime' => function (ParseNode $n) use ($o) { $o->setDeletedDateTime($n->getDateTimeValue()); },
+            'etag' => function (ParseNode $n) use ($o) { $o->setEtag($n->getStringValue()); },
+            'eventDetail' => function (ParseNode $n) use ($o) { $o->setEventDetail($n->getObjectValue(array(EventMessageDetail::class, 'createFromDiscriminatorValue'))); },
+            'from' => function (ParseNode $n) use ($o) { $o->setFrom($n->getObjectValue(array(ChatMessageFromIdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'hostedContents' => function (ParseNode $n) use ($o) { $o->setHostedContents($n->getCollectionOfObjectValues(array(ChatMessageHostedContent::class, 'createFromDiscriminatorValue'))); },
+            'importance' => function (ParseNode $n) use ($o) { $o->setImportance($n->getEnumValue(ChatMessageImportance::class)); },
+            'lastEditedDateTime' => function (ParseNode $n) use ($o) { $o->setLastEditedDateTime($n->getDateTimeValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'locale' => function (ParseNode $n) use ($o) { $o->setLocale($n->getStringValue()); },
+            'mentions' => function (ParseNode $n) use ($o) { $o->setMentions($n->getCollectionOfObjectValues(array(ChatMessageMention::class, 'createFromDiscriminatorValue'))); },
+            'messageType' => function (ParseNode $n) use ($o) { $o->setMessageType($n->getEnumValue(ChatMessageType::class)); },
+            'policyViolation' => function (ParseNode $n) use ($o) { $o->setPolicyViolation($n->getObjectValue(array(ChatMessagePolicyViolation::class, 'createFromDiscriminatorValue'))); },
+            'reactions' => function (ParseNode $n) use ($o) { $o->setReactions($n->getCollectionOfObjectValues(array(ChatMessageReaction::class, 'createFromDiscriminatorValue'))); },
+            'replies' => function (ParseNode $n) use ($o) { $o->setReplies($n->getCollectionOfObjectValues(array(ChatMessage::class, 'createFromDiscriminatorValue'))); },
+            'replyToId' => function (ParseNode $n) use ($o) { $o->setReplyToId($n->getStringValue()); },
+            'subject' => function (ParseNode $n) use ($o) { $o->setSubject($n->getStringValue()); },
+            'summary' => function (ParseNode $n) use ($o) { $o->setSummary($n->getStringValue()); },
+            'webUrl' => function (ParseNode $n) use ($o) { $o->setWebUrl($n->getStringValue()); },
         ]);
     }
 
@@ -239,7 +286,7 @@ class ChatMessage extends Entity
     }
 
     /**
-     * Gets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
+     * Gets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
      * @return array<ChatMessageMention>|null
     */
     public function getMentions(): ?array {
@@ -271,7 +318,7 @@ class ChatMessage extends Entity
     }
 
     /**
-     * Gets the replies property value. Replies for a specified message.
+     * Gets the replies property value. Replies for a specified message. Supports $expand for channel messages.
      * @return array<ChatMessage>|null
     */
     public function getReplies(): ?array {
@@ -398,7 +445,7 @@ class ChatMessage extends Entity
     }
 
     /**
-     * Sets the eventDetail property value. Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
+     * Sets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
      *  @param EventMessageDetail|null $value Value to set for the eventDetail property.
     */
     public function setEventDetail(?EventMessageDetail $value ): void {
@@ -454,7 +501,7 @@ class ChatMessage extends Entity
     }
 
     /**
-     * Sets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
+     * Sets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
      *  @param array<ChatMessageMention>|null $value Value to set for the mentions property.
     */
     public function setMentions(?array $value ): void {
@@ -486,7 +533,7 @@ class ChatMessage extends Entity
     }
 
     /**
-     * Sets the replies property value. Replies for a specified message.
+     * Sets the replies property value. Replies for a specified message. Supports $expand for channel messages.
      *  @param array<ChatMessage>|null $value Value to set for the replies property.
     */
     public function setReplies(?array $value ): void {

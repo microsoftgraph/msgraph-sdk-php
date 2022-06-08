@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SearchHitsContainer implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<SearchAggregation>|null $aggregations Contains the collection of aggregations computed based on the provided aggregationOption specified in the request. */
+    /**
+     * @var array<SearchAggregation>|null $aggregations Contains the collection of aggregations computed based on the provided aggregationOption specified in the request.
+    */
     private ?array $aggregations = null;
     
-    /** @var array<SearchHit>|null $hits A collection of the search results. */
+    /**
+     * @var array<SearchHit>|null $hits A collection of the search results.
+    */
     private ?array $hits = null;
     
-    /** @var bool|null $moreResultsAvailable Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly. */
+    /**
+     * @var bool|null $moreResultsAvailable Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly.
+    */
     private ?bool $moreResultsAvailable = null;
     
-    /** @var int|null $total The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query. */
+    /**
+     * @var int|null $total The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
+    */
     private ?int $total = null;
     
     /**
@@ -36,7 +46,7 @@ class SearchHitsContainer implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SearchHitsContainer
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SearchHitsContainer {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SearchHitsContainer {
         return new SearchHitsContainer();
     }
 
@@ -61,11 +71,12 @@ class SearchHitsContainer implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'aggregations' => function (self $o, ParseNode $n) { $o->setAggregations($n->getCollectionOfObjectValues(SearchAggregation::class)); },
-            'hits' => function (self $o, ParseNode $n) { $o->setHits($n->getCollectionOfObjectValues(SearchHit::class)); },
-            'moreResultsAvailable' => function (self $o, ParseNode $n) { $o->setMoreResultsAvailable($n->getBooleanValue()); },
-            'total' => function (self $o, ParseNode $n) { $o->setTotal($n->getIntegerValue()); },
+            'aggregations' => function (ParseNode $n) use ($o) { $o->setAggregations($n->getCollectionOfObjectValues(array(SearchAggregation::class, 'createFromDiscriminatorValue'))); },
+            'hits' => function (ParseNode $n) use ($o) { $o->setHits($n->getCollectionOfObjectValues(array(SearchHit::class, 'createFromDiscriminatorValue'))); },
+            'moreResultsAvailable' => function (ParseNode $n) use ($o) { $o->setMoreResultsAvailable($n->getBooleanValue()); },
+            'total' => function (ParseNode $n) use ($o) { $o->setTotal($n->getIntegerValue()); },
         ];
     }
 

@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class FolderView implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $sortBy The method by which the folder should be sorted. */
+    /**
+     * @var string|null $sortBy The method by which the folder should be sorted.
+    */
     private ?string $sortBy = null;
     
-    /** @var string|null $sortOrder If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending. */
+    /**
+     * @var string|null $sortOrder If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending.
+    */
     private ?string $sortOrder = null;
     
-    /** @var string|null $viewType The type of view that should be used to represent the folder. */
+    /**
+     * @var string|null $viewType The type of view that should be used to represent the folder.
+    */
     private ?string $viewType = null;
     
     /**
@@ -33,7 +41,7 @@ class FolderView implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return FolderView
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): FolderView {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): FolderView {
         return new FolderView();
     }
 
@@ -50,10 +58,11 @@ class FolderView implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'sortBy' => function (self $o, ParseNode $n) { $o->setSortBy($n->getStringValue()); },
-            'sortOrder' => function (self $o, ParseNode $n) { $o->setSortOrder($n->getStringValue()); },
-            'viewType' => function (self $o, ParseNode $n) { $o->setViewType($n->getStringValue()); },
+            'sortBy' => function (ParseNode $n) use ($o) { $o->setSortBy($n->getStringValue()); },
+            'sortOrder' => function (ParseNode $n) use ($o) { $o->setSortOrder($n->getStringValue()); },
+            'viewType' => function (ParseNode $n) use ($o) { $o->setViewType($n->getStringValue()); },
         ];
     }
 

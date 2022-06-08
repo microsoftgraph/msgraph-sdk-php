@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $query The query specifying who will be the reviewer. See table for examples. */
+    /**
+     * @var string|null $query The query specifying who will be the reviewer. See table for examples.
+    */
     private ?string $query = null;
     
-    /** @var string|null $queryRoot In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query, for example, ./manager, is specified. Possible value: decisions. */
+    /**
+     * @var string|null $queryRoot In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query, for example, ./manager, is specified. Possible value: decisions.
+    */
     private ?string $queryRoot = null;
     
-    /** @var string|null $queryType The type of query. Examples include MicrosoftGraph and ARM. */
+    /**
+     * @var string|null $queryType The type of query. Examples include MicrosoftGraph and ARM.
+    */
     private ?string $queryType = null;
     
     /**
@@ -33,7 +41,7 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AccessReviewReviewerScope
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AccessReviewReviewerScope {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessReviewReviewerScope {
         return new AccessReviewReviewerScope();
     }
 
@@ -50,10 +58,11 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'query' => function (self $o, ParseNode $n) { $o->setQuery($n->getStringValue()); },
-            'queryRoot' => function (self $o, ParseNode $n) { $o->setQueryRoot($n->getStringValue()); },
-            'queryType' => function (self $o, ParseNode $n) { $o->setQueryType($n->getStringValue()); },
+            'query' => function (ParseNode $n) use ($o) { $o->setQuery($n->getStringValue()); },
+            'queryRoot' => function (ParseNode $n) use ($o) { $o->setQueryRoot($n->getStringValue()); },
+            'queryType' => function (ParseNode $n) use ($o) { $o->setQueryType($n->getStringValue()); },
         ];
     }
 

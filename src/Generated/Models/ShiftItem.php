@@ -6,15 +6,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ShiftItem extends ScheduleEntity 
+class ShiftItem extends ScheduleEntity implements Parsable 
 {
-    /** @var array<ShiftActivity>|null $activities An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required. */
+    /**
+     * @var array<ShiftActivity>|null $activities An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required.
+    */
     private ?array $activities = null;
     
-    /** @var string|null $displayName The shift label of the shiftItem. */
+    /**
+     * @var string|null $displayName The shift label of the shiftItem.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $notes The shift notes for the shiftItem. */
+    /**
+     * @var string|null $notes The shift notes for the shiftItem.
+    */
     private ?string $notes = null;
     
     /**
@@ -29,7 +35,7 @@ class ShiftItem extends ScheduleEntity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ShiftItem
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ShiftItem {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ShiftItem {
         return new ShiftItem();
     }
 
@@ -54,10 +60,11 @@ class ShiftItem extends ScheduleEntity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activities' => function (self $o, ParseNode $n) { $o->setActivities($n->getCollectionOfObjectValues(ShiftActivity::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'notes' => function (self $o, ParseNode $n) { $o->setNotes($n->getStringValue()); },
+            'activities' => function (ParseNode $n) use ($o) { $o->setActivities($n->getCollectionOfObjectValues(array(ShiftActivity::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'notes' => function (ParseNode $n) use ($o) { $o->setNotes($n->getStringValue()); },
         ]);
     }
 

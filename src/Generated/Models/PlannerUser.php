@@ -6,12 +6,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class PlannerUser extends Entity 
+class PlannerUser extends Entity implements Parsable 
 {
-    /** @var array<PlannerPlan>|null $plans Read-only. Nullable. Returns the plannerTasks assigned to the user. */
+    /**
+     * @var array<PlannerPlan>|null $plans Read-only. Nullable. Returns the plannerTasks assigned to the user.
+    */
     private ?array $plans = null;
     
-    /** @var array<PlannerTask>|null $tasks Read-only. Nullable. Returns the plannerPlans shared with the user. */
+    /**
+     * @var array<PlannerTask>|null $tasks Read-only. Nullable. Returns the plannerTasks assigned to the user.
+    */
     private ?array $tasks = null;
     
     /**
@@ -26,7 +30,7 @@ class PlannerUser extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PlannerUser
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PlannerUser {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PlannerUser {
         return new PlannerUser();
     }
 
@@ -35,9 +39,10 @@ class PlannerUser extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'plans' => function (self $o, ParseNode $n) { $o->setPlans($n->getCollectionOfObjectValues(PlannerPlan::class)); },
-            'tasks' => function (self $o, ParseNode $n) { $o->setTasks($n->getCollectionOfObjectValues(PlannerTask::class)); },
+            'plans' => function (ParseNode $n) use ($o) { $o->setPlans($n->getCollectionOfObjectValues(array(PlannerPlan::class, 'createFromDiscriminatorValue'))); },
+            'tasks' => function (ParseNode $n) use ($o) { $o->setTasks($n->getCollectionOfObjectValues(array(PlannerTask::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -50,7 +55,7 @@ class PlannerUser extends Entity
     }
 
     /**
-     * Gets the tasks property value. Read-only. Nullable. Returns the plannerPlans shared with the user.
+     * Gets the tasks property value. Read-only. Nullable. Returns the plannerTasks assigned to the user.
      * @return array<PlannerTask>|null
     */
     public function getTasks(): ?array {
@@ -76,7 +81,7 @@ class PlannerUser extends Entity
     }
 
     /**
-     * Sets the tasks property value. Read-only. Nullable. Returns the plannerPlans shared with the user.
+     * Sets the tasks property value. Read-only. Nullable. Returns the plannerTasks assigned to the user.
      *  @param array<PlannerTask>|null $value Value to set for the tasks property.
     */
     public function setTasks(?array $value ): void {

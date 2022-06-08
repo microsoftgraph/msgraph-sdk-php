@@ -6,7 +6,7 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class PlayPromptOperation extends CommsOperation 
+class PlayPromptOperation extends CommsOperation implements Parsable 
 {
     /**
      * Instantiates a new playPromptOperation and sets the default values.
@@ -20,7 +20,7 @@ class PlayPromptOperation extends CommsOperation
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PlayPromptOperation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PlayPromptOperation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PlayPromptOperation {
         return new PlayPromptOperation();
     }
 
@@ -29,6 +29,7 @@ class PlayPromptOperation extends CommsOperation
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

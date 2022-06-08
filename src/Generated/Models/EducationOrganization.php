@@ -6,18 +6,26 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class EducationOrganization extends Entity 
+class EducationOrganization extends Entity implements Parsable 
 {
-    /** @var string|null $description Organization description. */
+    /**
+     * @var string|null $description Organization description.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName Organization display name. */
+    /**
+     * @var string|null $displayName Organization display name.
+    */
     private ?string $displayName = null;
     
-    /** @var EducationExternalSource|null $externalSource Source where this organization was created from. Possible values are: sis, manual. */
+    /**
+     * @var EducationExternalSource|null $externalSource Where this user was created from. Possible values are: sis, lms, or manual.
+    */
     private ?EducationExternalSource $externalSource = null;
     
-    /** @var string|null $externalSourceDetail The name of the external source this resources was generated from. */
+    /**
+     * @var string|null $externalSourceDetail The name of the external source this resources was generated from.
+    */
     private ?string $externalSourceDetail = null;
     
     /**
@@ -32,7 +40,14 @@ class EducationOrganization extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return EducationOrganization
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): EducationOrganization {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): EducationOrganization {
+        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.educationOrganization': return new EducationOrganization();
+            }
+        }
         return new EducationOrganization();
     }
 
@@ -53,7 +68,7 @@ class EducationOrganization extends Entity
     }
 
     /**
-     * Gets the externalSource property value. Source where this organization was created from. Possible values are: sis, manual.
+     * Gets the externalSource property value. Where this user was created from. Possible values are: sis, lms, or manual.
      * @return EducationExternalSource|null
     */
     public function getExternalSource(): ?EducationExternalSource {
@@ -73,11 +88,12 @@ class EducationOrganization extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'externalSource' => function (self $o, ParseNode $n) { $o->setExternalSource($n->getEnumValue(EducationExternalSource::class)); },
-            'externalSourceDetail' => function (self $o, ParseNode $n) { $o->setExternalSourceDetail($n->getStringValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'externalSource' => function (ParseNode $n) use ($o) { $o->setExternalSource($n->getEnumValue(EducationExternalSource::class)); },
+            'externalSourceDetail' => function (ParseNode $n) use ($o) { $o->setExternalSourceDetail($n->getStringValue()); },
         ]);
     }
 
@@ -110,7 +126,7 @@ class EducationOrganization extends Entity
     }
 
     /**
-     * Sets the externalSource property value. Source where this organization was created from. Possible values are: sis, manual.
+     * Sets the externalSource property value. Where this user was created from. Possible values are: sis, lms, or manual.
      *  @param EducationExternalSource|null $value Value to set for the externalSource property.
     */
     public function setExternalSource(?EducationExternalSource $value ): void {

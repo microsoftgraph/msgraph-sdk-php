@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SignInLocation implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $city Provides the city where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity. */
+    /**
+     * @var string|null $city Provides the city where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
+    */
     private ?string $city = null;
     
-    /** @var string|null $countryOrRegion Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity. */
+    /**
+     * @var string|null $countryOrRegion Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
+    */
     private ?string $countryOrRegion = null;
     
-    /** @var GeoCoordinates|null $geoCoordinates Provides the latitude, longitude and altitude where the sign-in originated. */
+    /**
+     * @var GeoCoordinates|null $geoCoordinates Provides the latitude, longitude and altitude where the sign-in originated.
+    */
     private ?GeoCoordinates $geoCoordinates = null;
     
-    /** @var string|null $state Provides the State where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity. */
+    /**
+     * @var string|null $state Provides the State where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
+    */
     private ?string $state = null;
     
     /**
@@ -36,7 +46,7 @@ class SignInLocation implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SignInLocation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SignInLocation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SignInLocation {
         return new SignInLocation();
     }
 
@@ -69,11 +79,12 @@ class SignInLocation implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'city' => function (self $o, ParseNode $n) { $o->setCity($n->getStringValue()); },
-            'countryOrRegion' => function (self $o, ParseNode $n) { $o->setCountryOrRegion($n->getStringValue()); },
-            'geoCoordinates' => function (self $o, ParseNode $n) { $o->setGeoCoordinates($n->getObjectValue(GeoCoordinates::class)); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getStringValue()); },
+            'city' => function (ParseNode $n) use ($o) { $o->setCity($n->getStringValue()); },
+            'countryOrRegion' => function (ParseNode $n) use ($o) { $o->setCountryOrRegion($n->getStringValue()); },
+            'geoCoordinates' => function (ParseNode $n) use ($o) { $o->setGeoCoordinates($n->getObjectValue(array(GeoCoordinates::class, 'createFromDiscriminatorValue'))); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getStringValue()); },
         ];
     }
 

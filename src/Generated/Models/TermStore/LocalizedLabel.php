@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class LocalizedLabel implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $isDefault Indicates whether the label is the default label. */
+    /**
+     * @var bool|null $isDefault Indicates whether the label is the default label.
+    */
     private ?bool $isDefault = null;
     
-    /** @var string|null $languageTag The language tag for the label. */
+    /**
+     * @var string|null $languageTag The language tag for the label.
+    */
     private ?string $languageTag = null;
     
-    /** @var string|null $name The name of the label. */
+    /**
+     * @var string|null $name The name of the label.
+    */
     private ?string $name = null;
     
     /**
@@ -33,7 +41,7 @@ class LocalizedLabel implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return LocalizedLabel
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): LocalizedLabel {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): LocalizedLabel {
         return new LocalizedLabel();
     }
 
@@ -50,10 +58,11 @@ class LocalizedLabel implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'isDefault' => function (self $o, ParseNode $n) { $o->setIsDefault($n->getBooleanValue()); },
-            'languageTag' => function (self $o, ParseNode $n) { $o->setLanguageTag($n->getStringValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
+            'isDefault' => function (ParseNode $n) use ($o) { $o->setIsDefault($n->getBooleanValue()); },
+            'languageTag' => function (ParseNode $n) use ($o) { $o->setLanguageTag($n->getStringValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
         ];
     }
 

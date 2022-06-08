@@ -9,10 +9,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ResultTemplateOption implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $enableResultTemplate Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. Optional. */
+    /**
+     * @var bool|null $enableResultTemplate Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. This property is optional.
+    */
     private ?bool $enableResultTemplate = null;
     
     /**
@@ -27,7 +31,7 @@ class ResultTemplateOption implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ResultTemplateOption
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ResultTemplateOption {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ResultTemplateOption {
         return new ResultTemplateOption();
     }
 
@@ -40,7 +44,7 @@ class ResultTemplateOption implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the enableResultTemplate property value. Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. Optional.
+     * Gets the enableResultTemplate property value. Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. This property is optional.
      * @return bool|null
     */
     public function getEnableResultTemplate(): ?bool {
@@ -52,8 +56,9 @@ class ResultTemplateOption implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'enableResultTemplate' => function (self $o, ParseNode $n) { $o->setEnableResultTemplate($n->getBooleanValue()); },
+            'enableResultTemplate' => function (ParseNode $n) use ($o) { $o->setEnableResultTemplate($n->getBooleanValue()); },
         ];
     }
 
@@ -75,7 +80,7 @@ class ResultTemplateOption implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the enableResultTemplate property value. Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. Optional.
+     * Sets the enableResultTemplate property value. Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. This property is optional.
      *  @param bool|null $value Value to set for the enableResultTemplate property.
     */
     public function setEnableResultTemplate(?bool $value ): void {

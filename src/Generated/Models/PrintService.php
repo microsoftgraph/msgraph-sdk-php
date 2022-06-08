@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class PrintService extends Entity 
+class PrintService extends Entity implements Parsable 
 {
-    /** @var array<PrintServiceEndpoint>|null $endpoints Endpoints that can be used to access the service. Read-only. Nullable. */
+    /**
+     * @var array<PrintServiceEndpoint>|null $endpoints Endpoints that can be used to access the service. Read-only. Nullable.
+    */
     private ?array $endpoints = null;
     
     /**
@@ -23,7 +25,7 @@ class PrintService extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrintService
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrintService {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrintService {
         return new PrintService();
     }
 
@@ -40,8 +42,9 @@ class PrintService extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'endpoints' => function (self $o, ParseNode $n) { $o->setEndpoints($n->getCollectionOfObjectValues(PrintServiceEndpoint::class)); },
+            'endpoints' => function (ParseNode $n) use ($o) { $o->setEndpoints($n->getCollectionOfObjectValues(array(PrintServiceEndpoint::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

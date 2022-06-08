@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ServicePlanInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $appliesTo The object the service plan can be assigned to. The possible values are:User - service plan can be assigned to individual users.Company - service plan can be assigned to the entire tenant. */
+    /**
+     * @var string|null $appliesTo The object the service plan can be assigned to. The possible values are:User - service plan can be assigned to individual users.Company - service plan can be assigned to the entire tenant.
+    */
     private ?string $appliesTo = null;
     
-    /** @var string|null $provisioningStatus The provisioning status of the service plan. The possible values are:Success - Service is fully provisioned.Disabled - Service has been disabled.ErrorStatus - The service plan has not been provisioned and is in an error state.PendingInput - Service is not yet provisioned; awaiting service confirmation.PendingActivation - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet. */
+    /**
+     * @var string|null $provisioningStatus The provisioning status of the service plan. The possible values are:Success - Service is fully provisioned.Disabled - Service has been disabled.ErrorStatus - The service plan has not been provisioned and is in an error state.PendingInput - Service is not yet provisioned; awaiting service confirmation.PendingActivation - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet.
+    */
     private ?string $provisioningStatus = null;
     
-    /** @var string|null $servicePlanId The unique identifier of the service plan. */
+    /**
+     * @var string|null $servicePlanId The unique identifier of the service plan.
+    */
     private ?string $servicePlanId = null;
     
-    /** @var string|null $servicePlanName The name of the service plan. */
+    /**
+     * @var string|null $servicePlanName The name of the service plan.
+    */
     private ?string $servicePlanName = null;
     
     /**
@@ -36,7 +46,7 @@ class ServicePlanInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ServicePlanInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ServicePlanInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ServicePlanInfo {
         return new ServicePlanInfo();
     }
 
@@ -61,11 +71,12 @@ class ServicePlanInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'appliesTo' => function (self $o, ParseNode $n) { $o->setAppliesTo($n->getStringValue()); },
-            'provisioningStatus' => function (self $o, ParseNode $n) { $o->setProvisioningStatus($n->getStringValue()); },
-            'servicePlanId' => function (self $o, ParseNode $n) { $o->setServicePlanId($n->getStringValue()); },
-            'servicePlanName' => function (self $o, ParseNode $n) { $o->setServicePlanName($n->getStringValue()); },
+            'appliesTo' => function (ParseNode $n) use ($o) { $o->setAppliesTo($n->getStringValue()); },
+            'provisioningStatus' => function (ParseNode $n) use ($o) { $o->setProvisioningStatus($n->getStringValue()); },
+            'servicePlanId' => function (ParseNode $n) use ($o) { $o->setServicePlanId($n->getStringValue()); },
+            'servicePlanName' => function (ParseNode $n) use ($o) { $o->setServicePlanName($n->getStringValue()); },
         ];
     }
 

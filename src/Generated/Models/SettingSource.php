@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SettingSource implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $displayName Not yet documented */
+    /**
+     * @var string|null $displayName Not yet documented
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $id Not yet documented */
+    /**
+     * @var string|null $id Not yet documented
+    */
     private ?string $id = null;
     
-    /** @var SettingSourceType|null $sourceType Not yet documented. Possible values are: deviceConfiguration, deviceIntent. */
+    /**
+     * @var SettingSourceType|null $sourceType Not yet documented. Possible values are: deviceConfiguration, deviceIntent.
+    */
     private ?SettingSourceType $sourceType = null;
     
     /**
@@ -33,7 +41,7 @@ class SettingSource implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SettingSource
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SettingSource {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SettingSource {
         return new SettingSource();
     }
 
@@ -58,10 +66,11 @@ class SettingSource implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'id' => function (self $o, ParseNode $n) { $o->setId($n->getStringValue()); },
-            'sourceType' => function (self $o, ParseNode $n) { $o->setSourceType($n->getEnumValue(SettingSourceType::class)); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            'sourceType' => function (ParseNode $n) use ($o) { $o->setSourceType($n->getEnumValue(SettingSourceType::class)); },
         ];
     }
 

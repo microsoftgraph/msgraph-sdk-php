@@ -7,33 +7,51 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ActivityHistoryItem extends Entity 
+class ActivityHistoryItem extends Entity implements Parsable 
 {
-    /** @var int|null $activeDurationSeconds Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime. */
+    /**
+     * @var int|null $activeDurationSeconds Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime.
+    */
     private ?int $activeDurationSeconds = null;
     
-    /** @var UserActivity|null $activity The activity property */
+    /**
+     * @var UserActivity|null $activity The activity property
+    */
     private ?UserActivity $activity = null;
     
-    /** @var DateTime|null $createdDateTime Set by the server. DateTime in UTC when the object was created on the server. */
+    /**
+     * @var DateTime|null $createdDateTime Set by the server. DateTime in UTC when the object was created on the server.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var DateTime|null $expirationDateTime Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client. */
+    /**
+     * @var DateTime|null $expirationDateTime Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
+    */
     private ?DateTime $expirationDateTime = null;
     
-    /** @var DateTime|null $lastActiveDateTime Optional. UTC DateTime when the historyItem (activity session) was last understood as active or finished - if null, historyItem status should be Ongoing. */
+    /**
+     * @var DateTime|null $lastActiveDateTime Optional. UTC DateTime when the historyItem (activity session) was last understood as active or finished - if null, historyItem status should be Ongoing.
+    */
     private ?DateTime $lastActiveDateTime = null;
     
-    /** @var DateTime|null $lastModifiedDateTime Set by the server. DateTime in UTC when the object was modified on the server. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime Set by the server. DateTime in UTC when the object was modified on the server.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var DateTime|null $startedDateTime Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history. */
+    /**
+     * @var DateTime|null $startedDateTime Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history.
+    */
     private ?DateTime $startedDateTime = null;
     
-    /** @var Status|null $status Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored. */
+    /**
+     * @var Status|null $status Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
+    */
     private ?Status $status = null;
     
-    /** @var string|null $userTimezone Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation. */
+    /**
+     * @var string|null $userTimezone Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
+    */
     private ?string $userTimezone = null;
     
     /**
@@ -48,7 +66,7 @@ class ActivityHistoryItem extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ActivityHistoryItem
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ActivityHistoryItem {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ActivityHistoryItem {
         return new ActivityHistoryItem();
     }
 
@@ -89,16 +107,17 @@ class ActivityHistoryItem extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activeDurationSeconds' => function (self $o, ParseNode $n) { $o->setActiveDurationSeconds($n->getIntegerValue()); },
-            'activity' => function (self $o, ParseNode $n) { $o->setActivity($n->getObjectValue(UserActivity::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'expirationDateTime' => function (self $o, ParseNode $n) { $o->setExpirationDateTime($n->getDateTimeValue()); },
-            'lastActiveDateTime' => function (self $o, ParseNode $n) { $o->setLastActiveDateTime($n->getDateTimeValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'startedDateTime' => function (self $o, ParseNode $n) { $o->setStartedDateTime($n->getDateTimeValue()); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(Status::class)); },
-            'userTimezone' => function (self $o, ParseNode $n) { $o->setUserTimezone($n->getStringValue()); },
+            'activeDurationSeconds' => function (ParseNode $n) use ($o) { $o->setActiveDurationSeconds($n->getIntegerValue()); },
+            'activity' => function (ParseNode $n) use ($o) { $o->setActivity($n->getObjectValue(array(UserActivity::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
+            'lastActiveDateTime' => function (ParseNode $n) use ($o) { $o->setLastActiveDateTime($n->getDateTimeValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'startedDateTime' => function (ParseNode $n) use ($o) { $o->setStartedDateTime($n->getDateTimeValue()); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(Status::class)); },
+            'userTimezone' => function (ParseNode $n) use ($o) { $o->setUserTimezone($n->getStringValue()); },
         ]);
     }
 

@@ -7,18 +7,26 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod 
+class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod implements Parsable 
 {
-    /** @var DateTime|null $createdDateTime The date and time that this Windows Hello for Business key was registered. */
+    /**
+     * @var DateTime|null $createdDateTime The date and time that this Windows Hello for Business key was registered.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var Device|null $device The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device. */
+    /**
+     * @var Device|null $device The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
+    */
     private ?Device $device = null;
     
-    /** @var string|null $displayName The name of the device on which Windows Hello for Business is registered */
+    /**
+     * @var string|null $displayName The name of the device on which Windows Hello for Business is registered
+    */
     private ?string $displayName = null;
     
-    /** @var AuthenticationMethodKeyStrength|null $keyStrength Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown. */
+    /**
+     * @var AuthenticationMethodKeyStrength|null $keyStrength Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
+    */
     private ?AuthenticationMethodKeyStrength $keyStrength = null;
     
     /**
@@ -33,7 +41,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WindowsHelloForBusinessAuthenticationMethod
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WindowsHelloForBusinessAuthenticationMethod {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WindowsHelloForBusinessAuthenticationMethod {
         return new WindowsHelloForBusinessAuthenticationMethod();
     }
 
@@ -66,11 +74,12 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'device' => function (self $o, ParseNode $n) { $o->setDevice($n->getObjectValue(Device::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'keyStrength' => function (self $o, ParseNode $n) { $o->setKeyStrength($n->getEnumValue(AuthenticationMethodKeyStrength::class)); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'device' => function (ParseNode $n) use ($o) { $o->setDevice($n->getObjectValue(array(Device::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'keyStrength' => function (ParseNode $n) use ($o) { $o->setKeyStrength($n->getEnumValue(AuthenticationMethodKeyStrength::class)); },
         ]);
     }
 

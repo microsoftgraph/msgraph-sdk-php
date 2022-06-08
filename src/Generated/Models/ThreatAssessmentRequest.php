@@ -7,30 +7,46 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ThreatAssessmentRequest extends Entity 
+class ThreatAssessmentRequest extends Entity implements Parsable 
 {
-    /** @var ThreatCategory|null $category The threat category. Possible values are: spam, phishing, malware. */
+    /**
+     * @var ThreatCategory|null $category The threat category. Possible values are: spam, phishing, malware.
+    */
     private ?ThreatCategory $category = null;
     
-    /** @var ThreatAssessmentContentType|null $contentType The content type of threat assessment. Possible values are: mail, url, file. */
+    /**
+     * @var ThreatAssessmentContentType|null $contentType The content type of threat assessment. Possible values are: mail, url, file.
+    */
     private ?ThreatAssessmentContentType $contentType = null;
     
-    /** @var IdentitySet|null $createdBy The threat assessment request creator. */
+    /**
+     * @var IdentitySet|null $createdBy The threat assessment request creator.
+    */
     private ?IdentitySet $createdBy = null;
     
-    /** @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var ThreatExpectedAssessment|null $expectedAssessment The expected assessment from submitter. Possible values are: block, unblock. */
+    /**
+     * @var ThreatExpectedAssessment|null $expectedAssessment The expected assessment from submitter. Possible values are: block, unblock.
+    */
     private ?ThreatExpectedAssessment $expectedAssessment = null;
     
-    /** @var ThreatAssessmentRequestSource|null $requestSource The source of the threat assessment request. Possible values are: administrator. */
+    /**
+     * @var ThreatAssessmentRequestSource|null $requestSource The source of the threat assessment request. Possible values are: user, administrator.
+    */
     private ?ThreatAssessmentRequestSource $requestSource = null;
     
-    /** @var array<ThreatAssessmentResult>|null $results A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it. */
+    /**
+     * @var array<ThreatAssessmentResult>|null $results A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
+    */
     private ?array $results = null;
     
-    /** @var ThreatAssessmentStatus|null $status The assessment process status. Possible values are: pending, completed. */
+    /**
+     * @var ThreatAssessmentStatus|null $status The assessment process status. Possible values are: pending, completed.
+    */
     private ?ThreatAssessmentStatus $status = null;
     
     /**
@@ -45,7 +61,14 @@ class ThreatAssessmentRequest extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ThreatAssessmentRequest
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ThreatAssessmentRequest {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ThreatAssessmentRequest {
+        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.threatAssessmentRequest': return new ThreatAssessmentRequest();
+            }
+        }
         return new ThreatAssessmentRequest();
     }
 
@@ -94,20 +117,21 @@ class ThreatAssessmentRequest extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'category' => function (self $o, ParseNode $n) { $o->setCategory($n->getEnumValue(ThreatCategory::class)); },
-            'contentType' => function (self $o, ParseNode $n) { $o->setContentType($n->getEnumValue(ThreatAssessmentContentType::class)); },
-            'createdBy' => function (self $o, ParseNode $n) { $o->setCreatedBy($n->getObjectValue(IdentitySet::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'expectedAssessment' => function (self $o, ParseNode $n) { $o->setExpectedAssessment($n->getEnumValue(ThreatExpectedAssessment::class)); },
-            'requestSource' => function (self $o, ParseNode $n) { $o->setRequestSource($n->getEnumValue(ThreatAssessmentRequestSource::class)); },
-            'results' => function (self $o, ParseNode $n) { $o->setResults($n->getCollectionOfObjectValues(ThreatAssessmentResult::class)); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(ThreatAssessmentStatus::class)); },
+            'category' => function (ParseNode $n) use ($o) { $o->setCategory($n->getEnumValue(ThreatCategory::class)); },
+            'contentType' => function (ParseNode $n) use ($o) { $o->setContentType($n->getEnumValue(ThreatAssessmentContentType::class)); },
+            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'expectedAssessment' => function (ParseNode $n) use ($o) { $o->setExpectedAssessment($n->getEnumValue(ThreatExpectedAssessment::class)); },
+            'requestSource' => function (ParseNode $n) use ($o) { $o->setRequestSource($n->getEnumValue(ThreatAssessmentRequestSource::class)); },
+            'results' => function (ParseNode $n) use ($o) { $o->setResults($n->getCollectionOfObjectValues(array(ThreatAssessmentResult::class, 'createFromDiscriminatorValue'))); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(ThreatAssessmentStatus::class)); },
         ]);
     }
 
     /**
-     * Gets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
+     * Gets the requestSource property value. The source of the threat assessment request. Possible values are: user, administrator.
      * @return ThreatAssessmentRequestSource|null
     */
     public function getRequestSource(): ?ThreatAssessmentRequestSource {
@@ -187,7 +211,7 @@ class ThreatAssessmentRequest extends Entity
     }
 
     /**
-     * Sets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
+     * Sets the requestSource property value. The source of the threat assessment request. Possible values are: user, administrator.
      *  @param ThreatAssessmentRequestSource|null $value Value to set for the requestSource property.
     */
     public function setRequestSource(?ThreatAssessmentRequestSource $value ): void {

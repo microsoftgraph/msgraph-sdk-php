@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ConvertIdResult implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var GenericError|null $errorDetails An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded. */
+    /**
+     * @var GenericError|null $errorDetails An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
+    */
     private ?GenericError $errorDetails = null;
     
-    /** @var string|null $sourceId The identifier that was converted. This value is the original, un-converted identifier. */
+    /**
+     * @var string|null $sourceId The identifier that was converted. This value is the original, un-converted identifier.
+    */
     private ?string $sourceId = null;
     
-    /** @var string|null $targetId The converted identifier. This value is not present if the conversion failed. */
+    /**
+     * @var string|null $targetId The converted identifier. This value is not present if the conversion failed.
+    */
     private ?string $targetId = null;
     
     /**
@@ -33,7 +41,7 @@ class ConvertIdResult implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ConvertIdResult
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ConvertIdResult {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ConvertIdResult {
         return new ConvertIdResult();
     }
 
@@ -58,10 +66,11 @@ class ConvertIdResult implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'errorDetails' => function (self $o, ParseNode $n) { $o->setErrorDetails($n->getObjectValue(GenericError::class)); },
-            'sourceId' => function (self $o, ParseNode $n) { $o->setSourceId($n->getStringValue()); },
-            'targetId' => function (self $o, ParseNode $n) { $o->setTargetId($n->getStringValue()); },
+            'errorDetails' => function (ParseNode $n) use ($o) { $o->setErrorDetails($n->getObjectValue(array(GenericError::class, 'createFromDiscriminatorValue'))); },
+            'sourceId' => function (ParseNode $n) use ($o) { $o->setSourceId($n->getStringValue()); },
+            'targetId' => function (ParseNode $n) use ($o) { $o->setTargetId($n->getStringValue()); },
         ];
     }
 

@@ -7,18 +7,26 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\Date;
 
-class PrintUsage extends Entity 
+class PrintUsage extends Entity implements Parsable 
 {
-    /** @var int|null $completedBlackAndWhiteJobCount The completedBlackAndWhiteJobCount property */
+    /**
+     * @var int|null $completedBlackAndWhiteJobCount The completedBlackAndWhiteJobCount property
+    */
     private ?int $completedBlackAndWhiteJobCount = null;
     
-    /** @var int|null $completedColorJobCount The completedColorJobCount property */
+    /**
+     * @var int|null $completedColorJobCount The completedColorJobCount property
+    */
     private ?int $completedColorJobCount = null;
     
-    /** @var int|null $incompleteJobCount The incompleteJobCount property */
+    /**
+     * @var int|null $incompleteJobCount The incompleteJobCount property
+    */
     private ?int $incompleteJobCount = null;
     
-    /** @var Date|null $usageDate The usageDate property */
+    /**
+     * @var Date|null $usageDate The usageDate property
+    */
     private ?Date $usageDate = null;
     
     /**
@@ -33,7 +41,14 @@ class PrintUsage extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrintUsage
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrintUsage {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrintUsage {
+        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.printUsage': return new PrintUsage();
+            }
+        }
         return new PrintUsage();
     }
 
@@ -58,11 +73,12 @@ class PrintUsage extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'completedBlackAndWhiteJobCount' => function (self $o, ParseNode $n) { $o->setCompletedBlackAndWhiteJobCount($n->getIntegerValue()); },
-            'completedColorJobCount' => function (self $o, ParseNode $n) { $o->setCompletedColorJobCount($n->getIntegerValue()); },
-            'incompleteJobCount' => function (self $o, ParseNode $n) { $o->setIncompleteJobCount($n->getIntegerValue()); },
-            'usageDate' => function (self $o, ParseNode $n) { $o->setUsageDate($n->getDateValue()); },
+            'completedBlackAndWhiteJobCount' => function (ParseNode $n) use ($o) { $o->setCompletedBlackAndWhiteJobCount($n->getIntegerValue()); },
+            'completedColorJobCount' => function (ParseNode $n) use ($o) { $o->setCompletedColorJobCount($n->getIntegerValue()); },
+            'incompleteJobCount' => function (ParseNode $n) use ($o) { $o->setIncompleteJobCount($n->getIntegerValue()); },
+            'usageDate' => function (ParseNode $n) use ($o) { $o->setUsageDate($n->getDateValue()); },
         ]);
     }
 

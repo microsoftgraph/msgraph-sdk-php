@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class EducationCourse implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $courseNumber Unique identifier for the course. */
+    /**
+     * @var string|null $courseNumber Unique identifier for the course.
+    */
     private ?string $courseNumber = null;
     
-    /** @var string|null $description Description of the course. */
+    /**
+     * @var string|null $description Description of the course.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName Name of the course. */
+    /**
+     * @var string|null $displayName Name of the course.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $externalId ID of the course from the syncing system. */
+    /**
+     * @var string|null $externalId ID of the course from the syncing system.
+    */
     private ?string $externalId = null;
     
-    /** @var string|null $subject Subject of the course. */
+    /**
+     * @var string|null $subject Subject of the course.
+    */
     private ?string $subject = null;
     
     /**
@@ -39,7 +51,7 @@ class EducationCourse implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return EducationCourse
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): EducationCourse {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): EducationCourse {
         return new EducationCourse();
     }
 
@@ -88,12 +100,13 @@ class EducationCourse implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'courseNumber' => function (self $o, ParseNode $n) { $o->setCourseNumber($n->getStringValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'externalId' => function (self $o, ParseNode $n) { $o->setExternalId($n->getStringValue()); },
-            'subject' => function (self $o, ParseNode $n) { $o->setSubject($n->getStringValue()); },
+            'courseNumber' => function (ParseNode $n) use ($o) { $o->setCourseNumber($n->getStringValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'externalId' => function (ParseNode $n) use ($o) { $o->setExternalId($n->getStringValue()); },
+            'subject' => function (ParseNode $n) use ($o) { $o->setSubject($n->getStringValue()); },
         ];
     }
 

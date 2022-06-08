@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ConditionalAccessApplications implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<string>|null $excludeApplications The list of application IDs explicitly excluded from the policy. */
+    /**
+     * @var array<string>|null $excludeApplications The list of application IDs explicitly excluded from the policy.
+    */
     private ?array $excludeApplications = null;
     
-    /** @var array<string>|null $includeApplications The list of application IDs the policy applies to, unless explicitly excluded (in excludeApplications). Can also be set to All. */
+    /**
+     * @var array<string>|null $includeApplications The list of application IDs the policy applies to, unless explicitly excluded (in excludeApplications). Can also be set to All.
+    */
     private ?array $includeApplications = null;
     
-    /** @var array<string>|null $includeAuthenticationContextClassReferences Authentication context class references include. Supported values are c1 through c25. */
+    /**
+     * @var array<string>|null $includeAuthenticationContextClassReferences Authentication context class references include. Supported values are c1 through c25.
+    */
     private ?array $includeAuthenticationContextClassReferences = null;
     
-    /** @var array<string>|null $includeUserActions User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice */
+    /**
+     * @var array<string>|null $includeUserActions User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice
+    */
     private ?array $includeUserActions = null;
     
     /**
@@ -36,7 +46,7 @@ class ConditionalAccessApplications implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ConditionalAccessApplications
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessApplications {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessApplications {
         return new ConditionalAccessApplications();
     }
 
@@ -61,11 +71,12 @@ class ConditionalAccessApplications implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'excludeApplications' => function (self $o, ParseNode $n) { $o->setExcludeApplications($n->getCollectionOfPrimitiveValues()); },
-            'includeApplications' => function (self $o, ParseNode $n) { $o->setIncludeApplications($n->getCollectionOfPrimitiveValues()); },
-            'includeAuthenticationContextClassReferences' => function (self $o, ParseNode $n) { $o->setIncludeAuthenticationContextClassReferences($n->getCollectionOfPrimitiveValues()); },
-            'includeUserActions' => function (self $o, ParseNode $n) { $o->setIncludeUserActions($n->getCollectionOfPrimitiveValues()); },
+            'excludeApplications' => function (ParseNode $n) use ($o) { $o->setExcludeApplications($n->getCollectionOfPrimitiveValues()); },
+            'includeApplications' => function (ParseNode $n) use ($o) { $o->setIncludeApplications($n->getCollectionOfPrimitiveValues()); },
+            'includeAuthenticationContextClassReferences' => function (ParseNode $n) use ($o) { $o->setIncludeAuthenticationContextClassReferences($n->getCollectionOfPrimitiveValues()); },
+            'includeUserActions' => function (ParseNode $n) use ($o) { $o->setIncludeUserActions($n->getCollectionOfPrimitiveValues()); },
         ];
     }
 

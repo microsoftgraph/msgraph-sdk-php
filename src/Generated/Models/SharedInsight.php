@@ -6,24 +6,36 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class SharedInsight extends Entity 
+class SharedInsight extends Entity implements Parsable 
 {
-    /** @var SharingDetail|null $lastShared Details about the shared item. Read only. */
+    /**
+     * @var SharingDetail|null $lastShared Details about the shared item. Read only.
+    */
     private ?SharingDetail $lastShared = null;
     
-    /** @var Entity|null $lastSharedMethod The lastSharedMethod property */
+    /**
+     * @var Entity|null $lastSharedMethod The lastSharedMethod property
+    */
     private ?Entity $lastSharedMethod = null;
     
-    /** @var Entity|null $resource Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem. */
+    /**
+     * @var Entity|null $resource Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
+    */
     private ?Entity $resource = null;
     
-    /** @var ResourceReference|null $resourceReference Reference properties of the shared document, such as the url and type of the document. Read-only */
+    /**
+     * @var ResourceReference|null $resourceReference Reference properties of the shared document, such as the url and type of the document. Read-only
+    */
     private ?ResourceReference $resourceReference = null;
     
-    /** @var ResourceVisualization|null $resourceVisualization Properties that you can use to visualize the document in your experience. Read-only */
+    /**
+     * @var ResourceVisualization|null $resourceVisualization Properties that you can use to visualize the document in your experience. Read-only
+    */
     private ?ResourceVisualization $resourceVisualization = null;
     
-    /** @var array<SharingDetail>|null $sharingHistory The sharingHistory property */
+    /**
+     * @var array<SharingDetail>|null $sharingHistory The sharingHistory property
+    */
     private ?array $sharingHistory = null;
     
     /**
@@ -38,7 +50,7 @@ class SharedInsight extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SharedInsight
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SharedInsight {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SharedInsight {
         return new SharedInsight();
     }
 
@@ -47,13 +59,14 @@ class SharedInsight extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'lastShared' => function (self $o, ParseNode $n) { $o->setLastShared($n->getObjectValue(SharingDetail::class)); },
-            'lastSharedMethod' => function (self $o, ParseNode $n) { $o->setLastSharedMethod($n->getObjectValue(Entity::class)); },
-            'resource' => function (self $o, ParseNode $n) { $o->setResource($n->getObjectValue(Entity::class)); },
-            'resourceReference' => function (self $o, ParseNode $n) { $o->setResourceReference($n->getObjectValue(ResourceReference::class)); },
-            'resourceVisualization' => function (self $o, ParseNode $n) { $o->setResourceVisualization($n->getObjectValue(ResourceVisualization::class)); },
-            'sharingHistory' => function (self $o, ParseNode $n) { $o->setSharingHistory($n->getCollectionOfObjectValues(SharingDetail::class)); },
+            'lastShared' => function (ParseNode $n) use ($o) { $o->setLastShared($n->getObjectValue(array(SharingDetail::class, 'createFromDiscriminatorValue'))); },
+            'lastSharedMethod' => function (ParseNode $n) use ($o) { $o->setLastSharedMethod($n->getObjectValue(array(Entity::class, 'createFromDiscriminatorValue'))); },
+            'resource' => function (ParseNode $n) use ($o) { $o->setResource($n->getObjectValue(array(Entity::class, 'createFromDiscriminatorValue'))); },
+            'resourceReference' => function (ParseNode $n) use ($o) { $o->setResourceReference($n->getObjectValue(array(ResourceReference::class, 'createFromDiscriminatorValue'))); },
+            'resourceVisualization' => function (ParseNode $n) use ($o) { $o->setResourceVisualization($n->getObjectValue(array(ResourceVisualization::class, 'createFromDiscriminatorValue'))); },
+            'sharingHistory' => function (ParseNode $n) use ($o) { $o->setSharingHistory($n->getCollectionOfObjectValues(array(SharingDetail::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

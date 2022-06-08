@@ -10,25 +10,39 @@ use Psr\Http\Message\StreamInterface;
 
 class CertificateAuthority implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var StreamInterface|null $certificate Required. The base64 encoded string representing the public certificate. */
+    /**
+     * @var StreamInterface|null $certificate Required. The base64 encoded string representing the public certificate.
+    */
     private ?StreamInterface $certificate = null;
     
-    /** @var string|null $certificateRevocationListUrl The URL of the certificate revocation list. */
+    /**
+     * @var string|null $certificateRevocationListUrl The URL of the certificate revocation list.
+    */
     private ?string $certificateRevocationListUrl = null;
     
-    /** @var string|null $deltaCertificateRevocationListUrl The URL contains the list of all revoked certificates since the last time a full certificate revocaton list was created. */
+    /**
+     * @var string|null $deltaCertificateRevocationListUrl The URL contains the list of all revoked certificates since the last time a full certificate revocaton list was created.
+    */
     private ?string $deltaCertificateRevocationListUrl = null;
     
-    /** @var bool|null $isRootAuthority Required. true if the trusted certificate is a root authority, false if the trusted certificate is an intermediate authority. */
+    /**
+     * @var bool|null $isRootAuthority Required. true if the trusted certificate is a root authority, false if the trusted certificate is an intermediate authority.
+    */
     private ?bool $isRootAuthority = null;
     
-    /** @var string|null $issuer The issuer of the certificate, calculated from the certificate value. Read-only. */
+    /**
+     * @var string|null $issuer The issuer of the certificate, calculated from the certificate value. Read-only.
+    */
     private ?string $issuer = null;
     
-    /** @var string|null $issuerSki The subject key identifier of the certificate, calculated from the certificate value. Read-only. */
+    /**
+     * @var string|null $issuerSki The subject key identifier of the certificate, calculated from the certificate value. Read-only.
+    */
     private ?string $issuerSki = null;
     
     /**
@@ -43,7 +57,7 @@ class CertificateAuthority implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return CertificateAuthority
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): CertificateAuthority {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): CertificateAuthority {
         return new CertificateAuthority();
     }
 
@@ -84,13 +98,14 @@ class CertificateAuthority implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'certificate' => function (self $o, ParseNode $n) { $o->setCertificate($n->getBinaryContent()); },
-            'certificateRevocationListUrl' => function (self $o, ParseNode $n) { $o->setCertificateRevocationListUrl($n->getStringValue()); },
-            'deltaCertificateRevocationListUrl' => function (self $o, ParseNode $n) { $o->setDeltaCertificateRevocationListUrl($n->getStringValue()); },
-            'isRootAuthority' => function (self $o, ParseNode $n) { $o->setIsRootAuthority($n->getBooleanValue()); },
-            'issuer' => function (self $o, ParseNode $n) { $o->setIssuer($n->getStringValue()); },
-            'issuerSki' => function (self $o, ParseNode $n) { $o->setIssuerSki($n->getStringValue()); },
+            'certificate' => function (ParseNode $n) use ($o) { $o->setCertificate($n->getBinaryContent()); },
+            'certificateRevocationListUrl' => function (ParseNode $n) use ($o) { $o->setCertificateRevocationListUrl($n->getStringValue()); },
+            'deltaCertificateRevocationListUrl' => function (ParseNode $n) use ($o) { $o->setDeltaCertificateRevocationListUrl($n->getStringValue()); },
+            'isRootAuthority' => function (ParseNode $n) use ($o) { $o->setIsRootAuthority($n->getBooleanValue()); },
+            'issuer' => function (ParseNode $n) use ($o) { $o->setIssuer($n->getStringValue()); },
+            'issuerSki' => function (ParseNode $n) use ($o) { $o->setIssuerSki($n->getStringValue()); },
         ];
     }
 

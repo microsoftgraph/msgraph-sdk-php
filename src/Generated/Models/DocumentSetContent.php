@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class DocumentSetContent implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var ContentTypeInfo|null $contentType Content type information of the file. */
+    /**
+     * @var ContentTypeInfo|null $contentType Content type information of the file.
+    */
     private ?ContentTypeInfo $contentType = null;
     
-    /** @var string|null $fileName Name of the file in resource folder that should be added as a default content or a template in the document set. */
+    /**
+     * @var string|null $fileName Name of the file in resource folder that should be added as a default content or a template in the document set
+    */
     private ?string $fileName = null;
     
-    /** @var string|null $folderName Folder name in which the file will be placed when a new document set is created in the library. */
+    /**
+     * @var string|null $folderName Folder name in which the file will be placed when a new document set is created in the library.
+    */
     private ?string $folderName = null;
     
     /**
@@ -33,7 +41,7 @@ class DocumentSetContent implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DocumentSetContent
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DocumentSetContent {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DocumentSetContent {
         return new DocumentSetContent();
     }
 
@@ -58,15 +66,16 @@ class DocumentSetContent implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'contentType' => function (self $o, ParseNode $n) { $o->setContentType($n->getObjectValue(ContentTypeInfo::class)); },
-            'fileName' => function (self $o, ParseNode $n) { $o->setFileName($n->getStringValue()); },
-            'folderName' => function (self $o, ParseNode $n) { $o->setFolderName($n->getStringValue()); },
+            'contentType' => function (ParseNode $n) use ($o) { $o->setContentType($n->getObjectValue(array(ContentTypeInfo::class, 'createFromDiscriminatorValue'))); },
+            'fileName' => function (ParseNode $n) use ($o) { $o->setFileName($n->getStringValue()); },
+            'folderName' => function (ParseNode $n) use ($o) { $o->setFolderName($n->getStringValue()); },
         ];
     }
 
     /**
-     * Gets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set.
+     * Gets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set
      * @return string|null
     */
     public function getFileName(): ?string {
@@ -109,7 +118,7 @@ class DocumentSetContent implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set.
+     * Sets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set
      *  @param string|null $value Value to set for the fileName property.
     */
     public function setFileName(?string $value ): void {

@@ -9,79 +9,139 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class NetworkInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var float|null $bandwidthLowEventRatio Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent. */
+    /**
+     * @var float|null $bandwidthLowEventRatio Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
+    */
     private ?float $bandwidthLowEventRatio = null;
     
-    /** @var string|null $basicServiceSetIdentifier The wireless LAN basic service set identifier of the media endpoint used to connect to the network. */
+    /**
+     * @var string|null $basicServiceSetIdentifier The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
+    */
     private ?string $basicServiceSetIdentifier = null;
     
-    /** @var NetworkConnectionType|null $connectionType Type of network used by the media endpoint. Possible values are: unknown, wired, wifi, mobile, tunnel, unknownFutureValue. */
+    /**
+     * @var NetworkConnectionType|null $connectionType Type of network used by the media endpoint. Possible values are: unknown, wired, wifi, mobile, tunnel, unknownFutureValue.
+    */
     private ?NetworkConnectionType $connectionType = null;
     
-    /** @var float|null $delayEventRatio Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication. */
+    /**
+     * @var float|null $delayEventRatio Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
+    */
     private ?float $delayEventRatio = null;
     
-    /** @var string|null $dnsSuffix DNS suffix associated with the network adapter of the media endpoint. */
+    /**
+     * @var string|null $dnsSuffix DNS suffix associated with the network adapter of the media endpoint.
+    */
     private ?string $dnsSuffix = null;
     
-    /** @var string|null $ipAddress IP address of the media endpoint. */
+    /**
+     * @var string|null $ipAddress IP address of the media endpoint.
+    */
     private ?string $ipAddress = null;
     
-    /** @var int|null $linkSpeed Link speed in bits per second reported by the network adapter used by the media endpoint. */
+    /**
+     * @var int|null $linkSpeed Link speed in bits per second reported by the network adapter used by the media endpoint.
+    */
     private ?int $linkSpeed = null;
     
-    /** @var string|null $macAddress The media access control (MAC) address of the media endpoint's network device. */
+    /**
+     * @var string|null $macAddress The media access control (MAC) address of the media endpoint's network device.
+    */
     private ?string $macAddress = null;
     
-    /** @var int|null $port Network port number used by media endpoint. */
+    /**
+     * @var NetworkTransportProtocol|null $networkTransportProtocol Network protocol used for the transmission of stream. Possible values are: unknown, udp, tcp, unknownFutureValue.
+    */
+    private ?NetworkTransportProtocol $networkTransportProtocol = null;
+    
+    /**
+     * @var int|null $port Network port number used by media endpoint.
+    */
     private ?int $port = null;
     
-    /** @var float|null $receivedQualityEventRatio Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received. */
+    /**
+     * @var float|null $receivedQualityEventRatio Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
+    */
     private ?float $receivedQualityEventRatio = null;
     
-    /** @var string|null $reflexiveIPAddress IP address of the media endpoint as seen by the media relay server. This is typically the public internet IP address associated to the endpoint. */
+    /**
+     * @var string|null $reflexiveIPAddress IP address of the media endpoint as seen by the media relay server. This is typically the public internet IP address associated to the endpoint.
+    */
     private ?string $reflexiveIPAddress = null;
     
-    /** @var string|null $relayIPAddress IP address of the media relay server allocated by the media endpoint. */
+    /**
+     * @var string|null $relayIPAddress IP address of the media relay server allocated by the media endpoint.
+    */
     private ?string $relayIPAddress = null;
     
-    /** @var int|null $relayPort Network port number allocated on the media relay server by the media endpoint. */
+    /**
+     * @var int|null $relayPort Network port number allocated on the media relay server by the media endpoint.
+    */
     private ?int $relayPort = null;
     
-    /** @var float|null $sentQualityEventRatio Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent. */
+    /**
+     * @var float|null $sentQualityEventRatio Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
+    */
     private ?float $sentQualityEventRatio = null;
     
-    /** @var string|null $subnet Subnet used for media stream by the media endpoint. */
+    /**
+     * @var string|null $subnet Subnet used for media stream by the media endpoint.
+    */
     private ?string $subnet = null;
     
-    /** @var WifiBand|null $wifiBand WiFi band used by the media endpoint. Possible values are: unknown, frequency24GHz, frequency50GHz, frequency60GHz, unknownFutureValue. */
+    /**
+     * @var array<TraceRouteHop>|null $traceRouteHops List of network trace route hops collected for this media stream.
+    */
+    private ?array $traceRouteHops = null;
+    
+    /**
+     * @var WifiBand|null $wifiBand WiFi band used by the media endpoint. Possible values are: unknown, frequency24GHz, frequency50GHz, frequency60GHz, unknownFutureValue.
+    */
     private ?WifiBand $wifiBand = null;
     
-    /** @var int|null $wifiBatteryCharge Estimated remaining battery charge in percentage reported by the media endpoint. */
+    /**
+     * @var int|null $wifiBatteryCharge Estimated remaining battery charge in percentage reported by the media endpoint.
+    */
     private ?int $wifiBatteryCharge = null;
     
-    /** @var int|null $wifiChannel WiFi channel used by the media endpoint. */
+    /**
+     * @var int|null $wifiChannel WiFi channel used by the media endpoint.
+    */
     private ?int $wifiChannel = null;
     
-    /** @var string|null $wifiMicrosoftDriver Name of the Microsoft WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint. */
+    /**
+     * @var string|null $wifiMicrosoftDriver Name of the Microsoft WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
+    */
     private ?string $wifiMicrosoftDriver = null;
     
-    /** @var string|null $wifiMicrosoftDriverVersion Version of the Microsoft WiFi driver used by the media endpoint. */
+    /**
+     * @var string|null $wifiMicrosoftDriverVersion Version of the Microsoft WiFi driver used by the media endpoint.
+    */
     private ?string $wifiMicrosoftDriverVersion = null;
     
-    /** @var WifiRadioType|null $wifiRadioType Type of WiFi radio used by the media endpoint. Possible values are: unknown, wifi80211a, wifi80211b, wifi80211g, wifi80211n, wifi80211ac, wifi80211ax, unknownFutureValue. */
+    /**
+     * @var WifiRadioType|null $wifiRadioType Type of WiFi radio used by the media endpoint. Possible values are: unknown, wifi80211a, wifi80211b, wifi80211g, wifi80211n, wifi80211ac, wifi80211ax, unknownFutureValue.
+    */
     private ?WifiRadioType $wifiRadioType = null;
     
-    /** @var int|null $wifiSignalStrength WiFi signal strength in percentage reported by the media endpoint. */
+    /**
+     * @var int|null $wifiSignalStrength WiFi signal strength in percentage reported by the media endpoint.
+    */
     private ?int $wifiSignalStrength = null;
     
-    /** @var string|null $wifiVendorDriver Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint. */
+    /**
+     * @var string|null $wifiVendorDriver Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
+    */
     private ?string $wifiVendorDriver = null;
     
-    /** @var string|null $wifiVendorDriverVersion Version of the WiFi driver used by the media endpoint. */
+    /**
+     * @var string|null $wifiVendorDriverVersion Version of the WiFi driver used by the media endpoint.
+    */
     private ?string $wifiVendorDriverVersion = null;
     
     /**
@@ -96,7 +156,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return NetworkInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): NetworkInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): NetworkInfo {
         return new NetworkInfo();
     }
 
@@ -153,31 +213,34 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'bandwidthLowEventRatio' => function (self $o, ParseNode $n) { $o->setBandwidthLowEventRatio($n->getFloatValue()); },
-            'basicServiceSetIdentifier' => function (self $o, ParseNode $n) { $o->setBasicServiceSetIdentifier($n->getStringValue()); },
-            'connectionType' => function (self $o, ParseNode $n) { $o->setConnectionType($n->getEnumValue(NetworkConnectionType::class)); },
-            'delayEventRatio' => function (self $o, ParseNode $n) { $o->setDelayEventRatio($n->getFloatValue()); },
-            'dnsSuffix' => function (self $o, ParseNode $n) { $o->setDnsSuffix($n->getStringValue()); },
-            'ipAddress' => function (self $o, ParseNode $n) { $o->setIpAddress($n->getStringValue()); },
-            'linkSpeed' => function (self $o, ParseNode $n) { $o->setLinkSpeed($n->getIntegerValue()); },
-            'macAddress' => function (self $o, ParseNode $n) { $o->setMacAddress($n->getStringValue()); },
-            'port' => function (self $o, ParseNode $n) { $o->setPort($n->getIntegerValue()); },
-            'receivedQualityEventRatio' => function (self $o, ParseNode $n) { $o->setReceivedQualityEventRatio($n->getFloatValue()); },
-            'reflexiveIPAddress' => function (self $o, ParseNode $n) { $o->setReflexiveIPAddress($n->getStringValue()); },
-            'relayIPAddress' => function (self $o, ParseNode $n) { $o->setRelayIPAddress($n->getStringValue()); },
-            'relayPort' => function (self $o, ParseNode $n) { $o->setRelayPort($n->getIntegerValue()); },
-            'sentQualityEventRatio' => function (self $o, ParseNode $n) { $o->setSentQualityEventRatio($n->getFloatValue()); },
-            'subnet' => function (self $o, ParseNode $n) { $o->setSubnet($n->getStringValue()); },
-            'wifiBand' => function (self $o, ParseNode $n) { $o->setWifiBand($n->getEnumValue(WifiBand::class)); },
-            'wifiBatteryCharge' => function (self $o, ParseNode $n) { $o->setWifiBatteryCharge($n->getIntegerValue()); },
-            'wifiChannel' => function (self $o, ParseNode $n) { $o->setWifiChannel($n->getIntegerValue()); },
-            'wifiMicrosoftDriver' => function (self $o, ParseNode $n) { $o->setWifiMicrosoftDriver($n->getStringValue()); },
-            'wifiMicrosoftDriverVersion' => function (self $o, ParseNode $n) { $o->setWifiMicrosoftDriverVersion($n->getStringValue()); },
-            'wifiRadioType' => function (self $o, ParseNode $n) { $o->setWifiRadioType($n->getEnumValue(WifiRadioType::class)); },
-            'wifiSignalStrength' => function (self $o, ParseNode $n) { $o->setWifiSignalStrength($n->getIntegerValue()); },
-            'wifiVendorDriver' => function (self $o, ParseNode $n) { $o->setWifiVendorDriver($n->getStringValue()); },
-            'wifiVendorDriverVersion' => function (self $o, ParseNode $n) { $o->setWifiVendorDriverVersion($n->getStringValue()); },
+            'bandwidthLowEventRatio' => function (ParseNode $n) use ($o) { $o->setBandwidthLowEventRatio($n->getFloatValue()); },
+            'basicServiceSetIdentifier' => function (ParseNode $n) use ($o) { $o->setBasicServiceSetIdentifier($n->getStringValue()); },
+            'connectionType' => function (ParseNode $n) use ($o) { $o->setConnectionType($n->getEnumValue(NetworkConnectionType::class)); },
+            'delayEventRatio' => function (ParseNode $n) use ($o) { $o->setDelayEventRatio($n->getFloatValue()); },
+            'dnsSuffix' => function (ParseNode $n) use ($o) { $o->setDnsSuffix($n->getStringValue()); },
+            'ipAddress' => function (ParseNode $n) use ($o) { $o->setIpAddress($n->getStringValue()); },
+            'linkSpeed' => function (ParseNode $n) use ($o) { $o->setLinkSpeed($n->getIntegerValue()); },
+            'macAddress' => function (ParseNode $n) use ($o) { $o->setMacAddress($n->getStringValue()); },
+            'networkTransportProtocol' => function (ParseNode $n) use ($o) { $o->setNetworkTransportProtocol($n->getEnumValue(NetworkTransportProtocol::class)); },
+            'port' => function (ParseNode $n) use ($o) { $o->setPort($n->getIntegerValue()); },
+            'receivedQualityEventRatio' => function (ParseNode $n) use ($o) { $o->setReceivedQualityEventRatio($n->getFloatValue()); },
+            'reflexiveIPAddress' => function (ParseNode $n) use ($o) { $o->setReflexiveIPAddress($n->getStringValue()); },
+            'relayIPAddress' => function (ParseNode $n) use ($o) { $o->setRelayIPAddress($n->getStringValue()); },
+            'relayPort' => function (ParseNode $n) use ($o) { $o->setRelayPort($n->getIntegerValue()); },
+            'sentQualityEventRatio' => function (ParseNode $n) use ($o) { $o->setSentQualityEventRatio($n->getFloatValue()); },
+            'subnet' => function (ParseNode $n) use ($o) { $o->setSubnet($n->getStringValue()); },
+            'traceRouteHops' => function (ParseNode $n) use ($o) { $o->setTraceRouteHops($n->getCollectionOfObjectValues(array(TraceRouteHop::class, 'createFromDiscriminatorValue'))); },
+            'wifiBand' => function (ParseNode $n) use ($o) { $o->setWifiBand($n->getEnumValue(WifiBand::class)); },
+            'wifiBatteryCharge' => function (ParseNode $n) use ($o) { $o->setWifiBatteryCharge($n->getIntegerValue()); },
+            'wifiChannel' => function (ParseNode $n) use ($o) { $o->setWifiChannel($n->getIntegerValue()); },
+            'wifiMicrosoftDriver' => function (ParseNode $n) use ($o) { $o->setWifiMicrosoftDriver($n->getStringValue()); },
+            'wifiMicrosoftDriverVersion' => function (ParseNode $n) use ($o) { $o->setWifiMicrosoftDriverVersion($n->getStringValue()); },
+            'wifiRadioType' => function (ParseNode $n) use ($o) { $o->setWifiRadioType($n->getEnumValue(WifiRadioType::class)); },
+            'wifiSignalStrength' => function (ParseNode $n) use ($o) { $o->setWifiSignalStrength($n->getIntegerValue()); },
+            'wifiVendorDriver' => function (ParseNode $n) use ($o) { $o->setWifiVendorDriver($n->getStringValue()); },
+            'wifiVendorDriverVersion' => function (ParseNode $n) use ($o) { $o->setWifiVendorDriverVersion($n->getStringValue()); },
         ];
     }
 
@@ -203,6 +266,14 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
     */
     public function getMacAddress(): ?string {
         return $this->macAddress;
+    }
+
+    /**
+     * Gets the networkTransportProtocol property value. Network protocol used for the transmission of stream. Possible values are: unknown, udp, tcp, unknownFutureValue.
+     * @return NetworkTransportProtocol|null
+    */
+    public function getNetworkTransportProtocol(): ?NetworkTransportProtocol {
+        return $this->networkTransportProtocol;
     }
 
     /**
@@ -259,6 +330,14 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
     */
     public function getSubnet(): ?string {
         return $this->subnet;
+    }
+
+    /**
+     * Gets the traceRouteHops property value. List of network trace route hops collected for this media stream.
+     * @return array<TraceRouteHop>|null
+    */
+    public function getTraceRouteHops(): ?array {
+        return $this->traceRouteHops;
     }
 
     /**
@@ -346,6 +425,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('ipAddress', $this->ipAddress);
         $writer->writeIntegerValue('linkSpeed', $this->linkSpeed);
         $writer->writeStringValue('macAddress', $this->macAddress);
+        $writer->writeEnumValue('networkTransportProtocol', $this->networkTransportProtocol);
         $writer->writeIntegerValue('port', $this->port);
         $writer->writeFloatValue('receivedQualityEventRatio', $this->receivedQualityEventRatio);
         $writer->writeStringValue('reflexiveIPAddress', $this->reflexiveIPAddress);
@@ -353,6 +433,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
         $writer->writeIntegerValue('relayPort', $this->relayPort);
         $writer->writeFloatValue('sentQualityEventRatio', $this->sentQualityEventRatio);
         $writer->writeStringValue('subnet', $this->subnet);
+        $writer->writeCollectionOfObjectValues('traceRouteHops', $this->traceRouteHops);
         $writer->writeEnumValue('wifiBand', $this->wifiBand);
         $writer->writeIntegerValue('wifiBatteryCharge', $this->wifiBatteryCharge);
         $writer->writeIntegerValue('wifiChannel', $this->wifiChannel);
@@ -438,6 +519,14 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Sets the networkTransportProtocol property value. Network protocol used for the transmission of stream. Possible values are: unknown, udp, tcp, unknownFutureValue.
+     *  @param NetworkTransportProtocol|null $value Value to set for the networkTransportProtocol property.
+    */
+    public function setNetworkTransportProtocol(?NetworkTransportProtocol $value ): void {
+        $this->networkTransportProtocol = $value;
+    }
+
+    /**
      * Sets the port property value. Network port number used by media endpoint.
      *  @param int|null $value Value to set for the port property.
     */
@@ -491,6 +580,14 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
     */
     public function setSubnet(?string $value ): void {
         $this->subnet = $value;
+    }
+
+    /**
+     * Sets the traceRouteHops property value. List of network trace route hops collected for this media stream.
+     *  @param array<TraceRouteHop>|null $value Value to set for the traceRouteHops property.
+    */
+    public function setTraceRouteHops(?array $value ): void {
+        $this->traceRouteHops = $value;
     }
 
     /**

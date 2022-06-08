@@ -10,16 +10,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class BookingReminder implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $message The message in the reminder. */
+    /**
+     * @var string|null $message The message in the reminder.
+    */
     private ?string $message = null;
     
-    /** @var DateInterval|null $offset The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format. */
+    /**
+     * @var DateInterval|null $offset The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format.
+    */
     private ?DateInterval $offset = null;
     
-    /** @var BookingReminderRecipients|null $recipients The persons who should receive the reminder. Possible values are: allAttendees, staff, customer, unknownFutureValue. */
+    /**
+     * @var BookingReminderRecipients|null $recipients The persons who should receive the reminder. Possible values are: allAttendees, staff, customer and unknownFutureValue.
+    */
     private ?BookingReminderRecipients $recipients = null;
     
     /**
@@ -34,7 +42,7 @@ class BookingReminder implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return BookingReminder
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): BookingReminder {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): BookingReminder {
         return new BookingReminder();
     }
 
@@ -51,10 +59,11 @@ class BookingReminder implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'message' => function (self $o, ParseNode $n) { $o->setMessage($n->getStringValue()); },
-            'offset' => function (self $o, ParseNode $n) { $o->setOffset($n->getDateIntervalValue()); },
-            'recipients' => function (self $o, ParseNode $n) { $o->setRecipients($n->getEnumValue(BookingReminderRecipients::class)); },
+            'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getStringValue()); },
+            'offset' => function (ParseNode $n) use ($o) { $o->setOffset($n->getDateIntervalValue()); },
+            'recipients' => function (ParseNode $n) use ($o) { $o->setRecipients($n->getEnumValue(BookingReminderRecipients::class)); },
         ];
     }
 
@@ -75,7 +84,7 @@ class BookingReminder implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the recipients property value. The persons who should receive the reminder. Possible values are: allAttendees, staff, customer, unknownFutureValue.
+     * Gets the recipients property value. The persons who should receive the reminder. Possible values are: allAttendees, staff, customer and unknownFutureValue.
      * @return BookingReminderRecipients|null
     */
     public function getRecipients(): ?BookingReminderRecipients {
@@ -118,7 +127,7 @@ class BookingReminder implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the recipients property value. The persons who should receive the reminder. Possible values are: allAttendees, staff, customer, unknownFutureValue.
+     * Sets the recipients property value. The persons who should receive the reminder. Possible values are: allAttendees, staff, customer and unknownFutureValue.
      *  @param BookingReminderRecipients|null $value Value to set for the recipients property.
     */
     public function setRecipients(?BookingReminderRecipients $value ): void {

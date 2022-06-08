@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class DriveRecipient implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $alias The alias of the domain object, for cases where an email address is unavailable (e.g. security groups). */
+    /**
+     * @var string|null $alias The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
+    */
     private ?string $alias = null;
     
-    /** @var string|null $email The email address for the recipient, if the recipient has an associated email address. */
+    /**
+     * @var string|null $email The email address for the recipient, if the recipient has an associated email address.
+    */
     private ?string $email = null;
     
-    /** @var string|null $objectId The unique identifier for the recipient in the directory. */
+    /**
+     * @var string|null $objectId The unique identifier for the recipient in the directory.
+    */
     private ?string $objectId = null;
     
     /**
@@ -33,7 +41,7 @@ class DriveRecipient implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DriveRecipient
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DriveRecipient {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DriveRecipient {
         return new DriveRecipient();
     }
 
@@ -66,10 +74,11 @@ class DriveRecipient implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'alias' => function (self $o, ParseNode $n) { $o->setAlias($n->getStringValue()); },
-            'email' => function (self $o, ParseNode $n) { $o->setEmail($n->getStringValue()); },
-            'objectId' => function (self $o, ParseNode $n) { $o->setObjectId($n->getStringValue()); },
+            'alias' => function (ParseNode $n) use ($o) { $o->setAlias($n->getStringValue()); },
+            'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
+            'objectId' => function (ParseNode $n) use ($o) { $o->setObjectId($n->getStringValue()); },
         ];
     }
 

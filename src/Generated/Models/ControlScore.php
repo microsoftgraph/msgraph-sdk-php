@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ControlScore implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $controlCategory Control action category (Identity, Data, Device, Apps, Infrastructure). */
+    /**
+     * @var string|null $controlCategory Control action category (Identity, Data, Device, Apps, Infrastructure).
+    */
     private ?string $controlCategory = null;
     
-    /** @var string|null $controlName Control unique name. */
+    /**
+     * @var string|null $controlName Control unique name.
+    */
     private ?string $controlName = null;
     
-    /** @var string|null $description Description of the control. */
+    /**
+     * @var string|null $description Description of the control.
+    */
     private ?string $description = null;
     
-    /** @var float|null $score Tenant achieved score for the control (it varies day by day depending on tenant operations on the control). */
+    /**
+     * @var float|null $score Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
+    */
     private ?float $score = null;
     
     /**
@@ -36,7 +46,7 @@ class ControlScore implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ControlScore
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ControlScore {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ControlScore {
         return new ControlScore();
     }
 
@@ -77,11 +87,12 @@ class ControlScore implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'controlCategory' => function (self $o, ParseNode $n) { $o->setControlCategory($n->getStringValue()); },
-            'controlName' => function (self $o, ParseNode $n) { $o->setControlName($n->getStringValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'score' => function (self $o, ParseNode $n) { $o->setScore($n->getFloatValue()); },
+            'controlCategory' => function (ParseNode $n) use ($o) { $o->setControlCategory($n->getStringValue()); },
+            'controlName' => function (ParseNode $n) use ($o) { $o->setControlName($n->getStringValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'score' => function (ParseNode $n) use ($o) { $o->setScore($n->getFloatValue()); },
         ];
     }
 

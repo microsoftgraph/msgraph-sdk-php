@@ -9,25 +9,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class WorkbookSortField implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $ascending Represents whether the sorting is done in an ascending fashion. */
+    /**
+     * @var bool|null $ascending Represents whether the sorting is done in an ascending fashion.
+    */
     private ?bool $ascending = null;
     
-    /** @var string|null $color Represents the color that is the target of the condition if the sorting is on font or cell color. */
+    /**
+     * @var string|null $color Represents the color that is the target of the condition if the sorting is on font or cell color.
+    */
     private ?string $color = null;
     
-    /** @var string|null $dataOption Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber. */
+    /**
+     * @var string|null $dataOption Represents additional sorting options for this field. Possible values are: Normal, TextAsNumber.
+    */
     private ?string $dataOption = null;
     
-    /** @var WorkbookIcon|null $icon Represents the icon that is the target of the condition if the sorting is on the cell's icon. */
+    /**
+     * @var WorkbookIcon|null $icon Represents the icon that is the target of the condition if the sorting is on the cell's icon.
+    */
     private ?WorkbookIcon $icon = null;
     
-    /** @var int|null $key Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset from the first column (or row). */
+    /**
+     * @var int|null $key Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset from the first column (or row).
+    */
     private ?int $key = null;
     
-    /** @var string|null $sortOn Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon. */
+    /**
+     * @var string|null $sortOn Represents the type of sorting of this condition. Possible values are: Value, CellColor, FontColor, Icon.
+    */
     private ?string $sortOn = null;
     
     /**
@@ -42,7 +56,7 @@ class WorkbookSortField implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookSortField
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookSortField {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookSortField {
         return new WorkbookSortField();
     }
 
@@ -71,7 +85,7 @@ class WorkbookSortField implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the dataOption property value. Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
+     * Gets the dataOption property value. Represents additional sorting options for this field. Possible values are: Normal, TextAsNumber.
      * @return string|null
     */
     public function getDataOption(): ?string {
@@ -83,13 +97,14 @@ class WorkbookSortField implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'ascending' => function (self $o, ParseNode $n) { $o->setAscending($n->getBooleanValue()); },
-            'color' => function (self $o, ParseNode $n) { $o->setColor($n->getStringValue()); },
-            'dataOption' => function (self $o, ParseNode $n) { $o->setDataOption($n->getStringValue()); },
-            'icon' => function (self $o, ParseNode $n) { $o->setIcon($n->getObjectValue(WorkbookIcon::class)); },
-            'key' => function (self $o, ParseNode $n) { $o->setKey($n->getIntegerValue()); },
-            'sortOn' => function (self $o, ParseNode $n) { $o->setSortOn($n->getStringValue()); },
+            'ascending' => function (ParseNode $n) use ($o) { $o->setAscending($n->getBooleanValue()); },
+            'color' => function (ParseNode $n) use ($o) { $o->setColor($n->getStringValue()); },
+            'dataOption' => function (ParseNode $n) use ($o) { $o->setDataOption($n->getStringValue()); },
+            'icon' => function (ParseNode $n) use ($o) { $o->setIcon($n->getObjectValue(array(WorkbookIcon::class, 'createFromDiscriminatorValue'))); },
+            'key' => function (ParseNode $n) use ($o) { $o->setKey($n->getIntegerValue()); },
+            'sortOn' => function (ParseNode $n) use ($o) { $o->setSortOn($n->getStringValue()); },
         ];
     }
 
@@ -110,7 +125,7 @@ class WorkbookSortField implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the sortOn property value. Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
+     * Gets the sortOn property value. Represents the type of sorting of this condition. Possible values are: Value, CellColor, FontColor, Icon.
      * @return string|null
     */
     public function getSortOn(): ?string {
@@ -156,7 +171,7 @@ class WorkbookSortField implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the dataOption property value. Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
+     * Sets the dataOption property value. Represents additional sorting options for this field. Possible values are: Normal, TextAsNumber.
      *  @param string|null $value Value to set for the dataOption property.
     */
     public function setDataOption(?string $value ): void {
@@ -180,7 +195,7 @@ class WorkbookSortField implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the sortOn property value. Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
+     * Sets the sortOn property value. Represents the type of sorting of this condition. Possible values are: Value, CellColor, FontColor, Icon.
      *  @param string|null $value Value to set for the sortOn property.
     */
     public function setSortOn(?string $value ): void {

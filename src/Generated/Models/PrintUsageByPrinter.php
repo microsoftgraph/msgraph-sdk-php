@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class PrintUsageByPrinter extends PrintUsage 
+class PrintUsageByPrinter extends PrintUsage implements Parsable 
 {
-    /** @var string|null $printerId The printerId property */
+    /**
+     * @var string|null $printerId The printerId property
+    */
     private ?string $printerId = null;
     
     /**
@@ -23,7 +25,7 @@ class PrintUsageByPrinter extends PrintUsage
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrintUsageByPrinter
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrintUsageByPrinter {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrintUsageByPrinter {
         return new PrintUsageByPrinter();
     }
 
@@ -32,8 +34,9 @@ class PrintUsageByPrinter extends PrintUsage
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'printerId' => function (self $o, ParseNode $n) { $o->setPrinterId($n->getStringValue()); },
+            'printerId' => function (ParseNode $n) use ($o) { $o->setPrinterId($n->getStringValue()); },
         ]);
     }
 

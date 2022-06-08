@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class TeamworkActivityTopic implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var TeamworkActivityTopicSource|null $source Type of source. Possible values are: entityUrl, text. For supported Microsoft Graph URLs, use entityUrl. For custom text, use text. */
+    /**
+     * @var TeamworkActivityTopicSource|null $source Type of source. Possible values are: entityUrl, text. For supported Microsoft Graph URLs, use entityUrl. For custom text, use text.
+    */
     private ?TeamworkActivityTopicSource $source = null;
     
-    /** @var string|null $value The topic value. If the value of the source property is entityUrl, this must be a Microsoft Graph URL. If the vaule is text, this must be a plain text value. */
+    /**
+     * @var string|null $value The topic value. If the value of the source property is entityUrl, this must be a Microsoft Graph URL. If the vaule is text, this must be a plain text value.
+    */
     private ?string $value = null;
     
-    /** @var string|null $webUrl The link the user clicks when they select the notification. Optional when source is entityUrl; required when source is text. */
+    /**
+     * @var string|null $webUrl The link the user clicks when they select the notification. Optional when source is entityUrl; required when source is text.
+    */
     private ?string $webUrl = null;
     
     /**
@@ -33,7 +41,7 @@ class TeamworkActivityTopic implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TeamworkActivityTopic
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TeamworkActivityTopic {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TeamworkActivityTopic {
         return new TeamworkActivityTopic();
     }
 
@@ -50,10 +58,11 @@ class TeamworkActivityTopic implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'source' => function (self $o, ParseNode $n) { $o->setSource($n->getEnumValue(TeamworkActivityTopicSource::class)); },
-            'value' => function (self $o, ParseNode $n) { $o->setValue($n->getStringValue()); },
-            'webUrl' => function (self $o, ParseNode $n) { $o->setWebUrl($n->getStringValue()); },
+            'source' => function (ParseNode $n) use ($o) { $o->setSource($n->getEnumValue(TeamworkActivityTopicSource::class)); },
+            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getStringValue()); },
+            'webUrl' => function (ParseNode $n) use ($o) { $o->setWebUrl($n->getStringValue()); },
         ];
     }
 

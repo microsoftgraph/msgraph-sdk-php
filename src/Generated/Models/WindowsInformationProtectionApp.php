@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class WindowsInformationProtectionApp implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $denied If true, app is denied protection or exemption. */
+    /**
+     * @var bool|null $denied If true, app is denied protection or exemption.
+    */
     private ?bool $denied = null;
     
-    /** @var string|null $description The app's description. */
+    /**
+     * @var string|null $description The app's description.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName App display name. */
+    /**
+     * @var string|null $displayName App display name.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $productName The product name. */
+    /**
+     * @var string|null $productName The product name.
+    */
     private ?string $productName = null;
     
-    /** @var string|null $publisherName The publisher name */
+    /**
+     * @var string|null $publisherName The publisher name
+    */
     private ?string $publisherName = null;
     
     /**
@@ -39,7 +51,7 @@ class WindowsInformationProtectionApp implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WindowsInformationProtectionApp
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WindowsInformationProtectionApp {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WindowsInformationProtectionApp {
         return new WindowsInformationProtectionApp();
     }
 
@@ -80,12 +92,13 @@ class WindowsInformationProtectionApp implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'denied' => function (self $o, ParseNode $n) { $o->setDenied($n->getBooleanValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'productName' => function (self $o, ParseNode $n) { $o->setProductName($n->getStringValue()); },
-            'publisherName' => function (self $o, ParseNode $n) { $o->setPublisherName($n->getStringValue()); },
+            'denied' => function (ParseNode $n) use ($o) { $o->setDenied($n->getBooleanValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'productName' => function (ParseNode $n) use ($o) { $o->setProductName($n->getStringValue()); },
+            'publisherName' => function (ParseNode $n) use ($o) { $o->setPublisherName($n->getStringValue()); },
         ];
     }
 

@@ -6,12 +6,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ConditionalAccessRoot extends Entity 
+class ConditionalAccessRoot extends Entity implements Parsable 
 {
-    /** @var array<NamedLocation>|null $namedLocations Read-only. Nullable. Returns a collection of the specified named locations. */
+    /**
+     * @var array<NamedLocation>|null $namedLocations Read-only. Nullable. Returns a collection of the specified named locations.
+    */
     private ?array $namedLocations = null;
     
-    /** @var array<ConditionalAccessPolicy>|null $policies Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies. */
+    /**
+     * @var array<ConditionalAccessPolicy>|null $policies Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
+    */
     private ?array $policies = null;
     
     /**
@@ -26,7 +30,7 @@ class ConditionalAccessRoot extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ConditionalAccessRoot
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessRoot {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessRoot {
         return new ConditionalAccessRoot();
     }
 
@@ -35,9 +39,10 @@ class ConditionalAccessRoot extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'namedLocations' => function (self $o, ParseNode $n) { $o->setNamedLocations($n->getCollectionOfObjectValues(NamedLocation::class)); },
-            'policies' => function (self $o, ParseNode $n) { $o->setPolicies($n->getCollectionOfObjectValues(ConditionalAccessPolicy::class)); },
+            'namedLocations' => function (ParseNode $n) use ($o) { $o->setNamedLocations($n->getCollectionOfObjectValues(array(NamedLocation::class, 'createFromDiscriminatorValue'))); },
+            'policies' => function (ParseNode $n) use ($o) { $o->setPolicies($n->getCollectionOfObjectValues(array(ConditionalAccessPolicy::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -50,7 +55,7 @@ class ConditionalAccessRoot extends Entity
     }
 
     /**
-     * Gets the policies property value. Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
+     * Gets the policies property value. Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
      * @return array<ConditionalAccessPolicy>|null
     */
     public function getPolicies(): ?array {
@@ -76,7 +81,7 @@ class ConditionalAccessRoot extends Entity
     }
 
     /**
-     * Sets the policies property value. Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
+     * Sets the policies property value. Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
      *  @param array<ConditionalAccessPolicy>|null $value Value to set for the policies property.
     */
     public function setPolicies(?array $value ): void {

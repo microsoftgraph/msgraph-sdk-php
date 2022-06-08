@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ColumnValidation implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $defaultLanguage Default BCP 47 language tag for the description. */
+    /**
+     * @var string|null $defaultLanguage Default BCP 47 language tag for the description.
+    */
     private ?string $defaultLanguage = null;
     
-    /** @var array<DisplayNameLocalization>|null $descriptions Localized messages that explain what is needed for this column's value to be considered valid. User will be prompted with this message if validation fails. */
+    /**
+     * @var array<DisplayNameLocalization>|null $descriptions Localized messages that explain what is needed for this column's value to be considered valid. User will be prompted with this message if validation fails.
+    */
     private ?array $descriptions = null;
     
-    /** @var string|null $formula The formula to validate column value. For examples, see Examples of common formulas in lists. */
+    /**
+     * @var string|null $formula The formula to validate column value. For examples, see Examples of common formulas in lists
+    */
     private ?string $formula = null;
     
     /**
@@ -33,7 +41,7 @@ class ColumnValidation implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ColumnValidation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ColumnValidation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ColumnValidation {
         return new ColumnValidation();
     }
 
@@ -66,15 +74,16 @@ class ColumnValidation implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'defaultLanguage' => function (self $o, ParseNode $n) { $o->setDefaultLanguage($n->getStringValue()); },
-            'descriptions' => function (self $o, ParseNode $n) { $o->setDescriptions($n->getCollectionOfObjectValues(DisplayNameLocalization::class)); },
-            'formula' => function (self $o, ParseNode $n) { $o->setFormula($n->getStringValue()); },
+            'defaultLanguage' => function (ParseNode $n) use ($o) { $o->setDefaultLanguage($n->getStringValue()); },
+            'descriptions' => function (ParseNode $n) use ($o) { $o->setDescriptions($n->getCollectionOfObjectValues(array(DisplayNameLocalization::class, 'createFromDiscriminatorValue'))); },
+            'formula' => function (ParseNode $n) use ($o) { $o->setFormula($n->getStringValue()); },
         ];
     }
 
     /**
-     * Gets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists.
+     * Gets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists
      * @return string|null
     */
     public function getFormula(): ?string {
@@ -117,7 +126,7 @@ class ColumnValidation implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists.
+     * Sets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists
      *  @param string|null $value Value to set for the formula property.
     */
     public function setFormula(?string $value ): void {

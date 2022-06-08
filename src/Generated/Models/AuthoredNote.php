@@ -7,15 +7,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AuthoredNote extends Entity 
+class AuthoredNote extends Entity implements Parsable 
 {
-    /** @var Identity|null $author Identity information about the note's author. */
+    /**
+     * @var Identity|null $author Identity information about the note's author.
+    */
     private ?Identity $author = null;
     
-    /** @var ItemBody|null $content The content of the note. */
+    /**
+     * @var ItemBody|null $content The content of the note.
+    */
     private ?ItemBody $content = null;
     
-    /** @var DateTime|null $createdDateTime The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $createdDateTime The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    */
     private ?DateTime $createdDateTime = null;
     
     /**
@@ -30,7 +36,7 @@ class AuthoredNote extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AuthoredNote
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AuthoredNote {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AuthoredNote {
         return new AuthoredNote();
     }
 
@@ -63,10 +69,11 @@ class AuthoredNote extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'author' => function (self $o, ParseNode $n) { $o->setAuthor($n->getObjectValue(Identity::class)); },
-            'content' => function (self $o, ParseNode $n) { $o->setContent($n->getObjectValue(ItemBody::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'author' => function (ParseNode $n) use ($o) { $o->setAuthor($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
+            'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getObjectValue(array(ItemBody::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
         ]);
     }
 

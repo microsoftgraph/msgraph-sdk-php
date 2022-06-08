@@ -7,30 +7,51 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AccessReviewInstance extends Entity 
+class AccessReviewInstance extends Entity implements Parsable 
 {
-    /** @var array<AccessReviewReviewer>|null $contactedReviewers Returns the collection of reviewers who were contacted to complete this review. While the reviewers and fallbackReviewers properties of the accessReviewScheduleDefinition might specify group owners or managers as reviewers, contactedReviewers returns their individual identities. Supports $select. Read-only. */
+    /**
+     * @var array<AccessReviewReviewer>|null $contactedReviewers Returns the collection of reviewers who were contacted to complete this review. While the reviewers and fallbackReviewers properties of the accessReviewScheduleDefinition might specify group owners or managers as reviewers, contactedReviewers returns their individual identities. Supports $select. Read-only.
+    */
     private ?array $contactedReviewers = null;
     
-    /** @var array<AccessReviewInstanceDecisionItem>|null $decisions Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed. */
+    /**
+     * @var array<AccessReviewInstanceDecisionItem>|null $decisions Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+    */
     private ?array $decisions = null;
     
-    /** @var DateTime|null $endDateTime DateTime when review instance is scheduled to end.The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $select. Read-only. */
+    /**
+     * @var DateTime|null $endDateTime DateTime when review instance is scheduled to end.The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $select. Read-only.
+    */
     private ?DateTime $endDateTime = null;
     
-    /** @var array<AccessReviewReviewerScope>|null $fallbackReviewers This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. Supports $select. */
+    /**
+     * @var array<AccessReviewReviewerScope>|null $fallbackReviewers This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. Supports $select.
+    */
     private ?array $fallbackReviewers = null;
     
-    /** @var array<AccessReviewReviewerScope>|null $reviewers This collection of access review scopes is used to define who the reviewers are. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. */
+    /**
+     * @var array<AccessReviewReviewerScope>|null $reviewers This collection of access review scopes is used to define who the reviewers are. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.
+    */
     private ?array $reviewers = null;
     
-    /** @var AccessReviewScope|null $scope Created based on scope and instanceEnumerationScope at the accessReviewScheduleDefinition level. Defines the scope of users reviewed in a group. Supports $select and $filter (contains only). Read-only. */
+    /**
+     * @var AccessReviewScope|null $scope Created based on scope and instanceEnumerationScope at the accessReviewScheduleDefinition level. Defines the scope of users reviewed in a group. Supports $select and $filter (contains only). Read-only.
+    */
     private ?AccessReviewScope $scope = null;
     
-    /** @var DateTime|null $startDateTime DateTime when review instance is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $select. Read-only. */
+    /**
+     * @var array<AccessReviewStage>|null $stages If the instance has multiple stages, this returns the collection of stages. A new stage will only be created when the previous stage ends. The existence, number, and settings of stages on a review instance are created based on the accessReviewStageSettings on the parent accessReviewScheduleDefinition.
+    */
+    private ?array $stages = null;
+    
+    /**
+     * @var DateTime|null $startDateTime DateTime when review instance is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $select. Read-only.
+    */
     private ?DateTime $startDateTime = null;
     
-    /** @var string|null $status Specifies the status of an accessReview. Possible values: Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed. Supports $select, $orderby, and $filter (eq only). Read-only. */
+    /**
+     * @var string|null $status Specifies the status of an accessReview. Possible values: Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed. Supports $select, $orderby, and $filter (eq only). Read-only.
+    */
     private ?string $status = null;
     
     /**
@@ -45,7 +66,7 @@ class AccessReviewInstance extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AccessReviewInstance
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AccessReviewInstance {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessReviewInstance {
         return new AccessReviewInstance();
     }
 
@@ -58,7 +79,7 @@ class AccessReviewInstance extends Entity
     }
 
     /**
-     * Gets the decisions property value. Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Gets the decisions property value. Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
      * @return array<AccessReviewInstanceDecisionItem>|null
     */
     public function getDecisions(): ?array {
@@ -86,15 +107,17 @@ class AccessReviewInstance extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'contactedReviewers' => function (self $o, ParseNode $n) { $o->setContactedReviewers($n->getCollectionOfObjectValues(AccessReviewReviewer::class)); },
-            'decisions' => function (self $o, ParseNode $n) { $o->setDecisions($n->getCollectionOfObjectValues(AccessReviewInstanceDecisionItem::class)); },
-            'endDateTime' => function (self $o, ParseNode $n) { $o->setEndDateTime($n->getDateTimeValue()); },
-            'fallbackReviewers' => function (self $o, ParseNode $n) { $o->setFallbackReviewers($n->getCollectionOfObjectValues(AccessReviewReviewerScope::class)); },
-            'reviewers' => function (self $o, ParseNode $n) { $o->setReviewers($n->getCollectionOfObjectValues(AccessReviewReviewerScope::class)); },
-            'scope' => function (self $o, ParseNode $n) { $o->setScope($n->getObjectValue(AccessReviewScope::class)); },
-            'startDateTime' => function (self $o, ParseNode $n) { $o->setStartDateTime($n->getDateTimeValue()); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getStringValue()); },
+            'contactedReviewers' => function (ParseNode $n) use ($o) { $o->setContactedReviewers($n->getCollectionOfObjectValues(array(AccessReviewReviewer::class, 'createFromDiscriminatorValue'))); },
+            'decisions' => function (ParseNode $n) use ($o) { $o->setDecisions($n->getCollectionOfObjectValues(array(AccessReviewInstanceDecisionItem::class, 'createFromDiscriminatorValue'))); },
+            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
+            'fallbackReviewers' => function (ParseNode $n) use ($o) { $o->setFallbackReviewers($n->getCollectionOfObjectValues(array(AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'))); },
+            'reviewers' => function (ParseNode $n) use ($o) { $o->setReviewers($n->getCollectionOfObjectValues(array(AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'))); },
+            'scope' => function (ParseNode $n) use ($o) { $o->setScope($n->getObjectValue(array(AccessReviewScope::class, 'createFromDiscriminatorValue'))); },
+            'stages' => function (ParseNode $n) use ($o) { $o->setStages($n->getCollectionOfObjectValues(array(AccessReviewStage::class, 'createFromDiscriminatorValue'))); },
+            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getStringValue()); },
         ]);
     }
 
@@ -112,6 +135,14 @@ class AccessReviewInstance extends Entity
     */
     public function getScope(): ?AccessReviewScope {
         return $this->scope;
+    }
+
+    /**
+     * Gets the stages property value. If the instance has multiple stages, this returns the collection of stages. A new stage will only be created when the previous stage ends. The existence, number, and settings of stages on a review instance are created based on the accessReviewStageSettings on the parent accessReviewScheduleDefinition.
+     * @return array<AccessReviewStage>|null
+    */
+    public function getStages(): ?array {
+        return $this->stages;
     }
 
     /**
@@ -142,6 +173,7 @@ class AccessReviewInstance extends Entity
         $writer->writeCollectionOfObjectValues('fallbackReviewers', $this->fallbackReviewers);
         $writer->writeCollectionOfObjectValues('reviewers', $this->reviewers);
         $writer->writeObjectValue('scope', $this->scope);
+        $writer->writeCollectionOfObjectValues('stages', $this->stages);
         $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
         $writer->writeStringValue('status', $this->status);
     }
@@ -155,7 +187,7 @@ class AccessReviewInstance extends Entity
     }
 
     /**
-     * Sets the decisions property value. Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Sets the decisions property value. Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
      *  @param array<AccessReviewInstanceDecisionItem>|null $value Value to set for the decisions property.
     */
     public function setDecisions(?array $value ): void {
@@ -192,6 +224,14 @@ class AccessReviewInstance extends Entity
     */
     public function setScope(?AccessReviewScope $value ): void {
         $this->scope = $value;
+    }
+
+    /**
+     * Sets the stages property value. If the instance has multiple stages, this returns the collection of stages. A new stage will only be created when the previous stage ends. The existence, number, and settings of stages on a review instance are created based on the accessReviewStageSettings on the parent accessReviewScheduleDefinition.
+     *  @param array<AccessReviewStage>|null $value Value to set for the stages property.
+    */
+    public function setStages(?array $value ): void {
+        $this->stages = $value;
     }
 
     /**

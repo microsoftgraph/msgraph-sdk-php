@@ -6,24 +6,36 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ListItem extends BaseItem 
+class ListItem extends BaseItem implements Parsable 
 {
-    /** @var ItemAnalytics|null $analytics Analytics about the view activities that took place on this item. */
+    /**
+     * @var ItemAnalytics|null $analytics Analytics about the view activities that took place on this item.
+    */
     private ?ItemAnalytics $analytics = null;
     
-    /** @var ContentTypeInfo|null $contentType The content type of this list item */
+    /**
+     * @var ContentTypeInfo|null $contentType The content type of this list item
+    */
     private ?ContentTypeInfo $contentType = null;
     
-    /** @var DriveItem|null $driveItem For document libraries, the driveItem relationship exposes the listItem as a [driveItem][] */
+    /**
+     * @var DriveItem|null $driveItem For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
+    */
     private ?DriveItem $driveItem = null;
     
-    /** @var FieldValueSet|null $fields The values of the columns set on this list item. */
+    /**
+     * @var FieldValueSet|null $fields The values of the columns set on this list item.
+    */
     private ?FieldValueSet $fields = null;
     
-    /** @var SharepointIds|null $sharepointIds Returns identifiers useful for SharePoint REST compatibility. Read-only. */
+    /**
+     * @var SharepointIds|null $sharepointIds Returns identifiers useful for SharePoint REST compatibility. Read-only.
+    */
     private ?SharepointIds $sharepointIds = null;
     
-    /** @var array<ListItemVersion>|null $versions The list of previous versions of the list item. */
+    /**
+     * @var array<ListItemVersion>|null $versions The list of previous versions of the list item.
+    */
     private ?array $versions = null;
     
     /**
@@ -38,7 +50,7 @@ class ListItem extends BaseItem
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ListItem
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ListItem {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ListItem {
         return new ListItem();
     }
 
@@ -71,13 +83,14 @@ class ListItem extends BaseItem
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'analytics' => function (self $o, ParseNode $n) { $o->setAnalytics($n->getObjectValue(ItemAnalytics::class)); },
-            'contentType' => function (self $o, ParseNode $n) { $o->setContentType($n->getObjectValue(ContentTypeInfo::class)); },
-            'driveItem' => function (self $o, ParseNode $n) { $o->setDriveItem($n->getObjectValue(DriveItem::class)); },
-            'fields' => function (self $o, ParseNode $n) { $o->setFields($n->getObjectValue(FieldValueSet::class)); },
-            'sharepointIds' => function (self $o, ParseNode $n) { $o->setSharepointIds($n->getObjectValue(SharepointIds::class)); },
-            'versions' => function (self $o, ParseNode $n) { $o->setVersions($n->getCollectionOfObjectValues(ListItemVersion::class)); },
+            'analytics' => function (ParseNode $n) use ($o) { $o->setAnalytics($n->getObjectValue(array(ItemAnalytics::class, 'createFromDiscriminatorValue'))); },
+            'contentType' => function (ParseNode $n) use ($o) { $o->setContentType($n->getObjectValue(array(ContentTypeInfo::class, 'createFromDiscriminatorValue'))); },
+            'driveItem' => function (ParseNode $n) use ($o) { $o->setDriveItem($n->getObjectValue(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
+            'fields' => function (ParseNode $n) use ($o) { $o->setFields($n->getObjectValue(array(FieldValueSet::class, 'createFromDiscriminatorValue'))); },
+            'sharepointIds' => function (ParseNode $n) use ($o) { $o->setSharepointIds($n->getObjectValue(array(SharepointIds::class, 'createFromDiscriminatorValue'))); },
+            'versions' => function (ParseNode $n) use ($o) { $o->setVersions($n->getCollectionOfObjectValues(array(ListItemVersion::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

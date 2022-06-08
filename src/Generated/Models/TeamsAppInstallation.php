@@ -6,12 +6,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class TeamsAppInstallation extends Entity 
+class TeamsAppInstallation extends Entity implements Parsable 
 {
-    /** @var TeamsApp|null $teamsApp The app that is installed. */
+    /**
+     * @var TeamsApp|null $teamsApp The app that is installed.
+    */
     private ?TeamsApp $teamsApp = null;
     
-    /** @var TeamsAppDefinition|null $teamsAppDefinition The details of this version of the app. */
+    /**
+     * @var TeamsAppDefinition|null $teamsAppDefinition The details of this version of the app.
+    */
     private ?TeamsAppDefinition $teamsAppDefinition = null;
     
     /**
@@ -26,7 +30,14 @@ class TeamsAppInstallation extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TeamsAppInstallation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TeamsAppInstallation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TeamsAppInstallation {
+        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.teamsAppInstallation': return new TeamsAppInstallation();
+            }
+        }
         return new TeamsAppInstallation();
     }
 
@@ -35,9 +46,10 @@ class TeamsAppInstallation extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'teamsApp' => function (self $o, ParseNode $n) { $o->setTeamsApp($n->getObjectValue(TeamsApp::class)); },
-            'teamsAppDefinition' => function (self $o, ParseNode $n) { $o->setTeamsAppDefinition($n->getObjectValue(TeamsAppDefinition::class)); },
+            'teamsApp' => function (ParseNode $n) use ($o) { $o->setTeamsApp($n->getObjectValue(array(TeamsApp::class, 'createFromDiscriminatorValue'))); },
+            'teamsAppDefinition' => function (ParseNode $n) use ($o) { $o->setTeamsAppDefinition($n->getObjectValue(array(TeamsAppDefinition::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

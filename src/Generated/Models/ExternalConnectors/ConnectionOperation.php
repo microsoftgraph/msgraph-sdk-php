@@ -8,12 +8,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ConnectionOperation extends Entity 
+class ConnectionOperation extends Entity implements Parsable 
 {
-    /** @var PublicError|null $error If status is failed, provides more information about the error that caused the failure. */
+    /**
+     * @var PublicError|null $error If status is failed, provides more information about the error that caused the failure.
+    */
     private ?PublicError $error = null;
     
-    /** @var ConnectionOperationStatus|null $status Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue. */
+    /**
+     * @var ConnectionOperationStatus|null $status Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed.
+    */
     private ?ConnectionOperationStatus $status = null;
     
     /**
@@ -28,7 +32,7 @@ class ConnectionOperation extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ConnectionOperation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ConnectionOperation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ConnectionOperation {
         return new ConnectionOperation();
     }
 
@@ -45,14 +49,15 @@ class ConnectionOperation extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'error' => function (self $o, ParseNode $n) { $o->setError($n->getObjectValue(PublicError::class)); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(ConnectionOperationStatus::class)); },
+            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getObjectValue(array(PublicError::class, 'createFromDiscriminatorValue'))); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(ConnectionOperationStatus::class)); },
         ]);
     }
 
     /**
-     * Gets the status property value. Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
+     * Gets the status property value. Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed.
      * @return ConnectionOperationStatus|null
     */
     public function getStatus(): ?ConnectionOperationStatus {
@@ -78,7 +83,7 @@ class ConnectionOperation extends Entity
     }
 
     /**
-     * Sets the status property value. Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
+     * Sets the status property value. Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed.
      *  @param ConnectionOperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ConnectionOperationStatus $value ): void {

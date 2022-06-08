@@ -6,18 +6,26 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WorkbookChartLegend extends Entity 
+class WorkbookChartLegend extends Entity implements Parsable 
 {
-    /** @var WorkbookChartLegendFormat|null $format Represents the formatting of a chart legend, which includes fill and font formatting. Read-only. */
+    /**
+     * @var WorkbookChartLegendFormat|null $format Represents the formatting of a chart legend, which includes fill and font formatting. Read-only.
+    */
     private ?WorkbookChartLegendFormat $format = null;
     
-    /** @var bool|null $overlay Boolean value for whether the chart legend should overlap with the main body of the chart. */
+    /**
+     * @var bool|null $overlay Boolean value for whether the chart legend should overlap with the main body of the chart.
+    */
     private ?bool $overlay = null;
     
-    /** @var string|null $position Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom. */
+    /**
+     * @var string|null $position Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
+    */
     private ?string $position = null;
     
-    /** @var bool|null $visible A boolean value the represents the visibility of a ChartLegend object. */
+    /**
+     * @var bool|null $visible A boolean value the represents the visibility of a ChartLegend object.
+    */
     private ?bool $visible = null;
     
     /**
@@ -32,7 +40,7 @@ class WorkbookChartLegend extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookChartLegend
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookChartLegend {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookChartLegend {
         return new WorkbookChartLegend();
     }
 
@@ -41,11 +49,12 @@ class WorkbookChartLegend extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'format' => function (self $o, ParseNode $n) { $o->setFormat($n->getObjectValue(WorkbookChartLegendFormat::class)); },
-            'overlay' => function (self $o, ParseNode $n) { $o->setOverlay($n->getBooleanValue()); },
-            'position' => function (self $o, ParseNode $n) { $o->setPosition($n->getStringValue()); },
-            'visible' => function (self $o, ParseNode $n) { $o->setVisible($n->getBooleanValue()); },
+            'format' => function (ParseNode $n) use ($o) { $o->setFormat($n->getObjectValue(array(WorkbookChartLegendFormat::class, 'createFromDiscriminatorValue'))); },
+            'overlay' => function (ParseNode $n) use ($o) { $o->setOverlay($n->getBooleanValue()); },
+            'position' => function (ParseNode $n) use ($o) { $o->setPosition($n->getStringValue()); },
+            'visible' => function (ParseNode $n) use ($o) { $o->setVisible($n->getBooleanValue()); },
         ]);
     }
 

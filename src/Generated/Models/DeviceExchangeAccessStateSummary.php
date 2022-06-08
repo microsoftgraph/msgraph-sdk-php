@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $allowedDeviceCount Total count of devices with Exchange Access State: Allowed. */
+    /**
+     * @var int|null $allowedDeviceCount Total count of devices with Exchange Access State: Allowed.
+    */
     private ?int $allowedDeviceCount = null;
     
-    /** @var int|null $blockedDeviceCount Total count of devices with Exchange Access State: Blocked. */
+    /**
+     * @var int|null $blockedDeviceCount Total count of devices with Exchange Access State: Blocked.
+    */
     private ?int $blockedDeviceCount = null;
     
-    /** @var int|null $quarantinedDeviceCount Total count of devices with Exchange Access State: Quarantined. */
+    /**
+     * @var int|null $quarantinedDeviceCount Total count of devices with Exchange Access State: Quarantined.
+    */
     private ?int $quarantinedDeviceCount = null;
     
-    /** @var int|null $unavailableDeviceCount Total count of devices for which no Exchange Access State could be found. */
+    /**
+     * @var int|null $unavailableDeviceCount Total count of devices for which no Exchange Access State could be found.
+    */
     private ?int $unavailableDeviceCount = null;
     
-    /** @var int|null $unknownDeviceCount Total count of devices with Exchange Access State: Unknown. */
+    /**
+     * @var int|null $unknownDeviceCount Total count of devices with Exchange Access State: Unknown.
+    */
     private ?int $unknownDeviceCount = null;
     
     /**
@@ -39,7 +51,7 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceExchangeAccessStateSummary
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceExchangeAccessStateSummary {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceExchangeAccessStateSummary {
         return new DeviceExchangeAccessStateSummary();
     }
 
@@ -72,12 +84,13 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'allowedDeviceCount' => function (self $o, ParseNode $n) { $o->setAllowedDeviceCount($n->getIntegerValue()); },
-            'blockedDeviceCount' => function (self $o, ParseNode $n) { $o->setBlockedDeviceCount($n->getIntegerValue()); },
-            'quarantinedDeviceCount' => function (self $o, ParseNode $n) { $o->setQuarantinedDeviceCount($n->getIntegerValue()); },
-            'unavailableDeviceCount' => function (self $o, ParseNode $n) { $o->setUnavailableDeviceCount($n->getIntegerValue()); },
-            'unknownDeviceCount' => function (self $o, ParseNode $n) { $o->setUnknownDeviceCount($n->getIntegerValue()); },
+            'allowedDeviceCount' => function (ParseNode $n) use ($o) { $o->setAllowedDeviceCount($n->getIntegerValue()); },
+            'blockedDeviceCount' => function (ParseNode $n) use ($o) { $o->setBlockedDeviceCount($n->getIntegerValue()); },
+            'quarantinedDeviceCount' => function (ParseNode $n) use ($o) { $o->setQuarantinedDeviceCount($n->getIntegerValue()); },
+            'unavailableDeviceCount' => function (ParseNode $n) use ($o) { $o->setUnavailableDeviceCount($n->getIntegerValue()); },
+            'unknownDeviceCount' => function (ParseNode $n) use ($o) { $o->setUnknownDeviceCount($n->getIntegerValue()); },
         ];
     }
 

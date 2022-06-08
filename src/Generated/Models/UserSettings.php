@@ -6,15 +6,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class UserSettings extends Entity 
+class UserSettings extends Entity implements Parsable 
 {
-    /** @var bool|null $contributionToContentDiscoveryAsOrganizationDisabled Reflects the Office Delve organization level setting. When set to true, the organization doesn't have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center. */
+    /**
+     * @var bool|null $contributionToContentDiscoveryAsOrganizationDisabled Reflects the Office Delve organization level setting. When set to true, the organization doesn't have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
+    */
     private ?bool $contributionToContentDiscoveryAsOrganizationDisabled = null;
     
-    /** @var bool|null $contributionToContentDiscoveryDisabled When set to true, documents in the user's Office Delve are disabled. Users can control this setting in Office Delve. */
+    /**
+     * @var bool|null $contributionToContentDiscoveryDisabled When set to true, documents in the user's Office Delve are disabled. Users can control this setting in Office Delve.
+    */
     private ?bool $contributionToContentDiscoveryDisabled = null;
     
-    /** @var ShiftPreferences|null $shiftPreferences The shift preferences for the user. */
+    /**
+     * @var ShiftPreferences|null $shiftPreferences The shift preferences for the user.
+    */
     private ?ShiftPreferences $shiftPreferences = null;
     
     /**
@@ -29,7 +35,7 @@ class UserSettings extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return UserSettings
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): UserSettings {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): UserSettings {
         return new UserSettings();
     }
 
@@ -54,10 +60,11 @@ class UserSettings extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'contributionToContentDiscoveryAsOrganizationDisabled' => function (self $o, ParseNode $n) { $o->setContributionToContentDiscoveryAsOrganizationDisabled($n->getBooleanValue()); },
-            'contributionToContentDiscoveryDisabled' => function (self $o, ParseNode $n) { $o->setContributionToContentDiscoveryDisabled($n->getBooleanValue()); },
-            'shiftPreferences' => function (self $o, ParseNode $n) { $o->setShiftPreferences($n->getObjectValue(ShiftPreferences::class)); },
+            'contributionToContentDiscoveryAsOrganizationDisabled' => function (ParseNode $n) use ($o) { $o->setContributionToContentDiscoveryAsOrganizationDisabled($n->getBooleanValue()); },
+            'contributionToContentDiscoveryDisabled' => function (ParseNode $n) use ($o) { $o->setContributionToContentDiscoveryDisabled($n->getBooleanValue()); },
+            'shiftPreferences' => function (ParseNode $n) use ($o) { $o->setShiftPreferences($n->getObjectValue(array(ShiftPreferences::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SecurityVendorInformation implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $provider Specific provider (product/service - not vendor company); for example, WindowsDefenderATP. */
+    /**
+     * @var string|null $provider Specific provider (product/service - not vendor company); for example, WindowsDefenderATP.
+    */
     private ?string $provider = null;
     
-    /** @var string|null $providerVersion Version of the provider or subprovider, if it exists, that generated the alert. Required */
+    /**
+     * @var string|null $providerVersion Version of the provider or subprovider, if it exists, that generated the alert. Required
+    */
     private ?string $providerVersion = null;
     
-    /** @var string|null $subProvider Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen. */
+    /**
+     * @var string|null $subProvider Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen.
+    */
     private ?string $subProvider = null;
     
-    /** @var string|null $vendor Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required */
+    /**
+     * @var string|null $vendor Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required
+    */
     private ?string $vendor = null;
     
     /**
@@ -36,7 +46,7 @@ class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SecurityVendorInformation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SecurityVendorInformation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SecurityVendorInformation {
         return new SecurityVendorInformation();
     }
 
@@ -53,11 +63,12 @@ class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'provider' => function (self $o, ParseNode $n) { $o->setProvider($n->getStringValue()); },
-            'providerVersion' => function (self $o, ParseNode $n) { $o->setProviderVersion($n->getStringValue()); },
-            'subProvider' => function (self $o, ParseNode $n) { $o->setSubProvider($n->getStringValue()); },
-            'vendor' => function (self $o, ParseNode $n) { $o->setVendor($n->getStringValue()); },
+            'provider' => function (ParseNode $n) use ($o) { $o->setProvider($n->getStringValue()); },
+            'providerVersion' => function (ParseNode $n) use ($o) { $o->setProviderVersion($n->getStringValue()); },
+            'subProvider' => function (ParseNode $n) use ($o) { $o->setSubProvider($n->getStringValue()); },
+            'vendor' => function (ParseNode $n) use ($o) { $o->setVendor($n->getStringValue()); },
         ];
     }
 

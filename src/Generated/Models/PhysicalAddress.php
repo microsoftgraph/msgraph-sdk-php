@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class PhysicalAddress implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $city The city. */
+    /**
+     * @var string|null $city The city.
+    */
     private ?string $city = null;
     
-    /** @var string|null $countryOrRegion The country or region. It's a free-format string value, for example, 'United States'. */
+    /**
+     * @var string|null $countryOrRegion The country or region. It's a free-format string value, for example, 'United States'.
+    */
     private ?string $countryOrRegion = null;
     
-    /** @var string|null $postalCode The postal code. */
+    /**
+     * @var string|null $postalCode The postal code.
+    */
     private ?string $postalCode = null;
     
-    /** @var string|null $state The state. */
+    /**
+     * @var string|null $state The state.
+    */
     private ?string $state = null;
     
-    /** @var string|null $street The street. */
+    /**
+     * @var string|null $street The street.
+    */
     private ?string $street = null;
     
     /**
@@ -39,7 +51,7 @@ class PhysicalAddress implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PhysicalAddress
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PhysicalAddress {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PhysicalAddress {
         return new PhysicalAddress();
     }
 
@@ -72,12 +84,13 @@ class PhysicalAddress implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'city' => function (self $o, ParseNode $n) { $o->setCity($n->getStringValue()); },
-            'countryOrRegion' => function (self $o, ParseNode $n) { $o->setCountryOrRegion($n->getStringValue()); },
-            'postalCode' => function (self $o, ParseNode $n) { $o->setPostalCode($n->getStringValue()); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getStringValue()); },
-            'street' => function (self $o, ParseNode $n) { $o->setStreet($n->getStringValue()); },
+            'city' => function (ParseNode $n) use ($o) { $o->setCity($n->getStringValue()); },
+            'countryOrRegion' => function (ParseNode $n) use ($o) { $o->setCountryOrRegion($n->getStringValue()); },
+            'postalCode' => function (ParseNode $n) use ($o) { $o->setPostalCode($n->getStringValue()); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getStringValue()); },
+            'street' => function (ParseNode $n) use ($o) { $o->setStreet($n->getStringValue()); },
         ];
     }
 

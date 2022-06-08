@@ -7,42 +7,66 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AccessPackageAssignmentPolicy extends Entity 
+class AccessPackageAssignmentPolicy extends Entity implements Parsable 
 {
-    /** @var AccessPackage|null $accessPackage Access package containing this policy. Read-only. */
+    /**
+     * @var AccessPackage|null $accessPackage The access package with this policy. Read-only. Nullable. Supports $expand.
+    */
     private ?AccessPackage $accessPackage = null;
     
-    /** @var AllowedTargetScope|null $allowedTargetScope Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue. */
+    /**
+     * @var AllowedTargetScope|null $allowedTargetScope Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
+    */
     private ?AllowedTargetScope $allowedTargetScope = null;
     
-    /** @var AccessPackageCatalog|null $catalog Catalog of the access package containing this policy. Read-only. */
+    /**
+     * @var AccessPackageCatalog|null $catalog Catalog of the access package containing this policy. Read-only.
+    */
     private ?AccessPackageCatalog $catalog = null;
     
-    /** @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $description The description of the policy. */
+    /**
+     * @var string|null $description The description of the policy.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName The display name of the policy. */
+    /**
+     * @var string|null $displayName The display name of the policy. Supports $filter (eq).
+    */
     private ?string $displayName = null;
     
-    /** @var ExpirationPattern|null $expiration The expiration date for assignments created in this policy. */
+    /**
+     * @var ExpirationPattern|null $expiration The expiration date for assignments created in this policy.
+    */
     private ?ExpirationPattern $expiration = null;
     
-    /** @var DateTime|null $modifiedDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $modifiedDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $modifiedDateTime = null;
     
-    /** @var AccessPackageAssignmentApprovalSettings|null $requestApprovalSettings Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests. */
+    /**
+     * @var AccessPackageAssignmentApprovalSettings|null $requestApprovalSettings Who must approve requests for access package in this policy.
+    */
     private ?AccessPackageAssignmentApprovalSettings $requestApprovalSettings = null;
     
-    /** @var AccessPackageAssignmentRequestorSettings|null $requestorSettings Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request. */
+    /**
+     * @var AccessPackageAssignmentRequestorSettings|null $requestorSettings Who can request this access package from this policy.
+    */
     private ?AccessPackageAssignmentRequestorSettings $requestorSettings = null;
     
-    /** @var AccessPackageAssignmentReviewSettings|null $reviewSettings Settings for access reviews of assignments through this policy. */
+    /**
+     * @var AccessPackageAssignmentReviewSettings|null $reviewSettings Settings for access reviews of assignments through this policy.
+    */
     private ?AccessPackageAssignmentReviewSettings $reviewSettings = null;
     
-    /** @var array<SubjectSet>|null $specificAllowedTargets The principals that can be assigned access from an access package through this policy. */
+    /**
+     * @var array<SubjectSet>|null $specificAllowedTargets The principals that can be assigned access from an access package through this policy.
+    */
     private ?array $specificAllowedTargets = null;
     
     /**
@@ -57,12 +81,12 @@ class AccessPackageAssignmentPolicy extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AccessPackageAssignmentPolicy
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageAssignmentPolicy {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageAssignmentPolicy {
         return new AccessPackageAssignmentPolicy();
     }
 
     /**
-     * Gets the accessPackage property value. Access package containing this policy. Read-only.
+     * Gets the accessPackage property value. The access package with this policy. Read-only. Nullable. Supports $expand.
      * @return AccessPackage|null
     */
     public function getAccessPackage(): ?AccessPackage {
@@ -86,7 +110,7 @@ class AccessPackageAssignmentPolicy extends Entity
     }
 
     /**
-     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -102,7 +126,7 @@ class AccessPackageAssignmentPolicy extends Entity
     }
 
     /**
-     * Gets the displayName property value. The display name of the policy.
+     * Gets the displayName property value. The display name of the policy. Supports $filter (eq).
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -122,24 +146,25 @@ class AccessPackageAssignmentPolicy extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'accessPackage' => function (self $o, ParseNode $n) { $o->setAccessPackage($n->getObjectValue(AccessPackage::class)); },
-            'allowedTargetScope' => function (self $o, ParseNode $n) { $o->setAllowedTargetScope($n->getEnumValue(AllowedTargetScope::class)); },
-            'catalog' => function (self $o, ParseNode $n) { $o->setCatalog($n->getObjectValue(AccessPackageCatalog::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'expiration' => function (self $o, ParseNode $n) { $o->setExpiration($n->getObjectValue(ExpirationPattern::class)); },
-            'modifiedDateTime' => function (self $o, ParseNode $n) { $o->setModifiedDateTime($n->getDateTimeValue()); },
-            'requestApprovalSettings' => function (self $o, ParseNode $n) { $o->setRequestApprovalSettings($n->getObjectValue(AccessPackageAssignmentApprovalSettings::class)); },
-            'requestorSettings' => function (self $o, ParseNode $n) { $o->setRequestorSettings($n->getObjectValue(AccessPackageAssignmentRequestorSettings::class)); },
-            'reviewSettings' => function (self $o, ParseNode $n) { $o->setReviewSettings($n->getObjectValue(AccessPackageAssignmentReviewSettings::class)); },
-            'specificAllowedTargets' => function (self $o, ParseNode $n) { $o->setSpecificAllowedTargets($n->getCollectionOfObjectValues(SubjectSet::class)); },
+            'accessPackage' => function (ParseNode $n) use ($o) { $o->setAccessPackage($n->getObjectValue(array(AccessPackage::class, 'createFromDiscriminatorValue'))); },
+            'allowedTargetScope' => function (ParseNode $n) use ($o) { $o->setAllowedTargetScope($n->getEnumValue(AllowedTargetScope::class)); },
+            'catalog' => function (ParseNode $n) use ($o) { $o->setCatalog($n->getObjectValue(array(AccessPackageCatalog::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'expiration' => function (ParseNode $n) use ($o) { $o->setExpiration($n->getObjectValue(array(ExpirationPattern::class, 'createFromDiscriminatorValue'))); },
+            'modifiedDateTime' => function (ParseNode $n) use ($o) { $o->setModifiedDateTime($n->getDateTimeValue()); },
+            'requestApprovalSettings' => function (ParseNode $n) use ($o) { $o->setRequestApprovalSettings($n->getObjectValue(array(AccessPackageAssignmentApprovalSettings::class, 'createFromDiscriminatorValue'))); },
+            'requestorSettings' => function (ParseNode $n) use ($o) { $o->setRequestorSettings($n->getObjectValue(array(AccessPackageAssignmentRequestorSettings::class, 'createFromDiscriminatorValue'))); },
+            'reviewSettings' => function (ParseNode $n) use ($o) { $o->setReviewSettings($n->getObjectValue(array(AccessPackageAssignmentReviewSettings::class, 'createFromDiscriminatorValue'))); },
+            'specificAllowedTargets' => function (ParseNode $n) use ($o) { $o->setSpecificAllowedTargets($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
     /**
-     * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return DateTime|null
     */
     public function getModifiedDateTime(): ?DateTime {
@@ -147,7 +172,7 @@ class AccessPackageAssignmentPolicy extends Entity
     }
 
     /**
-     * Gets the requestApprovalSettings property value. Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests.
+     * Gets the requestApprovalSettings property value. Who must approve requests for access package in this policy.
      * @return AccessPackageAssignmentApprovalSettings|null
     */
     public function getRequestApprovalSettings(): ?AccessPackageAssignmentApprovalSettings {
@@ -155,7 +180,7 @@ class AccessPackageAssignmentPolicy extends Entity
     }
 
     /**
-     * Gets the requestorSettings property value. Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request.
+     * Gets the requestorSettings property value. Who can request this access package from this policy.
      * @return AccessPackageAssignmentRequestorSettings|null
     */
     public function getRequestorSettings(): ?AccessPackageAssignmentRequestorSettings {
@@ -199,7 +224,7 @@ class AccessPackageAssignmentPolicy extends Entity
     }
 
     /**
-     * Sets the accessPackage property value. Access package containing this policy. Read-only.
+     * Sets the accessPackage property value. The access package with this policy. Read-only. Nullable. Supports $expand.
      *  @param AccessPackage|null $value Value to set for the accessPackage property.
     */
     public function setAccessPackage(?AccessPackage $value ): void {
@@ -223,7 +248,7 @@ class AccessPackageAssignmentPolicy extends Entity
     }
 
     /**
-     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value ): void {
@@ -239,7 +264,7 @@ class AccessPackageAssignmentPolicy extends Entity
     }
 
     /**
-     * Sets the displayName property value. The display name of the policy.
+     * Sets the displayName property value. The display name of the policy. Supports $filter (eq).
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -255,7 +280,7 @@ class AccessPackageAssignmentPolicy extends Entity
     }
 
     /**
-     * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the modifiedDateTime property.
     */
     public function setModifiedDateTime(?DateTime $value ): void {
@@ -263,7 +288,7 @@ class AccessPackageAssignmentPolicy extends Entity
     }
 
     /**
-     * Sets the requestApprovalSettings property value. Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests.
+     * Sets the requestApprovalSettings property value. Who must approve requests for access package in this policy.
      *  @param AccessPackageAssignmentApprovalSettings|null $value Value to set for the requestApprovalSettings property.
     */
     public function setRequestApprovalSettings(?AccessPackageAssignmentApprovalSettings $value ): void {
@@ -271,7 +296,7 @@ class AccessPackageAssignmentPolicy extends Entity
     }
 
     /**
-     * Sets the requestorSettings property value. Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request.
+     * Sets the requestorSettings property value. Who can request this access package from this policy.
      *  @param AccessPackageAssignmentRequestorSettings|null $value Value to set for the requestorSettings property.
     */
     public function setRequestorSettings(?AccessPackageAssignmentRequestorSettings $value ): void {

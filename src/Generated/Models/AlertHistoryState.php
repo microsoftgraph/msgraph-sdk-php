@@ -10,28 +10,44 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AlertHistoryState implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $appId The Application ID of the calling application that submitted an update (PATCH) to the alert. The appId should be extracted from the auth token and not entered manually by the calling application. */
+    /**
+     * @var string|null $appId The Application ID of the calling application that submitted an update (PATCH) to the alert. The appId should be extracted from the auth token and not entered manually by the calling application.
+    */
     private ?string $appId = null;
     
-    /** @var string|null $assignedTo UPN of user the alert was assigned to (note: alert.assignedTo only stores the last value/UPN). */
+    /**
+     * @var string|null $assignedTo UPN of user the alert was assigned to (note: alert.assignedTo only stores the last value/UPN).
+    */
     private ?string $assignedTo = null;
     
-    /** @var array<string>|null $comments Comment entered by signed-in user. */
+    /**
+     * @var array<string>|null $comments Comment entered by signed-in user.
+    */
     private ?array $comments = null;
     
-    /** @var AlertFeedback|null $feedback Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive. */
+    /**
+     * @var AlertFeedback|null $feedback Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive.
+    */
     private ?AlertFeedback $feedback = null;
     
-    /** @var AlertStatus|null $status Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed. */
+    /**
+     * @var AlertStatus|null $status Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.
+    */
     private ?AlertStatus $status = null;
     
-    /** @var DateTime|null $updatedDateTime Date and time of the alert update. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $updatedDateTime Date and time of the alert update. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $updatedDateTime = null;
     
-    /** @var string|null $user UPN of the signed-in user that updated the alert (taken from the bearer token - if in user/delegated auth mode). */
+    /**
+     * @var string|null $user UPN of the signed-in user that updated the alert (taken from the bearer token - if in user/delegated auth mode).
+    */
     private ?string $user = null;
     
     /**
@@ -46,7 +62,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AlertHistoryState
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AlertHistoryState {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AlertHistoryState {
         return new AlertHistoryState();
     }
 
@@ -95,14 +111,15 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'appId' => function (self $o, ParseNode $n) { $o->setAppId($n->getStringValue()); },
-            'assignedTo' => function (self $o, ParseNode $n) { $o->setAssignedTo($n->getStringValue()); },
-            'comments' => function (self $o, ParseNode $n) { $o->setComments($n->getCollectionOfPrimitiveValues()); },
-            'feedback' => function (self $o, ParseNode $n) { $o->setFeedback($n->getEnumValue(AlertFeedback::class)); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(AlertStatus::class)); },
-            'updatedDateTime' => function (self $o, ParseNode $n) { $o->setUpdatedDateTime($n->getDateTimeValue()); },
-            'user' => function (self $o, ParseNode $n) { $o->setUser($n->getStringValue()); },
+            'appId' => function (ParseNode $n) use ($o) { $o->setAppId($n->getStringValue()); },
+            'assignedTo' => function (ParseNode $n) use ($o) { $o->setAssignedTo($n->getStringValue()); },
+            'comments' => function (ParseNode $n) use ($o) { $o->setComments($n->getCollectionOfPrimitiveValues()); },
+            'feedback' => function (ParseNode $n) use ($o) { $o->setFeedback($n->getEnumValue(AlertFeedback::class)); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(AlertStatus::class)); },
+            'updatedDateTime' => function (ParseNode $n) use ($o) { $o->setUpdatedDateTime($n->getDateTimeValue()); },
+            'user' => function (ParseNode $n) use ($o) { $o->setUser($n->getStringValue()); },
         ];
     }
 

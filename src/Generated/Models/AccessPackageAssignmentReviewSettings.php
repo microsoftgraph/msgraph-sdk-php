@@ -9,31 +9,49 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var AccessReviewExpirationBehavior|null $expirationBehavior The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue. */
+    /**
+     * @var AccessReviewExpirationBehavior|null $expirationBehavior The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
+    */
     private ?AccessReviewExpirationBehavior $expirationBehavior = null;
     
-    /** @var array<SubjectSet>|null $fallbackReviewers This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond. */
+    /**
+     * @var array<SubjectSet>|null $fallbackReviewers This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
+    */
     private ?array $fallbackReviewers = null;
     
-    /** @var bool|null $isEnabled If true, access reviews are required for assignments through this policy. */
+    /**
+     * @var bool|null $isEnabled If true, access reviews are required for assignments through this policy.
+    */
     private ?bool $isEnabled = null;
     
-    /** @var bool|null $isRecommendationEnabled Specifies whether to display recommendations to the reviewer. The default value is true. */
+    /**
+     * @var bool|null $isRecommendationEnabled Specifies whether to display recommendations to the reviewer. The default value is true.
+    */
     private ?bool $isRecommendationEnabled = null;
     
-    /** @var bool|null $isReviewerJustificationRequired Specifies whether the reviewer must provide justification for the approval. The default value is true. */
+    /**
+     * @var bool|null $isReviewerJustificationRequired Specifies whether the reviewer must provide justification for the approval. The default value is true.
+    */
     private ?bool $isReviewerJustificationRequired = null;
     
-    /** @var bool|null $isSelfReview Specifies whether the principals can review their own assignments. */
+    /**
+     * @var bool|null $isSelfReview Specifies whether the principals can review their own assignments.
+    */
     private ?bool $isSelfReview = null;
     
-    /** @var array<SubjectSet>|null $primaryReviewers This collection specifies the users or group of users who will review the access package assignments. */
+    /**
+     * @var array<SubjectSet>|null $primaryReviewers This collection specifies the users or group of users who will review the access package assignments.
+    */
     private ?array $primaryReviewers = null;
     
-    /** @var EntitlementManagementSchedule|null $schedule When the first review should start and how often it should recur. */
+    /**
+     * @var EntitlementManagementSchedule|null $schedule When the first review should start and how often it should recur.
+    */
     private ?EntitlementManagementSchedule $schedule = null;
     
     /**
@@ -48,7 +66,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AccessPackageAssignmentReviewSettings
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageAssignmentReviewSettings {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageAssignmentReviewSettings {
         return new AccessPackageAssignmentReviewSettings();
     }
 
@@ -81,15 +99,16 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'expirationBehavior' => function (self $o, ParseNode $n) { $o->setExpirationBehavior($n->getEnumValue(AccessReviewExpirationBehavior::class)); },
-            'fallbackReviewers' => function (self $o, ParseNode $n) { $o->setFallbackReviewers($n->getCollectionOfObjectValues(SubjectSet::class)); },
-            'isEnabled' => function (self $o, ParseNode $n) { $o->setIsEnabled($n->getBooleanValue()); },
-            'isRecommendationEnabled' => function (self $o, ParseNode $n) { $o->setIsRecommendationEnabled($n->getBooleanValue()); },
-            'isReviewerJustificationRequired' => function (self $o, ParseNode $n) { $o->setIsReviewerJustificationRequired($n->getBooleanValue()); },
-            'isSelfReview' => function (self $o, ParseNode $n) { $o->setIsSelfReview($n->getBooleanValue()); },
-            'primaryReviewers' => function (self $o, ParseNode $n) { $o->setPrimaryReviewers($n->getCollectionOfObjectValues(SubjectSet::class)); },
-            'schedule' => function (self $o, ParseNode $n) { $o->setSchedule($n->getObjectValue(EntitlementManagementSchedule::class)); },
+            'expirationBehavior' => function (ParseNode $n) use ($o) { $o->setExpirationBehavior($n->getEnumValue(AccessReviewExpirationBehavior::class)); },
+            'fallbackReviewers' => function (ParseNode $n) use ($o) { $o->setFallbackReviewers($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
+            'isEnabled' => function (ParseNode $n) use ($o) { $o->setIsEnabled($n->getBooleanValue()); },
+            'isRecommendationEnabled' => function (ParseNode $n) use ($o) { $o->setIsRecommendationEnabled($n->getBooleanValue()); },
+            'isReviewerJustificationRequired' => function (ParseNode $n) use ($o) { $o->setIsReviewerJustificationRequired($n->getBooleanValue()); },
+            'isSelfReview' => function (ParseNode $n) use ($o) { $o->setIsSelfReview($n->getBooleanValue()); },
+            'primaryReviewers' => function (ParseNode $n) use ($o) { $o->setPrimaryReviewers($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
+            'schedule' => function (ParseNode $n) use ($o) { $o->setSchedule($n->getObjectValue(array(EntitlementManagementSchedule::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

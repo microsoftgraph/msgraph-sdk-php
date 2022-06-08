@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class BucketAggregationRange implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $from Defines the lower bound from which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required. */
+    /**
+     * @var string|null $from Defines the lower bound from which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.
+    */
     private ?string $from = null;
     
-    /** @var string|null $to Defines the upper bound up to which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required. */
+    /**
+     * @var string|null $to Defines the upper bound up to which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.
+    */
     private ?string $to = null;
     
     /**
@@ -30,7 +36,7 @@ class BucketAggregationRange implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return BucketAggregationRange
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): BucketAggregationRange {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): BucketAggregationRange {
         return new BucketAggregationRange();
     }
 
@@ -47,9 +53,10 @@ class BucketAggregationRange implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'from' => function (self $o, ParseNode $n) { $o->setFrom($n->getStringValue()); },
-            'to' => function (self $o, ParseNode $n) { $o->setTo($n->getStringValue()); },
+            'from' => function (ParseNode $n) use ($o) { $o->setFrom($n->getStringValue()); },
+            'to' => function (ParseNode $n) use ($o) { $o->setTo($n->getStringValue()); },
         ];
     }
 

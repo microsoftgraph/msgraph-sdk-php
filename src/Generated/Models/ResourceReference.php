@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ResourceReference implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $id The item's unique identifier. */
+    /**
+     * @var string|null $id The item's unique identifier.
+    */
     private ?string $id = null;
     
-    /** @var string|null $type A string value that can be used to classify the item, such as 'microsoft.graph.driveItem' */
+    /**
+     * @var string|null $type A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
+    */
     private ?string $type = null;
     
-    /** @var string|null $webUrl A URL leading to the referenced item. */
+    /**
+     * @var string|null $webUrl A URL leading to the referenced item.
+    */
     private ?string $webUrl = null;
     
     /**
@@ -33,7 +41,7 @@ class ResourceReference implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ResourceReference
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ResourceReference {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ResourceReference {
         return new ResourceReference();
     }
 
@@ -50,10 +58,11 @@ class ResourceReference implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'id' => function (self $o, ParseNode $n) { $o->setId($n->getStringValue()); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getStringValue()); },
-            'webUrl' => function (self $o, ParseNode $n) { $o->setWebUrl($n->getStringValue()); },
+            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
+            'webUrl' => function (ParseNode $n) use ($o) { $o->setWebUrl($n->getStringValue()); },
         ];
     }
 

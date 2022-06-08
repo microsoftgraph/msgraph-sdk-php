@@ -6,33 +6,51 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class UnifiedRoleDefinition extends Entity 
+class UnifiedRoleDefinition extends Entity implements Parsable 
 {
-    /** @var string|null $description The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true. */
+    /**
+     * @var string|null $description The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq, in). */
+    /**
+     * @var string|null $displayName The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith operators only).
+    */
     private ?string $displayName = null;
     
-    /** @var array<UnifiedRoleDefinition>|null $inheritsPermissionsFrom Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand. */
+    /**
+     * @var array<UnifiedRoleDefinition>|null $inheritsPermissionsFrom Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
+    */
     private ?array $inheritsPermissionsFrom = null;
     
-    /** @var bool|null $isBuiltIn Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in). */
+    /**
+     * @var bool|null $isBuiltIn Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq operator only).
+    */
     private ?bool $isBuiltIn = null;
     
-    /** @var bool|null $isEnabled Flag indicating whether the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true. */
+    /**
+     * @var bool|null $isEnabled Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
+    */
     private ?bool $isEnabled = null;
     
-    /** @var array<string>|null $resourceScopes List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment. */
+    /**
+     * @var array<string>|null $resourceScopes List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment
+    */
     private ?array $resourceScopes = null;
     
-    /** @var array<UnifiedRolePermission>|null $rolePermissions List of permissions included in the role. Read-only when isBuiltIn is true. Required. */
+    /**
+     * @var array<UnifiedRolePermission>|null $rolePermissions List of permissions included in the role. Read-only when isBuiltIn is true. Required.
+    */
     private ?array $rolePermissions = null;
     
-    /** @var string|null $templateId Custom template identifier that can be set when isBuiltIn is false but is read-only when isBuiltIn is true. This identifier is typically used if one needs an identifier to be the same across different directories. */
+    /**
+     * @var string|null $templateId Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.
+    */
     private ?string $templateId = null;
     
-    /** @var string|null $version Indicates version of the role definition. Read-only when isBuiltIn is true. */
+    /**
+     * @var string|null $version Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.
+    */
     private ?string $version = null;
     
     /**
@@ -47,7 +65,7 @@ class UnifiedRoleDefinition extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return UnifiedRoleDefinition
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): UnifiedRoleDefinition {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): UnifiedRoleDefinition {
         return new UnifiedRoleDefinition();
     }
 
@@ -60,7 +78,7 @@ class UnifiedRoleDefinition extends Entity
     }
 
     /**
-     * Gets the displayName property value. The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq, in).
+     * Gets the displayName property value. The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith operators only).
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -72,21 +90,22 @@ class UnifiedRoleDefinition extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'inheritsPermissionsFrom' => function (self $o, ParseNode $n) { $o->setInheritsPermissionsFrom($n->getCollectionOfObjectValues(UnifiedRoleDefinition::class)); },
-            'isBuiltIn' => function (self $o, ParseNode $n) { $o->setIsBuiltIn($n->getBooleanValue()); },
-            'isEnabled' => function (self $o, ParseNode $n) { $o->setIsEnabled($n->getBooleanValue()); },
-            'resourceScopes' => function (self $o, ParseNode $n) { $o->setResourceScopes($n->getCollectionOfPrimitiveValues()); },
-            'rolePermissions' => function (self $o, ParseNode $n) { $o->setRolePermissions($n->getCollectionOfObjectValues(UnifiedRolePermission::class)); },
-            'templateId' => function (self $o, ParseNode $n) { $o->setTemplateId($n->getStringValue()); },
-            'version' => function (self $o, ParseNode $n) { $o->setVersion($n->getStringValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'inheritsPermissionsFrom' => function (ParseNode $n) use ($o) { $o->setInheritsPermissionsFrom($n->getCollectionOfObjectValues(array(UnifiedRoleDefinition::class, 'createFromDiscriminatorValue'))); },
+            'isBuiltIn' => function (ParseNode $n) use ($o) { $o->setIsBuiltIn($n->getBooleanValue()); },
+            'isEnabled' => function (ParseNode $n) use ($o) { $o->setIsEnabled($n->getBooleanValue()); },
+            'resourceScopes' => function (ParseNode $n) use ($o) { $o->setResourceScopes($n->getCollectionOfPrimitiveValues()); },
+            'rolePermissions' => function (ParseNode $n) use ($o) { $o->setRolePermissions($n->getCollectionOfObjectValues(array(UnifiedRolePermission::class, 'createFromDiscriminatorValue'))); },
+            'templateId' => function (ParseNode $n) use ($o) { $o->setTemplateId($n->getStringValue()); },
+            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getStringValue()); },
         ]);
     }
 
     /**
-     * Gets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
+     * Gets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
      * @return array<UnifiedRoleDefinition>|null
     */
     public function getInheritsPermissionsFrom(): ?array {
@@ -94,7 +113,7 @@ class UnifiedRoleDefinition extends Entity
     }
 
     /**
-     * Gets the isBuiltIn property value. Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in).
+     * Gets the isBuiltIn property value. Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq operator only).
      * @return bool|null
     */
     public function getIsBuiltIn(): ?bool {
@@ -102,7 +121,7 @@ class UnifiedRoleDefinition extends Entity
     }
 
     /**
-     * Gets the isEnabled property value. Flag indicating whether the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
+     * Gets the isEnabled property value. Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
@@ -110,7 +129,7 @@ class UnifiedRoleDefinition extends Entity
     }
 
     /**
-     * Gets the resourceScopes property value. List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
+     * Gets the resourceScopes property value. List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment
      * @return array<string>|null
     */
     public function getResourceScopes(): ?array {
@@ -126,7 +145,7 @@ class UnifiedRoleDefinition extends Entity
     }
 
     /**
-     * Gets the templateId property value. Custom template identifier that can be set when isBuiltIn is false but is read-only when isBuiltIn is true. This identifier is typically used if one needs an identifier to be the same across different directories.
+     * Gets the templateId property value. Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.
      * @return string|null
     */
     public function getTemplateId(): ?string {
@@ -134,7 +153,7 @@ class UnifiedRoleDefinition extends Entity
     }
 
     /**
-     * Gets the version property value. Indicates version of the role definition. Read-only when isBuiltIn is true.
+     * Gets the version property value. Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.
      * @return string|null
     */
     public function getVersion(): ?string {
@@ -167,7 +186,7 @@ class UnifiedRoleDefinition extends Entity
     }
 
     /**
-     * Sets the displayName property value. The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq, in).
+     * Sets the displayName property value. The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith operators only).
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -175,7 +194,7 @@ class UnifiedRoleDefinition extends Entity
     }
 
     /**
-     * Sets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
+     * Sets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
      *  @param array<UnifiedRoleDefinition>|null $value Value to set for the inheritsPermissionsFrom property.
     */
     public function setInheritsPermissionsFrom(?array $value ): void {
@@ -183,7 +202,7 @@ class UnifiedRoleDefinition extends Entity
     }
 
     /**
-     * Sets the isBuiltIn property value. Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in).
+     * Sets the isBuiltIn property value. Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq operator only).
      *  @param bool|null $value Value to set for the isBuiltIn property.
     */
     public function setIsBuiltIn(?bool $value ): void {
@@ -191,7 +210,7 @@ class UnifiedRoleDefinition extends Entity
     }
 
     /**
-     * Sets the isEnabled property value. Flag indicating whether the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
+     * Sets the isEnabled property value. Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
      *  @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value ): void {
@@ -199,7 +218,7 @@ class UnifiedRoleDefinition extends Entity
     }
 
     /**
-     * Sets the resourceScopes property value. List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
+     * Sets the resourceScopes property value. List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment
      *  @param array<string>|null $value Value to set for the resourceScopes property.
     */
     public function setResourceScopes(?array $value ): void {
@@ -215,7 +234,7 @@ class UnifiedRoleDefinition extends Entity
     }
 
     /**
-     * Sets the templateId property value. Custom template identifier that can be set when isBuiltIn is false but is read-only when isBuiltIn is true. This identifier is typically used if one needs an identifier to be the same across different directories.
+     * Sets the templateId property value. Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.
      *  @param string|null $value Value to set for the templateId property.
     */
     public function setTemplateId(?string $value ): void {
@@ -223,7 +242,7 @@ class UnifiedRoleDefinition extends Entity
     }
 
     /**
-     * Sets the version property value. Indicates version of the role definition. Read-only when isBuiltIn is true.
+     * Sets the version property value. Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.
      *  @param string|null $value Value to set for the version property.
     */
     public function setVersion(?string $value ): void {

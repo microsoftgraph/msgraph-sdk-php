@@ -9,31 +9,49 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Property implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<string>|null $aliases A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^. Optional. */
+    /**
+     * @var array<string>|null $aliases A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^. Optional.
+    */
     private ?array $aliases = null;
     
-    /** @var bool|null $isQueryable Specifies if the property is queryable. Queryable properties can be used in Keyword Query Language (KQL) queries. Optional. */
+    /**
+     * @var bool|null $isQueryable Specifies if the property is queryable. Queryable properties can be used in Keyword Query Language (KQL) queries. Optional.
+    */
     private ?bool $isQueryable = null;
     
-    /** @var bool|null $isRefinable Specifies if the property is refinable.  Refinable properties can be used to filter search results in the Search API and add a refiner control in the Microsoft Search user experience. Optional. */
+    /**
+     * @var bool|null $isRefinable Specifies if the property is refinable.  Refinable properties can be used to filter search results in the Search API and add a refiner control in the Microsoft Search user experience. Optional.
+    */
     private ?bool $isRefinable = null;
     
-    /** @var bool|null $isRetrievable Specifies if the property is retrievable. Retrievable properties are returned in the result set when items are returned by the search API. Retrievable properties are also available to add to the display template used to render search results. Optional. */
+    /**
+     * @var bool|null $isRetrievable Specifies if the property is retrievable. Retrievable properties are returned in the result set when items are returned by the search API. Retrievable properties are also available to add to the display template used to render search results. Optional.
+    */
     private ?bool $isRetrievable = null;
     
-    /** @var bool|null $isSearchable Specifies if the property is searchable. Only properties of type String or StringCollection can be searchable. Non-searchable properties are not added to the search index. Optional. */
+    /**
+     * @var bool|null $isSearchable Specifies if the property is searchable. Only properties of type string or stringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.
+    */
     private ?bool $isSearchable = null;
     
-    /** @var array<Label>|null $labels Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional. */
+    /**
+     * @var array<string>|null $labels Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). Optional.The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, iconUrl, containerName, containerUrl. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: iconUrl, containerName, containerUrl.
+    */
     private ?array $labels = null;
     
-    /** @var string|null $name The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^.  Required. */
+    /**
+     * @var string|null $name The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^.  Required.
+    */
     private ?string $name = null;
     
-    /** @var PropertyType|null $type The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue. */
+    /**
+     * @var PropertyType|null $type The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue. Required.
+    */
     private ?PropertyType $type = null;
     
     /**
@@ -48,7 +66,7 @@ class Property implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Property
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Property {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Property {
         return new Property();
     }
 
@@ -73,15 +91,16 @@ class Property implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'aliases' => function (self $o, ParseNode $n) { $o->setAliases($n->getCollectionOfPrimitiveValues()); },
-            'isQueryable' => function (self $o, ParseNode $n) { $o->setIsQueryable($n->getBooleanValue()); },
-            'isRefinable' => function (self $o, ParseNode $n) { $o->setIsRefinable($n->getBooleanValue()); },
-            'isRetrievable' => function (self $o, ParseNode $n) { $o->setIsRetrievable($n->getBooleanValue()); },
-            'isSearchable' => function (self $o, ParseNode $n) { $o->setIsSearchable($n->getBooleanValue()); },
-            'labels' => function (self $o, ParseNode $n) { $o->setLabels($n->getCollectionOfEnumValues(Label::class)); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getEnumValue(PropertyType::class)); },
+            'aliases' => function (ParseNode $n) use ($o) { $o->setAliases($n->getCollectionOfPrimitiveValues()); },
+            'isQueryable' => function (ParseNode $n) use ($o) { $o->setIsQueryable($n->getBooleanValue()); },
+            'isRefinable' => function (ParseNode $n) use ($o) { $o->setIsRefinable($n->getBooleanValue()); },
+            'isRetrievable' => function (ParseNode $n) use ($o) { $o->setIsRetrievable($n->getBooleanValue()); },
+            'isSearchable' => function (ParseNode $n) use ($o) { $o->setIsSearchable($n->getBooleanValue()); },
+            'labels' => function (ParseNode $n) use ($o) { $o->setLabels($n->getCollectionOfPrimitiveValues()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(PropertyType::class)); },
         ];
     }
 
@@ -110,7 +129,7 @@ class Property implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the isSearchable property value. Specifies if the property is searchable. Only properties of type String or StringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.
+     * Gets the isSearchable property value. Specifies if the property is searchable. Only properties of type string or stringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.
      * @return bool|null
     */
     public function getIsSearchable(): ?bool {
@@ -118,8 +137,8 @@ class Property implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional.
-     * @return array<Label>|null
+     * Gets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). Optional.The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, iconUrl, containerName, containerUrl. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: iconUrl, containerName, containerUrl.
+     * @return array<string>|null
     */
     public function getLabels(): ?array {
         return $this->labels;
@@ -134,7 +153,7 @@ class Property implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the type property value. The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue.
+     * Gets the type property value. The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue. Required.
      * @return PropertyType|null
     */
     public function getType(): ?PropertyType {
@@ -151,7 +170,7 @@ class Property implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('isRefinable', $this->isRefinable);
         $writer->writeBooleanValue('isRetrievable', $this->isRetrievable);
         $writer->writeBooleanValue('isSearchable', $this->isSearchable);
-        $writer->writeCollectionOfEnumValues('labels', $this->labels);
+        $writer->writeCollectionOfPrimitiveValues('labels', $this->labels);
         $writer->writeStringValue('name', $this->name);
         $writer->writeEnumValue('type', $this->type);
         $writer->writeAdditionalData($this->additionalData);
@@ -198,7 +217,7 @@ class Property implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the isSearchable property value. Specifies if the property is searchable. Only properties of type String or StringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.
+     * Sets the isSearchable property value. Specifies if the property is searchable. Only properties of type string or stringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.
      *  @param bool|null $value Value to set for the isSearchable property.
     */
     public function setIsSearchable(?bool $value ): void {
@@ -206,8 +225,8 @@ class Property implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional.
-     *  @param array<Label>|null $value Value to set for the labels property.
+     * Sets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). Optional.The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, iconUrl, containerName, containerUrl. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: iconUrl, containerName, containerUrl.
+     *  @param array<string>|null $value Value to set for the labels property.
     */
     public function setLabels(?array $value ): void {
         $this->labels = $value;
@@ -222,7 +241,7 @@ class Property implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the type property value. The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue.
+     * Sets the type property value. The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue. Required.
      *  @param PropertyType|null $value Value to set for the type property.
     */
     public function setType(?PropertyType $value ): void {

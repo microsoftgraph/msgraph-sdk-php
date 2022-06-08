@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class TimeSlot implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var DateTimeTimeZone|null $end The end property */
+    /**
+     * @var DateTimeTimeZone|null $end The end property
+    */
     private ?DateTimeTimeZone $end = null;
     
-    /** @var DateTimeTimeZone|null $start The start property */
+    /**
+     * @var DateTimeTimeZone|null $start The start property
+    */
     private ?DateTimeTimeZone $start = null;
     
     /**
@@ -30,7 +36,7 @@ class TimeSlot implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TimeSlot
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TimeSlot {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TimeSlot {
         return new TimeSlot();
     }
 
@@ -55,9 +61,10 @@ class TimeSlot implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'end' => function (self $o, ParseNode $n) { $o->setEnd($n->getObjectValue(DateTimeTimeZone::class)); },
-            'start' => function (self $o, ParseNode $n) { $o->setStart($n->getObjectValue(DateTimeTimeZone::class)); },
+            'end' => function (ParseNode $n) use ($o) { $o->setEnd($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
+            'start' => function (ParseNode $n) use ($o) { $o->setStart($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

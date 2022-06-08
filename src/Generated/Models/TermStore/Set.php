@@ -9,30 +9,46 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Set extends Entity 
+class Set extends Entity implements Parsable 
 {
-    /** @var array<Term>|null $children Children terms of set in term [store]. */
+    /**
+     * @var array<Term>|null $children Children terms of set in term [store].
+    */
     private ?array $children = null;
     
-    /** @var DateTime|null $createdDateTime Date and time of set creation. Read-only. */
+    /**
+     * @var DateTime|null $createdDateTime Date and time of set creation. Read-only.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $description Description that gives details on the term usage. */
+    /**
+     * @var string|null $description Description giving details on the term usage.
+    */
     private ?string $description = null;
     
-    /** @var array<LocalizedName>|null $localizedNames Name of the set for each languageTag. */
+    /**
+     * @var array<LocalizedName>|null $localizedNames Name of the set for each languageTag.
+    */
     private ?array $localizedNames = null;
     
-    /** @var Group|null $parentGroup The parentGroup property */
+    /**
+     * @var Group|null $parentGroup The parentGroup property
+    */
     private ?Group $parentGroup = null;
     
-    /** @var array<KeyValue>|null $properties Custom properties for the set. */
+    /**
+     * @var array<KeyValue>|null $properties Custom properties for the set.
+    */
     private ?array $properties = null;
     
-    /** @var array<Relation>|null $relations Indicates which terms have been pinned or reused directly under the set. */
+    /**
+     * @var array<Relation>|null $relations Indicates which terms have been pinned or reused directly under the set.
+    */
     private ?array $relations = null;
     
-    /** @var array<Term>|null $terms All the terms under the set. */
+    /**
+     * @var array<Term>|null $terms All the terms under the set.
+    */
     private ?array $terms = null;
     
     /**
@@ -47,7 +63,7 @@ class Set extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Set
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Set {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Set {
         return new Set();
     }
 
@@ -68,7 +84,7 @@ class Set extends Entity
     }
 
     /**
-     * Gets the description property value. Description that gives details on the term usage.
+     * Gets the description property value. Description giving details on the term usage.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -80,15 +96,16 @@ class Set extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'children' => function (self $o, ParseNode $n) { $o->setChildren($n->getCollectionOfObjectValues(Term::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'localizedNames' => function (self $o, ParseNode $n) { $o->setLocalizedNames($n->getCollectionOfObjectValues(LocalizedName::class)); },
-            'parentGroup' => function (self $o, ParseNode $n) { $o->setParentGroup($n->getObjectValue(Group::class)); },
-            'properties' => function (self $o, ParseNode $n) { $o->setProperties($n->getCollectionOfObjectValues(KeyValue::class)); },
-            'relations' => function (self $o, ParseNode $n) { $o->setRelations($n->getCollectionOfObjectValues(Relation::class)); },
-            'terms' => function (self $o, ParseNode $n) { $o->setTerms($n->getCollectionOfObjectValues(Term::class)); },
+            'children' => function (ParseNode $n) use ($o) { $o->setChildren($n->getCollectionOfObjectValues(array(Term::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'localizedNames' => function (ParseNode $n) use ($o) { $o->setLocalizedNames($n->getCollectionOfObjectValues(array(LocalizedName::class, 'createFromDiscriminatorValue'))); },
+            'parentGroup' => function (ParseNode $n) use ($o) { $o->setParentGroup($n->getObjectValue(array(Group::class, 'createFromDiscriminatorValue'))); },
+            'properties' => function (ParseNode $n) use ($o) { $o->setProperties($n->getCollectionOfObjectValues(array(KeyValue::class, 'createFromDiscriminatorValue'))); },
+            'relations' => function (ParseNode $n) use ($o) { $o->setRelations($n->getCollectionOfObjectValues(array(Relation::class, 'createFromDiscriminatorValue'))); },
+            'terms' => function (ParseNode $n) use ($o) { $o->setTerms($n->getCollectionOfObjectValues(array(Term::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -165,7 +182,7 @@ class Set extends Entity
     }
 
     /**
-     * Sets the description property value. Description that gives details on the term usage.
+     * Sets the description property value. Description giving details on the term usage.
      *  @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value ): void {

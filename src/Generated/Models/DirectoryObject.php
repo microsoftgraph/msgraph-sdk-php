@@ -7,9 +7,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DirectoryObject extends Entity 
+class DirectoryObject extends Entity implements Parsable 
 {
-    /** @var DateTime|null $deletedDateTime Date and time when this object was deleted. Always null when the object hasn't been deleted. */
+    /**
+     * @var DateTime|null $deletedDateTime Date and time when this object was deleted. Always null when the object hasn't been deleted.
+    */
     private ?DateTime $deletedDateTime = null;
     
     /**
@@ -24,7 +26,14 @@ class DirectoryObject extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DirectoryObject
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DirectoryObject {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DirectoryObject {
+        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.directoryObject': return new DirectoryObject();
+            }
+        }
         return new DirectoryObject();
     }
 
@@ -41,8 +50,9 @@ class DirectoryObject extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'deletedDateTime' => function (self $o, ParseNode $n) { $o->setDeletedDateTime($n->getDateTimeValue()); },
+            'deletedDateTime' => function (ParseNode $n) use ($o) { $o->setDeletedDateTime($n->getDateTimeValue()); },
         ]);
     }
 

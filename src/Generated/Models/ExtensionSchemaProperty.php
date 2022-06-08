@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $name The name of the strongly-typed property defined as part of a schema extension. */
+    /**
+     * @var string|null $name The name of the strongly typed property defined as part of a schema extension.
+    */
     private ?string $name = null;
     
-    /** @var string|null $type The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String.  See the table below for more details. */
+    /**
+     * @var string|null $type The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String.  See the table below for more details.
+    */
     private ?string $type = null;
     
     /**
@@ -30,7 +36,7 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ExtensionSchemaProperty
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ExtensionSchemaProperty {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ExtensionSchemaProperty {
         return new ExtensionSchemaProperty();
     }
 
@@ -47,14 +53,15 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getStringValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
         ];
     }
 
     /**
-     * Gets the name property value. The name of the strongly-typed property defined as part of a schema extension.
+     * Gets the name property value. The name of the strongly typed property defined as part of a schema extension.
      * @return string|null
     */
     public function getName(): ?string {
@@ -88,7 +95,7 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the name property value. The name of the strongly-typed property defined as part of a schema extension.
+     * Sets the name property value. The name of the strongly typed property defined as part of a schema extension.
      *  @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value ): void {

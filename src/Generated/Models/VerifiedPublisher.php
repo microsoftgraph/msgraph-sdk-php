@@ -10,16 +10,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class VerifiedPublisher implements AdditionalDataHolder, Parsable 
 {
-    /** @var DateTime|null $addedDateTime The timestamp when the verified publisher was first added or most recently updated. */
+    /**
+     * @var DateTime|null $addedDateTime The timestamp when the verified publisher was first added or most recently updated.
+    */
     private ?DateTime $addedDateTime = null;
     
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $displayName The verified publisher name from the app publisher's Partner Center account. */
+    /**
+     * @var string|null $displayName The verified publisher name from the app publisher's Microsoft Partner Network (MPN) account.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $verifiedPublisherId The ID of the verified publisher from the app publisher's Partner Center account. */
+    /**
+     * @var string|null $verifiedPublisherId The ID of the verified publisher from the app publisher's Partner Center account.
+    */
     private ?string $verifiedPublisherId = null;
     
     /**
@@ -34,7 +42,7 @@ class VerifiedPublisher implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return VerifiedPublisher
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): VerifiedPublisher {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): VerifiedPublisher {
         return new VerifiedPublisher();
     }
 
@@ -55,7 +63,7 @@ class VerifiedPublisher implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the displayName property value. The verified publisher name from the app publisher's Partner Center account.
+     * Gets the displayName property value. The verified publisher name from the app publisher's Microsoft Partner Network (MPN) account.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -67,10 +75,11 @@ class VerifiedPublisher implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'addedDateTime' => function (self $o, ParseNode $n) { $o->setAddedDateTime($n->getDateTimeValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'verifiedPublisherId' => function (self $o, ParseNode $n) { $o->setVerifiedPublisherId($n->getStringValue()); },
+            'addedDateTime' => function (ParseNode $n) use ($o) { $o->setAddedDateTime($n->getDateTimeValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'verifiedPublisherId' => function (ParseNode $n) use ($o) { $o->setVerifiedPublisherId($n->getStringValue()); },
         ];
     }
 
@@ -110,7 +119,7 @@ class VerifiedPublisher implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the displayName property value. The verified publisher name from the app publisher's Partner Center account.
+     * Sets the displayName property value. The verified publisher name from the app publisher's Microsoft Partner Network (MPN) account.
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {

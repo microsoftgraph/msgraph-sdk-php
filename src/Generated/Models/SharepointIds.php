@@ -9,28 +9,44 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SharepointIds implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $listId The unique identifier (guid) for the item's list in SharePoint. */
+    /**
+     * @var string|null $listId The unique identifier (guid) for the item's list in SharePoint.
+    */
     private ?string $listId = null;
     
-    /** @var string|null $listItemId An integer identifier for the item within the containing list. */
+    /**
+     * @var string|null $listItemId An integer identifier for the item within the containing list.
+    */
     private ?string $listItemId = null;
     
-    /** @var string|null $listItemUniqueId The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site. */
+    /**
+     * @var string|null $listItemUniqueId The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site.
+    */
     private ?string $listItemUniqueId = null;
     
-    /** @var string|null $siteId The unique identifier (guid) for the item's site collection (SPSite). */
+    /**
+     * @var string|null $siteId The unique identifier (guid) for the item's site collection (SPSite).
+    */
     private ?string $siteId = null;
     
-    /** @var string|null $siteUrl The SharePoint URL for the site that contains the item. */
+    /**
+     * @var string|null $siteUrl The SharePoint URL for the site that contains the item.
+    */
     private ?string $siteUrl = null;
     
-    /** @var string|null $tenantId The unique identifier (guid) for the tenancy. */
+    /**
+     * @var string|null $tenantId The unique identifier (guid) for the tenancy.
+    */
     private ?string $tenantId = null;
     
-    /** @var string|null $webId The unique identifier (guid) for the item's site (SPWeb). */
+    /**
+     * @var string|null $webId The unique identifier (guid) for the item's site (SPWeb).
+    */
     private ?string $webId = null;
     
     /**
@@ -45,7 +61,7 @@ class SharepointIds implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SharepointIds
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SharepointIds {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SharepointIds {
         return new SharepointIds();
     }
 
@@ -62,14 +78,15 @@ class SharepointIds implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'listId' => function (self $o, ParseNode $n) { $o->setListId($n->getStringValue()); },
-            'listItemId' => function (self $o, ParseNode $n) { $o->setListItemId($n->getStringValue()); },
-            'listItemUniqueId' => function (self $o, ParseNode $n) { $o->setListItemUniqueId($n->getStringValue()); },
-            'siteId' => function (self $o, ParseNode $n) { $o->setSiteId($n->getStringValue()); },
-            'siteUrl' => function (self $o, ParseNode $n) { $o->setSiteUrl($n->getStringValue()); },
-            'tenantId' => function (self $o, ParseNode $n) { $o->setTenantId($n->getStringValue()); },
-            'webId' => function (self $o, ParseNode $n) { $o->setWebId($n->getStringValue()); },
+            'listId' => function (ParseNode $n) use ($o) { $o->setListId($n->getStringValue()); },
+            'listItemId' => function (ParseNode $n) use ($o) { $o->setListItemId($n->getStringValue()); },
+            'listItemUniqueId' => function (ParseNode $n) use ($o) { $o->setListItemUniqueId($n->getStringValue()); },
+            'siteId' => function (ParseNode $n) use ($o) { $o->setSiteId($n->getStringValue()); },
+            'siteUrl' => function (ParseNode $n) use ($o) { $o->setSiteUrl($n->getStringValue()); },
+            'tenantId' => function (ParseNode $n) use ($o) { $o->setTenantId($n->getStringValue()); },
+            'webId' => function (ParseNode $n) use ($o) { $o->setWebId($n->getStringValue()); },
         ];
     }
 

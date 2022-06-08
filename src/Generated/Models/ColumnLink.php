@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ColumnLink extends Entity 
+class ColumnLink extends Entity implements Parsable 
 {
-    /** @var string|null $name The name of the column  in this content type. */
+    /**
+     * @var string|null $name The name of the column  in this content type.
+    */
     private ?string $name = null;
     
     /**
@@ -23,7 +25,7 @@ class ColumnLink extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ColumnLink
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ColumnLink {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ColumnLink {
         return new ColumnLink();
     }
 
@@ -32,8 +34,9 @@ class ColumnLink extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
         ]);
     }
 

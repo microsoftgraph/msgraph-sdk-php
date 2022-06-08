@@ -6,24 +6,36 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class IdentityUserFlowAttributeAssignment extends Entity 
+class IdentityUserFlowAttributeAssignment extends Entity implements Parsable 
 {
-    /** @var string|null $displayName The display name of the identityUserFlowAttribute within a user flow. */
+    /**
+     * @var string|null $displayName The display name of the identityUserFlowAttribute within a user flow.
+    */
     private ?string $displayName = null;
     
-    /** @var bool|null $isOptional Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value. */
+    /**
+     * @var bool|null $isOptional Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
+    */
     private ?bool $isOptional = null;
     
-    /** @var bool|null $requiresVerification Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address. */
+    /**
+     * @var bool|null $requiresVerification Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address.
+    */
     private ?bool $requiresVerification = null;
     
-    /** @var IdentityUserFlowAttribute|null $userAttribute The user attribute that you want to add to your user flow. */
+    /**
+     * @var IdentityUserFlowAttribute|null $userAttribute The user attribute that you want to add to your user flow.
+    */
     private ?IdentityUserFlowAttribute $userAttribute = null;
     
-    /** @var array<UserAttributeValuesItem>|null $userAttributeValues The input options for the user flow attribute. Only applicable when the userInputType is radioSingleSelect, dropdownSingleSelect, or checkboxMultiSelect. */
+    /**
+     * @var array<UserAttributeValuesItem>|null $userAttributeValues The input options for the user flow attribute. Only applicable when the userInputType is radioSingleSelect, dropdownSingleSelect, or checkboxMultiSelect.
+    */
     private ?array $userAttributeValues = null;
     
-    /** @var IdentityUserFlowAttributeInputType|null $userInputType The input type of the user flow attribute. Possible values are: textBox, dateTimeDropdown, radioSingleSelect, dropdownSingleSelect, emailBox, checkboxMultiSelect. */
+    /**
+     * @var IdentityUserFlowAttributeInputType|null $userInputType The input type of the user flow attribute. Possible values are: textBox, dateTimeDropdown, radioSingleSelect, dropdownSingleSelect, emailBox, checkboxMultiSelect.
+    */
     private ?IdentityUserFlowAttributeInputType $userInputType = null;
     
     /**
@@ -38,7 +50,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return IdentityUserFlowAttributeAssignment
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): IdentityUserFlowAttributeAssignment {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): IdentityUserFlowAttributeAssignment {
         return new IdentityUserFlowAttributeAssignment();
     }
 
@@ -55,13 +67,14 @@ class IdentityUserFlowAttributeAssignment extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'isOptional' => function (self $o, ParseNode $n) { $o->setIsOptional($n->getBooleanValue()); },
-            'requiresVerification' => function (self $o, ParseNode $n) { $o->setRequiresVerification($n->getBooleanValue()); },
-            'userAttribute' => function (self $o, ParseNode $n) { $o->setUserAttribute($n->getObjectValue(IdentityUserFlowAttribute::class)); },
-            'userAttributeValues' => function (self $o, ParseNode $n) { $o->setUserAttributeValues($n->getCollectionOfObjectValues(UserAttributeValuesItem::class)); },
-            'userInputType' => function (self $o, ParseNode $n) { $o->setUserInputType($n->getEnumValue(IdentityUserFlowAttributeInputType::class)); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'isOptional' => function (ParseNode $n) use ($o) { $o->setIsOptional($n->getBooleanValue()); },
+            'requiresVerification' => function (ParseNode $n) use ($o) { $o->setRequiresVerification($n->getBooleanValue()); },
+            'userAttribute' => function (ParseNode $n) use ($o) { $o->setUserAttribute($n->getObjectValue(array(IdentityUserFlowAttribute::class, 'createFromDiscriminatorValue'))); },
+            'userAttributeValues' => function (ParseNode $n) use ($o) { $o->setUserAttributeValues($n->getCollectionOfObjectValues(array(UserAttributeValuesItem::class, 'createFromDiscriminatorValue'))); },
+            'userInputType' => function (ParseNode $n) use ($o) { $o->setUserInputType($n->getEnumValue(IdentityUserFlowAttributeInputType::class)); },
         ]);
     }
 

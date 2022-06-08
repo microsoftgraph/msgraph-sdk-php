@@ -6,27 +6,41 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AuthorizationPolicy extends PolicyBase 
+class AuthorizationPolicy extends PolicyBase implements Parsable 
 {
-    /** @var bool|null $allowedToSignUpEmailBasedSubscriptions Indicates whether users can sign up for email based subscriptions. */
+    /**
+     * @var bool|null $allowedToSignUpEmailBasedSubscriptions Indicates whether users can sign up for email based subscriptions.
+    */
     private ?bool $allowedToSignUpEmailBasedSubscriptions = null;
     
-    /** @var bool|null $allowedToUseSSPR Indicates whether the Self-Serve Password Reset feature can be used by users on the tenant. */
+    /**
+     * @var bool|null $allowedToUseSSPR Indicates whether the Self-Serve Password Reset feature can be used by users on the tenant.
+    */
     private ?bool $allowedToUseSSPR = null;
     
-    /** @var bool|null $allowEmailVerifiedUsersToJoinOrganization Indicates whether a user can join the tenant by email validation. */
+    /**
+     * @var bool|null $allowEmailVerifiedUsersToJoinOrganization Indicates whether a user can join the tenant by email validation.
+    */
     private ?bool $allowEmailVerifiedUsersToJoinOrganization = null;
     
-    /** @var AllowInvitesFrom|null $allowInvitesFrom Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. See more in the table below. */
+    /**
+     * @var AllowInvitesFrom|null $allowInvitesFrom Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. See more in the table below.
+    */
     private ?AllowInvitesFrom $allowInvitesFrom = null;
     
-    /** @var bool|null $blockMsolPowerShell To disable the use of MSOL PowerShell set this property to true. This will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph. */
+    /**
+     * @var bool|null $blockMsolPowerShell To disable the use of MSOL PowerShell set this property to true. This will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
+    */
     private ?bool $blockMsolPowerShell = null;
     
-    /** @var DefaultUserRolePermissions|null $defaultUserRolePermissions The defaultUserRolePermissions property */
+    /**
+     * @var DefaultUserRolePermissions|null $defaultUserRolePermissions The defaultUserRolePermissions property
+    */
     private ?DefaultUserRolePermissions $defaultUserRolePermissions = null;
     
-    /** @var string|null $guestUserRoleId Represents role templateId for the role that should be granted to guest user. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b). */
+    /**
+     * @var string|null $guestUserRoleId Represents role templateId for the role that should be granted to guest user. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
+    */
     private ?string $guestUserRoleId = null;
     
     /**
@@ -41,7 +55,7 @@ class AuthorizationPolicy extends PolicyBase
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AuthorizationPolicy
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AuthorizationPolicy {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AuthorizationPolicy {
         return new AuthorizationPolicy();
     }
 
@@ -98,19 +112,20 @@ class AuthorizationPolicy extends PolicyBase
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowedToSignUpEmailBasedSubscriptions' => function (self $o, ParseNode $n) { $o->setAllowedToSignUpEmailBasedSubscriptions($n->getBooleanValue()); },
-            'allowedToUseSSPR' => function (self $o, ParseNode $n) { $o->setAllowedToUseSSPR($n->getBooleanValue()); },
-            'allowEmailVerifiedUsersToJoinOrganization' => function (self $o, ParseNode $n) { $o->setAllowEmailVerifiedUsersToJoinOrganization($n->getBooleanValue()); },
-            'allowInvitesFrom' => function (self $o, ParseNode $n) { $o->setAllowInvitesFrom($n->getEnumValue(AllowInvitesFrom::class)); },
-            'blockMsolPowerShell' => function (self $o, ParseNode $n) { $o->setBlockMsolPowerShell($n->getBooleanValue()); },
-            'defaultUserRolePermissions' => function (self $o, ParseNode $n) { $o->setDefaultUserRolePermissions($n->getObjectValue(DefaultUserRolePermissions::class)); },
-            'guestUserRoleId' => function (self $o, ParseNode $n) { $o->setGuestUserRoleId($n->getStringValue()); },
+            'allowedToSignUpEmailBasedSubscriptions' => function (ParseNode $n) use ($o) { $o->setAllowedToSignUpEmailBasedSubscriptions($n->getBooleanValue()); },
+            'allowedToUseSSPR' => function (ParseNode $n) use ($o) { $o->setAllowedToUseSSPR($n->getBooleanValue()); },
+            'allowEmailVerifiedUsersToJoinOrganization' => function (ParseNode $n) use ($o) { $o->setAllowEmailVerifiedUsersToJoinOrganization($n->getBooleanValue()); },
+            'allowInvitesFrom' => function (ParseNode $n) use ($o) { $o->setAllowInvitesFrom($n->getEnumValue(AllowInvitesFrom::class)); },
+            'blockMsolPowerShell' => function (ParseNode $n) use ($o) { $o->setBlockMsolPowerShell($n->getBooleanValue()); },
+            'defaultUserRolePermissions' => function (ParseNode $n) use ($o) { $o->setDefaultUserRolePermissions($n->getObjectValue(array(DefaultUserRolePermissions::class, 'createFromDiscriminatorValue'))); },
+            'guestUserRoleId' => function (ParseNode $n) use ($o) { $o->setGuestUserRoleId($n->getStringValue()); },
         ]);
     }
 
     /**
-     * Gets the guestUserRoleId property value. Represents role templateId for the role that should be granted to guest user. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
+     * Gets the guestUserRoleId property value. Represents role templateId for the role that should be granted to guest user. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
      * @return string|null
     */
     public function getGuestUserRoleId(): ?string {
@@ -181,7 +196,7 @@ class AuthorizationPolicy extends PolicyBase
     }
 
     /**
-     * Sets the guestUserRoleId property value. Represents role templateId for the role that should be granted to guest user. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
+     * Sets the guestUserRoleId property value. Represents role templateId for the role that should be granted to guest user. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
      *  @param string|null $value Value to set for the guestUserRoleId property.
     */
     public function setGuestUserRoleId(?string $value ): void {

@@ -9,14 +9,18 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ProvisionChannelEmailResult implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $email Represents the provisioned email address. */
+    /**
+     * @var string|null $email Represents the provisioned email address.
+    */
     private ?string $email = null;
     
     /**
-     * Instantiates a new provisionChannelEmailResult and sets the default values.
+     * Instantiates a new ProvisionChannelEmailResult and sets the default values.
     */
     public function __construct() {
         $this->additionalData = [];
@@ -27,7 +31,7 @@ class ProvisionChannelEmailResult implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ProvisionChannelEmailResult
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ProvisionChannelEmailResult {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ProvisionChannelEmailResult {
         return new ProvisionChannelEmailResult();
     }
 
@@ -52,8 +56,9 @@ class ProvisionChannelEmailResult implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'email' => function (self $o, ParseNode $n) { $o->setEmail($n->getStringValue()); },
+            'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
         ];
     }
 

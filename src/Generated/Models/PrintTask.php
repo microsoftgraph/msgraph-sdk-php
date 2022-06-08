@@ -6,18 +6,26 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class PrintTask extends Entity 
+class PrintTask extends Entity implements Parsable 
 {
-    /** @var PrintTaskDefinition|null $definition The definition property */
+    /**
+     * @var PrintTaskDefinition|null $definition The definition property
+    */
     private ?PrintTaskDefinition $definition = null;
     
-    /** @var string|null $parentUrl The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only. */
+    /**
+     * @var string|null $parentUrl The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/beta/print/printers/{printerId}/jobs/{jobId}. Read-only.
+    */
     private ?string $parentUrl = null;
     
-    /** @var PrintTaskStatus|null $status The status property */
+    /**
+     * @var PrintTaskStatus|null $status The status property
+    */
     private ?PrintTaskStatus $status = null;
     
-    /** @var PrintTaskTrigger|null $trigger The trigger property */
+    /**
+     * @var PrintTaskTrigger|null $trigger The trigger property
+    */
     private ?PrintTaskTrigger $trigger = null;
     
     /**
@@ -32,7 +40,7 @@ class PrintTask extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrintTask
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrintTask {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrintTask {
         return new PrintTask();
     }
 
@@ -49,16 +57,17 @@ class PrintTask extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'definition' => function (self $o, ParseNode $n) { $o->setDefinition($n->getObjectValue(PrintTaskDefinition::class)); },
-            'parentUrl' => function (self $o, ParseNode $n) { $o->setParentUrl($n->getStringValue()); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getObjectValue(PrintTaskStatus::class)); },
-            'trigger' => function (self $o, ParseNode $n) { $o->setTrigger($n->getObjectValue(PrintTaskTrigger::class)); },
+            'definition' => function (ParseNode $n) use ($o) { $o->setDefinition($n->getObjectValue(array(PrintTaskDefinition::class, 'createFromDiscriminatorValue'))); },
+            'parentUrl' => function (ParseNode $n) use ($o) { $o->setParentUrl($n->getStringValue()); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getObjectValue(array(PrintTaskStatus::class, 'createFromDiscriminatorValue'))); },
+            'trigger' => function (ParseNode $n) use ($o) { $o->setTrigger($n->getObjectValue(array(PrintTaskTrigger::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
     /**
-     * Gets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
+     * Gets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/beta/print/printers/{printerId}/jobs/{jobId}. Read-only.
      * @return string|null
     */
     public function getParentUrl(): ?string {
@@ -102,7 +111,7 @@ class PrintTask extends Entity
     }
 
     /**
-     * Sets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
+     * Sets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/beta/print/printers/{printerId}/jobs/{jobId}. Read-only.
      *  @param string|null $value Value to set for the parentUrl property.
     */
     public function setParentUrl(?string $value ): void {

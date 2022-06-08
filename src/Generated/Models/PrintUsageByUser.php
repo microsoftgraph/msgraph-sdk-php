@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class PrintUsageByUser extends PrintUsage 
+class PrintUsageByUser extends PrintUsage implements Parsable 
 {
-    /** @var string|null $userPrincipalName The UPN of the user represented by these statistics. */
+    /**
+     * @var string|null $userPrincipalName The UPN of the user represented by these statistics.
+    */
     private ?string $userPrincipalName = null;
     
     /**
@@ -23,7 +25,7 @@ class PrintUsageByUser extends PrintUsage
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrintUsageByUser
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrintUsageByUser {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrintUsageByUser {
         return new PrintUsageByUser();
     }
 
@@ -32,8 +34,9 @@ class PrintUsageByUser extends PrintUsage
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'userPrincipalName' => function (self $o, ParseNode $n) { $o->setUserPrincipalName($n->getStringValue()); },
+            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
         ]);
     }
 

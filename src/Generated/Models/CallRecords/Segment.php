@@ -8,24 +8,36 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Segment extends Entity 
+class Segment extends Entity implements Parsable 
 {
-    /** @var Endpoint|null $callee Endpoint that answered this segment. */
+    /**
+     * @var Endpoint|null $callee Endpoint that answered this segment.
+    */
     private ?Endpoint $callee = null;
     
-    /** @var Endpoint|null $caller Endpoint that initiated this segment. */
+    /**
+     * @var Endpoint|null $caller Endpoint that initiated this segment.
+    */
     private ?Endpoint $caller = null;
     
-    /** @var DateTime|null $endDateTime UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $endDateTime UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $endDateTime = null;
     
-    /** @var FailureInfo|null $failureInfo Failure information associated with the segment if it failed. */
+    /**
+     * @var FailureInfo|null $failureInfo Failure information associated with the segment if it failed.
+    */
     private ?FailureInfo $failureInfo = null;
     
-    /** @var array<Media>|null $media Media associated with this segment. */
+    /**
+     * @var array<Media>|null $media Media associated with this segment.
+    */
     private ?array $media = null;
     
-    /** @var DateTime|null $startDateTime UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $startDateTime UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $startDateTime = null;
     
     /**
@@ -40,7 +52,7 @@ class Segment extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Segment
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Segment {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Segment {
         return new Segment();
     }
 
@@ -81,13 +93,14 @@ class Segment extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'callee' => function (self $o, ParseNode $n) { $o->setCallee($n->getObjectValue(Endpoint::class)); },
-            'caller' => function (self $o, ParseNode $n) { $o->setCaller($n->getObjectValue(Endpoint::class)); },
-            'endDateTime' => function (self $o, ParseNode $n) { $o->setEndDateTime($n->getDateTimeValue()); },
-            'failureInfo' => function (self $o, ParseNode $n) { $o->setFailureInfo($n->getObjectValue(FailureInfo::class)); },
-            'media' => function (self $o, ParseNode $n) { $o->setMedia($n->getCollectionOfObjectValues(Media::class)); },
-            'startDateTime' => function (self $o, ParseNode $n) { $o->setStartDateTime($n->getDateTimeValue()); },
+            'callee' => function (ParseNode $n) use ($o) { $o->setCallee($n->getObjectValue(array(Endpoint::class, 'createFromDiscriminatorValue'))); },
+            'caller' => function (ParseNode $n) use ($o) { $o->setCaller($n->getObjectValue(array(Endpoint::class, 'createFromDiscriminatorValue'))); },
+            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
+            'failureInfo' => function (ParseNode $n) use ($o) { $o->setFailureInfo($n->getObjectValue(array(FailureInfo::class, 'createFromDiscriminatorValue'))); },
+            'media' => function (ParseNode $n) use ($o) { $o->setMedia($n->getCollectionOfObjectValues(array(Media::class, 'createFromDiscriminatorValue'))); },
+            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
         ]);
     }
 

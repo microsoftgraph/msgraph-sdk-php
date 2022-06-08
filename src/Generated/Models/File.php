@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class File implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var Hashes|null $hashes Hashes of the file's binary content, if available. Read-only. */
+    /**
+     * @var Hashes|null $hashes Hashes of the file's binary content, if available. Read-only.
+    */
     private ?Hashes $hashes = null;
     
-    /** @var string|null $mimeType The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only. */
+    /**
+     * @var string|null $mimeType The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.
+    */
     private ?string $mimeType = null;
     
-    /** @var bool|null $processingMetadata The processingMetadata property */
+    /**
+     * @var bool|null $processingMetadata The processingMetadata property
+    */
     private ?bool $processingMetadata = null;
     
     /**
@@ -33,7 +41,7 @@ class File implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return File
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): File {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): File {
         return new File();
     }
 
@@ -50,10 +58,11 @@ class File implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'hashes' => function (self $o, ParseNode $n) { $o->setHashes($n->getObjectValue(Hashes::class)); },
-            'mimeType' => function (self $o, ParseNode $n) { $o->setMimeType($n->getStringValue()); },
-            'processingMetadata' => function (self $o, ParseNode $n) { $o->setProcessingMetadata($n->getBooleanValue()); },
+            'hashes' => function (ParseNode $n) use ($o) { $o->setHashes($n->getObjectValue(array(Hashes::class, 'createFromDiscriminatorValue'))); },
+            'mimeType' => function (ParseNode $n) use ($o) { $o->setMimeType($n->getStringValue()); },
+            'processingMetadata' => function (ParseNode $n) use ($o) { $o->setProcessingMetadata($n->getBooleanValue()); },
         ];
     }
 

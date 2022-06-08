@@ -9,25 +9,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AudioConferencing implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $conferenceId The conference id of the online meeting. */
+    /**
+     * @var string|null $conferenceId The conference id of the online meeting.
+    */
     private ?string $conferenceId = null;
     
-    /** @var string|null $dialinUrl A URL to the externally-accessible web page that contains dial-in information. */
+    /**
+     * @var string|null $dialinUrl A URL to the externally-accessible web page that contains dial-in information.
+    */
     private ?string $dialinUrl = null;
     
-    /** @var string|null $tollFreeNumber The tollFreeNumber property */
+    /**
+     * @var string|null $tollFreeNumber The tollFreeNumber property
+    */
     private ?string $tollFreeNumber = null;
     
-    /** @var array<string>|null $tollFreeNumbers List of toll-free numbers that are displayed in the meeting invite. */
+    /**
+     * @var array<string>|null $tollFreeNumbers List of toll-free numbers that are displayed in the meeting invite.
+    */
     private ?array $tollFreeNumbers = null;
     
-    /** @var string|null $tollNumber The tollNumber property */
+    /**
+     * @var string|null $tollNumber The tollNumber property
+    */
     private ?string $tollNumber = null;
     
-    /** @var array<string>|null $tollNumbers List of toll numbers that are displayed in the meeting invite. */
+    /**
+     * @var array<string>|null $tollNumbers List of toll numbers that are displayed in the meeting invite.
+    */
     private ?array $tollNumbers = null;
     
     /**
@@ -42,7 +56,7 @@ class AudioConferencing implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AudioConferencing
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AudioConferencing {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AudioConferencing {
         return new AudioConferencing();
     }
 
@@ -75,13 +89,14 @@ class AudioConferencing implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'conferenceId' => function (self $o, ParseNode $n) { $o->setConferenceId($n->getStringValue()); },
-            'dialinUrl' => function (self $o, ParseNode $n) { $o->setDialinUrl($n->getStringValue()); },
-            'tollFreeNumber' => function (self $o, ParseNode $n) { $o->setTollFreeNumber($n->getStringValue()); },
-            'tollFreeNumbers' => function (self $o, ParseNode $n) { $o->setTollFreeNumbers($n->getCollectionOfPrimitiveValues()); },
-            'tollNumber' => function (self $o, ParseNode $n) { $o->setTollNumber($n->getStringValue()); },
-            'tollNumbers' => function (self $o, ParseNode $n) { $o->setTollNumbers($n->getCollectionOfPrimitiveValues()); },
+            'conferenceId' => function (ParseNode $n) use ($o) { $o->setConferenceId($n->getStringValue()); },
+            'dialinUrl' => function (ParseNode $n) use ($o) { $o->setDialinUrl($n->getStringValue()); },
+            'tollFreeNumber' => function (ParseNode $n) use ($o) { $o->setTollFreeNumber($n->getStringValue()); },
+            'tollFreeNumbers' => function (ParseNode $n) use ($o) { $o->setTollFreeNumbers($n->getCollectionOfPrimitiveValues()); },
+            'tollNumber' => function (ParseNode $n) use ($o) { $o->setTollNumber($n->getStringValue()); },
+            'tollNumbers' => function (ParseNode $n) use ($o) { $o->setTollNumbers($n->getCollectionOfPrimitiveValues()); },
         ];
     }
 

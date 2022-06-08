@@ -6,15 +6,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ItemAnalytics extends Entity 
+class ItemAnalytics extends Entity implements Parsable 
 {
-    /** @var ItemActivityStat|null $allTime The allTime property */
+    /**
+     * @var ItemActivityStat|null $allTime The allTime property
+    */
     private ?ItemActivityStat $allTime = null;
     
-    /** @var array<ItemActivityStat>|null $itemActivityStats The itemActivityStats property */
+    /**
+     * @var array<ItemActivityStat>|null $itemActivityStats The itemActivityStats property
+    */
     private ?array $itemActivityStats = null;
     
-    /** @var ItemActivityStat|null $lastSevenDays The lastSevenDays property */
+    /**
+     * @var ItemActivityStat|null $lastSevenDays The lastSevenDays property
+    */
     private ?ItemActivityStat $lastSevenDays = null;
     
     /**
@@ -29,7 +35,7 @@ class ItemAnalytics extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ItemAnalytics
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ItemAnalytics {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ItemAnalytics {
         return new ItemAnalytics();
     }
 
@@ -46,10 +52,11 @@ class ItemAnalytics extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allTime' => function (self $o, ParseNode $n) { $o->setAllTime($n->getObjectValue(ItemActivityStat::class)); },
-            'itemActivityStats' => function (self $o, ParseNode $n) { $o->setItemActivityStats($n->getCollectionOfObjectValues(ItemActivityStat::class)); },
-            'lastSevenDays' => function (self $o, ParseNode $n) { $o->setLastSevenDays($n->getObjectValue(ItemActivityStat::class)); },
+            'allTime' => function (ParseNode $n) use ($o) { $o->setAllTime($n->getObjectValue(array(ItemActivityStat::class, 'createFromDiscriminatorValue'))); },
+            'itemActivityStats' => function (ParseNode $n) use ($o) { $o->setItemActivityStats($n->getCollectionOfObjectValues(array(ItemActivityStat::class, 'createFromDiscriminatorValue'))); },
+            'lastSevenDays' => function (ParseNode $n) use ($o) { $o->setLastSevenDays($n->getObjectValue(array(ItemActivityStat::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

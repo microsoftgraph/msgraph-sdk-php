@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ConditionalAccessFilter implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var FilterMode|null $mode Mode to use for the filter. Possible values are include or exclude. */
+    /**
+     * @var FilterMode|null $mode Mode to use for the filter. Possible values are include or exclude.
+    */
     private ?FilterMode $mode = null;
     
-    /** @var string|null $rule Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions */
+    /**
+     * @var string|null $rule Rule syntax is similar to that used for membership rules for groups in Azure Active Directory. For details, see rules with multiple expressions
+    */
     private ?string $rule = null;
     
     /**
@@ -30,7 +36,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ConditionalAccessFilter
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessFilter {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessFilter {
         return new ConditionalAccessFilter();
     }
 
@@ -47,9 +53,10 @@ class ConditionalAccessFilter implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'mode' => function (self $o, ParseNode $n) { $o->setMode($n->getEnumValue(FilterMode::class)); },
-            'rule' => function (self $o, ParseNode $n) { $o->setRule($n->getStringValue()); },
+            'mode' => function (ParseNode $n) use ($o) { $o->setMode($n->getEnumValue(FilterMode::class)); },
+            'rule' => function (ParseNode $n) use ($o) { $o->setRule($n->getStringValue()); },
         ];
     }
 
@@ -62,7 +69,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions
+     * Gets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory. For details, see rules with multiple expressions
      * @return string|null
     */
     public function getRule(): ?string {
@@ -96,7 +103,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions
+     * Sets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory. For details, see rules with multiple expressions
      *  @param string|null $value Value to set for the rule property.
     */
     public function setRule(?string $value ): void {

@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ApiApplication implements AdditionalDataHolder, Parsable 
 {
-    /** @var bool|null $acceptMappedClaims When true, allows an application to use claims mapping without specifying a custom signing key. */
+    /**
+     * @var bool|null $acceptMappedClaims When true, allows an application to use claims mapping without specifying a custom signing key.
+    */
     private ?bool $acceptMappedClaims = null;
     
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<string>|null $knownClientApplications Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Azure AD knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant. */
+    /**
+     * @var array<string>|null $knownClientApplications Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Azure AD knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant.
+    */
     private ?array $knownClientApplications = null;
     
-    /** @var array<PermissionScope>|null $oauth2PermissionScopes The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes. */
+    /**
+     * @var array<PermissionScope>|null $oauth2PermissionScopes The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.
+    */
     private ?array $oauth2PermissionScopes = null;
     
-    /** @var array<PreAuthorizedApplication>|null $preAuthorizedApplications Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent. */
+    /**
+     * @var array<PreAuthorizedApplication>|null $preAuthorizedApplications Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
+    */
     private ?array $preAuthorizedApplications = null;
     
-    /** @var int|null $requestedAccessTokenVersion Specifies the access token version expected by this resource. This changes the version and format of the JWT produced independent of the endpoint or client used to request the access token.  The endpoint used, v1.0 or v2.0, is chosen by the client and only impacts the version of id_tokens. Resources need to explicitly configure requestedAccessTokenVersion to indicate the supported access token format.  Possible values for requestedAccessTokenVersion are 1, 2, or null. If the value is null, this defaults to 1, which corresponds to the v1.0 endpoint.  If signInAudience on the application is configured as AzureADandPersonalMicrosoftAccount, the value for this property must be 2 */
+    /**
+     * @var int|null $requestedAccessTokenVersion Specifies the access token version expected by this resource. This changes the version and format of the JWT produced independent of the endpoint or client used to request the access token.  The endpoint used, v1.0 or v2.0, is chosen by the client and only impacts the version of id_tokens. Resources need to explicitly configure requestedAccessTokenVersion to indicate the supported access token format.  Possible values for requestedAccessTokenVersion are 1, 2, or null. If the value is null, this defaults to 1, which corresponds to the v1.0 endpoint.  If signInAudience on the application is configured as AzureADandPersonalMicrosoftAccount, the value for this property must be 2
+    */
     private ?int $requestedAccessTokenVersion = null;
     
     /**
@@ -39,7 +51,7 @@ class ApiApplication implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ApiApplication
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ApiApplication {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ApiApplication {
         return new ApiApplication();
     }
 
@@ -64,12 +76,13 @@ class ApiApplication implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'acceptMappedClaims' => function (self $o, ParseNode $n) { $o->setAcceptMappedClaims($n->getBooleanValue()); },
-            'knownClientApplications' => function (self $o, ParseNode $n) { $o->setKnownClientApplications($n->getCollectionOfPrimitiveValues()); },
-            'oauth2PermissionScopes' => function (self $o, ParseNode $n) { $o->setOauth2PermissionScopes($n->getCollectionOfObjectValues(PermissionScope::class)); },
-            'preAuthorizedApplications' => function (self $o, ParseNode $n) { $o->setPreAuthorizedApplications($n->getCollectionOfObjectValues(PreAuthorizedApplication::class)); },
-            'requestedAccessTokenVersion' => function (self $o, ParseNode $n) { $o->setRequestedAccessTokenVersion($n->getIntegerValue()); },
+            'acceptMappedClaims' => function (ParseNode $n) use ($o) { $o->setAcceptMappedClaims($n->getBooleanValue()); },
+            'knownClientApplications' => function (ParseNode $n) use ($o) { $o->setKnownClientApplications($n->getCollectionOfPrimitiveValues()); },
+            'oauth2PermissionScopes' => function (ParseNode $n) use ($o) { $o->setOauth2PermissionScopes($n->getCollectionOfObjectValues(array(PermissionScope::class, 'createFromDiscriminatorValue'))); },
+            'preAuthorizedApplications' => function (ParseNode $n) use ($o) { $o->setPreAuthorizedApplications($n->getCollectionOfObjectValues(array(PreAuthorizedApplication::class, 'createFromDiscriminatorValue'))); },
+            'requestedAccessTokenVersion' => function (ParseNode $n) use ($o) { $o->setRequestedAccessTokenVersion($n->getIntegerValue()); },
         ];
     }
 

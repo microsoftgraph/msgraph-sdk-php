@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var PublicError|null $error Describes the error, if any, for the current stage. */
+    /**
+     * @var PublicError|null $error Describes the error, if any, for the current stage.
+    */
     private ?PublicError $error = null;
     
-    /** @var SubjectRightsRequestStage|null $stage The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue. */
+    /**
+     * @var SubjectRightsRequestStage|null $stage The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
+    */
     private ?SubjectRightsRequestStage $stage = null;
     
-    /** @var SubjectRightsRequestStageStatus|null $status Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue. */
+    /**
+     * @var SubjectRightsRequestStageStatus|null $status Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
+    */
     private ?SubjectRightsRequestStageStatus $status = null;
     
     /**
@@ -33,7 +41,7 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SubjectRightsRequestStageDetail
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SubjectRightsRequestStageDetail {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SubjectRightsRequestStageDetail {
         return new SubjectRightsRequestStageDetail();
     }
 
@@ -58,10 +66,11 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'error' => function (self $o, ParseNode $n) { $o->setError($n->getObjectValue(PublicError::class)); },
-            'stage' => function (self $o, ParseNode $n) { $o->setStage($n->getEnumValue(SubjectRightsRequestStage::class)); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(SubjectRightsRequestStageStatus::class)); },
+            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getObjectValue(array(PublicError::class, 'createFromDiscriminatorValue'))); },
+            'stage' => function (ParseNode $n) use ($o) { $o->setStage($n->getEnumValue(SubjectRightsRequestStage::class)); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(SubjectRightsRequestStageStatus::class)); },
         ];
     }
 

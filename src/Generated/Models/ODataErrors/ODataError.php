@@ -2,23 +2,29 @@
 
 namespace Microsoft\Graph\Generated\Models\ODataErrors;
 
+use Microsoft\Kiota\Abstractions\ApiException;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ODataError implements AdditionalDataHolder, Parsable 
+class ODataError extends ApiException implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var MainError|null $error The error property */
+    /**
+     * @var MainError|null $error The error property
+    */
     private ?MainError $error = null;
     
     /**
      * Instantiates a new ODataError and sets the default values.
     */
     public function __construct() {
+        parent::__construct();
         $this->additionalData = [];
     }
 
@@ -27,7 +33,7 @@ class ODataError implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ODataError
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ODataError {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ODataError {
         return new ODataError();
     }
 
@@ -52,8 +58,9 @@ class ODataError implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'error' => function (self $o, ParseNode $n) { $o->setError($n->getObjectValue(MainError::class)); },
+            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getObjectValue(array(MainError::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

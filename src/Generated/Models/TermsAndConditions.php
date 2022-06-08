@@ -7,36 +7,56 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class TermsAndConditions extends Entity 
+class TermsAndConditions extends Entity implements Parsable 
 {
-    /** @var string|null $acceptanceStatement Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&C policy. This is shown to the user on prompts to accept the T&C policy. */
+    /**
+     * @var string|null $acceptanceStatement Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&C policy. This is shown to the user on prompts to accept the T&C policy.
+    */
     private ?string $acceptanceStatement = null;
     
-    /** @var array<TermsAndConditionsAcceptanceStatus>|null $acceptanceStatuses The list of acceptance statuses for this T&C policy. */
+    /**
+     * @var array<TermsAndConditionsAcceptanceStatus>|null $acceptanceStatuses The list of acceptance statuses for this T&C policy.
+    */
     private ?array $acceptanceStatuses = null;
     
-    /** @var array<TermsAndConditionsAssignment>|null $assignments The list of assignments for this T&C policy. */
+    /**
+     * @var array<TermsAndConditionsAssignment>|null $assignments The list of assignments for this T&C policy.
+    */
     private ?array $assignments = null;
     
-    /** @var string|null $bodyText Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy. */
+    /**
+     * @var string|null $bodyText Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy.
+    */
     private ?string $bodyText = null;
     
-    /** @var DateTime|null $createdDateTime DateTime the object was created. */
+    /**
+     * @var DateTime|null $createdDateTime DateTime the object was created.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $description Administrator-supplied description of the T&C policy. */
+    /**
+     * @var string|null $description Administrator-supplied description of the T&C policy.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName Administrator-supplied name for the T&C policy. */
+    /**
+     * @var string|null $displayName Administrator-supplied name for the T&C policy.
+    */
     private ?string $displayName = null;
     
-    /** @var DateTime|null $lastModifiedDateTime DateTime the object was last modified. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime DateTime the object was last modified.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var string|null $title Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy. */
+    /**
+     * @var string|null $title Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy.
+    */
     private ?string $title = null;
     
-    /** @var int|null $version Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy. */
+    /**
+     * @var int|null $version Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy.
+    */
     private ?int $version = null;
     
     /**
@@ -51,7 +71,7 @@ class TermsAndConditions extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TermsAndConditions
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TermsAndConditions {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TermsAndConditions {
         return new TermsAndConditions();
     }
 
@@ -116,17 +136,18 @@ class TermsAndConditions extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'acceptanceStatement' => function (self $o, ParseNode $n) { $o->setAcceptanceStatement($n->getStringValue()); },
-            'acceptanceStatuses' => function (self $o, ParseNode $n) { $o->setAcceptanceStatuses($n->getCollectionOfObjectValues(TermsAndConditionsAcceptanceStatus::class)); },
-            'assignments' => function (self $o, ParseNode $n) { $o->setAssignments($n->getCollectionOfObjectValues(TermsAndConditionsAssignment::class)); },
-            'bodyText' => function (self $o, ParseNode $n) { $o->setBodyText($n->getStringValue()); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'title' => function (self $o, ParseNode $n) { $o->setTitle($n->getStringValue()); },
-            'version' => function (self $o, ParseNode $n) { $o->setVersion($n->getIntegerValue()); },
+            'acceptanceStatement' => function (ParseNode $n) use ($o) { $o->setAcceptanceStatement($n->getStringValue()); },
+            'acceptanceStatuses' => function (ParseNode $n) use ($o) { $o->setAcceptanceStatuses($n->getCollectionOfObjectValues(array(TermsAndConditionsAcceptanceStatus::class, 'createFromDiscriminatorValue'))); },
+            'assignments' => function (ParseNode $n) use ($o) { $o->setAssignments($n->getCollectionOfObjectValues(array(TermsAndConditionsAssignment::class, 'createFromDiscriminatorValue'))); },
+            'bodyText' => function (ParseNode $n) use ($o) { $o->setBodyText($n->getStringValue()); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getStringValue()); },
+            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getIntegerValue()); },
         ]);
     }
 

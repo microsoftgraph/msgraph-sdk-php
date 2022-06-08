@@ -9,58 +9,94 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class PrinterLocation implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $altitudeInMeters The altitude, in meters, that the printer is located at. */
+    /**
+     * @var int|null $altitudeInMeters The altitude, in meters, that the printer is located at.
+    */
     private ?int $altitudeInMeters = null;
     
-    /** @var string|null $building The building that the printer is located in. */
+    /**
+     * @var string|null $building The building that the printer is located in.
+    */
     private ?string $building = null;
     
-    /** @var string|null $city The city that the printer is located in. */
+    /**
+     * @var string|null $city The city that the printer is located in.
+    */
     private ?string $city = null;
     
-    /** @var string|null $countryOrRegion The country or region that the printer is located in. */
+    /**
+     * @var string|null $countryOrRegion The country or region that the printer is located in.
+    */
     private ?string $countryOrRegion = null;
     
-    /** @var string|null $floor The floor that the printer is located on. Only numerical values are supported right now. */
+    /**
+     * @var string|null $floor The floor that the printer is located on. Only numerical values are supported right now.
+    */
     private ?string $floor = null;
     
-    /** @var string|null $floorDescription The description of the floor that the printer is located on. */
+    /**
+     * @var string|null $floorDescription The description of the floor that the printer is located on.
+    */
     private ?string $floorDescription = null;
     
-    /** @var float|null $latitude The latitude that the printer is located at. */
+    /**
+     * @var float|null $latitude The latitude that the printer is located at.
+    */
     private ?float $latitude = null;
     
-    /** @var float|null $longitude The longitude that the printer is located at. */
+    /**
+     * @var float|null $longitude The longitude that the printer is located at.
+    */
     private ?float $longitude = null;
     
-    /** @var array<string>|null $organization The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order. */
+    /**
+     * @var array<string>|null $organization The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
+    */
     private ?array $organization = null;
     
-    /** @var string|null $postalCode The postal code that the printer is located in. */
+    /**
+     * @var string|null $postalCode The postal code that the printer is located in.
+    */
     private ?string $postalCode = null;
     
-    /** @var string|null $roomDescription The description of the room that the printer is located in. */
+    /**
+     * @var string|null $roomDescription The description of the room that the printer is located in.
+    */
     private ?string $roomDescription = null;
     
-    /** @var string|null $roomName The room that the printer is located in. Only numerical values are supported right now. */
+    /**
+     * @var string|null $roomName The room that the printer is located in. Only numerical values are supported right now.
+    */
     private ?string $roomName = null;
     
-    /** @var string|null $site The site that the printer is located in. */
+    /**
+     * @var string|null $site The site that the printer is located in.
+    */
     private ?string $site = null;
     
-    /** @var string|null $stateOrProvince The state or province that the printer is located in. */
+    /**
+     * @var string|null $stateOrProvince The state or province that the printer is located in.
+    */
     private ?string $stateOrProvince = null;
     
-    /** @var string|null $streetAddress The street address where the printer is located. */
+    /**
+     * @var string|null $streetAddress The street address where the printer is located.
+    */
     private ?string $streetAddress = null;
     
-    /** @var array<string>|null $subdivision The subdivision that the printer is located in. The elements should be in hierarchical order. */
+    /**
+     * @var array<string>|null $subdivision The subdivision that the printer is located in. The elements should be in hierarchical order.
+    */
     private ?array $subdivision = null;
     
-    /** @var array<string>|null $subunit The subunit property */
+    /**
+     * @var array<string>|null $subunit The subunit property
+    */
     private ?array $subunit = null;
     
     /**
@@ -75,7 +111,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrinterLocation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrinterLocation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrinterLocation {
         return new PrinterLocation();
     }
 
@@ -124,24 +160,25 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'altitudeInMeters' => function (self $o, ParseNode $n) { $o->setAltitudeInMeters($n->getIntegerValue()); },
-            'building' => function (self $o, ParseNode $n) { $o->setBuilding($n->getStringValue()); },
-            'city' => function (self $o, ParseNode $n) { $o->setCity($n->getStringValue()); },
-            'countryOrRegion' => function (self $o, ParseNode $n) { $o->setCountryOrRegion($n->getStringValue()); },
-            'floor' => function (self $o, ParseNode $n) { $o->setFloor($n->getStringValue()); },
-            'floorDescription' => function (self $o, ParseNode $n) { $o->setFloorDescription($n->getStringValue()); },
-            'latitude' => function (self $o, ParseNode $n) { $o->setLatitude($n->getFloatValue()); },
-            'longitude' => function (self $o, ParseNode $n) { $o->setLongitude($n->getFloatValue()); },
-            'organization' => function (self $o, ParseNode $n) { $o->setOrganization($n->getCollectionOfPrimitiveValues()); },
-            'postalCode' => function (self $o, ParseNode $n) { $o->setPostalCode($n->getStringValue()); },
-            'roomDescription' => function (self $o, ParseNode $n) { $o->setRoomDescription($n->getStringValue()); },
-            'roomName' => function (self $o, ParseNode $n) { $o->setRoomName($n->getStringValue()); },
-            'site' => function (self $o, ParseNode $n) { $o->setSite($n->getStringValue()); },
-            'stateOrProvince' => function (self $o, ParseNode $n) { $o->setStateOrProvince($n->getStringValue()); },
-            'streetAddress' => function (self $o, ParseNode $n) { $o->setStreetAddress($n->getStringValue()); },
-            'subdivision' => function (self $o, ParseNode $n) { $o->setSubdivision($n->getCollectionOfPrimitiveValues()); },
-            'subunit' => function (self $o, ParseNode $n) { $o->setSubunit($n->getCollectionOfPrimitiveValues()); },
+            'altitudeInMeters' => function (ParseNode $n) use ($o) { $o->setAltitudeInMeters($n->getIntegerValue()); },
+            'building' => function (ParseNode $n) use ($o) { $o->setBuilding($n->getStringValue()); },
+            'city' => function (ParseNode $n) use ($o) { $o->setCity($n->getStringValue()); },
+            'countryOrRegion' => function (ParseNode $n) use ($o) { $o->setCountryOrRegion($n->getStringValue()); },
+            'floor' => function (ParseNode $n) use ($o) { $o->setFloor($n->getStringValue()); },
+            'floorDescription' => function (ParseNode $n) use ($o) { $o->setFloorDescription($n->getStringValue()); },
+            'latitude' => function (ParseNode $n) use ($o) { $o->setLatitude($n->getFloatValue()); },
+            'longitude' => function (ParseNode $n) use ($o) { $o->setLongitude($n->getFloatValue()); },
+            'organization' => function (ParseNode $n) use ($o) { $o->setOrganization($n->getCollectionOfPrimitiveValues()); },
+            'postalCode' => function (ParseNode $n) use ($o) { $o->setPostalCode($n->getStringValue()); },
+            'roomDescription' => function (ParseNode $n) use ($o) { $o->setRoomDescription($n->getStringValue()); },
+            'roomName' => function (ParseNode $n) use ($o) { $o->setRoomName($n->getStringValue()); },
+            'site' => function (ParseNode $n) use ($o) { $o->setSite($n->getStringValue()); },
+            'stateOrProvince' => function (ParseNode $n) use ($o) { $o->setStateOrProvince($n->getStringValue()); },
+            'streetAddress' => function (ParseNode $n) use ($o) { $o->setStreetAddress($n->getStringValue()); },
+            'subdivision' => function (ParseNode $n) use ($o) { $o->setSubdivision($n->getCollectionOfPrimitiveValues()); },
+            'subunit' => function (ParseNode $n) use ($o) { $o->setSubunit($n->getCollectionOfPrimitiveValues()); },
         ];
     }
 

@@ -9,28 +9,44 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<AttendeeAvailability>|null $attendeeAvailability An array that shows the availability status of each attendee for this meeting suggestion. */
+    /**
+     * @var array<AttendeeAvailability>|null $attendeeAvailability An array that shows the availability status of each attendee for this meeting suggestion.
+    */
     private ?array $attendeeAvailability = null;
     
-    /** @var float|null $confidence A percentage that represents the likelhood of all the attendees attending. */
+    /**
+     * @var float|null $confidence A percentage that represents the likelhood of all the attendees attending.
+    */
     private ?float $confidence = null;
     
-    /** @var array<Location>|null $locations An array that specifies the name and geographic location of each meeting location for this meeting suggestion. */
+    /**
+     * @var array<Location>|null $locations An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
+    */
     private ?array $locations = null;
     
-    /** @var TimeSlot|null $meetingTimeSlot A time period suggested for the meeting. */
+    /**
+     * @var TimeSlot|null $meetingTimeSlot A time period suggested for the meeting.
+    */
     private ?TimeSlot $meetingTimeSlot = null;
     
-    /** @var int|null $order Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence. */
+    /**
+     * @var int|null $order Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence.
+    */
     private ?int $order = null;
     
-    /** @var FreeBusyStatus|null $organizerAvailability Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown. */
+    /**
+     * @var FreeBusyStatus|null $organizerAvailability Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+    */
     private ?FreeBusyStatus $organizerAvailability = null;
     
-    /** @var string|null $suggestionReason Reason for suggesting the meeting time. */
+    /**
+     * @var string|null $suggestionReason Reason for suggesting the meeting time.
+    */
     private ?string $suggestionReason = null;
     
     /**
@@ -45,7 +61,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return MeetingTimeSuggestion
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): MeetingTimeSuggestion {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): MeetingTimeSuggestion {
         return new MeetingTimeSuggestion();
     }
 
@@ -78,14 +94,15 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'attendeeAvailability' => function (self $o, ParseNode $n) { $o->setAttendeeAvailability($n->getCollectionOfObjectValues(AttendeeAvailability::class)); },
-            'confidence' => function (self $o, ParseNode $n) { $o->setConfidence($n->getFloatValue()); },
-            'locations' => function (self $o, ParseNode $n) { $o->setLocations($n->getCollectionOfObjectValues(Location::class)); },
-            'meetingTimeSlot' => function (self $o, ParseNode $n) { $o->setMeetingTimeSlot($n->getObjectValue(TimeSlot::class)); },
-            'order' => function (self $o, ParseNode $n) { $o->setOrder($n->getIntegerValue()); },
-            'organizerAvailability' => function (self $o, ParseNode $n) { $o->setOrganizerAvailability($n->getEnumValue(FreeBusyStatus::class)); },
-            'suggestionReason' => function (self $o, ParseNode $n) { $o->setSuggestionReason($n->getStringValue()); },
+            'attendeeAvailability' => function (ParseNode $n) use ($o) { $o->setAttendeeAvailability($n->getCollectionOfObjectValues(array(AttendeeAvailability::class, 'createFromDiscriminatorValue'))); },
+            'confidence' => function (ParseNode $n) use ($o) { $o->setConfidence($n->getFloatValue()); },
+            'locations' => function (ParseNode $n) use ($o) { $o->setLocations($n->getCollectionOfObjectValues(array(Location::class, 'createFromDiscriminatorValue'))); },
+            'meetingTimeSlot' => function (ParseNode $n) use ($o) { $o->setMeetingTimeSlot($n->getObjectValue(array(TimeSlot::class, 'createFromDiscriminatorValue'))); },
+            'order' => function (ParseNode $n) use ($o) { $o->setOrder($n->getIntegerValue()); },
+            'organizerAvailability' => function (ParseNode $n) use ($o) { $o->setOrganizerAvailability($n->getEnumValue(FreeBusyStatus::class)); },
+            'suggestionReason' => function (ParseNode $n) use ($o) { $o->setSuggestionReason($n->getStringValue()); },
         ];
     }
 
@@ -114,7 +131,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Gets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @return FreeBusyStatus|null
     */
     public function getOrganizerAvailability(): ?FreeBusyStatus {
@@ -193,7 +210,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Sets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      *  @param FreeBusyStatus|null $value Value to set for the organizerAvailability property.
     */
     public function setOrganizerAvailability(?FreeBusyStatus $value ): void {

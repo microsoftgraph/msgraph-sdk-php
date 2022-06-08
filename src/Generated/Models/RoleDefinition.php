@@ -6,21 +6,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class RoleDefinition extends Entity 
+class RoleDefinition extends Entity implements Parsable 
 {
-    /** @var string|null $description Description of the Role definition. */
+    /**
+     * @var string|null $description Description of the Role definition.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName Display Name of the Role definition. */
+    /**
+     * @var string|null $displayName Display Name of the Role definition.
+    */
     private ?string $displayName = null;
     
-    /** @var bool|null $isBuiltIn Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition. */
+    /**
+     * @var bool|null $isBuiltIn Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
+    */
     private ?bool $isBuiltIn = null;
     
-    /** @var array<RoleAssignment>|null $roleAssignments List of Role assignments for this role definition. */
+    /**
+     * @var array<RoleAssignment>|null $roleAssignments List of Role assignments for this role definition.
+    */
     private ?array $roleAssignments = null;
     
-    /** @var array<RolePermission>|null $rolePermissions List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission. */
+    /**
+     * @var array<RolePermission>|null $rolePermissions List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
+    */
     private ?array $rolePermissions = null;
     
     /**
@@ -35,7 +45,14 @@ class RoleDefinition extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return RoleDefinition
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): RoleDefinition {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): RoleDefinition {
+        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.roleDefinition': return new RoleDefinition();
+            }
+        }
         return new RoleDefinition();
     }
 
@@ -60,12 +77,13 @@ class RoleDefinition extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'isBuiltIn' => function (self $o, ParseNode $n) { $o->setIsBuiltIn($n->getBooleanValue()); },
-            'roleAssignments' => function (self $o, ParseNode $n) { $o->setRoleAssignments($n->getCollectionOfObjectValues(RoleAssignment::class)); },
-            'rolePermissions' => function (self $o, ParseNode $n) { $o->setRolePermissions($n->getCollectionOfObjectValues(RolePermission::class)); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'isBuiltIn' => function (ParseNode $n) use ($o) { $o->setIsBuiltIn($n->getBooleanValue()); },
+            'roleAssignments' => function (ParseNode $n) use ($o) { $o->setRoleAssignments($n->getCollectionOfObjectValues(array(RoleAssignment::class, 'createFromDiscriminatorValue'))); },
+            'rolePermissions' => function (ParseNode $n) use ($o) { $o->setRolePermissions($n->getCollectionOfObjectValues(array(RolePermission::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

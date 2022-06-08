@@ -9,31 +9,49 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ItemReference implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $driveId Unique identifier of the drive instance that contains the item. Read-only. */
+    /**
+     * @var string|null $driveId Unique identifier of the drive instance that contains the item. Read-only.
+    */
     private ?string $driveId = null;
     
-    /** @var string|null $driveType Identifies the type of drive. See [drive][] resource for values. */
+    /**
+     * @var string|null $driveType Identifies the type of drive. See [drive][] resource for values.
+    */
     private ?string $driveType = null;
     
-    /** @var string|null $id Unique identifier of the item in the drive. Read-only. */
+    /**
+     * @var string|null $id Unique identifier of the item in the drive. Read-only.
+    */
     private ?string $id = null;
     
-    /** @var string|null $name The name of the item being referenced. Read-only. */
+    /**
+     * @var string|null $name The name of the item being referenced. Read-only.
+    */
     private ?string $name = null;
     
-    /** @var string|null $path Path that can be used to navigate to the item. Read-only. */
+    /**
+     * @var string|null $path Path that can be used to navigate to the item. Read-only.
+    */
     private ?string $path = null;
     
-    /** @var string|null $shareId A unique identifier for a shared resource that can be accessed via the [Shares][] API. */
+    /**
+     * @var string|null $shareId A unique identifier for a shared resource that can be accessed via the [Shares][] API.
+    */
     private ?string $shareId = null;
     
-    /** @var SharepointIds|null $sharepointIds Returns identifiers useful for SharePoint REST compatibility. Read-only. */
+    /**
+     * @var SharepointIds|null $sharepointIds Returns identifiers useful for SharePoint REST compatibility. Read-only.
+    */
     private ?SharepointIds $sharepointIds = null;
     
-    /** @var string|null $siteId For OneDrive for Business and SharePoint, this property represents the ID of the site that contains the parent document library of the driveItem resource. The value is the same as the id property of that [site][] resource. It is an opaque string that consists of three identifiers of the site. For OneDrive, this property is not populated. */
+    /**
+     * @var string|null $siteId For OneDrive for Business and SharePoint, this property represents the ID of the site that contains the parent document library of the driveItem resource. The value is the same as the id property of that [site][] resource. It is an opaque string that consists of three identifiers of the site. For OneDrive, this property is not populated.
+    */
     private ?string $siteId = null;
     
     /**
@@ -48,7 +66,7 @@ class ItemReference implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ItemReference
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ItemReference {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ItemReference {
         return new ItemReference();
     }
 
@@ -81,15 +99,16 @@ class ItemReference implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'driveId' => function (self $o, ParseNode $n) { $o->setDriveId($n->getStringValue()); },
-            'driveType' => function (self $o, ParseNode $n) { $o->setDriveType($n->getStringValue()); },
-            'id' => function (self $o, ParseNode $n) { $o->setId($n->getStringValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'path' => function (self $o, ParseNode $n) { $o->setPath($n->getStringValue()); },
-            'shareId' => function (self $o, ParseNode $n) { $o->setShareId($n->getStringValue()); },
-            'sharepointIds' => function (self $o, ParseNode $n) { $o->setSharepointIds($n->getObjectValue(SharepointIds::class)); },
-            'siteId' => function (self $o, ParseNode $n) { $o->setSiteId($n->getStringValue()); },
+            'driveId' => function (ParseNode $n) use ($o) { $o->setDriveId($n->getStringValue()); },
+            'driveType' => function (ParseNode $n) use ($o) { $o->setDriveType($n->getStringValue()); },
+            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'path' => function (ParseNode $n) use ($o) { $o->setPath($n->getStringValue()); },
+            'shareId' => function (ParseNode $n) use ($o) { $o->setShareId($n->getStringValue()); },
+            'sharepointIds' => function (ParseNode $n) use ($o) { $o->setSharepointIds($n->getObjectValue(array(SharepointIds::class, 'createFromDiscriminatorValue'))); },
+            'siteId' => function (ParseNode $n) use ($o) { $o->setSiteId($n->getStringValue()); },
         ];
     }
 

@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class OrganizationalBranding extends OrganizationalBrandingProperties 
+class OrganizationalBranding extends OrganizationalBrandingProperties implements Parsable 
 {
-    /** @var array<OrganizationalBrandingLocalization>|null $localizations Add different branding based on a locale. */
+    /**
+     * @var array<OrganizationalBrandingLocalization>|null $localizations Add different branding based on a locale.
+    */
     private ?array $localizations = null;
     
     /**
@@ -23,7 +25,7 @@ class OrganizationalBranding extends OrganizationalBrandingProperties
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return OrganizationalBranding
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): OrganizationalBranding {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): OrganizationalBranding {
         return new OrganizationalBranding();
     }
 
@@ -32,8 +34,9 @@ class OrganizationalBranding extends OrganizationalBrandingProperties
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'localizations' => function (self $o, ParseNode $n) { $o->setLocalizations($n->getCollectionOfObjectValues(OrganizationalBrandingLocalization::class)); },
+            'localizations' => function (ParseNode $n) use ($o) { $o->setLocalizations($n->getCollectionOfObjectValues(array(OrganizationalBrandingLocalization::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

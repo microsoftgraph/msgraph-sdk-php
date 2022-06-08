@@ -9,30 +9,46 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Term extends Entity 
+class Term extends Entity implements Parsable 
 {
-    /** @var array<Term>|null $children Children of current term. */
+    /**
+     * @var array<Term>|null $children Children of current term.
+    */
     private ?array $children = null;
     
-    /** @var DateTime|null $createdDateTime Date and time of term creation. Read-only. */
+    /**
+     * @var DateTime|null $createdDateTime Date and time of term creation. Read-only.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var array<LocalizedDescription>|null $descriptions Description about term that is dependent on the languageTag. */
+    /**
+     * @var array<LocalizedDescription>|null $descriptions Description about term that is dependent on the languageTag.
+    */
     private ?array $descriptions = null;
     
-    /** @var array<LocalizedLabel>|null $labels Label metadata for a term. */
+    /**
+     * @var array<LocalizedLabel>|null $labels Label metadata for a term.
+    */
     private ?array $labels = null;
     
-    /** @var DateTime|null $lastModifiedDateTime Last date and time of term modification. Read-only. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime Last date and time of term modification. Read-only.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var array<KeyValue>|null $properties Collection of properties on the term. */
+    /**
+     * @var array<KeyValue>|null $properties Collection of properties on the term.
+    */
     private ?array $properties = null;
     
-    /** @var array<Relation>|null $relations To indicate which terms are related to the current term as either pinned or reused. */
+    /**
+     * @var array<Relation>|null $relations To indicate which terms are related to the current term as either pinned or reused.
+    */
     private ?array $relations = null;
     
-    /** @var Set|null $set The [set] in which the term is created. */
+    /**
+     * @var Set|null $set The [set] in which the term is created.
+    */
     private ?Set $set = null;
     
     /**
@@ -47,7 +63,7 @@ class Term extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Term
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Term {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Term {
         return new Term();
     }
 
@@ -80,15 +96,16 @@ class Term extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'children' => function (self $o, ParseNode $n) { $o->setChildren($n->getCollectionOfObjectValues(Term::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'descriptions' => function (self $o, ParseNode $n) { $o->setDescriptions($n->getCollectionOfObjectValues(LocalizedDescription::class)); },
-            'labels' => function (self $o, ParseNode $n) { $o->setLabels($n->getCollectionOfObjectValues(LocalizedLabel::class)); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'properties' => function (self $o, ParseNode $n) { $o->setProperties($n->getCollectionOfObjectValues(KeyValue::class)); },
-            'relations' => function (self $o, ParseNode $n) { $o->setRelations($n->getCollectionOfObjectValues(Relation::class)); },
-            'set' => function (self $o, ParseNode $n) { $o->setSet($n->getObjectValue(Set::class)); },
+            'children' => function (ParseNode $n) use ($o) { $o->setChildren($n->getCollectionOfObjectValues(array(Term::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'descriptions' => function (ParseNode $n) use ($o) { $o->setDescriptions($n->getCollectionOfObjectValues(array(LocalizedDescription::class, 'createFromDiscriminatorValue'))); },
+            'labels' => function (ParseNode $n) use ($o) { $o->setLabels($n->getCollectionOfObjectValues(array(LocalizedLabel::class, 'createFromDiscriminatorValue'))); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'properties' => function (ParseNode $n) use ($o) { $o->setProperties($n->getCollectionOfObjectValues(array(KeyValue::class, 'createFromDiscriminatorValue'))); },
+            'relations' => function (ParseNode $n) use ($o) { $o->setRelations($n->getCollectionOfObjectValues(array(Relation::class, 'createFromDiscriminatorValue'))); },
+            'set' => function (ParseNode $n) use ($o) { $o->setSet($n->getObjectValue(array(Set::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

@@ -9,31 +9,49 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $color The color property */
+    /**
+     * @var string|null $color The color property
+    */
     private ?string $color = null;
     
-    /** @var string|null $criterion1 The criterion1 property */
+    /**
+     * @var string|null $criterion1 The criterion1 property
+    */
     private ?string $criterion1 = null;
     
-    /** @var string|null $criterion2 The criterion2 property */
+    /**
+     * @var string|null $criterion2 The criterion2 property
+    */
     private ?string $criterion2 = null;
     
-    /** @var string|null $dynamicCriteria The dynamicCriteria property */
+    /**
+     * @var string|null $dynamicCriteria The dynamicCriteria property
+    */
     private ?string $dynamicCriteria = null;
     
-    /** @var string|null $filterOn The filterOn property */
+    /**
+     * @var string|null $filterOn The filterOn property
+    */
     private ?string $filterOn = null;
     
-    /** @var WorkbookIcon|null $icon The icon property */
+    /**
+     * @var WorkbookIcon|null $icon The icon property
+    */
     private ?WorkbookIcon $icon = null;
     
-    /** @var string|null $operator The operator property */
+    /**
+     * @var string|null $operator The operator property
+    */
     private ?string $operator = null;
     
-    /** @var Json|null $values The values property */
+    /**
+     * @var Json|null $values The values property
+    */
     private ?Json $values = null;
     
     /**
@@ -48,7 +66,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookFilterCriteria
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookFilterCriteria {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookFilterCriteria {
         return new WorkbookFilterCriteria();
     }
 
@@ -97,15 +115,16 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'color' => function (self $o, ParseNode $n) { $o->setColor($n->getStringValue()); },
-            'criterion1' => function (self $o, ParseNode $n) { $o->setCriterion1($n->getStringValue()); },
-            'criterion2' => function (self $o, ParseNode $n) { $o->setCriterion2($n->getStringValue()); },
-            'dynamicCriteria' => function (self $o, ParseNode $n) { $o->setDynamicCriteria($n->getStringValue()); },
-            'filterOn' => function (self $o, ParseNode $n) { $o->setFilterOn($n->getStringValue()); },
-            'icon' => function (self $o, ParseNode $n) { $o->setIcon($n->getObjectValue(WorkbookIcon::class)); },
-            'operator' => function (self $o, ParseNode $n) { $o->setOperator($n->getStringValue()); },
-            'values' => function (self $o, ParseNode $n) { $o->setValues($n->getObjectValue(Json::class)); },
+            'color' => function (ParseNode $n) use ($o) { $o->setColor($n->getStringValue()); },
+            'criterion1' => function (ParseNode $n) use ($o) { $o->setCriterion1($n->getStringValue()); },
+            'criterion2' => function (ParseNode $n) use ($o) { $o->setCriterion2($n->getStringValue()); },
+            'dynamicCriteria' => function (ParseNode $n) use ($o) { $o->setDynamicCriteria($n->getStringValue()); },
+            'filterOn' => function (ParseNode $n) use ($o) { $o->setFilterOn($n->getStringValue()); },
+            'icon' => function (ParseNode $n) use ($o) { $o->setIcon($n->getObjectValue(array(WorkbookIcon::class, 'createFromDiscriminatorValue'))); },
+            'operator' => function (ParseNode $n) use ($o) { $o->setOperator($n->getStringValue()); },
+            'values' => function (ParseNode $n) use ($o) { $o->setValues($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

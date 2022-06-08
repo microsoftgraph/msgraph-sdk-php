@@ -10,13 +10,19 @@ use Psr\Http\Message\StreamInterface;
 
 class MimeContent implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $type Indicates the content mime type. */
+    /**
+     * @var string|null $type Indicates the content mime type.
+    */
     private ?string $type = null;
     
-    /** @var StreamInterface|null $value The byte array that contains the actual content. */
+    /**
+     * @var StreamInterface|null $value The byte array that contains the actual content.
+    */
     private ?StreamInterface $value = null;
     
     /**
@@ -31,7 +37,7 @@ class MimeContent implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return MimeContent
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): MimeContent {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): MimeContent {
         return new MimeContent();
     }
 
@@ -48,9 +54,10 @@ class MimeContent implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getStringValue()); },
-            'value' => function (self $o, ParseNode $n) { $o->setValue($n->getBinaryContent()); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
+            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getBinaryContent()); },
         ];
     }
 

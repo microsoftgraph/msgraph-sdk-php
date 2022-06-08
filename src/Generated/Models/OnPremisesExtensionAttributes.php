@@ -9,52 +9,84 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $extensionAttribute1 First customizable extension attribute. */
+    /**
+     * @var string|null $extensionAttribute1 First customizable extension attribute.
+    */
     private ?string $extensionAttribute1 = null;
     
-    /** @var string|null $extensionAttribute10 Tenth customizable extension attribute. */
+    /**
+     * @var string|null $extensionAttribute10 Tenth customizable extension attribute.
+    */
     private ?string $extensionAttribute10 = null;
     
-    /** @var string|null $extensionAttribute11 Eleventh customizable extension attribute. */
+    /**
+     * @var string|null $extensionAttribute11 Eleventh customizable extension attribute.
+    */
     private ?string $extensionAttribute11 = null;
     
-    /** @var string|null $extensionAttribute12 Twelfth customizable extension attribute. */
+    /**
+     * @var string|null $extensionAttribute12 Twelfth customizable extension attribute.
+    */
     private ?string $extensionAttribute12 = null;
     
-    /** @var string|null $extensionAttribute13 Thirteenth customizable extension attribute. */
+    /**
+     * @var string|null $extensionAttribute13 Thirteenth customizable extension attribute.
+    */
     private ?string $extensionAttribute13 = null;
     
-    /** @var string|null $extensionAttribute14 Fourteenth customizable extension attribute. */
+    /**
+     * @var string|null $extensionAttribute14 Fourteenth customizable extension attribute.
+    */
     private ?string $extensionAttribute14 = null;
     
-    /** @var string|null $extensionAttribute15 Fifteenth customizable extension attribute. */
+    /**
+     * @var string|null $extensionAttribute15 Fifteenth customizable extension attribute.
+    */
     private ?string $extensionAttribute15 = null;
     
-    /** @var string|null $extensionAttribute2 Second customizable extension attribute. */
+    /**
+     * @var string|null $extensionAttribute2 Second customizable extension attribute.
+    */
     private ?string $extensionAttribute2 = null;
     
-    /** @var string|null $extensionAttribute3 Third customizable extension attribute. */
+    /**
+     * @var string|null $extensionAttribute3 Third customizable extension attribute.
+    */
     private ?string $extensionAttribute3 = null;
     
-    /** @var string|null $extensionAttribute4 Fourth customizable extension attribute. */
+    /**
+     * @var string|null $extensionAttribute4 Fourth customizable extension attribute.
+    */
     private ?string $extensionAttribute4 = null;
     
-    /** @var string|null $extensionAttribute5 Fifth customizable extension attribute. */
+    /**
+     * @var string|null $extensionAttribute5 Fifth customizable extension attribute.
+    */
     private ?string $extensionAttribute5 = null;
     
-    /** @var string|null $extensionAttribute6 Sixth customizable extension attribute. */
+    /**
+     * @var string|null $extensionAttribute6 Sixth customizable extension attribute.
+    */
     private ?string $extensionAttribute6 = null;
     
-    /** @var string|null $extensionAttribute7 Seventh customizable extension attribute. */
+    /**
+     * @var string|null $extensionAttribute7 Seventh customizable extension attribute.
+    */
     private ?string $extensionAttribute7 = null;
     
-    /** @var string|null $extensionAttribute8 Eighth customizable extension attribute. */
+    /**
+     * @var string|null $extensionAttribute8 Eighth customizable extension attribute.
+    */
     private ?string $extensionAttribute8 = null;
     
-    /** @var string|null $extensionAttribute9 Ninth customizable extension attribute. */
+    /**
+     * @var string|null $extensionAttribute9 Ninth customizable extension attribute.
+    */
     private ?string $extensionAttribute9 = null;
     
     /**
@@ -69,7 +101,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return OnPremisesExtensionAttributes
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): OnPremisesExtensionAttributes {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): OnPremisesExtensionAttributes {
         return new OnPremisesExtensionAttributes();
     }
 
@@ -206,22 +238,23 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'extensionAttribute1' => function (self $o, ParseNode $n) { $o->setExtensionAttribute1($n->getStringValue()); },
-            'extensionAttribute10' => function (self $o, ParseNode $n) { $o->setExtensionAttribute10($n->getStringValue()); },
-            'extensionAttribute11' => function (self $o, ParseNode $n) { $o->setExtensionAttribute11($n->getStringValue()); },
-            'extensionAttribute12' => function (self $o, ParseNode $n) { $o->setExtensionAttribute12($n->getStringValue()); },
-            'extensionAttribute13' => function (self $o, ParseNode $n) { $o->setExtensionAttribute13($n->getStringValue()); },
-            'extensionAttribute14' => function (self $o, ParseNode $n) { $o->setExtensionAttribute14($n->getStringValue()); },
-            'extensionAttribute15' => function (self $o, ParseNode $n) { $o->setExtensionAttribute15($n->getStringValue()); },
-            'extensionAttribute2' => function (self $o, ParseNode $n) { $o->setExtensionAttribute2($n->getStringValue()); },
-            'extensionAttribute3' => function (self $o, ParseNode $n) { $o->setExtensionAttribute3($n->getStringValue()); },
-            'extensionAttribute4' => function (self $o, ParseNode $n) { $o->setExtensionAttribute4($n->getStringValue()); },
-            'extensionAttribute5' => function (self $o, ParseNode $n) { $o->setExtensionAttribute5($n->getStringValue()); },
-            'extensionAttribute6' => function (self $o, ParseNode $n) { $o->setExtensionAttribute6($n->getStringValue()); },
-            'extensionAttribute7' => function (self $o, ParseNode $n) { $o->setExtensionAttribute7($n->getStringValue()); },
-            'extensionAttribute8' => function (self $o, ParseNode $n) { $o->setExtensionAttribute8($n->getStringValue()); },
-            'extensionAttribute9' => function (self $o, ParseNode $n) { $o->setExtensionAttribute9($n->getStringValue()); },
+            'extensionAttribute1' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute1($n->getStringValue()); },
+            'extensionAttribute10' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute10($n->getStringValue()); },
+            'extensionAttribute11' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute11($n->getStringValue()); },
+            'extensionAttribute12' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute12($n->getStringValue()); },
+            'extensionAttribute13' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute13($n->getStringValue()); },
+            'extensionAttribute14' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute14($n->getStringValue()); },
+            'extensionAttribute15' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute15($n->getStringValue()); },
+            'extensionAttribute2' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute2($n->getStringValue()); },
+            'extensionAttribute3' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute3($n->getStringValue()); },
+            'extensionAttribute4' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute4($n->getStringValue()); },
+            'extensionAttribute5' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute5($n->getStringValue()); },
+            'extensionAttribute6' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute6($n->getStringValue()); },
+            'extensionAttribute7' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute7($n->getStringValue()); },
+            'extensionAttribute8' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute8($n->getStringValue()); },
+            'extensionAttribute9' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute9($n->getStringValue()); },
         ];
     }
 

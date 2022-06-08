@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class TimeZoneInformation implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $alias An identifier for the time zone. */
+    /**
+     * @var string|null $alias An identifier for the time zone.
+    */
     private ?string $alias = null;
     
-    /** @var string|null $displayName A display string that represents the time zone. */
+    /**
+     * @var string|null $displayName A display string that represents the time zone.
+    */
     private ?string $displayName = null;
     
     /**
@@ -30,7 +36,7 @@ class TimeZoneInformation implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TimeZoneInformation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TimeZoneInformation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TimeZoneInformation {
         return new TimeZoneInformation();
     }
 
@@ -63,9 +69,10 @@ class TimeZoneInformation implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'alias' => function (self $o, ParseNode $n) { $o->setAlias($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
+            'alias' => function (ParseNode $n) use ($o) { $o->setAlias($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
         ];
     }
 

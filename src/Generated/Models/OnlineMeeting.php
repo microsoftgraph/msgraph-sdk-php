@@ -8,75 +8,121 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Psr\Http\Message\StreamInterface;
 
-class OnlineMeeting extends Entity 
+class OnlineMeeting extends Entity implements Parsable 
 {
-    /** @var bool|null $allowAttendeeToEnableCamera Indicates whether attendees can turn on their camera. */
+    /**
+     * @var bool|null $allowAttendeeToEnableCamera Indicates whether attendees can turn on their camera.
+    */
     private ?bool $allowAttendeeToEnableCamera = null;
     
-    /** @var bool|null $allowAttendeeToEnableMic Indicates whether attendees can turn on their microphone. */
+    /**
+     * @var bool|null $allowAttendeeToEnableMic Indicates whether attendees can turn on their microphone.
+    */
     private ?bool $allowAttendeeToEnableMic = null;
     
-    /** @var OnlineMeetingPresenters|null $allowedPresenters Specifies who can be a presenter in a meeting. Possible values are listed in the following table. */
+    /**
+     * @var OnlineMeetingPresenters|null $allowedPresenters Specifies who can be a presenter in a meeting.
+    */
     private ?OnlineMeetingPresenters $allowedPresenters = null;
     
-    /** @var MeetingChatMode|null $allowMeetingChat Specifies the mode of meeting chat. */
+    /**
+     * @var MeetingChatMode|null $allowMeetingChat Specifies the mode of meeting chat.
+    */
     private ?MeetingChatMode $allowMeetingChat = null;
     
-    /** @var bool|null $allowTeamworkReactions Indicates whether Teams reactions are enabled for the meeting. */
+    /**
+     * @var bool|null $allowTeamworkReactions Indicates if Teams reactions are enabled for the meeting.
+    */
     private ?bool $allowTeamworkReactions = null;
     
-    /** @var array<MeetingAttendanceReport>|null $attendanceReports The attendance reports of an online meeting. Read-only. */
+    /**
+     * @var array<MeetingAttendanceReport>|null $attendanceReports The attendance reports of an online meeting. Read-only.
+    */
     private ?array $attendanceReports = null;
     
-    /** @var StreamInterface|null $attendeeReport The content stream of the attendee report of a Microsoft Teams live event. Read-only. */
+    /**
+     * @var StreamInterface|null $attendeeReport The content stream of the attendee report of a Teams live event. Read-only.
+    */
     private ?StreamInterface $attendeeReport = null;
     
-    /** @var AudioConferencing|null $audioConferencing The phone access (dial-in) information for an online meeting. Read-only. */
+    /**
+     * @var AudioConferencing|null $audioConferencing The phone access (dial-in) information for an online meeting. Read-only.
+    */
     private ?AudioConferencing $audioConferencing = null;
     
-    /** @var BroadcastMeetingSettings|null $broadcastSettings Settings related to a live event. */
+    /**
+     * @var BroadcastMeetingSettings|null $broadcastSettings Settings related to a live event.
+    */
     private ?BroadcastMeetingSettings $broadcastSettings = null;
     
-    /** @var ChatInfo|null $chatInfo The chat information associated with this online meeting. */
+    /**
+     * @var ChatInfo|null $chatInfo The chat information associated with this online meeting.
+    */
     private ?ChatInfo $chatInfo = null;
     
-    /** @var DateTime|null $creationDateTime The meeting creation time in UTC. Read-only. */
+    /**
+     * @var DateTime|null $creationDateTime The meeting creation time in UTC. Read-only.
+    */
     private ?DateTime $creationDateTime = null;
     
-    /** @var DateTime|null $endDateTime The meeting end time in UTC. */
+    /**
+     * @var DateTime|null $endDateTime The meeting end time in UTC.
+    */
     private ?DateTime $endDateTime = null;
     
-    /** @var string|null $externalId The external ID. A custom ID. Optional. */
+    /**
+     * @var string|null $externalId The external ID. A custom ID. Optional.
+    */
     private ?string $externalId = null;
     
-    /** @var bool|null $isBroadcast Indicates if this is a Teams live event. */
+    /**
+     * @var bool|null $isBroadcast Indicates whether this is a Teams live event.
+    */
     private ?bool $isBroadcast = null;
     
-    /** @var bool|null $isEntryExitAnnounced Indicates whether to announce when callers join or leave. */
+    /**
+     * @var bool|null $isEntryExitAnnounced Indicates whether to announce when callers join or leave.
+    */
     private ?bool $isEntryExitAnnounced = null;
     
-    /** @var ItemBody|null $joinInformation The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only. */
+    /**
+     * @var ItemBody|null $joinInformation The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only.
+    */
     private ?ItemBody $joinInformation = null;
     
-    /** @var string|null $joinWebUrl The join URL of the online meeting. Read-only. */
+    /**
+     * @var string|null $joinWebUrl The join URL of the online meeting. Read-only.
+    */
     private ?string $joinWebUrl = null;
     
-    /** @var LobbyBypassSettings|null $lobbyBypassSettings Specifies which participants can bypass the meeting   lobby. */
+    /**
+     * @var LobbyBypassSettings|null $lobbyBypassSettings Specifies which participants can bypass the meeting lobby.
+    */
     private ?LobbyBypassSettings $lobbyBypassSettings = null;
     
-    /** @var MeetingParticipants|null $participants The participants associated with the online meeting.  This includes the organizer and the attendees. */
+    /**
+     * @var MeetingParticipants|null $participants The participants associated with the online meeting. This includes the organizer and the attendees.
+    */
     private ?MeetingParticipants $participants = null;
     
-    /** @var bool|null $recordAutomatically Indicates whether to record the meeting automatically. */
+    /**
+     * @var bool|null $recordAutomatically Indicates whether to record the meeting automatically.
+    */
     private ?bool $recordAutomatically = null;
     
-    /** @var DateTime|null $startDateTime The meeting start time in UTC. */
+    /**
+     * @var DateTime|null $startDateTime The meeting start time in UTC.
+    */
     private ?DateTime $startDateTime = null;
     
-    /** @var string|null $subject The subject of the online meeting. */
+    /**
+     * @var string|null $subject The subject of the online meeting.
+    */
     private ?string $subject = null;
     
-    /** @var string|null $videoTeleconferenceId The video teleconferencing ID. Read-only. */
+    /**
+     * @var string|null $videoTeleconferenceId The video teleconferencing ID. Read-only.
+    */
     private ?string $videoTeleconferenceId = null;
     
     /**
@@ -91,7 +137,7 @@ class OnlineMeeting extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return OnlineMeeting
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): OnlineMeeting {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): OnlineMeeting {
         return new OnlineMeeting();
     }
 
@@ -112,7 +158,7 @@ class OnlineMeeting extends Entity
     }
 
     /**
-     * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
+     * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting.
      * @return OnlineMeetingPresenters|null
     */
     public function getAllowedPresenters(): ?OnlineMeetingPresenters {
@@ -128,7 +174,7 @@ class OnlineMeeting extends Entity
     }
 
     /**
-     * Gets the allowTeamworkReactions property value. Indicates whether Teams reactions are enabled for the meeting.
+     * Gets the allowTeamworkReactions property value. Indicates if Teams reactions are enabled for the meeting.
      * @return bool|null
     */
     public function getAllowTeamworkReactions(): ?bool {
@@ -144,7 +190,7 @@ class OnlineMeeting extends Entity
     }
 
     /**
-     * Gets the attendeeReport property value. The content stream of the attendee report of a Microsoft Teams live event. Read-only.
+     * Gets the attendeeReport property value. The content stream of the attendee report of a Teams live event. Read-only.
      * @return StreamInterface|null
     */
     public function getAttendeeReport(): ?StreamInterface {
@@ -204,35 +250,36 @@ class OnlineMeeting extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowAttendeeToEnableCamera' => function (self $o, ParseNode $n) { $o->setAllowAttendeeToEnableCamera($n->getBooleanValue()); },
-            'allowAttendeeToEnableMic' => function (self $o, ParseNode $n) { $o->setAllowAttendeeToEnableMic($n->getBooleanValue()); },
-            'allowedPresenters' => function (self $o, ParseNode $n) { $o->setAllowedPresenters($n->getEnumValue(OnlineMeetingPresenters::class)); },
-            'allowMeetingChat' => function (self $o, ParseNode $n) { $o->setAllowMeetingChat($n->getEnumValue(MeetingChatMode::class)); },
-            'allowTeamworkReactions' => function (self $o, ParseNode $n) { $o->setAllowTeamworkReactions($n->getBooleanValue()); },
-            'attendanceReports' => function (self $o, ParseNode $n) { $o->setAttendanceReports($n->getCollectionOfObjectValues(MeetingAttendanceReport::class)); },
-            'attendeeReport' => function (self $o, ParseNode $n) { $o->setAttendeeReport($n->getBinaryContent()); },
-            'audioConferencing' => function (self $o, ParseNode $n) { $o->setAudioConferencing($n->getObjectValue(AudioConferencing::class)); },
-            'broadcastSettings' => function (self $o, ParseNode $n) { $o->setBroadcastSettings($n->getObjectValue(BroadcastMeetingSettings::class)); },
-            'chatInfo' => function (self $o, ParseNode $n) { $o->setChatInfo($n->getObjectValue(ChatInfo::class)); },
-            'creationDateTime' => function (self $o, ParseNode $n) { $o->setCreationDateTime($n->getDateTimeValue()); },
-            'endDateTime' => function (self $o, ParseNode $n) { $o->setEndDateTime($n->getDateTimeValue()); },
-            'externalId' => function (self $o, ParseNode $n) { $o->setExternalId($n->getStringValue()); },
-            'isBroadcast' => function (self $o, ParseNode $n) { $o->setIsBroadcast($n->getBooleanValue()); },
-            'isEntryExitAnnounced' => function (self $o, ParseNode $n) { $o->setIsEntryExitAnnounced($n->getBooleanValue()); },
-            'joinInformation' => function (self $o, ParseNode $n) { $o->setJoinInformation($n->getObjectValue(ItemBody::class)); },
-            'joinWebUrl' => function (self $o, ParseNode $n) { $o->setJoinWebUrl($n->getStringValue()); },
-            'lobbyBypassSettings' => function (self $o, ParseNode $n) { $o->setLobbyBypassSettings($n->getObjectValue(LobbyBypassSettings::class)); },
-            'participants' => function (self $o, ParseNode $n) { $o->setParticipants($n->getObjectValue(MeetingParticipants::class)); },
-            'recordAutomatically' => function (self $o, ParseNode $n) { $o->setRecordAutomatically($n->getBooleanValue()); },
-            'startDateTime' => function (self $o, ParseNode $n) { $o->setStartDateTime($n->getDateTimeValue()); },
-            'subject' => function (self $o, ParseNode $n) { $o->setSubject($n->getStringValue()); },
-            'videoTeleconferenceId' => function (self $o, ParseNode $n) { $o->setVideoTeleconferenceId($n->getStringValue()); },
+            'allowAttendeeToEnableCamera' => function (ParseNode $n) use ($o) { $o->setAllowAttendeeToEnableCamera($n->getBooleanValue()); },
+            'allowAttendeeToEnableMic' => function (ParseNode $n) use ($o) { $o->setAllowAttendeeToEnableMic($n->getBooleanValue()); },
+            'allowedPresenters' => function (ParseNode $n) use ($o) { $o->setAllowedPresenters($n->getEnumValue(OnlineMeetingPresenters::class)); },
+            'allowMeetingChat' => function (ParseNode $n) use ($o) { $o->setAllowMeetingChat($n->getEnumValue(MeetingChatMode::class)); },
+            'allowTeamworkReactions' => function (ParseNode $n) use ($o) { $o->setAllowTeamworkReactions($n->getBooleanValue()); },
+            'attendanceReports' => function (ParseNode $n) use ($o) { $o->setAttendanceReports($n->getCollectionOfObjectValues(array(MeetingAttendanceReport::class, 'createFromDiscriminatorValue'))); },
+            'attendeeReport' => function (ParseNode $n) use ($o) { $o->setAttendeeReport($n->getBinaryContent()); },
+            'audioConferencing' => function (ParseNode $n) use ($o) { $o->setAudioConferencing($n->getObjectValue(array(AudioConferencing::class, 'createFromDiscriminatorValue'))); },
+            'broadcastSettings' => function (ParseNode $n) use ($o) { $o->setBroadcastSettings($n->getObjectValue(array(BroadcastMeetingSettings::class, 'createFromDiscriminatorValue'))); },
+            'chatInfo' => function (ParseNode $n) use ($o) { $o->setChatInfo($n->getObjectValue(array(ChatInfo::class, 'createFromDiscriminatorValue'))); },
+            'creationDateTime' => function (ParseNode $n) use ($o) { $o->setCreationDateTime($n->getDateTimeValue()); },
+            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
+            'externalId' => function (ParseNode $n) use ($o) { $o->setExternalId($n->getStringValue()); },
+            'isBroadcast' => function (ParseNode $n) use ($o) { $o->setIsBroadcast($n->getBooleanValue()); },
+            'isEntryExitAnnounced' => function (ParseNode $n) use ($o) { $o->setIsEntryExitAnnounced($n->getBooleanValue()); },
+            'joinInformation' => function (ParseNode $n) use ($o) { $o->setJoinInformation($n->getObjectValue(array(ItemBody::class, 'createFromDiscriminatorValue'))); },
+            'joinWebUrl' => function (ParseNode $n) use ($o) { $o->setJoinWebUrl($n->getStringValue()); },
+            'lobbyBypassSettings' => function (ParseNode $n) use ($o) { $o->setLobbyBypassSettings($n->getObjectValue(array(LobbyBypassSettings::class, 'createFromDiscriminatorValue'))); },
+            'participants' => function (ParseNode $n) use ($o) { $o->setParticipants($n->getObjectValue(array(MeetingParticipants::class, 'createFromDiscriminatorValue'))); },
+            'recordAutomatically' => function (ParseNode $n) use ($o) { $o->setRecordAutomatically($n->getBooleanValue()); },
+            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
+            'subject' => function (ParseNode $n) use ($o) { $o->setSubject($n->getStringValue()); },
+            'videoTeleconferenceId' => function (ParseNode $n) use ($o) { $o->setVideoTeleconferenceId($n->getStringValue()); },
         ]);
     }
 
     /**
-     * Gets the isBroadcast property value. Indicates if this is a Teams live event.
+     * Gets the isBroadcast property value. Indicates whether this is a Teams live event.
      * @return bool|null
     */
     public function getIsBroadcast(): ?bool {
@@ -248,7 +295,7 @@ class OnlineMeeting extends Entity
     }
 
     /**
-     * Gets the joinInformation property value. The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
+     * Gets the joinInformation property value. The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only.
      * @return ItemBody|null
     */
     public function getJoinInformation(): ?ItemBody {
@@ -264,7 +311,7 @@ class OnlineMeeting extends Entity
     }
 
     /**
-     * Gets the lobbyBypassSettings property value. Specifies which participants can bypass the meeting   lobby.
+     * Gets the lobbyBypassSettings property value. Specifies which participants can bypass the meeting lobby.
      * @return LobbyBypassSettings|null
     */
     public function getLobbyBypassSettings(): ?LobbyBypassSettings {
@@ -272,7 +319,7 @@ class OnlineMeeting extends Entity
     }
 
     /**
-     * Gets the participants property value. The participants associated with the online meeting.  This includes the organizer and the attendees.
+     * Gets the participants property value. The participants associated with the online meeting. This includes the organizer and the attendees.
      * @return MeetingParticipants|null
     */
     public function getParticipants(): ?MeetingParticipants {
@@ -359,7 +406,7 @@ class OnlineMeeting extends Entity
     }
 
     /**
-     * Sets the allowedPresenters property value. Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
+     * Sets the allowedPresenters property value. Specifies who can be a presenter in a meeting.
      *  @param OnlineMeetingPresenters|null $value Value to set for the allowedPresenters property.
     */
     public function setAllowedPresenters(?OnlineMeetingPresenters $value ): void {
@@ -375,7 +422,7 @@ class OnlineMeeting extends Entity
     }
 
     /**
-     * Sets the allowTeamworkReactions property value. Indicates whether Teams reactions are enabled for the meeting.
+     * Sets the allowTeamworkReactions property value. Indicates if Teams reactions are enabled for the meeting.
      *  @param bool|null $value Value to set for the allowTeamworkReactions property.
     */
     public function setAllowTeamworkReactions(?bool $value ): void {
@@ -391,7 +438,7 @@ class OnlineMeeting extends Entity
     }
 
     /**
-     * Sets the attendeeReport property value. The content stream of the attendee report of a Microsoft Teams live event. Read-only.
+     * Sets the attendeeReport property value. The content stream of the attendee report of a Teams live event. Read-only.
      *  @param StreamInterface|null $value Value to set for the attendeeReport property.
     */
     public function setAttendeeReport(?StreamInterface $value ): void {
@@ -447,7 +494,7 @@ class OnlineMeeting extends Entity
     }
 
     /**
-     * Sets the isBroadcast property value. Indicates if this is a Teams live event.
+     * Sets the isBroadcast property value. Indicates whether this is a Teams live event.
      *  @param bool|null $value Value to set for the isBroadcast property.
     */
     public function setIsBroadcast(?bool $value ): void {
@@ -463,7 +510,7 @@ class OnlineMeeting extends Entity
     }
 
     /**
-     * Sets the joinInformation property value. The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
+     * Sets the joinInformation property value. The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only.
      *  @param ItemBody|null $value Value to set for the joinInformation property.
     */
     public function setJoinInformation(?ItemBody $value ): void {
@@ -479,7 +526,7 @@ class OnlineMeeting extends Entity
     }
 
     /**
-     * Sets the lobbyBypassSettings property value. Specifies which participants can bypass the meeting   lobby.
+     * Sets the lobbyBypassSettings property value. Specifies which participants can bypass the meeting lobby.
      *  @param LobbyBypassSettings|null $value Value to set for the lobbyBypassSettings property.
     */
     public function setLobbyBypassSettings(?LobbyBypassSettings $value ): void {
@@ -487,7 +534,7 @@ class OnlineMeeting extends Entity
     }
 
     /**
-     * Sets the participants property value. The participants associated with the online meeting.  This includes the organizer and the attendees.
+     * Sets the participants property value. The participants associated with the online meeting. This includes the organizer and the attendees.
      *  @param MeetingParticipants|null $value Value to set for the participants property.
     */
     public function setParticipants(?MeetingParticipants $value ): void {

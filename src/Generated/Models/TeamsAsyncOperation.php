@@ -7,30 +7,46 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class TeamsAsyncOperation extends Entity 
+class TeamsAsyncOperation extends Entity implements Parsable 
 {
-    /** @var int|null $attemptsCount Number of times the operation was attempted before being marked successful or failed. */
+    /**
+     * @var int|null $attemptsCount Number of times the operation was attempted before being marked successful or failed.
+    */
     private ?int $attemptsCount = null;
     
-    /** @var DateTime|null $createdDateTime Time when the operation was created. */
+    /**
+     * @var DateTime|null $createdDateTime Time when the operation was created.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var OperationError|null $error Any error that causes the async operation to fail. */
+    /**
+     * @var OperationError|null $error Any error that causes the async operation to fail.
+    */
     private ?OperationError $error = null;
     
-    /** @var DateTime|null $lastActionDateTime Time when the async operation was last updated. */
+    /**
+     * @var DateTime|null $lastActionDateTime Time when the async operation was last updated.
+    */
     private ?DateTime $lastActionDateTime = null;
     
-    /** @var TeamsAsyncOperationType|null $operationType Denotes which type of operation is being described. */
+    /**
+     * @var TeamsAsyncOperationType|null $operationType Denotes the type of operation being described.
+    */
     private ?TeamsAsyncOperationType $operationType = null;
     
-    /** @var TeamsAsyncOperationStatus|null $status Operation status. */
+    /**
+     * @var TeamsAsyncOperationStatus|null $status Operation status.
+    */
     private ?TeamsAsyncOperationStatus $status = null;
     
-    /** @var string|null $targetResourceId The ID of the object that's created or modified as result of this async operation, typically a team. */
+    /**
+     * @var string|null $targetResourceId The ID of the object that's created or modified as result of this async operation, typically a team.
+    */
     private ?string $targetResourceId = null;
     
-    /** @var string|null $targetResourceLocation The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths. */
+    /**
+     * @var string|null $targetResourceLocation The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
+    */
     private ?string $targetResourceLocation = null;
     
     /**
@@ -45,7 +61,7 @@ class TeamsAsyncOperation extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TeamsAsyncOperation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TeamsAsyncOperation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TeamsAsyncOperation {
         return new TeamsAsyncOperation();
     }
 
@@ -78,15 +94,16 @@ class TeamsAsyncOperation extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'attemptsCount' => function (self $o, ParseNode $n) { $o->setAttemptsCount($n->getIntegerValue()); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'error' => function (self $o, ParseNode $n) { $o->setError($n->getObjectValue(OperationError::class)); },
-            'lastActionDateTime' => function (self $o, ParseNode $n) { $o->setLastActionDateTime($n->getDateTimeValue()); },
-            'operationType' => function (self $o, ParseNode $n) { $o->setOperationType($n->getEnumValue(TeamsAsyncOperationType::class)); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(TeamsAsyncOperationStatus::class)); },
-            'targetResourceId' => function (self $o, ParseNode $n) { $o->setTargetResourceId($n->getStringValue()); },
-            'targetResourceLocation' => function (self $o, ParseNode $n) { $o->setTargetResourceLocation($n->getStringValue()); },
+            'attemptsCount' => function (ParseNode $n) use ($o) { $o->setAttemptsCount($n->getIntegerValue()); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getObjectValue(array(OperationError::class, 'createFromDiscriminatorValue'))); },
+            'lastActionDateTime' => function (ParseNode $n) use ($o) { $o->setLastActionDateTime($n->getDateTimeValue()); },
+            'operationType' => function (ParseNode $n) use ($o) { $o->setOperationType($n->getEnumValue(TeamsAsyncOperationType::class)); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(TeamsAsyncOperationStatus::class)); },
+            'targetResourceId' => function (ParseNode $n) use ($o) { $o->setTargetResourceId($n->getStringValue()); },
+            'targetResourceLocation' => function (ParseNode $n) use ($o) { $o->setTargetResourceLocation($n->getStringValue()); },
         ]);
     }
 
@@ -99,7 +116,7 @@ class TeamsAsyncOperation extends Entity
     }
 
     /**
-     * Gets the operationType property value. Denotes which type of operation is being described.
+     * Gets the operationType property value. Denotes the type of operation being described.
      * @return TeamsAsyncOperationType|null
     */
     public function getOperationType(): ?TeamsAsyncOperationType {
@@ -179,7 +196,7 @@ class TeamsAsyncOperation extends Entity
     }
 
     /**
-     * Sets the operationType property value. Denotes which type of operation is being described.
+     * Sets the operationType property value. Denotes the type of operation being described.
      *  @param TeamsAsyncOperationType|null $value Value to set for the operationType property.
     */
     public function setOperationType(?TeamsAsyncOperationType $value ): void {

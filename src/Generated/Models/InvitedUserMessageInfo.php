@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<Recipient>|null $ccRecipients Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported. */
+    /**
+     * @var array<Recipient>|null $ccRecipients Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
+    */
     private ?array $ccRecipients = null;
     
-    /** @var string|null $customizedMessageBody Customized message body you want to send if you don't want the default message. */
+    /**
+     * @var string|null $customizedMessageBody Customized message body you want to send if you don't want the default message.
+    */
     private ?string $customizedMessageBody = null;
     
-    /** @var string|null $messageLanguage The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US. */
+    /**
+     * @var string|null $messageLanguage The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
+    */
     private ?string $messageLanguage = null;
     
     /**
@@ -33,7 +41,7 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return InvitedUserMessageInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): InvitedUserMessageInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): InvitedUserMessageInfo {
         return new InvitedUserMessageInfo();
     }
 
@@ -66,10 +74,11 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'ccRecipients' => function (self $o, ParseNode $n) { $o->setCcRecipients($n->getCollectionOfObjectValues(Recipient::class)); },
-            'customizedMessageBody' => function (self $o, ParseNode $n) { $o->setCustomizedMessageBody($n->getStringValue()); },
-            'messageLanguage' => function (self $o, ParseNode $n) { $o->setMessageLanguage($n->getStringValue()); },
+            'ccRecipients' => function (ParseNode $n) use ($o) { $o->setCcRecipients($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
+            'customizedMessageBody' => function (ParseNode $n) use ($o) { $o->setCustomizedMessageBody($n->getStringValue()); },
+            'messageLanguage' => function (ParseNode $n) use ($o) { $o->setMessageLanguage($n->getStringValue()); },
         ];
     }
 

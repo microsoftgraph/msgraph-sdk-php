@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class UserTeamwork extends Entity 
+class UserTeamwork extends Entity implements Parsable 
 {
-    /** @var array<UserScopeTeamsAppInstallation>|null $installedApps The apps installed in the personal scope of this user. */
+    /**
+     * @var array<UserScopeTeamsAppInstallation>|null $installedApps The apps installed in the personal scope of this user.
+    */
     private ?array $installedApps = null;
     
     /**
@@ -23,7 +25,7 @@ class UserTeamwork extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return UserTeamwork
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): UserTeamwork {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): UserTeamwork {
         return new UserTeamwork();
     }
 
@@ -32,8 +34,9 @@ class UserTeamwork extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'installedApps' => function (self $o, ParseNode $n) { $o->setInstalledApps($n->getCollectionOfObjectValues(UserScopeTeamsAppInstallation::class)); },
+            'installedApps' => function (ParseNode $n) use ($o) { $o->setInstalledApps($n->getCollectionOfObjectValues(array(UserScopeTeamsAppInstallation::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

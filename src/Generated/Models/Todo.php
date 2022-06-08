@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Todo extends Entity 
+class Todo extends Entity implements Parsable 
 {
-    /** @var array<TodoTaskList>|null $lists The task lists in the users mailbox. */
+    /**
+     * @var array<TodoTaskList>|null $lists The task lists in the users mailbox.
+    */
     private ?array $lists = null;
     
     /**
@@ -23,7 +25,7 @@ class Todo extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Todo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Todo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Todo {
         return new Todo();
     }
 
@@ -32,8 +34,9 @@ class Todo extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'lists' => function (self $o, ParseNode $n) { $o->setLists($n->getCollectionOfObjectValues(TodoTaskList::class)); },
+            'lists' => function (ParseNode $n) use ($o) { $o->setLists($n->getCollectionOfObjectValues(array(TodoTaskList::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

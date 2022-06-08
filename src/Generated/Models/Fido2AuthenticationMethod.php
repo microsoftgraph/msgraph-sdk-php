@@ -7,24 +7,36 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Fido2AuthenticationMethod extends AuthenticationMethod 
+class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable 
 {
-    /** @var string|null $aaGuid Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator. */
+    /**
+     * @var string|null $aaGuid Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator.
+    */
     private ?string $aaGuid = null;
     
-    /** @var array<string>|null $attestationCertificates The attestation certificate(s) attached to this security key. */
+    /**
+     * @var array<string>|null $attestationCertificates The attestation certificate(s) attached to this security key.
+    */
     private ?array $attestationCertificates = null;
     
-    /** @var AttestationLevel|null $attestationLevel The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested. */
+    /**
+     * @var AttestationLevel|null $attestationLevel The attestation level of this FIDO2 security key. Possible values are: attested, notAttested, unknownFutureValue.
+    */
     private ?AttestationLevel $attestationLevel = null;
     
-    /** @var DateTime|null $createdDateTime The timestamp when this key was registered to the user. */
+    /**
+     * @var DateTime|null $createdDateTime The timestamp when this key was registered to the user.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $displayName The display name of the key as given by the user. */
+    /**
+     * @var string|null $displayName The display name of the key as given by the user.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $model The manufacturer-assigned model of the FIDO2 security key. */
+    /**
+     * @var string|null $model The manufacturer-assigned model of the FIDO2 security key.
+    */
     private ?string $model = null;
     
     /**
@@ -39,7 +51,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Fido2AuthenticationMethod
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Fido2AuthenticationMethod {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Fido2AuthenticationMethod {
         return new Fido2AuthenticationMethod();
     }
 
@@ -60,7 +72,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     }
 
     /**
-     * Gets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
+     * Gets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, notAttested, unknownFutureValue.
      * @return AttestationLevel|null
     */
     public function getAttestationLevel(): ?AttestationLevel {
@@ -88,13 +100,14 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'aaGuid' => function (self $o, ParseNode $n) { $o->setAaGuid($n->getStringValue()); },
-            'attestationCertificates' => function (self $o, ParseNode $n) { $o->setAttestationCertificates($n->getCollectionOfPrimitiveValues()); },
-            'attestationLevel' => function (self $o, ParseNode $n) { $o->setAttestationLevel($n->getEnumValue(AttestationLevel::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'model' => function (self $o, ParseNode $n) { $o->setModel($n->getStringValue()); },
+            'aaGuid' => function (ParseNode $n) use ($o) { $o->setAaGuid($n->getStringValue()); },
+            'attestationCertificates' => function (ParseNode $n) use ($o) { $o->setAttestationCertificates($n->getCollectionOfPrimitiveValues()); },
+            'attestationLevel' => function (ParseNode $n) use ($o) { $o->setAttestationLevel($n->getEnumValue(AttestationLevel::class)); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'model' => function (ParseNode $n) use ($o) { $o->setModel($n->getStringValue()); },
         ]);
     }
 
@@ -137,7 +150,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     }
 
     /**
-     * Sets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
+     * Sets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, notAttested, unknownFutureValue.
      *  @param AttestationLevel|null $value Value to set for the attestationLevel property.
     */
     public function setAttestationLevel(?AttestationLevel $value ): void {

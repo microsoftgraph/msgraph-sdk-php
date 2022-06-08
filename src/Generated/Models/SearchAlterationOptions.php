@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SearchAlterationOptions implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $enableModification Indicates whether spelling modifications are enabled. If enabled, the user will get the search results for the corrected query in case of no results for the original query with typos. The response will also include the spelling modification information in the queryAlterationResponse property. Optional. */
+    /**
+     * @var bool|null $enableModification Indicates whether spelling modifications are enabled. If enabled, user will get the search results for corrected query when there are no results for the original query with typos and get the spelling modification information in queryAlterationResponse property of the response. Optional.
+    */
     private ?bool $enableModification = null;
     
-    /** @var bool|null $enableSuggestion Indicates whether spelling suggestions are enabled. If enabled, the user will get the search results for the original search query and suggestions for spelling correction in the queryAlterationResponse property of the response for the typos in the query. Optional. */
+    /**
+     * @var bool|null $enableSuggestion Indicates whether spelling suggestions are enabled. If enabled, the user will get the search results for the original search query and suggestions for spelling correction in the queryAlterationResponse property of the response for the typos in the query. Optional.
+    */
     private ?bool $enableSuggestion = null;
     
     /**
@@ -30,7 +36,7 @@ class SearchAlterationOptions implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SearchAlterationOptions
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SearchAlterationOptions {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SearchAlterationOptions {
         return new SearchAlterationOptions();
     }
 
@@ -43,7 +49,7 @@ class SearchAlterationOptions implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the enableModification property value. Indicates whether spelling modifications are enabled. If enabled, the user will get the search results for the corrected query in case of no results for the original query with typos. The response will also include the spelling modification information in the queryAlterationResponse property. Optional.
+     * Gets the enableModification property value. Indicates whether spelling modifications are enabled. If enabled, user will get the search results for corrected query when there are no results for the original query with typos and get the spelling modification information in queryAlterationResponse property of the response. Optional.
      * @return bool|null
     */
     public function getEnableModification(): ?bool {
@@ -63,9 +69,10 @@ class SearchAlterationOptions implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'enableModification' => function (self $o, ParseNode $n) { $o->setEnableModification($n->getBooleanValue()); },
-            'enableSuggestion' => function (self $o, ParseNode $n) { $o->setEnableSuggestion($n->getBooleanValue()); },
+            'enableModification' => function (ParseNode $n) use ($o) { $o->setEnableModification($n->getBooleanValue()); },
+            'enableSuggestion' => function (ParseNode $n) use ($o) { $o->setEnableSuggestion($n->getBooleanValue()); },
         ];
     }
 
@@ -88,7 +95,7 @@ class SearchAlterationOptions implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the enableModification property value. Indicates whether spelling modifications are enabled. If enabled, the user will get the search results for the corrected query in case of no results for the original query with typos. The response will also include the spelling modification information in the queryAlterationResponse property. Optional.
+     * Sets the enableModification property value. Indicates whether spelling modifications are enabled. If enabled, user will get the search results for corrected query when there are no results for the original query with typos and get the spelling modification information in queryAlterationResponse property of the response. Optional.
      *  @param bool|null $value Value to set for the enableModification property.
     */
     public function setEnableModification(?bool $value ): void {

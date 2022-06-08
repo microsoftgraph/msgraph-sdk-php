@@ -6,24 +6,36 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DeviceConfigurationState extends Entity 
+class DeviceConfigurationState extends Entity implements Parsable 
 {
-    /** @var string|null $displayName The name of the policy for this policyBase */
+    /**
+     * @var string|null $displayName The name of the policy for this policyBase
+    */
     private ?string $displayName = null;
     
-    /** @var PolicyPlatformType|null $platformType Platform type that the policy applies to */
+    /**
+     * @var PolicyPlatformType|null $platformType Platform type that the policy applies to
+    */
     private ?PolicyPlatformType $platformType = null;
     
-    /** @var int|null $settingCount Count of how many setting a policy holds */
+    /**
+     * @var int|null $settingCount Count of how many setting a policy holds
+    */
     private ?int $settingCount = null;
     
-    /** @var array<DeviceConfigurationSettingState>|null $settingStates The settingStates property */
+    /**
+     * @var array<DeviceConfigurationSettingState>|null $settingStates The settingStates property
+    */
     private ?array $settingStates = null;
     
-    /** @var ComplianceStatus|null $state The compliance state of the policy */
+    /**
+     * @var ComplianceStatus|null $state The compliance state of the policy
+    */
     private ?ComplianceStatus $state = null;
     
-    /** @var int|null $version The version of the policy */
+    /**
+     * @var int|null $version The version of the policy
+    */
     private ?int $version = null;
     
     /**
@@ -38,7 +50,7 @@ class DeviceConfigurationState extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceConfigurationState
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceConfigurationState {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceConfigurationState {
         return new DeviceConfigurationState();
     }
 
@@ -55,13 +67,14 @@ class DeviceConfigurationState extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'platformType' => function (self $o, ParseNode $n) { $o->setPlatformType($n->getEnumValue(PolicyPlatformType::class)); },
-            'settingCount' => function (self $o, ParseNode $n) { $o->setSettingCount($n->getIntegerValue()); },
-            'settingStates' => function (self $o, ParseNode $n) { $o->setSettingStates($n->getCollectionOfObjectValues(DeviceConfigurationSettingState::class)); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getEnumValue(ComplianceStatus::class)); },
-            'version' => function (self $o, ParseNode $n) { $o->setVersion($n->getIntegerValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'platformType' => function (ParseNode $n) use ($o) { $o->setPlatformType($n->getEnumValue(PolicyPlatformType::class)); },
+            'settingCount' => function (ParseNode $n) use ($o) { $o->setSettingCount($n->getIntegerValue()); },
+            'settingStates' => function (ParseNode $n) use ($o) { $o->setSettingStates($n->getCollectionOfObjectValues(array(DeviceConfigurationSettingState::class, 'createFromDiscriminatorValue'))); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(ComplianceStatus::class)); },
+            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getIntegerValue()); },
         ]);
     }
 

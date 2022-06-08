@@ -6,7 +6,7 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class UserFlowLanguagePage extends Entity 
+class UserFlowLanguagePage extends Entity implements Parsable 
 {
     /**
      * Instantiates a new userFlowLanguagePage and sets the default values.
@@ -20,7 +20,7 @@ class UserFlowLanguagePage extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return UserFlowLanguagePage
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): UserFlowLanguagePage {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): UserFlowLanguagePage {
         return new UserFlowLanguagePage();
     }
 
@@ -29,6 +29,7 @@ class UserFlowLanguagePage extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

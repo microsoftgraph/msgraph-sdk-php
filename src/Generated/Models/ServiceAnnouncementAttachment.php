@@ -8,21 +8,31 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Psr\Http\Message\StreamInterface;
 
-class ServiceAnnouncementAttachment extends Entity 
+class ServiceAnnouncementAttachment extends Entity implements Parsable 
 {
-    /** @var StreamInterface|null $content The attachment content. */
+    /**
+     * @var StreamInterface|null $content The attachment content.
+    */
     private ?StreamInterface $content = null;
     
-    /** @var string|null $contentType The contentType property */
+    /**
+     * @var string|null $contentType The contentType property
+    */
     private ?string $contentType = null;
     
-    /** @var DateTime|null $lastModifiedDateTime The lastModifiedDateTime property */
+    /**
+     * @var DateTime|null $lastModifiedDateTime The lastModifiedDateTime property
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var string|null $name The name property */
+    /**
+     * @var string|null $name The name property
+    */
     private ?string $name = null;
     
-    /** @var int|null $size The size property */
+    /**
+     * @var int|null $size The size property
+    */
     private ?int $size = null;
     
     /**
@@ -37,7 +47,7 @@ class ServiceAnnouncementAttachment extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ServiceAnnouncementAttachment
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ServiceAnnouncementAttachment {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ServiceAnnouncementAttachment {
         return new ServiceAnnouncementAttachment();
     }
 
@@ -62,12 +72,13 @@ class ServiceAnnouncementAttachment extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'content' => function (self $o, ParseNode $n) { $o->setContent($n->getBinaryContent()); },
-            'contentType' => function (self $o, ParseNode $n) { $o->setContentType($n->getStringValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'size' => function (self $o, ParseNode $n) { $o->setSize($n->getIntegerValue()); },
+            'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getBinaryContent()); },
+            'contentType' => function (ParseNode $n) use ($o) { $o->setContentType($n->getStringValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'size' => function (ParseNode $n) use ($o) { $o->setSize($n->getIntegerValue()); },
         ]);
     }
 

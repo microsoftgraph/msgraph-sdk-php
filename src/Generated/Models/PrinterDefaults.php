@@ -9,58 +9,94 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class PrinterDefaults implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var PrintColorMode|null $colorMode The default color mode to use when printing the document. Valid values are described in the following table. */
+    /**
+     * @var PrintColorMode|null $colorMode The default color mode to use when printing the document. Valid values are described in the following table.
+    */
     private ?PrintColorMode $colorMode = null;
     
-    /** @var string|null $contentType The default content (MIME) type to use when processing documents. */
+    /**
+     * @var string|null $contentType The default content (MIME) type to use when processing documents.
+    */
     private ?string $contentType = null;
     
-    /** @var int|null $copiesPerJob The default number of copies printed per job. */
+    /**
+     * @var int|null $copiesPerJob The default number of copies printed per job.
+    */
     private ?int $copiesPerJob = null;
     
-    /** @var int|null $dpi The default resolution in DPI to use when printing the job. */
+    /**
+     * @var int|null $dpi The default resolution in DPI to use when printing the job.
+    */
     private ?int $dpi = null;
     
-    /** @var PrintDuplexMode|null $duplexMode The default duplex (double-sided) configuration to use when printing a document. Valid values are described in the following table. */
+    /**
+     * @var PrintDuplexMode|null $duplexMode The default duplex (double-sided) configuration to use when printing a document. Valid values are described in the following table.
+    */
     private ?PrintDuplexMode $duplexMode = null;
     
-    /** @var array<PrintFinishing>|null $finishings The default set of finishings to apply to print jobs. Valid values are described in the following table. */
+    /**
+     * @var array<string>|null $finishings The default set of finishings to apply to print jobs. Valid values are described in the following table.
+    */
     private ?array $finishings = null;
     
-    /** @var bool|null $fitPdfToPage The default fitPdfToPage setting. True to fit each page of a PDF document to a physical sheet of media; false to let the printer decide how to lay out impressions. */
+    /**
+     * @var bool|null $fitPdfToPage The default fitPdfToPage setting. True to fit each page of a PDF document to a physical sheet of media; false to let the printer decide how to lay out impressions.
+    */
     private ?bool $fitPdfToPage = null;
     
-    /** @var string|null $inputBin The default input bin that serves as the paper source. */
+    /**
+     * @var string|null $inputBin The default input bin that serves as the paper source.
+    */
     private ?string $inputBin = null;
     
-    /** @var string|null $mediaColor The default media (such as paper) color to print the document on. */
+    /**
+     * @var string|null $mediaColor The default media (such as paper) color to print the document on.
+    */
     private ?string $mediaColor = null;
     
-    /** @var string|null $mediaSize The default media size to use. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic. */
+    /**
+     * @var string|null $mediaSize The default media size to use. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
+    */
     private ?string $mediaSize = null;
     
-    /** @var string|null $mediaType The default media (such as paper) type to print the document on. */
+    /**
+     * @var string|null $mediaType The default media (such as paper) type to print the document on.
+    */
     private ?string $mediaType = null;
     
-    /** @var PrintMultipageLayout|null $multipageLayout The default direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table. */
+    /**
+     * @var PrintMultipageLayout|null $multipageLayout The default direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
+    */
     private ?PrintMultipageLayout $multipageLayout = null;
     
-    /** @var PrintOrientation|null $orientation The default orientation to use when printing the document. Valid values are described in the following table. */
+    /**
+     * @var PrintOrientation|null $orientation The default orientation to use when printing the document. Valid values are described in the following table.
+    */
     private ?PrintOrientation $orientation = null;
     
-    /** @var string|null $outputBin The default output bin to place completed prints into. See the printer's capabilities for a list of supported output bins. */
+    /**
+     * @var string|null $outputBin The default output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
+    */
     private ?string $outputBin = null;
     
-    /** @var int|null $pagesPerSheet The default number of document pages to print on each sheet. */
+    /**
+     * @var int|null $pagesPerSheet The default number of document pages to print on each sheet.
+    */
     private ?int $pagesPerSheet = null;
     
-    /** @var PrintQuality|null $quality The default quality to use when printing the document. Valid values are described in the following table. */
+    /**
+     * @var PrintQuality|null $quality The default quality to use when printing the document. Valid values are described in the following table.
+    */
     private ?PrintQuality $quality = null;
     
-    /** @var PrintScaling|null $scaling Specifies how the printer scales the document data to fit the requested media. Valid values are described in the following table. */
+    /**
+     * @var PrintScaling|null $scaling Specifies how the printer scales the document data to fit the requested media. Valid values are described in the following table.
+    */
     private ?PrintScaling $scaling = null;
     
     /**
@@ -75,7 +111,7 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrinterDefaults
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrinterDefaults {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrinterDefaults {
         return new PrinterDefaults();
     }
 
@@ -132,30 +168,31 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'colorMode' => function (self $o, ParseNode $n) { $o->setColorMode($n->getEnumValue(PrintColorMode::class)); },
-            'contentType' => function (self $o, ParseNode $n) { $o->setContentType($n->getStringValue()); },
-            'copiesPerJob' => function (self $o, ParseNode $n) { $o->setCopiesPerJob($n->getIntegerValue()); },
-            'dpi' => function (self $o, ParseNode $n) { $o->setDpi($n->getIntegerValue()); },
-            'duplexMode' => function (self $o, ParseNode $n) { $o->setDuplexMode($n->getEnumValue(PrintDuplexMode::class)); },
-            'finishings' => function (self $o, ParseNode $n) { $o->setFinishings($n->getCollectionOfEnumValues(PrintFinishing::class)); },
-            'fitPdfToPage' => function (self $o, ParseNode $n) { $o->setFitPdfToPage($n->getBooleanValue()); },
-            'inputBin' => function (self $o, ParseNode $n) { $o->setInputBin($n->getStringValue()); },
-            'mediaColor' => function (self $o, ParseNode $n) { $o->setMediaColor($n->getStringValue()); },
-            'mediaSize' => function (self $o, ParseNode $n) { $o->setMediaSize($n->getStringValue()); },
-            'mediaType' => function (self $o, ParseNode $n) { $o->setMediaType($n->getStringValue()); },
-            'multipageLayout' => function (self $o, ParseNode $n) { $o->setMultipageLayout($n->getEnumValue(PrintMultipageLayout::class)); },
-            'orientation' => function (self $o, ParseNode $n) { $o->setOrientation($n->getEnumValue(PrintOrientation::class)); },
-            'outputBin' => function (self $o, ParseNode $n) { $o->setOutputBin($n->getStringValue()); },
-            'pagesPerSheet' => function (self $o, ParseNode $n) { $o->setPagesPerSheet($n->getIntegerValue()); },
-            'quality' => function (self $o, ParseNode $n) { $o->setQuality($n->getEnumValue(PrintQuality::class)); },
-            'scaling' => function (self $o, ParseNode $n) { $o->setScaling($n->getEnumValue(PrintScaling::class)); },
+            'colorMode' => function (ParseNode $n) use ($o) { $o->setColorMode($n->getEnumValue(PrintColorMode::class)); },
+            'contentType' => function (ParseNode $n) use ($o) { $o->setContentType($n->getStringValue()); },
+            'copiesPerJob' => function (ParseNode $n) use ($o) { $o->setCopiesPerJob($n->getIntegerValue()); },
+            'dpi' => function (ParseNode $n) use ($o) { $o->setDpi($n->getIntegerValue()); },
+            'duplexMode' => function (ParseNode $n) use ($o) { $o->setDuplexMode($n->getEnumValue(PrintDuplexMode::class)); },
+            'finishings' => function (ParseNode $n) use ($o) { $o->setFinishings($n->getCollectionOfPrimitiveValues()); },
+            'fitPdfToPage' => function (ParseNode $n) use ($o) { $o->setFitPdfToPage($n->getBooleanValue()); },
+            'inputBin' => function (ParseNode $n) use ($o) { $o->setInputBin($n->getStringValue()); },
+            'mediaColor' => function (ParseNode $n) use ($o) { $o->setMediaColor($n->getStringValue()); },
+            'mediaSize' => function (ParseNode $n) use ($o) { $o->setMediaSize($n->getStringValue()); },
+            'mediaType' => function (ParseNode $n) use ($o) { $o->setMediaType($n->getStringValue()); },
+            'multipageLayout' => function (ParseNode $n) use ($o) { $o->setMultipageLayout($n->getEnumValue(PrintMultipageLayout::class)); },
+            'orientation' => function (ParseNode $n) use ($o) { $o->setOrientation($n->getEnumValue(PrintOrientation::class)); },
+            'outputBin' => function (ParseNode $n) use ($o) { $o->setOutputBin($n->getStringValue()); },
+            'pagesPerSheet' => function (ParseNode $n) use ($o) { $o->setPagesPerSheet($n->getIntegerValue()); },
+            'quality' => function (ParseNode $n) use ($o) { $o->setQuality($n->getEnumValue(PrintQuality::class)); },
+            'scaling' => function (ParseNode $n) use ($o) { $o->setScaling($n->getEnumValue(PrintScaling::class)); },
         ];
     }
 
     /**
      * Gets the finishings property value. The default set of finishings to apply to print jobs. Valid values are described in the following table.
-     * @return array<PrintFinishing>|null
+     * @return array<string>|null
     */
     public function getFinishings(): ?array {
         return $this->finishings;
@@ -259,7 +296,7 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
         $writer->writeIntegerValue('copiesPerJob', $this->copiesPerJob);
         $writer->writeIntegerValue('dpi', $this->dpi);
         $writer->writeEnumValue('duplexMode', $this->duplexMode);
-        $writer->writeCollectionOfEnumValues('finishings', $this->finishings);
+        $writer->writeCollectionOfPrimitiveValues('finishings', $this->finishings);
         $writer->writeBooleanValue('fitPdfToPage', $this->fitPdfToPage);
         $writer->writeStringValue('inputBin', $this->inputBin);
         $writer->writeStringValue('mediaColor', $this->mediaColor);
@@ -324,7 +361,7 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the finishings property value. The default set of finishings to apply to print jobs. Valid values are described in the following table.
-     *  @param array<PrintFinishing>|null $value Value to set for the finishings property.
+     *  @param array<string>|null $value Value to set for the finishings property.
     */
     public function setFinishings(?array $value ): void {
         $this->finishings = $value;

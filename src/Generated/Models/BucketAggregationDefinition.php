@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class BucketAggregationDefinition implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $isDescending True to specify the sort order as descending. The default is false, with the sort order as ascending. Optional. */
+    /**
+     * @var bool|null $isDescending True to specify the sort order as descending. The default is false, with the sort order as ascending. Optional.
+    */
     private ?bool $isDescending = null;
     
-    /** @var int|null $minimumCount The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional. */
+    /**
+     * @var int|null $minimumCount The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional.
+    */
     private ?int $minimumCount = null;
     
-    /** @var string|null $prefixFilter A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional. */
+    /**
+     * @var string|null $prefixFilter A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
+    */
     private ?string $prefixFilter = null;
     
-    /** @var array<BucketAggregationRange>|null $ranges Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional. */
+    /**
+     * @var array<BucketAggregationRange>|null $ranges Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
+    */
     private ?array $ranges = null;
     
-    /** @var BucketAggregationSortProperty|null $sortBy The possible values are count to sort by the number of matches in the aggregation, keyAsStringto sort alphabeticaly based on the key in the aggregation, keyAsNumber for numerical sorting based on the key in the aggregation. Required. */
+    /**
+     * @var BucketAggregationSortProperty|null $sortBy The possible values are count to sort by the number of matches in the aggregation, keyAsStringto sort alphabeticaly based on the key in the aggregation, keyAsNumber for numerical sorting based on the key in the aggregation. Required.
+    */
     private ?BucketAggregationSortProperty $sortBy = null;
     
     /**
@@ -39,7 +51,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return BucketAggregationDefinition
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): BucketAggregationDefinition {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): BucketAggregationDefinition {
         return new BucketAggregationDefinition();
     }
 
@@ -56,12 +68,13 @@ class BucketAggregationDefinition implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'isDescending' => function (self $o, ParseNode $n) { $o->setIsDescending($n->getBooleanValue()); },
-            'minimumCount' => function (self $o, ParseNode $n) { $o->setMinimumCount($n->getIntegerValue()); },
-            'prefixFilter' => function (self $o, ParseNode $n) { $o->setPrefixFilter($n->getStringValue()); },
-            'ranges' => function (self $o, ParseNode $n) { $o->setRanges($n->getCollectionOfObjectValues(BucketAggregationRange::class)); },
-            'sortBy' => function (self $o, ParseNode $n) { $o->setSortBy($n->getEnumValue(BucketAggregationSortProperty::class)); },
+            'isDescending' => function (ParseNode $n) use ($o) { $o->setIsDescending($n->getBooleanValue()); },
+            'minimumCount' => function (ParseNode $n) use ($o) { $o->setMinimumCount($n->getIntegerValue()); },
+            'prefixFilter' => function (ParseNode $n) use ($o) { $o->setPrefixFilter($n->getStringValue()); },
+            'ranges' => function (ParseNode $n) use ($o) { $o->setRanges($n->getCollectionOfObjectValues(array(BucketAggregationRange::class, 'createFromDiscriminatorValue'))); },
+            'sortBy' => function (ParseNode $n) use ($o) { $o->setSortBy($n->getEnumValue(BucketAggregationSortProperty::class)); },
         ];
     }
 

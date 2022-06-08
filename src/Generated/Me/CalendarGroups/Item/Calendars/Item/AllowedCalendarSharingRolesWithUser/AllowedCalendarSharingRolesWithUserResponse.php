@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\AllowedCalendarSharingRolesWithUser;
 
-use Microsoft\Graph\Generated\Models\CalendarRoleType;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -10,10 +9,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AllowedCalendarSharingRolesWithUserResponse implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<CalendarRoleType>|null $value The value property */
+    /**
+     * @var array<string>|null $value The value property
+    */
     private ?array $value = null;
     
     /**
@@ -28,7 +31,7 @@ class AllowedCalendarSharingRolesWithUserResponse implements AdditionalDataHolde
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AllowedCalendarSharingRolesWithUserResponse
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AllowedCalendarSharingRolesWithUserResponse {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AllowedCalendarSharingRolesWithUserResponse {
         return new AllowedCalendarSharingRolesWithUserResponse();
     }
 
@@ -45,14 +48,15 @@ class AllowedCalendarSharingRolesWithUserResponse implements AdditionalDataHolde
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'value' => function (self $o, ParseNode $n) { $o->setValue($n->getCollectionOfEnumValues(CalendarRoleType::class)); },
+            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfPrimitiveValues()); },
         ];
     }
 
     /**
      * Gets the value property value. The value property
-     * @return array<CalendarRoleType>|null
+     * @return array<string>|null
     */
     public function getValue(): ?array {
         return $this->value;
@@ -63,7 +67,7 @@ class AllowedCalendarSharingRolesWithUserResponse implements AdditionalDataHolde
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfEnumValues('value', $this->value);
+        $writer->writeCollectionOfPrimitiveValues('value', $this->value);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -77,7 +81,7 @@ class AllowedCalendarSharingRolesWithUserResponse implements AdditionalDataHolde
 
     /**
      * Sets the value property value. The value property
-     *  @param array<CalendarRoleType>|null $value Value to set for the value property.
+     *  @param array<string>|null $value Value to set for the value property.
     */
     public function setValue(?array $value ): void {
         $this->value = $value;

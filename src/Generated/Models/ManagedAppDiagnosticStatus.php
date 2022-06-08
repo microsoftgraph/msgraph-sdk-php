@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $mitigationInstruction Instruction on how to mitigate a failed validation */
+    /**
+     * @var string|null $mitigationInstruction Instruction on how to mitigate a failed validation
+    */
     private ?string $mitigationInstruction = null;
     
-    /** @var string|null $state The state of the operation */
+    /**
+     * @var string|null $state The state of the operation
+    */
     private ?string $state = null;
     
-    /** @var string|null $validationName The validation friendly name */
+    /**
+     * @var string|null $validationName The validation friendly name
+    */
     private ?string $validationName = null;
     
     /**
@@ -33,7 +41,7 @@ class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ManagedAppDiagnosticStatus
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ManagedAppDiagnosticStatus {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedAppDiagnosticStatus {
         return new ManagedAppDiagnosticStatus();
     }
 
@@ -50,10 +58,11 @@ class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'mitigationInstruction' => function (self $o, ParseNode $n) { $o->setMitigationInstruction($n->getStringValue()); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getStringValue()); },
-            'validationName' => function (self $o, ParseNode $n) { $o->setValidationName($n->getStringValue()); },
+            'mitigationInstruction' => function (ParseNode $n) use ($o) { $o->setMitigationInstruction($n->getStringValue()); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getStringValue()); },
+            'validationName' => function (ParseNode $n) use ($o) { $o->setValidationName($n->getStringValue()); },
         ];
     }
 

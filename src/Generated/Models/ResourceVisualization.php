@@ -9,31 +9,49 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ResourceVisualization implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $containerDisplayName A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item. */
+    /**
+     * @var string|null $containerDisplayName A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
+    */
     private ?string $containerDisplayName = null;
     
-    /** @var string|null $containerType Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness. */
+    /**
+     * @var string|null $containerType Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
+    */
     private ?string $containerType = null;
     
-    /** @var string|null $containerWebUrl A path leading to the folder in which the item is stored. */
+    /**
+     * @var string|null $containerWebUrl A path leading to the folder in which the item is stored.
+    */
     private ?string $containerWebUrl = null;
     
-    /** @var string|null $mediaType The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported. */
+    /**
+     * @var string|null $mediaType The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
+    */
     private ?string $mediaType = null;
     
-    /** @var string|null $previewImageUrl A URL leading to the preview image for the item. */
+    /**
+     * @var string|null $previewImageUrl A URL leading to the preview image for the item.
+    */
     private ?string $previewImageUrl = null;
     
-    /** @var string|null $previewText A preview text for the item. */
+    /**
+     * @var string|null $previewText A preview text for the item.
+    */
     private ?string $previewText = null;
     
-    /** @var string|null $title The item's title text. */
+    /**
+     * @var string|null $title The item's title text.
+    */
     private ?string $title = null;
     
-    /** @var string|null $type The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types. */
+    /**
+     * @var string|null $type The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
+    */
     private ?string $type = null;
     
     /**
@@ -48,7 +66,7 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ResourceVisualization
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ResourceVisualization {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ResourceVisualization {
         return new ResourceVisualization();
     }
 
@@ -89,15 +107,16 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'containerDisplayName' => function (self $o, ParseNode $n) { $o->setContainerDisplayName($n->getStringValue()); },
-            'containerType' => function (self $o, ParseNode $n) { $o->setContainerType($n->getStringValue()); },
-            'containerWebUrl' => function (self $o, ParseNode $n) { $o->setContainerWebUrl($n->getStringValue()); },
-            'mediaType' => function (self $o, ParseNode $n) { $o->setMediaType($n->getStringValue()); },
-            'previewImageUrl' => function (self $o, ParseNode $n) { $o->setPreviewImageUrl($n->getStringValue()); },
-            'previewText' => function (self $o, ParseNode $n) { $o->setPreviewText($n->getStringValue()); },
-            'title' => function (self $o, ParseNode $n) { $o->setTitle($n->getStringValue()); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getStringValue()); },
+            'containerDisplayName' => function (ParseNode $n) use ($o) { $o->setContainerDisplayName($n->getStringValue()); },
+            'containerType' => function (ParseNode $n) use ($o) { $o->setContainerType($n->getStringValue()); },
+            'containerWebUrl' => function (ParseNode $n) use ($o) { $o->setContainerWebUrl($n->getStringValue()); },
+            'mediaType' => function (ParseNode $n) use ($o) { $o->setMediaType($n->getStringValue()); },
+            'previewImageUrl' => function (ParseNode $n) use ($o) { $o->setPreviewImageUrl($n->getStringValue()); },
+            'previewText' => function (ParseNode $n) use ($o) { $o->setPreviewText($n->getStringValue()); },
+            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getStringValue()); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
         ];
     }
 

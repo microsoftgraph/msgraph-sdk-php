@@ -9,37 +9,59 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Video implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $audioBitsPerSample Number of audio bits per sample. */
+    /**
+     * @var int|null $audioBitsPerSample Number of audio bits per sample.
+    */
     private ?int $audioBitsPerSample = null;
     
-    /** @var int|null $audioChannels Number of audio channels. */
+    /**
+     * @var int|null $audioChannels Number of audio channels.
+    */
     private ?int $audioChannels = null;
     
-    /** @var string|null $audioFormat Name of the audio format (AAC, MP3, etc.). */
+    /**
+     * @var string|null $audioFormat Name of the audio format (AAC, MP3, etc.).
+    */
     private ?string $audioFormat = null;
     
-    /** @var int|null $audioSamplesPerSecond Number of audio samples per second. */
+    /**
+     * @var int|null $audioSamplesPerSecond Number of audio samples per second.
+    */
     private ?int $audioSamplesPerSecond = null;
     
-    /** @var int|null $bitrate Bit rate of the video in bits per second. */
+    /**
+     * @var int|null $bitrate Bit rate of the video in bits per second.
+    */
     private ?int $bitrate = null;
     
-    /** @var int|null $duration Duration of the file in milliseconds. */
+    /**
+     * @var int|null $duration Duration of the file in milliseconds.
+    */
     private ?int $duration = null;
     
-    /** @var string|null $fourCC 'Four character code' name of the video format. */
+    /**
+     * @var string|null $fourCC 'Four character code' name of the video format.
+    */
     private ?string $fourCC = null;
     
-    /** @var float|null $frameRate Frame rate of the video. */
+    /**
+     * @var float|null $frameRate Frame rate of the video.
+    */
     private ?float $frameRate = null;
     
-    /** @var int|null $height Height of the video, in pixels. */
+    /**
+     * @var int|null $height Height of the video, in pixels.
+    */
     private ?int $height = null;
     
-    /** @var int|null $width Width of the video, in pixels. */
+    /**
+     * @var int|null $width Width of the video, in pixels.
+    */
     private ?int $width = null;
     
     /**
@@ -54,7 +76,7 @@ class Video implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Video
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Video {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Video {
         return new Video();
     }
 
@@ -119,17 +141,18 @@ class Video implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'audioBitsPerSample' => function (self $o, ParseNode $n) { $o->setAudioBitsPerSample($n->getIntegerValue()); },
-            'audioChannels' => function (self $o, ParseNode $n) { $o->setAudioChannels($n->getIntegerValue()); },
-            'audioFormat' => function (self $o, ParseNode $n) { $o->setAudioFormat($n->getStringValue()); },
-            'audioSamplesPerSecond' => function (self $o, ParseNode $n) { $o->setAudioSamplesPerSecond($n->getIntegerValue()); },
-            'bitrate' => function (self $o, ParseNode $n) { $o->setBitrate($n->getIntegerValue()); },
-            'duration' => function (self $o, ParseNode $n) { $o->setDuration($n->getIntegerValue()); },
-            'fourCC' => function (self $o, ParseNode $n) { $o->setFourCC($n->getStringValue()); },
-            'frameRate' => function (self $o, ParseNode $n) { $o->setFrameRate($n->getFloatValue()); },
-            'height' => function (self $o, ParseNode $n) { $o->setHeight($n->getIntegerValue()); },
-            'width' => function (self $o, ParseNode $n) { $o->setWidth($n->getIntegerValue()); },
+            'audioBitsPerSample' => function (ParseNode $n) use ($o) { $o->setAudioBitsPerSample($n->getIntegerValue()); },
+            'audioChannels' => function (ParseNode $n) use ($o) { $o->setAudioChannels($n->getIntegerValue()); },
+            'audioFormat' => function (ParseNode $n) use ($o) { $o->setAudioFormat($n->getStringValue()); },
+            'audioSamplesPerSecond' => function (ParseNode $n) use ($o) { $o->setAudioSamplesPerSecond($n->getIntegerValue()); },
+            'bitrate' => function (ParseNode $n) use ($o) { $o->setBitrate($n->getIntegerValue()); },
+            'duration' => function (ParseNode $n) use ($o) { $o->setDuration($n->getIntegerValue()); },
+            'fourCC' => function (ParseNode $n) use ($o) { $o->setFourCC($n->getStringValue()); },
+            'frameRate' => function (ParseNode $n) use ($o) { $o->setFrameRate($n->getFloatValue()); },
+            'height' => function (ParseNode $n) use ($o) { $o->setHeight($n->getIntegerValue()); },
+            'width' => function (ParseNode $n) use ($o) { $o->setWidth($n->getIntegerValue()); },
         ];
     }
 

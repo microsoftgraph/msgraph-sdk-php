@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class RequiredResourceAccess implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<ResourceAccess>|null $resourceAccess The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource. */
+    /**
+     * @var array<ResourceAccess>|null $resourceAccess The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
+    */
     private ?array $resourceAccess = null;
     
-    /** @var string|null $resourceAppId The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application. */
+    /**
+     * @var string|null $resourceAppId The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
+    */
     private ?string $resourceAppId = null;
     
     /**
@@ -30,7 +36,7 @@ class RequiredResourceAccess implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return RequiredResourceAccess
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): RequiredResourceAccess {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): RequiredResourceAccess {
         return new RequiredResourceAccess();
     }
 
@@ -47,9 +53,10 @@ class RequiredResourceAccess implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'resourceAccess' => function (self $o, ParseNode $n) { $o->setResourceAccess($n->getCollectionOfObjectValues(ResourceAccess::class)); },
-            'resourceAppId' => function (self $o, ParseNode $n) { $o->setResourceAppId($n->getStringValue()); },
+            'resourceAccess' => function (ParseNode $n) use ($o) { $o->setResourceAccess($n->getCollectionOfObjectValues(array(ResourceAccess::class, 'createFromDiscriminatorValue'))); },
+            'resourceAppId' => function (ParseNode $n) use ($o) { $o->setResourceAppId($n->getStringValue()); },
         ];
     }
 

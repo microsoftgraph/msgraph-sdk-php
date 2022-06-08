@@ -6,60 +6,96 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Calendar extends Entity 
+class Calendar extends Entity implements Parsable 
 {
-    /** @var array<OnlineMeetingProviderType>|null $allowedOnlineMeetingProviders Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness. */
+    /**
+     * @var array<string>|null $allowedOnlineMeetingProviders Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+    */
     private ?array $allowedOnlineMeetingProviders = null;
     
-    /** @var array<CalendarPermission>|null $calendarPermissions The permissions of the users with whom the calendar is shared. */
+    /**
+     * @var array<CalendarPermission>|null $calendarPermissions The permissions of the users with whom the calendar is shared.
+    */
     private ?array $calendarPermissions = null;
     
-    /** @var array<Event>|null $calendarView The calendar view for the calendar. Navigation property. Read-only. */
+    /**
+     * @var array<Event>|null $calendarView The calendar view for the calendar. Navigation property. Read-only.
+    */
     private ?array $calendarView = null;
     
-    /** @var bool|null $canEdit true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access. */
+    /**
+     * @var bool|null $canEdit true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
+    */
     private ?bool $canEdit = null;
     
-    /** @var bool|null $canShare true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. */
+    /**
+     * @var bool|null $canShare true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
+    */
     private ?bool $canShare = null;
     
-    /** @var bool|null $canViewPrivateItems true if the user can read calendar items that have been marked private, false otherwise. */
+    /**
+     * @var bool|null $canViewPrivateItems true if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
+    */
     private ?bool $canViewPrivateItems = null;
     
-    /** @var string|null $changeKey Identifies the version of the calendar object. Every time the calendar is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only. */
+    /**
+     * @var string|null $changeKey Identifies the version of the calendar object. Every time the calendar is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
+    */
     private ?string $changeKey = null;
     
-    /** @var CalendarColor|null $color Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: auto, lightBlue, lightGreen, lightOrange, lightGray, lightYellow, lightTeal, lightPink, lightBrown, lightRed, maxColor. */
+    /**
+     * @var CalendarColor|null $color Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: auto, lightBlue, lightGreen, lightOrange, lightGray, lightYellow, lightTeal, lightPink, lightBrown, lightRed, maxColor.
+    */
     private ?CalendarColor $color = null;
     
-    /** @var OnlineMeetingProviderType|null $defaultOnlineMeetingProvider The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness. */
+    /**
+     * @var OnlineMeetingProviderType|null $defaultOnlineMeetingProvider The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+    */
     private ?OnlineMeetingProviderType $defaultOnlineMeetingProvider = null;
     
-    /** @var array<Event>|null $events The events in the calendar. Navigation property. Read-only. */
+    /**
+     * @var array<Event>|null $events The events in the calendar. Navigation property. Read-only.
+    */
     private ?array $events = null;
     
-    /** @var string|null $hexColor The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is empty. Read-only. */
+    /**
+     * @var string|null $hexColor The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
+    */
     private ?string $hexColor = null;
     
-    /** @var bool|null $isDefaultCalendar true if this is the default calendar where new events are created by default, false otherwise. */
+    /**
+     * @var bool|null $isDefaultCalendar true if this is the default calendar where new events are created by default, false otherwise.
+    */
     private ?bool $isDefaultCalendar = null;
     
-    /** @var bool|null $isRemovable Indicates whether this user calendar can be deleted from the user mailbox. */
+    /**
+     * @var bool|null $isRemovable Indicates whether this user calendar can be deleted from the user mailbox.
+    */
     private ?bool $isRemovable = null;
     
-    /** @var bool|null $isTallyingResponses Indicates whether this user calendar supports tracking of meeting responses. Only meeting invites sent from users' primary calendars support tracking of meeting responses. */
+    /**
+     * @var bool|null $isTallyingResponses Indicates whether this user calendar supports tracking of meeting responses. Only meeting invites sent from users' primary calendars support tracking of meeting responses.
+    */
     private ?bool $isTallyingResponses = null;
     
-    /** @var array<MultiValueLegacyExtendedProperty>|null $multiValueExtendedProperties The collection of multi-value extended properties defined for the calendar. Read-only. Nullable. */
+    /**
+     * @var array<MultiValueLegacyExtendedProperty>|null $multiValueExtendedProperties The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
+    */
     private ?array $multiValueExtendedProperties = null;
     
-    /** @var string|null $name The calendar name. */
+    /**
+     * @var string|null $name The calendar name.
+    */
     private ?string $name = null;
     
-    /** @var EmailAddress|null $owner If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user. */
+    /**
+     * @var EmailAddress|null $owner If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user. Read-only.
+    */
     private ?EmailAddress $owner = null;
     
-    /** @var array<SingleValueLegacyExtendedProperty>|null $singleValueExtendedProperties The collection of single-value extended properties defined for the calendar. Read-only. Nullable. */
+    /**
+     * @var array<SingleValueLegacyExtendedProperty>|null $singleValueExtendedProperties The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
+    */
     private ?array $singleValueExtendedProperties = null;
     
     /**
@@ -74,13 +110,13 @@ class Calendar extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Calendar
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Calendar {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Calendar {
         return new Calendar();
     }
 
     /**
      * Gets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
-     * @return array<OnlineMeetingProviderType>|null
+     * @return array<string>|null
     */
     public function getAllowedOnlineMeetingProviders(): ?array {
         return $this->allowedOnlineMeetingProviders;
@@ -103,7 +139,7 @@ class Calendar extends Entity
     }
 
     /**
-     * Gets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
+     * Gets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
      * @return bool|null
     */
     public function getCanEdit(): ?bool {
@@ -111,7 +147,7 @@ class Calendar extends Entity
     }
 
     /**
-     * Gets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
+     * Gets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
      * @return bool|null
     */
     public function getCanShare(): ?bool {
@@ -119,7 +155,7 @@ class Calendar extends Entity
     }
 
     /**
-     * Gets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise.
+     * Gets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
      * @return bool|null
     */
     public function getCanViewPrivateItems(): ?bool {
@@ -163,30 +199,31 @@ class Calendar extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowedOnlineMeetingProviders' => function (self $o, ParseNode $n) { $o->setAllowedOnlineMeetingProviders($n->getCollectionOfEnumValues(OnlineMeetingProviderType::class)); },
-            'calendarPermissions' => function (self $o, ParseNode $n) { $o->setCalendarPermissions($n->getCollectionOfObjectValues(CalendarPermission::class)); },
-            'calendarView' => function (self $o, ParseNode $n) { $o->setCalendarView($n->getCollectionOfObjectValues(Event::class)); },
-            'canEdit' => function (self $o, ParseNode $n) { $o->setCanEdit($n->getBooleanValue()); },
-            'canShare' => function (self $o, ParseNode $n) { $o->setCanShare($n->getBooleanValue()); },
-            'canViewPrivateItems' => function (self $o, ParseNode $n) { $o->setCanViewPrivateItems($n->getBooleanValue()); },
-            'changeKey' => function (self $o, ParseNode $n) { $o->setChangeKey($n->getStringValue()); },
-            'color' => function (self $o, ParseNode $n) { $o->setColor($n->getEnumValue(CalendarColor::class)); },
-            'defaultOnlineMeetingProvider' => function (self $o, ParseNode $n) { $o->setDefaultOnlineMeetingProvider($n->getEnumValue(OnlineMeetingProviderType::class)); },
-            'events' => function (self $o, ParseNode $n) { $o->setEvents($n->getCollectionOfObjectValues(Event::class)); },
-            'hexColor' => function (self $o, ParseNode $n) { $o->setHexColor($n->getStringValue()); },
-            'isDefaultCalendar' => function (self $o, ParseNode $n) { $o->setIsDefaultCalendar($n->getBooleanValue()); },
-            'isRemovable' => function (self $o, ParseNode $n) { $o->setIsRemovable($n->getBooleanValue()); },
-            'isTallyingResponses' => function (self $o, ParseNode $n) { $o->setIsTallyingResponses($n->getBooleanValue()); },
-            'multiValueExtendedProperties' => function (self $o, ParseNode $n) { $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::class)); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'owner' => function (self $o, ParseNode $n) { $o->setOwner($n->getObjectValue(EmailAddress::class)); },
-            'singleValueExtendedProperties' => function (self $o, ParseNode $n) { $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::class)); },
+            'allowedOnlineMeetingProviders' => function (ParseNode $n) use ($o) { $o->setAllowedOnlineMeetingProviders($n->getCollectionOfPrimitiveValues()); },
+            'calendarPermissions' => function (ParseNode $n) use ($o) { $o->setCalendarPermissions($n->getCollectionOfObjectValues(array(CalendarPermission::class, 'createFromDiscriminatorValue'))); },
+            'calendarView' => function (ParseNode $n) use ($o) { $o->setCalendarView($n->getCollectionOfObjectValues(array(Event::class, 'createFromDiscriminatorValue'))); },
+            'canEdit' => function (ParseNode $n) use ($o) { $o->setCanEdit($n->getBooleanValue()); },
+            'canShare' => function (ParseNode $n) use ($o) { $o->setCanShare($n->getBooleanValue()); },
+            'canViewPrivateItems' => function (ParseNode $n) use ($o) { $o->setCanViewPrivateItems($n->getBooleanValue()); },
+            'changeKey' => function (ParseNode $n) use ($o) { $o->setChangeKey($n->getStringValue()); },
+            'color' => function (ParseNode $n) use ($o) { $o->setColor($n->getEnumValue(CalendarColor::class)); },
+            'defaultOnlineMeetingProvider' => function (ParseNode $n) use ($o) { $o->setDefaultOnlineMeetingProvider($n->getEnumValue(OnlineMeetingProviderType::class)); },
+            'events' => function (ParseNode $n) use ($o) { $o->setEvents($n->getCollectionOfObjectValues(array(Event::class, 'createFromDiscriminatorValue'))); },
+            'hexColor' => function (ParseNode $n) use ($o) { $o->setHexColor($n->getStringValue()); },
+            'isDefaultCalendar' => function (ParseNode $n) use ($o) { $o->setIsDefaultCalendar($n->getBooleanValue()); },
+            'isRemovable' => function (ParseNode $n) use ($o) { $o->setIsRemovable($n->getBooleanValue()); },
+            'isTallyingResponses' => function (ParseNode $n) use ($o) { $o->setIsTallyingResponses($n->getBooleanValue()); },
+            'multiValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues(array(MultiValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'owner' => function (ParseNode $n) use ($o) { $o->setOwner($n->getObjectValue(array(EmailAddress::class, 'createFromDiscriminatorValue'))); },
+            'singleValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues(array(SingleValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
     /**
-     * Gets the hexColor property value. The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is empty. Read-only.
+     * Gets the hexColor property value. The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
      * @return string|null
     */
     public function getHexColor(): ?string {
@@ -234,7 +271,7 @@ class Calendar extends Entity
     }
 
     /**
-     * Gets the owner property value. If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
+     * Gets the owner property value. If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user. Read-only.
      * @return EmailAddress|null
     */
     public function getOwner(): ?EmailAddress {
@@ -255,7 +292,7 @@ class Calendar extends Entity
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfEnumValues('allowedOnlineMeetingProviders', $this->allowedOnlineMeetingProviders);
+        $writer->writeCollectionOfPrimitiveValues('allowedOnlineMeetingProviders', $this->allowedOnlineMeetingProviders);
         $writer->writeCollectionOfObjectValues('calendarPermissions', $this->calendarPermissions);
         $writer->writeCollectionOfObjectValues('calendarView', $this->calendarView);
         $writer->writeBooleanValue('canEdit', $this->canEdit);
@@ -277,7 +314,7 @@ class Calendar extends Entity
 
     /**
      * Sets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
-     *  @param array<OnlineMeetingProviderType>|null $value Value to set for the allowedOnlineMeetingProviders property.
+     *  @param array<string>|null $value Value to set for the allowedOnlineMeetingProviders property.
     */
     public function setAllowedOnlineMeetingProviders(?array $value ): void {
         $this->allowedOnlineMeetingProviders = $value;
@@ -300,7 +337,7 @@ class Calendar extends Entity
     }
 
     /**
-     * Sets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
+     * Sets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
      *  @param bool|null $value Value to set for the canEdit property.
     */
     public function setCanEdit(?bool $value ): void {
@@ -308,7 +345,7 @@ class Calendar extends Entity
     }
 
     /**
-     * Sets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
+     * Sets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
      *  @param bool|null $value Value to set for the canShare property.
     */
     public function setCanShare(?bool $value ): void {
@@ -316,7 +353,7 @@ class Calendar extends Entity
     }
 
     /**
-     * Sets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise.
+     * Sets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
      *  @param bool|null $value Value to set for the canViewPrivateItems property.
     */
     public function setCanViewPrivateItems(?bool $value ): void {
@@ -356,7 +393,7 @@ class Calendar extends Entity
     }
 
     /**
-     * Sets the hexColor property value. The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is empty. Read-only.
+     * Sets the hexColor property value. The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
      *  @param string|null $value Value to set for the hexColor property.
     */
     public function setHexColor(?string $value ): void {
@@ -404,7 +441,7 @@ class Calendar extends Entity
     }
 
     /**
-     * Sets the owner property value. If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
+     * Sets the owner property value. If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user. Read-only.
      *  @param EmailAddress|null $value Value to set for the owner property.
     */
     public function setOwner(?EmailAddress $value ): void {

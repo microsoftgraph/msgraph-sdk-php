@@ -6,15 +6,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class GroupSetting extends Entity 
+class GroupSetting extends Entity implements Parsable 
 {
-    /** @var string|null $displayName Display name of this group of settings, which comes from the associated template. */
+    /**
+     * @var string|null $displayName Display name of this group of settings, which comes from the associated template.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $templateId Unique identifier for the tenant-level groupSettingTemplates object that's been customized for this group-level settings object. Read-only. */
+    /**
+     * @var string|null $templateId Unique identifier for the tenant-level groupSettingTemplates object that's been customized for this group-level settings object. Read-only.
+    */
     private ?string $templateId = null;
     
-    /** @var array<SettingValue>|null $values Collection of name-value pairs corresponding to the name and defaultValue properties in the referenced groupSettingTemplates object. */
+    /**
+     * @var array<SettingValue>|null $values Collection of name-value pairs corresponding to the name and defaultValue properties in the referenced groupSettingTemplates object.
+    */
     private ?array $values = null;
     
     /**
@@ -29,7 +35,7 @@ class GroupSetting extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return GroupSetting
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): GroupSetting {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): GroupSetting {
         return new GroupSetting();
     }
 
@@ -46,10 +52,11 @@ class GroupSetting extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'templateId' => function (self $o, ParseNode $n) { $o->setTemplateId($n->getStringValue()); },
-            'values' => function (self $o, ParseNode $n) { $o->setValues($n->getCollectionOfObjectValues(SettingValue::class)); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'templateId' => function (ParseNode $n) use ($o) { $o->setTemplateId($n->getStringValue()); },
+            'values' => function (ParseNode $n) use ($o) { $o->setValues($n->getCollectionOfObjectValues(array(SettingValue::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

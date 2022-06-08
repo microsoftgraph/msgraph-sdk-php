@@ -7,39 +7,61 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Permission extends Entity 
+class Permission extends Entity implements Parsable 
 {
-    /** @var DateTime|null $expirationDateTime A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional. */
+    /**
+     * @var DateTime|null $expirationDateTime A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
+    */
     private ?DateTime $expirationDateTime = null;
     
-    /** @var IdentitySet|null $grantedTo The grantedTo property */
+    /**
+     * @var IdentitySet|null $grantedTo The grantedTo property
+    */
     private ?IdentitySet $grantedTo = null;
     
-    /** @var array<IdentitySet>|null $grantedToIdentities The grantedToIdentities property */
+    /**
+     * @var array<IdentitySet>|null $grantedToIdentities The grantedToIdentities property
+    */
     private ?array $grantedToIdentities = null;
     
-    /** @var array<SharePointIdentitySet>|null $grantedToIdentitiesV2 For link type permissions, the details of the users to whom permission was granted. Read-only. */
+    /**
+     * @var array<SharePointIdentitySet>|null $grantedToIdentitiesV2 For link type permissions, the details of the users to whom permission was granted. Read-only.
+    */
     private ?array $grantedToIdentitiesV2 = null;
     
-    /** @var SharePointIdentitySet|null $grantedToV2 For user type permissions, the details of the users and applications for this permission. Read-only. */
+    /**
+     * @var SharePointIdentitySet|null $grantedToV2 For user type permissions, the details of the users and applications for this permission. Read-only.
+    */
     private ?SharePointIdentitySet $grantedToV2 = null;
     
-    /** @var bool|null $hasPassword Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only.. */
+    /**
+     * @var bool|null $hasPassword Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only.
+    */
     private ?bool $hasPassword = null;
     
-    /** @var ItemReference|null $inheritedFrom Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only. */
+    /**
+     * @var ItemReference|null $inheritedFrom Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
+    */
     private ?ItemReference $inheritedFrom = null;
     
-    /** @var SharingInvitation|null $invitation Details of any associated sharing invitation for this permission. Read-only. */
+    /**
+     * @var SharingInvitation|null $invitation Details of any associated sharing invitation for this permission. Read-only.
+    */
     private ?SharingInvitation $invitation = null;
     
-    /** @var SharingLink|null $link Provides the link details of the current permission, if it is a link type permissions. Read-only. */
+    /**
+     * @var SharingLink|null $link Provides the link details of the current permission, if it is a link type permissions. Read-only.
+    */
     private ?SharingLink $link = null;
     
-    /** @var array<string>|null $roles The type of permission, for example, read. See below for the full list of roles. Read-only. */
+    /**
+     * @var array<string>|null $roles The type of permission, for example, read. See below for the full list of roles. Read-only.
+    */
     private ?array $roles = null;
     
-    /** @var string|null $shareId A unique token that can be used to access this shared item via the **shares** API. Read-only. */
+    /**
+     * @var string|null $shareId A unique token that can be used to access this shared item via the [shares API][]. Read-only.
+    */
     private ?string $shareId = null;
     
     /**
@@ -54,7 +76,7 @@ class Permission extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Permission
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Permission {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Permission {
         return new Permission();
     }
 
@@ -71,18 +93,19 @@ class Permission extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'expirationDateTime' => function (self $o, ParseNode $n) { $o->setExpirationDateTime($n->getDateTimeValue()); },
-            'grantedTo' => function (self $o, ParseNode $n) { $o->setGrantedTo($n->getObjectValue(IdentitySet::class)); },
-            'grantedToIdentities' => function (self $o, ParseNode $n) { $o->setGrantedToIdentities($n->getCollectionOfObjectValues(IdentitySet::class)); },
-            'grantedToIdentitiesV2' => function (self $o, ParseNode $n) { $o->setGrantedToIdentitiesV2($n->getCollectionOfObjectValues(SharePointIdentitySet::class)); },
-            'grantedToV2' => function (self $o, ParseNode $n) { $o->setGrantedToV2($n->getObjectValue(SharePointIdentitySet::class)); },
-            'hasPassword' => function (self $o, ParseNode $n) { $o->setHasPassword($n->getBooleanValue()); },
-            'inheritedFrom' => function (self $o, ParseNode $n) { $o->setInheritedFrom($n->getObjectValue(ItemReference::class)); },
-            'invitation' => function (self $o, ParseNode $n) { $o->setInvitation($n->getObjectValue(SharingInvitation::class)); },
-            'link' => function (self $o, ParseNode $n) { $o->setLink($n->getObjectValue(SharingLink::class)); },
-            'roles' => function (self $o, ParseNode $n) { $o->setRoles($n->getCollectionOfPrimitiveValues()); },
-            'shareId' => function (self $o, ParseNode $n) { $o->setShareId($n->getStringValue()); },
+            'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
+            'grantedTo' => function (ParseNode $n) use ($o) { $o->setGrantedTo($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'grantedToIdentities' => function (ParseNode $n) use ($o) { $o->setGrantedToIdentities($n->getCollectionOfObjectValues(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'grantedToIdentitiesV2' => function (ParseNode $n) use ($o) { $o->setGrantedToIdentitiesV2($n->getCollectionOfObjectValues(array(SharePointIdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'grantedToV2' => function (ParseNode $n) use ($o) { $o->setGrantedToV2($n->getObjectValue(array(SharePointIdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'hasPassword' => function (ParseNode $n) use ($o) { $o->setHasPassword($n->getBooleanValue()); },
+            'inheritedFrom' => function (ParseNode $n) use ($o) { $o->setInheritedFrom($n->getObjectValue(array(ItemReference::class, 'createFromDiscriminatorValue'))); },
+            'invitation' => function (ParseNode $n) use ($o) { $o->setInvitation($n->getObjectValue(array(SharingInvitation::class, 'createFromDiscriminatorValue'))); },
+            'link' => function (ParseNode $n) use ($o) { $o->setLink($n->getObjectValue(array(SharingLink::class, 'createFromDiscriminatorValue'))); },
+            'roles' => function (ParseNode $n) use ($o) { $o->setRoles($n->getCollectionOfPrimitiveValues()); },
+            'shareId' => function (ParseNode $n) use ($o) { $o->setShareId($n->getStringValue()); },
         ]);
     }
 
@@ -119,7 +142,7 @@ class Permission extends Entity
     }
 
     /**
-     * Gets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only..
+     * Gets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only.
      * @return bool|null
     */
     public function getHasPassword(): ?bool {
@@ -159,7 +182,7 @@ class Permission extends Entity
     }
 
     /**
-     * Gets the shareId property value. A unique token that can be used to access this shared item via the **shares** API. Read-only.
+     * Gets the shareId property value. A unique token that can be used to access this shared item via the [shares API][]. Read-only.
      * @return string|null
     */
     public function getShareId(): ?string {
@@ -226,7 +249,7 @@ class Permission extends Entity
     }
 
     /**
-     * Sets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only..
+     * Sets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only.
      *  @param bool|null $value Value to set for the hasPassword property.
     */
     public function setHasPassword(?bool $value ): void {
@@ -266,7 +289,7 @@ class Permission extends Entity
     }
 
     /**
-     * Sets the shareId property value. A unique token that can be used to access this shared item via the **shares** API. Read-only.
+     * Sets the shareId property value. A unique token that can be used to access this shared item via the [shares API][]. Read-only.
      *  @param string|null $value Value to set for the shareId property.
     */
     public function setShareId(?string $value ): void {

@@ -6,30 +6,46 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WorkbookWorksheet extends Entity 
+class WorkbookWorksheet extends Entity implements Parsable 
 {
-    /** @var array<WorkbookChart>|null $charts Returns collection of charts that are part of the worksheet. Read-only. */
+    /**
+     * @var array<WorkbookChart>|null $charts Returns collection of charts that are part of the worksheet. Read-only.
+    */
     private ?array $charts = null;
     
-    /** @var string|null $name The display name of the worksheet. */
+    /**
+     * @var string|null $name The display name of the worksheet.
+    */
     private ?string $name = null;
     
-    /** @var array<WorkbookNamedItem>|null $names Returns collection of names that are associated with the worksheet. Read-only. */
+    /**
+     * @var array<WorkbookNamedItem>|null $names Returns collection of names that are associated with the worksheet. Read-only.
+    */
     private ?array $names = null;
     
-    /** @var array<WorkbookPivotTable>|null $pivotTables Collection of PivotTables that are part of the worksheet. */
+    /**
+     * @var array<WorkbookPivotTable>|null $pivotTables Collection of PivotTables that are part of the worksheet.
+    */
     private ?array $pivotTables = null;
     
-    /** @var int|null $position The zero-based position of the worksheet within the workbook. */
+    /**
+     * @var int|null $position The zero-based position of the worksheet within the workbook.
+    */
     private ?int $position = null;
     
-    /** @var WorkbookWorksheetProtection|null $protection Returns sheet protection object for a worksheet. Read-only. */
+    /**
+     * @var WorkbookWorksheetProtection|null $protection Returns sheet protection object for a worksheet. Read-only.
+    */
     private ?WorkbookWorksheetProtection $protection = null;
     
-    /** @var array<WorkbookTable>|null $tables Collection of tables that are part of the worksheet. Read-only. */
+    /**
+     * @var array<WorkbookTable>|null $tables Collection of tables that are part of the worksheet. Read-only.
+    */
     private ?array $tables = null;
     
-    /** @var string|null $visibility The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden. */
+    /**
+     * @var string|null $visibility The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
+    */
     private ?string $visibility = null;
     
     /**
@@ -44,7 +60,7 @@ class WorkbookWorksheet extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookWorksheet
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookWorksheet {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookWorksheet {
         return new WorkbookWorksheet();
     }
 
@@ -61,15 +77,16 @@ class WorkbookWorksheet extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'charts' => function (self $o, ParseNode $n) { $o->setCharts($n->getCollectionOfObjectValues(WorkbookChart::class)); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'names' => function (self $o, ParseNode $n) { $o->setNames($n->getCollectionOfObjectValues(WorkbookNamedItem::class)); },
-            'pivotTables' => function (self $o, ParseNode $n) { $o->setPivotTables($n->getCollectionOfObjectValues(WorkbookPivotTable::class)); },
-            'position' => function (self $o, ParseNode $n) { $o->setPosition($n->getIntegerValue()); },
-            'protection' => function (self $o, ParseNode $n) { $o->setProtection($n->getObjectValue(WorkbookWorksheetProtection::class)); },
-            'tables' => function (self $o, ParseNode $n) { $o->setTables($n->getCollectionOfObjectValues(WorkbookTable::class)); },
-            'visibility' => function (self $o, ParseNode $n) { $o->setVisibility($n->getStringValue()); },
+            'charts' => function (ParseNode $n) use ($o) { $o->setCharts($n->getCollectionOfObjectValues(array(WorkbookChart::class, 'createFromDiscriminatorValue'))); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'names' => function (ParseNode $n) use ($o) { $o->setNames($n->getCollectionOfObjectValues(array(WorkbookNamedItem::class, 'createFromDiscriminatorValue'))); },
+            'pivotTables' => function (ParseNode $n) use ($o) { $o->setPivotTables($n->getCollectionOfObjectValues(array(WorkbookPivotTable::class, 'createFromDiscriminatorValue'))); },
+            'position' => function (ParseNode $n) use ($o) { $o->setPosition($n->getIntegerValue()); },
+            'protection' => function (ParseNode $n) use ($o) { $o->setProtection($n->getObjectValue(array(WorkbookWorksheetProtection::class, 'createFromDiscriminatorValue'))); },
+            'tables' => function (ParseNode $n) use ($o) { $o->setTables($n->getCollectionOfObjectValues(array(WorkbookTable::class, 'createFromDiscriminatorValue'))); },
+            'visibility' => function (ParseNode $n) use ($o) { $o->setVisibility($n->getStringValue()); },
         ]);
     }
 

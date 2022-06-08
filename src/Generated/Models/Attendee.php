@@ -6,12 +6,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Attendee extends AttendeeBase 
+class Attendee extends AttendeeBase implements Parsable 
 {
-    /** @var TimeSlot|null $proposedNewTime An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event. */
+    /**
+     * @var TimeSlot|null $proposedNewTime An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
+    */
     private ?TimeSlot $proposedNewTime = null;
     
-    /** @var ResponseStatus|null $status The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent. */
+    /**
+     * @var ResponseStatus|null $status The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
+    */
     private ?ResponseStatus $status = null;
     
     /**
@@ -26,7 +30,7 @@ class Attendee extends AttendeeBase
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Attendee
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Attendee {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Attendee {
         return new Attendee();
     }
 
@@ -35,9 +39,10 @@ class Attendee extends AttendeeBase
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'proposedNewTime' => function (self $o, ParseNode $n) { $o->setProposedNewTime($n->getObjectValue(TimeSlot::class)); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getObjectValue(ResponseStatus::class)); },
+            'proposedNewTime' => function (ParseNode $n) use ($o) { $o->setProposedNewTime($n->getObjectValue(array(TimeSlot::class, 'createFromDiscriminatorValue'))); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getObjectValue(array(ResponseStatus::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

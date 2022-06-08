@@ -11,34 +11,54 @@ use Psr\Http\Message\StreamInterface;
 
 class SelfSignedCertificate implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var StreamInterface|null $customKeyIdentifier Custom key identifier. */
+    /**
+     * @var StreamInterface|null $customKeyIdentifier Custom key identifier.
+    */
     private ?StreamInterface $customKeyIdentifier = null;
     
-    /** @var string|null $displayName The friendly name for the key. */
+    /**
+     * @var string|null $displayName The friendly name for the key.
+    */
     private ?string $displayName = null;
     
-    /** @var DateTime|null $endDateTime The date and time at which the credential expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $endDateTime The date and time at which the credential expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    */
     private ?DateTime $endDateTime = null;
     
-    /** @var StreamInterface|null $key The value for the key credential. Should be a base-64 encoded value. */
+    /**
+     * @var StreamInterface|null $key The value for the key credential. Should be a base-64 encoded value.
+    */
     private ?StreamInterface $key = null;
     
-    /** @var string|null $keyId The unique identifier (GUID) for the key. */
+    /**
+     * @var string|null $keyId The unique identifier (GUID) for the key.
+    */
     private ?string $keyId = null;
     
-    /** @var DateTime|null $startDateTime The date and time at which the credential becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $startDateTime The date and time at which the credential becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    */
     private ?DateTime $startDateTime = null;
     
-    /** @var string|null $thumbprint The thumbprint value for the key. */
+    /**
+     * @var string|null $thumbprint The thumbprint value for the key.
+    */
     private ?string $thumbprint = null;
     
-    /** @var string|null $type The type of key credential. 'AsymmetricX509Cert'. */
+    /**
+     * @var string|null $type The type of key credential. 'AsymmetricX509Cert'.
+    */
     private ?string $type = null;
     
-    /** @var string|null $usage A string that describes the purpose for which the key can be used. For example, 'Verify'. */
+    /**
+     * @var string|null $usage A string that describes the purpose for which the key can be used. For example, 'Verify'.
+    */
     private ?string $usage = null;
     
     /**
@@ -53,7 +73,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SelfSignedCertificate
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SelfSignedCertificate {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SelfSignedCertificate {
         return new SelfSignedCertificate();
     }
 
@@ -94,16 +114,17 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'customKeyIdentifier' => function (self $o, ParseNode $n) { $o->setCustomKeyIdentifier($n->getBinaryContent()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'endDateTime' => function (self $o, ParseNode $n) { $o->setEndDateTime($n->getDateTimeValue()); },
-            'key' => function (self $o, ParseNode $n) { $o->setKey($n->getBinaryContent()); },
-            'keyId' => function (self $o, ParseNode $n) { $o->setKeyId($n->getStringValue()); },
-            'startDateTime' => function (self $o, ParseNode $n) { $o->setStartDateTime($n->getDateTimeValue()); },
-            'thumbprint' => function (self $o, ParseNode $n) { $o->setThumbprint($n->getStringValue()); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getStringValue()); },
-            'usage' => function (self $o, ParseNode $n) { $o->setUsage($n->getStringValue()); },
+            'customKeyIdentifier' => function (ParseNode $n) use ($o) { $o->setCustomKeyIdentifier($n->getBinaryContent()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
+            'key' => function (ParseNode $n) use ($o) { $o->setKey($n->getBinaryContent()); },
+            'keyId' => function (ParseNode $n) use ($o) { $o->setKeyId($n->getStringValue()); },
+            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
+            'thumbprint' => function (ParseNode $n) use ($o) { $o->setThumbprint($n->getStringValue()); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
+            'usage' => function (ParseNode $n) use ($o) { $o->setUsage($n->getStringValue()); },
         ];
     }
 

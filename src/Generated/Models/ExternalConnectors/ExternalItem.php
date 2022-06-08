@@ -7,15 +7,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ExternalItem extends Entity 
+class ExternalItem extends Entity implements Parsable 
 {
-    /** @var array<Acl>|null $acl An array of access control entries. Each entry specifies the access granted to a user or group. Required. */
+    /**
+     * @var array<Acl>|null $acl An array of access control entries. Each entry specifies the access granted to a user or group. Required.
+    */
     private ?array $acl = null;
     
-    /** @var ExternalItemContent|null $content A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional. */
+    /**
+     * @var ExternalItemContent|null $content A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
+    */
     private ?ExternalItemContent $content = null;
     
-    /** @var Properties|null $properties A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required. */
+    /**
+     * @var Properties|null $properties A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required.
+    */
     private ?Properties $properties = null;
     
     /**
@@ -30,7 +36,7 @@ class ExternalItem extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ExternalItem
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ExternalItem {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ExternalItem {
         return new ExternalItem();
     }
 
@@ -55,10 +61,11 @@ class ExternalItem extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'acl' => function (self $o, ParseNode $n) { $o->setAcl($n->getCollectionOfObjectValues(Acl::class)); },
-            'content' => function (self $o, ParseNode $n) { $o->setContent($n->getObjectValue(ExternalItemContent::class)); },
-            'properties' => function (self $o, ParseNode $n) { $o->setProperties($n->getObjectValue(Properties::class)); },
+            'acl' => function (ParseNode $n) use ($o) { $o->setAcl($n->getCollectionOfObjectValues(array(Acl::class, 'createFromDiscriminatorValue'))); },
+            'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getObjectValue(array(ExternalItemContent::class, 'createFromDiscriminatorValue'))); },
+            'properties' => function (ParseNode $n) use ($o) { $o->setProperties($n->getObjectValue(array(Properties::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

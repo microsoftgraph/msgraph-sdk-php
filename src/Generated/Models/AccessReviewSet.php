@@ -6,12 +6,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AccessReviewSet extends Entity 
+class AccessReviewSet extends Entity implements Parsable 
 {
-    /** @var array<AccessReviewScheduleDefinition>|null $definitions Represents the template and scheduling for an access review. */
+    /**
+     * @var array<AccessReviewScheduleDefinition>|null $definitions Represents the template and scheduling for an access review.
+    */
     private ?array $definitions = null;
     
-    /** @var array<AccessReviewHistoryDefinition>|null $historyDefinitions Represents a collection of access review history data and the scopes used to collect that data. */
+    /**
+     * @var array<AccessReviewHistoryDefinition>|null $historyDefinitions Represents a collection of access review history data and the scopes used to collect that data.
+    */
     private ?array $historyDefinitions = null;
     
     /**
@@ -26,7 +30,7 @@ class AccessReviewSet extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AccessReviewSet
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AccessReviewSet {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessReviewSet {
         return new AccessReviewSet();
     }
 
@@ -43,9 +47,10 @@ class AccessReviewSet extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'definitions' => function (self $o, ParseNode $n) { $o->setDefinitions($n->getCollectionOfObjectValues(AccessReviewScheduleDefinition::class)); },
-            'historyDefinitions' => function (self $o, ParseNode $n) { $o->setHistoryDefinitions($n->getCollectionOfObjectValues(AccessReviewHistoryDefinition::class)); },
+            'definitions' => function (ParseNode $n) use ($o) { $o->setDefinitions($n->getCollectionOfObjectValues(array(AccessReviewScheduleDefinition::class, 'createFromDiscriminatorValue'))); },
+            'historyDefinitions' => function (ParseNode $n) use ($o) { $o->setHistoryDefinitions($n->getCollectionOfObjectValues(array(AccessReviewHistoryDefinition::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

@@ -6,45 +6,81 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class PolicyRoot extends Entity 
+class PolicyRoot extends Entity implements Parsable 
 {
-    /** @var array<ActivityBasedTimeoutPolicy>|null $activityBasedTimeoutPolicies The policy that controls the idle time out for web sessions for applications. */
+    /**
+     * @var array<ActivityBasedTimeoutPolicy>|null $activityBasedTimeoutPolicies The policy that controls the idle time out for web sessions for applications.
+    */
     private ?array $activityBasedTimeoutPolicies = null;
     
-    /** @var AdminConsentRequestPolicy|null $adminConsentRequestPolicy The policy by which consent requests are created and managed for the entire tenant. */
+    /**
+     * @var AdminConsentRequestPolicy|null $adminConsentRequestPolicy The policy by which consent requests are created and managed for the entire tenant.
+    */
     private ?AdminConsentRequestPolicy $adminConsentRequestPolicy = null;
     
-    /** @var AuthenticationFlowsPolicy|null $authenticationFlowsPolicy The policy configuration of the self-service sign-up experience of external users. */
+    /**
+     * @var AuthenticationFlowsPolicy|null $authenticationFlowsPolicy The policy configuration of the self-service sign-up experience of external users.
+    */
     private ?AuthenticationFlowsPolicy $authenticationFlowsPolicy = null;
     
-    /** @var AuthenticationMethodsPolicy|null $authenticationMethodsPolicy The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD). */
+    /**
+     * @var AuthenticationMethodsPolicy|null $authenticationMethodsPolicy The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
+    */
     private ?AuthenticationMethodsPolicy $authenticationMethodsPolicy = null;
     
-    /** @var AuthorizationPolicy|null $authorizationPolicy The policy that controls Azure AD authorization settings. */
+    /**
+     * @var AuthorizationPolicy|null $authorizationPolicy The policy that controls Azure AD authorization settings.
+    */
     private ?AuthorizationPolicy $authorizationPolicy = null;
     
-    /** @var array<ClaimsMappingPolicy>|null $claimsMappingPolicies The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application. */
+    /**
+     * @var array<ClaimsMappingPolicy>|null $claimsMappingPolicies The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
+    */
     private ?array $claimsMappingPolicies = null;
     
-    /** @var array<ConditionalAccessPolicy>|null $conditionalAccessPolicies The custom rules that define an access scenario. */
+    /**
+     * @var array<ConditionalAccessPolicy>|null $conditionalAccessPolicies The custom rules that define an access scenario.
+    */
     private ?array $conditionalAccessPolicies = null;
     
-    /** @var array<FeatureRolloutPolicy>|null $featureRolloutPolicies The feature rollout policy associated with a directory object. */
+    /**
+     * @var array<FeatureRolloutPolicy>|null $featureRolloutPolicies The feature rollout policy associated with a directory object.
+    */
     private ?array $featureRolloutPolicies = null;
     
-    /** @var array<HomeRealmDiscoveryPolicy>|null $homeRealmDiscoveryPolicies The policy to control Azure AD authentication behavior for federated users. */
+    /**
+     * @var array<HomeRealmDiscoveryPolicy>|null $homeRealmDiscoveryPolicies The policy to control Azure AD authentication behavior for federated users.
+    */
     private ?array $homeRealmDiscoveryPolicies = null;
     
-    /** @var IdentitySecurityDefaultsEnforcementPolicy|null $identitySecurityDefaultsEnforcementPolicy The policy that represents the security defaults that protect against common attacks. */
+    /**
+     * @var IdentitySecurityDefaultsEnforcementPolicy|null $identitySecurityDefaultsEnforcementPolicy The policy that represents the security defaults that protect against common attacks.
+    */
     private ?IdentitySecurityDefaultsEnforcementPolicy $identitySecurityDefaultsEnforcementPolicy = null;
     
-    /** @var array<PermissionGrantPolicy>|null $permissionGrantPolicies The policy that specifies the conditions under which consent can be granted. */
+    /**
+     * @var array<PermissionGrantPolicy>|null $permissionGrantPolicies The policy that specifies the conditions under which consent can be granted.
+    */
     private ?array $permissionGrantPolicies = null;
     
-    /** @var array<TokenIssuancePolicy>|null $tokenIssuancePolicies The policy that specifies the characteristics of SAML tokens issued by Azure AD. */
+    /**
+     * @var array<UnifiedRoleManagementPolicy>|null $roleManagementPolicies Represents the role management policies.
+    */
+    private ?array $roleManagementPolicies = null;
+    
+    /**
+     * @var array<UnifiedRoleManagementPolicyAssignment>|null $roleManagementPolicyAssignments Represents the role management policy assignments.
+    */
+    private ?array $roleManagementPolicyAssignments = null;
+    
+    /**
+     * @var array<TokenIssuancePolicy>|null $tokenIssuancePolicies The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+    */
     private ?array $tokenIssuancePolicies = null;
     
-    /** @var array<TokenLifetimePolicy>|null $tokenLifetimePolicies The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD. */
+    /**
+     * @var array<TokenLifetimePolicy>|null $tokenLifetimePolicies The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
+    */
     private ?array $tokenLifetimePolicies = null;
     
     /**
@@ -59,7 +95,7 @@ class PolicyRoot extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PolicyRoot
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PolicyRoot {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PolicyRoot {
         return new PolicyRoot();
     }
 
@@ -132,20 +168,23 @@ class PolicyRoot extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activityBasedTimeoutPolicies' => function (self $o, ParseNode $n) { $o->setActivityBasedTimeoutPolicies($n->getCollectionOfObjectValues(ActivityBasedTimeoutPolicy::class)); },
-            'adminConsentRequestPolicy' => function (self $o, ParseNode $n) { $o->setAdminConsentRequestPolicy($n->getObjectValue(AdminConsentRequestPolicy::class)); },
-            'authenticationFlowsPolicy' => function (self $o, ParseNode $n) { $o->setAuthenticationFlowsPolicy($n->getObjectValue(AuthenticationFlowsPolicy::class)); },
-            'authenticationMethodsPolicy' => function (self $o, ParseNode $n) { $o->setAuthenticationMethodsPolicy($n->getObjectValue(AuthenticationMethodsPolicy::class)); },
-            'authorizationPolicy' => function (self $o, ParseNode $n) { $o->setAuthorizationPolicy($n->getObjectValue(AuthorizationPolicy::class)); },
-            'claimsMappingPolicies' => function (self $o, ParseNode $n) { $o->setClaimsMappingPolicies($n->getCollectionOfObjectValues(ClaimsMappingPolicy::class)); },
-            'conditionalAccessPolicies' => function (self $o, ParseNode $n) { $o->setConditionalAccessPolicies($n->getCollectionOfObjectValues(ConditionalAccessPolicy::class)); },
-            'featureRolloutPolicies' => function (self $o, ParseNode $n) { $o->setFeatureRolloutPolicies($n->getCollectionOfObjectValues(FeatureRolloutPolicy::class)); },
-            'homeRealmDiscoveryPolicies' => function (self $o, ParseNode $n) { $o->setHomeRealmDiscoveryPolicies($n->getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::class)); },
-            'identitySecurityDefaultsEnforcementPolicy' => function (self $o, ParseNode $n) { $o->setIdentitySecurityDefaultsEnforcementPolicy($n->getObjectValue(IdentitySecurityDefaultsEnforcementPolicy::class)); },
-            'permissionGrantPolicies' => function (self $o, ParseNode $n) { $o->setPermissionGrantPolicies($n->getCollectionOfObjectValues(PermissionGrantPolicy::class)); },
-            'tokenIssuancePolicies' => function (self $o, ParseNode $n) { $o->setTokenIssuancePolicies($n->getCollectionOfObjectValues(TokenIssuancePolicy::class)); },
-            'tokenLifetimePolicies' => function (self $o, ParseNode $n) { $o->setTokenLifetimePolicies($n->getCollectionOfObjectValues(TokenLifetimePolicy::class)); },
+            'activityBasedTimeoutPolicies' => function (ParseNode $n) use ($o) { $o->setActivityBasedTimeoutPolicies($n->getCollectionOfObjectValues(array(ActivityBasedTimeoutPolicy::class, 'createFromDiscriminatorValue'))); },
+            'adminConsentRequestPolicy' => function (ParseNode $n) use ($o) { $o->setAdminConsentRequestPolicy($n->getObjectValue(array(AdminConsentRequestPolicy::class, 'createFromDiscriminatorValue'))); },
+            'authenticationFlowsPolicy' => function (ParseNode $n) use ($o) { $o->setAuthenticationFlowsPolicy($n->getObjectValue(array(AuthenticationFlowsPolicy::class, 'createFromDiscriminatorValue'))); },
+            'authenticationMethodsPolicy' => function (ParseNode $n) use ($o) { $o->setAuthenticationMethodsPolicy($n->getObjectValue(array(AuthenticationMethodsPolicy::class, 'createFromDiscriminatorValue'))); },
+            'authorizationPolicy' => function (ParseNode $n) use ($o) { $o->setAuthorizationPolicy($n->getObjectValue(array(AuthorizationPolicy::class, 'createFromDiscriminatorValue'))); },
+            'claimsMappingPolicies' => function (ParseNode $n) use ($o) { $o->setClaimsMappingPolicies($n->getCollectionOfObjectValues(array(ClaimsMappingPolicy::class, 'createFromDiscriminatorValue'))); },
+            'conditionalAccessPolicies' => function (ParseNode $n) use ($o) { $o->setConditionalAccessPolicies($n->getCollectionOfObjectValues(array(ConditionalAccessPolicy::class, 'createFromDiscriminatorValue'))); },
+            'featureRolloutPolicies' => function (ParseNode $n) use ($o) { $o->setFeatureRolloutPolicies($n->getCollectionOfObjectValues(array(FeatureRolloutPolicy::class, 'createFromDiscriminatorValue'))); },
+            'homeRealmDiscoveryPolicies' => function (ParseNode $n) use ($o) { $o->setHomeRealmDiscoveryPolicies($n->getCollectionOfObjectValues(array(HomeRealmDiscoveryPolicy::class, 'createFromDiscriminatorValue'))); },
+            'identitySecurityDefaultsEnforcementPolicy' => function (ParseNode $n) use ($o) { $o->setIdentitySecurityDefaultsEnforcementPolicy($n->getObjectValue(array(IdentitySecurityDefaultsEnforcementPolicy::class, 'createFromDiscriminatorValue'))); },
+            'permissionGrantPolicies' => function (ParseNode $n) use ($o) { $o->setPermissionGrantPolicies($n->getCollectionOfObjectValues(array(PermissionGrantPolicy::class, 'createFromDiscriminatorValue'))); },
+            'roleManagementPolicies' => function (ParseNode $n) use ($o) { $o->setRoleManagementPolicies($n->getCollectionOfObjectValues(array(UnifiedRoleManagementPolicy::class, 'createFromDiscriminatorValue'))); },
+            'roleManagementPolicyAssignments' => function (ParseNode $n) use ($o) { $o->setRoleManagementPolicyAssignments($n->getCollectionOfObjectValues(array(UnifiedRoleManagementPolicyAssignment::class, 'createFromDiscriminatorValue'))); },
+            'tokenIssuancePolicies' => function (ParseNode $n) use ($o) { $o->setTokenIssuancePolicies($n->getCollectionOfObjectValues(array(TokenIssuancePolicy::class, 'createFromDiscriminatorValue'))); },
+            'tokenLifetimePolicies' => function (ParseNode $n) use ($o) { $o->setTokenLifetimePolicies($n->getCollectionOfObjectValues(array(TokenLifetimePolicy::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -171,6 +210,22 @@ class PolicyRoot extends Entity
     */
     public function getPermissionGrantPolicies(): ?array {
         return $this->permissionGrantPolicies;
+    }
+
+    /**
+     * Gets the roleManagementPolicies property value. Represents the role management policies.
+     * @return array<UnifiedRoleManagementPolicy>|null
+    */
+    public function getRoleManagementPolicies(): ?array {
+        return $this->roleManagementPolicies;
+    }
+
+    /**
+     * Gets the roleManagementPolicyAssignments property value. Represents the role management policy assignments.
+     * @return array<UnifiedRoleManagementPolicyAssignment>|null
+    */
+    public function getRoleManagementPolicyAssignments(): ?array {
+        return $this->roleManagementPolicyAssignments;
     }
 
     /**
@@ -206,6 +261,8 @@ class PolicyRoot extends Entity
         $writer->writeCollectionOfObjectValues('homeRealmDiscoveryPolicies', $this->homeRealmDiscoveryPolicies);
         $writer->writeObjectValue('identitySecurityDefaultsEnforcementPolicy', $this->identitySecurityDefaultsEnforcementPolicy);
         $writer->writeCollectionOfObjectValues('permissionGrantPolicies', $this->permissionGrantPolicies);
+        $writer->writeCollectionOfObjectValues('roleManagementPolicies', $this->roleManagementPolicies);
+        $writer->writeCollectionOfObjectValues('roleManagementPolicyAssignments', $this->roleManagementPolicyAssignments);
         $writer->writeCollectionOfObjectValues('tokenIssuancePolicies', $this->tokenIssuancePolicies);
         $writer->writeCollectionOfObjectValues('tokenLifetimePolicies', $this->tokenLifetimePolicies);
     }
@@ -296,6 +353,22 @@ class PolicyRoot extends Entity
     */
     public function setPermissionGrantPolicies(?array $value ): void {
         $this->permissionGrantPolicies = $value;
+    }
+
+    /**
+     * Sets the roleManagementPolicies property value. Represents the role management policies.
+     *  @param array<UnifiedRoleManagementPolicy>|null $value Value to set for the roleManagementPolicies property.
+    */
+    public function setRoleManagementPolicies(?array $value ): void {
+        $this->roleManagementPolicies = $value;
+    }
+
+    /**
+     * Sets the roleManagementPolicyAssignments property value. Represents the role management policy assignments.
+     *  @param array<UnifiedRoleManagementPolicyAssignment>|null $value Value to set for the roleManagementPolicyAssignments property.
+    */
+    public function setRoleManagementPolicyAssignments(?array $value ): void {
+        $this->roleManagementPolicyAssignments = $value;
     }
 
     /**

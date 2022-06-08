@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $configurationAppliedUserCount Number of users the policy is applied. */
+    /**
+     * @var int|null $configurationAppliedUserCount Number of users the policy is applied.
+    */
     private ?int $configurationAppliedUserCount = null;
     
-    /** @var MobileAppIdentifier|null $mobileAppIdentifier Deployment of an app. */
+    /**
+     * @var MobileAppIdentifier|null $mobileAppIdentifier Deployment of an app.
+    */
     private ?MobileAppIdentifier $mobileAppIdentifier = null;
     
     /**
@@ -30,7 +36,7 @@ class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHolder, P
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ManagedAppPolicyDeploymentSummaryPerApp
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ManagedAppPolicyDeploymentSummaryPerApp {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedAppPolicyDeploymentSummaryPerApp {
         return new ManagedAppPolicyDeploymentSummaryPerApp();
     }
 
@@ -55,9 +61,10 @@ class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHolder, P
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'configurationAppliedUserCount' => function (self $o, ParseNode $n) { $o->setConfigurationAppliedUserCount($n->getIntegerValue()); },
-            'mobileAppIdentifier' => function (self $o, ParseNode $n) { $o->setMobileAppIdentifier($n->getObjectValue(MobileAppIdentifier::class)); },
+            'configurationAppliedUserCount' => function (ParseNode $n) use ($o) { $o->setConfigurationAppliedUserCount($n->getIntegerValue()); },
+            'mobileAppIdentifier' => function (ParseNode $n) use ($o) { $o->setMobileAppIdentifier($n->getObjectValue(array(MobileAppIdentifier::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

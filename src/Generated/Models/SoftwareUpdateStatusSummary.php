@@ -6,51 +6,81 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class SoftwareUpdateStatusSummary extends Entity 
+class SoftwareUpdateStatusSummary extends Entity implements Parsable 
 {
-    /** @var int|null $compliantDeviceCount Number of compliant devices. */
+    /**
+     * @var int|null $compliantDeviceCount Number of compliant devices.
+    */
     private ?int $compliantDeviceCount = null;
     
-    /** @var int|null $compliantUserCount Number of compliant users. */
+    /**
+     * @var int|null $compliantUserCount Number of compliant users.
+    */
     private ?int $compliantUserCount = null;
     
-    /** @var int|null $conflictDeviceCount Number of conflict devices. */
+    /**
+     * @var int|null $conflictDeviceCount Number of conflict devices.
+    */
     private ?int $conflictDeviceCount = null;
     
-    /** @var int|null $conflictUserCount Number of conflict users. */
+    /**
+     * @var int|null $conflictUserCount Number of conflict users.
+    */
     private ?int $conflictUserCount = null;
     
-    /** @var string|null $displayName The name of the policy. */
+    /**
+     * @var string|null $displayName The name of the policy.
+    */
     private ?string $displayName = null;
     
-    /** @var int|null $errorDeviceCount Number of devices had error. */
+    /**
+     * @var int|null $errorDeviceCount Number of devices had error.
+    */
     private ?int $errorDeviceCount = null;
     
-    /** @var int|null $errorUserCount Number of users had error. */
+    /**
+     * @var int|null $errorUserCount Number of users had error.
+    */
     private ?int $errorUserCount = null;
     
-    /** @var int|null $nonCompliantDeviceCount Number of non compliant devices. */
+    /**
+     * @var int|null $nonCompliantDeviceCount Number of non compliant devices.
+    */
     private ?int $nonCompliantDeviceCount = null;
     
-    /** @var int|null $nonCompliantUserCount Number of non compliant users. */
+    /**
+     * @var int|null $nonCompliantUserCount Number of non compliant users.
+    */
     private ?int $nonCompliantUserCount = null;
     
-    /** @var int|null $notApplicableDeviceCount Number of not applicable devices. */
+    /**
+     * @var int|null $notApplicableDeviceCount Number of not applicable devices.
+    */
     private ?int $notApplicableDeviceCount = null;
     
-    /** @var int|null $notApplicableUserCount Number of not applicable users. */
+    /**
+     * @var int|null $notApplicableUserCount Number of not applicable users.
+    */
     private ?int $notApplicableUserCount = null;
     
-    /** @var int|null $remediatedDeviceCount Number of remediated devices. */
+    /**
+     * @var int|null $remediatedDeviceCount Number of remediated devices.
+    */
     private ?int $remediatedDeviceCount = null;
     
-    /** @var int|null $remediatedUserCount Number of remediated users. */
+    /**
+     * @var int|null $remediatedUserCount Number of remediated users.
+    */
     private ?int $remediatedUserCount = null;
     
-    /** @var int|null $unknownDeviceCount Number of unknown devices. */
+    /**
+     * @var int|null $unknownDeviceCount Number of unknown devices.
+    */
     private ?int $unknownDeviceCount = null;
     
-    /** @var int|null $unknownUserCount Number of unknown users. */
+    /**
+     * @var int|null $unknownUserCount Number of unknown users.
+    */
     private ?int $unknownUserCount = null;
     
     /**
@@ -65,7 +95,7 @@ class SoftwareUpdateStatusSummary extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SoftwareUpdateStatusSummary
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SoftwareUpdateStatusSummary {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SoftwareUpdateStatusSummary {
         return new SoftwareUpdateStatusSummary();
     }
 
@@ -130,22 +160,23 @@ class SoftwareUpdateStatusSummary extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'compliantDeviceCount' => function (self $o, ParseNode $n) { $o->setCompliantDeviceCount($n->getIntegerValue()); },
-            'compliantUserCount' => function (self $o, ParseNode $n) { $o->setCompliantUserCount($n->getIntegerValue()); },
-            'conflictDeviceCount' => function (self $o, ParseNode $n) { $o->setConflictDeviceCount($n->getIntegerValue()); },
-            'conflictUserCount' => function (self $o, ParseNode $n) { $o->setConflictUserCount($n->getIntegerValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'errorDeviceCount' => function (self $o, ParseNode $n) { $o->setErrorDeviceCount($n->getIntegerValue()); },
-            'errorUserCount' => function (self $o, ParseNode $n) { $o->setErrorUserCount($n->getIntegerValue()); },
-            'nonCompliantDeviceCount' => function (self $o, ParseNode $n) { $o->setNonCompliantDeviceCount($n->getIntegerValue()); },
-            'nonCompliantUserCount' => function (self $o, ParseNode $n) { $o->setNonCompliantUserCount($n->getIntegerValue()); },
-            'notApplicableDeviceCount' => function (self $o, ParseNode $n) { $o->setNotApplicableDeviceCount($n->getIntegerValue()); },
-            'notApplicableUserCount' => function (self $o, ParseNode $n) { $o->setNotApplicableUserCount($n->getIntegerValue()); },
-            'remediatedDeviceCount' => function (self $o, ParseNode $n) { $o->setRemediatedDeviceCount($n->getIntegerValue()); },
-            'remediatedUserCount' => function (self $o, ParseNode $n) { $o->setRemediatedUserCount($n->getIntegerValue()); },
-            'unknownDeviceCount' => function (self $o, ParseNode $n) { $o->setUnknownDeviceCount($n->getIntegerValue()); },
-            'unknownUserCount' => function (self $o, ParseNode $n) { $o->setUnknownUserCount($n->getIntegerValue()); },
+            'compliantDeviceCount' => function (ParseNode $n) use ($o) { $o->setCompliantDeviceCount($n->getIntegerValue()); },
+            'compliantUserCount' => function (ParseNode $n) use ($o) { $o->setCompliantUserCount($n->getIntegerValue()); },
+            'conflictDeviceCount' => function (ParseNode $n) use ($o) { $o->setConflictDeviceCount($n->getIntegerValue()); },
+            'conflictUserCount' => function (ParseNode $n) use ($o) { $o->setConflictUserCount($n->getIntegerValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'errorDeviceCount' => function (ParseNode $n) use ($o) { $o->setErrorDeviceCount($n->getIntegerValue()); },
+            'errorUserCount' => function (ParseNode $n) use ($o) { $o->setErrorUserCount($n->getIntegerValue()); },
+            'nonCompliantDeviceCount' => function (ParseNode $n) use ($o) { $o->setNonCompliantDeviceCount($n->getIntegerValue()); },
+            'nonCompliantUserCount' => function (ParseNode $n) use ($o) { $o->setNonCompliantUserCount($n->getIntegerValue()); },
+            'notApplicableDeviceCount' => function (ParseNode $n) use ($o) { $o->setNotApplicableDeviceCount($n->getIntegerValue()); },
+            'notApplicableUserCount' => function (ParseNode $n) use ($o) { $o->setNotApplicableUserCount($n->getIntegerValue()); },
+            'remediatedDeviceCount' => function (ParseNode $n) use ($o) { $o->setRemediatedDeviceCount($n->getIntegerValue()); },
+            'remediatedUserCount' => function (ParseNode $n) use ($o) { $o->setRemediatedUserCount($n->getIntegerValue()); },
+            'unknownDeviceCount' => function (ParseNode $n) use ($o) { $o->setUnknownDeviceCount($n->getIntegerValue()); },
+            'unknownUserCount' => function (ParseNode $n) use ($o) { $o->setUnknownUserCount($n->getIntegerValue()); },
         ]);
     }
 

@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ListInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $contentTypesEnabled If true, indicates that content types are enabled for this list. */
+    /**
+     * @var bool|null $contentTypesEnabled If true, indicates that content types are enabled for this list.
+    */
     private ?bool $contentTypesEnabled = null;
     
-    /** @var bool|null $hidden If true, indicates that the list is not normally visible in the SharePoint user experience. */
+    /**
+     * @var bool|null $hidden If true, indicates that the list is not normally visible in the SharePoint user experience.
+    */
     private ?bool $hidden = null;
     
-    /** @var string|null $template An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more. */
+    /**
+     * @var string|null $template An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
+    */
     private ?string $template = null;
     
     /**
@@ -33,7 +41,7 @@ class ListInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ListInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ListInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ListInfo {
         return new ListInfo();
     }
 
@@ -58,10 +66,11 @@ class ListInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'contentTypesEnabled' => function (self $o, ParseNode $n) { $o->setContentTypesEnabled($n->getBooleanValue()); },
-            'hidden' => function (self $o, ParseNode $n) { $o->setHidden($n->getBooleanValue()); },
-            'template' => function (self $o, ParseNode $n) { $o->setTemplate($n->getStringValue()); },
+            'contentTypesEnabled' => function (ParseNode $n) use ($o) { $o->setContentTypesEnabled($n->getBooleanValue()); },
+            'hidden' => function (ParseNode $n) use ($o) { $o->setHidden($n->getBooleanValue()); },
+            'template' => function (ParseNode $n) use ($o) { $o->setTemplate($n->getStringValue()); },
         ];
     }
 

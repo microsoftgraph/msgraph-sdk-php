@@ -6,48 +6,76 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WorkbookTable extends Entity 
+class WorkbookTable extends Entity implements Parsable 
 {
-    /** @var array<WorkbookTableColumn>|null $columns Represents a collection of all the columns in the table. Read-only. */
+    /**
+     * @var array<WorkbookTableColumn>|null $columns Represents a collection of all the columns in the table. Read-only.
+    */
     private ?array $columns = null;
     
-    /** @var bool|null $highlightFirstColumn Indicates whether the first column contains special formatting. */
+    /**
+     * @var bool|null $highlightFirstColumn Indicates whether the first column contains special formatting.
+    */
     private ?bool $highlightFirstColumn = null;
     
-    /** @var bool|null $highlightLastColumn Indicates whether the last column contains special formatting. */
+    /**
+     * @var bool|null $highlightLastColumn Indicates whether the last column contains special formatting.
+    */
     private ?bool $highlightLastColumn = null;
     
-    /** @var string|null $legacyId Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only. */
+    /**
+     * @var string|null $legacyId Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only.
+    */
     private ?string $legacyId = null;
     
-    /** @var string|null $name Name of the table. */
+    /**
+     * @var string|null $name Name of the table.
+    */
     private ?string $name = null;
     
-    /** @var array<WorkbookTableRow>|null $rows Represents a collection of all the rows in the table. Read-only. */
+    /**
+     * @var array<WorkbookTableRow>|null $rows Represents a collection of all the rows in the table. Read-only.
+    */
     private ?array $rows = null;
     
-    /** @var bool|null $showBandedColumns Indicates whether the columns show banded formatting in which odd columns are highlighted differently from even ones to make reading the table easier. */
+    /**
+     * @var bool|null $showBandedColumns Indicates whether the columns show banded formatting in which odd columns are highlighted differently from even ones to make reading the table easier.
+    */
     private ?bool $showBandedColumns = null;
     
-    /** @var bool|null $showBandedRows Indicates whether the rows show banded formatting in which odd rows are highlighted differently from even ones to make reading the table easier. */
+    /**
+     * @var bool|null $showBandedRows Indicates whether the rows show banded formatting in which odd rows are highlighted differently from even ones to make reading the table easier.
+    */
     private ?bool $showBandedRows = null;
     
-    /** @var bool|null $showFilterButton Indicates whether the filter buttons are visible at the top of each column header. Setting this is only allowed if the table contains a header row. */
+    /**
+     * @var bool|null $showFilterButton Indicates whether the filter buttons are visible at the top of each column header. Setting this is only allowed if the table contains a header row.
+    */
     private ?bool $showFilterButton = null;
     
-    /** @var bool|null $showHeaders Indicates whether the header row is visible or not. This value can be set to show or remove the header row. */
+    /**
+     * @var bool|null $showHeaders Indicates whether the header row is visible or not. This value can be set to show or remove the header row.
+    */
     private ?bool $showHeaders = null;
     
-    /** @var bool|null $showTotals Indicates whether the total row is visible or not. This value can be set to show or remove the total row. */
+    /**
+     * @var bool|null $showTotals Indicates whether the total row is visible or not. This value can be set to show or remove the total row.
+    */
     private ?bool $showTotals = null;
     
-    /** @var WorkbookTableSort|null $sort Represents the sorting for the table. Read-only. */
+    /**
+     * @var WorkbookTableSort|null $sort Represents the sorting for the table. Read-only.
+    */
     private ?WorkbookTableSort $sort = null;
     
-    /** @var string|null $style Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified. */
+    /**
+     * @var string|null $style Constant value that represents the Table style. Possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
+    */
     private ?string $style = null;
     
-    /** @var WorkbookWorksheet|null $worksheet The worksheet containing the current table. Read-only. */
+    /**
+     * @var WorkbookWorksheet|null $worksheet The worksheet containing the current table. Read-only.
+    */
     private ?WorkbookWorksheet $worksheet = null;
     
     /**
@@ -62,7 +90,7 @@ class WorkbookTable extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookTable
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookTable {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookTable {
         return new WorkbookTable();
     }
 
@@ -79,21 +107,22 @@ class WorkbookTable extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'columns' => function (self $o, ParseNode $n) { $o->setColumns($n->getCollectionOfObjectValues(WorkbookTableColumn::class)); },
-            'highlightFirstColumn' => function (self $o, ParseNode $n) { $o->setHighlightFirstColumn($n->getBooleanValue()); },
-            'highlightLastColumn' => function (self $o, ParseNode $n) { $o->setHighlightLastColumn($n->getBooleanValue()); },
-            'legacyId' => function (self $o, ParseNode $n) { $o->setLegacyId($n->getStringValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'rows' => function (self $o, ParseNode $n) { $o->setRows($n->getCollectionOfObjectValues(WorkbookTableRow::class)); },
-            'showBandedColumns' => function (self $o, ParseNode $n) { $o->setShowBandedColumns($n->getBooleanValue()); },
-            'showBandedRows' => function (self $o, ParseNode $n) { $o->setShowBandedRows($n->getBooleanValue()); },
-            'showFilterButton' => function (self $o, ParseNode $n) { $o->setShowFilterButton($n->getBooleanValue()); },
-            'showHeaders' => function (self $o, ParseNode $n) { $o->setShowHeaders($n->getBooleanValue()); },
-            'showTotals' => function (self $o, ParseNode $n) { $o->setShowTotals($n->getBooleanValue()); },
-            'sort' => function (self $o, ParseNode $n) { $o->setSort($n->getObjectValue(WorkbookTableSort::class)); },
-            'style' => function (self $o, ParseNode $n) { $o->setStyle($n->getStringValue()); },
-            'worksheet' => function (self $o, ParseNode $n) { $o->setWorksheet($n->getObjectValue(WorkbookWorksheet::class)); },
+            'columns' => function (ParseNode $n) use ($o) { $o->setColumns($n->getCollectionOfObjectValues(array(WorkbookTableColumn::class, 'createFromDiscriminatorValue'))); },
+            'highlightFirstColumn' => function (ParseNode $n) use ($o) { $o->setHighlightFirstColumn($n->getBooleanValue()); },
+            'highlightLastColumn' => function (ParseNode $n) use ($o) { $o->setHighlightLastColumn($n->getBooleanValue()); },
+            'legacyId' => function (ParseNode $n) use ($o) { $o->setLegacyId($n->getStringValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'rows' => function (ParseNode $n) use ($o) { $o->setRows($n->getCollectionOfObjectValues(array(WorkbookTableRow::class, 'createFromDiscriminatorValue'))); },
+            'showBandedColumns' => function (ParseNode $n) use ($o) { $o->setShowBandedColumns($n->getBooleanValue()); },
+            'showBandedRows' => function (ParseNode $n) use ($o) { $o->setShowBandedRows($n->getBooleanValue()); },
+            'showFilterButton' => function (ParseNode $n) use ($o) { $o->setShowFilterButton($n->getBooleanValue()); },
+            'showHeaders' => function (ParseNode $n) use ($o) { $o->setShowHeaders($n->getBooleanValue()); },
+            'showTotals' => function (ParseNode $n) use ($o) { $o->setShowTotals($n->getBooleanValue()); },
+            'sort' => function (ParseNode $n) use ($o) { $o->setSort($n->getObjectValue(array(WorkbookTableSort::class, 'createFromDiscriminatorValue'))); },
+            'style' => function (ParseNode $n) use ($o) { $o->setStyle($n->getStringValue()); },
+            'worksheet' => function (ParseNode $n) use ($o) { $o->setWorksheet($n->getObjectValue(array(WorkbookWorksheet::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -186,7 +215,7 @@ class WorkbookTable extends Entity
     }
 
     /**
-     * Gets the style property value. Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
+     * Gets the style property value. Constant value that represents the Table style. Possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      * @return string|null
     */
     public function getStyle(): ?string {
@@ -320,7 +349,7 @@ class WorkbookTable extends Entity
     }
 
     /**
-     * Sets the style property value. Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
+     * Sets the style property value. Constant value that represents the Table style. Possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      *  @param string|null $value Value to set for the style property.
     */
     public function setStyle(?string $value ): void {

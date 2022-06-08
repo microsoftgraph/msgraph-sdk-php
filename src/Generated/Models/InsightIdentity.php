@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class InsightIdentity implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $address The email address of the user who shared the item. */
+    /**
+     * @var string|null $address The email address of the user who shared the item.
+    */
     private ?string $address = null;
     
-    /** @var string|null $displayName The display name of the user who shared the item. */
+    /**
+     * @var string|null $displayName The display name of the user who shared the item.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $id The id of the user who shared the item. */
+    /**
+     * @var string|null $id The id of the user who shared the item.
+    */
     private ?string $id = null;
     
     /**
@@ -33,7 +41,7 @@ class InsightIdentity implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return InsightIdentity
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): InsightIdentity {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): InsightIdentity {
         return new InsightIdentity();
     }
 
@@ -66,10 +74,11 @@ class InsightIdentity implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'address' => function (self $o, ParseNode $n) { $o->setAddress($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'id' => function (self $o, ParseNode $n) { $o->setId($n->getStringValue()); },
+            'address' => function (ParseNode $n) use ($o) { $o->setAddress($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
         ];
     }
 

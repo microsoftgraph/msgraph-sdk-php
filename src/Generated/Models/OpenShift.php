@@ -6,15 +6,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class OpenShift extends ChangeTrackedEntity 
+class OpenShift extends ChangeTrackedEntity implements Parsable 
 {
-    /** @var OpenShiftItem|null $draftOpenShift An unpublished open shift. */
+    /**
+     * @var OpenShiftItem|null $draftOpenShift An unpublished open shift.
+    */
     private ?OpenShiftItem $draftOpenShift = null;
     
-    /** @var string|null $schedulingGroupId ID for the scheduling group that the open shift belongs to. */
+    /**
+     * @var string|null $schedulingGroupId ID for the scheduling group that the open shift belongs to.
+    */
     private ?string $schedulingGroupId = null;
     
-    /** @var OpenShiftItem|null $sharedOpenShift A published open shift. */
+    /**
+     * @var OpenShiftItem|null $sharedOpenShift A published open shift.
+    */
     private ?OpenShiftItem $sharedOpenShift = null;
     
     /**
@@ -29,7 +35,7 @@ class OpenShift extends ChangeTrackedEntity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return OpenShift
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): OpenShift {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): OpenShift {
         return new OpenShift();
     }
 
@@ -46,10 +52,11 @@ class OpenShift extends ChangeTrackedEntity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'draftOpenShift' => function (self $o, ParseNode $n) { $o->setDraftOpenShift($n->getObjectValue(OpenShiftItem::class)); },
-            'schedulingGroupId' => function (self $o, ParseNode $n) { $o->setSchedulingGroupId($n->getStringValue()); },
-            'sharedOpenShift' => function (self $o, ParseNode $n) { $o->setSharedOpenShift($n->getObjectValue(OpenShiftItem::class)); },
+            'draftOpenShift' => function (ParseNode $n) use ($o) { $o->setDraftOpenShift($n->getObjectValue(array(OpenShiftItem::class, 'createFromDiscriminatorValue'))); },
+            'schedulingGroupId' => function (ParseNode $n) use ($o) { $o->setSchedulingGroupId($n->getStringValue()); },
+            'sharedOpenShift' => function (ParseNode $n) use ($o) { $o->setSharedOpenShift($n->getObjectValue(array(OpenShiftItem::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

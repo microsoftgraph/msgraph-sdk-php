@@ -6,15 +6,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class SharePointIdentitySet extends IdentitySet 
+class SharePointIdentitySet extends IdentitySet implements Parsable 
 {
-    /** @var Identity|null $group The group associated with this action. Optional. */
+    /**
+     * @var Identity|null $group The group associated with this action. Optional.
+    */
     private ?Identity $group = null;
     
-    /** @var SharePointIdentity|null $siteGroup The SharePoint group associated with this action. Optional. */
+    /**
+     * @var SharePointIdentity|null $siteGroup The SharePoint group associated with this action. Optional.
+    */
     private ?SharePointIdentity $siteGroup = null;
     
-    /** @var SharePointIdentity|null $siteUser The SharePoint user associated with this action. Optional. */
+    /**
+     * @var SharePointIdentity|null $siteUser The SharePoint user associated with this action. Optional.
+    */
     private ?SharePointIdentity $siteUser = null;
     
     /**
@@ -29,7 +35,7 @@ class SharePointIdentitySet extends IdentitySet
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SharePointIdentitySet
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SharePointIdentitySet {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SharePointIdentitySet {
         return new SharePointIdentitySet();
     }
 
@@ -38,10 +44,11 @@ class SharePointIdentitySet extends IdentitySet
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'group' => function (self $o, ParseNode $n) { $o->setGroup($n->getObjectValue(Identity::class)); },
-            'siteGroup' => function (self $o, ParseNode $n) { $o->setSiteGroup($n->getObjectValue(SharePointIdentity::class)); },
-            'siteUser' => function (self $o, ParseNode $n) { $o->setSiteUser($n->getObjectValue(SharePointIdentity::class)); },
+            'group' => function (ParseNode $n) use ($o) { $o->setGroup($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
+            'siteGroup' => function (ParseNode $n) use ($o) { $o->setSiteGroup($n->getObjectValue(array(SharePointIdentity::class, 'createFromDiscriminatorValue'))); },
+            'siteUser' => function (ParseNode $n) use ($o) { $o->setSiteUser($n->getObjectValue(array(SharePointIdentity::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

@@ -6,12 +6,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class UserIdentity extends Identity 
+class UserIdentity extends Identity implements Parsable 
 {
-    /** @var string|null $ipAddress Indicates the client IP address used by user performing the activity (audit log only). */
+    /**
+     * @var string|null $ipAddress Indicates the client IP address used by user performing the activity (audit log only).
+    */
     private ?string $ipAddress = null;
     
-    /** @var string|null $userPrincipalName The userPrincipalName attribute of the user. */
+    /**
+     * @var string|null $userPrincipalName The userPrincipalName attribute of the user.
+    */
     private ?string $userPrincipalName = null;
     
     /**
@@ -26,7 +30,7 @@ class UserIdentity extends Identity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return UserIdentity
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): UserIdentity {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): UserIdentity {
         return new UserIdentity();
     }
 
@@ -35,9 +39,10 @@ class UserIdentity extends Identity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'ipAddress' => function (self $o, ParseNode $n) { $o->setIpAddress($n->getStringValue()); },
-            'userPrincipalName' => function (self $o, ParseNode $n) { $o->setUserPrincipalName($n->getStringValue()); },
+            'ipAddress' => function (ParseNode $n) use ($o) { $o->setIpAddress($n->getStringValue()); },
+            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
         ]);
     }
 

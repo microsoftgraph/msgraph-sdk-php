@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class PersonType implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $EscapedClass The type of data source, such as Person. */
+    /**
+     * @var string|null $EscapedClass The type of data source, such as Person.
+    */
     private ?string $escapedClass = null;
     
-    /** @var string|null $subclass The secondary type of data source, such as OrganizationUser. */
+    /**
+     * @var string|null $subclass The secondary type of data source, such as OrganizationUser.
+    */
     private ?string $subclass = null;
     
     /**
@@ -30,7 +36,7 @@ class PersonType implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PersonType
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PersonType {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PersonType {
         return new PersonType();
     }
 
@@ -55,9 +61,10 @@ class PersonType implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'class' => function (self $o, ParseNode $n) { $o->setEscapedClass($n->getStringValue()); },
-            'subclass' => function (self $o, ParseNode $n) { $o->setSubclass($n->getStringValue()); },
+            'class' => function (ParseNode $n) use ($o) { $o->setClass($n->getStringValue()); },
+            'subclass' => function (ParseNode $n) use ($o) { $o->setSubclass($n->getStringValue()); },
         ];
     }
 

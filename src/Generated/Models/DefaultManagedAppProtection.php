@@ -6,42 +6,66 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DefaultManagedAppProtection extends ManagedAppProtection 
+class DefaultManagedAppProtection extends ManagedAppProtection implements Parsable 
 {
-    /** @var ManagedAppDataEncryptionType|null $appDataEncryptionType Type of encryption which should be used for data in a managed app. (iOS Only). Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked. */
+    /**
+     * @var ManagedAppDataEncryptionType|null $appDataEncryptionType Type of encryption which should be used for data in a managed app. (iOS Only). Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
+    */
     private ?ManagedAppDataEncryptionType $appDataEncryptionType = null;
     
-    /** @var array<ManagedMobileApp>|null $apps List of apps to which the policy is deployed. */
+    /**
+     * @var array<ManagedMobileApp>|null $apps List of apps to which the policy is deployed.
+    */
     private ?array $apps = null;
     
-    /** @var array<KeyValuePair>|null $customSettings A set of string key and string value pairs to be sent to the affected users, unalterned by this service */
+    /**
+     * @var array<KeyValuePair>|null $customSettings A set of string key and string value pairs to be sent to the affected users, unalterned by this service
+    */
     private ?array $customSettings = null;
     
-    /** @var int|null $deployedAppCount Count of apps to which the current policy is deployed. */
+    /**
+     * @var int|null $deployedAppCount Count of apps to which the current policy is deployed.
+    */
     private ?int $deployedAppCount = null;
     
-    /** @var ManagedAppPolicyDeploymentSummary|null $deploymentSummary Navigation property to deployment summary of the configuration. */
+    /**
+     * @var ManagedAppPolicyDeploymentSummary|null $deploymentSummary Navigation property to deployment summary of the configuration.
+    */
     private ?ManagedAppPolicyDeploymentSummary $deploymentSummary = null;
     
-    /** @var bool|null $disableAppEncryptionIfDeviceEncryptionIsEnabled When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only) */
+    /**
+     * @var bool|null $disableAppEncryptionIfDeviceEncryptionIsEnabled When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
+    */
     private ?bool $disableAppEncryptionIfDeviceEncryptionIsEnabled = null;
     
-    /** @var bool|null $encryptAppData Indicates whether managed-app data should be encrypted. (Android only) */
+    /**
+     * @var bool|null $encryptAppData Indicates whether managed-app data should be encrypted. (Android only)
+    */
     private ?bool $encryptAppData = null;
     
-    /** @var bool|null $faceIdBlocked Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only) */
+    /**
+     * @var bool|null $faceIdBlocked Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
+    */
     private ?bool $faceIdBlocked = null;
     
-    /** @var string|null $minimumRequiredPatchVersion Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only) */
+    /**
+     * @var string|null $minimumRequiredPatchVersion Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
+    */
     private ?string $minimumRequiredPatchVersion = null;
     
-    /** @var string|null $minimumRequiredSdkVersion Versions less than the specified version will block the managed app from accessing company data. (iOS Only) */
+    /**
+     * @var string|null $minimumRequiredSdkVersion Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
+    */
     private ?string $minimumRequiredSdkVersion = null;
     
-    /** @var string|null $minimumWarningPatchVersion Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only) */
+    /**
+     * @var string|null $minimumWarningPatchVersion Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
+    */
     private ?string $minimumWarningPatchVersion = null;
     
-    /** @var bool|null $screenCaptureBlocked Indicates whether screen capture is blocked. (Android only) */
+    /**
+     * @var bool|null $screenCaptureBlocked Indicates whether screen capture is blocked. (Android only)
+    */
     private ?bool $screenCaptureBlocked = null;
     
     /**
@@ -56,7 +80,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DefaultManagedAppProtection
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DefaultManagedAppProtection {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DefaultManagedAppProtection {
         return new DefaultManagedAppProtection();
     }
 
@@ -129,19 +153,20 @@ class DefaultManagedAppProtection extends ManagedAppProtection
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appDataEncryptionType' => function (self $o, ParseNode $n) { $o->setAppDataEncryptionType($n->getEnumValue(ManagedAppDataEncryptionType::class)); },
-            'apps' => function (self $o, ParseNode $n) { $o->setApps($n->getCollectionOfObjectValues(ManagedMobileApp::class)); },
-            'customSettings' => function (self $o, ParseNode $n) { $o->setCustomSettings($n->getCollectionOfObjectValues(KeyValuePair::class)); },
-            'deployedAppCount' => function (self $o, ParseNode $n) { $o->setDeployedAppCount($n->getIntegerValue()); },
-            'deploymentSummary' => function (self $o, ParseNode $n) { $o->setDeploymentSummary($n->getObjectValue(ManagedAppPolicyDeploymentSummary::class)); },
-            'disableAppEncryptionIfDeviceEncryptionIsEnabled' => function (self $o, ParseNode $n) { $o->setDisableAppEncryptionIfDeviceEncryptionIsEnabled($n->getBooleanValue()); },
-            'encryptAppData' => function (self $o, ParseNode $n) { $o->setEncryptAppData($n->getBooleanValue()); },
-            'faceIdBlocked' => function (self $o, ParseNode $n) { $o->setFaceIdBlocked($n->getBooleanValue()); },
-            'minimumRequiredPatchVersion' => function (self $o, ParseNode $n) { $o->setMinimumRequiredPatchVersion($n->getStringValue()); },
-            'minimumRequiredSdkVersion' => function (self $o, ParseNode $n) { $o->setMinimumRequiredSdkVersion($n->getStringValue()); },
-            'minimumWarningPatchVersion' => function (self $o, ParseNode $n) { $o->setMinimumWarningPatchVersion($n->getStringValue()); },
-            'screenCaptureBlocked' => function (self $o, ParseNode $n) { $o->setScreenCaptureBlocked($n->getBooleanValue()); },
+            'appDataEncryptionType' => function (ParseNode $n) use ($o) { $o->setAppDataEncryptionType($n->getEnumValue(ManagedAppDataEncryptionType::class)); },
+            'apps' => function (ParseNode $n) use ($o) { $o->setApps($n->getCollectionOfObjectValues(array(ManagedMobileApp::class, 'createFromDiscriminatorValue'))); },
+            'customSettings' => function (ParseNode $n) use ($o) { $o->setCustomSettings($n->getCollectionOfObjectValues(array(KeyValuePair::class, 'createFromDiscriminatorValue'))); },
+            'deployedAppCount' => function (ParseNode $n) use ($o) { $o->setDeployedAppCount($n->getIntegerValue()); },
+            'deploymentSummary' => function (ParseNode $n) use ($o) { $o->setDeploymentSummary($n->getObjectValue(array(ManagedAppPolicyDeploymentSummary::class, 'createFromDiscriminatorValue'))); },
+            'disableAppEncryptionIfDeviceEncryptionIsEnabled' => function (ParseNode $n) use ($o) { $o->setDisableAppEncryptionIfDeviceEncryptionIsEnabled($n->getBooleanValue()); },
+            'encryptAppData' => function (ParseNode $n) use ($o) { $o->setEncryptAppData($n->getBooleanValue()); },
+            'faceIdBlocked' => function (ParseNode $n) use ($o) { $o->setFaceIdBlocked($n->getBooleanValue()); },
+            'minimumRequiredPatchVersion' => function (ParseNode $n) use ($o) { $o->setMinimumRequiredPatchVersion($n->getStringValue()); },
+            'minimumRequiredSdkVersion' => function (ParseNode $n) use ($o) { $o->setMinimumRequiredSdkVersion($n->getStringValue()); },
+            'minimumWarningPatchVersion' => function (ParseNode $n) use ($o) { $o->setMinimumWarningPatchVersion($n->getStringValue()); },
+            'screenCaptureBlocked' => function (ParseNode $n) use ($o) { $o->setScreenCaptureBlocked($n->getBooleanValue()); },
         ]);
     }
 

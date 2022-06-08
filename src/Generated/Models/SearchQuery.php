@@ -9,10 +9,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SearchQuery implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $queryString The search query containing the search terms. Required. */
+    /**
+     * @var string|null $queryString The search query containing the search terms. Required.
+    */
     private ?string $queryString = null;
     
     /**
@@ -27,7 +31,7 @@ class SearchQuery implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SearchQuery
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SearchQuery {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SearchQuery {
         return new SearchQuery();
     }
 
@@ -44,8 +48,9 @@ class SearchQuery implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'queryString' => function (self $o, ParseNode $n) { $o->setQueryString($n->getStringValue()); },
+            'queryString' => function (ParseNode $n) use ($o) { $o->setQueryString($n->getStringValue()); },
         ];
     }
 

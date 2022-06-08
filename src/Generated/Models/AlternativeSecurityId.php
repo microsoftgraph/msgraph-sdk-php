@@ -10,16 +10,24 @@ use Psr\Http\Message\StreamInterface;
 
 class AlternativeSecurityId implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $identityProvider For internal use only */
+    /**
+     * @var string|null $identityProvider For internal use only
+    */
     private ?string $identityProvider = null;
     
-    /** @var StreamInterface|null $key For internal use only */
+    /**
+     * @var StreamInterface|null $key For internal use only
+    */
     private ?StreamInterface $key = null;
     
-    /** @var int|null $type For internal use only */
+    /**
+     * @var int|null $type For internal use only
+    */
     private ?int $type = null;
     
     /**
@@ -34,7 +42,7 @@ class AlternativeSecurityId implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AlternativeSecurityId
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AlternativeSecurityId {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AlternativeSecurityId {
         return new AlternativeSecurityId();
     }
 
@@ -51,10 +59,11 @@ class AlternativeSecurityId implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'identityProvider' => function (self $o, ParseNode $n) { $o->setIdentityProvider($n->getStringValue()); },
-            'key' => function (self $o, ParseNode $n) { $o->setKey($n->getBinaryContent()); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getIntegerValue()); },
+            'identityProvider' => function (ParseNode $n) use ($o) { $o->setIdentityProvider($n->getStringValue()); },
+            'key' => function (ParseNode $n) use ($o) { $o->setKey($n->getBinaryContent()); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getIntegerValue()); },
         ];
     }
 

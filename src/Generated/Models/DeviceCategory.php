@@ -6,12 +6,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DeviceCategory extends Entity 
+class DeviceCategory extends Entity implements Parsable 
 {
-    /** @var string|null $description Optional description for the device category. */
+    /**
+     * @var string|null $description Optional description for the device category.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName Display name for the device category. */
+    /**
+     * @var string|null $displayName Display name for the device category.
+    */
     private ?string $displayName = null;
     
     /**
@@ -26,7 +30,7 @@ class DeviceCategory extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceCategory
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceCategory {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceCategory {
         return new DeviceCategory();
     }
 
@@ -51,9 +55,10 @@ class DeviceCategory extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
         ]);
     }
 

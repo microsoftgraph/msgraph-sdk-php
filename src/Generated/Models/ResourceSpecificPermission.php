@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ResourceSpecificPermission implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $description Describes the level of access that the resource-specific permission represents. */
+    /**
+     * @var string|null $description Describes the level of access that the resource-specific permission represents.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName The display name for the resource-specific permission. */
+    /**
+     * @var string|null $displayName The display name for the resource-specific permission.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $id The unique identifier for the resource-specific application permission. */
+    /**
+     * @var string|null $id The unique identifier for the resource-specific application permission.
+    */
     private ?string $id = null;
     
-    /** @var bool|null $isEnabled Indicates whether the permission is enabled. */
+    /**
+     * @var bool|null $isEnabled Indicates whether the permission is enabled.
+    */
     private ?bool $isEnabled = null;
     
-    /** @var string|null $value The value of the permission. */
+    /**
+     * @var string|null $value The value of the permission.
+    */
     private ?string $value = null;
     
     /**
@@ -39,7 +51,7 @@ class ResourceSpecificPermission implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ResourceSpecificPermission
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ResourceSpecificPermission {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ResourceSpecificPermission {
         return new ResourceSpecificPermission();
     }
 
@@ -72,12 +84,13 @@ class ResourceSpecificPermission implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'id' => function (self $o, ParseNode $n) { $o->setId($n->getStringValue()); },
-            'isEnabled' => function (self $o, ParseNode $n) { $o->setIsEnabled($n->getBooleanValue()); },
-            'value' => function (self $o, ParseNode $n) { $o->setValue($n->getStringValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            'isEnabled' => function (ParseNode $n) use ($o) { $o->setIsEnabled($n->getBooleanValue()); },
+            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getStringValue()); },
         ];
     }
 

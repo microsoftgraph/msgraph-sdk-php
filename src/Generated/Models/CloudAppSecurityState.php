@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class CloudAppSecurityState implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $destinationServiceIp Destination IP Address of the connection to the cloud application/service. */
+    /**
+     * @var string|null $destinationServiceIp Destination IP Address of the connection to the cloud application/service.
+    */
     private ?string $destinationServiceIp = null;
     
-    /** @var string|null $destinationServiceName Cloud application/service name (for example 'Salesforce', 'DropBox', etc.). */
+    /**
+     * @var string|null $destinationServiceName Cloud application/service name (for example 'Salesforce', 'DropBox', etc.).
+    */
     private ?string $destinationServiceName = null;
     
-    /** @var string|null $riskScore Provider-generated/calculated risk score of the Cloud Application/Service. Recommended value range of 0-1, which equates to a percentage. */
+    /**
+     * @var string|null $riskScore Provider-generated/calculated risk score of the Cloud Application/Service. Recommended value range of 0-1, which equates to a percentage.
+    */
     private ?string $riskScore = null;
     
     /**
@@ -33,7 +41,7 @@ class CloudAppSecurityState implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return CloudAppSecurityState
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): CloudAppSecurityState {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): CloudAppSecurityState {
         return new CloudAppSecurityState();
     }
 
@@ -66,10 +74,11 @@ class CloudAppSecurityState implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'destinationServiceIp' => function (self $o, ParseNode $n) { $o->setDestinationServiceIp($n->getStringValue()); },
-            'destinationServiceName' => function (self $o, ParseNode $n) { $o->setDestinationServiceName($n->getStringValue()); },
-            'riskScore' => function (self $o, ParseNode $n) { $o->setRiskScore($n->getStringValue()); },
+            'destinationServiceIp' => function (ParseNode $n) use ($o) { $o->setDestinationServiceIp($n->getStringValue()); },
+            'destinationServiceName' => function (ParseNode $n) use ($o) { $o->setDestinationServiceName($n->getStringValue()); },
+            'riskScore' => function (ParseNode $n) use ($o) { $o->setRiskScore($n->getStringValue()); },
         ];
     }
 

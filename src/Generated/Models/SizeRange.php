@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SizeRange implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $maximumSize The maximum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply. */
+    /**
+     * @var int|null $maximumSize The maximum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.
+    */
     private ?int $maximumSize = null;
     
-    /** @var int|null $minimumSize The minimum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply. */
+    /**
+     * @var int|null $minimumSize The minimum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.
+    */
     private ?int $minimumSize = null;
     
     /**
@@ -30,7 +36,7 @@ class SizeRange implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SizeRange
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SizeRange {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SizeRange {
         return new SizeRange();
     }
 
@@ -47,9 +53,10 @@ class SizeRange implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'maximumSize' => function (self $o, ParseNode $n) { $o->setMaximumSize($n->getIntegerValue()); },
-            'minimumSize' => function (self $o, ParseNode $n) { $o->setMinimumSize($n->getIntegerValue()); },
+            'maximumSize' => function (ParseNode $n) use ($o) { $o->setMaximumSize($n->getIntegerValue()); },
+            'minimumSize' => function (ParseNode $n) use ($o) { $o->setMinimumSize($n->getIntegerValue()); },
         ];
     }
 
