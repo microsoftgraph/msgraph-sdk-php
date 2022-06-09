@@ -23,7 +23,7 @@ class GraphServiceClient extends Generated\BaseGraphClient
     /**
      * @param RequestAdapter $requestAdapter
      */
-    private function __construct(RequestAdapter $requestAdapter)
+    public function __construct(RequestAdapter $requestAdapter)
     {
         parent::__construct($requestAdapter);
     }
