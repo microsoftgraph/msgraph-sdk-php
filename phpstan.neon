@@ -4,4 +4,3 @@ parameters:
 	polluteScopeWithLoopInitialAssignments: false
 	paths:
 		- src
-		- tests
