@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationSubmission extends Entity implements Parsable 
 {
     /**
-     * @var array<EducationOutcome>|null $outcomes Read-Write. Nullable.
+     * @var array<EducationOutcome>|null $outcomes The outcomes property
     */
     private ?array $outcomes = null;
     
@@ -30,7 +30,7 @@ class EducationSubmission extends Entity implements Parsable
     private ?EducationSubmissionRecipient $recipient = null;
     
     /**
-     * @var array<EducationSubmissionResource>|null $resources Nullable.
+     * @var array<EducationSubmissionResource>|null $resources The resources property
     */
     private ?array $resources = null;
     
@@ -65,7 +65,7 @@ class EducationSubmission extends Entity implements Parsable
     private ?DateTime $submittedDateTime = null;
     
     /**
-     * @var array<EducationSubmissionResource>|null $submittedResources Read-only. Nullable.
+     * @var array<EducationSubmissionResource>|null $submittedResources The submittedResources property
     */
     private ?array $submittedResources = null;
     
@@ -120,7 +120,7 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
-     * Gets the outcomes property value. Read-Write. Nullable.
+     * Gets the outcomes property value. The outcomes property
      * @return array<EducationOutcome>|null
     */
     public function getOutcomes(): ?array {
@@ -152,7 +152,7 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
-     * Gets the resources property value. Nullable.
+     * Gets the resources property value. The resources property
      * @return array<EducationSubmissionResource>|null
     */
     public function getResources(): ?array {
@@ -208,7 +208,7 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
-     * Gets the submittedResources property value. Read-only. Nullable.
+     * Gets the submittedResources property value. The submittedResources property
      * @return array<EducationSubmissionResource>|null
     */
     public function getSubmittedResources(): ?array {
@@ -254,7 +254,7 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
-     * Sets the outcomes property value. Read-Write. Nullable.
+     * Sets the outcomes property value. The outcomes property
      *  @param array<EducationOutcome>|null $value Value to set for the outcomes property.
     */
     public function setOutcomes(?array $value ): void {
@@ -286,7 +286,7 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
-     * Sets the resources property value. Nullable.
+     * Sets the resources property value. The resources property
      *  @param array<EducationSubmissionResource>|null $value Value to set for the resources property.
     */
     public function setResources(?array $value ): void {
@@ -342,7 +342,7 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
-     * Sets the submittedResources property value. Read-only. Nullable.
+     * Sets the submittedResources property value. The submittedResources property
      *  @param array<EducationSubmissionResource>|null $value Value to set for the submittedResources property.
     */
     public function setSubmittedResources(?array $value ): void {

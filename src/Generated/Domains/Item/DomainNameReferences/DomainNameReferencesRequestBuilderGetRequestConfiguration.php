@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Domains\Item\DomainNameReferences;
+namespace Microsoft\Graph\Domains\Item\DomainNameReferences;
 
 class DomainNameReferencesRequestBuilderGetRequestConfiguration 
 {

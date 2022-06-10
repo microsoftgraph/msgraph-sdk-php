@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Calendar\Events\Item\Extensions;
+namespace Microsoft\Graph\Me\Calendar\Events\Item\Extensions;
 
 class ExtensionsRequestBuilderPostRequestConfiguration 
 {

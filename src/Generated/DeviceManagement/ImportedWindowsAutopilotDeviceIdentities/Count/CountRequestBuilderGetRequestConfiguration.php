@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Count;
+namespace Microsoft\Graph\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

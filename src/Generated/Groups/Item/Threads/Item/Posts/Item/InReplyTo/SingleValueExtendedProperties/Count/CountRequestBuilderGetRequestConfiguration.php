@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\SingleValueExtendedProperties\Count;
+namespace Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\InReplyTo\SingleValueExtendedProperties\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

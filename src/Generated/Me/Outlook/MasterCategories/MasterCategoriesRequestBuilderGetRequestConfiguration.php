@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Outlook\MasterCategories;
+namespace Microsoft\Graph\Me\Outlook\MasterCategories;
 
 class MasterCategoriesRequestBuilderGetRequestConfiguration 
 {

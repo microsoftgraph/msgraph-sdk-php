@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Activities;
+namespace Microsoft\Graph\Users\Item\Activities;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UserActivity;
-use Microsoft\Graph\Generated\Models\UserActivityCollectionResponse;
-use Microsoft\Graph\Generated\Users\Item\Activities\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Activities\Recent\RecentRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\UserActivity;
+use Microsoft\Graph\Models\UserActivityCollectionResponse;
+use Microsoft\Graph\Users\Item\Activities\Count\CountRequestBuilder;
+use Microsoft\Graph\Users\Item\Activities\Recent\RecentRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoleTemplates\Item\CheckMemberGroups;
+namespace Microsoft\Graph\DirectoryRoleTemplates\Item\CheckMemberGroups;
 
 class CheckMemberGroupsRequestBuilderPostRequestConfiguration 
 {

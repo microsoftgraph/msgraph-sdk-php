@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Authentication\MicrosoftAuthenticatorMethods\Item\Device\TransitiveMemberOf\Item\Group;
+namespace Microsoft\Graph\Users\Item\Authentication\MicrosoftAuthenticatorMethods\Item\Device\TransitiveMemberOf\Item\Group;
 
 class GroupRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Onenote\SectionGroups;
+namespace Microsoft\Graph\Groups\Item\Onenote\SectionGroups;
 
 class SectionGroupsRequestBuilderGetRequestConfiguration 
 {

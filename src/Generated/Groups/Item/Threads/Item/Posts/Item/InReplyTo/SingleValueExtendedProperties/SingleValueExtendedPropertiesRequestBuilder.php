@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\SingleValueExtendedProperties;
+namespace Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\InReplyTo\SingleValueExtendedProperties;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\SingleValueExtendedProperties\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SingleValueLegacyExtendedProperty;
-use Microsoft\Graph\Generated\Models\SingleValueLegacyExtendedPropertyCollectionResponse;
+use Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\InReplyTo\SingleValueExtendedProperties\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\SingleValueLegacyExtendedProperty;
+use Microsoft\Graph\Models\SingleValueLegacyExtendedPropertyCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

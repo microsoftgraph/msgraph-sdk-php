@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\TransitiveMemberOf\Application\Count;
+namespace Microsoft\Graph\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\TransitiveMemberOf\Application\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Activities\Item;
+namespace Microsoft\Graph\Me\Activities\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Activities\Item\HistoryItems\HistoryItemsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Activities\Item\HistoryItems\Item\ActivityHistoryItemItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UserActivity;
+use Microsoft\Graph\Me\Activities\Item\HistoryItems\HistoryItemsRequestBuilder;
+use Microsoft\Graph\Me\Activities\Item\HistoryItems\Item\ActivityHistoryItemItemRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\UserActivity;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -159,7 +159,7 @@ class UserActivityItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.activities.item.historyItems.item collection
+     * Gets an item from the Microsoft\Graph.me.activities.item.historyItems.item collection
      * @param string $id Unique identifier of the item
      * @return ActivityHistoryItemItemRequestBuilder
     */

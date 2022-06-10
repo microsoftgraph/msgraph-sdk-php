@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Calendar;
+namespace Microsoft\Graph\Me\Calendar;
 
 class CalendarRequestBuilderPatchRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Insights\Used;
+namespace Microsoft\Graph\Users\Item\Insights\Used;
 
 class UsedRequestBuilderGetRequestConfiguration 
 {

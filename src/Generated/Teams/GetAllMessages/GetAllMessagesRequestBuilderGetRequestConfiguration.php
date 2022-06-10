@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\GetAllMessages;
+namespace Microsoft\Graph\Teams\GetAllMessages;
 
 class GetAllMessagesRequestBuilderGetRequestConfiguration 
 {

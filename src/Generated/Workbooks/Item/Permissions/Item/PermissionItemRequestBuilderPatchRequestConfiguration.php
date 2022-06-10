@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\Permissions\Item;
+namespace Microsoft\Graph\Workbooks\Item\Permissions\Item;
 
 class PermissionItemRequestBuilderPatchRequestConfiguration 
 {

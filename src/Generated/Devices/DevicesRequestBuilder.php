@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Devices;
+namespace Microsoft\Graph\Devices;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Devices\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Devices\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Devices\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\Devices\ValidateProperties\ValidatePropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Models\Device;
-use Microsoft\Graph\Generated\Models\DeviceCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Devices\Count\CountRequestBuilder;
+use Microsoft\Graph\Devices\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Devices\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Devices\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Models\Device;
+use Microsoft\Graph\Models\DeviceCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

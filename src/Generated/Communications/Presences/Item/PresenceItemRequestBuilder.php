@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Presences\Item;
+namespace Microsoft\Graph\Communications\Presences\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Communications\Presences\Item\ClearPresence\ClearPresenceRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Presences\Item\SetPresence\SetPresenceRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Presence;
+use Microsoft\Graph\Communications\Presences\Item\ClearPresence\ClearPresenceRequestBuilder;
+use Microsoft\Graph\Communications\Presences\Item\SetPresence\SetPresenceRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Presence;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

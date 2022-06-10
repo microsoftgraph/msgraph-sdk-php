@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\Ref;
+namespace Microsoft\Graph\Me\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\Ref;
 
 class RefRequestBuilderGetRequestConfiguration 
 {

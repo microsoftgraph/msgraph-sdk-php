@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\External\Connections\Count;
+namespace Microsoft\Graph\External\Connections\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

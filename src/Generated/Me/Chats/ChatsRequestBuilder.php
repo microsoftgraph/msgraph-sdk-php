@@ -1,14 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Chats;
+namespace Microsoft\Graph\Me\Chats;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Chats\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\Chat;
-use Microsoft\Graph\Generated\Models\ChatCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Me\Chats\Count\CountRequestBuilder;
+use Microsoft\Graph\Me\Chats\GetAllMessages\GetAllMessagesRequestBuilder;
+use Microsoft\Graph\Models\Chat;
+use Microsoft\Graph\Models\ChatCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -116,6 +117,14 @@ class ChatsRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
+    }
+
+    /**
+     * Provides operations to call the getAllMessages method.
+     * @return GetAllMessagesRequestBuilder
+    */
+    public function getAllMessages(): GetAllMessagesRequestBuilder {
+        return new GetAllMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
 
     /**

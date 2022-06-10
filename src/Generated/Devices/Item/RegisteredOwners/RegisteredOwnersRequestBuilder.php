@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Devices\Item\RegisteredOwners;
+namespace Microsoft\Graph\Devices\Item\RegisteredOwners;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\AppRoleAssignment\AppRoleAssignmentRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Endpoint\EndpointRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Ref\RefRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\ServicePrincipal\ServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\User\UserRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Devices\Item\RegisteredOwners\AppRoleAssignment\AppRoleAssignmentRequestBuilder;
+use Microsoft\Graph\Devices\Item\RegisteredOwners\Count\CountRequestBuilder;
+use Microsoft\Graph\Devices\Item\RegisteredOwners\Endpoint\EndpointRequestBuilder;
+use Microsoft\Graph\Devices\Item\RegisteredOwners\Ref\RefRequestBuilder;
+use Microsoft\Graph\Devices\Item\RegisteredOwners\ServicePrincipal\ServicePrincipalRequestBuilder;
+use Microsoft\Graph\Devices\Item\RegisteredOwners\User\UserRequestBuilder;
+use Microsoft\Graph\Models\DirectoryObjectCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item;
+namespace Microsoft\Graph\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UnifiedRoleEligibilityScheduleRequest;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\AppScope\AppScopeRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\Cancel\CancelRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\DirectoryScope\DirectoryScopeRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\Principal\PrincipalRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\RoleDefinition\RoleDefinitionRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\TargetSchedule\TargetScheduleRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\UnifiedRoleEligibilityScheduleRequest;
+use Microsoft\Graph\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\AppScope\AppScopeRequestBuilder;
+use Microsoft\Graph\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\Cancel\CancelRequestBuilder;
+use Microsoft\Graph\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\DirectoryScope\DirectoryScopeRequestBuilder;
+use Microsoft\Graph\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\Principal\PrincipalRequestBuilder;
+use Microsoft\Graph\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\RoleDefinition\RoleDefinitionRequestBuilder;
+use Microsoft\Graph\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\TargetSchedule\TargetScheduleRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

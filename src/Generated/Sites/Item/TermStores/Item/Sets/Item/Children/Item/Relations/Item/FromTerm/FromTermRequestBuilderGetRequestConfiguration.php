@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Sets\Item\Children\Item\Relations\Item\FromTerm;
+namespace Microsoft\Graph\Sites\Item\TermStores\Item\Sets\Item\Children\Item\Relations\Item\FromTerm;
 
 class FromTermRequestBuilderGetRequestConfiguration 
 {

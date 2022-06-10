@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security;
+namespace Microsoft\Graph\Security;
 
 class SecurityRequestBuilderGetRequestConfiguration 
 {

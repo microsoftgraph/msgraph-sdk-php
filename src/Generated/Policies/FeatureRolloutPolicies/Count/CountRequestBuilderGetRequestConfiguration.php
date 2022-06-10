@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Count;
+namespace Microsoft\Graph\Policies\FeatureRolloutPolicies\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

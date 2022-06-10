@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Organization\Item\Restore;
+namespace Microsoft\Graph\Organization\Item\Restore;
 
 class RestoreRequestBuilderPostRequestConfiguration 
 {

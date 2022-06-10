@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\Item;
+namespace Microsoft\Graph\Devices\Item\TransitiveMemberOf\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\Item\Application\ApplicationRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\Item\Device\DeviceRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\Item\Group\GroupRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\Item\OrgContact\OrgContactRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\Item\ServicePrincipal\ServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\Item\User\UserRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryObject;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Devices\Item\TransitiveMemberOf\Item\Application\ApplicationRequestBuilder;
+use Microsoft\Graph\Devices\Item\TransitiveMemberOf\Item\Device\DeviceRequestBuilder;
+use Microsoft\Graph\Devices\Item\TransitiveMemberOf\Item\Group\GroupRequestBuilder;
+use Microsoft\Graph\Devices\Item\TransitiveMemberOf\Item\OrgContact\OrgContactRequestBuilder;
+use Microsoft\Graph\Devices\Item\TransitiveMemberOf\Item\ServicePrincipal\ServicePrincipalRequestBuilder;
+use Microsoft\Graph\Devices\Item\TransitiveMemberOf\Item\User\UserRequestBuilder;
+use Microsoft\Graph\Models\DirectoryObject;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

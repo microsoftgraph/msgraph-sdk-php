@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\Preview;
+namespace Microsoft\Graph\Workbooks\Item\Preview;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

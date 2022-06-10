@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\CopyToNotebook;
+namespace Microsoft\Graph\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\CopyToNotebook;
 
 class CopyToNotebookRequestBuilderPostRequestConfiguration 
 {

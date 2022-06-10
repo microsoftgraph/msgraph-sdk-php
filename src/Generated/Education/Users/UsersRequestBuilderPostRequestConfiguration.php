@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Users;
+namespace Microsoft\Graph\Education\Users;
 
 class UsersRequestBuilderPostRequestConfiguration 
 {

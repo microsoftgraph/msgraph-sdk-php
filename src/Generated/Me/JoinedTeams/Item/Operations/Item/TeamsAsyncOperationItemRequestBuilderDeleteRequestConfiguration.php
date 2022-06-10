@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Operations\Item;
+namespace Microsoft\Graph\Me\JoinedTeams\Item\Operations\Item;
 
 class TeamsAsyncOperationItemRequestBuilderDeleteRequestConfiguration 
 {

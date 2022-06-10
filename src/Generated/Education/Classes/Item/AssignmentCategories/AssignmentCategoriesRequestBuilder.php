@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Classes\Item\AssignmentCategories;
+namespace Microsoft\Graph\Education\Classes\Item\AssignmentCategories;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Education\Classes\Item\AssignmentCategories\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\AssignmentCategories\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Models\EducationCategory;
-use Microsoft\Graph\Generated\Models\EducationCategoryCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Education\Classes\Item\AssignmentCategories\Count\CountRequestBuilder;
+use Microsoft\Graph\Education\Classes\Item\AssignmentCategories\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Models\EducationCategory;
+use Microsoft\Graph\Models\EducationCategoryCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

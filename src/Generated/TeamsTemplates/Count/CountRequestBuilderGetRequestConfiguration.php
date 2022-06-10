@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\TeamsTemplates\Count;
+namespace Microsoft\Graph\TeamsTemplates\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

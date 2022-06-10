@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredUsers\Item;
+namespace Microsoft\Graph\Me\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredUsers\Item;
 
 class DirectoryObjectItemRequestBuilderGetRequestConfiguration 
 {

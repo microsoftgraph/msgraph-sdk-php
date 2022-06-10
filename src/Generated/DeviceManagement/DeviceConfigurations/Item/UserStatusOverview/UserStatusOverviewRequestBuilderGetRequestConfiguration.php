@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\UserStatusOverview;
+namespace Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\UserStatusOverview;
 
 class UserStatusOverviewRequestBuilderGetRequestConfiguration 
 {

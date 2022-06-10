@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item;
+namespace Microsoft\Graph\Communications\Calls\Item;
 
 class CallItemRequestBuilderGetRequestConfiguration 
 {

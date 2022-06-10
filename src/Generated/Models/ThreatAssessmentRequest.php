@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -62,11 +62,14 @@ class ThreatAssessmentRequest extends Entity implements Parsable
      * @return ThreatAssessmentRequest
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ThreatAssessmentRequest {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.threatAssessmentRequest': return new ThreatAssessmentRequest();
+                case '#microsoft.graph.emailFileAssessmentRequest': return new EmailFileAssessmentRequest();
+                case '#microsoft.graph.fileAssessmentRequest': return new FileAssessmentRequest();
+                case '#microsoft.graph.mailAssessmentRequest': return new MailAssessmentRequest();
+                case '#microsoft.graph.urlAssessmentRequest': return new UrlAssessmentRequest();
             }
         }
         return new ThreatAssessmentRequest();

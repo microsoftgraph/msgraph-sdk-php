@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\ChecklistItems;
+namespace Microsoft\Graph\Users\Item\Todo\Lists\Item\Tasks\Item\ChecklistItems;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

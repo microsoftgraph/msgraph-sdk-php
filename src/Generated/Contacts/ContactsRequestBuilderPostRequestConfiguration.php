@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Contacts;
+namespace Microsoft\Graph\Contacts;
 
 class ContactsRequestBuilderPostRequestConfiguration 
 {

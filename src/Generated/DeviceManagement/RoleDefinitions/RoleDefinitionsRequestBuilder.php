@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions;
+namespace Microsoft\Graph\DeviceManagement\RoleDefinitions;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\RoleDefinition;
-use Microsoft\Graph\Generated\Models\RoleDefinitionCollectionResponse;
+use Microsoft\Graph\DeviceManagement\RoleDefinitions\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\RoleDefinition;
+use Microsoft\Graph\Models\RoleDefinitionCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

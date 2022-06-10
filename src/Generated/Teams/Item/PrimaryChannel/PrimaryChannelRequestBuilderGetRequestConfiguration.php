@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel;
+namespace Microsoft\Graph\Teams\Item\PrimaryChannel;
 
 class PrimaryChannelRequestBuilderGetRequestConfiguration 
 {

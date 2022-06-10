@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -41,7 +41,7 @@ class Application extends DirectoryObject implements Parsable
     private ?DateTime $createdDateTime = null;
     
     /**
-     * @var DirectoryObject|null $createdOnBehalfOf Read-only.
+     * @var DirectoryObject|null $createdOnBehalfOf The createdOnBehalfOf property
     */
     private ?DirectoryObject $createdOnBehalfOf = null;
     
@@ -260,7 +260,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the createdOnBehalfOf property value. Read-only.
+     * Gets the createdOnBehalfOf property value. The createdOnBehalfOf property
      * @return DirectoryObject|null
     */
     public function getCreatedOnBehalfOf(): ?DirectoryObject {
@@ -648,7 +648,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the createdOnBehalfOf property value. Read-only.
+     * Sets the createdOnBehalfOf property value. The createdOnBehalfOf property
      *  @param DirectoryObject|null $value Value to set for the createdOnBehalfOf property.
     */
     public function setCreatedOnBehalfOf(?DirectoryObject $value ): void {

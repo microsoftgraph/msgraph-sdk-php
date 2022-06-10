@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Insights\Shared;
+namespace Microsoft\Graph\Me\Insights\Shared;
 
 class SharedRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\Root;
+namespace Microsoft\Graph\Drive\Root;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

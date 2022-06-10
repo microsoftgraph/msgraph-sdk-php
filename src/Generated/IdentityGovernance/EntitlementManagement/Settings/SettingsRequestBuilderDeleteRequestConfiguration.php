@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Settings;
+namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\Settings;
 
 class SettingsRequestBuilderDeleteRequestConfiguration 
 {

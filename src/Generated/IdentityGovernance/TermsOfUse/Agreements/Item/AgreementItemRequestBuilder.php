@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item;
+namespace Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\Acceptances\AcceptancesRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\Acceptances\Item\AgreementAcceptanceItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\File\FileRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\Files\FilesRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\Files\Item\AgreementFileLocalizationItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Agreement;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\Item\Acceptances\AcceptancesRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\Item\Acceptances\Item\AgreementAcceptanceItemRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\Item\File\FileRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\Item\Files\FilesRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\Item\Files\Item\AgreementFileLocalizationItemRequestBuilder;
+use Microsoft\Graph\Models\Agreement;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -59,7 +59,7 @@ class AgreementItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.termsOfUse.agreements.item.acceptances.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.termsOfUse.agreements.item.acceptances.item collection
      * @param string $id Unique identifier of the item
      * @return AgreementAcceptanceItemRequestBuilder
     */
@@ -168,7 +168,7 @@ class AgreementItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.termsOfUse.agreements.item.files.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.termsOfUse.agreements.item.files.item collection
      * @param string $id Unique identifier of the item
      * @return AgreementFileLocalizationItemRequestBuilder
     */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\Operations;
+namespace Microsoft\Graph\Drives\Item\EscapedList\Operations;
 
 class OperationsRequestBuilderPostRequestConfiguration 
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Planner\Plans\Item\Buckets\Item\Tasks\Item\BucketTaskBoardFormat;
+namespace Microsoft\Graph\Users\Item\Planner\Plans\Item\Buckets\Item\Tasks\Item\BucketTaskBoardFormat;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\PlannerBucketTaskBoardTaskFormat;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\PlannerBucketTaskBoardTaskFormat;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

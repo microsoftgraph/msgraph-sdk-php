@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MdmWindowsInformationProtectionPolicies\Count;
+namespace Microsoft\Graph\DeviceAppManagement\MdmWindowsInformationProtectionPolicies\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

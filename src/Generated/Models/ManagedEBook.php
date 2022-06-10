@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -87,11 +87,11 @@ class ManagedEBook extends Entity implements Parsable
      * @return ManagedEBook
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedEBook {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.managedEBook': return new ManagedEBook();
+                case '#microsoft.graph.iosVppEBook': return new IosVppEBook();
             }
         }
         return new ManagedEBook();

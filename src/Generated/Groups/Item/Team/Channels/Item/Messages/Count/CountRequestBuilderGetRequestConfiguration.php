@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Messages\Count;
+namespace Microsoft\Graph\Groups\Item\Team\Channels\Item\Messages\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

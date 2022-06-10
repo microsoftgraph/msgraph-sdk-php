@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Columns;
+namespace Microsoft\Graph\Groups\Item\Sites\Item\Columns;
 
 class ColumnsRequestBuilderGetRequestConfiguration 
 {

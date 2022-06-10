@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\ManagedDevices\Item\CleanWindowsDevice;
+namespace Microsoft\Graph\Me\ManagedDevices\Item\CleanWindowsDevice;
 
 class CleanWindowsDeviceRequestBuilderPostRequestConfiguration 
 {

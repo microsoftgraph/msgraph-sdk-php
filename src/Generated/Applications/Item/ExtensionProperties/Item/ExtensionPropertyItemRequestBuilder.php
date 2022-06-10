@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\ExtensionProperties\Item;
+namespace Microsoft\Graph\Applications\Item\ExtensionProperties\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ExtensionProperty;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\ExtensionProperty;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

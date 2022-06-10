@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Device;
+namespace Microsoft\Graph\ServicePrincipals\Item\MemberOf\Device;
 
 class DeviceRequestBuilderGetRequestConfiguration 
 {

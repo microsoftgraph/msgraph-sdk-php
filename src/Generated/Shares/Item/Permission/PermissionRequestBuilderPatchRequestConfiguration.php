@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\Permission;
+namespace Microsoft\Graph\Shares\Item\Permission;
 
 class PermissionRequestBuilderPatchRequestConfiguration 
 {

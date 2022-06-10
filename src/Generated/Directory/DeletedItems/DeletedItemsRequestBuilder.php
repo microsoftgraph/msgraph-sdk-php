@@ -1,17 +1,20 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\DeletedItems;
+namespace Microsoft\Graph\Directory\DeletedItems;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Application\ApplicationRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Group\GroupRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\User\UserRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryObject;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Directory\DeletedItems\Application\ApplicationRequestBuilder;
+use Microsoft\Graph\Directory\DeletedItems\Count\CountRequestBuilder;
+use Microsoft\Graph\Directory\DeletedItems\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Directory\DeletedItems\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Directory\DeletedItems\Group\GroupRequestBuilder;
+use Microsoft\Graph\Directory\DeletedItems\User\UserRequestBuilder;
+use Microsoft\Graph\Directory\DeletedItems\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Models\DirectoryObject;
+use Microsoft\Graph\Models\DirectoryObjectCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -34,6 +37,20 @@ class DeletedItemsRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The getAvailableExtensionProperties property
+    */
+    public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
+        return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The getByIds property
+    */
+    public function getByIds(): GetByIdsRequestBuilder {
+        return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -63,6 +80,13 @@ class DeletedItemsRequestBuilder
     */
     public function user(): UserRequestBuilder {
         return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The validateProperties property
+    */
+    public function validateProperties(): ValidatePropertiesRequestBuilder {
+        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Sets\Item\Terms\Item\Children;
+namespace Microsoft\Graph\Sites\Item\TermStores\Item\Sets\Item\Terms\Item\Children;
 
 class ChildrenRequestBuilderPostRequestConfiguration 
 {

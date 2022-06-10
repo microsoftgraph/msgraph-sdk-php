@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Events\Item\Instances\Item;
+namespace Microsoft\Graph\Me\Events\Item\Instances\Item;
 
 class EventItemRequestBuilderGetRequestConfiguration 
 {

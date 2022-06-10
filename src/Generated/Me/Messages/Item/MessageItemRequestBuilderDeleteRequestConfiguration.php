@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Messages\Item;
+namespace Microsoft\Graph\Me\Messages\Item;
 
 class MessageItemRequestBuilderDeleteRequestConfiguration 
 {

@@ -1,10 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\FederationConfigurations\AvailableProviderTypes;
+namespace Microsoft\Graph\Directory\FederationConfigurations\AvailableProviderTypes;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -71,7 +72,11 @@ class AvailableProviderTypesRequestBuilder
     public function get(?AvailableProviderTypesRequestBuilderGetRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
         $requestInfo = $this->createGetRequestInformation($requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, array(AvailableProviderTypesResponse::class, 'createFromDiscriminatorValue'), $responseHandler, null);
+            $errorMappings = [
+            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            ];
+            return $this->requestAdapter->sendAsync($requestInfo, array(AvailableProviderTypesResponse::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

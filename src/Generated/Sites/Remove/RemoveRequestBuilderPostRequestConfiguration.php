@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Remove;
+namespace Microsoft\Graph\Sites\Remove;
 
 class RemoveRequestBuilderPostRequestConfiguration 
 {

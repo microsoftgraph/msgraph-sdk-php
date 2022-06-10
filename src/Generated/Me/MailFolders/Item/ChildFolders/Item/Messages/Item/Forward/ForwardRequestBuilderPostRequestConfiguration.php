@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\Messages\Item\Forward;
+namespace Microsoft\Graph\Me\MailFolders\Item\ChildFolders\Item\Messages\Item\Forward;
 
 class ForwardRequestBuilderPostRequestConfiguration 
 {

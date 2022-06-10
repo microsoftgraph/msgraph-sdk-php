@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Authentication\MicrosoftAuthenticatorMethods\Item\Device\MemberOf\Item\ServicePrincipal;
+namespace Microsoft\Graph\Me\Authentication\MicrosoftAuthenticatorMethods\Item\Device\MemberOf\Item\ServicePrincipal;
 
 class ServicePrincipalRequestBuilderGetRequestConfiguration 
 {

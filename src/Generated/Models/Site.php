@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
-use Microsoft\Graph\Generated\Models\TermStore\Store;
+use Microsoft\Graph\Models\TermStore\Store;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

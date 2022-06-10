@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\SingleValueExtendedProperties\Item;
+namespace Microsoft\Graph\Users\Item\MailFolders\Item\ChildFolders\Item\SingleValueExtendedProperties\Item;
 
 class SingleValueLegacyExtendedPropertyItemRequestBuilderDeleteRequestConfiguration 
 {

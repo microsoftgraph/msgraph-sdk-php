@@ -1,23 +1,23 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Submissions\Item;
+namespace Microsoft\Graph\Education\Classes\Item\Assignments\Item\Submissions\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Submissions\Item\EscapedReturn\ReturnRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Submissions\Item\Outcomes\Item\EducationOutcomeItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Submissions\Item\Outcomes\OutcomesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Submissions\Item\Reassign\ReassignRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Submissions\Item\Resources\Item\EducationSubmissionResourceItemRequestBuilder as MicrosoftGraphGeneratedEducationClassesItemAssignmentsItemSubmissionsItemResourcesItemEducationSubmissionResourceItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Submissions\Item\Resources\ResourcesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Submissions\Item\SetUpResourcesFolder\SetUpResourcesFolderRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Submissions\Item\Submit\SubmitRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Submissions\Item\SubmittedResources\Item\EducationSubmissionResourceItemRequestBuilder as MicrosoftGraphGeneratedEducationClassesItemAssignmentsItemSubmissionsItemSubmittedResourcesItemEducationSubmissionResourceItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Submissions\Item\SubmittedResources\SubmittedResourcesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Submissions\Item\Unsubmit\UnsubmitRequestBuilder;
-use Microsoft\Graph\Generated\Models\EducationSubmission;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Education\Classes\Item\Assignments\Item\Submissions\Item\EscapedReturn\ReturnRequestBuilder;
+use Microsoft\Graph\Education\Classes\Item\Assignments\Item\Submissions\Item\Outcomes\Item\EducationOutcomeItemRequestBuilder;
+use Microsoft\Graph\Education\Classes\Item\Assignments\Item\Submissions\Item\Outcomes\OutcomesRequestBuilder;
+use Microsoft\Graph\Education\Classes\Item\Assignments\Item\Submissions\Item\Reassign\ReassignRequestBuilder;
+use Microsoft\Graph\Education\Classes\Item\Assignments\Item\Submissions\Item\Resources\Item\EducationSubmissionResourceItemRequestBuilder as MicrosoftGraphEducationClassesItemAssignmentsItemSubmissionsItemResourcesItemEducationSubmissionResourceItemRequestBuilder;
+use Microsoft\Graph\Education\Classes\Item\Assignments\Item\Submissions\Item\Resources\ResourcesRequestBuilder;
+use Microsoft\Graph\Education\Classes\Item\Assignments\Item\Submissions\Item\SetUpResourcesFolder\SetUpResourcesFolderRequestBuilder;
+use Microsoft\Graph\Education\Classes\Item\Assignments\Item\Submissions\Item\Submit\SubmitRequestBuilder;
+use Microsoft\Graph\Education\Classes\Item\Assignments\Item\Submissions\Item\SubmittedResources\Item\EducationSubmissionResourceItemRequestBuilder as MicrosoftGraphEducationClassesItemAssignmentsItemSubmissionsItemSubmittedResourcesItemEducationSubmissionResourceItemRequestBuilder;
+use Microsoft\Graph\Education\Classes\Item\Assignments\Item\Submissions\Item\SubmittedResources\SubmittedResourcesRequestBuilder;
+use Microsoft\Graph\Education\Classes\Item\Assignments\Item\Submissions\Item\Unsubmit\UnsubmitRequestBuilder;
+use Microsoft\Graph\Models\EducationSubmission;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -217,7 +217,7 @@ class EducationSubmissionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.classes.item.assignments.item.submissions.item.outcomes.item collection
+     * Gets an item from the Microsoft\Graph.education.classes.item.assignments.item.submissions.item.outcomes.item collection
      * @param string $id Unique identifier of the item
      * @return EducationOutcomeItemRequestBuilder
     */
@@ -248,25 +248,25 @@ class EducationSubmissionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.classes.item.assignments.item.submissions.item.resources.item collection
+     * Gets an item from the Microsoft\Graph.education.classes.item.assignments.item.submissions.item.resources.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedEducationClassesItemAssignmentsItemSubmissionsItemResourcesItemEducationSubmissionResourceItemRequestBuilder
+     * @return MicrosoftGraphEducationClassesItemAssignmentsItemSubmissionsItemResourcesItemEducationSubmissionResourceItemRequestBuilder
     */
-    public function resourcesById(string $id): MicrosoftGraphGeneratedEducationClassesItemAssignmentsItemSubmissionsItemResourcesItemEducationSubmissionResourceItemRequestBuilder {
+    public function resourcesById(string $id): MicrosoftGraphEducationClassesItemAssignmentsItemSubmissionsItemResourcesItemEducationSubmissionResourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationSubmissionResource%2Did'] = $id;
-        return new MicrosoftGraphGeneratedEducationClassesItemAssignmentsItemSubmissionsItemResourcesItemEducationSubmissionResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphEducationClassesItemAssignmentsItemSubmissionsItemResourcesItemEducationSubmissionResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.classes.item.assignments.item.submissions.item.submittedResources.item collection
+     * Gets an item from the Microsoft\Graph.education.classes.item.assignments.item.submissions.item.submittedResources.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedEducationClassesItemAssignmentsItemSubmissionsItemSubmittedResourcesItemEducationSubmissionResourceItemRequestBuilder
+     * @return MicrosoftGraphEducationClassesItemAssignmentsItemSubmissionsItemSubmittedResourcesItemEducationSubmissionResourceItemRequestBuilder
     */
-    public function submittedResourcesById(string $id): MicrosoftGraphGeneratedEducationClassesItemAssignmentsItemSubmissionsItemSubmittedResourcesItemEducationSubmissionResourceItemRequestBuilder {
+    public function submittedResourcesById(string $id): MicrosoftGraphEducationClassesItemAssignmentsItemSubmissionsItemSubmittedResourcesItemEducationSubmissionResourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationSubmissionResource%2Did'] = $id;
-        return new MicrosoftGraphGeneratedEducationClassesItemAssignmentsItemSubmissionsItemSubmittedResourcesItemEducationSubmissionResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphEducationClassesItemAssignmentsItemSubmissionsItemSubmittedResourcesItemEducationSubmissionResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

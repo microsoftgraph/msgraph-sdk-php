@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetSharePointActivityUserCountsWithPeriod;
+namespace Microsoft\Graph\Reports\GetSharePointActivityUserCountsWithPeriod;
 
 class GetSharePointActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration 
 {

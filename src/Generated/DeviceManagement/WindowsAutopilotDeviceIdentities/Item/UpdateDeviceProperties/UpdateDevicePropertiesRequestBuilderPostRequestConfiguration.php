@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\UpdateDeviceProperties;
+namespace Microsoft\Graph\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\UpdateDeviceProperties;
 
 class UpdateDevicePropertiesRequestBuilderPostRequestConfiguration 
 {

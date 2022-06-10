@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -195,7 +195,7 @@ class Contact extends OutlookItem implements Parsable
     private ?string $yomiSurname = null;
     
     /**
-     * Instantiates a new contact and sets the default values.
+     * Instantiates a new Contact and sets the default values.
     */
     public function __construct() {
         parent::__construct();

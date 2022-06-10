@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors;
+namespace Microsoft\Graph\DeviceManagement\MobileThreatDefenseConnectors;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\MobileThreatDefenseConnector;
-use Microsoft\Graph\Generated\Models\MobileThreatDefenseConnectorCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\DeviceManagement\MobileThreatDefenseConnectors\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\MobileThreatDefenseConnector;
+use Microsoft\Graph\Models\MobileThreatDefenseConnectorCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

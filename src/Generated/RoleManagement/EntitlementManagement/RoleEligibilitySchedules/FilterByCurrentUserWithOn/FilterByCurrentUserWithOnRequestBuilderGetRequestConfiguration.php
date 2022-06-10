@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilitySchedules\FilterByCurrentUserWithOn;
+namespace Microsoft\Graph\RoleManagement\EntitlementManagement\RoleEligibilitySchedules\FilterByCurrentUserWithOn;
 
 class FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration 
 {

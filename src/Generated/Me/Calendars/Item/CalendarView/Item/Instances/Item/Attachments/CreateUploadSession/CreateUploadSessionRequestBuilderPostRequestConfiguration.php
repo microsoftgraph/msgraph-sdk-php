@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\Item\Instances\Item\Attachments\CreateUploadSession;
+namespace Microsoft\Graph\Me\Calendars\Item\CalendarView\Item\Instances\Item\Attachments\CreateUploadSession;
 
 class CreateUploadSessionRequestBuilderPostRequestConfiguration 
 {

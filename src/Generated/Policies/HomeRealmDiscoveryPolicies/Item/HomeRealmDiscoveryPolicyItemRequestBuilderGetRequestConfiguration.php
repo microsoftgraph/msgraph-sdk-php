@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\HomeRealmDiscoveryPolicies\Item;
+namespace Microsoft\Graph\Policies\HomeRealmDiscoveryPolicies\Item;
 
 class HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration 
 {

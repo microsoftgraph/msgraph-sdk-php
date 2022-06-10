@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\ConditionalAccess;
+namespace Microsoft\Graph\Identity\ConditionalAccess;
 
 class ConditionalAccessRequestBuilderPatchRequestConfiguration 
 {

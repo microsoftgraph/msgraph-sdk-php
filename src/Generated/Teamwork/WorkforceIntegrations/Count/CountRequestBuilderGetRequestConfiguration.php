@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\Count;
+namespace Microsoft\Graph\Teamwork\WorkforceIntegrations\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

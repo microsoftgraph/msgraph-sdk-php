@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Events\Item\Instances\Item\Decline;
+namespace Microsoft\Graph\Groups\Item\Events\Item\Instances\Item\Decline;
 
-use Microsoft\Graph\Generated\Models\TimeSlot;
+use Microsoft\Graph\Models\TimeSlot;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

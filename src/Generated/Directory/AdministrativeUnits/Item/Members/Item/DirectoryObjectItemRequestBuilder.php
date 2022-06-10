@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\Item;
+namespace Microsoft\Graph\Directory\AdministrativeUnits\Item\Members\Item;
 
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\Item\Application\ApplicationRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\Item\Device\DeviceRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\Item\Group\GroupRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\Item\OrgContact\OrgContactRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\Item\Ref\RefRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\Item\ServicePrincipal\ServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\Item\User\UserRequestBuilder;
+use Microsoft\Graph\Directory\AdministrativeUnits\Item\Members\Item\Application\ApplicationRequestBuilder;
+use Microsoft\Graph\Directory\AdministrativeUnits\Item\Members\Item\Device\DeviceRequestBuilder;
+use Microsoft\Graph\Directory\AdministrativeUnits\Item\Members\Item\Group\GroupRequestBuilder;
+use Microsoft\Graph\Directory\AdministrativeUnits\Item\Members\Item\OrgContact\OrgContactRequestBuilder;
+use Microsoft\Graph\Directory\AdministrativeUnits\Item\Members\Item\Ref\RefRequestBuilder;
+use Microsoft\Graph\Directory\AdministrativeUnits\Item\Members\Item\ServicePrincipal\ServicePrincipalRequestBuilder;
+use Microsoft\Graph\Directory\AdministrativeUnits\Item\Members\Item\User\UserRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
 class DirectoryObjectItemRequestBuilder 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OfferShiftRequests\Item;
+namespace Microsoft\Graph\Me\JoinedTeams\Item\Schedule\OfferShiftRequests\Item;
 
 class OfferShiftRequestItemRequestBuilderDeleteRequestConfiguration 
 {

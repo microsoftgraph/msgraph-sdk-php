@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -41,11 +41,12 @@ class Place extends Entity implements Parsable
      * @return Place
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): Place {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.place': return new Place();
+                case '#microsoft.graph.room': return new Room();
+                case '#microsoft.graph.roomList': return new RoomList();
             }
         }
         return new Place();

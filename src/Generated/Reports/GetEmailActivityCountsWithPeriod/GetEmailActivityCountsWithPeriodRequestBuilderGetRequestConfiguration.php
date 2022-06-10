@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetEmailActivityCountsWithPeriod;
+namespace Microsoft\Graph\Reports\GetEmailActivityCountsWithPeriod;
 
 class GetEmailActivityCountsWithPeriodRequestBuilderGetRequestConfiguration 
 {

@@ -1,14 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\PermissionGrants;
+namespace Microsoft\Graph\Groups\Item\PermissionGrants;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrant;
-use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrantCollectionResponse;
+use Microsoft\Graph\Groups\Item\PermissionGrants\Count\CountRequestBuilder;
+use Microsoft\Graph\Groups\Item\PermissionGrants\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Groups\Item\PermissionGrants\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Groups\Item\PermissionGrants\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\ResourceSpecificPermissionGrant;
+use Microsoft\Graph\Models\ResourceSpecificPermissionGrantCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -27,6 +30,20 @@ class PermissionGrantsRequestBuilder
     }
     
     /**
+     * The getAvailableExtensionProperties property
+    */
+    public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
+        return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The getByIds property
+    */
+    public function getByIds(): GetByIdsRequestBuilder {
+        return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -40,6 +57,13 @@ class PermissionGrantsRequestBuilder
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
+    
+    /**
+     * The validateProperties property
+    */
+    public function validateProperties(): ValidatePropertiesRequestBuilder {
+        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Instantiates a new PermissionGrantsRequestBuilder and sets the default values.

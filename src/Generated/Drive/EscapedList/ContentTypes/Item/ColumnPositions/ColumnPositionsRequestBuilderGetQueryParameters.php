@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\ColumnPositions;
+namespace Microsoft\Graph\Drive\EscapedList\ContentTypes\Item\ColumnPositions;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

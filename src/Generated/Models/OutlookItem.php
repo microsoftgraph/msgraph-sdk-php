@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -42,11 +42,14 @@ class OutlookItem extends Entity implements Parsable
      * @return OutlookItem
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): OutlookItem {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.outlookItem': return new OutlookItem();
+                case '#microsoft.graph.contact': return new Contact();
+                case '#microsoft.graph.event': return new Event();
+                case '#microsoft.graph.message': return new Message();
+                case '#microsoft.graph.post': return new Post();
             }
         }
         return new OutlookItem();

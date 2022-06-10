@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Pages\Item\OnenotePatchContent;
+namespace Microsoft\Graph\Groups\Item\Sites\Item\Onenote\Pages\Item\OnenotePatchContent;
 
 class OnenotePatchContentRequestBuilderPostRequestConfiguration 
 {

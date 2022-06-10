@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Onenote;
+namespace Microsoft\Graph\Me\Onenote;
 
 class OnenoteRequestBuilderGetRequestConfiguration 
 {

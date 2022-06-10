@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\CertificateBasedAuthConfiguration;
+namespace Microsoft\Graph\CertificateBasedAuthConfiguration;
 
 class CertificateBasedAuthConfigurationRequestBuilderPostRequestConfiguration 
 {

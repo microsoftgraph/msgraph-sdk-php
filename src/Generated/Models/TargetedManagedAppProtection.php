@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -31,11 +31,12 @@ class TargetedManagedAppProtection extends ManagedAppProtection implements Parsa
      * @return TargetedManagedAppProtection
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): TargetedManagedAppProtection {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.targetedManagedAppProtection': return new TargetedManagedAppProtection();
+                case '#microsoft.graph.androidManagedAppProtection': return new AndroidManagedAppProtection();
+                case '#microsoft.graph.iosManagedAppProtection': return new IosManagedAppProtection();
             }
         }
         return new TargetedManagedAppProtection();

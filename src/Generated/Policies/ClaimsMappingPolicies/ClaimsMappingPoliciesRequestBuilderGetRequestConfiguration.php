@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\ClaimsMappingPolicies;
+namespace Microsoft\Graph\Policies\ClaimsMappingPolicies;
 
 class ClaimsMappingPoliciesRequestBuilderGetRequestConfiguration 
 {

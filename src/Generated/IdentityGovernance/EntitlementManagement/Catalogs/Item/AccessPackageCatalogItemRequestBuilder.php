@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item;
+namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\Catalogs\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\AccessPackagesRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\AccessPackageItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\AccessPackageCatalog;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\AccessPackagesRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\AccessPackageItemRequestBuilder;
+use Microsoft\Graph\Models\AccessPackageCatalog;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -42,7 +42,7 @@ class AccessPackageCatalogItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.catalogs.item.accessPackages.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.entitlementManagement.catalogs.item.accessPackages.item collection
      * @param string $id Unique identifier of the item
      * @return AccessPackageItemRequestBuilder
     */

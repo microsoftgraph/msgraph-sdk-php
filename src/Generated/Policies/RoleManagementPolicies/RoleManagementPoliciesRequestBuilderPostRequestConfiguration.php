@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\RoleManagementPolicies;
+namespace Microsoft\Graph\Policies\RoleManagementPolicies;
 
 class RoleManagementPoliciesRequestBuilderPostRequestConfiguration 
 {

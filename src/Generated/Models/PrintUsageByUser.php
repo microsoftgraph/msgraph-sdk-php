@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -14,7 +14,7 @@ class PrintUsageByUser extends PrintUsage implements Parsable
     private ?string $userPrincipalName = null;
     
     /**
-     * Instantiates a new printUsageByUser and sets the default values.
+     * Instantiates a new PrintUsageByUser and sets the default values.
     */
     public function __construct() {
         parent::__construct();

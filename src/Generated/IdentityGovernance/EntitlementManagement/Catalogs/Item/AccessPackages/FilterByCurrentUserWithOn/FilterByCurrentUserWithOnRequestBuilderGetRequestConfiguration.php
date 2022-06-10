@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\FilterByCurrentUserWithOn;
+namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\FilterByCurrentUserWithOn;
 
 class FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration 
 {

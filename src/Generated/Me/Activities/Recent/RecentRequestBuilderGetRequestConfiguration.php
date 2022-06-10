@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Activities\Recent;
+namespace Microsoft\Graph\Me\Activities\Recent;
 
 class RecentRequestBuilderGetRequestConfiguration 
 {

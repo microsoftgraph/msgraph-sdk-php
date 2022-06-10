@@ -1,11 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\FindMeetingTimes;
+namespace Microsoft\Graph\Users\Item\FindMeetingTimes;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\MeetingTimeSuggestionsResult;
+use Microsoft\Graph\Models\MeetingTimeSuggestionsResult;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -75,7 +76,11 @@ class FindMeetingTimesRequestBuilder
     public function post(FindMeetingTimesPostRequestBody $body, ?FindMeetingTimesRequestBuilderPostRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
         $requestInfo = $this->createPostRequestInformation($body, $requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, array(MeetingTimeSuggestionsResult::class, 'createFromDiscriminatorValue'), $responseHandler, null);
+            $errorMappings = [
+            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            ];
+            return $this->requestAdapter->sendAsync($requestInfo, array(MeetingTimeSuggestionsResult::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

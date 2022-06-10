@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item;
+namespace Microsoft\Graph\Policies\FeatureRolloutPolicies\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\FeatureRolloutPolicy;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\AppliesToRequestBuilder;
-use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Models\FeatureRolloutPolicy;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Policies\FeatureRolloutPolicies\Item\AppliesTo\AppliesToRequestBuilder;
+use Microsoft\Graph\Policies\FeatureRolloutPolicies\Item\AppliesTo\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -42,7 +42,7 @@ class FeatureRolloutPolicyItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.policies.featureRolloutPolicies.item.appliesTo.item collection
+     * Gets an item from the Microsoft\Graph.policies.featureRolloutPolicies.item.appliesTo.item collection
      * @param string $id Unique identifier of the item
      * @return DirectoryObjectItemRequestBuilder
     */

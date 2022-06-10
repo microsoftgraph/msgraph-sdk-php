@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners\Item;
+namespace Microsoft\Graph\DeviceManagement\DeviceManagementPartners\Item;
 
 class DeviceManagementPartnerItemRequestBuilderGetRequestConfiguration 
 {

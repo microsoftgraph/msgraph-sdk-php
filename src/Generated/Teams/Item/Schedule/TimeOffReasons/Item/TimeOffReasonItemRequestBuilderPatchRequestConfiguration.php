@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Schedule\TimeOffReasons\Item;
+namespace Microsoft\Graph\Teams\Item\Schedule\TimeOffReasons\Item;
 
 class TimeOffReasonItemRequestBuilderPatchRequestConfiguration 
 {

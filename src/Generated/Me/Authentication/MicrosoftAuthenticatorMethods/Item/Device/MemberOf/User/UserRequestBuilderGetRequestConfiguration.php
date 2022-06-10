@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Authentication\MicrosoftAuthenticatorMethods\Item\Device\MemberOf\User;
+namespace Microsoft\Graph\Me\Authentication\MicrosoftAuthenticatorMethods\Item\Device\MemberOf\User;
 
 class UserRequestBuilderGetRequestConfiguration 
 {

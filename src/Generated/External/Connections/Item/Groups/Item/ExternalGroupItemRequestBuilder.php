@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\External\Connections\Item\Groups\Item;
+namespace Microsoft\Graph\External\Connections\Item\Groups\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\External\Connections\Item\Groups\Item\Members\Item\IdentityItemRequestBuilder;
-use Microsoft\Graph\Generated\External\Connections\Item\Groups\Item\Members\MembersRequestBuilder;
-use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalGroup;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\External\Connections\Item\Groups\Item\Members\Item\IdentityItemRequestBuilder;
+use Microsoft\Graph\External\Connections\Item\Groups\Item\Members\MembersRequestBuilder;
+use Microsoft\Graph\Models\ExternalConnectors\ExternalGroup;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -74,7 +74,7 @@ class ExternalGroupItemRequestBuilder
     }
 
     /**
-     * Read-only. Nullable.
+     * Get groups from external
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -140,7 +140,7 @@ class ExternalGroupItemRequestBuilder
     }
 
     /**
-     * Read-only. Nullable.
+     * Get groups from external
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -159,7 +159,7 @@ class ExternalGroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.external.connections.item.groups.item.members.item collection
+     * Gets an item from the Microsoft\Graph.external.connections.item.groups.item.members.item collection
      * @param string $id Unique identifier of the item
      * @return IdentityItemRequestBuilder
     */

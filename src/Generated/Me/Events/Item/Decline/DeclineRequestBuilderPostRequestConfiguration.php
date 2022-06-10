@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Events\Item\Decline;
+namespace Microsoft\Graph\Me\Events\Item\Decline;
 
 class DeclineRequestBuilderPostRequestConfiguration 
 {

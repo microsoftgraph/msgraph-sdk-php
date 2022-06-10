@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Contacts\Item\CheckMemberObjects;
+namespace Microsoft\Graph\Contacts\Item\CheckMemberObjects;
 
 class CheckMemberObjectsRequestBuilderPostRequestConfiguration 
 {

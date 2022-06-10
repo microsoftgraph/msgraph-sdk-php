@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatusSummary;
+namespace Microsoft\Graph\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatusSummary;
 
 class DeviceStatusSummaryRequestBuilderGetRequestConfiguration 
 {

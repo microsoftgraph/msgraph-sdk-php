@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Team;
+namespace Microsoft\Graph\Privacy\SubjectRightsRequests\Item\Team;
 
 class TeamRequestBuilderGetRequestConfiguration 
 {

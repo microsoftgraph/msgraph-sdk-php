@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\Reports\ExportJobs;
+namespace Microsoft\Graph\DeviceManagement\Reports\ExportJobs;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\ExportJobs\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\DeviceManagementExportJob;
-use Microsoft\Graph\Generated\Models\DeviceManagementExportJobCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\DeviceManagement\Reports\ExportJobs\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\DeviceManagementExportJob;
+use Microsoft\Graph\Models\DeviceManagementExportJobCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item;
+namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\Assignments\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\AccessPackage\AccessPackageRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\AssignmentPolicy\AssignmentPolicyRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\Reprocess\ReprocessRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\Target\TargetRequestBuilder;
-use Microsoft\Graph\Generated\Models\AccessPackageAssignment;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\Assignments\Item\AccessPackage\AccessPackageRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\Assignments\Item\AssignmentPolicy\AssignmentPolicyRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\Assignments\Item\Reprocess\ReprocessRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\Assignments\Item\Target\TargetRequestBuilder;
+use Microsoft\Graph\Models\AccessPackageAssignment;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

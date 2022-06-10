@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Drives\Item\Root\Thumbnails;
+namespace Microsoft\Graph\Me\Drives\Item\Root\Thumbnails;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Drives\Item\Root\Thumbnails\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ThumbnailSet;
-use Microsoft\Graph\Generated\Models\ThumbnailSetCollectionResponse;
+use Microsoft\Graph\Me\Drives\Item\Root\Thumbnails\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\ThumbnailSet;
+use Microsoft\Graph\Models\ThumbnailSetCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

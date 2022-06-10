@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Permissions\Item;
+namespace Microsoft\Graph\Sites\Item\Permissions\Item;
 
 class PermissionItemRequestBuilderDeleteRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\DirectReports\User\Count;
+namespace Microsoft\Graph\Me\DirectReports\User\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

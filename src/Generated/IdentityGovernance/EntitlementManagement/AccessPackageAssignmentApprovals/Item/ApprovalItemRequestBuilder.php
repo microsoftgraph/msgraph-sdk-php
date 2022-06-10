@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackageAssignmentApprovals\Item;
+namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\AccessPackageAssignmentApprovals\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackageAssignmentApprovals\Item\Stages\Item\ApprovalStageItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackageAssignmentApprovals\Item\Stages\StagesRequestBuilder;
-use Microsoft\Graph\Generated\Models\Approval;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\AccessPackageAssignmentApprovals\Item\Stages\Item\ApprovalStageItemRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\AccessPackageAssignmentApprovals\Item\Stages\StagesRequestBuilder;
+use Microsoft\Graph\Models\Approval;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -179,7 +179,7 @@ class ApprovalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.accessPackageAssignmentApprovals.item.stages.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.entitlementManagement.accessPackageAssignmentApprovals.item.stages.item collection
      * @param string $id Unique identifier of the item
      * @return ApprovalStageItemRequestBuilder
     */

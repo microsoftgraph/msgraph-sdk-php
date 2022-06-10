@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\Checkout;
+namespace Microsoft\Graph\Workbooks\Item\Checkout;
 
 class CheckoutRequestBuilderPostRequestConfiguration 
 {

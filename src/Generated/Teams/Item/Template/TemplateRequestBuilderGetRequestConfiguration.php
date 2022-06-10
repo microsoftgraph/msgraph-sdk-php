@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Template;
+namespace Microsoft\Graph\Teams\Item\Template;
 
 class TemplateRequestBuilderGetRequestConfiguration 
 {

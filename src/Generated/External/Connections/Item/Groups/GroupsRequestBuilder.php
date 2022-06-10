@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\External\Connections\Item\Groups;
+namespace Microsoft\Graph\External\Connections\Item\Groups;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\External\Connections\Item\Groups\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalGroup;
-use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalGroupCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\External\Connections\Item\Groups\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ExternalConnectors\ExternalGroup;
+use Microsoft\Graph\Models\ExternalConnectors\ExternalGroupCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -53,7 +53,7 @@ class GroupsRequestBuilder
     }
 
     /**
-     * Read-only. Nullable.
+     * Get groups from external
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +100,7 @@ class GroupsRequestBuilder
     }
 
     /**
-     * Read-only. Nullable.
+     * Get groups from external
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

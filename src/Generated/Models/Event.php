@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -220,7 +220,7 @@ class Event extends OutlookItem implements Parsable
     private ?string $webLink = null;
     
     /**
-     * Instantiates a new event and sets the default values.
+     * Instantiates a new Event and sets the default values.
     */
     public function __construct() {
         parent::__construct();

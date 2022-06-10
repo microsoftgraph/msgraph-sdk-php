@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\ListItem\Analytics;
+namespace Microsoft\Graph\Shares\Item\ListItem\Analytics;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

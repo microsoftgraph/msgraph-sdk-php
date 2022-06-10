@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Drives\Item\Items\Item\Permissions;
+namespace Microsoft\Graph\Groups\Item\Drives\Item\Items\Item\Permissions;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

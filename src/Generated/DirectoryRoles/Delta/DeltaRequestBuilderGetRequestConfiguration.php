@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoles\Delta;
+namespace Microsoft\Graph\DirectoryRoles\Delta;
 
 class DeltaRequestBuilderGetRequestConfiguration 
 {

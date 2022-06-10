@@ -1,15 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo;
+namespace Microsoft\Graph\Policies\FeatureRolloutPolicies\Item\AppliesTo;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\DirectoryObject;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Ref\RefRequestBuilder;
+use Microsoft\Graph\Models\DirectoryObject;
+use Microsoft\Graph\Models\DirectoryObjectCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Policies\FeatureRolloutPolicies\Item\AppliesTo\Count\CountRequestBuilder;
+use Microsoft\Graph\Policies\FeatureRolloutPolicies\Item\AppliesTo\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Policies\FeatureRolloutPolicies\Item\AppliesTo\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Policies\FeatureRolloutPolicies\Item\AppliesTo\Ref\RefRequestBuilder;
+use Microsoft\Graph\Policies\FeatureRolloutPolicies\Item\AppliesTo\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -25,6 +28,20 @@ class AppliesToRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The getAvailableExtensionProperties property
+    */
+    public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
+        return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The getByIds property
+    */
+    public function getByIds(): GetByIdsRequestBuilder {
+        return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -48,6 +65,13 @@ class AppliesToRequestBuilder
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
+    
+    /**
+     * The validateProperties property
+    */
+    public function validateProperties(): ValidatePropertiesRequestBuilder {
+        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Instantiates a new AppliesToRequestBuilder and sets the default values.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\Item\Replies\Item\HostedContents\Count;
+namespace Microsoft\Graph\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\Item\Replies\Item\HostedContents\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

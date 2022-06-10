@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages\Item\HostedContents;
+namespace Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\Messages\Item\HostedContents;
 
 class HostedContentsRequestBuilderPostRequestConfiguration 
 {

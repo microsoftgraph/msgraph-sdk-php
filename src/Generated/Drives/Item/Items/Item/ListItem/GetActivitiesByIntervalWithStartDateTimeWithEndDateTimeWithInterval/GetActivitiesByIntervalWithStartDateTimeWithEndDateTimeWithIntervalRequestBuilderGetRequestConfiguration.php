@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\ListItem\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval;
+namespace Microsoft\Graph\Drives\Item\Items\Item\ListItem\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval;
 
 class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilderGetRequestConfiguration 
 {

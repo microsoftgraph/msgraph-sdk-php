@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -72,11 +72,12 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return OrganizationalBrandingProperties
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): OrganizationalBrandingProperties {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.organizationalBrandingProperties': return new OrganizationalBrandingProperties();
+                case '#microsoft.graph.organizationalBranding': return new OrganizationalBranding();
+                case '#microsoft.graph.organizationalBrandingLocalization': return new OrganizationalBrandingLocalization();
             }
         }
         return new OrganizationalBrandingProperties();

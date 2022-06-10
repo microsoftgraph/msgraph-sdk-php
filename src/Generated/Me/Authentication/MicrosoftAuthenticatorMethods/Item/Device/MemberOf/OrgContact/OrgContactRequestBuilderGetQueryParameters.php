@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Authentication\MicrosoftAuthenticatorMethods\Item\Device\MemberOf\OrgContact;
+namespace Microsoft\Graph\Me\Authentication\MicrosoftAuthenticatorMethods\Item\Device\MemberOf\OrgContact;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

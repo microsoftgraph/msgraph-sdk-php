@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Import;
+namespace Microsoft\Graph\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Import;
 
-use Microsoft\Graph\Generated\Models\ImportedWindowsAutopilotDeviceIdentity;
+use Microsoft\Graph\Models\ImportedWindowsAutopilotDeviceIdentity;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

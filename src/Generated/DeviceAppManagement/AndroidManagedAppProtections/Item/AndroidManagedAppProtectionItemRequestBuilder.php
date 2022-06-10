@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\AndroidManagedAppProtections\Item;
+namespace Microsoft\Graph\DeviceAppManagement\AndroidManagedAppProtections\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceAppManagement\AndroidManagedAppProtections\Item\Apps\AppsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\AndroidManagedAppProtections\Item\Apps\Item\ManagedMobileAppItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\AndroidManagedAppProtections\Item\DeploymentSummary\DeploymentSummaryRequestBuilder;
-use Microsoft\Graph\Generated\Models\AndroidManagedAppProtection;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\DeviceAppManagement\AndroidManagedAppProtections\Item\Apps\AppsRequestBuilder;
+use Microsoft\Graph\DeviceAppManagement\AndroidManagedAppProtections\Item\Apps\Item\ManagedMobileAppItemRequestBuilder;
+use Microsoft\Graph\DeviceAppManagement\AndroidManagedAppProtections\Item\DeploymentSummary\DeploymentSummaryRequestBuilder;
+use Microsoft\Graph\Models\AndroidManagedAppProtection;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -50,7 +50,7 @@ class AndroidManagedAppProtectionItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.androidManagedAppProtections.item.apps.item collection
+     * Gets an item from the Microsoft\Graph.deviceAppManagement.androidManagedAppProtections.item.apps.item collection
      * @param string $id Unique identifier of the item
      * @return ManagedMobileAppItemRequestBuilder
     */

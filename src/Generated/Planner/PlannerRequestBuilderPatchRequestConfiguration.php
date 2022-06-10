@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Planner;
+namespace Microsoft\Graph\Planner;
 
 class PlannerRequestBuilderPatchRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\AuthenticationMethodsPolicy\AuthenticationMethodConfigurations\Item;
+namespace Microsoft\Graph\Policies\AuthenticationMethodsPolicy\AuthenticationMethodConfigurations\Item;
 
 class AuthenticationMethodConfigurationItemRequestBuilderPatchRequestConfiguration 
 {

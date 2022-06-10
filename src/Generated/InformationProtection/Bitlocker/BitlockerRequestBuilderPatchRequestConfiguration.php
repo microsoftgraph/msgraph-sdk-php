@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\InformationProtection\Bitlocker;
+namespace Microsoft\Graph\InformationProtection\Bitlocker;
 
 class BitlockerRequestBuilderPatchRequestConfiguration 
 {

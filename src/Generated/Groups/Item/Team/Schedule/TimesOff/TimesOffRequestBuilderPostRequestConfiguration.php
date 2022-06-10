@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Schedule\TimesOff;
+namespace Microsoft\Graph\Groups\Item\Team\Schedule\TimesOff;
 
 class TimesOffRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\DeviceManagementTroubleshootingEvents;
+namespace Microsoft\Graph\Users\Item\DeviceManagementTroubleshootingEvents;
 
 class DeviceManagementTroubleshootingEventsRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\Item\InstalledApps\Item\Upgrade;
+namespace Microsoft\Graph\Chats\Item\InstalledApps\Item\Upgrade;
 
 class UpgradeRequestBuilderPostRequestConfiguration 
 {

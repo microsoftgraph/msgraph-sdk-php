@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Todo;
+namespace Microsoft\Graph\Users\Item\Todo;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Todo;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\TodoTaskListItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\ListsRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Todo;
+use Microsoft\Graph\Users\Item\Todo\Lists\Item\TodoTaskListItemRequestBuilder;
+use Microsoft\Graph\Users\Item\Todo\Lists\ListsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -159,7 +159,7 @@ class TodoRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.todo.lists.item collection
+     * Gets an item from the Microsoft\Graph.users.item.todo.lists.item collection
      * @param string $id Unique identifier of the item
      * @return TodoTaskListItemRequestBuilder
     */

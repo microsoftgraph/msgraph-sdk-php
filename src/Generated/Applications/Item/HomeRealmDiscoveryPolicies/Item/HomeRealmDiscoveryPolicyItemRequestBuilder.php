@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\HomeRealmDiscoveryPolicies\Item;
+namespace Microsoft\Graph\Applications\Item\HomeRealmDiscoveryPolicies\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\HomeRealmDiscoveryPolicy;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\HomeRealmDiscoveryPolicy;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\Answer;
+namespace Microsoft\Graph\Communications\Calls\Item\Answer;
 
-use Microsoft\Graph\Generated\Models\IncomingCallOptions;
-use Microsoft\Graph\Generated\Models\MediaConfig;
+use Microsoft\Graph\Models\IncomingCallOptions;
+use Microsoft\Graph\Models\MediaConfig;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

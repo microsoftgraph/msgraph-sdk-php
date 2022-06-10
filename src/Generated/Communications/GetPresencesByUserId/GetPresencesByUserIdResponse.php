@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\GetPresencesByUserId;
+namespace Microsoft\Graph\Communications\GetPresencesByUserId;
 
-use Microsoft\Graph\Generated\Models\Presence;
+use Microsoft\Graph\Models\Presence;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

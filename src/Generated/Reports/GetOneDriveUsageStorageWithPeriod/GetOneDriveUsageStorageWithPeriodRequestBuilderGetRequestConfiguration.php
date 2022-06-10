@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetOneDriveUsageStorageWithPeriod;
+namespace Microsoft\Graph\Reports\GetOneDriveUsageStorageWithPeriod;
 
 class GetOneDriveUsageStorageWithPeriodRequestBuilderGetRequestConfiguration 
 {

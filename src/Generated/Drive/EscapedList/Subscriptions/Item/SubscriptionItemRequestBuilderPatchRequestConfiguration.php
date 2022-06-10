@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\EscapedList\Subscriptions\Item;
+namespace Microsoft\Graph\Drive\EscapedList\Subscriptions\Item;
 
 class SubscriptionItemRequestBuilderPatchRequestConfiguration 
 {

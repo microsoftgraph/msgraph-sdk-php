@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\AcceptRecommendations;
+namespace Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\AcceptRecommendations;
 
 class AcceptRecommendationsRequestBuilderPostRequestConfiguration 
 {

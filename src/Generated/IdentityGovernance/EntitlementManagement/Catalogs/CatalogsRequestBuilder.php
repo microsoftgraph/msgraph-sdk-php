@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs;
+namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\Catalogs;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\AccessPackageCatalog;
-use Microsoft\Graph\Generated\Models\AccessPackageCatalogCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\Catalogs\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\AccessPackageCatalog;
+use Microsoft\Graph\Models\AccessPackageCatalogCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

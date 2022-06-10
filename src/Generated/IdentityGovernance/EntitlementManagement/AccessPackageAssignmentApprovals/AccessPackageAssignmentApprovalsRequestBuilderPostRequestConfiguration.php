@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackageAssignmentApprovals;
+namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\AccessPackageAssignmentApprovals;
 
 class AccessPackageAssignmentApprovalsRequestBuilderPostRequestConfiguration 
 {

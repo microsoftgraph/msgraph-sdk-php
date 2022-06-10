@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\ManagedDevices\Item\RequestRemoteAssistance;
+namespace Microsoft\Graph\Me\ManagedDevices\Item\RequestRemoteAssistance;
 
 class RequestRemoteAssistanceRequestBuilderPostRequestConfiguration 
 {

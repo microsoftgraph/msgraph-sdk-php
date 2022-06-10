@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\CalendarView\Item\Instances\Item\Calendar;
+namespace Microsoft\Graph\Users\Item\CalendarView\Item\Instances\Item\Calendar;
 
 class CalendarRequestBuilderGetRequestConfiguration 
 {

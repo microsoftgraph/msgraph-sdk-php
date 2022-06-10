@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DomainDnsRecords\Count;
+namespace Microsoft\Graph\DomainDnsRecords\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\ContactFolders\Item\ChildFolders\Item\SingleValueExtendedProperties\Item;
+namespace Microsoft\Graph\Me\ContactFolders\Item\ChildFolders\Item\SingleValueExtendedProperties\Item;
 
 class SingleValueLegacyExtendedPropertyItemRequestBuilderPatchRequestConfiguration 
 {

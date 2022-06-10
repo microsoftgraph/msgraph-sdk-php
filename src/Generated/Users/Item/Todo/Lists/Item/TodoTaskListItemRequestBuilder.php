@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item;
+namespace Microsoft\Graph\Users\Item\Todo\Lists\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TodoTaskList;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\TodoTaskItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\TasksRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\TodoTaskList;
+use Microsoft\Graph\Users\Item\Todo\Lists\Item\Extensions\ExtensionsRequestBuilder;
+use Microsoft\Graph\Users\Item\Todo\Lists\Item\Extensions\Item\ExtensionItemRequestBuilder;
+use Microsoft\Graph\Users\Item\Todo\Lists\Item\Tasks\Item\TodoTaskItemRequestBuilder;
+use Microsoft\Graph\Users\Item\Todo\Lists\Item\Tasks\TasksRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -149,7 +149,7 @@ class TodoTaskListItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.todo.lists.item.extensions.item collection
+     * Gets an item from the Microsoft\Graph.users.item.todo.lists.item.extensions.item collection
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */
@@ -199,7 +199,7 @@ class TodoTaskListItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.todo.lists.item.tasks.item collection
+     * Gets an item from the Microsoft\Graph.users.item.todo.lists.item.tasks.item collection
      * @param string $id Unique identifier of the item
      * @return TodoTaskItemRequestBuilder
     */

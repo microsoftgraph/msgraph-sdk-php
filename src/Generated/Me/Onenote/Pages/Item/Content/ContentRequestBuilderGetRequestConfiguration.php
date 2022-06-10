@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Onenote\Pages\Item\Content;
+namespace Microsoft\Graph\Me\Onenote\Pages\Item\Content;
 
 class ContentRequestBuilderGetRequestConfiguration 
 {

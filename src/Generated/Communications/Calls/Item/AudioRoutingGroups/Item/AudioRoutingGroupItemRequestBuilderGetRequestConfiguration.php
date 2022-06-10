@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\Item;
+namespace Microsoft\Graph\Communications\Calls\Item\AudioRoutingGroups\Item;
 
 class AudioRoutingGroupItemRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Presences\Item\ClearPresence;
+namespace Microsoft\Graph\Communications\Presences\Item\ClearPresence;
 
 class ClearPresenceRequestBuilderPostRequestConfiguration 
 {

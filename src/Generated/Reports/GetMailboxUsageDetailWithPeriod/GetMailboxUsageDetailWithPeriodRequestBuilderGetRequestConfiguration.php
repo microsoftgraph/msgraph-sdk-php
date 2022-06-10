@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetMailboxUsageDetailWithPeriod;
+namespace Microsoft\Graph\Reports\GetMailboxUsageDetailWithPeriod;
 
 class GetMailboxUsageDetailWithPeriodRequestBuilderGetRequestConfiguration 
 {

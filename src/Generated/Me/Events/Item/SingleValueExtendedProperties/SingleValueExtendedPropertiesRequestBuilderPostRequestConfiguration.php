@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Events\Item\SingleValueExtendedProperties;
+namespace Microsoft\Graph\Me\Events\Item\SingleValueExtendedProperties;
 
 class SingleValueExtendedPropertiesRequestBuilderPostRequestConfiguration 
 {

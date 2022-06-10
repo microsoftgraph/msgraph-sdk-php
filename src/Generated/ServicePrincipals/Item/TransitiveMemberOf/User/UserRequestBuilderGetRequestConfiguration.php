@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\User;
+namespace Microsoft\Graph\ServicePrincipals\Item\TransitiveMemberOf\User;
 
 class UserRequestBuilderGetRequestConfiguration 
 {

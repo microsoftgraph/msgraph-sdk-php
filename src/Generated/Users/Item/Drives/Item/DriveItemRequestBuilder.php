@@ -1,22 +1,25 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Drives\Item;
+namespace Microsoft\Graph\Users\Item\Drives\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Drive;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Drives\Item\Bundles\BundlesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Drives\Item\Bundles\Item\DriveItemItemRequestBuilder as MicrosoftGraphGeneratedUsersItemDrivesItemBundlesItemDriveItemItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Drives\Item\EscapedList\ListRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Drives\Item\Following\FollowingRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Drives\Item\Following\Item\DriveItemItemRequestBuilder as MicrosoftGraphGeneratedUsersItemDrivesItemFollowingItemDriveItemItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Drives\Item\Items\Item\DriveItemItemRequestBuilder as MicrosoftGraphGeneratedUsersItemDrivesItemItemsItemDriveItemItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Drives\Item\Items\ItemsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Drives\Item\Root\RootRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Drives\Item\Special\Item\DriveItemItemRequestBuilder as MicrosoftGraphGeneratedUsersItemDrivesItemSpecialItemDriveItemItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Drives\Item\Special\SpecialRequestBuilder;
+use Microsoft\Graph\Models\Drive;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Users\Item\Drives\Item\Bundles\BundlesRequestBuilder;
+use Microsoft\Graph\Users\Item\Drives\Item\Bundles\Item\DriveItemItemRequestBuilder as MicrosoftGraphUsersItemDrivesItemBundlesItemDriveItemItemRequestBuilder;
+use Microsoft\Graph\Users\Item\Drives\Item\EscapedList\ListRequestBuilder;
+use Microsoft\Graph\Users\Item\Drives\Item\Following\FollowingRequestBuilder;
+use Microsoft\Graph\Users\Item\Drives\Item\Following\Item\DriveItemItemRequestBuilder as MicrosoftGraphUsersItemDrivesItemFollowingItemDriveItemItemRequestBuilder;
+use Microsoft\Graph\Users\Item\Drives\Item\Items\Item\DriveItemItemRequestBuilder as MicrosoftGraphUsersItemDrivesItemItemsItemDriveItemItemRequestBuilder;
+use Microsoft\Graph\Users\Item\Drives\Item\Items\ItemsRequestBuilder;
+use Microsoft\Graph\Users\Item\Drives\Item\Recent\RecentRequestBuilder;
+use Microsoft\Graph\Users\Item\Drives\Item\Root\RootRequestBuilder;
+use Microsoft\Graph\Users\Item\Drives\Item\SearchWithQ\SearchWithQRequestBuilder;
+use Microsoft\Graph\Users\Item\Drives\Item\SharedWithMe\SharedWithMeRequestBuilder;
+use Microsoft\Graph\Users\Item\Drives\Item\Special\Item\DriveItemItemRequestBuilder as MicrosoftGraphUsersItemDrivesItemSpecialItemDriveItemItemRequestBuilder;
+use Microsoft\Graph\Users\Item\Drives\Item\Special\SpecialRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -85,14 +88,14 @@ class DriveItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.drives.item.bundles.item collection
+     * Gets an item from the Microsoft\Graph.users.item.drives.item.bundles.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedUsersItemDrivesItemBundlesItemDriveItemItemRequestBuilder
+     * @return MicrosoftGraphUsersItemDrivesItemBundlesItemDriveItemItemRequestBuilder
     */
-    public function bundlesById(string $id): MicrosoftGraphGeneratedUsersItemDrivesItemBundlesItemDriveItemItemRequestBuilder {
+    public function bundlesById(string $id): MicrosoftGraphUsersItemDrivesItemBundlesItemDriveItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['driveItem%2Did'] = $id;
-        return new MicrosoftGraphGeneratedUsersItemDrivesItemBundlesItemDriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphUsersItemDrivesItemBundlesItemDriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -194,14 +197,14 @@ class DriveItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.drives.item.following.item collection
+     * Gets an item from the Microsoft\Graph.users.item.drives.item.following.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedUsersItemDrivesItemFollowingItemDriveItemItemRequestBuilder
+     * @return MicrosoftGraphUsersItemDrivesItemFollowingItemDriveItemItemRequestBuilder
     */
-    public function followingById(string $id): MicrosoftGraphGeneratedUsersItemDrivesItemFollowingItemDriveItemItemRequestBuilder {
+    public function followingById(string $id): MicrosoftGraphUsersItemDrivesItemFollowingItemDriveItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['driveItem%2Did'] = $id;
-        return new MicrosoftGraphGeneratedUsersItemDrivesItemFollowingItemDriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphUsersItemDrivesItemFollowingItemDriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -224,14 +227,14 @@ class DriveItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.drives.item.items.item collection
+     * Gets an item from the Microsoft\Graph.users.item.drives.item.items.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedUsersItemDrivesItemItemsItemDriveItemItemRequestBuilder
+     * @return MicrosoftGraphUsersItemDrivesItemItemsItemDriveItemItemRequestBuilder
     */
-    public function itemsById(string $id): MicrosoftGraphGeneratedUsersItemDrivesItemItemsItemDriveItemItemRequestBuilder {
+    public function itemsById(string $id): MicrosoftGraphUsersItemDrivesItemItemsItemDriveItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['driveItem%2Did'] = $id;
-        return new MicrosoftGraphGeneratedUsersItemDrivesItemItemsItemDriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphUsersItemDrivesItemItemsItemDriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -255,14 +258,39 @@ class DriveItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.drives.item.special.item collection
-     * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedUsersItemDrivesItemSpecialItemDriveItemItemRequestBuilder
+     * Provides operations to call the recent method.
+     * @return RecentRequestBuilder
     */
-    public function specialById(string $id): MicrosoftGraphGeneratedUsersItemDrivesItemSpecialItemDriveItemItemRequestBuilder {
+    public function recent(): RecentRequestBuilder {
+        return new RecentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+
+    /**
+     * Provides operations to call the search method.
+     * @param string $q Usage: q='{q}'
+     * @return SearchWithQRequestBuilder
+    */
+    public function searchWithQ(string $q): SearchWithQRequestBuilder {
+        return new SearchWithQRequestBuilder($this->pathParameters, $this->requestAdapter, $q);
+    }
+
+    /**
+     * Provides operations to call the sharedWithMe method.
+     * @return SharedWithMeRequestBuilder
+    */
+    public function sharedWithMe(): SharedWithMeRequestBuilder {
+        return new SharedWithMeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+
+    /**
+     * Gets an item from the Microsoft\Graph.users.item.drives.item.special.item collection
+     * @param string $id Unique identifier of the item
+     * @return MicrosoftGraphUsersItemDrivesItemSpecialItemDriveItemItemRequestBuilder
+    */
+    public function specialById(string $id): MicrosoftGraphUsersItemDrivesItemSpecialItemDriveItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['driveItem%2Did'] = $id;
-        return new MicrosoftGraphGeneratedUsersItemDrivesItemSpecialItemDriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphUsersItemDrivesItemSpecialItemDriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

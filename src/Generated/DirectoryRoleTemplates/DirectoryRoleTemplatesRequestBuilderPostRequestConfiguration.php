@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoleTemplates;
+namespace Microsoft\Graph\DirectoryRoleTemplates;
 
 class DirectoryRoleTemplatesRequestBuilderPostRequestConfiguration 
 {

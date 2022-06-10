@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\EscapedList\Items;
+namespace Microsoft\Graph\Drive\EscapedList\Items;
 
 class ItemsRequestBuilderGetRequestConfiguration 
 {

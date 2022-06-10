@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Outlook\SupportedTimeZones;
+namespace Microsoft\Graph\Users\Item\Outlook\SupportedTimeZones;
 
 class SupportedTimeZonesRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MdmWindowsInformationProtectionPolicies\Item;
+namespace Microsoft\Graph\DeviceAppManagement\MdmWindowsInformationProtectionPolicies\Item;
 
 class MdmWindowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration 
 {

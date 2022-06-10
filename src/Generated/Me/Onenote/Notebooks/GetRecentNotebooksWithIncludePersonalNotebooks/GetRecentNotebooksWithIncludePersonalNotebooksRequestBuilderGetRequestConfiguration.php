@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Onenote\Notebooks\GetRecentNotebooksWithIncludePersonalNotebooks;
+namespace Microsoft\Graph\Me\Onenote\Notebooks\GetRecentNotebooksWithIncludePersonalNotebooks;
 
 class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetRequestConfiguration 
 {

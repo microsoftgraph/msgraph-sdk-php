@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\Operations;
+namespace Microsoft\Graph\Drives\Item\EscapedList\Operations;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\Operations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\RichLongRunningOperation;
-use Microsoft\Graph\Generated\Models\RichLongRunningOperationCollectionResponse;
+use Microsoft\Graph\Drives\Item\EscapedList\Operations\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\RichLongRunningOperation;
+use Microsoft\Graph\Models\RichLongRunningOperationCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

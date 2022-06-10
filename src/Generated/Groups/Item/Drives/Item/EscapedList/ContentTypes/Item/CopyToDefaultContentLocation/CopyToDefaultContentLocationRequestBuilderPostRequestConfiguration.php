@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Drives\Item\EscapedList\ContentTypes\Item\CopyToDefaultContentLocation;
+namespace Microsoft\Graph\Groups\Item\Drives\Item\EscapedList\ContentTypes\Item\CopyToDefaultContentLocation;
 
 class CopyToDefaultContentLocationRequestBuilderPostRequestConfiguration 
 {

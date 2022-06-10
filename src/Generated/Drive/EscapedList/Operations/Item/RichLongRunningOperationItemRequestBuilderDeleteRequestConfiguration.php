@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\EscapedList\Operations\Item;
+namespace Microsoft\Graph\Drive\EscapedList\Operations\Item;
 
 class RichLongRunningOperationItemRequestBuilderDeleteRequestConfiguration 
 {

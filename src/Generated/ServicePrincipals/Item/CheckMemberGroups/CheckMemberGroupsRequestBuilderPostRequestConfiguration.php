@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\CheckMemberGroups;
+namespace Microsoft\Graph\ServicePrincipals\Item\CheckMemberGroups;
 
 class CheckMemberGroupsRequestBuilderPostRequestConfiguration 
 {

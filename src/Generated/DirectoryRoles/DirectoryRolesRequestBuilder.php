@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoles;
+namespace Microsoft\Graph\DirectoryRoles;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DirectoryRoles\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\ValidateProperties\ValidatePropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryRole;
-use Microsoft\Graph\Generated\Models\DirectoryRoleCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\DirectoryRoles\Count\CountRequestBuilder;
+use Microsoft\Graph\DirectoryRoles\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\DirectoryRoles\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\DirectoryRoles\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\DirectoryRoles\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Models\DirectoryRole;
+use Microsoft\Graph\Models\DirectoryRoleCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

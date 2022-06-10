@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Drives\Item\Root\Subscriptions\Item;
+namespace Microsoft\Graph\Me\Drives\Item\Root\Subscriptions\Item;
 
 class SubscriptionItemRequestBuilderDeleteRequestConfiguration 
 {

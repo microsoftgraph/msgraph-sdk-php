@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\CheckGrantedPermissionsForApp;
+namespace Microsoft\Graph\Groups\Item\CheckGrantedPermissionsForApp;
 
-use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrant;
+use Microsoft\Graph\Models\ResourceSpecificPermissionGrant;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements;
+namespace Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\Agreement;
-use Microsoft\Graph\Generated\Models\AgreementCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\Agreement;
+use Microsoft\Graph\Models\AgreementCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

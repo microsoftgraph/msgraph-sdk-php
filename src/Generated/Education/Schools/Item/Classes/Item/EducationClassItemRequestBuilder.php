@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Schools\Item\Classes\Item;
+namespace Microsoft\Graph\Education\Schools\Item\Classes\Item;
 
-use Microsoft\Graph\Generated\Education\Schools\Item\Classes\Item\Ref\RefRequestBuilder;
+use Microsoft\Graph\Education\Schools\Item\Classes\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
 class EducationClassItemRequestBuilder 

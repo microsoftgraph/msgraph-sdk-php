@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\RemoveEmail;
+namespace Microsoft\Graph\Users\Item\JoinedTeams\Item\Channels\Item\RemoveEmail;
 
 class RemoveEmailRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\SearchWithQ;
+namespace Microsoft\Graph\Workbooks\Item\SearchWithQ;
 
 class SearchWithQRequestBuilderGetRequestConfiguration 
 {

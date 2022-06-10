@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -45,7 +45,7 @@ class Printer extends PrinterBase implements Parsable
     private ?array $taskTriggers = null;
     
     /**
-     * Instantiates a new printer and sets the default values.
+     * Instantiates a new Printer and sets the default values.
     */
     public function __construct() {
         parent::__construct();

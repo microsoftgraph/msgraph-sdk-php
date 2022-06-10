@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser\Count;
+namespace Microsoft\Graph\Reports\DailyPrintUsageByUser\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

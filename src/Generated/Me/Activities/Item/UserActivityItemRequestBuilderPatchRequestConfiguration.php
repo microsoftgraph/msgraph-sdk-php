@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Activities\Item;
+namespace Microsoft\Graph\Me\Activities\Item;
 
 class UserActivityItemRequestBuilderPatchRequestConfiguration 
 {

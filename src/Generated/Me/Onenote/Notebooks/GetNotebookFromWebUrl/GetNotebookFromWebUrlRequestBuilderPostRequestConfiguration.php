@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Onenote\Notebooks\GetNotebookFromWebUrl;
+namespace Microsoft\Graph\Me\Onenote\Notebooks\GetNotebookFromWebUrl;
 
 class GetNotebookFromWebUrlRequestBuilderPostRequestConfiguration 
 {

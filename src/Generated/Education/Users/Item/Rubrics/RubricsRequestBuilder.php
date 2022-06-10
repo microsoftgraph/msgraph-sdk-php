@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Users\Item\Rubrics;
+namespace Microsoft\Graph\Education\Users\Item\Rubrics;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Education\Users\Item\Rubrics\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\EducationRubric;
-use Microsoft\Graph\Generated\Models\EducationRubricCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Education\Users\Item\Rubrics\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\EducationRubric;
+use Microsoft\Graph\Models\EducationRubricCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

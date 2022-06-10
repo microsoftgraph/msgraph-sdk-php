@@ -1,24 +1,24 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint;
+namespace Microsoft\Graph\EscapedPrint;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\EscapedPrint\Connectors\ConnectorsRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Connectors\Item\PrintConnectorItemRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Operations\Item\PrintOperationItemRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\PrinterItemRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\PrintersRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Services\Item\PrintServiceItemRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Services\ServicesRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\PrinterShareItemRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Shares\SharesRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\Item\PrintTaskDefinitionItemRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\TaskDefinitionsRequestBuilder;
-use Microsoft\Graph\Generated\Models\EscapedPrint;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\EscapedPrint\Connectors\ConnectorsRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Connectors\Item\PrintConnectorItemRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Operations\Item\PrintOperationItemRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Printers\Item\PrinterItemRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Printers\PrintersRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Services\Item\PrintServiceItemRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Services\ServicesRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Shares\Item\PrinterShareItemRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Shares\SharesRequestBuilder;
+use Microsoft\Graph\EscapedPrint\TaskDefinitions\Item\PrintTaskDefinitionItemRequestBuilder;
+use Microsoft\Graph\EscapedPrint\TaskDefinitions\TaskDefinitionsRequestBuilder;
+use Microsoft\Graph\Models\EscapedPrint;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -87,7 +87,7 @@ class PrintRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.print.connectors.item collection
+     * Gets an item from the Microsoft\Graph.print.connectors.item collection
      * @param string $id Unique identifier of the item
      * @return PrintConnectorItemRequestBuilder
     */
@@ -175,7 +175,7 @@ class PrintRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.print.operations.item collection
+     * Gets an item from the Microsoft\Graph.print.operations.item collection
      * @param string $id Unique identifier of the item
      * @return PrintOperationItemRequestBuilder
     */
@@ -206,7 +206,7 @@ class PrintRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.print.printers.item collection
+     * Gets an item from the Microsoft\Graph.print.printers.item collection
      * @param string $id Unique identifier of the item
      * @return PrinterItemRequestBuilder
     */
@@ -217,7 +217,7 @@ class PrintRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.print.services.item collection
+     * Gets an item from the Microsoft\Graph.print.services.item collection
      * @param string $id Unique identifier of the item
      * @return PrintServiceItemRequestBuilder
     */
@@ -228,7 +228,7 @@ class PrintRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.print.shares.item collection
+     * Gets an item from the Microsoft\Graph.print.shares.item collection
      * @param string $id Unique identifier of the item
      * @return PrinterShareItemRequestBuilder
     */
@@ -239,7 +239,7 @@ class PrintRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.print.taskDefinitions.item collection
+     * Gets an item from the Microsoft\Graph.print.taskDefinitions.item collection
      * @param string $id Unique identifier of the item
      * @return PrintTaskDefinitionItemRequestBuilder
     */

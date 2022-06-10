@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Calendar\CalendarView\Item\SnoozeReminder;
+namespace Microsoft\Graph\Groups\Item\Calendar\CalendarView\Item\SnoozeReminder;
 
 class SnoozeReminderRequestBuilderPostRequestConfiguration 
 {

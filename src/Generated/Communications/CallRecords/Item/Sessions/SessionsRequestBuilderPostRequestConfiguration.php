@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions;
+namespace Microsoft\Graph\Communications\CallRecords\Item\Sessions;
 
 class SessionsRequestBuilderPostRequestConfiguration 
 {

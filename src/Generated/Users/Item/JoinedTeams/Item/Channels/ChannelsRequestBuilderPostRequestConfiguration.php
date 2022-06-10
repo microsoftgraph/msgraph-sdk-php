@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels;
+namespace Microsoft\Graph\Users\Item\JoinedTeams\Item\Channels;
 
 class ChannelsRequestBuilderPostRequestConfiguration 
 {

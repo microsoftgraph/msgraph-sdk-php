@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\CallRecords\GetDirectRoutingCallsWithFromDateTimeWithToDateTime;
+namespace Microsoft\Graph\Communications\CallRecords\GetDirectRoutingCallsWithFromDateTimeWithToDateTime;
 
 class GetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilderGetRequestConfiguration 
 {

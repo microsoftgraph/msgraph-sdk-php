@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Count;
+namespace Microsoft\Graph\Shares\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

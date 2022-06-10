@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\AuthenticationFlowsPolicy;
+namespace Microsoft\Graph\Policies\AuthenticationFlowsPolicy;
 
 class AuthenticationFlowsPolicyRequestBuilderPatchRequestConfiguration 
 {

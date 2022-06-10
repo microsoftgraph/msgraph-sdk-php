@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\Items\Item\ListItem\GetActivitiesByInterval;
+namespace Microsoft\Graph\Users\Item\Drives\Item\Items\Item\ListItem\GetActivitiesByInterval;
 
 class GetActivitiesByIntervalRequestBuilderGetRequestConfiguration 
 {

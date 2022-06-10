@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\RejectedSenders\Ref;
+namespace Microsoft\Graph\Groups\Item\RejectedSenders\Ref;
 
 class RefRequestBuilderGetRequestConfiguration 
 {

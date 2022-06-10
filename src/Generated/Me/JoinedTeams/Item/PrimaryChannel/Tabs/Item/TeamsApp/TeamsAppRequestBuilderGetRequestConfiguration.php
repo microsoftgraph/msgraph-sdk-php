@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Tabs\Item\TeamsApp;
+namespace Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\Tabs\Item\TeamsApp;
 
 class TeamsAppRequestBuilderGetRequestConfiguration 
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\Item;
+namespace Microsoft\Graph\Me\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\Item;
 
-use Microsoft\Graph\Generated\Me\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\Item\AppRoleAssignment\AppRoleAssignmentRequestBuilder;
-use Microsoft\Graph\Generated\Me\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\Item\Endpoint\EndpointRequestBuilder;
-use Microsoft\Graph\Generated\Me\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\Item\Ref\RefRequestBuilder;
-use Microsoft\Graph\Generated\Me\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\Item\ServicePrincipal\ServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\Me\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\Item\User\UserRequestBuilder;
+use Microsoft\Graph\Me\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\Item\AppRoleAssignment\AppRoleAssignmentRequestBuilder;
+use Microsoft\Graph\Me\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\Item\Endpoint\EndpointRequestBuilder;
+use Microsoft\Graph\Me\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\Item\Ref\RefRequestBuilder;
+use Microsoft\Graph\Me\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\Item\ServicePrincipal\ServicePrincipalRequestBuilder;
+use Microsoft\Graph\Me\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\Item\User\UserRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
 class DirectoryObjectItemRequestBuilder 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Root\ListItem\GetActivitiesByInterval;
+namespace Microsoft\Graph\Drives\Item\Root\ListItem\GetActivitiesByInterval;
 
-use Microsoft\Graph\Generated\Models\ItemActivityStat;
+use Microsoft\Graph\Models\ItemActivityStat;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

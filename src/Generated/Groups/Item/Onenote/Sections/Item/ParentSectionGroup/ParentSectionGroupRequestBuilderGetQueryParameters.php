@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Onenote\Sections\Item\ParentSectionGroup;
+namespace Microsoft\Graph\Groups\Item\Onenote\Sections\Item\ParentSectionGroup;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

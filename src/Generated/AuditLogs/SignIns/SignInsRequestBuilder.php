@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\AuditLogs\SignIns;
+namespace Microsoft\Graph\AuditLogs\SignIns;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\AuditLogs\SignIns\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SignIn;
-use Microsoft\Graph\Generated\Models\SignInCollectionResponse;
+use Microsoft\Graph\AuditLogs\SignIns\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\SignIn;
+use Microsoft\Graph\Models\SignInCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -53,7 +53,7 @@ class SignInsRequestBuilder
     }
 
     /**
-     * Read-only. Nullable.
+     * Get signIns from auditLogs
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +100,7 @@ class SignInsRequestBuilder
     }
 
     /**
-     * Read-only. Nullable.
+     * Get signIns from auditLogs
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

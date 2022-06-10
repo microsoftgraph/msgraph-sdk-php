@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Members\Item;
+namespace Microsoft\Graph\Me\JoinedTeams\Item\Members\Item;
 
 class ConversationMemberItemRequestBuilderPatchRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\Sets\Count;
+namespace Microsoft\Graph\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\Sets\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

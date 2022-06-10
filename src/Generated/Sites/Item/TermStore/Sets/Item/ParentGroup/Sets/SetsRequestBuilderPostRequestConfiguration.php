@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets;
+namespace Microsoft\Graph\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets;
 
 class SetsRequestBuilderPostRequestConfiguration 
 {

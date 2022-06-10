@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\RemoveFavorite;
+namespace Microsoft\Graph\Groups\Item\RemoveFavorite;
 
 class RemoveFavoriteRequestBuilderPostRequestConfiguration 
 {

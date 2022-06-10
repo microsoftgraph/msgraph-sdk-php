@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Count;
+namespace Microsoft\Graph\Solutions\BookingBusinesses\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

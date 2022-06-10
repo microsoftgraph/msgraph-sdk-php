@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\ContentTypes\AddCopy;
+namespace Microsoft\Graph\Groups\Item\Sites\Item\Lists\Item\ContentTypes\AddCopy;
 
 class AddCopyRequestBuilderPostRequestConfiguration 
 {

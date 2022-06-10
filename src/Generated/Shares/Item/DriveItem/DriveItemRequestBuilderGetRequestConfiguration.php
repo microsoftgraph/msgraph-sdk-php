@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\DriveItem;
+namespace Microsoft\Graph\Shares\Item\DriveItem;
 
 class DriveItemRequestBuilderGetRequestConfiguration 
 {

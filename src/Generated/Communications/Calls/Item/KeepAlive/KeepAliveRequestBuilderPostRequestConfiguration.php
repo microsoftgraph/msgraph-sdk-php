@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\KeepAlive;
+namespace Microsoft\Graph\Communications\Calls\Item\KeepAlive;
 
 class KeepAliveRequestBuilderPostRequestConfiguration 
 {

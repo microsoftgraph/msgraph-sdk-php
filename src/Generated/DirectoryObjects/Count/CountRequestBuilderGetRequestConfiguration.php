@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryObjects\Count;
+namespace Microsoft\Graph\DirectoryObjects\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

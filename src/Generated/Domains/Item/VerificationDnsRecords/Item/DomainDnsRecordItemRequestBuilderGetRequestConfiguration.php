@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item;
+namespace Microsoft\Graph\Domains\Item\VerificationDnsRecords\Item;
 
 class DomainDnsRecordItemRequestBuilderGetRequestConfiguration 
 {

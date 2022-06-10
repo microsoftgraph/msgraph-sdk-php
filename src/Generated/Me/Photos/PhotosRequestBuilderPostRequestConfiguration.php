@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Photos;
+namespace Microsoft\Graph\Me\Photos;
 
 class PhotosRequestBuilderPostRequestConfiguration 
 {

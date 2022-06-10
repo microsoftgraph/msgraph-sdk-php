@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item;
+namespace Microsoft\Graph\Workbooks\Item;
 
 class DriveItemItemRequestBuilderGetRequestConfiguration 
 {

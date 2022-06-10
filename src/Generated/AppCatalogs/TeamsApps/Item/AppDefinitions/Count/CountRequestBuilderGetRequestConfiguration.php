@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\AppCatalogs\TeamsApps\Item\AppDefinitions\Count;
+namespace Microsoft\Graph\AppCatalogs\TeamsApps\Item\AppDefinitions\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

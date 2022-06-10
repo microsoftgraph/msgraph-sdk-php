@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Schedule\SchedulingGroups\Item;
+namespace Microsoft\Graph\Teams\Item\Schedule\SchedulingGroups\Item;
 
 class SchedulingGroupItemRequestBuilderDeleteRequestConfiguration 
 {

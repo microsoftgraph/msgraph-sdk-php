@@ -1,35 +1,39 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item;
+namespace Microsoft\Graph\Groups\Item\Sites\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Analytics\AnalyticsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Columns\ColumnsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder as MicrosoftGraphGeneratedGroupsItemSitesItemColumnsItemColumnDefinitionItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\ContentTypesRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\ContentTypeItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Drive\DriveRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Drives\DrivesRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Drives\Item\DriveItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ExternalColumns\ExternalColumnsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder as MicrosoftGraphGeneratedGroupsItemSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Items\Item\BaseItemItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Items\ItemsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\ListItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\ListsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\OnenoteRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Operations\Item\RichLongRunningOperationItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Permissions\Item\PermissionItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Permissions\PermissionsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Sites\SitesRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\TermStoreRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\StoreItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\TermStoresRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Site;
+use Microsoft\Graph\Groups\Item\Sites\Item\Analytics\AnalyticsRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\Columns\ColumnsRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder as MicrosoftGraphGroupsItemSitesItemColumnsItemColumnDefinitionItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\ContentTypes\ContentTypesRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\ContentTypes\Item\ContentTypeItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\Drive\DriveRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\Drives\DrivesRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\Drives\Item\DriveItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\ExternalColumns\ExternalColumnsRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder as MicrosoftGraphGroupsItemSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\GetApplicableContentTypesForListWithListId\GetApplicableContentTypesForListWithListIdRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\GetByPathWithPath\GetByPathWithPathRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\Items\Item\BaseItemItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\Items\ItemsRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\Lists\Item\ListItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\Lists\ListsRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\Onenote\OnenoteRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\Operations\Item\RichLongRunningOperationItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\Permissions\Item\PermissionItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\Permissions\PermissionsRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\Sites\SitesRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\TermStore\TermStoreRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\TermStores\Item\StoreItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\TermStores\TermStoresRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Site;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -154,14 +158,14 @@ class SiteItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.columns.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.sites.item.columns.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedGroupsItemSitesItemColumnsItemColumnDefinitionItemRequestBuilder
+     * @return MicrosoftGraphGroupsItemSitesItemColumnsItemColumnDefinitionItemRequestBuilder
     */
-    public function columnsById(string $id): MicrosoftGraphGeneratedGroupsItemSitesItemColumnsItemColumnDefinitionItemRequestBuilder {
+    public function columnsById(string $id): MicrosoftGraphGroupsItemSitesItemColumnsItemColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new MicrosoftGraphGeneratedGroupsItemSitesItemColumnsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGroupsItemSitesItemColumnsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -176,7 +180,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.contentTypes.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.sites.item.contentTypes.item collection
      * @param string $id Unique identifier of the item
      * @return ContentTypeItemRequestBuilder
     */
@@ -184,27 +188,6 @@ class SiteItemRequestBuilder
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contentType%2Did'] = $id;
         return new ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Delete navigation property sites for groups
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function createDeleteRequestInformation(?SiteItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::DELETE;
-        if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
-        }
-        return $requestInfo;
     }
 
     /**
@@ -255,26 +238,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Delete navigation property sites for groups
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return Promise
-    */
-    public function delete(?SiteItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createDeleteRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            ];
-            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
-    }
-
-    /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.drives.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.sites.item.drives.item collection
      * @param string $id Unique identifier of the item
      * @return DriveItemRequestBuilder
     */
@@ -285,14 +249,14 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.externalColumns.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.sites.item.externalColumns.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedGroupsItemSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder
+     * @return MicrosoftGraphGroupsItemSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder
     */
-    public function externalColumnsById(string $id): MicrosoftGraphGeneratedGroupsItemSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder {
+    public function externalColumnsById(string $id): MicrosoftGraphGroupsItemSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new MicrosoftGraphGeneratedGroupsItemSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGroupsItemSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -315,7 +279,44 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.items.item collection
+     * Provides operations to call the getActivitiesByInterval method.
+     * @return GetActivitiesByIntervalRequestBuilder
+    */
+    public function getActivitiesByInterval(): GetActivitiesByIntervalRequestBuilder {
+        return new GetActivitiesByIntervalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+
+    /**
+     * Provides operations to call the getActivitiesByInterval method.
+     * @param string $endDateTime Usage: endDateTime='{endDateTime}'
+     * @param string $interval Usage: interval='{interval}'
+     * @param string $startDateTime Usage: startDateTime='{startDateTime}'
+     * @return GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+    */
+    public function getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(string $endDateTime, string $interval, string $startDateTime): GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder {
+        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $interval, $startDateTime);
+    }
+
+    /**
+     * Provides operations to call the getApplicableContentTypesForList method.
+     * @param string $listId Usage: listId='{listId}'
+     * @return GetApplicableContentTypesForListWithListIdRequestBuilder
+    */
+    public function getApplicableContentTypesForListWithListId(string $listId): GetApplicableContentTypesForListWithListIdRequestBuilder {
+        return new GetApplicableContentTypesForListWithListIdRequestBuilder($this->pathParameters, $this->requestAdapter, $listId);
+    }
+
+    /**
+     * Provides operations to call the getByPath method.
+     * @param string $path Usage: path='{path}'
+     * @return GetByPathWithPathRequestBuilder
+    */
+    public function getByPathWithPath(string $path): GetByPathWithPathRequestBuilder {
+        return new GetByPathWithPathRequestBuilder($this->pathParameters, $this->requestAdapter, $path);
+    }
+
+    /**
+     * Gets an item from the Microsoft\Graph.groups.item.sites.item.items.item collection
      * @param string $id Unique identifier of the item
      * @return BaseItemItemRequestBuilder
     */
@@ -326,7 +327,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.lists.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.sites.item.lists.item collection
      * @param string $id Unique identifier of the item
      * @return ListItemRequestBuilder
     */
@@ -337,7 +338,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.operations.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.sites.item.operations.item collection
      * @param string $id Unique identifier of the item
      * @return RichLongRunningOperationItemRequestBuilder
     */
@@ -368,7 +369,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.permissions.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.sites.item.permissions.item collection
      * @param string $id Unique identifier of the item
      * @return PermissionItemRequestBuilder
     */
@@ -379,7 +380,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.sites.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.sites.item.sites.item collection
      * @param string $id Unique identifier of the item
      * @return SiteItemRequestBuilder
     */
@@ -390,7 +391,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.termStores.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.sites.item.termStores.item collection
      * @param string $id Unique identifier of the item
      * @return StoreItemRequestBuilder
     */

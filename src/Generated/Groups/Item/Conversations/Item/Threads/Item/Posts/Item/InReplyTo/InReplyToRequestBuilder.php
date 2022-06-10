@@ -1,22 +1,22 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo;
+namespace Microsoft\Graph\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\Attachments\AttachmentsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\Attachments\Item\AttachmentItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\Forward\ForwardRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\Reply\ReplyRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Post;
+use Microsoft\Graph\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\Attachments\AttachmentsRequestBuilder;
+use Microsoft\Graph\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\Attachments\Item\AttachmentItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\Extensions\ExtensionsRequestBuilder;
+use Microsoft\Graph\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\Extensions\Item\ExtensionItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\Forward\ForwardRequestBuilder;
+use Microsoft\Graph\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\Reply\ReplyRequestBuilder;
+use Microsoft\Graph\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Post;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -85,7 +85,7 @@ class InReplyToRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.conversations.item.threads.item.posts.item.inReplyTo.attachments.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.conversations.item.threads.item.posts.item.inReplyTo.attachments.item collection
      * @param string $id Unique identifier of the item
      * @return AttachmentItemRequestBuilder
     */
@@ -194,7 +194,7 @@ class InReplyToRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.conversations.item.threads.item.posts.item.inReplyTo.extensions.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.conversations.item.threads.item.posts.item.inReplyTo.extensions.item collection
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */
@@ -224,7 +224,7 @@ class InReplyToRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.conversations.item.threads.item.posts.item.inReplyTo.multiValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.conversations.item.threads.item.posts.item.inReplyTo.multiValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
     */
@@ -255,7 +255,7 @@ class InReplyToRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.conversations.item.threads.item.posts.item.inReplyTo.singleValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.conversations.item.threads.item.posts.item.inReplyTo.singleValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
     */

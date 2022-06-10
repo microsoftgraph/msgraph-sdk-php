@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalReport;
+namespace Microsoft\Graph\Privacy\SubjectRightsRequests\Item\GetFinalReport;
 
 class GetFinalReportRequestBuilderGetRequestConfiguration 
 {

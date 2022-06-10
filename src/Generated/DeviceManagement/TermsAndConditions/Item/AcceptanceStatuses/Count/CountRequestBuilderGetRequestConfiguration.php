@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\AcceptanceStatuses\Count;
+namespace Microsoft\Graph\DeviceManagement\TermsAndConditions\Item\AcceptanceStatuses\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

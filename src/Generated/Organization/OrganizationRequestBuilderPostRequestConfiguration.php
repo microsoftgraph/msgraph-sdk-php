@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Organization;
+namespace Microsoft\Graph\Organization;
 
 class OrganizationRequestBuilderPostRequestConfiguration 
 {

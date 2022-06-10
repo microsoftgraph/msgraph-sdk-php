@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Authentication\MicrosoftAuthenticatorMethods\Item\Device\RegisteredOwners\AppRoleAssignment\Count;
+namespace Microsoft\Graph\Me\Authentication\MicrosoftAuthenticatorMethods\Item\Device\RegisteredOwners\AppRoleAssignment\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

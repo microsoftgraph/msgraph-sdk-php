@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Threads\Count;
+namespace Microsoft\Graph\Groups\Item\Threads\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

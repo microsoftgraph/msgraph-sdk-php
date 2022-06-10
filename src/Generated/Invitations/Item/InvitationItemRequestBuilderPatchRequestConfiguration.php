@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Invitations\Item;
+namespace Microsoft\Graph\Invitations\Item;
 
 class InvitationItemRequestBuilderPatchRequestConfiguration 
 {

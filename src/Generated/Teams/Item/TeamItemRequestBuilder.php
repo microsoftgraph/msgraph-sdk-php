@@ -1,29 +1,29 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item;
+namespace Microsoft\Graph\Teams\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Team;
-use Microsoft\Graph\Generated\Teams\Item\Archive\ArchiveRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Channels\ChannelsRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Channels\Item\ChannelItemRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\CompleteMigration\CompleteMigrationRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\EscapedClone\CloneRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Group\GroupRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\InstalledApps\InstalledAppsRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Members\Item\ConversationMemberItemRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Members\MembersRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Operations\Item\TeamsAsyncOperationItemRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\PrimaryChannelRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Schedule\ScheduleRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Template\TemplateRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Unarchive\UnarchiveRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Team;
+use Microsoft\Graph\Teams\Item\Archive\ArchiveRequestBuilder;
+use Microsoft\Graph\Teams\Item\Channels\ChannelsRequestBuilder;
+use Microsoft\Graph\Teams\Item\Channels\Item\ChannelItemRequestBuilder;
+use Microsoft\Graph\Teams\Item\CompleteMigration\CompleteMigrationRequestBuilder;
+use Microsoft\Graph\Teams\Item\EscapedClone\CloneRequestBuilder;
+use Microsoft\Graph\Teams\Item\Group\GroupRequestBuilder;
+use Microsoft\Graph\Teams\Item\InstalledApps\InstalledAppsRequestBuilder;
+use Microsoft\Graph\Teams\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
+use Microsoft\Graph\Teams\Item\Members\Item\ConversationMemberItemRequestBuilder;
+use Microsoft\Graph\Teams\Item\Members\MembersRequestBuilder;
+use Microsoft\Graph\Teams\Item\Operations\Item\TeamsAsyncOperationItemRequestBuilder;
+use Microsoft\Graph\Teams\Item\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Teams\Item\PrimaryChannel\PrimaryChannelRequestBuilder;
+use Microsoft\Graph\Teams\Item\Schedule\ScheduleRequestBuilder;
+use Microsoft\Graph\Teams\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
+use Microsoft\Graph\Teams\Item\Template\TemplateRequestBuilder;
+use Microsoft\Graph\Teams\Item\Unarchive\UnarchiveRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -141,7 +141,7 @@ class TeamItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.teams.item.channels.item collection
+     * Gets an item from the Microsoft\Graph.teams.item.channels.item collection
      * @param string $id Unique identifier of the item
      * @return ChannelItemRequestBuilder
     */
@@ -269,7 +269,7 @@ class TeamItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.teams.item.installedApps.item collection
+     * Gets an item from the Microsoft\Graph.teams.item.installedApps.item collection
      * @param string $id Unique identifier of the item
      * @return TeamsAppInstallationItemRequestBuilder
     */
@@ -280,7 +280,7 @@ class TeamItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.teams.item.members.item collection
+     * Gets an item from the Microsoft\Graph.teams.item.members.item collection
      * @param string $id Unique identifier of the item
      * @return ConversationMemberItemRequestBuilder
     */
@@ -291,7 +291,7 @@ class TeamItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.teams.item.operations.item collection
+     * Gets an item from the Microsoft\Graph.teams.item.operations.item collection
      * @param string $id Unique identifier of the item
      * @return TeamsAsyncOperationItemRequestBuilder
     */

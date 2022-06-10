@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Outlook;
+namespace Microsoft\Graph\Users\Item\Outlook;
 
 class OutlookRequestBuilderPatchRequestConfiguration 
 {

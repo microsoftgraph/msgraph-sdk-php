@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\GroupSettingTemplates\GetByIds;
+namespace Microsoft\Graph\GroupSettingTemplates\GetByIds;
 
-use Microsoft\Graph\Generated\Models\DirectoryObject;
+use Microsoft\Graph\Models\DirectoryObject;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Drives\Item\EscapedList\ContentTypes;
+namespace Microsoft\Graph\Me\Drives\Item\EscapedList\ContentTypes;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Drives\Item\EscapedList\ContentTypes\AddCopy\AddCopyRequestBuilder;
-use Microsoft\Graph\Generated\Me\Drives\Item\EscapedList\ContentTypes\AddCopyFromContentTypeHub\AddCopyFromContentTypeHubRequestBuilder;
-use Microsoft\Graph\Generated\Me\Drives\Item\EscapedList\ContentTypes\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Me\Drives\Item\EscapedList\ContentTypes\GetCompatibleHubContentTypes\GetCompatibleHubContentTypesRequestBuilder;
-use Microsoft\Graph\Generated\Models\ContentType;
-use Microsoft\Graph\Generated\Models\ContentTypeCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Me\Drives\Item\EscapedList\ContentTypes\AddCopy\AddCopyRequestBuilder;
+use Microsoft\Graph\Me\Drives\Item\EscapedList\ContentTypes\AddCopyFromContentTypeHub\AddCopyFromContentTypeHubRequestBuilder;
+use Microsoft\Graph\Me\Drives\Item\EscapedList\ContentTypes\Count\CountRequestBuilder;
+use Microsoft\Graph\Me\Drives\Item\EscapedList\ContentTypes\GetCompatibleHubContentTypes\GetCompatibleHubContentTypesRequestBuilder;
+use Microsoft\Graph\Models\ContentType;
+use Microsoft\Graph\Models\ContentTypeCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

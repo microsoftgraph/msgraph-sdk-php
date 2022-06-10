@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Group;
+namespace Microsoft\Graph\Teams\Item\Group;
 
 class GroupRequestBuilderGetRequestConfiguration 
 {

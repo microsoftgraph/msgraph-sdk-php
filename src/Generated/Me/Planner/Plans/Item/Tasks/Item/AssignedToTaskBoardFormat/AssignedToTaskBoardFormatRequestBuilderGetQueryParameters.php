@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Planner\Plans\Item\Tasks\Item\AssignedToTaskBoardFormat;
+namespace Microsoft\Graph\Me\Planner\Plans\Item\Tasks\Item\AssignedToTaskBoardFormat;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

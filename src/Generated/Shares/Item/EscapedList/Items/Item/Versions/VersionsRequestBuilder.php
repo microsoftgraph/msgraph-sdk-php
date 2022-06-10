@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Versions;
+namespace Microsoft\Graph\Shares\Item\EscapedList\Items\Item\Versions;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ListItemVersion;
-use Microsoft\Graph\Generated\Models\ListItemVersionCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Versions\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ListItemVersion;
+use Microsoft\Graph\Models\ListItemVersionCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Shares\Item\EscapedList\Items\Item\Versions\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

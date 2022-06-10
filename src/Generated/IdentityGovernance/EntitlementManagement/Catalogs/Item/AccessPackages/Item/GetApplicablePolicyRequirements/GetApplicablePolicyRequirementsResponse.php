@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\GetApplicablePolicyRequirements;
+namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\GetApplicablePolicyRequirements;
 
-use Microsoft\Graph\Generated\Models\AccessPackageAssignmentRequestRequirements;
+use Microsoft\Graph\Models\AccessPackageAssignmentRequestRequirements;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

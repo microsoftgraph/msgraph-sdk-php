@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\RegisteredDevices;
+namespace Microsoft\Graph\Users\Item\RegisteredDevices;
 
 class RegisteredDevicesRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\AgreementAcceptances\Item;
+namespace Microsoft\Graph\Me\AgreementAcceptances\Item;
 
 class AgreementAcceptanceItemRequestBuilderGetRequestConfiguration 
 {

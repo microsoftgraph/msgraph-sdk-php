@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatuses\Item;
+namespace Microsoft\Graph\DeviceAppManagement\MobileAppConfigurations\Item\UserStatuses\Item;
 
 class ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilderPatchRequestConfiguration 
 {

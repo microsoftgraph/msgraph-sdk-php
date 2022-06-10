@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item;
+namespace Microsoft\Graph\Users\Item\ManagedDevices\Item;
 
 class ManagedDeviceItemRequestBuilderDeleteRequestConfiguration 
 {

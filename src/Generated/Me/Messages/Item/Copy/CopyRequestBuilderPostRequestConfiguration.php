@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Messages\Item\Copy;
+namespace Microsoft\Graph\Me\Messages\Item\Copy;
 
 class CopyRequestBuilderPostRequestConfiguration 
 {

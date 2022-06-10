@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Members;
+namespace Microsoft\Graph\Me\JoinedTeams\Item\Members;
 
 class MembersRequestBuilderPostRequestConfiguration 
 {

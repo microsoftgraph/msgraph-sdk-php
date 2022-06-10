@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoles\Item\GetMemberObjects;
+namespace Microsoft\Graph\DirectoryRoles\Item\GetMemberObjects;
 
 class GetMemberObjectsRequestBuilderPostRequestConfiguration 
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleInstances;
+namespace Microsoft\Graph\RoleManagement\Directory\RoleEligibilityScheduleInstances;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UnifiedRoleEligibilityScheduleInstance;
-use Microsoft\Graph\Generated\Models\UnifiedRoleEligibilityScheduleInstanceCollectionResponse;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleInstances\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleInstances\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\UnifiedRoleEligibilityScheduleInstance;
+use Microsoft\Graph\Models\UnifiedRoleEligibilityScheduleInstanceCollectionResponse;
+use Microsoft\Graph\RoleManagement\Directory\RoleEligibilityScheduleInstances\Count\CountRequestBuilder;
+use Microsoft\Graph\RoleManagement\Directory\RoleEligibilityScheduleInstances\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\InstalledApps\Item;
+namespace Microsoft\Graph\Users\Item\JoinedTeams\Item\InstalledApps\Item;
 
 class TeamsAppInstallationItemRequestBuilderPatchRequestConfiguration 
 {

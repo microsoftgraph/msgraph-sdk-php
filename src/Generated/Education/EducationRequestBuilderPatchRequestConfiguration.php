@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education;
+namespace Microsoft\Graph\Education;
 
 class EducationRequestBuilderPatchRequestConfiguration 
 {

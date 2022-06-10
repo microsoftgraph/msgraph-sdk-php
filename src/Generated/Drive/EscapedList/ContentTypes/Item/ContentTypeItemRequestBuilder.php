@@ -1,25 +1,25 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item;
+namespace Microsoft\Graph\Drive\EscapedList\ContentTypes\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\AssociateWithHubSites\AssociateWithHubSitesRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\Base\BaseRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\BaseTypes\BaseTypesRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\ColumnLinks\ColumnLinksRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\ColumnLinks\Item\ColumnLinkItemRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\ColumnPositions\ColumnPositionsRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\ColumnPositions\Item\ColumnDefinitionItemRequestBuilder as MicrosoftGraphGeneratedDriveEscapedListContentTypesItemColumnPositionsItemColumnDefinitionItemRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\Columns\ColumnsRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\Columns\Item\ColumnDefinitionItemRequestBuilder as MicrosoftGraphGeneratedDriveEscapedListContentTypesItemColumnsItemColumnDefinitionItemRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\CopyToDefaultContentLocation\CopyToDefaultContentLocationRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\IsPublished\IsPublishedRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\Publish\PublishRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\Unpublish\UnpublishRequestBuilder;
-use Microsoft\Graph\Generated\Models\ContentType;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Drive\EscapedList\ContentTypes\Item\AssociateWithHubSites\AssociateWithHubSitesRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\ContentTypes\Item\Base\BaseRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\ContentTypes\Item\BaseTypes\BaseTypesRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\ContentTypes\Item\ColumnLinks\ColumnLinksRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\ContentTypes\Item\ColumnLinks\Item\ColumnLinkItemRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\ContentTypes\Item\ColumnPositions\ColumnPositionsRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\ContentTypes\Item\ColumnPositions\Item\ColumnDefinitionItemRequestBuilder as MicrosoftGraphDriveEscapedListContentTypesItemColumnPositionsItemColumnDefinitionItemRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\ContentTypes\Item\Columns\ColumnsRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\ContentTypes\Item\Columns\Item\ColumnDefinitionItemRequestBuilder as MicrosoftGraphDriveEscapedListContentTypesItemColumnsItemColumnDefinitionItemRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\ContentTypes\Item\CopyToDefaultContentLocation\CopyToDefaultContentLocationRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\ContentTypes\Item\IsPublished\IsPublishedRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\ContentTypes\Item\Publish\PublishRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\ContentTypes\Item\Unpublish\UnpublishRequestBuilder;
+use Microsoft\Graph\Models\ContentType;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -109,7 +109,7 @@ class ContentTypeItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drive.list.contentTypes.item.baseTypes.item collection
+     * Gets an item from the Microsoft\Graph.drive.list.contentTypes.item.baseTypes.item collection
      * @param string $id Unique identifier of the item
      * @return ContentTypeItemRequestBuilder
     */
@@ -120,7 +120,7 @@ class ContentTypeItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drive.list.contentTypes.item.columnLinks.item collection
+     * Gets an item from the Microsoft\Graph.drive.list.contentTypes.item.columnLinks.item collection
      * @param string $id Unique identifier of the item
      * @return ColumnLinkItemRequestBuilder
     */
@@ -131,25 +131,25 @@ class ContentTypeItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drive.list.contentTypes.item.columnPositions.item collection
+     * Gets an item from the Microsoft\Graph.drive.list.contentTypes.item.columnPositions.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedDriveEscapedListContentTypesItemColumnPositionsItemColumnDefinitionItemRequestBuilder
+     * @return MicrosoftGraphDriveEscapedListContentTypesItemColumnPositionsItemColumnDefinitionItemRequestBuilder
     */
-    public function columnPositionsById(string $id): MicrosoftGraphGeneratedDriveEscapedListContentTypesItemColumnPositionsItemColumnDefinitionItemRequestBuilder {
+    public function columnPositionsById(string $id): MicrosoftGraphDriveEscapedListContentTypesItemColumnPositionsItemColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new MicrosoftGraphGeneratedDriveEscapedListContentTypesItemColumnPositionsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphDriveEscapedListContentTypesItemColumnPositionsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drive.list.contentTypes.item.columns.item collection
+     * Gets an item from the Microsoft\Graph.drive.list.contentTypes.item.columns.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedDriveEscapedListContentTypesItemColumnsItemColumnDefinitionItemRequestBuilder
+     * @return MicrosoftGraphDriveEscapedListContentTypesItemColumnsItemColumnDefinitionItemRequestBuilder
     */
-    public function columnsById(string $id): MicrosoftGraphGeneratedDriveEscapedListContentTypesItemColumnsItemColumnDefinitionItemRequestBuilder {
+    public function columnsById(string $id): MicrosoftGraphDriveEscapedListContentTypesItemColumnsItemColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new MicrosoftGraphGeneratedDriveEscapedListContentTypesItemColumnsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphDriveEscapedListContentTypesItemColumnsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

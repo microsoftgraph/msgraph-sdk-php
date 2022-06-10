@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\UpdateRecordingStatus;
+namespace Microsoft\Graph\Communications\Calls\Item\UpdateRecordingStatus;
 
-use Microsoft\Graph\Generated\Models\RecordingStatus;
+use Microsoft\Graph\Models\RecordingStatus;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

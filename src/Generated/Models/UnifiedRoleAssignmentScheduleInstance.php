@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -45,7 +45,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     private ?DateTime $startDateTime = null;
     
     /**
-     * Instantiates a new unifiedRoleAssignmentScheduleInstance and sets the default values.
+     * Instantiates a new UnifiedRoleAssignmentScheduleInstance and sets the default values.
     */
     public function __construct() {
         parent::__construct();

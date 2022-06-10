@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\FederationConfigurations\Item;
+namespace Microsoft\Graph\Directory\FederationConfigurations\Item;
 
 class IdentityProviderBaseItemRequestBuilderGetRequestConfiguration 
 {

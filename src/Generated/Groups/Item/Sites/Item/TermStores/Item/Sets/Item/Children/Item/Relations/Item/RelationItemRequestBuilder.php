@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\Children\Item\Relations\Item;
+namespace Microsoft\Graph\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\Children\Item\Relations\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\Children\Item\Relations\Item\FromTerm\FromTermRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\Children\Item\Relations\Item\Set\SetRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\Children\Item\Relations\Item\ToTerm\ToTermRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TermStore\Relation;
+use Microsoft\Graph\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\Children\Item\Relations\Item\FromTerm\FromTermRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\Children\Item\Relations\Item\Set\SetRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\Children\Item\Relations\Item\ToTerm\ToTermRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\TermStore\Relation;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

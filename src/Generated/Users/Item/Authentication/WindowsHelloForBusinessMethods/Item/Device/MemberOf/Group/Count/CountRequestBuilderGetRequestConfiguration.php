@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\MemberOf\Group\Count;
+namespace Microsoft\Graph\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\MemberOf\Group\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

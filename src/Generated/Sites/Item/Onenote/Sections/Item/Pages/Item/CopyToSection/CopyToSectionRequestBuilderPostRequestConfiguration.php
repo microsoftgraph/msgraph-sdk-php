@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Onenote\Sections\Item\Pages\Item\CopyToSection;
+namespace Microsoft\Graph\Sites\Item\Onenote\Sections\Item\Pages\Item\CopyToSection;
 
 class CopyToSectionRequestBuilderPostRequestConfiguration 
 {

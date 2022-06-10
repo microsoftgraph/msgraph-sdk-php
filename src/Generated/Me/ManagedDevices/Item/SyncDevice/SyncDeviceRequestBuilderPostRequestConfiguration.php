@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\ManagedDevices\Item\SyncDevice;
+namespace Microsoft\Graph\Me\ManagedDevices\Item\SyncDevice;
 
 class SyncDeviceRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Photo;
+namespace Microsoft\Graph\Groups\Item\Photo;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

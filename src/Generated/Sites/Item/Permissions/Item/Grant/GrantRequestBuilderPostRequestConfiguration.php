@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Permissions\Item\Grant;
+namespace Microsoft\Graph\Sites\Item\Permissions\Item\Grant;
 
 class GrantRequestBuilderPostRequestConfiguration 
 {

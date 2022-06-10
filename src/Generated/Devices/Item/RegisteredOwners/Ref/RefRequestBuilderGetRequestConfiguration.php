@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Ref;
+namespace Microsoft\Graph\Devices\Item\RegisteredOwners\Ref;
 
 class RefRequestBuilderGetRequestConfiguration 
 {

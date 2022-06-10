@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords;
+namespace Microsoft\Graph\Domains\Item\ServiceConfigurationRecords;
 
 class ServiceConfigurationRecordsRequestBuilderGetRequestConfiguration 
 {

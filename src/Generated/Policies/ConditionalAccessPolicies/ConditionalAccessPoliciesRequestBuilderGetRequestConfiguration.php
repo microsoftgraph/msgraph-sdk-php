@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\ConditionalAccessPolicies;
+namespace Microsoft\Graph\Policies\ConditionalAccessPolicies;
 
 class ConditionalAccessPoliciesRequestBuilderGetRequestConfiguration 
 {

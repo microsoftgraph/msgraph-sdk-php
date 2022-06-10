@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\Checkin;
+namespace Microsoft\Graph\Workbooks\Item\Checkin;
 
 class CheckinRequestBuilderPostRequestConfiguration 
 {

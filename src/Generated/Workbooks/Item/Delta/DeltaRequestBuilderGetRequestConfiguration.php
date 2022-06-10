@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\Delta;
+namespace Microsoft\Graph\Workbooks\Item\Delta;
 
 class DeltaRequestBuilderGetRequestConfiguration 
 {

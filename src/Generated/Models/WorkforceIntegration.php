@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -39,7 +39,7 @@ class WorkforceIntegration extends ChangeTrackedEntity implements Parsable
     private ?string $url = null;
     
     /**
-     * Instantiates a new workforceIntegration and sets the default values.
+     * Instantiates a new WorkforceIntegration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

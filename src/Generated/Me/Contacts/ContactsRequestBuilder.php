@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Contacts;
+namespace Microsoft\Graph\Me\Contacts;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Contacts\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Me\Contacts\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Models\Contact;
-use Microsoft\Graph\Generated\Models\ContactCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Me\Contacts\Count\CountRequestBuilder;
+use Microsoft\Graph\Me\Contacts\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Models\Contact;
+use Microsoft\Graph\Models\ContactCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

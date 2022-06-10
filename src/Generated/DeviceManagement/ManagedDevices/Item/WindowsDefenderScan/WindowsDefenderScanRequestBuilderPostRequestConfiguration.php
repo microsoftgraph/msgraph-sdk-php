@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\WindowsDefenderScan;
+namespace Microsoft\Graph\DeviceManagement\ManagedDevices\Item\WindowsDefenderScan;
 
 class WindowsDefenderScanRequestBuilderPostRequestConfiguration 
 {

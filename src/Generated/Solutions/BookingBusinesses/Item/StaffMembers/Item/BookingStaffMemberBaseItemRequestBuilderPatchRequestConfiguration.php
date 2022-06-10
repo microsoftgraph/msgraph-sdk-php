@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\StaffMembers\Item;
+namespace Microsoft\Graph\Solutions\BookingBusinesses\Item\StaffMembers\Item;
 
 class BookingStaffMemberBaseItemRequestBuilderPatchRequestConfiguration 
 {

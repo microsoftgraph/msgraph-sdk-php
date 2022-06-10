@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentSchedules\Item\ActivatedUsing;
+namespace Microsoft\Graph\RoleManagement\EntitlementManagement\RoleAssignmentSchedules\Item\ActivatedUsing;
 
 class ActivatedUsingRequestBuilderGetRequestConfiguration 
 {

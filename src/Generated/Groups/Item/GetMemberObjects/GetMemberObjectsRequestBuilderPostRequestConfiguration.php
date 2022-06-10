@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\GetMemberObjects;
+namespace Microsoft\Graph\Groups\Item\GetMemberObjects;
 
 class GetMemberObjectsRequestBuilderPostRequestConfiguration 
 {

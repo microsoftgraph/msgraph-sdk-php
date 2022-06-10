@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\OnlineMeetings;
+namespace Microsoft\Graph\Communications\OnlineMeetings;
 
 class OnlineMeetingsRequestBuilderGetRequestConfiguration 
 {

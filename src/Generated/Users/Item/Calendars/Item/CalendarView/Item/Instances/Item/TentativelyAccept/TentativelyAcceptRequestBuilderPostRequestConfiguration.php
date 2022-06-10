@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Calendars\Item\CalendarView\Item\Instances\Item\TentativelyAccept;
+namespace Microsoft\Graph\Users\Item\Calendars\Item\CalendarView\Item\Instances\Item\TentativelyAccept;
 
 class TentativelyAcceptRequestBuilderPostRequestConfiguration 
 {

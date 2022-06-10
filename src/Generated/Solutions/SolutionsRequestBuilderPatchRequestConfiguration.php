@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions;
+namespace Microsoft\Graph\Solutions;
 
 class SolutionsRequestBuilderPatchRequestConfiguration 
 {

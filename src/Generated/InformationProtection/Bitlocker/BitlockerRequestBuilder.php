@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\InformationProtection\Bitlocker;
+namespace Microsoft\Graph\InformationProtection\Bitlocker;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\InformationProtection\Bitlocker\RecoveryKeys\Item\BitlockerRecoveryKeyItemRequestBuilder;
-use Microsoft\Graph\Generated\InformationProtection\Bitlocker\RecoveryKeys\RecoveryKeysRequestBuilder;
-use Microsoft\Graph\Generated\Models\Bitlocker;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\InformationProtection\Bitlocker\RecoveryKeys\Item\BitlockerRecoveryKeyItemRequestBuilder;
+use Microsoft\Graph\InformationProtection\Bitlocker\RecoveryKeys\RecoveryKeysRequestBuilder;
+use Microsoft\Graph\Models\Bitlocker;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -50,27 +50,6 @@ class BitlockerRequestBuilder
         $this->urlTemplate = '{+baseurl}/informationProtection/bitlocker{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
-    }
-
-    /**
-     * Delete navigation property bitlocker for informationProtection
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function createDeleteRequestInformation(?BitlockerRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::DELETE;
-        if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
-        }
-        return $requestInfo;
     }
 
     /**
@@ -121,25 +100,6 @@ class BitlockerRequestBuilder
     }
 
     /**
-     * Delete navigation property bitlocker for informationProtection
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return Promise
-    */
-    public function delete(?BitlockerRequestBuilderDeleteRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createDeleteRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            ];
-            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
-    }
-
-    /**
      * Get bitlocker from informationProtection
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -179,7 +139,7 @@ class BitlockerRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.informationProtection.bitlocker.recoveryKeys.item collection
+     * Gets an item from the Microsoft\Graph.informationProtection.bitlocker.recoveryKeys.item collection
      * @param string $id Unique identifier of the item
      * @return BitlockerRecoveryKeyItemRequestBuilder
     */

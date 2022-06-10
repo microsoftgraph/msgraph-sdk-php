@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\Subscriptions\Item;
+namespace Microsoft\Graph\Workbooks\Item\Subscriptions\Item;
 
 class SubscriptionItemRequestBuilderPatchRequestConfiguration 
 {

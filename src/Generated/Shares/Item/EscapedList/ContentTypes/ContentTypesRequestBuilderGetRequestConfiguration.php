@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes;
+namespace Microsoft\Graph\Shares\Item\EscapedList\ContentTypes;
 
 class ContentTypesRequestBuilderGetRequestConfiguration 
 {

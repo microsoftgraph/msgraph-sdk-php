@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserFlowIdentityProviders\Ref;
+namespace Microsoft\Graph\Identity\B2xUserFlows\Item\UserFlowIdentityProviders\Ref;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

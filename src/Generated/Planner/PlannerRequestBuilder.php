@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Planner;
+namespace Microsoft\Graph\Planner;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Planner;
-use Microsoft\Graph\Generated\Planner\Buckets\BucketsRequestBuilder;
-use Microsoft\Graph\Generated\Planner\Buckets\Item\PlannerBucketItemRequestBuilder;
-use Microsoft\Graph\Generated\Planner\Plans\Item\PlannerPlanItemRequestBuilder;
-use Microsoft\Graph\Generated\Planner\Plans\PlansRequestBuilder;
-use Microsoft\Graph\Generated\Planner\Tasks\Item\PlannerTaskItemRequestBuilder;
-use Microsoft\Graph\Generated\Planner\Tasks\TasksRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Planner;
+use Microsoft\Graph\Planner\Buckets\BucketsRequestBuilder;
+use Microsoft\Graph\Planner\Buckets\Item\PlannerBucketItemRequestBuilder;
+use Microsoft\Graph\Planner\Plans\Item\PlannerPlanItemRequestBuilder;
+use Microsoft\Graph\Planner\Plans\PlansRequestBuilder;
+use Microsoft\Graph\Planner\Tasks\Item\PlannerTaskItemRequestBuilder;
+use Microsoft\Graph\Planner\Tasks\TasksRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -60,7 +60,7 @@ class PlannerRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.planner.buckets.item collection
+     * Gets an item from the Microsoft\Graph.planner.buckets.item collection
      * @param string $id Unique identifier of the item
      * @return PlannerBucketItemRequestBuilder
     */
@@ -168,7 +168,7 @@ class PlannerRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.planner.plans.item collection
+     * Gets an item from the Microsoft\Graph.planner.plans.item collection
      * @param string $id Unique identifier of the item
      * @return PlannerPlanItemRequestBuilder
     */
@@ -179,7 +179,7 @@ class PlannerRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.planner.tasks.item collection
+     * Gets an item from the Microsoft\Graph.planner.tasks.item collection
      * @param string $id Unique identifier of the item
      * @return PlannerTaskItemRequestBuilder
     */

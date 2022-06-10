@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -34,7 +34,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
     private ?string $signingCertificate = null;
     
     /**
-     * Instantiates a new samlOrWsFedProvider and sets the default values.
+     * Instantiates a new SamlOrWsFedProvider and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -46,13 +46,6 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
      * @return SamlOrWsFedProvider
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): SamlOrWsFedProvider {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
-        if ($mappingValueNode !== null) {
-            $mappingValue = $mappingValueNode->getStringValue();
-            switch ($mappingValue) {
-                case '#microsoft.graph.samlOrWsFedProvider': return new SamlOrWsFedProvider();
-            }
-        }
         return new SamlOrWsFedProvider();
     }
 

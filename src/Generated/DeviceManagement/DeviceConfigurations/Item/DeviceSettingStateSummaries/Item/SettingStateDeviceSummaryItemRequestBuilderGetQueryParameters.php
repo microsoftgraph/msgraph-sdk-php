@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceSettingStateSummaries\Item;
+namespace Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\DeviceSettingStateSummaries\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

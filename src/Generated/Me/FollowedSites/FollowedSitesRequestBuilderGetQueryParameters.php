@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\FollowedSites;
+namespace Microsoft\Graph\Me\FollowedSites;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

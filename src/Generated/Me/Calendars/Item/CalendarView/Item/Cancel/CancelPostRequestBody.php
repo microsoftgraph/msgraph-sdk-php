@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\Item\Cancel;
+namespace Microsoft\Graph\Me\Calendars\Item\CalendarView\Item\Cancel;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts;
+namespace Microsoft\Graph\Groups\Item\Conversations\Item\Threads\Item\Posts;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Post;
-use Microsoft\Graph\Generated\Models\PostCollectionResponse;
+use Microsoft\Graph\Groups\Item\Conversations\Item\Threads\Item\Posts\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Post;
+use Microsoft\Graph\Models\PostCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -53,7 +53,7 @@ class PostsRequestBuilder
     }
 
     /**
-     * Read-only. Nullable.
+     * Get posts from groups
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +100,7 @@ class PostsRequestBuilder
     }
 
     /**
-     * Read-only. Nullable.
+     * Get posts from groups
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

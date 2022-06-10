@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities;
+namespace Microsoft\Graph\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities;
 
 class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration 
 {

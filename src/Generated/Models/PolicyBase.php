@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -31,11 +31,14 @@ class PolicyBase extends DirectoryObject implements Parsable
      * @return PolicyBase
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): PolicyBase {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.policyBase': return new PolicyBase();
+                case '#microsoft.graph.authorizationPolicy': return new AuthorizationPolicy();
+                case '#microsoft.graph.identitySecurityDefaultsEnforcementPolicy': return new IdentitySecurityDefaultsEnforcementPolicy();
+                case '#microsoft.graph.permissionGrantPolicy': return new PermissionGrantPolicy();
+                case '#microsoft.graph.stsPolicy': return new StsPolicy();
             }
         }
         return new PolicyBase();

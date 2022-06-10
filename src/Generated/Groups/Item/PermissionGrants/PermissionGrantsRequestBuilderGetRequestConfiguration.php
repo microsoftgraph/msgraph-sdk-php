@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\PermissionGrants;
+namespace Microsoft\Graph\Groups\Item\PermissionGrants;
 
 class PermissionGrantsRequestBuilderGetRequestConfiguration 
 {

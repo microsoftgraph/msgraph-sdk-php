@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\Item;
+namespace Microsoft\Graph\Solutions\BookingBusinesses\Item\CalendarView\Item;
 
 class BookingAppointmentItemRequestBuilderDeleteRequestConfiguration 
 {

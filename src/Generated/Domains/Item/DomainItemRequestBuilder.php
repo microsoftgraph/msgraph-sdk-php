@@ -1,22 +1,22 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Domains\Item;
+namespace Microsoft\Graph\Domains\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Domains\Item\DomainNameReferences\DomainNameReferencesRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\DomainNameReferences\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\FederationConfiguration\FederationConfigurationRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\FederationConfiguration\Item\InternalDomainFederationItemRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\ForceDelete\ForceDeleteRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder as MicrosoftGraphGeneratedDomainsItemServiceConfigurationRecordsItemDomainDnsRecordItemRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\ServiceConfigurationRecordsRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder as MicrosoftGraphGeneratedDomainsItemVerificationDnsRecordsItemDomainDnsRecordItemRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\VerificationDnsRecordsRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\Verify\VerifyRequestBuilder;
-use Microsoft\Graph\Generated\Models\Domain;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Domains\Item\DomainNameReferences\DomainNameReferencesRequestBuilder;
+use Microsoft\Graph\Domains\Item\DomainNameReferences\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Domains\Item\FederationConfiguration\FederationConfigurationRequestBuilder;
+use Microsoft\Graph\Domains\Item\FederationConfiguration\Item\InternalDomainFederationItemRequestBuilder;
+use Microsoft\Graph\Domains\Item\ForceDelete\ForceDeleteRequestBuilder;
+use Microsoft\Graph\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder as MicrosoftGraphDomainsItemServiceConfigurationRecordsItemDomainDnsRecordItemRequestBuilder;
+use Microsoft\Graph\Domains\Item\ServiceConfigurationRecords\ServiceConfigurationRecordsRequestBuilder;
+use Microsoft\Graph\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder as MicrosoftGraphDomainsItemVerificationDnsRecordsItemDomainDnsRecordItemRequestBuilder;
+use Microsoft\Graph\Domains\Item\VerificationDnsRecords\VerificationDnsRecordsRequestBuilder;
+use Microsoft\Graph\Domains\Item\Verify\VerifyRequestBuilder;
+use Microsoft\Graph\Models\Domain;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -183,7 +183,7 @@ class DomainItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.domains.item.domainNameReferences.item collection
+     * Gets an item from the Microsoft\Graph.domains.item.domainNameReferences.item collection
      * @param string $id Unique identifier of the item
      * @return DirectoryObjectItemRequestBuilder
     */
@@ -194,7 +194,7 @@ class DomainItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.domains.item.federationConfiguration.item collection
+     * Gets an item from the Microsoft\Graph.domains.item.federationConfiguration.item collection
      * @param string $id Unique identifier of the item
      * @return InternalDomainFederationItemRequestBuilder
     */
@@ -244,25 +244,25 @@ class DomainItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.domains.item.serviceConfigurationRecords.item collection
+     * Gets an item from the Microsoft\Graph.domains.item.serviceConfigurationRecords.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedDomainsItemServiceConfigurationRecordsItemDomainDnsRecordItemRequestBuilder
+     * @return MicrosoftGraphDomainsItemServiceConfigurationRecordsItemDomainDnsRecordItemRequestBuilder
     */
-    public function serviceConfigurationRecordsById(string $id): MicrosoftGraphGeneratedDomainsItemServiceConfigurationRecordsItemDomainDnsRecordItemRequestBuilder {
+    public function serviceConfigurationRecordsById(string $id): MicrosoftGraphDomainsItemServiceConfigurationRecordsItemDomainDnsRecordItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['domainDnsRecord%2Did'] = $id;
-        return new MicrosoftGraphGeneratedDomainsItemServiceConfigurationRecordsItemDomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphDomainsItemServiceConfigurationRecordsItemDomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.domains.item.verificationDnsRecords.item collection
+     * Gets an item from the Microsoft\Graph.domains.item.verificationDnsRecords.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedDomainsItemVerificationDnsRecordsItemDomainDnsRecordItemRequestBuilder
+     * @return MicrosoftGraphDomainsItemVerificationDnsRecordsItemDomainDnsRecordItemRequestBuilder
     */
-    public function verificationDnsRecordsById(string $id): MicrosoftGraphGeneratedDomainsItemVerificationDnsRecordsItemDomainDnsRecordItemRequestBuilder {
+    public function verificationDnsRecordsById(string $id): MicrosoftGraphDomainsItemVerificationDnsRecordsItemDomainDnsRecordItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['domainDnsRecord%2Did'] = $id;
-        return new MicrosoftGraphGeneratedDomainsItemVerificationDnsRecordsItemDomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphDomainsItemVerificationDnsRecordsItemDomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

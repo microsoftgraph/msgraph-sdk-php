@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Reply;
+namespace Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Reply;
 
 class ReplyRequestBuilderPostRequestConfiguration 
 {

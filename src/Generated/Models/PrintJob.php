@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -15,7 +15,7 @@ class PrintJob extends Entity implements Parsable
     private ?PrintJobConfiguration $configuration = null;
     
     /**
-     * @var UserIdentity|null $createdBy Read-only. Nullable.
+     * @var UserIdentity|null $createdBy The createdBy property
     */
     private ?UserIdentity $createdBy = null;
     
@@ -25,7 +25,7 @@ class PrintJob extends Entity implements Parsable
     private ?DateTime $createdDateTime = null;
     
     /**
-     * @var array<PrintDocument>|null $documents Read-only.
+     * @var array<PrintDocument>|null $documents The documents property
     */
     private ?array $documents = null;
     
@@ -79,7 +79,7 @@ class PrintJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. Read-only. Nullable.
+     * Gets the createdBy property value. The createdBy property
      * @return UserIdentity|null
     */
     public function getCreatedBy(): ?UserIdentity {
@@ -95,7 +95,7 @@ class PrintJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the documents property value. Read-only.
+     * Gets the documents property value. The documents property
      * @return array<PrintDocument>|null
     */
     public function getDocuments(): ?array {
@@ -187,7 +187,7 @@ class PrintJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. Read-only. Nullable.
+     * Sets the createdBy property value. The createdBy property
      *  @param UserIdentity|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?UserIdentity $value ): void {
@@ -203,7 +203,7 @@ class PrintJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the documents property value. Read-only.
+     * Sets the documents property value. The documents property
      *  @param array<PrintDocument>|null $value Value to set for the documents property.
     */
     public function setDocuments(?array $value ): void {

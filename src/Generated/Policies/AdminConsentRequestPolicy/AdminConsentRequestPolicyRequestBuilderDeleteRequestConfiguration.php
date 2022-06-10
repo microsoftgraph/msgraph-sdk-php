@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\AdminConsentRequestPolicy;
+namespace Microsoft\Graph\Policies\AdminConsentRequestPolicy;
 
 class AdminConsentRequestPolicyRequestBuilderDeleteRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Planner\Tasks\Item\ProgressTaskBoardFormat;
+namespace Microsoft\Graph\Planner\Tasks\Item\ProgressTaskBoardFormat;
 
 class ProgressTaskBoardFormatRequestBuilderPatchRequestConfiguration 
 {

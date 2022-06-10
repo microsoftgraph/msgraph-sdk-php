@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\ListItem;
+namespace Microsoft\Graph\Shares\Item\ListItem;
 
 class ListItemRequestBuilderDeleteRequestConfiguration 
 {

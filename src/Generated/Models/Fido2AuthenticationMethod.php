@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -40,7 +40,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
     private ?string $model = null;
     
     /**
-     * Instantiates a new fido2AuthenticationMethod and sets the default values.
+     * Instantiates a new Fido2AuthenticationMethod and sets the default values.
     */
     public function __construct() {
         parent::__construct();

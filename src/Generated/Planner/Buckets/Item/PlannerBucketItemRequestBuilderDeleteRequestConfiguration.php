@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Planner\Buckets\Item;
+namespace Microsoft\Graph\Planner\Buckets\Item;
 
 class PlannerBucketItemRequestBuilderDeleteRequestConfiguration 
 {

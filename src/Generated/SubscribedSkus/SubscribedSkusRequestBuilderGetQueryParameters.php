@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\SubscribedSkus;
+namespace Microsoft\Graph\SubscribedSkus;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

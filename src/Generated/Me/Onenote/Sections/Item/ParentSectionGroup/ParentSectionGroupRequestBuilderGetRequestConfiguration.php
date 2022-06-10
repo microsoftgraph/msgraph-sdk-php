@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Onenote\Sections\Item\ParentSectionGroup;
+namespace Microsoft\Graph\Me\Onenote\Sections\Item\ParentSectionGroup;
 
 class ParentSectionGroupRequestBuilderGetRequestConfiguration 
 {

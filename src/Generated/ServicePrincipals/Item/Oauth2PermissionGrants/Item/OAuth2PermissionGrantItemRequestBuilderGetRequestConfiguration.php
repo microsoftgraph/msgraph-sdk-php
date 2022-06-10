@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Oauth2PermissionGrants\Item;
+namespace Microsoft\Graph\ServicePrincipals\Item\Oauth2PermissionGrants\Item;
 
 class OAuth2PermissionGrantItemRequestBuilderGetRequestConfiguration 
 {

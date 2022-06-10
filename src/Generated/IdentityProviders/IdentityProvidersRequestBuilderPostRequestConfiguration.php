@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityProviders;
+namespace Microsoft\Graph\IdentityProviders;
 
 class IdentityProvidersRequestBuilderPostRequestConfiguration 
 {

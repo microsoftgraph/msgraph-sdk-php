@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\Permissions;
+namespace Microsoft\Graph\Workbooks\Item\Permissions;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\VerifyWindowsEnrollmentAutoDiscoveryWithDomainName;
+namespace Microsoft\Graph\DeviceManagement\VerifyWindowsEnrollmentAutoDiscoveryWithDomainName;
 
 class VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\DeploymentSummary;
+namespace Microsoft\Graph\DeviceAppManagement\TargetedManagedAppConfigurations\Item\DeploymentSummary;
 
 class DeploymentSummaryRequestBuilderPatchRequestConfiguration 
 {

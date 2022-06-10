@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\Permissions\Item\Grant;
+namespace Microsoft\Graph\Workbooks\Item\Permissions\Item\Grant;
 
-use Microsoft\Graph\Generated\Models\Permission;
+use Microsoft\Graph\Models\Permission;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

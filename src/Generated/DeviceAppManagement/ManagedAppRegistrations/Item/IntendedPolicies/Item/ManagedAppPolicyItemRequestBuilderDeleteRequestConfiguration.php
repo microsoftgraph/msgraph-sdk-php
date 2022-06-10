@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\IntendedPolicies\Item;
+namespace Microsoft\Graph\DeviceAppManagement\ManagedAppRegistrations\Item\IntendedPolicies\Item;
 
 class ManagedAppPolicyItemRequestBuilderDeleteRequestConfiguration 
 {

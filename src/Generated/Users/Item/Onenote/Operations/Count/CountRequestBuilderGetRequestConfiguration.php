@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Onenote\Operations\Count;
+namespace Microsoft\Graph\Users\Item\Onenote\Operations\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

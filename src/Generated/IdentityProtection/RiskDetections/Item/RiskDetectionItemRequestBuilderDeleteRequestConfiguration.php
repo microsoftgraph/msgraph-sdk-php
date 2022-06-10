@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityProtection\RiskDetections\Item;
+namespace Microsoft\Graph\IdentityProtection\RiskDetections\Item;
 
 class RiskDetectionItemRequestBuilderDeleteRequestConfiguration 
 {

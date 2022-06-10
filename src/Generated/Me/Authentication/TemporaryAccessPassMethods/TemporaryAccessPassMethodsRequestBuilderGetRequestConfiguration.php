@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Authentication\TemporaryAccessPassMethods;
+namespace Microsoft\Graph\Me\Authentication\TemporaryAccessPassMethods;
 
 class TemporaryAccessPassMethodsRequestBuilderGetRequestConfiguration 
 {

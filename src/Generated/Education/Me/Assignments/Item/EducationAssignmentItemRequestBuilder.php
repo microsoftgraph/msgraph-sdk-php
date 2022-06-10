@@ -1,21 +1,21 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item;
+namespace Microsoft\Graph\Education\Me\Assignments\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\CategoriesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\Item\EducationCategoryItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Publish\PublishRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Resources\Item\EducationAssignmentResourceItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Resources\ResourcesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Rubric\RubricRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\SetUpResourcesFolder\SetUpResourcesFolderRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\EducationSubmissionItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\SubmissionsRequestBuilder;
-use Microsoft\Graph\Generated\Models\EducationAssignment;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Education\Me\Assignments\Item\Categories\CategoriesRequestBuilder;
+use Microsoft\Graph\Education\Me\Assignments\Item\Categories\Item\EducationCategoryItemRequestBuilder;
+use Microsoft\Graph\Education\Me\Assignments\Item\Publish\PublishRequestBuilder;
+use Microsoft\Graph\Education\Me\Assignments\Item\Resources\Item\EducationAssignmentResourceItemRequestBuilder;
+use Microsoft\Graph\Education\Me\Assignments\Item\Resources\ResourcesRequestBuilder;
+use Microsoft\Graph\Education\Me\Assignments\Item\Rubric\RubricRequestBuilder;
+use Microsoft\Graph\Education\Me\Assignments\Item\SetUpResourcesFolder\SetUpResourcesFolderRequestBuilder;
+use Microsoft\Graph\Education\Me\Assignments\Item\Submissions\Item\EducationSubmissionItemRequestBuilder;
+use Microsoft\Graph\Education\Me\Assignments\Item\Submissions\SubmissionsRequestBuilder;
+use Microsoft\Graph\Models\EducationAssignment;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -84,7 +84,7 @@ class EducationAssignmentItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.me.assignments.item.categories.item collection
+     * Gets an item from the Microsoft\Graph.education.me.assignments.item.categories.item collection
      * @param string $id Unique identifier of the item
      * @return EducationCategoryItemRequestBuilder
     */
@@ -232,7 +232,7 @@ class EducationAssignmentItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.me.assignments.item.resources.item collection
+     * Gets an item from the Microsoft\Graph.education.me.assignments.item.resources.item collection
      * @param string $id Unique identifier of the item
      * @return EducationAssignmentResourceItemRequestBuilder
     */
@@ -243,7 +243,7 @@ class EducationAssignmentItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.me.assignments.item.submissions.item collection
+     * Gets an item from the Microsoft\Graph.education.me.assignments.item.submissions.item collection
      * @param string $id Unique identifier of the item
      * @return EducationSubmissionItemRequestBuilder
     */

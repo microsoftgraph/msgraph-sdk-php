@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Agreements;
+namespace Microsoft\Graph\Agreements;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Agreement;
-use Microsoft\Graph\Generated\Models\AgreementCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Agreement;
+use Microsoft\Graph\Models\AgreementCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

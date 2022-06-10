@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\FilterByCurrentUserWithOn;
+namespace Microsoft\Graph\IdentityGovernance\AppConsent\AppConsentRequests\FilterByCurrentUserWithOn;
 
 class FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration 
 {

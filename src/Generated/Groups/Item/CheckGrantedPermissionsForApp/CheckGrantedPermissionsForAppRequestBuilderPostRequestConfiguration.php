@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\CheckGrantedPermissionsForApp;
+namespace Microsoft\Graph\Groups\Item\CheckGrantedPermissionsForApp;
 
 class CheckGrantedPermissionsForAppRequestBuilderPostRequestConfiguration 
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\ScheduleActionsForRules;
+namespace Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\ScheduleActionsForRules;
 
-use Microsoft\Graph\Generated\Models\DeviceComplianceScheduledActionForRule;
+use Microsoft\Graph\Models\DeviceComplianceScheduledActionForRule;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

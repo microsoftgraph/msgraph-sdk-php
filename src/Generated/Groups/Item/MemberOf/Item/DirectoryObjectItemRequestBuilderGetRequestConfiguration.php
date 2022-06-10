@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\MemberOf\Item;
+namespace Microsoft\Graph\Groups\Item\MemberOf\Item;
 
 class DirectoryObjectItemRequestBuilderGetRequestConfiguration 
 {

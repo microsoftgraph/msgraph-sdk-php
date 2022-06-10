@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\FilesFolder;
+namespace Microsoft\Graph\Me\JoinedTeams\Item\Channels\Item\FilesFolder;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

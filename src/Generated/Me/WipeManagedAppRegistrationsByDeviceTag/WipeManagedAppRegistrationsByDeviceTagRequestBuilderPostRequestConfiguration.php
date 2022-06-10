@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\WipeManagedAppRegistrationsByDeviceTag;
+namespace Microsoft\Graph\Me\WipeManagedAppRegistrationsByDeviceTag;
 
 class WipeManagedAppRegistrationsByDeviceTagRequestBuilderPostRequestConfiguration 
 {

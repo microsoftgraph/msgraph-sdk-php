@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Calendar\CalendarView\Delta;
+namespace Microsoft\Graph\Me\Calendar\CalendarView\Delta;
 
 class DeltaRequestBuilderGetRequestConfiguration 
 {

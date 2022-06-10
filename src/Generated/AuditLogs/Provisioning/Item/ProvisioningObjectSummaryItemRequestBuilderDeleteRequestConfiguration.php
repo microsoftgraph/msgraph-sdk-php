@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\AuditLogs\Provisioning\Item;
+namespace Microsoft\Graph\AuditLogs\Provisioning\Item;
 
 class ProvisioningObjectSummaryItemRequestBuilderDeleteRequestConfiguration 
 {

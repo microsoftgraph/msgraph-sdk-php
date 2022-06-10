@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Insights\Trending\Item;
+namespace Microsoft\Graph\Me\Insights\Trending\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

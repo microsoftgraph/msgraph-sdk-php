@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\ConditionalAccessPolicies\Count;
+namespace Microsoft\Graph\Policies\ConditionalAccessPolicies\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Presences\Item;
+namespace Microsoft\Graph\Communications\Presences\Item;
 
 class PresenceItemRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\ScheduledActionsForRule\Item;
+namespace Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\ScheduledActionsForRule\Item;
 
 class DeviceComplianceScheduledActionForRuleItemRequestBuilderPatchRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoleTemplates\GetByIds;
+namespace Microsoft\Graph\DirectoryRoleTemplates\GetByIds;
 
 class GetByIdsRequestBuilderPostRequestConfiguration 
 {

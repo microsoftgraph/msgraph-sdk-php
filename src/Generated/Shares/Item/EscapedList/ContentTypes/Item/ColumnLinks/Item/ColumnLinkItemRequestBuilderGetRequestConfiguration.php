@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\ColumnLinks\Item;
+namespace Microsoft\Graph\Shares\Item\EscapedList\ContentTypes\Item\ColumnLinks\Item;
 
 class ColumnLinkItemRequestBuilderGetRequestConfiguration 
 {

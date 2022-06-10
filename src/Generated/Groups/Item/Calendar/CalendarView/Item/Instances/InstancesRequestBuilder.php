@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Calendar\CalendarView\Item\Instances;
+namespace Microsoft\Graph\Groups\Item\Calendar\CalendarView\Item\Instances;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Calendar\CalendarView\Item\Instances\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Calendar\CalendarView\Item\Instances\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Models\Event;
-use Microsoft\Graph\Generated\Models\EventCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Groups\Item\Calendar\CalendarView\Item\Instances\Count\CountRequestBuilder;
+use Microsoft\Graph\Groups\Item\Calendar\CalendarView\Item\Instances\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Models\Event;
+use Microsoft\Graph\Models\EventCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

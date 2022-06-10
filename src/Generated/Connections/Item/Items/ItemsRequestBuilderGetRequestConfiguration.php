@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Connections\Item\Items;
+namespace Microsoft\Graph\Connections\Item\Items;
 
 class ItemsRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -34,7 +34,7 @@ class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable
     private ?array $userFlowIdentityProviders = null;
     
     /**
-     * Instantiates a new b2xIdentityUserFlow and sets the default values.
+     * Instantiates a new B2xIdentityUserFlow and sets the default values.
     */
     public function __construct() {
         parent::__construct();

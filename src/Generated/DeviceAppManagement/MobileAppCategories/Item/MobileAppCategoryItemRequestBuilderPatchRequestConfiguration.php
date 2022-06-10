@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppCategories\Item;
+namespace Microsoft\Graph\DeviceAppManagement\MobileAppCategories\Item;
 
 class MobileAppCategoryItemRequestBuilderPatchRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DataPolicyOperations\Item;
+namespace Microsoft\Graph\DataPolicyOperations\Item;
 
 class DataPolicyOperationItemRequestBuilderDeleteRequestConfiguration 
 {

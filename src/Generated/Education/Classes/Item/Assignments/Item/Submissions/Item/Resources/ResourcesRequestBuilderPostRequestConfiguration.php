@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Submissions\Item\Resources;
+namespace Microsoft\Graph\Education\Classes\Item\Assignments\Item\Submissions\Item\Resources;
 
 class ResourcesRequestBuilderPostRequestConfiguration 
 {

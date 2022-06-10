@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\DisableLostMode;
+namespace Microsoft\Graph\DeviceManagement\ManagedDevices\Item\DisableLostMode;
 
 class DisableLostModeRequestBuilderPostRequestConfiguration 
 {

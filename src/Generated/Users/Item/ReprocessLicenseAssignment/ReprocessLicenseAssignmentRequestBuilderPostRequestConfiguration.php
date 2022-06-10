@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ReprocessLicenseAssignment;
+namespace Microsoft\Graph\Users\Item\ReprocessLicenseAssignment;
 
 class ReprocessLicenseAssignmentRequestBuilderPostRequestConfiguration 
 {

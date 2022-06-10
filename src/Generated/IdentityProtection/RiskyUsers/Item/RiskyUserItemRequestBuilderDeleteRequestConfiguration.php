@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item;
+namespace Microsoft\Graph\IdentityProtection\RiskyUsers\Item;
 
 class RiskyUserItemRequestBuilderDeleteRequestConfiguration 
 {

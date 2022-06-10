@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -45,7 +45,7 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod imple
     private ?string $temporaryAccessPass = null;
     
     /**
-     * Instantiates a new temporaryAccessPassAuthenticationMethod and sets the default values.
+     * Instantiates a new TemporaryAccessPassAuthenticationMethod and sets the default values.
     */
     public function __construct() {
         parent::__construct();

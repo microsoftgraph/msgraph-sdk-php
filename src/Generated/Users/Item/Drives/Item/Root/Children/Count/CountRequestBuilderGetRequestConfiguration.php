@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\Root\Children\Count;
+namespace Microsoft\Graph\Users\Item\Drives\Item\Root\Children\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

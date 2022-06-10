@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Branding\SquareLogo;
+namespace Microsoft\Graph\Branding\SquareLogo;
 
 class SquareLogoRequestBuilderPutRequestConfiguration 
 {

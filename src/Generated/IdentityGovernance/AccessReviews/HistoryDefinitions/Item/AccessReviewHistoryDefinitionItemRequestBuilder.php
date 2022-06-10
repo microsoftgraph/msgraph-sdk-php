@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Item;
+namespace Microsoft\Graph\IdentityGovernance\AccessReviews\HistoryDefinitions\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\Instances\InstancesRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\Instances\Item\AccessReviewHistoryInstanceItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\AccessReviewHistoryDefinition;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\Instances\InstancesRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\Instances\Item\AccessReviewHistoryInstanceItemRequestBuilder;
+use Microsoft\Graph\Models\AccessReviewHistoryDefinition;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -159,7 +159,7 @@ class AccessReviewHistoryDefinitionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.accessReviews.historyDefinitions.item.instances.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.accessReviews.historyDefinitions.item.instances.item collection
      * @param string $id Unique identifier of the item
      * @return AccessReviewHistoryInstanceItemRequestBuilder
     */

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses;
+namespace Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\DeviceConfigurationDeviceStatus;
-use Microsoft\Graph\Generated\Models\DeviceConfigurationDeviceStatusCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\DeviceConfigurationDeviceStatus;
+use Microsoft\Graph\Models\DeviceConfigurationDeviceStatusCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

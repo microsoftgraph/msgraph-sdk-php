@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -14,7 +14,7 @@ class ShiftPreferences extends ChangeTrackedEntity implements Parsable
     private ?array $availability = null;
     
     /**
-     * Instantiates a new shiftPreferences and sets the default values.
+     * Instantiates a new ShiftPreferences and sets the default values.
     */
     public function __construct() {
         parent::__construct();

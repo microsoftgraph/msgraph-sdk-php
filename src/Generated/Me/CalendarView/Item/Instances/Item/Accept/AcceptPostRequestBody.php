@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\CalendarView\Item\Instances\Item\Accept;
+namespace Microsoft\Graph\Me\CalendarView\Item\Instances\Item\Accept;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

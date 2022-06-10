@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -82,11 +82,12 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
      * @return UnifiedRoleScheduleBase
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): UnifiedRoleScheduleBase {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.unifiedRoleScheduleBase': return new UnifiedRoleScheduleBase();
+                case '#microsoft.graph.unifiedRoleAssignmentSchedule': return new UnifiedRoleAssignmentSchedule();
+                case '#microsoft.graph.unifiedRoleEligibilitySchedule': return new UnifiedRoleEligibilitySchedule();
             }
         }
         return new UnifiedRoleScheduleBase();

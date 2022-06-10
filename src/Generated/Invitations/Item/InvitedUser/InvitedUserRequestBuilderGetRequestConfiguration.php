@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Invitations\Item\InvitedUser;
+namespace Microsoft\Graph\Invitations\Item\InvitedUser;
 
 class InvitedUserRequestBuilderGetRequestConfiguration 
 {

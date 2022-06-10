@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\AndroidManagedAppProtections\Count;
+namespace Microsoft\Graph\DeviceAppManagement\AndroidManagedAppProtections\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

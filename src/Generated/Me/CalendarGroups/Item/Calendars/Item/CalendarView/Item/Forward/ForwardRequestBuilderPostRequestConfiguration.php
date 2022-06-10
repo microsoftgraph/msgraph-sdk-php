@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Forward;
+namespace Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Forward;
 
 class ForwardRequestBuilderPostRequestConfiguration 
 {

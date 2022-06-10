@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Tabs\Count;
+namespace Microsoft\Graph\Teams\Item\PrimaryChannel\Tabs\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

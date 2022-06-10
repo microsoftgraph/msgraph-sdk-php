@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\ApiConnectors\Item\UploadClientCertificate;
+namespace Microsoft\Graph\Identity\ApiConnectors\Item\UploadClientCertificate;
 
 class UploadClientCertificateRequestBuilderPostRequestConfiguration 
 {

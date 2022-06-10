@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ApplePushNotificationCertificate;
+namespace Microsoft\Graph\DeviceManagement\ApplePushNotificationCertificate;
 
 class ApplePushNotificationCertificateRequestBuilderPatchRequestConfiguration 
 {

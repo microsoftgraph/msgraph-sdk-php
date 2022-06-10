@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Events;
+namespace Microsoft\Graph\Users\Item\Events;
 
 class EventsRequestBuilderPostRequestConfiguration 
 {

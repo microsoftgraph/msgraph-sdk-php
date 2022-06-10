@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -26,11 +26,12 @@ class OnenoteEntityBaseModel extends Entity implements Parsable
      * @return OnenoteEntityBaseModel
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): OnenoteEntityBaseModel {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.onenoteEntityBaseModel': return new OnenoteEntityBaseModel();
+                case '#microsoft.graph.onenoteEntitySchemaObjectModel': return new OnenoteEntitySchemaObjectModel();
+                case '#microsoft.graph.onenoteResource': return new OnenoteResource();
             }
         }
         return new OnenoteEntityBaseModel();

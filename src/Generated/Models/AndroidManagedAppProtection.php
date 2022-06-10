@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -59,7 +59,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
     private ?bool $screenCaptureBlocked = null;
     
     /**
-     * Instantiates a new androidManagedAppProtection and sets the default values.
+     * Instantiates a new AndroidManagedAppProtection and sets the default values.
     */
     public function __construct() {
         parent::__construct();

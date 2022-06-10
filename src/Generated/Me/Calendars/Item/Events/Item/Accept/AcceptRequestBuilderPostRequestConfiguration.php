@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\Accept;
+namespace Microsoft\Graph\Me\Calendars\Item\Events\Item\Accept;
 
 class AcceptRequestBuilderPostRequestConfiguration 
 {

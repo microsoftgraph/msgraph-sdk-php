@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\InternalSponsors\Count;
+namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\InternalSponsors\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

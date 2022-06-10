@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels;
+namespace Microsoft\Graph\Me\JoinedTeams\Item\Channels;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

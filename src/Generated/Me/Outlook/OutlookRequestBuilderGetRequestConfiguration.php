@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Outlook;
+namespace Microsoft\Graph\Me\Outlook;
 
 class OutlookRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\CreatedObjects\ServicePrincipal\Count;
+namespace Microsoft\Graph\Me\CreatedObjects\ServicePrincipal\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Settings\ShiftPreferences;
+namespace Microsoft\Graph\Me\Settings\ShiftPreferences;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

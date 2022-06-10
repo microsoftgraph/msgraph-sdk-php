@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Item;
+namespace Microsoft\Graph\DeviceManagement\DetectedApps\Item;
 
 class DetectedAppItemRequestBuilderGetRequestConfiguration 
 {

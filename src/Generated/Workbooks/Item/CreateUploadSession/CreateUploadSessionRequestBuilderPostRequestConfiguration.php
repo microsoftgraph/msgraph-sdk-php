@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\CreateUploadSession;
+namespace Microsoft\Graph\Workbooks\Item\CreateUploadSession;
 
 class CreateUploadSessionRequestBuilderPostRequestConfiguration 
 {

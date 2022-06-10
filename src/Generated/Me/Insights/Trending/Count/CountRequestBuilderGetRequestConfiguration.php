@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Insights\Trending\Count;
+namespace Microsoft\Graph\Me\Insights\Trending\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

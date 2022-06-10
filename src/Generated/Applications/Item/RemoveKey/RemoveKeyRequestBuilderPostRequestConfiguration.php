@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\RemoveKey;
+namespace Microsoft\Graph\Applications\Item\RemoveKey;
 
 class RemoveKeyRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\DismissReminder;
+namespace Microsoft\Graph\Me\Calendar\CalendarView\Item\DismissReminder;
 
 class DismissReminderRequestBuilderPostRequestConfiguration 
 {

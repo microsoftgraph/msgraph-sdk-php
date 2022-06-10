@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -21,11 +21,11 @@ class BookingStaffMemberBase extends Entity implements Parsable
      * @return BookingStaffMemberBase
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): BookingStaffMemberBase {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.bookingStaffMemberBase': return new BookingStaffMemberBase();
+                case '#microsoft.graph.bookingStaffMember': return new BookingStaffMember();
             }
         }
         return new BookingStaffMemberBase();

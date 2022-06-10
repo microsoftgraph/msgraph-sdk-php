@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Events;
+namespace Microsoft\Graph\Users\Item\Events;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Event;
-use Microsoft\Graph\Generated\Models\EventCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Events\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Events\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Models\Event;
+use Microsoft\Graph\Models\EventCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Users\Item\Events\Count\CountRequestBuilder;
+use Microsoft\Graph\Users\Item\Events\Delta\DeltaRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

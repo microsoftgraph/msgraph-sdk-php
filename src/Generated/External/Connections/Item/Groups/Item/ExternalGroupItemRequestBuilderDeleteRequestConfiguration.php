@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\External\Connections\Item\Groups\Item;
+namespace Microsoft\Graph\External\Connections\Item\Groups\Item;
 
 class ExternalGroupItemRequestBuilderDeleteRequestConfiguration 
 {

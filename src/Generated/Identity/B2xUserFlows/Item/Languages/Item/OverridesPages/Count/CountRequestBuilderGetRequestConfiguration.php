@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\Count;
+namespace Microsoft\Graph\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\UserFlowAttributes;
+namespace Microsoft\Graph\Identity\UserFlowAttributes;
 
 class UserFlowAttributesRequestBuilderGetRequestConfiguration 
 {

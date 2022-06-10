@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\Item;
+namespace Microsoft\Graph\Solutions\BookingBusinesses\Item\Appointments\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\BookingAppointment;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\Item\Cancel\CancelRequestBuilder;
+use Microsoft\Graph\Models\BookingAppointment;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Solutions\BookingBusinesses\Item\Appointments\Item\Cancel\CancelRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

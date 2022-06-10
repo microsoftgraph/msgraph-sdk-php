@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -44,7 +44,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
     private ?string $minimumRequiredSdkVersion = null;
     
     /**
-     * Instantiates a new iosManagedAppProtection and sets the default values.
+     * Instantiates a new IosManagedAppProtection and sets the default values.
     */
     public function __construct() {
         parent::__construct();

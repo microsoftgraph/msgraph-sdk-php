@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\Pages\Item\ParentNotebook;
+namespace Microsoft\Graph\Users\Item\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\Pages\Item\ParentNotebook;
 
 class ParentNotebookRequestBuilderGetRequestConfiguration 
 {

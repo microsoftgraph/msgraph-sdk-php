@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\Messages\Item\CreateForward;
+namespace Microsoft\Graph\Me\MailFolders\Item\ChildFolders\Item\Messages\Item\CreateForward;
 
-use Microsoft\Graph\Generated\Models\Message;
-use Microsoft\Graph\Generated\Models\Recipient;
+use Microsoft\Graph\Models\Message;
+use Microsoft\Graph\Models\Recipient;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

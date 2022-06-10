@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\Owners\Ref;
+namespace Microsoft\Graph\Applications\Item\Owners\Ref;
 
 class RefRequestBuilderGetRequestConfiguration 
 {

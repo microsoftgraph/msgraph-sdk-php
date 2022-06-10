@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\Items\Item\ListItem\Versions\Item;
+namespace Microsoft\Graph\Drive\Items\Item\ListItem\Versions\Item;
 
 class ListItemVersionItemRequestBuilderPatchRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement;
+namespace Microsoft\Graph\DeviceAppManagement;
 
 class DeviceAppManagementRequestBuilderPatchRequestConfiguration 
 {

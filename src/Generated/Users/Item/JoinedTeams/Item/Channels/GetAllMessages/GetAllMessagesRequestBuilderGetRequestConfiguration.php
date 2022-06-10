@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\GetAllMessages;
+namespace Microsoft\Graph\Users\Item\JoinedTeams\Item\Channels\GetAllMessages;
 
 class GetAllMessagesRequestBuilderGetRequestConfiguration 
 {

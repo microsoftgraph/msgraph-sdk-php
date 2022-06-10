@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\Root\Thumbnails\Count;
+namespace Microsoft\Graph\Drive\Root\Thumbnails\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

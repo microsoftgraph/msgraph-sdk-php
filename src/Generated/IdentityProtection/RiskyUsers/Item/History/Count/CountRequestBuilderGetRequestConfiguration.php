@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item\History\Count;
+namespace Microsoft\Graph\IdentityProtection\RiskyUsers\Item\History\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

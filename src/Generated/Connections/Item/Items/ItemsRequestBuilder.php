@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Connections\Item\Items;
+namespace Microsoft\Graph\Connections\Item\Items;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Connections\Item\Items\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalItem;
-use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalItemCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Connections\Item\Items\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ExternalConnectors\ExternalItem;
+use Microsoft\Graph\Models\ExternalConnectors\ExternalItemCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -53,7 +53,7 @@ class ItemsRequestBuilder
     }
 
     /**
-     * Read-only. Nullable.
+     * Get items from connections
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +100,7 @@ class ItemsRequestBuilder
     }
 
     /**
-     * Read-only. Nullable.
+     * Get items from connections
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

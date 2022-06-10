@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\ConditionalAccessPolicies\Item;
+namespace Microsoft\Graph\Policies\ConditionalAccessPolicies\Item;
 
 class ConditionalAccessPolicyItemRequestBuilderDeleteRequestConfiguration 
 {

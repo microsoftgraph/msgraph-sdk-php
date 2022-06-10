@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilitySchedules\Item;
+namespace Microsoft\Graph\RoleManagement\EntitlementManagement\RoleEligibilitySchedules\Item;
 
 class UnifiedRoleEligibilityScheduleItemRequestBuilderDeleteRequestConfiguration 
 {

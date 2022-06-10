@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Events\Item\TentativelyAccept;
+namespace Microsoft\Graph\Me\Events\Item\TentativelyAccept;
 
-use Microsoft\Graph\Generated\Models\TimeSlot;
+use Microsoft\Graph\Models\TimeSlot;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

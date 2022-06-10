@@ -1,12 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Subscriptions\Item;
+namespace Microsoft\Graph\Groups\Item\Sites\Item\Lists\Item\Subscriptions\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Subscription;
+use Microsoft\Graph\Groups\Item\Sites\Item\Lists\Item\Subscriptions\Item\Reauthorize\ReauthorizeRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Subscription;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -21,6 +22,13 @@ class SubscriptionItemRequestBuilder
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * The reauthorize property
+    */
+    public function reauthorize(): ReauthorizeRequestBuilder {
+        return new ReauthorizeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

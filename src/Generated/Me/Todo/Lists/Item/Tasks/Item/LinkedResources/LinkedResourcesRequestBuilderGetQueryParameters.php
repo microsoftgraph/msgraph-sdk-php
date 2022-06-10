@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\LinkedResources;
+namespace Microsoft\Graph\Me\Todo\Lists\Item\Tasks\Item\LinkedResources;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

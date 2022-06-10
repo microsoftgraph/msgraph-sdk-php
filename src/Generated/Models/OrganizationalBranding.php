@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -14,7 +14,7 @@ class OrganizationalBranding extends OrganizationalBrandingProperties implements
     private ?array $localizations = null;
     
     /**
-     * Instantiates a new organizationalBranding and sets the default values.
+     * Instantiates a new OrganizationalBranding and sets the default values.
     */
     public function __construct() {
         parent::__construct();

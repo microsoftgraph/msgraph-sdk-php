@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetOffice365ActiveUserCountsWithPeriod;
+namespace Microsoft\Graph\Reports\GetOffice365ActiveUserCountsWithPeriod;
 
 class GetOffice365ActiveUserCountsWithPeriodRequestBuilderGetRequestConfiguration 
 {

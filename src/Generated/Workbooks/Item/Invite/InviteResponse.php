@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\Invite;
+namespace Microsoft\Graph\Workbooks\Item\Invite;
 
-use Microsoft\Graph\Generated\Models\Permission;
+use Microsoft\Graph\Models\Permission;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

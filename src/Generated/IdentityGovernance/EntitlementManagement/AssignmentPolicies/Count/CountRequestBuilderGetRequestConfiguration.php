@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentPolicies\Count;
+namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\AssignmentPolicies\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

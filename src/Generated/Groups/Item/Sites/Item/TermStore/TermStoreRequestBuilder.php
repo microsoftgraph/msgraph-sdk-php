@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore;
+namespace Microsoft\Graph\Groups\Item\Sites\Item\TermStore;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Groups\GroupsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Groups\Item\GroupItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Item\SetItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\SetsRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TermStore\Store;
+use Microsoft\Graph\Groups\Item\Sites\Item\TermStore\Groups\GroupsRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\TermStore\Groups\Item\GroupItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\TermStore\Sets\Item\SetItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Item\TermStore\Sets\SetsRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\TermStore\Store;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -168,7 +168,7 @@ class TermStoreRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.termStore.groups.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.sites.item.termStore.groups.item collection
      * @param string $id Unique identifier of the item
      * @return GroupItemRequestBuilder
     */
@@ -199,7 +199,7 @@ class TermStoreRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.termStore.sets.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.sites.item.termStore.sets.item collection
      * @param string $id Unique identifier of the item
      * @return SetItemRequestBuilder
     */

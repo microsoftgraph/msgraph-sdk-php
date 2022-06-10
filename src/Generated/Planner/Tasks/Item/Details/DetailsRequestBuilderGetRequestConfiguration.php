@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Planner\Tasks\Item\Details;
+namespace Microsoft\Graph\Planner\Tasks\Item\Details;
 
 class DetailsRequestBuilderGetRequestConfiguration 
 {

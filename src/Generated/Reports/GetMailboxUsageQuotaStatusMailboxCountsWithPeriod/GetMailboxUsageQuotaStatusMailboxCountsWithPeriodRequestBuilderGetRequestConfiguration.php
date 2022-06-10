@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetMailboxUsageQuotaStatusMailboxCountsWithPeriod;
+namespace Microsoft\Graph\Reports\GetMailboxUsageQuotaStatusMailboxCountsWithPeriod;
 
 class GetMailboxUsageQuotaStatusMailboxCountsWithPeriodRequestBuilderGetRequestConfiguration 
 {

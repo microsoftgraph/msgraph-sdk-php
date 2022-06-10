@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Manager\Ref;
+namespace Microsoft\Graph\Users\Item\Manager\Ref;
 
 class RefRequestBuilderPutRequestConfiguration 
 {

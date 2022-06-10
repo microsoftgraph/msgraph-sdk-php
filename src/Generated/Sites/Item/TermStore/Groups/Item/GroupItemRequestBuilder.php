@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\TermStore\Groups\Item;
+namespace Microsoft\Graph\Sites\Item\TermStore\Groups\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TermStore\Group;
-use Microsoft\Graph\Generated\Sites\Item\TermStore\Groups\Item\Sets\Item\SetItemRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\TermStore\Groups\Item\Sets\SetsRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\TermStore\Group;
+use Microsoft\Graph\Sites\Item\TermStore\Groups\Item\Sets\Item\SetItemRequestBuilder;
+use Microsoft\Graph\Sites\Item\TermStore\Groups\Item\Sets\SetsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -179,7 +179,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.sites.item.termStore.groups.item.sets.item collection
+     * Gets an item from the Microsoft\Graph.sites.item.termStore.groups.item.sets.item collection
      * @param string $id Unique identifier of the item
      * @return SetItemRequestBuilder
     */

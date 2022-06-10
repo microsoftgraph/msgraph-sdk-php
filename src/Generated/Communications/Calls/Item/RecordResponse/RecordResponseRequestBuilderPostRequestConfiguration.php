@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\RecordResponse;
+namespace Microsoft\Graph\Communications\Calls\Item\RecordResponse;
 
 class RecordResponseRequestBuilderPostRequestConfiguration 
 {

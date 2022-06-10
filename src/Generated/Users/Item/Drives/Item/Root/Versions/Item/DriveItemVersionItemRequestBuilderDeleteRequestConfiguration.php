@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\Root\Versions\Item;
+namespace Microsoft\Graph\Users\Item\Drives\Item\Root\Versions\Item;
 
 class DriveItemVersionItemRequestBuilderDeleteRequestConfiguration 
 {

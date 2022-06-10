@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\DirectReports\OrgContact;
+namespace Microsoft\Graph\Me\DirectReports\OrgContact;
 
 class OrgContactRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Organization\Item\Branding\Localizations;
+namespace Microsoft\Graph\Organization\Item\Branding\Localizations;
 
 class LocalizationsRequestBuilderGetRequestConfiguration 
 {

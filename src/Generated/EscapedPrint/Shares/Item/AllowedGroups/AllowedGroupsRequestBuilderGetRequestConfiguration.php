@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedGroups;
+namespace Microsoft\Graph\EscapedPrint\Shares\Item\AllowedGroups;
 
 class AllowedGroupsRequestBuilderGetRequestConfiguration 
 {

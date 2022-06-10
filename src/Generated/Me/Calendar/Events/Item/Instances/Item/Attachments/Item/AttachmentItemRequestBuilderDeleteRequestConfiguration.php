@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Calendar\Events\Item\Instances\Item\Attachments\Item;
+namespace Microsoft\Graph\Me\Calendar\Events\Item\Instances\Item\Attachments\Item;
 
 class AttachmentItemRequestBuilderDeleteRequestConfiguration 
 {

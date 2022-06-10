@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Item\Contacts\Item;
+namespace Microsoft\Graph\Users\Item\ContactFolders\Item\ChildFolders\Item\Contacts\Item;
 
 class ContactItemRequestBuilderGetRequestConfiguration 
 {

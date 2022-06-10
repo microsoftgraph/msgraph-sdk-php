@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CancelMediaProcessingOperation extends CommsOperation implements Parsable 
 {
     /**
-     * Instantiates a new cancelMediaProcessingOperation and sets the default values.
+     * Instantiates a new CancelMediaProcessingOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

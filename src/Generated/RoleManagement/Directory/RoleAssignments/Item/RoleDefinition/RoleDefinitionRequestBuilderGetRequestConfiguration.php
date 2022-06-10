@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignments\Item\RoleDefinition;
+namespace Microsoft\Graph\RoleManagement\Directory\RoleAssignments\Item\RoleDefinition;
 
 class RoleDefinitionRequestBuilderGetRequestConfiguration 
 {

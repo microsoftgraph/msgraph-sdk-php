@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\GroupLifecyclePolicies;
+namespace Microsoft\Graph\GroupLifecyclePolicies;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\GroupLifecyclePolicies\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\GroupLifecyclePolicy;
-use Microsoft\Graph\Generated\Models\GroupLifecyclePolicyCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\GroupLifecyclePolicies\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\GroupLifecyclePolicy;
+use Microsoft\Graph\Models\GroupLifecyclePolicyCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

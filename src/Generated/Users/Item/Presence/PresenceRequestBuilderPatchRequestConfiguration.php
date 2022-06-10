@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Presence;
+namespace Microsoft\Graph\Users\Item\Presence;
 
 class PresenceRequestBuilderPatchRequestConfiguration 
 {

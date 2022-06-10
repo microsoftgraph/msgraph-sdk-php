@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\CalendarView\Item\Extensions\Item;
+namespace Microsoft\Graph\Users\Item\CalendarView\Item\Extensions\Item;
 
 class ExtensionItemRequestBuilderDeleteRequestConfiguration 
 {

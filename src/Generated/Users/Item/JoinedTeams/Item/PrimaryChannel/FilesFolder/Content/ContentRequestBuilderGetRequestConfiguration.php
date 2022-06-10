@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\FilesFolder\Content;
+namespace Microsoft\Graph\Users\Item\JoinedTeams\Item\PrimaryChannel\FilesFolder\Content;
 
 class ContentRequestBuilderGetRequestConfiguration 
 {

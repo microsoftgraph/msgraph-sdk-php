@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\Delta;
+namespace Microsoft\Graph\Workbooks\Item\Delta;
 
-use Microsoft\Graph\Generated\Models\DriveItem;
+use Microsoft\Graph\Models\DriveItem;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

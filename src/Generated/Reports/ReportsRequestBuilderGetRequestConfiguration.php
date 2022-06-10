@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports;
+namespace Microsoft\Graph\Reports;
 
 class ReportsRequestBuilderGetRequestConfiguration 
 {

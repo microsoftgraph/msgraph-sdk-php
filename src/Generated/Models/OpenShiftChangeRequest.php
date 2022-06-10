@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -14,7 +14,7 @@ class OpenShiftChangeRequest extends ScheduleChangeRequest implements Parsable
     private ?string $openShiftId = null;
     
     /**
-     * Instantiates a new openShiftChangeRequest and sets the default values.
+     * Instantiates a new OpenShiftChangeRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();

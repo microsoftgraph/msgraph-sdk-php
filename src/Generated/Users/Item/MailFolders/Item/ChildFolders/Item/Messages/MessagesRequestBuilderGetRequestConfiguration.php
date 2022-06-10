@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages;
+namespace Microsoft\Graph\Users\Item\MailFolders\Item\ChildFolders\Item\Messages;
 
 class MessagesRequestBuilderGetRequestConfiguration 
 {

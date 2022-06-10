@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\SubscribeByMail;
+namespace Microsoft\Graph\Groups\Item\SubscribeByMail;
 
 class SubscribeByMailRequestBuilderPostRequestConfiguration 
 {

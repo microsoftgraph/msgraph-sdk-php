@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Places;
+namespace Microsoft\Graph\Places;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Place;
-use Microsoft\Graph\Generated\Models\PlaceCollectionResponse;
-use Microsoft\Graph\Generated\Places\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Places\Room\RoomRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Place;
+use Microsoft\Graph\Models\PlaceCollectionResponse;
+use Microsoft\Graph\Places\Count\CountRequestBuilder;
+use Microsoft\Graph\Places\Room\RoomRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

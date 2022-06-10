@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Contacts\Item\MultiValueExtendedProperties\Item;
+namespace Microsoft\Graph\Me\Contacts\Item\MultiValueExtendedProperties\Item;
 
 class MultiValueLegacyExtendedPropertyItemRequestBuilderGetRequestConfiguration 
 {

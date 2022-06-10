@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Authentication\MicrosoftAuthenticatorMethods;
+namespace Microsoft\Graph\Me\Authentication\MicrosoftAuthenticatorMethods;
 
 class MicrosoftAuthenticatorMethodsRequestBuilderGetRequestConfiguration 
 {

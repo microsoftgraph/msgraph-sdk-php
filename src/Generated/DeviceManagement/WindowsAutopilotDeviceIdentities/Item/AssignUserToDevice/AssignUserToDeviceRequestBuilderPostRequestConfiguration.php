@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\AssignUserToDevice;
+namespace Microsoft\Graph\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\AssignUserToDevice;
 
 class AssignUserToDeviceRequestBuilderPostRequestConfiguration 
 {

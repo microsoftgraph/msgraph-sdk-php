@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item;
+namespace Microsoft\Graph\Groups\Item\Sites\Item\TermStores\Item\Groups\Item;
 
 class GroupItemRequestBuilderPatchRequestConfiguration 
 {

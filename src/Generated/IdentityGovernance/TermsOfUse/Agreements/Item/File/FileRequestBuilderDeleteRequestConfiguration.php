@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\File;
+namespace Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\Item\File;
 
 class FileRequestBuilderDeleteRequestConfiguration 
 {

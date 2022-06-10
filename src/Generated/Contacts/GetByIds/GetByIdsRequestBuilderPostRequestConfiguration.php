@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Contacts\GetByIds;
+namespace Microsoft\Graph\Contacts\GetByIds;
 
 class GetByIdsRequestBuilderPostRequestConfiguration 
 {

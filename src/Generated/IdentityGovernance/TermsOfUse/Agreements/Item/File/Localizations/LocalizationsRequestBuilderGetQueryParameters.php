@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\File\Localizations;
+namespace Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\Item\File\Localizations;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Count;
+namespace Microsoft\Graph\IdentityGovernance\AppConsent\AppConsentRequests\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuditLogRoot extends Entity implements Parsable 
 {
     /**
-     * @var array<DirectoryAudit>|null $directoryAudits Read-only. Nullable.
+     * @var array<DirectoryAudit>|null $directoryAudits The directoryAudits property
     */
     private ?array $directoryAudits = null;
     
@@ -24,7 +24,7 @@ class AuditLogRoot extends Entity implements Parsable
     private ?array $restrictedSignIns = null;
     
     /**
-     * @var array<SignIn>|null $signIns Read-only. Nullable.
+     * @var array<SignIn>|null $signIns The signIns property
     */
     private ?array $signIns = null;
     
@@ -45,7 +45,7 @@ class AuditLogRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the directoryAudits property value. Read-only. Nullable.
+     * Gets the directoryAudits property value. The directoryAudits property
      * @return array<DirectoryAudit>|null
     */
     public function getDirectoryAudits(): ?array {
@@ -83,7 +83,7 @@ class AuditLogRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the signIns property value. Read-only. Nullable.
+     * Gets the signIns property value. The signIns property
      * @return array<SignIn>|null
     */
     public function getSignIns(): ?array {
@@ -103,7 +103,7 @@ class AuditLogRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the directoryAudits property value. Read-only. Nullable.
+     * Sets the directoryAudits property value. The directoryAudits property
      *  @param array<DirectoryAudit>|null $value Value to set for the directoryAudits property.
     */
     public function setDirectoryAudits(?array $value ): void {
@@ -127,7 +127,7 @@ class AuditLogRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the signIns property value. Read-only. Nullable.
+     * Sets the signIns property value. The signIns property
      *  @param array<SignIn>|null $value Value to set for the signIns property.
     */
     public function setSignIns(?array $value ): void {

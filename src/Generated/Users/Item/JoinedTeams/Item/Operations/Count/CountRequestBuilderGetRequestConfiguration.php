@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Operations\Count;
+namespace Microsoft\Graph\Users\Item\JoinedTeams\Item\Operations\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

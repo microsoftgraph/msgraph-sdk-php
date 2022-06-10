@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\CreatedObjects;
+namespace Microsoft\Graph\ServicePrincipals\Item\CreatedObjects;
 
 class CreatedObjectsRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\Unfollow;
+namespace Microsoft\Graph\Workbooks\Item\Unfollow;
 
 class UnfollowRequestBuilderPostRequestConfiguration 
 {

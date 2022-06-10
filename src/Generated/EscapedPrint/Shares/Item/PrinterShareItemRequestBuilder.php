@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item;
+namespace Microsoft\Graph\EscapedPrint\Shares\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedGroups\AllowedGroupsRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedGroups\Item\GroupItemRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\AllowedUsersRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item\UserItemRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\Printer\PrinterRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\PrinterShare;
+use Microsoft\Graph\EscapedPrint\Shares\Item\AllowedGroups\AllowedGroupsRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Shares\Item\AllowedGroups\Item\GroupItemRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Shares\Item\AllowedUsers\AllowedUsersRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Shares\Item\AllowedUsers\Item\UserItemRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Shares\Item\Printer\PrinterRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\PrinterShare;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -59,7 +59,7 @@ class PrinterShareItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.print.shares.item.allowedGroups.item collection
+     * Gets an item from the Microsoft\Graph.print.shares.item.allowedGroups.item collection
      * @param string $id Unique identifier of the item
      * @return GroupItemRequestBuilder
     */
@@ -70,7 +70,7 @@ class PrinterShareItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.print.shares.item.allowedUsers.item collection
+     * Gets an item from the Microsoft\Graph.print.shares.item.allowedUsers.item collection
      * @param string $id Unique identifier of the item
      * @return UserItemRequestBuilder
     */

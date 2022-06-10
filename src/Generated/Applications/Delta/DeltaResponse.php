@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Delta;
+namespace Microsoft\Graph\Applications\Delta;
 
-use Microsoft\Graph\Generated\Models\Application;
+use Microsoft\Graph\Models\Application;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

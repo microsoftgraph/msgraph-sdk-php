@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\DeletedItems\Group;
+namespace Microsoft\Graph\Directory\DeletedItems\Group;
 
 class GroupRequestBuilderGetRequestConfiguration 
 {

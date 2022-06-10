@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\ManagedDevices\Item\BypassActivationLock;
+namespace Microsoft\Graph\Me\ManagedDevices\Item\BypassActivationLock;
 
 class BypassActivationLockRequestBuilderPostRequestConfiguration 
 {

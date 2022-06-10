@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ApplicationTemplates\Item\Instantiate;
+namespace Microsoft\Graph\ApplicationTemplates\Item\Instantiate;
 
 class InstantiateRequestBuilderPostRequestConfiguration 
 {

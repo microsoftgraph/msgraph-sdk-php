@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory;
+namespace Microsoft\Graph\Directory;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\AdministrativeUnitsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\AdministrativeUnitItemRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\DeletedItemsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Directory\FederationConfigurations\FederationConfigurationsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\FederationConfigurations\Item\IdentityProviderBaseItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Directory;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Directory\AdministrativeUnits\AdministrativeUnitsRequestBuilder;
+use Microsoft\Graph\Directory\AdministrativeUnits\Item\AdministrativeUnitItemRequestBuilder;
+use Microsoft\Graph\Directory\DeletedItems\DeletedItemsRequestBuilder;
+use Microsoft\Graph\Directory\DeletedItems\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Directory\FederationConfigurations\FederationConfigurationsRequestBuilder;
+use Microsoft\Graph\Directory\FederationConfigurations\Item\IdentityProviderBaseItemRequestBuilder;
+use Microsoft\Graph\Models\Directory;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -60,7 +60,7 @@ class DirectoryRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directory.administrativeUnits.item collection
+     * Gets an item from the Microsoft\Graph.directory.administrativeUnits.item collection
      * @param string $id Unique identifier of the item
      * @return AdministrativeUnitItemRequestBuilder
     */
@@ -129,7 +129,7 @@ class DirectoryRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directory.deletedItems.item collection
+     * Gets an item from the Microsoft\Graph.directory.deletedItems.item collection
      * @param string $id Unique identifier of the item
      * @return DirectoryObjectItemRequestBuilder
     */
@@ -140,7 +140,7 @@ class DirectoryRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directory.federationConfigurations.item collection
+     * Gets an item from the Microsoft\Graph.directory.federationConfigurations.item collection
      * @param string $id Unique identifier of the item
      * @return IdentityProviderBaseItemRequestBuilder
     */

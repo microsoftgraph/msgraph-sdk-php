@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Activities\Item\HistoryItems\Count;
+namespace Microsoft\Graph\Me\Activities\Item\HistoryItems\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

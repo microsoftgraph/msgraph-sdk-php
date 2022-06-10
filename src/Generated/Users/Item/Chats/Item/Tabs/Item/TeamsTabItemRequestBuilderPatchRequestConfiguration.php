@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\Tabs\Item;
+namespace Microsoft\Graph\Users\Item\Chats\Item\Tabs\Item;
 
 class TeamsTabItemRequestBuilderPatchRequestConfiguration 
 {

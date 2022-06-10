@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\NamedLocations\Item;
+namespace Microsoft\Graph\Identity\ConditionalAccess\NamedLocations\Item;
 
 class NamedLocationItemRequestBuilderDeleteRequestConfiguration 
 {

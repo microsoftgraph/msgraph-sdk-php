@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Schedule\OpenShifts\Item;
+namespace Microsoft\Graph\Teams\Item\Schedule\OpenShifts\Item;
 
 class OpenShiftItemRequestBuilderGetRequestConfiguration 
 {

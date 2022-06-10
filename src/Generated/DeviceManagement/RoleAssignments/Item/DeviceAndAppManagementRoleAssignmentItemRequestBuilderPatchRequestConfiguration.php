@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\RoleAssignments\Item;
+namespace Microsoft\Graph\DeviceManagement\RoleAssignments\Item;
 
 class DeviceAndAppManagementRoleAssignmentItemRequestBuilderPatchRequestConfiguration 
 {

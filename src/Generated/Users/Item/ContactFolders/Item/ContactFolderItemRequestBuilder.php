@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ContactFolders\Item;
+namespace Microsoft\Graph\Users\Item\ContactFolders\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ContactFolder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\ChildFoldersRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\Contacts\ContactsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\Contacts\Item\ContactItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Models\ContactFolder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Users\Item\ContactFolders\Item\ChildFolders\ChildFoldersRequestBuilder;
+use Microsoft\Graph\Users\Item\ContactFolders\Item\Contacts\ContactsRequestBuilder;
+use Microsoft\Graph\Users\Item\ContactFolders\Item\Contacts\Item\ContactItemRequestBuilder;
+use Microsoft\Graph\Users\Item\ContactFolders\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Users\Item\ContactFolders\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Users\Item\ContactFolders\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Users\Item\ContactFolders\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -68,7 +68,7 @@ class ContactFolderItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.contactFolders.item.childFolders.item collection
+     * Gets an item from the Microsoft\Graph.users.item.contactFolders.item.childFolders.item collection
      * @param string $id Unique identifier of the item
      * @return ContactFolderItemRequestBuilder
     */
@@ -90,7 +90,7 @@ class ContactFolderItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.contactFolders.item.contacts.item collection
+     * Gets an item from the Microsoft\Graph.users.item.contactFolders.item.contacts.item collection
      * @param string $id Unique identifier of the item
      * @return ContactItemRequestBuilder
     */
@@ -207,7 +207,7 @@ class ContactFolderItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.contactFolders.item.multiValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph.users.item.contactFolders.item.multiValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
     */
@@ -238,7 +238,7 @@ class ContactFolderItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.contactFolders.item.singleValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph.users.item.contactFolders.item.singleValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
     */

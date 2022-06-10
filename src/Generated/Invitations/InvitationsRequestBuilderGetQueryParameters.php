@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Invitations;
+namespace Microsoft\Graph\Invitations;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

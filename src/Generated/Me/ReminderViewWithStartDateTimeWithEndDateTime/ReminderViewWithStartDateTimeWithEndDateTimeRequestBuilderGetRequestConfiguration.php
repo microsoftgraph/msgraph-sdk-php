@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\ReminderViewWithStartDateTimeWithEndDateTime;
+namespace Microsoft\Graph\Me\ReminderViewWithStartDateTimeWithEndDateTime;
 
 class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration 
 {

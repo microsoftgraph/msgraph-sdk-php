@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\AssignLicense;
+namespace Microsoft\Graph\Me\AssignLicense;
 
-use Microsoft\Graph\Generated\Models\AssignedLicense;
+use Microsoft\Graph\Models\AssignedLicense;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

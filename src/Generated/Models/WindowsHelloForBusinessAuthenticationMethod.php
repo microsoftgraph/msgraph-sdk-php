@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -30,7 +30,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod i
     private ?AuthenticationMethodKeyStrength $keyStrength = null;
     
     /**
-     * Instantiates a new windowsHelloForBusinessAuthenticationMethod and sets the default values.
+     * Instantiates a new WindowsHelloForBusinessAuthenticationMethod and sets the default values.
     */
     public function __construct() {
         parent::__construct();

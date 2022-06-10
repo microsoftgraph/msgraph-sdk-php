@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -24,7 +24,7 @@ class StsPolicy extends PolicyBase implements Parsable
     private ?bool $isOrganizationDefault = null;
     
     /**
-     * Instantiates a new stsPolicy and sets the default values.
+     * Instantiates a new StsPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -36,13 +36,6 @@ class StsPolicy extends PolicyBase implements Parsable
      * @return StsPolicy
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): StsPolicy {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
-        if ($mappingValueNode !== null) {
-            $mappingValue = $mappingValueNode->getStringValue();
-            switch ($mappingValue) {
-                case '#microsoft.graph.stsPolicy': return new StsPolicy();
-            }
-        }
         return new StsPolicy();
     }
 

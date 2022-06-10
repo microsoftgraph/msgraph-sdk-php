@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Onenote\Resources\Item;
+namespace Microsoft\Graph\Groups\Item\Onenote\Resources\Item;
 
 class OnenoteResourceItemRequestBuilderDeleteRequestConfiguration 
 {

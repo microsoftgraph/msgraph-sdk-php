@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetYammerGroupsActivityCountsWithPeriod;
+namespace Microsoft\Graph\Reports\GetYammerGroupsActivityCountsWithPeriod;
 
 class GetYammerGroupsActivityCountsWithPeriodRequestBuilderGetRequestConfiguration 
 {

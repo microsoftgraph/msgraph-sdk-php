@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\Group;
+namespace Microsoft\Graph\Devices\Item\TransitiveMemberOf\Group;
 
 class GroupRequestBuilderGetRequestConfiguration 
 {

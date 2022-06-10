@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -19,7 +19,7 @@ class ManagedApp extends MobileApp implements Parsable
     private ?string $version = null;
     
     /**
-     * Instantiates a new managedApp and sets the default values.
+     * Instantiates a new ManagedApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -31,13 +31,6 @@ class ManagedApp extends MobileApp implements Parsable
      * @return ManagedApp
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedApp {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
-        if ($mappingValueNode !== null) {
-            $mappingValue = $mappingValueNode->getStringValue();
-            switch ($mappingValue) {
-                case '#microsoft.graph.managedApp': return new ManagedApp();
-            }
-        }
         return new ManagedApp();
     }
 

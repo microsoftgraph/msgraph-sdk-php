@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Count;
+namespace Microsoft\Graph\Users\Item\Chats\Item\Messages\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

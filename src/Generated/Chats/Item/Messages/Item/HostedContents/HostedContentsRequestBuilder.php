@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\Item\Messages\Item\HostedContents;
+namespace Microsoft\Graph\Chats\Item\Messages\Item\HostedContents;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Chats\Item\Messages\Item\HostedContents\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ChatMessageHostedContent;
-use Microsoft\Graph\Generated\Models\ChatMessageHostedContentCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Chats\Item\Messages\Item\HostedContents\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ChatMessageHostedContent;
+use Microsoft\Graph\Models\ChatMessageHostedContentCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

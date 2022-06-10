@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Photo;
+namespace Microsoft\Graph\Me\Photo;
 
 class PhotoRequestBuilderDeleteRequestConfiguration 
 {

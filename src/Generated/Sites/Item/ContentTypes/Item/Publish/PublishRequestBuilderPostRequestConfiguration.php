@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\Publish;
+namespace Microsoft\Graph\Sites\Item\ContentTypes\Item\Publish;
 
 class PublishRequestBuilderPostRequestConfiguration 
 {

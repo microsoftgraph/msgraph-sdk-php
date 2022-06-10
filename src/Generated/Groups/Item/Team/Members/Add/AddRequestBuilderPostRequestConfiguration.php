@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Members\Add;
+namespace Microsoft\Graph\Groups\Item\Team\Members\Add;
 
 class AddRequestBuilderPostRequestConfiguration 
 {

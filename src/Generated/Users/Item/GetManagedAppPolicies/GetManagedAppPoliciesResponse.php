@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\GetManagedAppPolicies;
+namespace Microsoft\Graph\Users\Item\GetManagedAppPolicies;
 
-use Microsoft\Graph\Generated\Models\ManagedAppPolicy;
+use Microsoft\Graph\Models\ManagedAppPolicy;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Planner\Plans;
+namespace Microsoft\Graph\Users\Item\Planner\Plans;
 
 class PlansRequestBuilderPostRequestConfiguration 
 {

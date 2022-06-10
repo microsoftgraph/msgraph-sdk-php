@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Owners;
+namespace Microsoft\Graph\ServicePrincipals\Item\Owners;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\AppRoleAssignment\AppRoleAssignmentRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\Endpoint\EndpointRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\Ref\RefRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\ServicePrincipal\ServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\User\UserRequestBuilder;
+use Microsoft\Graph\Models\DirectoryObjectCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\ServicePrincipals\Item\Owners\AppRoleAssignment\AppRoleAssignmentRequestBuilder;
+use Microsoft\Graph\ServicePrincipals\Item\Owners\Count\CountRequestBuilder;
+use Microsoft\Graph\ServicePrincipals\Item\Owners\Endpoint\EndpointRequestBuilder;
+use Microsoft\Graph\ServicePrincipals\Item\Owners\Ref\RefRequestBuilder;
+use Microsoft\Graph\ServicePrincipals\Item\Owners\ServicePrincipal\ServicePrincipalRequestBuilder;
+use Microsoft\Graph\ServicePrincipals\Item\Owners\User\UserRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

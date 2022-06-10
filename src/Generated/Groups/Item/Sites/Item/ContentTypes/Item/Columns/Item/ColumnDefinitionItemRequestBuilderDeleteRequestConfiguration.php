@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\Columns\Item;
+namespace Microsoft\Graph\Groups\Item\Sites\Item\ContentTypes\Item\Columns\Item;
 
 class ColumnDefinitionItemRequestBuilderDeleteRequestConfiguration 
 {

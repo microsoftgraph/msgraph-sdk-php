@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -66,7 +66,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     private ?ServiceUpdateMessageViewpoint $viewPoint = null;
     
     /**
-     * Instantiates a new serviceUpdateMessage and sets the default values.
+     * Instantiates a new ServiceUpdateMessage and sets the default values.
     */
     public function __construct() {
         parent::__construct();

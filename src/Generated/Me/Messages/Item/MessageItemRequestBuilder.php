@@ -1,31 +1,30 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Messages\Item;
+namespace Microsoft\Graph\Me\Messages\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Messages\Item\Attachments\AttachmentsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\Attachments\Item\AttachmentItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\CalendarSharingMessage\CalendarSharingMessageRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\Copy\CopyRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\CreateForward\CreateForwardRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\CreateReply\CreateReplyRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\CreateReplyAll\CreateReplyAllRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\Forward\ForwardRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\Move\MoveRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\Reply\ReplyRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\ReplyAll\ReplyAllRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\Send\SendRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\Value\ContentRequestBuilder;
-use Microsoft\Graph\Generated\Models\Message;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Me\Messages\Item\Attachments\AttachmentsRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\Attachments\Item\AttachmentItemRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\Copy\CopyRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\CreateForward\CreateForwardRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\CreateReply\CreateReplyRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\CreateReplyAll\CreateReplyAllRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\Extensions\ExtensionsRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\Extensions\Item\ExtensionItemRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\Forward\ForwardRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\Move\MoveRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\Reply\ReplyRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\ReplyAll\ReplyAllRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\Send\SendRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\Value\ContentRequestBuilder;
+use Microsoft\Graph\Models\Message;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -41,13 +40,6 @@ class MessageItemRequestBuilder
     */
     public function attachments(): AttachmentsRequestBuilder {
         return new AttachmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The calendarSharingMessage property
-    */
-    public function calendarSharingMessage(): CalendarSharingMessageRequestBuilder {
-        return new CalendarSharingMessageRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -157,7 +149,7 @@ class MessageItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.messages.item.attachments.item collection
+     * Gets an item from the Microsoft\Graph.me.messages.item.attachments.item collection
      * @param string $id Unique identifier of the item
      * @return AttachmentItemRequestBuilder
     */
@@ -266,7 +258,7 @@ class MessageItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.messages.item.extensions.item collection
+     * Gets an item from the Microsoft\Graph.me.messages.item.extensions.item collection
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */
@@ -296,7 +288,7 @@ class MessageItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.messages.item.multiValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph.me.messages.item.multiValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
     */
@@ -327,7 +319,7 @@ class MessageItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.messages.item.singleValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph.me.messages.item.singleValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
     */

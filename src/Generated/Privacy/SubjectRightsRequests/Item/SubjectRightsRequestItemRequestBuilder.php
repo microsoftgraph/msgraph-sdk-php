@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item;
+namespace Microsoft\Graph\Privacy\SubjectRightsRequests\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SubjectRightsRequest;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalAttachment\GetFinalAttachmentRequestBuilder;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalReport\GetFinalReportRequestBuilder;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Notes\Item\AuthoredNoteItemRequestBuilder;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Notes\NotesRequestBuilder;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Team\TeamRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\SubjectRightsRequest;
+use Microsoft\Graph\Privacy\SubjectRightsRequests\Item\GetFinalAttachment\GetFinalAttachmentRequestBuilder;
+use Microsoft\Graph\Privacy\SubjectRightsRequests\Item\GetFinalReport\GetFinalReportRequestBuilder;
+use Microsoft\Graph\Privacy\SubjectRightsRequests\Item\Notes\Item\AuthoredNoteItemRequestBuilder;
+use Microsoft\Graph\Privacy\SubjectRightsRequests\Item\Notes\NotesRequestBuilder;
+use Microsoft\Graph\Privacy\SubjectRightsRequests\Item\Team\TeamRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -185,7 +185,7 @@ class SubjectRightsRequestItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.privacy.subjectRightsRequests.item.notes.item collection
+     * Gets an item from the Microsoft\Graph.privacy.subjectRightsRequests.item.notes.item collection
      * @param string $id Unique identifier of the item
      * @return AuthoredNoteItemRequestBuilder
     */

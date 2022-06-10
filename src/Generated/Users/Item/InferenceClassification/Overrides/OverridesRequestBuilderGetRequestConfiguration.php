@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\InferenceClassification\Overrides;
+namespace Microsoft\Graph\Users\Item\InferenceClassification\Overrides;
 
 class OverridesRequestBuilderGetRequestConfiguration 
 {

@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Printers\Item;
+namespace Microsoft\Graph\EscapedPrint\Printers\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Connectors\ConnectorsRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Connectors\Item\PrintConnectorItemRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\RestoreFactoryDefaults\RestoreFactoryDefaultsRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Shares\Item\PrinterShareItemRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Shares\SharesRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\TaskTriggers\Item\PrintTaskTriggerItemRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\TaskTriggers\TaskTriggersRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Printer;
+use Microsoft\Graph\EscapedPrint\Printers\Item\Connectors\ConnectorsRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Printers\Item\Connectors\Item\PrintConnectorItemRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Printers\Item\RestoreFactoryDefaults\RestoreFactoryDefaultsRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Printers\Item\Shares\Item\PrinterShareItemRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Printers\Item\Shares\SharesRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Printers\Item\TaskTriggers\Item\PrintTaskTriggerItemRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Printers\Item\TaskTriggers\TaskTriggersRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Printer;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -68,7 +68,7 @@ class PrinterItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.print.printers.item.connectors.item collection
+     * Gets an item from the Microsoft\Graph.print.printers.item.connectors.item collection
      * @param string $id Unique identifier of the item
      * @return PrintConnectorItemRequestBuilder
     */
@@ -216,7 +216,7 @@ class PrinterItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.print.printers.item.shares.item collection
+     * Gets an item from the Microsoft\Graph.print.printers.item.shares.item collection
      * @param string $id Unique identifier of the item
      * @return PrinterShareItemRequestBuilder
     */
@@ -227,7 +227,7 @@ class PrinterItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.print.printers.item.taskTriggers.item collection
+     * Gets an item from the Microsoft\Graph.print.printers.item.taskTriggers.item collection
      * @param string $id Unique identifier of the item
      * @return PrintTaskTriggerItemRequestBuilder
     */

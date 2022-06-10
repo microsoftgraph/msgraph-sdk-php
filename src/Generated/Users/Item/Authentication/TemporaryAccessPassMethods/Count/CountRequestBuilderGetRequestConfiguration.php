@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Authentication\TemporaryAccessPassMethods\Count;
+namespace Microsoft\Graph\Users\Item\Authentication\TemporaryAccessPassMethods\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

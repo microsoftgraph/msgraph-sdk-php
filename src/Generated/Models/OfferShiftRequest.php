@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -30,7 +30,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     private ?string $senderShiftId = null;
     
     /**
-     * Instantiates a new offerShiftRequest and sets the default values.
+     * Instantiates a new OfferShiftRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -42,13 +42,6 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      * @return OfferShiftRequest
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): OfferShiftRequest {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
-        if ($mappingValueNode !== null) {
-            $mappingValue = $mappingValueNode->getStringValue();
-            switch ($mappingValue) {
-                case '#microsoft.graph.offerShiftRequest': return new OfferShiftRequest();
-            }
-        }
         return new OfferShiftRequest();
     }
 

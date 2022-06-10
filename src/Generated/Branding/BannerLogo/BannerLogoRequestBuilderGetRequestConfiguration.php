@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Branding\BannerLogo;
+namespace Microsoft\Graph\Branding\BannerLogo;
 
 class BannerLogoRequestBuilderGetRequestConfiguration 
 {

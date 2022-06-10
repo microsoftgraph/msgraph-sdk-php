@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item\Members\Count;
+namespace Microsoft\Graph\Teams\Item\Channels\Item\Members\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

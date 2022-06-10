@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists;
+namespace Microsoft\Graph\Users\Item\Todo\Lists;
 
 class ListsRequestBuilderPostRequestConfiguration 
 {

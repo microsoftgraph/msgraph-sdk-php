@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Root;
+namespace Microsoft\Graph\Drives\Item\Root;
 
 class RootRequestBuilderPatchRequestConfiguration 
 {

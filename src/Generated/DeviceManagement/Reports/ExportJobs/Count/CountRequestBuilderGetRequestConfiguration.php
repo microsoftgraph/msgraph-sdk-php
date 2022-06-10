@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\Reports\ExportJobs\Count;
+namespace Microsoft\Graph\DeviceManagement\Reports\ExportJobs\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Outlook\MasterCategories;
+namespace Microsoft\Graph\Me\Outlook\MasterCategories;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Outlook\MasterCategories\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\OutlookCategory;
-use Microsoft\Graph\Generated\Models\OutlookCategoryCollectionResponse;
+use Microsoft\Graph\Me\Outlook\MasterCategories\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\OutlookCategory;
+use Microsoft\Graph\Models\OutlookCategoryCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

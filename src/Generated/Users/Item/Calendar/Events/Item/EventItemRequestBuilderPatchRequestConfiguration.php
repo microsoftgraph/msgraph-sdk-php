@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Calendar\Events\Item;
+namespace Microsoft\Graph\Users\Item\Calendar\Events\Item;
 
 class EventItemRequestBuilderPatchRequestConfiguration 
 {

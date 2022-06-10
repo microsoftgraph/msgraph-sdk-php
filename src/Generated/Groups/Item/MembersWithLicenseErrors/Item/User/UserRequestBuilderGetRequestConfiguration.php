@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Item\User;
+namespace Microsoft\Graph\Groups\Item\MembersWithLicenseErrors\Item\User;
 
 class UserRequestBuilderGetRequestConfiguration 
 {

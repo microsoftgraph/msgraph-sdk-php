@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -77,11 +77,16 @@ class BaseItem extends Entity implements Parsable
      * @return BaseItem
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): BaseItem {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.baseItem': return new BaseItem();
+                case '#microsoft.graph.drive': return new Drive();
+                case '#microsoft.graph.driveItem': return new DriveItem();
+                case '#microsoft.graph.list': return new EscapedList();
+                case '#microsoft.graph.listItem': return new ListItem();
+                case '#microsoft.graph.sharedDriveItem': return new SharedDriveItem();
+                case '#microsoft.graph.site': return new Site();
             }
         }
         return new BaseItem();

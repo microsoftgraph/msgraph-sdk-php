@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\GetCompatibleHubContentTypes;
+namespace Microsoft\Graph\Groups\Item\Sites\Item\ContentTypes\GetCompatibleHubContentTypes;
 
-use Microsoft\Graph\Generated\Models\ContentType;
+use Microsoft\Graph\Models\ContentType;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

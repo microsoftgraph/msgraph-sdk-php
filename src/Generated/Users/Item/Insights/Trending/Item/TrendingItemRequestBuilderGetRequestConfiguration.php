@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Insights\Trending\Item;
+namespace Microsoft\Graph\Users\Item\Insights\Trending\Item;
 
 class TrendingItemRequestBuilderGetRequestConfiguration 
 {

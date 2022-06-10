@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\TermStores;
+namespace Microsoft\Graph\Sites\Item\TermStores;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

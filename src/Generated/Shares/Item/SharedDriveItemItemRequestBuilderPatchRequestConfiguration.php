@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item;
+namespace Microsoft\Graph\Shares\Item;
 
 class SharedDriveItemItemRequestBuilderPatchRequestConfiguration 
 {

@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item;
+namespace Microsoft\Graph\Policies\PermissionGrantPolicies\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\PermissionGrantPolicy;
-use Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Excludes\ExcludesRequestBuilder;
-use Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Excludes\Item\PermissionGrantConditionSetItemRequestBuilder as MicrosoftGraphGeneratedPoliciesPermissionGrantPoliciesItemExcludesItemPermissionGrantConditionSetItemRequestBuilder;
-use Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Includes\IncludesRequestBuilder;
-use Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Includes\Item\PermissionGrantConditionSetItemRequestBuilder as MicrosoftGraphGeneratedPoliciesPermissionGrantPoliciesItemIncludesItemPermissionGrantConditionSetItemRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\PermissionGrantPolicy;
+use Microsoft\Graph\Policies\PermissionGrantPolicies\Item\Excludes\ExcludesRequestBuilder;
+use Microsoft\Graph\Policies\PermissionGrantPolicies\Item\Excludes\Item\PermissionGrantConditionSetItemRequestBuilder as MicrosoftGraphPoliciesPermissionGrantPoliciesItemExcludesItemPermissionGrantConditionSetItemRequestBuilder;
+use Microsoft\Graph\Policies\PermissionGrantPolicies\Item\Includes\IncludesRequestBuilder;
+use Microsoft\Graph\Policies\PermissionGrantPolicies\Item\Includes\Item\PermissionGrantConditionSetItemRequestBuilder as MicrosoftGraphPoliciesPermissionGrantPoliciesItemIncludesItemPermissionGrantConditionSetItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -149,14 +149,14 @@ class PermissionGrantPolicyItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.policies.permissionGrantPolicies.item.excludes.item collection
+     * Gets an item from the Microsoft\Graph.policies.permissionGrantPolicies.item.excludes.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedPoliciesPermissionGrantPoliciesItemExcludesItemPermissionGrantConditionSetItemRequestBuilder
+     * @return MicrosoftGraphPoliciesPermissionGrantPoliciesItemExcludesItemPermissionGrantConditionSetItemRequestBuilder
     */
-    public function excludesById(string $id): MicrosoftGraphGeneratedPoliciesPermissionGrantPoliciesItemExcludesItemPermissionGrantConditionSetItemRequestBuilder {
+    public function excludesById(string $id): MicrosoftGraphPoliciesPermissionGrantPoliciesItemExcludesItemPermissionGrantConditionSetItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['permissionGrantConditionSet%2Did'] = $id;
-        return new MicrosoftGraphGeneratedPoliciesPermissionGrantPoliciesItemExcludesItemPermissionGrantConditionSetItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphPoliciesPermissionGrantPoliciesItemExcludesItemPermissionGrantConditionSetItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -179,14 +179,14 @@ class PermissionGrantPolicyItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.policies.permissionGrantPolicies.item.includes.item collection
+     * Gets an item from the Microsoft\Graph.policies.permissionGrantPolicies.item.includes.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedPoliciesPermissionGrantPoliciesItemIncludesItemPermissionGrantConditionSetItemRequestBuilder
+     * @return MicrosoftGraphPoliciesPermissionGrantPoliciesItemIncludesItemPermissionGrantConditionSetItemRequestBuilder
     */
-    public function includesById(string $id): MicrosoftGraphGeneratedPoliciesPermissionGrantPoliciesItemIncludesItemPermissionGrantConditionSetItemRequestBuilder {
+    public function includesById(string $id): MicrosoftGraphPoliciesPermissionGrantPoliciesItemIncludesItemPermissionGrantConditionSetItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['permissionGrantConditionSet%2Did'] = $id;
-        return new MicrosoftGraphGeneratedPoliciesPermissionGrantPoliciesItemIncludesItemPermissionGrantConditionSetItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphPoliciesPermissionGrantPoliciesItemIncludesItemPermissionGrantConditionSetItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

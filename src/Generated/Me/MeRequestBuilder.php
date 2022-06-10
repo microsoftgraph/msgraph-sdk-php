@@ -1,109 +1,109 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me;
+namespace Microsoft\Graph\Me;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Activities\ActivitiesRequestBuilder;
-use Microsoft\Graph\Generated\Me\Activities\Item\UserActivityItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\AgreementAcceptances\AgreementAcceptancesRequestBuilder;
-use Microsoft\Graph\Generated\Me\AgreementAcceptances\Item\AgreementAcceptanceItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\AppRoleAssignments\AppRoleAssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\Me\AppRoleAssignments\Item\AppRoleAssignmentItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\AssignLicense\AssignLicenseRequestBuilder;
-use Microsoft\Graph\Generated\Me\Authentication\AuthenticationRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendar\CalendarRequestBuilder;
-use Microsoft\Graph\Generated\Me\CalendarGroups\CalendarGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Me\CalendarGroups\Item\CalendarGroupItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendars\CalendarsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendars\Item\CalendarItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\CalendarView\CalendarViewRequestBuilder;
-use Microsoft\Graph\Generated\Me\CalendarView\Item\EventItemRequestBuilder as MicrosoftGraphGeneratedMeCalendarViewItemEventItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\ChangePassword\ChangePasswordRequestBuilder;
-use Microsoft\Graph\Generated\Me\Chats\ChatsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Chats\Item\ChatItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Me\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Me\ContactFolders\ContactFoldersRequestBuilder;
-use Microsoft\Graph\Generated\Me\ContactFolders\Item\ContactFolderItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Contacts\ContactsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Contacts\Item\ContactItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\CreatedObjects\CreatedObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Me\CreatedObjects\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedMeCreatedObjectsItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\DeviceManagementTroubleshootingEvents\DeviceManagementTroubleshootingEventsRequestBuilder;
-use Microsoft\Graph\Generated\Me\DeviceManagementTroubleshootingEvents\Item\DeviceManagementTroubleshootingEventItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\DirectReports\DirectReportsRequestBuilder;
-use Microsoft\Graph\Generated\Me\DirectReports\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedMeDirectReportsItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Drive\DriveRequestBuilder;
-use Microsoft\Graph\Generated\Me\Drives\DrivesRequestBuilder;
-use Microsoft\Graph\Generated\Me\Drives\Item\DriveItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Events\EventsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Events\Item\EventItemRequestBuilder as MicrosoftGraphGeneratedMeEventsItemEventItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\ExportPersonalData\ExportPersonalDataRequestBuilder;
-use Microsoft\Graph\Generated\Me\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\FindMeetingTimes\FindMeetingTimesRequestBuilder;
-use Microsoft\Graph\Generated\Me\FollowedSites\FollowedSitesRequestBuilder;
-use Microsoft\Graph\Generated\Me\FollowedSites\Item\SiteItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\GetMailTips\GetMailTipsRequestBuilder;
-use Microsoft\Graph\Generated\Me\GetManagedAppDiagnosticStatuses\GetManagedAppDiagnosticStatusesRequestBuilder;
-use Microsoft\Graph\Generated\Me\GetManagedAppPolicies\GetManagedAppPoliciesRequestBuilder;
-use Microsoft\Graph\Generated\Me\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Me\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Me\InferenceClassification\InferenceClassificationRequestBuilder;
-use Microsoft\Graph\Generated\Me\Insights\InsightsRequestBuilder;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\TeamItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\JoinedTeams\JoinedTeamsRequestBuilder;
-use Microsoft\Graph\Generated\Me\LicenseDetails\Item\LicenseDetailsItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\LicenseDetails\LicenseDetailsRequestBuilder;
-use Microsoft\Graph\Generated\Me\MailFolders\Item\MailFolderItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\MailFolders\MailFoldersRequestBuilder;
-use Microsoft\Graph\Generated\Me\ManagedAppRegistrations\Item\ManagedAppRegistrationItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\ManagedAppRegistrations\ManagedAppRegistrationsRequestBuilder;
-use Microsoft\Graph\Generated\Me\ManagedDevices\Item\ManagedDeviceItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\ManagedDevices\ManagedDevicesRequestBuilder;
-use Microsoft\Graph\Generated\Me\Manager\ManagerRequestBuilder;
-use Microsoft\Graph\Generated\Me\MemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedMeMemberOfItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\MemberOf\MemberOfRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\MessageItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Generated\Me\Oauth2PermissionGrants\Item\OAuth2PermissionGrantItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Oauth2PermissionGrants\Oauth2PermissionGrantsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Onenote\OnenoteRequestBuilder;
-use Microsoft\Graph\Generated\Me\OnlineMeetings\Item\OnlineMeetingItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\OnlineMeetings\OnlineMeetingsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Outlook\OutlookRequestBuilder;
-use Microsoft\Graph\Generated\Me\OwnedDevices\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedMeOwnedDevicesItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\OwnedDevices\OwnedDevicesRequestBuilder;
-use Microsoft\Graph\Generated\Me\OwnedObjects\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedMeOwnedObjectsItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\OwnedObjects\OwnedObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Me\People\Item\PersonItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\People\PeopleRequestBuilder;
-use Microsoft\Graph\Generated\Me\Photo\PhotoRequestBuilder;
-use Microsoft\Graph\Generated\Me\Photos\Item\ProfilePhotoItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Photos\PhotosRequestBuilder;
-use Microsoft\Graph\Generated\Me\Planner\PlannerRequestBuilder;
-use Microsoft\Graph\Generated\Me\Presence\PresenceRequestBuilder;
-use Microsoft\Graph\Generated\Me\RegisteredDevices\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedMeRegisteredDevicesItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\RegisteredDevices\RegisteredDevicesRequestBuilder;
-use Microsoft\Graph\Generated\Me\ReminderViewWithStartDateTimeWithEndDateTime\ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder;
-use Microsoft\Graph\Generated\Me\RemoveAllDevicesFromManagement\RemoveAllDevicesFromManagementRequestBuilder;
-use Microsoft\Graph\Generated\Me\ReprocessLicenseAssignment\ReprocessLicenseAssignmentRequestBuilder;
-use Microsoft\Graph\Generated\Me\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Generated\Me\RevokeSignInSessions\RevokeSignInSessionsRequestBuilder;
-use Microsoft\Graph\Generated\Me\ScopedRoleMemberOf\Item\ScopedRoleMembershipItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\ScopedRoleMemberOf\ScopedRoleMemberOfRequestBuilder;
-use Microsoft\Graph\Generated\Me\SendMail\SendMailRequestBuilder;
-use Microsoft\Graph\Generated\Me\Settings\SettingsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Teamwork\TeamworkRequestBuilder;
-use Microsoft\Graph\Generated\Me\Todo\TodoRequestBuilder;
-use Microsoft\Graph\Generated\Me\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedMeTransitiveMemberOfItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
-use Microsoft\Graph\Generated\Me\TranslateExchangeIds\TranslateExchangeIdsRequestBuilder;
-use Microsoft\Graph\Generated\Me\WipeManagedAppRegistrationsByDeviceTag\WipeManagedAppRegistrationsByDeviceTagRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\User;
+use Microsoft\Graph\Me\Activities\ActivitiesRequestBuilder;
+use Microsoft\Graph\Me\Activities\Item\UserActivityItemRequestBuilder;
+use Microsoft\Graph\Me\AgreementAcceptances\AgreementAcceptancesRequestBuilder;
+use Microsoft\Graph\Me\AgreementAcceptances\Item\AgreementAcceptanceItemRequestBuilder;
+use Microsoft\Graph\Me\AppRoleAssignments\AppRoleAssignmentsRequestBuilder;
+use Microsoft\Graph\Me\AppRoleAssignments\Item\AppRoleAssignmentItemRequestBuilder;
+use Microsoft\Graph\Me\AssignLicense\AssignLicenseRequestBuilder;
+use Microsoft\Graph\Me\Authentication\AuthenticationRequestBuilder;
+use Microsoft\Graph\Me\Calendar\CalendarRequestBuilder;
+use Microsoft\Graph\Me\CalendarGroups\CalendarGroupsRequestBuilder;
+use Microsoft\Graph\Me\CalendarGroups\Item\CalendarGroupItemRequestBuilder;
+use Microsoft\Graph\Me\Calendars\CalendarsRequestBuilder;
+use Microsoft\Graph\Me\Calendars\Item\CalendarItemRequestBuilder;
+use Microsoft\Graph\Me\CalendarView\CalendarViewRequestBuilder;
+use Microsoft\Graph\Me\CalendarView\Item\EventItemRequestBuilder as MicrosoftGraphMeCalendarViewItemEventItemRequestBuilder;
+use Microsoft\Graph\Me\ChangePassword\ChangePasswordRequestBuilder;
+use Microsoft\Graph\Me\Chats\ChatsRequestBuilder;
+use Microsoft\Graph\Me\Chats\Item\ChatItemRequestBuilder;
+use Microsoft\Graph\Me\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Me\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Me\ContactFolders\ContactFoldersRequestBuilder;
+use Microsoft\Graph\Me\ContactFolders\Item\ContactFolderItemRequestBuilder;
+use Microsoft\Graph\Me\Contacts\ContactsRequestBuilder;
+use Microsoft\Graph\Me\Contacts\Item\ContactItemRequestBuilder;
+use Microsoft\Graph\Me\CreatedObjects\CreatedObjectsRequestBuilder;
+use Microsoft\Graph\Me\CreatedObjects\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphMeCreatedObjectsItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Me\DeviceManagementTroubleshootingEvents\DeviceManagementTroubleshootingEventsRequestBuilder;
+use Microsoft\Graph\Me\DeviceManagementTroubleshootingEvents\Item\DeviceManagementTroubleshootingEventItemRequestBuilder;
+use Microsoft\Graph\Me\DirectReports\DirectReportsRequestBuilder;
+use Microsoft\Graph\Me\DirectReports\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphMeDirectReportsItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Me\Drive\DriveRequestBuilder;
+use Microsoft\Graph\Me\Drives\DrivesRequestBuilder;
+use Microsoft\Graph\Me\Drives\Item\DriveItemRequestBuilder;
+use Microsoft\Graph\Me\Events\EventsRequestBuilder;
+use Microsoft\Graph\Me\Events\Item\EventItemRequestBuilder as MicrosoftGraphMeEventsItemEventItemRequestBuilder;
+use Microsoft\Graph\Me\ExportPersonalData\ExportPersonalDataRequestBuilder;
+use Microsoft\Graph\Me\Extensions\ExtensionsRequestBuilder;
+use Microsoft\Graph\Me\Extensions\Item\ExtensionItemRequestBuilder;
+use Microsoft\Graph\Me\FindMeetingTimes\FindMeetingTimesRequestBuilder;
+use Microsoft\Graph\Me\FollowedSites\FollowedSitesRequestBuilder;
+use Microsoft\Graph\Me\FollowedSites\Item\SiteItemRequestBuilder;
+use Microsoft\Graph\Me\GetMailTips\GetMailTipsRequestBuilder;
+use Microsoft\Graph\Me\GetManagedAppDiagnosticStatuses\GetManagedAppDiagnosticStatusesRequestBuilder;
+use Microsoft\Graph\Me\GetManagedAppPolicies\GetManagedAppPoliciesRequestBuilder;
+use Microsoft\Graph\Me\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Me\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Me\InferenceClassification\InferenceClassificationRequestBuilder;
+use Microsoft\Graph\Me\Insights\InsightsRequestBuilder;
+use Microsoft\Graph\Me\JoinedTeams\Item\TeamItemRequestBuilder;
+use Microsoft\Graph\Me\JoinedTeams\JoinedTeamsRequestBuilder;
+use Microsoft\Graph\Me\LicenseDetails\Item\LicenseDetailsItemRequestBuilder;
+use Microsoft\Graph\Me\LicenseDetails\LicenseDetailsRequestBuilder;
+use Microsoft\Graph\Me\MailFolders\Item\MailFolderItemRequestBuilder;
+use Microsoft\Graph\Me\MailFolders\MailFoldersRequestBuilder;
+use Microsoft\Graph\Me\ManagedAppRegistrations\Item\ManagedAppRegistrationItemRequestBuilder;
+use Microsoft\Graph\Me\ManagedAppRegistrations\ManagedAppRegistrationsRequestBuilder;
+use Microsoft\Graph\Me\ManagedDevices\Item\ManagedDeviceItemRequestBuilder;
+use Microsoft\Graph\Me\ManagedDevices\ManagedDevicesRequestBuilder;
+use Microsoft\Graph\Me\Manager\ManagerRequestBuilder;
+use Microsoft\Graph\Me\MemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphMeMemberOfItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Me\MemberOf\MemberOfRequestBuilder;
+use Microsoft\Graph\Me\Messages\Item\MessageItemRequestBuilder;
+use Microsoft\Graph\Me\Messages\MessagesRequestBuilder;
+use Microsoft\Graph\Me\Oauth2PermissionGrants\Item\OAuth2PermissionGrantItemRequestBuilder;
+use Microsoft\Graph\Me\Oauth2PermissionGrants\Oauth2PermissionGrantsRequestBuilder;
+use Microsoft\Graph\Me\Onenote\OnenoteRequestBuilder;
+use Microsoft\Graph\Me\OnlineMeetings\Item\OnlineMeetingItemRequestBuilder;
+use Microsoft\Graph\Me\OnlineMeetings\OnlineMeetingsRequestBuilder;
+use Microsoft\Graph\Me\Outlook\OutlookRequestBuilder;
+use Microsoft\Graph\Me\OwnedDevices\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphMeOwnedDevicesItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Me\OwnedDevices\OwnedDevicesRequestBuilder;
+use Microsoft\Graph\Me\OwnedObjects\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphMeOwnedObjectsItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Me\OwnedObjects\OwnedObjectsRequestBuilder;
+use Microsoft\Graph\Me\People\Item\PersonItemRequestBuilder;
+use Microsoft\Graph\Me\People\PeopleRequestBuilder;
+use Microsoft\Graph\Me\Photo\PhotoRequestBuilder;
+use Microsoft\Graph\Me\Photos\Item\ProfilePhotoItemRequestBuilder;
+use Microsoft\Graph\Me\Photos\PhotosRequestBuilder;
+use Microsoft\Graph\Me\Planner\PlannerRequestBuilder;
+use Microsoft\Graph\Me\Presence\PresenceRequestBuilder;
+use Microsoft\Graph\Me\RegisteredDevices\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphMeRegisteredDevicesItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Me\RegisteredDevices\RegisteredDevicesRequestBuilder;
+use Microsoft\Graph\Me\ReminderViewWithStartDateTimeWithEndDateTime\ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder;
+use Microsoft\Graph\Me\RemoveAllDevicesFromManagement\RemoveAllDevicesFromManagementRequestBuilder;
+use Microsoft\Graph\Me\ReprocessLicenseAssignment\ReprocessLicenseAssignmentRequestBuilder;
+use Microsoft\Graph\Me\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Me\RevokeSignInSessions\RevokeSignInSessionsRequestBuilder;
+use Microsoft\Graph\Me\ScopedRoleMemberOf\Item\ScopedRoleMembershipItemRequestBuilder;
+use Microsoft\Graph\Me\ScopedRoleMemberOf\ScopedRoleMemberOfRequestBuilder;
+use Microsoft\Graph\Me\SendMail\SendMailRequestBuilder;
+use Microsoft\Graph\Me\Settings\SettingsRequestBuilder;
+use Microsoft\Graph\Me\Teamwork\TeamworkRequestBuilder;
+use Microsoft\Graph\Me\Todo\TodoRequestBuilder;
+use Microsoft\Graph\Me\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphMeTransitiveMemberOfItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Me\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
+use Microsoft\Graph\Me\TranslateExchangeIds\TranslateExchangeIdsRequestBuilder;
+use Microsoft\Graph\Me\WipeManagedAppRegistrationsByDeviceTag\WipeManagedAppRegistrationsByDeviceTagRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\User;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -564,7 +564,7 @@ class MeRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.activities.item collection
+     * Gets an item from the Microsoft\Graph.me.activities.item collection
      * @param string $id Unique identifier of the item
      * @return UserActivityItemRequestBuilder
     */
@@ -575,7 +575,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.agreementAcceptances.item collection
+     * Gets an item from the Microsoft\Graph.me.agreementAcceptances.item collection
      * @param string $id Unique identifier of the item
      * @return AgreementAcceptanceItemRequestBuilder
     */
@@ -586,7 +586,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.appRoleAssignments.item collection
+     * Gets an item from the Microsoft\Graph.me.appRoleAssignments.item collection
      * @param string $id Unique identifier of the item
      * @return AppRoleAssignmentItemRequestBuilder
     */
@@ -597,7 +597,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.calendarGroups.item collection
+     * Gets an item from the Microsoft\Graph.me.calendarGroups.item collection
      * @param string $id Unique identifier of the item
      * @return CalendarGroupItemRequestBuilder
     */
@@ -608,7 +608,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.calendars.item collection
+     * Gets an item from the Microsoft\Graph.me.calendars.item collection
      * @param string $id Unique identifier of the item
      * @return CalendarItemRequestBuilder
     */
@@ -619,18 +619,18 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.calendarView.item collection
+     * Gets an item from the Microsoft\Graph.me.calendarView.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedMeCalendarViewItemEventItemRequestBuilder
+     * @return MicrosoftGraphMeCalendarViewItemEventItemRequestBuilder
     */
-    public function calendarViewById(string $id): MicrosoftGraphGeneratedMeCalendarViewItemEventItemRequestBuilder {
+    public function calendarViewById(string $id): MicrosoftGraphMeCalendarViewItemEventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new MicrosoftGraphGeneratedMeCalendarViewItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphMeCalendarViewItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.chats.item collection
+     * Gets an item from the Microsoft\Graph.me.chats.item collection
      * @param string $id Unique identifier of the item
      * @return ChatItemRequestBuilder
     */
@@ -652,7 +652,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.contactFolders.item collection
+     * Gets an item from the Microsoft\Graph.me.contactFolders.item collection
      * @param string $id Unique identifier of the item
      * @return ContactFolderItemRequestBuilder
     */
@@ -663,7 +663,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.contacts.item collection
+     * Gets an item from the Microsoft\Graph.me.contacts.item collection
      * @param string $id Unique identifier of the item
      * @return ContactItemRequestBuilder
     */
@@ -674,14 +674,14 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.createdObjects.item collection
+     * Gets an item from the Microsoft\Graph.me.createdObjects.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedMeCreatedObjectsItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphMeCreatedObjectsItemDirectoryObjectItemRequestBuilder
     */
-    public function createdObjectsById(string $id): MicrosoftGraphGeneratedMeCreatedObjectsItemDirectoryObjectItemRequestBuilder {
+    public function createdObjectsById(string $id): MicrosoftGraphMeCreatedObjectsItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphGeneratedMeCreatedObjectsItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphMeCreatedObjectsItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -732,7 +732,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.deviceManagementTroubleshootingEvents.item collection
+     * Gets an item from the Microsoft\Graph.me.deviceManagementTroubleshootingEvents.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceManagementTroubleshootingEventItemRequestBuilder
     */
@@ -743,18 +743,18 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.directReports.item collection
+     * Gets an item from the Microsoft\Graph.me.directReports.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedMeDirectReportsItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphMeDirectReportsItemDirectoryObjectItemRequestBuilder
     */
-    public function directReportsById(string $id): MicrosoftGraphGeneratedMeDirectReportsItemDirectoryObjectItemRequestBuilder {
+    public function directReportsById(string $id): MicrosoftGraphMeDirectReportsItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphGeneratedMeDirectReportsItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphMeDirectReportsItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.drives.item collection
+     * Gets an item from the Microsoft\Graph.me.drives.item collection
      * @param string $id Unique identifier of the item
      * @return DriveItemRequestBuilder
     */
@@ -765,18 +765,18 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.events.item collection
+     * Gets an item from the Microsoft\Graph.me.events.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedMeEventsItemEventItemRequestBuilder
+     * @return MicrosoftGraphMeEventsItemEventItemRequestBuilder
     */
-    public function eventsById(string $id): MicrosoftGraphGeneratedMeEventsItemEventItemRequestBuilder {
+    public function eventsById(string $id): MicrosoftGraphMeEventsItemEventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new MicrosoftGraphGeneratedMeEventsItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphMeEventsItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.extensions.item collection
+     * Gets an item from the Microsoft\Graph.me.extensions.item collection
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */
@@ -787,7 +787,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.followedSites.item collection
+     * Gets an item from the Microsoft\Graph.me.followedSites.item collection
      * @param string $id Unique identifier of the item
      * @return SiteItemRequestBuilder
     */
@@ -833,7 +833,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.joinedTeams.item collection
+     * Gets an item from the Microsoft\Graph.me.joinedTeams.item collection
      * @param string $id Unique identifier of the item
      * @return TeamItemRequestBuilder
     */
@@ -844,7 +844,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.licenseDetails.item collection
+     * Gets an item from the Microsoft\Graph.me.licenseDetails.item collection
      * @param string $id Unique identifier of the item
      * @return LicenseDetailsItemRequestBuilder
     */
@@ -855,7 +855,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.mailFolders.item collection
+     * Gets an item from the Microsoft\Graph.me.mailFolders.item collection
      * @param string $id Unique identifier of the item
      * @return MailFolderItemRequestBuilder
     */
@@ -866,7 +866,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.managedAppRegistrations.item collection
+     * Gets an item from the Microsoft\Graph.me.managedAppRegistrations.item collection
      * @param string $id Unique identifier of the item
      * @return ManagedAppRegistrationItemRequestBuilder
     */
@@ -877,7 +877,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.managedDevices.item collection
+     * Gets an item from the Microsoft\Graph.me.managedDevices.item collection
      * @param string $id Unique identifier of the item
      * @return ManagedDeviceItemRequestBuilder
     */
@@ -888,18 +888,18 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.memberOf.item collection
+     * Gets an item from the Microsoft\Graph.me.memberOf.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedMeMemberOfItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphMeMemberOfItemDirectoryObjectItemRequestBuilder
     */
-    public function memberOfById(string $id): MicrosoftGraphGeneratedMeMemberOfItemDirectoryObjectItemRequestBuilder {
+    public function memberOfById(string $id): MicrosoftGraphMeMemberOfItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphGeneratedMeMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphMeMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.messages.item collection
+     * Gets an item from the Microsoft\Graph.me.messages.item collection
      * @param string $id Unique identifier of the item
      * @return MessageItemRequestBuilder
     */
@@ -910,7 +910,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.oauth2PermissionGrants.item collection
+     * Gets an item from the Microsoft\Graph.me.oauth2PermissionGrants.item collection
      * @param string $id Unique identifier of the item
      * @return OAuth2PermissionGrantItemRequestBuilder
     */
@@ -921,7 +921,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.onlineMeetings.item collection
+     * Gets an item from the Microsoft\Graph.me.onlineMeetings.item collection
      * @param string $id Unique identifier of the item
      * @return OnlineMeetingItemRequestBuilder
     */
@@ -932,25 +932,25 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.ownedDevices.item collection
+     * Gets an item from the Microsoft\Graph.me.ownedDevices.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedMeOwnedDevicesItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphMeOwnedDevicesItemDirectoryObjectItemRequestBuilder
     */
-    public function ownedDevicesById(string $id): MicrosoftGraphGeneratedMeOwnedDevicesItemDirectoryObjectItemRequestBuilder {
+    public function ownedDevicesById(string $id): MicrosoftGraphMeOwnedDevicesItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphGeneratedMeOwnedDevicesItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphMeOwnedDevicesItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.ownedObjects.item collection
+     * Gets an item from the Microsoft\Graph.me.ownedObjects.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedMeOwnedObjectsItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphMeOwnedObjectsItemDirectoryObjectItemRequestBuilder
     */
-    public function ownedObjectsById(string $id): MicrosoftGraphGeneratedMeOwnedObjectsItemDirectoryObjectItemRequestBuilder {
+    public function ownedObjectsById(string $id): MicrosoftGraphMeOwnedObjectsItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphGeneratedMeOwnedObjectsItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphMeOwnedObjectsItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -974,7 +974,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.people.item collection
+     * Gets an item from the Microsoft\Graph.me.people.item collection
      * @param string $id Unique identifier of the item
      * @return PersonItemRequestBuilder
     */
@@ -985,7 +985,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.photos.item collection
+     * Gets an item from the Microsoft\Graph.me.photos.item collection
      * @param string $id Unique identifier of the item
      * @return ProfilePhotoItemRequestBuilder
     */
@@ -996,14 +996,14 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.registeredDevices.item collection
+     * Gets an item from the Microsoft\Graph.me.registeredDevices.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedMeRegisteredDevicesItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphMeRegisteredDevicesItemDirectoryObjectItemRequestBuilder
     */
-    public function registeredDevicesById(string $id): MicrosoftGraphGeneratedMeRegisteredDevicesItemDirectoryObjectItemRequestBuilder {
+    public function registeredDevicesById(string $id): MicrosoftGraphMeRegisteredDevicesItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphGeneratedMeRegisteredDevicesItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphMeRegisteredDevicesItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -1017,7 +1017,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.scopedRoleMemberOf.item collection
+     * Gets an item from the Microsoft\Graph.me.scopedRoleMemberOf.item collection
      * @param string $id Unique identifier of the item
      * @return ScopedRoleMembershipItemRequestBuilder
     */
@@ -1028,14 +1028,14 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.transitiveMemberOf.item collection
+     * Gets an item from the Microsoft\Graph.me.transitiveMemberOf.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedMeTransitiveMemberOfItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphMeTransitiveMemberOfItemDirectoryObjectItemRequestBuilder
     */
-    public function transitiveMemberOfById(string $id): MicrosoftGraphGeneratedMeTransitiveMemberOfItemDirectoryObjectItemRequestBuilder {
+    public function transitiveMemberOfById(string $id): MicrosoftGraphMeTransitiveMemberOfItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphGeneratedMeTransitiveMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphMeTransitiveMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

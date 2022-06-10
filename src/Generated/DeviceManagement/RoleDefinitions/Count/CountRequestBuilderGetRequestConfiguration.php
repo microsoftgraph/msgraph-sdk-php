@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\Count;
+namespace Microsoft\Graph\DeviceManagement\RoleDefinitions\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

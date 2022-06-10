@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Presence;
+namespace Microsoft\Graph\Me\Presence;
 
 class PresenceRequestBuilderDeleteRequestConfiguration 
 {

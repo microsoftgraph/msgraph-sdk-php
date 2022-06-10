@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\External;
+namespace Microsoft\Graph\External;
 
 class ExternalRequestBuilderPatchRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\Operations\Item;
+namespace Microsoft\Graph\Drives\Item\EscapedList\Operations\Item;
 
 class RichLongRunningOperationItemRequestBuilderPatchRequestConfiguration 
 {

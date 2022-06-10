@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\Item\ServicePrincipal;
+namespace Microsoft\Graph\ServicePrincipals\Item\TransitiveMemberOf\Item\ServicePrincipal;
 
 class ServicePrincipalRequestBuilderGetRequestConfiguration 
 {

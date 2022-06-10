@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\HomeRealmDiscoveryPolicies;
+namespace Microsoft\Graph\Policies\HomeRealmDiscoveryPolicies;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

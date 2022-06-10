@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Messages\Delta;
+namespace Microsoft\Graph\Groups\Item\Team\PrimaryChannel\Messages\Delta;
 
-use Microsoft\Graph\Generated\Models\ChatMessage;
+use Microsoft\Graph\Models\ChatMessage;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

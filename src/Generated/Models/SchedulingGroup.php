@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -24,7 +24,7 @@ class SchedulingGroup extends ChangeTrackedEntity implements Parsable
     private ?array $userIds = null;
     
     /**
-     * Instantiates a new schedulingGroup and sets the default values.
+     * Instantiates a new SchedulingGroup and sets the default values.
     */
     public function __construct() {
         parent::__construct();

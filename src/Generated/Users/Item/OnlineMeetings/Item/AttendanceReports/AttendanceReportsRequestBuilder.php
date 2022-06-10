@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\AttendanceReports;
+namespace Microsoft\Graph\Users\Item\OnlineMeetings\Item\AttendanceReports;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\MeetingAttendanceReport;
-use Microsoft\Graph\Generated\Models\MeetingAttendanceReportCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\AttendanceReports\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\MeetingAttendanceReport;
+use Microsoft\Graph\Models\MeetingAttendanceReportCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Users\Item\OnlineMeetings\Item\AttendanceReports\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

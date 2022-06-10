@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item;
+namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\ExternalSponsors\ExternalSponsorsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\ExternalSponsors\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedIdentityGovernanceEntitlementManagementConnectedOrganizationsItemExternalSponsorsItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\InternalSponsors\InternalSponsorsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\InternalSponsors\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedIdentityGovernanceEntitlementManagementConnectedOrganizationsItemInternalSponsorsItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ConnectedOrganization;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\ExternalSponsors\ExternalSponsorsRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\ExternalSponsors\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphIdentityGovernanceEntitlementManagementConnectedOrganizationsItemExternalSponsorsItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\InternalSponsors\InternalSponsorsRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\InternalSponsors\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphIdentityGovernanceEntitlementManagementConnectedOrganizationsItemInternalSponsorsItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Models\ConnectedOrganization;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -149,14 +149,14 @@ class ConnectedOrganizationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.connectedOrganizations.item.externalSponsors.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.entitlementManagement.connectedOrganizations.item.externalSponsors.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedIdentityGovernanceEntitlementManagementConnectedOrganizationsItemExternalSponsorsItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphIdentityGovernanceEntitlementManagementConnectedOrganizationsItemExternalSponsorsItemDirectoryObjectItemRequestBuilder
     */
-    public function externalSponsorsById(string $id): MicrosoftGraphGeneratedIdentityGovernanceEntitlementManagementConnectedOrganizationsItemExternalSponsorsItemDirectoryObjectItemRequestBuilder {
+    public function externalSponsorsById(string $id): MicrosoftGraphIdentityGovernanceEntitlementManagementConnectedOrganizationsItemExternalSponsorsItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphGeneratedIdentityGovernanceEntitlementManagementConnectedOrganizationsItemExternalSponsorsItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphIdentityGovernanceEntitlementManagementConnectedOrganizationsItemExternalSponsorsItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -179,14 +179,14 @@ class ConnectedOrganizationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.connectedOrganizations.item.internalSponsors.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.entitlementManagement.connectedOrganizations.item.internalSponsors.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedIdentityGovernanceEntitlementManagementConnectedOrganizationsItemInternalSponsorsItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphIdentityGovernanceEntitlementManagementConnectedOrganizationsItemInternalSponsorsItemDirectoryObjectItemRequestBuilder
     */
-    public function internalSponsorsById(string $id): MicrosoftGraphGeneratedIdentityGovernanceEntitlementManagementConnectedOrganizationsItemInternalSponsorsItemDirectoryObjectItemRequestBuilder {
+    public function internalSponsorsById(string $id): MicrosoftGraphIdentityGovernanceEntitlementManagementConnectedOrganizationsItemInternalSponsorsItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphGeneratedIdentityGovernanceEntitlementManagementConnectedOrganizationsItemInternalSponsorsItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphIdentityGovernanceEntitlementManagementConnectedOrganizationsItemInternalSponsorsItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

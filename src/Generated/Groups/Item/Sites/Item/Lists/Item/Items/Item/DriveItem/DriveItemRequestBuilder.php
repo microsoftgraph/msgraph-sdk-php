@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\DriveItem;
+namespace Microsoft\Graph\Groups\Item\Sites\Item\Lists\Item\Items\Item\DriveItem;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\DriveItem\Content\ContentRequestBuilder;
-use Microsoft\Graph\Generated\Models\DriveItem;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Groups\Item\Sites\Item\Lists\Item\Items\Item\DriveItem\Content\ContentRequestBuilder;
+use Microsoft\Graph\Models\DriveItem;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

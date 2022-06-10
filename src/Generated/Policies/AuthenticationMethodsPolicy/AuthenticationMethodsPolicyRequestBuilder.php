@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\AuthenticationMethodsPolicy;
+namespace Microsoft\Graph\Policies\AuthenticationMethodsPolicy;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\AuthenticationMethodsPolicy;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Policies\AuthenticationMethodsPolicy\AuthenticationMethodConfigurations\AuthenticationMethodConfigurationsRequestBuilder;
-use Microsoft\Graph\Generated\Policies\AuthenticationMethodsPolicy\AuthenticationMethodConfigurations\Item\AuthenticationMethodConfigurationItemRequestBuilder;
+use Microsoft\Graph\Models\AuthenticationMethodsPolicy;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Policies\AuthenticationMethodsPolicy\AuthenticationMethodConfigurations\AuthenticationMethodConfigurationsRequestBuilder;
+use Microsoft\Graph\Policies\AuthenticationMethodsPolicy\AuthenticationMethodConfigurations\Item\AuthenticationMethodConfigurationItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -42,7 +42,7 @@ class AuthenticationMethodsPolicyRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.policies.authenticationMethodsPolicy.authenticationMethodConfigurations.item collection
+     * Gets an item from the Microsoft\Graph.policies.authenticationMethodsPolicy.authenticationMethodConfigurations.item collection
      * @param string $id Unique identifier of the item
      * @return AuthenticationMethodConfigurationItemRequestBuilder
     */

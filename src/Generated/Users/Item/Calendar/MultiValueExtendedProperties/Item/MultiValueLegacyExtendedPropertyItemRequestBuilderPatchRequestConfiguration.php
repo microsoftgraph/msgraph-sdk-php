@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Calendar\MultiValueExtendedProperties\Item;
+namespace Microsoft\Graph\Users\Item\Calendar\MultiValueExtendedProperties\Item;
 
 class MultiValueLegacyExtendedPropertyItemRequestBuilderPatchRequestConfiguration 
 {

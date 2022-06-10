@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\Reports\GetCachedReport;
+namespace Microsoft\Graph\DeviceManagement\Reports\GetCachedReport;
 
 class GetCachedReportRequestBuilderPostRequestConfiguration 
 {

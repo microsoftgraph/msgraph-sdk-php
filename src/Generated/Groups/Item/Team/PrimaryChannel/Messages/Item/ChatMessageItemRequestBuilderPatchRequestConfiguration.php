@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Messages\Item;
+namespace Microsoft\Graph\Groups\Item\Team\PrimaryChannel\Messages\Item;
 
 class ChatMessageItemRequestBuilderPatchRequestConfiguration 
 {

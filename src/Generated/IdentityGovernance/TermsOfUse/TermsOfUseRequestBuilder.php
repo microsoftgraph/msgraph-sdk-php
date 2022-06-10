@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse;
+namespace Microsoft\Graph\IdentityGovernance\TermsOfUse;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\AgreementAcceptances\AgreementAcceptancesRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\AgreementAcceptances\Item\AgreementAcceptanceItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\AgreementsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\AgreementItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TermsOfUseContainer;
+use Microsoft\Graph\IdentityGovernance\TermsOfUse\AgreementAcceptances\AgreementAcceptancesRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\TermsOfUse\AgreementAcceptances\Item\AgreementAcceptanceItemRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\AgreementsRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\Item\AgreementItemRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\TermsOfUseContainer;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -51,7 +51,7 @@ class TermsOfUseRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.termsOfUse.agreementAcceptances.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.termsOfUse.agreementAcceptances.item collection
      * @param string $id Unique identifier of the item
      * @return AgreementAcceptanceItemRequestBuilder
     */
@@ -62,7 +62,7 @@ class TermsOfUseRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.termsOfUse.agreements.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.termsOfUse.agreements.item collection
      * @param string $id Unique identifier of the item
      * @return AgreementItemRequestBuilder
     */

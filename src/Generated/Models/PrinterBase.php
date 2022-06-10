@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -66,11 +66,12 @@ class PrinterBase extends Entity implements Parsable
      * @return PrinterBase
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): PrinterBase {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.printerBase': return new PrinterBase();
+                case '#microsoft.graph.printer': return new Printer();
+                case '#microsoft.graph.printerShare': return new PrinterShare();
             }
         }
         return new PrinterBase();

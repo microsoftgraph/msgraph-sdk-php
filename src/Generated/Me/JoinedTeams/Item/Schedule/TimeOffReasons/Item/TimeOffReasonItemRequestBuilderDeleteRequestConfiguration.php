@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\TimeOffReasons\Item;
+namespace Microsoft\Graph\Me\JoinedTeams\Item\Schedule\TimeOffReasons\Item;
 
 class TimeOffReasonItemRequestBuilderDeleteRequestConfiguration 
 {

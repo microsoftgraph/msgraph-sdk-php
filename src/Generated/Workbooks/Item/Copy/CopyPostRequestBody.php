@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\Copy;
+namespace Microsoft\Graph\Workbooks\Item\Copy;
 
-use Microsoft\Graph\Generated\Models\ItemReference;
+use Microsoft\Graph\Models\ItemReference;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

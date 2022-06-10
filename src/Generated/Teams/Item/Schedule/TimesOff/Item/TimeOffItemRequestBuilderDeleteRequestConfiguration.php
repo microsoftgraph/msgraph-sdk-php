@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Schedule\TimesOff\Item;
+namespace Microsoft\Graph\Teams\Item\Schedule\TimesOff\Item;
 
 class TimeOffItemRequestBuilderDeleteRequestConfiguration 
 {

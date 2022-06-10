@@ -1,25 +1,41 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\Root;
+namespace Microsoft\Graph\Drive\Root;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drive\Root\Analytics\AnalyticsRequestBuilder;
-use Microsoft\Graph\Generated\Drive\Root\Children\ChildrenRequestBuilder;
-use Microsoft\Graph\Generated\Drive\Root\Children\Item\DriveItemItemRequestBuilder;
-use Microsoft\Graph\Generated\Drive\Root\Content\ContentRequestBuilder;
-use Microsoft\Graph\Generated\Drive\Root\ListItem\ListItemRequestBuilder;
-use Microsoft\Graph\Generated\Drive\Root\Permissions\Item\PermissionItemRequestBuilder;
-use Microsoft\Graph\Generated\Drive\Root\Permissions\PermissionsRequestBuilder;
-use Microsoft\Graph\Generated\Drive\Root\Subscriptions\Item\SubscriptionItemRequestBuilder;
-use Microsoft\Graph\Generated\Drive\Root\Subscriptions\SubscriptionsRequestBuilder;
-use Microsoft\Graph\Generated\Drive\Root\Thumbnails\Item\ThumbnailSetItemRequestBuilder;
-use Microsoft\Graph\Generated\Drive\Root\Thumbnails\ThumbnailsRequestBuilder;
-use Microsoft\Graph\Generated\Drive\Root\Versions\Item\DriveItemVersionItemRequestBuilder;
-use Microsoft\Graph\Generated\Drive\Root\Versions\VersionsRequestBuilder;
-use Microsoft\Graph\Generated\Models\DriveItem;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Drive\Root\Analytics\AnalyticsRequestBuilder;
+use Microsoft\Graph\Drive\Root\Checkin\CheckinRequestBuilder;
+use Microsoft\Graph\Drive\Root\Checkout\CheckoutRequestBuilder;
+use Microsoft\Graph\Drive\Root\Children\ChildrenRequestBuilder;
+use Microsoft\Graph\Drive\Root\Children\Item\DriveItemItemRequestBuilder;
+use Microsoft\Graph\Drive\Root\Content\ContentRequestBuilder;
+use Microsoft\Graph\Drive\Root\Copy\CopyRequestBuilder;
+use Microsoft\Graph\Drive\Root\CreateLink\CreateLinkRequestBuilder;
+use Microsoft\Graph\Drive\Root\CreateUploadSession\CreateUploadSessionRequestBuilder;
+use Microsoft\Graph\Drive\Root\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Drive\Root\DeltaWithToken\DeltaWithTokenRequestBuilder;
+use Microsoft\Graph\Drive\Root\Follow\FollowRequestBuilder;
+use Microsoft\Graph\Drive\Root\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
+use Microsoft\Graph\Drive\Root\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\Graph\Drive\Root\Invite\InviteRequestBuilder;
+use Microsoft\Graph\Drive\Root\ListItem\ListItemRequestBuilder;
+use Microsoft\Graph\Drive\Root\Permissions\Item\PermissionItemRequestBuilder;
+use Microsoft\Graph\Drive\Root\Permissions\PermissionsRequestBuilder;
+use Microsoft\Graph\Drive\Root\Preview\PreviewRequestBuilder;
+use Microsoft\Graph\Drive\Root\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Drive\Root\SearchWithQ\SearchWithQRequestBuilder;
+use Microsoft\Graph\Drive\Root\Subscriptions\Item\SubscriptionItemRequestBuilder;
+use Microsoft\Graph\Drive\Root\Subscriptions\SubscriptionsRequestBuilder;
+use Microsoft\Graph\Drive\Root\Thumbnails\Item\ThumbnailSetItemRequestBuilder;
+use Microsoft\Graph\Drive\Root\Thumbnails\ThumbnailsRequestBuilder;
+use Microsoft\Graph\Drive\Root\Unfollow\UnfollowRequestBuilder;
+use Microsoft\Graph\Drive\Root\ValidatePermission\ValidatePermissionRequestBuilder;
+use Microsoft\Graph\Drive\Root\Versions\Item\DriveItemVersionItemRequestBuilder;
+use Microsoft\Graph\Drive\Root\Versions\VersionsRequestBuilder;
+use Microsoft\Graph\Models\DriveItem;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -38,6 +54,20 @@ class RootRequestBuilder
     }
     
     /**
+     * The checkin property
+    */
+    public function checkin(): CheckinRequestBuilder {
+        return new CheckinRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The checkout property
+    */
+    public function checkout(): CheckoutRequestBuilder {
+        return new CheckoutRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * The children property
     */
     public function children(): ChildrenRequestBuilder {
@@ -49,6 +79,41 @@ class RootRequestBuilder
     */
     public function content(): ContentRequestBuilder {
         return new ContentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The copy property
+    */
+    public function copy(): CopyRequestBuilder {
+        return new CopyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The createLink property
+    */
+    public function createLink(): CreateLinkRequestBuilder {
+        return new CreateLinkRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The createUploadSession property
+    */
+    public function createUploadSession(): CreateUploadSessionRequestBuilder {
+        return new CreateUploadSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The follow property
+    */
+    public function follow(): FollowRequestBuilder {
+        return new FollowRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The invite property
+    */
+    public function invite(): InviteRequestBuilder {
+        return new InviteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -71,9 +136,23 @@ class RootRequestBuilder
     }
     
     /**
+     * The preview property
+    */
+    public function preview(): PreviewRequestBuilder {
+        return new PreviewRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * The restore property
+    */
+    public function restore(): RestoreRequestBuilder {
+        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * The subscriptions property
@@ -90,9 +169,23 @@ class RootRequestBuilder
     }
     
     /**
+     * The unfollow property
+    */
+    public function unfollow(): UnfollowRequestBuilder {
+        return new UnfollowRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
+    
+    /**
+     * The validatePermission property
+    */
+    public function validatePermission(): ValidatePermissionRequestBuilder {
+        return new ValidatePermissionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * The versions property
@@ -102,7 +195,7 @@ class RootRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drive.root.children.item collection
+     * Gets an item from the Microsoft\Graph.drive.root.children.item collection
      * @param string $id Unique identifier of the item
      * @return DriveItemItemRequestBuilder
     */
@@ -211,6 +304,23 @@ class RootRequestBuilder
     }
 
     /**
+     * Provides operations to call the delta method.
+     * @return DeltaRequestBuilder
+    */
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+
+    /**
+     * Provides operations to call the delta method.
+     * @param string $token Usage: token='{token}'
+     * @return DeltaWithTokenRequestBuilder
+    */
+    public function deltaWithToken(string $token): DeltaWithTokenRequestBuilder {
+        return new DeltaWithTokenRequestBuilder($this->pathParameters, $this->requestAdapter, $token);
+    }
+
+    /**
      * The root folder of the drive. Read-only.
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -227,6 +337,25 @@ class RootRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
+    }
+
+    /**
+     * Provides operations to call the getActivitiesByInterval method.
+     * @return GetActivitiesByIntervalRequestBuilder
+    */
+    public function getActivitiesByInterval(): GetActivitiesByIntervalRequestBuilder {
+        return new GetActivitiesByIntervalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+
+    /**
+     * Provides operations to call the getActivitiesByInterval method.
+     * @param string $endDateTime Usage: endDateTime='{endDateTime}'
+     * @param string $interval Usage: interval='{interval}'
+     * @param string $startDateTime Usage: startDateTime='{startDateTime}'
+     * @return GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+    */
+    public function getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(string $endDateTime, string $interval, string $startDateTime): GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder {
+        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $interval, $startDateTime);
     }
 
     /**
@@ -250,7 +379,7 @@ class RootRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drive.root.permissions.item collection
+     * Gets an item from the Microsoft\Graph.drive.root.permissions.item collection
      * @param string $id Unique identifier of the item
      * @return PermissionItemRequestBuilder
     */
@@ -261,7 +390,16 @@ class RootRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drive.root.subscriptions.item collection
+     * Provides operations to call the search method.
+     * @param string $q Usage: q='{q}'
+     * @return SearchWithQRequestBuilder
+    */
+    public function searchWithQ(string $q): SearchWithQRequestBuilder {
+        return new SearchWithQRequestBuilder($this->pathParameters, $this->requestAdapter, $q);
+    }
+
+    /**
+     * Gets an item from the Microsoft\Graph.drive.root.subscriptions.item collection
      * @param string $id Unique identifier of the item
      * @return SubscriptionItemRequestBuilder
     */
@@ -272,7 +410,7 @@ class RootRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drive.root.thumbnails.item collection
+     * Gets an item from the Microsoft\Graph.drive.root.thumbnails.item collection
      * @param string $id Unique identifier of the item
      * @return ThumbnailSetItemRequestBuilder
     */
@@ -283,7 +421,7 @@ class RootRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drive.root.versions.item collection
+     * Gets an item from the Microsoft\Graph.drive.root.versions.item collection
      * @param string $id Unique identifier of the item
      * @return DriveItemVersionItemRequestBuilder
     */

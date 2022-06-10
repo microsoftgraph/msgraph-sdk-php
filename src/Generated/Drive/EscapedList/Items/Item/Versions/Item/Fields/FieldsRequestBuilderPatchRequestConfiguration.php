@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\EscapedList\Items\Item\Versions\Item\Fields;
+namespace Microsoft\Graph\Drive\EscapedList\Items\Item\Versions\Item\Fields;
 
 class FieldsRequestBuilderPatchRequestConfiguration 
 {

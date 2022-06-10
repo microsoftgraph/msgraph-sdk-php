@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments;
+namespace Microsoft\Graph\Identity\B2xUserFlows\Item\UserAttributeAssignments;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\GetOrder\GetOrderRequestBuilder;
-use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\SetOrder\SetOrderRequestBuilder;
-use Microsoft\Graph\Generated\Models\IdentityUserFlowAttributeAssignment;
-use Microsoft\Graph\Generated\Models\IdentityUserFlowAttributeAssignmentCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Identity\B2xUserFlows\Item\UserAttributeAssignments\Count\CountRequestBuilder;
+use Microsoft\Graph\Identity\B2xUserFlows\Item\UserAttributeAssignments\GetOrder\GetOrderRequestBuilder;
+use Microsoft\Graph\Identity\B2xUserFlows\Item\UserAttributeAssignments\SetOrder\SetOrderRequestBuilder;
+use Microsoft\Graph\Models\IdentityUserFlowAttributeAssignment;
+use Microsoft\Graph\Models\IdentityUserFlowAttributeAssignmentCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -15,7 +15,7 @@ class RoleManagement implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var RbacApplication|null $directory Read-only. Nullable.
+     * @var RbacApplication|null $directory The directory property
     */
     private ?RbacApplication $directory = null;
     
@@ -49,7 +49,7 @@ class RoleManagement implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the directory property value. Read-only. Nullable.
+     * Gets the directory property value. The directory property
      * @return RbacApplication|null
     */
     public function getDirectory(): ?RbacApplication {
@@ -95,7 +95,7 @@ class RoleManagement implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the directory property value. Read-only. Nullable.
+     * Sets the directory property value. The directory property
      *  @param RbacApplication|null $value Value to set for the directory property.
     */
     public function setDirectory(?RbacApplication $value ): void {

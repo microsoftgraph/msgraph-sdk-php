@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Todo\Lists;
+namespace Microsoft\Graph\Me\Todo\Lists;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

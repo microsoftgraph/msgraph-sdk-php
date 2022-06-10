@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Reply;
+namespace Microsoft\Graph\Groups\Item\Conversations\Item\Threads\Item\Reply;
 
 class ReplyRequestBuilderPostRequestConfiguration 
 {

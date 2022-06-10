@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Contracts\ValidateProperties;
+namespace Microsoft\Graph\Contracts\ValidateProperties;
 
 class ValidatePropertiesRequestBuilderPostRequestConfiguration 
 {

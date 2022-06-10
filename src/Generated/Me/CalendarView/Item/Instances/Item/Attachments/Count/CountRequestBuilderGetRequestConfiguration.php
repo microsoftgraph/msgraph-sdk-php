@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\CalendarView\Item\Instances\Item\Attachments\Count;
+namespace Microsoft\Graph\Me\CalendarView\Item\Instances\Item\Attachments\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

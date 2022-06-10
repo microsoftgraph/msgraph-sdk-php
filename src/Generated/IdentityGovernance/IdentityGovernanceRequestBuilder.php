@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance;
+namespace Microsoft\Graph\IdentityGovernance;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\AccessReviewsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\EntitlementManagementRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\TermsOfUseRequestBuilder;
-use Microsoft\Graph\Generated\Models\IdentityGovernance;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\IdentityGovernance\AccessReviews\AccessReviewsRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\AppConsent\AppConsentRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\EntitlementManagementRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\TermsOfUse\TermsOfUseRequestBuilder;
+use Microsoft\Graph\Models\IdentityGovernance;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

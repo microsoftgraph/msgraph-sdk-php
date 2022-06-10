@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -35,7 +35,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
     private ?string $phoneAppVersion = null;
     
     /**
-     * Instantiates a new microsoftAuthenticatorAuthenticationMethod and sets the default values.
+     * Instantiates a new MicrosoftAuthenticatorAuthenticationMethod and sets the default values.
     */
     public function __construct() {
         parent::__construct();

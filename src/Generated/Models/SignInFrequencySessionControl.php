@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SignInFrequencySessionControl extends ConditionalAccessSessionControl implements Parsable 
 {
     /**
-     * @var SigninFrequencyType|null $type Possible values are: days, hours.
+     * @var SigninFrequencyType|null $type Possible values are: days, hours, or null if frequencyInterval is everyTime .
     */
     private ?SigninFrequencyType $type = null;
     
@@ -47,7 +47,7 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
     }
 
     /**
-     * Gets the type property value. Possible values are: days, hours.
+     * Gets the type property value. Possible values are: days, hours, or null if frequencyInterval is everyTime .
      * @return SigninFrequencyType|null
     */
     public function getType(): ?SigninFrequencyType {
@@ -73,7 +73,7 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
     }
 
     /**
-     * Sets the type property value. Possible values are: days, hours.
+     * Sets the type property value. Possible values are: days, hours, or null if frequencyInterval is everyTime .
      *  @param SigninFrequencyType|null $value Value to set for the type property.
     */
     public function setType(?SigninFrequencyType $value ): void {

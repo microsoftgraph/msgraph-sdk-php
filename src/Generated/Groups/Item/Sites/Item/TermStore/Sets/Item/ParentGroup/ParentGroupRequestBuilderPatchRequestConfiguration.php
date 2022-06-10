@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Item\ParentGroup;
+namespace Microsoft\Graph\Groups\Item\Sites\Item\TermStore\Sets\Item\ParentGroup;
 
 class ParentGroupRequestBuilderPatchRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Schedule\OfferShiftRequests;
+namespace Microsoft\Graph\Groups\Item\Team\Schedule\OfferShiftRequests;
 
 class OfferShiftRequestsRequestBuilderPostRequestConfiguration 
 {

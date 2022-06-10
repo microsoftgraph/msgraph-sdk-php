@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\AuditLogs\Provisioning;
+namespace Microsoft\Graph\AuditLogs\Provisioning;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\AuditLogs\Provisioning\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ProvisioningObjectSummary;
-use Microsoft\Graph\Generated\Models\ProvisioningObjectSummaryCollectionResponse;
+use Microsoft\Graph\AuditLogs\Provisioning\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\ProvisioningObjectSummary;
+use Microsoft\Graph\Models\ProvisioningObjectSummaryCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

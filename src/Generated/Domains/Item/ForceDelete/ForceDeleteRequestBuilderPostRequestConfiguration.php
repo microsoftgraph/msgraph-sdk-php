@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Domains\Item\ForceDelete;
+namespace Microsoft\Graph\Domains\Item\ForceDelete;
 
 class ForceDeleteRequestBuilderPostRequestConfiguration 
 {

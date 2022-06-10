@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Calendar\Events\Item\Attachments;
+namespace Microsoft\Graph\Me\Calendar\Events\Item\Attachments;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

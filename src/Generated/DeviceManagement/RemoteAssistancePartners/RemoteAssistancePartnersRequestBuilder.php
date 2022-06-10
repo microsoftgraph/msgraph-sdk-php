@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners;
+namespace Microsoft\Graph\DeviceManagement\RemoteAssistancePartners;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\RemoteAssistancePartner;
-use Microsoft\Graph\Generated\Models\RemoteAssistancePartnerCollectionResponse;
+use Microsoft\Graph\DeviceManagement\RemoteAssistancePartners\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\RemoteAssistancePartner;
+use Microsoft\Graph\Models\RemoteAssistancePartnerCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

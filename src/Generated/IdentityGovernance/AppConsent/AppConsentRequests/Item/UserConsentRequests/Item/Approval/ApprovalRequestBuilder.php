@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Item\UserConsentRequests\Item\Approval;
+namespace Microsoft\Graph\IdentityGovernance\AppConsent\AppConsentRequests\Item\UserConsentRequests\Item\Approval;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Item\UserConsentRequests\Item\Approval\Stages\Item\ApprovalStageItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Item\UserConsentRequests\Item\Approval\Stages\StagesRequestBuilder;
-use Microsoft\Graph\Generated\Models\Approval;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\IdentityGovernance\AppConsent\AppConsentRequests\Item\UserConsentRequests\Item\Approval\Stages\Item\ApprovalStageItemRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\AppConsent\AppConsentRequests\Item\UserConsentRequests\Item\Approval\Stages\StagesRequestBuilder;
+use Microsoft\Graph\Models\Approval;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -179,7 +179,7 @@ class ApprovalRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.appConsent.appConsentRequests.item.userConsentRequests.item.approval.stages.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.appConsent.appConsentRequests.item.userConsentRequests.item.approval.stages.item collection
      * @param string $id Unique identifier of the item
      * @return ApprovalStageItemRequestBuilder
     */

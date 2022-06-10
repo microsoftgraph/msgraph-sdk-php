@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Branding\Localizations\Item\BannerLogo;
+namespace Microsoft\Graph\Branding\Localizations\Item\BannerLogo;
 
 class BannerLogoRequestBuilderPutRequestConfiguration 
 {

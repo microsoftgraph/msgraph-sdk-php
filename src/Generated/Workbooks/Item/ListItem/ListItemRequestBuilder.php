@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\ListItem;
+namespace Microsoft\Graph\Workbooks\Item\ListItem;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ListItem;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Workbooks\Item\ListItem\Analytics\AnalyticsRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\ListItem\DriveItem\DriveItemRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\ListItem\Fields\FieldsRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\ListItem\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\ListItem\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\ListItem\Versions\Item\ListItemVersionItemRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\ListItem\Versions\VersionsRequestBuilder;
+use Microsoft\Graph\Models\ListItem;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Workbooks\Item\ListItem\Analytics\AnalyticsRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\ListItem\DriveItem\DriveItemRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\ListItem\Fields\FieldsRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\ListItem\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\ListItem\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\ListItem\Versions\Item\ListItemVersionItemRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\ListItem\Versions\VersionsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -224,7 +224,7 @@ class ListItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.workbooks.item.listItem.versions.item collection
+     * Gets an item from the Microsoft\Graph.workbooks.item.listItem.versions.item collection
      * @param string $id Unique identifier of the item
      * @return ListItemVersionItemRequestBuilder
     */

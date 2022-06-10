@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Schools\Item;
+namespace Microsoft\Graph\Education\Schools\Item;
 
 class EducationSchoolItemRequestBuilderDeleteRequestConfiguration 
 {

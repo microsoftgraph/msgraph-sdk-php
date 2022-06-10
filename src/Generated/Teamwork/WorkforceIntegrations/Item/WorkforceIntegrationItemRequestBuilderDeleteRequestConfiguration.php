@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\Item;
+namespace Microsoft\Graph\Teamwork\WorkforceIntegrations\Item;
 
 class WorkforceIntegrationItemRequestBuilderDeleteRequestConfiguration 
 {

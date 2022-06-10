@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -15,7 +15,7 @@ class Entity implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $id Read-only.
+     * @var string|null $id The id property
     */
     private ?string $id = null;
     
@@ -55,7 +55,7 @@ class Entity implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the id property value. Read-only.
+     * Gets the id property value. The id property
      * @return string|null
     */
     public function getId(): ?string {
@@ -80,7 +80,7 @@ class Entity implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the id property value. Read-only.
+     * Sets the id property value. The id property
      *  @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value ): void {

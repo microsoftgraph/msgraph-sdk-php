@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item;
+namespace Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item;
 
 class AccessReviewScheduleDefinitionItemRequestBuilderPatchRequestConfiguration 
 {

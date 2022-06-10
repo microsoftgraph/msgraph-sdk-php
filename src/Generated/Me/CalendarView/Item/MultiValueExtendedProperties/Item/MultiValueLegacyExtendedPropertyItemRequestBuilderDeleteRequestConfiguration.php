@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\CalendarView\Item\MultiValueExtendedProperties\Item;
+namespace Microsoft\Graph\Me\CalendarView\Item\MultiValueExtendedProperties\Item;
 
 class MultiValueLegacyExtendedPropertyItemRequestBuilderDeleteRequestConfiguration 
 {

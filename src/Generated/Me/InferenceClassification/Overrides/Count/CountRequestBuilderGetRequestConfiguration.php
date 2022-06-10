@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\InferenceClassification\Overrides\Count;
+namespace Microsoft\Graph\Me\InferenceClassification\Overrides\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

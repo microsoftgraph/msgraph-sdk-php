@@ -1,20 +1,20 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item;
+namespace Microsoft\Graph\Shares\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SharedDriveItem;
-use Microsoft\Graph\Generated\Shares\Item\DriveItem\DriveItemRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\ListRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\Items\Item\DriveItemItemRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\Items\ItemsRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\ListItem\ListItemRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\Permission\PermissionRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\Root\RootRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\Site\SiteRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\SharedDriveItem;
+use Microsoft\Graph\Shares\Item\DriveItem\DriveItemRequestBuilder;
+use Microsoft\Graph\Shares\Item\EscapedList\ListRequestBuilder;
+use Microsoft\Graph\Shares\Item\Items\Item\DriveItemItemRequestBuilder;
+use Microsoft\Graph\Shares\Item\Items\ItemsRequestBuilder;
+use Microsoft\Graph\Shares\Item\ListItem\ListItemRequestBuilder;
+use Microsoft\Graph\Shares\Item\Permission\PermissionRequestBuilder;
+use Microsoft\Graph\Shares\Item\Root\RootRequestBuilder;
+use Microsoft\Graph\Shares\Item\Site\SiteRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -207,7 +207,7 @@ class SharedDriveItemItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.shares.item.items.item collection
+     * Gets an item from the Microsoft\Graph.shares.item.items.item collection
      * @param string $id Unique identifier of the item
      * @return DriveItemItemRequestBuilder
     */

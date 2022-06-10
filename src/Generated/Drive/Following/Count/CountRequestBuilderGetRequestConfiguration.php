@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\Following\Count;
+namespace Microsoft\Graph\Drive\Following\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

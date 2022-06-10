@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Schedule\Shifts;
+namespace Microsoft\Graph\Teams\Item\Schedule\Shifts;
 
 class ShiftsRequestBuilderGetRequestConfiguration 
 {

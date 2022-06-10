@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Calendars\Item\Events\Item\MultiValueExtendedProperties\Item;
+namespace Microsoft\Graph\Users\Item\Calendars\Item\Events\Item\MultiValueExtendedProperties\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

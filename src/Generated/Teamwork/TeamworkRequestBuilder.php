@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teamwork;
+namespace Microsoft\Graph\Teamwork;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Teamwork;
-use Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\Item\WorkforceIntegrationItemRequestBuilder;
-use Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\WorkforceIntegrationsRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Teamwork;
+use Microsoft\Graph\Teamwork\WorkforceIntegrations\Item\WorkforceIntegrationItemRequestBuilder;
+use Microsoft\Graph\Teamwork\WorkforceIntegrations\WorkforceIntegrationsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -139,7 +139,7 @@ class TeamworkRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.teamwork.workforceIntegrations.item collection
+     * Gets an item from the Microsoft\Graph.teamwork.workforceIntegrations.item collection
      * @param string $id Unique identifier of the item
      * @return WorkforceIntegrationItemRequestBuilder
     */

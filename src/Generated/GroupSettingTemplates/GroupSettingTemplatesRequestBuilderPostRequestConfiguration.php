@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\GroupSettingTemplates;
+namespace Microsoft\Graph\GroupSettingTemplates;
 
 class GroupSettingTemplatesRequestBuilderPostRequestConfiguration 
 {

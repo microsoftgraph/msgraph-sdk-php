@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Operations;
+namespace Microsoft\Graph\EscapedPrint\Operations;
 
 class OperationsRequestBuilderPostRequestConfiguration 
 {

@@ -1,22 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Item\ServicePrincipal;
+namespace Microsoft\Graph\ServicePrincipals\Item\MemberOf\Item\ServicePrincipal;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ServicePrincipal;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Item\ServicePrincipal\AddKey\AddKeyRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Item\ServicePrincipal\AddPassword\AddPasswordRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Item\ServicePrincipal\AddTokenSigningCertificate\AddTokenSigningCertificateRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Item\ServicePrincipal\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Item\ServicePrincipal\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Item\ServicePrincipal\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Item\ServicePrincipal\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Item\ServicePrincipal\RemoveKey\RemoveKeyRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Item\ServicePrincipal\RemovePassword\RemovePasswordRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Item\ServicePrincipal\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\ServicePrincipal;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -28,84 +18,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ServicePrincipalRequestBuilder 
 {
     /**
-     * The addKey property
-    */
-    public function addKey(): AddKeyRequestBuilder {
-        return new AddKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The addPassword property
-    */
-    public function addPassword(): AddPasswordRequestBuilder {
-        return new AddPasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The addTokenSigningCertificate property
-    */
-    public function addTokenSigningCertificate(): AddTokenSigningCertificateRequestBuilder {
-        return new AddTokenSigningCertificateRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The checkMemberGroups property
-    */
-    public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
-        return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The checkMemberObjects property
-    */
-    public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
-        return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The getMemberGroups property
-    */
-    public function getMemberGroups(): GetMemberGroupsRequestBuilder {
-        return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The getMemberObjects property
-    */
-    public function getMemberObjects(): GetMemberObjectsRequestBuilder {
-        return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
     
     /**
-     * The removeKey property
-    */
-    public function removeKey(): RemoveKeyRequestBuilder {
-        return new RemoveKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The removePassword property
-    */
-    public function removePassword(): RemovePasswordRequestBuilder {
-        return new RemovePasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * The restore property
-    */
-    public function restore(): RestoreRequestBuilder {
-        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

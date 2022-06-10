@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\ActivityBasedTimeoutPolicies;
+namespace Microsoft\Graph\Policies\ActivityBasedTimeoutPolicies;
 
 class ActivityBasedTimeoutPoliciesRequestBuilderGetRequestConfiguration 
 {

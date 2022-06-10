@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentPolicies\Item\Catalog;
+namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\AssignmentPolicies\Item\Catalog;
 
 class CatalogRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\Reprocess;
+namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\Reprocess;
 
 class ReprocessRequestBuilderPostRequestConfiguration 
 {

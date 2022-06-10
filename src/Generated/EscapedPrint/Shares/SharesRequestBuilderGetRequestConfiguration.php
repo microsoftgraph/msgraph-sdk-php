@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Shares;
+namespace Microsoft\Graph\EscapedPrint\Shares;
 
 class SharesRequestBuilderGetRequestConfiguration 
 {

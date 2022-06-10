@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\GroupLifecyclePolicies\Item;
+namespace Microsoft\Graph\GroupLifecyclePolicies\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\AddGroup\AddGroupRequestBuilder;
-use Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\RemoveGroup\RemoveGroupRequestBuilder;
-use Microsoft\Graph\Generated\Models\GroupLifecyclePolicy;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\GroupLifecyclePolicies\Item\AddGroup\AddGroupRequestBuilder;
+use Microsoft\Graph\GroupLifecyclePolicies\Item\RemoveGroup\RemoveGroupRequestBuilder;
+use Microsoft\Graph\Models\GroupLifecyclePolicy;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

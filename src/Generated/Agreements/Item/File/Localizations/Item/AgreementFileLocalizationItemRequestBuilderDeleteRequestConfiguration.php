@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Agreements\Item\File\Localizations\Item;
+namespace Microsoft\Graph\Agreements\Item\File\Localizations\Item;
 
 class AgreementFileLocalizationItemRequestBuilderDeleteRequestConfiguration 
 {

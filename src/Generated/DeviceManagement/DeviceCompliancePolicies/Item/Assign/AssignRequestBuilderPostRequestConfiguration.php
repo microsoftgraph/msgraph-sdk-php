@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Assign;
+namespace Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\Assign;
 
 class AssignRequestBuilderPostRequestConfiguration 
 {

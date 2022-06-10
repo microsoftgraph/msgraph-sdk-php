@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\AddPassword;
+namespace Microsoft\Graph\Applications\Item\AddPassword;
 
-use Microsoft\Graph\Generated\Models\PasswordCredential;
+use Microsoft\Graph\Models\PasswordCredential;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

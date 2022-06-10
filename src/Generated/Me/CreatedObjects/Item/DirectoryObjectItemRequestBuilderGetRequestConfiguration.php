@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\CreatedObjects\Item;
+namespace Microsoft\Graph\Me\CreatedObjects\Item;
 
 class DirectoryObjectItemRequestBuilderGetRequestConfiguration 
 {

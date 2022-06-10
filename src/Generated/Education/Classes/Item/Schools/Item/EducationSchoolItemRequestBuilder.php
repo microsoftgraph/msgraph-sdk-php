@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Classes\Item\Schools\Item;
+namespace Microsoft\Graph\Education\Classes\Item\Schools\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\EducationSchool;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\EducationSchool;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

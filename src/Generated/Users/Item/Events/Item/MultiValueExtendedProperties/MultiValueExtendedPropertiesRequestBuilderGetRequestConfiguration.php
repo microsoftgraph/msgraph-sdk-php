@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Events\Item\MultiValueExtendedProperties;
+namespace Microsoft\Graph\Users\Item\Events\Item\MultiValueExtendedProperties;
 
 class MultiValueExtendedPropertiesRequestBuilderGetRequestConfiguration 
 {

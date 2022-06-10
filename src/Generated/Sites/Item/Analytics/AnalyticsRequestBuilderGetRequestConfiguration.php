@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Analytics;
+namespace Microsoft\Graph\Sites\Item\Analytics;
 
 class AnalyticsRequestBuilderGetRequestConfiguration 
 {

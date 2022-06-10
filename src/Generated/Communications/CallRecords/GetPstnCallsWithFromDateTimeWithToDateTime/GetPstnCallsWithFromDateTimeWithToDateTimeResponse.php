@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\CallRecords\GetPstnCallsWithFromDateTimeWithToDateTime;
+namespace Microsoft\Graph\Communications\CallRecords\GetPstnCallsWithFromDateTimeWithToDateTime;
 
-use Microsoft\Graph\Generated\Models\CallRecords\PstnCallLogRow;
+use Microsoft\Graph\Models\CallRecords\PstnCallLogRow;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

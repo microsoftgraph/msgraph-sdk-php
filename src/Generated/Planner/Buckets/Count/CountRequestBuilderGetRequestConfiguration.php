@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Planner\Buckets\Count;
+namespace Microsoft\Graph\Planner\Buckets\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

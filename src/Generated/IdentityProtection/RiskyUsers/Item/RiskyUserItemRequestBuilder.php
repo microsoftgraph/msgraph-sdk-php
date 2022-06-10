@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item;
+namespace Microsoft\Graph\IdentityProtection\RiskyUsers\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item\History\HistoryRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item\History\Item\RiskyUserHistoryItemItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\RiskyUser;
+use Microsoft\Graph\IdentityProtection\RiskyUsers\Item\History\HistoryRequestBuilder;
+use Microsoft\Graph\IdentityProtection\RiskyUsers\Item\History\Item\RiskyUserHistoryItemItemRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\RiskyUser;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -159,7 +159,7 @@ class RiskyUserItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityProtection.riskyUsers.item.history.item collection
+     * Gets an item from the Microsoft\Graph.identityProtection.riskyUsers.item.history.item collection
      * @param string $id Unique identifier of the item
      * @return RiskyUserHistoryItemItemRequestBuilder
     */

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\SecureScoreControlProfiles;
+namespace Microsoft\Graph\Security\SecureScoreControlProfiles;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SecureScoreControlProfile;
-use Microsoft\Graph\Generated\Models\SecureScoreControlProfileCollectionResponse;
-use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\SecureScoreControlProfile;
+use Microsoft\Graph\Models\SecureScoreControlProfileCollectionResponse;
+use Microsoft\Graph\Security\SecureScoreControlProfiles\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

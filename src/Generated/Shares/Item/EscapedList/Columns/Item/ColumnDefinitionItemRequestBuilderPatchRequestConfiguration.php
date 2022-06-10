@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Columns\Item;
+namespace Microsoft\Graph\Shares\Item\EscapedList\Columns\Item;
 
 class ColumnDefinitionItemRequestBuilderPatchRequestConfiguration 
 {

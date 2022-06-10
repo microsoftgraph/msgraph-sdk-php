@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -134,7 +134,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
     private ?array $smbAutoEncryptedFileExtensions = null;
     
     /**
-     * Instantiates a new windowsInformationProtection and sets the default values.
+     * Instantiates a new WindowsInformationProtection and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -146,13 +146,6 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return WindowsInformationProtection
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): WindowsInformationProtection {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
-        if ($mappingValueNode !== null) {
-            $mappingValue = $mappingValueNode->getStringValue();
-            switch ($mappingValue) {
-                case '#microsoft.graph.windowsInformationProtection': return new WindowsInformationProtection();
-            }
-        }
         return new WindowsInformationProtection();
     }
 

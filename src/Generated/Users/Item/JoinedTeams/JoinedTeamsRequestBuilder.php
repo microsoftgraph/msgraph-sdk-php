@@ -1,14 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams;
+namespace Microsoft\Graph\Users\Item\JoinedTeams;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Team;
-use Microsoft\Graph\Generated\Models\TeamCollectionResponse;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Team;
+use Microsoft\Graph\Models\TeamCollectionResponse;
+use Microsoft\Graph\Users\Item\JoinedTeams\Count\CountRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\GetAllMessages\GetAllMessagesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -116,6 +117,14 @@ class JoinedTeamsRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
+    }
+
+    /**
+     * Provides operations to call the getAllMessages method.
+     * @return GetAllMessagesRequestBuilder
+    */
+    public function getAllMessages(): GetAllMessagesRequestBuilder {
+        return new GetAllMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
 
     /**

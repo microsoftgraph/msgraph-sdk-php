@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Root\Versions\Item;
+namespace Microsoft\Graph\Drives\Item\Root\Versions\Item;
 
 class DriveItemVersionItemRequestBuilderGetRequestConfiguration 
 {

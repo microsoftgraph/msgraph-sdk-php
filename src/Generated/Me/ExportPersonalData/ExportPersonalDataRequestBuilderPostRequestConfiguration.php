@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\ExportPersonalData;
+namespace Microsoft\Graph\Me\ExportPersonalData;
 
 class ExportPersonalDataRequestBuilderPostRequestConfiguration 
 {

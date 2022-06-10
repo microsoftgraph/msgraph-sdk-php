@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\SyncMicrosoftStoreForBusinessApps;
+namespace Microsoft\Graph\DeviceAppManagement\SyncMicrosoftStoreForBusinessApps;
 
 class SyncMicrosoftStoreForBusinessAppsRequestBuilderPostRequestConfiguration 
 {

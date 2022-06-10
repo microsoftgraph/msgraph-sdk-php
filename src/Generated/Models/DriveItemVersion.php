@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -20,7 +20,7 @@ class DriveItemVersion extends BaseItemVersion implements Parsable
     private ?int $size = null;
     
     /**
-     * Instantiates a new driveItemVersion and sets the default values.
+     * Instantiates a new DriveItemVersion and sets the default values.
     */
     public function __construct() {
         parent::__construct();

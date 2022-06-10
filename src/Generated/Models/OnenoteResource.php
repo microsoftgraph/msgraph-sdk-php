@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -20,7 +20,7 @@ class OnenoteResource extends OnenoteEntityBaseModel implements Parsable
     private ?string $contentUrl = null;
     
     /**
-     * Instantiates a new onenoteResource and sets the default values.
+     * Instantiates a new OnenoteResource and sets the default values.
     */
     public function __construct() {
         parent::__construct();

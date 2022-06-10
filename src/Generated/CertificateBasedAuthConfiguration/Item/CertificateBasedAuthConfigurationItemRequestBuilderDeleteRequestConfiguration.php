@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\CertificateBasedAuthConfiguration\Item;
+namespace Microsoft\Graph\CertificateBasedAuthConfiguration\Item;
 
 class CertificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration 
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Teamwork;
+namespace Microsoft\Graph\Users\Item\Teamwork;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UserTeamwork;
-use Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\InstalledAppsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\Item\UserScopeTeamsAppInstallationItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Teamwork\SendActivityNotification\SendActivityNotificationRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\UserTeamwork;
+use Microsoft\Graph\Users\Item\Teamwork\InstalledApps\InstalledAppsRequestBuilder;
+use Microsoft\Graph\Users\Item\Teamwork\InstalledApps\Item\UserScopeTeamsAppInstallationItemRequestBuilder;
+use Microsoft\Graph\Users\Item\Teamwork\SendActivityNotification\SendActivityNotificationRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -167,7 +167,7 @@ class TeamworkRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.teamwork.installedApps.item collection
+     * Gets an item from the Microsoft\Graph.users.item.teamwork.installedApps.item collection
      * @param string $id Unique identifier of the item
      * @return UserScopeTeamsAppInstallationItemRequestBuilder
     */

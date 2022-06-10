@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\ContactFolders\Item\Contacts\Item\MultiValueExtendedProperties\Item;
+namespace Microsoft\Graph\Me\ContactFolders\Item\Contacts\Item\MultiValueExtendedProperties\Item;
 
 class MultiValueLegacyExtendedPropertyItemRequestBuilderDeleteRequestConfiguration 
 {

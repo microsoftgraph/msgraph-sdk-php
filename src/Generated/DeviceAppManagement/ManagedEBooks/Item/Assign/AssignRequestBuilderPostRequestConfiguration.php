@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Assign;
+namespace Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\Assign;
 
 class AssignRequestBuilderPostRequestConfiguration 
 {

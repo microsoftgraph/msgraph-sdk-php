@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoles;
+namespace Microsoft\Graph\DirectoryRoles;
 
 class DirectoryRolesRequestBuilderGetRequestConfiguration 
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Authentication\Fido2Methods;
+namespace Microsoft\Graph\Me\Authentication\Fido2Methods;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Authentication\Fido2Methods\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\Fido2AuthenticationMethod;
-use Microsoft\Graph\Generated\Models\Fido2AuthenticationMethodCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Me\Authentication\Fido2Methods\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\Fido2AuthenticationMethod;
+use Microsoft\Graph\Models\Fido2AuthenticationMethodCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

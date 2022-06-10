@@ -1,14 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites;
+namespace Microsoft\Graph\Groups\Item\Sites;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Site;
-use Microsoft\Graph\Generated\Models\SiteCollectionResponse;
+use Microsoft\Graph\Groups\Item\Sites\Add\AddRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Count\CountRequestBuilder;
+use Microsoft\Graph\Groups\Item\Sites\Remove\RemoveRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Site;
+use Microsoft\Graph\Models\SiteCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -20,6 +22,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class SitesRequestBuilder 
 {
     /**
+     * The add property
+    */
+    public function add(): AddRequestBuilder {
+        return new AddRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * The count property
     */
     public function count(): CountRequestBuilder {
@@ -30,6 +39,13 @@ class SitesRequestBuilder
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * The remove property
+    */
+    public function remove(): RemoveRequestBuilder {
+        return new RemoveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

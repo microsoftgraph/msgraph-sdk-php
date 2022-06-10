@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\MultiValueExtendedProperties\Item;
+namespace Microsoft\Graph\Users\Item\MailFolders\Item\MultiValueExtendedProperties\Item;
 
 class MultiValueLegacyExtendedPropertyItemRequestBuilderDeleteRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\PermissionGrantPolicies;
+namespace Microsoft\Graph\Policies\PermissionGrantPolicies;
 
 class PermissionGrantPoliciesRequestBuilderPostRequestConfiguration 
 {

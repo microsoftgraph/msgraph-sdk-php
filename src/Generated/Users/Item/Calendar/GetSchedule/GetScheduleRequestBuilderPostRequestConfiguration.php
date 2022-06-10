@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Calendar\GetSchedule;
+namespace Microsoft\Graph\Users\Item\Calendar\GetSchedule;
 
 class GetScheduleRequestBuilderPostRequestConfiguration 
 {

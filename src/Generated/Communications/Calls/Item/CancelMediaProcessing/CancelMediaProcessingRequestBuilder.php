@@ -1,11 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\CancelMediaProcessing;
+namespace Microsoft\Graph\Communications\Calls\Item\CancelMediaProcessing;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\CancelMediaProcessingOperation;
+use Microsoft\Graph\Models\CancelMediaProcessingOperation;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -75,7 +76,11 @@ class CancelMediaProcessingRequestBuilder
     public function post(CancelMediaProcessingPostRequestBody $body, ?CancelMediaProcessingRequestBuilderPostRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
         $requestInfo = $this->createPostRequestInformation($body, $requestConfiguration);
         try {
-            return $this->requestAdapter->sendAsync($requestInfo, array(CancelMediaProcessingOperation::class, 'createFromDiscriminatorValue'), $responseHandler, null);
+            $errorMappings = [
+            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+            ];
+            return $this->requestAdapter->sendAsync($requestInfo, array(CancelMediaProcessingOperation::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

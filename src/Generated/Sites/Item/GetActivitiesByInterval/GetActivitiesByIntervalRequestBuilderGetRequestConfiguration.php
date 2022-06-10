@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\GetActivitiesByInterval;
+namespace Microsoft\Graph\Sites\Item\GetActivitiesByInterval;
 
 class GetActivitiesByIntervalRequestBuilderGetRequestConfiguration 
 {

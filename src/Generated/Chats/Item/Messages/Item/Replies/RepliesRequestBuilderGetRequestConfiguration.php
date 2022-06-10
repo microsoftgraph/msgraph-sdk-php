@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\Item\Messages\Item\Replies;
+namespace Microsoft\Graph\Chats\Item\Messages\Item\Replies;
 
 class RepliesRequestBuilderGetRequestConfiguration 
 {

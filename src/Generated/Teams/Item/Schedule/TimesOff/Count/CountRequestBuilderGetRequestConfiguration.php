@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Schedule\TimesOff\Count;
+namespace Microsoft\Graph\Teams\Item\Schedule\TimesOff\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

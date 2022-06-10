@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Events\Item\Instances\Item\SingleValueExtendedProperties\Item;
+namespace Microsoft\Graph\Groups\Item\Events\Item\Instances\Item\SingleValueExtendedProperties\Item;
 
 class SingleValueLegacyExtendedPropertyItemRequestBuilderGetRequestConfiguration 
 {

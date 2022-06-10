@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentFailureDetails;
+namespace Microsoft\Graph\Reports\ManagedDeviceEnrollmentFailureDetails;
 
 class ManagedDeviceEnrollmentFailureDetailsRequestBuilderGetRequestConfiguration 
 {

@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item;
+namespace Microsoft\Graph\Directory\AdministrativeUnits\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\MembersRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\ScopedRoleMembers\Item\ScopedRoleMembershipItemRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\ScopedRoleMembers\ScopedRoleMembersRequestBuilder;
-use Microsoft\Graph\Generated\Models\AdministrativeUnit;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Directory\AdministrativeUnits\Item\Extensions\ExtensionsRequestBuilder;
+use Microsoft\Graph\Directory\AdministrativeUnits\Item\Extensions\Item\ExtensionItemRequestBuilder;
+use Microsoft\Graph\Directory\AdministrativeUnits\Item\Members\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Directory\AdministrativeUnits\Item\Members\MembersRequestBuilder;
+use Microsoft\Graph\Directory\AdministrativeUnits\Item\ScopedRoleMembers\Item\ScopedRoleMembershipItemRequestBuilder;
+use Microsoft\Graph\Directory\AdministrativeUnits\Item\ScopedRoleMembers\ScopedRoleMembersRequestBuilder;
+use Microsoft\Graph\Models\AdministrativeUnit;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -158,7 +158,7 @@ class AdministrativeUnitItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directory.administrativeUnits.item.extensions.item collection
+     * Gets an item from the Microsoft\Graph.directory.administrativeUnits.item.extensions.item collection
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */
@@ -188,7 +188,7 @@ class AdministrativeUnitItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directory.administrativeUnits.item.members.item collection
+     * Gets an item from the Microsoft\Graph.directory.administrativeUnits.item.members.item collection
      * @param string $id Unique identifier of the item
      * @return DirectoryObjectItemRequestBuilder
     */
@@ -219,7 +219,7 @@ class AdministrativeUnitItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directory.administrativeUnits.item.scopedRoleMembers.item collection
+     * Gets an item from the Microsoft\Graph.directory.administrativeUnits.item.scopedRoleMembers.item collection
      * @param string $id Unique identifier of the item
      * @return ScopedRoleMembershipItemRequestBuilder
     */

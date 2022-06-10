@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\AddTokenSigningCertificate;
+namespace Microsoft\Graph\ServicePrincipals\Item\AddTokenSigningCertificate;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\DeviceConfigurationUserActivity;
+namespace Microsoft\Graph\Reports\DeviceConfigurationUserActivity;
 
 class DeviceConfigurationUserActivityRequestBuilderGetRequestConfiguration 
 {

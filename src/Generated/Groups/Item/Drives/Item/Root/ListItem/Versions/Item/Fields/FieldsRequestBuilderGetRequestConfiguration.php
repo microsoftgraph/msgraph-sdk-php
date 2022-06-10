@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Drives\Item\Root\ListItem\Versions\Item\Fields;
+namespace Microsoft\Graph\Groups\Item\Drives\Item\Root\ListItem\Versions\Item\Fields;
 
 class FieldsRequestBuilderGetRequestConfiguration 
 {

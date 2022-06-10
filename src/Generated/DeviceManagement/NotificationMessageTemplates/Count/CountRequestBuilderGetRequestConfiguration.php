@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Count;
+namespace Microsoft\Graph\DeviceManagement\NotificationMessageTemplates\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

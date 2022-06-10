@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Chats;
+namespace Microsoft\Graph\Users\Item\Chats;
 
 class ChatsRequestBuilderGetRequestConfiguration 
 {

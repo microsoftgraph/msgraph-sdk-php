@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item;
+namespace Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item;
 
 class ManagedEBookItemRequestBuilderGetRequestConfiguration 
 {

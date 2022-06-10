@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Onenote\Notebooks\Item;
+namespace Microsoft\Graph\Me\Onenote\Notebooks\Item;
 
 class NotebookItemRequestBuilderDeleteRequestConfiguration 
 {

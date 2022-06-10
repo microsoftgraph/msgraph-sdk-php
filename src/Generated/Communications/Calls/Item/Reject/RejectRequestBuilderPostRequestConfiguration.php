@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\Reject;
+namespace Microsoft\Graph\Communications\Calls\Item\Reject;
 
 class RejectRequestBuilderPostRequestConfiguration 
 {

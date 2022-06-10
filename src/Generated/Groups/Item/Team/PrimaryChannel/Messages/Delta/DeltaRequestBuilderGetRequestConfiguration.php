@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Messages\Delta;
+namespace Microsoft\Graph\Groups\Item\Team\PrimaryChannel\Messages\Delta;
 
 class DeltaRequestBuilderGetRequestConfiguration 
 {

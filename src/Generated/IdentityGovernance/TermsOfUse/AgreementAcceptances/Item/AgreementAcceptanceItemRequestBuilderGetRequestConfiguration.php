@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\AgreementAcceptances\Item;
+namespace Microsoft\Graph\IdentityGovernance\TermsOfUse\AgreementAcceptances\Item;
 
 class AgreementAcceptanceItemRequestBuilderGetRequestConfiguration 
 {

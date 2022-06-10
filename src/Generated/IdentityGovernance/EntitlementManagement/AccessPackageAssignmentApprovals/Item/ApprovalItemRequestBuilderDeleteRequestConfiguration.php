@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackageAssignmentApprovals\Item;
+namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\AccessPackageAssignmentApprovals\Item;
 
 class ApprovalItemRequestBuilderDeleteRequestConfiguration 
 {

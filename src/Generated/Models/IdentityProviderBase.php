@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -26,11 +26,14 @@ class IdentityProviderBase extends Entity implements Parsable
      * @return IdentityProviderBase
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): IdentityProviderBase {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.identityProviderBase': return new IdentityProviderBase();
+                case '#microsoft.graph.appleManagedIdentityProvider': return new AppleManagedIdentityProvider();
+                case '#microsoft.graph.builtInIdentityProvider': return new BuiltInIdentityProvider();
+                case '#microsoft.graph.samlOrWsFedProvider': return new SamlOrWsFedProvider();
+                case '#microsoft.graph.socialIdentityProvider': return new SocialIdentityProvider();
             }
         }
         return new IdentityProviderBase();

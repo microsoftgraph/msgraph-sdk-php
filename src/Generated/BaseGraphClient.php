@@ -1,115 +1,115 @@
 <?php
 
-namespace Microsoft\Graph\Generated;
+namespace Microsoft\Graph;
 
-use Microsoft\Graph\Generated\Admin\AdminRequestBuilder;
-use Microsoft\Graph\Generated\AgreementAcceptances\AgreementAcceptancesRequestBuilder;
-use Microsoft\Graph\Generated\AgreementAcceptances\Item\AgreementAcceptanceItemRequestBuilder;
-use Microsoft\Graph\Generated\Agreements\AgreementsRequestBuilder;
-use Microsoft\Graph\Generated\Agreements\Item\AgreementItemRequestBuilder;
-use Microsoft\Graph\Generated\AppCatalogs\AppCatalogsRequestBuilder;
-use Microsoft\Graph\Generated\Applications\ApplicationsRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\ApplicationItemRequestBuilder;
-use Microsoft\Graph\Generated\ApplicationTemplates\ApplicationTemplatesRequestBuilder;
-use Microsoft\Graph\Generated\ApplicationTemplates\Item\ApplicationTemplateItemRequestBuilder;
-use Microsoft\Graph\Generated\AuditLogs\AuditLogsRequestBuilder;
-use Microsoft\Graph\Generated\AuthenticationMethodConfigurations\AuthenticationMethodConfigurationsRequestBuilder;
-use Microsoft\Graph\Generated\AuthenticationMethodConfigurations\Item\AuthenticationMethodConfigurationItemRequestBuilder;
-use Microsoft\Graph\Generated\AuthenticationMethodsPolicy\AuthenticationMethodsPolicyRequestBuilder;
-use Microsoft\Graph\Generated\Branding\BrandingRequestBuilder;
-use Microsoft\Graph\Generated\CertificateBasedAuthConfiguration\CertificateBasedAuthConfigurationRequestBuilder;
-use Microsoft\Graph\Generated\CertificateBasedAuthConfiguration\Item\CertificateBasedAuthConfigurationItemRequestBuilder;
-use Microsoft\Graph\Generated\Chats\ChatsRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\ChatItemRequestBuilder;
-use Microsoft\Graph\Generated\Communications\CommunicationsRequestBuilder;
-use Microsoft\Graph\Generated\Compliance\ComplianceRequestBuilder;
-use Microsoft\Graph\Generated\Connections\ConnectionsRequestBuilder;
-use Microsoft\Graph\Generated\Connections\Item\ExternalConnectionItemRequestBuilder;
-use Microsoft\Graph\Generated\Contacts\ContactsRequestBuilder;
-use Microsoft\Graph\Generated\Contacts\Item\OrgContactItemRequestBuilder;
-use Microsoft\Graph\Generated\Contracts\ContractsRequestBuilder;
-use Microsoft\Graph\Generated\Contracts\Item\ContractItemRequestBuilder;
-use Microsoft\Graph\Generated\DataPolicyOperations\DataPolicyOperationsRequestBuilder;
-use Microsoft\Graph\Generated\DataPolicyOperations\Item\DataPolicyOperationItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\DeviceAppManagementRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceManagementRequestBuilder;
-use Microsoft\Graph\Generated\Devices\DevicesRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\DeviceItemRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DirectoryRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryObjects\DirectoryObjectsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryObjects\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\DirectoryRolesRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\DirectoryRoleItemRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoleTemplates\DirectoryRoleTemplatesRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoleTemplates\Item\DirectoryRoleTemplateItemRequestBuilder;
-use Microsoft\Graph\Generated\DomainDnsRecords\DomainDnsRecordsRequestBuilder;
-use Microsoft\Graph\Generated\DomainDnsRecords\Item\DomainDnsRecordItemRequestBuilder;
-use Microsoft\Graph\Generated\Domains\DomainsRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\DomainItemRequestBuilder;
-use Microsoft\Graph\Generated\Drive\DriveRequestBuilder;
-use Microsoft\Graph\Generated\Drives\DrivesRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\DriveItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\EducationRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\PrintRequestBuilder;
-use Microsoft\Graph\Generated\External\ExternalRequestBuilder;
-use Microsoft\Graph\Generated\GroupLifecyclePolicies\GroupLifecyclePoliciesRequestBuilder;
-use Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\GroupLifecyclePolicyItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\GroupsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\GroupItemRequestBuilder;
-use Microsoft\Graph\Generated\GroupSettings\GroupSettingsRequestBuilder;
-use Microsoft\Graph\Generated\GroupSettings\Item\GroupSettingItemRequestBuilder;
-use Microsoft\Graph\Generated\GroupSettingTemplates\GroupSettingTemplatesRequestBuilder;
-use Microsoft\Graph\Generated\GroupSettingTemplates\Item\GroupSettingTemplateItemRequestBuilder;
-use Microsoft\Graph\Generated\Identity\IdentityRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\IdentityGovernanceRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProtection\IdentityProtectionRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProviders\IdentityProvidersRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProviders\Item\IdentityProviderItemRequestBuilder;
-use Microsoft\Graph\Generated\InformationProtection\InformationProtectionRequestBuilder;
-use Microsoft\Graph\Generated\Invitations\InvitationsRequestBuilder;
-use Microsoft\Graph\Generated\Invitations\Item\InvitationItemRequestBuilder;
-use Microsoft\Graph\Generated\Localizations\Item\OrganizationalBrandingLocalizationItemRequestBuilder;
-use Microsoft\Graph\Generated\Localizations\LocalizationsRequestBuilder;
-use Microsoft\Graph\Generated\Me\MeRequestBuilder;
-use Microsoft\Graph\Generated\Oauth2PermissionGrants\Item\OAuth2PermissionGrantItemRequestBuilder;
-use Microsoft\Graph\Generated\Oauth2PermissionGrants\Oauth2PermissionGrantsRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\OrganizationItemRequestBuilder;
-use Microsoft\Graph\Generated\Organization\OrganizationRequestBuilder;
-use Microsoft\Graph\Generated\PermissionGrants\Item\ResourceSpecificPermissionGrantItemRequestBuilder;
-use Microsoft\Graph\Generated\PermissionGrants\PermissionGrantsRequestBuilder;
-use Microsoft\Graph\Generated\Places\Item\PlaceItemRequestBuilder;
-use Microsoft\Graph\Generated\Places\PlacesRequestBuilder;
-use Microsoft\Graph\Generated\Planner\PlannerRequestBuilder;
-use Microsoft\Graph\Generated\Policies\PoliciesRequestBuilder;
-use Microsoft\Graph\Generated\Privacy\PrivacyRequestBuilder;
-use Microsoft\Graph\Generated\Reports\ReportsRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\RoleManagementRequestBuilder;
-use Microsoft\Graph\Generated\SchemaExtensions\Item\SchemaExtensionItemRequestBuilder;
-use Microsoft\Graph\Generated\SchemaExtensions\SchemaExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\ScopedRoleMemberships\Item\ScopedRoleMembershipItemRequestBuilder;
-use Microsoft\Graph\Generated\ScopedRoleMemberships\ScopedRoleMembershipsRequestBuilder;
-use Microsoft\Graph\Generated\Search\SearchRequestBuilder;
-use Microsoft\Graph\Generated\Security\SecurityRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\ServicePrincipalItemRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\ServicePrincipalsRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\SharedDriveItemItemRequestBuilder;
-use Microsoft\Graph\Generated\Shares\SharesRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\SiteItemRequestBuilder;
-use Microsoft\Graph\Generated\Sites\SitesRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\SolutionsRequestBuilder;
-use Microsoft\Graph\Generated\SubscribedSkus\Item\SubscribedSkuItemRequestBuilder;
-use Microsoft\Graph\Generated\SubscribedSkus\SubscribedSkusRequestBuilder;
-use Microsoft\Graph\Generated\Subscriptions\Item\SubscriptionItemRequestBuilder;
-use Microsoft\Graph\Generated\Subscriptions\SubscriptionsRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\TeamItemRequestBuilder;
-use Microsoft\Graph\Generated\Teams\TeamsRequestBuilder;
-use Microsoft\Graph\Generated\TeamsTemplates\Item\TeamsTemplateItemRequestBuilder;
-use Microsoft\Graph\Generated\TeamsTemplates\TeamsTemplatesRequestBuilder;
-use Microsoft\Graph\Generated\Teamwork\TeamworkRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\UserItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\UsersRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\DriveItemItemRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\WorkbooksRequestBuilder;
+use Microsoft\Graph\Admin\AdminRequestBuilder;
+use Microsoft\Graph\AgreementAcceptances\AgreementAcceptancesRequestBuilder;
+use Microsoft\Graph\AgreementAcceptances\Item\AgreementAcceptanceItemRequestBuilder;
+use Microsoft\Graph\Agreements\AgreementsRequestBuilder;
+use Microsoft\Graph\Agreements\Item\AgreementItemRequestBuilder;
+use Microsoft\Graph\AppCatalogs\AppCatalogsRequestBuilder;
+use Microsoft\Graph\Applications\ApplicationsRequestBuilder;
+use Microsoft\Graph\Applications\Item\ApplicationItemRequestBuilder;
+use Microsoft\Graph\ApplicationTemplates\ApplicationTemplatesRequestBuilder;
+use Microsoft\Graph\ApplicationTemplates\Item\ApplicationTemplateItemRequestBuilder;
+use Microsoft\Graph\AuditLogs\AuditLogsRequestBuilder;
+use Microsoft\Graph\AuthenticationMethodConfigurations\AuthenticationMethodConfigurationsRequestBuilder;
+use Microsoft\Graph\AuthenticationMethodConfigurations\Item\AuthenticationMethodConfigurationItemRequestBuilder;
+use Microsoft\Graph\AuthenticationMethodsPolicy\AuthenticationMethodsPolicyRequestBuilder;
+use Microsoft\Graph\Branding\BrandingRequestBuilder;
+use Microsoft\Graph\CertificateBasedAuthConfiguration\CertificateBasedAuthConfigurationRequestBuilder;
+use Microsoft\Graph\CertificateBasedAuthConfiguration\Item\CertificateBasedAuthConfigurationItemRequestBuilder;
+use Microsoft\Graph\Chats\ChatsRequestBuilder;
+use Microsoft\Graph\Chats\Item\ChatItemRequestBuilder;
+use Microsoft\Graph\Communications\CommunicationsRequestBuilder;
+use Microsoft\Graph\Compliance\ComplianceRequestBuilder;
+use Microsoft\Graph\Connections\ConnectionsRequestBuilder;
+use Microsoft\Graph\Connections\Item\ExternalConnectionItemRequestBuilder;
+use Microsoft\Graph\Contacts\ContactsRequestBuilder;
+use Microsoft\Graph\Contacts\Item\OrgContactItemRequestBuilder;
+use Microsoft\Graph\Contracts\ContractsRequestBuilder;
+use Microsoft\Graph\Contracts\Item\ContractItemRequestBuilder;
+use Microsoft\Graph\DataPolicyOperations\DataPolicyOperationsRequestBuilder;
+use Microsoft\Graph\DataPolicyOperations\Item\DataPolicyOperationItemRequestBuilder;
+use Microsoft\Graph\DeviceAppManagement\DeviceAppManagementRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceManagementRequestBuilder;
+use Microsoft\Graph\Devices\DevicesRequestBuilder;
+use Microsoft\Graph\Devices\Item\DeviceItemRequestBuilder;
+use Microsoft\Graph\Directory\DirectoryRequestBuilder;
+use Microsoft\Graph\DirectoryObjects\DirectoryObjectsRequestBuilder;
+use Microsoft\Graph\DirectoryObjects\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\DirectoryRoles\DirectoryRolesRequestBuilder;
+use Microsoft\Graph\DirectoryRoles\Item\DirectoryRoleItemRequestBuilder;
+use Microsoft\Graph\DirectoryRoleTemplates\DirectoryRoleTemplatesRequestBuilder;
+use Microsoft\Graph\DirectoryRoleTemplates\Item\DirectoryRoleTemplateItemRequestBuilder;
+use Microsoft\Graph\DomainDnsRecords\DomainDnsRecordsRequestBuilder;
+use Microsoft\Graph\DomainDnsRecords\Item\DomainDnsRecordItemRequestBuilder;
+use Microsoft\Graph\Domains\DomainsRequestBuilder;
+use Microsoft\Graph\Domains\Item\DomainItemRequestBuilder;
+use Microsoft\Graph\Drive\DriveRequestBuilder;
+use Microsoft\Graph\Drives\DrivesRequestBuilder;
+use Microsoft\Graph\Drives\Item\DriveItemRequestBuilder;
+use Microsoft\Graph\Education\EducationRequestBuilder;
+use Microsoft\Graph\EscapedPrint\PrintRequestBuilder;
+use Microsoft\Graph\External\ExternalRequestBuilder;
+use Microsoft\Graph\GroupLifecyclePolicies\GroupLifecyclePoliciesRequestBuilder;
+use Microsoft\Graph\GroupLifecyclePolicies\Item\GroupLifecyclePolicyItemRequestBuilder;
+use Microsoft\Graph\Groups\GroupsRequestBuilder;
+use Microsoft\Graph\Groups\Item\GroupItemRequestBuilder;
+use Microsoft\Graph\GroupSettings\GroupSettingsRequestBuilder;
+use Microsoft\Graph\GroupSettings\Item\GroupSettingItemRequestBuilder;
+use Microsoft\Graph\GroupSettingTemplates\GroupSettingTemplatesRequestBuilder;
+use Microsoft\Graph\GroupSettingTemplates\Item\GroupSettingTemplateItemRequestBuilder;
+use Microsoft\Graph\Identity\IdentityRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\IdentityGovernanceRequestBuilder;
+use Microsoft\Graph\IdentityProtection\IdentityProtectionRequestBuilder;
+use Microsoft\Graph\IdentityProviders\IdentityProvidersRequestBuilder;
+use Microsoft\Graph\IdentityProviders\Item\IdentityProviderItemRequestBuilder;
+use Microsoft\Graph\InformationProtection\InformationProtectionRequestBuilder;
+use Microsoft\Graph\Invitations\InvitationsRequestBuilder;
+use Microsoft\Graph\Invitations\Item\InvitationItemRequestBuilder;
+use Microsoft\Graph\Localizations\Item\OrganizationalBrandingLocalizationItemRequestBuilder;
+use Microsoft\Graph\Localizations\LocalizationsRequestBuilder;
+use Microsoft\Graph\Me\MeRequestBuilder;
+use Microsoft\Graph\Oauth2PermissionGrants\Item\OAuth2PermissionGrantItemRequestBuilder;
+use Microsoft\Graph\Oauth2PermissionGrants\Oauth2PermissionGrantsRequestBuilder;
+use Microsoft\Graph\Organization\Item\OrganizationItemRequestBuilder;
+use Microsoft\Graph\Organization\OrganizationRequestBuilder;
+use Microsoft\Graph\PermissionGrants\Item\ResourceSpecificPermissionGrantItemRequestBuilder;
+use Microsoft\Graph\PermissionGrants\PermissionGrantsRequestBuilder;
+use Microsoft\Graph\Places\Item\PlaceItemRequestBuilder;
+use Microsoft\Graph\Places\PlacesRequestBuilder;
+use Microsoft\Graph\Planner\PlannerRequestBuilder;
+use Microsoft\Graph\Policies\PoliciesRequestBuilder;
+use Microsoft\Graph\Privacy\PrivacyRequestBuilder;
+use Microsoft\Graph\Reports\ReportsRequestBuilder;
+use Microsoft\Graph\RoleManagement\RoleManagementRequestBuilder;
+use Microsoft\Graph\SchemaExtensions\Item\SchemaExtensionItemRequestBuilder;
+use Microsoft\Graph\SchemaExtensions\SchemaExtensionsRequestBuilder;
+use Microsoft\Graph\ScopedRoleMemberships\Item\ScopedRoleMembershipItemRequestBuilder;
+use Microsoft\Graph\ScopedRoleMemberships\ScopedRoleMembershipsRequestBuilder;
+use Microsoft\Graph\Search\SearchRequestBuilder;
+use Microsoft\Graph\Security\SecurityRequestBuilder;
+use Microsoft\Graph\ServicePrincipals\Item\ServicePrincipalItemRequestBuilder;
+use Microsoft\Graph\ServicePrincipals\ServicePrincipalsRequestBuilder;
+use Microsoft\Graph\Shares\Item\SharedDriveItemItemRequestBuilder;
+use Microsoft\Graph\Shares\SharesRequestBuilder;
+use Microsoft\Graph\Sites\Item\SiteItemRequestBuilder;
+use Microsoft\Graph\Sites\SitesRequestBuilder;
+use Microsoft\Graph\Solutions\SolutionsRequestBuilder;
+use Microsoft\Graph\SubscribedSkus\Item\SubscribedSkuItemRequestBuilder;
+use Microsoft\Graph\SubscribedSkus\SubscribedSkusRequestBuilder;
+use Microsoft\Graph\Subscriptions\Item\SubscriptionItemRequestBuilder;
+use Microsoft\Graph\Subscriptions\SubscriptionsRequestBuilder;
+use Microsoft\Graph\Teams\Item\TeamItemRequestBuilder;
+use Microsoft\Graph\Teams\TeamsRequestBuilder;
+use Microsoft\Graph\TeamsTemplates\Item\TeamsTemplateItemRequestBuilder;
+use Microsoft\Graph\TeamsTemplates\TeamsTemplatesRequestBuilder;
+use Microsoft\Graph\Teamwork\TeamworkRequestBuilder;
+use Microsoft\Graph\Users\Item\UserItemRequestBuilder;
+use Microsoft\Graph\Users\UsersRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\DriveItemItemRequestBuilder;
+use Microsoft\Graph\Workbooks\WorkbooksRequestBuilder;
 use Microsoft\Kiota\Abstractions\ApiClientBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Serialization\Json\JsonParseNodeFactory;
@@ -611,7 +611,7 @@ class BaseGraphClient
     }
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.agreementAcceptances.item collection
+     * Gets an item from the Microsoft\Graph.agreementAcceptances.item collection
      * @param string $id Unique identifier of the item
      * @return AgreementAcceptanceItemRequestBuilder
     */
@@ -622,7 +622,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.agreements.item collection
+     * Gets an item from the Microsoft\Graph.agreements.item collection
      * @param string $id Unique identifier of the item
      * @return AgreementItemRequestBuilder
     */
@@ -633,7 +633,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.applications.item collection
+     * Gets an item from the Microsoft\Graph.applications.item collection
      * @param string $id Unique identifier of the item
      * @return ApplicationItemRequestBuilder
     */
@@ -644,7 +644,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.applicationTemplates.item collection
+     * Gets an item from the Microsoft\Graph.applicationTemplates.item collection
      * @param string $id Unique identifier of the item
      * @return ApplicationTemplateItemRequestBuilder
     */
@@ -655,7 +655,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.authenticationMethodConfigurations.item collection
+     * Gets an item from the Microsoft\Graph.authenticationMethodConfigurations.item collection
      * @param string $id Unique identifier of the item
      * @return AuthenticationMethodConfigurationItemRequestBuilder
     */
@@ -666,7 +666,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.certificateBasedAuthConfiguration.item collection
+     * Gets an item from the Microsoft\Graph.certificateBasedAuthConfiguration.item collection
      * @param string $id Unique identifier of the item
      * @return CertificateBasedAuthConfigurationItemRequestBuilder
     */
@@ -677,7 +677,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.chats.item collection
+     * Gets an item from the Microsoft\Graph.chats.item collection
      * @param string $id Unique identifier of the item
      * @return ChatItemRequestBuilder
     */
@@ -688,7 +688,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.connections.item collection
+     * Gets an item from the Microsoft\Graph.connections.item collection
      * @param string $id Unique identifier of the item
      * @return ExternalConnectionItemRequestBuilder
     */
@@ -716,7 +716,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.contacts.item collection
+     * Gets an item from the Microsoft\Graph.contacts.item collection
      * @param string $id Unique identifier of the item
      * @return OrgContactItemRequestBuilder
     */
@@ -727,7 +727,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.contracts.item collection
+     * Gets an item from the Microsoft\Graph.contracts.item collection
      * @param string $id Unique identifier of the item
      * @return ContractItemRequestBuilder
     */
@@ -738,7 +738,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.dataPolicyOperations.item collection
+     * Gets an item from the Microsoft\Graph.dataPolicyOperations.item collection
      * @param string $id Unique identifier of the item
      * @return DataPolicyOperationItemRequestBuilder
     */
@@ -749,7 +749,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.devices.item collection
+     * Gets an item from the Microsoft\Graph.devices.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceItemRequestBuilder
     */
@@ -760,7 +760,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directoryObjects.item collection
+     * Gets an item from the Microsoft\Graph.directoryObjects.item collection
      * @param string $id Unique identifier of the item
      * @return DirectoryObjectItemRequestBuilder
     */
@@ -771,7 +771,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directoryRoles.item collection
+     * Gets an item from the Microsoft\Graph.directoryRoles.item collection
      * @param string $id Unique identifier of the item
      * @return DirectoryRoleItemRequestBuilder
     */
@@ -782,7 +782,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directoryRoleTemplates.item collection
+     * Gets an item from the Microsoft\Graph.directoryRoleTemplates.item collection
      * @param string $id Unique identifier of the item
      * @return DirectoryRoleTemplateItemRequestBuilder
     */
@@ -793,7 +793,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.domainDnsRecords.item collection
+     * Gets an item from the Microsoft\Graph.domainDnsRecords.item collection
      * @param string $id Unique identifier of the item
      * @return DomainDnsRecordItemRequestBuilder
     */
@@ -804,7 +804,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.domains.item collection
+     * Gets an item from the Microsoft\Graph.domains.item collection
      * @param string $id Unique identifier of the item
      * @return DomainItemRequestBuilder
     */
@@ -815,7 +815,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drives.item collection
+     * Gets an item from the Microsoft\Graph.drives.item collection
      * @param string $id Unique identifier of the item
      * @return DriveItemRequestBuilder
     */
@@ -826,7 +826,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groupLifecyclePolicies.item collection
+     * Gets an item from the Microsoft\Graph.groupLifecyclePolicies.item collection
      * @param string $id Unique identifier of the item
      * @return GroupLifecyclePolicyItemRequestBuilder
     */
@@ -837,7 +837,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item collection
+     * Gets an item from the Microsoft\Graph.groups.item collection
      * @param string $id Unique identifier of the item
      * @return GroupItemRequestBuilder
     */
@@ -848,7 +848,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groupSettings.item collection
+     * Gets an item from the Microsoft\Graph.groupSettings.item collection
      * @param string $id Unique identifier of the item
      * @return GroupSettingItemRequestBuilder
     */
@@ -859,7 +859,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groupSettingTemplates.item collection
+     * Gets an item from the Microsoft\Graph.groupSettingTemplates.item collection
      * @param string $id Unique identifier of the item
      * @return GroupSettingTemplateItemRequestBuilder
     */
@@ -870,7 +870,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityProviders.item collection
+     * Gets an item from the Microsoft\Graph.identityProviders.item collection
      * @param string $id Unique identifier of the item
      * @return IdentityProviderItemRequestBuilder
     */
@@ -881,7 +881,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.invitations.item collection
+     * Gets an item from the Microsoft\Graph.invitations.item collection
      * @param string $id Unique identifier of the item
      * @return InvitationItemRequestBuilder
     */
@@ -892,7 +892,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.localizations.item collection
+     * Gets an item from the Microsoft\Graph.localizations.item collection
      * @param string $id Unique identifier of the item
      * @return OrganizationalBrandingLocalizationItemRequestBuilder
     */
@@ -903,7 +903,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.oauth2PermissionGrants.item collection
+     * Gets an item from the Microsoft\Graph.oauth2PermissionGrants.item collection
      * @param string $id Unique identifier of the item
      * @return OAuth2PermissionGrantItemRequestBuilder
     */
@@ -914,7 +914,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.organization.item collection
+     * Gets an item from the Microsoft\Graph.organization.item collection
      * @param string $id Unique identifier of the item
      * @return OrganizationItemRequestBuilder
     */
@@ -925,7 +925,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.permissionGrants.item collection
+     * Gets an item from the Microsoft\Graph.permissionGrants.item collection
      * @param string $id Unique identifier of the item
      * @return ResourceSpecificPermissionGrantItemRequestBuilder
     */
@@ -936,7 +936,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.places.item collection
+     * Gets an item from the Microsoft\Graph.places.item collection
      * @param string $id Unique identifier of the item
      * @return PlaceItemRequestBuilder
     */
@@ -947,7 +947,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.schemaExtensions.item collection
+     * Gets an item from the Microsoft\Graph.schemaExtensions.item collection
      * @param string $id Unique identifier of the item
      * @return SchemaExtensionItemRequestBuilder
     */
@@ -958,7 +958,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.scopedRoleMemberships.item collection
+     * Gets an item from the Microsoft\Graph.scopedRoleMemberships.item collection
      * @param string $id Unique identifier of the item
      * @return ScopedRoleMembershipItemRequestBuilder
     */
@@ -969,7 +969,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item collection
+     * Gets an item from the Microsoft\Graph.servicePrincipals.item collection
      * @param string $id Unique identifier of the item
      * @return ServicePrincipalItemRequestBuilder
     */
@@ -980,7 +980,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.shares.item collection
+     * Gets an item from the Microsoft\Graph.shares.item collection
      * @param string $id Unique identifier of the item
      * @return SharedDriveItemItemRequestBuilder
     */
@@ -991,7 +991,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.sites.item collection
+     * Gets an item from the Microsoft\Graph.sites.item collection
      * @param string $id Unique identifier of the item
      * @return SiteItemRequestBuilder
     */
@@ -1002,7 +1002,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.subscribedSkus.item collection
+     * Gets an item from the Microsoft\Graph.subscribedSkus.item collection
      * @param string $id Unique identifier of the item
      * @return SubscribedSkuItemRequestBuilder
     */
@@ -1013,7 +1013,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.subscriptions.item collection
+     * Gets an item from the Microsoft\Graph.subscriptions.item collection
      * @param string $id Unique identifier of the item
      * @return SubscriptionItemRequestBuilder
     */
@@ -1024,7 +1024,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.teams.item collection
+     * Gets an item from the Microsoft\Graph.teams.item collection
      * @param string $id Unique identifier of the item
      * @return TeamItemRequestBuilder
     */
@@ -1035,7 +1035,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.teamsTemplates.item collection
+     * Gets an item from the Microsoft\Graph.teamsTemplates.item collection
      * @param string $id Unique identifier of the item
      * @return TeamsTemplateItemRequestBuilder
     */
@@ -1046,7 +1046,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item collection
+     * Gets an item from the Microsoft\Graph.users.item collection
      * @param string $id Unique identifier of the item
      * @return UserItemRequestBuilder
     */
@@ -1057,7 +1057,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.workbooks.item collection
+     * Gets an item from the Microsoft\Graph.workbooks.item collection
      * @param string $id Unique identifier of the item
      * @return DriveItemItemRequestBuilder
     */

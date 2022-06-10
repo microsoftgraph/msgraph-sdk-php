@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\MailFolders\Item\Messages\Item\SingleValueExtendedProperties;
+namespace Microsoft\Graph\Me\MailFolders\Item\Messages\Item\SingleValueExtendedProperties;
 
 class SingleValueExtendedPropertiesRequestBuilderGetRequestConfiguration 
 {

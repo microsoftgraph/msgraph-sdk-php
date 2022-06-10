@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\SetVerifiedPublisher;
+namespace Microsoft\Graph\Applications\Item\SetVerifiedPublisher;
 
 class SetVerifiedPublisherRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\Root\ListItem\Versions\Item\Fields;
+namespace Microsoft\Graph\Drive\Root\ListItem\Versions\Item\Fields;
 
 class FieldsRequestBuilderDeleteRequestConfiguration 
 {

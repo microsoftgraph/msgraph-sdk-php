@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCategories;
+namespace Microsoft\Graph\DeviceManagement\DeviceCategories;
 
 class DeviceCategoriesRequestBuilderPostRequestConfiguration 
 {

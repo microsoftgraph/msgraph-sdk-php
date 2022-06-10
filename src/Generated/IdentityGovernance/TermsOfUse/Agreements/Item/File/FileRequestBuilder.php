@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\File;
+namespace Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\Item\File;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\File\Localizations\Item\AgreementFileLocalizationItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\File\Localizations\LocalizationsRequestBuilder;
-use Microsoft\Graph\Generated\Models\AgreementFile;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\Item\File\Localizations\Item\AgreementFileLocalizationItemRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\Item\File\Localizations\LocalizationsRequestBuilder;
+use Microsoft\Graph\Models\AgreementFile;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -159,7 +159,7 @@ class FileRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.termsOfUse.agreements.item.file.localizations.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.termsOfUse.agreements.item.file.localizations.item collection
      * @param string $id Unique identifier of the item
      * @return AgreementFileLocalizationItemRequestBuilder
     */

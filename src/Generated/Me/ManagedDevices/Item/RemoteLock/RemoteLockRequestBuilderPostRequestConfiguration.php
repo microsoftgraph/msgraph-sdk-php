@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\ManagedDevices\Item\RemoteLock;
+namespace Microsoft\Graph\Me\ManagedDevices\Item\RemoteLock;
 
 class RemoteLockRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\Items\Item\Subscriptions\Count;
+namespace Microsoft\Graph\Drive\Items\Item\Subscriptions\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

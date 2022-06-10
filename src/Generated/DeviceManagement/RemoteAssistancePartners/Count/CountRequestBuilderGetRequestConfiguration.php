@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Count;
+namespace Microsoft\Graph\DeviceManagement\RemoteAssistancePartners\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

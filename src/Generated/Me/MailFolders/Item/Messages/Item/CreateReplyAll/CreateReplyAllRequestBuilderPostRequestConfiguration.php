@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\MailFolders\Item\Messages\Item\CreateReplyAll;
+namespace Microsoft\Graph\Me\MailFolders\Item\Messages\Item\CreateReplyAll;
 
 class CreateReplyAllRequestBuilderPostRequestConfiguration 
 {

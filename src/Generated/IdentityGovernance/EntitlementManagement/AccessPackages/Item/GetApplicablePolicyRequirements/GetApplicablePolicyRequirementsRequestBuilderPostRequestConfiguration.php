@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\GetApplicablePolicyRequirements;
+namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\AccessPackages\Item\GetApplicablePolicyRequirements;
 
 class GetApplicablePolicyRequirementsRequestBuilderPostRequestConfiguration 
 {

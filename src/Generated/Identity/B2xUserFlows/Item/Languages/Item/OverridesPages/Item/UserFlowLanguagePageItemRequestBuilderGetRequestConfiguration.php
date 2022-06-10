@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\Item;
+namespace Microsoft\Graph\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\Item;
 
 class UserFlowLanguagePageItemRequestBuilderGetRequestConfiguration 
 {

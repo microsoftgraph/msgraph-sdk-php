@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\ResetPasscode;
+namespace Microsoft\Graph\DeviceManagement\ManagedDevices\Item\ResetPasscode;
 
 class ResetPasscodeRequestBuilderPostRequestConfiguration 
 {

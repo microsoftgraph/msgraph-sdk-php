@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Item\UserConsentRequests\Item\Approval;
+namespace Microsoft\Graph\IdentityGovernance\AppConsent\AppConsentRequests\Item\UserConsentRequests\Item\Approval;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

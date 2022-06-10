@@ -1,35 +1,35 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item;
+namespace Microsoft\Graph\Users\Item\ManagedDevices\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ManagedDevice;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\BypassActivationLock\BypassActivationLockRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\CleanWindowsDevice\CleanWindowsDeviceRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\DeleteUserFromSharedAppleDevice\DeleteUserFromSharedAppleDeviceRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\DeviceCategory\DeviceCategoryRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\DeviceCompliancePolicyStates\DeviceCompliancePolicyStatesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\DeviceCompliancePolicyStates\Item\DeviceCompliancePolicyStateItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\DeviceConfigurationStates\DeviceConfigurationStatesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\DeviceConfigurationStates\Item\DeviceConfigurationStateItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\DisableLostMode\DisableLostModeRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\LocateDevice\LocateDeviceRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\LogoutSharedAppleDeviceActiveUser\LogoutSharedAppleDeviceActiveUserRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\RebootNow\RebootNowRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\RecoverPasscode\RecoverPasscodeRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\RemoteLock\RemoteLockRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\RequestRemoteAssistance\RequestRemoteAssistanceRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\ResetPasscode\ResetPasscodeRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\Retire\RetireRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\ShutDown\ShutDownRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\SyncDevice\SyncDeviceRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\UpdateWindowsDeviceAccount\UpdateWindowsDeviceAccountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\WindowsDefenderScan\WindowsDefenderScanRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\WindowsDefenderUpdateSignatures\WindowsDefenderUpdateSignaturesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\Wipe\WipeRequestBuilder;
+use Microsoft\Graph\Models\ManagedDevice;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\BypassActivationLock\BypassActivationLockRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\CleanWindowsDevice\CleanWindowsDeviceRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\DeleteUserFromSharedAppleDevice\DeleteUserFromSharedAppleDeviceRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\DeviceCategory\DeviceCategoryRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\DeviceCompliancePolicyStates\DeviceCompliancePolicyStatesRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\DeviceCompliancePolicyStates\Item\DeviceCompliancePolicyStateItemRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\DeviceConfigurationStates\DeviceConfigurationStatesRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\DeviceConfigurationStates\Item\DeviceConfigurationStateItemRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\DisableLostMode\DisableLostModeRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\LocateDevice\LocateDeviceRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\LogoutSharedAppleDeviceActiveUser\LogoutSharedAppleDeviceActiveUserRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\RebootNow\RebootNowRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\RecoverPasscode\RecoverPasscodeRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\RemoteLock\RemoteLockRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\RequestRemoteAssistance\RequestRemoteAssistanceRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\ResetPasscode\ResetPasscodeRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\Retire\RetireRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\ShutDown\ShutDownRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\SyncDevice\SyncDeviceRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\UpdateWindowsDeviceAccount\UpdateWindowsDeviceAccountRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\WindowsDefenderScan\WindowsDefenderScanRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\WindowsDefenderUpdateSignatures\WindowsDefenderUpdateSignaturesRequestBuilder;
+use Microsoft\Graph\Users\Item\ManagedDevices\Item\Wipe\WipeRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -301,7 +301,7 @@ class ManagedDeviceItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.managedDevices.item.deviceCompliancePolicyStates.item collection
+     * Gets an item from the Microsoft\Graph.users.item.managedDevices.item.deviceCompliancePolicyStates.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceCompliancePolicyStateItemRequestBuilder
     */
@@ -312,7 +312,7 @@ class ManagedDeviceItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.managedDevices.item.deviceConfigurationStates.item collection
+     * Gets an item from the Microsoft\Graph.users.item.managedDevices.item.deviceConfigurationStates.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceConfigurationStateItemRequestBuilder
     */

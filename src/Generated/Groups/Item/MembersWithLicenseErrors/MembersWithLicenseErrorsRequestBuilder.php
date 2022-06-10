@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors;
+namespace Microsoft\Graph\Groups\Item\MembersWithLicenseErrors;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Application\ApplicationRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Device\DeviceRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Group\GroupRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\OrgContact\OrgContactRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\ServicePrincipal\ServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\User\UserRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Groups\Item\MembersWithLicenseErrors\Application\ApplicationRequestBuilder;
+use Microsoft\Graph\Groups\Item\MembersWithLicenseErrors\Count\CountRequestBuilder;
+use Microsoft\Graph\Groups\Item\MembersWithLicenseErrors\Device\DeviceRequestBuilder;
+use Microsoft\Graph\Groups\Item\MembersWithLicenseErrors\Group\GroupRequestBuilder;
+use Microsoft\Graph\Groups\Item\MembersWithLicenseErrors\OrgContact\OrgContactRequestBuilder;
+use Microsoft\Graph\Groups\Item\MembersWithLicenseErrors\ServicePrincipal\ServicePrincipalRequestBuilder;
+use Microsoft\Graph\Groups\Item\MembersWithLicenseErrors\User\UserRequestBuilder;
+use Microsoft\Graph\Models\DirectoryObjectCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

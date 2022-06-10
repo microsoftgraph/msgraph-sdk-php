@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\AuditLogs\RestrictedSignIns\Item;
+namespace Microsoft\Graph\AuditLogs\RestrictedSignIns\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

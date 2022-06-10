@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\Extensions\Item;
+namespace Microsoft\Graph\Me\Todo\Lists\Item\Tasks\Item\Extensions\Item;
 
 class ExtensionItemRequestBuilderDeleteRequestConfiguration 
 {

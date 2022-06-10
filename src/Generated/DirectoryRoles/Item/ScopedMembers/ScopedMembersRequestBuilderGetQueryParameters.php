@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoles\Item\ScopedMembers;
+namespace Microsoft\Graph\DirectoryRoles\Item\ScopedMembers;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Tabs;
+namespace Microsoft\Graph\Teams\Item\PrimaryChannel\Tabs;
 
 class TabsRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\CreateLink;
+namespace Microsoft\Graph\Workbooks\Item\CreateLink;
 
 class CreateLinkRequestBuilderPostRequestConfiguration 
 {

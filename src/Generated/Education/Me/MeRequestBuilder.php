@@ -1,23 +1,23 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Me;
+namespace Microsoft\Graph\Education\Me;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Education\Me\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\EducationAssignmentItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Classes\ClassesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Classes\Item\EducationClassItemRequestBuilder as MicrosoftGraphGeneratedEducationMeClassesItemEducationClassItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Rubrics\Item\EducationRubricItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Rubrics\RubricsRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Schools\Item\EducationSchoolItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Schools\SchoolsRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\TaughtClasses\Item\EducationClassItemRequestBuilder as MicrosoftGraphGeneratedEducationMeTaughtClassesItemEducationClassItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\TaughtClasses\TaughtClassesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\User\UserRequestBuilder;
-use Microsoft\Graph\Generated\Models\EducationUser;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Education\Me\Assignments\AssignmentsRequestBuilder;
+use Microsoft\Graph\Education\Me\Assignments\Item\EducationAssignmentItemRequestBuilder;
+use Microsoft\Graph\Education\Me\Classes\ClassesRequestBuilder;
+use Microsoft\Graph\Education\Me\Classes\Item\EducationClassItemRequestBuilder as MicrosoftGraphEducationMeClassesItemEducationClassItemRequestBuilder;
+use Microsoft\Graph\Education\Me\Rubrics\Item\EducationRubricItemRequestBuilder;
+use Microsoft\Graph\Education\Me\Rubrics\RubricsRequestBuilder;
+use Microsoft\Graph\Education\Me\Schools\Item\EducationSchoolItemRequestBuilder;
+use Microsoft\Graph\Education\Me\Schools\SchoolsRequestBuilder;
+use Microsoft\Graph\Education\Me\TaughtClasses\Item\EducationClassItemRequestBuilder as MicrosoftGraphEducationMeTaughtClassesItemEducationClassItemRequestBuilder;
+use Microsoft\Graph\Education\Me\TaughtClasses\TaughtClassesRequestBuilder;
+use Microsoft\Graph\Education\Me\User\UserRequestBuilder;
+use Microsoft\Graph\Models\EducationUser;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -86,7 +86,7 @@ class MeRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.me.assignments.item collection
+     * Gets an item from the Microsoft\Graph.education.me.assignments.item collection
      * @param string $id Unique identifier of the item
      * @return EducationAssignmentItemRequestBuilder
     */
@@ -97,14 +97,14 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.me.classes.item collection
+     * Gets an item from the Microsoft\Graph.education.me.classes.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedEducationMeClassesItemEducationClassItemRequestBuilder
+     * @return MicrosoftGraphEducationMeClassesItemEducationClassItemRequestBuilder
     */
-    public function classesById(string $id): MicrosoftGraphGeneratedEducationMeClassesItemEducationClassItemRequestBuilder {
+    public function classesById(string $id): MicrosoftGraphEducationMeClassesItemEducationClassItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationClass%2Did'] = $id;
-        return new MicrosoftGraphGeneratedEducationMeClassesItemEducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphEducationMeClassesItemEducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -245,7 +245,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.me.rubrics.item collection
+     * Gets an item from the Microsoft\Graph.education.me.rubrics.item collection
      * @param string $id Unique identifier of the item
      * @return EducationRubricItemRequestBuilder
     */
@@ -256,7 +256,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.me.schools.item collection
+     * Gets an item from the Microsoft\Graph.education.me.schools.item collection
      * @param string $id Unique identifier of the item
      * @return EducationSchoolItemRequestBuilder
     */
@@ -267,14 +267,14 @@ class MeRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.me.taughtClasses.item collection
+     * Gets an item from the Microsoft\Graph.education.me.taughtClasses.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedEducationMeTaughtClassesItemEducationClassItemRequestBuilder
+     * @return MicrosoftGraphEducationMeTaughtClassesItemEducationClassItemRequestBuilder
     */
-    public function taughtClassesById(string $id): MicrosoftGraphGeneratedEducationMeTaughtClassesItemEducationClassItemRequestBuilder {
+    public function taughtClassesById(string $id): MicrosoftGraphEducationMeTaughtClassesItemEducationClassItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationClass%2Did'] = $id;
-        return new MicrosoftGraphGeneratedEducationMeTaughtClassesItemEducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphEducationMeTaughtClassesItemEducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\ShutDown;
+namespace Microsoft\Graph\DeviceManagement\ManagedDevices\Item\ShutDown;
 
 class ShutDownRequestBuilderPostRequestConfiguration 
 {

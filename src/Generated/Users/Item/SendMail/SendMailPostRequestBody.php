@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\SendMail;
+namespace Microsoft\Graph\Users\Item\SendMail;
 
-use Microsoft\Graph\Generated\Models\Message;
+use Microsoft\Graph\Models\Message;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

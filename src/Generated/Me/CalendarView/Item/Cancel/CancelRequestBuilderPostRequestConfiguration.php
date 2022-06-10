@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\CalendarView\Item\Cancel;
+namespace Microsoft\Graph\Me\CalendarView\Item\Cancel;
 
 class CancelRequestBuilderPostRequestConfiguration 
 {

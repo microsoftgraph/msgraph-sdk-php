@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -50,7 +50,7 @@ class User extends DirectoryObject implements Parsable
     private ?array $assignedPlans = null;
     
     /**
-     * @var Authentication|null $authentication TODO: Add Description
+     * @var Authentication|null $authentication The authentication methods that are supported for the user.
     */
     private ?Authentication $authentication = null;
     
@@ -245,7 +245,7 @@ class User extends DirectoryObject implements Parsable
     private ?InferenceClassification $inferenceClassification = null;
     
     /**
-     * @var OfficeGraphInsights|null $insights Read-only. Nullable.
+     * @var OfficeGraphInsights|null $insights The insights property
     */
     private ?OfficeGraphInsights $insights = null;
     
@@ -355,7 +355,7 @@ class User extends DirectoryObject implements Parsable
     private ?string $officeLocation = null;
     
     /**
-     * @var Onenote|null $onenote Read-only.
+     * @var Onenote|null $onenote The onenote property
     */
     private ?Onenote $onenote = null;
     
@@ -460,7 +460,7 @@ class User extends DirectoryObject implements Parsable
     private ?ProfilePhoto $photo = null;
     
     /**
-     * @var array<ProfilePhoto>|null $photos Read-only. Nullable.
+     * @var array<ProfilePhoto>|null $photos The photos property
     */
     private ?array $photos = null;
     
@@ -525,7 +525,7 @@ class User extends DirectoryObject implements Parsable
     private ?array $scopedRoleMemberOf = null;
     
     /**
-     * @var UserSettings|null $settings Read-only. Nullable.
+     * @var UserSettings|null $settings The settings property
     */
     private ?UserSettings $settings = null;
     
@@ -590,7 +590,7 @@ class User extends DirectoryObject implements Parsable
     private ?string $userType = null;
     
     /**
-     * Instantiates a new user and sets the default values.
+     * Instantiates a new User and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -670,7 +670,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the authentication property value. TODO: Add Description
+     * Gets the authentication property value. The authentication methods that are supported for the user.
      * @return Authentication|null
     */
     public function getAuthentication(): ?Authentication {
@@ -1108,7 +1108,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the insights property value. Read-only. Nullable.
+     * Gets the insights property value. The insights property
      * @return OfficeGraphInsights|null
     */
     public function getInsights(): ?OfficeGraphInsights {
@@ -1284,7 +1284,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onenote property value. Read-only.
+     * Gets the onenote property value. The onenote property
      * @return Onenote|null
     */
     public function getOnenote(): ?Onenote {
@@ -1452,7 +1452,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the photos property value. Read-only. Nullable.
+     * Gets the photos property value. The photos property
      * @return array<ProfilePhoto>|null
     */
     public function getPhotos(): ?array {
@@ -1556,7 +1556,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the settings property value. Read-only. Nullable.
+     * Gets the settings property value. The settings property
      * @return UserSettings|null
     */
     public function getSettings(): ?UserSettings {
@@ -1848,7 +1848,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the authentication property value. TODO: Add Description
+     * Sets the authentication property value. The authentication methods that are supported for the user.
      *  @param Authentication|null $value Value to set for the authentication property.
     */
     public function setAuthentication(?Authentication $value ): void {
@@ -2160,7 +2160,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the insights property value. Read-only. Nullable.
+     * Sets the insights property value. The insights property
      *  @param OfficeGraphInsights|null $value Value to set for the insights property.
     */
     public function setInsights(?OfficeGraphInsights $value ): void {
@@ -2336,7 +2336,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onenote property value. Read-only.
+     * Sets the onenote property value. The onenote property
      *  @param Onenote|null $value Value to set for the onenote property.
     */
     public function setOnenote(?Onenote $value ): void {
@@ -2504,7 +2504,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the photos property value. Read-only. Nullable.
+     * Sets the photos property value. The photos property
      *  @param array<ProfilePhoto>|null $value Value to set for the photos property.
     */
     public function setPhotos(?array $value ): void {
@@ -2608,7 +2608,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the settings property value. Read-only. Nullable.
+     * Sets the settings property value. The settings property
      *  @param UserSettings|null $value Value to set for the settings property.
     */
     public function setSettings(?UserSettings $value ): void {

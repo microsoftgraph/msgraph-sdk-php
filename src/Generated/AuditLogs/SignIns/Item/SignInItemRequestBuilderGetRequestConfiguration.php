@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\AuditLogs\SignIns\Item;
+namespace Microsoft\Graph\AuditLogs\SignIns\Item;
 
 class SignInItemRequestBuilderGetRequestConfiguration 
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\ServicePrincipal;
+namespace Microsoft\Graph\Contacts\Item\TransitiveMemberOf\ServicePrincipal;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\ServicePrincipal\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ServicePrincipalCollectionResponse;
+use Microsoft\Graph\Contacts\Item\TransitiveMemberOf\ServicePrincipal\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\ServicePrincipalCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

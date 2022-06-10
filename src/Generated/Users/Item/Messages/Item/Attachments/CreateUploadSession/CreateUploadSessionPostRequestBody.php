@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Messages\Item\Attachments\CreateUploadSession;
+namespace Microsoft\Graph\Users\Item\Messages\Item\Attachments\CreateUploadSession;
 
-use Microsoft\Graph\Generated\Models\AttachmentItem;
+use Microsoft\Graph\Models\AttachmentItem;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

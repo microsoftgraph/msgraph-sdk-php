@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\Columns\Item;
+namespace Microsoft\Graph\Drives\Item\EscapedList\ContentTypes\Item\Columns\Item;
 
 class ColumnDefinitionItemRequestBuilderDeleteRequestConfiguration 
 {

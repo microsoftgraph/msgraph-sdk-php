@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\ExternalConnectors;
+namespace Microsoft\Graph\Models\ExternalConnectors;
 
-use Microsoft\Graph\Generated\Models\Entity;
+use Microsoft\Graph\Models\Entity;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -20,12 +20,12 @@ class ExternalConnection extends Entity implements Parsable
     private ?string $description = null;
     
     /**
-     * @var array<ExternalGroup>|null $groups Read-only. Nullable.
+     * @var array<ExternalGroup>|null $groups The groups property
     */
     private ?array $groups = null;
     
     /**
-     * @var array<ExternalItem>|null $items Read-only. Nullable.
+     * @var array<ExternalItem>|null $items The items property
     */
     private ?array $items = null;
     
@@ -35,12 +35,12 @@ class ExternalConnection extends Entity implements Parsable
     private ?string $name = null;
     
     /**
-     * @var array<ConnectionOperation>|null $operations Read-only. Nullable.
+     * @var array<ConnectionOperation>|null $operations The operations property
     */
     private ?array $operations = null;
     
     /**
-     * @var Schema|null $schema Read-only. Nullable.
+     * @var Schema|null $schema The schema property
     */
     private ?Schema $schema = null;
     
@@ -100,7 +100,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the groups property value. Read-only. Nullable.
+     * Gets the groups property value. The groups property
      * @return array<ExternalGroup>|null
     */
     public function getGroups(): ?array {
@@ -108,7 +108,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the items property value. Read-only. Nullable.
+     * Gets the items property value. The items property
      * @return array<ExternalItem>|null
     */
     public function getItems(): ?array {
@@ -124,7 +124,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the operations property value. Read-only. Nullable.
+     * Gets the operations property value. The operations property
      * @return array<ConnectionOperation>|null
     */
     public function getOperations(): ?array {
@@ -132,7 +132,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the schema property value. Read-only. Nullable.
+     * Gets the schema property value. The schema property
      * @return Schema|null
     */
     public function getSchema(): ?Schema {
@@ -180,7 +180,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the groups property value. Read-only. Nullable.
+     * Sets the groups property value. The groups property
      *  @param array<ExternalGroup>|null $value Value to set for the groups property.
     */
     public function setGroups(?array $value ): void {
@@ -188,7 +188,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the items property value. Read-only. Nullable.
+     * Sets the items property value. The items property
      *  @param array<ExternalItem>|null $value Value to set for the items property.
     */
     public function setItems(?array $value ): void {
@@ -204,7 +204,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the operations property value. Read-only. Nullable.
+     * Sets the operations property value. The operations property
      *  @param array<ConnectionOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value ): void {
@@ -212,7 +212,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the schema property value. Read-only. Nullable.
+     * Sets the schema property value. The schema property
      *  @param Schema|null $value Value to set for the schema property.
     */
     public function setSchema(?Schema $value ): void {

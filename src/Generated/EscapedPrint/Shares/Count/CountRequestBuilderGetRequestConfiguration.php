@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Count;
+namespace Microsoft\Graph\EscapedPrint\Shares\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

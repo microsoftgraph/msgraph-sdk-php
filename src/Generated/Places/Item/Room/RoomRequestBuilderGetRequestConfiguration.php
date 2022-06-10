@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Places\Item\Room;
+namespace Microsoft\Graph\Places\Item\Room;
 
 class RoomRequestBuilderGetRequestConfiguration 
 {

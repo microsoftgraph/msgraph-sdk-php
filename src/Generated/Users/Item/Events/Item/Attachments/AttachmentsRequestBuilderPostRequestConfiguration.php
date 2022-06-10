@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Events\Item\Attachments;
+namespace Microsoft\Graph\Users\Item\Events\Item\Attachments;
 
 class AttachmentsRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\FederationConfigurations\Count;
+namespace Microsoft\Graph\Directory\FederationConfigurations\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

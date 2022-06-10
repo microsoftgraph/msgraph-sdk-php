@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\AddGroup;
+namespace Microsoft\Graph\GroupLifecyclePolicies\Item\AddGroup;
 
 class AddGroupRequestBuilderPostRequestConfiguration 
 {

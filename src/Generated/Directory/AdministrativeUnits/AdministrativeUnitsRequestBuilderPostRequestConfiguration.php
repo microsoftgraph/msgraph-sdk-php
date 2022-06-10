@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\AdministrativeUnits;
+namespace Microsoft\Graph\Directory\AdministrativeUnits;
 
 class AdministrativeUnitsRequestBuilderPostRequestConfiguration 
 {

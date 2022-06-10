@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Schedule\SchedulingGroups\Item;
+namespace Microsoft\Graph\Teams\Item\Schedule\SchedulingGroups\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SchedulingGroup;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\SchedulingGroup;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

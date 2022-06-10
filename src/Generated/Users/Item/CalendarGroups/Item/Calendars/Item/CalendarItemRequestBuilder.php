@@ -1,24 +1,24 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item;
+namespace Microsoft\Graph\Users\Item\CalendarGroups\Item\Calendars\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\Calendar;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\AllowedCalendarSharingRolesWithUser\AllowedCalendarSharingRolesWithUserRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\CalendarPermissions\CalendarPermissionsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\CalendarPermissions\Item\CalendarPermissionItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\CalendarView\CalendarViewRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\CalendarView\Item\EventItemRequestBuilder as MicrosoftGraphGeneratedUsersItemCalendarGroupsItemCalendarsItemCalendarViewItemEventItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Events\EventsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Events\Item\EventItemRequestBuilder as MicrosoftGraphGeneratedUsersItemCalendarGroupsItemCalendarsItemEventsItemEventItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\GetSchedule\GetScheduleRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Models\Calendar;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Users\Item\CalendarGroups\Item\Calendars\Item\AllowedCalendarSharingRolesWithUser\AllowedCalendarSharingRolesWithUserRequestBuilder;
+use Microsoft\Graph\Users\Item\CalendarGroups\Item\Calendars\Item\CalendarPermissions\CalendarPermissionsRequestBuilder;
+use Microsoft\Graph\Users\Item\CalendarGroups\Item\Calendars\Item\CalendarPermissions\Item\CalendarPermissionItemRequestBuilder;
+use Microsoft\Graph\Users\Item\CalendarGroups\Item\Calendars\Item\CalendarView\CalendarViewRequestBuilder;
+use Microsoft\Graph\Users\Item\CalendarGroups\Item\Calendars\Item\CalendarView\Item\EventItemRequestBuilder as MicrosoftGraphUsersItemCalendarGroupsItemCalendarsItemCalendarViewItemEventItemRequestBuilder;
+use Microsoft\Graph\Users\Item\CalendarGroups\Item\Calendars\Item\Events\EventsRequestBuilder;
+use Microsoft\Graph\Users\Item\CalendarGroups\Item\Calendars\Item\Events\Item\EventItemRequestBuilder as MicrosoftGraphUsersItemCalendarGroupsItemCalendarsItemEventsItemEventItemRequestBuilder;
+use Microsoft\Graph\Users\Item\CalendarGroups\Item\Calendars\Item\GetSchedule\GetScheduleRequestBuilder;
+use Microsoft\Graph\Users\Item\CalendarGroups\Item\Calendars\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Users\Item\CalendarGroups\Item\Calendars\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Users\Item\CalendarGroups\Item\Calendars\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Users\Item\CalendarGroups\Item\Calendars\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -96,7 +96,7 @@ class CalendarItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.calendarGroups.item.calendars.item.calendarPermissions.item collection
+     * Gets an item from the Microsoft\Graph.users.item.calendarGroups.item.calendars.item.calendarPermissions.item collection
      * @param string $id Unique identifier of the item
      * @return CalendarPermissionItemRequestBuilder
     */
@@ -107,14 +107,14 @@ class CalendarItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.calendarGroups.item.calendars.item.calendarView.item collection
+     * Gets an item from the Microsoft\Graph.users.item.calendarGroups.item.calendars.item.calendarView.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedUsersItemCalendarGroupsItemCalendarsItemCalendarViewItemEventItemRequestBuilder
+     * @return MicrosoftGraphUsersItemCalendarGroupsItemCalendarsItemCalendarViewItemEventItemRequestBuilder
     */
-    public function calendarViewById(string $id): MicrosoftGraphGeneratedUsersItemCalendarGroupsItemCalendarsItemCalendarViewItemEventItemRequestBuilder {
+    public function calendarViewById(string $id): MicrosoftGraphUsersItemCalendarGroupsItemCalendarsItemCalendarViewItemEventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new MicrosoftGraphGeneratedUsersItemCalendarGroupsItemCalendarsItemCalendarViewItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphUsersItemCalendarGroupsItemCalendarsItemCalendarViewItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -216,14 +216,14 @@ class CalendarItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.calendarGroups.item.calendars.item.events.item collection
+     * Gets an item from the Microsoft\Graph.users.item.calendarGroups.item.calendars.item.events.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedUsersItemCalendarGroupsItemCalendarsItemEventsItemEventItemRequestBuilder
+     * @return MicrosoftGraphUsersItemCalendarGroupsItemCalendarsItemEventsItemEventItemRequestBuilder
     */
-    public function eventsById(string $id): MicrosoftGraphGeneratedUsersItemCalendarGroupsItemCalendarsItemEventsItemEventItemRequestBuilder {
+    public function eventsById(string $id): MicrosoftGraphUsersItemCalendarGroupsItemCalendarsItemEventsItemEventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new MicrosoftGraphGeneratedUsersItemCalendarGroupsItemCalendarsItemEventsItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphUsersItemCalendarGroupsItemCalendarsItemEventsItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -246,7 +246,7 @@ class CalendarItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.calendarGroups.item.calendars.item.multiValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph.users.item.calendarGroups.item.calendars.item.multiValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
     */
@@ -277,7 +277,7 @@ class CalendarItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.calendarGroups.item.calendars.item.singleValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph.users.item.calendarGroups.item.calendars.item.singleValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
     */

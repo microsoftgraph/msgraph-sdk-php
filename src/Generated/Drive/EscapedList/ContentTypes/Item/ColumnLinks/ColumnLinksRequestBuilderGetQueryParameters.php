@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\ColumnLinks;
+namespace Microsoft\Graph\Drive\EscapedList\ContentTypes\Item\ColumnLinks;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

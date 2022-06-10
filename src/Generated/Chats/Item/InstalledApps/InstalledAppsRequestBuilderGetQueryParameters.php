@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\Item\InstalledApps;
+namespace Microsoft\Graph\Chats\Item\InstalledApps;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

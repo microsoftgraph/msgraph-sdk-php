@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\ChangeScreenSharingRole;
+namespace Microsoft\Graph\Communications\Calls\Item\ChangeScreenSharingRole;
 
 class ChangeScreenSharingRoleRequestBuilderPostRequestConfiguration 
 {

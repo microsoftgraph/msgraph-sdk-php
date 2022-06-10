@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers;
+namespace Microsoft\Graph\IdentityProtection\RiskyUsers;
 
 class RiskyUsersRequestBuilderPostRequestConfiguration 
 {

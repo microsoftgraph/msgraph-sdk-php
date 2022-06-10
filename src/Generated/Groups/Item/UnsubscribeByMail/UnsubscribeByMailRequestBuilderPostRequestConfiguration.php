@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\UnsubscribeByMail;
+namespace Microsoft\Graph\Groups\Item\UnsubscribeByMail;
 
 class UnsubscribeByMailRequestBuilderPostRequestConfiguration 
 {

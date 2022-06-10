@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppPolicies\Item;
+namespace Microsoft\Graph\DeviceAppManagement\ManagedAppPolicies\Item;
 
 class ManagedAppPolicyItemRequestBuilderGetRequestConfiguration 
 {

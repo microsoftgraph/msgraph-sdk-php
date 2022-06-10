@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\Children;
+namespace Microsoft\Graph\Workbooks\Item\Children;
 
 class ChildrenRequestBuilderGetRequestConfiguration 
 {

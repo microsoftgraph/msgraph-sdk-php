@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\ProvisionEmail;
+namespace Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\ProvisionEmail;
 
 class ProvisionEmailRequestBuilderPostRequestConfiguration 
 {

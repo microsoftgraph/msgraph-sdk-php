@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\Permissions\Count;
+namespace Microsoft\Graph\Workbooks\Item\Permissions\Count;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

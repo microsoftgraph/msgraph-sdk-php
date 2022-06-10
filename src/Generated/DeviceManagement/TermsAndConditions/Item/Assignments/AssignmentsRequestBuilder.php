@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\Assignments;
+namespace Microsoft\Graph\DeviceManagement\TermsAndConditions\Item\Assignments;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\Assignments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TermsAndConditionsAssignment;
-use Microsoft\Graph\Generated\Models\TermsAndConditionsAssignmentCollectionResponse;
+use Microsoft\Graph\DeviceManagement\TermsAndConditions\Item\Assignments\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\TermsAndConditionsAssignment;
+use Microsoft\Graph\Models\TermsAndConditionsAssignmentCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

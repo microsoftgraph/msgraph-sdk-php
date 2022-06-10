@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\UserFlowAttributes\Item;
+namespace Microsoft\Graph\Identity\UserFlowAttributes\Item;
 
 class IdentityUserFlowAttributeItemRequestBuilderDeleteRequestConfiguration 
 {

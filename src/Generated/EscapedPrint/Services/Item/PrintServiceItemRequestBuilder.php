@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Services\Item;
+namespace Microsoft\Graph\EscapedPrint\Services\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\EscapedPrint\Services\Item\Endpoints\EndpointsRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Services\Item\Endpoints\Item\PrintServiceEndpointItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\PrintService;
+use Microsoft\Graph\EscapedPrint\Services\Item\Endpoints\EndpointsRequestBuilder;
+use Microsoft\Graph\EscapedPrint\Services\Item\Endpoints\Item\PrintServiceEndpointItemRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\PrintService;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -140,7 +140,7 @@ class PrintServiceItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.print.services.item.endpoints.item collection
+     * Gets an item from the Microsoft\Graph.print.services.item.endpoints.item collection
      * @param string $id Unique identifier of the item
      * @return PrintServiceEndpointItemRequestBuilder
     */

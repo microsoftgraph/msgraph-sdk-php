@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\SubscribedSkus\Item;
+namespace Microsoft\Graph\SubscribedSkus\Item;
 
 class SubscribedSkuItemRequestBuilderDeleteRequestConfiguration 
 {

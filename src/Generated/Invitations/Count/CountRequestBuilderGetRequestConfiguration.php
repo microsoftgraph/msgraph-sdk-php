@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Invitations\Count;
+namespace Microsoft\Graph\Invitations\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

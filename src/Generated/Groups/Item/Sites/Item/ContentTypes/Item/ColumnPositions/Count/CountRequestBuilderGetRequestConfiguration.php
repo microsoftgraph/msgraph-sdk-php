@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\ColumnPositions\Count;
+namespace Microsoft\Graph\Groups\Item\Sites\Item\ContentTypes\Item\ColumnPositions\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

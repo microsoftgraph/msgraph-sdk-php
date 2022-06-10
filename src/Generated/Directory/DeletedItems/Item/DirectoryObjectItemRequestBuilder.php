@@ -1,15 +1,20 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\DeletedItems\Item;
+namespace Microsoft\Graph\Directory\DeletedItems\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\Application\ApplicationRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\Group\GroupRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\User\UserRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryObject;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Directory\DeletedItems\Item\Application\ApplicationRequestBuilder;
+use Microsoft\Graph\Directory\DeletedItems\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Directory\DeletedItems\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Directory\DeletedItems\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Directory\DeletedItems\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Directory\DeletedItems\Item\Group\GroupRequestBuilder;
+use Microsoft\Graph\Directory\DeletedItems\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Directory\DeletedItems\Item\User\UserRequestBuilder;
+use Microsoft\Graph\Models\DirectoryObject;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -28,6 +33,34 @@ class DirectoryObjectItemRequestBuilder
     }
     
     /**
+     * The checkMemberGroups property
+    */
+    public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
+        return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The checkMemberObjects property
+    */
+    public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
+        return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The getMemberGroups property
+    */
+    public function getMemberGroups(): GetMemberGroupsRequestBuilder {
+        return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The getMemberObjects property
+    */
+    public function getMemberObjects(): GetMemberObjectsRequestBuilder {
+        return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * The group property
     */
     public function group(): GroupRequestBuilder {
@@ -43,6 +76,13 @@ class DirectoryObjectItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * The restore property
+    */
+    public function restore(): RestoreRequestBuilder {
+        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

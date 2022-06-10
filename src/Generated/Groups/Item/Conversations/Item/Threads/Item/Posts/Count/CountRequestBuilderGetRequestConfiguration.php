@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Count;
+namespace Microsoft\Graph\Groups\Item\Conversations\Item\Threads\Item\Posts\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

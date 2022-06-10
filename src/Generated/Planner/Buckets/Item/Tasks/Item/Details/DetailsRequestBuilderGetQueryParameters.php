@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Planner\Buckets\Item\Tasks\Item\Details;
+namespace Microsoft\Graph\Planner\Buckets\Item\Tasks\Item\Details;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

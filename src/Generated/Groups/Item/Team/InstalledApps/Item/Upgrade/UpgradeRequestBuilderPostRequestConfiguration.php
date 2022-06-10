@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\InstalledApps\Item\Upgrade;
+namespace Microsoft\Graph\Groups\Item\Team\InstalledApps\Item\Upgrade;
 
 class UpgradeRequestBuilderPostRequestConfiguration 
 {

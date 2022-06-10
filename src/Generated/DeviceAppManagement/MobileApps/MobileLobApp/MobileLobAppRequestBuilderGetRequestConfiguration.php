@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\MobileLobApp;
+namespace Microsoft\Graph\DeviceAppManagement\MobileApps\MobileLobApp;
 
 class MobileLobAppRequestBuilderGetRequestConfiguration 
 {

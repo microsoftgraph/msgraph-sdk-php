@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityProtection;
+namespace Microsoft\Graph\IdentityProtection;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityProtection\RiskDetections\Item\RiskDetectionItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProtection\RiskDetections\RiskDetectionsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item\RiskyUserItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\RiskyUsersRequestBuilder;
-use Microsoft\Graph\Generated\Models\IdentityProtectionRoot;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\IdentityProtection\RiskDetections\Item\RiskDetectionItemRequestBuilder;
+use Microsoft\Graph\IdentityProtection\RiskDetections\RiskDetectionsRequestBuilder;
+use Microsoft\Graph\IdentityProtection\RiskyUsers\Item\RiskyUserItemRequestBuilder;
+use Microsoft\Graph\IdentityProtection\RiskyUsers\RiskyUsersRequestBuilder;
+use Microsoft\Graph\Models\IdentityProtectionRoot;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -148,7 +148,7 @@ class IdentityProtectionRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityProtection.riskDetections.item collection
+     * Gets an item from the Microsoft\Graph.identityProtection.riskDetections.item collection
      * @param string $id Unique identifier of the item
      * @return RiskDetectionItemRequestBuilder
     */
@@ -159,7 +159,7 @@ class IdentityProtectionRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityProtection.riskyUsers.item collection
+     * Gets an item from the Microsoft\Graph.identityProtection.riskyUsers.item collection
      * @param string $id Unique identifier of the item
      * @return RiskyUserItemRequestBuilder
     */

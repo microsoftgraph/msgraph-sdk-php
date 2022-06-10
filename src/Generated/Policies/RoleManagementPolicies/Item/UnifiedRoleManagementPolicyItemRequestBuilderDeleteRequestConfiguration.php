@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item;
+namespace Microsoft\Graph\Policies\RoleManagementPolicies\Item;
 
 class UnifiedRoleManagementPolicyItemRequestBuilderDeleteRequestConfiguration 
 {

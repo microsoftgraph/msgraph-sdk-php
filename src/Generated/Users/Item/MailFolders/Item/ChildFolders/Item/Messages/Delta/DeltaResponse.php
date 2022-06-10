@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Delta;
+namespace Microsoft\Graph\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Delta;
 
-use Microsoft\Graph\Generated\Models\Message;
+use Microsoft\Graph\Models\Message;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

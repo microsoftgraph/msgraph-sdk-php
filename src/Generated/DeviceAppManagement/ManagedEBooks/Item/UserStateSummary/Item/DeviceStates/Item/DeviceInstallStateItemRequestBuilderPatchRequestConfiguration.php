@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\Item\DeviceStates\Item;
+namespace Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\Item\DeviceStates\Item;
 
 class DeviceInstallStateItemRequestBuilderPatchRequestConfiguration 
 {

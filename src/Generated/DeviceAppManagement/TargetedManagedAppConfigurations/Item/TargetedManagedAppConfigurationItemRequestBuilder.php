@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item;
+namespace Microsoft\Graph\DeviceAppManagement\TargetedManagedAppConfigurations\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Apps\AppsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Apps\Item\ManagedMobileAppItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Assign\AssignRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Assignments\Item\TargetedManagedAppPolicyAssignmentItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\DeploymentSummary\DeploymentSummaryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\TargetApps\TargetAppsRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TargetedManagedAppConfiguration;
+use Microsoft\Graph\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Apps\AppsRequestBuilder;
+use Microsoft\Graph\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Apps\Item\ManagedMobileAppItemRequestBuilder;
+use Microsoft\Graph\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Assign\AssignRequestBuilder;
+use Microsoft\Graph\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Assignments\AssignmentsRequestBuilder;
+use Microsoft\Graph\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Assignments\Item\TargetedManagedAppPolicyAssignmentItemRequestBuilder;
+use Microsoft\Graph\DeviceAppManagement\TargetedManagedAppConfigurations\Item\DeploymentSummary\DeploymentSummaryRequestBuilder;
+use Microsoft\Graph\DeviceAppManagement\TargetedManagedAppConfigurations\Item\TargetApps\TargetAppsRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\TargetedManagedAppConfiguration;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -75,7 +75,7 @@ class TargetedManagedAppConfigurationItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.targetedManagedAppConfigurations.item.apps.item collection
+     * Gets an item from the Microsoft\Graph.deviceAppManagement.targetedManagedAppConfigurations.item.apps.item collection
      * @param string $id Unique identifier of the item
      * @return ManagedMobileAppItemRequestBuilder
     */
@@ -86,7 +86,7 @@ class TargetedManagedAppConfigurationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.targetedManagedAppConfigurations.item.assignments.item collection
+     * Gets an item from the Microsoft\Graph.deviceAppManagement.targetedManagedAppConfigurations.item.assignments.item collection
      * @param string $id Unique identifier of the item
      * @return TargetedManagedAppPolicyAssignmentItemRequestBuilder
     */

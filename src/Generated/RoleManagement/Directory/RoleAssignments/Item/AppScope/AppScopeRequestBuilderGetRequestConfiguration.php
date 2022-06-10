@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignments\Item\AppScope;
+namespace Microsoft\Graph\RoleManagement\Directory\RoleAssignments\Item\AppScope;
 
 class AppScopeRequestBuilderGetRequestConfiguration 
 {

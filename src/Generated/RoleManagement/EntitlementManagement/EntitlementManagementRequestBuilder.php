@@ -1,28 +1,28 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement;
+namespace Microsoft\Graph\RoleManagement\EntitlementManagement;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\RbacApplication;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignments\Item\UnifiedRoleAssignmentItemRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignments\RoleAssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleInstances\Item\UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleInstances\RoleAssignmentScheduleInstancesRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\UnifiedRoleAssignmentScheduleRequestItemRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\RoleAssignmentScheduleRequestsRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentSchedules\Item\UnifiedRoleAssignmentScheduleItemRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentSchedules\RoleAssignmentSchedulesRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleDefinitions\Item\UnifiedRoleDefinitionItemRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleDefinitions\RoleDefinitionsRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleInstances\Item\UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleInstances\RoleEligibilityScheduleInstancesRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\UnifiedRoleEligibilityScheduleRequestItemRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\RoleEligibilityScheduleRequestsRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilitySchedules\Item\UnifiedRoleEligibilityScheduleItemRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilitySchedules\RoleEligibilitySchedulesRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\RbacApplication;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleAssignments\Item\UnifiedRoleAssignmentItemRequestBuilder;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleAssignments\RoleAssignmentsRequestBuilder;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleAssignmentScheduleInstances\Item\UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleAssignmentScheduleInstances\RoleAssignmentScheduleInstancesRequestBuilder;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\UnifiedRoleAssignmentScheduleRequestItemRequestBuilder;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\RoleAssignmentScheduleRequestsRequestBuilder;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleAssignmentSchedules\Item\UnifiedRoleAssignmentScheduleItemRequestBuilder;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleAssignmentSchedules\RoleAssignmentSchedulesRequestBuilder;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleDefinitions\Item\UnifiedRoleDefinitionItemRequestBuilder;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleDefinitions\RoleDefinitionsRequestBuilder;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleEligibilityScheduleInstances\Item\UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleEligibilityScheduleInstances\RoleEligibilityScheduleInstancesRequestBuilder;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\UnifiedRoleEligibilityScheduleRequestItemRequestBuilder;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\RoleEligibilityScheduleRequestsRequestBuilder;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleEligibilitySchedules\Item\UnifiedRoleEligibilityScheduleItemRequestBuilder;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleEligibilitySchedules\RoleEligibilitySchedulesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -242,7 +242,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleAssignments.item collection
+     * Gets an item from the Microsoft\Graph.roleManagement.entitlementManagement.roleAssignments.item collection
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleAssignmentItemRequestBuilder
     */
@@ -253,7 +253,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleAssignmentScheduleInstances.item collection
+     * Gets an item from the Microsoft\Graph.roleManagement.entitlementManagement.roleAssignmentScheduleInstances.item collection
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder
     */
@@ -264,7 +264,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleAssignmentScheduleRequests.item collection
+     * Gets an item from the Microsoft\Graph.roleManagement.entitlementManagement.roleAssignmentScheduleRequests.item collection
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleAssignmentScheduleRequestItemRequestBuilder
     */
@@ -275,7 +275,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleAssignmentSchedules.item collection
+     * Gets an item from the Microsoft\Graph.roleManagement.entitlementManagement.roleAssignmentSchedules.item collection
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleAssignmentScheduleItemRequestBuilder
     */
@@ -286,7 +286,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleDefinitions.item collection
+     * Gets an item from the Microsoft\Graph.roleManagement.entitlementManagement.roleDefinitions.item collection
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleDefinitionItemRequestBuilder
     */
@@ -297,7 +297,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleEligibilityScheduleInstances.item collection
+     * Gets an item from the Microsoft\Graph.roleManagement.entitlementManagement.roleEligibilityScheduleInstances.item collection
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder
     */
@@ -308,7 +308,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleEligibilityScheduleRequests.item collection
+     * Gets an item from the Microsoft\Graph.roleManagement.entitlementManagement.roleEligibilityScheduleRequests.item collection
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
     */
@@ -319,7 +319,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleEligibilitySchedules.item collection
+     * Gets an item from the Microsoft\Graph.roleManagement.entitlementManagement.roleEligibilitySchedules.item collection
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleEligibilityScheduleItemRequestBuilder
     */

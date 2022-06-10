@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item;
+namespace Microsoft\Graph\DeviceManagement\NotificationMessageTemplates\Item;
 
 class NotificationMessageTemplateItemRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\Fields;
+namespace Microsoft\Graph\Sites\Item\Lists\Item\Items\Item\Fields;
 
 class FieldsRequestBuilderGetRequestConfiguration 
 {

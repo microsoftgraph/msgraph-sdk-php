@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateInterval;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -145,7 +145,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
     private ?bool $simplePinBlocked = null;
     
     /**
-     * Instantiates a new managedAppProtection and sets the default values.
+     * Instantiates a new ManagedAppProtection and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -157,13 +157,6 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return ManagedAppProtection
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedAppProtection {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
-        if ($mappingValueNode !== null) {
-            $mappingValue = $mappingValueNode->getStringValue();
-            switch ($mappingValue) {
-                case '#microsoft.graph.managedAppProtection': return new ManagedAppProtection();
-            }
-        }
         return new ManagedAppProtection();
     }
 

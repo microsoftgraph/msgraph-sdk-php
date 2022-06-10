@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Extensions\Item;
+namespace Microsoft\Graph\Me\Extensions\Item;
 
 class ExtensionItemRequestBuilderGetRequestConfiguration 
 {

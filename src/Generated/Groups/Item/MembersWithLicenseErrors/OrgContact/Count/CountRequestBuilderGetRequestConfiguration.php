@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\OrgContact\Count;
+namespace Microsoft\Graph\Groups\Item\MembersWithLicenseErrors\OrgContact\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

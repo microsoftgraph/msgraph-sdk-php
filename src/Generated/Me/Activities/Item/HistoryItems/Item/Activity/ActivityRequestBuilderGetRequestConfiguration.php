@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Activities\Item\HistoryItems\Item\Activity;
+namespace Microsoft\Graph\Me\Activities\Item\HistoryItems\Item\Activity;
 
 class ActivityRequestBuilderGetRequestConfiguration 
 {

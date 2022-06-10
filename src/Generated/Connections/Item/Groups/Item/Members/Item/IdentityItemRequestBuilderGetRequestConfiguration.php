@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Connections\Item\Groups\Item\Members\Item;
+namespace Microsoft\Graph\Connections\Item\Groups\Item\Members\Item;
 
 class IdentityItemRequestBuilderGetRequestConfiguration 
 {

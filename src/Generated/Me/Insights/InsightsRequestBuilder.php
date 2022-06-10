@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Insights;
+namespace Microsoft\Graph\Me\Insights;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Insights\Shared\Item\SharedInsightItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Insights\Shared\SharedRequestBuilder;
-use Microsoft\Graph\Generated\Me\Insights\Trending\Item\TrendingItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Insights\Trending\TrendingRequestBuilder;
-use Microsoft\Graph\Generated\Me\Insights\Used\Item\UsedInsightItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Insights\Used\UsedRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\OfficeGraphInsights;
+use Microsoft\Graph\Me\Insights\Shared\Item\SharedInsightItemRequestBuilder;
+use Microsoft\Graph\Me\Insights\Shared\SharedRequestBuilder;
+use Microsoft\Graph\Me\Insights\Trending\Item\TrendingItemRequestBuilder;
+use Microsoft\Graph\Me\Insights\Trending\TrendingRequestBuilder;
+use Microsoft\Graph\Me\Insights\Used\Item\UsedInsightItemRequestBuilder;
+use Microsoft\Graph\Me\Insights\Used\UsedRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\OfficeGraphInsights;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -92,7 +92,7 @@ class InsightsRequestBuilder
     }
 
     /**
-     * Read-only. Nullable.
+     * Get insights from me
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -158,7 +158,7 @@ class InsightsRequestBuilder
     }
 
     /**
-     * Read-only. Nullable.
+     * Get insights from me
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -197,7 +197,7 @@ class InsightsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.insights.shared.item collection
+     * Gets an item from the Microsoft\Graph.me.insights.shared.item collection
      * @param string $id Unique identifier of the item
      * @return SharedInsightItemRequestBuilder
     */
@@ -208,7 +208,7 @@ class InsightsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.insights.trending.item collection
+     * Gets an item from the Microsoft\Graph.me.insights.trending.item collection
      * @param string $id Unique identifier of the item
      * @return TrendingItemRequestBuilder
     */
@@ -219,7 +219,7 @@ class InsightsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.insights.used.item collection
+     * Gets an item from the Microsoft\Graph.me.insights.used.item collection
      * @param string $id Unique identifier of the item
      * @return UsedInsightItemRequestBuilder
     */

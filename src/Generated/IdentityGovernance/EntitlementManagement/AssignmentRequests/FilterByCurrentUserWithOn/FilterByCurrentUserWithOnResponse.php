@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\FilterByCurrentUserWithOn;
+namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\AssignmentRequests\FilterByCurrentUserWithOn;
 
-use Microsoft\Graph\Generated\Models\AccessPackageAssignmentRequest;
+use Microsoft\Graph\Models\AccessPackageAssignmentRequest;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

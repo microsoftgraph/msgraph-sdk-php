@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Authentication\TemporaryAccessPassMethods;
+namespace Microsoft\Graph\Me\Authentication\TemporaryAccessPassMethods;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Authentication\TemporaryAccessPassMethods\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TemporaryAccessPassAuthenticationMethod;
-use Microsoft\Graph\Generated\Models\TemporaryAccessPassAuthenticationMethodCollectionResponse;
+use Microsoft\Graph\Me\Authentication\TemporaryAccessPassMethods\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\TemporaryAccessPassAuthenticationMethod;
+use Microsoft\Graph\Models\TemporaryAccessPassAuthenticationMethodCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

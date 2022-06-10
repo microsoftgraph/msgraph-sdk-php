@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\Cancel;
+namespace Microsoft\Graph\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\Cancel;
 
 class CancelRequestBuilderPostRequestConfiguration 
 {

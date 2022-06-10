@@ -1,16 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\IntendedPolicies\Item;
+namespace Microsoft\Graph\DeviceAppManagement\ManagedAppRegistrations\Item\IntendedPolicies\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\IntendedPolicies\Item\ManagedAppProtection\ManagedAppProtectionRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\IntendedPolicies\Item\TargetApps\TargetAppsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\IntendedPolicies\Item\TargetedManagedAppProtection\TargetedManagedAppProtectionRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\IntendedPolicies\Item\WindowsInformationProtection\WindowsInformationProtectionRequestBuilder;
-use Microsoft\Graph\Generated\Models\ManagedAppPolicy;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\DeviceAppManagement\ManagedAppRegistrations\Item\IntendedPolicies\Item\TargetApps\TargetAppsRequestBuilder;
+use Microsoft\Graph\Models\ManagedAppPolicy;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -21,13 +18,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ManagedAppPolicyItemRequestBuilder 
 {
-    /**
-     * The managedAppProtection property
-    */
-    public function managedAppProtection(): ManagedAppProtectionRequestBuilder {
-        return new ManagedAppProtectionRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
     /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
@@ -46,23 +36,9 @@ class ManagedAppPolicyItemRequestBuilder
     }
     
     /**
-     * The targetedManagedAppProtection property
-    */
-    public function targetedManagedAppProtection(): TargetedManagedAppProtectionRequestBuilder {
-        return new TargetedManagedAppProtectionRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
-    
-    /**
-     * The windowsInformationProtection property
-    */
-    public function windowsInformationProtection(): WindowsInformationProtectionRequestBuilder {
-        return new WindowsInformationProtectionRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Instantiates a new ManagedAppPolicyItemRequestBuilder and sets the default values.

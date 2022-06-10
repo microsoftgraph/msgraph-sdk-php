@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\InstallSummary;
+namespace Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\InstallSummary;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

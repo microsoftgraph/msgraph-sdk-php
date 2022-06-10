@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\Items\Item\Subscriptions\Item;
+namespace Microsoft\Graph\Drive\Items\Item\Subscriptions\Item;
 
 class SubscriptionItemRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item;
+namespace Microsoft\Graph\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item;
 
 class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration 
 {

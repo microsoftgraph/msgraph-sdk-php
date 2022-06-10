@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -82,11 +82,18 @@ class DeviceCompliancePolicy extends Entity implements Parsable
      * @return DeviceCompliancePolicy
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceCompliancePolicy {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.deviceCompliancePolicy': return new DeviceCompliancePolicy();
+                case '#microsoft.graph.androidCompliancePolicy': return new AndroidCompliancePolicy();
+                case '#microsoft.graph.androidWorkProfileCompliancePolicy': return new AndroidWorkProfileCompliancePolicy();
+                case '#microsoft.graph.iosCompliancePolicy': return new IosCompliancePolicy();
+                case '#microsoft.graph.macOSCompliancePolicy': return new MacOSCompliancePolicy();
+                case '#microsoft.graph.windows10CompliancePolicy': return new Windows10CompliancePolicy();
+                case '#microsoft.graph.windows10MobileCompliancePolicy': return new Windows10MobileCompliancePolicy();
+                case '#microsoft.graph.windows81CompliancePolicy': return new Windows81CompliancePolicy();
+                case '#microsoft.graph.windowsPhone81CompliancePolicy': return new WindowsPhone81CompliancePolicy();
             }
         }
         return new DeviceCompliancePolicy();

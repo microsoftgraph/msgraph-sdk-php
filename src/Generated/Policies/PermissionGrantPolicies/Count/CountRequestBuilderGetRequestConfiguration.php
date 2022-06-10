@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Count;
+namespace Microsoft\Graph\Policies\PermissionGrantPolicies\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

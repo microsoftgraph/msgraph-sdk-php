@@ -1,20 +1,20 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item;
+namespace Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Assign\AssignRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Assignments\Item\ManagedEBookAssignmentItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates\DeviceStatesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates\Item\DeviceInstallStateItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\InstallSummary\InstallSummaryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\Item\UserInstallStateSummaryItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\UserStateSummaryRequestBuilder;
-use Microsoft\Graph\Generated\Models\ManagedEBook;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\Assign\AssignRequestBuilder;
+use Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\Assignments\AssignmentsRequestBuilder;
+use Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\Assignments\Item\ManagedEBookAssignmentItemRequestBuilder;
+use Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\DeviceStates\DeviceStatesRequestBuilder;
+use Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\DeviceStates\Item\DeviceInstallStateItemRequestBuilder;
+use Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\InstallSummary\InstallSummaryRequestBuilder;
+use Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\Item\UserInstallStateSummaryItemRequestBuilder;
+use Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\UserStateSummaryRequestBuilder;
+use Microsoft\Graph\Models\ManagedEBook;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -76,7 +76,7 @@ class ManagedEBookItemRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.managedEBooks.item.assignments.item collection
+     * Gets an item from the Microsoft\Graph.deviceAppManagement.managedEBooks.item.assignments.item collection
      * @param string $id Unique identifier of the item
      * @return ManagedEBookAssignmentItemRequestBuilder
     */
@@ -185,7 +185,7 @@ class ManagedEBookItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.managedEBooks.item.deviceStates.item collection
+     * Gets an item from the Microsoft\Graph.deviceAppManagement.managedEBooks.item.deviceStates.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceInstallStateItemRequestBuilder
     */
@@ -235,7 +235,7 @@ class ManagedEBookItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.managedEBooks.item.userStateSummary.item collection
+     * Gets an item from the Microsoft\Graph.deviceAppManagement.managedEBooks.item.userStateSummary.item collection
      * @param string $id Unique identifier of the item
      * @return UserInstallStateSummaryItemRequestBuilder
     */

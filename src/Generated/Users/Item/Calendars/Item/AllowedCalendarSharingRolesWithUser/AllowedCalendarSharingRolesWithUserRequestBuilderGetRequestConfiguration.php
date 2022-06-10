@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Calendars\Item\AllowedCalendarSharingRolesWithUser;
+namespace Microsoft\Graph\Users\Item\Calendars\Item\AllowedCalendarSharingRolesWithUser;
 
 class AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration 
 {

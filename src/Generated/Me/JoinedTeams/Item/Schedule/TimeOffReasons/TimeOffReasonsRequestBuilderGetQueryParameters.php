@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\TimeOffReasons;
+namespace Microsoft\Graph\Me\JoinedTeams\Item\Schedule\TimeOffReasons;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

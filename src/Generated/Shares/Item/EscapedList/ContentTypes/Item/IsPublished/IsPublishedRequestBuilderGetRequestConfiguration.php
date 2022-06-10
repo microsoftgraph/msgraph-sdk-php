@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\IsPublished;
+namespace Microsoft\Graph\Shares\Item\EscapedList\ContentTypes\Item\IsPublished;
 
 class IsPublishedRequestBuilderGetRequestConfiguration 
 {

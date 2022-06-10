@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleRequests\Item\DirectoryScope;
+namespace Microsoft\Graph\RoleManagement\Directory\RoleAssignmentScheduleRequests\Item\DirectoryScope;
 
 class DirectoryScopeRequestBuilderGetRequestConfiguration 
 {

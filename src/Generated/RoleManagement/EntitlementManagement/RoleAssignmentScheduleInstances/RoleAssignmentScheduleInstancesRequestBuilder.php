@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleInstances;
+namespace Microsoft\Graph\RoleManagement\EntitlementManagement\RoleAssignmentScheduleInstances;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UnifiedRoleAssignmentScheduleInstance;
-use Microsoft\Graph\Generated\Models\UnifiedRoleAssignmentScheduleInstanceCollectionResponse;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleInstances\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleInstances\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\UnifiedRoleAssignmentScheduleInstance;
+use Microsoft\Graph\Models\UnifiedRoleAssignmentScheduleInstanceCollectionResponse;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleAssignmentScheduleInstances\Count\CountRequestBuilder;
+use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleAssignmentScheduleInstances\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

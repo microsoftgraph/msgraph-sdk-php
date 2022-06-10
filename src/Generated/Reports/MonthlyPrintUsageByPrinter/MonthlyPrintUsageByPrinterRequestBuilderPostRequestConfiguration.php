@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByPrinter;
+namespace Microsoft\Graph\Reports\MonthlyPrintUsageByPrinter;
 
 class MonthlyPrintUsageByPrinterRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Contracts\Item;
+namespace Microsoft\Graph\Contracts\Item;
 
 class ContractItemRequestBuilderGetRequestConfiguration 
 {

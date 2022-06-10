@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionAppLearningSummaries;
+namespace Microsoft\Graph\DeviceManagement\WindowsInformationProtectionAppLearningSummaries;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionAppLearningSummaries\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\WindowsInformationProtectionAppLearningSummary;
-use Microsoft\Graph\Generated\Models\WindowsInformationProtectionAppLearningSummaryCollectionResponse;
+use Microsoft\Graph\DeviceManagement\WindowsInformationProtectionAppLearningSummaries\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\WindowsInformationProtectionAppLearningSummary;
+use Microsoft\Graph\Models\WindowsInformationProtectionAppLearningSummaryCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

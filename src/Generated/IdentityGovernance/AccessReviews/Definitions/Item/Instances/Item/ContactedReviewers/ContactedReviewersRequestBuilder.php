@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\ContactedReviewers;
+namespace Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\ContactedReviewers;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\ContactedReviewers\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\AccessReviewReviewer;
-use Microsoft\Graph\Generated\Models\AccessReviewReviewerCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\ContactedReviewers\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\AccessReviewReviewer;
+use Microsoft\Graph\Models\AccessReviewReviewerCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

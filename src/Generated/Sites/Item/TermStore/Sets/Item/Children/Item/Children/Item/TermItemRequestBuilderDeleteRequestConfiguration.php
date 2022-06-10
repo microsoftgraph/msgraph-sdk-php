@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\Children\Item\Children\Item;
+namespace Microsoft\Graph\Sites\Item\TermStore\Sets\Item\Children\Item\Children\Item;
 
 class TermItemRequestBuilderDeleteRequestConfiguration 
 {

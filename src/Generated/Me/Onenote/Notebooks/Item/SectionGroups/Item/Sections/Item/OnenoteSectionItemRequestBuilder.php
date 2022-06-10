@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item;
+namespace Microsoft\Graph\Me\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\CopyToNotebook\CopyToNotebookRequestBuilder;
-use Microsoft\Graph\Generated\Me\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\CopyToSectionGroup\CopyToSectionGroupRequestBuilder;
-use Microsoft\Graph\Generated\Me\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\Pages\Item\OnenotePageItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\Pages\PagesRequestBuilder;
-use Microsoft\Graph\Generated\Me\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\ParentNotebook\ParentNotebookRequestBuilder;
-use Microsoft\Graph\Generated\Me\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\ParentSectionGroup\ParentSectionGroupRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\OnenoteSection;
+use Microsoft\Graph\Me\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\CopyToNotebook\CopyToNotebookRequestBuilder;
+use Microsoft\Graph\Me\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\CopyToSectionGroup\CopyToSectionGroupRequestBuilder;
+use Microsoft\Graph\Me\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\Pages\Item\OnenotePageItemRequestBuilder;
+use Microsoft\Graph\Me\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\Pages\PagesRequestBuilder;
+use Microsoft\Graph\Me\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\ParentNotebook\ParentNotebookRequestBuilder;
+use Microsoft\Graph\Me\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\ParentSectionGroup\ParentSectionGroupRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\OnenoteSection;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -191,7 +191,7 @@ class OnenoteSectionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.onenote.notebooks.item.sectionGroups.item.sections.item.pages.item collection
+     * Gets an item from the Microsoft\Graph.me.onenote.notebooks.item.sectionGroups.item.sections.item.pages.item collection
      * @param string $id Unique identifier of the item
      * @return OnenotePageItemRequestBuilder
     */

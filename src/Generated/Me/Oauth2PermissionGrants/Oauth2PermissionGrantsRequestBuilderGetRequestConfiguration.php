@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Oauth2PermissionGrants;
+namespace Microsoft\Graph\Me\Oauth2PermissionGrants;
 
 class Oauth2PermissionGrantsRequestBuilderGetRequestConfiguration 
 {

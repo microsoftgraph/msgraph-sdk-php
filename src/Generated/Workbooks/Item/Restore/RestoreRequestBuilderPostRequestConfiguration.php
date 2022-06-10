@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\Restore;
+namespace Microsoft\Graph\Workbooks\Item\Restore;
 
 class RestoreRequestBuilderPostRequestConfiguration 
 {

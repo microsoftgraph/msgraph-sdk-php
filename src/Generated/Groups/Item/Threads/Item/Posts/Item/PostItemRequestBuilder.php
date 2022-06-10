@@ -1,23 +1,23 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item;
+namespace Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\Attachments\AttachmentsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\Attachments\Item\AttachmentItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\Forward\ForwardRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\InReplyToRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\Reply\ReplyRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Post;
+use Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\Attachments\AttachmentsRequestBuilder;
+use Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\Attachments\Item\AttachmentItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\Extensions\ExtensionsRequestBuilder;
+use Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\Extensions\Item\ExtensionItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\Forward\ForwardRequestBuilder;
+use Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\InReplyTo\InReplyToRequestBuilder;
+use Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\Reply\ReplyRequestBuilder;
+use Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Post;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -93,7 +93,7 @@ class PostItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.threads.item.posts.item.attachments.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.threads.item.posts.item.attachments.item collection
      * @param string $id Unique identifier of the item
      * @return AttachmentItemRequestBuilder
     */
@@ -136,7 +136,7 @@ class PostItemRequestBuilder
     }
 
     /**
-     * Read-only. Nullable.
+     * Get posts from groups
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -202,7 +202,7 @@ class PostItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.threads.item.posts.item.extensions.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.threads.item.posts.item.extensions.item collection
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */
@@ -213,7 +213,7 @@ class PostItemRequestBuilder
     }
 
     /**
-     * Read-only. Nullable.
+     * Get posts from groups
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -232,7 +232,7 @@ class PostItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.threads.item.posts.item.multiValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.threads.item.posts.item.multiValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
     */
@@ -263,7 +263,7 @@ class PostItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.threads.item.posts.item.singleValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.threads.item.posts.item.singleValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
     */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Domains\Item;
+namespace Microsoft\Graph\Domains\Item;
 
 class DomainItemRequestBuilderDeleteRequestConfiguration 
 {

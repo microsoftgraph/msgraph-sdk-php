@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security;
+namespace Microsoft\Graph\Security;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security;
-use Microsoft\Graph\Generated\Security\Alerts\AlertsRequestBuilder;
-use Microsoft\Graph\Generated\Security\Alerts\Item\AlertItemRequestBuilder;
-use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\Item\SecureScoreControlProfileItemRequestBuilder;
-use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\SecureScoreControlProfilesRequestBuilder;
-use Microsoft\Graph\Generated\Security\SecureScores\Item\SecureScoreItemRequestBuilder;
-use Microsoft\Graph\Generated\Security\SecureScores\SecureScoresRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Security;
+use Microsoft\Graph\Security\Alerts\AlertsRequestBuilder;
+use Microsoft\Graph\Security\Alerts\Item\AlertItemRequestBuilder;
+use Microsoft\Graph\Security\SecureScoreControlProfiles\Item\SecureScoreControlProfileItemRequestBuilder;
+use Microsoft\Graph\Security\SecureScoreControlProfiles\SecureScoreControlProfilesRequestBuilder;
+use Microsoft\Graph\Security\SecureScores\Item\SecureScoreItemRequestBuilder;
+use Microsoft\Graph\Security\SecureScores\SecureScoresRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -60,7 +60,7 @@ class SecurityRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.security.alerts.item collection
+     * Gets an item from the Microsoft\Graph.security.alerts.item collection
      * @param string $id Unique identifier of the item
      * @return AlertItemRequestBuilder
     */
@@ -168,7 +168,7 @@ class SecurityRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.security.secureScoreControlProfiles.item collection
+     * Gets an item from the Microsoft\Graph.security.secureScoreControlProfiles.item collection
      * @param string $id Unique identifier of the item
      * @return SecureScoreControlProfileItemRequestBuilder
     */
@@ -179,7 +179,7 @@ class SecurityRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.security.secureScores.item collection
+     * Gets an item from the Microsoft\Graph.security.secureScores.item collection
      * @param string $id Unique identifier of the item
      * @return SecureScoreItemRequestBuilder
     */

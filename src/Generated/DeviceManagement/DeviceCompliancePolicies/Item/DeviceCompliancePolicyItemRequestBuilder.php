@@ -1,26 +1,26 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item;
+namespace Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Assign\AssignRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Assignments\Item\DeviceCompliancePolicyAssignmentItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceSettingStateSummaries\DeviceSettingStateSummariesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceSettingStateSummaries\Item\SettingStateDeviceSummaryItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceStatuses\DeviceStatusesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceStatuses\Item\DeviceComplianceDeviceStatusItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceStatusOverview\DeviceStatusOverviewRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\ScheduleActionsForRules\ScheduleActionsForRulesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\ScheduledActionsForRule\Item\DeviceComplianceScheduledActionForRuleItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\ScheduledActionsForRule\ScheduledActionsForRuleRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\UserStatuses\Item\DeviceComplianceUserStatusItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\UserStatuses\UserStatusesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\UserStatusOverview\UserStatusOverviewRequestBuilder;
-use Microsoft\Graph\Generated\Models\DeviceCompliancePolicy;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\Assign\AssignRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\Assignments\AssignmentsRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\Assignments\Item\DeviceCompliancePolicyAssignmentItemRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\DeviceSettingStateSummaries\DeviceSettingStateSummariesRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\DeviceSettingStateSummaries\Item\SettingStateDeviceSummaryItemRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\DeviceStatuses\DeviceStatusesRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\DeviceStatuses\Item\DeviceComplianceDeviceStatusItemRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\DeviceStatusOverview\DeviceStatusOverviewRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\ScheduleActionsForRules\ScheduleActionsForRulesRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\ScheduledActionsForRule\Item\DeviceComplianceScheduledActionForRuleItemRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\ScheduledActionsForRule\ScheduledActionsForRuleRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\UserStatuses\Item\DeviceComplianceUserStatusItemRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\UserStatuses\UserStatusesRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\UserStatusOverview\UserStatusOverviewRequestBuilder;
+use Microsoft\Graph\Models\DeviceCompliancePolicy;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -110,7 +110,7 @@ class DeviceCompliancePolicyItemRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceCompliancePolicies.item.assignments.item collection
+     * Gets an item from the Microsoft\Graph.deviceManagement.deviceCompliancePolicies.item.assignments.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceCompliancePolicyAssignmentItemRequestBuilder
     */
@@ -219,7 +219,7 @@ class DeviceCompliancePolicyItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceCompliancePolicies.item.deviceSettingStateSummaries.item collection
+     * Gets an item from the Microsoft\Graph.deviceManagement.deviceCompliancePolicies.item.deviceSettingStateSummaries.item collection
      * @param string $id Unique identifier of the item
      * @return SettingStateDeviceSummaryItemRequestBuilder
     */
@@ -230,7 +230,7 @@ class DeviceCompliancePolicyItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceCompliancePolicies.item.deviceStatuses.item collection
+     * Gets an item from the Microsoft\Graph.deviceManagement.deviceCompliancePolicies.item.deviceStatuses.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceComplianceDeviceStatusItemRequestBuilder
     */
@@ -280,7 +280,7 @@ class DeviceCompliancePolicyItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceCompliancePolicies.item.scheduledActionsForRule.item collection
+     * Gets an item from the Microsoft\Graph.deviceManagement.deviceCompliancePolicies.item.scheduledActionsForRule.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceComplianceScheduledActionForRuleItemRequestBuilder
     */
@@ -291,7 +291,7 @@ class DeviceCompliancePolicyItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceCompliancePolicies.item.userStatuses.item collection
+     * Gets an item from the Microsoft\Graph.deviceManagement.deviceCompliancePolicies.item.userStatuses.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceComplianceUserStatusItemRequestBuilder
     */

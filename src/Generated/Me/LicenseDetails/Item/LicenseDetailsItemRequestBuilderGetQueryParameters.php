@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\LicenseDetails\Item;
+namespace Microsoft\Graph\Me\LicenseDetails\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

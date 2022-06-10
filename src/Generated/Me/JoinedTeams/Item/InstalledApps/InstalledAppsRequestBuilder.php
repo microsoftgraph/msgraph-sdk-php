@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\InstalledApps;
+namespace Microsoft\Graph\Me\JoinedTeams\Item\InstalledApps;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\InstalledApps\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TeamsAppInstallation;
-use Microsoft\Graph\Generated\Models\TeamsAppInstallationCollectionResponse;
+use Microsoft\Graph\Me\JoinedTeams\Item\InstalledApps\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\TeamsAppInstallation;
+use Microsoft\Graph\Models\TeamsAppInstallationCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

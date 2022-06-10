@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -37,11 +37,11 @@ class Operation extends Entity implements Parsable
      * @return Operation
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): Operation {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.operation': return new Operation();
+                case '#microsoft.graph.onenoteOperation': return new OnenoteOperation();
             }
         }
         return new Operation();

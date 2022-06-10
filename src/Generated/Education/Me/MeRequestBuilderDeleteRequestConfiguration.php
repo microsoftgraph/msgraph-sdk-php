@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Me;
+namespace Microsoft\Graph\Education\Me;
 
 class MeRequestBuilderDeleteRequestConfiguration 
 {

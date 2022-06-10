@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\SubscribeToTone;
+namespace Microsoft\Graph\Communications\Calls\Item\SubscribeToTone;
 
 class SubscribeToToneRequestBuilderPostRequestConfiguration 
 {

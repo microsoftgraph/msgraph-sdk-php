@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Calendar\CalendarView\Item\Instances\Item\MultiValueExtendedProperties;
+namespace Microsoft\Graph\Users\Item\Calendar\CalendarView\Item\Instances\Item\MultiValueExtendedProperties;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\MultiValueLegacyExtendedProperty;
-use Microsoft\Graph\Generated\Models\MultiValueLegacyExtendedPropertyCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Calendar\CalendarView\Item\Instances\Item\MultiValueExtendedProperties\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\MultiValueLegacyExtendedProperty;
+use Microsoft\Graph\Models\MultiValueLegacyExtendedPropertyCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Users\Item\Calendar\CalendarView\Item\Instances\Item\MultiValueExtendedProperties\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

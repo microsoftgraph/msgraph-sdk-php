@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Members\Item;
+namespace Microsoft\Graph\Users\Item\JoinedTeams\Item\Channels\Item\Members\Item;
 
 class ConversationMemberItemRequestBuilderGetRequestConfiguration 
 {

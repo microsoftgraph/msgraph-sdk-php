@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\FollowedSites\Item;
+namespace Microsoft\Graph\Me\FollowedSites\Item;
 
 class SiteItemRequestBuilderGetRequestConfiguration 
 {

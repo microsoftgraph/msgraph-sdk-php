@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Insights\Shared\Count;
+namespace Microsoft\Graph\Users\Item\Insights\Shared\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

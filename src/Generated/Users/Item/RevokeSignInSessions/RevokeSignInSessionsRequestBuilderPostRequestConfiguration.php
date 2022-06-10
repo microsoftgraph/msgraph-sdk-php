@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\RevokeSignInSessions;
+namespace Microsoft\Graph\Users\Item\RevokeSignInSessions;
 
 class RevokeSignInSessionsRequestBuilderPostRequestConfiguration 
 {

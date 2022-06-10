@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -190,7 +190,7 @@ class Group extends DirectoryObject implements Parsable
     private ?array $membersWithLicenseErrors = null;
     
     /**
-     * @var Onenote|null $onenote Read-only.
+     * @var Onenote|null $onenote The onenote property
     */
     private ?Onenote $onenote = null;
     
@@ -714,7 +714,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onenote property value. Read-only.
+     * Gets the onenote property value. The onenote property
      * @return Onenote|null
     */
     public function getOnenote(): ?Onenote {
@@ -1307,7 +1307,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onenote property value. Read-only.
+     * Sets the onenote property value. The onenote property
      *  @param Onenote|null $value Value to set for the onenote property.
     */
     public function setOnenote(?Onenote $value ): void {

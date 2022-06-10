@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\ListItem\Versions\Item;
+namespace Microsoft\Graph\Workbooks\Item\ListItem\Versions\Item;
 
 class ListItemVersionItemRequestBuilderGetRequestConfiguration 
 {

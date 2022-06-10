@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item;
+namespace Microsoft\Graph\Users\Item;
 
 class UserItemRequestBuilderPatchRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Places\Room\Count;
+namespace Microsoft\Graph\Places\Room\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

@@ -1,20 +1,21 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Chats\Item;
+namespace Microsoft\Graph\Me\Chats\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Chats\Item\InstalledApps\InstalledAppsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Chats\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Chats\Item\Members\Item\ConversationMemberItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Chats\Item\Members\MembersRequestBuilder;
-use Microsoft\Graph\Generated\Me\Chats\Item\Messages\Item\ChatMessageItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Chats\Item\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Generated\Me\Chats\Item\Tabs\Item\TeamsTabItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Chats\Item\Tabs\TabsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Chat;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Me\Chats\Item\InstalledApps\InstalledAppsRequestBuilder;
+use Microsoft\Graph\Me\Chats\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
+use Microsoft\Graph\Me\Chats\Item\Members\Item\ConversationMemberItemRequestBuilder;
+use Microsoft\Graph\Me\Chats\Item\Members\MembersRequestBuilder;
+use Microsoft\Graph\Me\Chats\Item\Messages\Item\ChatMessageItemRequestBuilder;
+use Microsoft\Graph\Me\Chats\Item\Messages\MessagesRequestBuilder;
+use Microsoft\Graph\Me\Chats\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
+use Microsoft\Graph\Me\Chats\Item\Tabs\Item\TeamsTabItemRequestBuilder;
+use Microsoft\Graph\Me\Chats\Item\Tabs\TabsRequestBuilder;
+use Microsoft\Graph\Models\Chat;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -55,6 +56,13 @@ class ChatItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * The sendActivityNotification property
+    */
+    public function sendActivityNotification(): SendActivityNotificationRequestBuilder {
+        return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * The tabs property
@@ -186,7 +194,7 @@ class ChatItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.chats.item.installedApps.item collection
+     * Gets an item from the Microsoft\Graph.me.chats.item.installedApps.item collection
      * @param string $id Unique identifier of the item
      * @return TeamsAppInstallationItemRequestBuilder
     */
@@ -197,7 +205,7 @@ class ChatItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.chats.item.members.item collection
+     * Gets an item from the Microsoft\Graph.me.chats.item.members.item collection
      * @param string $id Unique identifier of the item
      * @return ConversationMemberItemRequestBuilder
     */
@@ -208,7 +216,7 @@ class ChatItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.chats.item.messages.item collection
+     * Gets an item from the Microsoft\Graph.me.chats.item.messages.item collection
      * @param string $id Unique identifier of the item
      * @return ChatMessageItemRequestBuilder
     */
@@ -239,7 +247,7 @@ class ChatItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.chats.item.tabs.item collection
+     * Gets an item from the Microsoft\Graph.me.chats.item.tabs.item collection
      * @param string $id Unique identifier of the item
      * @return TeamsTabItemRequestBuilder
     */

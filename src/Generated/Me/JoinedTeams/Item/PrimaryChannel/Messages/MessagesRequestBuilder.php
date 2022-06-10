@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages;
+namespace Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\Messages;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Models\ChatMessage;
-use Microsoft\Graph\Generated\Models\ChatMessageCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\Messages\Count\CountRequestBuilder;
+use Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\Messages\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Models\ChatMessage;
+use Microsoft\Graph\Models\ChatMessageCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

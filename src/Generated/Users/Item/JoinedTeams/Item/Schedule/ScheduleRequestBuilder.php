@@ -1,31 +1,31 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule;
+namespace Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Schedule;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\OfferShiftRequests\Item\OfferShiftRequestItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\OfferShiftRequests\OfferShiftRequestsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\OpenShiftChangeRequests\Item\OpenShiftChangeRequestItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\OpenShiftChangeRequests\OpenShiftChangeRequestsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\OpenShifts\Item\OpenShiftItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\OpenShifts\OpenShiftsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\SchedulingGroups\Item\SchedulingGroupItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\SchedulingGroups\SchedulingGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\Share\ShareRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\Shifts\Item\ShiftItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\Shifts\ShiftsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\SwapShiftsChangeRequests\Item\SwapShiftsChangeRequestItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\SwapShiftsChangeRequests\SwapShiftsChangeRequestsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeOffReasons\Item\TimeOffReasonItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeOffReasons\TimeOffReasonsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeOffRequests\Item\TimeOffRequestItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeOffRequests\TimeOffRequestsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\TimesOff\Item\TimeOffItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\TimesOff\TimesOffRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Schedule;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\OfferShiftRequests\Item\OfferShiftRequestItemRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\OfferShiftRequests\OfferShiftRequestsRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\OpenShiftChangeRequests\Item\OpenShiftChangeRequestItemRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\OpenShiftChangeRequests\OpenShiftChangeRequestsRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\OpenShifts\Item\OpenShiftItemRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\OpenShifts\OpenShiftsRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\SchedulingGroups\Item\SchedulingGroupItemRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\SchedulingGroups\SchedulingGroupsRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\Share\ShareRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\Shifts\Item\ShiftItemRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\Shifts\ShiftsRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\SwapShiftsChangeRequests\Item\SwapShiftsChangeRequestItemRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\SwapShiftsChangeRequests\SwapShiftsChangeRequestsRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\TimeOffReasons\Item\TimeOffReasonItemRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\TimeOffReasons\TimeOffReasonsRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\TimeOffRequests\Item\TimeOffRequestItemRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\TimeOffRequests\TimeOffRequestsRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\TimesOff\Item\TimeOffItemRequestBuilder;
+use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\TimesOff\TimesOffRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -239,7 +239,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.joinedTeams.item.schedule.offerShiftRequests.item collection
+     * Gets an item from the Microsoft\Graph.users.item.joinedTeams.item.schedule.offerShiftRequests.item collection
      * @param string $id Unique identifier of the item
      * @return OfferShiftRequestItemRequestBuilder
     */
@@ -250,7 +250,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.joinedTeams.item.schedule.openShiftChangeRequests.item collection
+     * Gets an item from the Microsoft\Graph.users.item.joinedTeams.item.schedule.openShiftChangeRequests.item collection
      * @param string $id Unique identifier of the item
      * @return OpenShiftChangeRequestItemRequestBuilder
     */
@@ -261,7 +261,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.joinedTeams.item.schedule.openShifts.item collection
+     * Gets an item from the Microsoft\Graph.users.item.joinedTeams.item.schedule.openShifts.item collection
      * @param string $id Unique identifier of the item
      * @return OpenShiftItemRequestBuilder
     */
@@ -292,7 +292,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.joinedTeams.item.schedule.schedulingGroups.item collection
+     * Gets an item from the Microsoft\Graph.users.item.joinedTeams.item.schedule.schedulingGroups.item collection
      * @param string $id Unique identifier of the item
      * @return SchedulingGroupItemRequestBuilder
     */
@@ -303,7 +303,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.joinedTeams.item.schedule.shifts.item collection
+     * Gets an item from the Microsoft\Graph.users.item.joinedTeams.item.schedule.shifts.item collection
      * @param string $id Unique identifier of the item
      * @return ShiftItemRequestBuilder
     */
@@ -314,7 +314,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.joinedTeams.item.schedule.swapShiftsChangeRequests.item collection
+     * Gets an item from the Microsoft\Graph.users.item.joinedTeams.item.schedule.swapShiftsChangeRequests.item collection
      * @param string $id Unique identifier of the item
      * @return SwapShiftsChangeRequestItemRequestBuilder
     */
@@ -325,7 +325,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.joinedTeams.item.schedule.timeOffReasons.item collection
+     * Gets an item from the Microsoft\Graph.users.item.joinedTeams.item.schedule.timeOffReasons.item collection
      * @param string $id Unique identifier of the item
      * @return TimeOffReasonItemRequestBuilder
     */
@@ -336,7 +336,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.joinedTeams.item.schedule.timeOffRequests.item collection
+     * Gets an item from the Microsoft\Graph.users.item.joinedTeams.item.schedule.timeOffRequests.item collection
      * @param string $id Unique identifier of the item
      * @return TimeOffRequestItemRequestBuilder
     */
@@ -347,7 +347,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.joinedTeams.item.schedule.timesOff.item collection
+     * Gets an item from the Microsoft\Graph.users.item.joinedTeams.item.schedule.timesOff.item collection
      * @param string $id Unique identifier of the item
      * @return TimeOffItemRequestBuilder
     */

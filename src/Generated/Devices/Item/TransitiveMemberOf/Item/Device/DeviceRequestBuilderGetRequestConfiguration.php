@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\Item\Device;
+namespace Microsoft\Graph\Devices\Item\TransitiveMemberOf\Item\Device;
 
 class DeviceRequestBuilderGetRequestConfiguration 
 {

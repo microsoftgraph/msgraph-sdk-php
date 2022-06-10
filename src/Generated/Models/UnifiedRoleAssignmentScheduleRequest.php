@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -89,7 +89,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
     private ?TicketInfo $ticketInfo = null;
     
     /**
-     * Instantiates a new unifiedRoleAssignmentScheduleRequest and sets the default values.
+     * Instantiates a new UnifiedRoleAssignmentScheduleRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();

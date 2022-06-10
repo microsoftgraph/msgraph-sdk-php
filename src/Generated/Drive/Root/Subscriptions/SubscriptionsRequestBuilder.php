@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\Root\Subscriptions;
+namespace Microsoft\Graph\Drive\Root\Subscriptions;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drive\Root\Subscriptions\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Subscription;
-use Microsoft\Graph\Generated\Models\SubscriptionCollectionResponse;
+use Microsoft\Graph\Drive\Root\Subscriptions\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Subscription;
+use Microsoft\Graph\Models\SubscriptionCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

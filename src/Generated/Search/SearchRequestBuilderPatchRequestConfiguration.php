@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Search;
+namespace Microsoft\Graph\Search;
 
 class SearchRequestBuilderPatchRequestConfiguration 
 {

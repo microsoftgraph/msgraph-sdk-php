@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\Item\Sync;
+namespace Microsoft\Graph\DeviceManagement\ExchangeConnectors\Item\Sync;
 
 class SyncRequestBuilderPostRequestConfiguration 
 {

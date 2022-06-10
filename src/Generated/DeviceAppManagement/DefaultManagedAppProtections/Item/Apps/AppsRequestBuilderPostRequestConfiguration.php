@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\DefaultManagedAppProtections\Item\Apps;
+namespace Microsoft\Graph\DeviceAppManagement\DefaultManagedAppProtections\Item\Apps;
 
 class AppsRequestBuilderPostRequestConfiguration 
 {

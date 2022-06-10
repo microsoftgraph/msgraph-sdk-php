@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -49,7 +49,7 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
     private ?OnenoteUserRole $userRole = null;
     
     /**
-     * Instantiates a new notebook and sets the default values.
+     * Instantiates a new Notebook and sets the default values.
     */
     public function __construct() {
         parent::__construct();

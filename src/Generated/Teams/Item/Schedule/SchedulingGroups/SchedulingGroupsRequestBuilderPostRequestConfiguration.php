@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Schedule\SchedulingGroups;
+namespace Microsoft\Graph\Teams\Item\Schedule\SchedulingGroups;
 
 class SchedulingGroupsRequestBuilderPostRequestConfiguration 
 {

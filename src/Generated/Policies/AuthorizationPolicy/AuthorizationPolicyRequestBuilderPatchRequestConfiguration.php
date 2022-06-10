@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\AuthorizationPolicy;
+namespace Microsoft\Graph\Policies\AuthorizationPolicy;
 
 class AuthorizationPolicyRequestBuilderPatchRequestConfiguration 
 {

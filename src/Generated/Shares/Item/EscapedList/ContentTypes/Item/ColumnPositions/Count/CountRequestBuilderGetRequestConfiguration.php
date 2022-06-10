@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\ColumnPositions\Count;
+namespace Microsoft\Graph\Shares\Item\EscapedList\ContentTypes\Item\ColumnPositions\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

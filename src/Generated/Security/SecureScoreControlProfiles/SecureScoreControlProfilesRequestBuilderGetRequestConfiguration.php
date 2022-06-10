@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\SecureScoreControlProfiles;
+namespace Microsoft\Graph\Security\SecureScoreControlProfiles;
 
 class SecureScoreControlProfilesRequestBuilderGetRequestConfiguration 
 {

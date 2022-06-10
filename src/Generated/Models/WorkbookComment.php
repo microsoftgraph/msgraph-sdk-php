@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -19,7 +19,7 @@ class WorkbookComment extends Entity implements Parsable
     private ?string $contentType = null;
     
     /**
-     * @var array<WorkbookCommentReply>|null $replies Read-only. Nullable.
+     * @var array<WorkbookCommentReply>|null $replies The replies property
     */
     private ?array $replies = null;
     
@@ -69,7 +69,7 @@ class WorkbookComment extends Entity implements Parsable
     }
 
     /**
-     * Gets the replies property value. Read-only. Nullable.
+     * Gets the replies property value. The replies property
      * @return array<WorkbookCommentReply>|null
     */
     public function getReplies(): ?array {
@@ -104,7 +104,7 @@ class WorkbookComment extends Entity implements Parsable
     }
 
     /**
-     * Sets the replies property value. Read-only. Nullable.
+     * Sets the replies property value. The replies property
      *  @param array<WorkbookCommentReply>|null $value Value to set for the replies property.
     */
     public function setReplies(?array $value ): void {

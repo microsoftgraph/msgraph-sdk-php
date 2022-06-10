@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\Contacts\Item\SingleValueExtendedProperties\Item;
+namespace Microsoft\Graph\Users\Item\ContactFolders\Item\Contacts\Item\SingleValueExtendedProperties\Item;
 
 class SingleValueLegacyExtendedPropertyItemRequestBuilderDeleteRequestConfiguration 
 {

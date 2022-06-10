@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Photos\Item;
+namespace Microsoft\Graph\Users\Item\Photos\Item;
 
 class ProfilePhotoItemRequestBuilderPatchRequestConfiguration 
 {

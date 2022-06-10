@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\ClaimsMappingPolicies\Count;
+namespace Microsoft\Graph\Policies\ClaimsMappingPolicies\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

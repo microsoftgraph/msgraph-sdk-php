@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BookingCurrencies\Count;
+namespace Microsoft\Graph\Solutions\BookingCurrencies\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

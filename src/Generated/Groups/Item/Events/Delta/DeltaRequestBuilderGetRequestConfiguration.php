@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Events\Delta;
+namespace Microsoft\Graph\Groups\Item\Events\Delta;
 
 class DeltaRequestBuilderGetRequestConfiguration 
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\FilterByCurrentUserWithOn;
+namespace Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\FilterByCurrentUserWithOn;
 
-use Microsoft\Graph\Generated\Models\AccessReviewScheduleDefinition;
+use Microsoft\Graph\Models\AccessReviewScheduleDefinition;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

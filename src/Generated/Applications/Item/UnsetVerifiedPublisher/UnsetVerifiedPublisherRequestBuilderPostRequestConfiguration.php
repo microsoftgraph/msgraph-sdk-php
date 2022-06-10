@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\UnsetVerifiedPublisher;
+namespace Microsoft\Graph\Applications\Item\UnsetVerifiedPublisher;
 
 class UnsetVerifiedPublisherRequestBuilderPostRequestConfiguration 
 {

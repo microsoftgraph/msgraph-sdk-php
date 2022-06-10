@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item;
+namespace Microsoft\Graph\DeviceManagement\RemoteAssistancePartners\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\BeginOnboarding\BeginOnboardingRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\Disconnect\DisconnectRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\RemoteAssistancePartner;
+use Microsoft\Graph\DeviceManagement\RemoteAssistancePartners\Item\BeginOnboarding\BeginOnboardingRequestBuilder;
+use Microsoft\Graph\DeviceManagement\RemoteAssistancePartners\Item\Disconnect\DisconnectRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\RemoteAssistancePartner;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

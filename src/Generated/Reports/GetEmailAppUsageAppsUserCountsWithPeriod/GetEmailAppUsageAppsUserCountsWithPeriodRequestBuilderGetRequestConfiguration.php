@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetEmailAppUsageAppsUserCountsWithPeriod;
+namespace Microsoft\Graph\Reports\GetEmailAppUsageAppsUserCountsWithPeriod;
 
 class GetEmailAppUsageAppsUserCountsWithPeriodRequestBuilderGetRequestConfiguration 
 {

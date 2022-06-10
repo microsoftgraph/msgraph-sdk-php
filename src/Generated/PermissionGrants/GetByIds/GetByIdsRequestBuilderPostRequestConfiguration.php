@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\PermissionGrants\GetByIds;
+namespace Microsoft\Graph\PermissionGrants\GetByIds;
 
 class GetByIdsRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Connections\Item;
+namespace Microsoft\Graph\Connections\Item;
 
 class ExternalConnectionItemRequestBuilderPatchRequestConfiguration 
 {

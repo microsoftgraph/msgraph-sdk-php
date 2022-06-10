@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\ManagedDevices\Item\WindowsDefenderUpdateSignatures;
+namespace Microsoft\Graph\Me\ManagedDevices\Item\WindowsDefenderUpdateSignatures;
 
 class WindowsDefenderUpdateSignaturesRequestBuilderPostRequestConfiguration 
 {

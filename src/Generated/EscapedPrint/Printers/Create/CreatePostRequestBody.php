@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Printers\Create;
+namespace Microsoft\Graph\EscapedPrint\Printers\Create;
 
-use Microsoft\Graph\Generated\Models\PrintCertificateSigningRequest;
+use Microsoft\Graph\Models\PrintCertificateSigningRequest;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

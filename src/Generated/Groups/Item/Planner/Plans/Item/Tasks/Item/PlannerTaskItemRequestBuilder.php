@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\Tasks\Item;
+namespace Microsoft\Graph\Groups\Item\Planner\Plans\Item\Tasks\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\Tasks\Item\AssignedToTaskBoardFormat\AssignedToTaskBoardFormatRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\Tasks\Item\BucketTaskBoardFormat\BucketTaskBoardFormatRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\Tasks\Item\Details\DetailsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\Tasks\Item\ProgressTaskBoardFormat\ProgressTaskBoardFormatRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\PlannerTask;
+use Microsoft\Graph\Groups\Item\Planner\Plans\Item\Tasks\Item\AssignedToTaskBoardFormat\AssignedToTaskBoardFormatRequestBuilder;
+use Microsoft\Graph\Groups\Item\Planner\Plans\Item\Tasks\Item\BucketTaskBoardFormat\BucketTaskBoardFormatRequestBuilder;
+use Microsoft\Graph\Groups\Item\Planner\Plans\Item\Tasks\Item\Details\DetailsRequestBuilder;
+use Microsoft\Graph\Groups\Item\Planner\Plans\Item\Tasks\Item\ProgressTaskBoardFormat\ProgressTaskBoardFormatRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\PlannerTask;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

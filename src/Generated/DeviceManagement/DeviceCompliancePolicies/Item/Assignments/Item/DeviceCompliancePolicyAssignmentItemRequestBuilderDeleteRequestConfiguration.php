@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Assignments\Item;
+namespace Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\Assignments\Item;
 
 class DeviceCompliancePolicyAssignmentItemRequestBuilderDeleteRequestConfiguration 
 {

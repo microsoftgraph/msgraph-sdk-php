@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Drives\Item\Root\Children;
+namespace Microsoft\Graph\Me\Drives\Item\Root\Children;
 
 class ChildrenRequestBuilderGetRequestConfiguration 
 {

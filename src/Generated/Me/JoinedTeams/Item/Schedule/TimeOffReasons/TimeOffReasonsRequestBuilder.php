@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\TimeOffReasons;
+namespace Microsoft\Graph\Me\JoinedTeams\Item\Schedule\TimeOffReasons;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\TimeOffReasons\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TimeOffReason;
-use Microsoft\Graph\Generated\Models\TimeOffReasonCollectionResponse;
+use Microsoft\Graph\Me\JoinedTeams\Item\Schedule\TimeOffReasons\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\TimeOffReason;
+use Microsoft\Graph\Models\TimeOffReasonCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

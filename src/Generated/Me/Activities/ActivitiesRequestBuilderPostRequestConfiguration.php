@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Activities;
+namespace Microsoft\Graph\Me\Activities;
 
 class ActivitiesRequestBuilderPostRequestConfiguration 
 {

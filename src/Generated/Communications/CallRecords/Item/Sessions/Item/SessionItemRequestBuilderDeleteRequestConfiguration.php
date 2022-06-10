@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\Item;
+namespace Microsoft\Graph\Communications\CallRecords\Item\Sessions\Item;
 
 class SessionItemRequestBuilderDeleteRequestConfiguration 
 {

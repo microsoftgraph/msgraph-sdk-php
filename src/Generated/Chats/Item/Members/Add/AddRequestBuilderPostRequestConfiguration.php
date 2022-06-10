@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\Item\Members\Add;
+namespace Microsoft\Graph\Chats\Item\Members\Add;
 
 class AddRequestBuilderPostRequestConfiguration 
 {

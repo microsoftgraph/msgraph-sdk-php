@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Connections\Item\Schema;
+namespace Microsoft\Graph\Connections\Item\Schema;
 
 class SchemaRequestBuilderDeleteRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\ValidatePermission;
+namespace Microsoft\Graph\Workbooks\Item\ValidatePermission;
 
 class ValidatePermissionRequestBuilderPostRequestConfiguration 
 {

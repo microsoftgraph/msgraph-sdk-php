@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors;
+namespace Microsoft\Graph\DeviceManagement\ExchangeConnectors;
 
 class ExchangeConnectorsRequestBuilderPostRequestConfiguration 
 {

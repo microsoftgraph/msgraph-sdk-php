@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryObjects\Item;
+namespace Microsoft\Graph\DirectoryObjects\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DirectoryObjects\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryObjects\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryObjects\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryObjects\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryObjects\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryObject;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\DirectoryObjects\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\DirectoryObjects\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\DirectoryObjects\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\DirectoryObjects\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\DirectoryObjects\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Models\DirectoryObject;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

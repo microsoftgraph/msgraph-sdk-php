@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\Ref;
+namespace Microsoft\Graph\Education\Me\Assignments\Item\Categories\Ref;
 
 class RefRequestBuilderGetRequestConfiguration 
 {

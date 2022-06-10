@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Onenote\Pages\Item\Preview;
+namespace Microsoft\Graph\Sites\Item\Onenote\Pages\Item\Preview;
 
 class PreviewRequestBuilderGetRequestConfiguration 
 {

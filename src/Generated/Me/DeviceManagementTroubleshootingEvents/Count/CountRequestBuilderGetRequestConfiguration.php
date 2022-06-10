@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\DeviceManagementTroubleshootingEvents\Count;
+namespace Microsoft\Graph\Me\DeviceManagementTroubleshootingEvents\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Onenote\Pages\Count;
+namespace Microsoft\Graph\Users\Item\Onenote\Pages\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\Subscriptions;
+namespace Microsoft\Graph\Sites\Item\Lists\Item\Subscriptions;
 
 class SubscriptionsRequestBuilderPostRequestConfiguration 
 {

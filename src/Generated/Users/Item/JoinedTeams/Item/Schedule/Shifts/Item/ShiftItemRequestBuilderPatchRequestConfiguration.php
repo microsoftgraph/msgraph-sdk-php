@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\Shifts\Item;
+namespace Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\Shifts\Item;
 
 class ShiftItemRequestBuilderPatchRequestConfiguration 
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\GetEffectivePermissionsWithScope;
+namespace Microsoft\Graph\DeviceManagement\GetEffectivePermissionsWithScope;
 
-use Microsoft\Graph\Generated\Models\RolePermission;
+use Microsoft\Graph\Models\RolePermission;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

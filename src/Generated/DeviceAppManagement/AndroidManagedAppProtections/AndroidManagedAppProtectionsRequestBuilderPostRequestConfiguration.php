@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\AndroidManagedAppProtections;
+namespace Microsoft\Graph\DeviceAppManagement\AndroidManagedAppProtections;
 
 class AndroidManagedAppProtectionsRequestBuilderPostRequestConfiguration 
 {

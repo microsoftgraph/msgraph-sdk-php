@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies;
+namespace Microsoft\Graph\Policies;
 
 class PoliciesRequestBuilderPatchRequestConfiguration 
 {

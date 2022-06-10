@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\MailFolders\Item;
+namespace Microsoft\Graph\Me\MailFolders\Item;
 
 class MailFolderItemRequestBuilderDeleteRequestConfiguration 
 {

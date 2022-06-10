@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Item;
+namespace Microsoft\Graph\Groups\Item\PermissionGrants\Item;
 
 class ResourceSpecificPermissionGrantItemRequestBuilderDeleteRequestConfiguration 
 {

@@ -1,27 +1,27 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement;
+namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackageAssignmentApprovals\AccessPackageAssignmentApprovalsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackageAssignmentApprovals\Item\ApprovalItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\AccessPackagesRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\AccessPackageItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentPolicies\AssignmentPoliciesRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentPolicies\Item\AccessPackageAssignmentPolicyItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\AssignmentRequestsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\AccessPackageAssignmentRequestItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\AccessPackageAssignmentItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\CatalogsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackageCatalogItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\ConnectedOrganizationsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\ConnectedOrganizationItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Settings\SettingsRequestBuilder;
-use Microsoft\Graph\Generated\Models\EntitlementManagement;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\AccessPackageAssignmentApprovals\AccessPackageAssignmentApprovalsRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\AccessPackageAssignmentApprovals\Item\ApprovalItemRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\AccessPackages\AccessPackagesRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\AccessPackages\Item\AccessPackageItemRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\AssignmentPolicies\AssignmentPoliciesRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\AssignmentPolicies\Item\AccessPackageAssignmentPolicyItemRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\AssignmentRequests\AssignmentRequestsRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\AccessPackageAssignmentRequestItemRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\Assignments\AssignmentsRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\Assignments\Item\AccessPackageAssignmentItemRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\Catalogs\CatalogsRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackageCatalogItemRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\ConnectedOrganizationsRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\ConnectedOrganizationItemRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\EntitlementManagement\Settings\SettingsRequestBuilder;
+use Microsoft\Graph\Models\EntitlementManagement;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -104,7 +104,7 @@ class EntitlementManagementRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.accessPackageAssignmentApprovals.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.entitlementManagement.accessPackageAssignmentApprovals.item collection
      * @param string $id Unique identifier of the item
      * @return ApprovalItemRequestBuilder
     */
@@ -115,7 +115,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.accessPackages.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.entitlementManagement.accessPackages.item collection
      * @param string $id Unique identifier of the item
      * @return AccessPackageItemRequestBuilder
     */
@@ -126,7 +126,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.assignmentPolicies.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.entitlementManagement.assignmentPolicies.item collection
      * @param string $id Unique identifier of the item
      * @return AccessPackageAssignmentPolicyItemRequestBuilder
     */
@@ -137,7 +137,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.assignmentRequests.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.entitlementManagement.assignmentRequests.item collection
      * @param string $id Unique identifier of the item
      * @return AccessPackageAssignmentRequestItemRequestBuilder
     */
@@ -148,7 +148,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.assignments.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.entitlementManagement.assignments.item collection
      * @param string $id Unique identifier of the item
      * @return AccessPackageAssignmentItemRequestBuilder
     */
@@ -159,7 +159,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.catalogs.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.entitlementManagement.catalogs.item collection
      * @param string $id Unique identifier of the item
      * @return AccessPackageCatalogItemRequestBuilder
     */
@@ -170,7 +170,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.connectedOrganizations.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.entitlementManagement.connectedOrganizations.item collection
      * @param string $id Unique identifier of the item
      * @return ConnectedOrganizationItemRequestBuilder
     */

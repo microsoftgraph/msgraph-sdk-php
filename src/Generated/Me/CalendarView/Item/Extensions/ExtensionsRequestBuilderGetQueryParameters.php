@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\CalendarView\Item\Extensions;
+namespace Microsoft\Graph\Me\CalendarView\Item\Extensions;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

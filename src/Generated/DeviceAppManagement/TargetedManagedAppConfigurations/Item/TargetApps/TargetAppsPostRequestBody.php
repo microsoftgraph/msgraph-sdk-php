@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\TargetApps;
+namespace Microsoft\Graph\DeviceAppManagement\TargetedManagedAppConfigurations\Item\TargetApps;
 
-use Microsoft\Graph\Generated\Models\ManagedMobileApp;
-use Microsoft\Graph\Generated\Models\TargetedManagedAppGroupType;
+use Microsoft\Graph\Models\ManagedMobileApp;
+use Microsoft\Graph\Models\TargetedManagedAppGroupType;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

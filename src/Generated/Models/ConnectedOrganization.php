@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -25,7 +25,7 @@ class ConnectedOrganization extends Entity implements Parsable
     private ?string $displayName = null;
     
     /**
-     * @var array<DirectoryObject>|null $externalSponsors Nullable.
+     * @var array<DirectoryObject>|null $externalSponsors The externalSponsors property
     */
     private ?array $externalSponsors = null;
     
@@ -35,7 +35,7 @@ class ConnectedOrganization extends Entity implements Parsable
     private ?array $identitySources = null;
     
     /**
-     * @var array<DirectoryObject>|null $internalSponsors Nullable.
+     * @var array<DirectoryObject>|null $internalSponsors The internalSponsors property
     */
     private ?array $internalSponsors = null;
     
@@ -90,7 +90,7 @@ class ConnectedOrganization extends Entity implements Parsable
     }
 
     /**
-     * Gets the externalSponsors property value. Nullable.
+     * Gets the externalSponsors property value. The externalSponsors property
      * @return array<DirectoryObject>|null
     */
     public function getExternalSponsors(): ?array {
@@ -124,7 +124,7 @@ class ConnectedOrganization extends Entity implements Parsable
     }
 
     /**
-     * Gets the internalSponsors property value. Nullable.
+     * Gets the internalSponsors property value. The internalSponsors property
      * @return array<DirectoryObject>|null
     */
     public function getInternalSponsors(): ?array {
@@ -188,7 +188,7 @@ class ConnectedOrganization extends Entity implements Parsable
     }
 
     /**
-     * Sets the externalSponsors property value. Nullable.
+     * Sets the externalSponsors property value. The externalSponsors property
      *  @param array<DirectoryObject>|null $value Value to set for the externalSponsors property.
     */
     public function setExternalSponsors(?array $value ): void {
@@ -204,7 +204,7 @@ class ConnectedOrganization extends Entity implements Parsable
     }
 
     /**
-     * Sets the internalSponsors property value. Nullable.
+     * Sets the internalSponsors property value. The internalSponsors property
      *  @param array<DirectoryObject>|null $value Value to set for the internalSponsors property.
     */
     public function setInternalSponsors(?array $value ): void {

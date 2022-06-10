@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Services\Item\Endpoints\Item;
+namespace Microsoft\Graph\EscapedPrint\Services\Item\Endpoints\Item;
 
 class PrintServiceEndpointItemRequestBuilderDeleteRequestConfiguration 
 {

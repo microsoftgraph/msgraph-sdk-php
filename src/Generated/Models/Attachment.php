@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -47,11 +47,13 @@ class Attachment extends Entity implements Parsable
      * @return Attachment
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): Attachment {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.attachment': return new Attachment();
+                case '#microsoft.graph.fileAttachment': return new FileAttachment();
+                case '#microsoft.graph.itemAttachment': return new ItemAttachment();
+                case '#microsoft.graph.referenceAttachment': return new ReferenceAttachment();
             }
         }
         return new Attachment();

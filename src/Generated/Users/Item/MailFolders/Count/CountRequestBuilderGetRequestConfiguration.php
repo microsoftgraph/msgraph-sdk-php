@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Count;
+namespace Microsoft\Graph\Users\Item\MailFolders\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

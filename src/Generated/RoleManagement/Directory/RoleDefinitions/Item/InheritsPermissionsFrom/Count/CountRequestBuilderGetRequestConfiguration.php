@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleDefinitions\Item\InheritsPermissionsFrom\Count;
+namespace Microsoft\Graph\RoleManagement\Directory\RoleDefinitions\Item\InheritsPermissionsFrom\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

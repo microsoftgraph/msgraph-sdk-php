@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\GetEffectivePermissionsWithScope;
+namespace Microsoft\Graph\DeviceManagement\GetEffectivePermissionsWithScope;
 
 class GetEffectivePermissionsWithScopeRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ConditionalAccessSettings;
+namespace Microsoft\Graph\DeviceManagement\ConditionalAccessSettings;
 
 class ConditionalAccessSettingsRequestBuilderDeleteRequestConfiguration 
 {

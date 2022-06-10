@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\GetManagedAppDiagnosticStatuses;
+namespace Microsoft\Graph\Me\GetManagedAppDiagnosticStatuses;
 
-use Microsoft\Graph\Generated\Models\ManagedAppDiagnosticStatus;
+use Microsoft\Graph\Models\ManagedAppDiagnosticStatus;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

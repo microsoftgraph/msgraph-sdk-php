@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OfferShiftRequests;
+namespace Microsoft\Graph\Me\JoinedTeams\Item\Schedule\OfferShiftRequests;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Classes\Item\AssignmentCategories\Count;
+namespace Microsoft\Graph\Education\Classes\Item\AssignmentCategories\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

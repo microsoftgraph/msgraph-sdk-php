@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\AttendanceReports;
+namespace Microsoft\Graph\Communications\OnlineMeetings\Item\AttendanceReports;
 
 class AttendanceReportsRequestBuilderGetRequestConfiguration 
 {

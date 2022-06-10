@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -10,12 +10,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackage extends Entity implements Parsable 
 {
     /**
-     * @var array<AccessPackageAssignmentPolicy>|null $assignmentPolicies Read-only. Nullable.
+     * @var array<AccessPackageAssignmentPolicy>|null $assignmentPolicies The assignmentPolicies property
     */
     private ?array $assignmentPolicies = null;
     
     /**
-     * @var AccessPackageCatalog|null $catalog Read-only. Nullable.
+     * @var AccessPackageCatalog|null $catalog The catalog property
     */
     private ?AccessPackageCatalog $catalog = null;
     
@@ -61,7 +61,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Gets the assignmentPolicies property value. Read-only. Nullable.
+     * Gets the assignmentPolicies property value. The assignmentPolicies property
      * @return array<AccessPackageAssignmentPolicy>|null
     */
     public function getAssignmentPolicies(): ?array {
@@ -69,7 +69,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Gets the catalog property value. Read-only. Nullable.
+     * Gets the catalog property value. The catalog property
      * @return AccessPackageCatalog|null
     */
     public function getCatalog(): ?AccessPackageCatalog {
@@ -149,7 +149,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Sets the assignmentPolicies property value. Read-only. Nullable.
+     * Sets the assignmentPolicies property value. The assignmentPolicies property
      *  @param array<AccessPackageAssignmentPolicy>|null $value Value to set for the assignmentPolicies property.
     */
     public function setAssignmentPolicies(?array $value ): void {
@@ -157,7 +157,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Sets the catalog property value. Read-only. Nullable.
+     * Sets the catalog property value. The catalog property
      *  @param AccessPackageCatalog|null $value Value to set for the catalog property.
     */
     public function setCatalog(?AccessPackageCatalog $value ): void {

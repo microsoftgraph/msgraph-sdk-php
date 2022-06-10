@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Members\Add;
+namespace Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\Members\Add;
 
-use Microsoft\Graph\Generated\Models\ConversationMember;
+use Microsoft\Graph\Models\ConversationMember;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\AuditLogs\DirectoryAudits\Item;
+namespace Microsoft\Graph\AuditLogs\DirectoryAudits\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\DirectoryAudit;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\DirectoryAudit;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -65,7 +65,7 @@ class DirectoryAuditItemRequestBuilder
     }
 
     /**
-     * Read-only. Nullable.
+     * Get directoryAudits from auditLogs
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +131,7 @@ class DirectoryAuditItemRequestBuilder
     }
 
     /**
-     * Read-only. Nullable.
+     * Get directoryAudits from auditLogs
      * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

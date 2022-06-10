@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoleTemplates\Item;
+namespace Microsoft\Graph\DirectoryRoleTemplates\Item;
 
 class DirectoryRoleTemplateItemRequestBuilderDeleteRequestConfiguration 
 {

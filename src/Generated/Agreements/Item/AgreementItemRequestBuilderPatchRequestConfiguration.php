@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Agreements\Item;
+namespace Microsoft\Graph\Agreements\Item;
 
 class AgreementItemRequestBuilderPatchRequestConfiguration 
 {

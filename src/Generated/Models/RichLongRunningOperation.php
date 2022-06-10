@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -29,7 +29,7 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
     private ?string $type = null;
     
     /**
-     * Instantiates a new richLongRunningOperation and sets the default values.
+     * Instantiates a new RichLongRunningOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

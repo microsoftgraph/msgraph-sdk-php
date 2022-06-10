@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CustomQuestions\Count;
+namespace Microsoft\Graph\Solutions\BookingBusinesses\Item\CustomQuestions\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

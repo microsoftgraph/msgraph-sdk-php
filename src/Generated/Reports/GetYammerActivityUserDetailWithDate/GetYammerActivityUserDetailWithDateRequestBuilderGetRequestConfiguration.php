@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetYammerActivityUserDetailWithDate;
+namespace Microsoft\Graph\Reports\GetYammerActivityUserDetailWithDate;
 
 class GetYammerActivityUserDetailWithDateRequestBuilderGetRequestConfiguration 
 {

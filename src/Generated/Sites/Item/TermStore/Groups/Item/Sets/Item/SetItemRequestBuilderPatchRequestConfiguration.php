@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\TermStore\Groups\Item\Sets\Item;
+namespace Microsoft\Graph\Sites\Item\TermStore\Groups\Item\Sets\Item;
 
 class SetItemRequestBuilderPatchRequestConfiguration 
 {

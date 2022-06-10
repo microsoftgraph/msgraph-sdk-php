@@ -1,40 +1,40 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item;
+namespace Microsoft\Graph\Workbooks\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\DriveItem;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Workbooks\Item\Analytics\AnalyticsRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Checkin\CheckinRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Checkout\CheckoutRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Children\ChildrenRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Content\ContentRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Copy\CopyRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\CreateLink\CreateLinkRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\CreateUploadSession\CreateUploadSessionRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\DeltaWithToken\DeltaWithTokenRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Follow\FollowRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Invite\InviteRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\ListItem\ListItemRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Permissions\Item\PermissionItemRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Permissions\PermissionsRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Preview\PreviewRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\SearchWithQ\SearchWithQRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Subscriptions\Item\SubscriptionItemRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Subscriptions\SubscriptionsRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Thumbnails\Item\ThumbnailSetItemRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Thumbnails\ThumbnailsRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Unfollow\UnfollowRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\ValidatePermission\ValidatePermissionRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Versions\Item\DriveItemVersionItemRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\Versions\VersionsRequestBuilder;
+use Microsoft\Graph\Models\DriveItem;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Workbooks\Item\Analytics\AnalyticsRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Checkin\CheckinRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Checkout\CheckoutRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Children\ChildrenRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Content\ContentRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Copy\CopyRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\CreateLink\CreateLinkRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\CreateUploadSession\CreateUploadSessionRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\DeltaWithToken\DeltaWithTokenRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Follow\FollowRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Invite\InviteRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\ListItem\ListItemRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Permissions\Item\PermissionItemRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Permissions\PermissionsRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Preview\PreviewRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\SearchWithQ\SearchWithQRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Subscriptions\Item\SubscriptionItemRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Subscriptions\SubscriptionsRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Thumbnails\Item\ThumbnailSetItemRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Thumbnails\ThumbnailsRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Unfollow\UnfollowRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\ValidatePermission\ValidatePermissionRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Versions\Item\DriveItemVersionItemRequestBuilder;
+use Microsoft\Graph\Workbooks\Item\Versions\VersionsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -194,7 +194,7 @@ class DriveItemItemRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.workbooks.item.children.item collection
+     * Gets an item from the Microsoft\Graph.workbooks.item.children.item collection
      * @param string $id Unique identifier of the item
      * @return DriveItemItemRequestBuilder
     */
@@ -378,7 +378,7 @@ class DriveItemItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.workbooks.item.permissions.item collection
+     * Gets an item from the Microsoft\Graph.workbooks.item.permissions.item collection
      * @param string $id Unique identifier of the item
      * @return PermissionItemRequestBuilder
     */
@@ -398,7 +398,7 @@ class DriveItemItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.workbooks.item.subscriptions.item collection
+     * Gets an item from the Microsoft\Graph.workbooks.item.subscriptions.item collection
      * @param string $id Unique identifier of the item
      * @return SubscriptionItemRequestBuilder
     */
@@ -409,7 +409,7 @@ class DriveItemItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.workbooks.item.thumbnails.item collection
+     * Gets an item from the Microsoft\Graph.workbooks.item.thumbnails.item collection
      * @param string $id Unique identifier of the item
      * @return ThumbnailSetItemRequestBuilder
     */
@@ -420,7 +420,7 @@ class DriveItemItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.workbooks.item.versions.item collection
+     * Gets an item from the Microsoft\Graph.workbooks.item.versions.item collection
      * @param string $id Unique identifier of the item
      * @return DriveItemVersionItemRequestBuilder
     */

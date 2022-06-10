@@ -1,12 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Item;
+namespace Microsoft\Graph\Groups\Item\PermissionGrants\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrant;
+use Microsoft\Graph\Groups\Item\PermissionGrants\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Groups\Item\PermissionGrants\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Groups\Item\PermissionGrants\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Groups\Item\PermissionGrants\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Groups\Item\PermissionGrants\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\ResourceSpecificPermissionGrant;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -18,6 +23,34 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ResourceSpecificPermissionGrantItemRequestBuilder 
 {
     /**
+     * The checkMemberGroups property
+    */
+    public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
+        return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The checkMemberObjects property
+    */
+    public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
+        return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The getMemberGroups property
+    */
+    public function getMemberGroups(): GetMemberGroupsRequestBuilder {
+        return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The getMemberObjects property
+    */
+    public function getMemberObjects(): GetMemberObjectsRequestBuilder {
+        return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -26,6 +59,13 @@ class ResourceSpecificPermissionGrantItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * The restore property
+    */
+    public function restore(): RestoreRequestBuilder {
+        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\TermStore;
+namespace Microsoft\Graph\Models\TermStore;
 
 use DateTime;
-use Microsoft\Graph\Generated\Models\Entity;
-use Microsoft\Graph\Generated\Models\KeyValue;
+use Microsoft\Graph\Models\Entity;
+use Microsoft\Graph\Models\KeyValue;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

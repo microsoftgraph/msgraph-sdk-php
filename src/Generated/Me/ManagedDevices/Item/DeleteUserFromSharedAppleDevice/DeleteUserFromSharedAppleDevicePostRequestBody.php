@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\ManagedDevices\Item\DeleteUserFromSharedAppleDevice;
+namespace Microsoft\Graph\Me\ManagedDevices\Item\DeleteUserFromSharedAppleDevice;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

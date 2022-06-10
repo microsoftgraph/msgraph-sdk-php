@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilitySchedules;
+namespace Microsoft\Graph\RoleManagement\Directory\RoleEligibilitySchedules;
 
 class RoleEligibilitySchedulesRequestBuilderPostRequestConfiguration 
 {

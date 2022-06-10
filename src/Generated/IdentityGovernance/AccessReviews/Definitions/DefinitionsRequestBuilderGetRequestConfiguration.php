@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions;
+namespace Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions;
 
 class DefinitionsRequestBuilderGetRequestConfiguration 
 {

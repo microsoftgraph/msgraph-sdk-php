@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\CompleteMigration;
+namespace Microsoft\Graph\Teams\Item\PrimaryChannel\CompleteMigration;
 
 class CompleteMigrationRequestBuilderPostRequestConfiguration 
 {

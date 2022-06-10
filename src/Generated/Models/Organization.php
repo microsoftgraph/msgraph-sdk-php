@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -135,7 +135,7 @@ class Organization extends DirectoryObject implements Parsable
     private ?array $verifiedDomains = null;
     
     /**
-     * Instantiates a new organization and sets the default values.
+     * Instantiates a new Organization and sets the default values.
     */
     public function __construct() {
         parent::__construct();

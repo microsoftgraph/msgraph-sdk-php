@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\EscapedList\Items\Item;
+namespace Microsoft\Graph\Drive\EscapedList\Items\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drive\EscapedList\Items\Item\Analytics\AnalyticsRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\Items\Item\DriveItem\DriveItemRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\Items\Item\Fields\FieldsRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\Items\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\Items\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\Items\Item\Versions\Item\ListItemVersionItemRequestBuilder;
-use Microsoft\Graph\Generated\Drive\EscapedList\Items\Item\Versions\VersionsRequestBuilder;
-use Microsoft\Graph\Generated\Models\ListItem;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Drive\EscapedList\Items\Item\Analytics\AnalyticsRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\Items\Item\DriveItem\DriveItemRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\Items\Item\Fields\FieldsRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\Items\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\Items\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\Items\Item\Versions\Item\ListItemVersionItemRequestBuilder;
+use Microsoft\Graph\Drive\EscapedList\Items\Item\Versions\VersionsRequestBuilder;
+use Microsoft\Graph\Models\ListItem;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -224,7 +224,7 @@ class ListItemItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drive.list.items.item.versions.item collection
+     * Gets an item from the Microsoft\Graph.drive.list.items.item.versions.item collection
      * @param string $id Unique identifier of the item
      * @return ListItemVersionItemRequestBuilder
     */

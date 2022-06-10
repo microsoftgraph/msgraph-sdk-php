@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\EscapedList\Items\Item\Analytics;
+namespace Microsoft\Graph\Drive\EscapedList\Items\Item\Analytics;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ItemAnalytics;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\ItemAnalytics;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

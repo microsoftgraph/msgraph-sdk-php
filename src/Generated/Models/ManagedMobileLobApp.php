@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -41,11 +41,12 @@ class ManagedMobileLobApp extends ManagedApp implements Parsable
      * @return ManagedMobileLobApp
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedMobileLobApp {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.managedMobileLobApp': return new ManagedMobileLobApp();
+                case '#microsoft.graph.managedAndroidLobApp': return new ManagedAndroidLobApp();
+                case '#microsoft.graph.managedIOSLobApp': return new ManagedIOSLobApp();
             }
         }
         return new ManagedMobileLobApp();

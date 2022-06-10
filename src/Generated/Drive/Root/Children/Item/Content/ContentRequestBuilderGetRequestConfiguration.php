@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\Root\Children\Item\Content;
+namespace Microsoft\Graph\Drive\Root\Children\Item\Content;
 
 class ContentRequestBuilderGetRequestConfiguration 
 {

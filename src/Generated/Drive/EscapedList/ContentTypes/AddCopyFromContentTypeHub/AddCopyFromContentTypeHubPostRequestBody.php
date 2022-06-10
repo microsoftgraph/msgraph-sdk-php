@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\AddCopyFromContentTypeHub;
+namespace Microsoft\Graph\Drive\EscapedList\ContentTypes\AddCopyFromContentTypeHub;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Count;
+namespace Microsoft\Graph\IdentityGovernance\AccessReviews\HistoryDefinitions\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

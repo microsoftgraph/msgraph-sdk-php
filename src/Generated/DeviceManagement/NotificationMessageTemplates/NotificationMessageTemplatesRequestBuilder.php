@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates;
+namespace Microsoft\Graph\DeviceManagement\NotificationMessageTemplates;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\NotificationMessageTemplate;
-use Microsoft\Graph\Generated\Models\NotificationMessageTemplateCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\DeviceManagement\NotificationMessageTemplates\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\NotificationMessageTemplate;
+use Microsoft\Graph\Models\NotificationMessageTemplateCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

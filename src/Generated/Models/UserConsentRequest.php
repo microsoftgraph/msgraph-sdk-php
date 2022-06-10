@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -19,7 +19,7 @@ class UserConsentRequest extends Request implements Parsable
     private ?string $reason = null;
     
     /**
-     * Instantiates a new userConsentRequest and sets the default values.
+     * Instantiates a new UserConsentRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetOffice365ActivationsUserDetail;
+namespace Microsoft\Graph\Reports\GetOffice365ActivationsUserDetail;
 
 class GetOffice365ActivationsUserDetailRequestBuilderGetRequestConfiguration 
 {

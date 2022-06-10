@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Assignments;
+namespace Microsoft\Graph\DeviceAppManagement\MobileApps\Item\Assignments;
 
 class AssignmentsRequestBuilderGetRequestConfiguration 
 {

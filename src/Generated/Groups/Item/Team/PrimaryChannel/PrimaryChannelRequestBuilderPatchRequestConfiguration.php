@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel;
+namespace Microsoft\Graph\Groups\Item\Team\PrimaryChannel;
 
 class PrimaryChannelRequestBuilderPatchRequestConfiguration 
 {

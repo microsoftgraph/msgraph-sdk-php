@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item;
+namespace Microsoft\Graph\Identity\B2xUserFlows\Item\Languages\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\DefaultPagesRequestBuilder;
-use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\Item\UserFlowLanguagePageItemRequestBuilder as MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemDefaultPagesItemUserFlowLanguagePageItemRequestBuilder;
-use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\Item\UserFlowLanguagePageItemRequestBuilder as MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemOverridesPagesItemUserFlowLanguagePageItemRequestBuilder;
-use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\OverridesPagesRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UserFlowLanguageConfiguration;
+use Microsoft\Graph\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\DefaultPagesRequestBuilder;
+use Microsoft\Graph\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\Item\UserFlowLanguagePageItemRequestBuilder as MicrosoftGraphIdentityB2xUserFlowsItemLanguagesItemDefaultPagesItemUserFlowLanguagePageItemRequestBuilder;
+use Microsoft\Graph\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\Item\UserFlowLanguagePageItemRequestBuilder as MicrosoftGraphIdentityB2xUserFlowsItemLanguagesItemOverridesPagesItemUserFlowLanguagePageItemRequestBuilder;
+use Microsoft\Graph\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\OverridesPagesRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\UserFlowLanguageConfiguration;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -130,14 +130,14 @@ class UserFlowLanguageConfigurationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identity.b2xUserFlows.item.languages.item.defaultPages.item collection
+     * Gets an item from the Microsoft\Graph.identity.b2xUserFlows.item.languages.item.defaultPages.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemDefaultPagesItemUserFlowLanguagePageItemRequestBuilder
+     * @return MicrosoftGraphIdentityB2xUserFlowsItemLanguagesItemDefaultPagesItemUserFlowLanguagePageItemRequestBuilder
     */
-    public function defaultPagesById(string $id): MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemDefaultPagesItemUserFlowLanguagePageItemRequestBuilder {
+    public function defaultPagesById(string $id): MicrosoftGraphIdentityB2xUserFlowsItemLanguagesItemDefaultPagesItemUserFlowLanguagePageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['userFlowLanguagePage%2Did'] = $id;
-        return new MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemDefaultPagesItemUserFlowLanguagePageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphIdentityB2xUserFlowsItemLanguagesItemDefaultPagesItemUserFlowLanguagePageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -179,14 +179,14 @@ class UserFlowLanguageConfigurationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identity.b2xUserFlows.item.languages.item.overridesPages.item collection
+     * Gets an item from the Microsoft\Graph.identity.b2xUserFlows.item.languages.item.overridesPages.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemOverridesPagesItemUserFlowLanguagePageItemRequestBuilder
+     * @return MicrosoftGraphIdentityB2xUserFlowsItemLanguagesItemOverridesPagesItemUserFlowLanguagePageItemRequestBuilder
     */
-    public function overridesPagesById(string $id): MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemOverridesPagesItemUserFlowLanguagePageItemRequestBuilder {
+    public function overridesPagesById(string $id): MicrosoftGraphIdentityB2xUserFlowsItemLanguagesItemOverridesPagesItemUserFlowLanguagePageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['userFlowLanguagePage%2Did'] = $id;
-        return new MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemOverridesPagesItemUserFlowLanguagePageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphIdentityB2xUserFlowsItemLanguagesItemOverridesPagesItemUserFlowLanguagePageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

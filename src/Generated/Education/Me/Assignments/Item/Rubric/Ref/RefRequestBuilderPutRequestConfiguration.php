@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item\Rubric\Ref;
+namespace Microsoft\Graph\Education\Me\Assignments\Item\Rubric\Ref;
 
 class RefRequestBuilderPutRequestConfiguration 
 {

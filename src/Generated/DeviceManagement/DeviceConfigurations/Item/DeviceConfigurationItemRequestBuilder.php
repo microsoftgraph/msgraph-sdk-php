@@ -1,24 +1,24 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item;
+namespace Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\Assign\AssignRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\Assignments\Item\DeviceConfigurationAssignmentItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceSettingStateSummaries\DeviceSettingStateSummariesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceSettingStateSummaries\Item\SettingStateDeviceSummaryItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\DeviceStatusesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\Item\DeviceConfigurationDeviceStatusItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatusOverview\DeviceStatusOverviewRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\GetOmaSettingPlainTextValueWithSecretReferenceValueId\GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\UserStatuses\Item\DeviceConfigurationUserStatusItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\UserStatuses\UserStatusesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\UserStatusOverview\UserStatusOverviewRequestBuilder;
-use Microsoft\Graph\Generated\Models\DeviceConfiguration;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\Assign\AssignRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\Assignments\AssignmentsRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\Assignments\Item\DeviceConfigurationAssignmentItemRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\DeviceSettingStateSummaries\DeviceSettingStateSummariesRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\DeviceSettingStateSummaries\Item\SettingStateDeviceSummaryItemRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\DeviceStatusesRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\Item\DeviceConfigurationDeviceStatusItemRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\DeviceStatusOverview\DeviceStatusOverviewRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\GetOmaSettingPlainTextValueWithSecretReferenceValueId\GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\UserStatuses\Item\DeviceConfigurationUserStatusItemRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\UserStatuses\UserStatusesRequestBuilder;
+use Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\UserStatusOverview\UserStatusOverviewRequestBuilder;
+use Microsoft\Graph\Models\DeviceConfiguration;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -94,7 +94,7 @@ class DeviceConfigurationItemRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceConfigurations.item.assignments.item collection
+     * Gets an item from the Microsoft\Graph.deviceManagement.deviceConfigurations.item.assignments.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceConfigurationAssignmentItemRequestBuilder
     */
@@ -203,7 +203,7 @@ class DeviceConfigurationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceConfigurations.item.deviceSettingStateSummaries.item collection
+     * Gets an item from the Microsoft\Graph.deviceManagement.deviceConfigurations.item.deviceSettingStateSummaries.item collection
      * @param string $id Unique identifier of the item
      * @return SettingStateDeviceSummaryItemRequestBuilder
     */
@@ -214,7 +214,7 @@ class DeviceConfigurationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceConfigurations.item.deviceStatuses.item collection
+     * Gets an item from the Microsoft\Graph.deviceManagement.deviceConfigurations.item.deviceStatuses.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceConfigurationDeviceStatusItemRequestBuilder
     */
@@ -273,7 +273,7 @@ class DeviceConfigurationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceConfigurations.item.userStatuses.item collection
+     * Gets an item from the Microsoft\Graph.deviceManagement.deviceConfigurations.item.userStatuses.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceConfigurationUserStatusItemRequestBuilder
     */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews;
+namespace Microsoft\Graph\IdentityGovernance\AccessReviews;
 
 class AccessReviewsRequestBuilderDeleteRequestConfiguration 
 {

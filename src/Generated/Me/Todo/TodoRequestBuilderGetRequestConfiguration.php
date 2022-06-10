@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Todo;
+namespace Microsoft\Graph\Me\Todo;
 
 class TodoRequestBuilderGetRequestConfiguration 
 {

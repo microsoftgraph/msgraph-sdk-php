@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\Assign;
+namespace Microsoft\Graph\DeviceAppManagement\MobileAppConfigurations\Item\Assign;
 
-use Microsoft\Graph\Generated\Models\ManagedDeviceMobileAppConfigurationAssignment;
+use Microsoft\Graph\Models\ManagedDeviceMobileAppConfigurationAssignment;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

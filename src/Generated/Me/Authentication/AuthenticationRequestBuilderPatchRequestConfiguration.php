@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Authentication;
+namespace Microsoft\Graph\Me\Authentication;
 
 class AuthenticationRequestBuilderPatchRequestConfiguration 
 {

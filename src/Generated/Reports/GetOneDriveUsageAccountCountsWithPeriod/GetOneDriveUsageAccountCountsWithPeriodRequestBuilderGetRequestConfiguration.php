@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetOneDriveUsageAccountCountsWithPeriod;
+namespace Microsoft\Graph\Reports\GetOneDriveUsageAccountCountsWithPeriod;
 
 class GetOneDriveUsageAccountCountsWithPeriodRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Count;
+namespace Microsoft\Graph\Identity\B2xUserFlows\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

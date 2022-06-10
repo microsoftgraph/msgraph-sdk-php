@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Agreements\Item\File\Localizations;
+namespace Microsoft\Graph\Agreements\Item\File\Localizations;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Agreements\Item\File\Localizations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\AgreementFileLocalization;
-use Microsoft\Graph\Generated\Models\AgreementFileLocalizationCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Agreements\Item\File\Localizations\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\AgreementFileLocalization;
+use Microsoft\Graph\Models\AgreementFileLocalizationCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\TeamsTemplates;
+namespace Microsoft\Graph\TeamsTemplates;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TeamsTemplate;
-use Microsoft\Graph\Generated\Models\TeamsTemplateCollectionResponse;
-use Microsoft\Graph\Generated\TeamsTemplates\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\TeamsTemplate;
+use Microsoft\Graph\Models\TeamsTemplateCollectionResponse;
+use Microsoft\Graph\TeamsTemplates\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

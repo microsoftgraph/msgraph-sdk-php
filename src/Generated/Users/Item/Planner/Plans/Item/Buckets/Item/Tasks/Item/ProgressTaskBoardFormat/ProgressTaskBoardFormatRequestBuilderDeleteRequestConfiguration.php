@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Planner\Plans\Item\Buckets\Item\Tasks\Item\ProgressTaskBoardFormat;
+namespace Microsoft\Graph\Users\Item\Planner\Plans\Item\Buckets\Item\Tasks\Item\ProgressTaskBoardFormat;
 
 class ProgressTaskBoardFormatRequestBuilderDeleteRequestConfiguration 
 {

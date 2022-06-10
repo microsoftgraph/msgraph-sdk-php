@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\RegisteredDevices\Endpoint;
+namespace Microsoft\Graph\Users\Item\RegisteredDevices\Endpoint;
 
 class EndpointRequestBuilderGetRequestConfiguration 
 {

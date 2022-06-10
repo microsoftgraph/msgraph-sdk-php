@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -27,11 +27,28 @@ class DirectoryObject extends Entity implements Parsable
      * @return DirectoryObject
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): DirectoryObject {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.directoryObject': return new DirectoryObject();
+                case '#microsoft.graph.administrativeUnit': return new AdministrativeUnit();
+                case '#microsoft.graph.application': return new Application();
+                case '#microsoft.graph.appRoleAssignment': return new AppRoleAssignment();
+                case '#microsoft.graph.contract': return new Contract();
+                case '#microsoft.graph.device': return new Device();
+                case '#microsoft.graph.directoryObjectPartnerReference': return new DirectoryObjectPartnerReference();
+                case '#microsoft.graph.directoryRole': return new DirectoryRole();
+                case '#microsoft.graph.directoryRoleTemplate': return new DirectoryRoleTemplate();
+                case '#microsoft.graph.endpoint': return new Endpoint();
+                case '#microsoft.graph.extensionProperty': return new ExtensionProperty();
+                case '#microsoft.graph.group': return new Group();
+                case '#microsoft.graph.groupSettingTemplate': return new GroupSettingTemplate();
+                case '#microsoft.graph.organization': return new Organization();
+                case '#microsoft.graph.orgContact': return new OrgContact();
+                case '#microsoft.graph.policyBase': return new PolicyBase();
+                case '#microsoft.graph.resourceSpecificPermissionGrant': return new ResourceSpecificPermissionGrant();
+                case '#microsoft.graph.servicePrincipal': return new ServicePrincipal();
+                case '#microsoft.graph.user': return new User();
             }
         }
         return new DirectoryObject();

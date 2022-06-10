@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\EscapedList\Subscriptions;
+namespace Microsoft\Graph\Users\Item\Drives\Item\EscapedList\Subscriptions;
 
 class SubscriptionsRequestBuilderGetRequestConfiguration 
 {

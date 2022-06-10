@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -47,11 +47,12 @@ class ServiceAnnouncementBase extends Entity implements Parsable
      * @return ServiceAnnouncementBase
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ServiceAnnouncementBase {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.serviceAnnouncementBase': return new ServiceAnnouncementBase();
+                case '#microsoft.graph.serviceHealthIssue': return new ServiceHealthIssue();
+                case '#microsoft.graph.serviceUpdateMessage': return new ServiceUpdateMessage();
             }
         }
         return new ServiceAnnouncementBase();

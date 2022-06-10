@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\IosUpdateStatuses;
+namespace Microsoft\Graph\DeviceManagement\IosUpdateStatuses;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item;
+namespace Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\InstancesRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\AccessReviewInstanceItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Stop\StopRequestBuilder;
-use Microsoft\Graph\Generated\Models\AccessReviewScheduleDefinition;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\InstancesRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\AccessReviewInstanceItemRequestBuilder;
+use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Stop\StopRequestBuilder;
+use Microsoft\Graph\Models\AccessReviewScheduleDefinition;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -167,7 +167,7 @@ class AccessReviewScheduleDefinitionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.accessReviews.definitions.item.instances.item collection
+     * Gets an item from the Microsoft\Graph.identityGovernance.accessReviews.definitions.item.instances.item collection
      * @param string $id Unique identifier of the item
      * @return AccessReviewInstanceItemRequestBuilder
     */

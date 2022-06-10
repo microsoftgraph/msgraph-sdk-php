@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item;
+namespace Microsoft\Graph\Privacy\SubjectRightsRequests\Item;
 
 class SubjectRightsRequestItemRequestBuilderDeleteRequestConfiguration 
 {

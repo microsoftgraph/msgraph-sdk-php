@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\Terms\Item\Relations\Item;
+namespace Microsoft\Graph\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\Terms\Item\Relations\Item;
 
 class RelationItemRequestBuilderPatchRequestConfiguration 
 {

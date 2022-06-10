@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\AgreementAcceptances\Count;
+namespace Microsoft\Graph\Me\AgreementAcceptances\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

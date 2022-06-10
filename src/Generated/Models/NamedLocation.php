@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -37,11 +37,12 @@ class NamedLocation extends Entity implements Parsable
      * @return NamedLocation
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): NamedLocation {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.namedLocation': return new NamedLocation();
+                case '#microsoft.graph.countryNamedLocation': return new CountryNamedLocation();
+                case '#microsoft.graph.ipNamedLocation': return new IpNamedLocation();
             }
         }
         return new NamedLocation();

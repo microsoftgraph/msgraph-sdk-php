@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Planner\Tasks;
+namespace Microsoft\Graph\Me\Planner\Tasks;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

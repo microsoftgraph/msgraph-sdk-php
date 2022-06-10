@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -161,7 +161,7 @@ class Message extends OutlookItem implements Parsable
     private ?string $webLink = null;
     
     /**
-     * Instantiates a new message and sets the default values.
+     * Instantiates a new Message and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -173,13 +173,6 @@ class Message extends OutlookItem implements Parsable
      * @return Message
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): Message {
-        $mappingValueNode = ParseNode::getChildNode("@odata.type");
-        if ($mappingValueNode !== null) {
-            $mappingValue = $mappingValueNode->getStringValue();
-            switch ($mappingValue) {
-                case '#microsoft.graph.message': return new Message();
-            }
-        }
         return new Message();
     }
 

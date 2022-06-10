@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Planner\Tasks\Item\AssignedToTaskBoardFormat;
+namespace Microsoft\Graph\Me\Planner\Tasks\Item\AssignedToTaskBoardFormat;
 
 class AssignedToTaskBoardFormatRequestBuilderPatchRequestConfiguration 
 {

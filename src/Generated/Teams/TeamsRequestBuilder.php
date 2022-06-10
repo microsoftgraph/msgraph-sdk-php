@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams;
+namespace Microsoft\Graph\Teams;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Team;
-use Microsoft\Graph\Generated\Models\TeamCollectionResponse;
-use Microsoft\Graph\Generated\Teams\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Teams\GetAllMessages\GetAllMessagesRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Team;
+use Microsoft\Graph\Models\TeamCollectionResponse;
+use Microsoft\Graph\Teams\Count\CountRequestBuilder;
+use Microsoft\Graph\Teams\GetAllMessages\GetAllMessagesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

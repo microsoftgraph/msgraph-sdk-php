@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Connections\Item\Groups;
+namespace Microsoft\Graph\Connections\Item\Groups;
 
 class GroupsRequestBuilderPostRequestConfiguration 
 {

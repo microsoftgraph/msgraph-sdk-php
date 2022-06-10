@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\ConfirmCompromised;
+namespace Microsoft\Graph\IdentityProtection\RiskyUsers\ConfirmCompromised;
 
 class ConfirmCompromisedRequestBuilderPostRequestConfiguration 
 {

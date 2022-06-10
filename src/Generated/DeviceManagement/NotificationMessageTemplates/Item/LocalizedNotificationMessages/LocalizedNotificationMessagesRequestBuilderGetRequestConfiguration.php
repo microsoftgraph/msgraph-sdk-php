@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages;
+namespace Microsoft\Graph\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages;
 
 class LocalizedNotificationMessagesRequestBuilderGetRequestConfiguration 
 {

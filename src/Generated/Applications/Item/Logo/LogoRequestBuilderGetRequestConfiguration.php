@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\Logo;
+namespace Microsoft\Graph\Applications\Item\Logo;
 
 class LogoRequestBuilderGetRequestConfiguration 
 {

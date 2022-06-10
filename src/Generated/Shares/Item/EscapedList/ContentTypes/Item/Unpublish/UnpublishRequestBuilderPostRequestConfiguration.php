@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\Unpublish;
+namespace Microsoft\Graph\Shares\Item\EscapedList\ContentTypes\Item\Unpublish;
 
 class UnpublishRequestBuilderPostRequestConfiguration 
 {

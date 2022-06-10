@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Onenote\Notebooks\Item\Sections\Item\Pages;
+namespace Microsoft\Graph\Me\Onenote\Notebooks\Item\Sections\Item\Pages;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Onenote\Notebooks\Item\Sections\Item\Pages\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\OnenotePage;
-use Microsoft\Graph\Generated\Models\OnenotePageCollectionResponse;
+use Microsoft\Graph\Me\Onenote\Notebooks\Item\Sections\Item\Pages\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\OnenotePage;
+use Microsoft\Graph\Models\OnenotePageCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

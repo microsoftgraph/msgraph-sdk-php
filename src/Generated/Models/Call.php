@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Call extends Entity implements Parsable 
 {
     /**
-     * @var array<AudioRoutingGroup>|null $audioRoutingGroups Read-only. Nullable.
+     * @var array<AudioRoutingGroup>|null $audioRoutingGroups The audioRoutingGroups property
     */
     private ?array $audioRoutingGroups = null;
     
@@ -69,12 +69,12 @@ class Call extends Entity implements Parsable
     private ?string $myParticipantId = null;
     
     /**
-     * @var array<CommsOperation>|null $operations Read-only. Nullable.
+     * @var array<CommsOperation>|null $operations The operations property
     */
     private ?array $operations = null;
     
     /**
-     * @var array<Participant>|null $participants Read-only. Nullable.
+     * @var array<Participant>|null $participants The participants property
     */
     private ?array $participants = null;
     
@@ -140,7 +140,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the audioRoutingGroups property value. Read-only. Nullable.
+     * Gets the audioRoutingGroups property value. The audioRoutingGroups property
      * @return array<AudioRoutingGroup>|null
     */
     public function getAudioRoutingGroups(): ?array {
@@ -269,7 +269,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the operations property value. Read-only. Nullable.
+     * Gets the operations property value. The operations property
      * @return array<CommsOperation>|null
     */
     public function getOperations(): ?array {
@@ -277,7 +277,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the participants property value. Read-only. Nullable.
+     * Gets the participants property value. The participants property
      * @return array<Participant>|null
     */
     public function getParticipants(): ?array {
@@ -388,7 +388,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the audioRoutingGroups property value. Read-only. Nullable.
+     * Sets the audioRoutingGroups property value. The audioRoutingGroups property
      *  @param array<AudioRoutingGroup>|null $value Value to set for the audioRoutingGroups property.
     */
     public function setAudioRoutingGroups(?array $value ): void {
@@ -484,7 +484,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the operations property value. Read-only. Nullable.
+     * Sets the operations property value. The operations property
      *  @param array<CommsOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value ): void {
@@ -492,7 +492,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the participants property value. Read-only. Nullable.
+     * Sets the participants property value. The participants property
      *  @param array<Participant>|null $value Value to set for the participants property.
     */
     public function setParticipants(?array $value ): void {

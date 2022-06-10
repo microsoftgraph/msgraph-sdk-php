@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item;
+namespace Microsoft\Graph\Users\Item\CalendarGroups\Item;
 
 class CalendarGroupItemRequestBuilderDeleteRequestConfiguration 
 {

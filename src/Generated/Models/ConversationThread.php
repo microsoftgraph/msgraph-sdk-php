@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -30,7 +30,7 @@ class ConversationThread extends Entity implements Parsable
     private ?DateTime $lastDeliveredDateTime = null;
     
     /**
-     * @var array<Post>|null $posts Read-only. Nullable.
+     * @var array<Post>|null $posts The posts property
     */
     private ?array $posts = null;
     
@@ -122,7 +122,7 @@ class ConversationThread extends Entity implements Parsable
     }
 
     /**
-     * Gets the posts property value. Read-only. Nullable.
+     * Gets the posts property value. The posts property
      * @return array<Post>|null
     */
     public function getPosts(): ?array {
@@ -211,7 +211,7 @@ class ConversationThread extends Entity implements Parsable
     }
 
     /**
-     * Sets the posts property value. Read-only. Nullable.
+     * Sets the posts property value. The posts property
      *  @param array<Post>|null $value Value to set for the posts property.
     */
     public function setPosts(?array $value ): void {

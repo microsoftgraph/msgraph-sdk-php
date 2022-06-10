@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\EffectiveRules;
+namespace Microsoft\Graph\Policies\RoleManagementPolicies\Item\EffectiveRules;
 
 class EffectiveRulesRequestBuilderPostRequestConfiguration 
 {

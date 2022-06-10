@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\EscapedList\Operations\Count;
+namespace Microsoft\Graph\Users\Item\Drives\Item\EscapedList\Operations\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

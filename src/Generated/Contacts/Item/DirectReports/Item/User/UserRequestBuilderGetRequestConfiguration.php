@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Contacts\Item\DirectReports\Item\User;
+namespace Microsoft\Graph\Contacts\Item\DirectReports\Item\User;
 
 class UserRequestBuilderGetRequestConfiguration 
 {

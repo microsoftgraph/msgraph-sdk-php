@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Activities\Item\HistoryItems;
+namespace Microsoft\Graph\Users\Item\Activities\Item\HistoryItems;
 
 class HistoryItemsRequestBuilderPostRequestConfiguration 
 {

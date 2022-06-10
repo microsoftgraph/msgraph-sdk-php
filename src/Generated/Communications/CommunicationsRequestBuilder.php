@@ -1,21 +1,21 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications;
+namespace Microsoft\Graph\Communications;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Communications\CallRecords\CallRecordsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\CallRecords\Item\CallRecordItemRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\CallsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\CallItemRequestBuilder;
-use Microsoft\Graph\Generated\Communications\GetPresencesByUserId\GetPresencesByUserIdRequestBuilder;
-use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\OnlineMeetingItemRequestBuilder;
-use Microsoft\Graph\Generated\Communications\OnlineMeetings\OnlineMeetingsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Presences\Item\PresenceItemRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Presences\PresencesRequestBuilder;
-use Microsoft\Graph\Generated\Models\CloudCommunications;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Communications\CallRecords\CallRecordsRequestBuilder;
+use Microsoft\Graph\Communications\CallRecords\Item\CallRecordItemRequestBuilder;
+use Microsoft\Graph\Communications\Calls\CallsRequestBuilder;
+use Microsoft\Graph\Communications\Calls\Item\CallItemRequestBuilder;
+use Microsoft\Graph\Communications\GetPresencesByUserId\GetPresencesByUserIdRequestBuilder;
+use Microsoft\Graph\Communications\OnlineMeetings\Item\OnlineMeetingItemRequestBuilder;
+use Microsoft\Graph\Communications\OnlineMeetings\OnlineMeetingsRequestBuilder;
+use Microsoft\Graph\Communications\Presences\Item\PresenceItemRequestBuilder;
+use Microsoft\Graph\Communications\Presences\PresencesRequestBuilder;
+use Microsoft\Graph\Models\CloudCommunications;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -77,7 +77,7 @@ class CommunicationsRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.communications.callRecords.item collection
+     * Gets an item from the Microsoft\Graph.communications.callRecords.item collection
      * @param string $id Unique identifier of the item
      * @return CallRecordItemRequestBuilder
     */
@@ -88,7 +88,7 @@ class CommunicationsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.communications.calls.item collection
+     * Gets an item from the Microsoft\Graph.communications.calls.item collection
      * @param string $id Unique identifier of the item
      * @return CallItemRequestBuilder
     */
@@ -176,7 +176,7 @@ class CommunicationsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.communications.onlineMeetings.item collection
+     * Gets an item from the Microsoft\Graph.communications.onlineMeetings.item collection
      * @param string $id Unique identifier of the item
      * @return OnlineMeetingItemRequestBuilder
     */
@@ -207,7 +207,7 @@ class CommunicationsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.communications.presences.item collection
+     * Gets an item from the Microsoft\Graph.communications.presences.item collection
      * @param string $id Unique identifier of the item
      * @return PresenceItemRequestBuilder
     */

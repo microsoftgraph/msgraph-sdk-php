@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\AuditLogs\Provisioning\Item;
+namespace Microsoft\Graph\AuditLogs\Provisioning\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ProvisioningObjectSummary;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\ProvisioningObjectSummary;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

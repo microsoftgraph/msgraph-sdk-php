@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item;
+namespace Microsoft\Graph\Groups\Item\Conversations\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\ConversationThreadItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\ThreadsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Conversation;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Groups\Item\Conversations\Item\Threads\Item\ConversationThreadItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Conversations\Item\Threads\ThreadsRequestBuilder;
+use Microsoft\Graph\Models\Conversation;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -179,7 +179,7 @@ class ConversationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.conversations.item.threads.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.conversations.item.threads.item collection
      * @param string $id Unique identifier of the item
      * @return ConversationThreadItemRequestBuilder
     */

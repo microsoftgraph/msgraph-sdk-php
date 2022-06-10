@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions;
+namespace Microsoft\Graph\Solutions;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SolutionsRoot;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\BookingBusinessesRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\BookingBusinessItemRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingCurrencies\BookingCurrenciesRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingCurrencies\Item\BookingCurrencyItemRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\SolutionsRoot;
+use Microsoft\Graph\Solutions\BookingBusinesses\BookingBusinessesRequestBuilder;
+use Microsoft\Graph\Solutions\BookingBusinesses\Item\BookingBusinessItemRequestBuilder;
+use Microsoft\Graph\Solutions\BookingCurrencies\BookingCurrenciesRequestBuilder;
+use Microsoft\Graph\Solutions\BookingCurrencies\Item\BookingCurrencyItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -51,7 +51,7 @@ class SolutionsRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.solutions.bookingBusinesses.item collection
+     * Gets an item from the Microsoft\Graph.solutions.bookingBusinesses.item collection
      * @param string $id Unique identifier of the item
      * @return BookingBusinessItemRequestBuilder
     */
@@ -62,7 +62,7 @@ class SolutionsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.solutions.bookingCurrencies.item collection
+     * Gets an item from the Microsoft\Graph.solutions.bookingCurrencies.item collection
      * @param string $id Unique identifier of the item
      * @return BookingCurrencyItemRequestBuilder
     */

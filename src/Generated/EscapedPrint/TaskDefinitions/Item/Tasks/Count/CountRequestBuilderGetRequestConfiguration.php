@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\Item\Tasks\Count;
+namespace Microsoft\Graph\EscapedPrint\TaskDefinitions\Item\Tasks\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

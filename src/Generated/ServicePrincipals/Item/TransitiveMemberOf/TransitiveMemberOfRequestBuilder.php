@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf;
+namespace Microsoft\Graph\ServicePrincipals\Item\TransitiveMemberOf;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\Application\ApplicationRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\Device\DeviceRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\Group\GroupRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\OrgContact\OrgContactRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\ServicePrincipal\ServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\User\UserRequestBuilder;
+use Microsoft\Graph\Models\DirectoryObjectCollectionResponse;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\ServicePrincipals\Item\TransitiveMemberOf\Application\ApplicationRequestBuilder;
+use Microsoft\Graph\ServicePrincipals\Item\TransitiveMemberOf\Count\CountRequestBuilder;
+use Microsoft\Graph\ServicePrincipals\Item\TransitiveMemberOf\Device\DeviceRequestBuilder;
+use Microsoft\Graph\ServicePrincipals\Item\TransitiveMemberOf\Group\GroupRequestBuilder;
+use Microsoft\Graph\ServicePrincipals\Item\TransitiveMemberOf\OrgContact\OrgContactRequestBuilder;
+use Microsoft\Graph\ServicePrincipals\Item\TransitiveMemberOf\ServicePrincipal\ServicePrincipalRequestBuilder;
+use Microsoft\Graph\ServicePrincipals\Item\TransitiveMemberOf\User\UserRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

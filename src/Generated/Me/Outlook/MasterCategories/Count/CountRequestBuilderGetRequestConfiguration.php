@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Outlook\MasterCategories\Count;
+namespace Microsoft\Graph\Me\Outlook\MasterCategories\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

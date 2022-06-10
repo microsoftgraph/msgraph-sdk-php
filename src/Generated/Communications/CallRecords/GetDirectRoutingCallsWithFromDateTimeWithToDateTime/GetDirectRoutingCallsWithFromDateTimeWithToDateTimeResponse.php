@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\CallRecords\GetDirectRoutingCallsWithFromDateTimeWithToDateTime;
+namespace Microsoft\Graph\Communications\CallRecords\GetDirectRoutingCallsWithFromDateTimeWithToDateTime;
 
-use Microsoft\Graph\Generated\Models\CallRecords\DirectRoutingLogRow;
+use Microsoft\Graph\Models\CallRecords\DirectRoutingLogRow;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

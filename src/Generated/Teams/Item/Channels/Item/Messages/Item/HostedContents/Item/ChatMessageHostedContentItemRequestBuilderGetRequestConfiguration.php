@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item\Messages\Item\HostedContents\Item;
+namespace Microsoft\Graph\Teams\Item\Channels\Item\Messages\Item\HostedContents\Item;
 
 class ChatMessageHostedContentItemRequestBuilderGetRequestConfiguration 
 {

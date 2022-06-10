@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OpenShifts;
+namespace Microsoft\Graph\Me\JoinedTeams\Item\Schedule\OpenShifts;
 
 class OpenShiftsRequestBuilderPostRequestConfiguration 
 {

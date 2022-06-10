@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\File\Localizations\Count;
+namespace Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\Item\File\Localizations\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

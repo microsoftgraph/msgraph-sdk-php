@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryObjects\Item;
+namespace Microsoft\Graph\DirectoryObjects\Item;
 
 class DirectoryObjectItemRequestBuilderDeleteRequestConfiguration 
 {

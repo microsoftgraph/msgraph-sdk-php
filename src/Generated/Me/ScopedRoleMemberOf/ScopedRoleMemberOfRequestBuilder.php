@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\ScopedRoleMemberOf;
+namespace Microsoft\Graph\Me\ScopedRoleMemberOf;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\ScopedRoleMemberOf\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ScopedRoleMembership;
-use Microsoft\Graph\Generated\Models\ScopedRoleMembershipCollectionResponse;
+use Microsoft\Graph\Me\ScopedRoleMemberOf\Count\CountRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\ScopedRoleMembership;
+use Microsoft\Graph\Models\ScopedRoleMembershipCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

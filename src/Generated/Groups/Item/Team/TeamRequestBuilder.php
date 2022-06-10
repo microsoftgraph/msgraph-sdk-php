@@ -1,24 +1,29 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team;
+namespace Microsoft\Graph\Groups\Item\Team;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Team\Channels\ChannelsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\ChannelItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Group\GroupRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\InstalledApps\InstalledAppsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Members\Item\ConversationMemberItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Members\MembersRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Operations\Item\TeamsAsyncOperationItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\PrimaryChannelRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\ScheduleRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Template\TemplateRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Team;
+use Microsoft\Graph\Groups\Item\Team\Archive\ArchiveRequestBuilder;
+use Microsoft\Graph\Groups\Item\Team\Channels\ChannelsRequestBuilder;
+use Microsoft\Graph\Groups\Item\Team\Channels\Item\ChannelItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Team\CompleteMigration\CompleteMigrationRequestBuilder;
+use Microsoft\Graph\Groups\Item\Team\EscapedClone\CloneRequestBuilder;
+use Microsoft\Graph\Groups\Item\Team\Group\GroupRequestBuilder;
+use Microsoft\Graph\Groups\Item\Team\InstalledApps\InstalledAppsRequestBuilder;
+use Microsoft\Graph\Groups\Item\Team\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Team\Members\Item\ConversationMemberItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Team\Members\MembersRequestBuilder;
+use Microsoft\Graph\Groups\Item\Team\Operations\Item\TeamsAsyncOperationItemRequestBuilder;
+use Microsoft\Graph\Groups\Item\Team\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Groups\Item\Team\PrimaryChannel\PrimaryChannelRequestBuilder;
+use Microsoft\Graph\Groups\Item\Team\Schedule\ScheduleRequestBuilder;
+use Microsoft\Graph\Groups\Item\Team\SendActivityNotification\SendActivityNotificationRequestBuilder;
+use Microsoft\Graph\Groups\Item\Team\Template\TemplateRequestBuilder;
+use Microsoft\Graph\Groups\Item\Team\Unarchive\UnarchiveRequestBuilder;
+use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Models\Team;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -30,10 +35,31 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class TeamRequestBuilder 
 {
     /**
+     * The archive property
+    */
+    public function archive(): ArchiveRequestBuilder {
+        return new ArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * The channels property
     */
     public function channels(): ChannelsRequestBuilder {
         return new ChannelsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The completeMigration property
+    */
+    public function completeMigration(): CompleteMigrationRequestBuilder {
+        return new CompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The clone property
+    */
+    public function escapedClone(): CloneRequestBuilder {
+        return new CloneRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -89,10 +115,24 @@ class TeamRequestBuilder
     }
     
     /**
+     * The sendActivityNotification property
+    */
+    public function sendActivityNotification(): SendActivityNotificationRequestBuilder {
+        return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * The template property
     */
     public function template(): TemplateRequestBuilder {
         return new TemplateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The unarchive property
+    */
+    public function unarchive(): UnarchiveRequestBuilder {
+        return new UnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -101,7 +141,7 @@ class TeamRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.team.channels.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.team.channels.item collection
      * @param string $id Unique identifier of the item
      * @return ChannelItemRequestBuilder
     */
@@ -229,7 +269,7 @@ class TeamRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.team.installedApps.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.team.installedApps.item collection
      * @param string $id Unique identifier of the item
      * @return TeamsAppInstallationItemRequestBuilder
     */
@@ -240,7 +280,7 @@ class TeamRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.team.members.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.team.members.item collection
      * @param string $id Unique identifier of the item
      * @return ConversationMemberItemRequestBuilder
     */
@@ -251,7 +291,7 @@ class TeamRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.team.operations.item collection
+     * Gets an item from the Microsoft\Graph.groups.item.team.operations.item collection
      * @param string $id Unique identifier of the item
      * @return TeamsAsyncOperationItemRequestBuilder
     */

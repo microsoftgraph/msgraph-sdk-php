@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -49,7 +49,7 @@ class SharedDriveItem extends BaseItem implements Parsable
     private ?Site $site = null;
     
     /**
-     * Instantiates a new sharedDriveItem and sets the default values.
+     * Instantiates a new SharedDriveItem and sets the default values.
     */
     public function __construct() {
         parent::__construct();

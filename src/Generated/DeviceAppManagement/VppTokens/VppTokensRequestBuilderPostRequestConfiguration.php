@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\VppTokens;
+namespace Microsoft\Graph\DeviceAppManagement\VppTokens;
 
 class VppTokensRequestBuilderPostRequestConfiguration 
 {

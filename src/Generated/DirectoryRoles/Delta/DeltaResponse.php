@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoles\Delta;
+namespace Microsoft\Graph\DirectoryRoles\Delta;
 
-use Microsoft\Graph\Generated\Models\DirectoryRole;
+use Microsoft\Graph\Models\DirectoryRole;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

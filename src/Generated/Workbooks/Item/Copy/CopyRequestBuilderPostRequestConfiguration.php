@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Workbooks\Item\Copy;
+namespace Microsoft\Graph\Workbooks\Item\Copy;
 
 class CopyRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Messages\Item\Reply;
+namespace Microsoft\Graph\Me\Messages\Item\Reply;
 
 class ReplyRequestBuilderPostRequestConfiguration 
 {

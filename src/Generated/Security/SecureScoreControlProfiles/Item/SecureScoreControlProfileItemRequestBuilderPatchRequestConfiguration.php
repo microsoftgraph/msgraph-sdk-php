@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\Item;
+namespace Microsoft\Graph\Security\SecureScoreControlProfiles\Item;
 
 class SecureScoreControlProfileItemRequestBuilderPatchRequestConfiguration 
 {
