@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Directory\AdministrativeUnits;
+namespace Microsoft\Graph\Generated\Directory\AdministrativeUnits;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Directory\AdministrativeUnits\Count\CountRequestBuilder;
-use Microsoft\Graph\Directory\AdministrativeUnits\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Models\AdministrativeUnit;
-use Microsoft\Graph\Models\AdministrativeUnitCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Models\AdministrativeUnit;
+use Microsoft\Graph\Generated\Models\AdministrativeUnitCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

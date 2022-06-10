@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Chats\Item\Tabs;
+namespace Microsoft\Graph\Generated\Me\Chats\Item\Tabs;
 
 class TabsRequestBuilderPostRequestConfiguration 
 {

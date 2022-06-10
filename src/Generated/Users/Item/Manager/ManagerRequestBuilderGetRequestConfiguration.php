@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Manager;
+namespace Microsoft\Graph\Generated\Users\Item\Manager;
 
 class ManagerRequestBuilderGetRequestConfiguration 
 {

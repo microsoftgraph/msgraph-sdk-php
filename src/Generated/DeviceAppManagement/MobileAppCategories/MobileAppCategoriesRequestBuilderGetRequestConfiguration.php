@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\MobileAppCategories;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppCategories;
 
 class MobileAppCategoriesRequestBuilderGetRequestConfiguration 
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Communications\Calls\Item\Participants\Item;
+namespace Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Communications\Calls\Item\Participants\Item\Mute\MuteRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\Participants\Item\StartHoldMusic\StartHoldMusicRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\Participants\Item\StopHoldMusic\StopHoldMusicRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\Participant;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\Mute\MuteRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\StartHoldMusic\StartHoldMusicRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\StopHoldMusic\StopHoldMusicRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Participant;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

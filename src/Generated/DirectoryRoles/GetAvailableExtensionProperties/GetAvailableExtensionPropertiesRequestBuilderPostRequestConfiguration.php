@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DirectoryRoles\GetAvailableExtensionProperties;
+namespace Microsoft\Graph\Generated\DirectoryRoles\GetAvailableExtensionProperties;
 
 class GetAvailableExtensionPropertiesRequestBuilderPostRequestConfiguration 
 {

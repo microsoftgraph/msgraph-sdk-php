@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Onenote\Resources\Count;
+namespace Microsoft\Graph\Generated\Groups\Item\Onenote\Resources\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

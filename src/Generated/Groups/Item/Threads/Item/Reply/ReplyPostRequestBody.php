@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Threads\Item\Reply;
+namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Reply;
 
-use Microsoft\Graph\Models\Post;
+use Microsoft\Graph\Generated\Models\Post;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

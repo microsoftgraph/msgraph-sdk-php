@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\PermissionGrants;
+namespace Microsoft\Graph\Generated\PermissionGrants;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\ResourceSpecificPermissionGrant;
-use Microsoft\Graph\Models\ResourceSpecificPermissionGrantCollectionResponse;
-use Microsoft\Graph\PermissionGrants\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\PermissionGrants\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\PermissionGrants\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrant;
+use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrantCollectionResponse;
+use Microsoft\Graph\Generated\PermissionGrants\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\PermissionGrants\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\PermissionGrants\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

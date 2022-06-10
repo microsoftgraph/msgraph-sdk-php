@@ -1,20 +1,20 @@
 <?php
 
-namespace Microsoft\Graph\Identity\B2xUserFlows\Item;
+namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Identity\B2xUserFlows\Item\IdentityProviders\IdentityProvidersRequestBuilder;
-use Microsoft\Graph\Identity\B2xUserFlows\Item\IdentityProviders\Item\IdentityProviderItemRequestBuilder;
-use Microsoft\Graph\Identity\B2xUserFlows\Item\Languages\Item\UserFlowLanguageConfigurationItemRequestBuilder;
-use Microsoft\Graph\Identity\B2xUserFlows\Item\Languages\LanguagesRequestBuilder;
-use Microsoft\Graph\Identity\B2xUserFlows\Item\UserAttributeAssignments\Item\IdentityUserFlowAttributeAssignmentItemRequestBuilder;
-use Microsoft\Graph\Identity\B2xUserFlows\Item\UserAttributeAssignments\UserAttributeAssignmentsRequestBuilder;
-use Microsoft\Graph\Identity\B2xUserFlows\Item\UserFlowIdentityProviders\Item\IdentityProviderBaseItemRequestBuilder;
-use Microsoft\Graph\Identity\B2xUserFlows\Item\UserFlowIdentityProviders\UserFlowIdentityProvidersRequestBuilder;
-use Microsoft\Graph\Models\B2xIdentityUserFlow;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\IdentityProviders\IdentityProvidersRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\IdentityProviders\Item\IdentityProviderItemRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\UserFlowLanguageConfigurationItemRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\LanguagesRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\Item\IdentityUserFlowAttributeAssignmentItemRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\UserAttributeAssignmentsRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserFlowIdentityProviders\Item\IdentityProviderBaseItemRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserFlowIdentityProviders\UserFlowIdentityProvidersRequestBuilder;
+use Microsoft\Graph\Generated\Models\B2xIdentityUserFlow;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -186,7 +186,7 @@ class B2xIdentityUserFlowItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.identity.b2xUserFlows.item.identityProviders.item collection
+     * Gets an item from the Microsoft\Graph\Generated.identity.b2xUserFlows.item.identityProviders.item collection
      * @param string $id Unique identifier of the item
      * @return IdentityProviderItemRequestBuilder
     */
@@ -197,7 +197,7 @@ class B2xIdentityUserFlowItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.identity.b2xUserFlows.item.languages.item collection
+     * Gets an item from the Microsoft\Graph\Generated.identity.b2xUserFlows.item.languages.item collection
      * @param string $id Unique identifier of the item
      * @return UserFlowLanguageConfigurationItemRequestBuilder
     */
@@ -228,7 +228,7 @@ class B2xIdentityUserFlowItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.identity.b2xUserFlows.item.userAttributeAssignments.item collection
+     * Gets an item from the Microsoft\Graph\Generated.identity.b2xUserFlows.item.userAttributeAssignments.item collection
      * @param string $id Unique identifier of the item
      * @return IdentityUserFlowAttributeAssignmentItemRequestBuilder
     */
@@ -239,7 +239,7 @@ class B2xIdentityUserFlowItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.identity.b2xUserFlows.item.userFlowIdentityProviders.item collection
+     * Gets an item from the Microsoft\Graph\Generated.identity.b2xUserFlows.item.userFlowIdentityProviders.item collection
      * @param string $id Unique identifier of the item
      * @return IdentityProviderBaseItemRequestBuilder
     */

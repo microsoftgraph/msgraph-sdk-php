@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Authentication\MicrosoftAuthenticatorMethods\Item\Device\RegisteredOwners\ServicePrincipal\Count;
+namespace Microsoft\Graph\Generated\Me\Authentication\MicrosoftAuthenticatorMethods\Item\Device\RegisteredOwners\ServicePrincipal\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

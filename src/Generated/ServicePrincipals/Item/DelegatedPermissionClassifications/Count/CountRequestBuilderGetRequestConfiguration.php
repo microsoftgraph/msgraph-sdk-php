@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\ServicePrincipals\Item\DelegatedPermissionClassifications\Count;
+namespace Microsoft\Graph\Generated\ServicePrincipals\Item\DelegatedPermissionClassifications\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

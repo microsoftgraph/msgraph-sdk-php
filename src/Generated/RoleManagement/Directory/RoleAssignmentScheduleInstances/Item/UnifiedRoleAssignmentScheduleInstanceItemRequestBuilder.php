@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\RoleManagement\Directory\RoleAssignmentScheduleInstances\Item;
+namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleInstances\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\UnifiedRoleAssignmentScheduleInstance;
-use Microsoft\Graph\RoleManagement\Directory\RoleAssignmentScheduleInstances\Item\ActivatedUsing\ActivatedUsingRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\UnifiedRoleAssignmentScheduleInstance;
+use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleInstances\Item\ActivatedUsing\ActivatedUsingRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

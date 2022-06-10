@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\JoinedTeams\Item\Operations;
+namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Operations;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\TeamsAsyncOperation;
-use Microsoft\Graph\Models\TeamsAsyncOperationCollectionResponse;
-use Microsoft\Graph\Users\Item\JoinedTeams\Item\Operations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TeamsAsyncOperation;
+use Microsoft\Graph\Generated\Models\TeamsAsyncOperationCollectionResponse;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Operations\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

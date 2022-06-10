@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\UserStatusOverview;
+namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\UserStatusOverview;
 
 class UserStatusOverviewRequestBuilderDeleteRequestConfiguration 
 {

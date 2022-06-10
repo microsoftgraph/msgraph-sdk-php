@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\Item\File\Localizations\Item\Versions\Item;
+namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\File\Localizations\Item\Versions\Item;
 
 class AgreementFileVersionItemRequestBuilderGetRequestConfiguration 
 {

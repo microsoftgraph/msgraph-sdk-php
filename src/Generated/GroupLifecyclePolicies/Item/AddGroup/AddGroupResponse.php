@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\GroupLifecyclePolicies\Item\AddGroup;
+namespace Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\AddGroup;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

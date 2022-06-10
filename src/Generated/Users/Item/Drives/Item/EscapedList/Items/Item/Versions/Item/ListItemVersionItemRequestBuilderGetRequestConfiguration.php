@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Drives\Item\EscapedList\Items\Item\Versions\Item;
+namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\EscapedList\Items\Item\Versions\Item;
 
 class ListItemVersionItemRequestBuilderGetRequestConfiguration 
 {

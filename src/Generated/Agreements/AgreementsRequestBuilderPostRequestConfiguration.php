@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Agreements;
+namespace Microsoft\Graph\Generated\Agreements;
 
 class AgreementsRequestBuilderPostRequestConfiguration 
 {

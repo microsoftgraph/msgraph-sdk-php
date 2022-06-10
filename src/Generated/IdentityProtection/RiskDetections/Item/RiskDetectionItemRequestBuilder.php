@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\IdentityProtection\RiskDetections\Item;
+namespace Microsoft\Graph\Generated\IdentityProtection\RiskDetections\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\RiskDetection;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\RiskDetection;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

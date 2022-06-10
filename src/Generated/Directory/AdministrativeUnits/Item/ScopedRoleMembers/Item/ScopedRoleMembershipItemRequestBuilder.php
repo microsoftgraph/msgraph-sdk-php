@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Directory\AdministrativeUnits\Item\ScopedRoleMembers\Item;
+namespace Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\ScopedRoleMembers\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\ScopedRoleMembership;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ScopedRoleMembership;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

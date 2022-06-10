@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Policies\FeatureRolloutPolicies\Item\AppliesTo\ValidateProperties;
+namespace Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\ValidateProperties;
 
 class ValidatePropertiesRequestBuilderPostRequestConfiguration 
 {

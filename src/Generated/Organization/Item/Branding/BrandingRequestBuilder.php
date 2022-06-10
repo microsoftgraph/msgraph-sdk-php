@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Organization\Item\Branding;
+namespace Microsoft\Graph\Generated\Organization\Item\Branding;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\OrganizationalBranding;
-use Microsoft\Graph\Organization\Item\Branding\BackgroundImage\BackgroundImageRequestBuilder;
-use Microsoft\Graph\Organization\Item\Branding\BannerLogo\BannerLogoRequestBuilder;
-use Microsoft\Graph\Organization\Item\Branding\Localizations\Item\OrganizationalBrandingLocalizationItemRequestBuilder;
-use Microsoft\Graph\Organization\Item\Branding\Localizations\LocalizationsRequestBuilder;
-use Microsoft\Graph\Organization\Item\Branding\SquareLogo\SquareLogoRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OrganizationalBranding;
+use Microsoft\Graph\Generated\Organization\Item\Branding\BackgroundImage\BackgroundImageRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Item\Branding\BannerLogo\BannerLogoRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Item\Branding\Localizations\Item\OrganizationalBrandingLocalizationItemRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Item\Branding\Localizations\LocalizationsRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Item\Branding\SquareLogo\SquareLogoRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -183,7 +183,7 @@ class BrandingRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.organization.item.branding.localizations.item collection
+     * Gets an item from the Microsoft\Graph\Generated.organization.item.branding.localizations.item collection
      * @param string $id Unique identifier of the item
      * @return OrganizationalBrandingLocalizationItemRequestBuilder
     */

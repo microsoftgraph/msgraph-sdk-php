@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Communications\CallRecords\Item\Sessions\Item;
+namespace Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Communications\CallRecords\Item\Sessions\Item\Segments\Item\SegmentItemRequestBuilder;
-use Microsoft\Graph\Communications\CallRecords\Item\Sessions\Item\Segments\SegmentsRequestBuilder;
-use Microsoft\Graph\Models\CallRecords\Session;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\Item\Segments\Item\SegmentItemRequestBuilder;
+use Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\Item\Segments\SegmentsRequestBuilder;
+use Microsoft\Graph\Generated\Models\CallRecords\Session;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -179,7 +179,7 @@ class SessionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.communications.callRecords.item.sessions.item.segments.item collection
+     * Gets an item from the Microsoft\Graph\Generated.communications.callRecords.item.sessions.item.segments.item collection
      * @param string $id Unique identifier of the item
      * @return SegmentItemRequestBuilder
     */

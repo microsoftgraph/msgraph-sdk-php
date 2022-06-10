@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Drive\EscapedList\Operations\Item;
+namespace Microsoft\Graph\Generated\Drive\EscapedList\Operations\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\RichLongRunningOperation;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\RichLongRunningOperation;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

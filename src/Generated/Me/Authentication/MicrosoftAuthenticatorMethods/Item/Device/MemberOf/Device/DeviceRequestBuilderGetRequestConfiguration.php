@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Authentication\MicrosoftAuthenticatorMethods\Item\Device\MemberOf\Device;
+namespace Microsoft\Graph\Generated\Me\Authentication\MicrosoftAuthenticatorMethods\Item\Device\MemberOf\Device;
 
 class DeviceRequestBuilderGetRequestConfiguration 
 {

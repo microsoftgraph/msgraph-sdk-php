@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Education\Me\Assignments\Item;
+namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item;
 
 class EducationAssignmentItemRequestBuilderDeleteRequestConfiguration 
 {

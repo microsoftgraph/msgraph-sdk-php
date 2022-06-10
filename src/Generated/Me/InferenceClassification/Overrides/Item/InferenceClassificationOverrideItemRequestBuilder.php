@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Me\InferenceClassification\Overrides\Item;
+namespace Microsoft\Graph\Generated\Me\InferenceClassification\Overrides\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\InferenceClassificationOverride;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\InferenceClassificationOverride;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

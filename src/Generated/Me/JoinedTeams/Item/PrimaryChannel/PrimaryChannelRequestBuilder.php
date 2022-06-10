@@ -1,22 +1,22 @@
 <?php
 
-namespace Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel;
+namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\CompleteMigration\CompleteMigrationRequestBuilder;
-use Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\FilesFolder\FilesFolderRequestBuilder;
-use Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\Members\Item\ConversationMemberItemRequestBuilder;
-use Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\Members\MembersRequestBuilder;
-use Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\Messages\Item\ChatMessageItemRequestBuilder;
-use Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\ProvisionEmail\ProvisionEmailRequestBuilder;
-use Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\RemoveEmail\RemoveEmailRequestBuilder;
-use Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\Tabs\Item\TeamsTabItemRequestBuilder;
-use Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\Tabs\TabsRequestBuilder;
-use Microsoft\Graph\Models\Channel;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\CompleteMigration\CompleteMigrationRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\FilesFolder\FilesFolderRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Members\Item\ConversationMemberItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Members\MembersRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages\Item\ChatMessageItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages\MessagesRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\ProvisionEmail\ProvisionEmailRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\RemoveEmail\RemoveEmailRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Tabs\Item\TeamsTabItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Tabs\TabsRequestBuilder;
+use Microsoft\Graph\Generated\Models\Channel;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -209,7 +209,7 @@ class PrimaryChannelRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.joinedTeams.item.primaryChannel.members.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.joinedTeams.item.primaryChannel.members.item collection
      * @param string $id Unique identifier of the item
      * @return ConversationMemberItemRequestBuilder
     */
@@ -220,7 +220,7 @@ class PrimaryChannelRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.joinedTeams.item.primaryChannel.messages.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.joinedTeams.item.primaryChannel.messages.item collection
      * @param string $id Unique identifier of the item
      * @return ChatMessageItemRequestBuilder
     */
@@ -251,7 +251,7 @@ class PrimaryChannelRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.joinedTeams.item.primaryChannel.tabs.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.joinedTeams.item.primaryChannel.tabs.item collection
      * @param string $id Unique identifier of the item
      * @return TeamsTabItemRequestBuilder
     */

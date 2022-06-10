@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\IdentityProtection\RiskyUsers\Dismiss;
+namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Dismiss;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

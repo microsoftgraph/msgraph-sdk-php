@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Me\InferenceClassification;
+namespace Microsoft\Graph\Generated\Me\InferenceClassification;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\InferenceClassification\Overrides\Item\InferenceClassificationOverrideItemRequestBuilder;
-use Microsoft\Graph\Me\InferenceClassification\Overrides\OverridesRequestBuilder;
-use Microsoft\Graph\Models\InferenceClassification;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Me\InferenceClassification\Overrides\Item\InferenceClassificationOverrideItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\InferenceClassification\Overrides\OverridesRequestBuilder;
+use Microsoft\Graph\Generated\Models\InferenceClassification;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -159,7 +159,7 @@ class InferenceClassificationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.inferenceClassification.overrides.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.inferenceClassification.overrides.item collection
      * @param string $id Unique identifier of the item
      * @return InferenceClassificationOverrideItemRequestBuilder
     */

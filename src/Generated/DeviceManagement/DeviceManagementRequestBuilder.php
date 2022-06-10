@@ -1,69 +1,69 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement;
+namespace Microsoft\Graph\Generated\DeviceManagement;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\DeviceManagement\ApplePushNotificationCertificate\ApplePushNotificationCertificateRequestBuilder;
-use Microsoft\Graph\DeviceManagement\ComplianceManagementPartners\ComplianceManagementPartnersRequestBuilder;
-use Microsoft\Graph\DeviceManagement\ComplianceManagementPartners\Item\ComplianceManagementPartnerItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\ConditionalAccessSettings\ConditionalAccessSettingsRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DetectedApps\DetectedAppsRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DetectedApps\Item\DetectedAppItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DeviceCategories\DeviceCategoriesRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DeviceCategories\Item\DeviceCategoryItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\DeviceCompliancePoliciesRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\DeviceCompliancePolicyItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicyDeviceStateSummary\DeviceCompliancePolicyDeviceStateSummaryRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicySettingStateSummaries\DeviceCompliancePolicySettingStateSummariesRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DeviceCompliancePolicySettingStateSummaries\Item\DeviceCompliancePolicySettingStateSummaryItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DeviceConfigurationDeviceStateSummaries\DeviceConfigurationDeviceStateSummariesRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DeviceConfigurations\DeviceConfigurationsRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\DeviceConfigurationItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DeviceEnrollmentConfigurations\DeviceEnrollmentConfigurationsRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DeviceEnrollmentConfigurations\Item\DeviceEnrollmentConfigurationItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DeviceManagementPartners\DeviceManagementPartnersRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DeviceManagementPartners\Item\DeviceManagementPartnerItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\ExchangeConnectors\ExchangeConnectorsRequestBuilder;
-use Microsoft\Graph\DeviceManagement\ExchangeConnectors\Item\DeviceManagementExchangeConnectorItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\GetEffectivePermissionsWithScope\GetEffectivePermissionsWithScopeRequestBuilder;
-use Microsoft\Graph\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder;
-use Microsoft\Graph\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Item\ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\IosUpdateStatuses\IosUpdateStatusesRequestBuilder;
-use Microsoft\Graph\DeviceManagement\IosUpdateStatuses\Item\IosUpdateDeviceStatusItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\ManagedDeviceOverview\ManagedDeviceOverviewRequestBuilder;
-use Microsoft\Graph\DeviceManagement\ManagedDevices\Item\ManagedDeviceItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\ManagedDevices\ManagedDevicesRequestBuilder;
-use Microsoft\Graph\DeviceManagement\MobileThreatDefenseConnectors\Item\MobileThreatDefenseConnectorItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\MobileThreatDefenseConnectors\MobileThreatDefenseConnectorsRequestBuilder;
-use Microsoft\Graph\DeviceManagement\NotificationMessageTemplates\Item\NotificationMessageTemplateItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\NotificationMessageTemplates\NotificationMessageTemplatesRequestBuilder;
-use Microsoft\Graph\DeviceManagement\RemoteAssistancePartners\Item\RemoteAssistancePartnerItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\RemoteAssistancePartners\RemoteAssistancePartnersRequestBuilder;
-use Microsoft\Graph\DeviceManagement\Reports\ReportsRequestBuilder;
-use Microsoft\Graph\DeviceManagement\ResourceOperations\Item\ResourceOperationItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\ResourceOperations\ResourceOperationsRequestBuilder;
-use Microsoft\Graph\DeviceManagement\RoleAssignments\Item\DeviceAndAppManagementRoleAssignmentItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\RoleAssignments\RoleAssignmentsRequestBuilder;
-use Microsoft\Graph\DeviceManagement\RoleDefinitions\Item\RoleDefinitionItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\RoleDefinitions\RoleDefinitionsRequestBuilder;
-use Microsoft\Graph\DeviceManagement\SoftwareUpdateStatusSummary\SoftwareUpdateStatusSummaryRequestBuilder;
-use Microsoft\Graph\DeviceManagement\TelecomExpenseManagementPartners\Item\TelecomExpenseManagementPartnerItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\TelecomExpenseManagementPartners\TelecomExpenseManagementPartnersRequestBuilder;
-use Microsoft\Graph\DeviceManagement\TermsAndConditions\Item\TermsAndConditionsItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\TermsAndConditions\TermsAndConditionsRequestBuilder;
-use Microsoft\Graph\DeviceManagement\TroubleshootingEvents\Item\DeviceManagementTroubleshootingEventItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\TroubleshootingEvents\TroubleshootingEventsRequestBuilder;
-use Microsoft\Graph\DeviceManagement\VerifyWindowsEnrollmentAutoDiscoveryWithDomainName\VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder;
-use Microsoft\Graph\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\WindowsAutopilotDeviceIdentityItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\WindowsAutopilotDeviceIdentities\WindowsAutopilotDeviceIdentitiesRequestBuilder;
-use Microsoft\Graph\DeviceManagement\WindowsInformationProtectionAppLearningSummaries\Item\WindowsInformationProtectionAppLearningSummaryItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\WindowsInformationProtectionAppLearningSummaries\WindowsInformationProtectionAppLearningSummariesRequestBuilder;
-use Microsoft\Graph\DeviceManagement\WindowsInformationProtectionNetworkLearningSummaries\Item\WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\WindowsInformationProtectionNetworkLearningSummaries\WindowsInformationProtectionNetworkLearningSummariesRequestBuilder;
-use Microsoft\Graph\Models\DeviceManagement;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\DeviceManagement\ApplePushNotificationCertificate\ApplePushNotificationCertificateRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ComplianceManagementPartners\ComplianceManagementPartnersRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ComplianceManagementPartners\Item\ComplianceManagementPartnerItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ConditionalAccessSettings\ConditionalAccessSettingsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DetectedApps\DetectedAppsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Item\DetectedAppItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceCategories\DeviceCategoriesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceCategories\Item\DeviceCategoryItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\DeviceCompliancePoliciesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceCompliancePolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicyDeviceStateSummary\DeviceCompliancePolicyDeviceStateSummaryRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicySettingStateSummaries\DeviceCompliancePolicySettingStateSummariesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicySettingStateSummaries\Item\DeviceCompliancePolicySettingStateSummaryItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurationDeviceStateSummaries\DeviceConfigurationDeviceStateSummariesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\DeviceConfigurationsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceConfigurationItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\DeviceEnrollmentConfigurationsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\DeviceEnrollmentConfigurationItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners\DeviceManagementPartnersRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners\Item\DeviceManagementPartnerItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\ExchangeConnectorsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\Item\DeviceManagementExchangeConnectorItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\GetEffectivePermissionsWithScope\GetEffectivePermissionsWithScopeRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Item\ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\IosUpdateStatuses\IosUpdateStatusesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\IosUpdateStatuses\Item\IosUpdateDeviceStatusItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDeviceOverview\ManagedDeviceOverviewRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\ManagedDeviceItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\ManagedDevicesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors\Item\MobileThreatDefenseConnectorItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors\MobileThreatDefenseConnectorsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\NotificationMessageTemplateItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\NotificationMessageTemplatesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\RemoteAssistancePartnerItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\RemoteAssistancePartnersRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\ReportsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ResourceOperations\Item\ResourceOperationItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ResourceOperations\ResourceOperationsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\RoleAssignments\Item\DeviceAndAppManagementRoleAssignmentItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\RoleAssignments\RoleAssignmentsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\Item\RoleDefinitionItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\RoleDefinitionsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\SoftwareUpdateStatusSummary\SoftwareUpdateStatusSummaryRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\TelecomExpenseManagementPartners\Item\TelecomExpenseManagementPartnerItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\TelecomExpenseManagementPartners\TelecomExpenseManagementPartnersRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\TermsAndConditionsItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\TermsAndConditionsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\TroubleshootingEvents\Item\DeviceManagementTroubleshootingEventItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\TroubleshootingEvents\TroubleshootingEventsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\VerifyWindowsEnrollmentAutoDiscoveryWithDomainName\VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\WindowsAutopilotDeviceIdentityItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\WindowsAutopilotDeviceIdentitiesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionAppLearningSummaries\Item\WindowsInformationProtectionAppLearningSummaryItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionAppLearningSummaries\WindowsInformationProtectionAppLearningSummariesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionNetworkLearningSummaries\Item\WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionNetworkLearningSummaries\WindowsInformationProtectionNetworkLearningSummariesRequestBuilder;
+use Microsoft\Graph\Generated\Models\DeviceManagement;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -307,7 +307,7 @@ class DeviceManagementRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.complianceManagementPartners.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.complianceManagementPartners.item collection
      * @param string $id Unique identifier of the item
      * @return ComplianceManagementPartnerItemRequestBuilder
     */
@@ -376,7 +376,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.detectedApps.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.detectedApps.item collection
      * @param string $id Unique identifier of the item
      * @return DetectedAppItemRequestBuilder
     */
@@ -387,7 +387,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.deviceCategories.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceCategories.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceCategoryItemRequestBuilder
     */
@@ -398,7 +398,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.deviceCompliancePolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceCompliancePolicies.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceCompliancePolicyItemRequestBuilder
     */
@@ -409,7 +409,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.deviceCompliancePolicySettingStateSummaries.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceCompliancePolicySettingStateSummaries.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
     */
@@ -420,7 +420,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.deviceConfigurations.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceConfigurations.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceConfigurationItemRequestBuilder
     */
@@ -431,7 +431,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.deviceEnrollmentConfigurations.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceEnrollmentConfigurations.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceEnrollmentConfigurationItemRequestBuilder
     */
@@ -442,7 +442,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.deviceManagementPartners.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceManagementPartners.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceManagementPartnerItemRequestBuilder
     */
@@ -453,7 +453,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.exchangeConnectors.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.exchangeConnectors.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceManagementExchangeConnectorItemRequestBuilder
     */
@@ -492,7 +492,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.importedWindowsAutopilotDeviceIdentities.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.importedWindowsAutopilotDeviceIdentities.item collection
      * @param string $id Unique identifier of the item
      * @return ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder
     */
@@ -503,7 +503,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.iosUpdateStatuses.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.iosUpdateStatuses.item collection
      * @param string $id Unique identifier of the item
      * @return IosUpdateDeviceStatusItemRequestBuilder
     */
@@ -514,7 +514,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.managedDevices.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.managedDevices.item collection
      * @param string $id Unique identifier of the item
      * @return ManagedDeviceItemRequestBuilder
     */
@@ -525,7 +525,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.mobileThreatDefenseConnectors.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.mobileThreatDefenseConnectors.item collection
      * @param string $id Unique identifier of the item
      * @return MobileThreatDefenseConnectorItemRequestBuilder
     */
@@ -536,7 +536,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.notificationMessageTemplates.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.notificationMessageTemplates.item collection
      * @param string $id Unique identifier of the item
      * @return NotificationMessageTemplateItemRequestBuilder
     */
@@ -567,7 +567,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.remoteAssistancePartners.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.remoteAssistancePartners.item collection
      * @param string $id Unique identifier of the item
      * @return RemoteAssistancePartnerItemRequestBuilder
     */
@@ -578,7 +578,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.resourceOperations.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.resourceOperations.item collection
      * @param string $id Unique identifier of the item
      * @return ResourceOperationItemRequestBuilder
     */
@@ -589,7 +589,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.roleAssignments.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.roleAssignments.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceAndAppManagementRoleAssignmentItemRequestBuilder
     */
@@ -600,7 +600,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.roleDefinitions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.roleDefinitions.item collection
      * @param string $id Unique identifier of the item
      * @return RoleDefinitionItemRequestBuilder
     */
@@ -611,7 +611,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.telecomExpenseManagementPartners.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.telecomExpenseManagementPartners.item collection
      * @param string $id Unique identifier of the item
      * @return TelecomExpenseManagementPartnerItemRequestBuilder
     */
@@ -622,7 +622,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.termsAndConditions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.termsAndConditions.item collection
      * @param string $id Unique identifier of the item
      * @return TermsAndConditionsItemRequestBuilder
     */
@@ -633,7 +633,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.troubleshootingEvents.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.troubleshootingEvents.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceManagementTroubleshootingEventItemRequestBuilder
     */
@@ -653,7 +653,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.windowsAutopilotDeviceIdentities.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.windowsAutopilotDeviceIdentities.item collection
      * @param string $id Unique identifier of the item
      * @return WindowsAutopilotDeviceIdentityItemRequestBuilder
     */
@@ -664,7 +664,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.windowsInformationProtectionAppLearningSummaries.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.windowsInformationProtectionAppLearningSummaries.item collection
      * @param string $id Unique identifier of the item
      * @return WindowsInformationProtectionAppLearningSummaryItemRequestBuilder
     */
@@ -675,7 +675,7 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.windowsInformationProtectionNetworkLearningSummaries.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.windowsInformationProtectionNetworkLearningSummaries.item collection
      * @param string $id Unique identifier of the item
      * @return WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder
     */

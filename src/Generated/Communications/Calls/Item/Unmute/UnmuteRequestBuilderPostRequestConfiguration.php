@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\Calls\Item\Unmute;
+namespace Microsoft\Graph\Generated\Communications\Calls\Item\Unmute;
 
 class UnmuteRequestBuilderPostRequestConfiguration 
 {

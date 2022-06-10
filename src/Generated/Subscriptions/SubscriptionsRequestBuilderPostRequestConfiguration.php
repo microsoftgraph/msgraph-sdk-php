@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Subscriptions;
+namespace Microsoft\Graph\Generated\Subscriptions;
 
 class SubscriptionsRequestBuilderPostRequestConfiguration 
 {

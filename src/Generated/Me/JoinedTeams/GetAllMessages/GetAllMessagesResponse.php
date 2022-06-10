@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Me\JoinedTeams\GetAllMessages;
+namespace Microsoft\Graph\Generated\Me\JoinedTeams\GetAllMessages;
 
-use Microsoft\Graph\Models\ChatMessage;
+use Microsoft\Graph\Generated\Models\ChatMessage;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\GroupLifecyclePolicies\Item;
+namespace Microsoft\Graph\Generated\GroupLifecyclePolicies\Item;
 
 class GroupLifecyclePolicyItemRequestBuilderDeleteRequestConfiguration 
 {

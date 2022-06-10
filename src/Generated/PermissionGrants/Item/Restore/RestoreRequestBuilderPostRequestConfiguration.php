@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\PermissionGrants\Item\Restore;
+namespace Microsoft\Graph\Generated\PermissionGrants\Item\Restore;
 
 class RestoreRequestBuilderPostRequestConfiguration 
 {

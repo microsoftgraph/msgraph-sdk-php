@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Reports\GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTime;
+namespace Microsoft\Graph\Generated\Reports\GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTime;
 
-use Microsoft\Graph\Models\ArchivedPrintJob;
+use Microsoft\Graph\Generated\Models\ArchivedPrintJob;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\Messages\Item\Replies\Item\HostedContents\Item;
+namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages\Item\Replies\Item\HostedContents\Item;
 
 class ChatMessageHostedContentItemRequestBuilderPatchRequestConfiguration 
 {

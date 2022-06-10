@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance\AppConsent;
+namespace Microsoft\Graph\Generated\IdentityGovernance\AppConsent;
 
 class AppConsentRequestBuilderPatchRequestConfiguration 
 {

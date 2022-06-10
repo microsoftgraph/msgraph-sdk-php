@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\ApplicationTemplates\Item\Instantiate;
+namespace Microsoft\Graph\Generated\ApplicationTemplates\Item\Instantiate;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

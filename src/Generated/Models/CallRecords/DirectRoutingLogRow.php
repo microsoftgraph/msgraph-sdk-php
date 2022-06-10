@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Models\CallRecords;
+namespace Microsoft\Graph\Generated\Models\CallRecords;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;

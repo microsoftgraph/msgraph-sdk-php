@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item;
+namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item;
 
 class ConnectedOrganizationItemRequestBuilderGetRequestConfiguration 
 {

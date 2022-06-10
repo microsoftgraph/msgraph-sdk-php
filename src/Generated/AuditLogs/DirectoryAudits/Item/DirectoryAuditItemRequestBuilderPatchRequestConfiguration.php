@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\AuditLogs\DirectoryAudits\Item;
+namespace Microsoft\Graph\Generated\AuditLogs\DirectoryAudits\Item;
 
 class DirectoryAuditItemRequestBuilderPatchRequestConfiguration 
 {

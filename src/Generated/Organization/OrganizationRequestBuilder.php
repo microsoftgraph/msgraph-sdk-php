@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Organization;
+namespace Microsoft\Graph\Generated\Organization;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\Organization;
-use Microsoft\Graph\Models\OrganizationCollectionResponse;
-use Microsoft\Graph\Organization\Count\CountRequestBuilder;
-use Microsoft\Graph\Organization\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Organization\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Organization\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Organization;
+use Microsoft\Graph\Generated\Models\OrganizationCollectionResponse;
+use Microsoft\Graph\Generated\Organization\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Organization\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Organization\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\Organization\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

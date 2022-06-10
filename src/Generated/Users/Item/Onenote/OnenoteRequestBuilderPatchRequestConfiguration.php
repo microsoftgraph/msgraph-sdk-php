@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Onenote;
+namespace Microsoft\Graph\Generated\Users\Item\Onenote;
 
 class OnenoteRequestBuilderPatchRequestConfiguration 
 {

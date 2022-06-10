@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Authentication\MicrosoftAuthenticatorMethods\Item\Device\RegisteredOwners\Item\Ref;
+namespace Microsoft\Graph\Generated\Me\Authentication\MicrosoftAuthenticatorMethods\Item\Device\RegisteredOwners\Item\Ref;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

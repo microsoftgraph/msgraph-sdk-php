@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\ManagedAppRegistrations\Item;
+namespace Microsoft\Graph\Generated\Me\ManagedAppRegistrations\Item;
 
 class ManagedAppRegistrationItemRequestBuilderGetRequestConfiguration 
 {

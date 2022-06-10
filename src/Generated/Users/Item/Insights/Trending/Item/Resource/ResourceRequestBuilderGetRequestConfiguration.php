@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Insights\Trending\Item\Resource;
+namespace Microsoft\Graph\Generated\Users\Item\Insights\Trending\Item\Resource;
 
 class ResourceRequestBuilderGetRequestConfiguration 
 {

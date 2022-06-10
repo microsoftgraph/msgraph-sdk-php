@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance\AccessReviews;
+namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\DefinitionsRequestBuilder;
-use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\AccessReviewScheduleDefinitionItemRequestBuilder;
-use Microsoft\Graph\IdentityGovernance\AccessReviews\HistoryDefinitions\HistoryDefinitionsRequestBuilder;
-use Microsoft\Graph\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\AccessReviewHistoryDefinitionItemRequestBuilder;
-use Microsoft\Graph\Models\AccessReviewSet;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\DefinitionsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\AccessReviewScheduleDefinitionItemRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\HistoryDefinitionsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\AccessReviewHistoryDefinitionItemRequestBuilder;
+use Microsoft\Graph\Generated\Models\AccessReviewSet;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -130,7 +130,7 @@ class AccessReviewsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.identityGovernance.accessReviews.definitions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.accessReviews.definitions.item collection
      * @param string $id Unique identifier of the item
      * @return AccessReviewScheduleDefinitionItemRequestBuilder
     */
@@ -179,7 +179,7 @@ class AccessReviewsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.identityGovernance.accessReviews.historyDefinitions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.accessReviews.historyDefinitions.item collection
      * @param string $id Unique identifier of the item
      * @return AccessReviewHistoryDefinitionItemRequestBuilder
     */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Sites\Item\TermStore;
+namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore;
 
 class TermStoreRequestBuilderGetRequestConfiguration 
 {

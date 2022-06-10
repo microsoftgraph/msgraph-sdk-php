@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\Calls\Item\Redirect;
+namespace Microsoft\Graph\Generated\Communications\Calls\Item\Redirect;
 
 class RedirectRequestBuilderPostRequestConfiguration 
 {

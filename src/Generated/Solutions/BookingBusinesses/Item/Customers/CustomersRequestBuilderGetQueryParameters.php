@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Solutions\BookingBusinesses\Item\Customers;
+namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Customers;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\ServicePrincipals\Item\ClaimsMappingPolicies\Item;
+namespace Microsoft\Graph\Generated\ServicePrincipals\Item\ClaimsMappingPolicies\Item;
 
-use Microsoft\Graph\ServicePrincipals\Item\ClaimsMappingPolicies\Item\Ref\RefRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\ClaimsMappingPolicies\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
 class ClaimsMappingPolicyItemRequestBuilder 

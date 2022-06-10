@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Contacts\Item\MemberOf\Item\OrgContact;
+namespace Microsoft\Graph\Generated\Contacts\Item\MemberOf\Item\OrgContact;
 
 class OrgContactRequestBuilderGetRequestConfiguration 
 {

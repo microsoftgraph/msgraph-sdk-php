@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Privacy;
+namespace Microsoft\Graph\Generated\Privacy;
 
 class PrivacyRequestBuilderPatchRequestConfiguration 
 {

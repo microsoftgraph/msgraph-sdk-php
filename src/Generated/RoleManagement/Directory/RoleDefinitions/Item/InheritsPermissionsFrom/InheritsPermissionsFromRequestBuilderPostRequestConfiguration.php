@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\RoleManagement\Directory\RoleDefinitions\Item\InheritsPermissionsFrom;
+namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleDefinitions\Item\InheritsPermissionsFrom;
 
 class InheritsPermissionsFromRequestBuilderPostRequestConfiguration 
 {

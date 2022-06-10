@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Me\Messages\Item\CreateReplyAll;
+namespace Microsoft\Graph\Generated\Me\Messages\Item\CreateReplyAll;
 
-use Microsoft\Graph\Models\Message;
+use Microsoft\Graph\Generated\Models\Message;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

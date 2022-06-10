@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item\Lists\Item\Subscriptions\Item;
+namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\Subscriptions\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\Subscription;
-use Microsoft\Graph\Sites\Item\Lists\Item\Subscriptions\Item\Reauthorize\ReauthorizeRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Subscription;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Subscriptions\Item\Reauthorize\ReauthorizeRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

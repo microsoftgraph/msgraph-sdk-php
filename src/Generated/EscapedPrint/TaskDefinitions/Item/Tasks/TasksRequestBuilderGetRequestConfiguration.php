@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\EscapedPrint\TaskDefinitions\Item\Tasks;
+namespace Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\Item\Tasks;
 
 class TasksRequestBuilderGetRequestConfiguration 
 {

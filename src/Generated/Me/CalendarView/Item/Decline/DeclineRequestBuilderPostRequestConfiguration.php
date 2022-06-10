@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\CalendarView\Item\Decline;
+namespace Microsoft\Graph\Generated\Me\CalendarView\Item\Decline;
 
 class DeclineRequestBuilderPostRequestConfiguration 
 {

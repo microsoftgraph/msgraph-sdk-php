@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Sites\Item\Lists\Item\Subscriptions\Item;
+namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Subscriptions\Item;
 
 class SubscriptionItemRequestBuilderDeleteRequestConfiguration 
 {

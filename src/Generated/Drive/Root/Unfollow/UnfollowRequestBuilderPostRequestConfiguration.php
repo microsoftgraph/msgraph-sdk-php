@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Root\Unfollow;
+namespace Microsoft\Graph\Generated\Drive\Root\Unfollow;
 
 class UnfollowRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Onenote\Notebooks\Item\Sections\Item;
+namespace Microsoft\Graph\Generated\Me\Onenote\Notebooks\Item\Sections\Item;
 
 class OnenoteSectionItemRequestBuilderPatchRequestConfiguration 
 {

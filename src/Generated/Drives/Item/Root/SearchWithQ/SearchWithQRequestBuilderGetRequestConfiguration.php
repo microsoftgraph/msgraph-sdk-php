@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drives\Item\Root\SearchWithQ;
+namespace Microsoft\Graph\Generated\Drives\Item\Root\SearchWithQ;
 
 class SearchWithQRequestBuilderGetRequestConfiguration 
 {

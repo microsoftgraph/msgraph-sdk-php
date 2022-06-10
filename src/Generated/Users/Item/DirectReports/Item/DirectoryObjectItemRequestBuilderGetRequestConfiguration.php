@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\DirectReports\Item;
+namespace Microsoft\Graph\Generated\Users\Item\DirectReports\Item;
 
 class DirectoryObjectItemRequestBuilderGetRequestConfiguration 
 {

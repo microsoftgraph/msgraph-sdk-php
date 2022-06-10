@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\RejectedSenders\Item;
+namespace Microsoft\Graph\Generated\Groups\Item\RejectedSenders\Item;
 
-use Microsoft\Graph\Groups\Item\RejectedSenders\Item\Ref\RefRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\RejectedSenders\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
 class DirectoryObjectItemRequestBuilder 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Insights;
+namespace Microsoft\Graph\Generated\Me\Insights;
 
 class InsightsRequestBuilderDeleteRequestConfiguration 
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Me\Outlook\SupportedTimeZonesWithTimeZoneStandard;
+namespace Microsoft\Graph\Generated\Me\Outlook\SupportedTimeZonesWithTimeZoneStandard;
 
-use Microsoft\Graph\Models\TimeZoneInformation;
+use Microsoft\Graph\Generated\Models\TimeZoneInformation;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

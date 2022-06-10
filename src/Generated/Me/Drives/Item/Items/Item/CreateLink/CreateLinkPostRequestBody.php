@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Drives\Item\Items\Item\CreateLink;
+namespace Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\CreateLink;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;

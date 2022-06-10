@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\RoleAssignments;
+namespace Microsoft\Graph\Generated\DeviceManagement\RoleAssignments;
 
 class RoleAssignmentsRequestBuilderPostRequestConfiguration 
 {

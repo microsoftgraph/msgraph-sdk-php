@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Groups;
+namespace Microsoft\Graph\Generated\Groups;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Groups\Count\CountRequestBuilder;
-use Microsoft\Graph\Groups\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Groups\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Groups\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Groups\ValidateProperties\ValidatePropertiesRequestBuilder;
-use Microsoft\Graph\Models\Group;
-use Microsoft\Graph\Models\GroupCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Groups\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Groups\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Models\Group;
+use Microsoft\Graph\Generated\Models\GroupCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

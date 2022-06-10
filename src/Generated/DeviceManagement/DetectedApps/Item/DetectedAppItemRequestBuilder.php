@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\DetectedApps\Item;
+namespace Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\DeviceManagement\DetectedApps\Item\ManagedDevices\Item\ManagedDeviceItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DetectedApps\Item\ManagedDevices\ManagedDevicesRequestBuilder;
-use Microsoft\Graph\Models\DetectedApp;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Item\ManagedDevices\Item\ManagedDeviceItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Item\ManagedDevices\ManagedDevicesRequestBuilder;
+use Microsoft\Graph\Generated\Models\DetectedApp;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -159,7 +159,7 @@ class DetectedAppItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.detectedApps.item.managedDevices.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.detectedApps.item.managedDevices.item collection
      * @param string $id Unique identifier of the item
      * @return ManagedDeviceItemRequestBuilder
     */

@@ -1,20 +1,20 @@
 <?php
 
-namespace Microsoft\Graph\AuditLogs;
+namespace Microsoft\Graph\Generated\AuditLogs;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\AuditLogs\DirectoryAudits\DirectoryAuditsRequestBuilder;
-use Microsoft\Graph\AuditLogs\DirectoryAudits\Item\DirectoryAuditItemRequestBuilder;
-use Microsoft\Graph\AuditLogs\Provisioning\Item\ProvisioningObjectSummaryItemRequestBuilder;
-use Microsoft\Graph\AuditLogs\Provisioning\ProvisioningRequestBuilder;
-use Microsoft\Graph\AuditLogs\RestrictedSignIns\Item\RestrictedSignInItemRequestBuilder;
-use Microsoft\Graph\AuditLogs\RestrictedSignIns\RestrictedSignInsRequestBuilder;
-use Microsoft\Graph\AuditLogs\SignIns\Item\SignInItemRequestBuilder;
-use Microsoft\Graph\AuditLogs\SignIns\SignInsRequestBuilder;
-use Microsoft\Graph\Models\AuditLogRoot;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\AuditLogs\DirectoryAudits\DirectoryAuditsRequestBuilder;
+use Microsoft\Graph\Generated\AuditLogs\DirectoryAudits\Item\DirectoryAuditItemRequestBuilder;
+use Microsoft\Graph\Generated\AuditLogs\Provisioning\Item\ProvisioningObjectSummaryItemRequestBuilder;
+use Microsoft\Graph\Generated\AuditLogs\Provisioning\ProvisioningRequestBuilder;
+use Microsoft\Graph\Generated\AuditLogs\RestrictedSignIns\Item\RestrictedSignInItemRequestBuilder;
+use Microsoft\Graph\Generated\AuditLogs\RestrictedSignIns\RestrictedSignInsRequestBuilder;
+use Microsoft\Graph\Generated\AuditLogs\SignIns\Item\SignInItemRequestBuilder;
+use Microsoft\Graph\Generated\AuditLogs\SignIns\SignInsRequestBuilder;
+use Microsoft\Graph\Generated\Models\AuditLogRoot;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -127,7 +127,7 @@ class AuditLogsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.auditLogs.directoryAudits.item collection
+     * Gets an item from the Microsoft\Graph\Generated.auditLogs.directoryAudits.item collection
      * @param string $id Unique identifier of the item
      * @return DirectoryAuditItemRequestBuilder
     */
@@ -177,7 +177,7 @@ class AuditLogsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.auditLogs.provisioning.item collection
+     * Gets an item from the Microsoft\Graph\Generated.auditLogs.provisioning.item collection
      * @param string $id Unique identifier of the item
      * @return ProvisioningObjectSummaryItemRequestBuilder
     */
@@ -188,7 +188,7 @@ class AuditLogsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.auditLogs.restrictedSignIns.item collection
+     * Gets an item from the Microsoft\Graph\Generated.auditLogs.restrictedSignIns.item collection
      * @param string $id Unique identifier of the item
      * @return RestrictedSignInItemRequestBuilder
     */
@@ -199,7 +199,7 @@ class AuditLogsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.auditLogs.signIns.item collection
+     * Gets an item from the Microsoft\Graph\Generated.auditLogs.signIns.item collection
      * @param string $id Unique identifier of the item
      * @return SignInItemRequestBuilder
     */

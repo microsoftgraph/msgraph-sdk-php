@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Admin\ServiceAnnouncement\Messages\Item\Attachments;
+namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Item\Attachments;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Admin\ServiceAnnouncement\Messages\Item\Attachments\Count\CountRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\ServiceAnnouncementAttachment;
-use Microsoft\Graph\Models\ServiceAnnouncementAttachmentCollectionResponse;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Item\Attachments\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ServiceAnnouncementAttachment;
+use Microsoft\Graph\Generated\Models\ServiceAnnouncementAttachmentCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

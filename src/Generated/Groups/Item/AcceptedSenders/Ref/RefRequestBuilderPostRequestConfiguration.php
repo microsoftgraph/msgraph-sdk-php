@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\AcceptedSenders\Ref;
+namespace Microsoft\Graph\Generated\Groups\Item\AcceptedSenders\Ref;
 
 class RefRequestBuilderPostRequestConfiguration 
 {

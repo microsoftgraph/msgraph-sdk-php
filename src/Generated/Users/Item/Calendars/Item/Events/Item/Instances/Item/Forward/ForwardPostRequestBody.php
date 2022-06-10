@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Calendars\Item\Events\Item\Instances\Item\Forward;
+namespace Microsoft\Graph\Generated\Users\Item\Calendars\Item\Events\Item\Instances\Item\Forward;
 
-use Microsoft\Graph\Models\Recipient;
+use Microsoft\Graph\Generated\Models\Recipient;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item\Lists\Item\ContentTypes\Item\BaseTypes;
+namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\BaseTypes;
 
 class BaseTypesRequestBuilderGetRequestConfiguration 
 {

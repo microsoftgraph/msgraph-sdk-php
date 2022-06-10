@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Identity;
+namespace Microsoft\Graph\Generated\Identity;
 
 class IdentityRequestBuilderPatchRequestConfiguration 
 {

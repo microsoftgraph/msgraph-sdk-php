@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drives\Item\Root\Preview;
+namespace Microsoft\Graph\Generated\Drives\Item\Root\Preview;
 
 class PreviewRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\MobileThreatDefenseConnectors\Count;
+namespace Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

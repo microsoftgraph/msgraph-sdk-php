@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\ServicePrincipals\Item\TokenLifetimePolicies;
+namespace Microsoft\Graph\Generated\ServicePrincipals\Item\TokenLifetimePolicies;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

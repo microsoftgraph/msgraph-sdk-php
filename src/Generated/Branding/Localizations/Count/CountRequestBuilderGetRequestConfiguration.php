@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Branding\Localizations\Count;
+namespace Microsoft\Graph\Generated\Branding\Localizations\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

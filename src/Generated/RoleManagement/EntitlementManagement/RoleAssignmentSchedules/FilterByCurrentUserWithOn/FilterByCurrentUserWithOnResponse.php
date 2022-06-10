@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\RoleManagement\EntitlementManagement\RoleAssignmentSchedules\FilterByCurrentUserWithOn;
+namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentSchedules\FilterByCurrentUserWithOn;
 
-use Microsoft\Graph\Models\UnifiedRoleAssignmentSchedule;
+use Microsoft\Graph\Generated\Models\UnifiedRoleAssignmentSchedule;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

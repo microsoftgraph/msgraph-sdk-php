@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Me\Settings\ShiftPreferences;
+namespace Microsoft\Graph\Generated\Me\Settings\ShiftPreferences;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\ShiftPreferences;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ShiftPreferences;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

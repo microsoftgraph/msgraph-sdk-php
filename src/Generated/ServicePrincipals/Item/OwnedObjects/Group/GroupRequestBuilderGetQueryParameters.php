@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\ServicePrincipals\Item\OwnedObjects\Group;
+namespace Microsoft\Graph\Generated\ServicePrincipals\Item\OwnedObjects\Group;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

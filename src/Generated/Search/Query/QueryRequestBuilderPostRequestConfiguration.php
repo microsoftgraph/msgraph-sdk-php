@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Search\Query;
+namespace Microsoft\Graph\Generated\Search\Query;
 
 class QueryRequestBuilderPostRequestConfiguration 
 {

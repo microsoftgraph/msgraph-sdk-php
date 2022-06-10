@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Me\MemberOf\Item\OrgContact;
+namespace Microsoft\Graph\Generated\Me\MemberOf\Item\OrgContact;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\OrgContact;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OrgContact;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

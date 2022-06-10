@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Drives\Item\EscapedList\ContentTypes\Item\ColumnLinks\Count;
+namespace Microsoft\Graph\Generated\Me\Drives\Item\EscapedList\ContentTypes\Item\ColumnLinks\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

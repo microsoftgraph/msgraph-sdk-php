@@ -1,26 +1,26 @@
 <?php
 
-namespace Microsoft\Graph\Solutions\BookingBusinesses\Item;
+namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\BookingBusiness;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Solutions\BookingBusinesses\Item\Appointments\AppointmentsRequestBuilder;
-use Microsoft\Graph\Solutions\BookingBusinesses\Item\Appointments\Item\BookingAppointmentItemRequestBuilder as MicrosoftGraphSolutionsBookingBusinessesItemAppointmentsItemBookingAppointmentItemRequestBuilder;
-use Microsoft\Graph\Solutions\BookingBusinesses\Item\CalendarView\CalendarViewRequestBuilder;
-use Microsoft\Graph\Solutions\BookingBusinesses\Item\CalendarView\Item\BookingAppointmentItemRequestBuilder as MicrosoftGraphSolutionsBookingBusinessesItemCalendarViewItemBookingAppointmentItemRequestBuilder;
-use Microsoft\Graph\Solutions\BookingBusinesses\Item\Customers\CustomersRequestBuilder;
-use Microsoft\Graph\Solutions\BookingBusinesses\Item\Customers\Item\BookingCustomerBaseItemRequestBuilder;
-use Microsoft\Graph\Solutions\BookingBusinesses\Item\CustomQuestions\CustomQuestionsRequestBuilder;
-use Microsoft\Graph\Solutions\BookingBusinesses\Item\CustomQuestions\Item\BookingCustomQuestionItemRequestBuilder;
-use Microsoft\Graph\Solutions\BookingBusinesses\Item\Publish\PublishRequestBuilder;
-use Microsoft\Graph\Solutions\BookingBusinesses\Item\Services\Item\BookingServiceItemRequestBuilder;
-use Microsoft\Graph\Solutions\BookingBusinesses\Item\Services\ServicesRequestBuilder;
-use Microsoft\Graph\Solutions\BookingBusinesses\Item\StaffMembers\Item\BookingStaffMemberBaseItemRequestBuilder;
-use Microsoft\Graph\Solutions\BookingBusinesses\Item\StaffMembers\StaffMembersRequestBuilder;
-use Microsoft\Graph\Solutions\BookingBusinesses\Item\Unpublish\UnpublishRequestBuilder;
+use Microsoft\Graph\Generated\Models\BookingBusiness;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\AppointmentsRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\Item\BookingAppointmentItemRequestBuilder as MicrosoftGraphGeneratedSolutionsBookingBusinessesItemAppointmentsItemBookingAppointmentItemRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\CalendarViewRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\Item\BookingAppointmentItemRequestBuilder as MicrosoftGraphGeneratedSolutionsBookingBusinessesItemCalendarViewItemBookingAppointmentItemRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Customers\CustomersRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Customers\Item\BookingCustomerBaseItemRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CustomQuestions\CustomQuestionsRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CustomQuestions\Item\BookingCustomQuestionItemRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Publish\PublishRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Services\Item\BookingServiceItemRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Services\ServicesRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\StaffMembers\Item\BookingStaffMemberBaseItemRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\StaffMembers\StaffMembersRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Unpublish\UnpublishRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -103,25 +103,25 @@ class BookingBusinessItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.solutions.bookingBusinesses.item.appointments.item collection
+     * Gets an item from the Microsoft\Graph\Generated.solutions.bookingBusinesses.item.appointments.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphSolutionsBookingBusinessesItemAppointmentsItemBookingAppointmentItemRequestBuilder
+     * @return MicrosoftGraphGeneratedSolutionsBookingBusinessesItemAppointmentsItemBookingAppointmentItemRequestBuilder
     */
-    public function appointmentsById(string $id): MicrosoftGraphSolutionsBookingBusinessesItemAppointmentsItemBookingAppointmentItemRequestBuilder {
+    public function appointmentsById(string $id): MicrosoftGraphGeneratedSolutionsBookingBusinessesItemAppointmentsItemBookingAppointmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingAppointment%2Did'] = $id;
-        return new MicrosoftGraphSolutionsBookingBusinessesItemAppointmentsItemBookingAppointmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedSolutionsBookingBusinessesItemAppointmentsItemBookingAppointmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.solutions.bookingBusinesses.item.calendarView.item collection
+     * Gets an item from the Microsoft\Graph\Generated.solutions.bookingBusinesses.item.calendarView.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphSolutionsBookingBusinessesItemCalendarViewItemBookingAppointmentItemRequestBuilder
+     * @return MicrosoftGraphGeneratedSolutionsBookingBusinessesItemCalendarViewItemBookingAppointmentItemRequestBuilder
     */
-    public function calendarViewById(string $id): MicrosoftGraphSolutionsBookingBusinessesItemCalendarViewItemBookingAppointmentItemRequestBuilder {
+    public function calendarViewById(string $id): MicrosoftGraphGeneratedSolutionsBookingBusinessesItemCalendarViewItemBookingAppointmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingAppointment%2Did'] = $id;
-        return new MicrosoftGraphSolutionsBookingBusinessesItemCalendarViewItemBookingAppointmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedSolutionsBookingBusinessesItemCalendarViewItemBookingAppointmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -204,7 +204,7 @@ class BookingBusinessItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.solutions.bookingBusinesses.item.customers.item collection
+     * Gets an item from the Microsoft\Graph\Generated.solutions.bookingBusinesses.item.customers.item collection
      * @param string $id Unique identifier of the item
      * @return BookingCustomerBaseItemRequestBuilder
     */
@@ -215,7 +215,7 @@ class BookingBusinessItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.solutions.bookingBusinesses.item.customQuestions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.solutions.bookingBusinesses.item.customQuestions.item collection
      * @param string $id Unique identifier of the item
      * @return BookingCustomQuestionItemRequestBuilder
     */
@@ -284,7 +284,7 @@ class BookingBusinessItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.solutions.bookingBusinesses.item.services.item collection
+     * Gets an item from the Microsoft\Graph\Generated.solutions.bookingBusinesses.item.services.item collection
      * @param string $id Unique identifier of the item
      * @return BookingServiceItemRequestBuilder
     */
@@ -295,7 +295,7 @@ class BookingBusinessItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.solutions.bookingBusinesses.item.staffMembers.item collection
+     * Gets an item from the Microsoft\Graph\Generated.solutions.bookingBusinesses.item.staffMembers.item collection
      * @param string $id Unique identifier of the item
      * @return BookingStaffMemberBaseItemRequestBuilder
     */

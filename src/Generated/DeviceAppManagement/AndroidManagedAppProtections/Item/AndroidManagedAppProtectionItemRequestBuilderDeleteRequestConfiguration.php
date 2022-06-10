@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\AndroidManagedAppProtections\Item;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\AndroidManagedAppProtections\Item;
 
 class AndroidManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration 
 {

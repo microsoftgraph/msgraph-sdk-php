@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\TermsAndConditions\Item;
+namespace Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\DeviceManagement\TermsAndConditions\Item\AcceptanceStatuses\AcceptanceStatusesRequestBuilder;
-use Microsoft\Graph\DeviceManagement\TermsAndConditions\Item\AcceptanceStatuses\Item\TermsAndConditionsAcceptanceStatusItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\TermsAndConditions\Item\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\DeviceManagement\TermsAndConditions\Item\Assignments\Item\TermsAndConditionsAssignmentItemRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\TermsAndConditions;
+use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\AcceptanceStatuses\AcceptanceStatusesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\AcceptanceStatuses\Item\TermsAndConditionsAcceptanceStatusItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\Assignments\AssignmentsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\Assignments\Item\TermsAndConditionsAssignmentItemRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TermsAndConditions;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -51,7 +51,7 @@ class TermsAndConditionsItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.termsAndConditions.item.acceptanceStatuses.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.termsAndConditions.item.acceptanceStatuses.item collection
      * @param string $id Unique identifier of the item
      * @return TermsAndConditionsAcceptanceStatusItemRequestBuilder
     */
@@ -62,7 +62,7 @@ class TermsAndConditionsItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.termsAndConditions.item.assignments.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.termsAndConditions.item.assignments.item collection
      * @param string $id Unique identifier of the item
      * @return TermsAndConditionsAssignmentItemRequestBuilder
     */

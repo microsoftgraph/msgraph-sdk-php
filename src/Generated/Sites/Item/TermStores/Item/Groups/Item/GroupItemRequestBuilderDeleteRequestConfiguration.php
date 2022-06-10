@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item\TermStores\Item\Groups\Item;
+namespace Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Groups\Item;
 
 class GroupItemRequestBuilderDeleteRequestConfiguration 
 {

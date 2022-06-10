@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Authentication\Fido2Methods\Item;
+namespace Microsoft\Graph\Generated\Users\Item\Authentication\Fido2Methods\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

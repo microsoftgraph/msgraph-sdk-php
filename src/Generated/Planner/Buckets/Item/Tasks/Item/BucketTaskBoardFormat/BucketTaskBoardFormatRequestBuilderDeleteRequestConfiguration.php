@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Planner\Buckets\Item\Tasks\Item\BucketTaskBoardFormat;
+namespace Microsoft\Graph\Generated\Planner\Buckets\Item\Tasks\Item\BucketTaskBoardFormat;
 
 class BucketTaskBoardFormatRequestBuilderDeleteRequestConfiguration 
 {

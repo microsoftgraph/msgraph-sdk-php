@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\EscapedPrint;
+namespace Microsoft\Graph\Generated\EscapedPrint;
 
 class PrintRequestBuilderPatchRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\JoinedTeams\Item\Schedule\TimeOffReasons\Count;
+namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\TimeOffReasons\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

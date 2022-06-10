@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drives\Item\EscapedList\ContentTypes\AddCopyFromContentTypeHub;
+namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\AddCopyFromContentTypeHub;
 
 class AddCopyFromContentTypeHubRequestBuilderPostRequestConfiguration 
 {

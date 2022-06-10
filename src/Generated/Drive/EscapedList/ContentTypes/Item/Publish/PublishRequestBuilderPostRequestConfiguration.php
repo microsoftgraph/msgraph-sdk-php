@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drive\EscapedList\ContentTypes\Item\Publish;
+namespace Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\Publish;
 
 class PublishRequestBuilderPostRequestConfiguration 
 {

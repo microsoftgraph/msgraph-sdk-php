@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\TargetedManagedAppConfigurations\Item;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item;
 
 class TargetedManagedAppConfigurationItemRequestBuilderPatchRequestConfiguration 
 {

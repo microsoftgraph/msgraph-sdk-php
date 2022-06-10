@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Team\InstalledApps\Item\TeamsApp;
+namespace Microsoft\Graph\Generated\Groups\Item\Team\InstalledApps\Item\TeamsApp;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

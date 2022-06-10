@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Calendar\Events\Item\Instances\Item\SnoozeReminder;
+namespace Microsoft\Graph\Generated\Me\Calendar\Events\Item\Instances\Item\SnoozeReminder;
 
 class SnoozeReminderRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Outlook\SupportedLanguages;
+namespace Microsoft\Graph\Generated\Users\Item\Outlook\SupportedLanguages;
 
 class SupportedLanguagesRequestBuilderGetRequestConfiguration 
 {

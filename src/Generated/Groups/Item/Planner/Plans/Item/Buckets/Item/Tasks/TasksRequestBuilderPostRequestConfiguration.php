@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Planner\Plans\Item\Buckets\Item\Tasks;
+namespace Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\Buckets\Item\Tasks;
 
 class TasksRequestBuilderPostRequestConfiguration 
 {

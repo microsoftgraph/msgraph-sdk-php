@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\IdentityProtection\RiskyUsers\Dismiss;
+namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Dismiss;
 
 class DismissRequestBuilderPostRequestConfiguration 
 {

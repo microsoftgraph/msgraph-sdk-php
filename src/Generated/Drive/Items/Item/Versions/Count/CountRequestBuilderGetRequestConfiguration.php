@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Items\Item\Versions\Count;
+namespace Microsoft\Graph\Generated\Drive\Items\Item\Versions\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

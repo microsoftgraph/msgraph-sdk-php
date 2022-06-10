@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\Messages;
+namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages;
 
 class MessagesRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Shares\Item\EscapedList\Operations\Count;
+namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Operations\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

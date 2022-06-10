@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Messages\Item\Attachments\CreateUploadSession;
+namespace Microsoft\Graph\Generated\Me\Messages\Item\Attachments\CreateUploadSession;
 
 class CreateUploadSessionRequestBuilderPostRequestConfiguration 
 {

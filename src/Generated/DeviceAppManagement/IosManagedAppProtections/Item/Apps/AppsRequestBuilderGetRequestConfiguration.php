@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\IosManagedAppProtections\Item\Apps;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections\Item\Apps;
 
 class AppsRequestBuilderGetRequestConfiguration 
 {

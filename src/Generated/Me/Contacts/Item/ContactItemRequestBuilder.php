@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Me\Contacts\Item;
+namespace Microsoft\Graph\Generated\Me\Contacts\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\Contacts\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Me\Contacts\Item\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Me\Contacts\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Me\Contacts\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Me\Contacts\Item\Photo\PhotoRequestBuilder;
-use Microsoft\Graph\Me\Contacts\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Me\Contacts\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Models\Contact;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Me\Contacts\Item\Extensions\ExtensionsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Contacts\Item\Extensions\Item\ExtensionItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Contacts\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Contacts\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Me\Contacts\Item\Photo\PhotoRequestBuilder;
+use Microsoft\Graph\Generated\Me\Contacts\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Contacts\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Models\Contact;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -166,7 +166,7 @@ class ContactItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.contacts.item.extensions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.contacts.item.extensions.item collection
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */
@@ -196,7 +196,7 @@ class ContactItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.contacts.item.multiValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.contacts.item.multiValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
     */
@@ -227,7 +227,7 @@ class ContactItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.contacts.item.singleValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.contacts.item.singleValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
     */

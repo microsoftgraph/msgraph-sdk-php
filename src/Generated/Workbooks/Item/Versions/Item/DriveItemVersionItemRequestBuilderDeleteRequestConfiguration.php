@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Workbooks\Item\Versions\Item;
+namespace Microsoft\Graph\Generated\Workbooks\Item\Versions\Item;
 
 class DriveItemVersionItemRequestBuilderDeleteRequestConfiguration 
 {

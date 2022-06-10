@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\External\Connections\Item\Operations;
+namespace Microsoft\Graph\Generated\External\Connections\Item\Operations;
 
 class OperationsRequestBuilderPostRequestConfiguration 
 {

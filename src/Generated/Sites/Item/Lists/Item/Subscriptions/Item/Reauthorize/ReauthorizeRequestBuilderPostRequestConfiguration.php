@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item\Lists\Item\Subscriptions\Item\Reauthorize;
+namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\Subscriptions\Item\Reauthorize;
 
 class ReauthorizeRequestBuilderPostRequestConfiguration 
 {

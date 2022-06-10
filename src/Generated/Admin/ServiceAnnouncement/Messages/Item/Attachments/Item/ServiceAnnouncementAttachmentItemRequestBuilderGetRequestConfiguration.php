@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Admin\ServiceAnnouncement\Messages\Item\Attachments\Item;
+namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Item\Attachments\Item;
 
 class ServiceAnnouncementAttachmentItemRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Items\Item\Copy;
+namespace Microsoft\Graph\Generated\Drive\Items\Item\Copy;
 
 class CopyRequestBuilderPostRequestConfiguration 
 {

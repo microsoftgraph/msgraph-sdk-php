@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Outlook\MasterCategories\Item;
+namespace Microsoft\Graph\Generated\Me\Outlook\MasterCategories\Item;
 
 class OutlookCategoryItemRequestBuilderGetRequestConfiguration 
 {

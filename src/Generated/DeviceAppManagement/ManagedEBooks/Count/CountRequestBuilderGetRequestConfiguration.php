@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Count;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

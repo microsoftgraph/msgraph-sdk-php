@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Sites\Item\TermStores\Item\Groups\Item;
+namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\SetItemRequestBuilder;
-use Microsoft\Graph\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\SetsRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\TermStore\Group;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\SetItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\SetsRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TermStore\Group;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -179,7 +179,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.groups.item.sites.item.termStores.item.groups.item.sets.item collection
+     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.termStores.item.groups.item.sets.item collection
      * @param string $id Unique identifier of the item
      * @return SetItemRequestBuilder
     */

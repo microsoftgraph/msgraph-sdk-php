@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item\ExternalColumns;
+namespace Microsoft\Graph\Generated\Sites\Item\ExternalColumns;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

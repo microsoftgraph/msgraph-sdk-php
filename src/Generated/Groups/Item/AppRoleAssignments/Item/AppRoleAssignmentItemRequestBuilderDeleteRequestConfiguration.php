@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\AppRoleAssignments\Item;
+namespace Microsoft\Graph\Generated\Groups\Item\AppRoleAssignments\Item;
 
 class AppRoleAssignmentItemRequestBuilderDeleteRequestConfiguration 
 {

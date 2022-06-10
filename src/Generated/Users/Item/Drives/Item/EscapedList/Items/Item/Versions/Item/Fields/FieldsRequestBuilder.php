@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Drives\Item\EscapedList\Items\Item\Versions\Item\Fields;
+namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\EscapedList\Items\Item\Versions\Item\Fields;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\FieldValueSet;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\FieldValueSet;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

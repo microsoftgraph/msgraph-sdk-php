@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\MailFolders\Item\ChildFolders\Item\Move;
+namespace Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\Move;
 
 class MoveRequestBuilderPostRequestConfiguration 
 {

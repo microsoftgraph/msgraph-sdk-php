@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Calendar\Events\Item\SingleValueExtendedProperties;
+namespace Microsoft\Graph\Generated\Me\Calendar\Events\Item\SingleValueExtendedProperties;
 
 class SingleValueExtendedPropertiesRequestBuilderGetRequestConfiguration 
 {

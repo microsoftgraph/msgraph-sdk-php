@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Identity\B2xUserFlows;
+namespace Microsoft\Graph\Generated\Identity\B2xUserFlows;
 
 class B2xUserFlowsRequestBuilderGetRequestConfiguration 
 {

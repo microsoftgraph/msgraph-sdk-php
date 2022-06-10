@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Me\OwnedDevices;
+namespace Microsoft\Graph\Generated\Me\OwnedDevices;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\OwnedDevices\AppRoleAssignment\AppRoleAssignmentRequestBuilder;
-use Microsoft\Graph\Me\OwnedDevices\Count\CountRequestBuilder;
-use Microsoft\Graph\Me\OwnedDevices\Device\DeviceRequestBuilder;
-use Microsoft\Graph\Me\OwnedDevices\Endpoint\EndpointRequestBuilder;
-use Microsoft\Graph\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Me\OwnedDevices\AppRoleAssignment\AppRoleAssignmentRequestBuilder;
+use Microsoft\Graph\Generated\Me\OwnedDevices\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\OwnedDevices\Device\DeviceRequestBuilder;
+use Microsoft\Graph\Generated\Me\OwnedDevices\Endpoint\EndpointRequestBuilder;
+use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

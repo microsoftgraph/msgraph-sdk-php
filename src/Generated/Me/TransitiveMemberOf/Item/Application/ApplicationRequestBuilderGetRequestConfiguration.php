@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\TransitiveMemberOf\Item\Application;
+namespace Microsoft\Graph\Generated\Me\TransitiveMemberOf\Item\Application;
 
 class ApplicationRequestBuilderGetRequestConfiguration 
 {

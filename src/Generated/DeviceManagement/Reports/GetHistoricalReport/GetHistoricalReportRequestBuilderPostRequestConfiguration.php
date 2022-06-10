@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\Reports\GetHistoricalReport;
+namespace Microsoft\Graph\Generated\DeviceManagement\Reports\GetHistoricalReport;
 
 class GetHistoricalReportRequestBuilderPostRequestConfiguration 
 {

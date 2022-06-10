@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Policies\RoleManagementPolicies\Count;
+namespace Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

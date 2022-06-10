@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\DeviceCompliancePolicyDeviceStateSummary;
+namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicyDeviceStateSummary;
 
 class DeviceCompliancePolicyDeviceStateSummaryRequestBuilderDeleteRequestConfiguration 
 {

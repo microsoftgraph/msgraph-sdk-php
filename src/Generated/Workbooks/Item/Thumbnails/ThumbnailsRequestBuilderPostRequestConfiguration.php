@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Workbooks\Item\Thumbnails;
+namespace Microsoft\Graph\Generated\Workbooks\Item\Thumbnails;
 
 class ThumbnailsRequestBuilderPostRequestConfiguration 
 {

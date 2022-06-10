@@ -1,21 +1,21 @@
 <?php
 
-namespace Microsoft\Graph\DirectoryRoles\Item;
+namespace Microsoft\Graph\Generated\DirectoryRoles\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\DirectoryRoles\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\DirectoryRoles\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\DirectoryRoles\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\DirectoryRoles\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\DirectoryRoles\Item\Members\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\DirectoryRoles\Item\Members\MembersRequestBuilder;
-use Microsoft\Graph\DirectoryRoles\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\DirectoryRoles\Item\ScopedMembers\Item\ScopedRoleMembershipItemRequestBuilder;
-use Microsoft\Graph\DirectoryRoles\Item\ScopedMembers\ScopedMembersRequestBuilder;
-use Microsoft\Graph\Models\DirectoryRole;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\MembersRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\ScopedMembers\Item\ScopedRoleMembershipItemRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\ScopedMembers\ScopedMembersRequestBuilder;
+use Microsoft\Graph\Generated\Models\DirectoryRole;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -208,7 +208,7 @@ class DirectoryRoleItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.directoryRoles.item.members.item collection
+     * Gets an item from the Microsoft\Graph\Generated.directoryRoles.item.members.item collection
      * @param string $id Unique identifier of the item
      * @return DirectoryObjectItemRequestBuilder
     */
@@ -239,7 +239,7 @@ class DirectoryRoleItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.directoryRoles.item.scopedMembers.item collection
+     * Gets an item from the Microsoft\Graph\Generated.directoryRoles.item.scopedMembers.item collection
      * @param string $id Unique identifier of the item
      * @return ScopedRoleMembershipItemRequestBuilder
     */

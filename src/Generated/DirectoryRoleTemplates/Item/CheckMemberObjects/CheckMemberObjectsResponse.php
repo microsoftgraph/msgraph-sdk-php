@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DirectoryRoleTemplates\Item\CheckMemberObjects;
+namespace Microsoft\Graph\Generated\DirectoryRoleTemplates\Item\CheckMemberObjects;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

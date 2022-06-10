@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Solutions\BookingBusinesses\Item\CalendarView\Item\Cancel;
+namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\Item\Cancel;
 
 class CancelRequestBuilderPostRequestConfiguration 
 {

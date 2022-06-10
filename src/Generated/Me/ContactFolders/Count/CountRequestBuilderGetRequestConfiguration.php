@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\ContactFolders\Count;
+namespace Microsoft\Graph\Generated\Me\ContactFolders\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

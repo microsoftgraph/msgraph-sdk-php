@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Reports\GetTeamsDeviceUsageUserDetailWithDate;
+namespace Microsoft\Graph\Generated\Reports\GetTeamsDeviceUsageUserDetailWithDate;
 
 class GetTeamsDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration 
 {

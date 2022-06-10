@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Workbooks\Item\Permissions\Count;
+namespace Microsoft\Graph\Generated\Workbooks\Item\Permissions\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

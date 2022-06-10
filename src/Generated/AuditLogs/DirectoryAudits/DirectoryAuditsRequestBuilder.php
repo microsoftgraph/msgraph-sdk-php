@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\AuditLogs\DirectoryAudits;
+namespace Microsoft\Graph\Generated\AuditLogs\DirectoryAudits;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\AuditLogs\DirectoryAudits\Count\CountRequestBuilder;
-use Microsoft\Graph\Models\DirectoryAudit;
-use Microsoft\Graph\Models\DirectoryAuditCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\AuditLogs\DirectoryAudits\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\DirectoryAudit;
+use Microsoft\Graph\Generated\Models\DirectoryAuditCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

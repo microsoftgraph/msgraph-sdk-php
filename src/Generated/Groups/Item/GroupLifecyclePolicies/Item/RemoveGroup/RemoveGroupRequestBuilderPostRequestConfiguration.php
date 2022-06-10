@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\GroupLifecyclePolicies\Item\RemoveGroup;
+namespace Microsoft\Graph\Generated\Groups\Item\GroupLifecyclePolicies\Item\RemoveGroup;
 
 class RemoveGroupRequestBuilderPostRequestConfiguration 
 {

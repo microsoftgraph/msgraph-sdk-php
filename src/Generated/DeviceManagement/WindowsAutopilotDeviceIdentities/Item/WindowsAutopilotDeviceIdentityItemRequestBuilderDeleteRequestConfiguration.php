@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\WindowsAutopilotDeviceIdentities\Item;
+namespace Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item;
 
 class WindowsAutopilotDeviceIdentityItemRequestBuilderDeleteRequestConfiguration 
 {

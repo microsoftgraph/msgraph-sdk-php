@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Contacts\Item\TransitiveMemberOf\OrgContact;
+namespace Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\OrgContact;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

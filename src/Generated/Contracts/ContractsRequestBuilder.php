@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Contracts;
+namespace Microsoft\Graph\Generated\Contracts;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Contracts\Count\CountRequestBuilder;
-use Microsoft\Graph\Contracts\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Contracts\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Contracts\ValidateProperties\ValidatePropertiesRequestBuilder;
-use Microsoft\Graph\Models\Contract;
-use Microsoft\Graph\Models\ContractCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Contracts\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Contracts\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Contracts\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\Contracts\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Models\Contract;
+use Microsoft\Graph\Generated\Models\ContractCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

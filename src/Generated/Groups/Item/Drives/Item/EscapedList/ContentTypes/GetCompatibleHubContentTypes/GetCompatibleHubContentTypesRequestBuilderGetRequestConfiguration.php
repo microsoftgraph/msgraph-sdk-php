@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Drives\Item\EscapedList\ContentTypes\GetCompatibleHubContentTypes;
+namespace Microsoft\Graph\Generated\Groups\Item\Drives\Item\EscapedList\ContentTypes\GetCompatibleHubContentTypes;
 
 class GetCompatibleHubContentTypesRequestBuilderGetRequestConfiguration 
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Communications\OnlineMeetings\Item;
+namespace Microsoft\Graph\Generated\Communications\OnlineMeetings\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Communications\OnlineMeetings\Item\AttendanceReports\AttendanceReportsRequestBuilder;
-use Microsoft\Graph\Communications\OnlineMeetings\Item\AttendanceReports\Item\MeetingAttendanceReportItemRequestBuilder;
-use Microsoft\Graph\Communications\OnlineMeetings\Item\AttendeeReport\AttendeeReportRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\OnlineMeeting;
+use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\AttendanceReports\AttendanceReportsRequestBuilder;
+use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\AttendanceReports\Item\MeetingAttendanceReportItemRequestBuilder;
+use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\AttendeeReport\AttendeeReportRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OnlineMeeting;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -50,7 +50,7 @@ class OnlineMeetingItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.communications.onlineMeetings.item.attendanceReports.item collection
+     * Gets an item from the Microsoft\Graph\Generated.communications.onlineMeetings.item.attendanceReports.item collection
      * @param string $id Unique identifier of the item
      * @return MeetingAttendanceReportItemRequestBuilder
     */

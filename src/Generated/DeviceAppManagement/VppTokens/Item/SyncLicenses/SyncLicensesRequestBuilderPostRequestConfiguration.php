@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\VppTokens\Item\SyncLicenses;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item\SyncLicenses;
 
 class SyncLicensesRequestBuilderPostRequestConfiguration 
 {

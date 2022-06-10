@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DirectoryObjects\Item;
+namespace Microsoft\Graph\Generated\DirectoryObjects\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

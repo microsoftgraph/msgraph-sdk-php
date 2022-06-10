@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Models;
+namespace Microsoft\Graph\Generated\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -50,7 +50,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     private ?ScheduleChangeState $state = null;
     
     /**
-     * Instantiates a new scheduleChangeRequest and sets the default values.
+     * Instantiates a new ScheduleChangeRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -62,15 +62,6 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
      * @return ScheduleChangeRequest
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ScheduleChangeRequest {
-        $mappingValueNode = $parseNode->getChildNode("@odata.type");
-        if ($mappingValueNode !== null) {
-            $mappingValue = $mappingValueNode->getStringValue();
-            switch ($mappingValue) {
-                case '#microsoft.graph.offerShiftRequest': return new OfferShiftRequest();
-                case '#microsoft.graph.openShiftChangeRequest': return new OpenShiftChangeRequest();
-                case '#microsoft.graph.timeOffRequest': return new TimeOffRequest();
-            }
-        }
         return new ScheduleChangeRequest();
     }
 

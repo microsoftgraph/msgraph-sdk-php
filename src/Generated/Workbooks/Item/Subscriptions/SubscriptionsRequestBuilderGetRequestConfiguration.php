@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Workbooks\Item\Subscriptions;
+namespace Microsoft\Graph\Generated\Workbooks\Item\Subscriptions;
 
 class SubscriptionsRequestBuilderGetRequestConfiguration 
 {

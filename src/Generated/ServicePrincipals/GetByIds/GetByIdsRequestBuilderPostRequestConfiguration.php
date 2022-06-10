@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\ServicePrincipals\GetByIds;
+namespace Microsoft\Graph\Generated\ServicePrincipals\GetByIds;
 
 class GetByIdsRequestBuilderPostRequestConfiguration 
 {

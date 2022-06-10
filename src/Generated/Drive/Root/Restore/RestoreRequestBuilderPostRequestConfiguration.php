@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Root\Restore;
+namespace Microsoft\Graph\Generated\Drive\Root\Restore;
 
 class RestoreRequestBuilderPostRequestConfiguration 
 {

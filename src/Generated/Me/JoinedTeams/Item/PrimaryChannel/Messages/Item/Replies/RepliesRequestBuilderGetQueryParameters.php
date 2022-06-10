@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\Messages\Item\Replies;
+namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages\Item\Replies;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

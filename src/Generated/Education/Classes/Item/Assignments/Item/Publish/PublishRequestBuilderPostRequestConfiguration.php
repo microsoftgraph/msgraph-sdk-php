@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Education\Classes\Item\Assignments\Item\Publish;
+namespace Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Publish;
 
 class PublishRequestBuilderPostRequestConfiguration 
 {

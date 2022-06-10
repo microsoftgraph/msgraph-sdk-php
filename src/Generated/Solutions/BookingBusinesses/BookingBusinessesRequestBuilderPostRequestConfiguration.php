@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Solutions\BookingBusinesses;
+namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses;
 
 class BookingBusinessesRequestBuilderPostRequestConfiguration 
 {

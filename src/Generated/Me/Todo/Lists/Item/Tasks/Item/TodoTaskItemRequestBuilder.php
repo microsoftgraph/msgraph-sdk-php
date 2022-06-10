@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Me\Todo\Lists\Item\Tasks\Item;
+namespace Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\Todo\Lists\Item\Tasks\Item\ChecklistItems\ChecklistItemsRequestBuilder;
-use Microsoft\Graph\Me\Todo\Lists\Item\Tasks\Item\ChecklistItems\Item\ChecklistItemItemRequestBuilder;
-use Microsoft\Graph\Me\Todo\Lists\Item\Tasks\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Me\Todo\Lists\Item\Tasks\Item\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Me\Todo\Lists\Item\Tasks\Item\LinkedResources\Item\LinkedResourceItemRequestBuilder;
-use Microsoft\Graph\Me\Todo\Lists\Item\Tasks\Item\LinkedResources\LinkedResourcesRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\TodoTask;
+use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\ChecklistItems\ChecklistItemsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\ChecklistItems\Item\ChecklistItemItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\Extensions\ExtensionsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\Extensions\Item\ExtensionItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\LinkedResources\Item\LinkedResourceItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\LinkedResources\LinkedResourcesRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TodoTask;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -60,7 +60,7 @@ class TodoTaskItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.me.todo.lists.item.tasks.item.checklistItems.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.todo.lists.item.tasks.item.checklistItems.item collection
      * @param string $id Unique identifier of the item
      * @return ChecklistItemItemRequestBuilder
     */
@@ -169,7 +169,7 @@ class TodoTaskItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.todo.lists.item.tasks.item.extensions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.todo.lists.item.tasks.item.extensions.item collection
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */
@@ -199,7 +199,7 @@ class TodoTaskItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.todo.lists.item.tasks.item.linkedResources.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.todo.lists.item.tasks.item.linkedResources.item collection
      * @param string $id Unique identifier of the item
      * @return LinkedResourceItemRequestBuilder
     */

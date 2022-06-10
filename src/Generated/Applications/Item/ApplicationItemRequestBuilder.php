@@ -1,35 +1,35 @@
 <?php
 
-namespace Microsoft\Graph\Applications\Item;
+namespace Microsoft\Graph\Generated\Applications\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Applications\Item\AddKey\AddKeyRequestBuilder;
-use Microsoft\Graph\Applications\Item\AddPassword\AddPasswordRequestBuilder;
-use Microsoft\Graph\Applications\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Applications\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Applications\Item\CreatedOnBehalfOf\CreatedOnBehalfOfRequestBuilder;
-use Microsoft\Graph\Applications\Item\ExtensionProperties\ExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Applications\Item\ExtensionProperties\Item\ExtensionPropertyItemRequestBuilder;
-use Microsoft\Graph\Applications\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Applications\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Applications\Item\HomeRealmDiscoveryPolicies\HomeRealmDiscoveryPoliciesRequestBuilder;
-use Microsoft\Graph\Applications\Item\HomeRealmDiscoveryPolicies\Item\HomeRealmDiscoveryPolicyItemRequestBuilder;
-use Microsoft\Graph\Applications\Item\Logo\LogoRequestBuilder;
-use Microsoft\Graph\Applications\Item\Owners\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Applications\Item\Owners\OwnersRequestBuilder;
-use Microsoft\Graph\Applications\Item\RemoveKey\RemoveKeyRequestBuilder;
-use Microsoft\Graph\Applications\Item\RemovePassword\RemovePasswordRequestBuilder;
-use Microsoft\Graph\Applications\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Applications\Item\SetVerifiedPublisher\SetVerifiedPublisherRequestBuilder;
-use Microsoft\Graph\Applications\Item\TokenIssuancePolicies\Item\TokenIssuancePolicyItemRequestBuilder;
-use Microsoft\Graph\Applications\Item\TokenIssuancePolicies\TokenIssuancePoliciesRequestBuilder;
-use Microsoft\Graph\Applications\Item\TokenLifetimePolicies\Item\TokenLifetimePolicyItemRequestBuilder;
-use Microsoft\Graph\Applications\Item\TokenLifetimePolicies\TokenLifetimePoliciesRequestBuilder;
-use Microsoft\Graph\Applications\Item\UnsetVerifiedPublisher\UnsetVerifiedPublisherRequestBuilder;
-use Microsoft\Graph\Models\Application;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Applications\Item\AddKey\AddKeyRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\AddPassword\AddPasswordRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\CreatedOnBehalfOf\CreatedOnBehalfOfRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\ExtensionProperties\ExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\ExtensionProperties\Item\ExtensionPropertyItemRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\HomeRealmDiscoveryPolicies\HomeRealmDiscoveryPoliciesRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\HomeRealmDiscoveryPolicies\Item\HomeRealmDiscoveryPolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\Logo\LogoRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\Owners\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\Owners\OwnersRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\RemoveKey\RemoveKeyRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\RemovePassword\RemovePasswordRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\SetVerifiedPublisher\SetVerifiedPublisherRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\TokenIssuancePolicies\Item\TokenIssuancePolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\TokenIssuancePolicies\TokenIssuancePoliciesRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\TokenLifetimePolicies\Item\TokenLifetimePolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\TokenLifetimePolicies\TokenLifetimePoliciesRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\UnsetVerifiedPublisher\UnsetVerifiedPublisherRequestBuilder;
+use Microsoft\Graph\Generated\Models\Application;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -280,7 +280,7 @@ class ApplicationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.applications.item.extensionProperties.item collection
+     * Gets an item from the Microsoft\Graph\Generated.applications.item.extensionProperties.item collection
      * @param string $id Unique identifier of the item
      * @return ExtensionPropertyItemRequestBuilder
     */
@@ -310,7 +310,7 @@ class ApplicationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.applications.item.homeRealmDiscoveryPolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.applications.item.homeRealmDiscoveryPolicies.item collection
      * @param string $id Unique identifier of the item
      * @return HomeRealmDiscoveryPolicyItemRequestBuilder
     */
@@ -321,7 +321,7 @@ class ApplicationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.applications.item.owners.item collection
+     * Gets an item from the Microsoft\Graph\Generated.applications.item.owners.item collection
      * @param string $id Unique identifier of the item
      * @return DirectoryObjectItemRequestBuilder
     */
@@ -352,7 +352,7 @@ class ApplicationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.applications.item.tokenIssuancePolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.applications.item.tokenIssuancePolicies.item collection
      * @param string $id Unique identifier of the item
      * @return TokenIssuancePolicyItemRequestBuilder
     */
@@ -363,7 +363,7 @@ class ApplicationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.applications.item.tokenLifetimePolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.applications.item.tokenLifetimePolicies.item collection
      * @param string $id Unique identifier of the item
      * @return TokenLifetimePolicyItemRequestBuilder
     */

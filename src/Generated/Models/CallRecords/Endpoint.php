@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Models\CallRecords;
+namespace Microsoft\Graph\Generated\Models\CallRecords;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

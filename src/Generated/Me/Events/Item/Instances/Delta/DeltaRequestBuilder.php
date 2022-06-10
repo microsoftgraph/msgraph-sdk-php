@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Me\Events\Item\Instances\Delta;
+namespace Microsoft\Graph\Generated\Me\Events\Item\Instances\Delta;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\InformationProtection\Bitlocker\RecoveryKeys;
+namespace Microsoft\Graph\Generated\InformationProtection\Bitlocker\RecoveryKeys;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\InformationProtection\Bitlocker\RecoveryKeys\Count\CountRequestBuilder;
-use Microsoft\Graph\Models\BitlockerRecoveryKey;
-use Microsoft\Graph\Models\BitlockerRecoveryKeyCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\InformationProtection\Bitlocker\RecoveryKeys\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\BitlockerRecoveryKey;
+use Microsoft\Graph\Generated\Models\BitlockerRecoveryKeyCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

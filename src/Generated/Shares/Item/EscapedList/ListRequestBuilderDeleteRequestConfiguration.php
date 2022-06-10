@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Shares\Item\EscapedList;
+namespace Microsoft\Graph\Generated\Shares\Item\EscapedList;
 
 class ListRequestBuilderDeleteRequestConfiguration 
 {

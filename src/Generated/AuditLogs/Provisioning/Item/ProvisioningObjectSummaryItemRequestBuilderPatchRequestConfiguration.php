@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\AuditLogs\Provisioning\Item;
+namespace Microsoft\Graph\Generated\AuditLogs\Provisioning\Item;
 
 class ProvisioningObjectSummaryItemRequestBuilderPatchRequestConfiguration 
 {

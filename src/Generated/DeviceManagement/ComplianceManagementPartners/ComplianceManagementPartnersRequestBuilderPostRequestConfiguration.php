@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\ComplianceManagementPartners;
+namespace Microsoft\Graph\Generated\DeviceManagement\ComplianceManagementPartners;
 
 class ComplianceManagementPartnersRequestBuilderPostRequestConfiguration 
 {

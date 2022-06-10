@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Events\Item\Cancel;
+namespace Microsoft\Graph\Generated\Me\Events\Item\Cancel;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

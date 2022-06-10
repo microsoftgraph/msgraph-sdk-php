@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Calendar\CalendarView\Item\SnoozeReminder;
+namespace Microsoft\Graph\Generated\Users\Item\Calendar\CalendarView\Item\SnoozeReminder;
 
-use Microsoft\Graph\Models\DateTimeTimeZone;
+use Microsoft\Graph\Generated\Models\DateTimeTimeZone;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

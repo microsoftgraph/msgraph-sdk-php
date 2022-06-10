@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Directory\DeletedItems\Item\GetMemberObjects;
+namespace Microsoft\Graph\Generated\Directory\DeletedItems\Item\GetMemberObjects;
 
 class GetMemberObjectsRequestBuilderPostRequestConfiguration 
 {

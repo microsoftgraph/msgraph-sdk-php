@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Education\Classes\Item\AssignmentSettings;
+namespace Microsoft\Graph\Generated\Education\Classes\Item\AssignmentSettings;
 
 class AssignmentSettingsRequestBuilderGetRequestConfiguration 
 {

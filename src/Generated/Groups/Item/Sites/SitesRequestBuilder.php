@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Sites;
+namespace Microsoft\Graph\Generated\Groups\Item\Sites;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Groups\Item\Sites\Add\AddRequestBuilder;
-use Microsoft\Graph\Groups\Item\Sites\Count\CountRequestBuilder;
-use Microsoft\Graph\Groups\Item\Sites\Remove\RemoveRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\Site;
-use Microsoft\Graph\Models\SiteCollectionResponse;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Add\AddRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Remove\RemoveRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Site;
+use Microsoft\Graph\Generated\Models\SiteCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

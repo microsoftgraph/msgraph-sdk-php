@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Admin\ServiceAnnouncement\Messages\Item\AttachmentsArchive;
+namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Item\AttachmentsArchive;
 
 class AttachmentsArchiveRequestBuilderPutRequestConfiguration 
 {

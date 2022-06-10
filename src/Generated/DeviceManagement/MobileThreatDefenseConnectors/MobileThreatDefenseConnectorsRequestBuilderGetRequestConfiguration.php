@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\MobileThreatDefenseConnectors;
+namespace Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors;
 
 class MobileThreatDefenseConnectorsRequestBuilderGetRequestConfiguration 
 {

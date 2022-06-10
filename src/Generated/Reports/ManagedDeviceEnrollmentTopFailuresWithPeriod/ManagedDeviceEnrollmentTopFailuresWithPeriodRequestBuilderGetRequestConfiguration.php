@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Reports\ManagedDeviceEnrollmentTopFailuresWithPeriod;
+namespace Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentTopFailuresWithPeriod;
 
 class ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Admin\ServiceAnnouncement\Messages\Archive;
+namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Archive;
 
 class ArchiveRequestBuilderPostRequestConfiguration 
 {

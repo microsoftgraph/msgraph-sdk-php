@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\EscapedPrint\Printers\Create;
+namespace Microsoft\Graph\Generated\EscapedPrint\Printers\Create;
 
 class CreateRequestBuilderPostRequestConfiguration 
 {

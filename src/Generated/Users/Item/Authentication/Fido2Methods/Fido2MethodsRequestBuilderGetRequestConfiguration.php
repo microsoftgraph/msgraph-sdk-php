@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Authentication\Fido2Methods;
+namespace Microsoft\Graph\Generated\Users\Item\Authentication\Fido2Methods;
 
 class Fido2MethodsRequestBuilderGetRequestConfiguration 
 {

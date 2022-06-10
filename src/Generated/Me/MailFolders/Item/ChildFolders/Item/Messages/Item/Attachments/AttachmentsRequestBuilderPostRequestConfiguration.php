@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\MailFolders\Item\ChildFolders\Item\Messages\Item\Attachments;
+namespace Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\Messages\Item\Attachments;
 
 class AttachmentsRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\EscapedPrint\Operations\Item;
+namespace Microsoft\Graph\Generated\EscapedPrint\Operations\Item;
 
 class PrintOperationItemRequestBuilderDeleteRequestConfiguration 
 {

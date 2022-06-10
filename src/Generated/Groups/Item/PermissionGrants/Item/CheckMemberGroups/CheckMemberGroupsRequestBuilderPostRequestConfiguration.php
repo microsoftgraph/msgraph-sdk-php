@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\PermissionGrants\Item\CheckMemberGroups;
+namespace Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Item\CheckMemberGroups;
 
 class CheckMemberGroupsRequestBuilderPostRequestConfiguration 
 {

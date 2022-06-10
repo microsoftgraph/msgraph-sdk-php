@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Reports\GetOneDriveActivityUserDetailWithDate;
+namespace Microsoft\Graph\Generated\Reports\GetOneDriveActivityUserDetailWithDate;
 
 class GetOneDriveActivityUserDetailWithDateRequestBuilderGetRequestConfiguration 
 {

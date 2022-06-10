@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Me\JoinedTeams;
+namespace Microsoft\Graph\Generated\Me\JoinedTeams;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\JoinedTeams\Count\CountRequestBuilder;
-use Microsoft\Graph\Me\JoinedTeams\GetAllMessages\GetAllMessagesRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\Team;
-use Microsoft\Graph\Models\TeamCollectionResponse;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\GetAllMessages\GetAllMessagesRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Team;
+use Microsoft\Graph\Generated\Models\TeamCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

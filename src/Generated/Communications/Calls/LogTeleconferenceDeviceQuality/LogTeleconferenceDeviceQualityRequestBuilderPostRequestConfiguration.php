@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\Calls\LogTeleconferenceDeviceQuality;
+namespace Microsoft\Graph\Generated\Communications\Calls\LogTeleconferenceDeviceQuality;
 
 class LogTeleconferenceDeviceQualityRequestBuilderPostRequestConfiguration 
 {

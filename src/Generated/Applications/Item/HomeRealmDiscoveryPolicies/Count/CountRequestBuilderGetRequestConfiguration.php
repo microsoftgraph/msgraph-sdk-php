@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Applications\Item\HomeRealmDiscoveryPolicies\Count;
+namespace Microsoft\Graph\Generated\Applications\Item\HomeRealmDiscoveryPolicies\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

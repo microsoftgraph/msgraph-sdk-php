@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\GetByIds;
+namespace Microsoft\Graph\Generated\Groups\GetByIds;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

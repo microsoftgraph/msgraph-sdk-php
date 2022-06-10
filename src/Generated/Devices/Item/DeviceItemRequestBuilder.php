@@ -1,27 +1,27 @@
 <?php
 
-namespace Microsoft\Graph\Devices\Item;
+namespace Microsoft\Graph\Generated\Devices\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Devices\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Devices\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Devices\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Devices\Item\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Devices\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Devices\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Devices\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphDevicesItemMemberOfItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Devices\Item\MemberOf\MemberOfRequestBuilder;
-use Microsoft\Graph\Devices\Item\RegisteredOwners\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphDevicesItemRegisteredOwnersItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Devices\Item\RegisteredOwners\RegisteredOwnersRequestBuilder;
-use Microsoft\Graph\Devices\Item\RegisteredUsers\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphDevicesItemRegisteredUsersItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Devices\Item\RegisteredUsers\RegisteredUsersRequestBuilder;
-use Microsoft\Graph\Devices\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Devices\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphDevicesItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Devices\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
-use Microsoft\Graph\Models\Device;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Devices\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\Extensions\ExtensionsRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\Extensions\Item\ExtensionItemRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedDevicesItemMemberOfItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\MemberOf\MemberOfRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedDevicesItemRegisteredOwnersItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\RegisteredOwnersRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedDevicesItemRegisteredUsersItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\RegisteredUsersRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedDevicesItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
+use Microsoft\Graph\Generated\Models\Device;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -216,7 +216,7 @@ class DeviceItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.devices.item.extensions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.devices.item.extensions.item collection
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */
@@ -246,14 +246,14 @@ class DeviceItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.devices.item.memberOf.item collection
+     * Gets an item from the Microsoft\Graph\Generated.devices.item.memberOf.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphDevicesItemMemberOfItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphGeneratedDevicesItemMemberOfItemDirectoryObjectItemRequestBuilder
     */
-    public function memberOfById(string $id): MicrosoftGraphDevicesItemMemberOfItemDirectoryObjectItemRequestBuilder {
+    public function memberOfById(string $id): MicrosoftGraphGeneratedDevicesItemMemberOfItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphDevicesItemMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedDevicesItemMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -277,36 +277,36 @@ class DeviceItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.devices.item.registeredOwners.item collection
+     * Gets an item from the Microsoft\Graph\Generated.devices.item.registeredOwners.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphDevicesItemRegisteredOwnersItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphGeneratedDevicesItemRegisteredOwnersItemDirectoryObjectItemRequestBuilder
     */
-    public function registeredOwnersById(string $id): MicrosoftGraphDevicesItemRegisteredOwnersItemDirectoryObjectItemRequestBuilder {
+    public function registeredOwnersById(string $id): MicrosoftGraphGeneratedDevicesItemRegisteredOwnersItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphDevicesItemRegisteredOwnersItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedDevicesItemRegisteredOwnersItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.devices.item.registeredUsers.item collection
+     * Gets an item from the Microsoft\Graph\Generated.devices.item.registeredUsers.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphDevicesItemRegisteredUsersItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphGeneratedDevicesItemRegisteredUsersItemDirectoryObjectItemRequestBuilder
     */
-    public function registeredUsersById(string $id): MicrosoftGraphDevicesItemRegisteredUsersItemDirectoryObjectItemRequestBuilder {
+    public function registeredUsersById(string $id): MicrosoftGraphGeneratedDevicesItemRegisteredUsersItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphDevicesItemRegisteredUsersItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedDevicesItemRegisteredUsersItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.devices.item.transitiveMemberOf.item collection
+     * Gets an item from the Microsoft\Graph\Generated.devices.item.transitiveMemberOf.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphDevicesItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphGeneratedDevicesItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder
     */
-    public function transitiveMemberOfById(string $id): MicrosoftGraphDevicesItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder {
+    public function transitiveMemberOfById(string $id): MicrosoftGraphGeneratedDevicesItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphDevicesItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedDevicesItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

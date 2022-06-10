@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications;
+namespace Microsoft\Graph\Generated\Communications;
 
 class CommunicationsRequestBuilderPatchRequestConfiguration 
 {

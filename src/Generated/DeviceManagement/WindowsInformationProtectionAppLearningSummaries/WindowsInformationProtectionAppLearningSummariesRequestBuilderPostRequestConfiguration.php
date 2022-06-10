@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\WindowsInformationProtectionAppLearningSummaries;
+namespace Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionAppLearningSummaries;
 
 class WindowsInformationProtectionAppLearningSummariesRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Reports\GetOffice365GroupsActivityDetailWithPeriod;
+namespace Microsoft\Graph\Generated\Reports\GetOffice365GroupsActivityDetailWithPeriod;
 
 class GetOffice365GroupsActivityDetailWithPeriodRequestBuilderGetRequestConfiguration 
 {

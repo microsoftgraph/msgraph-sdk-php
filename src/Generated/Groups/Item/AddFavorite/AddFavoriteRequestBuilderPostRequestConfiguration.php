@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\AddFavorite;
+namespace Microsoft\Graph\Generated\Groups\Item\AddFavorite;
 
 class AddFavoriteRequestBuilderPostRequestConfiguration 
 {

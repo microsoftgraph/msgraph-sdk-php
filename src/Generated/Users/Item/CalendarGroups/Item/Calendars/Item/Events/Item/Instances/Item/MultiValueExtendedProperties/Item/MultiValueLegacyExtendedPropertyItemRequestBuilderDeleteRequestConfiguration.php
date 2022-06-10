@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\CalendarGroups\Item\Calendars\Item\Events\Item\Instances\Item\MultiValueExtendedProperties\Item;
+namespace Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Events\Item\Instances\Item\MultiValueExtendedProperties\Item;
 
 class MultiValueLegacyExtendedPropertyItemRequestBuilderDeleteRequestConfiguration 
 {

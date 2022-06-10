@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Education\Me\Assignments\Item\Submissions\Item\EscapedReturn;
+namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\EscapedReturn;
 
 class ReturnRequestBuilderPostRequestConfiguration 
 {

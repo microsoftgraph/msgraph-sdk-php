@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\ManagedAppPolicies\Item;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppPolicies\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\DeviceAppManagement\ManagedAppPolicies\Item\TargetApps\TargetAppsRequestBuilder;
-use Microsoft\Graph\Models\ManagedAppPolicy;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppPolicies\Item\TargetApps\TargetAppsRequestBuilder;
+use Microsoft\Graph\Generated\Models\ManagedAppPolicy;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

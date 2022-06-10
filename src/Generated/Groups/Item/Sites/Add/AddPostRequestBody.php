@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Sites\Add;
+namespace Microsoft\Graph\Generated\Groups\Item\Sites\Add;
 
-use Microsoft\Graph\Models\Site;
+use Microsoft\Graph\Generated\Models\Site;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

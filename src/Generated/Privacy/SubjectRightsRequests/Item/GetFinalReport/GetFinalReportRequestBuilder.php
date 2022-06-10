@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Privacy\SubjectRightsRequests\Item\GetFinalReport;
+namespace Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalReport;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

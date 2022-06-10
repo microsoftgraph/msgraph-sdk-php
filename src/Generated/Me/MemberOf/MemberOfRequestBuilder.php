@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Me\MemberOf;
+namespace Microsoft\Graph\Generated\Me\MemberOf;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\MemberOf\Application\ApplicationRequestBuilder;
-use Microsoft\Graph\Me\MemberOf\Count\CountRequestBuilder;
-use Microsoft\Graph\Me\MemberOf\Device\DeviceRequestBuilder;
-use Microsoft\Graph\Me\MemberOf\Group\GroupRequestBuilder;
-use Microsoft\Graph\Me\MemberOf\OrgContact\OrgContactRequestBuilder;
-use Microsoft\Graph\Me\MemberOf\ServicePrincipal\ServicePrincipalRequestBuilder;
-use Microsoft\Graph\Me\MemberOf\User\UserRequestBuilder;
-use Microsoft\Graph\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Me\MemberOf\Application\ApplicationRequestBuilder;
+use Microsoft\Graph\Generated\Me\MemberOf\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\MemberOf\Device\DeviceRequestBuilder;
+use Microsoft\Graph\Generated\Me\MemberOf\Group\GroupRequestBuilder;
+use Microsoft\Graph\Generated\Me\MemberOf\OrgContact\OrgContactRequestBuilder;
+use Microsoft\Graph\Generated\Me\MemberOf\ServicePrincipal\ServicePrincipalRequestBuilder;
+use Microsoft\Graph\Generated\Me\MemberOf\User\UserRequestBuilder;
+use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Presence\SetPresence;
+namespace Microsoft\Graph\Generated\Me\Presence\SetPresence;
 
 class SetPresenceRequestBuilderPostRequestConfiguration 
 {

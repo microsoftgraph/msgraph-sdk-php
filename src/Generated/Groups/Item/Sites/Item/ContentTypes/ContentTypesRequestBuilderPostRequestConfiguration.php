@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Sites\Item\ContentTypes;
+namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes;
 
 class ContentTypesRequestBuilderPostRequestConfiguration 
 {

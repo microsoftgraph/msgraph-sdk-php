@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\CalendarView\Item\Instances\Item\Calendar;
+namespace Microsoft\Graph\Generated\Users\Item\CalendarView\Item\Instances\Item\Calendar;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\Calendar;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Calendar;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

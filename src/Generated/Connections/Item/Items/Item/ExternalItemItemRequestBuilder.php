@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Connections\Item\Items\Item;
+namespace Microsoft\Graph\Generated\Connections\Item\Items\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ExternalConnectors\ExternalItem;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalItem;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

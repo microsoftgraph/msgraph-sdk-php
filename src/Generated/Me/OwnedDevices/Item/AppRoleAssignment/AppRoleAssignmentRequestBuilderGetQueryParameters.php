@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\OwnedDevices\Item\AppRoleAssignment;
+namespace Microsoft\Graph\Generated\Me\OwnedDevices\Item\AppRoleAssignment;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

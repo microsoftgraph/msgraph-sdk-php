@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item;
+namespace Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\TermStore\Set;
-use Microsoft\Graph\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Children\ChildrenRequestBuilder;
-use Microsoft\Graph\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Children\Item\TermItemRequestBuilder as MicrosoftGraphSitesItemTermStoreSetsItemParentGroupSetsItemChildrenItemTermItemRequestBuilder;
-use Microsoft\Graph\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Relations\Item\RelationItemRequestBuilder;
-use Microsoft\Graph\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Relations\RelationsRequestBuilder;
-use Microsoft\Graph\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Terms\Item\TermItemRequestBuilder as MicrosoftGraphSitesItemTermStoreSetsItemParentGroupSetsItemTermsItemTermItemRequestBuilder;
-use Microsoft\Graph\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Terms\TermsRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TermStore\Set;
+use Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Children\ChildrenRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Children\Item\TermItemRequestBuilder as MicrosoftGraphGeneratedSitesItemTermStoreSetsItemParentGroupSetsItemChildrenItemTermItemRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Relations\Item\RelationItemRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Relations\RelationsRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Terms\Item\TermItemRequestBuilder as MicrosoftGraphGeneratedSitesItemTermStoreSetsItemParentGroupSetsItemTermsItemTermItemRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Terms\TermsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -60,14 +60,14 @@ class SetItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.sites.item.termStore.sets.item.parentGroup.sets.item.children.item collection
+     * Gets an item from the Microsoft\Graph\Generated.sites.item.termStore.sets.item.parentGroup.sets.item.children.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphSitesItemTermStoreSetsItemParentGroupSetsItemChildrenItemTermItemRequestBuilder
+     * @return MicrosoftGraphGeneratedSitesItemTermStoreSetsItemParentGroupSetsItemChildrenItemTermItemRequestBuilder
     */
-    public function childrenById(string $id): MicrosoftGraphSitesItemTermStoreSetsItemParentGroupSetsItemChildrenItemTermItemRequestBuilder {
+    public function childrenById(string $id): MicrosoftGraphGeneratedSitesItemTermStoreSetsItemParentGroupSetsItemChildrenItemTermItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['term%2Did'] = $id;
-        return new MicrosoftGraphSitesItemTermStoreSetsItemParentGroupSetsItemChildrenItemTermItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedSitesItemTermStoreSetsItemParentGroupSetsItemChildrenItemTermItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -208,7 +208,7 @@ class SetItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.sites.item.termStore.sets.item.parentGroup.sets.item.relations.item collection
+     * Gets an item from the Microsoft\Graph\Generated.sites.item.termStore.sets.item.parentGroup.sets.item.relations.item collection
      * @param string $id Unique identifier of the item
      * @return RelationItemRequestBuilder
     */
@@ -219,14 +219,14 @@ class SetItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.sites.item.termStore.sets.item.parentGroup.sets.item.terms.item collection
+     * Gets an item from the Microsoft\Graph\Generated.sites.item.termStore.sets.item.parentGroup.sets.item.terms.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphSitesItemTermStoreSetsItemParentGroupSetsItemTermsItemTermItemRequestBuilder
+     * @return MicrosoftGraphGeneratedSitesItemTermStoreSetsItemParentGroupSetsItemTermsItemTermItemRequestBuilder
     */
-    public function termsById(string $id): MicrosoftGraphSitesItemTermStoreSetsItemParentGroupSetsItemTermsItemTermItemRequestBuilder {
+    public function termsById(string $id): MicrosoftGraphGeneratedSitesItemTermStoreSetsItemParentGroupSetsItemTermsItemTermItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['term%2Did'] = $id;
-        return new MicrosoftGraphSitesItemTermStoreSetsItemParentGroupSetsItemTermsItemTermItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedSitesItemTermStoreSetsItemParentGroupSetsItemTermsItemTermItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\TermsAndConditions\Item\AcceptanceStatuses\Item\TermsAndConditions;
+namespace Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\AcceptanceStatuses\Item\TermsAndConditions;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

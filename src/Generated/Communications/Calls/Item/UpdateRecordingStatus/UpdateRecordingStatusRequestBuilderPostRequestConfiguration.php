@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\Calls\Item\UpdateRecordingStatus;
+namespace Microsoft\Graph\Generated\Communications\Calls\Item\UpdateRecordingStatus;
 
 class UpdateRecordingStatusRequestBuilderPostRequestConfiguration 
 {

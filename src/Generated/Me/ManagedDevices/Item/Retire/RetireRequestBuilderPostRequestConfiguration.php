@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\ManagedDevices\Item\Retire;
+namespace Microsoft\Graph\Generated\Me\ManagedDevices\Item\Retire;
 
 class RetireRequestBuilderPostRequestConfiguration 
 {

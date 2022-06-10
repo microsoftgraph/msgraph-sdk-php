@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Shares\Item\EscapedList\Columns\Item\SourceColumn;
+namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Columns\Item\SourceColumn;
 
 class SourceColumnRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\ContactFolders\Item\MultiValueExtendedProperties;
+namespace Microsoft\Graph\Generated\Me\ContactFolders\Item\MultiValueExtendedProperties;
 
 class MultiValueExtendedPropertiesRequestBuilderGetRequestConfiguration 
 {

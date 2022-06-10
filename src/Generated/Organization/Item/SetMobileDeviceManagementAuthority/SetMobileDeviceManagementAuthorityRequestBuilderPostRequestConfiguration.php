@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Organization\Item\SetMobileDeviceManagementAuthority;
+namespace Microsoft\Graph\Generated\Organization\Item\SetMobileDeviceManagementAuthority;
 
 class SetMobileDeviceManagementAuthorityRequestBuilderPostRequestConfiguration 
 {

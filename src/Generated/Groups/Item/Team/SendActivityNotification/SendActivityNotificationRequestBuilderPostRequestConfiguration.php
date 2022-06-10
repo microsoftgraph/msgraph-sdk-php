@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Team\SendActivityNotification;
+namespace Microsoft\Graph\Generated\Groups\Item\Team\SendActivityNotification;
 
 class SendActivityNotificationRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Chats\Item\InstalledApps;
+namespace Microsoft\Graph\Generated\Chats\Item\InstalledApps;
 
 class InstalledAppsRequestBuilderGetRequestConfiguration 
 {

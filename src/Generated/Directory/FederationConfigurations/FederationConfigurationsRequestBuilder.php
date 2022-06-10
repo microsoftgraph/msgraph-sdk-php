@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Directory\FederationConfigurations;
+namespace Microsoft\Graph\Generated\Directory\FederationConfigurations;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Directory\FederationConfigurations\AvailableProviderTypes\AvailableProviderTypesRequestBuilder;
-use Microsoft\Graph\Directory\FederationConfigurations\Count\CountRequestBuilder;
-use Microsoft\Graph\Models\IdentityProviderBase;
-use Microsoft\Graph\Models\IdentityProviderBaseCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Directory\FederationConfigurations\AvailableProviderTypes\AvailableProviderTypesRequestBuilder;
+use Microsoft\Graph\Generated\Directory\FederationConfigurations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\IdentityProviderBase;
+use Microsoft\Graph\Generated\Models\IdentityProviderBaseCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Models\ExternalConnectors;
+namespace Microsoft\Graph\Generated\Models\ExternalConnectors;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

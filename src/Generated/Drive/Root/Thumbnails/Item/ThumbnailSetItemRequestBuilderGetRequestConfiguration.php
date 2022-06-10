@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Root\Thumbnails\Item;
+namespace Microsoft\Graph\Generated\Drive\Root\Thumbnails\Item;
 
 class ThumbnailSetItemRequestBuilderGetRequestConfiguration 
 {

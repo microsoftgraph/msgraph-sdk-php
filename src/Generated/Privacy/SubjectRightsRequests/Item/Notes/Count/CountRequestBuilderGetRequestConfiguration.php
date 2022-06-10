@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Privacy\SubjectRightsRequests\Item\Notes\Count;
+namespace Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Notes\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

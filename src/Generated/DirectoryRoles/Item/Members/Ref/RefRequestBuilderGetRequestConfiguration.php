@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DirectoryRoles\Item\Members\Ref;
+namespace Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Ref;
 
 class RefRequestBuilderGetRequestConfiguration 
 {

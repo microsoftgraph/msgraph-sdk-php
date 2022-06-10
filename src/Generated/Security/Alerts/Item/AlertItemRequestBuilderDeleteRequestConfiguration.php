@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Security\Alerts\Item;
+namespace Microsoft\Graph\Generated\Security\Alerts\Item;
 
 class AlertItemRequestBuilderDeleteRequestConfiguration 
 {

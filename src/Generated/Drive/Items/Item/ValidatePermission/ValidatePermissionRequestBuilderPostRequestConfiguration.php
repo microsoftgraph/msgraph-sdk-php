@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Items\Item\ValidatePermission;
+namespace Microsoft\Graph\Generated\Drive\Items\Item\ValidatePermission;
 
 class ValidatePermissionRequestBuilderPostRequestConfiguration 
 {

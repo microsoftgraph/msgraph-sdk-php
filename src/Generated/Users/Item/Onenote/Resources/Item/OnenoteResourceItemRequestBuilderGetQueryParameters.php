@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Onenote\Resources\Item;
+namespace Microsoft\Graph\Generated\Users\Item\Onenote\Resources\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

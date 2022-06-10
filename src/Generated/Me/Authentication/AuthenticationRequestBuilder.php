@@ -1,22 +1,22 @@
 <?php
 
-namespace Microsoft\Graph\Me\Authentication;
+namespace Microsoft\Graph\Generated\Me\Authentication;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\Authentication\Fido2Methods\Fido2MethodsRequestBuilder;
-use Microsoft\Graph\Me\Authentication\Fido2Methods\Item\Fido2AuthenticationMethodItemRequestBuilder;
-use Microsoft\Graph\Me\Authentication\Methods\Item\AuthenticationMethodItemRequestBuilder;
-use Microsoft\Graph\Me\Authentication\Methods\MethodsRequestBuilder;
-use Microsoft\Graph\Me\Authentication\MicrosoftAuthenticatorMethods\Item\MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder;
-use Microsoft\Graph\Me\Authentication\MicrosoftAuthenticatorMethods\MicrosoftAuthenticatorMethodsRequestBuilder;
-use Microsoft\Graph\Me\Authentication\TemporaryAccessPassMethods\Item\TemporaryAccessPassAuthenticationMethodItemRequestBuilder;
-use Microsoft\Graph\Me\Authentication\TemporaryAccessPassMethods\TemporaryAccessPassMethodsRequestBuilder;
-use Microsoft\Graph\Me\Authentication\WindowsHelloForBusinessMethods\Item\WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder;
-use Microsoft\Graph\Me\Authentication\WindowsHelloForBusinessMethods\WindowsHelloForBusinessMethodsRequestBuilder;
-use Microsoft\Graph\Models\Authentication;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Me\Authentication\Fido2Methods\Fido2MethodsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Authentication\Fido2Methods\Item\Fido2AuthenticationMethodItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Authentication\Methods\Item\AuthenticationMethodItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Authentication\Methods\MethodsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Authentication\MicrosoftAuthenticatorMethods\Item\MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Authentication\MicrosoftAuthenticatorMethods\MicrosoftAuthenticatorMethodsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Authentication\TemporaryAccessPassMethods\Item\TemporaryAccessPassAuthenticationMethodItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Authentication\TemporaryAccessPassMethods\TemporaryAccessPassMethodsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Authentication\WindowsHelloForBusinessMethods\Item\WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Authentication\WindowsHelloForBusinessMethods\WindowsHelloForBusinessMethodsRequestBuilder;
+use Microsoft\Graph\Generated\Models\Authentication;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -176,7 +176,7 @@ class AuthenticationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.authentication.fido2Methods.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.authentication.fido2Methods.item collection
      * @param string $id Unique identifier of the item
      * @return Fido2AuthenticationMethodItemRequestBuilder
     */
@@ -206,7 +206,7 @@ class AuthenticationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.authentication.methods.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.authentication.methods.item collection
      * @param string $id Unique identifier of the item
      * @return AuthenticationMethodItemRequestBuilder
     */
@@ -217,7 +217,7 @@ class AuthenticationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.authentication.microsoftAuthenticatorMethods.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.authentication.microsoftAuthenticatorMethods.item collection
      * @param string $id Unique identifier of the item
      * @return MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder
     */
@@ -248,7 +248,7 @@ class AuthenticationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.authentication.temporaryAccessPassMethods.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.authentication.temporaryAccessPassMethods.item collection
      * @param string $id Unique identifier of the item
      * @return TemporaryAccessPassAuthenticationMethodItemRequestBuilder
     */
@@ -259,7 +259,7 @@ class AuthenticationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.authentication.windowsHelloForBusinessMethods.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.authentication.windowsHelloForBusinessMethods.item collection
      * @param string $id Unique identifier of the item
      * @return WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder
     */

@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Communications\CallRecords;
+namespace Microsoft\Graph\Generated\Communications\CallRecords;
 
 use DateTime;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Communications\CallRecords\Count\CountRequestBuilder;
-use Microsoft\Graph\Communications\CallRecords\GetDirectRoutingCallsWithFromDateTimeWithToDateTime\GetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder;
-use Microsoft\Graph\Communications\CallRecords\GetPstnCallsWithFromDateTimeWithToDateTime\GetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder;
-use Microsoft\Graph\Models\CallRecords\CallRecord;
-use Microsoft\Graph\Models\CallRecords\CallRecordCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Communications\CallRecords\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Communications\CallRecords\GetDirectRoutingCallsWithFromDateTimeWithToDateTime\GetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder;
+use Microsoft\Graph\Generated\Communications\CallRecords\GetPstnCallsWithFromDateTimeWithToDateTime\GetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder;
+use Microsoft\Graph\Generated\Models\CallRecords\CallRecord;
+use Microsoft\Graph\Generated\Models\CallRecords\CallRecordCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

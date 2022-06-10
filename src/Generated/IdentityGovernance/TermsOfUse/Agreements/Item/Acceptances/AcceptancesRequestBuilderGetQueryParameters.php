@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\Item\Acceptances;
+namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\Acceptances;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

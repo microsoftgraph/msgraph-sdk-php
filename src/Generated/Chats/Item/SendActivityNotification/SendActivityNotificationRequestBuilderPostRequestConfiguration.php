@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Chats\Item\SendActivityNotification;
+namespace Microsoft\Graph\Generated\Chats\Item\SendActivityNotification;
 
 class SendActivityNotificationRequestBuilderPostRequestConfiguration 
 {

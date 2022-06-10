@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Admin\ServiceAnnouncement\HealthOverviews\Item\Issues\Item;
+namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\Item\Issues\Item;
 
 class ServiceHealthIssueItemRequestBuilderPatchRequestConfiguration 
 {

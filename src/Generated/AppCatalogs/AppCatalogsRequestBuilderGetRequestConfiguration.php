@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\AppCatalogs;
+namespace Microsoft\Graph\Generated\AppCatalogs;
 
 class AppCatalogsRequestBuilderGetRequestConfiguration 
 {

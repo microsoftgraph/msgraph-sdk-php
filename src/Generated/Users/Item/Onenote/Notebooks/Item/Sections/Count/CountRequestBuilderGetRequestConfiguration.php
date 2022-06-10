@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Onenote\Notebooks\Item\Sections\Count;
+namespace Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\Sections\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

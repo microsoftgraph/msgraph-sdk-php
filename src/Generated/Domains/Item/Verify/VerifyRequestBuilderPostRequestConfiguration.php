@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Domains\Item\Verify;
+namespace Microsoft\Graph\Generated\Domains\Item\Verify;
 
 class VerifyRequestBuilderPostRequestConfiguration 
 {

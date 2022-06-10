@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\UserStatuses\Item;
+namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\UserStatuses\Item;
 
 class DeviceComplianceUserStatusItemRequestBuilderPatchRequestConfiguration 
 {

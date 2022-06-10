@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Directory\DeletedItems\Item\CheckMemberGroups;
+namespace Microsoft\Graph\Generated\Directory\DeletedItems\Item\CheckMemberGroups;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

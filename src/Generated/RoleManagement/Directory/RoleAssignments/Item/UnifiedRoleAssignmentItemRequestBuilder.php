@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\RoleManagement\Directory\RoleAssignments\Item;
+namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignments\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\UnifiedRoleAssignment;
-use Microsoft\Graph\RoleManagement\Directory\RoleAssignments\Item\AppScope\AppScopeRequestBuilder;
-use Microsoft\Graph\RoleManagement\Directory\RoleAssignments\Item\DirectoryScope\DirectoryScopeRequestBuilder;
-use Microsoft\Graph\RoleManagement\Directory\RoleAssignments\Item\Principal\PrincipalRequestBuilder;
-use Microsoft\Graph\RoleManagement\Directory\RoleAssignments\Item\RoleDefinition\RoleDefinitionRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\UnifiedRoleAssignment;
+use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignments\Item\AppScope\AppScopeRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignments\Item\DirectoryScope\DirectoryScopeRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignments\Item\Principal\PrincipalRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignments\Item\RoleDefinition\RoleDefinitionRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

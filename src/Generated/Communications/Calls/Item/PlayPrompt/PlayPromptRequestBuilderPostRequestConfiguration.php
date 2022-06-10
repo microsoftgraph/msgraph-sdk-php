@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\Calls\Item\PlayPrompt;
+namespace Microsoft\Graph\Generated\Communications\Calls\Item\PlayPrompt;
 
 class PlayPromptRequestBuilderPostRequestConfiguration 
 {

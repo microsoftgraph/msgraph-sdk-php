@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Education\Users\Item\Schools\Item;
+namespace Microsoft\Graph\Generated\Education\Users\Item\Schools\Item;
 
 class EducationSchoolItemRequestBuilderGetRequestConfiguration 
 {

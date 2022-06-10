@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Planner\Plans\Item;
+namespace Microsoft\Graph\Generated\Me\Planner\Plans\Item;
 
 class PlannerPlanItemRequestBuilderGetRequestConfiguration 
 {

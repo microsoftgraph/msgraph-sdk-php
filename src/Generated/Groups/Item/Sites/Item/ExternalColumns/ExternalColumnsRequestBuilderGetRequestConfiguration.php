@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Sites\Item\ExternalColumns;
+namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\ExternalColumns;
 
 class ExternalColumnsRequestBuilderGetRequestConfiguration 
 {

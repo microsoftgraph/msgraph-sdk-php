@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Conversations\Item\Threads;
+namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads;
 
 class ThreadsRequestBuilderGetRequestConfiguration 
 {

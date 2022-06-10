@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Admin\ServiceAnnouncement\Messages\MarkRead;
+namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MarkRead;
 
 class MarkReadRequestBuilderPostRequestConfiguration 
 {

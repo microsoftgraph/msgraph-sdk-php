@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drives\Item\EscapedList\ContentTypes\Item;
+namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item;
 
 class ContentTypeItemRequestBuilderPatchRequestConfiguration 
 {

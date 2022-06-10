@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\RoleDefinitions\Item;
+namespace Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\DeviceManagement\RoleDefinitions\Item\RoleAssignments\Item\RoleAssignmentItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\RoleDefinitions\Item\RoleAssignments\RoleAssignmentsRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\RoleDefinition;
+use Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\Item\RoleAssignments\Item\RoleAssignmentItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\Item\RoleAssignments\RoleAssignmentsRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\RoleDefinition;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -179,7 +179,7 @@ class RoleDefinitionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.roleDefinitions.item.roleAssignments.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.roleDefinitions.item.roleAssignments.item collection
      * @param string $id Unique identifier of the item
      * @return RoleAssignmentItemRequestBuilder
     */

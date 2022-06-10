@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drives\Item\Root\Delta;
+namespace Microsoft\Graph\Generated\Drives\Item\Root\Delta;
 
 class DeltaRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Admin\ServiceAnnouncement\HealthOverviews\Count;
+namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

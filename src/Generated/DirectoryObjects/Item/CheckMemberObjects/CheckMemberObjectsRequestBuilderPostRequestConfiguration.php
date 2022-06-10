@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DirectoryObjects\Item\CheckMemberObjects;
+namespace Microsoft\Graph\Generated\DirectoryObjects\Item\CheckMemberObjects;
 
 class CheckMemberObjectsRequestBuilderPostRequestConfiguration 
 {

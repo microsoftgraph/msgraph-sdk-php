@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Teams\Item\InstalledApps;
+namespace Microsoft\Graph\Generated\Teams\Item\InstalledApps;
 
 class InstalledAppsRequestBuilderPostRequestConfiguration 
 {

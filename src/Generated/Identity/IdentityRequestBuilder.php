@@ -1,21 +1,21 @@
 <?php
 
-namespace Microsoft\Graph\Identity;
+namespace Microsoft\Graph\Generated\Identity;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Identity\ApiConnectors\ApiConnectorsRequestBuilder;
-use Microsoft\Graph\Identity\ApiConnectors\Item\IdentityApiConnectorItemRequestBuilder;
-use Microsoft\Graph\Identity\B2xUserFlows\B2xUserFlowsRequestBuilder;
-use Microsoft\Graph\Identity\B2xUserFlows\Item\B2xIdentityUserFlowItemRequestBuilder;
-use Microsoft\Graph\Identity\ConditionalAccess\ConditionalAccessRequestBuilder;
-use Microsoft\Graph\Identity\IdentityProviders\IdentityProvidersRequestBuilder;
-use Microsoft\Graph\Identity\IdentityProviders\Item\IdentityProviderBaseItemRequestBuilder;
-use Microsoft\Graph\Identity\UserFlowAttributes\Item\IdentityUserFlowAttributeItemRequestBuilder;
-use Microsoft\Graph\Identity\UserFlowAttributes\UserFlowAttributesRequestBuilder;
-use Microsoft\Graph\Models\IdentityContainer;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Identity\ApiConnectors\ApiConnectorsRequestBuilder;
+use Microsoft\Graph\Generated\Identity\ApiConnectors\Item\IdentityApiConnectorItemRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\B2xUserFlowsRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\B2xIdentityUserFlowItemRequestBuilder;
+use Microsoft\Graph\Generated\Identity\ConditionalAccess\ConditionalAccessRequestBuilder;
+use Microsoft\Graph\Generated\Identity\IdentityProviders\IdentityProvidersRequestBuilder;
+use Microsoft\Graph\Generated\Identity\IdentityProviders\Item\IdentityProviderBaseItemRequestBuilder;
+use Microsoft\Graph\Generated\Identity\UserFlowAttributes\Item\IdentityUserFlowAttributeItemRequestBuilder;
+use Microsoft\Graph\Generated\Identity\UserFlowAttributes\UserFlowAttributesRequestBuilder;
+use Microsoft\Graph\Generated\Models\IdentityContainer;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -77,7 +77,7 @@ class IdentityRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft\Graph.identity.apiConnectors.item collection
+     * Gets an item from the Microsoft\Graph\Generated.identity.apiConnectors.item collection
      * @param string $id Unique identifier of the item
      * @return IdentityApiConnectorItemRequestBuilder
     */
@@ -88,7 +88,7 @@ class IdentityRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.identity.b2xUserFlows.item collection
+     * Gets an item from the Microsoft\Graph\Generated.identity.b2xUserFlows.item collection
      * @param string $id Unique identifier of the item
      * @return B2xIdentityUserFlowItemRequestBuilder
     */
@@ -176,7 +176,7 @@ class IdentityRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.identity.identityProviders.item collection
+     * Gets an item from the Microsoft\Graph\Generated.identity.identityProviders.item collection
      * @param string $id Unique identifier of the item
      * @return IdentityProviderBaseItemRequestBuilder
     */
@@ -207,7 +207,7 @@ class IdentityRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.identity.userFlowAttributes.item collection
+     * Gets an item from the Microsoft\Graph\Generated.identity.userFlowAttributes.item collection
      * @param string $id Unique identifier of the item
      * @return IdentityUserFlowAttributeItemRequestBuilder
     */

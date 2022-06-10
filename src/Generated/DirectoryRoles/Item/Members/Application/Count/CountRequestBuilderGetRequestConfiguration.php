@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DirectoryRoles\Item\Members\Application\Count;
+namespace Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Application\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

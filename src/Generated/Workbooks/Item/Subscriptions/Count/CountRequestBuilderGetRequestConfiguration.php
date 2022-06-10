@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Workbooks\Item\Subscriptions\Count;
+namespace Microsoft\Graph\Generated\Workbooks\Item\Subscriptions\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

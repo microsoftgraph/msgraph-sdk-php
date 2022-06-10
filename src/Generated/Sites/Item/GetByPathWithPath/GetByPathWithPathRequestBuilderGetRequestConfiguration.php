@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item\GetByPathWithPath;
+namespace Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath;
 
 class GetByPathWithPathRequestBuilderGetRequestConfiguration 
 {

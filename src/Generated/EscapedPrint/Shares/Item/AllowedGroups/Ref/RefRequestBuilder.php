@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\EscapedPrint\Shares\Item\AllowedGroups\Ref;
+namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedGroups\Ref;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\StringCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\StringCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

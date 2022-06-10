@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\AuthenticationMethodsPolicy;
+namespace Microsoft\Graph\Generated\AuthenticationMethodsPolicy;
 
 class AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration 
 {

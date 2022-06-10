@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Drives\Item\Items\Item\Checkout;
+namespace Microsoft\Graph\Generated\Groups\Item\Drives\Item\Items\Item\Checkout;
 
 class CheckoutRequestBuilderPostRequestConfiguration 
 {

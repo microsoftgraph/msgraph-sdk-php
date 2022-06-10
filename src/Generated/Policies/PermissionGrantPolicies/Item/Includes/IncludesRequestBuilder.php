@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Policies\PermissionGrantPolicies\Item\Includes;
+namespace Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Includes;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\PermissionGrantConditionSet;
-use Microsoft\Graph\Models\PermissionGrantConditionSetCollectionResponse;
-use Microsoft\Graph\Policies\PermissionGrantPolicies\Item\Includes\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\PermissionGrantConditionSet;
+use Microsoft\Graph\Generated\Models\PermissionGrantConditionSetCollectionResponse;
+use Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Includes\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

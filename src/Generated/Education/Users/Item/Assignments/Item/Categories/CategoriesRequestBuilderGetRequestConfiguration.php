@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Education\Users\Item\Assignments\Item\Categories;
+namespace Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Categories;
 
 class CategoriesRequestBuilderGetRequestConfiguration 
 {

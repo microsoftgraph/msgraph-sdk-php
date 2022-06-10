@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\DeviceManagementTroubleshootingEvents;
+namespace Microsoft\Graph\Generated\Me\DeviceManagementTroubleshootingEvents;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

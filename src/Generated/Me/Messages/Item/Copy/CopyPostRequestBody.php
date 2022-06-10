@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Messages\Item\Copy;
+namespace Microsoft\Graph\Generated\Me\Messages\Item\Copy;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

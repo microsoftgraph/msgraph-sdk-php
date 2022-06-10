@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Sites\Item\Lists\Item\ContentTypes\Item\AssociateWithHubSites;
+namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\ContentTypes\Item\AssociateWithHubSites;
 
 class AssociateWithHubSitesRequestBuilderPostRequestConfiguration 
 {

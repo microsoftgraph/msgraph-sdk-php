@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\RoleManagement\Directory\RoleDefinitions\Item;
+namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleDefinitions\Item;
 
 class UnifiedRoleDefinitionItemRequestBuilderDeleteRequestConfiguration 
 {

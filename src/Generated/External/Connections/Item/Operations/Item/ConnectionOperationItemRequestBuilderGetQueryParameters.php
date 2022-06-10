@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\External\Connections\Item\Operations\Item;
+namespace Microsoft\Graph\Generated\External\Connections\Item\Operations\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

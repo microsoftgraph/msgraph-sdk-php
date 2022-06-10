@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\Share;
+namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\Share;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;

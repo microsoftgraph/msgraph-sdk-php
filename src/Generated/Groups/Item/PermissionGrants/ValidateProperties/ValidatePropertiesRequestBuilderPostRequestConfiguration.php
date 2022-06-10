@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\PermissionGrants\ValidateProperties;
+namespace Microsoft\Graph\Generated\Groups\Item\PermissionGrants\ValidateProperties;
 
 class ValidatePropertiesRequestBuilderPostRequestConfiguration 
 {

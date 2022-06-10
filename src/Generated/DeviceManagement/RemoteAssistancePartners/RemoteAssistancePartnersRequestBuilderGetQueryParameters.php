@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\RemoteAssistancePartners;
+namespace Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

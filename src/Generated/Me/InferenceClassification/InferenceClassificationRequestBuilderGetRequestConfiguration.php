@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\InferenceClassification;
+namespace Microsoft\Graph\Generated\Me\InferenceClassification;
 
 class InferenceClassificationRequestBuilderGetRequestConfiguration 
 {

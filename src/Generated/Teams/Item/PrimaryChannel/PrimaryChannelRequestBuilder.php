@@ -1,22 +1,22 @@
 <?php
 
-namespace Microsoft\Graph\Teams\Item\PrimaryChannel;
+namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\Channel;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Teams\Item\PrimaryChannel\CompleteMigration\CompleteMigrationRequestBuilder;
-use Microsoft\Graph\Teams\Item\PrimaryChannel\FilesFolder\FilesFolderRequestBuilder;
-use Microsoft\Graph\Teams\Item\PrimaryChannel\Members\Item\ConversationMemberItemRequestBuilder;
-use Microsoft\Graph\Teams\Item\PrimaryChannel\Members\MembersRequestBuilder;
-use Microsoft\Graph\Teams\Item\PrimaryChannel\Messages\Item\ChatMessageItemRequestBuilder;
-use Microsoft\Graph\Teams\Item\PrimaryChannel\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Teams\Item\PrimaryChannel\ProvisionEmail\ProvisionEmailRequestBuilder;
-use Microsoft\Graph\Teams\Item\PrimaryChannel\RemoveEmail\RemoveEmailRequestBuilder;
-use Microsoft\Graph\Teams\Item\PrimaryChannel\Tabs\Item\TeamsTabItemRequestBuilder;
-use Microsoft\Graph\Teams\Item\PrimaryChannel\Tabs\TabsRequestBuilder;
+use Microsoft\Graph\Generated\Models\Channel;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\CompleteMigration\CompleteMigrationRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\FilesFolder\FilesFolderRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Members\Item\ConversationMemberItemRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Members\MembersRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\Item\ChatMessageItemRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\MessagesRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\ProvisionEmail\ProvisionEmailRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\RemoveEmail\RemoveEmailRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Tabs\Item\TeamsTabItemRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Tabs\TabsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -209,7 +209,7 @@ class PrimaryChannelRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.teams.item.primaryChannel.members.item collection
+     * Gets an item from the Microsoft\Graph\Generated.teams.item.primaryChannel.members.item collection
      * @param string $id Unique identifier of the item
      * @return ConversationMemberItemRequestBuilder
     */
@@ -220,7 +220,7 @@ class PrimaryChannelRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.teams.item.primaryChannel.messages.item collection
+     * Gets an item from the Microsoft\Graph\Generated.teams.item.primaryChannel.messages.item collection
      * @param string $id Unique identifier of the item
      * @return ChatMessageItemRequestBuilder
     */
@@ -251,7 +251,7 @@ class PrimaryChannelRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.teams.item.primaryChannel.tabs.item collection
+     * Gets an item from the Microsoft\Graph\Generated.teams.item.primaryChannel.tabs.item collection
      * @param string $id Unique identifier of the item
      * @return TeamsTabItemRequestBuilder
     */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\Assignments\Item;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Assignments\Item;
 
 class ManagedEBookAssignmentItemRequestBuilderDeleteRequestConfiguration 
 {

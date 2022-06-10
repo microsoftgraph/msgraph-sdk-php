@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Todo\Lists\Item\Tasks\Count;
+namespace Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

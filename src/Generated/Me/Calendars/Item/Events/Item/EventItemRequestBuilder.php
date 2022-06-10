@@ -1,29 +1,29 @@
 <?php
 
-namespace Microsoft\Graph\Me\Calendars\Item\Events\Item;
+namespace Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\Calendars\Item\Events\Item\Accept\AcceptRequestBuilder;
-use Microsoft\Graph\Me\Calendars\Item\Events\Item\Attachments\AttachmentsRequestBuilder;
-use Microsoft\Graph\Me\Calendars\Item\Events\Item\Attachments\Item\AttachmentItemRequestBuilder;
-use Microsoft\Graph\Me\Calendars\Item\Events\Item\Calendar\CalendarRequestBuilder;
-use Microsoft\Graph\Me\Calendars\Item\Events\Item\Cancel\CancelRequestBuilder;
-use Microsoft\Graph\Me\Calendars\Item\Events\Item\Decline\DeclineRequestBuilder;
-use Microsoft\Graph\Me\Calendars\Item\Events\Item\DismissReminder\DismissReminderRequestBuilder;
-use Microsoft\Graph\Me\Calendars\Item\Events\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Me\Calendars\Item\Events\Item\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Me\Calendars\Item\Events\Item\Forward\ForwardRequestBuilder;
-use Microsoft\Graph\Me\Calendars\Item\Events\Item\Instances\InstancesRequestBuilder;
-use Microsoft\Graph\Me\Calendars\Item\Events\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Me\Calendars\Item\Events\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Me\Calendars\Item\Events\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Me\Calendars\Item\Events\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Me\Calendars\Item\Events\Item\SnoozeReminder\SnoozeReminderRequestBuilder;
-use Microsoft\Graph\Me\Calendars\Item\Events\Item\TentativelyAccept\TentativelyAcceptRequestBuilder;
-use Microsoft\Graph\Models\Event;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\Accept\AcceptRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\Attachments\AttachmentsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\Attachments\Item\AttachmentItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\Calendar\CalendarRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\Cancel\CancelRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\Decline\DeclineRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\DismissReminder\DismissReminderRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\Extensions\ExtensionsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\Extensions\Item\ExtensionItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\Forward\ForwardRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\Instances\InstancesRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\SnoozeReminder\SnoozeReminderRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\TentativelyAccept\TentativelyAcceptRequestBuilder;
+use Microsoft\Graph\Generated\Models\Event;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -141,7 +141,7 @@ class EventItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.me.calendars.item.events.item.attachments.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.calendars.item.events.item.attachments.item collection
      * @param string $id Unique identifier of the item
      * @return AttachmentItemRequestBuilder
     */
@@ -250,7 +250,7 @@ class EventItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.calendars.item.events.item.extensions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.calendars.item.events.item.extensions.item collection
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */
@@ -280,7 +280,7 @@ class EventItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.calendars.item.events.item.instances.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.calendars.item.events.item.instances.item collection
      * @param string $id Unique identifier of the item
      * @return EventItemRequestBuilder
     */
@@ -291,7 +291,7 @@ class EventItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.calendars.item.events.item.multiValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.calendars.item.events.item.multiValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
     */
@@ -322,7 +322,7 @@ class EventItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.calendars.item.events.item.singleValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.calendars.item.events.item.singleValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
     */

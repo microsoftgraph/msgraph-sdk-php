@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drives\Item\Root\Follow;
+namespace Microsoft\Graph\Generated\Drives\Item\Root\Follow;
 
 class FollowRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\PermissionGrants\Item\CheckMemberGroups;
+namespace Microsoft\Graph\Generated\PermissionGrants\Item\CheckMemberGroups;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

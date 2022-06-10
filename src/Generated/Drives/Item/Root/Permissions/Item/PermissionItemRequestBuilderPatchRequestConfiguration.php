@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drives\Item\Root\Permissions\Item;
+namespace Microsoft\Graph\Generated\Drives\Item\Root\Permissions\Item;
 
 class PermissionItemRequestBuilderPatchRequestConfiguration 
 {

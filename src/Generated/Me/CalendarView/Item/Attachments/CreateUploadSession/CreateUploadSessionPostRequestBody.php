@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Me\CalendarView\Item\Attachments\CreateUploadSession;
+namespace Microsoft\Graph\Generated\Me\CalendarView\Item\Attachments\CreateUploadSession;
 
-use Microsoft\Graph\Models\AttachmentItem;
+use Microsoft\Graph\Generated\Models\AttachmentItem;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

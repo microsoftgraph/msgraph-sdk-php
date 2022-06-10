@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Authentication\TemporaryAccessPassMethods\Item;
+namespace Microsoft\Graph\Generated\Me\Authentication\TemporaryAccessPassMethods\Item;
 
 class TemporaryAccessPassAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration 
 {

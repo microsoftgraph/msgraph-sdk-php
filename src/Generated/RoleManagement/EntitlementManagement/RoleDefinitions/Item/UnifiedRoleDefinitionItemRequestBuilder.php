@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\RoleManagement\EntitlementManagement\RoleDefinitions\Item;
+namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleDefinitions\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\UnifiedRoleDefinition;
-use Microsoft\Graph\RoleManagement\EntitlementManagement\RoleDefinitions\Item\InheritsPermissionsFrom\InheritsPermissionsFromRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\UnifiedRoleDefinition;
+use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleDefinitions\Item\InheritsPermissionsFrom\InheritsPermissionsFromRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -158,7 +158,7 @@ class UnifiedRoleDefinitionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.roleManagement.entitlementManagement.roleDefinitions.item.inheritsPermissionsFrom.item collection
+     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleDefinitions.item.inheritsPermissionsFrom.item collection
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleDefinitionItemRequestBuilder
     */

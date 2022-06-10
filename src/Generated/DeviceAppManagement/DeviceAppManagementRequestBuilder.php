@@ -1,41 +1,41 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement;
+namespace Microsoft\Graph\Generated\DeviceAppManagement;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\DeviceAppManagement\AndroidManagedAppProtections\AndroidManagedAppProtectionsRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\AndroidManagedAppProtections\Item\AndroidManagedAppProtectionItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\DefaultManagedAppProtections\DefaultManagedAppProtectionsRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\DefaultManagedAppProtections\Item\DefaultManagedAppProtectionItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\IosManagedAppProtections\IosManagedAppProtectionsRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\IosManagedAppProtections\Item\IosManagedAppProtectionItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\ManagedAppPolicies\Item\ManagedAppPolicyItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\ManagedAppPolicies\ManagedAppPoliciesRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\ManagedAppRegistrations\Item\ManagedAppRegistrationItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\ManagedAppRegistrations\ManagedAppRegistrationsRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\ManagedAppStatuses\Item\ManagedAppStatusItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\ManagedAppStatuses\ManagedAppStatusesRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\ManagedEBookItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\ManagedEBooks\ManagedEBooksRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MdmWindowsInformationProtectionPolicies\Item\MdmWindowsInformationProtectionPolicyItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MdmWindowsInformationProtectionPolicies\MdmWindowsInformationProtectionPoliciesRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileAppCategories\Item\MobileAppCategoryItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileAppCategories\MobileAppCategoriesRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileAppConfigurations\Item\ManagedDeviceMobileAppConfigurationItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileAppConfigurations\MobileAppConfigurationsRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileApps\Item\MobileAppItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileApps\MobileAppsRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\SyncMicrosoftStoreForBusinessApps\SyncMicrosoftStoreForBusinessAppsRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\TargetedManagedAppConfigurations\Item\TargetedManagedAppConfigurationItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\TargetedManagedAppConfigurations\TargetedManagedAppConfigurationsRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\VppTokens\Item\VppTokenItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\VppTokens\VppTokensRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\WindowsInformationProtectionPolicies\Item\WindowsInformationProtectionPolicyItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\WindowsInformationProtectionPolicies\WindowsInformationProtectionPoliciesRequestBuilder;
-use Microsoft\Graph\Models\DeviceAppManagement;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\DeviceAppManagement\AndroidManagedAppProtections\AndroidManagedAppProtectionsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\AndroidManagedAppProtections\Item\AndroidManagedAppProtectionItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\DefaultManagedAppProtections\DefaultManagedAppProtectionsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\DefaultManagedAppProtections\Item\DefaultManagedAppProtectionItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections\IosManagedAppProtectionsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections\Item\IosManagedAppProtectionItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppPolicies\Item\ManagedAppPolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppPolicies\ManagedAppPoliciesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\ManagedAppRegistrationItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\ManagedAppRegistrationsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppStatuses\Item\ManagedAppStatusItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppStatuses\ManagedAppStatusesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\ManagedEBookItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\ManagedEBooksRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MdmWindowsInformationProtectionPolicies\Item\MdmWindowsInformationProtectionPolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MdmWindowsInformationProtectionPolicies\MdmWindowsInformationProtectionPoliciesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppCategories\Item\MobileAppCategoryItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppCategories\MobileAppCategoriesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\ManagedDeviceMobileAppConfigurationItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\MobileAppConfigurationsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\MobileAppItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\MobileAppsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\SyncMicrosoftStoreForBusinessApps\SyncMicrosoftStoreForBusinessAppsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\TargetedManagedAppConfigurationItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\TargetedManagedAppConfigurationsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item\VppTokenItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\VppTokensRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies\Item\WindowsInformationProtectionPolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies\WindowsInformationProtectionPoliciesRequestBuilder;
+use Microsoft\Graph\Generated\Models\DeviceAppManagement;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -167,7 +167,7 @@ class DeviceAppManagementRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.androidManagedAppProtections.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.androidManagedAppProtections.item collection
      * @param string $id Unique identifier of the item
      * @return AndroidManagedAppProtectionItemRequestBuilder
     */
@@ -236,7 +236,7 @@ class DeviceAppManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.defaultManagedAppProtections.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.defaultManagedAppProtections.item collection
      * @param string $id Unique identifier of the item
      * @return DefaultManagedAppProtectionItemRequestBuilder
     */
@@ -266,7 +266,7 @@ class DeviceAppManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.iosManagedAppProtections.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.iosManagedAppProtections.item collection
      * @param string $id Unique identifier of the item
      * @return IosManagedAppProtectionItemRequestBuilder
     */
@@ -277,7 +277,7 @@ class DeviceAppManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.managedAppPolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.managedAppPolicies.item collection
      * @param string $id Unique identifier of the item
      * @return ManagedAppPolicyItemRequestBuilder
     */
@@ -288,7 +288,7 @@ class DeviceAppManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.managedAppRegistrations.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.managedAppRegistrations.item collection
      * @param string $id Unique identifier of the item
      * @return ManagedAppRegistrationItemRequestBuilder
     */
@@ -299,7 +299,7 @@ class DeviceAppManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.managedAppStatuses.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.managedAppStatuses.item collection
      * @param string $id Unique identifier of the item
      * @return ManagedAppStatusItemRequestBuilder
     */
@@ -310,7 +310,7 @@ class DeviceAppManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.managedEBooks.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.managedEBooks.item collection
      * @param string $id Unique identifier of the item
      * @return ManagedEBookItemRequestBuilder
     */
@@ -321,7 +321,7 @@ class DeviceAppManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.mdmWindowsInformationProtectionPolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.mdmWindowsInformationProtectionPolicies.item collection
      * @param string $id Unique identifier of the item
      * @return MdmWindowsInformationProtectionPolicyItemRequestBuilder
     */
@@ -332,7 +332,7 @@ class DeviceAppManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.mobileAppCategories.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.mobileAppCategories.item collection
      * @param string $id Unique identifier of the item
      * @return MobileAppCategoryItemRequestBuilder
     */
@@ -343,7 +343,7 @@ class DeviceAppManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.mobileAppConfigurations.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.mobileAppConfigurations.item collection
      * @param string $id Unique identifier of the item
      * @return ManagedDeviceMobileAppConfigurationItemRequestBuilder
     */
@@ -354,7 +354,7 @@ class DeviceAppManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.mobileApps.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.mobileApps.item collection
      * @param string $id Unique identifier of the item
      * @return MobileAppItemRequestBuilder
     */
@@ -385,7 +385,7 @@ class DeviceAppManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.targetedManagedAppConfigurations.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.targetedManagedAppConfigurations.item collection
      * @param string $id Unique identifier of the item
      * @return TargetedManagedAppConfigurationItemRequestBuilder
     */
@@ -396,7 +396,7 @@ class DeviceAppManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.vppTokens.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.vppTokens.item collection
      * @param string $id Unique identifier of the item
      * @return VppTokenItemRequestBuilder
     */
@@ -407,7 +407,7 @@ class DeviceAppManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.windowsInformationProtectionPolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.windowsInformationProtectionPolicies.item collection
      * @param string $id Unique identifier of the item
      * @return WindowsInformationProtectionPolicyItemRequestBuilder
     */

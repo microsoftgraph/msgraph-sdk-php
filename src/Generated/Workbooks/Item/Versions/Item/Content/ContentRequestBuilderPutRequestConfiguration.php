@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Workbooks\Item\Versions\Item\Content;
+namespace Microsoft\Graph\Generated\Workbooks\Item\Versions\Item\Content;
 
 class ContentRequestBuilderPutRequestConfiguration 
 {

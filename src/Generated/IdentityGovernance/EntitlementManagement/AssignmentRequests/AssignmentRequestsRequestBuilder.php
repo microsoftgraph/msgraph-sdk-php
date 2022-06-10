@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\AssignmentRequests;
+namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\IdentityGovernance\EntitlementManagement\AssignmentRequests\Count\CountRequestBuilder;
-use Microsoft\Graph\IdentityGovernance\EntitlementManagement\AssignmentRequests\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
-use Microsoft\Graph\Models\AccessPackageAssignmentRequest;
-use Microsoft\Graph\Models\AccessPackageAssignmentRequestCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
+use Microsoft\Graph\Generated\Models\AccessPackageAssignmentRequest;
+use Microsoft\Graph\Generated\Models\AccessPackageAssignmentRequestCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

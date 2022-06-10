@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DirectoryRoles\Item;
+namespace Microsoft\Graph\Generated\DirectoryRoles\Item;
 
 class DirectoryRoleItemRequestBuilderPatchRequestConfiguration 
 {

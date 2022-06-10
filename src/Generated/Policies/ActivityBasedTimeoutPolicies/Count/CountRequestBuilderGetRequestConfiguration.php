@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Policies\ActivityBasedTimeoutPolicies\Count;
+namespace Microsoft\Graph\Generated\Policies\ActivityBasedTimeoutPolicies\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

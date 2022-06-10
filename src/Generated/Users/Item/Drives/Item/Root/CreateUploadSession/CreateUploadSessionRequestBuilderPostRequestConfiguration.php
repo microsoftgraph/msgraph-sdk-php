@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Drives\Item\Root\CreateUploadSession;
+namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\Root\CreateUploadSession;
 
 class CreateUploadSessionRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Admin\ServiceAnnouncement\Messages\Unfavorite;
+namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Unfavorite;
 
 class UnfavoriteRequestBuilderPostRequestConfiguration 
 {

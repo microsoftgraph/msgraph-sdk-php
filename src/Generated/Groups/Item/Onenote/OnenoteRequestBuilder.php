@@ -1,24 +1,24 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Onenote;
+namespace Microsoft\Graph\Generated\Groups\Item\Onenote;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Groups\Item\Onenote\Notebooks\Item\NotebookItemRequestBuilder;
-use Microsoft\Graph\Groups\Item\Onenote\Notebooks\NotebooksRequestBuilder;
-use Microsoft\Graph\Groups\Item\Onenote\Operations\Item\OnenoteOperationItemRequestBuilder;
-use Microsoft\Graph\Groups\Item\Onenote\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Groups\Item\Onenote\Pages\Item\OnenotePageItemRequestBuilder;
-use Microsoft\Graph\Groups\Item\Onenote\Pages\PagesRequestBuilder;
-use Microsoft\Graph\Groups\Item\Onenote\Resources\Item\OnenoteResourceItemRequestBuilder;
-use Microsoft\Graph\Groups\Item\Onenote\Resources\ResourcesRequestBuilder;
-use Microsoft\Graph\Groups\Item\Onenote\SectionGroups\Item\SectionGroupItemRequestBuilder;
-use Microsoft\Graph\Groups\Item\Onenote\SectionGroups\SectionGroupsRequestBuilder;
-use Microsoft\Graph\Groups\Item\Onenote\Sections\Item\OnenoteSectionItemRequestBuilder;
-use Microsoft\Graph\Groups\Item\Onenote\Sections\SectionsRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\Onenote;
+use Microsoft\Graph\Generated\Groups\Item\Onenote\Notebooks\Item\NotebookItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Onenote\Notebooks\NotebooksRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Onenote\Operations\Item\OnenoteOperationItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Onenote\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Onenote\Pages\Item\OnenotePageItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Onenote\Pages\PagesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Onenote\Resources\Item\OnenoteResourceItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Onenote\Resources\ResourcesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Onenote\SectionGroups\Item\SectionGroupItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Onenote\SectionGroups\SectionGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Onenote\Sections\Item\OnenoteSectionItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Onenote\Sections\SectionsRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Onenote;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -204,7 +204,7 @@ class OnenoteRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.groups.item.onenote.notebooks.item collection
+     * Gets an item from the Microsoft\Graph\Generated.groups.item.onenote.notebooks.item collection
      * @param string $id Unique identifier of the item
      * @return NotebookItemRequestBuilder
     */
@@ -215,7 +215,7 @@ class OnenoteRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.groups.item.onenote.operations.item collection
+     * Gets an item from the Microsoft\Graph\Generated.groups.item.onenote.operations.item collection
      * @param string $id Unique identifier of the item
      * @return OnenoteOperationItemRequestBuilder
     */
@@ -226,7 +226,7 @@ class OnenoteRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.groups.item.onenote.pages.item collection
+     * Gets an item from the Microsoft\Graph\Generated.groups.item.onenote.pages.item collection
      * @param string $id Unique identifier of the item
      * @return OnenotePageItemRequestBuilder
     */
@@ -257,7 +257,7 @@ class OnenoteRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.groups.item.onenote.resources.item collection
+     * Gets an item from the Microsoft\Graph\Generated.groups.item.onenote.resources.item collection
      * @param string $id Unique identifier of the item
      * @return OnenoteResourceItemRequestBuilder
     */
@@ -268,7 +268,7 @@ class OnenoteRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.groups.item.onenote.sectionGroups.item collection
+     * Gets an item from the Microsoft\Graph\Generated.groups.item.onenote.sectionGroups.item collection
      * @param string $id Unique identifier of the item
      * @return SectionGroupItemRequestBuilder
     */
@@ -279,7 +279,7 @@ class OnenoteRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.groups.item.onenote.sections.item collection
+     * Gets an item from the Microsoft\Graph\Generated.groups.item.onenote.sections.item collection
      * @param string $id Unique identifier of the item
      * @return OnenoteSectionItemRequestBuilder
     */

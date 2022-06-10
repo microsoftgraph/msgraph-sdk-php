@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Reports\GetSharePointSiteUsageDetailWithPeriod;
+namespace Microsoft\Graph\Generated\Reports\GetSharePointSiteUsageDetailWithPeriod;
 
 class GetSharePointSiteUsageDetailWithPeriodRequestBuilderGetRequestConfiguration 
 {

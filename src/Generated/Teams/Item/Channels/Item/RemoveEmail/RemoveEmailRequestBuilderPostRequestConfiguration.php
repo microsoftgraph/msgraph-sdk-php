@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Teams\Item\Channels\Item\RemoveEmail;
+namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item\RemoveEmail;
 
 class RemoveEmailRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Solutions\BookingBusinesses\Item\CalendarView\Count;
+namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Todo\Lists\Item\Tasks\Item\LinkedResources\Item;
+namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\LinkedResources\Item;
 
 class LinkedResourceItemRequestBuilderPatchRequestConfiguration 
 {

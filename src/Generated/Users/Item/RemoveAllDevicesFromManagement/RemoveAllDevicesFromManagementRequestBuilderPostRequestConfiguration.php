@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\RemoveAllDevicesFromManagement;
+namespace Microsoft\Graph\Generated\Users\Item\RemoveAllDevicesFromManagement;
 
 class RemoveAllDevicesFromManagementRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drive\EscapedList\Columns;
+namespace Microsoft\Graph\Generated\Drive\EscapedList\Columns;
 
 class ColumnsRequestBuilderGetRequestConfiguration 
 {

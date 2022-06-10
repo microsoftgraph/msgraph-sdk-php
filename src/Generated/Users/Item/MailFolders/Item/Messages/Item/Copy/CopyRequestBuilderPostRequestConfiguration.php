@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\MailFolders\Item\Messages\Item\Copy;
+namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\Copy;
 
 class CopyRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\ExchangeConnectors\Item;
+namespace Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\Item;
 
 class DeviceManagementExchangeConnectorItemRequestBuilderGetRequestConfiguration 
 {

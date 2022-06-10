@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Sites\Item\Lists\Item\ContentTypes\Item\ColumnLinks\Item;
+namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\ContentTypes\Item\ColumnLinks\Item;
 
 class ColumnLinkItemRequestBuilderGetRequestConfiguration 
 {

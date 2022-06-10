@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DirectoryObjects\GetByIds;
+namespace Microsoft\Graph\Generated\DirectoryObjects\GetByIds;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

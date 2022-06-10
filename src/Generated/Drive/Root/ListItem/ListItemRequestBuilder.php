@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Root\ListItem;
+namespace Microsoft\Graph\Generated\Drive\Root\ListItem;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Drive\Root\ListItem\Analytics\AnalyticsRequestBuilder;
-use Microsoft\Graph\Drive\Root\ListItem\DriveItem\DriveItemRequestBuilder;
-use Microsoft\Graph\Drive\Root\ListItem\Fields\FieldsRequestBuilder;
-use Microsoft\Graph\Drive\Root\ListItem\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
-use Microsoft\Graph\Drive\Root\ListItem\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-use Microsoft\Graph\Drive\Root\ListItem\Versions\Item\ListItemVersionItemRequestBuilder;
-use Microsoft\Graph\Drive\Root\ListItem\Versions\VersionsRequestBuilder;
-use Microsoft\Graph\Models\ListItem;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Drive\Root\ListItem\Analytics\AnalyticsRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\ListItem\DriveItem\DriveItemRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\ListItem\Fields\FieldsRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\ListItem\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\ListItem\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\ListItem\Versions\Item\ListItemVersionItemRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\ListItem\Versions\VersionsRequestBuilder;
+use Microsoft\Graph\Generated\Models\ListItem;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -224,7 +224,7 @@ class ListItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.drive.root.listItem.versions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.drive.root.listItem.versions.item collection
      * @param string $id Unique identifier of the item
      * @return ListItemVersionItemRequestBuilder
     */

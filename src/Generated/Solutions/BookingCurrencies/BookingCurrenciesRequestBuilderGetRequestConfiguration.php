@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Solutions\BookingCurrencies;
+namespace Microsoft\Graph\Generated\Solutions\BookingCurrencies;
 
 class BookingCurrenciesRequestBuilderGetRequestConfiguration 
 {

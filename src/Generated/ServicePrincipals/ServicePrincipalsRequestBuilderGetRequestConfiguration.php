@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\ServicePrincipals;
+namespace Microsoft\Graph\Generated\ServicePrincipals;
 
 class ServicePrincipalsRequestBuilderGetRequestConfiguration 
 {

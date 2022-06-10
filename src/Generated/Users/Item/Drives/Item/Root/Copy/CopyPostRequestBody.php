@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Drives\Item\Root\Copy;
+namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\Root\Copy;
 
-use Microsoft\Graph\Models\ItemReference;
+use Microsoft\Graph\Generated\Models\ItemReference;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

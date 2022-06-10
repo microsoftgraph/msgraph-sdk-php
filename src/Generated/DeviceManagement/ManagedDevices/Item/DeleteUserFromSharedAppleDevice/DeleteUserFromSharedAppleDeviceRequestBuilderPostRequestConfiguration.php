@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\ManagedDevices\Item\DeleteUserFromSharedAppleDevice;
+namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\DeleteUserFromSharedAppleDevice;
 
 class DeleteUserFromSharedAppleDeviceRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\Reports\ExportJobs;
+namespace Microsoft\Graph\Generated\DeviceManagement\Reports\ExportJobs;
 
 class ExportJobsRequestBuilderGetRequestConfiguration 
 {

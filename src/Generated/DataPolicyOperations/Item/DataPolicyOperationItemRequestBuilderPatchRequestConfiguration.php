@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DataPolicyOperations\Item;
+namespace Microsoft\Graph\Generated\DataPolicyOperations\Item;
 
 class DataPolicyOperationItemRequestBuilderPatchRequestConfiguration 
 {

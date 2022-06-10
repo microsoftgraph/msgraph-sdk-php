@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\JoinedTeams\Item\Operations\Item;
+namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Operations\Item;
 
 class TeamsAsyncOperationItemRequestBuilderGetRequestConfiguration 
 {

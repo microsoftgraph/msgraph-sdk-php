@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\IdentityProtection;
+namespace Microsoft\Graph\Generated\IdentityProtection;
 
 class IdentityProtectionRequestBuilderGetRequestConfiguration 
 {

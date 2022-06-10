@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\ServicePrincipals\Item\ClaimsMappingPolicies;
+namespace Microsoft\Graph\Generated\ServicePrincipals\Item\ClaimsMappingPolicies;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ClaimsMappingPolicyCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\ServicePrincipals\Item\ClaimsMappingPolicies\Count\CountRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\ClaimsMappingPolicies\Ref\RefRequestBuilder;
+use Microsoft\Graph\Generated\Models\ClaimsMappingPolicyCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\ClaimsMappingPolicies\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\ClaimsMappingPolicies\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Messages;
+namespace Microsoft\Graph\Generated\Me\Messages;
 
 class MessagesRequestBuilderGetRequestConfiguration 
 {

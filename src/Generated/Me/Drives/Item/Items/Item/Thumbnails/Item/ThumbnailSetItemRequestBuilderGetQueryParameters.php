@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Drives\Item\Items\Item\Thumbnails\Item;
+namespace Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Thumbnails\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\AuditLogs;
+namespace Microsoft\Graph\Generated\AuditLogs;
 
 class AuditLogsRequestBuilderGetRequestConfiguration 
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\SchedulingGroups;
+namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\SchedulingGroups;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\SchedulingGroup;
-use Microsoft\Graph\Models\SchedulingGroupCollectionResponse;
-use Microsoft\Graph\Users\Item\JoinedTeams\Item\Schedule\SchedulingGroups\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\SchedulingGroup;
+use Microsoft\Graph\Generated\Models\SchedulingGroupCollectionResponse;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\SchedulingGroups\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

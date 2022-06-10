@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Calendar\CalendarPermissions\Item;
+namespace Microsoft\Graph\Generated\Users\Item\Calendar\CalendarPermissions\Item;
 
 class CalendarPermissionItemRequestBuilderPatchRequestConfiguration 
 {

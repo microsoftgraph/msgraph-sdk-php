@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Teams\Item\Channels\Item\Messages\Item\Replies\Item;
+namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item\Messages\Item\Replies\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ChatMessage;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Teams\Item\Channels\Item\Messages\Item\Replies\Item\HostedContents\HostedContentsRequestBuilder;
-use Microsoft\Graph\Teams\Item\Channels\Item\Messages\Item\Replies\Item\HostedContents\Item\ChatMessageHostedContentItemRequestBuilder;
+use Microsoft\Graph\Generated\Models\ChatMessage;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Teams\Item\Channels\Item\Messages\Item\Replies\Item\HostedContents\HostedContentsRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\Channels\Item\Messages\Item\Replies\Item\HostedContents\Item\ChatMessageHostedContentItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -159,7 +159,7 @@ class ChatMessageItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.teams.item.channels.item.messages.item.replies.item.hostedContents.item collection
+     * Gets an item from the Microsoft\Graph\Generated.teams.item.channels.item.messages.item.replies.item.hostedContents.item collection
      * @param string $id Unique identifier of the item
      * @return ChatMessageHostedContentItemRequestBuilder
     */

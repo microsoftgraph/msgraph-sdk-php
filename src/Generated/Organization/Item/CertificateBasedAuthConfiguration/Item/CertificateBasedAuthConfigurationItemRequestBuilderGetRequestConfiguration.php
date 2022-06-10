@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Organization\Item\CertificateBasedAuthConfiguration\Item;
+namespace Microsoft\Graph\Generated\Organization\Item\CertificateBasedAuthConfiguration\Item;
 
 class CertificateBasedAuthConfigurationItemRequestBuilderGetRequestConfiguration 
 {

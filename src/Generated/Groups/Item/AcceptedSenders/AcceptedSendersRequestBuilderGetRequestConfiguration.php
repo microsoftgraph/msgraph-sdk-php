@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\AcceptedSenders;
+namespace Microsoft\Graph\Generated\Groups\Item\AcceptedSenders;
 
 class AcceptedSendersRequestBuilderGetRequestConfiguration 
 {

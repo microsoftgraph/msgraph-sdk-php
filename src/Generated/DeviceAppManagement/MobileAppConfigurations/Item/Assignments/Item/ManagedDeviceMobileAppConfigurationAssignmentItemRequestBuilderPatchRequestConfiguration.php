@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\MobileAppConfigurations\Item\Assignments\Item;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\Assignments\Item;
 
 class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration 
 {

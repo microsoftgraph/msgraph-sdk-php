@@ -1,23 +1,23 @@
 <?php
 
-namespace Microsoft\Graph\Drive\EscapedList;
+namespace Microsoft\Graph\Generated\Drive\EscapedList;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Drive\EscapedList\Columns\ColumnsRequestBuilder;
-use Microsoft\Graph\Drive\EscapedList\Columns\Item\ColumnDefinitionItemRequestBuilder;
-use Microsoft\Graph\Drive\EscapedList\ContentTypes\ContentTypesRequestBuilder;
-use Microsoft\Graph\Drive\EscapedList\ContentTypes\Item\ContentTypeItemRequestBuilder;
-use Microsoft\Graph\Drive\EscapedList\Drive\DriveRequestBuilder;
-use Microsoft\Graph\Drive\EscapedList\Items\Item\ListItemItemRequestBuilder;
-use Microsoft\Graph\Drive\EscapedList\Items\ItemsRequestBuilder;
-use Microsoft\Graph\Drive\EscapedList\Operations\Item\RichLongRunningOperationItemRequestBuilder;
-use Microsoft\Graph\Drive\EscapedList\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Drive\EscapedList\Subscriptions\Item\SubscriptionItemRequestBuilder;
-use Microsoft\Graph\Drive\EscapedList\Subscriptions\SubscriptionsRequestBuilder;
-use Microsoft\Graph\Models\EscapedList;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Drive\EscapedList\Columns\ColumnsRequestBuilder;
+use Microsoft\Graph\Generated\Drive\EscapedList\Columns\Item\ColumnDefinitionItemRequestBuilder;
+use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\ContentTypesRequestBuilder;
+use Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\ContentTypeItemRequestBuilder;
+use Microsoft\Graph\Generated\Drive\EscapedList\Drive\DriveRequestBuilder;
+use Microsoft\Graph\Generated\Drive\EscapedList\Items\Item\ListItemItemRequestBuilder;
+use Microsoft\Graph\Generated\Drive\EscapedList\Items\ItemsRequestBuilder;
+use Microsoft\Graph\Generated\Drive\EscapedList\Operations\Item\RichLongRunningOperationItemRequestBuilder;
+use Microsoft\Graph\Generated\Drive\EscapedList\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Generated\Drive\EscapedList\Subscriptions\Item\SubscriptionItemRequestBuilder;
+use Microsoft\Graph\Generated\Drive\EscapedList\Subscriptions\SubscriptionsRequestBuilder;
+use Microsoft\Graph\Generated\Models\EscapedList;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -86,7 +86,7 @@ class ListRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.drive.list.columns.item collection
+     * Gets an item from the Microsoft\Graph\Generated.drive.list.columns.item collection
      * @param string $id Unique identifier of the item
      * @return ColumnDefinitionItemRequestBuilder
     */
@@ -108,7 +108,7 @@ class ListRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.drive.list.contentTypes.item collection
+     * Gets an item from the Microsoft\Graph\Generated.drive.list.contentTypes.item collection
      * @param string $id Unique identifier of the item
      * @return ContentTypeItemRequestBuilder
     */
@@ -225,7 +225,7 @@ class ListRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.drive.list.items.item collection
+     * Gets an item from the Microsoft\Graph\Generated.drive.list.items.item collection
      * @param string $id Unique identifier of the item
      * @return ListItemItemRequestBuilder
     */
@@ -236,7 +236,7 @@ class ListRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.drive.list.operations.item collection
+     * Gets an item from the Microsoft\Graph\Generated.drive.list.operations.item collection
      * @param string $id Unique identifier of the item
      * @return RichLongRunningOperationItemRequestBuilder
     */
@@ -267,7 +267,7 @@ class ListRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.drive.list.subscriptions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.drive.list.subscriptions.item collection
      * @param string $id Unique identifier of the item
      * @return SubscriptionItemRequestBuilder
     */

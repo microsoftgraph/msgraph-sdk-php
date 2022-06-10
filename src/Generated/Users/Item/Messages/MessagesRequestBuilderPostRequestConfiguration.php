@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Messages;
+namespace Microsoft\Graph\Generated\Users\Item\Messages;
 
 class MessagesRequestBuilderPostRequestConfiguration 
 {

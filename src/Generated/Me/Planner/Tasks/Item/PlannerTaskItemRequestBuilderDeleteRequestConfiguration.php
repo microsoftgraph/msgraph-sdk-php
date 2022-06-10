@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Planner\Tasks\Item;
+namespace Microsoft\Graph\Generated\Me\Planner\Tasks\Item;
 
 class PlannerTaskItemRequestBuilderDeleteRequestConfiguration 
 {

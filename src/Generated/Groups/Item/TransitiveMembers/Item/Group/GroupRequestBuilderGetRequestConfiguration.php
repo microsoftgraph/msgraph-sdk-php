@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\TransitiveMembers\Item\Group;
+namespace Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\Item\Group;
 
 class GroupRequestBuilderGetRequestConfiguration 
 {

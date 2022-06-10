@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Sites\Item\GetApplicableContentTypesForListWithListId;
+namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetApplicableContentTypesForListWithListId;
 
 class GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration 
 {

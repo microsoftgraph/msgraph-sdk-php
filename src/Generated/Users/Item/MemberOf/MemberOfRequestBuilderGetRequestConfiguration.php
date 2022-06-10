@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\MemberOf;
+namespace Microsoft\Graph\Generated\Users\Item\MemberOf;
 
 class MemberOfRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Contacts\Item\MemberOf\Item\Device;
+namespace Microsoft\Graph\Generated\Contacts\Item\MemberOf\Item\Device;
 
 class DeviceRequestBuilderGetRequestConfiguration 
 {

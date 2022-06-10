@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Places;
+namespace Microsoft\Graph\Generated\Places;
 
 class PlacesRequestBuilderGetRequestConfiguration 
 {

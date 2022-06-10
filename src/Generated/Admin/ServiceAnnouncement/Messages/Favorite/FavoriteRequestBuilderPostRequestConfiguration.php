@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Admin\ServiceAnnouncement\Messages\Favorite;
+namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Favorite;
 
 class FavoriteRequestBuilderPostRequestConfiguration 
 {

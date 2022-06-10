@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drives\Item\Root\Invite;
+namespace Microsoft\Graph\Generated\Drives\Item\Root\Invite;
 
 class InviteRequestBuilderPostRequestConfiguration 
 {

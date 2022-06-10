@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\InformationProtection\Bitlocker\RecoveryKeys\Item;
+namespace Microsoft\Graph\Generated\InformationProtection\Bitlocker\RecoveryKeys\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\BitlockerRecoveryKey;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\BitlockerRecoveryKey;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

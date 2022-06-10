@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Calendars\Item\CalendarView\Item\Extensions;
+namespace Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\Item\Extensions;
 
 class ExtensionsRequestBuilderPostRequestConfiguration 
 {

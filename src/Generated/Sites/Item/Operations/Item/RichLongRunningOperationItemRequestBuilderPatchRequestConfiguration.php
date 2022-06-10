@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item\Operations\Item;
+namespace Microsoft\Graph\Generated\Sites\Item\Operations\Item;
 
 class RichLongRunningOperationItemRequestBuilderPatchRequestConfiguration 
 {

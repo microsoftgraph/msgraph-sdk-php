@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\MailFolders\Item\Messages\Item\MultiValueExtendedProperties\Item;
+namespace Microsoft\Graph\Generated\Me\MailFolders\Item\Messages\Item\MultiValueExtendedProperties\Item;
 
 class MultiValueLegacyExtendedPropertyItemRequestBuilderPatchRequestConfiguration 
 {

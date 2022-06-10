@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\CertificateBasedAuthConfiguration\Count;
+namespace Microsoft\Graph\Generated\CertificateBasedAuthConfiguration\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

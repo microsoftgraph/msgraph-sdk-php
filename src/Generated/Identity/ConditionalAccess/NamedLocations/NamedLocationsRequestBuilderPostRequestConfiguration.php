@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Identity\ConditionalAccess\NamedLocations;
+namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\NamedLocations;
 
 class NamedLocationsRequestBuilderPostRequestConfiguration 
 {

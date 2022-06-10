@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Teamwork;
+namespace Microsoft\Graph\Generated\Me\Teamwork;
 
 class TeamworkRequestBuilderDeleteRequestConfiguration 
 {

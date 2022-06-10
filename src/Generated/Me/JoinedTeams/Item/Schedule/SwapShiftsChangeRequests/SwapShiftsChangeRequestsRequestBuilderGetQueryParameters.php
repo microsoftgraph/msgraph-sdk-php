@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\JoinedTeams\Item\Schedule\SwapShiftsChangeRequests;
+namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\SwapShiftsChangeRequests;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

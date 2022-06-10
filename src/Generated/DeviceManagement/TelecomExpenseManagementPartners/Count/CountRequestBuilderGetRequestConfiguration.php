@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\TelecomExpenseManagementPartners\Count;
+namespace Microsoft\Graph\Generated\DeviceManagement\TelecomExpenseManagementPartners\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

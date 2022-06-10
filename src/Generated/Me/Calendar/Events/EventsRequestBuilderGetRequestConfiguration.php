@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Calendar\Events;
+namespace Microsoft\Graph\Generated\Me\Calendar\Events;
 
 class EventsRequestBuilderGetRequestConfiguration 
 {

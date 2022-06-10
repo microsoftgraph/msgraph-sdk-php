@@ -1,21 +1,21 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Chats\Item;
+namespace Microsoft\Graph\Generated\Users\Item\Chats\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\Chat;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Users\Item\Chats\Item\InstalledApps\InstalledAppsRequestBuilder;
-use Microsoft\Graph\Users\Item\Chats\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
-use Microsoft\Graph\Users\Item\Chats\Item\Members\Item\ConversationMemberItemRequestBuilder;
-use Microsoft\Graph\Users\Item\Chats\Item\Members\MembersRequestBuilder;
-use Microsoft\Graph\Users\Item\Chats\Item\Messages\Item\ChatMessageItemRequestBuilder;
-use Microsoft\Graph\Users\Item\Chats\Item\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Users\Item\Chats\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
-use Microsoft\Graph\Users\Item\Chats\Item\Tabs\Item\TeamsTabItemRequestBuilder;
-use Microsoft\Graph\Users\Item\Chats\Item\Tabs\TabsRequestBuilder;
+use Microsoft\Graph\Generated\Models\Chat;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\InstalledApps\InstalledAppsRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\Members\Item\ConversationMemberItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\Members\MembersRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\ChatMessageItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\MessagesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\Tabs\Item\TeamsTabItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\Tabs\TabsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -194,7 +194,7 @@ class ChatItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.users.item.chats.item.installedApps.item collection
+     * Gets an item from the Microsoft\Graph\Generated.users.item.chats.item.installedApps.item collection
      * @param string $id Unique identifier of the item
      * @return TeamsAppInstallationItemRequestBuilder
     */
@@ -205,7 +205,7 @@ class ChatItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.users.item.chats.item.members.item collection
+     * Gets an item from the Microsoft\Graph\Generated.users.item.chats.item.members.item collection
      * @param string $id Unique identifier of the item
      * @return ConversationMemberItemRequestBuilder
     */
@@ -216,7 +216,7 @@ class ChatItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.users.item.chats.item.messages.item collection
+     * Gets an item from the Microsoft\Graph\Generated.users.item.chats.item.messages.item collection
      * @param string $id Unique identifier of the item
      * @return ChatMessageItemRequestBuilder
     */
@@ -247,7 +247,7 @@ class ChatItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.users.item.chats.item.tabs.item collection
+     * Gets an item from the Microsoft\Graph\Generated.users.item.chats.item.tabs.item collection
      * @param string $id Unique identifier of the item
      * @return TeamsTabItemRequestBuilder
     */

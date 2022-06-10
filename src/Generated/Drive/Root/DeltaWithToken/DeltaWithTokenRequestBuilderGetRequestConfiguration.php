@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Root\DeltaWithToken;
+namespace Microsoft\Graph\Generated\Drive\Root\DeltaWithToken;
 
 class DeltaWithTokenRequestBuilderGetRequestConfiguration 
 {

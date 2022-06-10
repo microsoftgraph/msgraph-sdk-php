@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item\ContentTypes\Item\CopyToDefaultContentLocation;
+namespace Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\CopyToDefaultContentLocation;
 
 class CopyToDefaultContentLocationRequestBuilderPostRequestConfiguration 
 {

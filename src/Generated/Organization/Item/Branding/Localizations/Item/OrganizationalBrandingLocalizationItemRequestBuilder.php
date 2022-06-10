@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Organization\Item\Branding\Localizations\Item;
+namespace Microsoft\Graph\Generated\Organization\Item\Branding\Localizations\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\OrganizationalBrandingLocalization;
-use Microsoft\Graph\Organization\Item\Branding\Localizations\Item\BackgroundImage\BackgroundImageRequestBuilder;
-use Microsoft\Graph\Organization\Item\Branding\Localizations\Item\BannerLogo\BannerLogoRequestBuilder;
-use Microsoft\Graph\Organization\Item\Branding\Localizations\Item\SquareLogo\SquareLogoRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OrganizationalBrandingLocalization;
+use Microsoft\Graph\Generated\Organization\Item\Branding\Localizations\Item\BackgroundImage\BackgroundImageRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Item\Branding\Localizations\Item\BannerLogo\BannerLogoRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Item\Branding\Localizations\Item\SquareLogo\SquareLogoRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Calendar\Events\Item\Extensions\Count;
+namespace Microsoft\Graph\Generated\Groups\Item\Calendar\Events\Item\Extensions\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

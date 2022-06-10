@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Admin\ServiceAnnouncement;
+namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Admin\ServiceAnnouncement\HealthOverviews\HealthOverviewsRequestBuilder;
-use Microsoft\Graph\Admin\ServiceAnnouncement\HealthOverviews\Item\ServiceHealthItemRequestBuilder;
-use Microsoft\Graph\Admin\ServiceAnnouncement\Issues\IssuesRequestBuilder;
-use Microsoft\Graph\Admin\ServiceAnnouncement\Issues\Item\ServiceHealthIssueItemRequestBuilder;
-use Microsoft\Graph\Admin\ServiceAnnouncement\Messages\Item\ServiceUpdateMessageItemRequestBuilder;
-use Microsoft\Graph\Admin\ServiceAnnouncement\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\ServiceAnnouncement;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\HealthOverviewsRequestBuilder;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\Item\ServiceHealthItemRequestBuilder;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues\IssuesRequestBuilder;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues\Item\ServiceHealthIssueItemRequestBuilder;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Item\ServiceUpdateMessageItemRequestBuilder;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MessagesRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ServiceAnnouncement;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -177,7 +177,7 @@ class ServiceAnnouncementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.admin.serviceAnnouncement.healthOverviews.item collection
+     * Gets an item from the Microsoft\Graph\Generated.admin.serviceAnnouncement.healthOverviews.item collection
      * @param string $id Unique identifier of the item
      * @return ServiceHealthItemRequestBuilder
     */
@@ -188,7 +188,7 @@ class ServiceAnnouncementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.admin.serviceAnnouncement.issues.item collection
+     * Gets an item from the Microsoft\Graph\Generated.admin.serviceAnnouncement.issues.item collection
      * @param string $id Unique identifier of the item
      * @return ServiceHealthIssueItemRequestBuilder
     */
@@ -199,7 +199,7 @@ class ServiceAnnouncementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.admin.serviceAnnouncement.messages.item collection
+     * Gets an item from the Microsoft\Graph\Generated.admin.serviceAnnouncement.messages.item collection
      * @param string $id Unique identifier of the item
      * @return ServiceUpdateMessageItemRequestBuilder
     */

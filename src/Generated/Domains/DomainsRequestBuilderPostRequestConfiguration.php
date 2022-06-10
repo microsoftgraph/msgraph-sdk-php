@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Domains;
+namespace Microsoft\Graph\Generated\Domains;
 
 class DomainsRequestBuilderPostRequestConfiguration 
 {

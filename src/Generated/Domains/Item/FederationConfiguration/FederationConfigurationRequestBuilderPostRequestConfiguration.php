@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Domains\Item\FederationConfiguration;
+namespace Microsoft\Graph\Generated\Domains\Item\FederationConfiguration;
 
 class FederationConfigurationRequestBuilderPostRequestConfiguration 
 {

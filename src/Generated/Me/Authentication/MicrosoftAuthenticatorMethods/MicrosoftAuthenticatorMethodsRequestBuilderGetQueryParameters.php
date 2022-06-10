@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Authentication\MicrosoftAuthenticatorMethods;
+namespace Microsoft\Graph\Generated\Me\Authentication\MicrosoftAuthenticatorMethods;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

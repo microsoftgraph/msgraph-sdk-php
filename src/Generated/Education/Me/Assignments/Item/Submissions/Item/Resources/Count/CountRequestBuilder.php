@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Education\Me\Assignments\Item\Submissions\Item\Resources\Count;
+namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Resources\Count;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

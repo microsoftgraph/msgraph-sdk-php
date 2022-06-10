@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Events\Item\Accept;
+namespace Microsoft\Graph\Generated\Groups\Item\Events\Item\Accept;
 
 class AcceptRequestBuilderPostRequestConfiguration 
 {

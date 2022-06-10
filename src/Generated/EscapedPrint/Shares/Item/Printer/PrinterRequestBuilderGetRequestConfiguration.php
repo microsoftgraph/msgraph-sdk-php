@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\EscapedPrint\Shares\Item\Printer;
+namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\Printer;
 
 class PrinterRequestBuilderGetRequestConfiguration 
 {

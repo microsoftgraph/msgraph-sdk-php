@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Root\Invite;
+namespace Microsoft\Graph\Generated\Drive\Root\Invite;
 
-use Microsoft\Graph\Models\Permission;
+use Microsoft\Graph\Generated\Models\Permission;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

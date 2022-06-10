@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\OwnedObjects;
+namespace Microsoft\Graph\Generated\Users\Item\OwnedObjects;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Users\Item\OwnedObjects\Application\ApplicationRequestBuilder;
-use Microsoft\Graph\Users\Item\OwnedObjects\Count\CountRequestBuilder;
-use Microsoft\Graph\Users\Item\OwnedObjects\Group\GroupRequestBuilder;
-use Microsoft\Graph\Users\Item\OwnedObjects\ServicePrincipal\ServicePrincipalRequestBuilder;
+use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Users\Item\OwnedObjects\Application\ApplicationRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\OwnedObjects\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\OwnedObjects\Group\GroupRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\OwnedObjects\ServicePrincipal\ServicePrincipalRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Workbooks\Item\Thumbnails\Item;
+namespace Microsoft\Graph\Generated\Workbooks\Item\Thumbnails\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\ThumbnailSet;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ThumbnailSet;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\VppTokens\Count;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

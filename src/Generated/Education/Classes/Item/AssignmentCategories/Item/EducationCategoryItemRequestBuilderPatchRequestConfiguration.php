@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Education\Classes\Item\AssignmentCategories\Item;
+namespace Microsoft\Graph\Generated\Education\Classes\Item\AssignmentCategories\Item;
 
 class EducationCategoryItemRequestBuilderPatchRequestConfiguration 
 {

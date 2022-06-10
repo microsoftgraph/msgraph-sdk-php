@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Drives\Item\Following;
+namespace Microsoft\Graph\Generated\Me\Drives\Item\Following;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

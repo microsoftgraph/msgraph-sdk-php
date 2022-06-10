@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\EscapedPrint\Services;
+namespace Microsoft\Graph\Generated\EscapedPrint\Services;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

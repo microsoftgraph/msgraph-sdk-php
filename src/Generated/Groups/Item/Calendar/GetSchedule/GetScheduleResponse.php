@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Calendar\GetSchedule;
+namespace Microsoft\Graph\Generated\Groups\Item\Calendar\GetSchedule;
 
-use Microsoft\Graph\Models\ScheduleInformation;
+use Microsoft\Graph\Generated\Models\ScheduleInformation;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

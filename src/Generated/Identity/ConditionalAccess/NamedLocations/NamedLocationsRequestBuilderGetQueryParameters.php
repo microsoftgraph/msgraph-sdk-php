@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Identity\ConditionalAccess\NamedLocations;
+namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\NamedLocations;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

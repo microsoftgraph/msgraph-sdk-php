@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\ServicePrincipals\Item\Endpoints;
+namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Endpoints;
 
 class EndpointsRequestBuilderPostRequestConfiguration 
 {

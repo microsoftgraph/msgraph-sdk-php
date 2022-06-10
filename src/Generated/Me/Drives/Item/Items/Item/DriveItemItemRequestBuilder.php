@@ -1,40 +1,40 @@
 <?php
 
-namespace Microsoft\Graph\Me\Drives\Item\Items\Item;
+namespace Microsoft\Graph\Generated\Me\Drives\Item\Items\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Analytics\AnalyticsRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Checkin\CheckinRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Checkout\CheckoutRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Children\ChildrenRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Content\ContentRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Copy\CopyRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\CreateLink\CreateLinkRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\CreateUploadSession\CreateUploadSessionRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\DeltaWithToken\DeltaWithTokenRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Follow\FollowRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Invite\InviteRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\ListItem\ListItemRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Permissions\Item\PermissionItemRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Permissions\PermissionsRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Preview\PreviewRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\SearchWithQ\SearchWithQRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Subscriptions\Item\SubscriptionItemRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Subscriptions\SubscriptionsRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Thumbnails\Item\ThumbnailSetItemRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Thumbnails\ThumbnailsRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Unfollow\UnfollowRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\ValidatePermission\ValidatePermissionRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Versions\Item\DriveItemVersionItemRequestBuilder;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Versions\VersionsRequestBuilder;
-use Microsoft\Graph\Models\DriveItem;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Analytics\AnalyticsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Checkin\CheckinRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Checkout\CheckoutRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Children\ChildrenRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Content\ContentRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Copy\CopyRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\CreateLink\CreateLinkRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\CreateUploadSession\CreateUploadSessionRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\DeltaWithToken\DeltaWithTokenRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Follow\FollowRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Invite\InviteRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\ListItem\ListItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Permissions\Item\PermissionItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Permissions\PermissionsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Preview\PreviewRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\SearchWithQ\SearchWithQRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Subscriptions\Item\SubscriptionItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Subscriptions\SubscriptionsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Thumbnails\Item\ThumbnailSetItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Thumbnails\ThumbnailsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Unfollow\UnfollowRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\ValidatePermission\ValidatePermissionRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Versions\Item\DriveItemVersionItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Versions\VersionsRequestBuilder;
+use Microsoft\Graph\Generated\Models\DriveItem;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -194,7 +194,7 @@ class DriveItemItemRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft\Graph.me.drives.item.items.item.children.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.drives.item.items.item.children.item collection
      * @param string $id Unique identifier of the item
      * @return DriveItemItemRequestBuilder
     */
@@ -378,7 +378,7 @@ class DriveItemItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.drives.item.items.item.permissions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.drives.item.items.item.permissions.item collection
      * @param string $id Unique identifier of the item
      * @return PermissionItemRequestBuilder
     */
@@ -398,7 +398,7 @@ class DriveItemItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.drives.item.items.item.subscriptions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.drives.item.items.item.subscriptions.item collection
      * @param string $id Unique identifier of the item
      * @return SubscriptionItemRequestBuilder
     */
@@ -409,7 +409,7 @@ class DriveItemItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.drives.item.items.item.thumbnails.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.drives.item.items.item.thumbnails.item collection
      * @param string $id Unique identifier of the item
      * @return ThumbnailSetItemRequestBuilder
     */
@@ -420,7 +420,7 @@ class DriveItemItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.drives.item.items.item.versions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.drives.item.items.item.versions.item collection
      * @param string $id Unique identifier of the item
      * @return DriveItemVersionItemRequestBuilder
     */

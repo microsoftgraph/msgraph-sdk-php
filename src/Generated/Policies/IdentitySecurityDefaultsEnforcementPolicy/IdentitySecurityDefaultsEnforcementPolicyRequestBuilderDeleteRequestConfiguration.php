@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Policies\IdentitySecurityDefaultsEnforcementPolicy;
+namespace Microsoft\Graph\Generated\Policies\IdentitySecurityDefaultsEnforcementPolicy;
 
 class IdentitySecurityDefaultsEnforcementPolicyRequestBuilderDeleteRequestConfiguration 
 {

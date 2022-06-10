@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Todo\Lists\Item\Tasks\Item\ChecklistItems\Item;
+namespace Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\ChecklistItems\Item;
 
 class ChecklistItemItemRequestBuilderGetRequestConfiguration 
 {

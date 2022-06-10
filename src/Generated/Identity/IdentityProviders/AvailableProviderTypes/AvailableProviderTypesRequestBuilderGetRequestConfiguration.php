@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Identity\IdentityProviders\AvailableProviderTypes;
+namespace Microsoft\Graph\Generated\Identity\IdentityProviders\AvailableProviderTypes;
 
 class AvailableProviderTypesRequestBuilderGetRequestConfiguration 
 {

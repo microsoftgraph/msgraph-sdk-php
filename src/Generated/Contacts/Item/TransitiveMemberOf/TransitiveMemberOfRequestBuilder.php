@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Contacts\Item\TransitiveMemberOf;
+namespace Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Contacts\Item\TransitiveMemberOf\Application\ApplicationRequestBuilder;
-use Microsoft\Graph\Contacts\Item\TransitiveMemberOf\Count\CountRequestBuilder;
-use Microsoft\Graph\Contacts\Item\TransitiveMemberOf\Device\DeviceRequestBuilder;
-use Microsoft\Graph\Contacts\Item\TransitiveMemberOf\Group\GroupRequestBuilder;
-use Microsoft\Graph\Contacts\Item\TransitiveMemberOf\OrgContact\OrgContactRequestBuilder;
-use Microsoft\Graph\Contacts\Item\TransitiveMemberOf\ServicePrincipal\ServicePrincipalRequestBuilder;
-use Microsoft\Graph\Contacts\Item\TransitiveMemberOf\User\UserRequestBuilder;
-use Microsoft\Graph\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\Application\ApplicationRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\Device\DeviceRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\Group\GroupRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\OrgContact\OrgContactRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\ServicePrincipal\ServicePrincipalRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\User\UserRequestBuilder;
+use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

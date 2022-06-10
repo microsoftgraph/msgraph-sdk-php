@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\DirectoryRoles\Item\Members\Item;
+namespace Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item;
 
-use Microsoft\Graph\DirectoryRoles\Item\Members\Item\Application\ApplicationRequestBuilder;
-use Microsoft\Graph\DirectoryRoles\Item\Members\Item\Device\DeviceRequestBuilder;
-use Microsoft\Graph\DirectoryRoles\Item\Members\Item\Group\GroupRequestBuilder;
-use Microsoft\Graph\DirectoryRoles\Item\Members\Item\OrgContact\OrgContactRequestBuilder;
-use Microsoft\Graph\DirectoryRoles\Item\Members\Item\Ref\RefRequestBuilder;
-use Microsoft\Graph\DirectoryRoles\Item\Members\Item\ServicePrincipal\ServicePrincipalRequestBuilder;
-use Microsoft\Graph\DirectoryRoles\Item\Members\Item\User\UserRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\Application\ApplicationRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\Device\DeviceRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\Group\GroupRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\OrgContact\OrgContactRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\Ref\RefRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\ServicePrincipal\ServicePrincipalRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\User\UserRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
 class DirectoryObjectItemRequestBuilder 

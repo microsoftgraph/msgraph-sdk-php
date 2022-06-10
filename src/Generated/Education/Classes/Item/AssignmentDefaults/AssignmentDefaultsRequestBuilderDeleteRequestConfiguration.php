@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Education\Classes\Item\AssignmentDefaults;
+namespace Microsoft\Graph\Generated\Education\Classes\Item\AssignmentDefaults;
 
 class AssignmentDefaultsRequestBuilderDeleteRequestConfiguration 
 {

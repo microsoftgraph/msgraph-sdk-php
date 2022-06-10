@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\GetMailTips;
+namespace Microsoft\Graph\Generated\Me\GetMailTips;
 
 class GetMailTipsRequestBuilderPostRequestConfiguration 
 {

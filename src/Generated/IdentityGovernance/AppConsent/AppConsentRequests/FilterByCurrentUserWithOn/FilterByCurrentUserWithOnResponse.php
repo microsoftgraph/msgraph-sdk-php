@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance\AppConsent\AppConsentRequests\FilterByCurrentUserWithOn;
+namespace Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\FilterByCurrentUserWithOn;
 
-use Microsoft\Graph\Models\AppConsentRequest;
+use Microsoft\Graph\Generated\Models\AppConsentRequest;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

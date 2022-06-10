@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\RoleManagement\EntitlementManagement\RoleDefinitions\Item;
+namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleDefinitions\Item;
 
 class UnifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\ServicePrincipals\Item\RemovePassword;
+namespace Microsoft\Graph\Generated\ServicePrincipals\Item\RemovePassword;
 
 class RemovePasswordRequestBuilderPostRequestConfiguration 
 {

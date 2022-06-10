@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Shares\Item\Permission;
+namespace Microsoft\Graph\Generated\Shares\Item\Permission;
 
 class PermissionRequestBuilderDeleteRequestConfiguration 
 {

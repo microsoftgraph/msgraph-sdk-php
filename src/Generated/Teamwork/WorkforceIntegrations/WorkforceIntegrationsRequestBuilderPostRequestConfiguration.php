@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Teamwork\WorkforceIntegrations;
+namespace Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations;
 
 class WorkforceIntegrationsRequestBuilderPostRequestConfiguration 
 {

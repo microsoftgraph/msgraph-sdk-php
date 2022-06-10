@@ -1,24 +1,24 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item;
+namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\AcceptRecommendations\AcceptRecommendationsRequestBuilder;
-use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\ApplyDecisions\ApplyDecisionsRequestBuilder;
-use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\BatchRecordDecisions\BatchRecordDecisionsRequestBuilder;
-use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\ContactedReviewers\ContactedReviewersRequestBuilder;
-use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\ContactedReviewers\Item\AccessReviewReviewerItemRequestBuilder;
-use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Decisions\DecisionsRequestBuilder;
-use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Decisions\Item\AccessReviewInstanceDecisionItemItemRequestBuilder;
-use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\ResetDecisions\ResetDecisionsRequestBuilder;
-use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\SendReminder\SendReminderRequestBuilder;
-use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Stages\Item\AccessReviewStageItemRequestBuilder;
-use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Stages\StagesRequestBuilder;
-use Microsoft\Graph\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Stop\StopRequestBuilder;
-use Microsoft\Graph\Models\AccessReviewInstance;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\AcceptRecommendations\AcceptRecommendationsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\ApplyDecisions\ApplyDecisionsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\BatchRecordDecisions\BatchRecordDecisionsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\ContactedReviewers\ContactedReviewersRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\ContactedReviewers\Item\AccessReviewReviewerItemRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Decisions\DecisionsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Decisions\Item\AccessReviewInstanceDecisionItemItemRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\ResetDecisions\ResetDecisionsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\SendReminder\SendReminderRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Stages\Item\AccessReviewStageItemRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Stages\StagesRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Stop\StopRequestBuilder;
+use Microsoft\Graph\Generated\Models\AccessReviewInstance;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -119,7 +119,7 @@ class AccessReviewInstanceItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.identityGovernance.accessReviews.definitions.item.instances.item.contactedReviewers.item collection
+     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.accessReviews.definitions.item.instances.item.contactedReviewers.item collection
      * @param string $id Unique identifier of the item
      * @return AccessReviewReviewerItemRequestBuilder
     */
@@ -198,7 +198,7 @@ class AccessReviewInstanceItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.identityGovernance.accessReviews.definitions.item.instances.item.decisions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.accessReviews.definitions.item.instances.item.decisions.item collection
      * @param string $id Unique identifier of the item
      * @return AccessReviewInstanceDecisionItemItemRequestBuilder
     */
@@ -267,7 +267,7 @@ class AccessReviewInstanceItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.identityGovernance.accessReviews.definitions.item.instances.item.stages.item collection
+     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.accessReviews.definitions.item.instances.item.stages.item collection
      * @param string $id Unique identifier of the item
      * @return AccessReviewStageItemRequestBuilder
     */

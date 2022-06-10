@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\JoinedTeams\Item\PrimaryChannel\Messages\Delta;
+namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages\Delta;
 
 class DeltaRequestBuilderGetRequestConfiguration 
 {

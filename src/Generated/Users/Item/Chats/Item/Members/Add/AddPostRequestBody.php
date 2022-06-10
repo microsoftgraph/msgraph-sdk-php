@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Chats\Item\Members\Add;
+namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\Members\Add;
 
-use Microsoft\Graph\Models\ConversationMember;
+use Microsoft\Graph\Generated\Models\ConversationMember;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

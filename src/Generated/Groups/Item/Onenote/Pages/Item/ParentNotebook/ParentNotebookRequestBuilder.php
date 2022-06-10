@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Onenote\Pages\Item\ParentNotebook;
+namespace Microsoft\Graph\Generated\Groups\Item\Onenote\Pages\Item\ParentNotebook;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\Notebook;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Notebook;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

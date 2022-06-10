@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Privacy;
+namespace Microsoft\Graph\Generated\Privacy;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\Privacy;
-use Microsoft\Graph\Privacy\SubjectRightsRequests\Item\SubjectRightsRequestItemRequestBuilder;
-use Microsoft\Graph\Privacy\SubjectRightsRequests\SubjectRightsRequestsRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Privacy;
+use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\SubjectRightsRequestItemRequestBuilder;
+use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\SubjectRightsRequestsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -139,7 +139,7 @@ class PrivacyRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.privacy.subjectRightsRequests.item collection
+     * Gets an item from the Microsoft\Graph\Generated.privacy.subjectRightsRequests.item collection
      * @param string $id Unique identifier of the item
      * @return SubjectRightsRequestItemRequestBuilder
     */

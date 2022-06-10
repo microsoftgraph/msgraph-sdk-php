@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages;
+namespace Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages\Count\CountRequestBuilder;
-use Microsoft\Graph\Models\LocalizedNotificationMessage;
-use Microsoft\Graph\Models\LocalizedNotificationMessageCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\LocalizedNotificationMessage;
+use Microsoft\Graph\Generated\Models\LocalizedNotificationMessageCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

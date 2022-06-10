@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Security\SecureScoreControlProfiles\Item;
+namespace Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\SecureScoreControlProfile;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\SecureScoreControlProfile;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

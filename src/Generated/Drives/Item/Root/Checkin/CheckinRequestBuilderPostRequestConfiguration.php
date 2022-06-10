@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drives\Item\Root\Checkin;
+namespace Microsoft\Graph\Generated\Drives\Item\Root\Checkin;
 
 class CheckinRequestBuilderPostRequestConfiguration 
 {

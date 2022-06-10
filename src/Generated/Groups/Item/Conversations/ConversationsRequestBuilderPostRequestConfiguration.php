@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Conversations;
+namespace Microsoft\Graph\Generated\Groups\Item\Conversations;
 
 class ConversationsRequestBuilderPostRequestConfiguration 
 {

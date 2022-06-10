@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\ServicePrincipals\Item\AddTokenSigningCertificate;
+namespace Microsoft\Graph\Generated\ServicePrincipals\Item\AddTokenSigningCertificate;
 
 class AddTokenSigningCertificateRequestBuilderPostRequestConfiguration 
 {

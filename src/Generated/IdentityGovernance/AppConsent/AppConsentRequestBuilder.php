@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance\AppConsent;
+namespace Microsoft\Graph\Generated\IdentityGovernance\AppConsent;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\IdentityGovernance\AppConsent\AppConsentRequests\AppConsentRequestsRequestBuilder;
-use Microsoft\Graph\IdentityGovernance\AppConsent\AppConsentRequests\Item\AppConsentRequestItemRequestBuilder;
-use Microsoft\Graph\Models\AppConsentApprovalRoute;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\AppConsentRequestsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Item\AppConsentRequestItemRequestBuilder;
+use Microsoft\Graph\Generated\Models\AppConsentApprovalRoute;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -42,7 +42,7 @@ class AppConsentRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.identityGovernance.appConsent.appConsentRequests.item collection
+     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.appConsent.appConsentRequests.item collection
      * @param string $id Unique identifier of the item
      * @return AppConsentRequestItemRequestBuilder
     */

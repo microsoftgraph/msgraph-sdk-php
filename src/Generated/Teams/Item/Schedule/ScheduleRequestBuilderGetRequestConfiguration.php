@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Teams\Item\Schedule;
+namespace Microsoft\Graph\Generated\Teams\Item\Schedule;
 
 class ScheduleRequestBuilderGetRequestConfiguration 
 {

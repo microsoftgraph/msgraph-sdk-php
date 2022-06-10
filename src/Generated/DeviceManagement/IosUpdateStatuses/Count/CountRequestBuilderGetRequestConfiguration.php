@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\IosUpdateStatuses\Count;
+namespace Microsoft\Graph\Generated\DeviceManagement\IosUpdateStatuses\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

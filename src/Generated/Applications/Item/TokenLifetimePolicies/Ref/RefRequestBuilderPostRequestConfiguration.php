@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Applications\Item\TokenLifetimePolicies\Ref;
+namespace Microsoft\Graph\Generated\Applications\Item\TokenLifetimePolicies\Ref;
 
 class RefRequestBuilderPostRequestConfiguration 
 {

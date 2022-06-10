@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Models;
+namespace Microsoft\Graph\Generated\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;

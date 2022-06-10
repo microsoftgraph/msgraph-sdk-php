@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Policies\PermissionGrantPolicies\Item\Includes;
+namespace Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Includes;
 
 class IncludesRequestBuilderGetRequestConfiguration 
 {

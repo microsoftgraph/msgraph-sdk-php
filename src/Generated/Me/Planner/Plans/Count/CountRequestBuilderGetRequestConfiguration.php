@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Planner\Plans\Count;
+namespace Microsoft\Graph\Generated\Me\Planner\Plans\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

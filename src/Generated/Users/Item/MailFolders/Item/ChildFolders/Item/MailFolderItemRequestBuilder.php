@@ -1,22 +1,22 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\MailFolders\Item\ChildFolders\Item;
+namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\MailFolder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Users\Item\MailFolders\Item\ChildFolders\Item\Copy\CopyRequestBuilder;
-use Microsoft\Graph\Users\Item\MailFolders\Item\ChildFolders\Item\MessageRules\Item\MessageRuleItemRequestBuilder;
-use Microsoft\Graph\Users\Item\MailFolders\Item\ChildFolders\Item\MessageRules\MessageRulesRequestBuilder;
-use Microsoft\Graph\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\MessageItemRequestBuilder;
-use Microsoft\Graph\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Users\Item\MailFolders\Item\ChildFolders\Item\Move\MoveRequestBuilder;
-use Microsoft\Graph\Users\Item\MailFolders\Item\ChildFolders\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Users\Item\MailFolders\Item\ChildFolders\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Users\Item\MailFolders\Item\ChildFolders\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Users\Item\MailFolders\Item\ChildFolders\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Models\MailFolder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Copy\CopyRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\MessageRules\Item\MessageRuleItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\MessageRules\MessageRulesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\MessageItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\MessagesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Move\MoveRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -202,7 +202,7 @@ class MailFolderItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.users.item.mailFolders.item.childFolders.item.messageRules.item collection
+     * Gets an item from the Microsoft\Graph\Generated.users.item.mailFolders.item.childFolders.item.messageRules.item collection
      * @param string $id Unique identifier of the item
      * @return MessageRuleItemRequestBuilder
     */
@@ -213,7 +213,7 @@ class MailFolderItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.users.item.mailFolders.item.childFolders.item.messages.item collection
+     * Gets an item from the Microsoft\Graph\Generated.users.item.mailFolders.item.childFolders.item.messages.item collection
      * @param string $id Unique identifier of the item
      * @return MessageItemRequestBuilder
     */
@@ -224,7 +224,7 @@ class MailFolderItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.users.item.mailFolders.item.childFolders.item.multiValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph\Generated.users.item.mailFolders.item.childFolders.item.multiValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
     */
@@ -255,7 +255,7 @@ class MailFolderItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.users.item.mailFolders.item.childFolders.item.singleValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph\Generated.users.item.mailFolders.item.childFolders.item.singleValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
     */

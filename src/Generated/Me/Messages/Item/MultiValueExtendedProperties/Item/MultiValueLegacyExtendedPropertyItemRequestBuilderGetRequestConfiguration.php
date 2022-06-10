@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Messages\Item\MultiValueExtendedProperties\Item;
+namespace Microsoft\Graph\Generated\Me\Messages\Item\MultiValueExtendedProperties\Item;
 
 class MultiValueLegacyExtendedPropertyItemRequestBuilderGetRequestConfiguration 
 {

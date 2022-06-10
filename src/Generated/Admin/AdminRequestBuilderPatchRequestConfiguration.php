@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Admin;
+namespace Microsoft\Graph\Generated\Admin;
 
 class AdminRequestBuilderPatchRequestConfiguration 
 {

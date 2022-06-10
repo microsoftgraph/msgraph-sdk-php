@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Identity\B2xUserFlows\Item\UserFlowIdentityProviders\Item;
+namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserFlowIdentityProviders\Item;
 
-use Microsoft\Graph\Identity\B2xUserFlows\Item\UserFlowIdentityProviders\Item\Ref\RefRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserFlowIdentityProviders\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
 class IdentityProviderBaseItemRequestBuilder 

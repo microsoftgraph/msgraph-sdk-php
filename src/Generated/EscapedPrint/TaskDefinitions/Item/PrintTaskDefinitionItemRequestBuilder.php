@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\EscapedPrint\TaskDefinitions\Item;
+namespace Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\EscapedPrint\TaskDefinitions\Item\Tasks\Item\PrintTaskItemRequestBuilder;
-use Microsoft\Graph\EscapedPrint\TaskDefinitions\Item\Tasks\TasksRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\PrintTaskDefinition;
+use Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\Item\Tasks\Item\PrintTaskItemRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\Item\Tasks\TasksRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\PrintTaskDefinition;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -179,7 +179,7 @@ class PrintTaskDefinitionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.print.taskDefinitions.item.tasks.item collection
+     * Gets an item from the Microsoft\Graph\Generated.print.taskDefinitions.item.tasks.item collection
      * @param string $id Unique identifier of the item
      * @return PrintTaskItemRequestBuilder
     */

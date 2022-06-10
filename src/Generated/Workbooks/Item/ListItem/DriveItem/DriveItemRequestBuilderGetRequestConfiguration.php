@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Workbooks\Item\ListItem\DriveItem;
+namespace Microsoft\Graph\Generated\Workbooks\Item\ListItem\DriveItem;
 
 class DriveItemRequestBuilderGetRequestConfiguration 
 {

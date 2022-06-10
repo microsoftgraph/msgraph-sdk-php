@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DomainDnsRecords\Item;
+namespace Microsoft\Graph\Generated\DomainDnsRecords\Item;
 
 class DomainDnsRecordItemRequestBuilderPatchRequestConfiguration 
 {

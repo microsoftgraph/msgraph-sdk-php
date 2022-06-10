@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\Presences\Count;
+namespace Microsoft\Graph\Generated\Communications\Presences\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

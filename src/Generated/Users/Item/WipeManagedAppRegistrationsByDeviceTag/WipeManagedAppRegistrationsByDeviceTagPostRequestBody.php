@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\WipeManagedAppRegistrationsByDeviceTag;
+namespace Microsoft\Graph\Generated\Users\Item\WipeManagedAppRegistrationsByDeviceTag;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

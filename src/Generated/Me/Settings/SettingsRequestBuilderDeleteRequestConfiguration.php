@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Settings;
+namespace Microsoft\Graph\Generated\Me\Settings;
 
 class SettingsRequestBuilderDeleteRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\InformationProtection\ThreatAssessmentRequests;
+namespace Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

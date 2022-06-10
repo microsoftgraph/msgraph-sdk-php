@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Domains\Item;
+namespace Microsoft\Graph\Generated\Domains\Item;
 
 class DomainItemRequestBuilderPatchRequestConfiguration 
 {

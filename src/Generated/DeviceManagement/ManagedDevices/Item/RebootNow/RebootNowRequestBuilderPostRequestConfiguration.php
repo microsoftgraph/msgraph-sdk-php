@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\ManagedDevices\Item\RebootNow;
+namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\RebootNow;
 
 class RebootNowRequestBuilderPostRequestConfiguration 
 {

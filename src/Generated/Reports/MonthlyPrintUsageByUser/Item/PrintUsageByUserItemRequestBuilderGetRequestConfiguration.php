@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Reports\MonthlyPrintUsageByUser\Item;
+namespace Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\Item;
 
 class PrintUsageByUserItemRequestBuilderGetRequestConfiguration 
 {

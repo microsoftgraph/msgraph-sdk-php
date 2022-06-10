@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\Calls\Item\Operations\Item;
+namespace Microsoft\Graph\Generated\Communications\Calls\Item\Operations\Item;
 
 class CommsOperationItemRequestBuilderPatchRequestConfiguration 
 {

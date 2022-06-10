@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Activities\Recent;
+namespace Microsoft\Graph\Generated\Users\Item\Activities\Recent;
 
-use Microsoft\Graph\Models\UserActivity;
+use Microsoft\Graph\Generated\Models\UserActivity;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

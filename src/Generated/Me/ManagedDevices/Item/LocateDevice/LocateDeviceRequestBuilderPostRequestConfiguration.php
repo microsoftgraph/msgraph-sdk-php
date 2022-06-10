@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\ManagedDevices\Item\LocateDevice;
+namespace Microsoft\Graph\Generated\Me\ManagedDevices\Item\LocateDevice;
 
 class LocateDeviceRequestBuilderPostRequestConfiguration 
 {

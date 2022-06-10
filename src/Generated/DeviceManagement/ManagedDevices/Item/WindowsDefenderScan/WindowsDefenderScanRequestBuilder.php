@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\ManagedDevices\Item\WindowsDefenderScan;
+namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\WindowsDefenderScan;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Photos\Item\Value;
+namespace Microsoft\Graph\Generated\Users\Item\Photos\Item\Value;
 
 class ContentRequestBuilderGetRequestConfiguration 
 {

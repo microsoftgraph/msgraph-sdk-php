@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Directory\DeletedItems\Application;
+namespace Microsoft\Graph\Generated\Directory\DeletedItems\Application;
 
 class ApplicationRequestBuilderGetRequestConfiguration 
 {

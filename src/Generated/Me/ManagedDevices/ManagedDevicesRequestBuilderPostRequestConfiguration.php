@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\ManagedDevices;
+namespace Microsoft\Graph\Generated\Me\ManagedDevices;
 
 class ManagedDevicesRequestBuilderPostRequestConfiguration 
 {

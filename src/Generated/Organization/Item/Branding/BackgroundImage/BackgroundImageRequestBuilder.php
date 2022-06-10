@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Organization\Item\Branding\BackgroundImage;
+namespace Microsoft\Graph\Generated\Organization\Item\Branding\BackgroundImage;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

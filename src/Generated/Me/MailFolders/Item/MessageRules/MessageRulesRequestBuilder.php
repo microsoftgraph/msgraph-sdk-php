@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Me\MailFolders\Item\MessageRules;
+namespace Microsoft\Graph\Generated\Me\MailFolders\Item\MessageRules;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\MailFolders\Item\MessageRules\Count\CountRequestBuilder;
-use Microsoft\Graph\Models\MessageRule;
-use Microsoft\Graph\Models\MessageRuleCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Me\MailFolders\Item\MessageRules\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\MessageRule;
+use Microsoft\Graph\Generated\Models\MessageRuleCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

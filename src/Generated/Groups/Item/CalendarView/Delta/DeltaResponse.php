@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\CalendarView\Delta;
+namespace Microsoft\Graph\Generated\Groups\Item\CalendarView\Delta;
 
-use Microsoft\Graph\Models\Event;
+use Microsoft\Graph\Generated\Models\Event;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

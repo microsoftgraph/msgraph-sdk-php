@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Teams;
+namespace Microsoft\Graph\Generated\Teams;
 
 class TeamsRequestBuilderPostRequestConfiguration 
 {

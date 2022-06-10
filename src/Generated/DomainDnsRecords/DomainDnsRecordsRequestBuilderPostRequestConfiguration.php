@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DomainDnsRecords;
+namespace Microsoft\Graph\Generated\DomainDnsRecords;
 
 class DomainDnsRecordsRequestBuilderPostRequestConfiguration 
 {

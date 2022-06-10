@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\ManagedAppStatuses;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppStatuses;
 
 class ManagedAppStatusesRequestBuilderPostRequestConfiguration 
 {

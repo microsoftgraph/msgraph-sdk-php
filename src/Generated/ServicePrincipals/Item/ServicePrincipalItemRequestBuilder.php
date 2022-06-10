@@ -1,50 +1,50 @@
 <?php
 
-namespace Microsoft\Graph\ServicePrincipals\Item;
+namespace Microsoft\Graph\Generated\ServicePrincipals\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\ServicePrincipal;
-use Microsoft\Graph\ServicePrincipals\Item\AddKey\AddKeyRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\AddPassword\AddPasswordRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\AddTokenSigningCertificate\AddTokenSigningCertificateRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\AppRoleAssignedTo\AppRoleAssignedToRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\AppRoleAssignedTo\Item\AppRoleAssignmentItemRequestBuilder as MicrosoftGraphServicePrincipalsItemAppRoleAssignedToItemAppRoleAssignmentItemRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\AppRoleAssignments\AppRoleAssignmentsRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\AppRoleAssignments\Item\AppRoleAssignmentItemRequestBuilder as MicrosoftGraphServicePrincipalsItemAppRoleAssignmentsItemAppRoleAssignmentItemRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\ClaimsMappingPolicies\ClaimsMappingPoliciesRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\ClaimsMappingPolicies\Item\ClaimsMappingPolicyItemRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\CreatedObjects\CreatedObjectsRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\CreatedObjects\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphServicePrincipalsItemCreatedObjectsItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\DelegatedPermissionClassifications\DelegatedPermissionClassificationsRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\DelegatedPermissionClassifications\Item\DelegatedPermissionClassificationItemRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\Endpoints\EndpointsRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\Endpoints\Item\EndpointItemRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\HomeRealmDiscoveryPolicies\HomeRealmDiscoveryPoliciesRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\HomeRealmDiscoveryPolicies\Item\HomeRealmDiscoveryPolicyItemRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphServicePrincipalsItemMemberOfItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\MemberOf\MemberOfRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\Oauth2PermissionGrants\Item\OAuth2PermissionGrantItemRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\Oauth2PermissionGrants\Oauth2PermissionGrantsRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\OwnedObjects\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphServicePrincipalsItemOwnedObjectsItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\OwnedObjects\OwnedObjectsRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\Owners\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphServicePrincipalsItemOwnersItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\Owners\OwnersRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\RemoveKey\RemoveKeyRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\RemovePassword\RemovePasswordRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\TokenIssuancePolicies\Item\TokenIssuancePolicyItemRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\TokenIssuancePolicies\TokenIssuancePoliciesRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\TokenLifetimePolicies\Item\TokenLifetimePolicyItemRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\TokenLifetimePolicies\TokenLifetimePoliciesRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphServicePrincipalsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\ServicePrincipals\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ServicePrincipal;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\AddKey\AddKeyRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\AddPassword\AddPasswordRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\AddTokenSigningCertificate\AddTokenSigningCertificateRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\AppRoleAssignedTo\AppRoleAssignedToRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\AppRoleAssignedTo\Item\AppRoleAssignmentItemRequestBuilder as MicrosoftGraphGeneratedServicePrincipalsItemAppRoleAssignedToItemAppRoleAssignmentItemRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\AppRoleAssignments\AppRoleAssignmentsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\AppRoleAssignments\Item\AppRoleAssignmentItemRequestBuilder as MicrosoftGraphGeneratedServicePrincipalsItemAppRoleAssignmentsItemAppRoleAssignmentItemRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\ClaimsMappingPolicies\ClaimsMappingPoliciesRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\ClaimsMappingPolicies\Item\ClaimsMappingPolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\CreatedObjects\CreatedObjectsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\CreatedObjects\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedServicePrincipalsItemCreatedObjectsItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\DelegatedPermissionClassifications\DelegatedPermissionClassificationsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\DelegatedPermissionClassifications\Item\DelegatedPermissionClassificationItemRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Endpoints\EndpointsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Endpoints\Item\EndpointItemRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPolicies\HomeRealmDiscoveryPoliciesRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPolicies\Item\HomeRealmDiscoveryPolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedServicePrincipalsItemMemberOfItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\MemberOfRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Oauth2PermissionGrants\Item\OAuth2PermissionGrantItemRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Oauth2PermissionGrants\Oauth2PermissionGrantsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\OwnedObjects\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedServicePrincipalsItemOwnedObjectsItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\OwnedObjects\OwnedObjectsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedServicePrincipalsItemOwnersItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\OwnersRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\RemoveKey\RemoveKeyRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\RemovePassword\RemovePasswordRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\TokenIssuancePolicies\Item\TokenIssuancePolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\TokenIssuancePolicies\TokenIssuancePoliciesRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\TokenLifetimePolicies\Item\TokenLifetimePolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\TokenLifetimePolicies\TokenLifetimePoliciesRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedServicePrincipalsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -239,29 +239,29 @@ class ServicePrincipalItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.servicePrincipals.item.appRoleAssignedTo.item collection
+     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.appRoleAssignedTo.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphServicePrincipalsItemAppRoleAssignedToItemAppRoleAssignmentItemRequestBuilder
+     * @return MicrosoftGraphGeneratedServicePrincipalsItemAppRoleAssignedToItemAppRoleAssignmentItemRequestBuilder
     */
-    public function appRoleAssignedToById(string $id): MicrosoftGraphServicePrincipalsItemAppRoleAssignedToItemAppRoleAssignmentItemRequestBuilder {
+    public function appRoleAssignedToById(string $id): MicrosoftGraphGeneratedServicePrincipalsItemAppRoleAssignedToItemAppRoleAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['appRoleAssignment%2Did'] = $id;
-        return new MicrosoftGraphServicePrincipalsItemAppRoleAssignedToItemAppRoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedServicePrincipalsItemAppRoleAssignedToItemAppRoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.servicePrincipals.item.appRoleAssignments.item collection
+     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.appRoleAssignments.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphServicePrincipalsItemAppRoleAssignmentsItemAppRoleAssignmentItemRequestBuilder
+     * @return MicrosoftGraphGeneratedServicePrincipalsItemAppRoleAssignmentsItemAppRoleAssignmentItemRequestBuilder
     */
-    public function appRoleAssignmentsById(string $id): MicrosoftGraphServicePrincipalsItemAppRoleAssignmentsItemAppRoleAssignmentItemRequestBuilder {
+    public function appRoleAssignmentsById(string $id): MicrosoftGraphGeneratedServicePrincipalsItemAppRoleAssignmentsItemAppRoleAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['appRoleAssignment%2Did'] = $id;
-        return new MicrosoftGraphServicePrincipalsItemAppRoleAssignmentsItemAppRoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedServicePrincipalsItemAppRoleAssignmentsItemAppRoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.servicePrincipals.item.claimsMappingPolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.claimsMappingPolicies.item collection
      * @param string $id Unique identifier of the item
      * @return ClaimsMappingPolicyItemRequestBuilder
     */
@@ -304,14 +304,14 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.servicePrincipals.item.createdObjects.item collection
+     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.createdObjects.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphServicePrincipalsItemCreatedObjectsItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphGeneratedServicePrincipalsItemCreatedObjectsItemDirectoryObjectItemRequestBuilder
     */
-    public function createdObjectsById(string $id): MicrosoftGraphServicePrincipalsItemCreatedObjectsItemDirectoryObjectItemRequestBuilder {
+    public function createdObjectsById(string $id): MicrosoftGraphGeneratedServicePrincipalsItemCreatedObjectsItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphServicePrincipalsItemCreatedObjectsItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedServicePrincipalsItemCreatedObjectsItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -362,7 +362,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.servicePrincipals.item.delegatedPermissionClassifications.item collection
+     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.delegatedPermissionClassifications.item collection
      * @param string $id Unique identifier of the item
      * @return DelegatedPermissionClassificationItemRequestBuilder
     */
@@ -392,7 +392,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.servicePrincipals.item.endpoints.item collection
+     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.endpoints.item collection
      * @param string $id Unique identifier of the item
      * @return EndpointItemRequestBuilder
     */
@@ -422,7 +422,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.servicePrincipals.item.homeRealmDiscoveryPolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.homeRealmDiscoveryPolicies.item collection
      * @param string $id Unique identifier of the item
      * @return HomeRealmDiscoveryPolicyItemRequestBuilder
     */
@@ -433,18 +433,18 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.servicePrincipals.item.memberOf.item collection
+     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.memberOf.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphServicePrincipalsItemMemberOfItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphGeneratedServicePrincipalsItemMemberOfItemDirectoryObjectItemRequestBuilder
     */
-    public function memberOfById(string $id): MicrosoftGraphServicePrincipalsItemMemberOfItemDirectoryObjectItemRequestBuilder {
+    public function memberOfById(string $id): MicrosoftGraphGeneratedServicePrincipalsItemMemberOfItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphServicePrincipalsItemMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedServicePrincipalsItemMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.servicePrincipals.item.oauth2PermissionGrants.item collection
+     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.oauth2PermissionGrants.item collection
      * @param string $id Unique identifier of the item
      * @return OAuth2PermissionGrantItemRequestBuilder
     */
@@ -455,25 +455,25 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.servicePrincipals.item.ownedObjects.item collection
+     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.ownedObjects.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphServicePrincipalsItemOwnedObjectsItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphGeneratedServicePrincipalsItemOwnedObjectsItemDirectoryObjectItemRequestBuilder
     */
-    public function ownedObjectsById(string $id): MicrosoftGraphServicePrincipalsItemOwnedObjectsItemDirectoryObjectItemRequestBuilder {
+    public function ownedObjectsById(string $id): MicrosoftGraphGeneratedServicePrincipalsItemOwnedObjectsItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphServicePrincipalsItemOwnedObjectsItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedServicePrincipalsItemOwnedObjectsItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.servicePrincipals.item.owners.item collection
+     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.owners.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphServicePrincipalsItemOwnersItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphGeneratedServicePrincipalsItemOwnersItemDirectoryObjectItemRequestBuilder
     */
-    public function ownersById(string $id): MicrosoftGraphServicePrincipalsItemOwnersItemDirectoryObjectItemRequestBuilder {
+    public function ownersById(string $id): MicrosoftGraphGeneratedServicePrincipalsItemOwnersItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphServicePrincipalsItemOwnersItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedServicePrincipalsItemOwnersItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -497,7 +497,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.servicePrincipals.item.tokenIssuancePolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.tokenIssuancePolicies.item collection
      * @param string $id Unique identifier of the item
      * @return TokenIssuancePolicyItemRequestBuilder
     */
@@ -508,7 +508,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.servicePrincipals.item.tokenLifetimePolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.tokenLifetimePolicies.item collection
      * @param string $id Unique identifier of the item
      * @return TokenLifetimePolicyItemRequestBuilder
     */
@@ -519,14 +519,14 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.servicePrincipals.item.transitiveMemberOf.item collection
+     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.transitiveMemberOf.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphServicePrincipalsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphGeneratedServicePrincipalsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder
     */
-    public function transitiveMemberOfById(string $id): MicrosoftGraphServicePrincipalsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder {
+    public function transitiveMemberOfById(string $id): MicrosoftGraphGeneratedServicePrincipalsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphServicePrincipalsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedServicePrincipalsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

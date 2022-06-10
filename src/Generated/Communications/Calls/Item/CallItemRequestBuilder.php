@@ -1,31 +1,31 @@
 <?php
 
-namespace Microsoft\Graph\Communications\Calls\Item;
+namespace Microsoft\Graph\Generated\Communications\Calls\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Communications\Calls\Item\Answer\AnswerRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\AudioRoutingGroups\AudioRoutingGroupsRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\AudioRoutingGroups\Item\AudioRoutingGroupItemRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\CancelMediaProcessing\CancelMediaProcessingRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\ChangeScreenSharingRole\ChangeScreenSharingRoleRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\KeepAlive\KeepAliveRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\Mute\MuteRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\Operations\Item\CommsOperationItemRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\Participants\Item\ParticipantItemRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\Participants\ParticipantsRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\PlayPrompt\PlayPromptRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\RecordResponse\RecordResponseRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\Redirect\RedirectRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\Reject\RejectRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\SubscribeToTone\SubscribeToToneRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\Transfer\TransferRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\Unmute\UnmuteRequestBuilder;
-use Microsoft\Graph\Communications\Calls\Item\UpdateRecordingStatus\UpdateRecordingStatusRequestBuilder;
-use Microsoft\Graph\Models\Call;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Answer\AnswerRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\AudioRoutingGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\Item\AudioRoutingGroupItemRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\CancelMediaProcessing\CancelMediaProcessingRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\ChangeScreenSharingRole\ChangeScreenSharingRoleRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\KeepAlive\KeepAliveRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Mute\MuteRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Operations\Item\CommsOperationItemRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\ParticipantItemRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\ParticipantsRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\PlayPrompt\PlayPromptRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\RecordResponse\RecordResponseRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Redirect\RedirectRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Reject\RejectRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\SubscribeToTone\SubscribeToToneRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Transfer\TransferRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Unmute\UnmuteRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\UpdateRecordingStatus\UpdateRecordingStatusRequestBuilder;
+use Microsoft\Graph\Generated\Models\Call;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -164,7 +164,7 @@ class CallItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.communications.calls.item.audioRoutingGroups.item collection
+     * Gets an item from the Microsoft\Graph\Generated.communications.calls.item.audioRoutingGroups.item collection
      * @param string $id Unique identifier of the item
      * @return AudioRoutingGroupItemRequestBuilder
     */
@@ -292,7 +292,7 @@ class CallItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.communications.calls.item.operations.item collection
+     * Gets an item from the Microsoft\Graph\Generated.communications.calls.item.operations.item collection
      * @param string $id Unique identifier of the item
      * @return CommsOperationItemRequestBuilder
     */
@@ -303,7 +303,7 @@ class CallItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.communications.calls.item.participants.item collection
+     * Gets an item from the Microsoft\Graph\Generated.communications.calls.item.participants.item collection
      * @param string $id Unique identifier of the item
      * @return ParticipantItemRequestBuilder
     */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\ManagedDevices\Item\Wipe;
+namespace Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\Wipe;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

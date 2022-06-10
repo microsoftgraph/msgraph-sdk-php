@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\Reports\GetConfigurationPolicyNonComplianceSummaryReport;
+namespace Microsoft\Graph\Generated\DeviceManagement\Reports\GetConfigurationPolicyNonComplianceSummaryReport;
 
 class GetConfigurationPolicyNonComplianceSummaryReportRequestBuilderPostRequestConfiguration 
 {

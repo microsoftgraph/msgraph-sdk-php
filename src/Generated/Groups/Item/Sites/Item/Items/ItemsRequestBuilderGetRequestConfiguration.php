@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Sites\Item\Items;
+namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Items;
 
 class ItemsRequestBuilderGetRequestConfiguration 
 {

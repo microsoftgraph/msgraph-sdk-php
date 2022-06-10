@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\OnlineMeetings\Item\AttendanceReports\Count;
+namespace Microsoft\Graph\Generated\Me\OnlineMeetings\Item\AttendanceReports\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

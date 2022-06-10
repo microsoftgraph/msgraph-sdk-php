@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\AppCatalogs;
+namespace Microsoft\Graph\Generated\AppCatalogs;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\AppCatalogs\TeamsApps\Item\TeamsAppItemRequestBuilder;
-use Microsoft\Graph\AppCatalogs\TeamsApps\TeamsAppsRequestBuilder;
-use Microsoft\Graph\Models\AppCatalogs;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\AppCatalogs\TeamsApps\Item\TeamsAppItemRequestBuilder;
+use Microsoft\Graph\Generated\AppCatalogs\TeamsApps\TeamsAppsRequestBuilder;
+use Microsoft\Graph\Generated\Models\AppCatalogs;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -139,7 +139,7 @@ class AppCatalogsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.appCatalogs.teamsApps.item collection
+     * Gets an item from the Microsoft\Graph\Generated.appCatalogs.teamsApps.item collection
      * @param string $id Unique identifier of the item
      * @return TeamsAppItemRequestBuilder
     */

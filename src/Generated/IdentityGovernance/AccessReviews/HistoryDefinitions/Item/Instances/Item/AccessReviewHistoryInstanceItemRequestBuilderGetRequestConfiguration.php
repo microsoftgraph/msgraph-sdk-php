@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\Instances\Item;
+namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\Instances\Item;
 
 class AccessReviewHistoryInstanceItemRequestBuilderGetRequestConfiguration 
 {

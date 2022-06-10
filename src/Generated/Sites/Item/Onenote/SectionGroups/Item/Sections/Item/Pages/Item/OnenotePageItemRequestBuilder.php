@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item;
+namespace Microsoft\Graph\Generated\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\OnenotePage;
-use Microsoft\Graph\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\Content\ContentRequestBuilder;
-use Microsoft\Graph\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\CopyToSection\CopyToSectionRequestBuilder;
-use Microsoft\Graph\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\OnenotePatchContent\OnenotePatchContentRequestBuilder;
-use Microsoft\Graph\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\ParentNotebook\ParentNotebookRequestBuilder;
-use Microsoft\Graph\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\ParentSection\ParentSectionRequestBuilder;
-use Microsoft\Graph\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\Preview\PreviewRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OnenotePage;
+use Microsoft\Graph\Generated\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\Content\ContentRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\CopyToSection\CopyToSectionRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\OnenotePatchContent\OnenotePatchContentRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\ParentNotebook\ParentNotebookRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\ParentSection\ParentSectionRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\Preview\PreviewRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

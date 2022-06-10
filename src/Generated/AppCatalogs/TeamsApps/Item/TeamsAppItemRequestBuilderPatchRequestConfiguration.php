@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\AppCatalogs\TeamsApps\Item;
+namespace Microsoft\Graph\Generated\AppCatalogs\TeamsApps\Item;
 
 class TeamsAppItemRequestBuilderPatchRequestConfiguration 
 {

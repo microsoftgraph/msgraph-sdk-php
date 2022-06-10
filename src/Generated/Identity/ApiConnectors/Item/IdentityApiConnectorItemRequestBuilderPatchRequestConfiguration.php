@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Identity\ApiConnectors\Item;
+namespace Microsoft\Graph\Generated\Identity\ApiConnectors\Item;
 
 class IdentityApiConnectorItemRequestBuilderPatchRequestConfiguration 
 {

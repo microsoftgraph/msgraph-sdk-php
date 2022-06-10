@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance\TermsOfUse\Agreements\Item\Files\Count;
+namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\Files\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

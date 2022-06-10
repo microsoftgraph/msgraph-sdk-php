@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Solutions\BookingBusinesses\Item\Publish;
+namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Publish;
 
 class PublishRequestBuilderPostRequestConfiguration 
 {

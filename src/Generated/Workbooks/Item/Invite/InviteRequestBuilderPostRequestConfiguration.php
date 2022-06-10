@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Workbooks\Item\Invite;
+namespace Microsoft\Graph\Generated\Workbooks\Item\Invite;
 
 class InviteRequestBuilderPostRequestConfiguration 
 {

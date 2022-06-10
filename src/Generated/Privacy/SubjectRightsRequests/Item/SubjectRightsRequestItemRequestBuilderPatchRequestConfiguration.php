@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Privacy\SubjectRightsRequests\Item;
+namespace Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item;
 
 class SubjectRightsRequestItemRequestBuilderPatchRequestConfiguration 
 {

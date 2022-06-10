@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item\TermStore\Sets\Item\Terms;
+namespace Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\Terms;
 
 class TermsRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Messages\Item\Extensions\Item;
+namespace Microsoft\Graph\Generated\Users\Item\Messages\Item\Extensions\Item;
 
 class ExtensionItemRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\TeamsTemplates\Item;
+namespace Microsoft\Graph\Generated\TeamsTemplates\Item;
 
 class TeamsTemplateItemRequestBuilderPatchRequestConfiguration 
 {

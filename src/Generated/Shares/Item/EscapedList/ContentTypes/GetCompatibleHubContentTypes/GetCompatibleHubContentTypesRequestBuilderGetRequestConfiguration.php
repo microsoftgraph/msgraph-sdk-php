@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Shares\Item\EscapedList\ContentTypes\GetCompatibleHubContentTypes;
+namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\GetCompatibleHubContentTypes;
 
 class GetCompatibleHubContentTypesRequestBuilderGetRequestConfiguration 
 {

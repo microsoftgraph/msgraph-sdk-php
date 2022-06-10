@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\Calls\Item\AudioRoutingGroups\Count;
+namespace Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

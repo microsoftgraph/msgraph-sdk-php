@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Drives\Item\SharedWithMe;
+namespace Microsoft\Graph\Generated\Groups\Item\Drives\Item\SharedWithMe;
 
-use Microsoft\Graph\Models\DriveItem;
+use Microsoft\Graph\Generated\Models\DriveItem;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

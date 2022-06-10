@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\External\Connections\Item;
+namespace Microsoft\Graph\Generated\External\Connections\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\External\Connections\Item\Groups\GroupsRequestBuilder;
-use Microsoft\Graph\External\Connections\Item\Groups\Item\ExternalGroupItemRequestBuilder;
-use Microsoft\Graph\External\Connections\Item\Items\Item\ExternalItemItemRequestBuilder;
-use Microsoft\Graph\External\Connections\Item\Items\ItemsRequestBuilder;
-use Microsoft\Graph\External\Connections\Item\Operations\Item\ConnectionOperationItemRequestBuilder;
-use Microsoft\Graph\External\Connections\Item\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\External\Connections\Item\Schema\SchemaRequestBuilder;
-use Microsoft\Graph\Models\ExternalConnectors\ExternalConnection;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\External\Connections\Item\Groups\GroupsRequestBuilder;
+use Microsoft\Graph\Generated\External\Connections\Item\Groups\Item\ExternalGroupItemRequestBuilder;
+use Microsoft\Graph\Generated\External\Connections\Item\Items\Item\ExternalItemItemRequestBuilder;
+use Microsoft\Graph\Generated\External\Connections\Item\Items\ItemsRequestBuilder;
+use Microsoft\Graph\Generated\External\Connections\Item\Operations\Item\ConnectionOperationItemRequestBuilder;
+use Microsoft\Graph\Generated\External\Connections\Item\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Generated\External\Connections\Item\Schema\SchemaRequestBuilder;
+use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalConnection;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -185,7 +185,7 @@ class ExternalConnectionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.external.connections.item.groups.item collection
+     * Gets an item from the Microsoft\Graph\Generated.external.connections.item.groups.item collection
      * @param string $id Unique identifier of the item
      * @return ExternalGroupItemRequestBuilder
     */
@@ -196,7 +196,7 @@ class ExternalConnectionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.external.connections.item.items.item collection
+     * Gets an item from the Microsoft\Graph\Generated.external.connections.item.items.item collection
      * @param string $id Unique identifier of the item
      * @return ExternalItemItemRequestBuilder
     */
@@ -207,7 +207,7 @@ class ExternalConnectionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.external.connections.item.operations.item collection
+     * Gets an item from the Microsoft\Graph\Generated.external.connections.item.operations.item collection
      * @param string $id Unique identifier of the item
      * @return ConnectionOperationItemRequestBuilder
     */

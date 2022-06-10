@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Messages\Item\Attachments;
+namespace Microsoft\Graph\Generated\Users\Item\Messages\Item\Attachments;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\Attachment;
-use Microsoft\Graph\Models\AttachmentCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Users\Item\Messages\Item\Attachments\Count\CountRequestBuilder;
-use Microsoft\Graph\Users\Item\Messages\Item\Attachments\CreateUploadSession\CreateUploadSessionRequestBuilder;
+use Microsoft\Graph\Generated\Models\Attachment;
+use Microsoft\Graph\Generated\Models\AttachmentCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Users\Item\Messages\Item\Attachments\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Messages\Item\Attachments\CreateUploadSession\CreateUploadSessionRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\Attachments;
+namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\Attachments;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

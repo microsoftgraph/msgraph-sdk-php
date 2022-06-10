@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\ContactFolders\Item\ChildFolders\Delta;
+namespace Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Delta;
 
-use Microsoft\Graph\Models\ContactFolder;
+use Microsoft\Graph\Generated\Models\ContactFolder;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

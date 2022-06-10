@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\JoinedTeams\Item\Operations;
+namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Operations;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

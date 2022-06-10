@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Team\Unarchive;
+namespace Microsoft\Graph\Generated\Groups\Item\Team\Unarchive;
 
 class UnarchiveRequestBuilderPostRequestConfiguration 
 {

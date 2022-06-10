@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\MdmWindowsInformationProtectionPolicies;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\MdmWindowsInformationProtectionPolicies;
 
 class MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration 
 {

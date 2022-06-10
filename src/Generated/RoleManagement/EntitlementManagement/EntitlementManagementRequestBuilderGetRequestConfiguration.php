@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\RoleManagement\EntitlementManagement;
+namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement;
 
 class EntitlementManagementRequestBuilderGetRequestConfiguration 
 {

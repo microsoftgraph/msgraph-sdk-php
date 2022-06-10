@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Recent;
+namespace Microsoft\Graph\Generated\Drive\Recent;
 
 class RecentRequestBuilderGetRequestConfiguration 
 {

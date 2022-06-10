@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Devices\Item\RegisteredOwners\Item;
+namespace Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item;
 
-use Microsoft\Graph\Devices\Item\RegisteredOwners\Item\AppRoleAssignment\AppRoleAssignmentRequestBuilder;
-use Microsoft\Graph\Devices\Item\RegisteredOwners\Item\Endpoint\EndpointRequestBuilder;
-use Microsoft\Graph\Devices\Item\RegisteredOwners\Item\Ref\RefRequestBuilder;
-use Microsoft\Graph\Devices\Item\RegisteredOwners\Item\ServicePrincipal\ServicePrincipalRequestBuilder;
-use Microsoft\Graph\Devices\Item\RegisteredOwners\Item\User\UserRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item\AppRoleAssignment\AppRoleAssignmentRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item\Endpoint\EndpointRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item\Ref\RefRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item\ServicePrincipal\ServicePrincipalRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item\User\UserRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
 class DirectoryObjectItemRequestBuilder 

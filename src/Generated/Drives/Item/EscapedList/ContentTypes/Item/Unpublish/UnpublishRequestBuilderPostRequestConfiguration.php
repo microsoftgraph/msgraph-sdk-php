@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drives\Item\EscapedList\ContentTypes\Item\Unpublish;
+namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\Unpublish;
 
 class UnpublishRequestBuilderPostRequestConfiguration 
 {

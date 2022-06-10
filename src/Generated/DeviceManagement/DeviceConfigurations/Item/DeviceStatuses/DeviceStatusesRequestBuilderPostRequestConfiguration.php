@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses;
+namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses;
 
 class DeviceStatusesRequestBuilderPostRequestConfiguration 
 {

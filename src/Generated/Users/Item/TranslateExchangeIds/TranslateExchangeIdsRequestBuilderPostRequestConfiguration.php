@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\TranslateExchangeIds;
+namespace Microsoft\Graph\Generated\Users\Item\TranslateExchangeIds;
 
 class TranslateExchangeIdsRequestBuilderPostRequestConfiguration 
 {

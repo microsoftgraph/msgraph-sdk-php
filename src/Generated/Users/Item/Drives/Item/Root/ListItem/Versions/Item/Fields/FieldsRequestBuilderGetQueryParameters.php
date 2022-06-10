@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Drives\Item\Root\ListItem\Versions\Item\Fields;
+namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\Root\ListItem\Versions\Item\Fields;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

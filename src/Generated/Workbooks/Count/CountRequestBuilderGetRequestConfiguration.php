@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Workbooks\Count;
+namespace Microsoft\Graph\Generated\Workbooks\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

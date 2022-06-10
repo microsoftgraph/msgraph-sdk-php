@@ -1,23 +1,23 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Drives\Item\EscapedList;
+namespace Microsoft\Graph\Generated\Groups\Item\Drives\Item\EscapedList;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Groups\Item\Drives\Item\EscapedList\Columns\ColumnsRequestBuilder;
-use Microsoft\Graph\Groups\Item\Drives\Item\EscapedList\Columns\Item\ColumnDefinitionItemRequestBuilder;
-use Microsoft\Graph\Groups\Item\Drives\Item\EscapedList\ContentTypes\ContentTypesRequestBuilder;
-use Microsoft\Graph\Groups\Item\Drives\Item\EscapedList\ContentTypes\Item\ContentTypeItemRequestBuilder;
-use Microsoft\Graph\Groups\Item\Drives\Item\EscapedList\Drive\DriveRequestBuilder;
-use Microsoft\Graph\Groups\Item\Drives\Item\EscapedList\Items\Item\ListItemItemRequestBuilder;
-use Microsoft\Graph\Groups\Item\Drives\Item\EscapedList\Items\ItemsRequestBuilder;
-use Microsoft\Graph\Groups\Item\Drives\Item\EscapedList\Operations\Item\RichLongRunningOperationItemRequestBuilder;
-use Microsoft\Graph\Groups\Item\Drives\Item\EscapedList\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Groups\Item\Drives\Item\EscapedList\Subscriptions\Item\SubscriptionItemRequestBuilder;
-use Microsoft\Graph\Groups\Item\Drives\Item\EscapedList\Subscriptions\SubscriptionsRequestBuilder;
-use Microsoft\Graph\Models\EscapedList;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\EscapedList\Columns\ColumnsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\EscapedList\Columns\Item\ColumnDefinitionItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\EscapedList\ContentTypes\ContentTypesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\EscapedList\ContentTypes\Item\ContentTypeItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\EscapedList\Drive\DriveRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\EscapedList\Items\Item\ListItemItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\EscapedList\Items\ItemsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\EscapedList\Operations\Item\RichLongRunningOperationItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\EscapedList\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\EscapedList\Subscriptions\Item\SubscriptionItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\EscapedList\Subscriptions\SubscriptionsRequestBuilder;
+use Microsoft\Graph\Generated\Models\EscapedList;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -86,7 +86,7 @@ class ListRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.groups.item.drives.item.list.columns.item collection
+     * Gets an item from the Microsoft\Graph\Generated.groups.item.drives.item.list.columns.item collection
      * @param string $id Unique identifier of the item
      * @return ColumnDefinitionItemRequestBuilder
     */
@@ -108,7 +108,7 @@ class ListRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.groups.item.drives.item.list.contentTypes.item collection
+     * Gets an item from the Microsoft\Graph\Generated.groups.item.drives.item.list.contentTypes.item collection
      * @param string $id Unique identifier of the item
      * @return ContentTypeItemRequestBuilder
     */
@@ -225,7 +225,7 @@ class ListRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.groups.item.drives.item.list.items.item collection
+     * Gets an item from the Microsoft\Graph\Generated.groups.item.drives.item.list.items.item collection
      * @param string $id Unique identifier of the item
      * @return ListItemItemRequestBuilder
     */
@@ -236,7 +236,7 @@ class ListRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.groups.item.drives.item.list.operations.item collection
+     * Gets an item from the Microsoft\Graph\Generated.groups.item.drives.item.list.operations.item collection
      * @param string $id Unique identifier of the item
      * @return RichLongRunningOperationItemRequestBuilder
     */
@@ -267,7 +267,7 @@ class ListRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.groups.item.drives.item.list.subscriptions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.groups.item.drives.item.list.subscriptions.item collection
      * @param string $id Unique identifier of the item
      * @return SubscriptionItemRequestBuilder
     */

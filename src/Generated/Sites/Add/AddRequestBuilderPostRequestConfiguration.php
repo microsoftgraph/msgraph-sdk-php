@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Add;
+namespace Microsoft\Graph\Generated\Sites\Add;
 
 class AddRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\IosUpdateStatuses\Item;
+namespace Microsoft\Graph\Generated\DeviceManagement\IosUpdateStatuses\Item;
 
 class IosUpdateDeviceStatusItemRequestBuilderGetRequestConfiguration 
 {

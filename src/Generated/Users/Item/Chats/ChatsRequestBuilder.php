@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Chats;
+namespace Microsoft\Graph\Generated\Users\Item\Chats;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\Chat;
-use Microsoft\Graph\Models\ChatCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Users\Item\Chats\Count\CountRequestBuilder;
-use Microsoft\Graph\Users\Item\Chats\GetAllMessages\GetAllMessagesRequestBuilder;
+use Microsoft\Graph\Generated\Models\Chat;
+use Microsoft\Graph\Generated\Models\ChatCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Users\Item\Chats\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\GetAllMessages\GetAllMessagesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

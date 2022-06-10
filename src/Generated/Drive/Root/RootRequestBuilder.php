@@ -1,41 +1,41 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Root;
+namespace Microsoft\Graph\Generated\Drive\Root;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Drive\Root\Analytics\AnalyticsRequestBuilder;
-use Microsoft\Graph\Drive\Root\Checkin\CheckinRequestBuilder;
-use Microsoft\Graph\Drive\Root\Checkout\CheckoutRequestBuilder;
-use Microsoft\Graph\Drive\Root\Children\ChildrenRequestBuilder;
-use Microsoft\Graph\Drive\Root\Children\Item\DriveItemItemRequestBuilder;
-use Microsoft\Graph\Drive\Root\Content\ContentRequestBuilder;
-use Microsoft\Graph\Drive\Root\Copy\CopyRequestBuilder;
-use Microsoft\Graph\Drive\Root\CreateLink\CreateLinkRequestBuilder;
-use Microsoft\Graph\Drive\Root\CreateUploadSession\CreateUploadSessionRequestBuilder;
-use Microsoft\Graph\Drive\Root\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Drive\Root\DeltaWithToken\DeltaWithTokenRequestBuilder;
-use Microsoft\Graph\Drive\Root\Follow\FollowRequestBuilder;
-use Microsoft\Graph\Drive\Root\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
-use Microsoft\Graph\Drive\Root\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-use Microsoft\Graph\Drive\Root\Invite\InviteRequestBuilder;
-use Microsoft\Graph\Drive\Root\ListItem\ListItemRequestBuilder;
-use Microsoft\Graph\Drive\Root\Permissions\Item\PermissionItemRequestBuilder;
-use Microsoft\Graph\Drive\Root\Permissions\PermissionsRequestBuilder;
-use Microsoft\Graph\Drive\Root\Preview\PreviewRequestBuilder;
-use Microsoft\Graph\Drive\Root\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Drive\Root\SearchWithQ\SearchWithQRequestBuilder;
-use Microsoft\Graph\Drive\Root\Subscriptions\Item\SubscriptionItemRequestBuilder;
-use Microsoft\Graph\Drive\Root\Subscriptions\SubscriptionsRequestBuilder;
-use Microsoft\Graph\Drive\Root\Thumbnails\Item\ThumbnailSetItemRequestBuilder;
-use Microsoft\Graph\Drive\Root\Thumbnails\ThumbnailsRequestBuilder;
-use Microsoft\Graph\Drive\Root\Unfollow\UnfollowRequestBuilder;
-use Microsoft\Graph\Drive\Root\ValidatePermission\ValidatePermissionRequestBuilder;
-use Microsoft\Graph\Drive\Root\Versions\Item\DriveItemVersionItemRequestBuilder;
-use Microsoft\Graph\Drive\Root\Versions\VersionsRequestBuilder;
-use Microsoft\Graph\Models\DriveItem;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Drive\Root\Analytics\AnalyticsRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Checkin\CheckinRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Checkout\CheckoutRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Children\ChildrenRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Children\Item\DriveItemItemRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Content\ContentRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Copy\CopyRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\CreateLink\CreateLinkRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\CreateUploadSession\CreateUploadSessionRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\DeltaWithToken\DeltaWithTokenRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Follow\FollowRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Invite\InviteRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\ListItem\ListItemRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Permissions\Item\PermissionItemRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Permissions\PermissionsRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Preview\PreviewRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\SearchWithQ\SearchWithQRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Subscriptions\Item\SubscriptionItemRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Subscriptions\SubscriptionsRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Thumbnails\Item\ThumbnailSetItemRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Thumbnails\ThumbnailsRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Unfollow\UnfollowRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\ValidatePermission\ValidatePermissionRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Versions\Item\DriveItemVersionItemRequestBuilder;
+use Microsoft\Graph\Generated\Drive\Root\Versions\VersionsRequestBuilder;
+use Microsoft\Graph\Generated\Models\DriveItem;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -195,7 +195,7 @@ class RootRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft\Graph.drive.root.children.item collection
+     * Gets an item from the Microsoft\Graph\Generated.drive.root.children.item collection
      * @param string $id Unique identifier of the item
      * @return DriveItemItemRequestBuilder
     */
@@ -379,7 +379,7 @@ class RootRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.drive.root.permissions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.drive.root.permissions.item collection
      * @param string $id Unique identifier of the item
      * @return PermissionItemRequestBuilder
     */
@@ -399,7 +399,7 @@ class RootRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.drive.root.subscriptions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.drive.root.subscriptions.item collection
      * @param string $id Unique identifier of the item
      * @return SubscriptionItemRequestBuilder
     */
@@ -410,7 +410,7 @@ class RootRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.drive.root.thumbnails.item collection
+     * Gets an item from the Microsoft\Graph\Generated.drive.root.thumbnails.item collection
      * @param string $id Unique identifier of the item
      * @return ThumbnailSetItemRequestBuilder
     */
@@ -421,7 +421,7 @@ class RootRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.drive.root.versions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.drive.root.versions.item collection
      * @param string $id Unique identifier of the item
      * @return DriveItemVersionItemRequestBuilder
     */

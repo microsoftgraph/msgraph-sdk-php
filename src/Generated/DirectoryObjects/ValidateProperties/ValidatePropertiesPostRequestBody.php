@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DirectoryObjects\ValidateProperties;
+namespace Microsoft\Graph\Generated\DirectoryObjects\ValidateProperties;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

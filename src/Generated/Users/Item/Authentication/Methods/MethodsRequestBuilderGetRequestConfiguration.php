@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Authentication\Methods;
+namespace Microsoft\Graph\Generated\Users\Item\Authentication\Methods;
 
 class MethodsRequestBuilderGetRequestConfiguration 
 {

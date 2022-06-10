@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Education\Classes\Item\Assignments\Item\Rubric;
+namespace Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Rubric;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Education\Classes\Item\Assignments\Item\Rubric\Ref\RefRequestBuilder;
-use Microsoft\Graph\Models\EducationRubric;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Rubric\Ref\RefRequestBuilder;
+use Microsoft\Graph\Generated\Models\EducationRubric;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

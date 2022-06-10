@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DirectoryRoleTemplates\Item\CheckMemberObjects;
+namespace Microsoft\Graph\Generated\DirectoryRoleTemplates\Item\CheckMemberObjects;
 
 class CheckMemberObjectsRequestBuilderPostRequestConfiguration 
 {

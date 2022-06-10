@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Devices\GetAvailableExtensionProperties;
+namespace Microsoft\Graph\Generated\Devices\GetAvailableExtensionProperties;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

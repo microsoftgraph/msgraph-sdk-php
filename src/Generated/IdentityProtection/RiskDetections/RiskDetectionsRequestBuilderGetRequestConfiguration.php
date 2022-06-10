@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\IdentityProtection\RiskDetections;
+namespace Microsoft\Graph\Generated\IdentityProtection\RiskDetections;
 
 class RiskDetectionsRequestBuilderGetRequestConfiguration 
 {

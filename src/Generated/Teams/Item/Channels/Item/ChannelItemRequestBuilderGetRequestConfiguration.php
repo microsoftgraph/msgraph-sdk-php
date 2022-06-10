@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Teams\Item\Channels\Item;
+namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item;
 
 class ChannelItemRequestBuilderGetRequestConfiguration 
 {

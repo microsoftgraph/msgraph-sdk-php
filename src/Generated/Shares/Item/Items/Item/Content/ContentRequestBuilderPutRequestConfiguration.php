@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Shares\Item\Items\Item\Content;
+namespace Microsoft\Graph\Generated\Shares\Item\Items\Item\Content;
 
 class ContentRequestBuilderPutRequestConfiguration 
 {

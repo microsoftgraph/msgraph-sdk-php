@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\SoftwareUpdateStatusSummary;
+namespace Microsoft\Graph\Generated\DeviceManagement\SoftwareUpdateStatusSummary;
 
 class SoftwareUpdateStatusSummaryRequestBuilderGetRequestConfiguration 
 {

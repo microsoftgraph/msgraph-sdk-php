@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Solutions\BookingBusinesses\Item\Appointments\Item;
+namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\Item;
 
 class BookingAppointmentItemRequestBuilderGetRequestConfiguration 
 {

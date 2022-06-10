@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Drive;
+namespace Microsoft\Graph\Generated\Groups\Item\Drive;
 
 class DriveRequestBuilderGetRequestConfiguration 
 {

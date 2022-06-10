@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Me\DirectReports;
+namespace Microsoft\Graph\Generated\Me\DirectReports;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\DirectReports\Count\CountRequestBuilder;
-use Microsoft\Graph\Me\DirectReports\OrgContact\OrgContactRequestBuilder;
-use Microsoft\Graph\Me\DirectReports\User\UserRequestBuilder;
-use Microsoft\Graph\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Me\DirectReports\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\DirectReports\OrgContact\OrgContactRequestBuilder;
+use Microsoft\Graph\Generated\Me\DirectReports\User\UserRequestBuilder;
+use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Events\Item;
+namespace Microsoft\Graph\Generated\Me\Events\Item;
 
 class EventItemRequestBuilderPatchRequestConfiguration 
 {

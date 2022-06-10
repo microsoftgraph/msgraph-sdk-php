@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\ServicePrincipals\Item\TransitiveMemberOf\Item;
+namespace Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\Item;
 
 class DirectoryObjectItemRequestBuilderGetRequestConfiguration 
 {

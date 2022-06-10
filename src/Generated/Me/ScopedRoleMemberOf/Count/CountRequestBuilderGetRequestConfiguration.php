@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\ScopedRoleMemberOf\Count;
+namespace Microsoft\Graph\Generated\Me\ScopedRoleMemberOf\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\MultiValueExtendedProperties\Count;
+namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\MultiValueExtendedProperties\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

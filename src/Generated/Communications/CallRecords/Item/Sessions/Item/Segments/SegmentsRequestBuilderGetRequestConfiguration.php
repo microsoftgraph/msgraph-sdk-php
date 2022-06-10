@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\CallRecords\Item\Sessions\Item\Segments;
+namespace Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\Item\Segments;
 
 class SegmentsRequestBuilderGetRequestConfiguration 
 {

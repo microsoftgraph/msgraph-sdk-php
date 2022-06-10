@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\GroupSettingTemplates\Item\Restore;
+namespace Microsoft\Graph\Generated\GroupSettingTemplates\Item\Restore;
 
 class RestoreRequestBuilderPostRequestConfiguration 
 {

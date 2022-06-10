@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\ManagedAppPolicies\Item\TargetApps;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppPolicies\Item\TargetApps;
 
 class TargetAppsRequestBuilderPostRequestConfiguration 
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Privacy\SubjectRightsRequests\Item\Team;
+namespace Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Team;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\Team;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Team;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

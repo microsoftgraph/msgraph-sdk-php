@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\RemoteAssistancePartners\Item\Disconnect;
+namespace Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\Disconnect;
 
 class DisconnectRequestBuilderPostRequestConfiguration 
 {

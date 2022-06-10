@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Teams\Item\Schedule\OpenShiftChangeRequests\Count;
+namespace Microsoft\Graph\Generated\Teams\Item\Schedule\OpenShiftChangeRequests\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

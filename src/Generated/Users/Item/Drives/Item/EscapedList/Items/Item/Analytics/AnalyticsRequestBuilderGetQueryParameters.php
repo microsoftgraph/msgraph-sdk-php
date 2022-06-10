@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Drives\Item\EscapedList\Items\Item\Analytics;
+namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\EscapedList\Items\Item\Analytics;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

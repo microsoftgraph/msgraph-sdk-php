@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Outlook\SupportedTimeZones;
+namespace Microsoft\Graph\Generated\Users\Item\Outlook\SupportedTimeZones;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

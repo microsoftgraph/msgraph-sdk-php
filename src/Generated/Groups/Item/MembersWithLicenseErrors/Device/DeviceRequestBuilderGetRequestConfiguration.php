@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\MembersWithLicenseErrors\Device;
+namespace Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Device;
 
 class DeviceRequestBuilderGetRequestConfiguration 
 {

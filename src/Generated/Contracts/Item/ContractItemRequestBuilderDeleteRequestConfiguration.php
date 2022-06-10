@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Contracts\Item;
+namespace Microsoft\Graph\Generated\Contracts\Item;
 
 class ContractItemRequestBuilderDeleteRequestConfiguration 
 {

@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\PermissionGrants\Item;
+namespace Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Groups\Item\PermissionGrants\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Groups\Item\PermissionGrants\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Groups\Item\PermissionGrants\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Groups\Item\PermissionGrants\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Groups\Item\PermissionGrants\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\ResourceSpecificPermissionGrant;
+use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrant;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Drives\Item\EscapedList\Subscriptions\Item\Reauthorize;
+namespace Microsoft\Graph\Generated\Me\Drives\Item\EscapedList\Subscriptions\Item\Reauthorize;
 
 class ReauthorizeRequestBuilderPostRequestConfiguration 
 {

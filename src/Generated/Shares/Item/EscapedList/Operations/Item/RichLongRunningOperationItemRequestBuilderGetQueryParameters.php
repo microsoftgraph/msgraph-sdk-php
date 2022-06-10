@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Shares\Item\EscapedList\Operations\Item;
+namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Operations\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

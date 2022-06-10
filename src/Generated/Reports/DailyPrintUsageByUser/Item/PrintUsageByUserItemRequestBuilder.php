@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Reports\DailyPrintUsageByUser\Item;
+namespace Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\PrintUsageByUser;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\PrintUsageByUser;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

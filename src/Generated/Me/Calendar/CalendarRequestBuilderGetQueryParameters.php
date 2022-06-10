@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Calendar;
+namespace Microsoft\Graph\Generated\Me\Calendar;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

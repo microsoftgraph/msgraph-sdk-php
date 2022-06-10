@@ -1,37 +1,37 @@
 <?php
 
-namespace Microsoft\Graph\Policies;
+namespace Microsoft\Graph\Generated\Policies;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\PolicyRoot;
-use Microsoft\Graph\Policies\ActivityBasedTimeoutPolicies\ActivityBasedTimeoutPoliciesRequestBuilder;
-use Microsoft\Graph\Policies\ActivityBasedTimeoutPolicies\Item\ActivityBasedTimeoutPolicyItemRequestBuilder;
-use Microsoft\Graph\Policies\AdminConsentRequestPolicy\AdminConsentRequestPolicyRequestBuilder;
-use Microsoft\Graph\Policies\AuthenticationFlowsPolicy\AuthenticationFlowsPolicyRequestBuilder;
-use Microsoft\Graph\Policies\AuthenticationMethodsPolicy\AuthenticationMethodsPolicyRequestBuilder;
-use Microsoft\Graph\Policies\AuthorizationPolicy\AuthorizationPolicyRequestBuilder;
-use Microsoft\Graph\Policies\ClaimsMappingPolicies\ClaimsMappingPoliciesRequestBuilder;
-use Microsoft\Graph\Policies\ClaimsMappingPolicies\Item\ClaimsMappingPolicyItemRequestBuilder;
-use Microsoft\Graph\Policies\ConditionalAccessPolicies\ConditionalAccessPoliciesRequestBuilder;
-use Microsoft\Graph\Policies\ConditionalAccessPolicies\Item\ConditionalAccessPolicyItemRequestBuilder;
-use Microsoft\Graph\Policies\FeatureRolloutPolicies\FeatureRolloutPoliciesRequestBuilder;
-use Microsoft\Graph\Policies\FeatureRolloutPolicies\Item\FeatureRolloutPolicyItemRequestBuilder;
-use Microsoft\Graph\Policies\HomeRealmDiscoveryPolicies\HomeRealmDiscoveryPoliciesRequestBuilder;
-use Microsoft\Graph\Policies\HomeRealmDiscoveryPolicies\Item\HomeRealmDiscoveryPolicyItemRequestBuilder;
-use Microsoft\Graph\Policies\IdentitySecurityDefaultsEnforcementPolicy\IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
-use Microsoft\Graph\Policies\PermissionGrantPolicies\Item\PermissionGrantPolicyItemRequestBuilder;
-use Microsoft\Graph\Policies\PermissionGrantPolicies\PermissionGrantPoliciesRequestBuilder;
-use Microsoft\Graph\Policies\RoleManagementPolicies\Item\UnifiedRoleManagementPolicyItemRequestBuilder;
-use Microsoft\Graph\Policies\RoleManagementPolicies\RoleManagementPoliciesRequestBuilder;
-use Microsoft\Graph\Policies\RoleManagementPolicyAssignments\Item\UnifiedRoleManagementPolicyAssignmentItemRequestBuilder;
-use Microsoft\Graph\Policies\RoleManagementPolicyAssignments\RoleManagementPolicyAssignmentsRequestBuilder;
-use Microsoft\Graph\Policies\TokenIssuancePolicies\Item\TokenIssuancePolicyItemRequestBuilder;
-use Microsoft\Graph\Policies\TokenIssuancePolicies\TokenIssuancePoliciesRequestBuilder;
-use Microsoft\Graph\Policies\TokenLifetimePolicies\Item\TokenLifetimePolicyItemRequestBuilder;
-use Microsoft\Graph\Policies\TokenLifetimePolicies\TokenLifetimePoliciesRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\PolicyRoot;
+use Microsoft\Graph\Generated\Policies\ActivityBasedTimeoutPolicies\ActivityBasedTimeoutPoliciesRequestBuilder;
+use Microsoft\Graph\Generated\Policies\ActivityBasedTimeoutPolicies\Item\ActivityBasedTimeoutPolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\Policies\AdminConsentRequestPolicy\AdminConsentRequestPolicyRequestBuilder;
+use Microsoft\Graph\Generated\Policies\AuthenticationFlowsPolicy\AuthenticationFlowsPolicyRequestBuilder;
+use Microsoft\Graph\Generated\Policies\AuthenticationMethodsPolicy\AuthenticationMethodsPolicyRequestBuilder;
+use Microsoft\Graph\Generated\Policies\AuthorizationPolicy\AuthorizationPolicyRequestBuilder;
+use Microsoft\Graph\Generated\Policies\ClaimsMappingPolicies\ClaimsMappingPoliciesRequestBuilder;
+use Microsoft\Graph\Generated\Policies\ClaimsMappingPolicies\Item\ClaimsMappingPolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\Policies\ConditionalAccessPolicies\ConditionalAccessPoliciesRequestBuilder;
+use Microsoft\Graph\Generated\Policies\ConditionalAccessPolicies\Item\ConditionalAccessPolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\FeatureRolloutPoliciesRequestBuilder;
+use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\FeatureRolloutPolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\Policies\HomeRealmDiscoveryPolicies\HomeRealmDiscoveryPoliciesRequestBuilder;
+use Microsoft\Graph\Generated\Policies\HomeRealmDiscoveryPolicies\Item\HomeRealmDiscoveryPolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\Policies\IdentitySecurityDefaultsEnforcementPolicy\IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
+use Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\PermissionGrantPolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\PermissionGrantPoliciesRequestBuilder;
+use Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\UnifiedRoleManagementPolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\Policies\RoleManagementPolicies\RoleManagementPoliciesRequestBuilder;
+use Microsoft\Graph\Generated\Policies\RoleManagementPolicyAssignments\Item\UnifiedRoleManagementPolicyAssignmentItemRequestBuilder;
+use Microsoft\Graph\Generated\Policies\RoleManagementPolicyAssignments\RoleManagementPolicyAssignmentsRequestBuilder;
+use Microsoft\Graph\Generated\Policies\TokenIssuancePolicies\Item\TokenIssuancePolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\Policies\TokenIssuancePolicies\TokenIssuancePoliciesRequestBuilder;
+use Microsoft\Graph\Generated\Policies\TokenLifetimePolicies\Item\TokenLifetimePolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\Policies\TokenLifetimePolicies\TokenLifetimePoliciesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -163,7 +163,7 @@ class PoliciesRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.policies.activityBasedTimeoutPolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.policies.activityBasedTimeoutPolicies.item collection
      * @param string $id Unique identifier of the item
      * @return ActivityBasedTimeoutPolicyItemRequestBuilder
     */
@@ -174,7 +174,7 @@ class PoliciesRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.policies.claimsMappingPolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.policies.claimsMappingPolicies.item collection
      * @param string $id Unique identifier of the item
      * @return ClaimsMappingPolicyItemRequestBuilder
     */
@@ -185,7 +185,7 @@ class PoliciesRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.policies.conditionalAccessPolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.policies.conditionalAccessPolicies.item collection
      * @param string $id Unique identifier of the item
      * @return ConditionalAccessPolicyItemRequestBuilder
     */
@@ -254,7 +254,7 @@ class PoliciesRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.policies.featureRolloutPolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.policies.featureRolloutPolicies.item collection
      * @param string $id Unique identifier of the item
      * @return FeatureRolloutPolicyItemRequestBuilder
     */
@@ -284,7 +284,7 @@ class PoliciesRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.policies.homeRealmDiscoveryPolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.policies.homeRealmDiscoveryPolicies.item collection
      * @param string $id Unique identifier of the item
      * @return HomeRealmDiscoveryPolicyItemRequestBuilder
     */
@@ -315,7 +315,7 @@ class PoliciesRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.policies.permissionGrantPolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.policies.permissionGrantPolicies.item collection
      * @param string $id Unique identifier of the item
      * @return PermissionGrantPolicyItemRequestBuilder
     */
@@ -326,7 +326,7 @@ class PoliciesRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.policies.roleManagementPolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.policies.roleManagementPolicies.item collection
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleManagementPolicyItemRequestBuilder
     */
@@ -337,7 +337,7 @@ class PoliciesRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.policies.roleManagementPolicyAssignments.item collection
+     * Gets an item from the Microsoft\Graph\Generated.policies.roleManagementPolicyAssignments.item collection
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleManagementPolicyAssignmentItemRequestBuilder
     */
@@ -348,7 +348,7 @@ class PoliciesRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.policies.tokenIssuancePolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.policies.tokenIssuancePolicies.item collection
      * @param string $id Unique identifier of the item
      * @return TokenIssuancePolicyItemRequestBuilder
     */
@@ -359,7 +359,7 @@ class PoliciesRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.policies.tokenLifetimePolicies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.policies.tokenLifetimePolicies.item collection
      * @param string $id Unique identifier of the item
      * @return TokenLifetimePolicyItemRequestBuilder
     */

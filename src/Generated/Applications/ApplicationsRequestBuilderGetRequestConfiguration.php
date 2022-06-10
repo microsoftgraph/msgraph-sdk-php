@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Applications;
+namespace Microsoft\Graph\Generated\Applications;
 
 class ApplicationsRequestBuilderGetRequestConfiguration 
 {

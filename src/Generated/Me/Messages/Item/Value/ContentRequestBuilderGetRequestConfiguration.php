@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Messages\Item\Value;
+namespace Microsoft\Graph\Generated\Me\Messages\Item\Value;
 
 class ContentRequestBuilderGetRequestConfiguration 
 {

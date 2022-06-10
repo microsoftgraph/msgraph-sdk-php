@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\LicenseDetails\Item;
+namespace Microsoft\Graph\Generated\Me\LicenseDetails\Item;
 
 class LicenseDetailsItemRequestBuilderGetRequestConfiguration 
 {

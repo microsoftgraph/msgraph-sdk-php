@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Me\Drives\Item\Items\Item\Versions;
+namespace Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Versions;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\Drives\Item\Items\Item\Versions\Count\CountRequestBuilder;
-use Microsoft\Graph\Models\DriveItemVersion;
-use Microsoft\Graph\Models\DriveItemVersionCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Versions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\DriveItemVersion;
+use Microsoft\Graph\Generated\Models\DriveItemVersionCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

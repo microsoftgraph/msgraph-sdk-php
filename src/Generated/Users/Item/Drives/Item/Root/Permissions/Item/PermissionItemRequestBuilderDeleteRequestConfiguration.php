@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Drives\Item\Root\Permissions\Item;
+namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\Root\Permissions\Item;
 
 class PermissionItemRequestBuilderDeleteRequestConfiguration 
 {

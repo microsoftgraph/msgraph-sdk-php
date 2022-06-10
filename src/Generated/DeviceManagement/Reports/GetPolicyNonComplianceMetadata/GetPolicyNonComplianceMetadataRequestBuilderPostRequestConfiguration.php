@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\Reports\GetPolicyNonComplianceMetadata;
+namespace Microsoft\Graph\Generated\DeviceManagement\Reports\GetPolicyNonComplianceMetadata;
 
 class GetPolicyNonComplianceMetadataRequestBuilderPostRequestConfiguration 
 {

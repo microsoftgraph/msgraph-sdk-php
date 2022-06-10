@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\TermsAndConditions;
+namespace Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions;
 
 class TermsAndConditionsRequestBuilderPostRequestConfiguration 
 {

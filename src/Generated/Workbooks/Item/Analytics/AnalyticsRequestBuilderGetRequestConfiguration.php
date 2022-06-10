@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Workbooks\Item\Analytics;
+namespace Microsoft\Graph\Generated\Workbooks\Item\Analytics;
 
 class AnalyticsRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Devices\Item\RegisteredOwners\User\Count;
+namespace Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\User\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

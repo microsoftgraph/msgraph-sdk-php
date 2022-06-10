@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\ServicePrincipals\Item\DelegatedPermissionClassifications;
+namespace Microsoft\Graph\Generated\ServicePrincipals\Item\DelegatedPermissionClassifications;
 
 class DelegatedPermissionClassificationsRequestBuilderPostRequestConfiguration 
 {

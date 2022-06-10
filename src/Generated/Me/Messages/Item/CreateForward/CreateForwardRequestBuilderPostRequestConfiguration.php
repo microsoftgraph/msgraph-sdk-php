@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Messages\Item\CreateForward;
+namespace Microsoft\Graph\Generated\Me\Messages\Item\CreateForward;
 
 class CreateForwardRequestBuilderPostRequestConfiguration 
 {

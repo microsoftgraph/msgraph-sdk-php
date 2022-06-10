@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\CalendarView\Item\Instances\Item\Attachments\Item;
+namespace Microsoft\Graph\Generated\Groups\Item\CalendarView\Item\Instances\Item\Attachments\Item;
 
 class AttachmentItemRequestBuilderGetRequestConfiguration 
 {

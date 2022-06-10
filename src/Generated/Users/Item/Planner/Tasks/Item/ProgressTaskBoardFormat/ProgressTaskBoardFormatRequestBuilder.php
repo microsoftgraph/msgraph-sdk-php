@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Planner\Tasks\Item\ProgressTaskBoardFormat;
+namespace Microsoft\Graph\Generated\Users\Item\Planner\Tasks\Item\ProgressTaskBoardFormat;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\PlannerProgressTaskBoardTaskFormat;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\PlannerProgressTaskBoardTaskFormat;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

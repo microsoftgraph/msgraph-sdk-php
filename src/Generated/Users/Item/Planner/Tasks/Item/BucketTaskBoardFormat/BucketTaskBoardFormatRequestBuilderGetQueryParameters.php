@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Planner\Tasks\Item\BucketTaskBoardFormat;
+namespace Microsoft\Graph\Generated\Users\Item\Planner\Tasks\Item\BucketTaskBoardFormat;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

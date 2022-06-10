@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Reports\DailyPrintUsageByUser;
+namespace Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser;
 
 class DailyPrintUsageByUserRequestBuilderPostRequestConfiguration 
 {

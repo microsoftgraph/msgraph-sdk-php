@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Me\Settings;
+namespace Microsoft\Graph\Generated\Me\Settings;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\Settings\ShiftPreferences\ShiftPreferencesRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\UserSettings;
+use Microsoft\Graph\Generated\Me\Settings\ShiftPreferences\ShiftPreferencesRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\UserSettings;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

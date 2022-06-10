@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\ManagedDevices\Item\DeviceCompliancePolicyStates;
+namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\DeviceCompliancePolicyStates;
 
 class DeviceCompliancePolicyStatesRequestBuilderGetRequestConfiguration 
 {

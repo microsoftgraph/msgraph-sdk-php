@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\Forward;
+namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\Forward;
 
 class ForwardRequestBuilderPostRequestConfiguration 
 {

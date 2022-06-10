@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Me\Drives\Item\Recent;
+namespace Microsoft\Graph\Generated\Me\Drives\Item\Recent;
 
-use Microsoft\Graph\Models\DriveItem;
+use Microsoft\Graph\Generated\Models\DriveItem;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

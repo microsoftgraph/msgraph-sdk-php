@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\Calls\Item\Transfer;
+namespace Microsoft\Graph\Generated\Communications\Calls\Item\Transfer;
 
 class TransferRequestBuilderPostRequestConfiguration 
 {

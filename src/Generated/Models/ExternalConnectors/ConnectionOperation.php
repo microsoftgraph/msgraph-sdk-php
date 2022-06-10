@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Models\ExternalConnectors;
+namespace Microsoft\Graph\Generated\Models\ExternalConnectors;
 
-use Microsoft\Graph\Models\Entity;
-use Microsoft\Graph\Models\PublicError;
+use Microsoft\Graph\Generated\Models\Entity;
+use Microsoft\Graph\Generated\Models\PublicError;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

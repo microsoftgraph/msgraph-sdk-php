@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\ServicePrincipals\Item\Owners\AppRoleAssignment\Count;
+namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\AppRoleAssignment\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

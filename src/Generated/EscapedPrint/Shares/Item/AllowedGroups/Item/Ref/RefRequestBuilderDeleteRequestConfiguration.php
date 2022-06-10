@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\EscapedPrint\Shares\Item\AllowedGroups\Item\Ref;
+namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedGroups\Item\Ref;
 
 class RefRequestBuilderDeleteRequestConfiguration 
 {

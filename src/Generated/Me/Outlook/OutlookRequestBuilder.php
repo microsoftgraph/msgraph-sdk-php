@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Me\Outlook;
+namespace Microsoft\Graph\Generated\Me\Outlook;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\Outlook\MasterCategories\Item\OutlookCategoryItemRequestBuilder;
-use Microsoft\Graph\Me\Outlook\MasterCategories\MasterCategoriesRequestBuilder;
-use Microsoft\Graph\Me\Outlook\SupportedLanguages\SupportedLanguagesRequestBuilder;
-use Microsoft\Graph\Me\Outlook\SupportedTimeZones\SupportedTimeZonesRequestBuilder;
-use Microsoft\Graph\Me\Outlook\SupportedTimeZonesWithTimeZoneStandard\SupportedTimeZonesWithTimeZoneStandardRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\OutlookUser;
+use Microsoft\Graph\Generated\Me\Outlook\MasterCategories\Item\OutlookCategoryItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Outlook\MasterCategories\MasterCategoriesRequestBuilder;
+use Microsoft\Graph\Generated\Me\Outlook\SupportedLanguages\SupportedLanguagesRequestBuilder;
+use Microsoft\Graph\Generated\Me\Outlook\SupportedTimeZones\SupportedTimeZonesRequestBuilder;
+use Microsoft\Graph\Generated\Me\Outlook\SupportedTimeZonesWithTimeZoneStandard\SupportedTimeZonesWithTimeZoneStandardRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OutlookUser;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -162,7 +162,7 @@ class OutlookRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.outlook.masterCategories.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.outlook.masterCategories.item collection
      * @param string $id Unique identifier of the item
      * @return OutlookCategoryItemRequestBuilder
     */

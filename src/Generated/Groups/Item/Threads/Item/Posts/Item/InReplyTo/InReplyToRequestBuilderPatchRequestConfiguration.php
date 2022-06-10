@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\InReplyTo;
+namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo;
 
 class InReplyToRequestBuilderPatchRequestConfiguration 
 {

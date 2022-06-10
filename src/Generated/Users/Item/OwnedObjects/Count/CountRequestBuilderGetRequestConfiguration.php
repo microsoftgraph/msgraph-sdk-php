@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\OwnedObjects\Count;
+namespace Microsoft\Graph\Generated\Users\Item\OwnedObjects\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

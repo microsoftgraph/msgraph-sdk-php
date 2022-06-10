@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Drives\Item\EscapedList\Items\Item\Fields;
+namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\EscapedList\Items\Item\Fields;
 
 class FieldsRequestBuilderDeleteRequestConfiguration 
 {

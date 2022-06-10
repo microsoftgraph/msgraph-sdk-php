@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\DeviceEnrollmentConfigurations\Item\SetPriority;
+namespace Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\SetPriority;
 
 class SetPriorityRequestBuilderPostRequestConfiguration 
 {

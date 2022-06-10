@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Shares\Item\Root;
+namespace Microsoft\Graph\Generated\Shares\Item\Root;
 
 class RootRequestBuilderGetRequestConfiguration 
 {

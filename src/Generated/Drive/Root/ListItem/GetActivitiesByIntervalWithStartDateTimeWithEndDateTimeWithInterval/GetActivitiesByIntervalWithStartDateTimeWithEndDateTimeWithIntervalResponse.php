@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Root\ListItem\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval;
+namespace Microsoft\Graph\Generated\Drive\Root\ListItem\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval;
 
-use Microsoft\Graph\Models\ItemActivityStat;
+use Microsoft\Graph\Generated\Models\ItemActivityStat;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

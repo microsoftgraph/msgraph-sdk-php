@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Domains\Item\FederationConfiguration\Item;
+namespace Microsoft\Graph\Generated\Domains\Item\FederationConfiguration\Item;
 
 class InternalDomainFederationItemRequestBuilderGetRequestConfiguration 
 {

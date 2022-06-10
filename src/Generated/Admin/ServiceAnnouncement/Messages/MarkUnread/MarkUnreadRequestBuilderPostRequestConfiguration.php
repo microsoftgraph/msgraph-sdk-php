@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Admin\ServiceAnnouncement\Messages\MarkUnread;
+namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MarkUnread;
 
 class MarkUnreadRequestBuilderPostRequestConfiguration 
 {

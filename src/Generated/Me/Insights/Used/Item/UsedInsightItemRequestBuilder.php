@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Me\Insights\Used\Item;
+namespace Microsoft\Graph\Generated\Me\Insights\Used\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\Insights\Used\Item\Resource\ResourceRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\UsedInsight;
+use Microsoft\Graph\Generated\Me\Insights\Used\Item\Resource\ResourceRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\UsedInsight;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

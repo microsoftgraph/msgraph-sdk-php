@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\AssignmentPolicies;
+namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentPolicies;
 
 class AssignmentPoliciesRequestBuilderGetRequestConfiguration 
 {

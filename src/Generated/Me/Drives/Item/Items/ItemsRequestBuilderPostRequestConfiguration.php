@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Drives\Item\Items;
+namespace Microsoft\Graph\Generated\Me\Drives\Item\Items;
 
 class ItemsRequestBuilderPostRequestConfiguration 
 {

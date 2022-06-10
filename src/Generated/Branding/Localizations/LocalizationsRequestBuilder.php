@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Branding\Localizations;
+namespace Microsoft\Graph\Generated\Branding\Localizations;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Branding\Localizations\Count\CountRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\OrganizationalBrandingLocalization;
-use Microsoft\Graph\Models\OrganizationalBrandingLocalizationCollectionResponse;
+use Microsoft\Graph\Generated\Branding\Localizations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OrganizationalBrandingLocalization;
+use Microsoft\Graph\Generated\Models\OrganizationalBrandingLocalizationCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

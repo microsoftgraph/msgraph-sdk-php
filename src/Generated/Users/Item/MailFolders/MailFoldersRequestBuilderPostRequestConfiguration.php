@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\MailFolders;
+namespace Microsoft\Graph\Generated\Users\Item\MailFolders;
 
 class MailFoldersRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Calendar\CalendarPermissions;
+namespace Microsoft\Graph\Generated\Users\Item\Calendar\CalendarPermissions;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

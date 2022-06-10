@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Models;
+namespace Microsoft\Graph\Generated\Models;
 
-use Microsoft\Graph\Models\TermStore\Store;
+use Microsoft\Graph\Generated\Models\TermStore\Store;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -105,7 +105,7 @@ class Site extends BaseItem implements Parsable
     private ?array $termStores = null;
     
     /**
-     * Instantiates a new site and sets the default values.
+     * Instantiates a new Site and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drive\EscapedList\Items\Item\GetActivitiesByInterval;
+namespace Microsoft\Graph\Generated\Drive\EscapedList\Items\Item\GetActivitiesByInterval;
 
 class GetActivitiesByIntervalRequestBuilderGetRequestConfiguration 
 {

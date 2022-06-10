@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Privacy\SubjectRightsRequests\Item\GetFinalAttachment;
+namespace Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalAttachment;
 
 class GetFinalAttachmentRequestBuilderGetRequestConfiguration 
 {

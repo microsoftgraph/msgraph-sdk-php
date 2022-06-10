@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\ManagedDevices\Item\RecoverPasscode;
+namespace Microsoft\Graph\Generated\Me\ManagedDevices\Item\RecoverPasscode;
 
 class RecoverPasscodeRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\Item\Value;
+namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\Item\Value;
 
 class ContentRequestBuilderGetRequestConfiguration 
 {

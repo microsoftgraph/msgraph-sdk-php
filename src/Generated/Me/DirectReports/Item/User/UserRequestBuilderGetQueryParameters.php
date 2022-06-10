@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\DirectReports\Item\User;
+namespace Microsoft\Graph\Generated\Me\DirectReports\Item\User;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

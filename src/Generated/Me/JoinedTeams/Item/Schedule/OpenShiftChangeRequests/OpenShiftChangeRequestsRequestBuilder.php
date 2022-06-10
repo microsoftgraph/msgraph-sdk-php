@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Me\JoinedTeams\Item\Schedule\OpenShiftChangeRequests;
+namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OpenShiftChangeRequests;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\JoinedTeams\Item\Schedule\OpenShiftChangeRequests\Count\CountRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\OpenShiftChangeRequest;
-use Microsoft\Graph\Models\OpenShiftChangeRequestCollectionResponse;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OpenShiftChangeRequests\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OpenShiftChangeRequest;
+use Microsoft\Graph\Generated\Models\OpenShiftChangeRequestCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

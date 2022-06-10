@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\RoleManagement\Directory\RoleAssignments;
+namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignments;
 
 class RoleAssignmentsRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Contacts\Item\TransitiveMemberOf\OrgContact\Count;
+namespace Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\OrgContact\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

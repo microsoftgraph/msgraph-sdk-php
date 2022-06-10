@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\DirectReports\OrgContact;
+namespace Microsoft\Graph\Generated\Me\DirectReports\OrgContact;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Root\Permissions\Item;
+namespace Microsoft\Graph\Generated\Drive\Root\Permissions\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Drive\Root\Permissions\Item\Grant\GrantRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\Permission;
+use Microsoft\Graph\Generated\Drive\Root\Permissions\Item\Grant\GrantRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Permission;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Events\Item\Attachments;
+namespace Microsoft\Graph\Generated\Me\Events\Item\Attachments;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

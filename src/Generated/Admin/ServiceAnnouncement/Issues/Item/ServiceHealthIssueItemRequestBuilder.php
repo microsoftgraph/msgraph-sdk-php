@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Admin\ServiceAnnouncement\Issues\Item;
+namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Admin\ServiceAnnouncement\Issues\Item\IncidentReport\IncidentReportRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\ServiceHealthIssue;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues\Item\IncidentReport\IncidentReportRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ServiceHealthIssue;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Agreements\Item;
+namespace Microsoft\Graph\Generated\Agreements\Item;
 
 class AgreementItemRequestBuilderDeleteRequestConfiguration 
 {

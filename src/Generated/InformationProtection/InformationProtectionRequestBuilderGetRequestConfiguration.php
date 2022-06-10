@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\InformationProtection;
+namespace Microsoft\Graph\Generated\InformationProtection;
 
 class InformationProtectionRequestBuilderGetRequestConfiguration 
 {

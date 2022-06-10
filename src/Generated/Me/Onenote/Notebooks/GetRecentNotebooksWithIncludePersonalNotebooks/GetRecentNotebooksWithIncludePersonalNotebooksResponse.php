@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Me\Onenote\Notebooks\GetRecentNotebooksWithIncludePersonalNotebooks;
+namespace Microsoft\Graph\Generated\Me\Onenote\Notebooks\GetRecentNotebooksWithIncludePersonalNotebooks;
 
-use Microsoft\Graph\Models\RecentNotebook;
+use Microsoft\Graph\Generated\Models\RecentNotebook;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

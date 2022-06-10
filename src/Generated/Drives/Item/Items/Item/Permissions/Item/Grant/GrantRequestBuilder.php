@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Drives\Item\Items\Item\Permissions\Item\Grant;
+namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Permissions\Item\Grant;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Shares;
+namespace Microsoft\Graph\Generated\Shares;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\SharedDriveItem;
-use Microsoft\Graph\Models\SharedDriveItemCollectionResponse;
-use Microsoft\Graph\Shares\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\SharedDriveItem;
+use Microsoft\Graph\Generated\Models\SharedDriveItemCollectionResponse;
+use Microsoft\Graph\Generated\Shares\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

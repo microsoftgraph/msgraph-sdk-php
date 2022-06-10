@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Planner;
+namespace Microsoft\Graph\Generated\Groups\Item\Planner;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Groups\Item\Planner\Plans\Item\PlannerPlanItemRequestBuilder;
-use Microsoft\Graph\Groups\Item\Planner\Plans\PlansRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\PlannerGroup;
+use Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\PlannerPlanItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Planner\Plans\PlansRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\PlannerGroup;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -179,7 +179,7 @@ class PlannerRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.groups.item.planner.plans.item collection
+     * Gets an item from the Microsoft\Graph\Generated.groups.item.planner.plans.item collection
      * @param string $id Unique identifier of the item
      * @return PlannerPlanItemRequestBuilder
     */

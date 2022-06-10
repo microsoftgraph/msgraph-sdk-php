@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\EscapedPrint\Shares\Item\AllowedUsers\Item;
+namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item;
 
-use Microsoft\Graph\EscapedPrint\Shares\Item\AllowedUsers\Item\Ref\RefRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
 class UserItemRequestBuilder 

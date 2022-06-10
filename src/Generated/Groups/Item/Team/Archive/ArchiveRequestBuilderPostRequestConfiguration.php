@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Team\Archive;
+namespace Microsoft\Graph\Generated\Groups\Item\Team\Archive;
 
 class ArchiveRequestBuilderPostRequestConfiguration 
 {

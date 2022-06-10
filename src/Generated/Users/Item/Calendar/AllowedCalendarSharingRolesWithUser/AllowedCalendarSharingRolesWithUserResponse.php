@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Calendar\AllowedCalendarSharingRolesWithUser;
+namespace Microsoft\Graph\Generated\Users\Item\Calendar\AllowedCalendarSharingRolesWithUser;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

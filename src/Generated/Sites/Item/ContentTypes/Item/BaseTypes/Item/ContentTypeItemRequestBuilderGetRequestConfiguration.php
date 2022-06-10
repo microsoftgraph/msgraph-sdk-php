@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item\ContentTypes\Item\BaseTypes\Item;
+namespace Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\BaseTypes\Item;
 
 class ContentTypeItemRequestBuilderGetRequestConfiguration 
 {

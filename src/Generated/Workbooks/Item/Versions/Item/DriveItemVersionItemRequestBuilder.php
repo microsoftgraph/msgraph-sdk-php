@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Workbooks\Item\Versions\Item;
+namespace Microsoft\Graph\Generated\Workbooks\Item\Versions\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\DriveItemVersion;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Workbooks\Item\Versions\Item\Content\ContentRequestBuilder;
-use Microsoft\Graph\Workbooks\Item\Versions\Item\RestoreVersion\RestoreVersionRequestBuilder;
+use Microsoft\Graph\Generated\Models\DriveItemVersion;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Workbooks\Item\Versions\Item\Content\ContentRequestBuilder;
+use Microsoft\Graph\Generated\Workbooks\Item\Versions\Item\RestoreVersion\RestoreVersionRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

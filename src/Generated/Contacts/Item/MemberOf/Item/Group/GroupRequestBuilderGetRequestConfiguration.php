@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Contacts\Item\MemberOf\Item\Group;
+namespace Microsoft\Graph\Generated\Contacts\Item\MemberOf\Item\Group;
 
 class GroupRequestBuilderGetRequestConfiguration 
 {

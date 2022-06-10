@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Teams\Item\PrimaryChannel\FilesFolder\Content;
+namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\FilesFolder\Content;
 
 class ContentRequestBuilderGetRequestConfiguration 
 {

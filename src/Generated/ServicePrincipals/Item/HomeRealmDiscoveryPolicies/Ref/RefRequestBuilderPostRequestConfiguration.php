@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\ServicePrincipals\Item\HomeRealmDiscoveryPolicies\Ref;
+namespace Microsoft\Graph\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPolicies\Ref;
 
 class RefRequestBuilderPostRequestConfiguration 
 {

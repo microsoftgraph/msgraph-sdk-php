@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Connections\Item\Groups\Item;
+namespace Microsoft\Graph\Generated\Connections\Item\Groups\Item;
 
 class ExternalGroupItemRequestBuilderPatchRequestConfiguration 
 {

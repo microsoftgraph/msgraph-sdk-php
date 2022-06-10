@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\MailFolders\Item\SingleValueExtendedProperties\Item;
+namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\SingleValueExtendedProperties\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

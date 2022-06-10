@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Settings\ShiftPreferences;
+namespace Microsoft\Graph\Generated\Me\Settings\ShiftPreferences;
 
 class ShiftPreferencesRequestBuilderGetRequestConfiguration 
 {

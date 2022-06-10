@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Localizations\Item\BackgroundImage;
+namespace Microsoft\Graph\Generated\Localizations\Item\BackgroundImage;
 
 class BackgroundImageRequestBuilderPutRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Oauth2PermissionGrants\Delta;
+namespace Microsoft\Graph\Generated\Oauth2PermissionGrants\Delta;
 
 class DeltaRequestBuilderGetRequestConfiguration 
 {

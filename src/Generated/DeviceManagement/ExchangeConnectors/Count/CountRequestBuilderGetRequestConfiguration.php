@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\ExchangeConnectors\Count;
+namespace Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

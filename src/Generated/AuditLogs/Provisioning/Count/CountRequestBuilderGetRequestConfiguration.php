@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\AuditLogs\Provisioning\Count;
+namespace Microsoft\Graph\Generated\AuditLogs\Provisioning\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance\AppConsent\AppConsentRequests;
+namespace Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\IdentityGovernance\AppConsent\AppConsentRequests\Count\CountRequestBuilder;
-use Microsoft\Graph\IdentityGovernance\AppConsent\AppConsentRequests\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
-use Microsoft\Graph\Models\AppConsentRequest;
-use Microsoft\Graph\Models\AppConsentRequestCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
+use Microsoft\Graph\Generated\Models\AppConsentRequest;
+use Microsoft\Graph\Generated\Models\AppConsentRequestCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

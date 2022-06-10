@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Policies\PermissionGrantPolicies\Item;
+namespace Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item;
 
 class PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration 
 {

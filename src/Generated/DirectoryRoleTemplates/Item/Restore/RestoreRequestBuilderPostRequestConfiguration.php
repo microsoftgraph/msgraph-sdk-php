@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DirectoryRoleTemplates\Item\Restore;
+namespace Microsoft\Graph\Generated\DirectoryRoleTemplates\Item\Restore;
 
 class RestoreRequestBuilderPostRequestConfiguration 
 {

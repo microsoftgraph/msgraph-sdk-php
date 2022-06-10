@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Security\Alerts\Count;
+namespace Microsoft\Graph\Generated\Security\Alerts\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

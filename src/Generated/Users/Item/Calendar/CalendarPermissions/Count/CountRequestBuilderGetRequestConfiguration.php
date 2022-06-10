@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Calendar\CalendarPermissions\Count;
+namespace Microsoft\Graph\Generated\Users\Item\Calendar\CalendarPermissions\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

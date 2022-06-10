@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Communications\Calls\Item\UpdateRecordingStatus;
+namespace Microsoft\Graph\Generated\Communications\Calls\Item\UpdateRecordingStatus;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\UpdateRecordingStatusOperation;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\UpdateRecordingStatusOperation;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

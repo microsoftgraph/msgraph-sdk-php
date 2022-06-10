@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Me\Drives\Item\Following;
+namespace Microsoft\Graph\Generated\Me\Drives\Item\Following;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\Drives\Item\Following\Count\CountRequestBuilder;
-use Microsoft\Graph\Models\DriveItemCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Me\Drives\Item\Following\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\DriveItemCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

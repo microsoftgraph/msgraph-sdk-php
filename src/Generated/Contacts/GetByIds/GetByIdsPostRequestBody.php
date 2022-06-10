@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Contacts\GetByIds;
+namespace Microsoft\Graph\Generated\Contacts\GetByIds;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

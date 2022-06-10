@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Outlook;
+namespace Microsoft\Graph\Generated\Me\Outlook;
 
 class OutlookRequestBuilderDeleteRequestConfiguration 
 {

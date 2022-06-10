@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\InformationProtection\Bitlocker;
+namespace Microsoft\Graph\Generated\InformationProtection\Bitlocker;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\InformationProtection\Bitlocker\RecoveryKeys\Item\BitlockerRecoveryKeyItemRequestBuilder;
-use Microsoft\Graph\InformationProtection\Bitlocker\RecoveryKeys\RecoveryKeysRequestBuilder;
-use Microsoft\Graph\Models\Bitlocker;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\InformationProtection\Bitlocker\RecoveryKeys\Item\BitlockerRecoveryKeyItemRequestBuilder;
+use Microsoft\Graph\Generated\InformationProtection\Bitlocker\RecoveryKeys\RecoveryKeysRequestBuilder;
+use Microsoft\Graph\Generated\Models\Bitlocker;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -139,7 +139,7 @@ class BitlockerRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.informationProtection.bitlocker.recoveryKeys.item collection
+     * Gets an item from the Microsoft\Graph\Generated.informationProtection.bitlocker.recoveryKeys.item collection
      * @param string $id Unique identifier of the item
      * @return BitlockerRecoveryKeyItemRequestBuilder
     */

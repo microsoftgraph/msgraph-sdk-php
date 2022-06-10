@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\ContactFolders\Delta;
+namespace Microsoft\Graph\Generated\Users\Item\ContactFolders\Delta;
 
 class DeltaRequestBuilderGetRequestConfiguration 
 {

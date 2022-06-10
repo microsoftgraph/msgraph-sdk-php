@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Contacts\GetAvailableExtensionProperties;
+namespace Microsoft\Graph\Generated\Contacts\GetAvailableExtensionProperties;
 
-use Microsoft\Graph\Models\ExtensionProperty;
+use Microsoft\Graph\Generated\Models\ExtensionProperty;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\ManagedDevices\Item\Wipe;
+namespace Microsoft\Graph\Generated\Me\ManagedDevices\Item\Wipe;
 
 class WipeRequestBuilderPostRequestConfiguration 
 {

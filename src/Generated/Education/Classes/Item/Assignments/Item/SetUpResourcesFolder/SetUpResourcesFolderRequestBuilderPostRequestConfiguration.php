@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Education\Classes\Item\Assignments\Item\SetUpResourcesFolder;
+namespace Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\SetUpResourcesFolder;
 
 class SetUpResourcesFolderRequestBuilderPostRequestConfiguration 
 {

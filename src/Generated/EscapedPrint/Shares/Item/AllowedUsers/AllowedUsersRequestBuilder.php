@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\EscapedPrint\Shares\Item\AllowedUsers;
+namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\EscapedPrint\Shares\Item\AllowedUsers\Count\CountRequestBuilder;
-use Microsoft\Graph\EscapedPrint\Shares\Item\AllowedUsers\Ref\RefRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\UserCollectionResponse;
+use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Ref\RefRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\UserCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

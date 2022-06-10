@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\AssignLicense;
+namespace Microsoft\Graph\Generated\Me\AssignLicense;
 
 class AssignLicenseRequestBuilderPostRequestConfiguration 
 {

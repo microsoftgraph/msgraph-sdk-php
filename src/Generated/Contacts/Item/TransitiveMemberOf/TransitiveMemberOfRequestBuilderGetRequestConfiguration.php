@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Contacts\Item\TransitiveMemberOf;
+namespace Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf;
 
 class TransitiveMemberOfRequestBuilderGetRequestConfiguration 
 {

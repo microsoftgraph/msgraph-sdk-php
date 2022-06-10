@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\RoleManagement\Directory\RoleAssignmentSchedules\Item;
+namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSchedules\Item;
 
 class UnifiedRoleAssignmentScheduleItemRequestBuilderGetRequestConfiguration 
 {

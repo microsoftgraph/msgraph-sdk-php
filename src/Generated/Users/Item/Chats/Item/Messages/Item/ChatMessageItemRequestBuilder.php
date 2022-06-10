@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Chats\Item\Messages\Item;
+namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ChatMessage;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Users\Item\Chats\Item\Messages\Item\HostedContents\HostedContentsRequestBuilder;
-use Microsoft\Graph\Users\Item\Chats\Item\Messages\Item\HostedContents\Item\ChatMessageHostedContentItemRequestBuilder;
-use Microsoft\Graph\Users\Item\Chats\Item\Messages\Item\Replies\RepliesRequestBuilder;
+use Microsoft\Graph\Generated\Models\ChatMessage;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\HostedContents\HostedContentsRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\HostedContents\Item\ChatMessageHostedContentItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\Replies\RepliesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -167,7 +167,7 @@ class ChatMessageItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.users.item.chats.item.messages.item.hostedContents.item collection
+     * Gets an item from the Microsoft\Graph\Generated.users.item.chats.item.messages.item.hostedContents.item collection
      * @param string $id Unique identifier of the item
      * @return ChatMessageHostedContentItemRequestBuilder
     */
@@ -198,7 +198,7 @@ class ChatMessageItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.users.item.chats.item.messages.item.replies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.users.item.chats.item.messages.item.replies.item collection
      * @param string $id Unique identifier of the item
      * @return ChatMessageItemRequestBuilder
     */

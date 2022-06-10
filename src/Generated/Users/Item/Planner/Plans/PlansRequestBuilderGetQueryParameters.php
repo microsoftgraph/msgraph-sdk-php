@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Planner\Plans;
+namespace Microsoft\Graph\Generated\Users\Item\Planner\Plans;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

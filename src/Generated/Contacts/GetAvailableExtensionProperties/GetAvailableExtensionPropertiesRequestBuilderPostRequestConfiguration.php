@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Contacts\GetAvailableExtensionProperties;
+namespace Microsoft\Graph\Generated\Contacts\GetAvailableExtensionProperties;
 
 class GetAvailableExtensionPropertiesRequestBuilderPostRequestConfiguration 
 {

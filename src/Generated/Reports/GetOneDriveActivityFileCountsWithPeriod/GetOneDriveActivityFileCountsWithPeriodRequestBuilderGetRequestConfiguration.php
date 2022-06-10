@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Reports\GetOneDriveActivityFileCountsWithPeriod;
+namespace Microsoft\Graph\Generated\Reports\GetOneDriveActivityFileCountsWithPeriod;
 
 class GetOneDriveActivityFileCountsWithPeriodRequestBuilderGetRequestConfiguration 
 {

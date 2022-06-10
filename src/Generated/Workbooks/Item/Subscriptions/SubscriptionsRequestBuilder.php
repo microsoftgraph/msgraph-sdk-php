@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Workbooks\Item\Subscriptions;
+namespace Microsoft\Graph\Generated\Workbooks\Item\Subscriptions;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\Subscription;
-use Microsoft\Graph\Models\SubscriptionCollectionResponse;
-use Microsoft\Graph\Workbooks\Item\Subscriptions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Subscription;
+use Microsoft\Graph\Generated\Models\SubscriptionCollectionResponse;
+use Microsoft\Graph\Generated\Workbooks\Item\Subscriptions\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

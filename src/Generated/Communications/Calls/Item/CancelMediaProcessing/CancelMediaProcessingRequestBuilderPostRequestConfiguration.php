@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\Calls\Item\CancelMediaProcessing;
+namespace Microsoft\Graph\Generated\Communications\Calls\Item\CancelMediaProcessing;
 
 class CancelMediaProcessingRequestBuilderPostRequestConfiguration 
 {

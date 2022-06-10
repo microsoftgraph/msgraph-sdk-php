@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Onenote\Pages;
+namespace Microsoft\Graph\Generated\Users\Item\Onenote\Pages;
 
 class PagesRequestBuilderPostRequestConfiguration 
 {

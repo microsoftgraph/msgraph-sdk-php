@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Reports\GetOffice365ActiveUserDetailWithDate;
+namespace Microsoft\Graph\Generated\Reports\GetOffice365ActiveUserDetailWithDate;
 
 class GetOffice365ActiveUserDetailWithDateRequestBuilderGetRequestConfiguration 
 {

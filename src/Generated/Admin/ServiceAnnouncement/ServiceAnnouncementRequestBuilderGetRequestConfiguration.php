@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Admin\ServiceAnnouncement;
+namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement;
 
 class ServiceAnnouncementRequestBuilderGetRequestConfiguration 
 {

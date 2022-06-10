@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\InferenceClassification\Overrides\Item;
+namespace Microsoft\Graph\Generated\Me\InferenceClassification\Overrides\Item;
 
 class InferenceClassificationOverrideItemRequestBuilderPatchRequestConfiguration 
 {

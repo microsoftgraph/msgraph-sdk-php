@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\TransitiveMemberOf\Device\Count;
+namespace Microsoft\Graph\Generated\Users\Item\TransitiveMemberOf\Device\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

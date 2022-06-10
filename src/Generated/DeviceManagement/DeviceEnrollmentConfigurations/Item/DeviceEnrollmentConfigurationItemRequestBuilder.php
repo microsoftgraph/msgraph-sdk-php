@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\DeviceEnrollmentConfigurations\Item;
+namespace Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assign\AssignRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\Item\EnrollmentConfigurationAssignmentItemRequestBuilder;
-use Microsoft\Graph\DeviceManagement\DeviceEnrollmentConfigurations\Item\SetPriority\SetPriorityRequestBuilder;
-use Microsoft\Graph\Models\DeviceEnrollmentConfiguration;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assign\AssignRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\AssignmentsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\Item\EnrollmentConfigurationAssignmentItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\SetPriority\SetPriorityRequestBuilder;
+use Microsoft\Graph\Generated\Models\DeviceEnrollmentConfiguration;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -58,7 +58,7 @@ class DeviceEnrollmentConfigurationItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.deviceManagement.deviceEnrollmentConfigurations.item.assignments.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceEnrollmentConfigurations.item.assignments.item collection
      * @param string $id Unique identifier of the item
      * @return EnrollmentConfigurationAssignmentItemRequestBuilder
     */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DataPolicyOperations\Count;
+namespace Microsoft\Graph\Generated\DataPolicyOperations\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

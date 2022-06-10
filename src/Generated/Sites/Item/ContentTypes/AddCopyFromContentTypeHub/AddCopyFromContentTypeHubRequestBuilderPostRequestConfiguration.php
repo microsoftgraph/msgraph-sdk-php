@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item\ContentTypes\AddCopyFromContentTypeHub;
+namespace Microsoft\Graph\Generated\Sites\Item\ContentTypes\AddCopyFromContentTypeHub;
 
 class AddCopyFromContentTypeHubRequestBuilderPostRequestConfiguration 
 {

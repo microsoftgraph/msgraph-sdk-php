@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Education\Classes\Item\AssignmentCategories\Delta;
+namespace Microsoft\Graph\Generated\Education\Classes\Item\AssignmentCategories\Delta;
 
-use Microsoft\Graph\Models\EducationCategory;
+use Microsoft\Graph\Generated\Models\EducationCategory;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

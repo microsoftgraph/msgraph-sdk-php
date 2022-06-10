@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\DeviceCompliancePolicies\Item\Assign;
+namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Assign;
 
-use Microsoft\Graph\Models\DeviceCompliancePolicyAssignment;
+use Microsoft\Graph\Generated\Models\DeviceCompliancePolicyAssignment;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

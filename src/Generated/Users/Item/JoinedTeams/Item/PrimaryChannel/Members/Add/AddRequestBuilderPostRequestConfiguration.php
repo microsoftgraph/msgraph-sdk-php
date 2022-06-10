@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\JoinedTeams\Item\PrimaryChannel\Members\Add;
+namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Members\Add;
 
 class AddRequestBuilderPostRequestConfiguration 
 {

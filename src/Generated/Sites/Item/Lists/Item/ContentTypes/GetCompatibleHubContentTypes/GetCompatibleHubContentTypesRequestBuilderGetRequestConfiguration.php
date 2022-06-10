@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item\Lists\Item\ContentTypes\GetCompatibleHubContentTypes;
+namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\GetCompatibleHubContentTypes;
 
 class GetCompatibleHubContentTypesRequestBuilderGetRequestConfiguration 
 {

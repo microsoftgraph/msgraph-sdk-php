@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Me\Onenote\Resources;
+namespace Microsoft\Graph\Generated\Me\Onenote\Resources;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\Onenote\Resources\Count\CountRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\OnenoteResource;
-use Microsoft\Graph\Models\OnenoteResourceCollectionResponse;
+use Microsoft\Graph\Generated\Me\Onenote\Resources\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OnenoteResource;
+use Microsoft\Graph\Generated\Models\OnenoteResourceCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

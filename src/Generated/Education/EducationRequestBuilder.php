@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Education;
+namespace Microsoft\Graph\Generated\Education;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Education\Classes\ClassesRequestBuilder;
-use Microsoft\Graph\Education\Classes\Item\EducationClassItemRequestBuilder;
-use Microsoft\Graph\Education\Me\MeRequestBuilder;
-use Microsoft\Graph\Education\Schools\Item\EducationSchoolItemRequestBuilder;
-use Microsoft\Graph\Education\Schools\SchoolsRequestBuilder;
-use Microsoft\Graph\Education\Users\Item\EducationUserItemRequestBuilder;
-use Microsoft\Graph\Education\Users\UsersRequestBuilder;
-use Microsoft\Graph\Models\EducationRoot;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Education\Classes\ClassesRequestBuilder;
+use Microsoft\Graph\Generated\Education\Classes\Item\EducationClassItemRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\MeRequestBuilder;
+use Microsoft\Graph\Generated\Education\Schools\Item\EducationSchoolItemRequestBuilder;
+use Microsoft\Graph\Generated\Education\Schools\SchoolsRequestBuilder;
+use Microsoft\Graph\Generated\Education\Users\Item\EducationUserItemRequestBuilder;
+use Microsoft\Graph\Generated\Education\Users\UsersRequestBuilder;
+use Microsoft\Graph\Generated\Models\EducationRoot;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -68,7 +68,7 @@ class EducationRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft\Graph.education.classes.item collection
+     * Gets an item from the Microsoft\Graph\Generated.education.classes.item collection
      * @param string $id Unique identifier of the item
      * @return EducationClassItemRequestBuilder
     */
@@ -176,7 +176,7 @@ class EducationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.education.schools.item collection
+     * Gets an item from the Microsoft\Graph\Generated.education.schools.item collection
      * @param string $id Unique identifier of the item
      * @return EducationSchoolItemRequestBuilder
     */
@@ -187,7 +187,7 @@ class EducationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.education.users.item collection
+     * Gets an item from the Microsoft\Graph\Generated.education.users.item collection
      * @param string $id Unique identifier of the item
      * @return EducationUserItemRequestBuilder
     */

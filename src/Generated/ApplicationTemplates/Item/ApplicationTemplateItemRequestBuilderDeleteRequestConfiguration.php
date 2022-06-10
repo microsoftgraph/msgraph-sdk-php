@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\ApplicationTemplates\Item;
+namespace Microsoft\Graph\Generated\ApplicationTemplates\Item;
 
 class ApplicationTemplateItemRequestBuilderDeleteRequestConfiguration 
 {

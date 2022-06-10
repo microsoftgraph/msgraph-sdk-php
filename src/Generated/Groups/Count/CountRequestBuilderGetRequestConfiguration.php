@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Count;
+namespace Microsoft\Graph\Generated\Groups\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

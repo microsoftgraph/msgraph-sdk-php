@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\MobileApps\MobileLobApp;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\MobileLobApp;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\DeviceAppManagement\MobileApps\MobileLobApp\Count\CountRequestBuilder;
-use Microsoft\Graph\Models\MobileLobAppCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\MobileLobApp\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\MobileLobAppCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

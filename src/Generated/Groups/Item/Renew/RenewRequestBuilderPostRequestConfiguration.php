@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Renew;
+namespace Microsoft\Graph\Generated\Groups\Item\Renew;
 
 class RenewRequestBuilderPostRequestConfiguration 
 {

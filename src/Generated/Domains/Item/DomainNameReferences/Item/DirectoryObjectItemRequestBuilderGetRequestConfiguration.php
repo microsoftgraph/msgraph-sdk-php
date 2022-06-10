@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Domains\Item\DomainNameReferences\Item;
+namespace Microsoft\Graph\Generated\Domains\Item\DomainNameReferences\Item;
 
 class DirectoryObjectItemRequestBuilderGetRequestConfiguration 
 {

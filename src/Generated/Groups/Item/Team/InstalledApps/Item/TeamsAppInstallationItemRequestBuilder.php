@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Team\InstalledApps\Item;
+namespace Microsoft\Graph\Generated\Groups\Item\Team\InstalledApps\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Groups\Item\Team\InstalledApps\Item\TeamsApp\TeamsAppRequestBuilder;
-use Microsoft\Graph\Groups\Item\Team\InstalledApps\Item\TeamsAppDefinition\TeamsAppDefinitionRequestBuilder;
-use Microsoft\Graph\Groups\Item\Team\InstalledApps\Item\Upgrade\UpgradeRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\TeamsAppInstallation;
+use Microsoft\Graph\Generated\Groups\Item\Team\InstalledApps\Item\TeamsApp\TeamsAppRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\InstalledApps\Item\TeamsAppDefinition\TeamsAppDefinitionRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\InstalledApps\Item\Upgrade\UpgradeRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TeamsAppInstallation;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

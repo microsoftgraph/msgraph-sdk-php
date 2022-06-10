@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Shares;
+namespace Microsoft\Graph\Generated\Shares;
 
 class SharesRequestBuilderPostRequestConfiguration 
 {

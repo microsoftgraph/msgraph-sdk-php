@@ -1,21 +1,21 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\MobileAppConfigurations\Item;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\DeviceAppManagement\MobileAppConfigurations\Item\Assign\AssignRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileAppConfigurations\Item\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileAppConfigurations\Item\Assignments\Item\ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatuses\DeviceStatusesRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatuses\Item\ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatusSummary\DeviceStatusSummaryRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileAppConfigurations\Item\UserStatuses\Item\ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileAppConfigurations\Item\UserStatuses\UserStatusesRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileAppConfigurations\Item\UserStatusSummary\UserStatusSummaryRequestBuilder;
-use Microsoft\Graph\Models\ManagedDeviceMobileAppConfiguration;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\Assign\AssignRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\Assignments\AssignmentsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\Assignments\Item\ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatuses\DeviceStatusesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatuses\Item\ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatusSummary\DeviceStatusSummaryRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatuses\Item\ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatuses\UserStatusesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatusSummary\UserStatusSummaryRequestBuilder;
+use Microsoft\Graph\Generated\Models\ManagedDeviceMobileAppConfiguration;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -84,7 +84,7 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.mobileAppConfigurations.item.assignments.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.mobileAppConfigurations.item.assignments.item collection
      * @param string $id Unique identifier of the item
      * @return ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder
     */
@@ -193,7 +193,7 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.mobileAppConfigurations.item.deviceStatuses.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.mobileAppConfigurations.item.deviceStatuses.item collection
      * @param string $id Unique identifier of the item
      * @return ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder
     */
@@ -243,7 +243,7 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.mobileAppConfigurations.item.userStatuses.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.mobileAppConfigurations.item.userStatuses.item collection
      * @param string $id Unique identifier of the item
      * @return ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder
     */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Identity\IdentityProviders\Count;
+namespace Microsoft\Graph\Generated\Identity\IdentityProviders\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

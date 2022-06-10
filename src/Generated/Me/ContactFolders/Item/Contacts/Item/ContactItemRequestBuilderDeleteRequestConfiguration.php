@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\ContactFolders\Item\Contacts\Item;
+namespace Microsoft\Graph\Generated\Me\ContactFolders\Item\Contacts\Item;
 
 class ContactItemRequestBuilderDeleteRequestConfiguration 
 {

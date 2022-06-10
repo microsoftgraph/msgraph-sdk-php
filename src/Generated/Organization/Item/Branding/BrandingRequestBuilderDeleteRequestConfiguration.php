@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Organization\Item\Branding;
+namespace Microsoft\Graph\Generated\Organization\Item\Branding;
 
 class BrandingRequestBuilderDeleteRequestConfiguration 
 {

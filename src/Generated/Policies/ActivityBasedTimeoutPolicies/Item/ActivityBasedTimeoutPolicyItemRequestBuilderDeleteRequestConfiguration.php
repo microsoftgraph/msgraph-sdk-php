@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Policies\ActivityBasedTimeoutPolicies\Item;
+namespace Microsoft\Graph\Generated\Policies\ActivityBasedTimeoutPolicies\Item;
 
 class ActivityBasedTimeoutPolicyItemRequestBuilderDeleteRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Chats\GetAllMessages;
+namespace Microsoft\Graph\Generated\Me\Chats\GetAllMessages;
 
 class GetAllMessagesRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Root\Permissions\Count;
+namespace Microsoft\Graph\Generated\Drive\Root\Permissions\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

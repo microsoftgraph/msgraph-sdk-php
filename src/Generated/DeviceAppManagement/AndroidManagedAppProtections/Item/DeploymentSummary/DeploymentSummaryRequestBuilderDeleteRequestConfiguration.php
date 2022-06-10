@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\AndroidManagedAppProtections\Item\DeploymentSummary;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\AndroidManagedAppProtections\Item\DeploymentSummary;
 
 class DeploymentSummaryRequestBuilderDeleteRequestConfiguration 
 {

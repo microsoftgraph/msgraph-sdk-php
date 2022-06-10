@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\ExchangeConnectors;
+namespace Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

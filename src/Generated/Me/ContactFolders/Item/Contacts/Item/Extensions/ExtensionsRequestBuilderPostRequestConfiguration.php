@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\ContactFolders\Item\Contacts\Item\Extensions;
+namespace Microsoft\Graph\Generated\Me\ContactFolders\Item\Contacts\Item\Extensions;
 
 class ExtensionsRequestBuilderPostRequestConfiguration 
 {

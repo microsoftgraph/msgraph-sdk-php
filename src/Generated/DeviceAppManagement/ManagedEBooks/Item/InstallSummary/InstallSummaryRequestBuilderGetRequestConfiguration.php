@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\InstallSummary;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\InstallSummary;
 
 class InstallSummaryRequestBuilderGetRequestConfiguration 
 {

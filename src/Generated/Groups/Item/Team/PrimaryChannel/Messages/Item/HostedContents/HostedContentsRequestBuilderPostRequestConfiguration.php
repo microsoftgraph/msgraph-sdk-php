@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Team\PrimaryChannel\Messages\Item\HostedContents;
+namespace Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Messages\Item\HostedContents;
 
 class HostedContentsRequestBuilderPostRequestConfiguration 
 {

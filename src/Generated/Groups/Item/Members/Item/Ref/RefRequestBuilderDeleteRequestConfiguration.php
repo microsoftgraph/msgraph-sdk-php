@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Members\Item\Ref;
+namespace Microsoft\Graph\Generated\Groups\Item\Members\Item\Ref;
 
 class RefRequestBuilderDeleteRequestConfiguration 
 {

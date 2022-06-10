@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\Calls\Item\Participants\Item\StopHoldMusic;
+namespace Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\StopHoldMusic;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Following\Item\Content;
+namespace Microsoft\Graph\Generated\Drive\Following\Item\Content;
 
 class ContentRequestBuilderGetRequestConfiguration 
 {

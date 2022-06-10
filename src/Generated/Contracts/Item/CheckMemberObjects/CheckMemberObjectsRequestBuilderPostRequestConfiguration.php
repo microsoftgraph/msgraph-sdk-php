@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Contracts\Item\CheckMemberObjects;
+namespace Microsoft\Graph\Generated\Contracts\Item\CheckMemberObjects;
 
 class CheckMemberObjectsRequestBuilderPostRequestConfiguration 
 {

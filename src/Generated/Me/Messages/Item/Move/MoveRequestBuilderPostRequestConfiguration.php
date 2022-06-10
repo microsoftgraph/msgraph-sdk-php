@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Messages\Item\Move;
+namespace Microsoft\Graph\Generated\Me\Messages\Item\Move;
 
 class MoveRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Shares\Item\EscapedList\Items\Item\Analytics;
+namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Analytics;
 
 class AnalyticsRequestBuilderGetRequestConfiguration 
 {

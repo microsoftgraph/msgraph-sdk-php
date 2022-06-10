@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Me\ManagedDevices\Item\RebootNow;
+namespace Microsoft\Graph\Generated\Me\ManagedDevices\Item\RebootNow;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\DetectedApps\Item;
+namespace Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Item;
 
 class DetectedAppItemRequestBuilderDeleteRequestConfiguration 
 {

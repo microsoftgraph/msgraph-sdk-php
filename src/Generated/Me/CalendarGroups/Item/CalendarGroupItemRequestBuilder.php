@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Me\CalendarGroups\Item;
+namespace Microsoft\Graph\Generated\Me\CalendarGroups\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\CalendarsRequestBuilder;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarItemRequestBuilder;
-use Microsoft\Graph\Models\CalendarGroup;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\CalendarsRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarItemRequestBuilder;
+use Microsoft\Graph\Generated\Models\CalendarGroup;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -42,7 +42,7 @@ class CalendarGroupItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.me.calendarGroups.item.calendars.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.calendarGroups.item.calendars.item collection
      * @param string $id Unique identifier of the item
      * @return CalendarItemRequestBuilder
     */

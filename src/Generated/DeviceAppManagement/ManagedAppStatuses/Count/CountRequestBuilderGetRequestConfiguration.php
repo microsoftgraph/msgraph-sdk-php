@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\ManagedAppStatuses\Count;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppStatuses\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

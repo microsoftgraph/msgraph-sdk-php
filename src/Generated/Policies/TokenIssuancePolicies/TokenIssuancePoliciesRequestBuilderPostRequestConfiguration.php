@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Policies\TokenIssuancePolicies;
+namespace Microsoft\Graph\Generated\Policies\TokenIssuancePolicies;
 
 class TokenIssuancePoliciesRequestBuilderPostRequestConfiguration 
 {

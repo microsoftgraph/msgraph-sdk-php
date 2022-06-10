@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Workbooks\Item\Subscriptions\Item\Reauthorize;
+namespace Microsoft\Graph\Generated\Workbooks\Item\Subscriptions\Item\Reauthorize;
 
 class ReauthorizeRequestBuilderPostRequestConfiguration 
 {

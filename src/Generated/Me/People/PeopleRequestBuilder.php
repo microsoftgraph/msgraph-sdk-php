@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Me\People;
+namespace Microsoft\Graph\Generated\Me\People;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\People\Count\CountRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\Person;
-use Microsoft\Graph\Models\PersonCollectionResponse;
+use Microsoft\Graph\Generated\Me\People\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Person;
+use Microsoft\Graph\Generated\Models\PersonCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

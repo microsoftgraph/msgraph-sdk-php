@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Teams\Item\EscapedClone;
+namespace Microsoft\Graph\Generated\Teams\Item\EscapedClone;
 
-use Microsoft\Graph\Models\ClonableTeamParts;
-use Microsoft\Graph\Models\TeamVisibilityType;
+use Microsoft\Graph\Generated\Models\ClonableTeamParts;
+use Microsoft\Graph\Generated\Models\TeamVisibilityType;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

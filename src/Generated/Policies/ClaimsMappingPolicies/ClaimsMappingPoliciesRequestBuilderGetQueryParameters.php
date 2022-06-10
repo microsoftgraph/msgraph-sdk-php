@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Policies\ClaimsMappingPolicies;
+namespace Microsoft\Graph\Generated\Policies\ClaimsMappingPolicies;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

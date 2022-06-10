@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Models\CallRecords;
+namespace Microsoft\Graph\Generated\Models\CallRecords;
 
 use DateTime;
-use Microsoft\Graph\Models\Entity;
-use Microsoft\Graph\Models\IdentitySet;
+use Microsoft\Graph\Generated\Models\Entity;
+use Microsoft\Graph\Generated\Models\IdentitySet;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

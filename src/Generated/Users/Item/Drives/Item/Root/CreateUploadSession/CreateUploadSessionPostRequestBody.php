@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Drives\Item\Root\CreateUploadSession;
+namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\Root\CreateUploadSession;
 
-use Microsoft\Graph\Models\DriveItemUploadableProperties;
+use Microsoft\Graph\Generated\Models\DriveItemUploadableProperties;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

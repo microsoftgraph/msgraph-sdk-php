@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\FollowedSites\Count;
+namespace Microsoft\Graph\Generated\Me\FollowedSites\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

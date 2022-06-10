@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drives\Item\Root\CreateLink;
+namespace Microsoft\Graph\Generated\Drives\Item\Root\CreateLink;
 
 class CreateLinkRequestBuilderPostRequestConfiguration 
 {

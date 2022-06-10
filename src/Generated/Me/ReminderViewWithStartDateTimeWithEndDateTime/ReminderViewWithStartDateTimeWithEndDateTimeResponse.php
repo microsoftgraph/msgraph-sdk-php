@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Me\ReminderViewWithStartDateTimeWithEndDateTime;
+namespace Microsoft\Graph\Generated\Me\ReminderViewWithStartDateTimeWithEndDateTime;
 
-use Microsoft\Graph\Models\Reminder;
+use Microsoft\Graph\Generated\Models\Reminder;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

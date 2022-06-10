@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item\ContentTypes\Item\Columns\Item;
+namespace Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\Columns\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ColumnDefinition;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Sites\Item\ContentTypes\Item\Columns\Item\SourceColumn\SourceColumnRequestBuilder;
+use Microsoft\Graph\Generated\Models\ColumnDefinition;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\Columns\Item\SourceColumn\SourceColumnRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Oauth2PermissionGrants\Count;
+namespace Microsoft\Graph\Generated\Me\Oauth2PermissionGrants\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

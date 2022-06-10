@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\DeviceStates;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates;
 
 class DeviceStatesRequestBuilderGetRequestConfiguration 
 {

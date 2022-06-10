@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Directory;
+namespace Microsoft\Graph\Generated\Directory;
 
 class DirectoryRequestBuilderGetRequestConfiguration 
 {

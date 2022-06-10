@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\GetMemberObjects;
+namespace Microsoft\Graph\Generated\Users\Item\GetMemberObjects;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

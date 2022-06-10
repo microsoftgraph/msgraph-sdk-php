@@ -1,29 +1,29 @@
 <?php
 
-namespace Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item;
+namespace Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Accept\AcceptRequestBuilder;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Attachments\AttachmentsRequestBuilder;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Attachments\Item\AttachmentItemRequestBuilder;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Calendar\CalendarRequestBuilder;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Cancel\CancelRequestBuilder;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Decline\DeclineRequestBuilder;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\DismissReminder\DismissReminderRequestBuilder;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Forward\ForwardRequestBuilder;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Instances\InstancesRequestBuilder;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\SnoozeReminder\SnoozeReminderRequestBuilder;
-use Microsoft\Graph\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\TentativelyAccept\TentativelyAcceptRequestBuilder;
-use Microsoft\Graph\Models\Event;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Accept\AcceptRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Attachments\AttachmentsRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Attachments\Item\AttachmentItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Calendar\CalendarRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Cancel\CancelRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Decline\DeclineRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\DismissReminder\DismissReminderRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Extensions\ExtensionsRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Extensions\Item\ExtensionItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Forward\ForwardRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Instances\InstancesRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\SnoozeReminder\SnoozeReminderRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\TentativelyAccept\TentativelyAcceptRequestBuilder;
+use Microsoft\Graph\Generated\Models\Event;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -141,7 +141,7 @@ class EventItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.me.calendarGroups.item.calendars.item.calendarView.item.attachments.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.calendarGroups.item.calendars.item.calendarView.item.attachments.item collection
      * @param string $id Unique identifier of the item
      * @return AttachmentItemRequestBuilder
     */
@@ -250,7 +250,7 @@ class EventItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.calendarGroups.item.calendars.item.calendarView.item.extensions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.calendarGroups.item.calendars.item.calendarView.item.extensions.item collection
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */
@@ -280,7 +280,7 @@ class EventItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.calendarGroups.item.calendars.item.calendarView.item.instances.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.calendarGroups.item.calendars.item.calendarView.item.instances.item collection
      * @param string $id Unique identifier of the item
      * @return EventItemRequestBuilder
     */
@@ -291,7 +291,7 @@ class EventItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.calendarGroups.item.calendars.item.calendarView.item.multiValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.calendarGroups.item.calendars.item.calendarView.item.multiValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
     */
@@ -322,7 +322,7 @@ class EventItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.calendarGroups.item.calendars.item.calendarView.item.singleValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.calendarGroups.item.calendars.item.calendarView.item.singleValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
     */

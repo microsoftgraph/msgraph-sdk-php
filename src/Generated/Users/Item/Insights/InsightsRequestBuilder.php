@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Insights;
+namespace Microsoft\Graph\Generated\Users\Item\Insights;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\OfficeGraphInsights;
-use Microsoft\Graph\Users\Item\Insights\Shared\Item\SharedInsightItemRequestBuilder;
-use Microsoft\Graph\Users\Item\Insights\Shared\SharedRequestBuilder;
-use Microsoft\Graph\Users\Item\Insights\Trending\Item\TrendingItemRequestBuilder;
-use Microsoft\Graph\Users\Item\Insights\Trending\TrendingRequestBuilder;
-use Microsoft\Graph\Users\Item\Insights\Used\Item\UsedInsightItemRequestBuilder;
-use Microsoft\Graph\Users\Item\Insights\Used\UsedRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OfficeGraphInsights;
+use Microsoft\Graph\Generated\Users\Item\Insights\Shared\Item\SharedInsightItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Insights\Shared\SharedRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Insights\Trending\Item\TrendingItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Insights\Trending\TrendingRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Insights\Used\Item\UsedInsightItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Insights\Used\UsedRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -197,7 +197,7 @@ class InsightsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.users.item.insights.shared.item collection
+     * Gets an item from the Microsoft\Graph\Generated.users.item.insights.shared.item collection
      * @param string $id Unique identifier of the item
      * @return SharedInsightItemRequestBuilder
     */
@@ -208,7 +208,7 @@ class InsightsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.users.item.insights.trending.item collection
+     * Gets an item from the Microsoft\Graph\Generated.users.item.insights.trending.item collection
      * @param string $id Unique identifier of the item
      * @return TrendingItemRequestBuilder
     */
@@ -219,7 +219,7 @@ class InsightsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.users.item.insights.used.item collection
+     * Gets an item from the Microsoft\Graph\Generated.users.item.insights.used.item collection
      * @param string $id Unique identifier of the item
      * @return UsedInsightItemRequestBuilder
     */

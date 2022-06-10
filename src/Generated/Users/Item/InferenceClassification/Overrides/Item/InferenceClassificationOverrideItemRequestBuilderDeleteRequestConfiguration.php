@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\InferenceClassification\Overrides\Item;
+namespace Microsoft\Graph\Generated\Users\Item\InferenceClassification\Overrides\Item;
 
 class InferenceClassificationOverrideItemRequestBuilderDeleteRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Education\Classes\Item\Assignments\Item\Categories\Item\Ref;
+namespace Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Categories\Item\Ref;
 
 class RefRequestBuilderDeleteRequestConfiguration 
 {

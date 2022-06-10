@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Sites;
+namespace Microsoft\Graph\Generated\Sites;
 
 class SitesRequestBuilderGetRequestConfiguration 
 {

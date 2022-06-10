@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\EscapedPrint\TaskDefinitions;
+namespace Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions;
 
 class TaskDefinitionsRequestBuilderPostRequestConfiguration 
 {

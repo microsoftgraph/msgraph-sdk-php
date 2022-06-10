@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance\AccessReviews\HistoryDefinitions;
+namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions;
 
 class HistoryDefinitionsRequestBuilderPostRequestConfiguration 
 {

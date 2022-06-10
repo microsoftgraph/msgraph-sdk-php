@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Reports\GetTeamsUserActivityUserCountsWithPeriod;
+namespace Microsoft\Graph\Generated\Reports\GetTeamsUserActivityUserCountsWithPeriod;
 
 class GetTeamsUserActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\ServicePrincipals\Item\AddPassword;
+namespace Microsoft\Graph\Generated\ServicePrincipals\Item\AddPassword;
 
 class AddPasswordRequestBuilderPostRequestConfiguration 
 {

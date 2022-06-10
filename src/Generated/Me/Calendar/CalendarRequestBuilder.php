@@ -1,24 +1,24 @@
 <?php
 
-namespace Microsoft\Graph\Me\Calendar;
+namespace Microsoft\Graph\Generated\Me\Calendar;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\Calendar\AllowedCalendarSharingRolesWithUser\AllowedCalendarSharingRolesWithUserRequestBuilder;
-use Microsoft\Graph\Me\Calendar\CalendarPermissions\CalendarPermissionsRequestBuilder;
-use Microsoft\Graph\Me\Calendar\CalendarPermissions\Item\CalendarPermissionItemRequestBuilder;
-use Microsoft\Graph\Me\Calendar\CalendarView\CalendarViewRequestBuilder;
-use Microsoft\Graph\Me\Calendar\CalendarView\Item\EventItemRequestBuilder as MicrosoftGraphMeCalendarCalendarViewItemEventItemRequestBuilder;
-use Microsoft\Graph\Me\Calendar\Events\EventsRequestBuilder;
-use Microsoft\Graph\Me\Calendar\Events\Item\EventItemRequestBuilder as MicrosoftGraphMeCalendarEventsItemEventItemRequestBuilder;
-use Microsoft\Graph\Me\Calendar\GetSchedule\GetScheduleRequestBuilder;
-use Microsoft\Graph\Me\Calendar\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Me\Calendar\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Me\Calendar\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
-use Microsoft\Graph\Me\Calendar\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Models\Calendar;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Me\Calendar\AllowedCalendarSharingRolesWithUser\AllowedCalendarSharingRolesWithUserRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\CalendarPermissions\CalendarPermissionsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\CalendarPermissions\Item\CalendarPermissionItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\CalendarView\CalendarViewRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\EventItemRequestBuilder as MicrosoftGraphGeneratedMeCalendarCalendarViewItemEventItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\Events\EventsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\Events\Item\EventItemRequestBuilder as MicrosoftGraphGeneratedMeCalendarEventsItemEventItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\GetSchedule\GetScheduleRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Models\Calendar;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -96,7 +96,7 @@ class CalendarRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.calendar.calendarPermissions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.calendar.calendarPermissions.item collection
      * @param string $id Unique identifier of the item
      * @return CalendarPermissionItemRequestBuilder
     */
@@ -107,14 +107,14 @@ class CalendarRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.calendar.calendarView.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.calendar.calendarView.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphMeCalendarCalendarViewItemEventItemRequestBuilder
+     * @return MicrosoftGraphGeneratedMeCalendarCalendarViewItemEventItemRequestBuilder
     */
-    public function calendarViewById(string $id): MicrosoftGraphMeCalendarCalendarViewItemEventItemRequestBuilder {
+    public function calendarViewById(string $id): MicrosoftGraphGeneratedMeCalendarCalendarViewItemEventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new MicrosoftGraphMeCalendarCalendarViewItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedMeCalendarCalendarViewItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -216,14 +216,14 @@ class CalendarRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.calendar.events.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.calendar.events.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphMeCalendarEventsItemEventItemRequestBuilder
+     * @return MicrosoftGraphGeneratedMeCalendarEventsItemEventItemRequestBuilder
     */
-    public function eventsById(string $id): MicrosoftGraphMeCalendarEventsItemEventItemRequestBuilder {
+    public function eventsById(string $id): MicrosoftGraphGeneratedMeCalendarEventsItemEventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new MicrosoftGraphMeCalendarEventsItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedMeCalendarEventsItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -246,7 +246,7 @@ class CalendarRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.calendar.multiValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.calendar.multiValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
     */
@@ -277,7 +277,7 @@ class CalendarRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.calendar.singleValueExtendedProperties.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.calendar.singleValueExtendedProperties.item collection
      * @param string $id Unique identifier of the item
      * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
     */

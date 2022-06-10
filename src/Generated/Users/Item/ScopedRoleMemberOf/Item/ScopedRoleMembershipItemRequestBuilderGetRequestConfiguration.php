@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\ScopedRoleMemberOf\Item;
+namespace Microsoft\Graph\Generated\Users\Item\ScopedRoleMemberOf\Item;
 
 class ScopedRoleMembershipItemRequestBuilderGetRequestConfiguration 
 {

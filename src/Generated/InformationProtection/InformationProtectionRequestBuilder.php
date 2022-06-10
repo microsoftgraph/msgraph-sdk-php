@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\InformationProtection;
+namespace Microsoft\Graph\Generated\InformationProtection;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\InformationProtection\Bitlocker\BitlockerRequestBuilder;
-use Microsoft\Graph\InformationProtection\ThreatAssessmentRequests\Item\ThreatAssessmentRequestItemRequestBuilder;
-use Microsoft\Graph\InformationProtection\ThreatAssessmentRequests\ThreatAssessmentRequestsRequestBuilder;
-use Microsoft\Graph\Models\InformationProtection;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\InformationProtection\Bitlocker\BitlockerRequestBuilder;
+use Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\Item\ThreatAssessmentRequestItemRequestBuilder;
+use Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\ThreatAssessmentRequestsRequestBuilder;
+use Microsoft\Graph\Generated\Models\InformationProtection;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -147,7 +147,7 @@ class InformationProtectionRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.informationProtection.threatAssessmentRequests.item collection
+     * Gets an item from the Microsoft\Graph\Generated.informationProtection.threatAssessmentRequests.item collection
      * @param string $id Unique identifier of the item
      * @return ThreatAssessmentRequestItemRequestBuilder
     */

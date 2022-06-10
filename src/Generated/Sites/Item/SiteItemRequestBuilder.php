@@ -1,39 +1,39 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item;
+namespace Microsoft\Graph\Generated\Sites\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\Site;
-use Microsoft\Graph\Sites\Item\Analytics\AnalyticsRequestBuilder;
-use Microsoft\Graph\Sites\Item\Columns\ColumnsRequestBuilder;
-use Microsoft\Graph\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder as MicrosoftGraphSitesItemColumnsItemColumnDefinitionItemRequestBuilder;
-use Microsoft\Graph\Sites\Item\ContentTypes\ContentTypesRequestBuilder;
-use Microsoft\Graph\Sites\Item\ContentTypes\Item\ContentTypeItemRequestBuilder;
-use Microsoft\Graph\Sites\Item\Drive\DriveRequestBuilder;
-use Microsoft\Graph\Sites\Item\Drives\DrivesRequestBuilder;
-use Microsoft\Graph\Sites\Item\Drives\Item\DriveItemRequestBuilder;
-use Microsoft\Graph\Sites\Item\ExternalColumns\ExternalColumnsRequestBuilder;
-use Microsoft\Graph\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder as MicrosoftGraphSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder;
-use Microsoft\Graph\Sites\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
-use Microsoft\Graph\Sites\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-use Microsoft\Graph\Sites\Item\GetApplicableContentTypesForListWithListId\GetApplicableContentTypesForListWithListIdRequestBuilder;
-use Microsoft\Graph\Sites\Item\GetByPathWithPath\GetByPathWithPathRequestBuilder;
-use Microsoft\Graph\Sites\Item\Items\Item\BaseItemItemRequestBuilder;
-use Microsoft\Graph\Sites\Item\Items\ItemsRequestBuilder;
-use Microsoft\Graph\Sites\Item\Lists\Item\ListItemRequestBuilder;
-use Microsoft\Graph\Sites\Item\Lists\ListsRequestBuilder;
-use Microsoft\Graph\Sites\Item\Onenote\OnenoteRequestBuilder;
-use Microsoft\Graph\Sites\Item\Operations\Item\RichLongRunningOperationItemRequestBuilder;
-use Microsoft\Graph\Sites\Item\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Sites\Item\Permissions\Item\PermissionItemRequestBuilder;
-use Microsoft\Graph\Sites\Item\Permissions\PermissionsRequestBuilder;
-use Microsoft\Graph\Sites\Item\Sites\SitesRequestBuilder;
-use Microsoft\Graph\Sites\Item\TermStore\TermStoreRequestBuilder;
-use Microsoft\Graph\Sites\Item\TermStores\Item\StoreItemRequestBuilder;
-use Microsoft\Graph\Sites\Item\TermStores\TermStoresRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Site;
+use Microsoft\Graph\Generated\Sites\Item\Analytics\AnalyticsRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Columns\ColumnsRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder as MicrosoftGraphGeneratedSitesItemColumnsItemColumnDefinitionItemRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\ContentTypes\ContentTypesRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\ContentTypeItemRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Drive\DriveRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Drives\DrivesRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Drives\Item\DriveItemRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\ExternalColumns\ExternalColumnsRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder as MicrosoftGraphGeneratedSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\GetApplicableContentTypesForListWithListId\GetApplicableContentTypesForListWithListIdRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath\GetByPathWithPathRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Items\Item\BaseItemItemRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Items\ItemsRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ListItemRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Lists\ListsRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Onenote\OnenoteRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Operations\Item\RichLongRunningOperationItemRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Permissions\Item\PermissionItemRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Permissions\PermissionsRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Sites\SitesRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\TermStore\TermStoreRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\TermStores\Item\StoreItemRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\TermStores\TermStoresRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -158,14 +158,14 @@ class SiteItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.sites.item.columns.item collection
+     * Gets an item from the Microsoft\Graph\Generated.sites.item.columns.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphSitesItemColumnsItemColumnDefinitionItemRequestBuilder
+     * @return MicrosoftGraphGeneratedSitesItemColumnsItemColumnDefinitionItemRequestBuilder
     */
-    public function columnsById(string $id): MicrosoftGraphSitesItemColumnsItemColumnDefinitionItemRequestBuilder {
+    public function columnsById(string $id): MicrosoftGraphGeneratedSitesItemColumnsItemColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new MicrosoftGraphSitesItemColumnsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedSitesItemColumnsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -180,7 +180,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.sites.item.contentTypes.item collection
+     * Gets an item from the Microsoft\Graph\Generated.sites.item.contentTypes.item collection
      * @param string $id Unique identifier of the item
      * @return ContentTypeItemRequestBuilder
     */
@@ -238,7 +238,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.sites.item.drives.item collection
+     * Gets an item from the Microsoft\Graph\Generated.sites.item.drives.item collection
      * @param string $id Unique identifier of the item
      * @return DriveItemRequestBuilder
     */
@@ -249,14 +249,14 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.sites.item.externalColumns.item collection
+     * Gets an item from the Microsoft\Graph\Generated.sites.item.externalColumns.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder
+     * @return MicrosoftGraphGeneratedSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder
     */
-    public function externalColumnsById(string $id): MicrosoftGraphSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder {
+    public function externalColumnsById(string $id): MicrosoftGraphGeneratedSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new MicrosoftGraphSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -316,7 +316,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.sites.item.items.item collection
+     * Gets an item from the Microsoft\Graph\Generated.sites.item.items.item collection
      * @param string $id Unique identifier of the item
      * @return BaseItemItemRequestBuilder
     */
@@ -327,7 +327,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.sites.item.lists.item collection
+     * Gets an item from the Microsoft\Graph\Generated.sites.item.lists.item collection
      * @param string $id Unique identifier of the item
      * @return ListItemRequestBuilder
     */
@@ -338,7 +338,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.sites.item.operations.item collection
+     * Gets an item from the Microsoft\Graph\Generated.sites.item.operations.item collection
      * @param string $id Unique identifier of the item
      * @return RichLongRunningOperationItemRequestBuilder
     */
@@ -369,7 +369,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.sites.item.permissions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.sites.item.permissions.item collection
      * @param string $id Unique identifier of the item
      * @return PermissionItemRequestBuilder
     */
@@ -380,7 +380,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.sites.item.sites.item collection
+     * Gets an item from the Microsoft\Graph\Generated.sites.item.sites.item collection
      * @param string $id Unique identifier of the item
      * @return SiteItemRequestBuilder
     */
@@ -391,7 +391,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.sites.item.termStores.item collection
+     * Gets an item from the Microsoft\Graph\Generated.sites.item.termStores.item collection
      * @param string $id Unique identifier of the item
      * @return StoreItemRequestBuilder
     */

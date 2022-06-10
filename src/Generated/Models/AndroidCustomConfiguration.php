@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Models;
+namespace Microsoft\Graph\Generated\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

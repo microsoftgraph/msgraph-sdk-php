@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Todo\Lists\Item\Tasks\Item\ChecklistItems;
+namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\ChecklistItems;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ChecklistItem;
-use Microsoft\Graph\Models\ChecklistItemCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Users\Item\Todo\Lists\Item\Tasks\Item\ChecklistItems\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\ChecklistItem;
+use Microsoft\Graph\Generated\Models\ChecklistItemCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\ChecklistItems\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

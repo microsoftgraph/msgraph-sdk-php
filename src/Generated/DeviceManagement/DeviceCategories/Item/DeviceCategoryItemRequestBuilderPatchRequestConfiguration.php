@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\DeviceCategories\Item;
+namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCategories\Item;
 
 class DeviceCategoryItemRequestBuilderPatchRequestConfiguration 
 {

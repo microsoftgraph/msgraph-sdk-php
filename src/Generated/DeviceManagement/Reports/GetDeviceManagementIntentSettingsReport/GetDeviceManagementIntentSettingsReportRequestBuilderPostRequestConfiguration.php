@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\Reports\GetDeviceManagementIntentSettingsReport;
+namespace Microsoft\Graph\Generated\DeviceManagement\Reports\GetDeviceManagementIntentSettingsReport;
 
 class GetDeviceManagementIntentSettingsReportRequestBuilderPostRequestConfiguration 
 {

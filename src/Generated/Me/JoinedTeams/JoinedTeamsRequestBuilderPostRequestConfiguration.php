@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\JoinedTeams;
+namespace Microsoft\Graph\Generated\Me\JoinedTeams;
 
 class JoinedTeamsRequestBuilderPostRequestConfiguration 
 {

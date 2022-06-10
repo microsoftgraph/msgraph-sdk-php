@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drives\Item\Root\ListItem\Versions\Item\RestoreVersion;
+namespace Microsoft\Graph\Generated\Drives\Item\Root\ListItem\Versions\Item\RestoreVersion;
 
 class RestoreVersionRequestBuilderPostRequestConfiguration 
 {

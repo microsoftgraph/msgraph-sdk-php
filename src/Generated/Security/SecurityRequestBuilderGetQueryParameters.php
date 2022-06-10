@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Security;
+namespace Microsoft\Graph\Generated\Security;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

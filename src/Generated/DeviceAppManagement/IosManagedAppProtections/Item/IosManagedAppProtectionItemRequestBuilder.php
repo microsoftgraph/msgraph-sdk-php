@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\IosManagedAppProtections\Item;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\DeviceAppManagement\IosManagedAppProtections\Item\Apps\AppsRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\IosManagedAppProtections\Item\Apps\Item\ManagedMobileAppItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\IosManagedAppProtections\Item\DeploymentSummary\DeploymentSummaryRequestBuilder;
-use Microsoft\Graph\Models\IosManagedAppProtection;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections\Item\Apps\AppsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections\Item\Apps\Item\ManagedMobileAppItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections\Item\DeploymentSummary\DeploymentSummaryRequestBuilder;
+use Microsoft\Graph\Generated\Models\IosManagedAppProtection;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -50,7 +50,7 @@ class IosManagedAppProtectionItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.iosManagedAppProtections.item.apps.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.iosManagedAppProtections.item.apps.item collection
      * @param string $id Unique identifier of the item
      * @return ManagedMobileAppItemRequestBuilder
     */

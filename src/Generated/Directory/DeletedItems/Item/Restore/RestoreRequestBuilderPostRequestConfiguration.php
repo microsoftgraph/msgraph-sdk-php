@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Directory\DeletedItems\Item\Restore;
+namespace Microsoft\Graph\Generated\Directory\DeletedItems\Item\Restore;
 
 class RestoreRequestBuilderPostRequestConfiguration 
 {

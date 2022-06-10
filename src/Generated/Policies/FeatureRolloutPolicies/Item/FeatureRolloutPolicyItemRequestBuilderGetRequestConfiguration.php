@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Policies\FeatureRolloutPolicies\Item;
+namespace Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item;
 
 class FeatureRolloutPolicyItemRequestBuilderGetRequestConfiguration 
 {

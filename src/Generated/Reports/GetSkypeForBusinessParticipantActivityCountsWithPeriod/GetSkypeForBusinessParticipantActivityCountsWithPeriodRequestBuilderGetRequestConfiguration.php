@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Reports\GetSkypeForBusinessParticipantActivityCountsWithPeriod;
+namespace Microsoft\Graph\Generated\Reports\GetSkypeForBusinessParticipantActivityCountsWithPeriod;
 
 class GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilderGetRequestConfiguration 
 {

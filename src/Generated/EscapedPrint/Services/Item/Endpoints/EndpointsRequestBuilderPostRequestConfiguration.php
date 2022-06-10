@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\EscapedPrint\Services\Item\Endpoints;
+namespace Microsoft\Graph\Generated\EscapedPrint\Services\Item\Endpoints;
 
 class EndpointsRequestBuilderPostRequestConfiguration 
 {

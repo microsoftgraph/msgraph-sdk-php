@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Reports\GetSharePointActivityFileCountsWithPeriod;
+namespace Microsoft\Graph\Generated\Reports\GetSharePointActivityFileCountsWithPeriod;
 
 class GetSharePointActivityFileCountsWithPeriodRequestBuilderGetRequestConfiguration 
 {

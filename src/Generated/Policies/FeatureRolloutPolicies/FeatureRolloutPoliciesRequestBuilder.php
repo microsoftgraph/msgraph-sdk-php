@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Policies\FeatureRolloutPolicies;
+namespace Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\FeatureRolloutPolicy;
-use Microsoft\Graph\Models\FeatureRolloutPolicyCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Policies\FeatureRolloutPolicies\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\FeatureRolloutPolicy;
+use Microsoft\Graph\Generated\Models\FeatureRolloutPolicyCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

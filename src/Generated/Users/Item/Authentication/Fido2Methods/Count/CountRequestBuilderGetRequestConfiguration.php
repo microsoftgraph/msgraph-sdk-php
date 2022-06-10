@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Authentication\Fido2Methods\Count;
+namespace Microsoft\Graph\Generated\Users\Item\Authentication\Fido2Methods\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

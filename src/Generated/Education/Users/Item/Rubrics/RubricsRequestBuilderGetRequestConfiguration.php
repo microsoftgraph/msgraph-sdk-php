@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Education\Users\Item\Rubrics;
+namespace Microsoft\Graph\Generated\Education\Users\Item\Rubrics;
 
 class RubricsRequestBuilderGetRequestConfiguration 
 {

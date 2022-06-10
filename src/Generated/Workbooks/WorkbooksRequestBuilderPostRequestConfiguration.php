@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Workbooks;
+namespace Microsoft\Graph\Generated\Workbooks;
 
 class WorkbooksRequestBuilderPostRequestConfiguration 
 {

@@ -1,24 +1,24 @@
 <?php
 
-namespace Microsoft\Graph\Contacts\Item;
+namespace Microsoft\Graph\Generated\Contacts\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Contacts\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Contacts\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Contacts\Item\DirectReports\DirectReportsRequestBuilder;
-use Microsoft\Graph\Contacts\Item\DirectReports\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphContactsItemDirectReportsItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Contacts\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Contacts\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Contacts\Item\Manager\ManagerRequestBuilder;
-use Microsoft\Graph\Contacts\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphContactsItemMemberOfItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Contacts\Item\MemberOf\MemberOfRequestBuilder;
-use Microsoft\Graph\Contacts\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Contacts\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphContactsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Contacts\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\OrgContact;
+use Microsoft\Graph\Generated\Contacts\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\DirectReports\DirectReportsRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\DirectReports\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedContactsItemDirectReportsItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\Manager\ManagerRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedContactsItemMemberOfItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\MemberOf\MemberOfRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedContactsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OrgContact;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -206,14 +206,14 @@ class OrgContactItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.contacts.item.directReports.item collection
+     * Gets an item from the Microsoft\Graph\Generated.contacts.item.directReports.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphContactsItemDirectReportsItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphGeneratedContactsItemDirectReportsItemDirectoryObjectItemRequestBuilder
     */
-    public function directReportsById(string $id): MicrosoftGraphContactsItemDirectReportsItemDirectoryObjectItemRequestBuilder {
+    public function directReportsById(string $id): MicrosoftGraphGeneratedContactsItemDirectReportsItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphContactsItemDirectReportsItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedContactsItemDirectReportsItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -236,14 +236,14 @@ class OrgContactItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.contacts.item.memberOf.item collection
+     * Gets an item from the Microsoft\Graph\Generated.contacts.item.memberOf.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphContactsItemMemberOfItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphGeneratedContactsItemMemberOfItemDirectoryObjectItemRequestBuilder
     */
-    public function memberOfById(string $id): MicrosoftGraphContactsItemMemberOfItemDirectoryObjectItemRequestBuilder {
+    public function memberOfById(string $id): MicrosoftGraphGeneratedContactsItemMemberOfItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphContactsItemMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedContactsItemMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -267,14 +267,14 @@ class OrgContactItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.contacts.item.transitiveMemberOf.item collection
+     * Gets an item from the Microsoft\Graph\Generated.contacts.item.transitiveMemberOf.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphContactsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphGeneratedContactsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder
     */
-    public function transitiveMemberOfById(string $id): MicrosoftGraphContactsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder {
+    public function transitiveMemberOfById(string $id): MicrosoftGraphGeneratedContactsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new MicrosoftGraphContactsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedContactsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

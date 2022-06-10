@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages;
+namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\Count\CountRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\UserFlowLanguagePage;
-use Microsoft\Graph\Models\UserFlowLanguagePageCollectionResponse;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\UserFlowLanguagePage;
+use Microsoft\Graph\Generated\Models\UserFlowLanguagePageCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

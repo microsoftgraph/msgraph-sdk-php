@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\MailFolders\Item\ChildFolders;
+namespace Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

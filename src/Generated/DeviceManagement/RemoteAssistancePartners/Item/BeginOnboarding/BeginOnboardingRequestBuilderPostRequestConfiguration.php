@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\RemoteAssistancePartners\Item\BeginOnboarding;
+namespace Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\BeginOnboarding;
 
 class BeginOnboardingRequestBuilderPostRequestConfiguration 
 {

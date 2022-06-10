@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Reports\GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTime;
+namespace Microsoft\Graph\Generated\Reports\GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTime;
 
 class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration 
 {

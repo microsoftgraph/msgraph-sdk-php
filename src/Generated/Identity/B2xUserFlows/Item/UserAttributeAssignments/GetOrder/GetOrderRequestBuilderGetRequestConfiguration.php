@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Identity\B2xUserFlows\Item\UserAttributeAssignments\GetOrder;
+namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\GetOrder;
 
 class GetOrderRequestBuilderGetRequestConfiguration 
 {

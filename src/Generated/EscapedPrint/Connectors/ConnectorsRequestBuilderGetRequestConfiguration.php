@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\EscapedPrint\Connectors;
+namespace Microsoft\Graph\Generated\EscapedPrint\Connectors;
 
 class ConnectorsRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\GetManagedAppDiagnosticStatuses;
+namespace Microsoft\Graph\Generated\Users\Item\GetManagedAppDiagnosticStatuses;
 
 class GetManagedAppDiagnosticStatusesRequestBuilderGetRequestConfiguration 
 {

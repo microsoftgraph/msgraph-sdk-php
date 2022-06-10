@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Teams\Item\Schedule\Share;
+namespace Microsoft\Graph\Generated\Teams\Item\Schedule\Share;
 
 class ShareRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Directory\FederationConfigurations\AvailableProviderTypes;
+namespace Microsoft\Graph\Generated\Directory\FederationConfigurations\AvailableProviderTypes;
 
 class AvailableProviderTypesRequestBuilderGetRequestConfiguration 
 {

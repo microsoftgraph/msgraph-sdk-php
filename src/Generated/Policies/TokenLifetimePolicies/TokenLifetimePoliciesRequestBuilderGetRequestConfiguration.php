@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Policies\TokenLifetimePolicies;
+namespace Microsoft\Graph\Generated\Policies\TokenLifetimePolicies;
 
 class TokenLifetimePoliciesRequestBuilderGetRequestConfiguration 
 {

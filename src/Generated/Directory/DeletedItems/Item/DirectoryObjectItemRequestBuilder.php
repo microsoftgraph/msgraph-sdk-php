@@ -1,20 +1,20 @@
 <?php
 
-namespace Microsoft\Graph\Directory\DeletedItems\Item;
+namespace Microsoft\Graph\Generated\Directory\DeletedItems\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Directory\DeletedItems\Item\Application\ApplicationRequestBuilder;
-use Microsoft\Graph\Directory\DeletedItems\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Directory\DeletedItems\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Directory\DeletedItems\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Directory\DeletedItems\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Directory\DeletedItems\Item\Group\GroupRequestBuilder;
-use Microsoft\Graph\Directory\DeletedItems\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Directory\DeletedItems\Item\User\UserRequestBuilder;
-use Microsoft\Graph\Models\DirectoryObject;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\Application\ApplicationRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\Group\GroupRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\User\UserRequestBuilder;
+use Microsoft\Graph\Generated\Models\DirectoryObject;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

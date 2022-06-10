@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\Reports\GetReportFilters;
+namespace Microsoft\Graph\Generated\DeviceManagement\Reports\GetReportFilters;
 
 class GetReportFiltersRequestBuilderPostRequestConfiguration 
 {

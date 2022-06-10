@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Root\Analytics;
+namespace Microsoft\Graph\Generated\Drive\Root\Analytics;
 
 class AnalyticsRequestBuilderGetRequestConfiguration 
 {

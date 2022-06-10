@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Onenote\Sections\Item\Pages\Item\ParentSection;
+namespace Microsoft\Graph\Generated\Users\Item\Onenote\Sections\Item\Pages\Item\ParentSection;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\OnenoteSection;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OnenoteSection;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\EscapedPrint\Printers\Item\TaskTriggers\Count;
+namespace Microsoft\Graph\Generated\EscapedPrint\Printers\Item\TaskTriggers\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

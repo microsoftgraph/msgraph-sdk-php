@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Onenote\Operations\Item;
+namespace Microsoft\Graph\Generated\Users\Item\Onenote\Operations\Item;
 
 class OnenoteOperationItemRequestBuilderGetRequestConfiguration 
 {

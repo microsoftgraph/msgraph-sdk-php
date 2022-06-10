@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Admin\ServiceAnnouncement\HealthOverviews\Item\Issues;
+namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\Item\Issues;
 
 class IssuesRequestBuilderGetRequestConfiguration 
 {

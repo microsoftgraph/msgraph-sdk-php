@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\External\Connections;
+namespace Microsoft\Graph\Generated\External\Connections;
 
 class ConnectionsRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Reports\GetYammerDeviceUsageUserDetailWithPeriod;
+namespace Microsoft\Graph\Generated\Reports\GetYammerDeviceUsageUserDetailWithPeriod;
 
 class GetYammerDeviceUsageUserDetailWithPeriodRequestBuilderGetRequestConfiguration 
 {

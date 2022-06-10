@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item\Permissions;
+namespace Microsoft\Graph\Generated\Sites\Item\Permissions;
 
 class PermissionsRequestBuilderPostRequestConfiguration 
 {

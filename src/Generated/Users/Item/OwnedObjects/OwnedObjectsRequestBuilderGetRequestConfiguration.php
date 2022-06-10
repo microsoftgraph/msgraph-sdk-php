@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\OwnedObjects;
+namespace Microsoft\Graph\Generated\Users\Item\OwnedObjects;
 
 class OwnedObjectsRequestBuilderGetRequestConfiguration 
 {

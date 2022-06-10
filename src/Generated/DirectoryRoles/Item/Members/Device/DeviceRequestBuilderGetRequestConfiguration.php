@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DirectoryRoles\Item\Members\Device;
+namespace Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Device;
 
 class DeviceRequestBuilderGetRequestConfiguration 
 {

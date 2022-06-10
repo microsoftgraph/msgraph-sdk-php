@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Calendar\CalendarPermissions\Item;
+namespace Microsoft\Graph\Generated\Me\Calendar\CalendarPermissions\Item;
 
 class CalendarPermissionItemRequestBuilderDeleteRequestConfiguration 
 {

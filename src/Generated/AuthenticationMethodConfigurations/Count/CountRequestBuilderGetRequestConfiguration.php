@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\AuthenticationMethodConfigurations\Count;
+namespace Microsoft\Graph\Generated\AuthenticationMethodConfigurations\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

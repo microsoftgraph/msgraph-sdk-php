@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Root\Permissions\Item;
+namespace Microsoft\Graph\Generated\Drive\Root\Permissions\Item;
 
 class PermissionItemRequestBuilderGetRequestConfiguration 
 {

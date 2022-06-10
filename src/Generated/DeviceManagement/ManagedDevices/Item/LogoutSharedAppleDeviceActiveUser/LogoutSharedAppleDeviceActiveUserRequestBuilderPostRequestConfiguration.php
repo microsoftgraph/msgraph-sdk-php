@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\ManagedDevices\Item\LogoutSharedAppleDeviceActiveUser;
+namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\LogoutSharedAppleDeviceActiveUser;
 
 class LogoutSharedAppleDeviceActiveUserRequestBuilderPostRequestConfiguration 
 {

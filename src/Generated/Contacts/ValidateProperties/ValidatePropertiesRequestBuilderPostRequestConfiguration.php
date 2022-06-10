@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Contacts\ValidateProperties;
+namespace Microsoft\Graph\Generated\Contacts\ValidateProperties;
 
 class ValidatePropertiesRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance\TermsOfUse;
+namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse;
 
 class TermsOfUseRequestBuilderDeleteRequestConfiguration 
 {

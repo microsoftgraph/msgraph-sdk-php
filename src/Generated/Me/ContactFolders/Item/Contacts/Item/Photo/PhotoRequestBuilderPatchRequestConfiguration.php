@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\ContactFolders\Item\Contacts\Item\Photo;
+namespace Microsoft\Graph\Generated\Me\ContactFolders\Item\Contacts\Item\Photo;
 
 class PhotoRequestBuilderPatchRequestConfiguration 
 {

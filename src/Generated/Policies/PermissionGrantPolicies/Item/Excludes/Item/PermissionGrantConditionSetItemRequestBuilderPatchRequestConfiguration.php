@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Policies\PermissionGrantPolicies\Item\Excludes\Item;
+namespace Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Excludes\Item;
 
 class PermissionGrantConditionSetItemRequestBuilderPatchRequestConfiguration 
 {

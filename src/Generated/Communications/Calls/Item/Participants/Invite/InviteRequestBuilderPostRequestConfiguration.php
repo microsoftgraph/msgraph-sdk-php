@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\Calls\Item\Participants\Invite;
+namespace Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Invite;
 
 class InviteRequestBuilderPostRequestConfiguration 
 {

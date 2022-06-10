@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Directory\DeletedItems\Application\Count;
+namespace Microsoft\Graph\Generated\Directory\DeletedItems\Application\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

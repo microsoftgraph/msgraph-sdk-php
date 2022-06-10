@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Education\Me\Schools;
+namespace Microsoft\Graph\Generated\Education\Me\Schools;
 
 class SchoolsRequestBuilderGetRequestConfiguration 
 {

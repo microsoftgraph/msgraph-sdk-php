@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\TranslateExchangeIds;
+namespace Microsoft\Graph\Generated\Users\Item\TranslateExchangeIds;
 
-use Microsoft\Graph\Models\ConvertIdResult;
+use Microsoft\Graph\Generated\Models\ConvertIdResult;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Teams\Item\PrimaryChannel\Tabs\Item;
+namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Tabs\Item;
 
 class TeamsTabItemRequestBuilderDeleteRequestConfiguration 
 {

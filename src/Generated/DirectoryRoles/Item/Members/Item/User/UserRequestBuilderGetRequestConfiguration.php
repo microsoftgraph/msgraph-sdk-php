@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DirectoryRoles\Item\Members\Item\User;
+namespace Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\User;
 
 class UserRequestBuilderGetRequestConfiguration 
 {

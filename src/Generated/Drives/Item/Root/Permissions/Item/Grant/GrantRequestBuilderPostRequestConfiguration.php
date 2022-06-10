@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drives\Item\Root\Permissions\Item\Grant;
+namespace Microsoft\Graph\Generated\Drives\Item\Root\Permissions\Item\Grant;
 
 class GrantRequestBuilderPostRequestConfiguration 
 {

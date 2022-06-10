@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drive\SharedWithMe;
+namespace Microsoft\Graph\Generated\Drive\SharedWithMe;
 
 class SharedWithMeRequestBuilderGetRequestConfiguration 
 {

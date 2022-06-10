@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\Item;
+namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\Item;
 
 class UserFlowLanguagePageItemRequestBuilderDeleteRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\RoleDefinitions\Item;
+namespace Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\Item;
 
 class RoleDefinitionItemRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\UnassignUserFromDevice;
+namespace Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\UnassignUserFromDevice;
 
 class UnassignUserFromDeviceRequestBuilderPostRequestConfiguration 
 {

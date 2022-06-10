@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Insights\Trending;
+namespace Microsoft\Graph\Generated\Me\Insights\Trending;
 
 class TrendingRequestBuilderPostRequestConfiguration 
 {

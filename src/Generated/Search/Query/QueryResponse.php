@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Search\Query;
+namespace Microsoft\Graph\Generated\Search\Query;
 
-use Microsoft\Graph\Models\SearchResponse;
+use Microsoft\Graph\Generated\Models\SearchResponse;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

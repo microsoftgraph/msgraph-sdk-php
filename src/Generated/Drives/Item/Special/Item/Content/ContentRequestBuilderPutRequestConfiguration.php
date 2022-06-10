@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drives\Item\Special\Item\Content;
+namespace Microsoft\Graph\Generated\Drives\Item\Special\Item\Content;
 
 class ContentRequestBuilderPutRequestConfiguration 
 {

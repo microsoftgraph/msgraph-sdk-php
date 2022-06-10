@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\NotificationMessageTemplates\Item\SendTestMessage;
+namespace Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\SendTestMessage;
 
 class SendTestMessageRequestBuilderPostRequestConfiguration 
 {

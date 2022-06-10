@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Admin\ServiceAnnouncement\HealthOverviews\Item;
+namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Admin\ServiceAnnouncement\HealthOverviews\Item\Issues\IssuesRequestBuilder;
-use Microsoft\Graph\Admin\ServiceAnnouncement\HealthOverviews\Item\Issues\Item\ServiceHealthIssueItemRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\ServiceHealth;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\Item\Issues\IssuesRequestBuilder;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\Item\Issues\Item\ServiceHealthIssueItemRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ServiceHealth;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -159,7 +159,7 @@ class ServiceHealthItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.admin.serviceAnnouncement.healthOverviews.item.issues.item collection
+     * Gets an item from the Microsoft\Graph\Generated.admin.serviceAnnouncement.healthOverviews.item.issues.item collection
      * @param string $id Unique identifier of the item
      * @return ServiceHealthIssueItemRequestBuilder
     */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Branding;
+namespace Microsoft\Graph\Generated\Branding;
 
 class BrandingRequestBuilderPatchRequestConfiguration 
 {

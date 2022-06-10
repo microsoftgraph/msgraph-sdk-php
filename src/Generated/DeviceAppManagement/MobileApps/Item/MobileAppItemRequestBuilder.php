@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\MobileApps\Item;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\DeviceAppManagement\MobileApps\Item\Assign\AssignRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileApps\Item\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileApps\Item\Assignments\Item\MobileAppAssignmentItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileApps\Item\Categories\CategoriesRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileApps\Item\Categories\Item\MobileAppCategoryItemRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileApps\Item\ManagedMobileLobApp\ManagedMobileLobAppRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\MobileApps\Item\MobileLobApp\MobileLobAppRequestBuilder;
-use Microsoft\Graph\Models\MobileApp;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Assign\AssignRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Assignments\AssignmentsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Assignments\Item\MobileAppAssignmentItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Categories\CategoriesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Categories\Item\MobileAppCategoryItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\ManagedMobileLobApp\ManagedMobileLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\MobileLobApp\MobileLobAppRequestBuilder;
+use Microsoft\Graph\Generated\Models\MobileApp;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -75,7 +75,7 @@ class MobileAppItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.mobileApps.item.assignments.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.mobileApps.item.assignments.item collection
      * @param string $id Unique identifier of the item
      * @return MobileAppAssignmentItemRequestBuilder
     */
@@ -86,7 +86,7 @@ class MobileAppItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.mobileApps.item.categories.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.mobileApps.item.categories.item collection
      * @param string $id Unique identifier of the item
      * @return MobileAppCategoryItemRequestBuilder
     */

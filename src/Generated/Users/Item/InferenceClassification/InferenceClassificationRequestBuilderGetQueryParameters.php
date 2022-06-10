@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\InferenceClassification;
+namespace Microsoft\Graph\Generated\Users\Item\InferenceClassification;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

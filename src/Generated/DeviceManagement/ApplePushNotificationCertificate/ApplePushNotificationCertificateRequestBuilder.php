@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\ApplePushNotificationCertificate;
+namespace Microsoft\Graph\Generated\DeviceManagement\ApplePushNotificationCertificate;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\DeviceManagement\ApplePushNotificationCertificate\DownloadApplePushNotificationCertificateSigningRequest\DownloadApplePushNotificationCertificateSigningRequestRequestBuilder;
-use Microsoft\Graph\Models\ApplePushNotificationCertificate;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\DeviceManagement\ApplePushNotificationCertificate\DownloadApplePushNotificationCertificateSigningRequest\DownloadApplePushNotificationCertificateSigningRequestRequestBuilder;
+use Microsoft\Graph\Generated\Models\ApplePushNotificationCertificate;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

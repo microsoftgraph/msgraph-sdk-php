@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\MobileThreatDefenseConnectors\Item;
+namespace Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

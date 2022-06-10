@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Models\TermStore;
+namespace Microsoft\Graph\Generated\Models\TermStore;
 
 use Microsoft\Kiota\Abstractions\Enum;
 

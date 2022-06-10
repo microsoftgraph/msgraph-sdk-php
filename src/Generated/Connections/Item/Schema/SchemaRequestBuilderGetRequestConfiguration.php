@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Connections\Item\Schema;
+namespace Microsoft\Graph\Generated\Connections\Item\Schema;
 
 class SchemaRequestBuilderGetRequestConfiguration 
 {

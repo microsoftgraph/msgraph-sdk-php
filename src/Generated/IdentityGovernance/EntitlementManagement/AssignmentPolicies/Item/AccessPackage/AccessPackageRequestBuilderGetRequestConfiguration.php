@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance\EntitlementManagement\AssignmentPolicies\Item\AccessPackage;
+namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentPolicies\Item\AccessPackage;
 
 class AccessPackageRequestBuilderGetRequestConfiguration 
 {

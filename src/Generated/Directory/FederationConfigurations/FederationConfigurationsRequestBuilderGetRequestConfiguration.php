@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Directory\FederationConfigurations;
+namespace Microsoft\Graph\Generated\Directory\FederationConfigurations;
 
 class FederationConfigurationsRequestBuilderGetRequestConfiguration 
 {

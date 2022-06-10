@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\VppTokens\Item;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item;
 
 class VppTokenItemRequestBuilderDeleteRequestConfiguration 
 {

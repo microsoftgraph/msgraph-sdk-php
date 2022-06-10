@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Calendars\Item\MultiValueExtendedProperties\Count;
+namespace Microsoft\Graph\Generated\Me\Calendars\Item\MultiValueExtendedProperties\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

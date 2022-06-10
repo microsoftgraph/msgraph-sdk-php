@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Oauth2PermissionGrants\Item;
+namespace Microsoft\Graph\Generated\Oauth2PermissionGrants\Item;
 
 class OAuth2PermissionGrantItemRequestBuilderDeleteRequestConfiguration 
 {

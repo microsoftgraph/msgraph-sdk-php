@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Security\SecureScores\Count;
+namespace Microsoft\Graph\Generated\Security\SecureScores\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\ValidateProperties;
+namespace Microsoft\Graph\Generated\Users\ValidateProperties;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

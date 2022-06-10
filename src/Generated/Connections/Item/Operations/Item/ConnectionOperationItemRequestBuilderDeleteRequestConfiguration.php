@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Connections\Item\Operations\Item;
+namespace Microsoft\Graph\Generated\Connections\Item\Operations\Item;
 
 class ConnectionOperationItemRequestBuilderDeleteRequestConfiguration 
 {

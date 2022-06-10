@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\DeviceEnrollmentConfigurations;
+namespace Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations;
 
 class DeviceEnrollmentConfigurationsRequestBuilderGetRequestConfiguration 
 {

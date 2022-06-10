@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Invitations;
+namespace Microsoft\Graph\Generated\Invitations;
 
 class InvitationsRequestBuilderGetRequestConfiguration 
 {

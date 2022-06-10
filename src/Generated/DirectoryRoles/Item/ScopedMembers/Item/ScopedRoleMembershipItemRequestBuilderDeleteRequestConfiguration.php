@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DirectoryRoles\Item\ScopedMembers\Item;
+namespace Microsoft\Graph\Generated\DirectoryRoles\Item\ScopedMembers\Item;
 
 class ScopedRoleMembershipItemRequestBuilderDeleteRequestConfiguration 
 {

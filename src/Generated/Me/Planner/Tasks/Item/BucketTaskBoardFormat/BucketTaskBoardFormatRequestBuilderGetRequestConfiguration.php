@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Planner\Tasks\Item\BucketTaskBoardFormat;
+namespace Microsoft\Graph\Generated\Me\Planner\Tasks\Item\BucketTaskBoardFormat;
 
 class BucketTaskBoardFormatRequestBuilderGetRequestConfiguration 
 {

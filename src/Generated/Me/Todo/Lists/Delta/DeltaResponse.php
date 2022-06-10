@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Me\Todo\Lists\Delta;
+namespace Microsoft\Graph\Generated\Me\Todo\Lists\Delta;
 
-use Microsoft\Graph\Models\TodoTaskList;
+use Microsoft\Graph\Generated\Models\TodoTaskList;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

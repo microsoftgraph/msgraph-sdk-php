@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Chats\Item\Messages\Item\HostedContents;
+namespace Microsoft\Graph\Generated\Chats\Item\Messages\Item\HostedContents;
 
 class HostedContentsRequestBuilderGetRequestConfiguration 
 {

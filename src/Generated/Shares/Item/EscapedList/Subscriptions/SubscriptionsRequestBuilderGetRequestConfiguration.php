@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Shares\Item\EscapedList\Subscriptions;
+namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Subscriptions;
 
 class SubscriptionsRequestBuilderGetRequestConfiguration 
 {

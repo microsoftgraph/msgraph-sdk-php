@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance;
+namespace Microsoft\Graph\Generated\IdentityGovernance;
 
 class IdentityGovernanceRequestBuilderGetRequestConfiguration 
 {

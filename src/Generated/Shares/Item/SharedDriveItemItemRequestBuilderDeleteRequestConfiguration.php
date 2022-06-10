@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Shares\Item;
+namespace Microsoft\Graph\Generated\Shares\Item;
 
 class SharedDriveItemItemRequestBuilderDeleteRequestConfiguration 
 {

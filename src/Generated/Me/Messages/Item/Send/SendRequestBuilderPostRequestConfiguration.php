@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Messages\Item\Send;
+namespace Microsoft\Graph\Generated\Me\Messages\Item\Send;
 
 class SendRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\ManagedDevices\Item\UpdateWindowsDeviceAccount;
+namespace Microsoft\Graph\Generated\Me\ManagedDevices\Item\UpdateWindowsDeviceAccount;
 
 class UpdateWindowsDeviceAccountRequestBuilderPostRequestConfiguration 
 {

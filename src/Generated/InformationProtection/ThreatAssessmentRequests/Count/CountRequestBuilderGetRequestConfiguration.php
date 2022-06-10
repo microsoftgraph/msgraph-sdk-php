@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\InformationProtection\ThreatAssessmentRequests\Count;
+namespace Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

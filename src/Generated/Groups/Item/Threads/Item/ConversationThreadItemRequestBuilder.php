@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Threads\Item;
+namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Groups\Item\Threads\Item\Posts\Item\PostItemRequestBuilder;
-use Microsoft\Graph\Groups\Item\Threads\Item\Posts\PostsRequestBuilder;
-use Microsoft\Graph\Groups\Item\Threads\Item\Reply\ReplyRequestBuilder;
-use Microsoft\Graph\Models\ConversationThread;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\PostItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\PostsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Reply\ReplyRequestBuilder;
+use Microsoft\Graph\Generated\Models\ConversationThread;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -187,7 +187,7 @@ class ConversationThreadItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.groups.item.threads.item.posts.item collection
+     * Gets an item from the Microsoft\Graph\Generated.groups.item.threads.item.posts.item collection
      * @param string $id Unique identifier of the item
      * @return PostItemRequestBuilder
     */

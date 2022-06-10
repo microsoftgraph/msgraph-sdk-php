@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Identity\ConditionalAccess;
+namespace Microsoft\Graph\Generated\Identity\ConditionalAccess;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Identity\ConditionalAccess\NamedLocations\Item\NamedLocationItemRequestBuilder;
-use Microsoft\Graph\Identity\ConditionalAccess\NamedLocations\NamedLocationsRequestBuilder;
-use Microsoft\Graph\Identity\ConditionalAccess\Policies\Item\ConditionalAccessPolicyItemRequestBuilder;
-use Microsoft\Graph\Identity\ConditionalAccess\Policies\PoliciesRequestBuilder;
-use Microsoft\Graph\Models\ConditionalAccessRoot;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Identity\ConditionalAccess\NamedLocations\Item\NamedLocationItemRequestBuilder;
+use Microsoft\Graph\Generated\Identity\ConditionalAccess\NamedLocations\NamedLocationsRequestBuilder;
+use Microsoft\Graph\Generated\Identity\ConditionalAccess\Policies\Item\ConditionalAccessPolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\Identity\ConditionalAccess\Policies\PoliciesRequestBuilder;
+use Microsoft\Graph\Generated\Models\ConditionalAccessRoot;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -168,7 +168,7 @@ class ConditionalAccessRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.identity.conditionalAccess.namedLocations.item collection
+     * Gets an item from the Microsoft\Graph\Generated.identity.conditionalAccess.namedLocations.item collection
      * @param string $id Unique identifier of the item
      * @return NamedLocationItemRequestBuilder
     */
@@ -199,7 +199,7 @@ class ConditionalAccessRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.identity.conditionalAccess.policies.item collection
+     * Gets an item from the Microsoft\Graph\Generated.identity.conditionalAccess.policies.item collection
      * @param string $id Unique identifier of the item
      * @return ConditionalAccessPolicyItemRequestBuilder
     */

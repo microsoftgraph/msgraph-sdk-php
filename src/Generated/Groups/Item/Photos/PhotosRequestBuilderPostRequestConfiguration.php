@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Photos;
+namespace Microsoft\Graph\Generated\Groups\Item\Photos;
 
 class PhotosRequestBuilderPostRequestConfiguration 
 {

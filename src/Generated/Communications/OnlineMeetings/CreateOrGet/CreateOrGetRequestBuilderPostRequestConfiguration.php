@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\OnlineMeetings\CreateOrGet;
+namespace Microsoft\Graph\Generated\Communications\OnlineMeetings\CreateOrGet;
 
 class CreateOrGetRequestBuilderPostRequestConfiguration 
 {

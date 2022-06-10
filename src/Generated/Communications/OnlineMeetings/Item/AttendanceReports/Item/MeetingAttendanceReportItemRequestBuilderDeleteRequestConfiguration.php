@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\OnlineMeetings\Item\AttendanceReports\Item;
+namespace Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\AttendanceReports\Item;
 
 class MeetingAttendanceReportItemRequestBuilderDeleteRequestConfiguration 
 {

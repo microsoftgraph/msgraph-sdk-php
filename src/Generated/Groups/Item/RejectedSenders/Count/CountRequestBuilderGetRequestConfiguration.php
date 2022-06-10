@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\RejectedSenders\Count;
+namespace Microsoft\Graph\Generated\Groups\Item\RejectedSenders\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

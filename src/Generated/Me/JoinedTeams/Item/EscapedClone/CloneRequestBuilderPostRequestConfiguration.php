@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\JoinedTeams\Item\EscapedClone;
+namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\EscapedClone;
 
 class CloneRequestBuilderPostRequestConfiguration 
 {

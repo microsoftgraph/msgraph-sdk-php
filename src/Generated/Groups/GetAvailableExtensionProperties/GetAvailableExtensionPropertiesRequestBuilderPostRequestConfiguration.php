@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\GetAvailableExtensionProperties;
+namespace Microsoft\Graph\Generated\Groups\GetAvailableExtensionProperties;
 
 class GetAvailableExtensionPropertiesRequestBuilderPostRequestConfiguration 
 {

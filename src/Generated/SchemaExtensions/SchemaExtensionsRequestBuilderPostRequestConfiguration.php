@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\SchemaExtensions;
+namespace Microsoft\Graph\Generated\SchemaExtensions;
 
 class SchemaExtensionsRequestBuilderPostRequestConfiguration 
 {

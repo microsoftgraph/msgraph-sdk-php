@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Sites\Item\ContentTypes\Item\ColumnLinks\Item;
+namespace Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\ColumnLinks\Item;
 
 class ColumnLinkItemRequestBuilderDeleteRequestConfiguration 
 {

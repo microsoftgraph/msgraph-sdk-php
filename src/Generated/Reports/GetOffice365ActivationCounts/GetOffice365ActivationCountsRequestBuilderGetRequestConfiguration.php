@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Reports\GetOffice365ActivationCounts;
+namespace Microsoft\Graph\Generated\Reports\GetOffice365ActivationCounts;
 
 class GetOffice365ActivationCountsRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\TargetedManagedAppConfigurations;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations;
 
 class TargetedManagedAppConfigurationsRequestBuilderPostRequestConfiguration 
 {

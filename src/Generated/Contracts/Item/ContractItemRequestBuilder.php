@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Contracts\Item;
+namespace Microsoft\Graph\Generated\Contracts\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Contracts\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Contracts\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Contracts\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Contracts\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Contracts\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Models\Contract;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Contracts\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Contracts\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Contracts\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Contracts\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Contracts\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\Models\Contract;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

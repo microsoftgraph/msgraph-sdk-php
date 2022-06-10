@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Agreements\Item\Files;
+namespace Microsoft\Graph\Generated\Agreements\Item\Files;
 
 class FilesRequestBuilderPostRequestConfiguration 
 {

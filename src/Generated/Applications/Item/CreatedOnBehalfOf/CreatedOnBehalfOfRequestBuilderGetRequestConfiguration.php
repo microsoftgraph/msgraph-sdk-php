@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Applications\Item\CreatedOnBehalfOf;
+namespace Microsoft\Graph\Generated\Applications\Item\CreatedOnBehalfOf;
 
 class CreatedOnBehalfOfRequestBuilderGetRequestConfiguration 
 {

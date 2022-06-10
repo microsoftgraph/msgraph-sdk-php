@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Agreements\Item\File\Localizations;
+namespace Microsoft\Graph\Generated\Agreements\Item\File\Localizations;
 
 class LocalizationsRequestBuilderPostRequestConfiguration 
 {

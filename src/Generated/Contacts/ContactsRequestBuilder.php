@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Contacts;
+namespace Microsoft\Graph\Generated\Contacts;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Contacts\Count\CountRequestBuilder;
-use Microsoft\Graph\Contacts\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Contacts\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Contacts\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Contacts\ValidateProperties\ValidatePropertiesRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\OrgContact;
-use Microsoft\Graph\Models\OrgContactCollectionResponse;
+use Microsoft\Graph\Generated\Contacts\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OrgContact;
+use Microsoft\Graph\Generated\Models\OrgContactCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

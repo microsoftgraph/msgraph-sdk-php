@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Teams\Item\Operations;
+namespace Microsoft\Graph\Generated\Teams\Item\Operations;
 
 class OperationsRequestBuilderPostRequestConfiguration 
 {

@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Drives\Item\Items\Item\ListItem;
+namespace Microsoft\Graph\Generated\Groups\Item\Drives\Item\Items\Item\ListItem;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Groups\Item\Drives\Item\Items\Item\ListItem\Analytics\AnalyticsRequestBuilder;
-use Microsoft\Graph\Groups\Item\Drives\Item\Items\Item\ListItem\DriveItem\DriveItemRequestBuilder;
-use Microsoft\Graph\Groups\Item\Drives\Item\Items\Item\ListItem\Fields\FieldsRequestBuilder;
-use Microsoft\Graph\Groups\Item\Drives\Item\Items\Item\ListItem\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
-use Microsoft\Graph\Groups\Item\Drives\Item\Items\Item\ListItem\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-use Microsoft\Graph\Groups\Item\Drives\Item\Items\Item\ListItem\Versions\Item\ListItemVersionItemRequestBuilder;
-use Microsoft\Graph\Groups\Item\Drives\Item\Items\Item\ListItem\Versions\VersionsRequestBuilder;
-use Microsoft\Graph\Models\ListItem;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\Items\Item\ListItem\Analytics\AnalyticsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\Items\Item\ListItem\DriveItem\DriveItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\Items\Item\ListItem\Fields\FieldsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\Items\Item\ListItem\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\Items\Item\ListItem\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\Items\Item\ListItem\Versions\Item\ListItemVersionItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\Items\Item\ListItem\Versions\VersionsRequestBuilder;
+use Microsoft\Graph\Generated\Models\ListItem;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -224,7 +224,7 @@ class ListItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.groups.item.drives.item.items.item.listItem.versions.item collection
+     * Gets an item from the Microsoft\Graph\Generated.groups.item.drives.item.items.item.listItem.versions.item collection
      * @param string $id Unique identifier of the item
      * @return ListItemVersionItemRequestBuilder
     */

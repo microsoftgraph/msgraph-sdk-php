@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Teamwork\InstalledApps\Item\Chat;
+namespace Microsoft\Graph\Generated\Me\Teamwork\InstalledApps\Item\Chat;
 
 class ChatRequestBuilderGetRequestConfiguration 
 {

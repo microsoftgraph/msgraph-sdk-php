@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Search;
+namespace Microsoft\Graph\Generated\Search;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\SearchEntity;
-use Microsoft\Graph\Search\Query\QueryRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\SearchEntity;
+use Microsoft\Graph\Generated\Search\Query\QueryRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

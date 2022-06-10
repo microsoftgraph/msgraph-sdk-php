@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\RoleManagement\Directory\RoleDefinitions\Item\InheritsPermissionsFrom\Item;
+namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleDefinitions\Item\InheritsPermissionsFrom\Item;
 
 class UnifiedRoleDefinitionItemRequestBuilderGetRequestConfiguration 
 {

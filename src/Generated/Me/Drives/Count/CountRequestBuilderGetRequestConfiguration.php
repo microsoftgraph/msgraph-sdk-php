@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\Drives\Count;
+namespace Microsoft\Graph\Generated\Me\Drives\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

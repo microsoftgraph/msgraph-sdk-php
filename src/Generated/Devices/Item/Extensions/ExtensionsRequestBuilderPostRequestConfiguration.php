@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Devices\Item\Extensions;
+namespace Microsoft\Graph\Generated\Devices\Item\Extensions;
 
 class ExtensionsRequestBuilderPostRequestConfiguration 
 {

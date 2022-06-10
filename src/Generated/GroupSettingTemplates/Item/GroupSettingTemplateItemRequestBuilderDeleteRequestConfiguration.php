@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\GroupSettingTemplates\Item;
+namespace Microsoft\Graph\Generated\GroupSettingTemplates\Item;
 
 class GroupSettingTemplateItemRequestBuilderDeleteRequestConfiguration 
 {

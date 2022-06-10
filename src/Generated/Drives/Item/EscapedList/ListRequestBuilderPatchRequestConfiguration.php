@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drives\Item\EscapedList;
+namespace Microsoft\Graph\Generated\Drives\Item\EscapedList;
 
 class ListRequestBuilderPatchRequestConfiguration 
 {

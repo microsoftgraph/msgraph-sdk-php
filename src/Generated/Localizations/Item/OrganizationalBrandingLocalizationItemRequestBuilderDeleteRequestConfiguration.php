@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Localizations\Item;
+namespace Microsoft\Graph\Generated\Localizations\Item;
 
 class OrganizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Drive\Special;
+namespace Microsoft\Graph\Generated\Drive\Special;
 
 class SpecialRequestBuilderGetRequestConfiguration 
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Drives\Item\Root\Versions\Item;
+namespace Microsoft\Graph\Generated\Groups\Item\Drives\Item\Root\Versions\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Groups\Item\Drives\Item\Root\Versions\Item\Content\ContentRequestBuilder;
-use Microsoft\Graph\Groups\Item\Drives\Item\Root\Versions\Item\RestoreVersion\RestoreVersionRequestBuilder;
-use Microsoft\Graph\Models\DriveItemVersion;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\Root\Versions\Item\Content\ContentRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\Root\Versions\Item\RestoreVersion\RestoreVersionRequestBuilder;
+use Microsoft\Graph\Generated\Models\DriveItemVersion;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

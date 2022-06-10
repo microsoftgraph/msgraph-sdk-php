@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\InformationProtection\ThreatAssessmentRequests\Item;
+namespace Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\InformationProtection\ThreatAssessmentRequests\Item\Results\Item\ThreatAssessmentResultItemRequestBuilder;
-use Microsoft\Graph\InformationProtection\ThreatAssessmentRequests\Item\Results\ResultsRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\ThreatAssessmentRequest;
+use Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\Item\Results\Item\ThreatAssessmentResultItemRequestBuilder;
+use Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\Item\Results\ResultsRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\ThreatAssessmentRequest;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -179,7 +179,7 @@ class ThreatAssessmentRequestItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.informationProtection.threatAssessmentRequests.item.results.item collection
+     * Gets an item from the Microsoft\Graph\Generated.informationProtection.threatAssessmentRequests.item.results.item collection
      * @param string $id Unique identifier of the item
      * @return ThreatAssessmentResultItemRequestBuilder
     */

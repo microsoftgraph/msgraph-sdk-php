@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Drives\Item\EscapedList\Columns\Item;
+namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\Columns\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Drives\Item\EscapedList\Columns\Item\SourceColumn\SourceColumnRequestBuilder;
-use Microsoft\Graph\Models\ColumnDefinition;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\Columns\Item\SourceColumn\SourceColumnRequestBuilder;
+use Microsoft\Graph\Generated\Models\ColumnDefinition;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

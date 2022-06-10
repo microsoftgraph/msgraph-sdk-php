@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\AuditLogs\RestrictedSignIns;
+namespace Microsoft\Graph\Generated\AuditLogs\RestrictedSignIns;
 
 class RestrictedSignInsRequestBuilderPostRequestConfiguration 
 {

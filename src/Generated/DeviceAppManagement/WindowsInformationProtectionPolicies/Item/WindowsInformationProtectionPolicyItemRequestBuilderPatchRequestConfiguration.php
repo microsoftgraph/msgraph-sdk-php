@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\WindowsInformationProtectionPolicies\Item;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies\Item;
 
 class WindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration 
 {

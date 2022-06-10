@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Reports\GetOffice365GroupsActivityStorageWithPeriod;
+namespace Microsoft\Graph\Generated\Reports\GetOffice365GroupsActivityStorageWithPeriod;
 
 class GetOffice365GroupsActivityStorageWithPeriodRequestBuilderGetRequestConfiguration 
 {

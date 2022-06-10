@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Me\Planner\Plans\Item;
+namespace Microsoft\Graph\Generated\Me\Planner\Plans\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Me\Planner\Plans\Item\Buckets\BucketsRequestBuilder;
-use Microsoft\Graph\Me\Planner\Plans\Item\Buckets\Item\PlannerBucketItemRequestBuilder;
-use Microsoft\Graph\Me\Planner\Plans\Item\Details\DetailsRequestBuilder;
-use Microsoft\Graph\Me\Planner\Plans\Item\Tasks\Item\PlannerTaskItemRequestBuilder;
-use Microsoft\Graph\Me\Planner\Plans\Item\Tasks\TasksRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\PlannerPlan;
+use Microsoft\Graph\Generated\Me\Planner\Plans\Item\Buckets\BucketsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Planner\Plans\Item\Buckets\Item\PlannerBucketItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Planner\Plans\Item\Details\DetailsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Planner\Plans\Item\Tasks\Item\PlannerTaskItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Planner\Plans\Item\Tasks\TasksRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\PlannerPlan;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -59,7 +59,7 @@ class PlannerPlanItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph.me.planner.plans.item.buckets.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.planner.plans.item.buckets.item collection
      * @param string $id Unique identifier of the item
      * @return PlannerBucketItemRequestBuilder
     */
@@ -207,7 +207,7 @@ class PlannerPlanItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.me.planner.plans.item.tasks.item collection
+     * Gets an item from the Microsoft\Graph\Generated.me.planner.plans.item.tasks.item collection
      * @param string $id Unique identifier of the item
      * @return PlannerTaskItemRequestBuilder
     */

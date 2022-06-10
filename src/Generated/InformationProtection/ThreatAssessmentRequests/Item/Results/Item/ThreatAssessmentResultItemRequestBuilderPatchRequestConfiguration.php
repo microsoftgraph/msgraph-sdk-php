@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\InformationProtection\ThreatAssessmentRequests\Item\Results\Item;
+namespace Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\Item\Results\Item;
 
 class ThreatAssessmentResultItemRequestBuilderPatchRequestConfiguration 
 {

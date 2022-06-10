@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\ConditionalAccessSettings;
+namespace Microsoft\Graph\Generated\DeviceManagement\ConditionalAccessSettings;
 
 class ConditionalAccessSettingsRequestBuilderGetRequestConfiguration 
 {

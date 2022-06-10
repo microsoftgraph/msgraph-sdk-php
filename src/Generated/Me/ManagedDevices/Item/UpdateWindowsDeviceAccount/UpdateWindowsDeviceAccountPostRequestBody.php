@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Me\ManagedDevices\Item\UpdateWindowsDeviceAccount;
+namespace Microsoft\Graph\Generated\Me\ManagedDevices\Item\UpdateWindowsDeviceAccount;
 
-use Microsoft\Graph\Models\UpdateWindowsDeviceAccountActionParameter;
+use Microsoft\Graph\Generated\Models\UpdateWindowsDeviceAccountActionParameter;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

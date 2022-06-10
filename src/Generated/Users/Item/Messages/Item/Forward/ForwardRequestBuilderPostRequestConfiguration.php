@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Messages\Item\Forward;
+namespace Microsoft\Graph\Generated\Users\Item\Messages\Item\Forward;
 
 class ForwardRequestBuilderPostRequestConfiguration 
 {

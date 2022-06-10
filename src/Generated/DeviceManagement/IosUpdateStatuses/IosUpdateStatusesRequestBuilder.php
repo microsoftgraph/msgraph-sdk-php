@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\IosUpdateStatuses;
+namespace Microsoft\Graph\Generated\DeviceManagement\IosUpdateStatuses;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\DeviceManagement\IosUpdateStatuses\Count\CountRequestBuilder;
-use Microsoft\Graph\Models\IosUpdateDeviceStatus;
-use Microsoft\Graph\Models\IosUpdateDeviceStatusCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\DeviceManagement\IosUpdateStatuses\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\IosUpdateDeviceStatus;
+use Microsoft\Graph\Generated\Models\IosUpdateDeviceStatusCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

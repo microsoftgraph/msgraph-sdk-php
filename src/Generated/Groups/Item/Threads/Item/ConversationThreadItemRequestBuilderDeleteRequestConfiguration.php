@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Threads\Item;
+namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item;
 
 class ConversationThreadItemRequestBuilderDeleteRequestConfiguration 
 {

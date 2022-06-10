@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Onenote\Notebooks;
+namespace Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks;
 
 class NotebooksRequestBuilderGetRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Applications\Item\TokenIssuancePolicies\Ref;
+namespace Microsoft\Graph\Generated\Applications\Item\TokenIssuancePolicies\Ref;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

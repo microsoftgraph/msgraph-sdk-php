@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Teams\Item\Schedule\SwapShiftsChangeRequests\Item;
+namespace Microsoft\Graph\Generated\Teams\Item\Schedule\SwapShiftsChangeRequests\Item;
 
 class SwapShiftsChangeRequestItemRequestBuilderGetRequestConfiguration 
 {

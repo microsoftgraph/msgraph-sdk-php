@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Security\Alerts;
+namespace Microsoft\Graph\Generated\Security\Alerts;
 
 class AlertsRequestBuilderPostRequestConfiguration 
 {

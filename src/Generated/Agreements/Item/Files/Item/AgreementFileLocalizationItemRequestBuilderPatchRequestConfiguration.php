@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Agreements\Item\Files\Item;
+namespace Microsoft\Graph\Generated\Agreements\Item\Files\Item;
 
 class AgreementFileLocalizationItemRequestBuilderPatchRequestConfiguration 
 {

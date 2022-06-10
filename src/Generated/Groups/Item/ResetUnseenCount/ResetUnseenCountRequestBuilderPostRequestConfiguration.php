@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\ResetUnseenCount;
+namespace Microsoft\Graph\Generated\Groups\Item\ResetUnseenCount;
 
 class ResetUnseenCountRequestBuilderPostRequestConfiguration 
 {

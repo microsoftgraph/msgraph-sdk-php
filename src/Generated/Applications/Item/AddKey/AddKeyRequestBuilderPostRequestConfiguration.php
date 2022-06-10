@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Applications\Item\AddKey;
+namespace Microsoft\Graph\Generated\Applications\Item\AddKey;
 
 class AddKeyRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Applications\Item\TokenLifetimePolicies\Count;
+namespace Microsoft\Graph\Generated\Applications\Item\TokenLifetimePolicies\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

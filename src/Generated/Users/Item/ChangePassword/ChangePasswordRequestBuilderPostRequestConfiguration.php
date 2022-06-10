@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\ChangePassword;
+namespace Microsoft\Graph\Generated\Users\Item\ChangePassword;
 
 class ChangePasswordRequestBuilderPostRequestConfiguration 
 {

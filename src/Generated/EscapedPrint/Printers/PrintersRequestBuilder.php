@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\EscapedPrint\Printers;
+namespace Microsoft\Graph\Generated\EscapedPrint\Printers;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\EscapedPrint\Printers\Count\CountRequestBuilder;
-use Microsoft\Graph\EscapedPrint\Printers\Create\CreateRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\Printer;
-use Microsoft\Graph\Models\PrinterCollectionResponse;
+use Microsoft\Graph\Generated\EscapedPrint\Printers\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\Printers\Create\CreateRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Printer;
+use Microsoft\Graph\Generated\Models\PrinterCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

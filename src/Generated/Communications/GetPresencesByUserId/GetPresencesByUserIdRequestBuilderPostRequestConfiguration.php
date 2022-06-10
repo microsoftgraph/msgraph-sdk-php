@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\GetPresencesByUserId;
+namespace Microsoft\Graph\Generated\Communications\GetPresencesByUserId;
 
 class GetPresencesByUserIdRequestBuilderPostRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Policies\AdminConsentRequestPolicy;
+namespace Microsoft\Graph\Generated\Policies\AdminConsentRequestPolicy;
 
 class AdminConsentRequestPolicyRequestBuilderGetRequestConfiguration 
 {

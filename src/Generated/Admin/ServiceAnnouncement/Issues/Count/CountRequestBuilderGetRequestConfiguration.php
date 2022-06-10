@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Admin\ServiceAnnouncement\Issues\Count;
+namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

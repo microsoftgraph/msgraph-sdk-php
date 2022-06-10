@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Reports\GetEmailActivityUserDetailWithDate;
+namespace Microsoft\Graph\Generated\Reports\GetEmailActivityUserDetailWithDate;
 
 class GetEmailActivityUserDetailWithDateRequestBuilderGetRequestConfiguration 
 {

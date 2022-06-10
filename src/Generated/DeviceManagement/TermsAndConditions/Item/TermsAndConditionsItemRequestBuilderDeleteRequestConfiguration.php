@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\TermsAndConditions\Item;
+namespace Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item;
 
 class TermsAndConditionsItemRequestBuilderDeleteRequestConfiguration 
 {

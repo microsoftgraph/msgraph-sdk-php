@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\AppRoleAssignments;
+namespace Microsoft\Graph\Generated\Groups\Item\AppRoleAssignments;
 
 class AppRoleAssignmentsRequestBuilderGetRequestConfiguration 
 {

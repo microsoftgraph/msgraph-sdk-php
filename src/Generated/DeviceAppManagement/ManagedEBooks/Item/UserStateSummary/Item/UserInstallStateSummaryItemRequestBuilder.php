@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\Item;
+namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\Item;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\Item\DeviceStates\DeviceStatesRequestBuilder;
-use Microsoft\Graph\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\Item\DeviceStates\Item\DeviceInstallStateItemRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\UserInstallStateSummary;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\Item\DeviceStates\DeviceStatesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\Item\DeviceStates\Item\DeviceInstallStateItemRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\UserInstallStateSummary;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -140,7 +140,7 @@ class UserInstallStateSummaryItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph.deviceAppManagement.managedEBooks.item.userStateSummary.item.deviceStates.item collection
+     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.managedEBooks.item.userStateSummary.item.deviceStates.item collection
      * @param string $id Unique identifier of the item
      * @return DeviceInstallStateItemRequestBuilder
     */

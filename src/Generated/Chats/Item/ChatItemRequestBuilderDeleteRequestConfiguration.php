@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Chats\Item;
+namespace Microsoft\Graph\Generated\Chats\Item;
 
 class ChatItemRequestBuilderDeleteRequestConfiguration 
 {

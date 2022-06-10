@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Groups\Item\Planner\Plans\Item\Buckets\Item;
+namespace Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\Buckets\Item;
 
 class PlannerBucketItemRequestBuilderPatchRequestConfiguration 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\PermissionGrants\Item;
+namespace Microsoft\Graph\Generated\PermissionGrants\Item;
 
 class ResourceSpecificPermissionGrantItemRequestBuilderPatchRequestConfiguration 
 {

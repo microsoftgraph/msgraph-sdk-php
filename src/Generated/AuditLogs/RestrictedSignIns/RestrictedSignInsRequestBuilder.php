@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\AuditLogs\RestrictedSignIns;
+namespace Microsoft\Graph\Generated\AuditLogs\RestrictedSignIns;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\AuditLogs\RestrictedSignIns\Count\CountRequestBuilder;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\RestrictedSignIn;
-use Microsoft\Graph\Models\RestrictedSignInCollectionResponse;
+use Microsoft\Graph\Generated\AuditLogs\RestrictedSignIns\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\RestrictedSignIn;
+use Microsoft\Graph\Generated\Models\RestrictedSignInCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

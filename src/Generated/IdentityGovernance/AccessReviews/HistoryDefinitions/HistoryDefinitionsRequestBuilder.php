@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\IdentityGovernance\AccessReviews\HistoryDefinitions;
+namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\IdentityGovernance\AccessReviews\HistoryDefinitions\Count\CountRequestBuilder;
-use Microsoft\Graph\Models\AccessReviewHistoryDefinition;
-use Microsoft\Graph\Models\AccessReviewHistoryDefinitionCollectionResponse;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\AccessReviewHistoryDefinition;
+use Microsoft\Graph\Generated\Models\AccessReviewHistoryDefinitionCollectionResponse;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

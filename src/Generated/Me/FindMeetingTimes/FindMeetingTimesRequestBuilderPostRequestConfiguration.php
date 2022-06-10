@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\FindMeetingTimes;
+namespace Microsoft\Graph\Generated\Me\FindMeetingTimes;
 
 class FindMeetingTimesRequestBuilderPostRequestConfiguration 
 {

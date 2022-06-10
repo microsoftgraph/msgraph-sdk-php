@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Workbooks\Item\Thumbnails\Count;
+namespace Microsoft\Graph\Generated\Workbooks\Item\Thumbnails\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

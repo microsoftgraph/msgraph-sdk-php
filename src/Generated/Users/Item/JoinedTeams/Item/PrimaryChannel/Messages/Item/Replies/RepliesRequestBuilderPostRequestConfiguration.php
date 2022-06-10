@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\Item\Replies;
+namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\Item\Replies;
 
 class RepliesRequestBuilderPostRequestConfiguration 
 {

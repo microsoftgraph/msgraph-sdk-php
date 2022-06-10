@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\CallRecords\GetPstnCallsWithFromDateTimeWithToDateTime;
+namespace Microsoft\Graph\Generated\Communications\CallRecords\GetPstnCallsWithFromDateTimeWithToDateTime;
 
 class GetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilderGetRequestConfiguration 
 {

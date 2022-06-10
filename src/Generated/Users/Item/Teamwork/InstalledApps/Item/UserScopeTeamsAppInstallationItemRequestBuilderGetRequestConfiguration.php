@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Teamwork\InstalledApps\Item;
+namespace Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\Item;
 
 class UserScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration 
 {

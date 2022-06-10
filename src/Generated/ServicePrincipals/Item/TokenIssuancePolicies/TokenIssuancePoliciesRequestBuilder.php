@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\ServicePrincipals\Item\TokenIssuancePolicies;
+namespace Microsoft\Graph\Generated\ServicePrincipals\Item\TokenIssuancePolicies;
 
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Models\TokenIssuancePolicyCollectionResponse;
-use Microsoft\Graph\ServicePrincipals\Item\TokenIssuancePolicies\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\TokenIssuancePolicyCollectionResponse;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\TokenIssuancePolicies\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;

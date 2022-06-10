@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Workbooks\Item\Follow;
+namespace Microsoft\Graph\Generated\Workbooks\Item\Follow;
 
 class FollowRequestBuilderPostRequestConfiguration 
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Identity\B2xUserFlows\Item\UserAttributeAssignments\SetOrder;
+namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\SetOrder;
 
-use Microsoft\Graph\Models\AssignmentOrder;
+use Microsoft\Graph\Generated\Models\AssignmentOrder;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

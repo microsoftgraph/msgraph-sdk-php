@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Users\Item\Authentication\MicrosoftAuthenticatorMethods\Item;
+namespace Microsoft\Graph\Generated\Users\Item\Authentication\MicrosoftAuthenticatorMethods\Item;
 
 class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration 
 {

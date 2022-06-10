@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\JoinedTeams\Item\Schedule\SchedulingGroups\Count;
+namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\SchedulingGroups\Count;
 
 class CountRequestBuilderGetRequestConfiguration 
 {

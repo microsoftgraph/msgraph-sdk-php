@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Solutions\BookingBusinesses\Item\Unpublish;
+namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Unpublish;
 
 class UnpublishRequestBuilderPostRequestConfiguration 
 {

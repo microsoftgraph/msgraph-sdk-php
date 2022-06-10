@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Me\SendMail;
+namespace Microsoft\Graph\Generated\Me\SendMail;
 
 class SendMailRequestBuilderPostRequestConfiguration 
 {

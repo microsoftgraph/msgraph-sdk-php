@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Communications\Calls\Item\Mute;
+namespace Microsoft\Graph\Generated\Communications\Calls\Item\Mute;
 
 class MuteRequestBuilderPostRequestConfiguration 
 {

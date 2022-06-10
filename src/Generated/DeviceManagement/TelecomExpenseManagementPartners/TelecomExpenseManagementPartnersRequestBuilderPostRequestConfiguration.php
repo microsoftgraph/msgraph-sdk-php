@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\DeviceManagement\TelecomExpenseManagementPartners;
+namespace Microsoft\Graph\Generated\DeviceManagement\TelecomExpenseManagementPartners;
 
 class TelecomExpenseManagementPartnersRequestBuilderPostRequestConfiguration 
 {
