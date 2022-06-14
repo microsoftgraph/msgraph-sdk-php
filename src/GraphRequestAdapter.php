@@ -12,40 +12,65 @@ namespace Microsoft\Graph;
 use GuzzleHttp\Client;
 use Microsoft\Graph\Core\BaseGraphRequestAdapter;
 use Microsoft\Graph\Core\Middleware\Option\GraphTelemetryOption;
-use Microsoft\Kiota\Abstractions\Authentication\AnonymousAuthenticationProvider;
 use Microsoft\Kiota\Abstractions\Authentication\AuthenticationProvider;
 use Microsoft\Kiota\Authentication\Oauth\TokenRequestContext;
 use Microsoft\Kiota\Authentication\PhpLeagueAuthenticationProvider;
 
+/**
+ * Class GraphRequestAdapter
+ * @package Microsoft\Graph
+ * @copyright 2022 Microsoft Corporation
+ * @license https://opensource.org/licenses/MIT MIT License
+ * @link https://developer.microsoft.com/graph
+ */
 class GraphRequestAdapter extends BaseGraphRequestAdapter
 {
+    /**
+     * @var AuthenticationProvider|null
+     */
+    private static ?AuthenticationProvider $authProvider = null;
+    /**
+     * @var Client|null
+     */
+    private static ?Client $httpClient = null;
+
     /**
      * @param TokenRequestContext $context
      * @param array $scopes
      * @return GraphRequestAdapter
      */
-    public static function createWithTokenRequestContext(TokenRequestContext $context, array $scopes = []): self
+    public static function withTokenRequestContext(TokenRequestContext $context, array $scopes = []): self
     {
-        $authProvider = new PhpLeagueAuthenticationProvider($context, $scopes);
-        return new GraphRequestAdapter($authProvider, self::getTelemetryConfig());
+        self::$authProvider = new PhpLeagueAuthenticationProvider($context, $scopes);
+        return self::getInstance();
     }
 
     /**
      * @param AuthenticationProvider $authProvider
      * @return static
      */
-    public static function createWithAuthenticationProvider(AuthenticationProvider $authProvider): self
+    public static function withAuthenticationProvider(AuthenticationProvider $authProvider): self
     {
-        return new GraphRequestAdapter($authProvider, self::getTelemetryConfig());
+        self::$authProvider = $authProvider;
+        return self::getInstance();
     }
 
     /**
      * @param Client $client
      * @return static
      */
-    public static function createWithHttpClient(Client $client): self
+    public static function withHttpClient(Client $client): self
     {
-        return new GraphRequestAdapter(new AnonymousAuthenticationProvider(), self::getTelemetryConfig(), null, null, $client);
+        self::$httpClient = $client;
+        return self::getInstance();
+    }
+
+    /**
+     * @return static
+     */
+    private static function getInstance(): self
+    {
+        return new GraphRequestAdapter(self::$authProvider, self::getTelemetryConfig(), null, null, self::$httpClient);
     }
 
     /**
