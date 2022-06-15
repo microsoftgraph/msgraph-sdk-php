@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* FileAttachment_v2 File
+* TaskFileAttachment File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* FileAttachment_v2 class
+* TaskFileAttachment class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class FileAttachment_v2 extends Attachment_v2
+class TaskFileAttachment extends AttachmentBase
 {
     /**
     * Gets the contentBytes
@@ -47,7 +47,7 @@ class FileAttachment_v2 extends Attachment_v2
     *
     * @param \GuzzleHttp\Psr7\Stream $val The contentBytes
     *
-    * @return FileAttachment_v2
+    * @return TaskFileAttachment
     */
     public function setContentBytes($val)
     {

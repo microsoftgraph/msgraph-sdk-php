@@ -272,7 +272,6 @@ class ConnectedOrganization extends Entity
 
      /**
      * Gets the externalSponsors
-    * Nullable.
      *
      * @return array|null The externalSponsors
      */
@@ -287,7 +286,6 @@ class ConnectedOrganization extends Entity
 
     /**
     * Sets the externalSponsors
-    * Nullable.
     *
     * @param DirectoryObject[] $val The externalSponsors
     *
@@ -302,7 +300,6 @@ class ConnectedOrganization extends Entity
 
      /**
      * Gets the internalSponsors
-    * Nullable.
      *
      * @return array|null The internalSponsors
      */
@@ -317,7 +314,6 @@ class ConnectedOrganization extends Entity
 
     /**
     * Sets the internalSponsors
-    * Nullable.
     *
     * @param DirectoryObject[] $val The internalSponsors
     *
