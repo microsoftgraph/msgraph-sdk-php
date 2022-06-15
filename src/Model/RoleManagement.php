@@ -57,7 +57,6 @@ class RoleManagement implements \JsonSerializable
 
     /**
     * Gets the directory
-    * Read-only. Nullable.
     *
     * @return RbacApplication|null The directory
     */
@@ -76,7 +75,6 @@ class RoleManagement implements \JsonSerializable
 
     /**
     * Sets the directory
-    * Read-only. Nullable.
     *
     * @param RbacApplication $val The directory
     *

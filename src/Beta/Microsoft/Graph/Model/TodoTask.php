@@ -486,7 +486,7 @@ class TodoTask extends Entity
     /**
     * Sets the attachments
     *
-    * @param Attachment_v2[] $val The attachments
+    * @param AttachmentBase[] $val The attachments
     *
     * @return TodoTask
     */

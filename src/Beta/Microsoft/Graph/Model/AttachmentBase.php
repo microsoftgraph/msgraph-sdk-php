@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Attachment_v2 File
+* AttachmentBase File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* Attachment_v2 class
+* AttachmentBase class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Attachment_v2 extends Entity
+class AttachmentBase extends Entity
 {
     /**
     * Gets the contentType
@@ -43,7 +43,7 @@ class Attachment_v2 extends Entity
     *
     * @param string $val The contentType
     *
-    * @return Attachment_v2
+    * @return AttachmentBase
     */
     public function setContentType($val)
     {
@@ -74,7 +74,7 @@ class Attachment_v2 extends Entity
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
-    * @return Attachment_v2
+    * @return AttachmentBase
     */
     public function setLastModifiedDateTime($val)
     {
@@ -101,7 +101,7 @@ class Attachment_v2 extends Entity
     *
     * @param string $val The name
     *
-    * @return Attachment_v2
+    * @return AttachmentBase
     */
     public function setName($val)
     {
@@ -128,7 +128,7 @@ class Attachment_v2 extends Entity
     *
     * @param int $val The size
     *
-    * @return Attachment_v2
+    * @return AttachmentBase
     */
     public function setSize($val)
     {
