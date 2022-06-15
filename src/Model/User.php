@@ -3112,7 +3112,6 @@ class User extends DirectoryObject
 
     /**
     * Gets the insights
-    * Read-only. Nullable.
     *
     * @return OfficeGraphInsights|null The insights
     */
@@ -3131,7 +3130,6 @@ class User extends DirectoryObject
 
     /**
     * Sets the insights
-    * Read-only. Nullable.
     *
     * @param OfficeGraphInsights $val The insights
     *
@@ -3145,7 +3143,6 @@ class User extends DirectoryObject
 
     /**
     * Gets the settings
-    * Read-only. Nullable.
     *
     * @return UserSettings|null The settings
     */
@@ -3164,7 +3161,6 @@ class User extends DirectoryObject
 
     /**
     * Sets the settings
-    * Read-only. Nullable.
     *
     * @param UserSettings $val The settings
     *
@@ -3178,7 +3174,6 @@ class User extends DirectoryObject
 
     /**
     * Gets the onenote
-    * Read-only.
     *
     * @return Onenote|null The onenote
     */
@@ -3197,7 +3192,6 @@ class User extends DirectoryObject
 
     /**
     * Sets the onenote
-    * Read-only.
     *
     * @param Onenote $val The onenote
     *
@@ -3245,7 +3239,6 @@ class User extends DirectoryObject
 
      /**
      * Gets the photos
-    * Read-only. Nullable.
      *
      * @return array|null The photos
      */
@@ -3260,7 +3253,6 @@ class User extends DirectoryObject
 
     /**
     * Sets the photos
-    * Read-only. Nullable.
     *
     * @param ProfilePhoto[] $val The photos
     *
@@ -3363,7 +3355,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the authentication
-    * TODO: Add Description
+    * The authentication methods that are supported for the user.
     *
     * @return Authentication|null The authentication
     */
@@ -3382,7 +3374,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the authentication
-    * TODO: Add Description
+    * The authentication methods that are supported for the user.
     *
     * @param Authentication $val The authentication
     *
