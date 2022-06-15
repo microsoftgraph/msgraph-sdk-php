@@ -26,6 +26,7 @@ class SiteSource extends DataSource
 {
     /**
     * Gets the site
+    * The SharePoint site associated with the siteSource.
     *
     * @return \Beta\Microsoft\Graph\Model\Site|null The site
     */
@@ -44,6 +45,7 @@ class SiteSource extends DataSource
 
     /**
     * Sets the site
+    * The SharePoint site associated with the siteSource.
     *
     * @param \Beta\Microsoft\Graph\Model\Site $val The site
     *
