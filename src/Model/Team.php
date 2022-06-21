@@ -368,6 +368,35 @@ class Team extends Entity
     }
 
     /**
+    * Gets the tenantId
+    * The ID of the Azure Active Directory tenant.
+    *
+    * @return string|null The tenantId
+    */
+    public function getTenantId()
+    {
+        if (array_key_exists("tenantId", $this->_propDict)) {
+            return $this->_propDict["tenantId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tenantId
+    * The ID of the Azure Active Directory tenant.
+    *
+    * @param string $val The tenantId
+    *
+    * @return Team
+    */
+    public function setTenantId($val)
+    {
+        $this->_propDict["tenantId"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the visibility
     * The visibility of the group and team. Defaults to Public.
     *
@@ -431,6 +460,36 @@ class Team extends Entity
 
 
      /**
+     * Gets the allChannels
+    * List of channels either hosted in or shared with the team (incoming channels).
+     *
+     * @return array|null The allChannels
+     */
+    public function getAllChannels()
+    {
+        if (array_key_exists("allChannels", $this->_propDict)) {
+           return $this->_propDict["allChannels"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the allChannels
+    * List of channels either hosted in or shared with the team (incoming channels).
+    *
+    * @param Channel[] $val The allChannels
+    *
+    * @return Team
+    */
+    public function setAllChannels($val)
+    {
+        $this->_propDict["allChannels"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the channels
     * The collection of channels and messages associated with the team.
      *
@@ -487,6 +546,36 @@ class Team extends Entity
     public function setGroup($val)
     {
         $this->_propDict["group"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the incomingChannels
+    * List of channels shared with the team.
+     *
+     * @return array|null The incomingChannels
+     */
+    public function getIncomingChannels()
+    {
+        if (array_key_exists("incomingChannels", $this->_propDict)) {
+           return $this->_propDict["incomingChannels"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the incomingChannels
+    * List of channels shared with the team.
+    *
+    * @param Channel[] $val The incomingChannels
+    *
+    * @return Team
+    */
+    public function setIncomingChannels($val)
+    {
+        $this->_propDict["incomingChannels"] = $val;
         return $this;
     }
 
