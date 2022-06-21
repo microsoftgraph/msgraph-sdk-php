@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ChannelMembershipType File
+* CustomExtensionData File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,9 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
+namespace Beta\Microsoft\Graph\Model;
 /**
-* ChannelMembershipType class
+* CustomExtensionData class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ChannelMembershipType extends Enum
+class CustomExtensionData extends Entity
 {
-    /**
-    * The Enum ChannelMembershipType
-    */
-    const STANDARD = "standard";
-    const GRAPHPRIVATE = "private";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const SHARED = "shared";
 }
