@@ -536,36 +536,6 @@ class DeviceManagement extends Entity
         return $this;
     }
 
-
-     /**
-     * Gets the androidDeviceOwnerEnrollmentProfiles
-    * Android device owner enrollment profile entities.
-     *
-     * @return array|null The androidDeviceOwnerEnrollmentProfiles
-     */
-    public function getAndroidDeviceOwnerEnrollmentProfiles()
-    {
-        if (array_key_exists("androidDeviceOwnerEnrollmentProfiles", $this->_propDict)) {
-           return $this->_propDict["androidDeviceOwnerEnrollmentProfiles"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the androidDeviceOwnerEnrollmentProfiles
-    * Android device owner enrollment profile entities.
-    *
-    * @param AndroidDeviceOwnerEnrollmentProfile[] $val The androidDeviceOwnerEnrollmentProfiles
-    *
-    * @return DeviceManagement
-    */
-    public function setAndroidDeviceOwnerEnrollmentProfiles($val)
-    {
-        $this->_propDict["androidDeviceOwnerEnrollmentProfiles"] = $val;
-        return $this;
-    }
-
     /**
     * Gets the virtualEndpoint
     *
@@ -594,6 +564,36 @@ class DeviceManagement extends Entity
     public function setVirtualEndpoint($val)
     {
         $this->_propDict["virtualEndpoint"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the androidDeviceOwnerEnrollmentProfiles
+    * Android device owner enrollment profile entities.
+     *
+     * @return array|null The androidDeviceOwnerEnrollmentProfiles
+     */
+    public function getAndroidDeviceOwnerEnrollmentProfiles()
+    {
+        if (array_key_exists("androidDeviceOwnerEnrollmentProfiles", $this->_propDict)) {
+           return $this->_propDict["androidDeviceOwnerEnrollmentProfiles"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the androidDeviceOwnerEnrollmentProfiles
+    * Android device owner enrollment profile entities.
+    *
+    * @param AndroidDeviceOwnerEnrollmentProfile[] $val The androidDeviceOwnerEnrollmentProfiles
+    *
+    * @return DeviceManagement
+    */
+    public function setAndroidDeviceOwnerEnrollmentProfiles($val)
+    {
+        $this->_propDict["androidDeviceOwnerEnrollmentProfiles"] = $val;
         return $this;
     }
 

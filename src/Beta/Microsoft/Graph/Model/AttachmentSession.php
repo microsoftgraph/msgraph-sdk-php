@@ -87,29 +87,29 @@ class AttachmentSession extends Entity
     }
 
     /**
-    * Gets the nextExpectedRange
+    * Gets the nextExpectedRanges
     *
-    * @return string|null The nextExpectedRange
+    * @return string|null The nextExpectedRanges
     */
-    public function getNextExpectedRange()
+    public function getNextExpectedRanges()
     {
-        if (array_key_exists("nextExpectedRange", $this->_propDict)) {
-            return $this->_propDict["nextExpectedRange"];
+        if (array_key_exists("nextExpectedRanges", $this->_propDict)) {
+            return $this->_propDict["nextExpectedRanges"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the nextExpectedRange
+    * Sets the nextExpectedRanges
     *
-    * @param string $val The nextExpectedRange
+    * @param string $val The nextExpectedRanges
     *
     * @return AttachmentSession
     */
-    public function setNextExpectedRange($val)
+    public function setNextExpectedRanges($val)
     {
-        $this->_propDict["nextExpectedRange"] = $val;
+        $this->_propDict["nextExpectedRanges"] = $val;
         return $this;
     }
 

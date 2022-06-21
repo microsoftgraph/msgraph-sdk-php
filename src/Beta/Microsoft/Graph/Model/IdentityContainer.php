@@ -55,39 +55,6 @@ class IdentityContainer implements \JsonSerializable
         return $this->_propDict;
     }
 
-    /**
-    * Gets the conditionalAccess
-    * the entry point for the Conditional Access (CA) object model.
-    *
-    * @return ConditionalAccessRoot|null The conditionalAccess
-    */
-    public function getConditionalAccess()
-    {
-        if (array_key_exists("conditionalAccess", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionalAccess"], "\Beta\Microsoft\Graph\Model\ConditionalAccessRoot") || is_null($this->_propDict["conditionalAccess"])) {
-                return $this->_propDict["conditionalAccess"];
-            } else {
-                $this->_propDict["conditionalAccess"] = new ConditionalAccessRoot($this->_propDict["conditionalAccess"]);
-                return $this->_propDict["conditionalAccess"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the conditionalAccess
-    * the entry point for the Conditional Access (CA) object model.
-    *
-    * @param ConditionalAccessRoot $val The conditionalAccess
-    *
-    * @return IdentityContainer
-    */
-    public function setConditionalAccess($val)
-    {
-        $this->_propDict["conditionalAccess"] = $val;
-        return $this;
-    }
-
 
      /**
      * Gets the apiConnectors
@@ -267,6 +234,39 @@ class IdentityContainer implements \JsonSerializable
     }
 
     /**
+    * Gets the conditionalAccess
+    * the entry point for the Conditional Access (CA) object model.
+    *
+    * @return ConditionalAccessRoot|null The conditionalAccess
+    */
+    public function getConditionalAccess()
+    {
+        if (array_key_exists("conditionalAccess", $this->_propDict)) {
+            if (is_a($this->_propDict["conditionalAccess"], "\Beta\Microsoft\Graph\Model\ConditionalAccessRoot") || is_null($this->_propDict["conditionalAccess"])) {
+                return $this->_propDict["conditionalAccess"];
+            } else {
+                $this->_propDict["conditionalAccess"] = new ConditionalAccessRoot($this->_propDict["conditionalAccess"]);
+                return $this->_propDict["conditionalAccess"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the conditionalAccess
+    * the entry point for the Conditional Access (CA) object model.
+    *
+    * @param ConditionalAccessRoot $val The conditionalAccess
+    *
+    * @return IdentityContainer
+    */
+    public function setConditionalAccess($val)
+    {
+        $this->_propDict["conditionalAccess"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the continuousAccessEvaluationPolicy
     * Represents entry point for continuous access evaluation policy.
     *
@@ -331,7 +331,8 @@ class IdentityContainer implements \JsonSerializable
     *
     * @return array The list of properties
     */
-    public function jsonSerialize(): array
+    #[\ReturnTypeWillChange]
+    public function jsonSerialize()
     {
         $serializableProperties = $this->getProperties();
         foreach ($serializableProperties as $property => $val) {

@@ -176,6 +176,37 @@ class User extends DirectoryObject
     }
 
     /**
+    * Gets the authorizationInfo
+    *
+    * @return AuthorizationInfo|null The authorizationInfo
+    */
+    public function getAuthorizationInfo()
+    {
+        if (array_key_exists("authorizationInfo", $this->_propDict)) {
+            if (is_a($this->_propDict["authorizationInfo"], "\Beta\Microsoft\Graph\Model\AuthorizationInfo") || is_null($this->_propDict["authorizationInfo"])) {
+                return $this->_propDict["authorizationInfo"];
+            } else {
+                $this->_propDict["authorizationInfo"] = new AuthorizationInfo($this->_propDict["authorizationInfo"]);
+                return $this->_propDict["authorizationInfo"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the authorizationInfo
+    *
+    * @param AuthorizationInfo $val The authorizationInfo
+    *
+    * @return User
+    */
+    public function setAuthorizationInfo($val)
+    {
+        $this->_propDict["authorizationInfo"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the businessPhones
     * The telephone numbers for the user. Only one number can be set for this property. Read-only for users synced from on-premises directory. Supports $filter (eq, not, ge, le, startsWith).
     *
@@ -1688,6 +1719,33 @@ class User extends DirectoryObject
     public function setRefreshTokensValidFromDateTime($val)
     {
         $this->_propDict["refreshTokensValidFromDateTime"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the securityIdentifier
+    *
+    * @return string|null The securityIdentifier
+    */
+    public function getSecurityIdentifier()
+    {
+        if (array_key_exists("securityIdentifier", $this->_propDict)) {
+            return $this->_propDict["securityIdentifier"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the securityIdentifier
+    *
+    * @param string $val The securityIdentifier
+    *
+    * @return User
+    */
+    public function setSecurityIdentifier($val)
+    {
+        $this->_propDict["securityIdentifier"] = $val;
         return $this;
     }
 
