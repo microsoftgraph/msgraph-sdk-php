@@ -647,6 +647,7 @@ class Team extends Entity
 
      /**
      * Gets the incomingChannels
+    * List of channels shared with the team.
      *
      * @return array|null The incomingChannels
      */
@@ -661,6 +662,7 @@ class Team extends Entity
 
     /**
     * Sets the incomingChannels
+    * List of channels shared with the team.
     *
     * @param Channel[] $val The incomingChannels
     *
