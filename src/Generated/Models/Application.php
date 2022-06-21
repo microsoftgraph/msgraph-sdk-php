@@ -8,114 +8,196 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Psr\Http\Message\StreamInterface;
 
-class Application extends DirectoryObject 
+class Application extends DirectoryObject implements Parsable 
 {
-    /** @var array<AddIn>|null $addIns Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Office 365 call the application in the context of a document the user is working on. */
+    /**
+     * @var array<AddIn>|null $addIns Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Office 365 call the application in the context of a document the user is working on.
+    */
     private ?array $addIns = null;
     
-    /** @var ApiApplication|null $api Specifies settings for an application that implements a web API. */
+    /**
+     * @var ApiApplication|null $api Specifies settings for an application that implements a web API.
+    */
     private ?ApiApplication $api = null;
     
-    /** @var string|null $appId The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only. */
+    /**
+     * @var string|null $appId The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
+    */
     private ?string $appId = null;
     
-    /** @var string|null $applicationTemplateId Unique identifier of the applicationTemplate. Supports $filter (eq, not, ne). */
+    /**
+     * @var string|null $applicationTemplateId Unique identifier of the applicationTemplate. Supports $filter (eq, not, ne).
+    */
     private ?string $applicationTemplateId = null;
     
-    /** @var array<AppRole>|null $appRoles The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable. */
+    /**
+     * @var array<AppRole>|null $appRoles The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
+    */
     private ?array $appRoles = null;
     
-    /** @var DateTime|null $createdDateTime The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy. */
+    /**
+     * @var Certification|null $certification Specifies the certification status of the application.
+    */
+    private ?Certification $certification = null;
+    
+    /**
+     * @var DateTime|null $createdDateTime The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var DirectoryObject|null $createdOnBehalfOf Read-only. */
+    /**
+     * @var DirectoryObject|null $createdOnBehalfOf The createdOnBehalfOf property
+    */
     private ?DirectoryObject $createdOnBehalfOf = null;
     
-    /** @var string|null $description Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search. */
+    /**
+     * @var string|null $description Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
+    */
     private ?string $description = null;
     
-    /** @var string|null $disabledByMicrosoftStatus Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not). */
+    /**
+     * @var string|null $disabledByMicrosoftStatus Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
+    */
     private ?string $disabledByMicrosoftStatus = null;
     
-    /** @var string|null $displayName The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
+    /**
+     * @var string|null $displayName The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+    */
     private ?string $displayName = null;
     
-    /** @var array<ExtensionProperty>|null $extensionProperties Read-only. Nullable. */
+    /**
+     * @var array<ExtensionProperty>|null $extensionProperties Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+    */
     private ?array $extensionProperties = null;
     
-    /** @var string|null $groupMembershipClaims Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of). */
+    /**
+     * @var string|null $groupMembershipClaims Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+    */
     private ?string $groupMembershipClaims = null;
     
-    /** @var array<HomeRealmDiscoveryPolicy>|null $homeRealmDiscoveryPolicies The homeRealmDiscoveryPolicies property */
+    /**
+     * @var array<HomeRealmDiscoveryPolicy>|null $homeRealmDiscoveryPolicies The homeRealmDiscoveryPolicies property
+    */
     private ?array $homeRealmDiscoveryPolicies = null;
     
-    /** @var array<string>|null $identifierUris Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith). */
+    /**
+     * @var array<string>|null $identifierUris Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
+    */
     private ?array $identifierUris = null;
     
-    /** @var InformationalUrl|null $info Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values). */
+    /**
+     * @var InformationalUrl|null $info Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+    */
     private ?InformationalUrl $info = null;
     
-    /** @var bool|null $isDeviceOnlyAuthSupported Specifies whether this application supports device authentication without a user. The default is false. */
+    /**
+     * @var bool|null $isDeviceOnlyAuthSupported Specifies whether this application supports device authentication without a user. The default is false.
+    */
     private ?bool $isDeviceOnlyAuthSupported = null;
     
-    /** @var bool|null $isFallbackPublicClient Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property. */
+    /**
+     * @var bool|null $isFallbackPublicClient Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+    */
     private ?bool $isFallbackPublicClient = null;
     
-    /** @var array<KeyCredential>|null $keyCredentials The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le). */
+    /**
+     * @var array<KeyCredential>|null $keyCredentials The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le).
+    */
     private ?array $keyCredentials = null;
     
-    /** @var StreamInterface|null $logo The main logo for the application. Not nullable. */
+    /**
+     * @var StreamInterface|null $logo The main logo for the application. Not nullable.
+    */
     private ?StreamInterface $logo = null;
     
-    /** @var string|null $notes Notes relevant for the management of the application. */
+    /**
+     * @var string|null $notes Notes relevant for the management of the application.
+    */
     private ?string $notes = null;
     
-    /** @var bool|null $oauth2RequirePostResponse The oauth2RequirePostResponse property */
+    /**
+     * @var bool|null $oauth2RequirePostResponse The oauth2RequirePostResponse property
+    */
     private ?bool $oauth2RequirePostResponse = null;
     
-    /** @var OptionalClaims|null $optionalClaims Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app. */
+    /**
+     * @var OptionalClaims|null $optionalClaims Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
+    */
     private ?OptionalClaims $optionalClaims = null;
     
-    /** @var array<DirectoryObject>|null $owners Directory objects that are owners of the application. Read-only. Nullable. Supports $expand. */
+    /**
+     * @var array<DirectoryObject>|null $owners Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+    */
     private ?array $owners = null;
     
-    /** @var ParentalControlSettings|null $parentalControlSettings Specifies parental control settings for an application. */
+    /**
+     * @var ParentalControlSettings|null $parentalControlSettings Specifies parental control settings for an application.
+    */
     private ?ParentalControlSettings $parentalControlSettings = null;
     
-    /** @var array<PasswordCredential>|null $passwordCredentials The collection of password credentials associated with the application. Not nullable. */
+    /**
+     * @var array<PasswordCredential>|null $passwordCredentials The collection of password credentials associated with the application. Not nullable.
+    */
     private ?array $passwordCredentials = null;
     
-    /** @var PublicClientApplication|null $publicClient Specifies settings for installed clients such as desktop or mobile devices. */
+    /**
+     * @var PublicClientApplication|null $publicClient Specifies settings for installed clients such as desktop or mobile devices.
+    */
     private ?PublicClientApplication $publicClient = null;
     
-    /** @var string|null $publisherDomain The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain. Supports $filter (eq, ne, ge, le, startsWith). */
+    /**
+     * @var string|null $publisherDomain The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith).
+    */
     private ?string $publisherDomain = null;
     
-    /** @var array<RequiredResourceAccess>|null $requiredResourceAccess Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le). */
+    /**
+     * @var array<RequiredResourceAccess>|null $requiredResourceAccess Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le).
+    */
     private ?array $requiredResourceAccess = null;
     
-    /** @var string|null $signInAudience Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, not). */
+    /**
+     * @var string|null $serviceManagementReference References application or service contact information from a Service or Asset Management database. Nullable.
+    */
+    private ?string $serviceManagementReference = null;
+    
+    /**
+     * @var string|null $signInAudience Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, not).
+    */
     private ?string $signInAudience = null;
     
-    /** @var SpaApplication|null $spa Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens. */
+    /**
+     * @var SpaApplication|null $spa Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens.
+    */
     private ?SpaApplication $spa = null;
     
-    /** @var array<string>|null $tags Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith). */
+    /**
+     * @var array<string>|null $tags Custom strings that can be used to categorize and identify the application. Not nullable.Supports $filter (eq, not, ge, le, startsWith).
+    */
     private ?array $tags = null;
     
-    /** @var string|null $tokenEncryptionKeyId Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user. */
+    /**
+     * @var string|null $tokenEncryptionKeyId Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
+    */
     private ?string $tokenEncryptionKeyId = null;
     
-    /** @var array<TokenIssuancePolicy>|null $tokenIssuancePolicies The tokenIssuancePolicies property */
+    /**
+     * @var array<TokenIssuancePolicy>|null $tokenIssuancePolicies The tokenIssuancePolicies property
+    */
     private ?array $tokenIssuancePolicies = null;
     
-    /** @var array<TokenLifetimePolicy>|null $tokenLifetimePolicies The tokenLifetimePolicies assigned to this application. Supports $expand. */
+    /**
+     * @var array<TokenLifetimePolicy>|null $tokenLifetimePolicies The tokenLifetimePolicies assigned to this application. Supports $expand.
+    */
     private ?array $tokenLifetimePolicies = null;
     
-    /** @var VerifiedPublisher|null $verifiedPublisher Specifies the verified publisher of the application. For more information about how publisher verification helps support application security, trustworthiness, and compliance, see Publisher verification. */
+    /**
+     * @var VerifiedPublisher|null $verifiedPublisher Specifies the verified publisher of the application. For more information about how publisher verification helps support application security, trustworthiness, and compliance, see Publisher verification.
+    */
     private ?VerifiedPublisher $verifiedPublisher = null;
     
-    /** @var WebApplication|null $web Specifies settings for a web application. */
+    /**
+     * @var WebApplication|null $web Specifies settings for a web application.
+    */
     private ?WebApplication $web = null;
     
     /**
@@ -130,7 +212,7 @@ class Application extends DirectoryObject
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Application
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Application {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Application {
         return new Application();
     }
 
@@ -151,7 +233,7 @@ class Application extends DirectoryObject
     }
 
     /**
-     * Gets the appId property value. The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.
+     * Gets the appId property value. The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
      * @return string|null
     */
     public function getAppId(): ?string {
@@ -175,6 +257,14 @@ class Application extends DirectoryObject
     }
 
     /**
+     * Gets the certification property value. Specifies the certification status of the application.
+     * @return Certification|null
+    */
+    public function getCertification(): ?Certification {
+        return $this->certification;
+    }
+
+    /**
      * Gets the createdDateTime property value. The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy.
      * @return DateTime|null
     */
@@ -183,7 +273,7 @@ class Application extends DirectoryObject
     }
 
     /**
-     * Gets the createdOnBehalfOf property value. Read-only.
+     * Gets the createdOnBehalfOf property value. The createdOnBehalfOf property
      * @return DirectoryObject|null
     */
     public function getCreatedOnBehalfOf(): ?DirectoryObject {
@@ -191,7 +281,7 @@ class Application extends DirectoryObject
     }
 
     /**
-     * Gets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
+     * Gets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -215,7 +305,7 @@ class Application extends DirectoryObject
     }
 
     /**
-     * Gets the extensionProperties property value. Read-only. Nullable.
+     * Gets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @return array<ExtensionProperty>|null
     */
     public function getExtensionProperties(): ?array {
@@ -227,48 +317,51 @@ class Application extends DirectoryObject
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'addIns' => function (self $o, ParseNode $n) { $o->setAddIns($n->getCollectionOfObjectValues(AddIn::class)); },
-            'api' => function (self $o, ParseNode $n) { $o->setApi($n->getObjectValue(ApiApplication::class)); },
-            'appId' => function (self $o, ParseNode $n) { $o->setAppId($n->getStringValue()); },
-            'applicationTemplateId' => function (self $o, ParseNode $n) { $o->setApplicationTemplateId($n->getStringValue()); },
-            'appRoles' => function (self $o, ParseNode $n) { $o->setAppRoles($n->getCollectionOfObjectValues(AppRole::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'createdOnBehalfOf' => function (self $o, ParseNode $n) { $o->setCreatedOnBehalfOf($n->getObjectValue(DirectoryObject::class)); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'disabledByMicrosoftStatus' => function (self $o, ParseNode $n) { $o->setDisabledByMicrosoftStatus($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'extensionProperties' => function (self $o, ParseNode $n) { $o->setExtensionProperties($n->getCollectionOfObjectValues(ExtensionProperty::class)); },
-            'groupMembershipClaims' => function (self $o, ParseNode $n) { $o->setGroupMembershipClaims($n->getStringValue()); },
-            'homeRealmDiscoveryPolicies' => function (self $o, ParseNode $n) { $o->setHomeRealmDiscoveryPolicies($n->getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::class)); },
-            'identifierUris' => function (self $o, ParseNode $n) { $o->setIdentifierUris($n->getCollectionOfPrimitiveValues()); },
-            'info' => function (self $o, ParseNode $n) { $o->setInfo($n->getObjectValue(InformationalUrl::class)); },
-            'isDeviceOnlyAuthSupported' => function (self $o, ParseNode $n) { $o->setIsDeviceOnlyAuthSupported($n->getBooleanValue()); },
-            'isFallbackPublicClient' => function (self $o, ParseNode $n) { $o->setIsFallbackPublicClient($n->getBooleanValue()); },
-            'keyCredentials' => function (self $o, ParseNode $n) { $o->setKeyCredentials($n->getCollectionOfObjectValues(KeyCredential::class)); },
-            'logo' => function (self $o, ParseNode $n) { $o->setLogo($n->getBinaryContent()); },
-            'notes' => function (self $o, ParseNode $n) { $o->setNotes($n->getStringValue()); },
-            'oauth2RequirePostResponse' => function (self $o, ParseNode $n) { $o->setOauth2RequirePostResponse($n->getBooleanValue()); },
-            'optionalClaims' => function (self $o, ParseNode $n) { $o->setOptionalClaims($n->getObjectValue(OptionalClaims::class)); },
-            'owners' => function (self $o, ParseNode $n) { $o->setOwners($n->getCollectionOfObjectValues(DirectoryObject::class)); },
-            'parentalControlSettings' => function (self $o, ParseNode $n) { $o->setParentalControlSettings($n->getObjectValue(ParentalControlSettings::class)); },
-            'passwordCredentials' => function (self $o, ParseNode $n) { $o->setPasswordCredentials($n->getCollectionOfObjectValues(PasswordCredential::class)); },
-            'publicClient' => function (self $o, ParseNode $n) { $o->setPublicClient($n->getObjectValue(PublicClientApplication::class)); },
-            'publisherDomain' => function (self $o, ParseNode $n) { $o->setPublisherDomain($n->getStringValue()); },
-            'requiredResourceAccess' => function (self $o, ParseNode $n) { $o->setRequiredResourceAccess($n->getCollectionOfObjectValues(RequiredResourceAccess::class)); },
-            'signInAudience' => function (self $o, ParseNode $n) { $o->setSignInAudience($n->getStringValue()); },
-            'spa' => function (self $o, ParseNode $n) { $o->setSpa($n->getObjectValue(SpaApplication::class)); },
-            'tags' => function (self $o, ParseNode $n) { $o->setTags($n->getCollectionOfPrimitiveValues()); },
-            'tokenEncryptionKeyId' => function (self $o, ParseNode $n) { $o->setTokenEncryptionKeyId($n->getStringValue()); },
-            'tokenIssuancePolicies' => function (self $o, ParseNode $n) { $o->setTokenIssuancePolicies($n->getCollectionOfObjectValues(TokenIssuancePolicy::class)); },
-            'tokenLifetimePolicies' => function (self $o, ParseNode $n) { $o->setTokenLifetimePolicies($n->getCollectionOfObjectValues(TokenLifetimePolicy::class)); },
-            'verifiedPublisher' => function (self $o, ParseNode $n) { $o->setVerifiedPublisher($n->getObjectValue(VerifiedPublisher::class)); },
-            'web' => function (self $o, ParseNode $n) { $o->setWeb($n->getObjectValue(WebApplication::class)); },
+            'addIns' => function (ParseNode $n) use ($o) { $o->setAddIns($n->getCollectionOfObjectValues(array(AddIn::class, 'createFromDiscriminatorValue'))); },
+            'api' => function (ParseNode $n) use ($o) { $o->setApi($n->getObjectValue(array(ApiApplication::class, 'createFromDiscriminatorValue'))); },
+            'appId' => function (ParseNode $n) use ($o) { $o->setAppId($n->getStringValue()); },
+            'applicationTemplateId' => function (ParseNode $n) use ($o) { $o->setApplicationTemplateId($n->getStringValue()); },
+            'appRoles' => function (ParseNode $n) use ($o) { $o->setAppRoles($n->getCollectionOfObjectValues(array(AppRole::class, 'createFromDiscriminatorValue'))); },
+            'certification' => function (ParseNode $n) use ($o) { $o->setCertification($n->getObjectValue(array(Certification::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'createdOnBehalfOf' => function (ParseNode $n) use ($o) { $o->setCreatedOnBehalfOf($n->getObjectValue(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'disabledByMicrosoftStatus' => function (ParseNode $n) use ($o) { $o->setDisabledByMicrosoftStatus($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'extensionProperties' => function (ParseNode $n) use ($o) { $o->setExtensionProperties($n->getCollectionOfObjectValues(array(ExtensionProperty::class, 'createFromDiscriminatorValue'))); },
+            'groupMembershipClaims' => function (ParseNode $n) use ($o) { $o->setGroupMembershipClaims($n->getStringValue()); },
+            'homeRealmDiscoveryPolicies' => function (ParseNode $n) use ($o) { $o->setHomeRealmDiscoveryPolicies($n->getCollectionOfObjectValues(array(HomeRealmDiscoveryPolicy::class, 'createFromDiscriminatorValue'))); },
+            'identifierUris' => function (ParseNode $n) use ($o) { $o->setIdentifierUris($n->getCollectionOfPrimitiveValues()); },
+            'info' => function (ParseNode $n) use ($o) { $o->setInfo($n->getObjectValue(array(InformationalUrl::class, 'createFromDiscriminatorValue'))); },
+            'isDeviceOnlyAuthSupported' => function (ParseNode $n) use ($o) { $o->setIsDeviceOnlyAuthSupported($n->getBooleanValue()); },
+            'isFallbackPublicClient' => function (ParseNode $n) use ($o) { $o->setIsFallbackPublicClient($n->getBooleanValue()); },
+            'keyCredentials' => function (ParseNode $n) use ($o) { $o->setKeyCredentials($n->getCollectionOfObjectValues(array(KeyCredential::class, 'createFromDiscriminatorValue'))); },
+            'logo' => function (ParseNode $n) use ($o) { $o->setLogo($n->getBinaryContent()); },
+            'notes' => function (ParseNode $n) use ($o) { $o->setNotes($n->getStringValue()); },
+            'oauth2RequirePostResponse' => function (ParseNode $n) use ($o) { $o->setOauth2RequirePostResponse($n->getBooleanValue()); },
+            'optionalClaims' => function (ParseNode $n) use ($o) { $o->setOptionalClaims($n->getObjectValue(array(OptionalClaims::class, 'createFromDiscriminatorValue'))); },
+            'owners' => function (ParseNode $n) use ($o) { $o->setOwners($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
+            'parentalControlSettings' => function (ParseNode $n) use ($o) { $o->setParentalControlSettings($n->getObjectValue(array(ParentalControlSettings::class, 'createFromDiscriminatorValue'))); },
+            'passwordCredentials' => function (ParseNode $n) use ($o) { $o->setPasswordCredentials($n->getCollectionOfObjectValues(array(PasswordCredential::class, 'createFromDiscriminatorValue'))); },
+            'publicClient' => function (ParseNode $n) use ($o) { $o->setPublicClient($n->getObjectValue(array(PublicClientApplication::class, 'createFromDiscriminatorValue'))); },
+            'publisherDomain' => function (ParseNode $n) use ($o) { $o->setPublisherDomain($n->getStringValue()); },
+            'requiredResourceAccess' => function (ParseNode $n) use ($o) { $o->setRequiredResourceAccess($n->getCollectionOfObjectValues(array(RequiredResourceAccess::class, 'createFromDiscriminatorValue'))); },
+            'serviceManagementReference' => function (ParseNode $n) use ($o) { $o->setServiceManagementReference($n->getStringValue()); },
+            'signInAudience' => function (ParseNode $n) use ($o) { $o->setSignInAudience($n->getStringValue()); },
+            'spa' => function (ParseNode $n) use ($o) { $o->setSpa($n->getObjectValue(array(SpaApplication::class, 'createFromDiscriminatorValue'))); },
+            'tags' => function (ParseNode $n) use ($o) { $o->setTags($n->getCollectionOfPrimitiveValues()); },
+            'tokenEncryptionKeyId' => function (ParseNode $n) use ($o) { $o->setTokenEncryptionKeyId($n->getStringValue()); },
+            'tokenIssuancePolicies' => function (ParseNode $n) use ($o) { $o->setTokenIssuancePolicies($n->getCollectionOfObjectValues(array(TokenIssuancePolicy::class, 'createFromDiscriminatorValue'))); },
+            'tokenLifetimePolicies' => function (ParseNode $n) use ($o) { $o->setTokenLifetimePolicies($n->getCollectionOfObjectValues(array(TokenLifetimePolicy::class, 'createFromDiscriminatorValue'))); },
+            'verifiedPublisher' => function (ParseNode $n) use ($o) { $o->setVerifiedPublisher($n->getObjectValue(array(VerifiedPublisher::class, 'createFromDiscriminatorValue'))); },
+            'web' => function (ParseNode $n) use ($o) { $o->setWeb($n->getObjectValue(array(WebApplication::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
     /**
-     * Gets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+     * Gets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
      * @return string|null
     */
     public function getGroupMembershipClaims(): ?string {
@@ -292,7 +385,7 @@ class Application extends DirectoryObject
     }
 
     /**
-     * Gets the info property value. Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+     * Gets the info property value. Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
      * @return InformationalUrl|null
     */
     public function getInfo(): ?InformationalUrl {
@@ -308,7 +401,7 @@ class Application extends DirectoryObject
     }
 
     /**
-     * Gets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+     * Gets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
      * @return bool|null
     */
     public function getIsFallbackPublicClient(): ?bool {
@@ -388,7 +481,7 @@ class Application extends DirectoryObject
     }
 
     /**
-     * Gets the publisherDomain property value. The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain. Supports $filter (eq, ne, ge, le, startsWith).
+     * Gets the publisherDomain property value. The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith).
      * @return string|null
     */
     public function getPublisherDomain(): ?string {
@@ -401,6 +494,14 @@ class Application extends DirectoryObject
     */
     public function getRequiredResourceAccess(): ?array {
         return $this->requiredResourceAccess;
+    }
+
+    /**
+     * Gets the serviceManagementReference property value. References application or service contact information from a Service or Asset Management database. Nullable.
+     * @return string|null
+    */
+    public function getServiceManagementReference(): ?string {
+        return $this->serviceManagementReference;
     }
 
     /**
@@ -420,7 +521,7 @@ class Application extends DirectoryObject
     }
 
     /**
-     * Gets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+     * Gets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable.Supports $filter (eq, not, ge, le, startsWith).
      * @return array<string>|null
     */
     public function getTags(): ?array {
@@ -478,6 +579,7 @@ class Application extends DirectoryObject
         $writer->writeStringValue('appId', $this->appId);
         $writer->writeStringValue('applicationTemplateId', $this->applicationTemplateId);
         $writer->writeCollectionOfObjectValues('appRoles', $this->appRoles);
+        $writer->writeObjectValue('certification', $this->certification);
         $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
         $writer->writeObjectValue('createdOnBehalfOf', $this->createdOnBehalfOf);
         $writer->writeStringValue('description', $this->description);
@@ -501,6 +603,7 @@ class Application extends DirectoryObject
         $writer->writeObjectValue('publicClient', $this->publicClient);
         $writer->writeStringValue('publisherDomain', $this->publisherDomain);
         $writer->writeCollectionOfObjectValues('requiredResourceAccess', $this->requiredResourceAccess);
+        $writer->writeStringValue('serviceManagementReference', $this->serviceManagementReference);
         $writer->writeStringValue('signInAudience', $this->signInAudience);
         $writer->writeObjectValue('spa', $this->spa);
         $writer->writeCollectionOfPrimitiveValues('tags', $this->tags);
@@ -528,7 +631,7 @@ class Application extends DirectoryObject
     }
 
     /**
-     * Sets the appId property value. The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.
+     * Sets the appId property value. The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
      *  @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value ): void {
@@ -552,6 +655,14 @@ class Application extends DirectoryObject
     }
 
     /**
+     * Sets the certification property value. Specifies the certification status of the application.
+     *  @param Certification|null $value Value to set for the certification property.
+    */
+    public function setCertification(?Certification $value ): void {
+        $this->certification = $value;
+    }
+
+    /**
      * Sets the createdDateTime property value. The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
@@ -560,7 +671,7 @@ class Application extends DirectoryObject
     }
 
     /**
-     * Sets the createdOnBehalfOf property value. Read-only.
+     * Sets the createdOnBehalfOf property value. The createdOnBehalfOf property
      *  @param DirectoryObject|null $value Value to set for the createdOnBehalfOf property.
     */
     public function setCreatedOnBehalfOf(?DirectoryObject $value ): void {
@@ -568,7 +679,7 @@ class Application extends DirectoryObject
     }
 
     /**
-     * Sets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
+     * Sets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
      *  @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value ): void {
@@ -592,7 +703,7 @@ class Application extends DirectoryObject
     }
 
     /**
-     * Sets the extensionProperties property value. Read-only. Nullable.
+     * Sets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      *  @param array<ExtensionProperty>|null $value Value to set for the extensionProperties property.
     */
     public function setExtensionProperties(?array $value ): void {
@@ -600,7 +711,7 @@ class Application extends DirectoryObject
     }
 
     /**
-     * Sets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+     * Sets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
      *  @param string|null $value Value to set for the groupMembershipClaims property.
     */
     public function setGroupMembershipClaims(?string $value ): void {
@@ -624,7 +735,7 @@ class Application extends DirectoryObject
     }
 
     /**
-     * Sets the info property value. Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+     * Sets the info property value. Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
      *  @param InformationalUrl|null $value Value to set for the info property.
     */
     public function setInfo(?InformationalUrl $value ): void {
@@ -640,7 +751,7 @@ class Application extends DirectoryObject
     }
 
     /**
-     * Sets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+     * Sets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
      *  @param bool|null $value Value to set for the isFallbackPublicClient property.
     */
     public function setIsFallbackPublicClient(?bool $value ): void {
@@ -720,7 +831,7 @@ class Application extends DirectoryObject
     }
 
     /**
-     * Sets the publisherDomain property value. The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain. Supports $filter (eq, ne, ge, le, startsWith).
+     * Sets the publisherDomain property value. The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith).
      *  @param string|null $value Value to set for the publisherDomain property.
     */
     public function setPublisherDomain(?string $value ): void {
@@ -733,6 +844,14 @@ class Application extends DirectoryObject
     */
     public function setRequiredResourceAccess(?array $value ): void {
         $this->requiredResourceAccess = $value;
+    }
+
+    /**
+     * Sets the serviceManagementReference property value. References application or service contact information from a Service or Asset Management database. Nullable.
+     *  @param string|null $value Value to set for the serviceManagementReference property.
+    */
+    public function setServiceManagementReference(?string $value ): void {
+        $this->serviceManagementReference = $value;
     }
 
     /**
@@ -752,7 +871,7 @@ class Application extends DirectoryObject
     }
 
     /**
-     * Sets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+     * Sets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable.Supports $filter (eq, not, ge, le, startsWith).
      *  @param array<string>|null $value Value to set for the tags property.
     */
     public function setTags(?array $value ): void {

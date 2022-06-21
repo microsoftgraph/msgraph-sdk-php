@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ProvisioningStep implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $description Summary of what occurred during the step. */
+    /**
+     * @var string|null $description Summary of what occurred during the step.
+    */
     private ?string $description = null;
     
-    /** @var DetailsInfo|null $details Details of what occurred during the step. */
+    /**
+     * @var DetailsInfo|null $details Details of what occurred during the step.
+    */
     private ?DetailsInfo $details = null;
     
-    /** @var string|null $name Name of the step. */
+    /**
+     * @var string|null $name Name of the step.
+    */
     private ?string $name = null;
     
-    /** @var ProvisioningStepType|null $provisioningStepType Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue. */
+    /**
+     * @var ProvisioningStepType|null $provisioningStepType Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
+    */
     private ?ProvisioningStepType $provisioningStepType = null;
     
-    /** @var ProvisioningResult|null $status Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue. */
+    /**
+     * @var ProvisioningResult|null $status Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
+    */
     private ?ProvisioningResult $status = null;
     
     /**
@@ -39,7 +51,7 @@ class ProvisioningStep implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ProvisioningStep
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ProvisioningStep {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ProvisioningStep {
         return new ProvisioningStep();
     }
 
@@ -72,12 +84,13 @@ class ProvisioningStep implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'details' => function (self $o, ParseNode $n) { $o->setDetails($n->getObjectValue(DetailsInfo::class)); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'provisioningStepType' => function (self $o, ParseNode $n) { $o->setProvisioningStepType($n->getEnumValue(ProvisioningStepType::class)); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(ProvisioningResult::class)); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'details' => function (ParseNode $n) use ($o) { $o->setDetails($n->getObjectValue(array(DetailsInfo::class, 'createFromDiscriminatorValue'))); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'provisioningStepType' => function (ParseNode $n) use ($o) { $o->setProvisioningStepType($n->getEnumValue(ProvisioningStepType::class)); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(ProvisioningResult::class)); },
         ];
     }
 

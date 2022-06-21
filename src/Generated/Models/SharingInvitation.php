@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SharingInvitation implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $email The email address provided for the recipient of the sharing invitation. Read-only. */
+    /**
+     * @var string|null $email The email address provided for the recipient of the sharing invitation. Read-only.
+    */
     private ?string $email = null;
     
-    /** @var IdentitySet|null $invitedBy Provides information about who sent the invitation that created this permission, if that information is available. Read-only. */
+    /**
+     * @var IdentitySet|null $invitedBy Provides information about who sent the invitation that created this permission, if that information is available. Read-only.
+    */
     private ?IdentitySet $invitedBy = null;
     
-    /** @var string|null $redeemedBy The redeemedBy property */
+    /**
+     * @var string|null $redeemedBy The redeemedBy property
+    */
     private ?string $redeemedBy = null;
     
-    /** @var bool|null $signInRequired If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only. */
+    /**
+     * @var bool|null $signInRequired If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only.
+    */
     private ?bool $signInRequired = null;
     
     /**
@@ -36,7 +46,7 @@ class SharingInvitation implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SharingInvitation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SharingInvitation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SharingInvitation {
         return new SharingInvitation();
     }
 
@@ -61,11 +71,12 @@ class SharingInvitation implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'email' => function (self $o, ParseNode $n) { $o->setEmail($n->getStringValue()); },
-            'invitedBy' => function (self $o, ParseNode $n) { $o->setInvitedBy($n->getObjectValue(IdentitySet::class)); },
-            'redeemedBy' => function (self $o, ParseNode $n) { $o->setRedeemedBy($n->getStringValue()); },
-            'signInRequired' => function (self $o, ParseNode $n) { $o->setSignInRequired($n->getBooleanValue()); },
+            'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
+            'invitedBy' => function (ParseNode $n) use ($o) { $o->setInvitedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'redeemedBy' => function (ParseNode $n) use ($o) { $o->setRedeemedBy($n->getStringValue()); },
+            'signInRequired' => function (ParseNode $n) use ($o) { $o->setSignInRequired($n->getBooleanValue()); },
         ];
     }
 

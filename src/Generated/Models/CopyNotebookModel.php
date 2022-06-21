@@ -10,52 +10,84 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class CopyNotebookModel implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $createdBy The createdBy property */
+    /**
+     * @var string|null $createdBy The createdBy property
+    */
     private ?string $createdBy = null;
     
-    /** @var IdentitySet|null $createdByIdentity The createdByIdentity property */
+    /**
+     * @var IdentitySet|null $createdByIdentity The createdByIdentity property
+    */
     private ?IdentitySet $createdByIdentity = null;
     
-    /** @var DateTime|null $createdTime The createdTime property */
+    /**
+     * @var DateTime|null $createdTime The createdTime property
+    */
     private ?DateTime $createdTime = null;
     
-    /** @var string|null $EscapedSelf The self property */
+    /**
+     * @var string|null $EscapedSelf The self property
+    */
     private ?string $escapedSelf = null;
     
-    /** @var string|null $id The id property */
+    /**
+     * @var string|null $id The id property
+    */
     private ?string $id = null;
     
-    /** @var bool|null $isDefault The isDefault property */
+    /**
+     * @var bool|null $isDefault The isDefault property
+    */
     private ?bool $isDefault = null;
     
-    /** @var bool|null $isShared The isShared property */
+    /**
+     * @var bool|null $isShared The isShared property
+    */
     private ?bool $isShared = null;
     
-    /** @var string|null $lastModifiedBy The lastModifiedBy property */
+    /**
+     * @var string|null $lastModifiedBy The lastModifiedBy property
+    */
     private ?string $lastModifiedBy = null;
     
-    /** @var IdentitySet|null $lastModifiedByIdentity The lastModifiedByIdentity property */
+    /**
+     * @var IdentitySet|null $lastModifiedByIdentity The lastModifiedByIdentity property
+    */
     private ?IdentitySet $lastModifiedByIdentity = null;
     
-    /** @var DateTime|null $lastModifiedTime The lastModifiedTime property */
+    /**
+     * @var DateTime|null $lastModifiedTime The lastModifiedTime property
+    */
     private ?DateTime $lastModifiedTime = null;
     
-    /** @var NotebookLinks|null $links The links property */
+    /**
+     * @var NotebookLinks|null $links The links property
+    */
     private ?NotebookLinks $links = null;
     
-    /** @var string|null $name The name property */
+    /**
+     * @var string|null $name The name property
+    */
     private ?string $name = null;
     
-    /** @var string|null $sectionGroupsUrl The sectionGroupsUrl property */
+    /**
+     * @var string|null $sectionGroupsUrl The sectionGroupsUrl property
+    */
     private ?string $sectionGroupsUrl = null;
     
-    /** @var string|null $sectionsUrl The sectionsUrl property */
+    /**
+     * @var string|null $sectionsUrl The sectionsUrl property
+    */
     private ?string $sectionsUrl = null;
     
-    /** @var OnenoteUserRole|null $userRole The userRole property */
+    /**
+     * @var OnenoteUserRole|null $userRole The userRole property
+    */
     private ?OnenoteUserRole $userRole = null;
     
     /**
@@ -70,7 +102,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return CopyNotebookModel
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): CopyNotebookModel {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): CopyNotebookModel {
         return new CopyNotebookModel();
     }
 
@@ -111,22 +143,23 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'createdBy' => function (self $o, ParseNode $n) { $o->setCreatedBy($n->getStringValue()); },
-            'createdByIdentity' => function (self $o, ParseNode $n) { $o->setCreatedByIdentity($n->getObjectValue(IdentitySet::class)); },
-            'createdTime' => function (self $o, ParseNode $n) { $o->setCreatedTime($n->getDateTimeValue()); },
-            'self' => function (self $o, ParseNode $n) { $o->setEscapedSelf($n->getStringValue()); },
-            'id' => function (self $o, ParseNode $n) { $o->setId($n->getStringValue()); },
-            'isDefault' => function (self $o, ParseNode $n) { $o->setIsDefault($n->getBooleanValue()); },
-            'isShared' => function (self $o, ParseNode $n) { $o->setIsShared($n->getBooleanValue()); },
-            'lastModifiedBy' => function (self $o, ParseNode $n) { $o->setLastModifiedBy($n->getStringValue()); },
-            'lastModifiedByIdentity' => function (self $o, ParseNode $n) { $o->setLastModifiedByIdentity($n->getObjectValue(IdentitySet::class)); },
-            'lastModifiedTime' => function (self $o, ParseNode $n) { $o->setLastModifiedTime($n->getDateTimeValue()); },
-            'links' => function (self $o, ParseNode $n) { $o->setLinks($n->getObjectValue(NotebookLinks::class)); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'sectionGroupsUrl' => function (self $o, ParseNode $n) { $o->setSectionGroupsUrl($n->getStringValue()); },
-            'sectionsUrl' => function (self $o, ParseNode $n) { $o->setSectionsUrl($n->getStringValue()); },
-            'userRole' => function (self $o, ParseNode $n) { $o->setUserRole($n->getEnumValue(OnenoteUserRole::class)); },
+            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getStringValue()); },
+            'createdByIdentity' => function (ParseNode $n) use ($o) { $o->setCreatedByIdentity($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'createdTime' => function (ParseNode $n) use ($o) { $o->setCreatedTime($n->getDateTimeValue()); },
+            'self' => function (ParseNode $n) use ($o) { $o->setSelf($n->getStringValue()); },
+            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            'isDefault' => function (ParseNode $n) use ($o) { $o->setIsDefault($n->getBooleanValue()); },
+            'isShared' => function (ParseNode $n) use ($o) { $o->setIsShared($n->getBooleanValue()); },
+            'lastModifiedBy' => function (ParseNode $n) use ($o) { $o->setLastModifiedBy($n->getStringValue()); },
+            'lastModifiedByIdentity' => function (ParseNode $n) use ($o) { $o->setLastModifiedByIdentity($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'lastModifiedTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedTime($n->getDateTimeValue()); },
+            'links' => function (ParseNode $n) use ($o) { $o->setLinks($n->getObjectValue(array(NotebookLinks::class, 'createFromDiscriminatorValue'))); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'sectionGroupsUrl' => function (ParseNode $n) use ($o) { $o->setSectionGroupsUrl($n->getStringValue()); },
+            'sectionsUrl' => function (ParseNode $n) use ($o) { $o->setSectionsUrl($n->getStringValue()); },
+            'userRole' => function (ParseNode $n) use ($o) { $o->setUserRole($n->getEnumValue(OnenoteUserRole::class)); },
         ];
     }
 

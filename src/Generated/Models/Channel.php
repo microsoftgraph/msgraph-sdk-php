@@ -7,39 +7,71 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Channel extends Entity 
+class Channel extends Entity implements Parsable 
 {
-    /** @var DateTime|null $createdDateTime Read only. Timestamp at which the channel was created. */
+    /**
+     * @var DateTime|null $createdDateTime Read only. Timestamp at which the channel was created.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $description Optional textual description for the channel. */
+    /**
+     * @var string|null $description Optional textual description for the channel.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName Channel name as it will appear to the user in Microsoft Teams. */
+    /**
+     * @var string|null $displayName Channel name as it will appear to the user in Microsoft Teams.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $email The email address for sending messages to the channel. Read-only. */
+    /**
+     * @var string|null $email The email address for sending messages to the channel. Read-only.
+    */
     private ?string $email = null;
     
-    /** @var DriveItem|null $filesFolder Metadata for the location where the channel's files are stored. */
+    /**
+     * @var DriveItem|null $filesFolder Metadata for the location where the channel's files are stored.
+    */
     private ?DriveItem $filesFolder = null;
     
-    /** @var bool|null $isFavoriteByDefault Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false. */
+    /**
+     * @var bool|null $isFavoriteByDefault Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
+    */
     private ?bool $isFavoriteByDefault = null;
     
-    /** @var array<ConversationMember>|null $members A collection of membership records associated with the channel. */
+    /**
+     * @var array<ConversationMember>|null $members A collection of membership records associated with the channel.
+    */
     private ?array $members = null;
     
-    /** @var ChannelMembershipType|null $membershipType The type of the channel. Can be set during creation and can't be changed. Possible values are: standard - Channel inherits the list of members of the parent team; private - Channel can have members that are a subset of all the members on the parent team. */
+    /**
+     * @var ChannelMembershipType|null $membershipType The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
+    */
     private ?ChannelMembershipType $membershipType = null;
     
-    /** @var array<ChatMessage>|null $messages A collection of all the messages in the channel. A navigation property. Nullable. */
+    /**
+     * @var array<ChatMessage>|null $messages A collection of all the messages in the channel. A navigation property. Nullable.
+    */
     private ?array $messages = null;
     
-    /** @var array<TeamsTab>|null $tabs A collection of all the tabs in the channel. A navigation property. */
+    /**
+     * @var array<SharedWithChannelTeamInfo>|null $sharedWithTeams A collection of teams with which a channel is shared.
+    */
+    private ?array $sharedWithTeams = null;
+    
+    /**
+     * @var array<TeamsTab>|null $tabs A collection of all the tabs in the channel. A navigation property.
+    */
     private ?array $tabs = null;
     
-    /** @var string|null $webUrl A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only. */
+    /**
+     * @var string|null $tenantId The ID of the Azure Active Directory tenant.
+    */
+    private ?string $tenantId = null;
+    
+    /**
+     * @var string|null $webUrl A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
+    */
     private ?string $webUrl = null;
     
     /**
@@ -54,7 +86,7 @@ class Channel extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Channel
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Channel {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Channel {
         return new Channel();
     }
 
@@ -95,18 +127,21 @@ class Channel extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'email' => function (self $o, ParseNode $n) { $o->setEmail($n->getStringValue()); },
-            'filesFolder' => function (self $o, ParseNode $n) { $o->setFilesFolder($n->getObjectValue(DriveItem::class)); },
-            'isFavoriteByDefault' => function (self $o, ParseNode $n) { $o->setIsFavoriteByDefault($n->getBooleanValue()); },
-            'members' => function (self $o, ParseNode $n) { $o->setMembers($n->getCollectionOfObjectValues(ConversationMember::class)); },
-            'membershipType' => function (self $o, ParseNode $n) { $o->setMembershipType($n->getEnumValue(ChannelMembershipType::class)); },
-            'messages' => function (self $o, ParseNode $n) { $o->setMessages($n->getCollectionOfObjectValues(ChatMessage::class)); },
-            'tabs' => function (self $o, ParseNode $n) { $o->setTabs($n->getCollectionOfObjectValues(TeamsTab::class)); },
-            'webUrl' => function (self $o, ParseNode $n) { $o->setWebUrl($n->getStringValue()); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
+            'filesFolder' => function (ParseNode $n) use ($o) { $o->setFilesFolder($n->getObjectValue(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
+            'isFavoriteByDefault' => function (ParseNode $n) use ($o) { $o->setIsFavoriteByDefault($n->getBooleanValue()); },
+            'members' => function (ParseNode $n) use ($o) { $o->setMembers($n->getCollectionOfObjectValues(array(ConversationMember::class, 'createFromDiscriminatorValue'))); },
+            'membershipType' => function (ParseNode $n) use ($o) { $o->setMembershipType($n->getEnumValue(ChannelMembershipType::class)); },
+            'messages' => function (ParseNode $n) use ($o) { $o->setMessages($n->getCollectionOfObjectValues(array(ChatMessage::class, 'createFromDiscriminatorValue'))); },
+            'sharedWithTeams' => function (ParseNode $n) use ($o) { $o->setSharedWithTeams($n->getCollectionOfObjectValues(array(SharedWithChannelTeamInfo::class, 'createFromDiscriminatorValue'))); },
+            'tabs' => function (ParseNode $n) use ($o) { $o->setTabs($n->getCollectionOfObjectValues(array(TeamsTab::class, 'createFromDiscriminatorValue'))); },
+            'tenantId' => function (ParseNode $n) use ($o) { $o->setTenantId($n->getStringValue()); },
+            'webUrl' => function (ParseNode $n) use ($o) { $o->setWebUrl($n->getStringValue()); },
         ]);
     }
 
@@ -135,7 +170,7 @@ class Channel extends Entity
     }
 
     /**
-     * Gets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. Possible values are: standard - Channel inherits the list of members of the parent team; private - Channel can have members that are a subset of all the members on the parent team.
+     * Gets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
      * @return ChannelMembershipType|null
     */
     public function getMembershipType(): ?ChannelMembershipType {
@@ -151,11 +186,27 @@ class Channel extends Entity
     }
 
     /**
+     * Gets the sharedWithTeams property value. A collection of teams with which a channel is shared.
+     * @return array<SharedWithChannelTeamInfo>|null
+    */
+    public function getSharedWithTeams(): ?array {
+        return $this->sharedWithTeams;
+    }
+
+    /**
      * Gets the tabs property value. A collection of all the tabs in the channel. A navigation property.
      * @return array<TeamsTab>|null
     */
     public function getTabs(): ?array {
         return $this->tabs;
+    }
+
+    /**
+     * Gets the tenantId property value. The ID of the Azure Active Directory tenant.
+     * @return string|null
+    */
+    public function getTenantId(): ?string {
+        return $this->tenantId;
     }
 
     /**
@@ -181,7 +232,9 @@ class Channel extends Entity
         $writer->writeCollectionOfObjectValues('members', $this->members);
         $writer->writeEnumValue('membershipType', $this->membershipType);
         $writer->writeCollectionOfObjectValues('messages', $this->messages);
+        $writer->writeCollectionOfObjectValues('sharedWithTeams', $this->sharedWithTeams);
         $writer->writeCollectionOfObjectValues('tabs', $this->tabs);
+        $writer->writeStringValue('tenantId', $this->tenantId);
         $writer->writeStringValue('webUrl', $this->webUrl);
     }
 
@@ -242,7 +295,7 @@ class Channel extends Entity
     }
 
     /**
-     * Sets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. Possible values are: standard - Channel inherits the list of members of the parent team; private - Channel can have members that are a subset of all the members on the parent team.
+     * Sets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
      *  @param ChannelMembershipType|null $value Value to set for the membershipType property.
     */
     public function setMembershipType(?ChannelMembershipType $value ): void {
@@ -258,11 +311,27 @@ class Channel extends Entity
     }
 
     /**
+     * Sets the sharedWithTeams property value. A collection of teams with which a channel is shared.
+     *  @param array<SharedWithChannelTeamInfo>|null $value Value to set for the sharedWithTeams property.
+    */
+    public function setSharedWithTeams(?array $value ): void {
+        $this->sharedWithTeams = $value;
+    }
+
+    /**
      * Sets the tabs property value. A collection of all the tabs in the channel. A navigation property.
      *  @param array<TeamsTab>|null $value Value to set for the tabs property.
     */
     public function setTabs(?array $value ): void {
         $this->tabs = $value;
+    }
+
+    /**
+     * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
+     *  @param string|null $value Value to set for the tenantId property.
+    */
+    public function setTenantId(?string $value ): void {
+        $this->tenantId = $value;
     }
 
     /**

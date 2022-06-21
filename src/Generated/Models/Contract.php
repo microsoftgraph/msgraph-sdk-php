@@ -6,22 +6,30 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Contract extends DirectoryObject 
+class Contract extends DirectoryObject implements Parsable 
 {
-    /** @var string|null $contractType Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below. */
+    /**
+     * @var string|null $contractType Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.
+    */
     private ?string $contractType = null;
     
-    /** @var string|null $customerId The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource. */
+    /**
+     * @var string|null $customerId The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource.
+    */
     private ?string $customerId = null;
     
-    /** @var string|null $defaultDomainName A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes. */
+    /**
+     * @var string|null $defaultDomainName A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
+    */
     private ?string $defaultDomainName = null;
     
-    /** @var string|null $displayName A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes. */
+    /**
+     * @var string|null $displayName A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
+    */
     private ?string $displayName = null;
     
     /**
-     * Instantiates a new contract and sets the default values.
+     * Instantiates a new Contract and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -32,7 +40,7 @@ class Contract extends DirectoryObject
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Contract
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Contract {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Contract {
         return new Contract();
     }
 
@@ -73,11 +81,12 @@ class Contract extends DirectoryObject
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'contractType' => function (self $o, ParseNode $n) { $o->setContractType($n->getStringValue()); },
-            'customerId' => function (self $o, ParseNode $n) { $o->setCustomerId($n->getStringValue()); },
-            'defaultDomainName' => function (self $o, ParseNode $n) { $o->setDefaultDomainName($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
+            'contractType' => function (ParseNode $n) use ($o) { $o->setContractType($n->getStringValue()); },
+            'customerId' => function (ParseNode $n) use ($o) { $o->setCustomerId($n->getStringValue()); },
+            'defaultDomainName' => function (ParseNode $n) use ($o) { $o->setDefaultDomainName($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
         ]);
     }
 

@@ -7,31 +7,45 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Printer extends PrinterBase 
+class Printer extends PrinterBase implements Parsable 
 {
-    /** @var array<PrintConnector>|null $connectors The connectors that are associated with the printer. */
+    /**
+     * @var array<PrintConnector>|null $connectors The connectors that are associated with the printer.
+    */
     private ?array $connectors = null;
     
-    /** @var bool|null $hasPhysicalDevice True if the printer has a physical device for printing. Read-only. */
+    /**
+     * @var bool|null $hasPhysicalDevice True if the printer has a physical device for printing. Read-only.
+    */
     private ?bool $hasPhysicalDevice = null;
     
-    /** @var bool|null $isShared True if the printer is shared; false otherwise. Read-only. */
+    /**
+     * @var bool|null $isShared True if the printer is shared; false otherwise. Read-only.
+    */
     private ?bool $isShared = null;
     
-    /** @var DateTime|null $lastSeenDateTime The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only. */
+    /**
+     * @var DateTime|null $lastSeenDateTime The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
+    */
     private ?DateTime $lastSeenDateTime = null;
     
-    /** @var DateTime|null $registeredDateTime The DateTimeOffset when the printer was registered. Read-only. */
+    /**
+     * @var DateTime|null $registeredDateTime The DateTimeOffset when the printer was registered. Read-only.
+    */
     private ?DateTime $registeredDateTime = null;
     
-    /** @var array<PrinterShare>|null $shares The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable. */
+    /**
+     * @var array<PrinterShare>|null $shares The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
+    */
     private ?array $shares = null;
     
-    /** @var array<PrintTaskTrigger>|null $taskTriggers A list of task triggers that are associated with the printer. */
+    /**
+     * @var array<PrintTaskTrigger>|null $taskTriggers A list of task triggers that are associated with the printer.
+    */
     private ?array $taskTriggers = null;
     
     /**
-     * Instantiates a new printer and sets the default values.
+     * Instantiates a new Printer and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -42,7 +56,7 @@ class Printer extends PrinterBase
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Printer
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Printer {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Printer {
         return new Printer();
     }
 
@@ -59,14 +73,15 @@ class Printer extends PrinterBase
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'connectors' => function (self $o, ParseNode $n) { $o->setConnectors($n->getCollectionOfObjectValues(PrintConnector::class)); },
-            'hasPhysicalDevice' => function (self $o, ParseNode $n) { $o->setHasPhysicalDevice($n->getBooleanValue()); },
-            'isShared' => function (self $o, ParseNode $n) { $o->setIsShared($n->getBooleanValue()); },
-            'lastSeenDateTime' => function (self $o, ParseNode $n) { $o->setLastSeenDateTime($n->getDateTimeValue()); },
-            'registeredDateTime' => function (self $o, ParseNode $n) { $o->setRegisteredDateTime($n->getDateTimeValue()); },
-            'shares' => function (self $o, ParseNode $n) { $o->setShares($n->getCollectionOfObjectValues(PrinterShare::class)); },
-            'taskTriggers' => function (self $o, ParseNode $n) { $o->setTaskTriggers($n->getCollectionOfObjectValues(PrintTaskTrigger::class)); },
+            'connectors' => function (ParseNode $n) use ($o) { $o->setConnectors($n->getCollectionOfObjectValues(array(PrintConnector::class, 'createFromDiscriminatorValue'))); },
+            'hasPhysicalDevice' => function (ParseNode $n) use ($o) { $o->setHasPhysicalDevice($n->getBooleanValue()); },
+            'isShared' => function (ParseNode $n) use ($o) { $o->setIsShared($n->getBooleanValue()); },
+            'lastSeenDateTime' => function (ParseNode $n) use ($o) { $o->setLastSeenDateTime($n->getDateTimeValue()); },
+            'registeredDateTime' => function (ParseNode $n) use ($o) { $o->setRegisteredDateTime($n->getDateTimeValue()); },
+            'shares' => function (ParseNode $n) use ($o) { $o->setShares($n->getCollectionOfObjectValues(array(PrinterShare::class, 'createFromDiscriminatorValue'))); },
+            'taskTriggers' => function (ParseNode $n) use ($o) { $o->setTaskTriggers($n->getCollectionOfObjectValues(array(PrintTaskTrigger::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

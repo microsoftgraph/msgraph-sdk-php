@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class EmailAddress implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $address The email address of the person or entity. */
+    /**
+     * @var string|null $address The email address of an entity instance.
+    */
     private ?string $address = null;
     
-    /** @var string|null $name The display name of the person or entity. */
+    /**
+     * @var string|null $name The display name of an entity instance.
+    */
     private ?string $name = null;
     
     /**
@@ -30,7 +36,7 @@ class EmailAddress implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return EmailAddress
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): EmailAddress {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): EmailAddress {
         return new EmailAddress();
     }
 
@@ -43,7 +49,7 @@ class EmailAddress implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the address property value. The email address of the person or entity.
+     * Gets the address property value. The email address of an entity instance.
      * @return string|null
     */
     public function getAddress(): ?string {
@@ -55,14 +61,15 @@ class EmailAddress implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'address' => function (self $o, ParseNode $n) { $o->setAddress($n->getStringValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
+            'address' => function (ParseNode $n) use ($o) { $o->setAddress($n->getStringValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
         ];
     }
 
     /**
-     * Gets the name property value. The display name of the person or entity.
+     * Gets the name property value. The display name of an entity instance.
      * @return string|null
     */
     public function getName(): ?string {
@@ -88,7 +95,7 @@ class EmailAddress implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the address property value. The email address of the person or entity.
+     * Sets the address property value. The email address of an entity instance.
      *  @param string|null $value Value to set for the address property.
     */
     public function setAddress(?string $value ): void {
@@ -96,7 +103,7 @@ class EmailAddress implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the name property value. The display name of the person or entity.
+     * Sets the name property value. The display name of an entity instance.
      *  @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value ): void {

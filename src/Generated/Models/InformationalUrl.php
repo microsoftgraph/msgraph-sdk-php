@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class InformationalUrl implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $logoUrl CDN URL to the application's logo, Read-only. */
+    /**
+     * @var string|null $logoUrl CDN URL to the application's logo, Read-only.
+    */
     private ?string $logoUrl = null;
     
-    /** @var string|null $marketingUrl Link to the application's marketing page. For example, https://www.contoso.com/app/marketing */
+    /**
+     * @var string|null $marketingUrl Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
+    */
     private ?string $marketingUrl = null;
     
-    /** @var string|null $privacyStatementUrl Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy */
+    /**
+     * @var string|null $privacyStatementUrl Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
+    */
     private ?string $privacyStatementUrl = null;
     
-    /** @var string|null $supportUrl Link to the application's support page. For example, https://www.contoso.com/app/support */
+    /**
+     * @var string|null $supportUrl Link to the application's support page. For example, https://www.contoso.com/app/support
+    */
     private ?string $supportUrl = null;
     
-    /** @var string|null $termsOfServiceUrl Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice */
+    /**
+     * @var string|null $termsOfServiceUrl Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
+    */
     private ?string $termsOfServiceUrl = null;
     
     /**
@@ -39,7 +51,7 @@ class InformationalUrl implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return InformationalUrl
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): InformationalUrl {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): InformationalUrl {
         return new InformationalUrl();
     }
 
@@ -56,12 +68,13 @@ class InformationalUrl implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'logoUrl' => function (self $o, ParseNode $n) { $o->setLogoUrl($n->getStringValue()); },
-            'marketingUrl' => function (self $o, ParseNode $n) { $o->setMarketingUrl($n->getStringValue()); },
-            'privacyStatementUrl' => function (self $o, ParseNode $n) { $o->setPrivacyStatementUrl($n->getStringValue()); },
-            'supportUrl' => function (self $o, ParseNode $n) { $o->setSupportUrl($n->getStringValue()); },
-            'termsOfServiceUrl' => function (self $o, ParseNode $n) { $o->setTermsOfServiceUrl($n->getStringValue()); },
+            'logoUrl' => function (ParseNode $n) use ($o) { $o->setLogoUrl($n->getStringValue()); },
+            'marketingUrl' => function (ParseNode $n) use ($o) { $o->setMarketingUrl($n->getStringValue()); },
+            'privacyStatementUrl' => function (ParseNode $n) use ($o) { $o->setPrivacyStatementUrl($n->getStringValue()); },
+            'supportUrl' => function (ParseNode $n) use ($o) { $o->setSupportUrl($n->getStringValue()); },
+            'termsOfServiceUrl' => function (ParseNode $n) use ($o) { $o->setTermsOfServiceUrl($n->getStringValue()); },
         ];
     }
 

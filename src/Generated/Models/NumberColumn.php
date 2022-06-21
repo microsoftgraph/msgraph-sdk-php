@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class NumberColumn implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $decimalPlaces How many decimal places to display. See below for information about the possible values. */
+    /**
+     * @var string|null $decimalPlaces How many decimal places to display. See below for information about the possible values.
+    */
     private ?string $decimalPlaces = null;
     
-    /** @var string|null $displayAs How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number. */
+    /**
+     * @var string|null $displayAs How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
+    */
     private ?string $displayAs = null;
     
-    /** @var float|null $maximum The maximum permitted value. */
+    /**
+     * @var float|null $maximum The maximum permitted value.
+    */
     private ?float $maximum = null;
     
-    /** @var float|null $minimum The minimum permitted value. */
+    /**
+     * @var float|null $minimum The minimum permitted value.
+    */
     private ?float $minimum = null;
     
     /**
@@ -36,7 +46,7 @@ class NumberColumn implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return NumberColumn
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): NumberColumn {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): NumberColumn {
         return new NumberColumn();
     }
 
@@ -69,11 +79,12 @@ class NumberColumn implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'decimalPlaces' => function (self $o, ParseNode $n) { $o->setDecimalPlaces($n->getStringValue()); },
-            'displayAs' => function (self $o, ParseNode $n) { $o->setDisplayAs($n->getStringValue()); },
-            'maximum' => function (self $o, ParseNode $n) { $o->setMaximum($n->getFloatValue()); },
-            'minimum' => function (self $o, ParseNode $n) { $o->setMinimum($n->getFloatValue()); },
+            'decimalPlaces' => function (ParseNode $n) use ($o) { $o->setDecimalPlaces($n->getStringValue()); },
+            'displayAs' => function (ParseNode $n) use ($o) { $o->setDisplayAs($n->getStringValue()); },
+            'maximum' => function (ParseNode $n) use ($o) { $o->setMaximum($n->getFloatValue()); },
+            'minimum' => function (ParseNode $n) use ($o) { $o->setMinimum($n->getFloatValue()); },
         ];
     }
 

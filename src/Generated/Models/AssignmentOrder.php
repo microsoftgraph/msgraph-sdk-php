@@ -9,14 +9,18 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AssignmentOrder implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<string>|null $order A list of identityUserFlowAttribute object identifiers that determine the order in which attributes should be collected within a user flow. */
+    /**
+     * @var array<string>|null $order A list of identityUserFlowAttribute IDs provided to determine the order in which attributes should be collected within a user flow.
+    */
     private ?array $order = null;
     
     /**
-     * Instantiates a new assignmentOrder and sets the default values.
+     * Instantiates a new AssignmentOrder and sets the default values.
     */
     public function __construct() {
         $this->additionalData = [];
@@ -27,7 +31,7 @@ class AssignmentOrder implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AssignmentOrder
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AssignmentOrder {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AssignmentOrder {
         return new AssignmentOrder();
     }
 
@@ -44,13 +48,14 @@ class AssignmentOrder implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'order' => function (self $o, ParseNode $n) { $o->setOrder($n->getCollectionOfPrimitiveValues()); },
+            'order' => function (ParseNode $n) use ($o) { $o->setOrder($n->getCollectionOfPrimitiveValues()); },
         ];
     }
 
     /**
-     * Gets the order property value. A list of identityUserFlowAttribute object identifiers that determine the order in which attributes should be collected within a user flow.
+     * Gets the order property value. A list of identityUserFlowAttribute IDs provided to determine the order in which attributes should be collected within a user flow.
      * @return array<string>|null
     */
     public function getOrder(): ?array {
@@ -75,7 +80,7 @@ class AssignmentOrder implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the order property value. A list of identityUserFlowAttribute object identifiers that determine the order in which attributes should be collected within a user flow.
+     * Sets the order property value. A list of identityUserFlowAttribute IDs provided to determine the order in which attributes should be collected within a user flow.
      *  @param array<string>|null $value Value to set for the order property.
     */
     public function setOrder(?array $value ): void {

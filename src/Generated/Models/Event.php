@@ -7,136 +7,220 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Event extends OutlookItem 
+class Event extends OutlookItem implements Parsable 
 {
-    /** @var bool|null $allowNewTimeProposals true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true. */
+    /**
+     * @var bool|null $allowNewTimeProposals true if the meeting organizer allows invitees to propose a new time when responding; otherwise false. Optional. Default is true.
+    */
     private ?bool $allowNewTimeProposals = null;
     
-    /** @var array<Attachment>|null $attachments The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable. */
+    /**
+     * @var array<Attachment>|null $attachments The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
+    */
     private ?array $attachments = null;
     
-    /** @var array<Attendee>|null $attendees The collection of attendees for the event. */
+    /**
+     * @var array<Attendee>|null $attendees The collection of attendees for the event.
+    */
     private ?array $attendees = null;
     
-    /** @var ItemBody|null $body The body of the message associated with the event. It can be in HTML or text format. */
+    /**
+     * @var ItemBody|null $body The body of the message associated with the event. It can be in HTML or text format.
+    */
     private ?ItemBody $body = null;
     
-    /** @var string|null $bodyPreview The preview of the message associated with the event. It is in text format. */
+    /**
+     * @var string|null $bodyPreview The preview of the message associated with the event. It is in text format.
+    */
     private ?string $bodyPreview = null;
     
-    /** @var Calendar|null $calendar The calendar that contains the event. Navigation property. Read-only. */
+    /**
+     * @var Calendar|null $calendar The calendar that contains the event. Navigation property. Read-only.
+    */
     private ?Calendar $calendar = null;
     
-    /** @var DateTimeTimeZone|null $end The date, time, and time zone that the event ends. By default, the end time is in UTC. */
+    /**
+     * @var DateTimeTimeZone|null $end The date, time, and time zone that the event ends. By default, the end time is in UTC.
+    */
     private ?DateTimeTimeZone $end = null;
     
-    /** @var array<Extension>|null $extensions The collection of open extensions defined for the event. Nullable. */
+    /**
+     * @var array<Extension>|null $extensions The collection of open extensions defined for the event. Nullable.
+    */
     private ?array $extensions = null;
     
-    /** @var bool|null $hasAttachments Set to true if the event has attachments. */
+    /**
+     * @var bool|null $hasAttachments Set to true if the event has attachments.
+    */
     private ?bool $hasAttachments = null;
     
-    /** @var bool|null $hideAttendees When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false. */
+    /**
+     * @var bool|null $hideAttendees When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.
+    */
     private ?bool $hideAttendees = null;
     
-    /** @var string|null $iCalUId A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only. */
+    /**
+     * @var string|null $iCalUId A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.
+    */
     private ?string $iCalUId = null;
     
-    /** @var Importance|null $importance The importance property */
+    /**
+     * @var Importance|null $importance The importance property
+    */
     private ?Importance $importance = null;
     
-    /** @var array<Event>|null $instances The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable. */
+    /**
+     * @var array<Event>|null $instances The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
+    */
     private ?array $instances = null;
     
-    /** @var bool|null $isAllDay The isAllDay property */
+    /**
+     * @var bool|null $isAllDay The isAllDay property
+    */
     private ?bool $isAllDay = null;
     
-    /** @var bool|null $isCancelled The isCancelled property */
+    /**
+     * @var bool|null $isCancelled The isCancelled property
+    */
     private ?bool $isCancelled = null;
     
-    /** @var bool|null $isDraft The isDraft property */
+    /**
+     * @var bool|null $isDraft The isDraft property
+    */
     private ?bool $isDraft = null;
     
-    /** @var bool|null $isOnlineMeeting The isOnlineMeeting property */
+    /**
+     * @var bool|null $isOnlineMeeting The isOnlineMeeting property
+    */
     private ?bool $isOnlineMeeting = null;
     
-    /** @var bool|null $isOrganizer The isOrganizer property */
+    /**
+     * @var bool|null $isOrganizer The isOrganizer property
+    */
     private ?bool $isOrganizer = null;
     
-    /** @var bool|null $isReminderOn The isReminderOn property */
+    /**
+     * @var bool|null $isReminderOn The isReminderOn property
+    */
     private ?bool $isReminderOn = null;
     
-    /** @var Location|null $location The location property */
+    /**
+     * @var Location|null $location The location property
+    */
     private ?Location $location = null;
     
-    /** @var array<Location>|null $locations The locations property */
+    /**
+     * @var array<Location>|null $locations The locations property
+    */
     private ?array $locations = null;
     
-    /** @var array<MultiValueLegacyExtendedProperty>|null $multiValueExtendedProperties The collection of multi-value extended properties defined for the event. Read-only. Nullable. */
+    /**
+     * @var array<MultiValueLegacyExtendedProperty>|null $multiValueExtendedProperties The collection of multi-value extended properties defined for the event. Read-only. Nullable.
+    */
     private ?array $multiValueExtendedProperties = null;
     
-    /** @var OnlineMeetingInfo|null $onlineMeeting The onlineMeeting property */
+    /**
+     * @var OnlineMeetingInfo|null $onlineMeeting The onlineMeeting property
+    */
     private ?OnlineMeetingInfo $onlineMeeting = null;
     
-    /** @var OnlineMeetingProviderType|null $onlineMeetingProvider The onlineMeetingProvider property */
+    /**
+     * @var OnlineMeetingProviderType|null $onlineMeetingProvider The onlineMeetingProvider property
+    */
     private ?OnlineMeetingProviderType $onlineMeetingProvider = null;
     
-    /** @var string|null $onlineMeetingUrl The onlineMeetingUrl property */
+    /**
+     * @var string|null $onlineMeetingUrl The onlineMeetingUrl property
+    */
     private ?string $onlineMeetingUrl = null;
     
-    /** @var Recipient|null $organizer The organizer property */
+    /**
+     * @var Recipient|null $organizer The organizer property
+    */
     private ?Recipient $organizer = null;
     
-    /** @var string|null $originalEndTimeZone The originalEndTimeZone property */
+    /**
+     * @var string|null $originalEndTimeZone The originalEndTimeZone property
+    */
     private ?string $originalEndTimeZone = null;
     
-    /** @var DateTime|null $originalStart The originalStart property */
+    /**
+     * @var DateTime|null $originalStart The originalStart property
+    */
     private ?DateTime $originalStart = null;
     
-    /** @var string|null $originalStartTimeZone The originalStartTimeZone property */
+    /**
+     * @var string|null $originalStartTimeZone The originalStartTimeZone property
+    */
     private ?string $originalStartTimeZone = null;
     
-    /** @var PatternedRecurrence|null $recurrence The recurrence property */
+    /**
+     * @var PatternedRecurrence|null $recurrence The recurrence property
+    */
     private ?PatternedRecurrence $recurrence = null;
     
-    /** @var int|null $reminderMinutesBeforeStart The reminderMinutesBeforeStart property */
+    /**
+     * @var int|null $reminderMinutesBeforeStart The reminderMinutesBeforeStart property
+    */
     private ?int $reminderMinutesBeforeStart = null;
     
-    /** @var bool|null $responseRequested The responseRequested property */
+    /**
+     * @var bool|null $responseRequested The responseRequested property
+    */
     private ?bool $responseRequested = null;
     
-    /** @var ResponseStatus|null $responseStatus The responseStatus property */
+    /**
+     * @var ResponseStatus|null $responseStatus The responseStatus property
+    */
     private ?ResponseStatus $responseStatus = null;
     
-    /** @var Sensitivity|null $sensitivity The sensitivity property */
+    /**
+     * @var Sensitivity|null $sensitivity The sensitivity property
+    */
     private ?Sensitivity $sensitivity = null;
     
-    /** @var string|null $seriesMasterId The seriesMasterId property */
+    /**
+     * @var string|null $seriesMasterId The seriesMasterId property
+    */
     private ?string $seriesMasterId = null;
     
-    /** @var FreeBusyStatus|null $showAs The showAs property */
+    /**
+     * @var FreeBusyStatus|null $showAs The showAs property
+    */
     private ?FreeBusyStatus $showAs = null;
     
-    /** @var array<SingleValueLegacyExtendedProperty>|null $singleValueExtendedProperties The collection of single-value extended properties defined for the event. Read-only. Nullable. */
+    /**
+     * @var array<SingleValueLegacyExtendedProperty>|null $singleValueExtendedProperties The collection of single-value extended properties defined for the event. Read-only. Nullable.
+    */
     private ?array $singleValueExtendedProperties = null;
     
-    /** @var DateTimeTimeZone|null $start The start property */
+    /**
+     * @var DateTimeTimeZone|null $start The start property
+    */
     private ?DateTimeTimeZone $start = null;
     
-    /** @var string|null $subject The subject property */
+    /**
+     * @var string|null $subject The subject property
+    */
     private ?string $subject = null;
     
-    /** @var string|null $transactionId The transactionId property */
+    /**
+     * @var string|null $transactionId The transactionId property
+    */
     private ?string $transactionId = null;
     
-    /** @var EventType|null $type The type property */
+    /**
+     * @var EventType|null $type The type property
+    */
     private ?EventType $type = null;
     
-    /** @var string|null $webLink The webLink property */
+    /**
+     * @var string|null $webLink The webLink property
+    */
     private ?string $webLink = null;
     
     /**
-     * Instantiates a new event and sets the default values.
+     * Instantiates a new Event and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -147,12 +231,12 @@ class Event extends OutlookItem
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Event
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Event {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Event {
         return new Event();
     }
 
     /**
-     * Gets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
+     * Gets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise false. Optional. Default is true.
      * @return bool|null
     */
     public function getAllowNewTimeProposals(): ?bool {
@@ -220,49 +304,50 @@ class Event extends OutlookItem
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowNewTimeProposals' => function (self $o, ParseNode $n) { $o->setAllowNewTimeProposals($n->getBooleanValue()); },
-            'attachments' => function (self $o, ParseNode $n) { $o->setAttachments($n->getCollectionOfObjectValues(Attachment::class)); },
-            'attendees' => function (self $o, ParseNode $n) { $o->setAttendees($n->getCollectionOfObjectValues(Attendee::class)); },
-            'body' => function (self $o, ParseNode $n) { $o->setBody($n->getObjectValue(ItemBody::class)); },
-            'bodyPreview' => function (self $o, ParseNode $n) { $o->setBodyPreview($n->getStringValue()); },
-            'calendar' => function (self $o, ParseNode $n) { $o->setCalendar($n->getObjectValue(Calendar::class)); },
-            'end' => function (self $o, ParseNode $n) { $o->setEnd($n->getObjectValue(DateTimeTimeZone::class)); },
-            'extensions' => function (self $o, ParseNode $n) { $o->setExtensions($n->getCollectionOfObjectValues(Extension::class)); },
-            'hasAttachments' => function (self $o, ParseNode $n) { $o->setHasAttachments($n->getBooleanValue()); },
-            'hideAttendees' => function (self $o, ParseNode $n) { $o->setHideAttendees($n->getBooleanValue()); },
-            'iCalUId' => function (self $o, ParseNode $n) { $o->setICalUId($n->getStringValue()); },
-            'importance' => function (self $o, ParseNode $n) { $o->setImportance($n->getEnumValue(Importance::class)); },
-            'instances' => function (self $o, ParseNode $n) { $o->setInstances($n->getCollectionOfObjectValues(Event::class)); },
-            'isAllDay' => function (self $o, ParseNode $n) { $o->setIsAllDay($n->getBooleanValue()); },
-            'isCancelled' => function (self $o, ParseNode $n) { $o->setIsCancelled($n->getBooleanValue()); },
-            'isDraft' => function (self $o, ParseNode $n) { $o->setIsDraft($n->getBooleanValue()); },
-            'isOnlineMeeting' => function (self $o, ParseNode $n) { $o->setIsOnlineMeeting($n->getBooleanValue()); },
-            'isOrganizer' => function (self $o, ParseNode $n) { $o->setIsOrganizer($n->getBooleanValue()); },
-            'isReminderOn' => function (self $o, ParseNode $n) { $o->setIsReminderOn($n->getBooleanValue()); },
-            'location' => function (self $o, ParseNode $n) { $o->setLocation($n->getObjectValue(Location::class)); },
-            'locations' => function (self $o, ParseNode $n) { $o->setLocations($n->getCollectionOfObjectValues(Location::class)); },
-            'multiValueExtendedProperties' => function (self $o, ParseNode $n) { $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::class)); },
-            'onlineMeeting' => function (self $o, ParseNode $n) { $o->setOnlineMeeting($n->getObjectValue(OnlineMeetingInfo::class)); },
-            'onlineMeetingProvider' => function (self $o, ParseNode $n) { $o->setOnlineMeetingProvider($n->getEnumValue(OnlineMeetingProviderType::class)); },
-            'onlineMeetingUrl' => function (self $o, ParseNode $n) { $o->setOnlineMeetingUrl($n->getStringValue()); },
-            'organizer' => function (self $o, ParseNode $n) { $o->setOrganizer($n->getObjectValue(Recipient::class)); },
-            'originalEndTimeZone' => function (self $o, ParseNode $n) { $o->setOriginalEndTimeZone($n->getStringValue()); },
-            'originalStart' => function (self $o, ParseNode $n) { $o->setOriginalStart($n->getDateTimeValue()); },
-            'originalStartTimeZone' => function (self $o, ParseNode $n) { $o->setOriginalStartTimeZone($n->getStringValue()); },
-            'recurrence' => function (self $o, ParseNode $n) { $o->setRecurrence($n->getObjectValue(PatternedRecurrence::class)); },
-            'reminderMinutesBeforeStart' => function (self $o, ParseNode $n) { $o->setReminderMinutesBeforeStart($n->getIntegerValue()); },
-            'responseRequested' => function (self $o, ParseNode $n) { $o->setResponseRequested($n->getBooleanValue()); },
-            'responseStatus' => function (self $o, ParseNode $n) { $o->setResponseStatus($n->getObjectValue(ResponseStatus::class)); },
-            'sensitivity' => function (self $o, ParseNode $n) { $o->setSensitivity($n->getEnumValue(Sensitivity::class)); },
-            'seriesMasterId' => function (self $o, ParseNode $n) { $o->setSeriesMasterId($n->getStringValue()); },
-            'showAs' => function (self $o, ParseNode $n) { $o->setShowAs($n->getEnumValue(FreeBusyStatus::class)); },
-            'singleValueExtendedProperties' => function (self $o, ParseNode $n) { $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::class)); },
-            'start' => function (self $o, ParseNode $n) { $o->setStart($n->getObjectValue(DateTimeTimeZone::class)); },
-            'subject' => function (self $o, ParseNode $n) { $o->setSubject($n->getStringValue()); },
-            'transactionId' => function (self $o, ParseNode $n) { $o->setTransactionId($n->getStringValue()); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getEnumValue(EventType::class)); },
-            'webLink' => function (self $o, ParseNode $n) { $o->setWebLink($n->getStringValue()); },
+            'allowNewTimeProposals' => function (ParseNode $n) use ($o) { $o->setAllowNewTimeProposals($n->getBooleanValue()); },
+            'attachments' => function (ParseNode $n) use ($o) { $o->setAttachments($n->getCollectionOfObjectValues(array(Attachment::class, 'createFromDiscriminatorValue'))); },
+            'attendees' => function (ParseNode $n) use ($o) { $o->setAttendees($n->getCollectionOfObjectValues(array(Attendee::class, 'createFromDiscriminatorValue'))); },
+            'body' => function (ParseNode $n) use ($o) { $o->setBody($n->getObjectValue(array(ItemBody::class, 'createFromDiscriminatorValue'))); },
+            'bodyPreview' => function (ParseNode $n) use ($o) { $o->setBodyPreview($n->getStringValue()); },
+            'calendar' => function (ParseNode $n) use ($o) { $o->setCalendar($n->getObjectValue(array(Calendar::class, 'createFromDiscriminatorValue'))); },
+            'end' => function (ParseNode $n) use ($o) { $o->setEnd($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
+            'extensions' => function (ParseNode $n) use ($o) { $o->setExtensions($n->getCollectionOfObjectValues(array(Extension::class, 'createFromDiscriminatorValue'))); },
+            'hasAttachments' => function (ParseNode $n) use ($o) { $o->setHasAttachments($n->getBooleanValue()); },
+            'hideAttendees' => function (ParseNode $n) use ($o) { $o->setHideAttendees($n->getBooleanValue()); },
+            'iCalUId' => function (ParseNode $n) use ($o) { $o->setICalUId($n->getStringValue()); },
+            'importance' => function (ParseNode $n) use ($o) { $o->setImportance($n->getEnumValue(Importance::class)); },
+            'instances' => function (ParseNode $n) use ($o) { $o->setInstances($n->getCollectionOfObjectValues(array(Event::class, 'createFromDiscriminatorValue'))); },
+            'isAllDay' => function (ParseNode $n) use ($o) { $o->setIsAllDay($n->getBooleanValue()); },
+            'isCancelled' => function (ParseNode $n) use ($o) { $o->setIsCancelled($n->getBooleanValue()); },
+            'isDraft' => function (ParseNode $n) use ($o) { $o->setIsDraft($n->getBooleanValue()); },
+            'isOnlineMeeting' => function (ParseNode $n) use ($o) { $o->setIsOnlineMeeting($n->getBooleanValue()); },
+            'isOrganizer' => function (ParseNode $n) use ($o) { $o->setIsOrganizer($n->getBooleanValue()); },
+            'isReminderOn' => function (ParseNode $n) use ($o) { $o->setIsReminderOn($n->getBooleanValue()); },
+            'location' => function (ParseNode $n) use ($o) { $o->setLocation($n->getObjectValue(array(Location::class, 'createFromDiscriminatorValue'))); },
+            'locations' => function (ParseNode $n) use ($o) { $o->setLocations($n->getCollectionOfObjectValues(array(Location::class, 'createFromDiscriminatorValue'))); },
+            'multiValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues(array(MultiValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
+            'onlineMeeting' => function (ParseNode $n) use ($o) { $o->setOnlineMeeting($n->getObjectValue(array(OnlineMeetingInfo::class, 'createFromDiscriminatorValue'))); },
+            'onlineMeetingProvider' => function (ParseNode $n) use ($o) { $o->setOnlineMeetingProvider($n->getEnumValue(OnlineMeetingProviderType::class)); },
+            'onlineMeetingUrl' => function (ParseNode $n) use ($o) { $o->setOnlineMeetingUrl($n->getStringValue()); },
+            'organizer' => function (ParseNode $n) use ($o) { $o->setOrganizer($n->getObjectValue(array(Recipient::class, 'createFromDiscriminatorValue'))); },
+            'originalEndTimeZone' => function (ParseNode $n) use ($o) { $o->setOriginalEndTimeZone($n->getStringValue()); },
+            'originalStart' => function (ParseNode $n) use ($o) { $o->setOriginalStart($n->getDateTimeValue()); },
+            'originalStartTimeZone' => function (ParseNode $n) use ($o) { $o->setOriginalStartTimeZone($n->getStringValue()); },
+            'recurrence' => function (ParseNode $n) use ($o) { $o->setRecurrence($n->getObjectValue(array(PatternedRecurrence::class, 'createFromDiscriminatorValue'))); },
+            'reminderMinutesBeforeStart' => function (ParseNode $n) use ($o) { $o->setReminderMinutesBeforeStart($n->getIntegerValue()); },
+            'responseRequested' => function (ParseNode $n) use ($o) { $o->setResponseRequested($n->getBooleanValue()); },
+            'responseStatus' => function (ParseNode $n) use ($o) { $o->setResponseStatus($n->getObjectValue(array(ResponseStatus::class, 'createFromDiscriminatorValue'))); },
+            'sensitivity' => function (ParseNode $n) use ($o) { $o->setSensitivity($n->getEnumValue(Sensitivity::class)); },
+            'seriesMasterId' => function (ParseNode $n) use ($o) { $o->setSeriesMasterId($n->getStringValue()); },
+            'showAs' => function (ParseNode $n) use ($o) { $o->setShowAs($n->getEnumValue(FreeBusyStatus::class)); },
+            'singleValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues(array(SingleValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
+            'start' => function (ParseNode $n) use ($o) { $o->setStart($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
+            'subject' => function (ParseNode $n) use ($o) { $o->setSubject($n->getStringValue()); },
+            'transactionId' => function (ParseNode $n) use ($o) { $o->setTransactionId($n->getStringValue()); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(EventType::class)); },
+            'webLink' => function (ParseNode $n) use ($o) { $o->setWebLink($n->getStringValue()); },
         ]);
     }
 
@@ -589,7 +674,7 @@ class Event extends OutlookItem
     }
 
     /**
-     * Sets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
+     * Sets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise false. Optional. Default is true.
      *  @param bool|null $value Value to set for the allowNewTimeProposals property.
     */
     public function setAllowNewTimeProposals(?bool $value ): void {

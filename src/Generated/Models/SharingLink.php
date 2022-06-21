@@ -9,25 +9,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SharingLink implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var Identity|null $application The app the link is associated with. */
+    /**
+     * @var Identity|null $application The app the link is associated with.
+    */
     private ?Identity $application = null;
     
-    /** @var bool|null $preventsDownload If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint. */
+    /**
+     * @var bool|null $preventsDownload If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
+    */
     private ?bool $preventsDownload = null;
     
-    /** @var string|null $scope The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant. */
+    /**
+     * @var string|null $scope The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
+    */
     private ?string $scope = null;
     
-    /** @var string|null $type The type of the link created. */
+    /**
+     * @var string|null $type The type of the link created.
+    */
     private ?string $type = null;
     
-    /** @var string|null $webHtml For embed links, this property contains the HTML code for an <iframe> element that will embed the item in a webpage. */
+    /**
+     * @var string|null $webHtml For embed links, this property contains the HTML code for an <iframe> element that will embed the item in a webpage.
+    */
     private ?string $webHtml = null;
     
-    /** @var string|null $webUrl A URL that opens the item in the browser on the OneDrive website. */
+    /**
+     * @var string|null $webUrl A URL that opens the item in the browser on the OneDrive website.
+    */
     private ?string $webUrl = null;
     
     /**
@@ -42,7 +56,7 @@ class SharingLink implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SharingLink
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SharingLink {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SharingLink {
         return new SharingLink();
     }
 
@@ -67,13 +81,14 @@ class SharingLink implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'application' => function (self $o, ParseNode $n) { $o->setApplication($n->getObjectValue(Identity::class)); },
-            'preventsDownload' => function (self $o, ParseNode $n) { $o->setPreventsDownload($n->getBooleanValue()); },
-            'scope' => function (self $o, ParseNode $n) { $o->setScope($n->getStringValue()); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getStringValue()); },
-            'webHtml' => function (self $o, ParseNode $n) { $o->setWebHtml($n->getStringValue()); },
-            'webUrl' => function (self $o, ParseNode $n) { $o->setWebUrl($n->getStringValue()); },
+            'application' => function (ParseNode $n) use ($o) { $o->setApplication($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
+            'preventsDownload' => function (ParseNode $n) use ($o) { $o->setPreventsDownload($n->getBooleanValue()); },
+            'scope' => function (ParseNode $n) use ($o) { $o->setScope($n->getStringValue()); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
+            'webHtml' => function (ParseNode $n) use ($o) { $o->setWebHtml($n->getStringValue()); },
+            'webUrl' => function (ParseNode $n) use ($o) { $o->setWebUrl($n->getStringValue()); },
         ];
     }
 

@@ -6,34 +6,50 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Notebook extends OnenoteEntityHierarchyModel 
+class Notebook extends OnenoteEntityHierarchyModel implements Parsable 
 {
-    /** @var bool|null $isDefault Indicates whether this is the user's default notebook. Read-only. */
+    /**
+     * @var bool|null $isDefault Indicates whether this is the user's default notebook. Read-only.
+    */
     private ?bool $isDefault = null;
     
-    /** @var bool|null $isShared Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only. */
+    /**
+     * @var bool|null $isShared Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only.
+    */
     private ?bool $isShared = null;
     
-    /** @var NotebookLinks|null $links Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web. */
+    /**
+     * @var NotebookLinks|null $links Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
+    */
     private ?NotebookLinks $links = null;
     
-    /** @var array<SectionGroup>|null $sectionGroups The section groups in the notebook. Read-only. Nullable. */
+    /**
+     * @var array<SectionGroup>|null $sectionGroups The section groups in the notebook. Read-only. Nullable.
+    */
     private ?array $sectionGroups = null;
     
-    /** @var string|null $sectionGroupsUrl The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only. */
+    /**
+     * @var string|null $sectionGroupsUrl The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.
+    */
     private ?string $sectionGroupsUrl = null;
     
-    /** @var array<OnenoteSection>|null $sections The sections in the notebook. Read-only. Nullable. */
+    /**
+     * @var array<OnenoteSection>|null $sections The sections in the notebook. Read-only. Nullable.
+    */
     private ?array $sections = null;
     
-    /** @var string|null $sectionsUrl The URL for the sections navigation property, which returns all the sections in the notebook. Read-only. */
+    /**
+     * @var string|null $sectionsUrl The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.
+    */
     private ?string $sectionsUrl = null;
     
-    /** @var OnenoteUserRole|null $userRole Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only. */
+    /**
+     * @var OnenoteUserRole|null $userRole Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
+    */
     private ?OnenoteUserRole $userRole = null;
     
     /**
-     * Instantiates a new notebook and sets the default values.
+     * Instantiates a new Notebook and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -44,7 +60,7 @@ class Notebook extends OnenoteEntityHierarchyModel
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Notebook
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Notebook {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Notebook {
         return new Notebook();
     }
 
@@ -53,15 +69,16 @@ class Notebook extends OnenoteEntityHierarchyModel
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'isDefault' => function (self $o, ParseNode $n) { $o->setIsDefault($n->getBooleanValue()); },
-            'isShared' => function (self $o, ParseNode $n) { $o->setIsShared($n->getBooleanValue()); },
-            'links' => function (self $o, ParseNode $n) { $o->setLinks($n->getObjectValue(NotebookLinks::class)); },
-            'sectionGroups' => function (self $o, ParseNode $n) { $o->setSectionGroups($n->getCollectionOfObjectValues(SectionGroup::class)); },
-            'sectionGroupsUrl' => function (self $o, ParseNode $n) { $o->setSectionGroupsUrl($n->getStringValue()); },
-            'sections' => function (self $o, ParseNode $n) { $o->setSections($n->getCollectionOfObjectValues(OnenoteSection::class)); },
-            'sectionsUrl' => function (self $o, ParseNode $n) { $o->setSectionsUrl($n->getStringValue()); },
-            'userRole' => function (self $o, ParseNode $n) { $o->setUserRole($n->getEnumValue(OnenoteUserRole::class)); },
+            'isDefault' => function (ParseNode $n) use ($o) { $o->setIsDefault($n->getBooleanValue()); },
+            'isShared' => function (ParseNode $n) use ($o) { $o->setIsShared($n->getBooleanValue()); },
+            'links' => function (ParseNode $n) use ($o) { $o->setLinks($n->getObjectValue(array(NotebookLinks::class, 'createFromDiscriminatorValue'))); },
+            'sectionGroups' => function (ParseNode $n) use ($o) { $o->setSectionGroups($n->getCollectionOfObjectValues(array(SectionGroup::class, 'createFromDiscriminatorValue'))); },
+            'sectionGroupsUrl' => function (ParseNode $n) use ($o) { $o->setSectionGroupsUrl($n->getStringValue()); },
+            'sections' => function (ParseNode $n) use ($o) { $o->setSections($n->getCollectionOfObjectValues(array(OnenoteSection::class, 'createFromDiscriminatorValue'))); },
+            'sectionsUrl' => function (ParseNode $n) use ($o) { $o->setSectionsUrl($n->getStringValue()); },
+            'userRole' => function (ParseNode $n) use ($o) { $o->setUserRole($n->getEnumValue(OnenoteUserRole::class)); },
         ]);
     }
 

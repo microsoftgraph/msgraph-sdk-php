@@ -6,13 +6,15 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase 
+class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implements Parsable 
 {
-    /** @var bool|null $isEnabled If set to true, Azure Active Directory security defaults is enabled for the tenant. */
+    /**
+     * @var bool|null $isEnabled If set to true, Azure Active Directory security defaults is enabled for the tenant.
+    */
     private ?bool $isEnabled = null;
     
     /**
-     * Instantiates a new identitySecurityDefaultsEnforcementPolicy and sets the default values.
+     * Instantiates a new IdentitySecurityDefaultsEnforcementPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -23,7 +25,7 @@ class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return IdentitySecurityDefaultsEnforcementPolicy
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): IdentitySecurityDefaultsEnforcementPolicy {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): IdentitySecurityDefaultsEnforcementPolicy {
         return new IdentitySecurityDefaultsEnforcementPolicy();
     }
 
@@ -32,8 +34,9 @@ class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'isEnabled' => function (self $o, ParseNode $n) { $o->setIsEnabled($n->getBooleanValue()); },
+            'isEnabled' => function (ParseNode $n) use ($o) { $o->setIsEnabled($n->getBooleanValue()); },
         ]);
     }
 

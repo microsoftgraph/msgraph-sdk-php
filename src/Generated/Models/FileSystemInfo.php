@@ -10,16 +10,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class FileSystemInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var DateTime|null $createdDateTime The UTC date and time the file was created on a client. */
+    /**
+     * @var DateTime|null $createdDateTime The UTC date and time the file was created on a client.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var DateTime|null $lastAccessedDateTime The UTC date and time the file was last accessed. Available for the recent file list only. */
+    /**
+     * @var DateTime|null $lastAccessedDateTime The UTC date and time the file was last accessed. Available for the recent file list only.
+    */
     private ?DateTime $lastAccessedDateTime = null;
     
-    /** @var DateTime|null $lastModifiedDateTime The UTC date and time the file was last modified on a client. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime The UTC date and time the file was last modified on a client.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
     /**
@@ -34,7 +42,7 @@ class FileSystemInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return FileSystemInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): FileSystemInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): FileSystemInfo {
         return new FileSystemInfo();
     }
 
@@ -59,10 +67,11 @@ class FileSystemInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'lastAccessedDateTime' => function (self $o, ParseNode $n) { $o->setLastAccessedDateTime($n->getDateTimeValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'lastAccessedDateTime' => function (ParseNode $n) use ($o) { $o->setLastAccessedDateTime($n->getDateTimeValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
         ];
     }
 

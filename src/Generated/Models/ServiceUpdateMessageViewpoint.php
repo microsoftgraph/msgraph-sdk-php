@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $isArchived Indicates whether the user archived the message. */
+    /**
+     * @var bool|null $isArchived Indicates whether the user archived the message.
+    */
     private ?bool $isArchived = null;
     
-    /** @var bool|null $isFavorited Indicates whether the user marked the message as favorite. */
+    /**
+     * @var bool|null $isFavorited Indicates whether the user marked the message as favorite.
+    */
     private ?bool $isFavorited = null;
     
-    /** @var bool|null $isRead Indicates whether the user read the message. */
+    /**
+     * @var bool|null $isRead Indicates whether the user read the message.
+    */
     private ?bool $isRead = null;
     
     /**
@@ -33,7 +41,7 @@ class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ServiceUpdateMessageViewpoint
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ServiceUpdateMessageViewpoint {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ServiceUpdateMessageViewpoint {
         return new ServiceUpdateMessageViewpoint();
     }
 
@@ -50,10 +58,11 @@ class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'isArchived' => function (self $o, ParseNode $n) { $o->setIsArchived($n->getBooleanValue()); },
-            'isFavorited' => function (self $o, ParseNode $n) { $o->setIsFavorited($n->getBooleanValue()); },
-            'isRead' => function (self $o, ParseNode $n) { $o->setIsRead($n->getBooleanValue()); },
+            'isArchived' => function (ParseNode $n) use ($o) { $o->setIsArchived($n->getBooleanValue()); },
+            'isFavorited' => function (ParseNode $n) use ($o) { $o->setIsFavorited($n->getBooleanValue()); },
+            'isRead' => function (ParseNode $n) use ($o) { $o->setIsRead($n->getBooleanValue()); },
         ];
     }
 

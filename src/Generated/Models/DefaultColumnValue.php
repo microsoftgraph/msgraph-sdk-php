@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class DefaultColumnValue implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $formula The formula used to compute the default value for this column. */
+    /**
+     * @var string|null $formula The formula used to compute the default value for this column.
+    */
     private ?string $formula = null;
     
-    /** @var string|null $value The direct value to use as the default value for this column. */
+    /**
+     * @var string|null $value The direct value to use as the default value for this column.
+    */
     private ?string $value = null;
     
     /**
@@ -30,7 +36,7 @@ class DefaultColumnValue implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DefaultColumnValue
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DefaultColumnValue {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DefaultColumnValue {
         return new DefaultColumnValue();
     }
 
@@ -47,9 +53,10 @@ class DefaultColumnValue implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'formula' => function (self $o, ParseNode $n) { $o->setFormula($n->getStringValue()); },
-            'value' => function (self $o, ParseNode $n) { $o->setValue($n->getStringValue()); },
+            'formula' => function (ParseNode $n) use ($o) { $o->setFormula($n->getStringValue()); },
+            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getStringValue()); },
         ];
     }
 

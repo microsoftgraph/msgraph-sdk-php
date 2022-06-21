@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class OutlookUser extends Entity 
+class OutlookUser extends Entity implements Parsable 
 {
-    /** @var array<OutlookCategory>|null $masterCategories A list of categories defined for the user. */
+    /**
+     * @var array<OutlookCategory>|null $masterCategories A list of categories defined for the user.
+    */
     private ?array $masterCategories = null;
     
     /**
@@ -23,7 +25,7 @@ class OutlookUser extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return OutlookUser
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): OutlookUser {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): OutlookUser {
         return new OutlookUser();
     }
 
@@ -32,8 +34,9 @@ class OutlookUser extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'masterCategories' => function (self $o, ParseNode $n) { $o->setMasterCategories($n->getCollectionOfObjectValues(OutlookCategory::class)); },
+            'masterCategories' => function (ParseNode $n) use ($o) { $o->setMasterCategories($n->getCollectionOfObjectValues(array(OutlookCategory::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

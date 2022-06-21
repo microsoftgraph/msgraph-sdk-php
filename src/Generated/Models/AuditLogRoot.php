@@ -6,18 +6,26 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AuditLogRoot extends Entity 
+class AuditLogRoot extends Entity implements Parsable 
 {
-    /** @var array<DirectoryAudit>|null $directoryAudits Read-only. Nullable. */
+    /**
+     * @var array<DirectoryAudit>|null $directoryAudits The directoryAudits property
+    */
     private ?array $directoryAudits = null;
     
-    /** @var array<ProvisioningObjectSummary>|null $provisioning The provisioning property */
+    /**
+     * @var array<ProvisioningObjectSummary>|null $provisioning The provisioning property
+    */
     private ?array $provisioning = null;
     
-    /** @var array<RestrictedSignIn>|null $restrictedSignIns The restrictedSignIns property */
+    /**
+     * @var array<RestrictedSignIn>|null $restrictedSignIns The restrictedSignIns property
+    */
     private ?array $restrictedSignIns = null;
     
-    /** @var array<SignIn>|null $signIns Read-only. Nullable. */
+    /**
+     * @var array<SignIn>|null $signIns The signIns property
+    */
     private ?array $signIns = null;
     
     /**
@@ -32,12 +40,12 @@ class AuditLogRoot extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AuditLogRoot
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AuditLogRoot {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AuditLogRoot {
         return new AuditLogRoot();
     }
 
     /**
-     * Gets the directoryAudits property value. Read-only. Nullable.
+     * Gets the directoryAudits property value. The directoryAudits property
      * @return array<DirectoryAudit>|null
     */
     public function getDirectoryAudits(): ?array {
@@ -49,11 +57,12 @@ class AuditLogRoot extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'directoryAudits' => function (self $o, ParseNode $n) { $o->setDirectoryAudits($n->getCollectionOfObjectValues(DirectoryAudit::class)); },
-            'provisioning' => function (self $o, ParseNode $n) { $o->setProvisioning($n->getCollectionOfObjectValues(ProvisioningObjectSummary::class)); },
-            'restrictedSignIns' => function (self $o, ParseNode $n) { $o->setRestrictedSignIns($n->getCollectionOfObjectValues(RestrictedSignIn::class)); },
-            'signIns' => function (self $o, ParseNode $n) { $o->setSignIns($n->getCollectionOfObjectValues(SignIn::class)); },
+            'directoryAudits' => function (ParseNode $n) use ($o) { $o->setDirectoryAudits($n->getCollectionOfObjectValues(array(DirectoryAudit::class, 'createFromDiscriminatorValue'))); },
+            'provisioning' => function (ParseNode $n) use ($o) { $o->setProvisioning($n->getCollectionOfObjectValues(array(ProvisioningObjectSummary::class, 'createFromDiscriminatorValue'))); },
+            'restrictedSignIns' => function (ParseNode $n) use ($o) { $o->setRestrictedSignIns($n->getCollectionOfObjectValues(array(RestrictedSignIn::class, 'createFromDiscriminatorValue'))); },
+            'signIns' => function (ParseNode $n) use ($o) { $o->setSignIns($n->getCollectionOfObjectValues(array(SignIn::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -74,7 +83,7 @@ class AuditLogRoot extends Entity
     }
 
     /**
-     * Gets the signIns property value. Read-only. Nullable.
+     * Gets the signIns property value. The signIns property
      * @return array<SignIn>|null
     */
     public function getSignIns(): ?array {
@@ -94,7 +103,7 @@ class AuditLogRoot extends Entity
     }
 
     /**
-     * Sets the directoryAudits property value. Read-only. Nullable.
+     * Sets the directoryAudits property value. The directoryAudits property
      *  @param array<DirectoryAudit>|null $value Value to set for the directoryAudits property.
     */
     public function setDirectoryAudits(?array $value ): void {
@@ -118,7 +127,7 @@ class AuditLogRoot extends Entity
     }
 
     /**
-     * Sets the signIns property value. Read-only. Nullable.
+     * Sets the signIns property value. The signIns property
      *  @param array<SignIn>|null $value Value to set for the signIns property.
     */
     public function setSignIns(?array $value ): void {

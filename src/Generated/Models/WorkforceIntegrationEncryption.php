@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class WorkforceIntegrationEncryption implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var WorkforceIntegrationEncryptionProtocol|null $protocol Possible values are: sharedSecret, unknownFutureValue. */
+    /**
+     * @var WorkforceIntegrationEncryptionProtocol|null $protocol Possible values are: sharedSecret, unknownFutureValue.
+    */
     private ?WorkforceIntegrationEncryptionProtocol $protocol = null;
     
-    /** @var string|null $secret Encryption shared secret. */
+    /**
+     * @var string|null $secret Encryption shared secret.
+    */
     private ?string $secret = null;
     
     /**
@@ -30,7 +36,7 @@ class WorkforceIntegrationEncryption implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkforceIntegrationEncryption
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkforceIntegrationEncryption {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkforceIntegrationEncryption {
         return new WorkforceIntegrationEncryption();
     }
 
@@ -47,9 +53,10 @@ class WorkforceIntegrationEncryption implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'protocol' => function (self $o, ParseNode $n) { $o->setProtocol($n->getEnumValue(WorkforceIntegrationEncryptionProtocol::class)); },
-            'secret' => function (self $o, ParseNode $n) { $o->setSecret($n->getStringValue()); },
+            'protocol' => function (ParseNode $n) use ($o) { $o->setProtocol($n->getEnumValue(WorkforceIntegrationEncryptionProtocol::class)); },
+            'secret' => function (ParseNode $n) use ($o) { $o->setSecret($n->getStringValue()); },
         ];
     }
 

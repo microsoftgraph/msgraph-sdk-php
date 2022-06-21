@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class VisualInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var ImageInfo|null $attribution Optional. JSON object used to represent an icon which represents the application used to generate the activity */
+    /**
+     * @var ImageInfo|null $attribution Optional. JSON object used to represent an icon which represents the application used to generate the activity
+    */
     private ?ImageInfo $attribution = null;
     
-    /** @var string|null $backgroundColor Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color */
+    /**
+     * @var string|null $backgroundColor Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
+    */
     private ?string $backgroundColor = null;
     
-    /** @var Json|null $content Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI */
+    /**
+     * @var Json|null $content Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
+    */
     private ?Json $content = null;
     
-    /** @var string|null $description Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata) */
+    /**
+     * @var string|null $description Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayText Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation) */
+    /**
+     * @var string|null $displayText Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
+    */
     private ?string $displayText = null;
     
     /**
@@ -39,7 +51,7 @@ class VisualInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return VisualInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): VisualInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): VisualInfo {
         return new VisualInfo();
     }
 
@@ -96,12 +108,13 @@ class VisualInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'attribution' => function (self $o, ParseNode $n) { $o->setAttribution($n->getObjectValue(ImageInfo::class)); },
-            'backgroundColor' => function (self $o, ParseNode $n) { $o->setBackgroundColor($n->getStringValue()); },
-            'content' => function (self $o, ParseNode $n) { $o->setContent($n->getObjectValue(Json::class)); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayText' => function (self $o, ParseNode $n) { $o->setDisplayText($n->getStringValue()); },
+            'attribution' => function (ParseNode $n) use ($o) { $o->setAttribution($n->getObjectValue(array(ImageInfo::class, 'createFromDiscriminatorValue'))); },
+            'backgroundColor' => function (ParseNode $n) use ($o) { $o->setBackgroundColor($n->getStringValue()); },
+            'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayText' => function (ParseNode $n) use ($o) { $o->setDisplayText($n->getStringValue()); },
         ];
     }
 

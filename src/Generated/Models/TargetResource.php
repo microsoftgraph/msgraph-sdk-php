@@ -9,25 +9,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class TargetResource implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $displayName Indicates the visible name defined for the resource. Typically specified when the resource is created. */
+    /**
+     * @var string|null $displayName Indicates the visible name defined for the resource. Typically specified when the resource is created.
+    */
     private ?string $displayName = null;
     
-    /** @var GroupType|null $groupType When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue */
+    /**
+     * @var GroupType|null $groupType When type is set to Group, this indicates the group type.  Possible values are: unifiedGroups, azureAD, and unknownFutureValue
+    */
     private ?GroupType $groupType = null;
     
-    /** @var string|null $id Indicates the unique ID of the resource. */
+    /**
+     * @var string|null $id Indicates the unique ID of the resource.
+    */
     private ?string $id = null;
     
-    /** @var array<ModifiedProperty>|null $modifiedProperties Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type. */
+    /**
+     * @var array<ModifiedProperty>|null $modifiedProperties Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.
+    */
     private ?array $modifiedProperties = null;
     
-    /** @var string|null $type Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User. */
+    /**
+     * @var string|null $type Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User.
+    */
     private ?string $type = null;
     
-    /** @var string|null $userPrincipalName When type is set to User, this includes the user name that initiated the action; null for other types. */
+    /**
+     * @var string|null $userPrincipalName When type is set to User, this includes the user name that initiated the action; null for other types.
+    */
     private ?string $userPrincipalName = null;
     
     /**
@@ -42,7 +56,7 @@ class TargetResource implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TargetResource
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TargetResource {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TargetResource {
         return new TargetResource();
     }
 
@@ -67,18 +81,19 @@ class TargetResource implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'groupType' => function (self $o, ParseNode $n) { $o->setGroupType($n->getEnumValue(GroupType::class)); },
-            'id' => function (self $o, ParseNode $n) { $o->setId($n->getStringValue()); },
-            'modifiedProperties' => function (self $o, ParseNode $n) { $o->setModifiedProperties($n->getCollectionOfObjectValues(ModifiedProperty::class)); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getStringValue()); },
-            'userPrincipalName' => function (self $o, ParseNode $n) { $o->setUserPrincipalName($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'groupType' => function (ParseNode $n) use ($o) { $o->setGroupType($n->getEnumValue(GroupType::class)); },
+            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            'modifiedProperties' => function (ParseNode $n) use ($o) { $o->setModifiedProperties($n->getCollectionOfObjectValues(array(ModifiedProperty::class, 'createFromDiscriminatorValue'))); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
+            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
         ];
     }
 
     /**
-     * Gets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
+     * Gets the groupType property value. When type is set to Group, this indicates the group type.  Possible values are: unifiedGroups, azureAD, and unknownFutureValue
      * @return GroupType|null
     */
     public function getGroupType(): ?GroupType {
@@ -148,7 +163,7 @@ class TargetResource implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
+     * Sets the groupType property value. When type is set to Group, this indicates the group type.  Possible values are: unifiedGroups, azureAD, and unknownFutureValue
      *  @param GroupType|null $value Value to set for the groupType property.
     */
     public function setGroupType(?GroupType $value ): void {

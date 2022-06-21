@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AverageComparativeScore implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var float|null $averageScore Average score within specified basis. */
+    /**
+     * @var float|null $averageScore Average score within specified basis.
+    */
     private ?float $averageScore = null;
     
-    /** @var string|null $basis Scope type. The possible values are: AllTenants, TotalSeats, IndustryTypes. */
+    /**
+     * @var string|null $basis Scope type. The possible values are: AllTenants, TotalSeats, IndustryTypes.
+    */
     private ?string $basis = null;
     
     /**
@@ -30,7 +36,7 @@ class AverageComparativeScore implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AverageComparativeScore
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AverageComparativeScore {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AverageComparativeScore {
         return new AverageComparativeScore();
     }
 
@@ -63,9 +69,10 @@ class AverageComparativeScore implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'averageScore' => function (self $o, ParseNode $n) { $o->setAverageScore($n->getFloatValue()); },
-            'basis' => function (self $o, ParseNode $n) { $o->setBasis($n->getStringValue()); },
+            'averageScore' => function (ParseNode $n) use ($o) { $o->setAverageScore($n->getFloatValue()); },
+            'basis' => function (ParseNode $n) use ($o) { $o->setBasis($n->getStringValue()); },
         ];
     }
 

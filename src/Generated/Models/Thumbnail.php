@@ -10,22 +10,34 @@ use Psr\Http\Message\StreamInterface;
 
 class Thumbnail implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var StreamInterface|null $content The content stream for the thumbnail. */
+    /**
+     * @var StreamInterface|null $content The content stream for the thumbnail.
+    */
     private ?StreamInterface $content = null;
     
-    /** @var int|null $height The height of the thumbnail, in pixels. */
+    /**
+     * @var int|null $height The height of the thumbnail, in pixels.
+    */
     private ?int $height = null;
     
-    /** @var string|null $sourceItemId The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested. */
+    /**
+     * @var string|null $sourceItemId The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
+    */
     private ?string $sourceItemId = null;
     
-    /** @var string|null $url The URL used to fetch the thumbnail content. */
+    /**
+     * @var string|null $url The URL used to fetch the thumbnail content.
+    */
     private ?string $url = null;
     
-    /** @var int|null $width The width of the thumbnail, in pixels. */
+    /**
+     * @var int|null $width The width of the thumbnail, in pixels.
+    */
     private ?int $width = null;
     
     /**
@@ -40,7 +52,7 @@ class Thumbnail implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Thumbnail
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Thumbnail {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Thumbnail {
         return new Thumbnail();
     }
 
@@ -65,12 +77,13 @@ class Thumbnail implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'content' => function (self $o, ParseNode $n) { $o->setContent($n->getBinaryContent()); },
-            'height' => function (self $o, ParseNode $n) { $o->setHeight($n->getIntegerValue()); },
-            'sourceItemId' => function (self $o, ParseNode $n) { $o->setSourceItemId($n->getStringValue()); },
-            'url' => function (self $o, ParseNode $n) { $o->setUrl($n->getStringValue()); },
-            'width' => function (self $o, ParseNode $n) { $o->setWidth($n->getIntegerValue()); },
+            'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getBinaryContent()); },
+            'height' => function (ParseNode $n) use ($o) { $o->setHeight($n->getIntegerValue()); },
+            'sourceItemId' => function (ParseNode $n) use ($o) { $o->setSourceItemId($n->getStringValue()); },
+            'url' => function (ParseNode $n) use ($o) { $o->setUrl($n->getStringValue()); },
+            'width' => function (ParseNode $n) use ($o) { $o->setWidth($n->getIntegerValue()); },
         ];
     }
 

@@ -6,19 +6,25 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class StsPolicy extends PolicyBase 
+class StsPolicy extends PolicyBase implements Parsable 
 {
-    /** @var array<DirectoryObject>|null $appliesTo The appliesTo property */
+    /**
+     * @var array<DirectoryObject>|null $appliesTo The appliesTo property
+    */
     private ?array $appliesTo = null;
     
-    /** @var array<string>|null $definition A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required. */
+    /**
+     * @var array<string>|null $definition A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required.
+    */
     private ?array $definition = null;
     
-    /** @var bool|null $isOrganizationDefault If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false. */
+    /**
+     * @var bool|null $isOrganizationDefault If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.
+    */
     private ?bool $isOrganizationDefault = null;
     
     /**
-     * Instantiates a new stsPolicy and sets the default values.
+     * Instantiates a new StsPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -29,7 +35,18 @@ class StsPolicy extends PolicyBase
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return StsPolicy
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): StsPolicy {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): StsPolicy {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.activityBasedTimeoutPolicy': return new ActivityBasedTimeoutPolicy();
+                case '#microsoft.graph.claimsMappingPolicy': return new ClaimsMappingPolicy();
+                case '#microsoft.graph.homeRealmDiscoveryPolicy': return new HomeRealmDiscoveryPolicy();
+                case '#microsoft.graph.tokenIssuancePolicy': return new TokenIssuancePolicy();
+                case '#microsoft.graph.tokenLifetimePolicy': return new TokenLifetimePolicy();
+            }
+        }
         return new StsPolicy();
     }
 
@@ -54,10 +71,11 @@ class StsPolicy extends PolicyBase
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appliesTo' => function (self $o, ParseNode $n) { $o->setAppliesTo($n->getCollectionOfObjectValues(DirectoryObject::class)); },
-            'definition' => function (self $o, ParseNode $n) { $o->setDefinition($n->getCollectionOfPrimitiveValues()); },
-            'isOrganizationDefault' => function (self $o, ParseNode $n) { $o->setIsOrganizationDefault($n->getBooleanValue()); },
+            'appliesTo' => function (ParseNode $n) use ($o) { $o->setAppliesTo($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
+            'definition' => function (ParseNode $n) use ($o) { $o->setDefinition($n->getCollectionOfPrimitiveValues()); },
+            'isOrganizationDefault' => function (ParseNode $n) use ($o) { $o->setIsOrganizationDefault($n->getBooleanValue()); },
         ]);
     }
 

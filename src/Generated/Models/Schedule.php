@@ -6,63 +6,101 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Schedule extends Entity 
+class Schedule extends Entity implements Parsable 
 {
-    /** @var bool|null $enabled Indicates whether the schedule is enabled for the team. Required. */
+    /**
+     * @var bool|null $enabled Indicates whether the schedule is enabled for the team. Required.
+    */
     private ?bool $enabled = null;
     
-    /** @var array<OfferShiftRequest>|null $offerShiftRequests The offerShiftRequests property */
+    /**
+     * @var array<OfferShiftRequest>|null $offerShiftRequests The offerShiftRequests property
+    */
     private ?array $offerShiftRequests = null;
     
-    /** @var bool|null $offerShiftRequestsEnabled Indicates whether offer shift requests are enabled for the schedule. */
+    /**
+     * @var bool|null $offerShiftRequestsEnabled Indicates whether offer shift requests are enabled for the schedule.
+    */
     private ?bool $offerShiftRequestsEnabled = null;
     
-    /** @var array<OpenShiftChangeRequest>|null $openShiftChangeRequests The openShiftChangeRequests property */
+    /**
+     * @var array<OpenShiftChangeRequest>|null $openShiftChangeRequests The openShiftChangeRequests property
+    */
     private ?array $openShiftChangeRequests = null;
     
-    /** @var array<OpenShift>|null $openShifts The openShifts property */
+    /**
+     * @var array<OpenShift>|null $openShifts The openShifts property
+    */
     private ?array $openShifts = null;
     
-    /** @var bool|null $openShiftsEnabled Indicates whether open shifts are enabled for the schedule. */
+    /**
+     * @var bool|null $openShiftsEnabled Indicates whether open shifts are enabled for the schedule.
+    */
     private ?bool $openShiftsEnabled = null;
     
-    /** @var OperationStatus|null $provisionStatus The status of the schedule provisioning. The possible values are notStarted, running, completed, failed. */
+    /**
+     * @var OperationStatus|null $provisionStatus The status of the schedule provisioning. The possible values are notStarted, running, completed, failed.
+    */
     private ?OperationStatus $provisionStatus = null;
     
-    /** @var string|null $provisionStatusCode Additional information about why schedule provisioning failed. */
+    /**
+     * @var string|null $provisionStatusCode Additional information about why schedule provisioning failed.
+    */
     private ?string $provisionStatusCode = null;
     
-    /** @var array<SchedulingGroup>|null $schedulingGroups The logical grouping of users in the schedule (usually by role). */
+    /**
+     * @var array<SchedulingGroup>|null $schedulingGroups The logical grouping of users in the schedule (usually by role).
+    */
     private ?array $schedulingGroups = null;
     
-    /** @var array<Shift>|null $shifts The shifts in the schedule. */
+    /**
+     * @var array<Shift>|null $shifts The shifts in the schedule.
+    */
     private ?array $shifts = null;
     
-    /** @var array<SwapShiftsChangeRequest>|null $swapShiftsChangeRequests The swapShiftsChangeRequests property */
+    /**
+     * @var array<SwapShiftsChangeRequest>|null $swapShiftsChangeRequests The swapShiftsChangeRequests property
+    */
     private ?array $swapShiftsChangeRequests = null;
     
-    /** @var bool|null $swapShiftsRequestsEnabled Indicates whether swap shifts requests are enabled for the schedule. */
+    /**
+     * @var bool|null $swapShiftsRequestsEnabled Indicates whether swap shifts requests are enabled for the schedule.
+    */
     private ?bool $swapShiftsRequestsEnabled = null;
     
-    /** @var bool|null $timeClockEnabled Indicates whether time clock is enabled for the schedule. */
+    /**
+     * @var bool|null $timeClockEnabled Indicates whether time clock is enabled for the schedule.
+    */
     private ?bool $timeClockEnabled = null;
     
-    /** @var array<TimeOffReason>|null $timeOffReasons The set of reasons for a time off in the schedule. */
+    /**
+     * @var array<TimeOffReason>|null $timeOffReasons The set of reasons for a time off in the schedule.
+    */
     private ?array $timeOffReasons = null;
     
-    /** @var array<TimeOffRequest>|null $timeOffRequests The timeOffRequests property */
+    /**
+     * @var array<TimeOffRequest>|null $timeOffRequests The timeOffRequests property
+    */
     private ?array $timeOffRequests = null;
     
-    /** @var bool|null $timeOffRequestsEnabled Indicates whether time off requests are enabled for the schedule. */
+    /**
+     * @var bool|null $timeOffRequestsEnabled Indicates whether time off requests are enabled for the schedule.
+    */
     private ?bool $timeOffRequestsEnabled = null;
     
-    /** @var array<TimeOff>|null $timesOff The instances of times off in the schedule. */
+    /**
+     * @var array<TimeOff>|null $timesOff The instances of times off in the schedule.
+    */
     private ?array $timesOff = null;
     
-    /** @var string|null $timeZone Indicates the time zone of the schedule team using tz database format. Required. */
+    /**
+     * @var string|null $timeZone Indicates the time zone of the schedule team using tz database format. Required.
+    */
     private ?string $timeZone = null;
     
-    /** @var array<string>|null $workforceIntegrationIds The workforceIntegrationIds property */
+    /**
+     * @var array<string>|null $workforceIntegrationIds The workforceIntegrationIds property
+    */
     private ?array $workforceIntegrationIds = null;
     
     /**
@@ -77,7 +115,7 @@ class Schedule extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Schedule
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Schedule {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Schedule {
         return new Schedule();
     }
 
@@ -94,26 +132,27 @@ class Schedule extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'enabled' => function (self $o, ParseNode $n) { $o->setEnabled($n->getBooleanValue()); },
-            'offerShiftRequests' => function (self $o, ParseNode $n) { $o->setOfferShiftRequests($n->getCollectionOfObjectValues(OfferShiftRequest::class)); },
-            'offerShiftRequestsEnabled' => function (self $o, ParseNode $n) { $o->setOfferShiftRequestsEnabled($n->getBooleanValue()); },
-            'openShiftChangeRequests' => function (self $o, ParseNode $n) { $o->setOpenShiftChangeRequests($n->getCollectionOfObjectValues(OpenShiftChangeRequest::class)); },
-            'openShifts' => function (self $o, ParseNode $n) { $o->setOpenShifts($n->getCollectionOfObjectValues(OpenShift::class)); },
-            'openShiftsEnabled' => function (self $o, ParseNode $n) { $o->setOpenShiftsEnabled($n->getBooleanValue()); },
-            'provisionStatus' => function (self $o, ParseNode $n) { $o->setProvisionStatus($n->getEnumValue(OperationStatus::class)); },
-            'provisionStatusCode' => function (self $o, ParseNode $n) { $o->setProvisionStatusCode($n->getStringValue()); },
-            'schedulingGroups' => function (self $o, ParseNode $n) { $o->setSchedulingGroups($n->getCollectionOfObjectValues(SchedulingGroup::class)); },
-            'shifts' => function (self $o, ParseNode $n) { $o->setShifts($n->getCollectionOfObjectValues(Shift::class)); },
-            'swapShiftsChangeRequests' => function (self $o, ParseNode $n) { $o->setSwapShiftsChangeRequests($n->getCollectionOfObjectValues(SwapShiftsChangeRequest::class)); },
-            'swapShiftsRequestsEnabled' => function (self $o, ParseNode $n) { $o->setSwapShiftsRequestsEnabled($n->getBooleanValue()); },
-            'timeClockEnabled' => function (self $o, ParseNode $n) { $o->setTimeClockEnabled($n->getBooleanValue()); },
-            'timeOffReasons' => function (self $o, ParseNode $n) { $o->setTimeOffReasons($n->getCollectionOfObjectValues(TimeOffReason::class)); },
-            'timeOffRequests' => function (self $o, ParseNode $n) { $o->setTimeOffRequests($n->getCollectionOfObjectValues(TimeOffRequest::class)); },
-            'timeOffRequestsEnabled' => function (self $o, ParseNode $n) { $o->setTimeOffRequestsEnabled($n->getBooleanValue()); },
-            'timesOff' => function (self $o, ParseNode $n) { $o->setTimesOff($n->getCollectionOfObjectValues(TimeOff::class)); },
-            'timeZone' => function (self $o, ParseNode $n) { $o->setTimeZone($n->getStringValue()); },
-            'workforceIntegrationIds' => function (self $o, ParseNode $n) { $o->setWorkforceIntegrationIds($n->getCollectionOfPrimitiveValues()); },
+            'enabled' => function (ParseNode $n) use ($o) { $o->setEnabled($n->getBooleanValue()); },
+            'offerShiftRequests' => function (ParseNode $n) use ($o) { $o->setOfferShiftRequests($n->getCollectionOfObjectValues(array(OfferShiftRequest::class, 'createFromDiscriminatorValue'))); },
+            'offerShiftRequestsEnabled' => function (ParseNode $n) use ($o) { $o->setOfferShiftRequestsEnabled($n->getBooleanValue()); },
+            'openShiftChangeRequests' => function (ParseNode $n) use ($o) { $o->setOpenShiftChangeRequests($n->getCollectionOfObjectValues(array(OpenShiftChangeRequest::class, 'createFromDiscriminatorValue'))); },
+            'openShifts' => function (ParseNode $n) use ($o) { $o->setOpenShifts($n->getCollectionOfObjectValues(array(OpenShift::class, 'createFromDiscriminatorValue'))); },
+            'openShiftsEnabled' => function (ParseNode $n) use ($o) { $o->setOpenShiftsEnabled($n->getBooleanValue()); },
+            'provisionStatus' => function (ParseNode $n) use ($o) { $o->setProvisionStatus($n->getEnumValue(OperationStatus::class)); },
+            'provisionStatusCode' => function (ParseNode $n) use ($o) { $o->setProvisionStatusCode($n->getStringValue()); },
+            'schedulingGroups' => function (ParseNode $n) use ($o) { $o->setSchedulingGroups($n->getCollectionOfObjectValues(array(SchedulingGroup::class, 'createFromDiscriminatorValue'))); },
+            'shifts' => function (ParseNode $n) use ($o) { $o->setShifts($n->getCollectionOfObjectValues(array(Shift::class, 'createFromDiscriminatorValue'))); },
+            'swapShiftsChangeRequests' => function (ParseNode $n) use ($o) { $o->setSwapShiftsChangeRequests($n->getCollectionOfObjectValues(array(SwapShiftsChangeRequest::class, 'createFromDiscriminatorValue'))); },
+            'swapShiftsRequestsEnabled' => function (ParseNode $n) use ($o) { $o->setSwapShiftsRequestsEnabled($n->getBooleanValue()); },
+            'timeClockEnabled' => function (ParseNode $n) use ($o) { $o->setTimeClockEnabled($n->getBooleanValue()); },
+            'timeOffReasons' => function (ParseNode $n) use ($o) { $o->setTimeOffReasons($n->getCollectionOfObjectValues(array(TimeOffReason::class, 'createFromDiscriminatorValue'))); },
+            'timeOffRequests' => function (ParseNode $n) use ($o) { $o->setTimeOffRequests($n->getCollectionOfObjectValues(array(TimeOffRequest::class, 'createFromDiscriminatorValue'))); },
+            'timeOffRequestsEnabled' => function (ParseNode $n) use ($o) { $o->setTimeOffRequestsEnabled($n->getBooleanValue()); },
+            'timesOff' => function (ParseNode $n) use ($o) { $o->setTimesOff($n->getCollectionOfObjectValues(array(TimeOff::class, 'createFromDiscriminatorValue'))); },
+            'timeZone' => function (ParseNode $n) use ($o) { $o->setTimeZone($n->getStringValue()); },
+            'workforceIntegrationIds' => function (ParseNode $n) use ($o) { $o->setWorkforceIntegrationIds($n->getCollectionOfPrimitiveValues()); },
         ]);
     }
 

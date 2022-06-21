@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable 
 {
-    /** @var float|null $accuracy The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters. */
+    /**
+     * @var float|null $accuracy The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
+    */
     private ?float $accuracy = null;
     
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var float|null $altitude The altitude of the location. */
+    /**
+     * @var float|null $altitude The altitude of the location.
+    */
     private ?float $altitude = null;
     
-    /** @var float|null $altitudeAccuracy The accuracy of the altitude. */
+    /**
+     * @var float|null $altitudeAccuracy The accuracy of the altitude.
+    */
     private ?float $altitudeAccuracy = null;
     
-    /** @var float|null $latitude The latitude of the location. */
+    /**
+     * @var float|null $latitude The latitude of the location.
+    */
     private ?float $latitude = null;
     
-    /** @var float|null $longitude The longitude of the location. */
+    /**
+     * @var float|null $longitude The longitude of the location.
+    */
     private ?float $longitude = null;
     
     /**
@@ -39,7 +51,7 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return OutlookGeoCoordinates
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): OutlookGeoCoordinates {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): OutlookGeoCoordinates {
         return new OutlookGeoCoordinates();
     }
 
@@ -80,12 +92,13 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'accuracy' => function (self $o, ParseNode $n) { $o->setAccuracy($n->getFloatValue()); },
-            'altitude' => function (self $o, ParseNode $n) { $o->setAltitude($n->getFloatValue()); },
-            'altitudeAccuracy' => function (self $o, ParseNode $n) { $o->setAltitudeAccuracy($n->getFloatValue()); },
-            'latitude' => function (self $o, ParseNode $n) { $o->setLatitude($n->getFloatValue()); },
-            'longitude' => function (self $o, ParseNode $n) { $o->setLongitude($n->getFloatValue()); },
+            'accuracy' => function (ParseNode $n) use ($o) { $o->setAccuracy($n->getFloatValue()); },
+            'altitude' => function (ParseNode $n) use ($o) { $o->setAltitude($n->getFloatValue()); },
+            'altitudeAccuracy' => function (ParseNode $n) use ($o) { $o->setAltitudeAccuracy($n->getFloatValue()); },
+            'latitude' => function (ParseNode $n) use ($o) { $o->setLatitude($n->getFloatValue()); },
+            'longitude' => function (ParseNode $n) use ($o) { $o->setLongitude($n->getFloatValue()); },
         ];
     }
 

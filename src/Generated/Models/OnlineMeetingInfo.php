@@ -9,25 +9,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class OnlineMeetingInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $conferenceId The ID of the conference. */
+    /**
+     * @var string|null $conferenceId The ID of the conference.
+    */
     private ?string $conferenceId = null;
     
-    /** @var string|null $joinUrl The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting. */
+    /**
+     * @var string|null $joinUrl The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
+    */
     private ?string $joinUrl = null;
     
-    /** @var array<Phone>|null $phones All of the phone numbers associated with this conference. */
+    /**
+     * @var array<Phone>|null $phones All of the phone numbers associated with this conference.
+    */
     private ?array $phones = null;
     
-    /** @var string|null $quickDial The pre-formatted quickdial for this call. */
+    /**
+     * @var string|null $quickDial The pre-formatted quickdial for this call.
+    */
     private ?string $quickDial = null;
     
-    /** @var array<string>|null $tollFreeNumbers The toll free numbers that can be used to join the conference. */
+    /**
+     * @var array<string>|null $tollFreeNumbers The toll free numbers that can be used to join the conference.
+    */
     private ?array $tollFreeNumbers = null;
     
-    /** @var string|null $tollNumber The toll number that can be used to join the conference. */
+    /**
+     * @var string|null $tollNumber The toll number that can be used to join the conference.
+    */
     private ?string $tollNumber = null;
     
     /**
@@ -42,7 +56,7 @@ class OnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return OnlineMeetingInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): OnlineMeetingInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): OnlineMeetingInfo {
         return new OnlineMeetingInfo();
     }
 
@@ -67,13 +81,14 @@ class OnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'conferenceId' => function (self $o, ParseNode $n) { $o->setConferenceId($n->getStringValue()); },
-            'joinUrl' => function (self $o, ParseNode $n) { $o->setJoinUrl($n->getStringValue()); },
-            'phones' => function (self $o, ParseNode $n) { $o->setPhones($n->getCollectionOfObjectValues(Phone::class)); },
-            'quickDial' => function (self $o, ParseNode $n) { $o->setQuickDial($n->getStringValue()); },
-            'tollFreeNumbers' => function (self $o, ParseNode $n) { $o->setTollFreeNumbers($n->getCollectionOfPrimitiveValues()); },
-            'tollNumber' => function (self $o, ParseNode $n) { $o->setTollNumber($n->getStringValue()); },
+            'conferenceId' => function (ParseNode $n) use ($o) { $o->setConferenceId($n->getStringValue()); },
+            'joinUrl' => function (ParseNode $n) use ($o) { $o->setJoinUrl($n->getStringValue()); },
+            'phones' => function (ParseNode $n) use ($o) { $o->setPhones($n->getCollectionOfObjectValues(array(Phone::class, 'createFromDiscriminatorValue'))); },
+            'quickDial' => function (ParseNode $n) use ($o) { $o->setQuickDial($n->getStringValue()); },
+            'tollFreeNumbers' => function (ParseNode $n) use ($o) { $o->setTollFreeNumbers($n->getCollectionOfPrimitiveValues()); },
+            'tollNumber' => function (ParseNode $n) use ($o) { $o->setTollNumber($n->getStringValue()); },
         ];
     }
 

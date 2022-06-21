@@ -6,144 +6,236 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ServicePrincipal extends DirectoryObject 
+class ServicePrincipal extends DirectoryObject implements Parsable 
 {
-    /** @var bool|null $accountEnabled true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, not, in). */
+    /**
+     * @var bool|null $accountEnabled true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, not, in).
+    */
     private ?bool $accountEnabled = null;
     
-    /** @var array<AddIn>|null $addIns Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on. */
+    /**
+     * @var array<AddIn>|null $addIns Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on.
+    */
     private ?array $addIns = null;
     
-    /** @var array<string>|null $alternativeNames Used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities. Supports $filter (eq, not, ge, le, startsWith). */
+    /**
+     * @var array<string>|null $alternativeNames Used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities. Supports $filter (eq, not, ge, le, startsWith).
+    */
     private ?array $alternativeNames = null;
     
-    /** @var string|null $appDescription The description exposed by the associated application. */
+    /**
+     * @var string|null $appDescription The description exposed by the associated application.
+    */
     private ?string $appDescription = null;
     
-    /** @var string|null $appDisplayName The display name exposed by the associated application. */
+    /**
+     * @var string|null $appDisplayName The display name exposed by the associated application.
+    */
     private ?string $appDisplayName = null;
     
-    /** @var string|null $appId The unique identifier for the associated application (its appId property). Supports $filter (eq, ne, not, in, startsWith). */
+    /**
+     * @var string|null $appId The unique identifier for the associated application (its appId property). Supports $filter (eq, ne, not, in, startsWith).
+    */
     private ?string $appId = null;
     
-    /** @var string|null $applicationTemplateId Unique identifier of the applicationTemplate that the servicePrincipal was created from. Read-only. Supports $filter (eq, ne, NOT, startsWith). */
+    /**
+     * @var string|null $applicationTemplateId Unique identifier of the applicationTemplate that the servicePrincipal was created from. Read-only. Supports $filter (eq, ne, NOT, startsWith).
+    */
     private ?string $applicationTemplateId = null;
     
-    /** @var string|null $appOwnerOrganizationId Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le). */
+    /**
+     * @var string|null $appOwnerOrganizationId Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).
+    */
     private ?string $appOwnerOrganizationId = null;
     
-    /** @var array<AppRoleAssignment>|null $appRoleAssignedTo App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand. */
+    /**
+     * @var array<AppRoleAssignment>|null $appRoleAssignedTo App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+    */
     private ?array $appRoleAssignedTo = null;
     
-    /** @var bool|null $appRoleAssignmentRequired Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens. The default value is false. Not nullable. Supports $filter (eq, ne, NOT). */
+    /**
+     * @var bool|null $appRoleAssignmentRequired Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens. The default value is false. Not nullable. Supports $filter (eq, ne, NOT).
+    */
     private ?bool $appRoleAssignmentRequired = null;
     
-    /** @var array<AppRoleAssignment>|null $appRoleAssignments App role assignment for another app or service, granted to this service principal. Supports $expand. */
+    /**
+     * @var array<AppRoleAssignment>|null $appRoleAssignments App role assignment for another app or service, granted to this service principal. Supports $expand.
+    */
     private ?array $appRoleAssignments = null;
     
-    /** @var array<AppRole>|null $appRoles The roles exposed by the application which this service principal represents. For more information see the appRoles property definition on the application entity. Not nullable. */
+    /**
+     * @var array<AppRole>|null $appRoles The roles exposed by the application which this service principal represents. For more information see the appRoles property definition on the application entity. Not nullable.
+    */
     private ?array $appRoles = null;
     
-    /** @var array<ClaimsMappingPolicy>|null $claimsMappingPolicies The claimsMappingPolicies assigned to this service principal. Supports $expand. */
+    /**
+     * @var array<ClaimsMappingPolicy>|null $claimsMappingPolicies The claimsMappingPolicies assigned to this service principal. Supports $expand.
+    */
     private ?array $claimsMappingPolicies = null;
     
-    /** @var array<DirectoryObject>|null $createdObjects Directory objects created by this service principal. Read-only. Nullable. */
+    /**
+     * @var array<DirectoryObject>|null $createdObjects Directory objects created by this service principal. Read-only. Nullable.
+    */
     private ?array $createdObjects = null;
     
-    /** @var array<DelegatedPermissionClassification>|null $delegatedPermissionClassifications The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand. */
+    /**
+     * @var array<DelegatedPermissionClassification>|null $delegatedPermissionClassifications The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
+    */
     private ?array $delegatedPermissionClassifications = null;
     
-    /** @var string|null $description Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search. */
+    /**
+     * @var string|null $description Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
+    */
     private ?string $description = null;
     
-    /** @var string|null $disabledByMicrosoftStatus Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not). */
+    /**
+     * @var string|null $disabledByMicrosoftStatus Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
+    */
     private ?string $disabledByMicrosoftStatus = null;
     
-    /** @var string|null $displayName The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
+    /**
+     * @var string|null $displayName The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+    */
     private ?string $displayName = null;
     
-    /** @var array<Endpoint>|null $endpoints Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences. */
+    /**
+     * @var array<Endpoint>|null $endpoints Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+    */
     private ?array $endpoints = null;
     
-    /** @var string|null $homepage Home page or landing page of the application. */
+    /**
+     * @var string|null $homepage Home page or landing page of the application.
+    */
     private ?string $homepage = null;
     
-    /** @var array<HomeRealmDiscoveryPolicy>|null $homeRealmDiscoveryPolicies The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand. */
+    /**
+     * @var array<HomeRealmDiscoveryPolicy>|null $homeRealmDiscoveryPolicies The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
+    */
     private ?array $homeRealmDiscoveryPolicies = null;
     
-    /** @var InformationalUrl|null $info Basic profile information of the acquired application such as app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values). */
+    /**
+     * @var InformationalUrl|null $info Basic profile information of the acquired application such as app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+    */
     private ?InformationalUrl $info = null;
     
-    /** @var array<KeyCredential>|null $keyCredentials The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, not, ge, le). */
+    /**
+     * @var array<KeyCredential>|null $keyCredentials The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, not, ge, le).
+    */
     private ?array $keyCredentials = null;
     
-    /** @var string|null $loginUrl Specifies the URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps. When blank, Azure AD performs IdP-initiated sign-on for applications configured with SAML-based single sign-on. The user launches the application from Microsoft 365, the Azure AD My Apps, or the Azure AD SSO URL. */
+    /**
+     * @var string|null $loginUrl Specifies the URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps. When blank, Azure AD performs IdP-initiated sign-on for applications configured with SAML-based single sign-on. The user launches the application from Microsoft 365, the Azure AD My Apps, or the Azure AD SSO URL.
+    */
     private ?string $loginUrl = null;
     
-    /** @var string|null $logoutUrl Specifies the URL that will be used by Microsoft's authorization service to logout an user using OpenId Connect front-channel, back-channel or SAML logout protocols. */
+    /**
+     * @var string|null $logoutUrl Specifies the URL that will be used by Microsoft's authorization service to logout an user using OpenId Connect front-channel, back-channel or SAML logout protocols.
+    */
     private ?string $logoutUrl = null;
     
-    /** @var array<DirectoryObject>|null $memberOf Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand. */
+    /**
+     * @var array<DirectoryObject>|null $memberOf Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
+    */
     private ?array $memberOf = null;
     
-    /** @var string|null $notes Free text field to capture information about the service principal, typically used for operational purposes. Maximum allowed size is 1024 characters. */
+    /**
+     * @var string|null $notes Free text field to capture information about the service principal, typically used for operational purposes. Maximum allowed size is 1024 characters.
+    */
     private ?string $notes = null;
     
-    /** @var array<string>|null $notificationEmailAddresses Specifies the list of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications. */
+    /**
+     * @var array<string>|null $notificationEmailAddresses Specifies the list of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
+    */
     private ?array $notificationEmailAddresses = null;
     
-    /** @var array<OAuth2PermissionGrant>|null $oauth2PermissionGrants Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable. */
+    /**
+     * @var array<OAuth2PermissionGrant>|null $oauth2PermissionGrants Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable.
+    */
     private ?array $oauth2PermissionGrants = null;
     
-    /** @var array<PermissionScope>|null $oauth2PermissionScopes The delegated permissions exposed by the application. For more information see the oauth2PermissionScopes property on the application entity's api property. Not nullable. */
+    /**
+     * @var array<PermissionScope>|null $oauth2PermissionScopes The delegated permissions exposed by the application. For more information see the oauth2PermissionScopes property on the application entity's api property. Not nullable.
+    */
     private ?array $oauth2PermissionScopes = null;
     
-    /** @var array<DirectoryObject>|null $ownedObjects Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand. */
+    /**
+     * @var array<DirectoryObject>|null $ownedObjects Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
+    */
     private ?array $ownedObjects = null;
     
-    /** @var array<DirectoryObject>|null $owners Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand. */
+    /**
+     * @var array<DirectoryObject>|null $owners Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand.
+    */
     private ?array $owners = null;
     
-    /** @var array<PasswordCredential>|null $passwordCredentials The collection of password credentials associated with the application. Not nullable. */
+    /**
+     * @var array<PasswordCredential>|null $passwordCredentials The collection of password credentials associated with the service principal. Not nullable.
+    */
     private ?array $passwordCredentials = null;
     
-    /** @var string|null $preferredSingleSignOnMode Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, notSupported, and oidc. */
+    /**
+     * @var string|null $preferredSingleSignOnMode Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, notSupported, and oidc.
+    */
     private ?string $preferredSingleSignOnMode = null;
     
-    /** @var string|null $preferredTokenSigningKeyThumbprint Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions. */
+    /**
+     * @var string|null $preferredTokenSigningKeyThumbprint Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
+    */
     private ?string $preferredTokenSigningKeyThumbprint = null;
     
-    /** @var array<string>|null $replyUrls The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable. */
+    /**
+     * @var array<string>|null $replyUrls The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable.
+    */
     private ?array $replyUrls = null;
     
-    /** @var array<ResourceSpecificPermission>|null $resourceSpecificApplicationPermissions The resource-specific application permissions exposed by this application. Currently, resource-specific permissions are only supported for Teams apps accessing to specific chats and teams using Microsoft Graph. Read-only. */
+    /**
+     * @var array<ResourceSpecificPermission>|null $resourceSpecificApplicationPermissions The resource-specific application permissions exposed by this application. Currently, resource-specific permissions are only supported for Teams apps accessing to specific chats and teams using Microsoft Graph. Read-only.
+    */
     private ?array $resourceSpecificApplicationPermissions = null;
     
-    /** @var SamlSingleSignOnSettings|null $samlSingleSignOnSettings The collection for settings related to saml single sign-on. */
+    /**
+     * @var SamlSingleSignOnSettings|null $samlSingleSignOnSettings The collection for settings related to saml single sign-on.
+    */
     private ?SamlSingleSignOnSettings $samlSingleSignOnSettings = null;
     
-    /** @var array<string>|null $servicePrincipalNames Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.  Supports $filter (eq, not, ge, le, startsWith). */
+    /**
+     * @var array<string>|null $servicePrincipalNames Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.  Supports $filter (eq, not, ge, le, startsWith).
+    */
     private ?array $servicePrincipalNames = null;
     
-    /** @var string|null $servicePrincipalType Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use. */
+    /**
+     * @var string|null $servicePrincipalType Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use.
+    */
     private ?string $servicePrincipalType = null;
     
-    /** @var string|null $signInAudience Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only. */
+    /**
+     * @var string|null $signInAudience Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
+    */
     private ?string $signInAudience = null;
     
-    /** @var array<string>|null $tags Custom strings that can be used to categorize and identify the service principal. Not nullable. Supports $filter (eq, not, ge, le, startsWith). */
+    /**
+     * @var array<string>|null $tags Custom strings that can be used to categorize and identify the service principal. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+    */
     private ?array $tags = null;
     
-    /** @var string|null $tokenEncryptionKeyId Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD issues tokens for this application encrypted using the key specified by this property. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user. */
+    /**
+     * @var string|null $tokenEncryptionKeyId Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD issues tokens for this application encrypted using the key specified by this property. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
+    */
     private ?string $tokenEncryptionKeyId = null;
     
-    /** @var array<TokenIssuancePolicy>|null $tokenIssuancePolicies The tokenIssuancePolicies assigned to this service principal. */
+    /**
+     * @var array<TokenIssuancePolicy>|null $tokenIssuancePolicies The tokenIssuancePolicies assigned to this service principal. Supports $expand.
+    */
     private ?array $tokenIssuancePolicies = null;
     
-    /** @var array<TokenLifetimePolicy>|null $tokenLifetimePolicies The tokenLifetimePolicies assigned to this service principal. */
+    /**
+     * @var array<TokenLifetimePolicy>|null $tokenLifetimePolicies The tokenLifetimePolicies assigned to this service principal. Supports $expand.
+    */
     private ?array $tokenLifetimePolicies = null;
     
-    /** @var array<DirectoryObject>|null $transitiveMemberOf The transitiveMemberOf property */
+    /**
+     * @var array<DirectoryObject>|null $transitiveMemberOf The transitiveMemberOf property
+    */
     private ?array $transitiveMemberOf = null;
     
     /**
@@ -158,7 +250,7 @@ class ServicePrincipal extends DirectoryObject
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ServicePrincipal
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ServicePrincipal {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ServicePrincipal {
         return new ServicePrincipal();
     }
 
@@ -219,7 +311,7 @@ class ServicePrincipal extends DirectoryObject
     }
 
     /**
-     * Gets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
+     * Gets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).
      * @return string|null
     */
     public function getAppOwnerOrganizationId(): ?string {
@@ -227,7 +319,7 @@ class ServicePrincipal extends DirectoryObject
     }
 
     /**
-     * Gets the appRoleAssignedTo property value. App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
+     * Gets the appRoleAssignedTo property value. App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
      * @return array<AppRoleAssignment>|null
     */
     public function getAppRoleAssignedTo(): ?array {
@@ -319,53 +411,54 @@ class ServicePrincipal extends DirectoryObject
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'accountEnabled' => function (self $o, ParseNode $n) { $o->setAccountEnabled($n->getBooleanValue()); },
-            'addIns' => function (self $o, ParseNode $n) { $o->setAddIns($n->getCollectionOfObjectValues(AddIn::class)); },
-            'alternativeNames' => function (self $o, ParseNode $n) { $o->setAlternativeNames($n->getCollectionOfPrimitiveValues()); },
-            'appDescription' => function (self $o, ParseNode $n) { $o->setAppDescription($n->getStringValue()); },
-            'appDisplayName' => function (self $o, ParseNode $n) { $o->setAppDisplayName($n->getStringValue()); },
-            'appId' => function (self $o, ParseNode $n) { $o->setAppId($n->getStringValue()); },
-            'applicationTemplateId' => function (self $o, ParseNode $n) { $o->setApplicationTemplateId($n->getStringValue()); },
-            'appOwnerOrganizationId' => function (self $o, ParseNode $n) { $o->setAppOwnerOrganizationId($n->getStringValue()); },
-            'appRoleAssignedTo' => function (self $o, ParseNode $n) { $o->setAppRoleAssignedTo($n->getCollectionOfObjectValues(AppRoleAssignment::class)); },
-            'appRoleAssignmentRequired' => function (self $o, ParseNode $n) { $o->setAppRoleAssignmentRequired($n->getBooleanValue()); },
-            'appRoleAssignments' => function (self $o, ParseNode $n) { $o->setAppRoleAssignments($n->getCollectionOfObjectValues(AppRoleAssignment::class)); },
-            'appRoles' => function (self $o, ParseNode $n) { $o->setAppRoles($n->getCollectionOfObjectValues(AppRole::class)); },
-            'claimsMappingPolicies' => function (self $o, ParseNode $n) { $o->setClaimsMappingPolicies($n->getCollectionOfObjectValues(ClaimsMappingPolicy::class)); },
-            'createdObjects' => function (self $o, ParseNode $n) { $o->setCreatedObjects($n->getCollectionOfObjectValues(DirectoryObject::class)); },
-            'delegatedPermissionClassifications' => function (self $o, ParseNode $n) { $o->setDelegatedPermissionClassifications($n->getCollectionOfObjectValues(DelegatedPermissionClassification::class)); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'disabledByMicrosoftStatus' => function (self $o, ParseNode $n) { $o->setDisabledByMicrosoftStatus($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'endpoints' => function (self $o, ParseNode $n) { $o->setEndpoints($n->getCollectionOfObjectValues(Endpoint::class)); },
-            'homepage' => function (self $o, ParseNode $n) { $o->setHomepage($n->getStringValue()); },
-            'homeRealmDiscoveryPolicies' => function (self $o, ParseNode $n) { $o->setHomeRealmDiscoveryPolicies($n->getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::class)); },
-            'info' => function (self $o, ParseNode $n) { $o->setInfo($n->getObjectValue(InformationalUrl::class)); },
-            'keyCredentials' => function (self $o, ParseNode $n) { $o->setKeyCredentials($n->getCollectionOfObjectValues(KeyCredential::class)); },
-            'loginUrl' => function (self $o, ParseNode $n) { $o->setLoginUrl($n->getStringValue()); },
-            'logoutUrl' => function (self $o, ParseNode $n) { $o->setLogoutUrl($n->getStringValue()); },
-            'memberOf' => function (self $o, ParseNode $n) { $o->setMemberOf($n->getCollectionOfObjectValues(DirectoryObject::class)); },
-            'notes' => function (self $o, ParseNode $n) { $o->setNotes($n->getStringValue()); },
-            'notificationEmailAddresses' => function (self $o, ParseNode $n) { $o->setNotificationEmailAddresses($n->getCollectionOfPrimitiveValues()); },
-            'oauth2PermissionGrants' => function (self $o, ParseNode $n) { $o->setOauth2PermissionGrants($n->getCollectionOfObjectValues(OAuth2PermissionGrant::class)); },
-            'oauth2PermissionScopes' => function (self $o, ParseNode $n) { $o->setOauth2PermissionScopes($n->getCollectionOfObjectValues(PermissionScope::class)); },
-            'ownedObjects' => function (self $o, ParseNode $n) { $o->setOwnedObjects($n->getCollectionOfObjectValues(DirectoryObject::class)); },
-            'owners' => function (self $o, ParseNode $n) { $o->setOwners($n->getCollectionOfObjectValues(DirectoryObject::class)); },
-            'passwordCredentials' => function (self $o, ParseNode $n) { $o->setPasswordCredentials($n->getCollectionOfObjectValues(PasswordCredential::class)); },
-            'preferredSingleSignOnMode' => function (self $o, ParseNode $n) { $o->setPreferredSingleSignOnMode($n->getStringValue()); },
-            'preferredTokenSigningKeyThumbprint' => function (self $o, ParseNode $n) { $o->setPreferredTokenSigningKeyThumbprint($n->getStringValue()); },
-            'replyUrls' => function (self $o, ParseNode $n) { $o->setReplyUrls($n->getCollectionOfPrimitiveValues()); },
-            'resourceSpecificApplicationPermissions' => function (self $o, ParseNode $n) { $o->setResourceSpecificApplicationPermissions($n->getCollectionOfObjectValues(ResourceSpecificPermission::class)); },
-            'samlSingleSignOnSettings' => function (self $o, ParseNode $n) { $o->setSamlSingleSignOnSettings($n->getObjectValue(SamlSingleSignOnSettings::class)); },
-            'servicePrincipalNames' => function (self $o, ParseNode $n) { $o->setServicePrincipalNames($n->getCollectionOfPrimitiveValues()); },
-            'servicePrincipalType' => function (self $o, ParseNode $n) { $o->setServicePrincipalType($n->getStringValue()); },
-            'signInAudience' => function (self $o, ParseNode $n) { $o->setSignInAudience($n->getStringValue()); },
-            'tags' => function (self $o, ParseNode $n) { $o->setTags($n->getCollectionOfPrimitiveValues()); },
-            'tokenEncryptionKeyId' => function (self $o, ParseNode $n) { $o->setTokenEncryptionKeyId($n->getStringValue()); },
-            'tokenIssuancePolicies' => function (self $o, ParseNode $n) { $o->setTokenIssuancePolicies($n->getCollectionOfObjectValues(TokenIssuancePolicy::class)); },
-            'tokenLifetimePolicies' => function (self $o, ParseNode $n) { $o->setTokenLifetimePolicies($n->getCollectionOfObjectValues(TokenLifetimePolicy::class)); },
-            'transitiveMemberOf' => function (self $o, ParseNode $n) { $o->setTransitiveMemberOf($n->getCollectionOfObjectValues(DirectoryObject::class)); },
+            'accountEnabled' => function (ParseNode $n) use ($o) { $o->setAccountEnabled($n->getBooleanValue()); },
+            'addIns' => function (ParseNode $n) use ($o) { $o->setAddIns($n->getCollectionOfObjectValues(array(AddIn::class, 'createFromDiscriminatorValue'))); },
+            'alternativeNames' => function (ParseNode $n) use ($o) { $o->setAlternativeNames($n->getCollectionOfPrimitiveValues()); },
+            'appDescription' => function (ParseNode $n) use ($o) { $o->setAppDescription($n->getStringValue()); },
+            'appDisplayName' => function (ParseNode $n) use ($o) { $o->setAppDisplayName($n->getStringValue()); },
+            'appId' => function (ParseNode $n) use ($o) { $o->setAppId($n->getStringValue()); },
+            'applicationTemplateId' => function (ParseNode $n) use ($o) { $o->setApplicationTemplateId($n->getStringValue()); },
+            'appOwnerOrganizationId' => function (ParseNode $n) use ($o) { $o->setAppOwnerOrganizationId($n->getStringValue()); },
+            'appRoleAssignedTo' => function (ParseNode $n) use ($o) { $o->setAppRoleAssignedTo($n->getCollectionOfObjectValues(array(AppRoleAssignment::class, 'createFromDiscriminatorValue'))); },
+            'appRoleAssignmentRequired' => function (ParseNode $n) use ($o) { $o->setAppRoleAssignmentRequired($n->getBooleanValue()); },
+            'appRoleAssignments' => function (ParseNode $n) use ($o) { $o->setAppRoleAssignments($n->getCollectionOfObjectValues(array(AppRoleAssignment::class, 'createFromDiscriminatorValue'))); },
+            'appRoles' => function (ParseNode $n) use ($o) { $o->setAppRoles($n->getCollectionOfObjectValues(array(AppRole::class, 'createFromDiscriminatorValue'))); },
+            'claimsMappingPolicies' => function (ParseNode $n) use ($o) { $o->setClaimsMappingPolicies($n->getCollectionOfObjectValues(array(ClaimsMappingPolicy::class, 'createFromDiscriminatorValue'))); },
+            'createdObjects' => function (ParseNode $n) use ($o) { $o->setCreatedObjects($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
+            'delegatedPermissionClassifications' => function (ParseNode $n) use ($o) { $o->setDelegatedPermissionClassifications($n->getCollectionOfObjectValues(array(DelegatedPermissionClassification::class, 'createFromDiscriminatorValue'))); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'disabledByMicrosoftStatus' => function (ParseNode $n) use ($o) { $o->setDisabledByMicrosoftStatus($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'endpoints' => function (ParseNode $n) use ($o) { $o->setEndpoints($n->getCollectionOfObjectValues(array(Endpoint::class, 'createFromDiscriminatorValue'))); },
+            'homepage' => function (ParseNode $n) use ($o) { $o->setHomepage($n->getStringValue()); },
+            'homeRealmDiscoveryPolicies' => function (ParseNode $n) use ($o) { $o->setHomeRealmDiscoveryPolicies($n->getCollectionOfObjectValues(array(HomeRealmDiscoveryPolicy::class, 'createFromDiscriminatorValue'))); },
+            'info' => function (ParseNode $n) use ($o) { $o->setInfo($n->getObjectValue(array(InformationalUrl::class, 'createFromDiscriminatorValue'))); },
+            'keyCredentials' => function (ParseNode $n) use ($o) { $o->setKeyCredentials($n->getCollectionOfObjectValues(array(KeyCredential::class, 'createFromDiscriminatorValue'))); },
+            'loginUrl' => function (ParseNode $n) use ($o) { $o->setLoginUrl($n->getStringValue()); },
+            'logoutUrl' => function (ParseNode $n) use ($o) { $o->setLogoutUrl($n->getStringValue()); },
+            'memberOf' => function (ParseNode $n) use ($o) { $o->setMemberOf($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
+            'notes' => function (ParseNode $n) use ($o) { $o->setNotes($n->getStringValue()); },
+            'notificationEmailAddresses' => function (ParseNode $n) use ($o) { $o->setNotificationEmailAddresses($n->getCollectionOfPrimitiveValues()); },
+            'oauth2PermissionGrants' => function (ParseNode $n) use ($o) { $o->setOauth2PermissionGrants($n->getCollectionOfObjectValues(array(OAuth2PermissionGrant::class, 'createFromDiscriminatorValue'))); },
+            'oauth2PermissionScopes' => function (ParseNode $n) use ($o) { $o->setOauth2PermissionScopes($n->getCollectionOfObjectValues(array(PermissionScope::class, 'createFromDiscriminatorValue'))); },
+            'ownedObjects' => function (ParseNode $n) use ($o) { $o->setOwnedObjects($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
+            'owners' => function (ParseNode $n) use ($o) { $o->setOwners($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
+            'passwordCredentials' => function (ParseNode $n) use ($o) { $o->setPasswordCredentials($n->getCollectionOfObjectValues(array(PasswordCredential::class, 'createFromDiscriminatorValue'))); },
+            'preferredSingleSignOnMode' => function (ParseNode $n) use ($o) { $o->setPreferredSingleSignOnMode($n->getStringValue()); },
+            'preferredTokenSigningKeyThumbprint' => function (ParseNode $n) use ($o) { $o->setPreferredTokenSigningKeyThumbprint($n->getStringValue()); },
+            'replyUrls' => function (ParseNode $n) use ($o) { $o->setReplyUrls($n->getCollectionOfPrimitiveValues()); },
+            'resourceSpecificApplicationPermissions' => function (ParseNode $n) use ($o) { $o->setResourceSpecificApplicationPermissions($n->getCollectionOfObjectValues(array(ResourceSpecificPermission::class, 'createFromDiscriminatorValue'))); },
+            'samlSingleSignOnSettings' => function (ParseNode $n) use ($o) { $o->setSamlSingleSignOnSettings($n->getObjectValue(array(SamlSingleSignOnSettings::class, 'createFromDiscriminatorValue'))); },
+            'servicePrincipalNames' => function (ParseNode $n) use ($o) { $o->setServicePrincipalNames($n->getCollectionOfPrimitiveValues()); },
+            'servicePrincipalType' => function (ParseNode $n) use ($o) { $o->setServicePrincipalType($n->getStringValue()); },
+            'signInAudience' => function (ParseNode $n) use ($o) { $o->setSignInAudience($n->getStringValue()); },
+            'tags' => function (ParseNode $n) use ($o) { $o->setTags($n->getCollectionOfPrimitiveValues()); },
+            'tokenEncryptionKeyId' => function (ParseNode $n) use ($o) { $o->setTokenEncryptionKeyId($n->getStringValue()); },
+            'tokenIssuancePolicies' => function (ParseNode $n) use ($o) { $o->setTokenIssuancePolicies($n->getCollectionOfObjectValues(array(TokenIssuancePolicy::class, 'createFromDiscriminatorValue'))); },
+            'tokenLifetimePolicies' => function (ParseNode $n) use ($o) { $o->setTokenLifetimePolicies($n->getCollectionOfObjectValues(array(TokenLifetimePolicy::class, 'createFromDiscriminatorValue'))); },
+            'transitiveMemberOf' => function (ParseNode $n) use ($o) { $o->setTransitiveMemberOf($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -474,7 +567,7 @@ class ServicePrincipal extends DirectoryObject
     }
 
     /**
-     * Gets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
+     * Gets the passwordCredentials property value. The collection of password credentials associated with the service principal. Not nullable.
      * @return array<PasswordCredential>|null
     */
     public function getPasswordCredentials(): ?array {
@@ -530,7 +623,7 @@ class ServicePrincipal extends DirectoryObject
     }
 
     /**
-     * Gets the servicePrincipalType property value. Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.
+     * Gets the servicePrincipalType property value. Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use.
      * @return string|null
     */
     public function getServicePrincipalType(): ?string {
@@ -562,7 +655,7 @@ class ServicePrincipal extends DirectoryObject
     }
 
     /**
-     * Gets the tokenIssuancePolicies property value. The tokenIssuancePolicies assigned to this service principal.
+     * Gets the tokenIssuancePolicies property value. The tokenIssuancePolicies assigned to this service principal. Supports $expand.
      * @return array<TokenIssuancePolicy>|null
     */
     public function getTokenIssuancePolicies(): ?array {
@@ -570,7 +663,7 @@ class ServicePrincipal extends DirectoryObject
     }
 
     /**
-     * Gets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this service principal.
+     * Gets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this service principal. Supports $expand.
      * @return array<TokenLifetimePolicy>|null
     */
     public function getTokenLifetimePolicies(): ?array {
@@ -696,7 +789,7 @@ class ServicePrincipal extends DirectoryObject
     }
 
     /**
-     * Sets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
+     * Sets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).
      *  @param string|null $value Value to set for the appOwnerOrganizationId property.
     */
     public function setAppOwnerOrganizationId(?string $value ): void {
@@ -704,7 +797,7 @@ class ServicePrincipal extends DirectoryObject
     }
 
     /**
-     * Sets the appRoleAssignedTo property value. App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
+     * Sets the appRoleAssignedTo property value. App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
      *  @param array<AppRoleAssignment>|null $value Value to set for the appRoleAssignedTo property.
     */
     public function setAppRoleAssignedTo(?array $value ): void {
@@ -896,7 +989,7 @@ class ServicePrincipal extends DirectoryObject
     }
 
     /**
-     * Sets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
+     * Sets the passwordCredentials property value. The collection of password credentials associated with the service principal. Not nullable.
      *  @param array<PasswordCredential>|null $value Value to set for the passwordCredentials property.
     */
     public function setPasswordCredentials(?array $value ): void {
@@ -952,7 +1045,7 @@ class ServicePrincipal extends DirectoryObject
     }
 
     /**
-     * Sets the servicePrincipalType property value. Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.
+     * Sets the servicePrincipalType property value. Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use.
      *  @param string|null $value Value to set for the servicePrincipalType property.
     */
     public function setServicePrincipalType(?string $value ): void {
@@ -984,7 +1077,7 @@ class ServicePrincipal extends DirectoryObject
     }
 
     /**
-     * Sets the tokenIssuancePolicies property value. The tokenIssuancePolicies assigned to this service principal.
+     * Sets the tokenIssuancePolicies property value. The tokenIssuancePolicies assigned to this service principal. Supports $expand.
      *  @param array<TokenIssuancePolicy>|null $value Value to set for the tokenIssuancePolicies property.
     */
     public function setTokenIssuancePolicies(?array $value ): void {
@@ -992,7 +1085,7 @@ class ServicePrincipal extends DirectoryObject
     }
 
     /**
-     * Sets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this service principal.
+     * Sets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this service principal. Supports $expand.
      *  @param array<TokenLifetimePolicy>|null $value Value to set for the tokenLifetimePolicies property.
     */
     public function setTokenLifetimePolicies(?array $value ): void {

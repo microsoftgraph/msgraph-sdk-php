@@ -7,21 +7,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ManagedAppPolicy extends Entity 
+class ManagedAppPolicy extends Entity implements Parsable 
 {
-    /** @var DateTime|null $createdDateTime The date and time the policy was created. */
+    /**
+     * @var DateTime|null $createdDateTime The date and time the policy was created.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $description The policy's description. */
+    /**
+     * @var string|null $description The policy's description.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName Policy display name. */
+    /**
+     * @var string|null $displayName Policy display name.
+    */
     private ?string $displayName = null;
     
-    /** @var DateTime|null $lastModifiedDateTime Last time the policy was modified. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime Last time the policy was modified.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var string|null $version Version of the entity. */
+    /**
+     * @var string|null $version Version of the entity.
+    */
     private ?string $version = null;
     
     /**
@@ -36,7 +46,16 @@ class ManagedAppPolicy extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ManagedAppPolicy
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ManagedAppPolicy {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedAppPolicy {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.managedAppConfiguration': return new ManagedAppConfiguration();
+                case '#microsoft.graph.managedAppProtection': return new ManagedAppProtection();
+                case '#microsoft.graph.windowsInformationProtection': return new WindowsInformationProtection();
+            }
+        }
         return new ManagedAppPolicy();
     }
 
@@ -69,12 +88,13 @@ class ManagedAppPolicy extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'version' => function (self $o, ParseNode $n) { $o->setVersion($n->getStringValue()); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getStringValue()); },
         ]);
     }
 

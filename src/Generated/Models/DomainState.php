@@ -10,16 +10,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class DomainState implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var DateTime|null $lastActionDateTime Timestamp for when the last activity occurred. The value is updated when an operation is scheduled, the asynchronous task starts, and when the operation completes. */
+    /**
+     * @var DateTime|null $lastActionDateTime Timestamp for when the last activity occurred. The value is updated when an operation is scheduled, the asynchronous task starts, and when the operation completes.
+    */
     private ?DateTime $lastActionDateTime = null;
     
-    /** @var string|null $operation Type of asynchronous operation. The values can be ForceDelete or Verification */
+    /**
+     * @var string|null $operation Type of asynchronous operation. The values can be ForceDelete or Verification
+    */
     private ?string $operation = null;
     
-    /** @var string|null $status Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed. */
+    /**
+     * @var string|null $status Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.
+    */
     private ?string $status = null;
     
     /**
@@ -34,7 +42,7 @@ class DomainState implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DomainState
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DomainState {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DomainState {
         return new DomainState();
     }
 
@@ -51,10 +59,11 @@ class DomainState implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'lastActionDateTime' => function (self $o, ParseNode $n) { $o->setLastActionDateTime($n->getDateTimeValue()); },
-            'operation' => function (self $o, ParseNode $n) { $o->setOperation($n->getStringValue()); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getStringValue()); },
+            'lastActionDateTime' => function (ParseNode $n) use ($o) { $o->setLastActionDateTime($n->getDateTimeValue()); },
+            'operation' => function (ParseNode $n) use ($o) { $o->setOperation($n->getStringValue()); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getStringValue()); },
         ];
     }
 

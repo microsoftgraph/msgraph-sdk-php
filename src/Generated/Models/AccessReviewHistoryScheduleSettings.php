@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var PatternedRecurrence|null $recurrence The recurrence property */
+    /**
+     * @var PatternedRecurrence|null $recurrence The recurrence property
+    */
     private ?PatternedRecurrence $recurrence = null;
     
-    /** @var string|null $reportRange A duration string in ISO 8601 duration format specifying the lookback period of the generated review history data. For example, if a history definition is scheduled to run on the 1st of every month, the reportRange is P1M. In this case, on the first of every month, access review history data will be collected containing only the previous month's review data. Note: Only years, months, and days ISO 8601 properties are supported. Required. */
+    /**
+     * @var string|null $reportRange A duration string in ISO 8601 duration format specifying the lookback period of the generated review history data. For example, if a history definition is scheduled to run on the 1st of every month, the reportRange is P1M. In this case, on the first of every month, access review history data will be collected containing only the previous month's review data. Note: Only years, months, and days ISO 8601 properties are supported. Required.
+    */
     private ?string $reportRange = null;
     
     /**
@@ -30,7 +36,7 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Parsa
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AccessReviewHistoryScheduleSettings
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AccessReviewHistoryScheduleSettings {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessReviewHistoryScheduleSettings {
         return new AccessReviewHistoryScheduleSettings();
     }
 
@@ -47,9 +53,10 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Parsa
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'recurrence' => function (self $o, ParseNode $n) { $o->setRecurrence($n->getObjectValue(PatternedRecurrence::class)); },
-            'reportRange' => function (self $o, ParseNode $n) { $o->setReportRange($n->getStringValue()); },
+            'recurrence' => function (ParseNode $n) use ($o) { $o->setRecurrence($n->getObjectValue(array(PatternedRecurrence::class, 'createFromDiscriminatorValue'))); },
+            'reportRange' => function (ParseNode $n) use ($o) { $o->setReportRange($n->getStringValue()); },
         ];
     }
 

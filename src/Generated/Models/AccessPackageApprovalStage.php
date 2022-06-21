@@ -10,31 +10,49 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AccessPackageApprovalStage implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var DateInterval|null $durationBeforeAutomaticDenial The number of days that a request can be pending a response before it is automatically denied. */
+    /**
+     * @var DateInterval|null $durationBeforeAutomaticDenial The number of days that a request can be pending a response before it is automatically denied.
+    */
     private ?DateInterval $durationBeforeAutomaticDenial = null;
     
-    /** @var DateInterval|null $durationBeforeEscalation If escalation is required, the time a request can be pending a response from a primary approver. */
+    /**
+     * @var DateInterval|null $durationBeforeEscalation If escalation is required, the time a request can be pending a response from a primary approver.
+    */
     private ?DateInterval $durationBeforeEscalation = null;
     
-    /** @var array<SubjectSet>|null $escalationApprovers If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests. */
+    /**
+     * @var array<SubjectSet>|null $escalationApprovers If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
+    */
     private ?array $escalationApprovers = null;
     
-    /** @var array<SubjectSet>|null $fallbackEscalationApprovers The subjects, typically users, who are the fallback escalation approvers. */
+    /**
+     * @var array<SubjectSet>|null $fallbackEscalationApprovers The subjects, typically users, who are the fallback escalation approvers.
+    */
     private ?array $fallbackEscalationApprovers = null;
     
-    /** @var array<SubjectSet>|null $fallbackPrimaryApprovers The subjects, typically users, who are the fallback primary approvers. */
+    /**
+     * @var array<SubjectSet>|null $fallbackPrimaryApprovers The subjects, typically users, who are the fallback primary approvers.
+    */
     private ?array $fallbackPrimaryApprovers = null;
     
-    /** @var bool|null $isApproverJustificationRequired Indicates whether the approver is required to provide a justification for approving a request. */
+    /**
+     * @var bool|null $isApproverJustificationRequired Indicates whether the approver is required to provide a justification for approving a request.
+    */
     private ?bool $isApproverJustificationRequired = null;
     
-    /** @var bool|null $isEscalationEnabled If true, then one or more escalationApprovers are configured in this approval stage. */
+    /**
+     * @var bool|null $isEscalationEnabled If true, then one or more escalationApprovers are configured in this approval stage.
+    */
     private ?bool $isEscalationEnabled = null;
     
-    /** @var array<SubjectSet>|null $primaryApprovers The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors. */
+    /**
+     * @var array<SubjectSet>|null $primaryApprovers The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors.
+    */
     private ?array $primaryApprovers = null;
     
     /**
@@ -49,7 +67,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AccessPackageApprovalStage
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageApprovalStage {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageApprovalStage {
         return new AccessPackageApprovalStage();
     }
 
@@ -106,15 +124,16 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'durationBeforeAutomaticDenial' => function (self $o, ParseNode $n) { $o->setDurationBeforeAutomaticDenial($n->getDateIntervalValue()); },
-            'durationBeforeEscalation' => function (self $o, ParseNode $n) { $o->setDurationBeforeEscalation($n->getDateIntervalValue()); },
-            'escalationApprovers' => function (self $o, ParseNode $n) { $o->setEscalationApprovers($n->getCollectionOfObjectValues(SubjectSet::class)); },
-            'fallbackEscalationApprovers' => function (self $o, ParseNode $n) { $o->setFallbackEscalationApprovers($n->getCollectionOfObjectValues(SubjectSet::class)); },
-            'fallbackPrimaryApprovers' => function (self $o, ParseNode $n) { $o->setFallbackPrimaryApprovers($n->getCollectionOfObjectValues(SubjectSet::class)); },
-            'isApproverJustificationRequired' => function (self $o, ParseNode $n) { $o->setIsApproverJustificationRequired($n->getBooleanValue()); },
-            'isEscalationEnabled' => function (self $o, ParseNode $n) { $o->setIsEscalationEnabled($n->getBooleanValue()); },
-            'primaryApprovers' => function (self $o, ParseNode $n) { $o->setPrimaryApprovers($n->getCollectionOfObjectValues(SubjectSet::class)); },
+            'durationBeforeAutomaticDenial' => function (ParseNode $n) use ($o) { $o->setDurationBeforeAutomaticDenial($n->getDateIntervalValue()); },
+            'durationBeforeEscalation' => function (ParseNode $n) use ($o) { $o->setDurationBeforeEscalation($n->getDateIntervalValue()); },
+            'escalationApprovers' => function (ParseNode $n) use ($o) { $o->setEscalationApprovers($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
+            'fallbackEscalationApprovers' => function (ParseNode $n) use ($o) { $o->setFallbackEscalationApprovers($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
+            'fallbackPrimaryApprovers' => function (ParseNode $n) use ($o) { $o->setFallbackPrimaryApprovers($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
+            'isApproverJustificationRequired' => function (ParseNode $n) use ($o) { $o->setIsApproverJustificationRequired($n->getBooleanValue()); },
+            'isEscalationEnabled' => function (ParseNode $n) use ($o) { $o->setIsEscalationEnabled($n->getBooleanValue()); },
+            'primaryApprovers' => function (ParseNode $n) use ($o) { $o->setPrimaryApprovers($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

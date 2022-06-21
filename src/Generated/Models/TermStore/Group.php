@@ -8,24 +8,36 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Group extends Entity 
+class Group extends Entity implements Parsable 
 {
-    /** @var DateTime|null $createdDateTime Date and time of the group creation. Read-only. */
+    /**
+     * @var DateTime|null $createdDateTime Date and time of the group creation. Read-only.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $description Description that gives details on the term usage. */
+    /**
+     * @var string|null $description Description that gives details on the term usage.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName Name of the group. */
+    /**
+     * @var string|null $displayName Name of the group.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $parentSiteId ID of the parent site of this group. */
+    /**
+     * @var string|null $parentSiteId ID of the parent site of this group.
+    */
     private ?string $parentSiteId = null;
     
-    /** @var TermGroupScope|null $scope Returns the type of the group. Possible values are global, system, and siteCollection. */
+    /**
+     * @var TermGroupScope|null $scope Returns the type of the group. Possible values are global, system, and siteCollection.
+    */
     private ?TermGroupScope $scope = null;
     
-    /** @var array<Set>|null $sets All sets under the group in a term [store]. */
+    /**
+     * @var array<Set>|null $sets All sets under the group in a term [store].
+    */
     private ?array $sets = null;
     
     /**
@@ -40,7 +52,7 @@ class Group extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Group
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Group {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Group {
         return new Group();
     }
 
@@ -73,13 +85,14 @@ class Group extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'parentSiteId' => function (self $o, ParseNode $n) { $o->setParentSiteId($n->getStringValue()); },
-            'scope' => function (self $o, ParseNode $n) { $o->setScope($n->getEnumValue(TermGroupScope::class)); },
-            'sets' => function (self $o, ParseNode $n) { $o->setSets($n->getCollectionOfObjectValues(Set::class)); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'parentSiteId' => function (ParseNode $n) use ($o) { $o->setParentSiteId($n->getStringValue()); },
+            'scope' => function (ParseNode $n) use ($o) { $o->setScope($n->getEnumValue(TermGroupScope::class)); },
+            'sets' => function (ParseNode $n) use ($o) { $o->setSets($n->getCollectionOfObjectValues(array(Set::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

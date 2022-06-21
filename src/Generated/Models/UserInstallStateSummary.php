@@ -6,21 +6,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class UserInstallStateSummary extends Entity 
+class UserInstallStateSummary extends Entity implements Parsable 
 {
-    /** @var array<DeviceInstallState>|null $deviceStates The install state of the eBook. */
+    /**
+     * @var array<DeviceInstallState>|null $deviceStates The install state of the eBook.
+    */
     private ?array $deviceStates = null;
     
-    /** @var int|null $failedDeviceCount Failed Device Count. */
+    /**
+     * @var int|null $failedDeviceCount Failed Device Count.
+    */
     private ?int $failedDeviceCount = null;
     
-    /** @var int|null $installedDeviceCount Installed Device Count. */
+    /**
+     * @var int|null $installedDeviceCount Installed Device Count.
+    */
     private ?int $installedDeviceCount = null;
     
-    /** @var int|null $notInstalledDeviceCount Not installed device count. */
+    /**
+     * @var int|null $notInstalledDeviceCount Not installed device count.
+    */
     private ?int $notInstalledDeviceCount = null;
     
-    /** @var string|null $userName User name. */
+    /**
+     * @var string|null $userName User name.
+    */
     private ?string $userName = null;
     
     /**
@@ -35,7 +45,7 @@ class UserInstallStateSummary extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return UserInstallStateSummary
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): UserInstallStateSummary {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): UserInstallStateSummary {
         return new UserInstallStateSummary();
     }
 
@@ -60,12 +70,13 @@ class UserInstallStateSummary extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'deviceStates' => function (self $o, ParseNode $n) { $o->setDeviceStates($n->getCollectionOfObjectValues(DeviceInstallState::class)); },
-            'failedDeviceCount' => function (self $o, ParseNode $n) { $o->setFailedDeviceCount($n->getIntegerValue()); },
-            'installedDeviceCount' => function (self $o, ParseNode $n) { $o->setInstalledDeviceCount($n->getIntegerValue()); },
-            'notInstalledDeviceCount' => function (self $o, ParseNode $n) { $o->setNotInstalledDeviceCount($n->getIntegerValue()); },
-            'userName' => function (self $o, ParseNode $n) { $o->setUserName($n->getStringValue()); },
+            'deviceStates' => function (ParseNode $n) use ($o) { $o->setDeviceStates($n->getCollectionOfObjectValues(array(DeviceInstallState::class, 'createFromDiscriminatorValue'))); },
+            'failedDeviceCount' => function (ParseNode $n) use ($o) { $o->setFailedDeviceCount($n->getIntegerValue()); },
+            'installedDeviceCount' => function (ParseNode $n) use ($o) { $o->setInstalledDeviceCount($n->getIntegerValue()); },
+            'notInstalledDeviceCount' => function (ParseNode $n) use ($o) { $o->setNotInstalledDeviceCount($n->getIntegerValue()); },
+            'userName' => function (ParseNode $n) use ($o) { $o->setUserName($n->getStringValue()); },
         ]);
     }
 

@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ImageInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var bool|null $addImageQuery Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example – a high contrast image */
+    /**
+     * @var bool|null $addImageQuery Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example – a high contrast image
+    */
     private ?bool $addImageQuery = null;
     
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $alternateText Optional; alt-text accessible content for the image */
+    /**
+     * @var string|null $alternateText Optional; alt-text accessible content for the image
+    */
     private ?string $alternateText = null;
     
-    /** @var string|null $alternativeText The alternativeText property */
+    /**
+     * @var string|null $alternativeText The alternativeText property
+    */
     private ?string $alternativeText = null;
     
-    /** @var string|null $iconUrl Optional; URI that points to an icon which represents the application used to generate the activity */
+    /**
+     * @var string|null $iconUrl Optional; URI that points to an icon which represents the application used to generate the activity
+    */
     private ?string $iconUrl = null;
     
     /**
@@ -36,7 +46,7 @@ class ImageInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ImageInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ImageInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ImageInfo {
         return new ImageInfo();
     }
 
@@ -77,11 +87,12 @@ class ImageInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'addImageQuery' => function (self $o, ParseNode $n) { $o->setAddImageQuery($n->getBooleanValue()); },
-            'alternateText' => function (self $o, ParseNode $n) { $o->setAlternateText($n->getStringValue()); },
-            'alternativeText' => function (self $o, ParseNode $n) { $o->setAlternativeText($n->getStringValue()); },
-            'iconUrl' => function (self $o, ParseNode $n) { $o->setIconUrl($n->getStringValue()); },
+            'addImageQuery' => function (ParseNode $n) use ($o) { $o->setAddImageQuery($n->getBooleanValue()); },
+            'alternateText' => function (ParseNode $n) use ($o) { $o->setAlternateText($n->getStringValue()); },
+            'alternativeText' => function (ParseNode $n) use ($o) { $o->setAlternativeText($n->getStringValue()); },
+            'iconUrl' => function (ParseNode $n) use ($o) { $o->setIconUrl($n->getStringValue()); },
         ];
     }
 

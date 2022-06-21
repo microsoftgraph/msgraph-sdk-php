@@ -6,12 +6,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ManagedAppStatus extends Entity 
+class ManagedAppStatus extends Entity implements Parsable 
 {
-    /** @var string|null $displayName Friendly name of the status report. */
+    /**
+     * @var string|null $displayName Friendly name of the status report.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $version Version of the entity. */
+    /**
+     * @var string|null $version Version of the entity.
+    */
     private ?string $version = null;
     
     /**
@@ -26,7 +30,14 @@ class ManagedAppStatus extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ManagedAppStatus
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ManagedAppStatus {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedAppStatus {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.managedAppStatusRaw': return new ManagedAppStatusRaw();
+            }
+        }
         return new ManagedAppStatus();
     }
 
@@ -43,9 +54,10 @@ class ManagedAppStatus extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'version' => function (self $o, ParseNode $n) { $o->setVersion($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getStringValue()); },
         ]);
     }
 

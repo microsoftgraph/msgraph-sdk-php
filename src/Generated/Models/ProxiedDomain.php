@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ProxiedDomain implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $ipAddressOrFQDN The IP address or FQDN */
+    /**
+     * @var string|null $ipAddressOrFQDN The IP address or FQDN
+    */
     private ?string $ipAddressOrFQDN = null;
     
-    /** @var string|null $proxy Proxy IP or FQDN */
+    /**
+     * @var string|null $proxy Proxy IP or FQDN
+    */
     private ?string $proxy = null;
     
     /**
@@ -30,7 +36,7 @@ class ProxiedDomain implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ProxiedDomain
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ProxiedDomain {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ProxiedDomain {
         return new ProxiedDomain();
     }
 
@@ -47,9 +53,10 @@ class ProxiedDomain implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'ipAddressOrFQDN' => function (self $o, ParseNode $n) { $o->setIpAddressOrFQDN($n->getStringValue()); },
-            'proxy' => function (self $o, ParseNode $n) { $o->setProxy($n->getStringValue()); },
+            'ipAddressOrFQDN' => function (ParseNode $n) use ($o) { $o->setIpAddressOrFQDN($n->getStringValue()); },
+            'proxy' => function (ParseNode $n) use ($o) { $o->setProxy($n->getStringValue()); },
         ];
     }
 

@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class TeamsTabConfiguration implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $contentUrl Url used for rendering tab contents in Teams. Required. */
+    /**
+     * @var string|null $contentUrl Url used for rendering tab contents in Teams. Required.
+    */
     private ?string $contentUrl = null;
     
-    /** @var string|null $entityId Identifier for the entity hosted by the tab provider. */
+    /**
+     * @var string|null $entityId Identifier for the entity hosted by the tab provider.
+    */
     private ?string $entityId = null;
     
-    /** @var string|null $removeUrl Url called by Teams client when a Tab is removed using the Teams Client. */
+    /**
+     * @var string|null $removeUrl Url called by Teams client when a Tab is removed using the Teams Client.
+    */
     private ?string $removeUrl = null;
     
-    /** @var string|null $websiteUrl Url for showing tab contents outside of Teams. */
+    /**
+     * @var string|null $websiteUrl Url for showing tab contents outside of Teams.
+    */
     private ?string $websiteUrl = null;
     
     /**
@@ -36,7 +46,7 @@ class TeamsTabConfiguration implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TeamsTabConfiguration
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TeamsTabConfiguration {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TeamsTabConfiguration {
         return new TeamsTabConfiguration();
     }
 
@@ -69,11 +79,12 @@ class TeamsTabConfiguration implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'contentUrl' => function (self $o, ParseNode $n) { $o->setContentUrl($n->getStringValue()); },
-            'entityId' => function (self $o, ParseNode $n) { $o->setEntityId($n->getStringValue()); },
-            'removeUrl' => function (self $o, ParseNode $n) { $o->setRemoveUrl($n->getStringValue()); },
-            'websiteUrl' => function (self $o, ParseNode $n) { $o->setWebsiteUrl($n->getStringValue()); },
+            'contentUrl' => function (ParseNode $n) use ($o) { $o->setContentUrl($n->getStringValue()); },
+            'entityId' => function (ParseNode $n) use ($o) { $o->setEntityId($n->getStringValue()); },
+            'removeUrl' => function (ParseNode $n) use ($o) { $o->setRemoveUrl($n->getStringValue()); },
+            'websiteUrl' => function (ParseNode $n) use ($o) { $o->setWebsiteUrl($n->getStringValue()); },
         ];
     }
 

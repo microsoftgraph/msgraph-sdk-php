@@ -6,18 +6,26 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WorkbookTableColumn extends Entity 
+class WorkbookTableColumn extends Entity implements Parsable 
 {
-    /** @var WorkbookFilter|null $filter Retrieve the filter applied to the column. Read-only. */
+    /**
+     * @var WorkbookFilter|null $filter Retrieve the filter applied to the column. Read-only.
+    */
     private ?WorkbookFilter $filter = null;
     
-    /** @var int|null $index Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only. */
+    /**
+     * @var int|null $index Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
+    */
     private ?int $index = null;
     
-    /** @var string|null $name Returns the name of the table column. */
+    /**
+     * @var string|null $name Returns the name of the table column.
+    */
     private ?string $name = null;
     
-    /** @var Json|null $values Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string. */
+    /**
+     * @var Json|null $values Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+    */
     private ?Json $values = null;
     
     /**
@@ -32,7 +40,7 @@ class WorkbookTableColumn extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookTableColumn
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookTableColumn {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookTableColumn {
         return new WorkbookTableColumn();
     }
 
@@ -41,11 +49,12 @@ class WorkbookTableColumn extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'filter' => function (self $o, ParseNode $n) { $o->setFilter($n->getObjectValue(WorkbookFilter::class)); },
-            'index' => function (self $o, ParseNode $n) { $o->setIndex($n->getIntegerValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'values' => function (self $o, ParseNode $n) { $o->setValues($n->getObjectValue(Json::class)); },
+            'filter' => function (ParseNode $n) use ($o) { $o->setFilter($n->getObjectValue(array(WorkbookFilter::class, 'createFromDiscriminatorValue'))); },
+            'index' => function (ParseNode $n) use ($o) { $o->setIndex($n->getIntegerValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'values' => function (ParseNode $n) use ($o) { $o->setValues($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

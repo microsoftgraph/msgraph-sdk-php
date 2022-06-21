@@ -9,10 +9,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class GetMemberGroupsResponse implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<string>|null $value The value property */
+    /**
+     * @var array<string>|null $value The value property
+    */
     private ?array $value = null;
     
     /**
@@ -27,7 +31,7 @@ class GetMemberGroupsResponse implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return GetMemberGroupsResponse
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): GetMemberGroupsResponse {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): GetMemberGroupsResponse {
         return new GetMemberGroupsResponse();
     }
 
@@ -44,8 +48,9 @@ class GetMemberGroupsResponse implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'value' => function (self $o, ParseNode $n) { $o->setValue($n->getCollectionOfPrimitiveValues()); },
+            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfPrimitiveValues()); },
         ];
     }
 

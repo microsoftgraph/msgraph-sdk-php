@@ -9,28 +9,44 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $allowCustomAssignmentSchedule Indicates whether the requestor is allowed to set a custom schedule. */
+    /**
+     * @var bool|null $allowCustomAssignmentSchedule Indicates whether the requestor is allowed to set a custom schedule.
+    */
     private ?bool $allowCustomAssignmentSchedule = null;
     
-    /** @var bool|null $isApprovalRequiredForAdd Indicates whether a request to add must be approved by an approver. */
+    /**
+     * @var bool|null $isApprovalRequiredForAdd Indicates whether a request to add must be approved by an approver.
+    */
     private ?bool $isApprovalRequiredForAdd = null;
     
-    /** @var bool|null $isApprovalRequiredForUpdate Indicates whether a request to update must be approved by an approver. */
+    /**
+     * @var bool|null $isApprovalRequiredForUpdate Indicates whether a request to update must be approved by an approver.
+    */
     private ?bool $isApprovalRequiredForUpdate = null;
     
-    /** @var string|null $policyDescription The description of the policy that the user is trying to request access using. */
+    /**
+     * @var string|null $policyDescription The description of the policy that the user is trying to request access using.
+    */
     private ?string $policyDescription = null;
     
-    /** @var string|null $policyDisplayName The display name of the policy that the user is trying to request access using. */
+    /**
+     * @var string|null $policyDisplayName The display name of the policy that the user is trying to request access using.
+    */
     private ?string $policyDisplayName = null;
     
-    /** @var string|null $policyId The identifier of the policy that these requirements are associated with. This identifier can be used when creating a new assignment request. */
+    /**
+     * @var string|null $policyId The identifier of the policy that these requirements are associated with. This identifier can be used when creating a new assignment request.
+    */
     private ?string $policyId = null;
     
-    /** @var EntitlementManagementSchedule|null $schedule Schedule restrictions enforced, if any. */
+    /**
+     * @var EntitlementManagementSchedule|null $schedule Schedule restrictions enforced, if any.
+    */
     private ?EntitlementManagementSchedule $schedule = null;
     
     /**
@@ -45,7 +61,7 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AccessPackageAssignmentRequestRequirements
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageAssignmentRequestRequirements {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageAssignmentRequestRequirements {
         return new AccessPackageAssignmentRequestRequirements();
     }
 
@@ -70,14 +86,15 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'allowCustomAssignmentSchedule' => function (self $o, ParseNode $n) { $o->setAllowCustomAssignmentSchedule($n->getBooleanValue()); },
-            'isApprovalRequiredForAdd' => function (self $o, ParseNode $n) { $o->setIsApprovalRequiredForAdd($n->getBooleanValue()); },
-            'isApprovalRequiredForUpdate' => function (self $o, ParseNode $n) { $o->setIsApprovalRequiredForUpdate($n->getBooleanValue()); },
-            'policyDescription' => function (self $o, ParseNode $n) { $o->setPolicyDescription($n->getStringValue()); },
-            'policyDisplayName' => function (self $o, ParseNode $n) { $o->setPolicyDisplayName($n->getStringValue()); },
-            'policyId' => function (self $o, ParseNode $n) { $o->setPolicyId($n->getStringValue()); },
-            'schedule' => function (self $o, ParseNode $n) { $o->setSchedule($n->getObjectValue(EntitlementManagementSchedule::class)); },
+            'allowCustomAssignmentSchedule' => function (ParseNode $n) use ($o) { $o->setAllowCustomAssignmentSchedule($n->getBooleanValue()); },
+            'isApprovalRequiredForAdd' => function (ParseNode $n) use ($o) { $o->setIsApprovalRequiredForAdd($n->getBooleanValue()); },
+            'isApprovalRequiredForUpdate' => function (ParseNode $n) use ($o) { $o->setIsApprovalRequiredForUpdate($n->getBooleanValue()); },
+            'policyDescription' => function (ParseNode $n) use ($o) { $o->setPolicyDescription($n->getStringValue()); },
+            'policyDisplayName' => function (ParseNode $n) use ($o) { $o->setPolicyDisplayName($n->getStringValue()); },
+            'policyId' => function (ParseNode $n) use ($o) { $o->setPolicyId($n->getStringValue()); },
+            'schedule' => function (ParseNode $n) use ($o) { $o->setSchedule($n->getObjectValue(array(EntitlementManagementSchedule::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

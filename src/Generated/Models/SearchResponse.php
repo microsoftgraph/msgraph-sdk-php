@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SearchResponse implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<SearchHitsContainer>|null $hitsContainers A collection of search results. */
+    /**
+     * @var array<SearchHitsContainer>|null $hitsContainers A collection of search results.
+    */
     private ?array $hitsContainers = null;
     
-    /** @var AlterationResponse|null $queryAlterationResponse Provides information related to spelling corrections in the alteration response. */
+    /**
+     * @var AlterationResponse|null $queryAlterationResponse Provides details of query alteration response for spelling correction.
+    */
     private ?AlterationResponse $queryAlterationResponse = null;
     
-    /** @var ResultTemplateDictionary|null $resultTemplates A dictionary of resultTemplateIds and associated values, which include the name and JSON schema of the result templates. */
+    /**
+     * @var ResultTemplateDictionary|null $resultTemplates A dictionary of resultTemplateIds and associated values, which include the name and JSON schema of the result templates.
+    */
     private ?ResultTemplateDictionary $resultTemplates = null;
     
-    /** @var array<string>|null $searchTerms Contains the search terms sent in the initial search query. */
+    /**
+     * @var array<string>|null $searchTerms Contains the search terms sent in the initial search query.
+    */
     private ?array $searchTerms = null;
     
     /**
@@ -36,7 +46,7 @@ class SearchResponse implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SearchResponse
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SearchResponse {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SearchResponse {
         return new SearchResponse();
     }
 
@@ -53,11 +63,12 @@ class SearchResponse implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'hitsContainers' => function (self $o, ParseNode $n) { $o->setHitsContainers($n->getCollectionOfObjectValues(SearchHitsContainer::class)); },
-            'queryAlterationResponse' => function (self $o, ParseNode $n) { $o->setQueryAlterationResponse($n->getObjectValue(AlterationResponse::class)); },
-            'resultTemplates' => function (self $o, ParseNode $n) { $o->setResultTemplates($n->getObjectValue(ResultTemplateDictionary::class)); },
-            'searchTerms' => function (self $o, ParseNode $n) { $o->setSearchTerms($n->getCollectionOfPrimitiveValues()); },
+            'hitsContainers' => function (ParseNode $n) use ($o) { $o->setHitsContainers($n->getCollectionOfObjectValues(array(SearchHitsContainer::class, 'createFromDiscriminatorValue'))); },
+            'queryAlterationResponse' => function (ParseNode $n) use ($o) { $o->setQueryAlterationResponse($n->getObjectValue(array(AlterationResponse::class, 'createFromDiscriminatorValue'))); },
+            'resultTemplates' => function (ParseNode $n) use ($o) { $o->setResultTemplates($n->getObjectValue(array(ResultTemplateDictionary::class, 'createFromDiscriminatorValue'))); },
+            'searchTerms' => function (ParseNode $n) use ($o) { $o->setSearchTerms($n->getCollectionOfPrimitiveValues()); },
         ];
     }
 
@@ -70,7 +81,7 @@ class SearchResponse implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the queryAlterationResponse property value. Provides information related to spelling corrections in the alteration response.
+     * Gets the queryAlterationResponse property value. Provides details of query alteration response for spelling correction.
      * @return AlterationResponse|null
     */
     public function getQueryAlterationResponse(): ?AlterationResponse {
@@ -122,7 +133,7 @@ class SearchResponse implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the queryAlterationResponse property value. Provides information related to spelling corrections in the alteration response.
+     * Sets the queryAlterationResponse property value. Provides details of query alteration response for spelling correction.
      *  @param AlterationResponse|null $value Value to set for the queryAlterationResponse property.
     */
     public function setQueryAlterationResponse(?AlterationResponse $value ): void {

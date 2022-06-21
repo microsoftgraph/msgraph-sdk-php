@@ -6,33 +6,51 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class PrinterBase extends Entity 
+class PrinterBase extends Entity implements Parsable 
 {
-    /** @var PrinterCapabilities|null $capabilities The capabilities of the printer/printerShare. */
+    /**
+     * @var PrinterCapabilities|null $capabilities The capabilities of the printer/printerShare.
+    */
     private ?PrinterCapabilities $capabilities = null;
     
-    /** @var PrinterDefaults|null $defaults The default print settings of printer/printerShare. */
+    /**
+     * @var PrinterDefaults|null $defaults The default print settings of printer/printerShare.
+    */
     private ?PrinterDefaults $defaults = null;
     
-    /** @var string|null $displayName The name of the printer/printerShare. */
+    /**
+     * @var string|null $displayName The name of the printer/printerShare.
+    */
     private ?string $displayName = null;
     
-    /** @var bool|null $isAcceptingJobs Whether the printer/printerShare is currently accepting new print jobs. */
+    /**
+     * @var bool|null $isAcceptingJobs Whether the printer/printerShare is currently accepting new print jobs.
+    */
     private ?bool $isAcceptingJobs = null;
     
-    /** @var array<PrintJob>|null $jobs The list of jobs that are queued for printing by the printer/printerShare. */
+    /**
+     * @var array<PrintJob>|null $jobs The list of jobs that are queued for printing by the printer/printerShare.
+    */
     private ?array $jobs = null;
     
-    /** @var PrinterLocation|null $location The physical and/or organizational location of the printer/printerShare. */
+    /**
+     * @var PrinterLocation|null $location The physical and/or organizational location of the printer/printerShare.
+    */
     private ?PrinterLocation $location = null;
     
-    /** @var string|null $manufacturer The manufacturer of the printer/printerShare. */
+    /**
+     * @var string|null $manufacturer The manufacturer of the printer/printerShare.
+    */
     private ?string $manufacturer = null;
     
-    /** @var string|null $model The model name of the printer/printerShare. */
+    /**
+     * @var string|null $model The model name of the printer/printerShare.
+    */
     private ?string $model = null;
     
-    /** @var PrinterStatus|null $status The status property */
+    /**
+     * @var PrinterStatus|null $status The status property
+    */
     private ?PrinterStatus $status = null;
     
     /**
@@ -47,7 +65,15 @@ class PrinterBase extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrinterBase
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrinterBase {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrinterBase {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.printer': return new Printer();
+                case '#microsoft.graph.printerShare': return new PrinterShare();
+            }
+        }
         return new PrinterBase();
     }
 
@@ -80,16 +106,17 @@ class PrinterBase extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'capabilities' => function (self $o, ParseNode $n) { $o->setCapabilities($n->getObjectValue(PrinterCapabilities::class)); },
-            'defaults' => function (self $o, ParseNode $n) { $o->setDefaults($n->getObjectValue(PrinterDefaults::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'isAcceptingJobs' => function (self $o, ParseNode $n) { $o->setIsAcceptingJobs($n->getBooleanValue()); },
-            'jobs' => function (self $o, ParseNode $n) { $o->setJobs($n->getCollectionOfObjectValues(PrintJob::class)); },
-            'location' => function (self $o, ParseNode $n) { $o->setLocation($n->getObjectValue(PrinterLocation::class)); },
-            'manufacturer' => function (self $o, ParseNode $n) { $o->setManufacturer($n->getStringValue()); },
-            'model' => function (self $o, ParseNode $n) { $o->setModel($n->getStringValue()); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getObjectValue(PrinterStatus::class)); },
+            'capabilities' => function (ParseNode $n) use ($o) { $o->setCapabilities($n->getObjectValue(array(PrinterCapabilities::class, 'createFromDiscriminatorValue'))); },
+            'defaults' => function (ParseNode $n) use ($o) { $o->setDefaults($n->getObjectValue(array(PrinterDefaults::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'isAcceptingJobs' => function (ParseNode $n) use ($o) { $o->setIsAcceptingJobs($n->getBooleanValue()); },
+            'jobs' => function (ParseNode $n) use ($o) { $o->setJobs($n->getCollectionOfObjectValues(array(PrintJob::class, 'createFromDiscriminatorValue'))); },
+            'location' => function (ParseNode $n) use ($o) { $o->setLocation($n->getObjectValue(array(PrinterLocation::class, 'createFromDiscriminatorValue'))); },
+            'manufacturer' => function (ParseNode $n) use ($o) { $o->setManufacturer($n->getStringValue()); },
+            'model' => function (ParseNode $n) use ($o) { $o->setModel($n->getStringValue()); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getObjectValue(array(PrinterStatus::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

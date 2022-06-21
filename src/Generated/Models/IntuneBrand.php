@@ -9,49 +9,79 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class IntuneBrand implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $contactITEmailAddress Email address of the person/organization responsible for IT support. */
+    /**
+     * @var string|null $contactITEmailAddress Email address of the person/organization responsible for IT support.
+    */
     private ?string $contactITEmailAddress = null;
     
-    /** @var string|null $contactITName Name of the person/organization responsible for IT support. */
+    /**
+     * @var string|null $contactITName Name of the person/organization responsible for IT support.
+    */
     private ?string $contactITName = null;
     
-    /** @var string|null $contactITNotes Text comments regarding the person/organization responsible for IT support. */
+    /**
+     * @var string|null $contactITNotes Text comments regarding the person/organization responsible for IT support.
+    */
     private ?string $contactITNotes = null;
     
-    /** @var string|null $contactITPhoneNumber Phone number of the person/organization responsible for IT support. */
+    /**
+     * @var string|null $contactITPhoneNumber Phone number of the person/organization responsible for IT support.
+    */
     private ?string $contactITPhoneNumber = null;
     
-    /** @var MimeContent|null $darkBackgroundLogo Logo image displayed in Company Portal apps which have a dark background behind the logo. */
+    /**
+     * @var MimeContent|null $darkBackgroundLogo Logo image displayed in Company Portal apps which have a dark background behind the logo.
+    */
     private ?MimeContent $darkBackgroundLogo = null;
     
-    /** @var string|null $displayName Company/organization name that is displayed to end users. */
+    /**
+     * @var string|null $displayName Company/organization name that is displayed to end users.
+    */
     private ?string $displayName = null;
     
-    /** @var MimeContent|null $lightBackgroundLogo Logo image displayed in Company Portal apps which have a light background behind the logo. */
+    /**
+     * @var MimeContent|null $lightBackgroundLogo Logo image displayed in Company Portal apps which have a light background behind the logo.
+    */
     private ?MimeContent $lightBackgroundLogo = null;
     
-    /** @var string|null $onlineSupportSiteName Display name of the company/organization’s IT helpdesk site. */
+    /**
+     * @var string|null $onlineSupportSiteName Display name of the company/organization’s IT helpdesk site.
+    */
     private ?string $onlineSupportSiteName = null;
     
-    /** @var string|null $onlineSupportSiteUrl URL to the company/organization’s IT helpdesk site. */
+    /**
+     * @var string|null $onlineSupportSiteUrl URL to the company/organization’s IT helpdesk site.
+    */
     private ?string $onlineSupportSiteUrl = null;
     
-    /** @var string|null $privacyUrl URL to the company/organization’s privacy policy. */
+    /**
+     * @var string|null $privacyUrl URL to the company/organization’s privacy policy.
+    */
     private ?string $privacyUrl = null;
     
-    /** @var bool|null $showDisplayNameNextToLogo Boolean that represents whether the administrator-supplied display name will be shown next to the logo image. */
+    /**
+     * @var bool|null $showDisplayNameNextToLogo Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
+    */
     private ?bool $showDisplayNameNextToLogo = null;
     
-    /** @var bool|null $showLogo Boolean that represents whether the administrator-supplied logo images are shown or not shown. */
+    /**
+     * @var bool|null $showLogo Boolean that represents whether the administrator-supplied logo images are shown or not shown.
+    */
     private ?bool $showLogo = null;
     
-    /** @var bool|null $showNameNextToLogo Boolean that represents whether the administrator-supplied display name will be shown next to the logo image. */
+    /**
+     * @var bool|null $showNameNextToLogo Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
+    */
     private ?bool $showNameNextToLogo = null;
     
-    /** @var RgbColor|null $themeColor Primary theme color used in the Company Portal applications and web portal. */
+    /**
+     * @var RgbColor|null $themeColor Primary theme color used in the Company Portal applications and web portal.
+    */
     private ?RgbColor $themeColor = null;
     
     /**
@@ -66,7 +96,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return IntuneBrand
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): IntuneBrand {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): IntuneBrand {
         return new IntuneBrand();
     }
 
@@ -131,21 +161,22 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'contactITEmailAddress' => function (self $o, ParseNode $n) { $o->setContactITEmailAddress($n->getStringValue()); },
-            'contactITName' => function (self $o, ParseNode $n) { $o->setContactITName($n->getStringValue()); },
-            'contactITNotes' => function (self $o, ParseNode $n) { $o->setContactITNotes($n->getStringValue()); },
-            'contactITPhoneNumber' => function (self $o, ParseNode $n) { $o->setContactITPhoneNumber($n->getStringValue()); },
-            'darkBackgroundLogo' => function (self $o, ParseNode $n) { $o->setDarkBackgroundLogo($n->getObjectValue(MimeContent::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'lightBackgroundLogo' => function (self $o, ParseNode $n) { $o->setLightBackgroundLogo($n->getObjectValue(MimeContent::class)); },
-            'onlineSupportSiteName' => function (self $o, ParseNode $n) { $o->setOnlineSupportSiteName($n->getStringValue()); },
-            'onlineSupportSiteUrl' => function (self $o, ParseNode $n) { $o->setOnlineSupportSiteUrl($n->getStringValue()); },
-            'privacyUrl' => function (self $o, ParseNode $n) { $o->setPrivacyUrl($n->getStringValue()); },
-            'showDisplayNameNextToLogo' => function (self $o, ParseNode $n) { $o->setShowDisplayNameNextToLogo($n->getBooleanValue()); },
-            'showLogo' => function (self $o, ParseNode $n) { $o->setShowLogo($n->getBooleanValue()); },
-            'showNameNextToLogo' => function (self $o, ParseNode $n) { $o->setShowNameNextToLogo($n->getBooleanValue()); },
-            'themeColor' => function (self $o, ParseNode $n) { $o->setThemeColor($n->getObjectValue(RgbColor::class)); },
+            'contactITEmailAddress' => function (ParseNode $n) use ($o) { $o->setContactITEmailAddress($n->getStringValue()); },
+            'contactITName' => function (ParseNode $n) use ($o) { $o->setContactITName($n->getStringValue()); },
+            'contactITNotes' => function (ParseNode $n) use ($o) { $o->setContactITNotes($n->getStringValue()); },
+            'contactITPhoneNumber' => function (ParseNode $n) use ($o) { $o->setContactITPhoneNumber($n->getStringValue()); },
+            'darkBackgroundLogo' => function (ParseNode $n) use ($o) { $o->setDarkBackgroundLogo($n->getObjectValue(array(MimeContent::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'lightBackgroundLogo' => function (ParseNode $n) use ($o) { $o->setLightBackgroundLogo($n->getObjectValue(array(MimeContent::class, 'createFromDiscriminatorValue'))); },
+            'onlineSupportSiteName' => function (ParseNode $n) use ($o) { $o->setOnlineSupportSiteName($n->getStringValue()); },
+            'onlineSupportSiteUrl' => function (ParseNode $n) use ($o) { $o->setOnlineSupportSiteUrl($n->getStringValue()); },
+            'privacyUrl' => function (ParseNode $n) use ($o) { $o->setPrivacyUrl($n->getStringValue()); },
+            'showDisplayNameNextToLogo' => function (ParseNode $n) use ($o) { $o->setShowDisplayNameNextToLogo($n->getBooleanValue()); },
+            'showLogo' => function (ParseNode $n) use ($o) { $o->setShowLogo($n->getBooleanValue()); },
+            'showNameNextToLogo' => function (ParseNode $n) use ($o) { $o->setShowNameNextToLogo($n->getBooleanValue()); },
+            'themeColor' => function (ParseNode $n) use ($o) { $o->setThemeColor($n->getObjectValue(array(RgbColor::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

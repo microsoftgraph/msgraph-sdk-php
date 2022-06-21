@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ProvisioningStatusInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var ProvisioningErrorInfo|null $errorInformation The errorInformation property */
+    /**
+     * @var ProvisioningErrorInfo|null $errorInformation The errorInformation property
+    */
     private ?ProvisioningErrorInfo $errorInformation = null;
     
-    /** @var ProvisioningResult|null $status Possible values are: success, warning, failure, skipped, unknownFutureValue. */
+    /**
+     * @var ProvisioningResult|null $status Possible values are: success, warning, failure, skipped, unknownFutureValue.
+    */
     private ?ProvisioningResult $status = null;
     
     /**
@@ -30,7 +36,7 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ProvisioningStatusInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ProvisioningStatusInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ProvisioningStatusInfo {
         return new ProvisioningStatusInfo();
     }
 
@@ -55,9 +61,10 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'errorInformation' => function (self $o, ParseNode $n) { $o->setErrorInformation($n->getObjectValue(ProvisioningErrorInfo::class)); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(ProvisioningResult::class)); },
+            'errorInformation' => function (ParseNode $n) use ($o) { $o->setErrorInformation($n->getObjectValue(array(ProvisioningErrorInfo::class, 'createFromDiscriminatorValue'))); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(ProvisioningResult::class)); },
         ];
     }
 

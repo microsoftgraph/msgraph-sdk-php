@@ -7,42 +7,66 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DeviceCompliancePolicy extends Entity 
+class DeviceCompliancePolicy extends Entity implements Parsable 
 {
-    /** @var array<DeviceCompliancePolicyAssignment>|null $assignments The collection of assignments for this compliance policy. */
+    /**
+     * @var array<DeviceCompliancePolicyAssignment>|null $assignments The collection of assignments for this compliance policy.
+    */
     private ?array $assignments = null;
     
-    /** @var DateTime|null $createdDateTime DateTime the object was created. */
+    /**
+     * @var DateTime|null $createdDateTime DateTime the object was created.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $description Admin provided description of the Device Configuration. */
+    /**
+     * @var string|null $description Admin provided description of the Device Configuration.
+    */
     private ?string $description = null;
     
-    /** @var array<SettingStateDeviceSummary>|null $deviceSettingStateSummaries Compliance Setting State Device Summary */
+    /**
+     * @var array<SettingStateDeviceSummary>|null $deviceSettingStateSummaries Compliance Setting State Device Summary
+    */
     private ?array $deviceSettingStateSummaries = null;
     
-    /** @var array<DeviceComplianceDeviceStatus>|null $deviceStatuses List of DeviceComplianceDeviceStatus. */
+    /**
+     * @var array<DeviceComplianceDeviceStatus>|null $deviceStatuses List of DeviceComplianceDeviceStatus.
+    */
     private ?array $deviceStatuses = null;
     
-    /** @var DeviceComplianceDeviceOverview|null $deviceStatusOverview Device compliance devices status overview */
+    /**
+     * @var DeviceComplianceDeviceOverview|null $deviceStatusOverview Device compliance devices status overview
+    */
     private ?DeviceComplianceDeviceOverview $deviceStatusOverview = null;
     
-    /** @var string|null $displayName Admin provided name of the device configuration. */
+    /**
+     * @var string|null $displayName Admin provided name of the device configuration.
+    */
     private ?string $displayName = null;
     
-    /** @var DateTime|null $lastModifiedDateTime DateTime the object was last modified. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime DateTime the object was last modified.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var array<DeviceComplianceScheduledActionForRule>|null $scheduledActionsForRule The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies. */
+    /**
+     * @var array<DeviceComplianceScheduledActionForRule>|null $scheduledActionsForRule The list of scheduled action for this rule
+    */
     private ?array $scheduledActionsForRule = null;
     
-    /** @var array<DeviceComplianceUserStatus>|null $userStatuses List of DeviceComplianceUserStatus. */
+    /**
+     * @var array<DeviceComplianceUserStatus>|null $userStatuses List of DeviceComplianceUserStatus.
+    */
     private ?array $userStatuses = null;
     
-    /** @var DeviceComplianceUserOverview|null $userStatusOverview Device compliance users status overview */
+    /**
+     * @var DeviceComplianceUserOverview|null $userStatusOverview Device compliance users status overview
+    */
     private ?DeviceComplianceUserOverview $userStatusOverview = null;
     
-    /** @var int|null $version Version of the device configuration. */
+    /**
+     * @var int|null $version Version of the device configuration.
+    */
     private ?int $version = null;
     
     /**
@@ -57,7 +81,21 @@ class DeviceCompliancePolicy extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceCompliancePolicy
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceCompliancePolicy {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceCompliancePolicy {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.androidCompliancePolicy': return new AndroidCompliancePolicy();
+                case '#microsoft.graph.androidWorkProfileCompliancePolicy': return new AndroidWorkProfileCompliancePolicy();
+                case '#microsoft.graph.iosCompliancePolicy': return new IosCompliancePolicy();
+                case '#microsoft.graph.macOSCompliancePolicy': return new MacOSCompliancePolicy();
+                case '#microsoft.graph.windows10CompliancePolicy': return new Windows10CompliancePolicy();
+                case '#microsoft.graph.windows10MobileCompliancePolicy': return new Windows10MobileCompliancePolicy();
+                case '#microsoft.graph.windows81CompliancePolicy': return new Windows81CompliancePolicy();
+                case '#microsoft.graph.windowsPhone81CompliancePolicy': return new WindowsPhone81CompliancePolicy();
+            }
+        }
         return new DeviceCompliancePolicy();
     }
 
@@ -122,19 +160,20 @@ class DeviceCompliancePolicy extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignments' => function (self $o, ParseNode $n) { $o->setAssignments($n->getCollectionOfObjectValues(DeviceCompliancePolicyAssignment::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'deviceSettingStateSummaries' => function (self $o, ParseNode $n) { $o->setDeviceSettingStateSummaries($n->getCollectionOfObjectValues(SettingStateDeviceSummary::class)); },
-            'deviceStatuses' => function (self $o, ParseNode $n) { $o->setDeviceStatuses($n->getCollectionOfObjectValues(DeviceComplianceDeviceStatus::class)); },
-            'deviceStatusOverview' => function (self $o, ParseNode $n) { $o->setDeviceStatusOverview($n->getObjectValue(DeviceComplianceDeviceOverview::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'scheduledActionsForRule' => function (self $o, ParseNode $n) { $o->setScheduledActionsForRule($n->getCollectionOfObjectValues(DeviceComplianceScheduledActionForRule::class)); },
-            'userStatuses' => function (self $o, ParseNode $n) { $o->setUserStatuses($n->getCollectionOfObjectValues(DeviceComplianceUserStatus::class)); },
-            'userStatusOverview' => function (self $o, ParseNode $n) { $o->setUserStatusOverview($n->getObjectValue(DeviceComplianceUserOverview::class)); },
-            'version' => function (self $o, ParseNode $n) { $o->setVersion($n->getIntegerValue()); },
+            'assignments' => function (ParseNode $n) use ($o) { $o->setAssignments($n->getCollectionOfObjectValues(array(DeviceCompliancePolicyAssignment::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'deviceSettingStateSummaries' => function (ParseNode $n) use ($o) { $o->setDeviceSettingStateSummaries($n->getCollectionOfObjectValues(array(SettingStateDeviceSummary::class, 'createFromDiscriminatorValue'))); },
+            'deviceStatuses' => function (ParseNode $n) use ($o) { $o->setDeviceStatuses($n->getCollectionOfObjectValues(array(DeviceComplianceDeviceStatus::class, 'createFromDiscriminatorValue'))); },
+            'deviceStatusOverview' => function (ParseNode $n) use ($o) { $o->setDeviceStatusOverview($n->getObjectValue(array(DeviceComplianceDeviceOverview::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'scheduledActionsForRule' => function (ParseNode $n) use ($o) { $o->setScheduledActionsForRule($n->getCollectionOfObjectValues(array(DeviceComplianceScheduledActionForRule::class, 'createFromDiscriminatorValue'))); },
+            'userStatuses' => function (ParseNode $n) use ($o) { $o->setUserStatuses($n->getCollectionOfObjectValues(array(DeviceComplianceUserStatus::class, 'createFromDiscriminatorValue'))); },
+            'userStatusOverview' => function (ParseNode $n) use ($o) { $o->setUserStatusOverview($n->getObjectValue(array(DeviceComplianceUserOverview::class, 'createFromDiscriminatorValue'))); },
+            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getIntegerValue()); },
         ]);
     }
 
@@ -147,7 +186,7 @@ class DeviceCompliancePolicy extends Entity
     }
 
     /**
-     * Gets the scheduledActionsForRule property value. The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
+     * Gets the scheduledActionsForRule property value. The list of scheduled action for this rule
      * @return array<DeviceComplianceScheduledActionForRule>|null
     */
     public function getScheduledActionsForRule(): ?array {
@@ -263,7 +302,7 @@ class DeviceCompliancePolicy extends Entity
     }
 
     /**
-     * Sets the scheduledActionsForRule property value. The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
+     * Sets the scheduledActionsForRule property value. The list of scheduled action for this rule
      *  @param array<DeviceComplianceScheduledActionForRule>|null $value Value to set for the scheduledActionsForRule property.
     */
     public function setScheduledActionsForRule(?array $value ): void {

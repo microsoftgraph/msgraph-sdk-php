@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class BookingWorkHours implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var DayOfWeek|null $day The day of the week represented by this instance. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. */
+    /**
+     * @var DayOfWeek|null $day The day of the week represented by this instance. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+    */
     private ?DayOfWeek $day = null;
     
-    /** @var array<BookingWorkTimeSlot>|null $timeSlots A list of start/end times during a day. */
+    /**
+     * @var array<BookingWorkTimeSlot>|null $timeSlots A list of start/end times during a day.
+    */
     private ?array $timeSlots = null;
     
     /**
@@ -30,7 +36,7 @@ class BookingWorkHours implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return BookingWorkHours
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): BookingWorkHours {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): BookingWorkHours {
         return new BookingWorkHours();
     }
 
@@ -55,9 +61,10 @@ class BookingWorkHours implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'day' => function (self $o, ParseNode $n) { $o->setDay($n->getEnumValue(DayOfWeek::class)); },
-            'timeSlots' => function (self $o, ParseNode $n) { $o->setTimeSlots($n->getCollectionOfObjectValues(BookingWorkTimeSlot::class)); },
+            'day' => function (ParseNode $n) use ($o) { $o->setDay($n->getEnumValue(DayOfWeek::class)); },
+            'timeSlots' => function (ParseNode $n) use ($o) { $o->setTimeSlots($n->getCollectionOfObjectValues(array(BookingWorkTimeSlot::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

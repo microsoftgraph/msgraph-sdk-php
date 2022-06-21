@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class CertificateBasedAuthConfiguration extends Entity 
+class CertificateBasedAuthConfiguration extends Entity implements Parsable 
 {
-    /** @var array<CertificateAuthority>|null $certificateAuthorities Collection of certificate authorities which creates a trusted certificate chain. */
+    /**
+     * @var array<CertificateAuthority>|null $certificateAuthorities Collection of certificate authorities which creates a trusted certificate chain.
+    */
     private ?array $certificateAuthorities = null;
     
     /**
@@ -23,7 +25,7 @@ class CertificateBasedAuthConfiguration extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return CertificateBasedAuthConfiguration
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): CertificateBasedAuthConfiguration {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): CertificateBasedAuthConfiguration {
         return new CertificateBasedAuthConfiguration();
     }
 
@@ -40,8 +42,9 @@ class CertificateBasedAuthConfiguration extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'certificateAuthorities' => function (self $o, ParseNode $n) { $o->setCertificateAuthorities($n->getCollectionOfObjectValues(CertificateAuthority::class)); },
+            'certificateAuthorities' => function (ParseNode $n) use ($o) { $o->setCertificateAuthorities($n->getCollectionOfObjectValues(array(CertificateAuthority::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

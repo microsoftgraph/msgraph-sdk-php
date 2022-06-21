@@ -7,18 +7,26 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\Time;
 
-class EducationAssignmentDefaults extends Entity 
+class EducationAssignmentDefaults extends Entity implements Parsable 
 {
-    /** @var EducationAddedStudentAction|null $addedStudentAction Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen. */
+    /**
+     * @var EducationAddedStudentAction|null $addedStudentAction Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
+    */
     private ?EducationAddedStudentAction $addedStudentAction = null;
     
-    /** @var EducationAddToCalendarOptions|null $addToCalendarAction Optional field to control adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none. */
+    /**
+     * @var EducationAddToCalendarOptions|null $addToCalendarAction Optional field to control adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
+    */
     private ?EducationAddToCalendarOptions $addToCalendarAction = null;
     
-    /** @var Time|null $dueTime Class-level default value for due time field. Default value is 23:59:00. */
+    /**
+     * @var Time|null $dueTime Class-level default value for due time field. Default value is 23:59:00.
+    */
     private ?Time $dueTime = null;
     
-    /** @var string|null $notificationChannelUrl Default Teams channel to which notifications will be sent. Default value is null. */
+    /**
+     * @var string|null $notificationChannelUrl Default Teams channel to which notifications will be sent. Default value is null.
+    */
     private ?string $notificationChannelUrl = null;
     
     /**
@@ -33,7 +41,7 @@ class EducationAssignmentDefaults extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return EducationAssignmentDefaults
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): EducationAssignmentDefaults {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): EducationAssignmentDefaults {
         return new EducationAssignmentDefaults();
     }
 
@@ -66,11 +74,12 @@ class EducationAssignmentDefaults extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'addedStudentAction' => function (self $o, ParseNode $n) { $o->setAddedStudentAction($n->getEnumValue(EducationAddedStudentAction::class)); },
-            'addToCalendarAction' => function (self $o, ParseNode $n) { $o->setAddToCalendarAction($n->getEnumValue(EducationAddToCalendarOptions::class)); },
-            'dueTime' => function (self $o, ParseNode $n) { $o->setDueTime($n->getTimeValue()); },
-            'notificationChannelUrl' => function (self $o, ParseNode $n) { $o->setNotificationChannelUrl($n->getStringValue()); },
+            'addedStudentAction' => function (ParseNode $n) use ($o) { $o->setAddedStudentAction($n->getEnumValue(EducationAddedStudentAction::class)); },
+            'addToCalendarAction' => function (ParseNode $n) use ($o) { $o->setAddToCalendarAction($n->getEnumValue(EducationAddToCalendarOptions::class)); },
+            'dueTime' => function (ParseNode $n) use ($o) { $o->setDueTime($n->getTimeValue()); },
+            'notificationChannelUrl' => function (ParseNode $n) use ($o) { $o->setNotificationChannelUrl($n->getStringValue()); },
         ]);
     }
 

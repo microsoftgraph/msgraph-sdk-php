@@ -6,25 +6,35 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class TargetedManagedAppConfiguration extends ManagedAppConfiguration 
+class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements Parsable 
 {
-    /** @var array<ManagedMobileApp>|null $apps List of apps to which the policy is deployed. */
+    /**
+     * @var array<ManagedMobileApp>|null $apps List of apps to which the policy is deployed.
+    */
     private ?array $apps = null;
     
-    /** @var array<TargetedManagedAppPolicyAssignment>|null $assignments Navigation property to list of inclusion and exclusion groups to which the policy is deployed. */
+    /**
+     * @var array<TargetedManagedAppPolicyAssignment>|null $assignments Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
+    */
     private ?array $assignments = null;
     
-    /** @var int|null $deployedAppCount Count of apps to which the current policy is deployed. */
+    /**
+     * @var int|null $deployedAppCount Count of apps to which the current policy is deployed.
+    */
     private ?int $deployedAppCount = null;
     
-    /** @var ManagedAppPolicyDeploymentSummary|null $deploymentSummary Navigation property to deployment summary of the configuration. */
+    /**
+     * @var ManagedAppPolicyDeploymentSummary|null $deploymentSummary Navigation property to deployment summary of the configuration.
+    */
     private ?ManagedAppPolicyDeploymentSummary $deploymentSummary = null;
     
-    /** @var bool|null $isAssigned Indicates if the policy is deployed to any inclusion groups or not. */
+    /**
+     * @var bool|null $isAssigned Indicates if the policy is deployed to any inclusion groups or not.
+    */
     private ?bool $isAssigned = null;
     
     /**
-     * Instantiates a new targetedManagedAppConfiguration and sets the default values.
+     * Instantiates a new TargetedManagedAppConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -35,7 +45,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TargetedManagedAppConfiguration
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TargetedManagedAppConfiguration {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TargetedManagedAppConfiguration {
         return new TargetedManagedAppConfiguration();
     }
 
@@ -76,12 +86,13 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'apps' => function (self $o, ParseNode $n) { $o->setApps($n->getCollectionOfObjectValues(ManagedMobileApp::class)); },
-            'assignments' => function (self $o, ParseNode $n) { $o->setAssignments($n->getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::class)); },
-            'deployedAppCount' => function (self $o, ParseNode $n) { $o->setDeployedAppCount($n->getIntegerValue()); },
-            'deploymentSummary' => function (self $o, ParseNode $n) { $o->setDeploymentSummary($n->getObjectValue(ManagedAppPolicyDeploymentSummary::class)); },
-            'isAssigned' => function (self $o, ParseNode $n) { $o->setIsAssigned($n->getBooleanValue()); },
+            'apps' => function (ParseNode $n) use ($o) { $o->setApps($n->getCollectionOfObjectValues(array(ManagedMobileApp::class, 'createFromDiscriminatorValue'))); },
+            'assignments' => function (ParseNode $n) use ($o) { $o->setAssignments($n->getCollectionOfObjectValues(array(TargetedManagedAppPolicyAssignment::class, 'createFromDiscriminatorValue'))); },
+            'deployedAppCount' => function (ParseNode $n) use ($o) { $o->setDeployedAppCount($n->getIntegerValue()); },
+            'deploymentSummary' => function (ParseNode $n) use ($o) { $o->setDeploymentSummary($n->getObjectValue(array(ManagedAppPolicyDeploymentSummary::class, 'createFromDiscriminatorValue'))); },
+            'isAssigned' => function (ParseNode $n) use ($o) { $o->setIsAssigned($n->getBooleanValue()); },
         ]);
     }
 

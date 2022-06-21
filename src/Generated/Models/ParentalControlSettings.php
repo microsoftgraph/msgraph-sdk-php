@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ParentalControlSettings implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<string>|null $countriesBlockedForMinors Specifies the two-letter ISO country codes. Access to the application will be blocked for minors from the countries specified in this list. */
+    /**
+     * @var array<string>|null $countriesBlockedForMinors Specifies the two-letter ISO country codes. Access to the application will be blocked for minors from the countries specified in this list.
+    */
     private ?array $countriesBlockedForMinors = null;
     
-    /** @var string|null $legalAgeGroupRule Specifies the legal age group rule that applies to users of the app. Can be set to one of the following values: ValueDescriptionAllowDefault. Enforces the legal minimum. This means parental consent is required for minors in the European Union and Korea.RequireConsentForPrivacyServicesEnforces the user to specify date of birth to comply with COPPA rules. RequireConsentForMinorsRequires parental consent for ages below 18, regardless of country minor rules.RequireConsentForKidsRequires parental consent for ages below 14, regardless of country minor rules.BlockMinorsBlocks minors from using the app. */
+    /**
+     * @var string|null $legalAgeGroupRule Specifies the legal age group rule that applies to users of the app. Can be set to one of the following values: ValueDescriptionAllowDefault. Enforces the legal minimum. This means parental consent is required for minors in the European Union and Korea.RequireConsentForPrivacyServicesEnforces the user to specify date of birth to comply with COPPA rules. RequireConsentForMinorsRequires parental consent for ages below 18, regardless of country minor rules.RequireConsentForKidsRequires parental consent for ages below 14, regardless of country minor rules.BlockMinorsBlocks minors from using the app.
+    */
     private ?string $legalAgeGroupRule = null;
     
     /**
@@ -30,7 +36,7 @@ class ParentalControlSettings implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ParentalControlSettings
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ParentalControlSettings {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ParentalControlSettings {
         return new ParentalControlSettings();
     }
 
@@ -55,9 +61,10 @@ class ParentalControlSettings implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'countriesBlockedForMinors' => function (self $o, ParseNode $n) { $o->setCountriesBlockedForMinors($n->getCollectionOfPrimitiveValues()); },
-            'legalAgeGroupRule' => function (self $o, ParseNode $n) { $o->setLegalAgeGroupRule($n->getStringValue()); },
+            'countriesBlockedForMinors' => function (ParseNode $n) use ($o) { $o->setCountriesBlockedForMinors($n->getCollectionOfPrimitiveValues()); },
+            'legalAgeGroupRule' => function (ParseNode $n) use ($o) { $o->setLegalAgeGroupRule($n->getStringValue()); },
         ];
     }
 

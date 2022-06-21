@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var IdentityApiConnector|null $postAttributeCollection The postAttributeCollection property */
+    /**
+     * @var IdentityApiConnector|null $postAttributeCollection The postAttributeCollection property
+    */
     private ?IdentityApiConnector $postAttributeCollection = null;
     
-    /** @var IdentityApiConnector|null $postFederationSignup The postFederationSignup property */
+    /**
+     * @var IdentityApiConnector|null $postFederationSignup The postFederationSignup property
+    */
     private ?IdentityApiConnector $postFederationSignup = null;
     
     /**
@@ -30,7 +36,7 @@ class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, Parsabl
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return UserFlowApiConnectorConfiguration
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): UserFlowApiConnectorConfiguration {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): UserFlowApiConnectorConfiguration {
         return new UserFlowApiConnectorConfiguration();
     }
 
@@ -47,9 +53,10 @@ class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, Parsabl
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'postAttributeCollection' => function (self $o, ParseNode $n) { $o->setPostAttributeCollection($n->getObjectValue(IdentityApiConnector::class)); },
-            'postFederationSignup' => function (self $o, ParseNode $n) { $o->setPostFederationSignup($n->getObjectValue(IdentityApiConnector::class)); },
+            'postAttributeCollection' => function (ParseNode $n) use ($o) { $o->setPostAttributeCollection($n->getObjectValue(array(IdentityApiConnector::class, 'createFromDiscriminatorValue'))); },
+            'postFederationSignup' => function (ParseNode $n) use ($o) { $o->setPostFederationSignup($n->getObjectValue(array(IdentityApiConnector::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

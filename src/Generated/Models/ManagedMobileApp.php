@@ -6,12 +6,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ManagedMobileApp extends Entity 
+class ManagedMobileApp extends Entity implements Parsable 
 {
-    /** @var MobileAppIdentifier|null $mobileAppIdentifier The identifier for an app with it's operating system type. */
+    /**
+     * @var MobileAppIdentifier|null $mobileAppIdentifier The identifier for an app with it's operating system type.
+    */
     private ?MobileAppIdentifier $mobileAppIdentifier = null;
     
-    /** @var string|null $version Version of the entity. */
+    /**
+     * @var string|null $version Version of the entity.
+    */
     private ?string $version = null;
     
     /**
@@ -26,7 +30,7 @@ class ManagedMobileApp extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ManagedMobileApp
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ManagedMobileApp {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedMobileApp {
         return new ManagedMobileApp();
     }
 
@@ -35,9 +39,10 @@ class ManagedMobileApp extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'mobileAppIdentifier' => function (self $o, ParseNode $n) { $o->setMobileAppIdentifier($n->getObjectValue(MobileAppIdentifier::class)); },
-            'version' => function (self $o, ParseNode $n) { $o->setVersion($n->getStringValue()); },
+            'mobileAppIdentifier' => function (ParseNode $n) use ($o) { $o->setMobileAppIdentifier($n->getObjectValue(array(MobileAppIdentifier::class, 'createFromDiscriminatorValue'))); },
+            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getStringValue()); },
         ]);
     }
 

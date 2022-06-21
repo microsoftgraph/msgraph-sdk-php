@@ -6,7 +6,7 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ProvisioningServicePrincipal extends Identity 
+class ProvisioningServicePrincipal extends Identity implements Parsable 
 {
     /**
      * Instantiates a new provisioningServicePrincipal and sets the default values.
@@ -20,7 +20,7 @@ class ProvisioningServicePrincipal extends Identity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ProvisioningServicePrincipal
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ProvisioningServicePrincipal {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ProvisioningServicePrincipal {
         return new ProvisioningServicePrincipal();
     }
 
@@ -29,6 +29,7 @@ class ProvisioningServicePrincipal extends Identity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

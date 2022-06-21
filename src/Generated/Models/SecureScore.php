@@ -7,36 +7,56 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class SecureScore extends Entity 
+class SecureScore extends Entity implements Parsable 
 {
-    /** @var int|null $activeUserCount Active user count of the given tenant. */
+    /**
+     * @var int|null $activeUserCount Active user count of the given tenant.
+    */
     private ?int $activeUserCount = null;
     
-    /** @var array<AverageComparativeScore>|null $averageComparativeScores Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope. */
+    /**
+     * @var array<AverageComparativeScore>|null $averageComparativeScores Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
+    */
     private ?array $averageComparativeScores = null;
     
-    /** @var string|null $azureTenantId GUID string for tenant ID. */
+    /**
+     * @var string|null $azureTenantId GUID string for tenant ID.
+    */
     private ?string $azureTenantId = null;
     
-    /** @var array<ControlScore>|null $controlScores Contains tenant scores for a set of controls. */
+    /**
+     * @var array<ControlScore>|null $controlScores Contains tenant scores for a set of controls.
+    */
     private ?array $controlScores = null;
     
-    /** @var DateTime|null $createdDateTime The date when the entity is created. */
+    /**
+     * @var DateTime|null $createdDateTime The date when the entity is created.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var float|null $currentScore Tenant current attained score on specified date. */
+    /**
+     * @var float|null $currentScore Tenant current attained score on specified date.
+    */
     private ?float $currentScore = null;
     
-    /** @var array<string>|null $enabledServices Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint). */
+    /**
+     * @var array<string>|null $enabledServices Microsoft-provided services for the tenant (for example, Exchange online, Skype, SharePoint).
+    */
     private ?array $enabledServices = null;
     
-    /** @var int|null $licensedUserCount Licensed user count of the given tenant. */
+    /**
+     * @var int|null $licensedUserCount Licensed user count of the given tenant.
+    */
     private ?int $licensedUserCount = null;
     
-    /** @var float|null $maxScore Tenant maximum possible score on specified date. */
+    /**
+     * @var float|null $maxScore Tenant maximum possible score on specified date.
+    */
     private ?float $maxScore = null;
     
-    /** @var SecurityVendorInformation|null $vendorInformation Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required. */
+    /**
+     * @var SecurityVendorInformation|null $vendorInformation Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
+    */
     private ?SecurityVendorInformation $vendorInformation = null;
     
     /**
@@ -51,7 +71,7 @@ class SecureScore extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SecureScore
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SecureScore {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SecureScore {
         return new SecureScore();
     }
 
@@ -104,7 +124,7 @@ class SecureScore extends Entity
     }
 
     /**
-     * Gets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
+     * Gets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, SharePoint).
      * @return array<string>|null
     */
     public function getEnabledServices(): ?array {
@@ -116,17 +136,18 @@ class SecureScore extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activeUserCount' => function (self $o, ParseNode $n) { $o->setActiveUserCount($n->getIntegerValue()); },
-            'averageComparativeScores' => function (self $o, ParseNode $n) { $o->setAverageComparativeScores($n->getCollectionOfObjectValues(AverageComparativeScore::class)); },
-            'azureTenantId' => function (self $o, ParseNode $n) { $o->setAzureTenantId($n->getStringValue()); },
-            'controlScores' => function (self $o, ParseNode $n) { $o->setControlScores($n->getCollectionOfObjectValues(ControlScore::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'currentScore' => function (self $o, ParseNode $n) { $o->setCurrentScore($n->getFloatValue()); },
-            'enabledServices' => function (self $o, ParseNode $n) { $o->setEnabledServices($n->getCollectionOfPrimitiveValues()); },
-            'licensedUserCount' => function (self $o, ParseNode $n) { $o->setLicensedUserCount($n->getIntegerValue()); },
-            'maxScore' => function (self $o, ParseNode $n) { $o->setMaxScore($n->getFloatValue()); },
-            'vendorInformation' => function (self $o, ParseNode $n) { $o->setVendorInformation($n->getObjectValue(SecurityVendorInformation::class)); },
+            'activeUserCount' => function (ParseNode $n) use ($o) { $o->setActiveUserCount($n->getIntegerValue()); },
+            'averageComparativeScores' => function (ParseNode $n) use ($o) { $o->setAverageComparativeScores($n->getCollectionOfObjectValues(array(AverageComparativeScore::class, 'createFromDiscriminatorValue'))); },
+            'azureTenantId' => function (ParseNode $n) use ($o) { $o->setAzureTenantId($n->getStringValue()); },
+            'controlScores' => function (ParseNode $n) use ($o) { $o->setControlScores($n->getCollectionOfObjectValues(array(ControlScore::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'currentScore' => function (ParseNode $n) use ($o) { $o->setCurrentScore($n->getFloatValue()); },
+            'enabledServices' => function (ParseNode $n) use ($o) { $o->setEnabledServices($n->getCollectionOfPrimitiveValues()); },
+            'licensedUserCount' => function (ParseNode $n) use ($o) { $o->setLicensedUserCount($n->getIntegerValue()); },
+            'maxScore' => function (ParseNode $n) use ($o) { $o->setMaxScore($n->getFloatValue()); },
+            'vendorInformation' => function (ParseNode $n) use ($o) { $o->setVendorInformation($n->getObjectValue(array(SecurityVendorInformation::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -221,7 +242,7 @@ class SecureScore extends Entity
     }
 
     /**
-     * Sets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
+     * Sets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, SharePoint).
      *  @param array<string>|null $value Value to set for the enabledServices property.
     */
     public function setEnabledServices(?array $value ): void {

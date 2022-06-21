@@ -9,25 +9,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ChatMessageAttachment implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $content The content of the attachment. If the attachment is a rich card, set the property to the rich card object. This property and contentUrl are mutually exclusive. */
+    /**
+     * @var string|null $content The content of the attachment. If the attachment is a rich card, set the property to the rich card object. This property and contentUrl are mutually exclusive.
+    */
     private ?string $content = null;
     
-    /** @var string|null $contentType The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.Any contentTypes supported by the Bot Framework's Attachment objectapplication/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header. */
+    /**
+     * @var string|null $contentType The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.Any contentTypes supported by the Bot Framework's Attachment objectapplication/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header.
+    */
     private ?string $contentType = null;
     
-    /** @var string|null $contentUrl URL for the content of the attachment. Supported protocols: http, https, file and data. */
+    /**
+     * @var string|null $contentUrl URL for the content of the attachment. Supported protocols: http, https, file and data.
+    */
     private ?string $contentUrl = null;
     
-    /** @var string|null $id Read-only. Unique id of the attachment. */
+    /**
+     * @var string|null $id Read-only. Unique id of the attachment.
+    */
     private ?string $id = null;
     
-    /** @var string|null $name Name of the attachment. */
+    /**
+     * @var string|null $name Name of the attachment.
+    */
     private ?string $name = null;
     
-    /** @var string|null $thumbnailUrl URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document. */
+    /**
+     * @var string|null $thumbnailUrl URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document.
+    */
     private ?string $thumbnailUrl = null;
     
     /**
@@ -42,7 +56,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ChatMessageAttachment
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ChatMessageAttachment {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ChatMessageAttachment {
         return new ChatMessageAttachment();
     }
 
@@ -83,13 +97,14 @@ class ChatMessageAttachment implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'content' => function (self $o, ParseNode $n) { $o->setContent($n->getStringValue()); },
-            'contentType' => function (self $o, ParseNode $n) { $o->setContentType($n->getStringValue()); },
-            'contentUrl' => function (self $o, ParseNode $n) { $o->setContentUrl($n->getStringValue()); },
-            'id' => function (self $o, ParseNode $n) { $o->setId($n->getStringValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'thumbnailUrl' => function (self $o, ParseNode $n) { $o->setThumbnailUrl($n->getStringValue()); },
+            'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getStringValue()); },
+            'contentType' => function (ParseNode $n) use ($o) { $o->setContentType($n->getStringValue()); },
+            'contentUrl' => function (ParseNode $n) use ($o) { $o->setContentUrl($n->getStringValue()); },
+            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'thumbnailUrl' => function (ParseNode $n) use ($o) { $o->setThumbnailUrl($n->getStringValue()); },
         ];
     }
 

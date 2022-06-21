@@ -7,12 +7,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DeviceManagementTroubleshootingEvent extends Entity 
+class DeviceManagementTroubleshootingEvent extends Entity implements Parsable 
 {
-    /** @var string|null $correlationId Id used for tracing the failure in the service. */
+    /**
+     * @var string|null $correlationId Id used for tracing the failure in the service.
+    */
     private ?string $correlationId = null;
     
-    /** @var DateTime|null $eventDateTime Time when the event occurred . */
+    /**
+     * @var DateTime|null $eventDateTime Time when the event occurred .
+    */
     private ?DateTime $eventDateTime = null;
     
     /**
@@ -27,7 +31,14 @@ class DeviceManagementTroubleshootingEvent extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceManagementTroubleshootingEvent
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceManagementTroubleshootingEvent {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceManagementTroubleshootingEvent {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.enrollmentTroubleshootingEvent': return new EnrollmentTroubleshootingEvent();
+            }
+        }
         return new DeviceManagementTroubleshootingEvent();
     }
 
@@ -52,9 +63,10 @@ class DeviceManagementTroubleshootingEvent extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'correlationId' => function (self $o, ParseNode $n) { $o->setCorrelationId($n->getStringValue()); },
-            'eventDateTime' => function (self $o, ParseNode $n) { $o->setEventDateTime($n->getDateTimeValue()); },
+            'correlationId' => function (ParseNode $n) use ($o) { $o->setCorrelationId($n->getStringValue()); },
+            'eventDateTime' => function (ParseNode $n) use ($o) { $o->setEventDateTime($n->getDateTimeValue()); },
         ]);
     }
 

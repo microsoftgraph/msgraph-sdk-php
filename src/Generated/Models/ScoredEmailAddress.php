@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ScoredEmailAddress implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $address The email address. */
+    /**
+     * @var string|null $address The email address.
+    */
     private ?string $address = null;
     
-    /** @var string|null $itemId The itemId property */
+    /**
+     * @var string|null $itemId The itemId property
+    */
     private ?string $itemId = null;
     
-    /** @var float|null $relevanceScore The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user’s communication and collaboration patterns and business relationships. */
+    /**
+     * @var float|null $relevanceScore The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user’s communication and collaboration patterns and business relationships.
+    */
     private ?float $relevanceScore = null;
     
-    /** @var SelectionLikelihoodInfo|null $selectionLikelihood The selectionLikelihood property */
+    /**
+     * @var SelectionLikelihoodInfo|null $selectionLikelihood The selectionLikelihood property
+    */
     private ?SelectionLikelihoodInfo $selectionLikelihood = null;
     
     /**
@@ -36,7 +46,7 @@ class ScoredEmailAddress implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ScoredEmailAddress
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ScoredEmailAddress {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ScoredEmailAddress {
         return new ScoredEmailAddress();
     }
 
@@ -61,11 +71,12 @@ class ScoredEmailAddress implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'address' => function (self $o, ParseNode $n) { $o->setAddress($n->getStringValue()); },
-            'itemId' => function (self $o, ParseNode $n) { $o->setItemId($n->getStringValue()); },
-            'relevanceScore' => function (self $o, ParseNode $n) { $o->setRelevanceScore($n->getFloatValue()); },
-            'selectionLikelihood' => function (self $o, ParseNode $n) { $o->setSelectionLikelihood($n->getEnumValue(SelectionLikelihoodInfo::class)); },
+            'address' => function (ParseNode $n) use ($o) { $o->setAddress($n->getStringValue()); },
+            'itemId' => function (ParseNode $n) use ($o) { $o->setItemId($n->getStringValue()); },
+            'relevanceScore' => function (ParseNode $n) use ($o) { $o->setRelevanceScore($n->getFloatValue()); },
+            'selectionLikelihood' => function (ParseNode $n) use ($o) { $o->setSelectionLikelihood($n->getEnumValue(SelectionLikelihoodInfo::class)); },
         ];
     }
 

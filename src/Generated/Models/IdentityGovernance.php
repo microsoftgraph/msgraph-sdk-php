@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class IdentityGovernance implements AdditionalDataHolder, Parsable 
 {
-    /** @var AccessReviewSet|null $accessReviews The accessReviews property */
+    /**
+     * @var AccessReviewSet|null $accessReviews The accessReviews property
+    */
     private ?AccessReviewSet $accessReviews = null;
     
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var AppConsentApprovalRoute|null $appConsent The appConsent property */
+    /**
+     * @var AppConsentApprovalRoute|null $appConsent The appConsent property
+    */
     private ?AppConsentApprovalRoute $appConsent = null;
     
-    /** @var EntitlementManagement|null $entitlementManagement The entitlementManagement property */
+    /**
+     * @var EntitlementManagement|null $entitlementManagement The entitlementManagement property
+    */
     private ?EntitlementManagement $entitlementManagement = null;
     
-    /** @var TermsOfUseContainer|null $termsOfUse The termsOfUse property */
+    /**
+     * @var TermsOfUseContainer|null $termsOfUse The termsOfUse property
+    */
     private ?TermsOfUseContainer $termsOfUse = null;
     
     /**
@@ -36,7 +46,7 @@ class IdentityGovernance implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return IdentityGovernance
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): IdentityGovernance {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): IdentityGovernance {
         return new IdentityGovernance();
     }
 
@@ -77,11 +87,12 @@ class IdentityGovernance implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'accessReviews' => function (self $o, ParseNode $n) { $o->setAccessReviews($n->getObjectValue(AccessReviewSet::class)); },
-            'appConsent' => function (self $o, ParseNode $n) { $o->setAppConsent($n->getObjectValue(AppConsentApprovalRoute::class)); },
-            'entitlementManagement' => function (self $o, ParseNode $n) { $o->setEntitlementManagement($n->getObjectValue(EntitlementManagement::class)); },
-            'termsOfUse' => function (self $o, ParseNode $n) { $o->setTermsOfUse($n->getObjectValue(TermsOfUseContainer::class)); },
+            'accessReviews' => function (ParseNode $n) use ($o) { $o->setAccessReviews($n->getObjectValue(array(AccessReviewSet::class, 'createFromDiscriminatorValue'))); },
+            'appConsent' => function (ParseNode $n) use ($o) { $o->setAppConsent($n->getObjectValue(array(AppConsentApprovalRoute::class, 'createFromDiscriminatorValue'))); },
+            'entitlementManagement' => function (ParseNode $n) use ($o) { $o->setEntitlementManagement($n->getObjectValue(array(EntitlementManagement::class, 'createFromDiscriminatorValue'))); },
+            'termsOfUse' => function (ParseNode $n) use ($o) { $o->setTermsOfUse($n->getObjectValue(array(TermsOfUseContainer::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

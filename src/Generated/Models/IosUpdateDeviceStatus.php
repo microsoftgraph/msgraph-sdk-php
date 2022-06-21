@@ -7,39 +7,61 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class IosUpdateDeviceStatus extends Entity 
+class IosUpdateDeviceStatus extends Entity implements Parsable 
 {
-    /** @var DateTime|null $complianceGracePeriodExpirationDateTime The DateTime when device compliance grace period expires */
+    /**
+     * @var DateTime|null $complianceGracePeriodExpirationDateTime The DateTime when device compliance grace period expires
+    */
     private ?DateTime $complianceGracePeriodExpirationDateTime = null;
     
-    /** @var string|null $deviceDisplayName Device name of the DevicePolicyStatus. */
+    /**
+     * @var string|null $deviceDisplayName Device name of the DevicePolicyStatus.
+    */
     private ?string $deviceDisplayName = null;
     
-    /** @var string|null $deviceId The device id that is being reported. */
+    /**
+     * @var string|null $deviceId The device id that is being reported.
+    */
     private ?string $deviceId = null;
     
-    /** @var string|null $deviceModel The device model that is being reported */
+    /**
+     * @var string|null $deviceModel The device model that is being reported
+    */
     private ?string $deviceModel = null;
     
-    /** @var IosUpdatesInstallStatus|null $installStatus The installation status of the policy report. Possible values are: success, available, idle, unknown, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError, deviceOsHigherThanDesiredOsVersion. */
+    /**
+     * @var IosUpdatesInstallStatus|null $installStatus The installation status of the policy report. Possible values are: success, available, idle, unknown, mdmClientCrashed, timeout, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError, updateError, deviceOsHigherThanDesiredOsVersion, updateScanFailed.
+    */
     private ?IosUpdatesInstallStatus $installStatus = null;
     
-    /** @var DateTime|null $lastReportedDateTime Last modified date time of the policy report. */
+    /**
+     * @var DateTime|null $lastReportedDateTime Last modified date time of the policy report.
+    */
     private ?DateTime $lastReportedDateTime = null;
     
-    /** @var string|null $osVersion The device version that is being reported. */
+    /**
+     * @var string|null $osVersion The device version that is being reported.
+    */
     private ?string $osVersion = null;
     
-    /** @var ComplianceStatus|null $status Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned. */
+    /**
+     * @var ComplianceStatus|null $status Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+    */
     private ?ComplianceStatus $status = null;
     
-    /** @var string|null $userId The User id that is being reported. */
+    /**
+     * @var string|null $userId The User id that is being reported.
+    */
     private ?string $userId = null;
     
-    /** @var string|null $userName The User Name that is being reported */
+    /**
+     * @var string|null $userName The User Name that is being reported
+    */
     private ?string $userName = null;
     
-    /** @var string|null $userPrincipalName UserPrincipalName. */
+    /**
+     * @var string|null $userPrincipalName UserPrincipalName.
+    */
     private ?string $userPrincipalName = null;
     
     /**
@@ -54,7 +76,7 @@ class IosUpdateDeviceStatus extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return IosUpdateDeviceStatus
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): IosUpdateDeviceStatus {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): IosUpdateDeviceStatus {
         return new IosUpdateDeviceStatus();
     }
 
@@ -95,23 +117,24 @@ class IosUpdateDeviceStatus extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'complianceGracePeriodExpirationDateTime' => function (self $o, ParseNode $n) { $o->setComplianceGracePeriodExpirationDateTime($n->getDateTimeValue()); },
-            'deviceDisplayName' => function (self $o, ParseNode $n) { $o->setDeviceDisplayName($n->getStringValue()); },
-            'deviceId' => function (self $o, ParseNode $n) { $o->setDeviceId($n->getStringValue()); },
-            'deviceModel' => function (self $o, ParseNode $n) { $o->setDeviceModel($n->getStringValue()); },
-            'installStatus' => function (self $o, ParseNode $n) { $o->setInstallStatus($n->getEnumValue(IosUpdatesInstallStatus::class)); },
-            'lastReportedDateTime' => function (self $o, ParseNode $n) { $o->setLastReportedDateTime($n->getDateTimeValue()); },
-            'osVersion' => function (self $o, ParseNode $n) { $o->setOsVersion($n->getStringValue()); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(ComplianceStatus::class)); },
-            'userId' => function (self $o, ParseNode $n) { $o->setUserId($n->getStringValue()); },
-            'userName' => function (self $o, ParseNode $n) { $o->setUserName($n->getStringValue()); },
-            'userPrincipalName' => function (self $o, ParseNode $n) { $o->setUserPrincipalName($n->getStringValue()); },
+            'complianceGracePeriodExpirationDateTime' => function (ParseNode $n) use ($o) { $o->setComplianceGracePeriodExpirationDateTime($n->getDateTimeValue()); },
+            'deviceDisplayName' => function (ParseNode $n) use ($o) { $o->setDeviceDisplayName($n->getStringValue()); },
+            'deviceId' => function (ParseNode $n) use ($o) { $o->setDeviceId($n->getStringValue()); },
+            'deviceModel' => function (ParseNode $n) use ($o) { $o->setDeviceModel($n->getStringValue()); },
+            'installStatus' => function (ParseNode $n) use ($o) { $o->setInstallStatus($n->getEnumValue(IosUpdatesInstallStatus::class)); },
+            'lastReportedDateTime' => function (ParseNode $n) use ($o) { $o->setLastReportedDateTime($n->getDateTimeValue()); },
+            'osVersion' => function (ParseNode $n) use ($o) { $o->setOsVersion($n->getStringValue()); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(ComplianceStatus::class)); },
+            'userId' => function (ParseNode $n) use ($o) { $o->setUserId($n->getStringValue()); },
+            'userName' => function (ParseNode $n) use ($o) { $o->setUserName($n->getStringValue()); },
+            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
         ]);
     }
 
     /**
-     * Gets the installStatus property value. The installation status of the policy report. Possible values are: success, available, idle, unknown, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError, deviceOsHigherThanDesiredOsVersion.
+     * Gets the installStatus property value. The installation status of the policy report. Possible values are: success, available, idle, unknown, mdmClientCrashed, timeout, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError, updateError, deviceOsHigherThanDesiredOsVersion, updateScanFailed.
      * @return IosUpdatesInstallStatus|null
     */
     public function getInstallStatus(): ?IosUpdatesInstallStatus {
@@ -218,7 +241,7 @@ class IosUpdateDeviceStatus extends Entity
     }
 
     /**
-     * Sets the installStatus property value. The installation status of the policy report. Possible values are: success, available, idle, unknown, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError, deviceOsHigherThanDesiredOsVersion.
+     * Sets the installStatus property value. The installation status of the policy report. Possible values are: success, available, idle, unknown, mdmClientCrashed, timeout, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError, updateError, deviceOsHigherThanDesiredOsVersion, updateScanFailed.
      *  @param IosUpdatesInstallStatus|null $value Value to set for the installStatus property.
     */
     public function setInstallStatus(?IosUpdatesInstallStatus $value ): void {

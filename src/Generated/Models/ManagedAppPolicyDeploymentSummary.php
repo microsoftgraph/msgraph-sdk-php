@@ -7,21 +7,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ManagedAppPolicyDeploymentSummary extends Entity 
+class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable 
 {
-    /** @var int|null $configurationDeployedUserCount Not yet documented */
+    /**
+     * @var int|null $configurationDeployedUserCount Not yet documented
+    */
     private ?int $configurationDeployedUserCount = null;
     
-    /** @var array<ManagedAppPolicyDeploymentSummaryPerApp>|null $configurationDeploymentSummaryPerApp Not yet documented */
+    /**
+     * @var array<ManagedAppPolicyDeploymentSummaryPerApp>|null $configurationDeploymentSummaryPerApp Not yet documented
+    */
     private ?array $configurationDeploymentSummaryPerApp = null;
     
-    /** @var string|null $displayName Not yet documented */
+    /**
+     * @var string|null $displayName Not yet documented
+    */
     private ?string $displayName = null;
     
-    /** @var DateTime|null $lastRefreshTime Not yet documented */
+    /**
+     * @var DateTime|null $lastRefreshTime Not yet documented
+    */
     private ?DateTime $lastRefreshTime = null;
     
-    /** @var string|null $version Version of the entity. */
+    /**
+     * @var string|null $version Version of the entity.
+    */
     private ?string $version = null;
     
     /**
@@ -36,7 +46,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ManagedAppPolicyDeploymentSummary
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ManagedAppPolicyDeploymentSummary {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedAppPolicyDeploymentSummary {
         return new ManagedAppPolicyDeploymentSummary();
     }
 
@@ -69,12 +79,13 @@ class ManagedAppPolicyDeploymentSummary extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'configurationDeployedUserCount' => function (self $o, ParseNode $n) { $o->setConfigurationDeployedUserCount($n->getIntegerValue()); },
-            'configurationDeploymentSummaryPerApp' => function (self $o, ParseNode $n) { $o->setConfigurationDeploymentSummaryPerApp($n->getCollectionOfObjectValues(ManagedAppPolicyDeploymentSummaryPerApp::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'lastRefreshTime' => function (self $o, ParseNode $n) { $o->setLastRefreshTime($n->getDateTimeValue()); },
-            'version' => function (self $o, ParseNode $n) { $o->setVersion($n->getStringValue()); },
+            'configurationDeployedUserCount' => function (ParseNode $n) use ($o) { $o->setConfigurationDeployedUserCount($n->getIntegerValue()); },
+            'configurationDeploymentSummaryPerApp' => function (ParseNode $n) use ($o) { $o->setConfigurationDeploymentSummaryPerApp($n->getCollectionOfObjectValues(array(ManagedAppPolicyDeploymentSummaryPerApp::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'lastRefreshTime' => function (ParseNode $n) use ($o) { $o->setLastRefreshTime($n->getDateTimeValue()); },
+            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getStringValue()); },
         ]);
     }
 

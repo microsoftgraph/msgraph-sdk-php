@@ -10,16 +10,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ScheduleEntity implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var DateTime|null $endDateTime The endDateTime property */
+    /**
+     * @var DateTime|null $endDateTime The endDateTime property
+    */
     private ?DateTime $endDateTime = null;
     
-    /** @var DateTime|null $startDateTime The startDateTime property */
+    /**
+     * @var DateTime|null $startDateTime The startDateTime property
+    */
     private ?DateTime $startDateTime = null;
     
-    /** @var ScheduleEntityTheme|null $theme The theme property */
+    /**
+     * @var ScheduleEntityTheme|null $theme The theme property
+    */
     private ?ScheduleEntityTheme $theme = null;
     
     /**
@@ -34,7 +42,7 @@ class ScheduleEntity implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ScheduleEntity
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ScheduleEntity {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ScheduleEntity {
         return new ScheduleEntity();
     }
 
@@ -59,10 +67,11 @@ class ScheduleEntity implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'endDateTime' => function (self $o, ParseNode $n) { $o->setEndDateTime($n->getDateTimeValue()); },
-            'startDateTime' => function (self $o, ParseNode $n) { $o->setStartDateTime($n->getDateTimeValue()); },
-            'theme' => function (self $o, ParseNode $n) { $o->setTheme($n->getEnumValue(ScheduleEntityTheme::class)); },
+            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
+            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
+            'theme' => function (ParseNode $n) use ($o) { $o->setTheme($n->getEnumValue(ScheduleEntityTheme::class)); },
         ];
     }
 

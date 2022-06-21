@@ -6,31 +6,45 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class IosManagedAppProtection extends TargetedManagedAppProtection 
+class IosManagedAppProtection extends TargetedManagedAppProtection implements Parsable 
 {
-    /** @var ManagedAppDataEncryptionType|null $appDataEncryptionType Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked. */
+    /**
+     * @var ManagedAppDataEncryptionType|null $appDataEncryptionType Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
+    */
     private ?ManagedAppDataEncryptionType $appDataEncryptionType = null;
     
-    /** @var array<ManagedMobileApp>|null $apps List of apps to which the policy is deployed. */
+    /**
+     * @var array<ManagedMobileApp>|null $apps List of apps to which the policy is deployed.
+    */
     private ?array $apps = null;
     
-    /** @var string|null $customBrowserProtocol A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. */
+    /**
+     * @var string|null $customBrowserProtocol A custom browser protocol to open weblink on iOS.
+    */
     private ?string $customBrowserProtocol = null;
     
-    /** @var int|null $deployedAppCount Count of apps to which the current policy is deployed. */
+    /**
+     * @var int|null $deployedAppCount Count of apps to which the current policy is deployed.
+    */
     private ?int $deployedAppCount = null;
     
-    /** @var ManagedAppPolicyDeploymentSummary|null $deploymentSummary Navigation property to deployment summary of the configuration. */
+    /**
+     * @var ManagedAppPolicyDeploymentSummary|null $deploymentSummary Navigation property to deployment summary of the configuration.
+    */
     private ?ManagedAppPolicyDeploymentSummary $deploymentSummary = null;
     
-    /** @var bool|null $faceIdBlocked Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. */
+    /**
+     * @var bool|null $faceIdBlocked Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
+    */
     private ?bool $faceIdBlocked = null;
     
-    /** @var string|null $minimumRequiredSdkVersion Versions less than the specified version will block the managed app from accessing company data. */
+    /**
+     * @var string|null $minimumRequiredSdkVersion Versions less than the specified version will block the managed app from accessing company data.
+    */
     private ?string $minimumRequiredSdkVersion = null;
     
     /**
-     * Instantiates a new iosManagedAppProtection and sets the default values.
+     * Instantiates a new IosManagedAppProtection and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -41,7 +55,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return IosManagedAppProtection
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): IosManagedAppProtection {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): IosManagedAppProtection {
         return new IosManagedAppProtection();
     }
 
@@ -62,7 +76,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     }
 
     /**
-     * Gets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Gets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS.
      * @return string|null
     */
     public function getCustomBrowserProtocol(): ?string {
@@ -98,14 +112,15 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appDataEncryptionType' => function (self $o, ParseNode $n) { $o->setAppDataEncryptionType($n->getEnumValue(ManagedAppDataEncryptionType::class)); },
-            'apps' => function (self $o, ParseNode $n) { $o->setApps($n->getCollectionOfObjectValues(ManagedMobileApp::class)); },
-            'customBrowserProtocol' => function (self $o, ParseNode $n) { $o->setCustomBrowserProtocol($n->getStringValue()); },
-            'deployedAppCount' => function (self $o, ParseNode $n) { $o->setDeployedAppCount($n->getIntegerValue()); },
-            'deploymentSummary' => function (self $o, ParseNode $n) { $o->setDeploymentSummary($n->getObjectValue(ManagedAppPolicyDeploymentSummary::class)); },
-            'faceIdBlocked' => function (self $o, ParseNode $n) { $o->setFaceIdBlocked($n->getBooleanValue()); },
-            'minimumRequiredSdkVersion' => function (self $o, ParseNode $n) { $o->setMinimumRequiredSdkVersion($n->getStringValue()); },
+            'appDataEncryptionType' => function (ParseNode $n) use ($o) { $o->setAppDataEncryptionType($n->getEnumValue(ManagedAppDataEncryptionType::class)); },
+            'apps' => function (ParseNode $n) use ($o) { $o->setApps($n->getCollectionOfObjectValues(array(ManagedMobileApp::class, 'createFromDiscriminatorValue'))); },
+            'customBrowserProtocol' => function (ParseNode $n) use ($o) { $o->setCustomBrowserProtocol($n->getStringValue()); },
+            'deployedAppCount' => function (ParseNode $n) use ($o) { $o->setDeployedAppCount($n->getIntegerValue()); },
+            'deploymentSummary' => function (ParseNode $n) use ($o) { $o->setDeploymentSummary($n->getObjectValue(array(ManagedAppPolicyDeploymentSummary::class, 'createFromDiscriminatorValue'))); },
+            'faceIdBlocked' => function (ParseNode $n) use ($o) { $o->setFaceIdBlocked($n->getBooleanValue()); },
+            'minimumRequiredSdkVersion' => function (ParseNode $n) use ($o) { $o->setMinimumRequiredSdkVersion($n->getStringValue()); },
         ]);
     }
 
@@ -149,7 +164,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     }
 
     /**
-     * Sets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Sets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS.
      *  @param string|null $value Value to set for the customBrowserProtocol property.
     */
     public function setCustomBrowserProtocol(?string $value ): void {

@@ -7,69 +7,126 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Team extends Entity 
+class Team extends Entity implements Parsable 
 {
-    /** @var array<Channel>|null $channels The collection of channels and messages associated with the team. */
+    /**
+     * @var array<Channel>|null $allChannels List of channels either hosted in or shared with the team (incoming channels).
+    */
+    private ?array $allChannels = null;
+    
+    /**
+     * @var array<Channel>|null $channels The collection of channels and messages associated with the team.
+    */
     private ?array $channels = null;
     
-    /** @var string|null $classification An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory. */
+    /**
+     * @var string|null $classification An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
+    */
     private ?string $classification = null;
     
-    /** @var DateTime|null $createdDateTime Timestamp at which the team was created. */
+    /**
+     * @var DateTime|null $createdDateTime Timestamp at which the team was created.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $description An optional description for the team. Maximum length: 1024 characters. */
+    /**
+     * @var string|null $description An optional description for the team. Maximum length: 1024 characters.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName The name of the team. */
+    /**
+     * @var string|null $displayName The name of the team.
+    */
     private ?string $displayName = null;
     
-    /** @var TeamFunSettings|null $funSettings Settings to configure use of Giphy, memes, and stickers in the team. */
+    /**
+     * @var TeamFunSettings|null $funSettings Settings to configure use of Giphy, memes, and stickers in the team.
+    */
     private ?TeamFunSettings $funSettings = null;
     
-    /** @var Group|null $group The group property */
+    /**
+     * @var Group|null $group The group property
+    */
     private ?Group $group = null;
     
-    /** @var TeamGuestSettings|null $guestSettings Settings to configure whether guests can create, update, or delete channels in the team. */
+    /**
+     * @var TeamGuestSettings|null $guestSettings Settings to configure whether guests can create, update, or delete channels in the team.
+    */
     private ?TeamGuestSettings $guestSettings = null;
     
-    /** @var array<TeamsAppInstallation>|null $installedApps The apps installed in this team. */
+    /**
+     * @var array<Channel>|null $incomingChannels List of channels shared with the team.
+    */
+    private ?array $incomingChannels = null;
+    
+    /**
+     * @var array<TeamsAppInstallation>|null $installedApps The apps installed in this team.
+    */
     private ?array $installedApps = null;
     
-    /** @var string|null $internalId A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API. */
+    /**
+     * @var string|null $internalId A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
+    */
     private ?string $internalId = null;
     
-    /** @var bool|null $isArchived Whether this team is in read-only mode. */
+    /**
+     * @var bool|null $isArchived Whether this team is in read-only mode.
+    */
     private ?bool $isArchived = null;
     
-    /** @var array<ConversationMember>|null $members Members and owners of the team. */
+    /**
+     * @var array<ConversationMember>|null $members Members and owners of the team.
+    */
     private ?array $members = null;
     
-    /** @var TeamMemberSettings|null $memberSettings Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team. */
+    /**
+     * @var TeamMemberSettings|null $memberSettings Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team.
+    */
     private ?TeamMemberSettings $memberSettings = null;
     
-    /** @var TeamMessagingSettings|null $messagingSettings Settings to configure messaging and mentions in the team. */
+    /**
+     * @var TeamMessagingSettings|null $messagingSettings Settings to configure messaging and mentions in the team.
+    */
     private ?TeamMessagingSettings $messagingSettings = null;
     
-    /** @var array<TeamsAsyncOperation>|null $operations The async operations that ran or are running on this team. */
+    /**
+     * @var array<TeamsAsyncOperation>|null $operations The async operations that ran or are running on this team.
+    */
     private ?array $operations = null;
     
-    /** @var Channel|null $primaryChannel The general channel for the team. */
+    /**
+     * @var Channel|null $primaryChannel The general channel for the team.
+    */
     private ?Channel $primaryChannel = null;
     
-    /** @var Schedule|null $schedule The schedule of shifts for this team. */
+    /**
+     * @var Schedule|null $schedule The schedule of shifts for this team.
+    */
     private ?Schedule $schedule = null;
     
-    /** @var TeamSpecialization|null $specialization Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case. */
+    /**
+     * @var TeamSpecialization|null $specialization Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
+    */
     private ?TeamSpecialization $specialization = null;
     
-    /** @var TeamsTemplate|null $template The template this team was created from. See available templates. */
+    /**
+     * @var TeamsTemplate|null $template The template this team was created from. See available templates.
+    */
     private ?TeamsTemplate $template = null;
     
-    /** @var TeamVisibilityType|null $visibility The visibility of the group and team. Defaults to Public. */
+    /**
+     * @var string|null $tenantId The ID of the Azure Active Directory tenant.
+    */
+    private ?string $tenantId = null;
+    
+    /**
+     * @var TeamVisibilityType|null $visibility The visibility of the group and team. Defaults to Public.
+    */
     private ?TeamVisibilityType $visibility = null;
     
-    /** @var string|null $webUrl A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed. */
+    /**
+     * @var string|null $webUrl A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
+    */
     private ?string $webUrl = null;
     
     /**
@@ -84,8 +141,16 @@ class Team extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Team
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Team {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Team {
         return new Team();
+    }
+
+    /**
+     * Gets the allChannels property value. List of channels either hosted in or shared with the team (incoming channels).
+     * @return array<Channel>|null
+    */
+    public function getAllChannels(): ?array {
+        return $this->allChannels;
     }
 
     /**
@@ -133,28 +198,32 @@ class Team extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'channels' => function (self $o, ParseNode $n) { $o->setChannels($n->getCollectionOfObjectValues(Channel::class)); },
-            'classification' => function (self $o, ParseNode $n) { $o->setClassification($n->getStringValue()); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'funSettings' => function (self $o, ParseNode $n) { $o->setFunSettings($n->getObjectValue(TeamFunSettings::class)); },
-            'group' => function (self $o, ParseNode $n) { $o->setGroup($n->getObjectValue(Group::class)); },
-            'guestSettings' => function (self $o, ParseNode $n) { $o->setGuestSettings($n->getObjectValue(TeamGuestSettings::class)); },
-            'installedApps' => function (self $o, ParseNode $n) { $o->setInstalledApps($n->getCollectionOfObjectValues(TeamsAppInstallation::class)); },
-            'internalId' => function (self $o, ParseNode $n) { $o->setInternalId($n->getStringValue()); },
-            'isArchived' => function (self $o, ParseNode $n) { $o->setIsArchived($n->getBooleanValue()); },
-            'members' => function (self $o, ParseNode $n) { $o->setMembers($n->getCollectionOfObjectValues(ConversationMember::class)); },
-            'memberSettings' => function (self $o, ParseNode $n) { $o->setMemberSettings($n->getObjectValue(TeamMemberSettings::class)); },
-            'messagingSettings' => function (self $o, ParseNode $n) { $o->setMessagingSettings($n->getObjectValue(TeamMessagingSettings::class)); },
-            'operations' => function (self $o, ParseNode $n) { $o->setOperations($n->getCollectionOfObjectValues(TeamsAsyncOperation::class)); },
-            'primaryChannel' => function (self $o, ParseNode $n) { $o->setPrimaryChannel($n->getObjectValue(Channel::class)); },
-            'schedule' => function (self $o, ParseNode $n) { $o->setSchedule($n->getObjectValue(Schedule::class)); },
-            'specialization' => function (self $o, ParseNode $n) { $o->setSpecialization($n->getEnumValue(TeamSpecialization::class)); },
-            'template' => function (self $o, ParseNode $n) { $o->setTemplate($n->getObjectValue(TeamsTemplate::class)); },
-            'visibility' => function (self $o, ParseNode $n) { $o->setVisibility($n->getEnumValue(TeamVisibilityType::class)); },
-            'webUrl' => function (self $o, ParseNode $n) { $o->setWebUrl($n->getStringValue()); },
+            'allChannels' => function (ParseNode $n) use ($o) { $o->setAllChannels($n->getCollectionOfObjectValues(array(Channel::class, 'createFromDiscriminatorValue'))); },
+            'channels' => function (ParseNode $n) use ($o) { $o->setChannels($n->getCollectionOfObjectValues(array(Channel::class, 'createFromDiscriminatorValue'))); },
+            'classification' => function (ParseNode $n) use ($o) { $o->setClassification($n->getStringValue()); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'funSettings' => function (ParseNode $n) use ($o) { $o->setFunSettings($n->getObjectValue(array(TeamFunSettings::class, 'createFromDiscriminatorValue'))); },
+            'group' => function (ParseNode $n) use ($o) { $o->setGroup($n->getObjectValue(array(Group::class, 'createFromDiscriminatorValue'))); },
+            'guestSettings' => function (ParseNode $n) use ($o) { $o->setGuestSettings($n->getObjectValue(array(TeamGuestSettings::class, 'createFromDiscriminatorValue'))); },
+            'incomingChannels' => function (ParseNode $n) use ($o) { $o->setIncomingChannels($n->getCollectionOfObjectValues(array(Channel::class, 'createFromDiscriminatorValue'))); },
+            'installedApps' => function (ParseNode $n) use ($o) { $o->setInstalledApps($n->getCollectionOfObjectValues(array(TeamsAppInstallation::class, 'createFromDiscriminatorValue'))); },
+            'internalId' => function (ParseNode $n) use ($o) { $o->setInternalId($n->getStringValue()); },
+            'isArchived' => function (ParseNode $n) use ($o) { $o->setIsArchived($n->getBooleanValue()); },
+            'members' => function (ParseNode $n) use ($o) { $o->setMembers($n->getCollectionOfObjectValues(array(ConversationMember::class, 'createFromDiscriminatorValue'))); },
+            'memberSettings' => function (ParseNode $n) use ($o) { $o->setMemberSettings($n->getObjectValue(array(TeamMemberSettings::class, 'createFromDiscriminatorValue'))); },
+            'messagingSettings' => function (ParseNode $n) use ($o) { $o->setMessagingSettings($n->getObjectValue(array(TeamMessagingSettings::class, 'createFromDiscriminatorValue'))); },
+            'operations' => function (ParseNode $n) use ($o) { $o->setOperations($n->getCollectionOfObjectValues(array(TeamsAsyncOperation::class, 'createFromDiscriminatorValue'))); },
+            'primaryChannel' => function (ParseNode $n) use ($o) { $o->setPrimaryChannel($n->getObjectValue(array(Channel::class, 'createFromDiscriminatorValue'))); },
+            'schedule' => function (ParseNode $n) use ($o) { $o->setSchedule($n->getObjectValue(array(Schedule::class, 'createFromDiscriminatorValue'))); },
+            'specialization' => function (ParseNode $n) use ($o) { $o->setSpecialization($n->getEnumValue(TeamSpecialization::class)); },
+            'template' => function (ParseNode $n) use ($o) { $o->setTemplate($n->getObjectValue(array(TeamsTemplate::class, 'createFromDiscriminatorValue'))); },
+            'tenantId' => function (ParseNode $n) use ($o) { $o->setTenantId($n->getStringValue()); },
+            'visibility' => function (ParseNode $n) use ($o) { $o->setVisibility($n->getEnumValue(TeamVisibilityType::class)); },
+            'webUrl' => function (ParseNode $n) use ($o) { $o->setWebUrl($n->getStringValue()); },
         ]);
     }
 
@@ -180,6 +249,14 @@ class Team extends Entity
     */
     public function getGuestSettings(): ?TeamGuestSettings {
         return $this->guestSettings;
+    }
+
+    /**
+     * Gets the incomingChannels property value. List of channels shared with the team.
+     * @return array<Channel>|null
+    */
+    public function getIncomingChannels(): ?array {
+        return $this->incomingChannels;
     }
 
     /**
@@ -271,6 +348,14 @@ class Team extends Entity
     }
 
     /**
+     * Gets the tenantId property value. The ID of the Azure Active Directory tenant.
+     * @return string|null
+    */
+    public function getTenantId(): ?string {
+        return $this->tenantId;
+    }
+
+    /**
      * Gets the visibility property value. The visibility of the group and team. Defaults to Public.
      * @return TeamVisibilityType|null
     */
@@ -292,6 +377,7 @@ class Team extends Entity
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('allChannels', $this->allChannels);
         $writer->writeCollectionOfObjectValues('channels', $this->channels);
         $writer->writeStringValue('classification', $this->classification);
         $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
@@ -300,6 +386,7 @@ class Team extends Entity
         $writer->writeObjectValue('funSettings', $this->funSettings);
         $writer->writeObjectValue('group', $this->group);
         $writer->writeObjectValue('guestSettings', $this->guestSettings);
+        $writer->writeCollectionOfObjectValues('incomingChannels', $this->incomingChannels);
         $writer->writeCollectionOfObjectValues('installedApps', $this->installedApps);
         $writer->writeStringValue('internalId', $this->internalId);
         $writer->writeBooleanValue('isArchived', $this->isArchived);
@@ -311,8 +398,17 @@ class Team extends Entity
         $writer->writeObjectValue('schedule', $this->schedule);
         $writer->writeEnumValue('specialization', $this->specialization);
         $writer->writeObjectValue('template', $this->template);
+        $writer->writeStringValue('tenantId', $this->tenantId);
         $writer->writeEnumValue('visibility', $this->visibility);
         $writer->writeStringValue('webUrl', $this->webUrl);
+    }
+
+    /**
+     * Sets the allChannels property value. List of channels either hosted in or shared with the team (incoming channels).
+     *  @param array<Channel>|null $value Value to set for the allChannels property.
+    */
+    public function setAllChannels(?array $value ): void {
+        $this->allChannels = $value;
     }
 
     /**
@@ -377,6 +473,14 @@ class Team extends Entity
     */
     public function setGuestSettings(?TeamGuestSettings $value ): void {
         $this->guestSettings = $value;
+    }
+
+    /**
+     * Sets the incomingChannels property value. List of channels shared with the team.
+     *  @param array<Channel>|null $value Value to set for the incomingChannels property.
+    */
+    public function setIncomingChannels(?array $value ): void {
+        $this->incomingChannels = $value;
     }
 
     /**
@@ -465,6 +569,14 @@ class Team extends Entity
     */
     public function setTemplate(?TeamsTemplate $value ): void {
         $this->template = $value;
+    }
+
+    /**
+     * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
+     *  @param string|null $value Value to set for the tenantId property.
+    */
+    public function setTenantId(?string $value ): void {
+        $this->tenantId = $value;
     }
 
     /**

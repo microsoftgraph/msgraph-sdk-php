@@ -10,67 +10,109 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class NetworkConnection implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $applicationName Name of the application managing the network connection (for example, Facebook or SMTP). */
+    /**
+     * @var string|null $applicationName Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
+    */
     private ?string $applicationName = null;
     
-    /** @var string|null $destinationAddress Destination IP address (of the network connection). */
+    /**
+     * @var string|null $destinationAddress Destination IP address (of the network connection).
+    */
     private ?string $destinationAddress = null;
     
-    /** @var string|null $destinationDomain Destination domain portion of the destination URL. (for example 'www.contoso.com'). */
+    /**
+     * @var string|null $destinationDomain Destination domain portion of the destination URL. (for example 'www.contoso.com').
+    */
     private ?string $destinationDomain = null;
     
-    /** @var string|null $destinationLocation Location (by IP address mapping) associated with the destination of a network connection. */
+    /**
+     * @var string|null $destinationLocation Location (by IP address mapping) associated with the destination of a network connection.
+    */
     private ?string $destinationLocation = null;
     
-    /** @var string|null $destinationPort Destination port (of the network connection). */
+    /**
+     * @var string|null $destinationPort Destination port (of the network connection).
+    */
     private ?string $destinationPort = null;
     
-    /** @var string|null $destinationUrl Network connection URL/URI string - excluding parameters. (for example 'www.contoso.com/products/default.html') */
+    /**
+     * @var string|null $destinationUrl Network connection URL/URI string - excluding parameters. (for example 'www.contoso.com/products/default.html')
+    */
     private ?string $destinationUrl = null;
     
-    /** @var ConnectionDirection|null $direction Network connection direction. Possible values are: unknown, inbound, outbound. */
+    /**
+     * @var ConnectionDirection|null $direction Network connection direction. Possible values are: unknown, inbound, outbound.
+    */
     private ?ConnectionDirection $direction = null;
     
-    /** @var DateTime|null $domainRegisteredDateTime Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $domainRegisteredDateTime Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $domainRegisteredDateTime = null;
     
-    /** @var string|null $localDnsName The local DNS name resolution as it appears in the host's local DNS cache (for example, in case the 'hosts' file was tampered with). */
+    /**
+     * @var string|null $localDnsName The local DNS name resolution as it appears in the host's local DNS cache (for example, in case the 'hosts' file was tampered with).
+    */
     private ?string $localDnsName = null;
     
-    /** @var string|null $natDestinationAddress Network Address Translation destination IP address. */
+    /**
+     * @var string|null $natDestinationAddress Network Address Translation destination IP address.
+    */
     private ?string $natDestinationAddress = null;
     
-    /** @var string|null $natDestinationPort Network Address Translation destination port. */
+    /**
+     * @var string|null $natDestinationPort Network Address Translation destination port.
+    */
     private ?string $natDestinationPort = null;
     
-    /** @var string|null $natSourceAddress Network Address Translation source IP address. */
+    /**
+     * @var string|null $natSourceAddress Network Address Translation source IP address.
+    */
     private ?string $natSourceAddress = null;
     
-    /** @var string|null $natSourcePort Network Address Translation source port. */
+    /**
+     * @var string|null $natSourcePort Network Address Translation source port.
+    */
     private ?string $natSourcePort = null;
     
-    /** @var SecurityNetworkProtocol|null $protocol Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII. */
+    /**
+     * @var SecurityNetworkProtocol|null $protocol Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
+    */
     private ?SecurityNetworkProtocol $protocol = null;
     
-    /** @var string|null $riskScore Provider generated/calculated risk score of the network connection. Recommended value range of 0-1, which equates to a percentage. */
+    /**
+     * @var string|null $riskScore Provider generated/calculated risk score of the network connection. Recommended value range of 0-1, which equates to a percentage.
+    */
     private ?string $riskScore = null;
     
-    /** @var string|null $sourceAddress Source (i.e. origin) IP address (of the network connection). */
+    /**
+     * @var string|null $sourceAddress Source (i.e. origin) IP address (of the network connection).
+    */
     private ?string $sourceAddress = null;
     
-    /** @var string|null $sourceLocation Location (by IP address mapping) associated with the source of a network connection. */
+    /**
+     * @var string|null $sourceLocation Location (by IP address mapping) associated with the source of a network connection.
+    */
     private ?string $sourceLocation = null;
     
-    /** @var string|null $sourcePort Source (i.e. origin) IP port (of the network connection). */
+    /**
+     * @var string|null $sourcePort Source (i.e. origin) IP port (of the network connection).
+    */
     private ?string $sourcePort = null;
     
-    /** @var ConnectionStatus|null $status Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed. */
+    /**
+     * @var ConnectionStatus|null $status Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
+    */
     private ?ConnectionStatus $status = null;
     
-    /** @var string|null $urlParameters Parameters (suffix) of the destination URL. */
+    /**
+     * @var string|null $urlParameters Parameters (suffix) of the destination URL.
+    */
     private ?string $urlParameters = null;
     
     /**
@@ -85,7 +127,7 @@ class NetworkConnection implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return NetworkConnection
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): NetworkConnection {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): NetworkConnection {
         return new NetworkConnection();
     }
 
@@ -98,7 +140,7 @@ class NetworkConnection implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the applicationName property value. Name of the application managing the network connection (for example, Facebook or SMTP).
+     * Gets the applicationName property value. Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
      * @return string|null
     */
     public function getApplicationName(): ?string {
@@ -166,27 +208,28 @@ class NetworkConnection implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'applicationName' => function (self $o, ParseNode $n) { $o->setApplicationName($n->getStringValue()); },
-            'destinationAddress' => function (self $o, ParseNode $n) { $o->setDestinationAddress($n->getStringValue()); },
-            'destinationDomain' => function (self $o, ParseNode $n) { $o->setDestinationDomain($n->getStringValue()); },
-            'destinationLocation' => function (self $o, ParseNode $n) { $o->setDestinationLocation($n->getStringValue()); },
-            'destinationPort' => function (self $o, ParseNode $n) { $o->setDestinationPort($n->getStringValue()); },
-            'destinationUrl' => function (self $o, ParseNode $n) { $o->setDestinationUrl($n->getStringValue()); },
-            'direction' => function (self $o, ParseNode $n) { $o->setDirection($n->getEnumValue(ConnectionDirection::class)); },
-            'domainRegisteredDateTime' => function (self $o, ParseNode $n) { $o->setDomainRegisteredDateTime($n->getDateTimeValue()); },
-            'localDnsName' => function (self $o, ParseNode $n) { $o->setLocalDnsName($n->getStringValue()); },
-            'natDestinationAddress' => function (self $o, ParseNode $n) { $o->setNatDestinationAddress($n->getStringValue()); },
-            'natDestinationPort' => function (self $o, ParseNode $n) { $o->setNatDestinationPort($n->getStringValue()); },
-            'natSourceAddress' => function (self $o, ParseNode $n) { $o->setNatSourceAddress($n->getStringValue()); },
-            'natSourcePort' => function (self $o, ParseNode $n) { $o->setNatSourcePort($n->getStringValue()); },
-            'protocol' => function (self $o, ParseNode $n) { $o->setProtocol($n->getEnumValue(SecurityNetworkProtocol::class)); },
-            'riskScore' => function (self $o, ParseNode $n) { $o->setRiskScore($n->getStringValue()); },
-            'sourceAddress' => function (self $o, ParseNode $n) { $o->setSourceAddress($n->getStringValue()); },
-            'sourceLocation' => function (self $o, ParseNode $n) { $o->setSourceLocation($n->getStringValue()); },
-            'sourcePort' => function (self $o, ParseNode $n) { $o->setSourcePort($n->getStringValue()); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(ConnectionStatus::class)); },
-            'urlParameters' => function (self $o, ParseNode $n) { $o->setUrlParameters($n->getStringValue()); },
+            'applicationName' => function (ParseNode $n) use ($o) { $o->setApplicationName($n->getStringValue()); },
+            'destinationAddress' => function (ParseNode $n) use ($o) { $o->setDestinationAddress($n->getStringValue()); },
+            'destinationDomain' => function (ParseNode $n) use ($o) { $o->setDestinationDomain($n->getStringValue()); },
+            'destinationLocation' => function (ParseNode $n) use ($o) { $o->setDestinationLocation($n->getStringValue()); },
+            'destinationPort' => function (ParseNode $n) use ($o) { $o->setDestinationPort($n->getStringValue()); },
+            'destinationUrl' => function (ParseNode $n) use ($o) { $o->setDestinationUrl($n->getStringValue()); },
+            'direction' => function (ParseNode $n) use ($o) { $o->setDirection($n->getEnumValue(ConnectionDirection::class)); },
+            'domainRegisteredDateTime' => function (ParseNode $n) use ($o) { $o->setDomainRegisteredDateTime($n->getDateTimeValue()); },
+            'localDnsName' => function (ParseNode $n) use ($o) { $o->setLocalDnsName($n->getStringValue()); },
+            'natDestinationAddress' => function (ParseNode $n) use ($o) { $o->setNatDestinationAddress($n->getStringValue()); },
+            'natDestinationPort' => function (ParseNode $n) use ($o) { $o->setNatDestinationPort($n->getStringValue()); },
+            'natSourceAddress' => function (ParseNode $n) use ($o) { $o->setNatSourceAddress($n->getStringValue()); },
+            'natSourcePort' => function (ParseNode $n) use ($o) { $o->setNatSourcePort($n->getStringValue()); },
+            'protocol' => function (ParseNode $n) use ($o) { $o->setProtocol($n->getEnumValue(SecurityNetworkProtocol::class)); },
+            'riskScore' => function (ParseNode $n) use ($o) { $o->setRiskScore($n->getStringValue()); },
+            'sourceAddress' => function (ParseNode $n) use ($o) { $o->setSourceAddress($n->getStringValue()); },
+            'sourceLocation' => function (ParseNode $n) use ($o) { $o->setSourceLocation($n->getStringValue()); },
+            'sourcePort' => function (ParseNode $n) use ($o) { $o->setSourcePort($n->getStringValue()); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(ConnectionStatus::class)); },
+            'urlParameters' => function (ParseNode $n) use ($o) { $o->setUrlParameters($n->getStringValue()); },
         ];
     }
 
@@ -323,7 +366,7 @@ class NetworkConnection implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the applicationName property value. Name of the application managing the network connection (for example, Facebook or SMTP).
+     * Sets the applicationName property value. Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
      *  @param string|null $value Value to set for the applicationName property.
     */
     public function setApplicationName(?string $value ): void {

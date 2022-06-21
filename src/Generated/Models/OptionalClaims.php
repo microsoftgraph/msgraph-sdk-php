@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class OptionalClaims implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<OptionalClaim>|null $accessToken The optional claims returned in the JWT access token. */
+    /**
+     * @var array<OptionalClaim>|null $accessToken The optional claims returned in the JWT access token.
+    */
     private ?array $accessToken = null;
     
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<OptionalClaim>|null $idToken The optional claims returned in the JWT ID token. */
+    /**
+     * @var array<OptionalClaim>|null $idToken The optional claims returned in the JWT ID token.
+    */
     private ?array $idToken = null;
     
-    /** @var array<OptionalClaim>|null $saml2Token The optional claims returned in the SAML token. */
+    /**
+     * @var array<OptionalClaim>|null $saml2Token The optional claims returned in the SAML token.
+    */
     private ?array $saml2Token = null;
     
     /**
@@ -33,7 +41,7 @@ class OptionalClaims implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return OptionalClaims
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): OptionalClaims {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): OptionalClaims {
         return new OptionalClaims();
     }
 
@@ -58,10 +66,11 @@ class OptionalClaims implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'accessToken' => function (self $o, ParseNode $n) { $o->setAccessToken($n->getCollectionOfObjectValues(OptionalClaim::class)); },
-            'idToken' => function (self $o, ParseNode $n) { $o->setIdToken($n->getCollectionOfObjectValues(OptionalClaim::class)); },
-            'saml2Token' => function (self $o, ParseNode $n) { $o->setSaml2Token($n->getCollectionOfObjectValues(OptionalClaim::class)); },
+            'accessToken' => function (ParseNode $n) use ($o) { $o->setAccessToken($n->getCollectionOfObjectValues(array(OptionalClaim::class, 'createFromDiscriminatorValue'))); },
+            'idToken' => function (ParseNode $n) use ($o) { $o->setIdToken($n->getCollectionOfObjectValues(array(OptionalClaim::class, 'createFromDiscriminatorValue'))); },
+            'saml2Token' => function (ParseNode $n) use ($o) { $o->setSaml2Token($n->getCollectionOfObjectValues(array(OptionalClaim::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

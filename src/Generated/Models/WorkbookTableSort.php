@@ -6,15 +6,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WorkbookTableSort extends Entity 
+class WorkbookTableSort extends Entity implements Parsable 
 {
-    /** @var array<WorkbookSortField>|null $fields Represents the current conditions used to last sort the table. Read-only. */
+    /**
+     * @var array<WorkbookSortField>|null $fields Represents the current conditions used to last sort the table. Read-only.
+    */
     private ?array $fields = null;
     
-    /** @var bool|null $matchCase Represents whether the casing impacted the last sort of the table. Read-only. */
+    /**
+     * @var bool|null $matchCase Represents whether the casing impacted the last sort of the table. Read-only.
+    */
     private ?bool $matchCase = null;
     
-    /** @var string|null $method Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only. */
+    /**
+     * @var string|null $method Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.
+    */
     private ?string $method = null;
     
     /**
@@ -29,7 +35,7 @@ class WorkbookTableSort extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookTableSort
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookTableSort {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookTableSort {
         return new WorkbookTableSort();
     }
 
@@ -38,10 +44,11 @@ class WorkbookTableSort extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'fields' => function (self $o, ParseNode $n) { $o->setFields($n->getCollectionOfObjectValues(WorkbookSortField::class)); },
-            'matchCase' => function (self $o, ParseNode $n) { $o->setMatchCase($n->getBooleanValue()); },
-            'method' => function (self $o, ParseNode $n) { $o->setMethod($n->getStringValue()); },
+            'fields' => function (ParseNode $n) use ($o) { $o->setFields($n->getCollectionOfObjectValues(array(WorkbookSortField::class, 'createFromDiscriminatorValue'))); },
+            'matchCase' => function (ParseNode $n) use ($o) { $o->setMatchCase($n->getBooleanValue()); },
+            'method' => function (ParseNode $n) use ($o) { $o->setMethod($n->getStringValue()); },
         ]);
     }
 
@@ -62,7 +69,7 @@ class WorkbookTableSort extends Entity
     }
 
     /**
-     * Gets the method property value. Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
+     * Gets the method property value. Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.
      * @return string|null
     */
     public function getMethod(): ?string {
@@ -97,7 +104,7 @@ class WorkbookTableSort extends Entity
     }
 
     /**
-     * Sets the method property value. Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
+     * Sets the method property value. Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.
      *  @param string|null $value Value to set for the method property.
     */
     public function setMethod(?string $value ): void {

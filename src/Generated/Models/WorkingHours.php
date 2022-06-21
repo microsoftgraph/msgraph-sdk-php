@@ -10,19 +10,29 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 
 class WorkingHours implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<DayOfWeek>|null $daysOfWeek The days of the week on which the user works. */
+    /**
+     * @var array<string>|null $daysOfWeek The days of the week on which the user works.
+    */
     private ?array $daysOfWeek = null;
     
-    /** @var Time|null $endTime The time of the day that the user stops working. */
+    /**
+     * @var Time|null $endTime The time of the day that the user stops working.
+    */
     private ?Time $endTime = null;
     
-    /** @var Time|null $startTime The time of the day that the user starts working. */
+    /**
+     * @var Time|null $startTime The time of the day that the user starts working.
+    */
     private ?Time $startTime = null;
     
-    /** @var TimeZoneBase|null $timeZone The time zone to which the working hours apply. */
+    /**
+     * @var TimeZoneBase|null $timeZone The time zone to which the working hours apply.
+    */
     private ?TimeZoneBase $timeZone = null;
     
     /**
@@ -37,7 +47,7 @@ class WorkingHours implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkingHours
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkingHours {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkingHours {
         return new WorkingHours();
     }
 
@@ -51,7 +61,7 @@ class WorkingHours implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the daysOfWeek property value. The days of the week on which the user works.
-     * @return array<DayOfWeek>|null
+     * @return array<string>|null
     */
     public function getDaysOfWeek(): ?array {
         return $this->daysOfWeek;
@@ -70,11 +80,12 @@ class WorkingHours implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'daysOfWeek' => function (self $o, ParseNode $n) { $o->setDaysOfWeek($n->getCollectionOfEnumValues(DayOfWeek::class)); },
-            'endTime' => function (self $o, ParseNode $n) { $o->setEndTime($n->getTimeValue()); },
-            'startTime' => function (self $o, ParseNode $n) { $o->setStartTime($n->getTimeValue()); },
-            'timeZone' => function (self $o, ParseNode $n) { $o->setTimeZone($n->getObjectValue(TimeZoneBase::class)); },
+            'daysOfWeek' => function (ParseNode $n) use ($o) { $o->setDaysOfWeek($n->getCollectionOfPrimitiveValues()); },
+            'endTime' => function (ParseNode $n) use ($o) { $o->setEndTime($n->getTimeValue()); },
+            'startTime' => function (ParseNode $n) use ($o) { $o->setStartTime($n->getTimeValue()); },
+            'timeZone' => function (ParseNode $n) use ($o) { $o->setTimeZone($n->getObjectValue(array(TimeZoneBase::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 
@@ -99,7 +110,7 @@ class WorkingHours implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfEnumValues('daysOfWeek', $this->daysOfWeek);
+        $writer->writeCollectionOfPrimitiveValues('daysOfWeek', $this->daysOfWeek);
         $writer->writeTimeValue('endTime', $this->endTime);
         $writer->writeTimeValue('startTime', $this->startTime);
         $writer->writeObjectValue('timeZone', $this->timeZone);
@@ -116,7 +127,7 @@ class WorkingHours implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the daysOfWeek property value. The days of the week on which the user works.
-     *  @param array<DayOfWeek>|null $value Value to set for the daysOfWeek property.
+     *  @param array<string>|null $value Value to set for the daysOfWeek property.
     */
     public function setDaysOfWeek(?array $value ): void {
         $this->daysOfWeek = $value;

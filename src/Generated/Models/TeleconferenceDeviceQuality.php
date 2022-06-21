@@ -9,37 +9,59 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $callChainId A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId. */
+    /**
+     * @var string|null $callChainId A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId.
+    */
     private ?string $callChainId = null;
     
-    /** @var string|null $cloudServiceDeploymentEnvironment A geo-region where the service is deployed, such as ProdNoam. */
+    /**
+     * @var string|null $cloudServiceDeploymentEnvironment A geo-region where the service is deployed, such as ProdNoam.
+    */
     private ?string $cloudServiceDeploymentEnvironment = null;
     
-    /** @var string|null $cloudServiceDeploymentId A unique deployment identifier assigned by Azure. */
+    /**
+     * @var string|null $cloudServiceDeploymentId A unique deployment identifier assigned by Azure.
+    */
     private ?string $cloudServiceDeploymentId = null;
     
-    /** @var string|null $cloudServiceInstanceName The Azure deployed cloud service instance name, such as FrontEnd_IN_3. */
+    /**
+     * @var string|null $cloudServiceInstanceName The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
+    */
     private ?string $cloudServiceInstanceName = null;
     
-    /** @var string|null $cloudServiceName The Azure deployed cloud service name, such as contoso.cloudapp.net. */
+    /**
+     * @var string|null $cloudServiceName The Azure deployed cloud service name, such as contoso.cloudapp.net.
+    */
     private ?string $cloudServiceName = null;
     
-    /** @var string|null $deviceDescription Any additional description, such as VTC Bldg 30/21. */
+    /**
+     * @var string|null $deviceDescription Any additional description, such as VTC Bldg 30/21.
+    */
     private ?string $deviceDescription = null;
     
-    /** @var string|null $deviceName The user media agent name, such as Cisco SX80. */
+    /**
+     * @var string|null $deviceName The user media agent name, such as Cisco SX80.
+    */
     private ?string $deviceName = null;
     
-    /** @var string|null $mediaLegId A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value. */
+    /**
+     * @var string|null $mediaLegId A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
+    */
     private ?string $mediaLegId = null;
     
-    /** @var array<TeleconferenceDeviceMediaQuality>|null $mediaQualityList The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality. */
+    /**
+     * @var array<TeleconferenceDeviceMediaQuality>|null $mediaQualityList The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality.
+    */
     private ?array $mediaQualityList = null;
     
-    /** @var string|null $participantId A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property. */
+    /**
+     * @var string|null $participantId A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
+    */
     private ?string $participantId = null;
     
     /**
@@ -54,7 +76,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TeleconferenceDeviceQuality
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TeleconferenceDeviceQuality {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TeleconferenceDeviceQuality {
         return new TeleconferenceDeviceQuality();
     }
 
@@ -127,17 +149,18 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'callChainId' => function (self $o, ParseNode $n) { $o->setCallChainId($n->getStringValue()); },
-            'cloudServiceDeploymentEnvironment' => function (self $o, ParseNode $n) { $o->setCloudServiceDeploymentEnvironment($n->getStringValue()); },
-            'cloudServiceDeploymentId' => function (self $o, ParseNode $n) { $o->setCloudServiceDeploymentId($n->getStringValue()); },
-            'cloudServiceInstanceName' => function (self $o, ParseNode $n) { $o->setCloudServiceInstanceName($n->getStringValue()); },
-            'cloudServiceName' => function (self $o, ParseNode $n) { $o->setCloudServiceName($n->getStringValue()); },
-            'deviceDescription' => function (self $o, ParseNode $n) { $o->setDeviceDescription($n->getStringValue()); },
-            'deviceName' => function (self $o, ParseNode $n) { $o->setDeviceName($n->getStringValue()); },
-            'mediaLegId' => function (self $o, ParseNode $n) { $o->setMediaLegId($n->getStringValue()); },
-            'mediaQualityList' => function (self $o, ParseNode $n) { $o->setMediaQualityList($n->getCollectionOfObjectValues(TeleconferenceDeviceMediaQuality::class)); },
-            'participantId' => function (self $o, ParseNode $n) { $o->setParticipantId($n->getStringValue()); },
+            'callChainId' => function (ParseNode $n) use ($o) { $o->setCallChainId($n->getStringValue()); },
+            'cloudServiceDeploymentEnvironment' => function (ParseNode $n) use ($o) { $o->setCloudServiceDeploymentEnvironment($n->getStringValue()); },
+            'cloudServiceDeploymentId' => function (ParseNode $n) use ($o) { $o->setCloudServiceDeploymentId($n->getStringValue()); },
+            'cloudServiceInstanceName' => function (ParseNode $n) use ($o) { $o->setCloudServiceInstanceName($n->getStringValue()); },
+            'cloudServiceName' => function (ParseNode $n) use ($o) { $o->setCloudServiceName($n->getStringValue()); },
+            'deviceDescription' => function (ParseNode $n) use ($o) { $o->setDeviceDescription($n->getStringValue()); },
+            'deviceName' => function (ParseNode $n) use ($o) { $o->setDeviceName($n->getStringValue()); },
+            'mediaLegId' => function (ParseNode $n) use ($o) { $o->setMediaLegId($n->getStringValue()); },
+            'mediaQualityList' => function (ParseNode $n) use ($o) { $o->setMediaQualityList($n->getCollectionOfObjectValues(array(TeleconferenceDeviceMediaQuality::class, 'createFromDiscriminatorValue'))); },
+            'participantId' => function (ParseNode $n) use ($o) { $o->setParticipantId($n->getStringValue()); },
         ];
     }
 

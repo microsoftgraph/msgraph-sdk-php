@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class TeamMessagingSettings implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $allowChannelMentions If set to true, @channel mentions are allowed. */
+    /**
+     * @var bool|null $allowChannelMentions If set to true, @channel mentions are allowed.
+    */
     private ?bool $allowChannelMentions = null;
     
-    /** @var bool|null $allowOwnerDeleteMessages If set to true, owners can delete any message. */
+    /**
+     * @var bool|null $allowOwnerDeleteMessages If set to true, owners can delete any message.
+    */
     private ?bool $allowOwnerDeleteMessages = null;
     
-    /** @var bool|null $allowTeamMentions If set to true, @team mentions are allowed. */
+    /**
+     * @var bool|null $allowTeamMentions If set to true, @team mentions are allowed.
+    */
     private ?bool $allowTeamMentions = null;
     
-    /** @var bool|null $allowUserDeleteMessages If set to true, users can delete their messages. */
+    /**
+     * @var bool|null $allowUserDeleteMessages If set to true, users can delete their messages.
+    */
     private ?bool $allowUserDeleteMessages = null;
     
-    /** @var bool|null $allowUserEditMessages If set to true, users can edit their messages. */
+    /**
+     * @var bool|null $allowUserEditMessages If set to true, users can edit their messages.
+    */
     private ?bool $allowUserEditMessages = null;
     
     /**
@@ -39,7 +51,7 @@ class TeamMessagingSettings implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return TeamMessagingSettings
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): TeamMessagingSettings {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): TeamMessagingSettings {
         return new TeamMessagingSettings();
     }
 
@@ -96,12 +108,13 @@ class TeamMessagingSettings implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'allowChannelMentions' => function (self $o, ParseNode $n) { $o->setAllowChannelMentions($n->getBooleanValue()); },
-            'allowOwnerDeleteMessages' => function (self $o, ParseNode $n) { $o->setAllowOwnerDeleteMessages($n->getBooleanValue()); },
-            'allowTeamMentions' => function (self $o, ParseNode $n) { $o->setAllowTeamMentions($n->getBooleanValue()); },
-            'allowUserDeleteMessages' => function (self $o, ParseNode $n) { $o->setAllowUserDeleteMessages($n->getBooleanValue()); },
-            'allowUserEditMessages' => function (self $o, ParseNode $n) { $o->setAllowUserEditMessages($n->getBooleanValue()); },
+            'allowChannelMentions' => function (ParseNode $n) use ($o) { $o->setAllowChannelMentions($n->getBooleanValue()); },
+            'allowOwnerDeleteMessages' => function (ParseNode $n) use ($o) { $o->setAllowOwnerDeleteMessages($n->getBooleanValue()); },
+            'allowTeamMentions' => function (ParseNode $n) use ($o) { $o->setAllowTeamMentions($n->getBooleanValue()); },
+            'allowUserDeleteMessages' => function (ParseNode $n) use ($o) { $o->setAllowUserDeleteMessages($n->getBooleanValue()); },
+            'allowUserEditMessages' => function (ParseNode $n) use ($o) { $o->setAllowUserEditMessages($n->getBooleanValue()); },
         ];
     }
 

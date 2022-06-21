@@ -6,10 +6,10 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class MdmWindowsInformationProtectionPolicy extends WindowsInformationProtection 
+class MdmWindowsInformationProtectionPolicy extends WindowsInformationProtection implements Parsable 
 {
     /**
-     * Instantiates a new mdmWindowsInformationProtectionPolicy and sets the default values.
+     * Instantiates a new MdmWindowsInformationProtectionPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -20,7 +20,7 @@ class MdmWindowsInformationProtectionPolicy extends WindowsInformationProtection
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return MdmWindowsInformationProtectionPolicy
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): MdmWindowsInformationProtectionPolicy {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): MdmWindowsInformationProtectionPolicy {
         return new MdmWindowsInformationProtectionPolicy();
     }
 
@@ -29,6 +29,7 @@ class MdmWindowsInformationProtectionPolicy extends WindowsInformationProtection
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

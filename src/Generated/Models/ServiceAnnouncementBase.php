@@ -7,21 +7,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ServiceAnnouncementBase extends Entity 
+class ServiceAnnouncementBase extends Entity implements Parsable 
 {
-    /** @var array<KeyValuePair>|null $details Additional details about service event. This property doesn't support filters. */
+    /**
+     * @var array<KeyValuePair>|null $details Additional details about service event. This property doesn't support filters.
+    */
     private ?array $details = null;
     
-    /** @var DateTime|null $endDateTime The end time of the service event. */
+    /**
+     * @var DateTime|null $endDateTime The end time of the service event.
+    */
     private ?DateTime $endDateTime = null;
     
-    /** @var DateTime|null $lastModifiedDateTime The last modified time of the service event. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime The last modified time of the service event.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var DateTime|null $startDateTime The start time of the service event. */
+    /**
+     * @var DateTime|null $startDateTime The start time of the service event.
+    */
     private ?DateTime $startDateTime = null;
     
-    /** @var string|null $title The title of the service event. */
+    /**
+     * @var string|null $title The title of the service event.
+    */
     private ?string $title = null;
     
     /**
@@ -36,7 +46,15 @@ class ServiceAnnouncementBase extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ServiceAnnouncementBase
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ServiceAnnouncementBase {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ServiceAnnouncementBase {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.serviceHealthIssue': return new ServiceHealthIssue();
+                case '#microsoft.graph.serviceUpdateMessage': return new ServiceUpdateMessage();
+            }
+        }
         return new ServiceAnnouncementBase();
     }
 
@@ -61,12 +79,13 @@ class ServiceAnnouncementBase extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'details' => function (self $o, ParseNode $n) { $o->setDetails($n->getCollectionOfObjectValues(KeyValuePair::class)); },
-            'endDateTime' => function (self $o, ParseNode $n) { $o->setEndDateTime($n->getDateTimeValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'startDateTime' => function (self $o, ParseNode $n) { $o->setStartDateTime($n->getDateTimeValue()); },
-            'title' => function (self $o, ParseNode $n) { $o->setTitle($n->getStringValue()); },
+            'details' => function (ParseNode $n) use ($o) { $o->setDetails($n->getCollectionOfObjectValues(array(KeyValuePair::class, 'createFromDiscriminatorValue'))); },
+            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
+            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getStringValue()); },
         ]);
     }
 

@@ -6,21 +6,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AttendanceRecord extends Entity 
+class AttendanceRecord extends Entity implements Parsable 
 {
-    /** @var array<AttendanceInterval>|null $attendanceIntervals List of time periods between joining and leaving a meeting. */
+    /**
+     * @var array<AttendanceInterval>|null $attendanceIntervals List of time periods between joining and leaving a meeting.
+    */
     private ?array $attendanceIntervals = null;
     
-    /** @var string|null $emailAddress Email address of the user associated with this atttendance record. */
+    /**
+     * @var string|null $emailAddress Email address of the user associated with this atttendance record.
+    */
     private ?string $emailAddress = null;
     
-    /** @var Identity|null $identity Identity of the user associated with this atttendance record. */
+    /**
+     * @var Identity|null $identity Identity of the user associated with this atttendance record.
+    */
     private ?Identity $identity = null;
     
-    /** @var string|null $role Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer. */
+    /**
+     * @var string|null $role Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
+    */
     private ?string $role = null;
     
-    /** @var int|null $totalAttendanceInSeconds Total duration of the attendances in seconds. */
+    /**
+     * @var int|null $totalAttendanceInSeconds Total duration of the attendances in seconds.
+    */
     private ?int $totalAttendanceInSeconds = null;
     
     /**
@@ -35,7 +45,7 @@ class AttendanceRecord extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AttendanceRecord
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AttendanceRecord {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AttendanceRecord {
         return new AttendanceRecord();
     }
 
@@ -60,12 +70,13 @@ class AttendanceRecord extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'attendanceIntervals' => function (self $o, ParseNode $n) { $o->setAttendanceIntervals($n->getCollectionOfObjectValues(AttendanceInterval::class)); },
-            'emailAddress' => function (self $o, ParseNode $n) { $o->setEmailAddress($n->getStringValue()); },
-            'identity' => function (self $o, ParseNode $n) { $o->setIdentity($n->getObjectValue(Identity::class)); },
-            'role' => function (self $o, ParseNode $n) { $o->setRole($n->getStringValue()); },
-            'totalAttendanceInSeconds' => function (self $o, ParseNode $n) { $o->setTotalAttendanceInSeconds($n->getIntegerValue()); },
+            'attendanceIntervals' => function (ParseNode $n) use ($o) { $o->setAttendanceIntervals($n->getCollectionOfObjectValues(array(AttendanceInterval::class, 'createFromDiscriminatorValue'))); },
+            'emailAddress' => function (ParseNode $n) use ($o) { $o->setEmailAddress($n->getStringValue()); },
+            'identity' => function (ParseNode $n) use ($o) { $o->setIdentity($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
+            'role' => function (ParseNode $n) use ($o) { $o->setRole($n->getStringValue()); },
+            'totalAttendanceInSeconds' => function (ParseNode $n) use ($o) { $o->setTotalAttendanceInSeconds($n->getIntegerValue()); },
         ]);
     }
 

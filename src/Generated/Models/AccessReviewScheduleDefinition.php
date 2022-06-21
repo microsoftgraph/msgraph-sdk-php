@@ -7,48 +7,81 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AccessReviewScheduleDefinition extends Entity 
+class AccessReviewScheduleDefinition extends Entity implements Parsable 
 {
-    /** @var array<AccessReviewNotificationRecipientItem>|null $additionalNotificationRecipients Defines the list of additional users or group members to be notified of the access review progress. */
+    /**
+     * @var array<AccessReviewNotificationRecipientItem>|null $additionalNotificationRecipients Defines the list of additional users or group members to be notified of the access review progress.
+    */
     private ?array $additionalNotificationRecipients = null;
     
-    /** @var UserIdentity|null $createdBy User who created this review. Read-only. */
+    /**
+     * @var UserIdentity|null $createdBy User who created this review. Read-only.
+    */
     private ?UserIdentity $createdBy = null;
     
-    /** @var DateTime|null $createdDateTime Timestamp when the access review series was created. Supports $select and $orderBy. Read-only. */
+    /**
+     * @var DateTime|null $createdDateTime Timestamp when the access review series was created. Supports $select. Read-only.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $descriptionForAdmins Description provided by review creators to provide more context of the review to admins. Supports $select. */
+    /**
+     * @var string|null $descriptionForAdmins Description provided by review creators to provide more context of the review to admins. Supports $select.
+    */
     private ?string $descriptionForAdmins = null;
     
-    /** @var string|null $descriptionForReviewers Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review. Email notifications support up to 256 characters. Supports $select. */
+    /**
+     * @var string|null $descriptionForReviewers Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review. Email notifications support up to 256 characters. Supports $select.
+    */
     private ?string $descriptionForReviewers = null;
     
-    /** @var string|null $displayName Name of the access review series. Supports $select and $orderBy. Required on create. */
+    /**
+     * @var string|null $displayName Name of the access review series. Supports $select and $orderBy. Required on create.
+    */
     private ?string $displayName = null;
     
-    /** @var array<AccessReviewReviewerScope>|null $fallbackReviewers This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. See accessReviewReviewerScope. Replaces backupReviewers. Supports $select. */
+    /**
+     * @var array<AccessReviewReviewerScope>|null $fallbackReviewers This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. See accessReviewReviewerScope. Replaces backupReviewers. Supports $select. NOTE: The value of this property will be ignored if fallback reviewers are assigned through the stageSettings property.
+    */
     private ?array $fallbackReviewers = null;
     
-    /** @var AccessReviewScope|null $instanceEnumerationScope This property is required when scoping a review to guest users' access across all Microsoft 365 groups and determines which Microsoft 365 groups are reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope. Supports $select. For examples of options for configuring instanceEnumerationScope, see Configure the scope of your access review definition using the Microsoft Graph API. */
+    /**
+     * @var AccessReviewScope|null $instanceEnumerationScope This property is required when scoping a review to guest users' access across all Microsoft 365 groups and determines which Microsoft 365 groups are reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope. Supports $select. For examples of options for configuring instanceEnumerationScope, see Configure the scope of your access review definition using the Microsoft Graph API.
+    */
     private ?AccessReviewScope $instanceEnumerationScope = null;
     
-    /** @var array<AccessReviewInstance>|null $instances If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence. */
+    /**
+     * @var array<AccessReviewInstance>|null $instances Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.
+    */
     private ?array $instances = null;
     
-    /** @var DateTime|null $lastModifiedDateTime Timestamp when the access review series was last modified. Supports $select. Read-only. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime Timestamp when the access review series was last modified. Supports $select. Read-only.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var array<AccessReviewReviewerScope>|null $reviewers This collection of access review scopes is used to define who are the reviewers. The reviewers property is only updatable if individual users are assigned as reviewers. Required on create. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. */
+    /**
+     * @var array<AccessReviewReviewerScope>|null $reviewers This collection of access review scopes is used to define who are the reviewers. The reviewers property is only updatable if individual users are assigned as reviewers. Required on create. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. NOTE: The value of this property will be ignored if reviewers are assigned through the stageSettings property.
+    */
     private ?array $reviewers = null;
     
-    /** @var AccessReviewScope|null $scope Defines the entities whose access is reviewed.  For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API. */
+    /**
+     * @var AccessReviewScope|null $scope Defines the entities whose access is reviewed. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.
+    */
     private ?AccessReviewScope $scope = null;
     
-    /** @var AccessReviewScheduleSettings|null $settings The settings for an access review series, see type definition below. Supports $select. Required on create. */
+    /**
+     * @var AccessReviewScheduleSettings|null $settings The settings for an access review series, see type definition below. Supports $select. Required on create.
+    */
     private ?AccessReviewScheduleSettings $settings = null;
     
-    /** @var string|null $status This read-only field specifies the status of an access review. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.  Supports $select, $orderby, and $filter (eq only). Read-only. */
+    /**
+     * @var array<AccessReviewStageSettings>|null $stageSettings Required only for a multi-stage access review to define the stages and their settings. You can break down each review instance into up to three sequential stages, where each stage can have a different set of reviewers, fallback reviewers, and settings. Stages will be created sequentially based on the dependsOn property. Optional.  When this property is defined, its settings are used instead of the corresponding settings in the accessReviewScheduleDefinition object and its settings, reviewers, and fallbackReviewers properties.
+    */
+    private ?array $stageSettings = null;
+    
+    /**
+     * @var string|null $status This read-only field specifies the status of an access review. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.  Supports $select, $orderby, and $filter (eq only). Read-only.
+    */
     private ?string $status = null;
     
     /**
@@ -63,7 +96,7 @@ class AccessReviewScheduleDefinition extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AccessReviewScheduleDefinition
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AccessReviewScheduleDefinition {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessReviewScheduleDefinition {
         return new AccessReviewScheduleDefinition();
     }
 
@@ -84,7 +117,7 @@ class AccessReviewScheduleDefinition extends Entity
     }
 
     /**
-     * Gets the createdDateTime property value. Timestamp when the access review series was created. Supports $select and $orderBy. Read-only.
+     * Gets the createdDateTime property value. Timestamp when the access review series was created. Supports $select. Read-only.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -116,7 +149,7 @@ class AccessReviewScheduleDefinition extends Entity
     }
 
     /**
-     * Gets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. See accessReviewReviewerScope. Replaces backupReviewers. Supports $select.
+     * Gets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. See accessReviewReviewerScope. Replaces backupReviewers. Supports $select. NOTE: The value of this property will be ignored if fallback reviewers are assigned through the stageSettings property.
      * @return array<AccessReviewReviewerScope>|null
     */
     public function getFallbackReviewers(): ?array {
@@ -128,21 +161,23 @@ class AccessReviewScheduleDefinition extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'additionalNotificationRecipients' => function (self $o, ParseNode $n) { $o->setAdditionalNotificationRecipients($n->getCollectionOfObjectValues(AccessReviewNotificationRecipientItem::class)); },
-            'createdBy' => function (self $o, ParseNode $n) { $o->setCreatedBy($n->getObjectValue(UserIdentity::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'descriptionForAdmins' => function (self $o, ParseNode $n) { $o->setDescriptionForAdmins($n->getStringValue()); },
-            'descriptionForReviewers' => function (self $o, ParseNode $n) { $o->setDescriptionForReviewers($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'fallbackReviewers' => function (self $o, ParseNode $n) { $o->setFallbackReviewers($n->getCollectionOfObjectValues(AccessReviewReviewerScope::class)); },
-            'instanceEnumerationScope' => function (self $o, ParseNode $n) { $o->setInstanceEnumerationScope($n->getObjectValue(AccessReviewScope::class)); },
-            'instances' => function (self $o, ParseNode $n) { $o->setInstances($n->getCollectionOfObjectValues(AccessReviewInstance::class)); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'reviewers' => function (self $o, ParseNode $n) { $o->setReviewers($n->getCollectionOfObjectValues(AccessReviewReviewerScope::class)); },
-            'scope' => function (self $o, ParseNode $n) { $o->setScope($n->getObjectValue(AccessReviewScope::class)); },
-            'settings' => function (self $o, ParseNode $n) { $o->setSettings($n->getObjectValue(AccessReviewScheduleSettings::class)); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getStringValue()); },
+            'additionalNotificationRecipients' => function (ParseNode $n) use ($o) { $o->setAdditionalNotificationRecipients($n->getCollectionOfObjectValues(array(AccessReviewNotificationRecipientItem::class, 'createFromDiscriminatorValue'))); },
+            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(UserIdentity::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'descriptionForAdmins' => function (ParseNode $n) use ($o) { $o->setDescriptionForAdmins($n->getStringValue()); },
+            'descriptionForReviewers' => function (ParseNode $n) use ($o) { $o->setDescriptionForReviewers($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'fallbackReviewers' => function (ParseNode $n) use ($o) { $o->setFallbackReviewers($n->getCollectionOfObjectValues(array(AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'))); },
+            'instanceEnumerationScope' => function (ParseNode $n) use ($o) { $o->setInstanceEnumerationScope($n->getObjectValue(array(AccessReviewScope::class, 'createFromDiscriminatorValue'))); },
+            'instances' => function (ParseNode $n) use ($o) { $o->setInstances($n->getCollectionOfObjectValues(array(AccessReviewInstance::class, 'createFromDiscriminatorValue'))); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'reviewers' => function (ParseNode $n) use ($o) { $o->setReviewers($n->getCollectionOfObjectValues(array(AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'))); },
+            'scope' => function (ParseNode $n) use ($o) { $o->setScope($n->getObjectValue(array(AccessReviewScope::class, 'createFromDiscriminatorValue'))); },
+            'settings' => function (ParseNode $n) use ($o) { $o->setSettings($n->getObjectValue(array(AccessReviewScheduleSettings::class, 'createFromDiscriminatorValue'))); },
+            'stageSettings' => function (ParseNode $n) use ($o) { $o->setStageSettings($n->getCollectionOfObjectValues(array(AccessReviewStageSettings::class, 'createFromDiscriminatorValue'))); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getStringValue()); },
         ]);
     }
 
@@ -155,7 +190,7 @@ class AccessReviewScheduleDefinition extends Entity
     }
 
     /**
-     * Gets the instances property value. If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.
+     * Gets the instances property value. Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.
      * @return array<AccessReviewInstance>|null
     */
     public function getInstances(): ?array {
@@ -171,7 +206,7 @@ class AccessReviewScheduleDefinition extends Entity
     }
 
     /**
-     * Gets the reviewers property value. This collection of access review scopes is used to define who are the reviewers. The reviewers property is only updatable if individual users are assigned as reviewers. Required on create. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.
+     * Gets the reviewers property value. This collection of access review scopes is used to define who are the reviewers. The reviewers property is only updatable if individual users are assigned as reviewers. Required on create. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. NOTE: The value of this property will be ignored if reviewers are assigned through the stageSettings property.
      * @return array<AccessReviewReviewerScope>|null
     */
     public function getReviewers(): ?array {
@@ -179,7 +214,7 @@ class AccessReviewScheduleDefinition extends Entity
     }
 
     /**
-     * Gets the scope property value. Defines the entities whose access is reviewed.  For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.
+     * Gets the scope property value. Defines the entities whose access is reviewed. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.
      * @return AccessReviewScope|null
     */
     public function getScope(): ?AccessReviewScope {
@@ -192,6 +227,14 @@ class AccessReviewScheduleDefinition extends Entity
     */
     public function getSettings(): ?AccessReviewScheduleSettings {
         return $this->settings;
+    }
+
+    /**
+     * Gets the stageSettings property value. Required only for a multi-stage access review to define the stages and their settings. You can break down each review instance into up to three sequential stages, where each stage can have a different set of reviewers, fallback reviewers, and settings. Stages will be created sequentially based on the dependsOn property. Optional.  When this property is defined, its settings are used instead of the corresponding settings in the accessReviewScheduleDefinition object and its settings, reviewers, and fallbackReviewers properties.
+     * @return array<AccessReviewStageSettings>|null
+    */
+    public function getStageSettings(): ?array {
+        return $this->stageSettings;
     }
 
     /**
@@ -221,6 +264,7 @@ class AccessReviewScheduleDefinition extends Entity
         $writer->writeCollectionOfObjectValues('reviewers', $this->reviewers);
         $writer->writeObjectValue('scope', $this->scope);
         $writer->writeObjectValue('settings', $this->settings);
+        $writer->writeCollectionOfObjectValues('stageSettings', $this->stageSettings);
         $writer->writeStringValue('status', $this->status);
     }
 
@@ -241,7 +285,7 @@ class AccessReviewScheduleDefinition extends Entity
     }
 
     /**
-     * Sets the createdDateTime property value. Timestamp when the access review series was created. Supports $select and $orderBy. Read-only.
+     * Sets the createdDateTime property value. Timestamp when the access review series was created. Supports $select. Read-only.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value ): void {
@@ -273,7 +317,7 @@ class AccessReviewScheduleDefinition extends Entity
     }
 
     /**
-     * Sets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. See accessReviewReviewerScope. Replaces backupReviewers. Supports $select.
+     * Sets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. See accessReviewReviewerScope. Replaces backupReviewers. Supports $select. NOTE: The value of this property will be ignored if fallback reviewers are assigned through the stageSettings property.
      *  @param array<AccessReviewReviewerScope>|null $value Value to set for the fallbackReviewers property.
     */
     public function setFallbackReviewers(?array $value ): void {
@@ -289,7 +333,7 @@ class AccessReviewScheduleDefinition extends Entity
     }
 
     /**
-     * Sets the instances property value. If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.
+     * Sets the instances property value. Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.
      *  @param array<AccessReviewInstance>|null $value Value to set for the instances property.
     */
     public function setInstances(?array $value ): void {
@@ -305,7 +349,7 @@ class AccessReviewScheduleDefinition extends Entity
     }
 
     /**
-     * Sets the reviewers property value. This collection of access review scopes is used to define who are the reviewers. The reviewers property is only updatable if individual users are assigned as reviewers. Required on create. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.
+     * Sets the reviewers property value. This collection of access review scopes is used to define who are the reviewers. The reviewers property is only updatable if individual users are assigned as reviewers. Required on create. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. NOTE: The value of this property will be ignored if reviewers are assigned through the stageSettings property.
      *  @param array<AccessReviewReviewerScope>|null $value Value to set for the reviewers property.
     */
     public function setReviewers(?array $value ): void {
@@ -313,7 +357,7 @@ class AccessReviewScheduleDefinition extends Entity
     }
 
     /**
-     * Sets the scope property value. Defines the entities whose access is reviewed.  For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.
+     * Sets the scope property value. Defines the entities whose access is reviewed. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.
      *  @param AccessReviewScope|null $value Value to set for the scope property.
     */
     public function setScope(?AccessReviewScope $value ): void {
@@ -326,6 +370,14 @@ class AccessReviewScheduleDefinition extends Entity
     */
     public function setSettings(?AccessReviewScheduleSettings $value ): void {
         $this->settings = $value;
+    }
+
+    /**
+     * Sets the stageSettings property value. Required only for a multi-stage access review to define the stages and their settings. You can break down each review instance into up to three sequential stages, where each stage can have a different set of reviewers, fallback reviewers, and settings. Stages will be created sequentially based on the dependsOn property. Optional.  When this property is defined, its settings are used instead of the corresponding settings in the accessReviewScheduleDefinition object and its settings, reviewers, and fallbackReviewers properties.
+     *  @param array<AccessReviewStageSettings>|null $value Value to set for the stageSettings property.
+    */
+    public function setStageSettings(?array $value ): void {
+        $this->stageSettings = $value;
     }
 
     /**

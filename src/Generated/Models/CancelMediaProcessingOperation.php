@@ -6,10 +6,10 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class CancelMediaProcessingOperation extends CommsOperation 
+class CancelMediaProcessingOperation extends CommsOperation implements Parsable 
 {
     /**
-     * Instantiates a new cancelMediaProcessingOperation and sets the default values.
+     * Instantiates a new CancelMediaProcessingOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -20,7 +20,7 @@ class CancelMediaProcessingOperation extends CommsOperation
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return CancelMediaProcessingOperation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): CancelMediaProcessingOperation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): CancelMediaProcessingOperation {
         return new CancelMediaProcessingOperation();
     }
 
@@ -29,6 +29,7 @@ class CancelMediaProcessingOperation extends CommsOperation
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

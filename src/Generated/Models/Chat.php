@@ -7,39 +7,61 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Chat extends Entity 
+class Chat extends Entity implements Parsable 
 {
-    /** @var ChatType|null $chatType Specifies the type of chat. Possible values are: group, oneOnOne, meeting, unknownFutureValue. */
+    /**
+     * @var ChatType|null $chatType Specifies the type of chat. Possible values are: group, oneOnOne, meeting, unknownFutureValue.
+    */
     private ?ChatType $chatType = null;
     
-    /** @var DateTime|null $createdDateTime Date and time at which the chat was created. Read-only. */
+    /**
+     * @var DateTime|null $createdDateTime Date and time at which the chat was created. Read-only.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var array<TeamsAppInstallation>|null $installedApps A collection of all the apps in the chat. Nullable. */
+    /**
+     * @var array<TeamsAppInstallation>|null $installedApps A collection of all the apps in the chat. Nullable.
+    */
     private ?array $installedApps = null;
     
-    /** @var DateTime|null $lastUpdatedDateTime Date and time at which the chat was renamed or list of members were last changed. Read-only. */
+    /**
+     * @var DateTime|null $lastUpdatedDateTime Date and time at which the chat was renamed or list of members were last changed. Read-only.
+    */
     private ?DateTime $lastUpdatedDateTime = null;
     
-    /** @var array<ConversationMember>|null $members A collection of all the members in the chat. Nullable. */
+    /**
+     * @var array<ConversationMember>|null $members A collection of all the members in the chat. Nullable.
+    */
     private ?array $members = null;
     
-    /** @var array<ChatMessage>|null $messages A collection of all the messages in the chat. Nullable. */
+    /**
+     * @var array<ChatMessage>|null $messages A collection of all the messages in the chat. Nullable.
+    */
     private ?array $messages = null;
     
-    /** @var TeamworkOnlineMeetingInfo|null $onlineMeetingInfo Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only. */
+    /**
+     * @var TeamworkOnlineMeetingInfo|null $onlineMeetingInfo Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
+    */
     private ?TeamworkOnlineMeetingInfo $onlineMeetingInfo = null;
     
-    /** @var array<TeamsTab>|null $tabs A collection of all the tabs in the chat. Nullable. */
+    /**
+     * @var array<TeamsTab>|null $tabs A collection of all the tabs in the chat. Nullable.
+    */
     private ?array $tabs = null;
     
-    /** @var string|null $tenantId The identifier of the tenant in which the chat was created. Read-only. */
+    /**
+     * @var string|null $tenantId The identifier of the tenant in which the chat was created. Read-only.
+    */
     private ?string $tenantId = null;
     
-    /** @var string|null $topic (Optional) Subject or topic for the chat. Only available for group chats. */
+    /**
+     * @var string|null $topic (Optional) Subject or topic for the chat. Only available for group chats.
+    */
     private ?string $topic = null;
     
-    /** @var string|null $webUrl The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only. */
+    /**
+     * @var string|null $webUrl The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only.
+    */
     private ?string $webUrl = null;
     
     /**
@@ -54,7 +76,7 @@ class Chat extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Chat
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Chat {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Chat {
         return new Chat();
     }
 
@@ -79,18 +101,19 @@ class Chat extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'chatType' => function (self $o, ParseNode $n) { $o->setChatType($n->getEnumValue(ChatType::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'installedApps' => function (self $o, ParseNode $n) { $o->setInstalledApps($n->getCollectionOfObjectValues(TeamsAppInstallation::class)); },
-            'lastUpdatedDateTime' => function (self $o, ParseNode $n) { $o->setLastUpdatedDateTime($n->getDateTimeValue()); },
-            'members' => function (self $o, ParseNode $n) { $o->setMembers($n->getCollectionOfObjectValues(ConversationMember::class)); },
-            'messages' => function (self $o, ParseNode $n) { $o->setMessages($n->getCollectionOfObjectValues(ChatMessage::class)); },
-            'onlineMeetingInfo' => function (self $o, ParseNode $n) { $o->setOnlineMeetingInfo($n->getObjectValue(TeamworkOnlineMeetingInfo::class)); },
-            'tabs' => function (self $o, ParseNode $n) { $o->setTabs($n->getCollectionOfObjectValues(TeamsTab::class)); },
-            'tenantId' => function (self $o, ParseNode $n) { $o->setTenantId($n->getStringValue()); },
-            'topic' => function (self $o, ParseNode $n) { $o->setTopic($n->getStringValue()); },
-            'webUrl' => function (self $o, ParseNode $n) { $o->setWebUrl($n->getStringValue()); },
+            'chatType' => function (ParseNode $n) use ($o) { $o->setChatType($n->getEnumValue(ChatType::class)); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'installedApps' => function (ParseNode $n) use ($o) { $o->setInstalledApps($n->getCollectionOfObjectValues(array(TeamsAppInstallation::class, 'createFromDiscriminatorValue'))); },
+            'lastUpdatedDateTime' => function (ParseNode $n) use ($o) { $o->setLastUpdatedDateTime($n->getDateTimeValue()); },
+            'members' => function (ParseNode $n) use ($o) { $o->setMembers($n->getCollectionOfObjectValues(array(ConversationMember::class, 'createFromDiscriminatorValue'))); },
+            'messages' => function (ParseNode $n) use ($o) { $o->setMessages($n->getCollectionOfObjectValues(array(ChatMessage::class, 'createFromDiscriminatorValue'))); },
+            'onlineMeetingInfo' => function (ParseNode $n) use ($o) { $o->setOnlineMeetingInfo($n->getObjectValue(array(TeamworkOnlineMeetingInfo::class, 'createFromDiscriminatorValue'))); },
+            'tabs' => function (ParseNode $n) use ($o) { $o->setTabs($n->getCollectionOfObjectValues(array(TeamsTab::class, 'createFromDiscriminatorValue'))); },
+            'tenantId' => function (ParseNode $n) use ($o) { $o->setTenantId($n->getStringValue()); },
+            'topic' => function (ParseNode $n) use ($o) { $o->setTopic($n->getStringValue()); },
+            'webUrl' => function (ParseNode $n) use ($o) { $o->setWebUrl($n->getStringValue()); },
         ]);
     }
 

@@ -7,45 +7,71 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ManagedEBook extends Entity 
+class ManagedEBook extends Entity implements Parsable 
 {
-    /** @var array<ManagedEBookAssignment>|null $assignments The list of assignments for this eBook. */
+    /**
+     * @var array<ManagedEBookAssignment>|null $assignments The list of assignments for this eBook.
+    */
     private ?array $assignments = null;
     
-    /** @var DateTime|null $createdDateTime The date and time when the eBook file was created. */
+    /**
+     * @var DateTime|null $createdDateTime The date and time when the eBook file was created.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $description Description. */
+    /**
+     * @var string|null $description Description.
+    */
     private ?string $description = null;
     
-    /** @var array<DeviceInstallState>|null $deviceStates The list of installation states for this eBook. */
+    /**
+     * @var array<DeviceInstallState>|null $deviceStates The list of installation states for this eBook.
+    */
     private ?array $deviceStates = null;
     
-    /** @var string|null $displayName Name of the eBook. */
+    /**
+     * @var string|null $displayName Name of the eBook.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $informationUrl The more information Url. */
+    /**
+     * @var string|null $informationUrl The more information Url.
+    */
     private ?string $informationUrl = null;
     
-    /** @var EBookInstallSummary|null $installSummary Mobile App Install Summary. */
+    /**
+     * @var EBookInstallSummary|null $installSummary Mobile App Install Summary.
+    */
     private ?EBookInstallSummary $installSummary = null;
     
-    /** @var MimeContent|null $largeCover Book cover. */
+    /**
+     * @var MimeContent|null $largeCover Book cover.
+    */
     private ?MimeContent $largeCover = null;
     
-    /** @var DateTime|null $lastModifiedDateTime The date and time when the eBook was last modified. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime The date and time when the eBook was last modified.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var string|null $privacyInformationUrl The privacy statement Url. */
+    /**
+     * @var string|null $privacyInformationUrl The privacy statement Url.
+    */
     private ?string $privacyInformationUrl = null;
     
-    /** @var DateTime|null $publishedDateTime The date and time when the eBook was published. */
+    /**
+     * @var DateTime|null $publishedDateTime The date and time when the eBook was published.
+    */
     private ?DateTime $publishedDateTime = null;
     
-    /** @var string|null $publisher Publisher. */
+    /**
+     * @var string|null $publisher Publisher.
+    */
     private ?string $publisher = null;
     
-    /** @var array<UserInstallStateSummary>|null $userStateSummary The list of installation states for this eBook. */
+    /**
+     * @var array<UserInstallStateSummary>|null $userStateSummary The list of installation states for this eBook.
+    */
     private ?array $userStateSummary = null;
     
     /**
@@ -60,7 +86,14 @@ class ManagedEBook extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ManagedEBook
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ManagedEBook {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedEBook {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.iosVppEBook': return new IosVppEBook();
+            }
+        }
         return new ManagedEBook();
     }
 
@@ -109,20 +142,21 @@ class ManagedEBook extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignments' => function (self $o, ParseNode $n) { $o->setAssignments($n->getCollectionOfObjectValues(ManagedEBookAssignment::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'deviceStates' => function (self $o, ParseNode $n) { $o->setDeviceStates($n->getCollectionOfObjectValues(DeviceInstallState::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'informationUrl' => function (self $o, ParseNode $n) { $o->setInformationUrl($n->getStringValue()); },
-            'installSummary' => function (self $o, ParseNode $n) { $o->setInstallSummary($n->getObjectValue(EBookInstallSummary::class)); },
-            'largeCover' => function (self $o, ParseNode $n) { $o->setLargeCover($n->getObjectValue(MimeContent::class)); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'privacyInformationUrl' => function (self $o, ParseNode $n) { $o->setPrivacyInformationUrl($n->getStringValue()); },
-            'publishedDateTime' => function (self $o, ParseNode $n) { $o->setPublishedDateTime($n->getDateTimeValue()); },
-            'publisher' => function (self $o, ParseNode $n) { $o->setPublisher($n->getStringValue()); },
-            'userStateSummary' => function (self $o, ParseNode $n) { $o->setUserStateSummary($n->getCollectionOfObjectValues(UserInstallStateSummary::class)); },
+            'assignments' => function (ParseNode $n) use ($o) { $o->setAssignments($n->getCollectionOfObjectValues(array(ManagedEBookAssignment::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'deviceStates' => function (ParseNode $n) use ($o) { $o->setDeviceStates($n->getCollectionOfObjectValues(array(DeviceInstallState::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'informationUrl' => function (ParseNode $n) use ($o) { $o->setInformationUrl($n->getStringValue()); },
+            'installSummary' => function (ParseNode $n) use ($o) { $o->setInstallSummary($n->getObjectValue(array(EBookInstallSummary::class, 'createFromDiscriminatorValue'))); },
+            'largeCover' => function (ParseNode $n) use ($o) { $o->setLargeCover($n->getObjectValue(array(MimeContent::class, 'createFromDiscriminatorValue'))); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'privacyInformationUrl' => function (ParseNode $n) use ($o) { $o->setPrivacyInformationUrl($n->getStringValue()); },
+            'publishedDateTime' => function (ParseNode $n) use ($o) { $o->setPublishedDateTime($n->getDateTimeValue()); },
+            'publisher' => function (ParseNode $n) use ($o) { $o->setPublisher($n->getStringValue()); },
+            'userStateSummary' => function (ParseNode $n) use ($o) { $o->setUserStateSummary($n->getCollectionOfObjectValues(array(UserInstallStateSummary::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

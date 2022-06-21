@@ -6,30 +6,46 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class PermissionGrantConditionSet extends Entity 
+class PermissionGrantConditionSet extends Entity implements Parsable 
 {
-    /** @var array<string>|null $clientApplicationIds A list of appId values for the client applications to match with, or a list with the single value all to match any client application. Default is the single value all. */
+    /**
+     * @var array<string>|null $clientApplicationIds A list of appId values for the client applications to match with, or a list with the single value all to match any client application. Default is the single value all.
+    */
     private ?array $clientApplicationIds = null;
     
-    /** @var array<string>|null $clientApplicationPublisherIds A list of Microsoft Partner Network (MPN) IDs for verified publishers of the client application, or a list with the single value all to match with client apps from any publisher. Default is the single value all. */
+    /**
+     * @var array<string>|null $clientApplicationPublisherIds A list of Microsoft Partner Network (MPN) IDs for verified publishers of the client application, or a list with the single value all to match with client apps from any publisher. Default is the single value all.
+    */
     private ?array $clientApplicationPublisherIds = null;
     
-    /** @var bool|null $clientApplicationsFromVerifiedPublisherOnly Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it does not have a verified publisher. Default is false. */
+    /**
+     * @var bool|null $clientApplicationsFromVerifiedPublisherOnly Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it does not have a verified publisher. Default is false.
+    */
     private ?bool $clientApplicationsFromVerifiedPublisherOnly = null;
     
-    /** @var array<string>|null $clientApplicationTenantIds A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all. */
+    /**
+     * @var array<string>|null $clientApplicationTenantIds A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
+    */
     private ?array $clientApplicationTenantIds = null;
     
-    /** @var string|null $permissionClassification The permission classification for the permission being granted, or all to match with any permission classification (including permissions which are not classified). Default is all. */
+    /**
+     * @var string|null $permissionClassification The permission classification for the permission being granted, or all to match with any permission classification (including permissions which are not classified). Default is all.
+    */
     private ?string $permissionClassification = null;
     
-    /** @var array<string>|null $permissions The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the oauth2PermissionScopes property of the API's **servicePrincipal** object. The id of application permissions can be found in the appRoles property of the API's **servicePrincipal** object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's **servicePrincipal** object. Default is the single value all. */
+    /**
+     * @var array<string>|null $permissions The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the publishedPermissionScopes property of the API's **servicePrincipal** object. The id of application permissions can be found in the appRoles property of the API's **servicePrincipal** object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's **servicePrincipal** object. Default is the single value all.
+    */
     private ?array $permissions = null;
     
-    /** @var PermissionType|null $permissionType The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consent—this value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required. */
+    /**
+     * @var PermissionType|null $permissionType The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consent—this value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
+    */
     private ?PermissionType $permissionType = null;
     
-    /** @var string|null $resourceApplication The appId of the resource application (e.g. the API) for which a permission is being granted, or any to match with any resource application or API. Default is any. */
+    /**
+     * @var string|null $resourceApplication The appId of the resource application (e.g. the API) for which a permission is being granted, or any to match with any resource application or API. Default is any.
+    */
     private ?string $resourceApplication = null;
     
     /**
@@ -44,7 +60,7 @@ class PermissionGrantConditionSet extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PermissionGrantConditionSet
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PermissionGrantConditionSet {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PermissionGrantConditionSet {
         return new PermissionGrantConditionSet();
     }
 
@@ -85,15 +101,16 @@ class PermissionGrantConditionSet extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'clientApplicationIds' => function (self $o, ParseNode $n) { $o->setClientApplicationIds($n->getCollectionOfPrimitiveValues()); },
-            'clientApplicationPublisherIds' => function (self $o, ParseNode $n) { $o->setClientApplicationPublisherIds($n->getCollectionOfPrimitiveValues()); },
-            'clientApplicationsFromVerifiedPublisherOnly' => function (self $o, ParseNode $n) { $o->setClientApplicationsFromVerifiedPublisherOnly($n->getBooleanValue()); },
-            'clientApplicationTenantIds' => function (self $o, ParseNode $n) { $o->setClientApplicationTenantIds($n->getCollectionOfPrimitiveValues()); },
-            'permissionClassification' => function (self $o, ParseNode $n) { $o->setPermissionClassification($n->getStringValue()); },
-            'permissions' => function (self $o, ParseNode $n) { $o->setPermissions($n->getCollectionOfPrimitiveValues()); },
-            'permissionType' => function (self $o, ParseNode $n) { $o->setPermissionType($n->getEnumValue(PermissionType::class)); },
-            'resourceApplication' => function (self $o, ParseNode $n) { $o->setResourceApplication($n->getStringValue()); },
+            'clientApplicationIds' => function (ParseNode $n) use ($o) { $o->setClientApplicationIds($n->getCollectionOfPrimitiveValues()); },
+            'clientApplicationPublisherIds' => function (ParseNode $n) use ($o) { $o->setClientApplicationPublisherIds($n->getCollectionOfPrimitiveValues()); },
+            'clientApplicationsFromVerifiedPublisherOnly' => function (ParseNode $n) use ($o) { $o->setClientApplicationsFromVerifiedPublisherOnly($n->getBooleanValue()); },
+            'clientApplicationTenantIds' => function (ParseNode $n) use ($o) { $o->setClientApplicationTenantIds($n->getCollectionOfPrimitiveValues()); },
+            'permissionClassification' => function (ParseNode $n) use ($o) { $o->setPermissionClassification($n->getStringValue()); },
+            'permissions' => function (ParseNode $n) use ($o) { $o->setPermissions($n->getCollectionOfPrimitiveValues()); },
+            'permissionType' => function (ParseNode $n) use ($o) { $o->setPermissionType($n->getEnumValue(PermissionType::class)); },
+            'resourceApplication' => function (ParseNode $n) use ($o) { $o->setResourceApplication($n->getStringValue()); },
         ]);
     }
 
@@ -106,7 +123,7 @@ class PermissionGrantConditionSet extends Entity
     }
 
     /**
-     * Gets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the oauth2PermissionScopes property of the API's **servicePrincipal** object. The id of application permissions can be found in the appRoles property of the API's **servicePrincipal** object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's **servicePrincipal** object. Default is the single value all.
+     * Gets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the publishedPermissionScopes property of the API's **servicePrincipal** object. The id of application permissions can be found in the appRoles property of the API's **servicePrincipal** object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's **servicePrincipal** object. Default is the single value all.
      * @return array<string>|null
     */
     public function getPermissions(): ?array {
@@ -186,7 +203,7 @@ class PermissionGrantConditionSet extends Entity
     }
 
     /**
-     * Sets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the oauth2PermissionScopes property of the API's **servicePrincipal** object. The id of application permissions can be found in the appRoles property of the API's **servicePrincipal** object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's **servicePrincipal** object. Default is the single value all.
+     * Sets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the publishedPermissionScopes property of the API's **servicePrincipal** object. The id of application permissions can be found in the appRoles property of the API's **servicePrincipal** object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's **servicePrincipal** object. Default is the single value all.
      *  @param array<string>|null $value Value to set for the permissions property.
     */
     public function setPermissions(?array $value ): void {

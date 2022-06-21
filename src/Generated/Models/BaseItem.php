@@ -7,39 +7,61 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class BaseItem extends Entity 
+class BaseItem extends Entity implements Parsable 
 {
-    /** @var IdentitySet|null $createdBy Identity of the user, device, or application which created the item. Read-only. */
+    /**
+     * @var IdentitySet|null $createdBy Identity of the user, device, or application which created the item. Read-only.
+    */
     private ?IdentitySet $createdBy = null;
     
-    /** @var User|null $createdByUser Identity of the user who created the item. Read-only. */
+    /**
+     * @var User|null $createdByUser Identity of the user who created the item. Read-only.
+    */
     private ?User $createdByUser = null;
     
-    /** @var DateTime|null $createdDateTime Date and time of item creation. Read-only. */
+    /**
+     * @var DateTime|null $createdDateTime Date and time of item creation. Read-only.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $description Provides a user-visible description of the item. Optional. */
+    /**
+     * @var string|null $description Provides a user-visible description of the item. Optional.
+    */
     private ?string $description = null;
     
-    /** @var string|null $eTag ETag for the item. Read-only. */
+    /**
+     * @var string|null $eTag ETag for the item. Read-only.
+    */
     private ?string $eTag = null;
     
-    /** @var IdentitySet|null $lastModifiedBy Identity of the user, device, and application which last modified the item. Read-only. */
+    /**
+     * @var IdentitySet|null $lastModifiedBy Identity of the user, device, and application which last modified the item. Read-only.
+    */
     private ?IdentitySet $lastModifiedBy = null;
     
-    /** @var User|null $lastModifiedByUser Identity of the user who last modified the item. Read-only. */
+    /**
+     * @var User|null $lastModifiedByUser Identity of the user who last modified the item. Read-only.
+    */
     private ?User $lastModifiedByUser = null;
     
-    /** @var DateTime|null $lastModifiedDateTime Date and time the item was last modified. Read-only. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime Date and time the item was last modified. Read-only.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var string|null $name The name of the item. Read-write. */
+    /**
+     * @var string|null $name The name of the item. Read-write.
+    */
     private ?string $name = null;
     
-    /** @var ItemReference|null $parentReference Parent information, if the item has a parent. Read-write. */
+    /**
+     * @var ItemReference|null $parentReference Parent information, if the item has a parent. Read-write.
+    */
     private ?ItemReference $parentReference = null;
     
-    /** @var string|null $webUrl URL that displays the resource in the browser. Read-only. */
+    /**
+     * @var string|null $webUrl URL that displays the resource in the browser. Read-only.
+    */
     private ?string $webUrl = null;
     
     /**
@@ -54,7 +76,19 @@ class BaseItem extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return BaseItem
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): BaseItem {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): BaseItem {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.drive': return new Drive();
+                case '#microsoft.graph.driveItem': return new DriveItem();
+                case '#microsoft.graph.list': return new EscapedList();
+                case '#microsoft.graph.listItem': return new ListItem();
+                case '#microsoft.graph.sharedDriveItem': return new SharedDriveItem();
+                case '#microsoft.graph.site': return new Site();
+            }
+        }
         return new BaseItem();
     }
 
@@ -103,18 +137,19 @@ class BaseItem extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdBy' => function (self $o, ParseNode $n) { $o->setCreatedBy($n->getObjectValue(IdentitySet::class)); },
-            'createdByUser' => function (self $o, ParseNode $n) { $o->setCreatedByUser($n->getObjectValue(User::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'eTag' => function (self $o, ParseNode $n) { $o->setETag($n->getStringValue()); },
-            'lastModifiedBy' => function (self $o, ParseNode $n) { $o->setLastModifiedBy($n->getObjectValue(IdentitySet::class)); },
-            'lastModifiedByUser' => function (self $o, ParseNode $n) { $o->setLastModifiedByUser($n->getObjectValue(User::class)); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'parentReference' => function (self $o, ParseNode $n) { $o->setParentReference($n->getObjectValue(ItemReference::class)); },
-            'webUrl' => function (self $o, ParseNode $n) { $o->setWebUrl($n->getStringValue()); },
+            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'createdByUser' => function (ParseNode $n) use ($o) { $o->setCreatedByUser($n->getObjectValue(array(User::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'eTag' => function (ParseNode $n) use ($o) { $o->setETag($n->getStringValue()); },
+            'lastModifiedBy' => function (ParseNode $n) use ($o) { $o->setLastModifiedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'lastModifiedByUser' => function (ParseNode $n) use ($o) { $o->setLastModifiedByUser($n->getObjectValue(array(User::class, 'createFromDiscriminatorValue'))); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'parentReference' => function (ParseNode $n) use ($o) { $o->setParentReference($n->getObjectValue(array(ItemReference::class, 'createFromDiscriminatorValue'))); },
+            'webUrl' => function (ParseNode $n) use ($o) { $o->setWebUrl($n->getStringValue()); },
         ]);
     }
 

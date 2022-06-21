@@ -9,10 +9,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ConditionalAccessSessionControl implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $isEnabled Specifies whether the session control is enabled. */
+    /**
+     * @var bool|null $isEnabled Specifies whether the session control is enabled.
+    */
     private ?bool $isEnabled = null;
     
     /**
@@ -27,7 +31,7 @@ class ConditionalAccessSessionControl implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ConditionalAccessSessionControl
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessSessionControl {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessSessionControl {
         return new ConditionalAccessSessionControl();
     }
 
@@ -44,8 +48,9 @@ class ConditionalAccessSessionControl implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'isEnabled' => function (self $o, ParseNode $n) { $o->setIsEnabled($n->getBooleanValue()); },
+            'isEnabled' => function (ParseNode $n) use ($o) { $o->setIsEnabled($n->getBooleanValue()); },
         ];
     }
 

@@ -7,51 +7,81 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class MobileApp extends Entity 
+class MobileApp extends Entity implements Parsable 
 {
-    /** @var array<MobileAppAssignment>|null $assignments The list of group assignments for this mobile app. */
+    /**
+     * @var array<MobileAppAssignment>|null $assignments The list of group assignments for this mobile app.
+    */
     private ?array $assignments = null;
     
-    /** @var array<MobileAppCategory>|null $categories The list of categories for this app. */
+    /**
+     * @var array<MobileAppCategory>|null $categories The list of categories for this app.
+    */
     private ?array $categories = null;
     
-    /** @var DateTime|null $createdDateTime The date and time the app was created. */
+    /**
+     * @var DateTime|null $createdDateTime The date and time the app was created.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $description The description of the app. */
+    /**
+     * @var string|null $description The description of the app.
+    */
     private ?string $description = null;
     
-    /** @var string|null $developer The developer of the app. */
+    /**
+     * @var string|null $developer The developer of the app.
+    */
     private ?string $developer = null;
     
-    /** @var string|null $displayName The admin provided or imported title of the app. */
+    /**
+     * @var string|null $displayName The admin provided or imported title of the app.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $informationUrl The more information Url. */
+    /**
+     * @var string|null $informationUrl The more information Url.
+    */
     private ?string $informationUrl = null;
     
-    /** @var bool|null $isFeatured The value indicating whether the app is marked as featured by the admin. */
+    /**
+     * @var bool|null $isFeatured The value indicating whether the app is marked as featured by the admin.
+    */
     private ?bool $isFeatured = null;
     
-    /** @var MimeContent|null $largeIcon The large icon, to be displayed in the app details and used for upload of the icon. */
+    /**
+     * @var MimeContent|null $largeIcon The large icon, to be displayed in the app details and used for upload of the icon.
+    */
     private ?MimeContent $largeIcon = null;
     
-    /** @var DateTime|null $lastModifiedDateTime The date and time the app was last modified. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime The date and time the app was last modified.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var string|null $notes Notes for the app. */
+    /**
+     * @var string|null $notes Notes for the app.
+    */
     private ?string $notes = null;
     
-    /** @var string|null $owner The owner of the app. */
+    /**
+     * @var string|null $owner The owner of the app.
+    */
     private ?string $owner = null;
     
-    /** @var string|null $privacyInformationUrl The privacy statement Url. */
+    /**
+     * @var string|null $privacyInformationUrl The privacy statement Url.
+    */
     private ?string $privacyInformationUrl = null;
     
-    /** @var string|null $publisher The publisher of the app. */
+    /**
+     * @var string|null $publisher The publisher of the app.
+    */
     private ?string $publisher = null;
     
-    /** @var MobileAppPublishingState|null $publishingState The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published. */
+    /**
+     * @var MobileAppPublishingState|null $publishingState The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published.
+    */
     private ?MobileAppPublishingState $publishingState = null;
     
     /**
@@ -66,7 +96,21 @@ class MobileApp extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return MobileApp
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): MobileApp {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): MobileApp {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.androidStoreApp': return new AndroidStoreApp();
+                case '#microsoft.graph.iosStoreApp': return new IosStoreApp();
+                case '#microsoft.graph.iosVppApp': return new IosVppApp();
+                case '#microsoft.graph.macOSOfficeSuiteApp': return new MacOSOfficeSuiteApp();
+                case '#microsoft.graph.managedApp': return new ManagedApp();
+                case '#microsoft.graph.microsoftStoreForBusinessApp': return new MicrosoftStoreForBusinessApp();
+                case '#microsoft.graph.mobileLobApp': return new MobileLobApp();
+                case '#microsoft.graph.webApp': return new WebApp();
+            }
+        }
         return new MobileApp();
     }
 
@@ -123,22 +167,23 @@ class MobileApp extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignments' => function (self $o, ParseNode $n) { $o->setAssignments($n->getCollectionOfObjectValues(MobileAppAssignment::class)); },
-            'categories' => function (self $o, ParseNode $n) { $o->setCategories($n->getCollectionOfObjectValues(MobileAppCategory::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'developer' => function (self $o, ParseNode $n) { $o->setDeveloper($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'informationUrl' => function (self $o, ParseNode $n) { $o->setInformationUrl($n->getStringValue()); },
-            'isFeatured' => function (self $o, ParseNode $n) { $o->setIsFeatured($n->getBooleanValue()); },
-            'largeIcon' => function (self $o, ParseNode $n) { $o->setLargeIcon($n->getObjectValue(MimeContent::class)); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'notes' => function (self $o, ParseNode $n) { $o->setNotes($n->getStringValue()); },
-            'owner' => function (self $o, ParseNode $n) { $o->setOwner($n->getStringValue()); },
-            'privacyInformationUrl' => function (self $o, ParseNode $n) { $o->setPrivacyInformationUrl($n->getStringValue()); },
-            'publisher' => function (self $o, ParseNode $n) { $o->setPublisher($n->getStringValue()); },
-            'publishingState' => function (self $o, ParseNode $n) { $o->setPublishingState($n->getEnumValue(MobileAppPublishingState::class)); },
+            'assignments' => function (ParseNode $n) use ($o) { $o->setAssignments($n->getCollectionOfObjectValues(array(MobileAppAssignment::class, 'createFromDiscriminatorValue'))); },
+            'categories' => function (ParseNode $n) use ($o) { $o->setCategories($n->getCollectionOfObjectValues(array(MobileAppCategory::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'developer' => function (ParseNode $n) use ($o) { $o->setDeveloper($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'informationUrl' => function (ParseNode $n) use ($o) { $o->setInformationUrl($n->getStringValue()); },
+            'isFeatured' => function (ParseNode $n) use ($o) { $o->setIsFeatured($n->getBooleanValue()); },
+            'largeIcon' => function (ParseNode $n) use ($o) { $o->setLargeIcon($n->getObjectValue(array(MimeContent::class, 'createFromDiscriminatorValue'))); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'notes' => function (ParseNode $n) use ($o) { $o->setNotes($n->getStringValue()); },
+            'owner' => function (ParseNode $n) use ($o) { $o->setOwner($n->getStringValue()); },
+            'privacyInformationUrl' => function (ParseNode $n) use ($o) { $o->setPrivacyInformationUrl($n->getStringValue()); },
+            'publisher' => function (ParseNode $n) use ($o) { $o->setPublisher($n->getStringValue()); },
+            'publishingState' => function (ParseNode $n) use ($o) { $o->setPublishingState($n->getEnumValue(MobileAppPublishingState::class)); },
         ]);
     }
 

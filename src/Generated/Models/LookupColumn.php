@@ -9,22 +9,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class LookupColumn implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $allowMultipleValues Indicates whether multiple values can be selected from the source. */
+    /**
+     * @var bool|null $allowMultipleValues Indicates whether multiple values can be selected from the source.
+    */
     private ?bool $allowMultipleValues = null;
     
-    /** @var bool|null $allowUnlimitedLength Indicates whether values in the column should be able to exceed the standard limit of 255 characters. */
+    /**
+     * @var bool|null $allowUnlimitedLength Indicates whether values in the column should be able to exceed the standard limit of 255 characters.
+    */
     private ?bool $allowUnlimitedLength = null;
     
-    /** @var string|null $columnName The name of the lookup source column. */
+    /**
+     * @var string|null $columnName The name of the lookup source column.
+    */
     private ?string $columnName = null;
     
-    /** @var string|null $listId The unique identifier of the lookup source list. */
+    /**
+     * @var string|null $listId The unique identifier of the lookup source list.
+    */
     private ?string $listId = null;
     
-    /** @var string|null $primaryLookupColumnId If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here. */
+    /**
+     * @var string|null $primaryLookupColumnId If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here.
+    */
     private ?string $primaryLookupColumnId = null;
     
     /**
@@ -39,7 +51,7 @@ class LookupColumn implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return LookupColumn
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): LookupColumn {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): LookupColumn {
         return new LookupColumn();
     }
 
@@ -80,12 +92,13 @@ class LookupColumn implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'allowMultipleValues' => function (self $o, ParseNode $n) { $o->setAllowMultipleValues($n->getBooleanValue()); },
-            'allowUnlimitedLength' => function (self $o, ParseNode $n) { $o->setAllowUnlimitedLength($n->getBooleanValue()); },
-            'columnName' => function (self $o, ParseNode $n) { $o->setColumnName($n->getStringValue()); },
-            'listId' => function (self $o, ParseNode $n) { $o->setListId($n->getStringValue()); },
-            'primaryLookupColumnId' => function (self $o, ParseNode $n) { $o->setPrimaryLookupColumnId($n->getStringValue()); },
+            'allowMultipleValues' => function (ParseNode $n) use ($o) { $o->setAllowMultipleValues($n->getBooleanValue()); },
+            'allowUnlimitedLength' => function (ParseNode $n) use ($o) { $o->setAllowUnlimitedLength($n->getBooleanValue()); },
+            'columnName' => function (ParseNode $n) use ($o) { $o->setColumnName($n->getStringValue()); },
+            'listId' => function (ParseNode $n) use ($o) { $o->setListId($n->getStringValue()); },
+            'primaryLookupColumnId' => function (ParseNode $n) use ($o) { $o->setPrimaryLookupColumnId($n->getStringValue()); },
         ];
     }
 

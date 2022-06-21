@@ -10,25 +10,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ShiftActivity implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $code Customer defined code for the shiftActivity. Required. */
+    /**
+     * @var string|null $code Customer defined code for the shiftActivity. Required.
+    */
     private ?string $code = null;
     
-    /** @var string|null $displayName The name of the shiftActivity. Required. */
+    /**
+     * @var string|null $displayName The name of the shiftActivity. Required.
+    */
     private ?string $displayName = null;
     
-    /** @var DateTime|null $endDateTime The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required. */
+    /**
+     * @var DateTime|null $endDateTime The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
+    */
     private ?DateTime $endDateTime = null;
     
-    /** @var bool|null $isPaid Indicates whether the microsoft.graph.user should be paid for the activity during their shift. Required. */
+    /**
+     * @var bool|null $isPaid Indicates whether the microsoft.graph.user should be paid for the activity during their shift. Required.
+    */
     private ?bool $isPaid = null;
     
-    /** @var DateTime|null $startDateTime The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required. */
+    /**
+     * @var DateTime|null $startDateTime The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
+    */
     private ?DateTime $startDateTime = null;
     
-    /** @var ScheduleEntityTheme|null $theme The theme property */
+    /**
+     * @var ScheduleEntityTheme|null $theme The theme property
+    */
     private ?ScheduleEntityTheme $theme = null;
     
     /**
@@ -43,7 +57,7 @@ class ShiftActivity implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ShiftActivity
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ShiftActivity {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ShiftActivity {
         return new ShiftActivity();
     }
 
@@ -84,13 +98,14 @@ class ShiftActivity implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'code' => function (self $o, ParseNode $n) { $o->setCode($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'endDateTime' => function (self $o, ParseNode $n) { $o->setEndDateTime($n->getDateTimeValue()); },
-            'isPaid' => function (self $o, ParseNode $n) { $o->setIsPaid($n->getBooleanValue()); },
-            'startDateTime' => function (self $o, ParseNode $n) { $o->setStartDateTime($n->getDateTimeValue()); },
-            'theme' => function (self $o, ParseNode $n) { $o->setTheme($n->getEnumValue(ScheduleEntityTheme::class)); },
+            'code' => function (ParseNode $n) use ($o) { $o->setCode($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
+            'isPaid' => function (ParseNode $n) use ($o) { $o->setIsPaid($n->getBooleanValue()); },
+            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
+            'theme' => function (ParseNode $n) use ($o) { $o->setTheme($n->getEnumValue(ScheduleEntityTheme::class)); },
         ];
     }
 

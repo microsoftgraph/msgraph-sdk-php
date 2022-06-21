@@ -7,121 +7,195 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Contact extends OutlookItem 
+class Contact extends OutlookItem implements Parsable 
 {
-    /** @var string|null $assistantName The name of the contact's assistant. */
+    /**
+     * @var string|null $assistantName The name of the contact's assistant.
+    */
     private ?string $assistantName = null;
     
-    /** @var DateTime|null $birthday The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $birthday The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $birthday = null;
     
-    /** @var PhysicalAddress|null $businessAddress The contact's business address. */
+    /**
+     * @var PhysicalAddress|null $businessAddress The contact's business address.
+    */
     private ?PhysicalAddress $businessAddress = null;
     
-    /** @var string|null $businessHomePage The business home page of the contact. */
+    /**
+     * @var string|null $businessHomePage The business home page of the contact.
+    */
     private ?string $businessHomePage = null;
     
-    /** @var array<string>|null $businessPhones The contact's business phone numbers. */
+    /**
+     * @var array<string>|null $businessPhones The contact's business phone numbers.
+    */
     private ?array $businessPhones = null;
     
-    /** @var array<string>|null $children The names of the contact's children. */
+    /**
+     * @var array<string>|null $children The names of the contact's children.
+    */
     private ?array $children = null;
     
-    /** @var string|null $companyName The name of the contact's company. */
+    /**
+     * @var string|null $companyName The name of the contact's company.
+    */
     private ?string $companyName = null;
     
-    /** @var string|null $department The contact's department. */
+    /**
+     * @var string|null $department The contact's department.
+    */
     private ?string $department = null;
     
-    /** @var string|null $displayName The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation. */
+    /**
+     * @var string|null $displayName The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
+    */
     private ?string $displayName = null;
     
-    /** @var array<EmailAddress>|null $emailAddresses The contact's email addresses. */
+    /**
+     * @var array<EmailAddress>|null $emailAddresses The contact's email addresses.
+    */
     private ?array $emailAddresses = null;
     
-    /** @var array<Extension>|null $extensions The collection of open extensions defined for the contact. Read-only. Nullable. */
+    /**
+     * @var array<Extension>|null $extensions The collection of open extensions defined for the contact. Nullable.
+    */
     private ?array $extensions = null;
     
-    /** @var string|null $fileAs The name the contact is filed under. */
+    /**
+     * @var string|null $fileAs The name the contact is filed under.
+    */
     private ?string $fileAs = null;
     
-    /** @var string|null $generation The contact's generation. */
+    /**
+     * @var string|null $generation The contact's generation.
+    */
     private ?string $generation = null;
     
-    /** @var string|null $givenName The contact's given name. */
+    /**
+     * @var string|null $givenName The contact's given name.
+    */
     private ?string $givenName = null;
     
-    /** @var PhysicalAddress|null $homeAddress The contact's home address. */
+    /**
+     * @var PhysicalAddress|null $homeAddress The contact's home address.
+    */
     private ?PhysicalAddress $homeAddress = null;
     
-    /** @var array<string>|null $homePhones The contact's home phone numbers. */
+    /**
+     * @var array<string>|null $homePhones The contact's home phone numbers.
+    */
     private ?array $homePhones = null;
     
-    /** @var array<string>|null $imAddresses The imAddresses property */
+    /**
+     * @var array<string>|null $imAddresses The imAddresses property
+    */
     private ?array $imAddresses = null;
     
-    /** @var string|null $initials The initials property */
+    /**
+     * @var string|null $initials The initials property
+    */
     private ?string $initials = null;
     
-    /** @var string|null $jobTitle The jobTitle property */
+    /**
+     * @var string|null $jobTitle The jobTitle property
+    */
     private ?string $jobTitle = null;
     
-    /** @var string|null $manager The manager property */
+    /**
+     * @var string|null $manager The manager property
+    */
     private ?string $manager = null;
     
-    /** @var string|null $middleName The middleName property */
+    /**
+     * @var string|null $middleName The middleName property
+    */
     private ?string $middleName = null;
     
-    /** @var string|null $mobilePhone The mobilePhone property */
+    /**
+     * @var string|null $mobilePhone The mobilePhone property
+    */
     private ?string $mobilePhone = null;
     
-    /** @var array<MultiValueLegacyExtendedProperty>|null $multiValueExtendedProperties The collection of multi-value extended properties defined for the contact. Read-only. Nullable. */
+    /**
+     * @var array<MultiValueLegacyExtendedProperty>|null $multiValueExtendedProperties The collection of multi-value extended properties defined for the contact. Read-only. Nullable.
+    */
     private ?array $multiValueExtendedProperties = null;
     
-    /** @var string|null $nickName The nickName property */
+    /**
+     * @var string|null $nickName The nickName property
+    */
     private ?string $nickName = null;
     
-    /** @var string|null $officeLocation The officeLocation property */
+    /**
+     * @var string|null $officeLocation The officeLocation property
+    */
     private ?string $officeLocation = null;
     
-    /** @var PhysicalAddress|null $otherAddress The otherAddress property */
+    /**
+     * @var PhysicalAddress|null $otherAddress The otherAddress property
+    */
     private ?PhysicalAddress $otherAddress = null;
     
-    /** @var string|null $parentFolderId The parentFolderId property */
+    /**
+     * @var string|null $parentFolderId The parentFolderId property
+    */
     private ?string $parentFolderId = null;
     
-    /** @var string|null $personalNotes The personalNotes property */
+    /**
+     * @var string|null $personalNotes The personalNotes property
+    */
     private ?string $personalNotes = null;
     
-    /** @var ProfilePhoto|null $photo Optional contact picture. You can get or set a photo for a contact. */
+    /**
+     * @var ProfilePhoto|null $photo Optional contact picture. You can get or set a photo for a contact.
+    */
     private ?ProfilePhoto $photo = null;
     
-    /** @var string|null $profession The profession property */
+    /**
+     * @var string|null $profession The profession property
+    */
     private ?string $profession = null;
     
-    /** @var array<SingleValueLegacyExtendedProperty>|null $singleValueExtendedProperties The collection of single-value extended properties defined for the contact. Read-only. Nullable. */
+    /**
+     * @var array<SingleValueLegacyExtendedProperty>|null $singleValueExtendedProperties The collection of single-value extended properties defined for the contact. Read-only. Nullable.
+    */
     private ?array $singleValueExtendedProperties = null;
     
-    /** @var string|null $spouseName The spouseName property */
+    /**
+     * @var string|null $spouseName The spouseName property
+    */
     private ?string $spouseName = null;
     
-    /** @var string|null $surname The surname property */
+    /**
+     * @var string|null $surname The surname property
+    */
     private ?string $surname = null;
     
-    /** @var string|null $title The title property */
+    /**
+     * @var string|null $title The title property
+    */
     private ?string $title = null;
     
-    /** @var string|null $yomiCompanyName The yomiCompanyName property */
+    /**
+     * @var string|null $yomiCompanyName The yomiCompanyName property
+    */
     private ?string $yomiCompanyName = null;
     
-    /** @var string|null $yomiGivenName The yomiGivenName property */
+    /**
+     * @var string|null $yomiGivenName The yomiGivenName property
+    */
     private ?string $yomiGivenName = null;
     
-    /** @var string|null $yomiSurname The yomiSurname property */
+    /**
+     * @var string|null $yomiSurname The yomiSurname property
+    */
     private ?string $yomiSurname = null;
     
     /**
-     * Instantiates a new contact and sets the default values.
+     * Instantiates a new Contact and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -132,7 +206,7 @@ class Contact extends OutlookItem
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Contact
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Contact {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Contact {
         return new Contact();
     }
 
@@ -217,7 +291,7 @@ class Contact extends OutlookItem
     }
 
     /**
-     * Gets the extensions property value. The collection of open extensions defined for the contact. Read-only. Nullable.
+     * Gets the extensions property value. The collection of open extensions defined for the contact. Nullable.
      * @return array<Extension>|null
     */
     public function getExtensions(): ?array {
@@ -229,44 +303,45 @@ class Contact extends OutlookItem
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assistantName' => function (self $o, ParseNode $n) { $o->setAssistantName($n->getStringValue()); },
-            'birthday' => function (self $o, ParseNode $n) { $o->setBirthday($n->getDateTimeValue()); },
-            'businessAddress' => function (self $o, ParseNode $n) { $o->setBusinessAddress($n->getObjectValue(PhysicalAddress::class)); },
-            'businessHomePage' => function (self $o, ParseNode $n) { $o->setBusinessHomePage($n->getStringValue()); },
-            'businessPhones' => function (self $o, ParseNode $n) { $o->setBusinessPhones($n->getCollectionOfPrimitiveValues()); },
-            'children' => function (self $o, ParseNode $n) { $o->setChildren($n->getCollectionOfPrimitiveValues()); },
-            'companyName' => function (self $o, ParseNode $n) { $o->setCompanyName($n->getStringValue()); },
-            'department' => function (self $o, ParseNode $n) { $o->setDepartment($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'emailAddresses' => function (self $o, ParseNode $n) { $o->setEmailAddresses($n->getCollectionOfObjectValues(EmailAddress::class)); },
-            'extensions' => function (self $o, ParseNode $n) { $o->setExtensions($n->getCollectionOfObjectValues(Extension::class)); },
-            'fileAs' => function (self $o, ParseNode $n) { $o->setFileAs($n->getStringValue()); },
-            'generation' => function (self $o, ParseNode $n) { $o->setGeneration($n->getStringValue()); },
-            'givenName' => function (self $o, ParseNode $n) { $o->setGivenName($n->getStringValue()); },
-            'homeAddress' => function (self $o, ParseNode $n) { $o->setHomeAddress($n->getObjectValue(PhysicalAddress::class)); },
-            'homePhones' => function (self $o, ParseNode $n) { $o->setHomePhones($n->getCollectionOfPrimitiveValues()); },
-            'imAddresses' => function (self $o, ParseNode $n) { $o->setImAddresses($n->getCollectionOfPrimitiveValues()); },
-            'initials' => function (self $o, ParseNode $n) { $o->setInitials($n->getStringValue()); },
-            'jobTitle' => function (self $o, ParseNode $n) { $o->setJobTitle($n->getStringValue()); },
-            'manager' => function (self $o, ParseNode $n) { $o->setManager($n->getStringValue()); },
-            'middleName' => function (self $o, ParseNode $n) { $o->setMiddleName($n->getStringValue()); },
-            'mobilePhone' => function (self $o, ParseNode $n) { $o->setMobilePhone($n->getStringValue()); },
-            'multiValueExtendedProperties' => function (self $o, ParseNode $n) { $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::class)); },
-            'nickName' => function (self $o, ParseNode $n) { $o->setNickName($n->getStringValue()); },
-            'officeLocation' => function (self $o, ParseNode $n) { $o->setOfficeLocation($n->getStringValue()); },
-            'otherAddress' => function (self $o, ParseNode $n) { $o->setOtherAddress($n->getObjectValue(PhysicalAddress::class)); },
-            'parentFolderId' => function (self $o, ParseNode $n) { $o->setParentFolderId($n->getStringValue()); },
-            'personalNotes' => function (self $o, ParseNode $n) { $o->setPersonalNotes($n->getStringValue()); },
-            'photo' => function (self $o, ParseNode $n) { $o->setPhoto($n->getObjectValue(ProfilePhoto::class)); },
-            'profession' => function (self $o, ParseNode $n) { $o->setProfession($n->getStringValue()); },
-            'singleValueExtendedProperties' => function (self $o, ParseNode $n) { $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::class)); },
-            'spouseName' => function (self $o, ParseNode $n) { $o->setSpouseName($n->getStringValue()); },
-            'surname' => function (self $o, ParseNode $n) { $o->setSurname($n->getStringValue()); },
-            'title' => function (self $o, ParseNode $n) { $o->setTitle($n->getStringValue()); },
-            'yomiCompanyName' => function (self $o, ParseNode $n) { $o->setYomiCompanyName($n->getStringValue()); },
-            'yomiGivenName' => function (self $o, ParseNode $n) { $o->setYomiGivenName($n->getStringValue()); },
-            'yomiSurname' => function (self $o, ParseNode $n) { $o->setYomiSurname($n->getStringValue()); },
+            'assistantName' => function (ParseNode $n) use ($o) { $o->setAssistantName($n->getStringValue()); },
+            'birthday' => function (ParseNode $n) use ($o) { $o->setBirthday($n->getDateTimeValue()); },
+            'businessAddress' => function (ParseNode $n) use ($o) { $o->setBusinessAddress($n->getObjectValue(array(PhysicalAddress::class, 'createFromDiscriminatorValue'))); },
+            'businessHomePage' => function (ParseNode $n) use ($o) { $o->setBusinessHomePage($n->getStringValue()); },
+            'businessPhones' => function (ParseNode $n) use ($o) { $o->setBusinessPhones($n->getCollectionOfPrimitiveValues()); },
+            'children' => function (ParseNode $n) use ($o) { $o->setChildren($n->getCollectionOfPrimitiveValues()); },
+            'companyName' => function (ParseNode $n) use ($o) { $o->setCompanyName($n->getStringValue()); },
+            'department' => function (ParseNode $n) use ($o) { $o->setDepartment($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'emailAddresses' => function (ParseNode $n) use ($o) { $o->setEmailAddresses($n->getCollectionOfObjectValues(array(EmailAddress::class, 'createFromDiscriminatorValue'))); },
+            'extensions' => function (ParseNode $n) use ($o) { $o->setExtensions($n->getCollectionOfObjectValues(array(Extension::class, 'createFromDiscriminatorValue'))); },
+            'fileAs' => function (ParseNode $n) use ($o) { $o->setFileAs($n->getStringValue()); },
+            'generation' => function (ParseNode $n) use ($o) { $o->setGeneration($n->getStringValue()); },
+            'givenName' => function (ParseNode $n) use ($o) { $o->setGivenName($n->getStringValue()); },
+            'homeAddress' => function (ParseNode $n) use ($o) { $o->setHomeAddress($n->getObjectValue(array(PhysicalAddress::class, 'createFromDiscriminatorValue'))); },
+            'homePhones' => function (ParseNode $n) use ($o) { $o->setHomePhones($n->getCollectionOfPrimitiveValues()); },
+            'imAddresses' => function (ParseNode $n) use ($o) { $o->setImAddresses($n->getCollectionOfPrimitiveValues()); },
+            'initials' => function (ParseNode $n) use ($o) { $o->setInitials($n->getStringValue()); },
+            'jobTitle' => function (ParseNode $n) use ($o) { $o->setJobTitle($n->getStringValue()); },
+            'manager' => function (ParseNode $n) use ($o) { $o->setManager($n->getStringValue()); },
+            'middleName' => function (ParseNode $n) use ($o) { $o->setMiddleName($n->getStringValue()); },
+            'mobilePhone' => function (ParseNode $n) use ($o) { $o->setMobilePhone($n->getStringValue()); },
+            'multiValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues(array(MultiValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
+            'nickName' => function (ParseNode $n) use ($o) { $o->setNickName($n->getStringValue()); },
+            'officeLocation' => function (ParseNode $n) use ($o) { $o->setOfficeLocation($n->getStringValue()); },
+            'otherAddress' => function (ParseNode $n) use ($o) { $o->setOtherAddress($n->getObjectValue(array(PhysicalAddress::class, 'createFromDiscriminatorValue'))); },
+            'parentFolderId' => function (ParseNode $n) use ($o) { $o->setParentFolderId($n->getStringValue()); },
+            'personalNotes' => function (ParseNode $n) use ($o) { $o->setPersonalNotes($n->getStringValue()); },
+            'photo' => function (ParseNode $n) use ($o) { $o->setPhoto($n->getObjectValue(array(ProfilePhoto::class, 'createFromDiscriminatorValue'))); },
+            'profession' => function (ParseNode $n) use ($o) { $o->setProfession($n->getStringValue()); },
+            'singleValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues(array(SingleValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
+            'spouseName' => function (ParseNode $n) use ($o) { $o->setSpouseName($n->getStringValue()); },
+            'surname' => function (ParseNode $n) use ($o) { $o->setSurname($n->getStringValue()); },
+            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getStringValue()); },
+            'yomiCompanyName' => function (ParseNode $n) use ($o) { $o->setYomiCompanyName($n->getStringValue()); },
+            'yomiGivenName' => function (ParseNode $n) use ($o) { $o->setYomiGivenName($n->getStringValue()); },
+            'yomiSurname' => function (ParseNode $n) use ($o) { $o->setYomiSurname($n->getStringValue()); },
         ]);
     }
 
@@ -604,7 +679,7 @@ class Contact extends OutlookItem
     }
 
     /**
-     * Sets the extensions property value. The collection of open extensions defined for the contact. Read-only. Nullable.
+     * Sets the extensions property value. The collection of open extensions defined for the contact. Nullable.
      *  @param array<Extension>|null $value Value to set for the extensions property.
     */
     public function setExtensions(?array $value ): void {

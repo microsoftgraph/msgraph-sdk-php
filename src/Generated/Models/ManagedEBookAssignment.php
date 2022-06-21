@@ -6,12 +6,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ManagedEBookAssignment extends Entity 
+class ManagedEBookAssignment extends Entity implements Parsable 
 {
-    /** @var InstallIntent|null $installIntent The install intent for eBook. Possible values are: available, required, uninstall, availableWithoutEnrollment. */
+    /**
+     * @var InstallIntent|null $installIntent The install intent for eBook. Possible values are: available, required, uninstall, availableWithoutEnrollment.
+    */
     private ?InstallIntent $installIntent = null;
     
-    /** @var DeviceAndAppManagementAssignmentTarget|null $target The assignment target for eBook. */
+    /**
+     * @var DeviceAndAppManagementAssignmentTarget|null $target The assignment target for eBook.
+    */
     private ?DeviceAndAppManagementAssignmentTarget $target = null;
     
     /**
@@ -26,7 +30,14 @@ class ManagedEBookAssignment extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ManagedEBookAssignment
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ManagedEBookAssignment {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedEBookAssignment {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.iosVppEBookAssignment': return new IosVppEBookAssignment();
+            }
+        }
         return new ManagedEBookAssignment();
     }
 
@@ -35,9 +46,10 @@ class ManagedEBookAssignment extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'installIntent' => function (self $o, ParseNode $n) { $o->setInstallIntent($n->getEnumValue(InstallIntent::class)); },
-            'target' => function (self $o, ParseNode $n) { $o->setTarget($n->getObjectValue(DeviceAndAppManagementAssignmentTarget::class)); },
+            'installIntent' => function (ParseNode $n) use ($o) { $o->setInstallIntent($n->getEnumValue(InstallIntent::class)); },
+            'target' => function (ParseNode $n) use ($o) { $o->setTarget($n->getObjectValue(array(DeviceAndAppManagementAssignmentTarget::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

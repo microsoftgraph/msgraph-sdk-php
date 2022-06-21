@@ -6,66 +6,106 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class EducationClass extends Entity 
+class EducationClass extends Entity implements Parsable 
 {
-    /** @var array<EducationCategory>|null $assignmentCategories The assignmentCategories property */
+    /**
+     * @var array<EducationCategory>|null $assignmentCategories All categories associated with this class. Nullable.
+    */
     private ?array $assignmentCategories = null;
     
-    /** @var EducationAssignmentDefaults|null $assignmentDefaults The assignmentDefaults property */
+    /**
+     * @var EducationAssignmentDefaults|null $assignmentDefaults Specifies class-level defaults respected by new assignments created in the class.
+    */
     private ?EducationAssignmentDefaults $assignmentDefaults = null;
     
-    /** @var array<EducationAssignment>|null $assignments All assignments associated with this class. Nullable. */
+    /**
+     * @var array<EducationAssignment>|null $assignments All assignments associated with this class. Nullable.
+    */
     private ?array $assignments = null;
     
-    /** @var EducationAssignmentSettings|null $assignmentSettings The assignmentSettings property */
+    /**
+     * @var EducationAssignmentSettings|null $assignmentSettings Specifies class-level assignments settings.
+    */
     private ?EducationAssignmentSettings $assignmentSettings = null;
     
-    /** @var string|null $classCode Class code used by the school to identify the class. */
+    /**
+     * @var string|null $classCode Class code used by the school to identify the class.
+    */
     private ?string $classCode = null;
     
-    /** @var EducationCourse|null $course Course information for the class. */
+    /**
+     * @var EducationCourse|null $course Course information for the class.
+    */
     private ?EducationCourse $course = null;
     
-    /** @var IdentitySet|null $createdBy Entity who created the class */
+    /**
+     * @var IdentitySet|null $createdBy Entity who created the class.
+    */
     private ?IdentitySet $createdBy = null;
     
-    /** @var string|null $description Description of the class. */
+    /**
+     * @var string|null $description Description of the class.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName Name of the class. */
+    /**
+     * @var string|null $displayName Name of the class.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $externalId ID of the class from the syncing system. */
+    /**
+     * @var string|null $externalId ID of the class from the syncing system.
+    */
     private ?string $externalId = null;
     
-    /** @var string|null $externalName Name of the class in the syncing system. */
+    /**
+     * @var string|null $externalName Name of the class in the syncing system.
+    */
     private ?string $externalName = null;
     
-    /** @var EducationExternalSource|null $externalSource How this class was created. Possible values are: sis, manual. */
+    /**
+     * @var EducationExternalSource|null $externalSource The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
+    */
     private ?EducationExternalSource $externalSource = null;
     
-    /** @var string|null $externalSourceDetail The name of the external source this resources was generated from. */
+    /**
+     * @var string|null $externalSourceDetail The name of the external source this resources was generated from.
+    */
     private ?string $externalSourceDetail = null;
     
-    /** @var string|null $grade Grade level of the class. */
+    /**
+     * @var string|null $grade Grade level of the class.
+    */
     private ?string $grade = null;
     
-    /** @var Group|null $group The underlying Microsoft 365 group object. */
+    /**
+     * @var Group|null $group The underlying Microsoft 365 group object.
+    */
     private ?Group $group = null;
     
-    /** @var string|null $mailNickname Mail name for sending email to all members, if this is enabled. */
+    /**
+     * @var string|null $mailNickname Mail name for sending email to all members, if this is enabled.
+    */
     private ?string $mailNickname = null;
     
-    /** @var array<EducationUser>|null $members All users in the class. Nullable. */
+    /**
+     * @var array<EducationUser>|null $members All users in the class. Nullable.
+    */
     private ?array $members = null;
     
-    /** @var array<EducationSchool>|null $schools All schools that this class is associated with. Nullable. */
+    /**
+     * @var array<EducationSchool>|null $schools All schools that this class is associated with. Nullable.
+    */
     private ?array $schools = null;
     
-    /** @var array<EducationUser>|null $teachers All teachers in the class. Nullable. */
+    /**
+     * @var array<EducationUser>|null $teachers All teachers in the class. Nullable.
+    */
     private ?array $teachers = null;
     
-    /** @var EducationTerm|null $term Term for this class. */
+    /**
+     * @var EducationTerm|null $term Term for the class.
+    */
     private ?EducationTerm $term = null;
     
     /**
@@ -80,12 +120,12 @@ class EducationClass extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return EducationClass
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): EducationClass {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): EducationClass {
         return new EducationClass();
     }
 
     /**
-     * Gets the assignmentCategories property value. The assignmentCategories property
+     * Gets the assignmentCategories property value. All categories associated with this class. Nullable.
      * @return array<EducationCategory>|null
     */
     public function getAssignmentCategories(): ?array {
@@ -93,7 +133,7 @@ class EducationClass extends Entity
     }
 
     /**
-     * Gets the assignmentDefaults property value. The assignmentDefaults property
+     * Gets the assignmentDefaults property value. Specifies class-level defaults respected by new assignments created in the class.
      * @return EducationAssignmentDefaults|null
     */
     public function getAssignmentDefaults(): ?EducationAssignmentDefaults {
@@ -109,7 +149,7 @@ class EducationClass extends Entity
     }
 
     /**
-     * Gets the assignmentSettings property value. The assignmentSettings property
+     * Gets the assignmentSettings property value. Specifies class-level assignments settings.
      * @return EducationAssignmentSettings|null
     */
     public function getAssignmentSettings(): ?EducationAssignmentSettings {
@@ -133,7 +173,7 @@ class EducationClass extends Entity
     }
 
     /**
-     * Gets the createdBy property value. Entity who created the class
+     * Gets the createdBy property value. Entity who created the class.
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
@@ -173,7 +213,7 @@ class EducationClass extends Entity
     }
 
     /**
-     * Gets the externalSource property value. How this class was created. Possible values are: sis, manual.
+     * Gets the externalSource property value. The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
      * @return EducationExternalSource|null
     */
     public function getExternalSource(): ?EducationExternalSource {
@@ -193,27 +233,28 @@ class EducationClass extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignmentCategories' => function (self $o, ParseNode $n) { $o->setAssignmentCategories($n->getCollectionOfObjectValues(EducationCategory::class)); },
-            'assignmentDefaults' => function (self $o, ParseNode $n) { $o->setAssignmentDefaults($n->getObjectValue(EducationAssignmentDefaults::class)); },
-            'assignments' => function (self $o, ParseNode $n) { $o->setAssignments($n->getCollectionOfObjectValues(EducationAssignment::class)); },
-            'assignmentSettings' => function (self $o, ParseNode $n) { $o->setAssignmentSettings($n->getObjectValue(EducationAssignmentSettings::class)); },
-            'classCode' => function (self $o, ParseNode $n) { $o->setClassCode($n->getStringValue()); },
-            'course' => function (self $o, ParseNode $n) { $o->setCourse($n->getObjectValue(EducationCourse::class)); },
-            'createdBy' => function (self $o, ParseNode $n) { $o->setCreatedBy($n->getObjectValue(IdentitySet::class)); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'externalId' => function (self $o, ParseNode $n) { $o->setExternalId($n->getStringValue()); },
-            'externalName' => function (self $o, ParseNode $n) { $o->setExternalName($n->getStringValue()); },
-            'externalSource' => function (self $o, ParseNode $n) { $o->setExternalSource($n->getEnumValue(EducationExternalSource::class)); },
-            'externalSourceDetail' => function (self $o, ParseNode $n) { $o->setExternalSourceDetail($n->getStringValue()); },
-            'grade' => function (self $o, ParseNode $n) { $o->setGrade($n->getStringValue()); },
-            'group' => function (self $o, ParseNode $n) { $o->setGroup($n->getObjectValue(Group::class)); },
-            'mailNickname' => function (self $o, ParseNode $n) { $o->setMailNickname($n->getStringValue()); },
-            'members' => function (self $o, ParseNode $n) { $o->setMembers($n->getCollectionOfObjectValues(EducationUser::class)); },
-            'schools' => function (self $o, ParseNode $n) { $o->setSchools($n->getCollectionOfObjectValues(EducationSchool::class)); },
-            'teachers' => function (self $o, ParseNode $n) { $o->setTeachers($n->getCollectionOfObjectValues(EducationUser::class)); },
-            'term' => function (self $o, ParseNode $n) { $o->setTerm($n->getObjectValue(EducationTerm::class)); },
+            'assignmentCategories' => function (ParseNode $n) use ($o) { $o->setAssignmentCategories($n->getCollectionOfObjectValues(array(EducationCategory::class, 'createFromDiscriminatorValue'))); },
+            'assignmentDefaults' => function (ParseNode $n) use ($o) { $o->setAssignmentDefaults($n->getObjectValue(array(EducationAssignmentDefaults::class, 'createFromDiscriminatorValue'))); },
+            'assignments' => function (ParseNode $n) use ($o) { $o->setAssignments($n->getCollectionOfObjectValues(array(EducationAssignment::class, 'createFromDiscriminatorValue'))); },
+            'assignmentSettings' => function (ParseNode $n) use ($o) { $o->setAssignmentSettings($n->getObjectValue(array(EducationAssignmentSettings::class, 'createFromDiscriminatorValue'))); },
+            'classCode' => function (ParseNode $n) use ($o) { $o->setClassCode($n->getStringValue()); },
+            'course' => function (ParseNode $n) use ($o) { $o->setCourse($n->getObjectValue(array(EducationCourse::class, 'createFromDiscriminatorValue'))); },
+            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'externalId' => function (ParseNode $n) use ($o) { $o->setExternalId($n->getStringValue()); },
+            'externalName' => function (ParseNode $n) use ($o) { $o->setExternalName($n->getStringValue()); },
+            'externalSource' => function (ParseNode $n) use ($o) { $o->setExternalSource($n->getEnumValue(EducationExternalSource::class)); },
+            'externalSourceDetail' => function (ParseNode $n) use ($o) { $o->setExternalSourceDetail($n->getStringValue()); },
+            'grade' => function (ParseNode $n) use ($o) { $o->setGrade($n->getStringValue()); },
+            'group' => function (ParseNode $n) use ($o) { $o->setGroup($n->getObjectValue(array(Group::class, 'createFromDiscriminatorValue'))); },
+            'mailNickname' => function (ParseNode $n) use ($o) { $o->setMailNickname($n->getStringValue()); },
+            'members' => function (ParseNode $n) use ($o) { $o->setMembers($n->getCollectionOfObjectValues(array(EducationUser::class, 'createFromDiscriminatorValue'))); },
+            'schools' => function (ParseNode $n) use ($o) { $o->setSchools($n->getCollectionOfObjectValues(array(EducationSchool::class, 'createFromDiscriminatorValue'))); },
+            'teachers' => function (ParseNode $n) use ($o) { $o->setTeachers($n->getCollectionOfObjectValues(array(EducationUser::class, 'createFromDiscriminatorValue'))); },
+            'term' => function (ParseNode $n) use ($o) { $o->setTerm($n->getObjectValue(array(EducationTerm::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -266,7 +307,7 @@ class EducationClass extends Entity
     }
 
     /**
-     * Gets the term property value. Term for this class.
+     * Gets the term property value. Term for the class.
      * @return EducationTerm|null
     */
     public function getTerm(): ?EducationTerm {
@@ -302,7 +343,7 @@ class EducationClass extends Entity
     }
 
     /**
-     * Sets the assignmentCategories property value. The assignmentCategories property
+     * Sets the assignmentCategories property value. All categories associated with this class. Nullable.
      *  @param array<EducationCategory>|null $value Value to set for the assignmentCategories property.
     */
     public function setAssignmentCategories(?array $value ): void {
@@ -310,7 +351,7 @@ class EducationClass extends Entity
     }
 
     /**
-     * Sets the assignmentDefaults property value. The assignmentDefaults property
+     * Sets the assignmentDefaults property value. Specifies class-level defaults respected by new assignments created in the class.
      *  @param EducationAssignmentDefaults|null $value Value to set for the assignmentDefaults property.
     */
     public function setAssignmentDefaults(?EducationAssignmentDefaults $value ): void {
@@ -326,7 +367,7 @@ class EducationClass extends Entity
     }
 
     /**
-     * Sets the assignmentSettings property value. The assignmentSettings property
+     * Sets the assignmentSettings property value. Specifies class-level assignments settings.
      *  @param EducationAssignmentSettings|null $value Value to set for the assignmentSettings property.
     */
     public function setAssignmentSettings(?EducationAssignmentSettings $value ): void {
@@ -350,7 +391,7 @@ class EducationClass extends Entity
     }
 
     /**
-     * Sets the createdBy property value. Entity who created the class
+     * Sets the createdBy property value. Entity who created the class.
      *  @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value ): void {
@@ -390,7 +431,7 @@ class EducationClass extends Entity
     }
 
     /**
-     * Sets the externalSource property value. How this class was created. Possible values are: sis, manual.
+     * Sets the externalSource property value. The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
      *  @param EducationExternalSource|null $value Value to set for the externalSource property.
     */
     public function setExternalSource(?EducationExternalSource $value ): void {
@@ -454,7 +495,7 @@ class EducationClass extends Entity
     }
 
     /**
-     * Sets the term property value. Term for this class.
+     * Sets the term property value. Term for the class.
      *  @param EducationTerm|null $value Value to set for the term property.
     */
     public function setTerm(?EducationTerm $value ): void {

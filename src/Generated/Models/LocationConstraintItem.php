@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class LocationConstraintItem extends Location 
+class LocationConstraintItem extends Location implements Parsable 
 {
-    /** @var bool|null $resolveAvailability If set to true and the specified resource is busy, findMeetingTimes looks for another resource that is free. If set to false and the specified resource is busy, findMeetingTimes returns the resource best ranked in the user's cache without checking if it's free. Default is true. */
+    /**
+     * @var bool|null $resolveAvailability If set to true and the specified resource is busy, findMeetingTimes looks for another resource that is free. If set to false and the specified resource is busy, findMeetingTimes returns the resource best ranked in the user's cache without checking if it's free. Default is true.
+    */
     private ?bool $resolveAvailability = null;
     
     /**
@@ -23,7 +25,7 @@ class LocationConstraintItem extends Location
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return LocationConstraintItem
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): LocationConstraintItem {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): LocationConstraintItem {
         return new LocationConstraintItem();
     }
 
@@ -32,8 +34,9 @@ class LocationConstraintItem extends Location
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'resolveAvailability' => function (self $o, ParseNode $n) { $o->setResolveAvailability($n->getBooleanValue()); },
+            'resolveAvailability' => function (ParseNode $n) use ($o) { $o->setResolveAvailability($n->getBooleanValue()); },
         ]);
     }
 

@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class MeetingParticipantInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var IdentitySet|null $identity Identity information of the participant. */
+    /**
+     * @var IdentitySet|null $identity Identity information of the participant.
+    */
     private ?IdentitySet $identity = null;
     
-    /** @var OnlineMeetingRole|null $role Specifies the participant's role in the meeting.  Possible values are attendee, presenter, producer, and unknownFutureValue. */
+    /**
+     * @var OnlineMeetingRole|null $role Specifies the participant's role in the meeting.
+    */
     private ?OnlineMeetingRole $role = null;
     
-    /** @var string|null $upn User principal name of the participant. */
+    /**
+     * @var string|null $upn User principal name of the participant.
+    */
     private ?string $upn = null;
     
     /**
@@ -33,7 +41,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return MeetingParticipantInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): MeetingParticipantInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): MeetingParticipantInfo {
         return new MeetingParticipantInfo();
     }
 
@@ -50,10 +58,11 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'identity' => function (self $o, ParseNode $n) { $o->setIdentity($n->getObjectValue(IdentitySet::class)); },
-            'role' => function (self $o, ParseNode $n) { $o->setRole($n->getEnumValue(OnlineMeetingRole::class)); },
-            'upn' => function (self $o, ParseNode $n) { $o->setUpn($n->getStringValue()); },
+            'identity' => function (ParseNode $n) use ($o) { $o->setIdentity($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'role' => function (ParseNode $n) use ($o) { $o->setRole($n->getEnumValue(OnlineMeetingRole::class)); },
+            'upn' => function (ParseNode $n) use ($o) { $o->setUpn($n->getStringValue()); },
         ];
     }
 
@@ -66,7 +75,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the role property value. Specifies the participant's role in the meeting.  Possible values are attendee, presenter, producer, and unknownFutureValue.
+     * Gets the role property value. Specifies the participant's role in the meeting.
      * @return OnlineMeetingRole|null
     */
     public function getRole(): ?OnlineMeetingRole {
@@ -109,7 +118,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the role property value. Specifies the participant's role in the meeting.  Possible values are attendee, presenter, producer, and unknownFutureValue.
+     * Sets the role property value. Specifies the participant's role in the meeting.
      *  @param OnlineMeetingRole|null $value Value to set for the role property.
     */
     public function setRole(?OnlineMeetingRole $value ): void {

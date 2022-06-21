@@ -7,15 +7,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ExternalGroup extends Entity 
+class ExternalGroup extends Entity implements Parsable 
 {
-    /** @var string|null $description The description of the external group. Optional. */
+    /**
+     * @var string|null $description The description of the external group. Optional.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName The friendly name of the external group. Optional. */
+    /**
+     * @var string|null $displayName The friendly name of the external group. Optional.
+    */
     private ?string $displayName = null;
     
-    /** @var array<Identity>|null $members A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members. */
+    /**
+     * @var array<Identity>|null $members A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or other externalGroups as members.
+    */
     private ?array $members = null;
     
     /**
@@ -30,7 +36,7 @@ class ExternalGroup extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ExternalGroup
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ExternalGroup {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ExternalGroup {
         return new ExternalGroup();
     }
 
@@ -55,15 +61,16 @@ class ExternalGroup extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'members' => function (self $o, ParseNode $n) { $o->setMembers($n->getCollectionOfObjectValues(Identity::class)); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'members' => function (ParseNode $n) use ($o) { $o->setMembers($n->getCollectionOfObjectValues(array(Identity::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
     /**
-     * Gets the members property value. A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
+     * Gets the members property value. A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or other externalGroups as members.
      * @return array<Identity>|null
     */
     public function getMembers(): ?array {
@@ -98,7 +105,7 @@ class ExternalGroup extends Entity
     }
 
     /**
-     * Sets the members property value. A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
+     * Sets the members property value. A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or other externalGroups as members.
      *  @param array<Identity>|null $value Value to set for the members property.
     */
     public function setMembers(?array $value ): void {

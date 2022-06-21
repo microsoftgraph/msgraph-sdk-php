@@ -9,55 +9,89 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Audio implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $album The title of the album for this audio file. */
+    /**
+     * @var string|null $album The title of the album for this audio file.
+    */
     private ?string $album = null;
     
-    /** @var string|null $albumArtist The artist named on the album for the audio file. */
+    /**
+     * @var string|null $albumArtist The artist named on the album for the audio file.
+    */
     private ?string $albumArtist = null;
     
-    /** @var string|null $artist The performing artist for the audio file. */
+    /**
+     * @var string|null $artist The performing artist for the audio file.
+    */
     private ?string $artist = null;
     
-    /** @var int|null $bitrate Bitrate expressed in kbps. */
+    /**
+     * @var int|null $bitrate Bitrate expressed in kbps.
+    */
     private ?int $bitrate = null;
     
-    /** @var string|null $composers The name of the composer of the audio file. */
+    /**
+     * @var string|null $composers The name of the composer of the audio file.
+    */
     private ?string $composers = null;
     
-    /** @var string|null $copyright Copyright information for the audio file. */
+    /**
+     * @var string|null $copyright Copyright information for the audio file.
+    */
     private ?string $copyright = null;
     
-    /** @var int|null $disc The number of the disc this audio file came from. */
+    /**
+     * @var int|null $disc The number of the disc this audio file came from.
+    */
     private ?int $disc = null;
     
-    /** @var int|null $discCount The total number of discs in this album. */
+    /**
+     * @var int|null $discCount The total number of discs in this album.
+    */
     private ?int $discCount = null;
     
-    /** @var int|null $duration Duration of the audio file, expressed in milliseconds */
+    /**
+     * @var int|null $duration Duration of the audio file, expressed in milliseconds
+    */
     private ?int $duration = null;
     
-    /** @var string|null $genre The genre of this audio file. */
+    /**
+     * @var string|null $genre The genre of this audio file.
+    */
     private ?string $genre = null;
     
-    /** @var bool|null $hasDrm Indicates if the file is protected with digital rights management. */
+    /**
+     * @var bool|null $hasDrm Indicates if the file is protected with digital rights management.
+    */
     private ?bool $hasDrm = null;
     
-    /** @var bool|null $isVariableBitrate Indicates if the file is encoded with a variable bitrate. */
+    /**
+     * @var bool|null $isVariableBitrate Indicates if the file is encoded with a variable bitrate.
+    */
     private ?bool $isVariableBitrate = null;
     
-    /** @var string|null $title The title of the audio file. */
+    /**
+     * @var string|null $title The title of the audio file.
+    */
     private ?string $title = null;
     
-    /** @var int|null $track The number of the track on the original disc for this audio file. */
+    /**
+     * @var int|null $track The number of the track on the original disc for this audio file.
+    */
     private ?int $track = null;
     
-    /** @var int|null $trackCount The total number of tracks on the original disc for this audio file. */
+    /**
+     * @var int|null $trackCount The total number of tracks on the original disc for this audio file.
+    */
     private ?int $trackCount = null;
     
-    /** @var int|null $year The year the audio file was recorded. */
+    /**
+     * @var int|null $year The year the audio file was recorded.
+    */
     private ?int $year = null;
     
     /**
@@ -72,7 +106,7 @@ class Audio implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Audio
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Audio {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Audio {
         return new Audio();
     }
 
@@ -161,23 +195,24 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'album' => function (self $o, ParseNode $n) { $o->setAlbum($n->getStringValue()); },
-            'albumArtist' => function (self $o, ParseNode $n) { $o->setAlbumArtist($n->getStringValue()); },
-            'artist' => function (self $o, ParseNode $n) { $o->setArtist($n->getStringValue()); },
-            'bitrate' => function (self $o, ParseNode $n) { $o->setBitrate($n->getIntegerValue()); },
-            'composers' => function (self $o, ParseNode $n) { $o->setComposers($n->getStringValue()); },
-            'copyright' => function (self $o, ParseNode $n) { $o->setCopyright($n->getStringValue()); },
-            'disc' => function (self $o, ParseNode $n) { $o->setDisc($n->getIntegerValue()); },
-            'discCount' => function (self $o, ParseNode $n) { $o->setDiscCount($n->getIntegerValue()); },
-            'duration' => function (self $o, ParseNode $n) { $o->setDuration($n->getIntegerValue()); },
-            'genre' => function (self $o, ParseNode $n) { $o->setGenre($n->getStringValue()); },
-            'hasDrm' => function (self $o, ParseNode $n) { $o->setHasDrm($n->getBooleanValue()); },
-            'isVariableBitrate' => function (self $o, ParseNode $n) { $o->setIsVariableBitrate($n->getBooleanValue()); },
-            'title' => function (self $o, ParseNode $n) { $o->setTitle($n->getStringValue()); },
-            'track' => function (self $o, ParseNode $n) { $o->setTrack($n->getIntegerValue()); },
-            'trackCount' => function (self $o, ParseNode $n) { $o->setTrackCount($n->getIntegerValue()); },
-            'year' => function (self $o, ParseNode $n) { $o->setYear($n->getIntegerValue()); },
+            'album' => function (ParseNode $n) use ($o) { $o->setAlbum($n->getStringValue()); },
+            'albumArtist' => function (ParseNode $n) use ($o) { $o->setAlbumArtist($n->getStringValue()); },
+            'artist' => function (ParseNode $n) use ($o) { $o->setArtist($n->getStringValue()); },
+            'bitrate' => function (ParseNode $n) use ($o) { $o->setBitrate($n->getIntegerValue()); },
+            'composers' => function (ParseNode $n) use ($o) { $o->setComposers($n->getStringValue()); },
+            'copyright' => function (ParseNode $n) use ($o) { $o->setCopyright($n->getStringValue()); },
+            'disc' => function (ParseNode $n) use ($o) { $o->setDisc($n->getIntegerValue()); },
+            'discCount' => function (ParseNode $n) use ($o) { $o->setDiscCount($n->getIntegerValue()); },
+            'duration' => function (ParseNode $n) use ($o) { $o->setDuration($n->getIntegerValue()); },
+            'genre' => function (ParseNode $n) use ($o) { $o->setGenre($n->getStringValue()); },
+            'hasDrm' => function (ParseNode $n) use ($o) { $o->setHasDrm($n->getBooleanValue()); },
+            'isVariableBitrate' => function (ParseNode $n) use ($o) { $o->setIsVariableBitrate($n->getBooleanValue()); },
+            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getStringValue()); },
+            'track' => function (ParseNode $n) use ($o) { $o->setTrack($n->getIntegerValue()); },
+            'trackCount' => function (ParseNode $n) use ($o) { $o->setTrackCount($n->getIntegerValue()); },
+            'year' => function (ParseNode $n) use ($o) { $o->setYear($n->getIntegerValue()); },
         ];
     }
 

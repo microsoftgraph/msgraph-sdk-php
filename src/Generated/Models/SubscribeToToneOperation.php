@@ -6,10 +6,10 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class SubscribeToToneOperation extends CommsOperation 
+class SubscribeToToneOperation extends CommsOperation implements Parsable 
 {
     /**
-     * Instantiates a new subscribeToToneOperation and sets the default values.
+     * Instantiates a new SubscribeToToneOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -20,7 +20,7 @@ class SubscribeToToneOperation extends CommsOperation
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SubscribeToToneOperation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SubscribeToToneOperation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SubscribeToToneOperation {
         return new SubscribeToToneOperation();
     }
 
@@ -29,6 +29,7 @@ class SubscribeToToneOperation extends CommsOperation
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

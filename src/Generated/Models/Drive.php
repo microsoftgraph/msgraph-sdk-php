@@ -6,43 +6,65 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Drive extends BaseItem 
+class Drive extends BaseItem implements Parsable 
 {
-    /** @var array<DriveItem>|null $bundles Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive. */
+    /**
+     * @var array<DriveItem>|null $bundles Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
+    */
     private ?array $bundles = null;
     
-    /** @var string|null $driveType Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only. */
+    /**
+     * @var string|null $driveType Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
+    */
     private ?string $driveType = null;
     
-    /** @var EscapedList|null $EscapedList For drives in SharePoint, the underlying document library list. Read-only. Nullable. */
+    /**
+     * @var EscapedList|null $EscapedList For drives in SharePoint, the underlying document library list. Read-only. Nullable.
+    */
     private ?EscapedList $escapedList = null;
     
-    /** @var array<DriveItem>|null $following The list of items the user is following. Only in OneDrive for Business. */
+    /**
+     * @var array<DriveItem>|null $following The list of items the user is following. Only in OneDrive for Business.
+    */
     private ?array $following = null;
     
-    /** @var array<DriveItem>|null $items All items contained in the drive. Read-only. Nullable. */
+    /**
+     * @var array<DriveItem>|null $items All items contained in the drive. Read-only. Nullable.
+    */
     private ?array $items = null;
     
-    /** @var IdentitySet|null $owner Optional. The user account that owns the drive. Read-only. */
+    /**
+     * @var IdentitySet|null $owner Optional. The user account that owns the drive. Read-only.
+    */
     private ?IdentitySet $owner = null;
     
-    /** @var Quota|null $quota Optional. Information about the drive's storage space quota. Read-only. */
+    /**
+     * @var Quota|null $quota Optional. Information about the drive's storage space quota. Read-only.
+    */
     private ?Quota $quota = null;
     
-    /** @var DriveItem|null $root The root folder of the drive. Read-only. */
+    /**
+     * @var DriveItem|null $root The root folder of the drive. Read-only.
+    */
     private ?DriveItem $root = null;
     
-    /** @var SharepointIds|null $sharePointIds The sharePointIds property */
+    /**
+     * @var SharepointIds|null $sharePointIds The sharePointIds property
+    */
     private ?SharepointIds $sharePointIds = null;
     
-    /** @var array<DriveItem>|null $special Collection of common folders available in OneDrive. Read-only. Nullable. */
+    /**
+     * @var array<DriveItem>|null $special Collection of common folders available in OneDrive. Read-only. Nullable.
+    */
     private ?array $special = null;
     
-    /** @var SystemFacet|null $system If present, indicates that this is a system-managed drive. Read-only. */
+    /**
+     * @var SystemFacet|null $system If present, indicates that this is a system-managed drive. Read-only.
+    */
     private ?SystemFacet $system = null;
     
     /**
-     * Instantiates a new drive and sets the default values.
+     * Instantiates a new Drive and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -53,7 +75,7 @@ class Drive extends BaseItem
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Drive
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Drive {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Drive {
         return new Drive();
     }
 
@@ -78,18 +100,19 @@ class Drive extends BaseItem
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'bundles' => function (self $o, ParseNode $n) { $o->setBundles($n->getCollectionOfObjectValues(DriveItem::class)); },
-            'driveType' => function (self $o, ParseNode $n) { $o->setDriveType($n->getStringValue()); },
-            'list' => function (self $o, ParseNode $n) { $o->setEscapedList($n->getObjectValue(EscapedList::class)); },
-            'following' => function (self $o, ParseNode $n) { $o->setFollowing($n->getCollectionOfObjectValues(DriveItem::class)); },
-            'items' => function (self $o, ParseNode $n) { $o->setItems($n->getCollectionOfObjectValues(DriveItem::class)); },
-            'owner' => function (self $o, ParseNode $n) { $o->setOwner($n->getObjectValue(IdentitySet::class)); },
-            'quota' => function (self $o, ParseNode $n) { $o->setQuota($n->getObjectValue(Quota::class)); },
-            'root' => function (self $o, ParseNode $n) { $o->setRoot($n->getObjectValue(DriveItem::class)); },
-            'sharePointIds' => function (self $o, ParseNode $n) { $o->setSharePointIds($n->getObjectValue(SharepointIds::class)); },
-            'special' => function (self $o, ParseNode $n) { $o->setSpecial($n->getCollectionOfObjectValues(DriveItem::class)); },
-            'system' => function (self $o, ParseNode $n) { $o->setSystem($n->getObjectValue(SystemFacet::class)); },
+            'bundles' => function (ParseNode $n) use ($o) { $o->setBundles($n->getCollectionOfObjectValues(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
+            'driveType' => function (ParseNode $n) use ($o) { $o->setDriveType($n->getStringValue()); },
+            'list' => function (ParseNode $n) use ($o) { $o->setList($n->getObjectValue(array(EscapedList::class, 'createFromDiscriminatorValue'))); },
+            'following' => function (ParseNode $n) use ($o) { $o->setFollowing($n->getCollectionOfObjectValues(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
+            'items' => function (ParseNode $n) use ($o) { $o->setItems($n->getCollectionOfObjectValues(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
+            'owner' => function (ParseNode $n) use ($o) { $o->setOwner($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'quota' => function (ParseNode $n) use ($o) { $o->setQuota($n->getObjectValue(array(Quota::class, 'createFromDiscriminatorValue'))); },
+            'root' => function (ParseNode $n) use ($o) { $o->setRoot($n->getObjectValue(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
+            'sharePointIds' => function (ParseNode $n) use ($o) { $o->setSharePointIds($n->getObjectValue(array(SharepointIds::class, 'createFromDiscriminatorValue'))); },
+            'special' => function (ParseNode $n) use ($o) { $o->setSpecial($n->getCollectionOfObjectValues(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
+            'system' => function (ParseNode $n) use ($o) { $o->setSystem($n->getObjectValue(array(SystemFacet::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

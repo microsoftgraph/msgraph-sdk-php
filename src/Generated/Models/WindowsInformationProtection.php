@@ -6,85 +6,135 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WindowsInformationProtection extends ManagedAppPolicy 
+class WindowsInformationProtection extends ManagedAppPolicy implements Parsable 
 {
-    /** @var array<TargetedManagedAppPolicyAssignment>|null $assignments Navigation property to list of security groups targeted for policy. */
+    /**
+     * @var array<TargetedManagedAppPolicyAssignment>|null $assignments Navigation property to list of security groups targeted for policy.
+    */
     private ?array $assignments = null;
     
-    /** @var bool|null $azureRightsManagementServicesAllowed Specifies whether to allow Azure RMS encryption for WIP */
+    /**
+     * @var bool|null $azureRightsManagementServicesAllowed Specifies whether to allow Azure RMS encryption for WIP
+    */
     private ?bool $azureRightsManagementServicesAllowed = null;
     
-    /** @var WindowsInformationProtectionDataRecoveryCertificate|null $dataRecoveryCertificate Specifies a recovery certificate that can be used for data recovery of encrypted files. This is the same as the data recovery agent(DRA) certificate for encrypting file system(EFS) */
+    /**
+     * @var WindowsInformationProtectionDataRecoveryCertificate|null $dataRecoveryCertificate Specifies a recovery certificate that can be used for data recovery of encrypted files. This is the same as the data recovery agent(DRA) certificate for encrypting file system(EFS)
+    */
     private ?WindowsInformationProtectionDataRecoveryCertificate $dataRecoveryCertificate = null;
     
-    /** @var WindowsInformationProtectionEnforcementLevel|null $enforcementLevel WIP enforcement level.See the Enum definition for supported values. Possible values are: noProtection, encryptAndAuditOnly, encryptAuditAndPrompt, encryptAuditAndBlock. */
+    /**
+     * @var WindowsInformationProtectionEnforcementLevel|null $enforcementLevel WIP enforcement level.See the Enum definition for supported values. Possible values are: noProtection, encryptAndAuditOnly, encryptAuditAndPrompt, encryptAuditAndBlock.
+    */
     private ?WindowsInformationProtectionEnforcementLevel $enforcementLevel = null;
     
-    /** @var string|null $enterpriseDomain Primary enterprise domain */
+    /**
+     * @var string|null $enterpriseDomain Primary enterprise domain
+    */
     private ?string $enterpriseDomain = null;
     
-    /** @var array<WindowsInformationProtectionResourceCollection>|null $enterpriseInternalProxyServers This is the comma-separated list of internal proxy servers. For example, '157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59'. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies */
+    /**
+     * @var array<WindowsInformationProtectionResourceCollection>|null $enterpriseInternalProxyServers This is the comma-separated list of internal proxy servers. For example, '157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59'. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies
+    */
     private ?array $enterpriseInternalProxyServers = null;
     
-    /** @var array<WindowsInformationProtectionIPRangeCollection>|null $enterpriseIPRanges Sets the enterprise IP ranges that define the computers in the enterprise network. Data that comes from those computers will be considered part of the enterprise and protected. These locations will be considered a safe destination for enterprise data to be shared to */
+    /**
+     * @var array<WindowsInformationProtectionIPRangeCollection>|null $enterpriseIPRanges Sets the enterprise IP ranges that define the computers in the enterprise network. Data that comes from those computers will be considered part of the enterprise and protected. These locations will be considered a safe destination for enterprise data to be shared to
+    */
     private ?array $enterpriseIPRanges = null;
     
-    /** @var bool|null $enterpriseIPRangesAreAuthoritative Boolean value that tells the client to accept the configured list and not to use heuristics to attempt to find other subnets. Default is false */
+    /**
+     * @var bool|null $enterpriseIPRangesAreAuthoritative Boolean value that tells the client to accept the configured list and not to use heuristics to attempt to find other subnets. Default is false
+    */
     private ?bool $enterpriseIPRangesAreAuthoritative = null;
     
-    /** @var array<WindowsInformationProtectionResourceCollection>|null $enterpriseNetworkDomainNames This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected These locations will be considered a safe destination for enterprise data to be shared to */
+    /**
+     * @var array<WindowsInformationProtectionResourceCollection>|null $enterpriseNetworkDomainNames This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected These locations will be considered a safe destination for enterprise data to be shared to
+    */
     private ?array $enterpriseNetworkDomainNames = null;
     
-    /** @var array<WindowsInformationProtectionResourceCollection>|null $enterpriseProtectedDomainNames List of enterprise domains to be protected */
+    /**
+     * @var array<WindowsInformationProtectionResourceCollection>|null $enterpriseProtectedDomainNames List of enterprise domains to be protected
+    */
     private ?array $enterpriseProtectedDomainNames = null;
     
-    /** @var array<WindowsInformationProtectionProxiedDomainCollection>|null $enterpriseProxiedDomains Contains a list of Enterprise resource domains hosted in the cloud that need to be protected. Connections to these resources are considered enterprise data. If a proxy is paired with a cloud resource, traffic to the cloud resource will be routed through the enterprise network via the denoted proxy server (on Port 80). A proxy server used for this purpose must also be configured using the EnterpriseInternalProxyServers policy */
+    /**
+     * @var array<WindowsInformationProtectionProxiedDomainCollection>|null $enterpriseProxiedDomains Contains a list of Enterprise resource domains hosted in the cloud that need to be protected. Connections to these resources are considered enterprise data. If a proxy is paired with a cloud resource, traffic to the cloud resource will be routed through the enterprise network via the denoted proxy server (on Port 80). A proxy server used for this purpose must also be configured using the EnterpriseInternalProxyServers policy
+    */
     private ?array $enterpriseProxiedDomains = null;
     
-    /** @var array<WindowsInformationProtectionResourceCollection>|null $enterpriseProxyServers This is a list of proxy servers. Any server not on this list is considered non-enterprise */
+    /**
+     * @var array<WindowsInformationProtectionResourceCollection>|null $enterpriseProxyServers This is a list of proxy servers. Any server not on this list is considered non-enterprise
+    */
     private ?array $enterpriseProxyServers = null;
     
-    /** @var bool|null $enterpriseProxyServersAreAuthoritative Boolean value that tells the client to accept the configured list of proxies and not try to detect other work proxies. Default is false */
+    /**
+     * @var bool|null $enterpriseProxyServersAreAuthoritative Boolean value that tells the client to accept the configured list of proxies and not try to detect other work proxies. Default is false
+    */
     private ?bool $enterpriseProxyServersAreAuthoritative = null;
     
-    /** @var array<WindowsInformationProtectionAppLockerFile>|null $exemptAppLockerFiles Another way to input exempt apps through xml files */
+    /**
+     * @var array<WindowsInformationProtectionAppLockerFile>|null $exemptAppLockerFiles Another way to input exempt apps through xml files
+    */
     private ?array $exemptAppLockerFiles = null;
     
-    /** @var array<WindowsInformationProtectionApp>|null $exemptApps Exempt applications can also access enterprise data, but the data handled by those applications are not protected. This is because some critical enterprise applications may have compatibility problems with encrypted data. */
+    /**
+     * @var array<WindowsInformationProtectionApp>|null $exemptApps Exempt applications can also access enterprise data, but the data handled by those applications are not protected. This is because some critical enterprise applications may have compatibility problems with encrypted data.
+    */
     private ?array $exemptApps = null;
     
-    /** @var bool|null $iconsVisible Determines whether overlays are added to icons for WIP protected files in Explorer and enterprise only app tiles in the Start menu. Starting in Windows 10, version 1703 this setting also configures the visibility of the WIP icon in the title bar of a WIP-protected app */
+    /**
+     * @var bool|null $iconsVisible Determines whether overlays are added to icons for WIP protected files in Explorer and enterprise only app tiles in the Start menu. Starting in Windows 10, version 1703 this setting also configures the visibility of the WIP icon in the title bar of a WIP-protected app
+    */
     private ?bool $iconsVisible = null;
     
-    /** @var bool|null $indexingEncryptedStoresOrItemsBlocked This switch is for the Windows Search Indexer, to allow or disallow indexing of items */
+    /**
+     * @var bool|null $indexingEncryptedStoresOrItemsBlocked This switch is for the Windows Search Indexer, to allow or disallow indexing of items
+    */
     private ?bool $indexingEncryptedStoresOrItemsBlocked = null;
     
-    /** @var bool|null $isAssigned Indicates if the policy is deployed to any inclusion groups or not. */
+    /**
+     * @var bool|null $isAssigned Indicates if the policy is deployed to any inclusion groups or not.
+    */
     private ?bool $isAssigned = null;
     
-    /** @var array<WindowsInformationProtectionResourceCollection>|null $neutralDomainResources List of domain names that can used for work or personal resource */
+    /**
+     * @var array<WindowsInformationProtectionResourceCollection>|null $neutralDomainResources List of domain names that can used for work or personal resource
+    */
     private ?array $neutralDomainResources = null;
     
-    /** @var array<WindowsInformationProtectionAppLockerFile>|null $protectedAppLockerFiles Another way to input protected apps through xml files */
+    /**
+     * @var array<WindowsInformationProtectionAppLockerFile>|null $protectedAppLockerFiles Another way to input protected apps through xml files
+    */
     private ?array $protectedAppLockerFiles = null;
     
-    /** @var array<WindowsInformationProtectionApp>|null $protectedApps Protected applications can access enterprise data and the data handled by those applications are protected with encryption */
+    /**
+     * @var array<WindowsInformationProtectionApp>|null $protectedApps Protected applications can access enterprise data and the data handled by those applications are protected with encryption
+    */
     private ?array $protectedApps = null;
     
-    /** @var bool|null $protectionUnderLockConfigRequired Specifies whether the protection under lock feature (also known as encrypt under pin) should be configured */
+    /**
+     * @var bool|null $protectionUnderLockConfigRequired Specifies whether the protection under lock feature (also known as encrypt under pin) should be configured
+    */
     private ?bool $protectionUnderLockConfigRequired = null;
     
-    /** @var bool|null $revokeOnUnenrollDisabled This policy controls whether to revoke the WIP keys when a device unenrolls from the management service. If set to 1 (Don't revoke keys), the keys will not be revoked and the user will continue to have access to protected files after unenrollment. If the keys are not revoked, there will be no revoked file cleanup subsequently. */
+    /**
+     * @var bool|null $revokeOnUnenrollDisabled This policy controls whether to revoke the WIP keys when a device unenrolls from the management service. If set to 1 (Don't revoke keys), the keys will not be revoked and the user will continue to have access to protected files after unenrollment. If the keys are not revoked, there will be no revoked file cleanup subsequently.
+    */
     private ?bool $revokeOnUnenrollDisabled = null;
     
-    /** @var string|null $rightsManagementServicesTemplateId TemplateID GUID to use for RMS encryption. The RMS template allows the IT admin to configure the details about who has access to RMS-protected file and how long they have access */
+    /**
+     * @var string|null $rightsManagementServicesTemplateId TemplateID GUID to use for RMS encryption. The RMS template allows the IT admin to configure the details about who has access to RMS-protected file and how long they have access
+    */
     private ?string $rightsManagementServicesTemplateId = null;
     
-    /** @var array<WindowsInformationProtectionResourceCollection>|null $smbAutoEncryptedFileExtensions Specifies a list of file extensions, so that files with these extensions are encrypted when copying from an SMB share within the corporate boundary */
+    /**
+     * @var array<WindowsInformationProtectionResourceCollection>|null $smbAutoEncryptedFileExtensions Specifies a list of file extensions, so that files with these extensions are encrypted when copying from an SMB share within the corporate boundary
+    */
     private ?array $smbAutoEncryptedFileExtensions = null;
     
     /**
-     * Instantiates a new windowsInformationProtection and sets the default values.
+     * Instantiates a new WindowsInformationProtection and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -95,7 +145,15 @@ class WindowsInformationProtection extends ManagedAppPolicy
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WindowsInformationProtection
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WindowsInformationProtection {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WindowsInformationProtection {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.mdmWindowsInformationProtectionPolicy': return new MdmWindowsInformationProtectionPolicy();
+                case '#microsoft.graph.windowsInformationProtectionPolicy': return new WindowsInformationProtectionPolicy();
+            }
+        }
         return new WindowsInformationProtection();
     }
 
@@ -224,32 +282,33 @@ class WindowsInformationProtection extends ManagedAppPolicy
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignments' => function (self $o, ParseNode $n) { $o->setAssignments($n->getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::class)); },
-            'azureRightsManagementServicesAllowed' => function (self $o, ParseNode $n) { $o->setAzureRightsManagementServicesAllowed($n->getBooleanValue()); },
-            'dataRecoveryCertificate' => function (self $o, ParseNode $n) { $o->setDataRecoveryCertificate($n->getObjectValue(WindowsInformationProtectionDataRecoveryCertificate::class)); },
-            'enforcementLevel' => function (self $o, ParseNode $n) { $o->setEnforcementLevel($n->getEnumValue(WindowsInformationProtectionEnforcementLevel::class)); },
-            'enterpriseDomain' => function (self $o, ParseNode $n) { $o->setEnterpriseDomain($n->getStringValue()); },
-            'enterpriseInternalProxyServers' => function (self $o, ParseNode $n) { $o->setEnterpriseInternalProxyServers($n->getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::class)); },
-            'enterpriseIPRanges' => function (self $o, ParseNode $n) { $o->setEnterpriseIPRanges($n->getCollectionOfObjectValues(WindowsInformationProtectionIPRangeCollection::class)); },
-            'enterpriseIPRangesAreAuthoritative' => function (self $o, ParseNode $n) { $o->setEnterpriseIPRangesAreAuthoritative($n->getBooleanValue()); },
-            'enterpriseNetworkDomainNames' => function (self $o, ParseNode $n) { $o->setEnterpriseNetworkDomainNames($n->getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::class)); },
-            'enterpriseProtectedDomainNames' => function (self $o, ParseNode $n) { $o->setEnterpriseProtectedDomainNames($n->getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::class)); },
-            'enterpriseProxiedDomains' => function (self $o, ParseNode $n) { $o->setEnterpriseProxiedDomains($n->getCollectionOfObjectValues(WindowsInformationProtectionProxiedDomainCollection::class)); },
-            'enterpriseProxyServers' => function (self $o, ParseNode $n) { $o->setEnterpriseProxyServers($n->getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::class)); },
-            'enterpriseProxyServersAreAuthoritative' => function (self $o, ParseNode $n) { $o->setEnterpriseProxyServersAreAuthoritative($n->getBooleanValue()); },
-            'exemptAppLockerFiles' => function (self $o, ParseNode $n) { $o->setExemptAppLockerFiles($n->getCollectionOfObjectValues(WindowsInformationProtectionAppLockerFile::class)); },
-            'exemptApps' => function (self $o, ParseNode $n) { $o->setExemptApps($n->getCollectionOfObjectValues(WindowsInformationProtectionApp::class)); },
-            'iconsVisible' => function (self $o, ParseNode $n) { $o->setIconsVisible($n->getBooleanValue()); },
-            'indexingEncryptedStoresOrItemsBlocked' => function (self $o, ParseNode $n) { $o->setIndexingEncryptedStoresOrItemsBlocked($n->getBooleanValue()); },
-            'isAssigned' => function (self $o, ParseNode $n) { $o->setIsAssigned($n->getBooleanValue()); },
-            'neutralDomainResources' => function (self $o, ParseNode $n) { $o->setNeutralDomainResources($n->getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::class)); },
-            'protectedAppLockerFiles' => function (self $o, ParseNode $n) { $o->setProtectedAppLockerFiles($n->getCollectionOfObjectValues(WindowsInformationProtectionAppLockerFile::class)); },
-            'protectedApps' => function (self $o, ParseNode $n) { $o->setProtectedApps($n->getCollectionOfObjectValues(WindowsInformationProtectionApp::class)); },
-            'protectionUnderLockConfigRequired' => function (self $o, ParseNode $n) { $o->setProtectionUnderLockConfigRequired($n->getBooleanValue()); },
-            'revokeOnUnenrollDisabled' => function (self $o, ParseNode $n) { $o->setRevokeOnUnenrollDisabled($n->getBooleanValue()); },
-            'rightsManagementServicesTemplateId' => function (self $o, ParseNode $n) { $o->setRightsManagementServicesTemplateId($n->getStringValue()); },
-            'smbAutoEncryptedFileExtensions' => function (self $o, ParseNode $n) { $o->setSmbAutoEncryptedFileExtensions($n->getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::class)); },
+            'assignments' => function (ParseNode $n) use ($o) { $o->setAssignments($n->getCollectionOfObjectValues(array(TargetedManagedAppPolicyAssignment::class, 'createFromDiscriminatorValue'))); },
+            'azureRightsManagementServicesAllowed' => function (ParseNode $n) use ($o) { $o->setAzureRightsManagementServicesAllowed($n->getBooleanValue()); },
+            'dataRecoveryCertificate' => function (ParseNode $n) use ($o) { $o->setDataRecoveryCertificate($n->getObjectValue(array(WindowsInformationProtectionDataRecoveryCertificate::class, 'createFromDiscriminatorValue'))); },
+            'enforcementLevel' => function (ParseNode $n) use ($o) { $o->setEnforcementLevel($n->getEnumValue(WindowsInformationProtectionEnforcementLevel::class)); },
+            'enterpriseDomain' => function (ParseNode $n) use ($o) { $o->setEnterpriseDomain($n->getStringValue()); },
+            'enterpriseInternalProxyServers' => function (ParseNode $n) use ($o) { $o->setEnterpriseInternalProxyServers($n->getCollectionOfObjectValues(array(WindowsInformationProtectionResourceCollection::class, 'createFromDiscriminatorValue'))); },
+            'enterpriseIPRanges' => function (ParseNode $n) use ($o) { $o->setEnterpriseIPRanges($n->getCollectionOfObjectValues(array(WindowsInformationProtectionIPRangeCollection::class, 'createFromDiscriminatorValue'))); },
+            'enterpriseIPRangesAreAuthoritative' => function (ParseNode $n) use ($o) { $o->setEnterpriseIPRangesAreAuthoritative($n->getBooleanValue()); },
+            'enterpriseNetworkDomainNames' => function (ParseNode $n) use ($o) { $o->setEnterpriseNetworkDomainNames($n->getCollectionOfObjectValues(array(WindowsInformationProtectionResourceCollection::class, 'createFromDiscriminatorValue'))); },
+            'enterpriseProtectedDomainNames' => function (ParseNode $n) use ($o) { $o->setEnterpriseProtectedDomainNames($n->getCollectionOfObjectValues(array(WindowsInformationProtectionResourceCollection::class, 'createFromDiscriminatorValue'))); },
+            'enterpriseProxiedDomains' => function (ParseNode $n) use ($o) { $o->setEnterpriseProxiedDomains($n->getCollectionOfObjectValues(array(WindowsInformationProtectionProxiedDomainCollection::class, 'createFromDiscriminatorValue'))); },
+            'enterpriseProxyServers' => function (ParseNode $n) use ($o) { $o->setEnterpriseProxyServers($n->getCollectionOfObjectValues(array(WindowsInformationProtectionResourceCollection::class, 'createFromDiscriminatorValue'))); },
+            'enterpriseProxyServersAreAuthoritative' => function (ParseNode $n) use ($o) { $o->setEnterpriseProxyServersAreAuthoritative($n->getBooleanValue()); },
+            'exemptAppLockerFiles' => function (ParseNode $n) use ($o) { $o->setExemptAppLockerFiles($n->getCollectionOfObjectValues(array(WindowsInformationProtectionAppLockerFile::class, 'createFromDiscriminatorValue'))); },
+            'exemptApps' => function (ParseNode $n) use ($o) { $o->setExemptApps($n->getCollectionOfObjectValues(array(WindowsInformationProtectionApp::class, 'createFromDiscriminatorValue'))); },
+            'iconsVisible' => function (ParseNode $n) use ($o) { $o->setIconsVisible($n->getBooleanValue()); },
+            'indexingEncryptedStoresOrItemsBlocked' => function (ParseNode $n) use ($o) { $o->setIndexingEncryptedStoresOrItemsBlocked($n->getBooleanValue()); },
+            'isAssigned' => function (ParseNode $n) use ($o) { $o->setIsAssigned($n->getBooleanValue()); },
+            'neutralDomainResources' => function (ParseNode $n) use ($o) { $o->setNeutralDomainResources($n->getCollectionOfObjectValues(array(WindowsInformationProtectionResourceCollection::class, 'createFromDiscriminatorValue'))); },
+            'protectedAppLockerFiles' => function (ParseNode $n) use ($o) { $o->setProtectedAppLockerFiles($n->getCollectionOfObjectValues(array(WindowsInformationProtectionAppLockerFile::class, 'createFromDiscriminatorValue'))); },
+            'protectedApps' => function (ParseNode $n) use ($o) { $o->setProtectedApps($n->getCollectionOfObjectValues(array(WindowsInformationProtectionApp::class, 'createFromDiscriminatorValue'))); },
+            'protectionUnderLockConfigRequired' => function (ParseNode $n) use ($o) { $o->setProtectionUnderLockConfigRequired($n->getBooleanValue()); },
+            'revokeOnUnenrollDisabled' => function (ParseNode $n) use ($o) { $o->setRevokeOnUnenrollDisabled($n->getBooleanValue()); },
+            'rightsManagementServicesTemplateId' => function (ParseNode $n) use ($o) { $o->setRightsManagementServicesTemplateId($n->getStringValue()); },
+            'smbAutoEncryptedFileExtensions' => function (ParseNode $n) use ($o) { $o->setSmbAutoEncryptedFileExtensions($n->getCollectionOfObjectValues(array(WindowsInformationProtectionResourceCollection::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

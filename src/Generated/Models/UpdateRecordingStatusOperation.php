@@ -6,10 +6,10 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class UpdateRecordingStatusOperation extends CommsOperation 
+class UpdateRecordingStatusOperation extends CommsOperation implements Parsable 
 {
     /**
-     * Instantiates a new updateRecordingStatusOperation and sets the default values.
+     * Instantiates a new UpdateRecordingStatusOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -20,7 +20,7 @@ class UpdateRecordingStatusOperation extends CommsOperation
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return UpdateRecordingStatusOperation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): UpdateRecordingStatusOperation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): UpdateRecordingStatusOperation {
         return new UpdateRecordingStatusOperation();
     }
 
@@ -29,6 +29,7 @@ class UpdateRecordingStatusOperation extends CommsOperation
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

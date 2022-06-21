@@ -7,36 +7,56 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ItemActivityStat extends Entity 
+class ItemActivityStat extends Entity implements Parsable 
 {
-    /** @var ItemActionStat|null $access Statistics about the access actions in this interval. Read-only. */
+    /**
+     * @var ItemActionStat|null $access Statistics about the access actions in this interval. Read-only.
+    */
     private ?ItemActionStat $access = null;
     
-    /** @var array<ItemActivity>|null $activities Exposes the itemActivities represented in this itemActivityStat resource. */
+    /**
+     * @var array<ItemActivity>|null $activities Exposes the itemActivities represented in this itemActivityStat resource.
+    */
     private ?array $activities = null;
     
-    /** @var ItemActionStat|null $create Statistics about the create actions in this interval. Read-only. */
+    /**
+     * @var ItemActionStat|null $create Statistics about the create actions in this interval. Read-only.
+    */
     private ?ItemActionStat $create = null;
     
-    /** @var ItemActionStat|null $delete Statistics about the delete actions in this interval. Read-only. */
+    /**
+     * @var ItemActionStat|null $delete Statistics about the delete actions in this interval. Read-only.
+    */
     private ?ItemActionStat $delete = null;
     
-    /** @var ItemActionStat|null $edit Statistics about the edit actions in this interval. Read-only. */
+    /**
+     * @var ItemActionStat|null $edit Statistics about the edit actions in this interval. Read-only.
+    */
     private ?ItemActionStat $edit = null;
     
-    /** @var DateTime|null $endDateTime When the interval ends. Read-only. */
+    /**
+     * @var DateTime|null $endDateTime When the interval ends. Read-only.
+    */
     private ?DateTime $endDateTime = null;
     
-    /** @var IncompleteData|null $incompleteData Indicates that the statistics in this interval are based on incomplete data. Read-only. */
+    /**
+     * @var IncompleteData|null $incompleteData Indicates that the statistics in this interval are based on incomplete data. Read-only.
+    */
     private ?IncompleteData $incompleteData = null;
     
-    /** @var bool|null $isTrending Indicates whether the item is 'trending.' Read-only. */
+    /**
+     * @var bool|null $isTrending Indicates whether the item is 'trending.' Read-only.
+    */
     private ?bool $isTrending = null;
     
-    /** @var ItemActionStat|null $move Statistics about the move actions in this interval. Read-only. */
+    /**
+     * @var ItemActionStat|null $move Statistics about the move actions in this interval. Read-only.
+    */
     private ?ItemActionStat $move = null;
     
-    /** @var DateTime|null $startDateTime When the interval starts. Read-only. */
+    /**
+     * @var DateTime|null $startDateTime When the interval starts. Read-only.
+    */
     private ?DateTime $startDateTime = null;
     
     /**
@@ -51,7 +71,7 @@ class ItemActivityStat extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ItemActivityStat
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ItemActivityStat {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ItemActivityStat {
         return new ItemActivityStat();
     }
 
@@ -108,17 +128,18 @@ class ItemActivityStat extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'access' => function (self $o, ParseNode $n) { $o->setAccess($n->getObjectValue(ItemActionStat::class)); },
-            'activities' => function (self $o, ParseNode $n) { $o->setActivities($n->getCollectionOfObjectValues(ItemActivity::class)); },
-            'create' => function (self $o, ParseNode $n) { $o->setCreate($n->getObjectValue(ItemActionStat::class)); },
-            'delete' => function (self $o, ParseNode $n) { $o->setDelete($n->getObjectValue(ItemActionStat::class)); },
-            'edit' => function (self $o, ParseNode $n) { $o->setEdit($n->getObjectValue(ItemActionStat::class)); },
-            'endDateTime' => function (self $o, ParseNode $n) { $o->setEndDateTime($n->getDateTimeValue()); },
-            'incompleteData' => function (self $o, ParseNode $n) { $o->setIncompleteData($n->getObjectValue(IncompleteData::class)); },
-            'isTrending' => function (self $o, ParseNode $n) { $o->setIsTrending($n->getBooleanValue()); },
-            'move' => function (self $o, ParseNode $n) { $o->setMove($n->getObjectValue(ItemActionStat::class)); },
-            'startDateTime' => function (self $o, ParseNode $n) { $o->setStartDateTime($n->getDateTimeValue()); },
+            'access' => function (ParseNode $n) use ($o) { $o->setAccess($n->getObjectValue(array(ItemActionStat::class, 'createFromDiscriminatorValue'))); },
+            'activities' => function (ParseNode $n) use ($o) { $o->setActivities($n->getCollectionOfObjectValues(array(ItemActivity::class, 'createFromDiscriminatorValue'))); },
+            'create' => function (ParseNode $n) use ($o) { $o->setCreate($n->getObjectValue(array(ItemActionStat::class, 'createFromDiscriminatorValue'))); },
+            'delete' => function (ParseNode $n) use ($o) { $o->setDelete($n->getObjectValue(array(ItemActionStat::class, 'createFromDiscriminatorValue'))); },
+            'edit' => function (ParseNode $n) use ($o) { $o->setEdit($n->getObjectValue(array(ItemActionStat::class, 'createFromDiscriminatorValue'))); },
+            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
+            'incompleteData' => function (ParseNode $n) use ($o) { $o->setIncompleteData($n->getObjectValue(array(IncompleteData::class, 'createFromDiscriminatorValue'))); },
+            'isTrending' => function (ParseNode $n) use ($o) { $o->setIsTrending($n->getBooleanValue()); },
+            'move' => function (ParseNode $n) use ($o) { $o->setMove($n->getObjectValue(array(ItemActionStat::class, 'createFromDiscriminatorValue'))); },
+            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
         ]);
     }
 

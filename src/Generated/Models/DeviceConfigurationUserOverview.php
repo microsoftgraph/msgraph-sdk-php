@@ -7,27 +7,41 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DeviceConfigurationUserOverview extends Entity 
+class DeviceConfigurationUserOverview extends Entity implements Parsable 
 {
-    /** @var int|null $configurationVersion Version of the policy for that overview */
+    /**
+     * @var int|null $configurationVersion Version of the policy for that overview
+    */
     private ?int $configurationVersion = null;
     
-    /** @var int|null $errorCount Number of error Users */
+    /**
+     * @var int|null $errorCount Number of error Users
+    */
     private ?int $errorCount = null;
     
-    /** @var int|null $failedCount Number of failed Users */
+    /**
+     * @var int|null $failedCount Number of failed Users
+    */
     private ?int $failedCount = null;
     
-    /** @var DateTime|null $lastUpdateDateTime Last update time */
+    /**
+     * @var DateTime|null $lastUpdateDateTime Last update time
+    */
     private ?DateTime $lastUpdateDateTime = null;
     
-    /** @var int|null $notApplicableCount Number of not applicable users */
+    /**
+     * @var int|null $notApplicableCount Number of not applicable users
+    */
     private ?int $notApplicableCount = null;
     
-    /** @var int|null $pendingCount Number of pending Users */
+    /**
+     * @var int|null $pendingCount Number of pending Users
+    */
     private ?int $pendingCount = null;
     
-    /** @var int|null $successCount Number of succeeded Users */
+    /**
+     * @var int|null $successCount Number of succeeded Users
+    */
     private ?int $successCount = null;
     
     /**
@@ -42,7 +56,7 @@ class DeviceConfigurationUserOverview extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceConfigurationUserOverview
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceConfigurationUserOverview {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceConfigurationUserOverview {
         return new DeviceConfigurationUserOverview();
     }
 
@@ -75,14 +89,15 @@ class DeviceConfigurationUserOverview extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'configurationVersion' => function (self $o, ParseNode $n) { $o->setConfigurationVersion($n->getIntegerValue()); },
-            'errorCount' => function (self $o, ParseNode $n) { $o->setErrorCount($n->getIntegerValue()); },
-            'failedCount' => function (self $o, ParseNode $n) { $o->setFailedCount($n->getIntegerValue()); },
-            'lastUpdateDateTime' => function (self $o, ParseNode $n) { $o->setLastUpdateDateTime($n->getDateTimeValue()); },
-            'notApplicableCount' => function (self $o, ParseNode $n) { $o->setNotApplicableCount($n->getIntegerValue()); },
-            'pendingCount' => function (self $o, ParseNode $n) { $o->setPendingCount($n->getIntegerValue()); },
-            'successCount' => function (self $o, ParseNode $n) { $o->setSuccessCount($n->getIntegerValue()); },
+            'configurationVersion' => function (ParseNode $n) use ($o) { $o->setConfigurationVersion($n->getIntegerValue()); },
+            'errorCount' => function (ParseNode $n) use ($o) { $o->setErrorCount($n->getIntegerValue()); },
+            'failedCount' => function (ParseNode $n) use ($o) { $o->setFailedCount($n->getIntegerValue()); },
+            'lastUpdateDateTime' => function (ParseNode $n) use ($o) { $o->setLastUpdateDateTime($n->getDateTimeValue()); },
+            'notApplicableCount' => function (ParseNode $n) use ($o) { $o->setNotApplicableCount($n->getIntegerValue()); },
+            'pendingCount' => function (ParseNode $n) use ($o) { $o->setPendingCount($n->getIntegerValue()); },
+            'successCount' => function (ParseNode $n) use ($o) { $o->setSuccessCount($n->getIntegerValue()); },
         ]);
     }
 

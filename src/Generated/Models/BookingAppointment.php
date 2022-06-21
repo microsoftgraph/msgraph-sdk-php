@@ -7,75 +7,121 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class BookingAppointment extends Entity 
+class BookingAppointment extends Entity implements Parsable 
 {
-    /** @var string|null $additionalInformation Additional information that is sent to the customer when an appointment is confirmed. */
+    /**
+     * @var string|null $additionalInformation Additional information that is sent to the customer when an appointment is confirmed.
+    */
     private ?string $additionalInformation = null;
     
-    /** @var array<BookingCustomerInformationBase>|null $customers It lists down the customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional. */
+    /**
+     * @var array<BookingCustomerInformationBase>|null $customers It lists down the customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
+    */
     private ?array $customers = null;
     
-    /** @var string|null $customerTimeZone The time zone of the customer. For a list of possible values, see dateTimeTimeZone. */
+    /**
+     * @var string|null $customerTimeZone The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
+    */
     private ?string $customerTimeZone = null;
     
-    /** @var DateInterval|null $duration The length of the appointment, denoted in ISO8601 format. */
+    /**
+     * @var DateInterval|null $duration The length of the appointment, denoted in ISO8601 format.
+    */
     private ?DateInterval $duration = null;
     
-    /** @var DateTimeTimeZone|null $endDateTime The endDateTime property */
+    /**
+     * @var DateTimeTimeZone|null $endDateTime The endDateTime property
+    */
     private ?DateTimeTimeZone $endDateTime = null;
     
-    /** @var int|null $filledAttendeesCount The current number of customers in the appointment */
+    /**
+     * @var int|null $filledAttendeesCount The current number of customers in the appointment.
+    */
     private ?int $filledAttendeesCount = null;
     
-    /** @var bool|null $isLocationOnline If true, indicates that the appointment will be held online. Default value is false. */
+    /**
+     * @var bool|null $isLocationOnline True indicates that the appointment will be held online. Default value is false.
+    */
     private ?bool $isLocationOnline = null;
     
-    /** @var string|null $joinWebUrl The URL of the online meeting for the appointment. */
+    /**
+     * @var string|null $joinWebUrl The URL of the online meeting for the appointment.
+    */
     private ?string $joinWebUrl = null;
     
-    /** @var int|null $maximumAttendeesCount The maximum number of customers allowed in an appointment. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation. */
+    /**
+     * @var int|null $maximumAttendeesCount The maximum number of customers allowed in an appointment. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
+    */
     private ?int $maximumAttendeesCount = null;
     
-    /** @var bool|null $optOutOfCustomerEmail If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment. */
+    /**
+     * @var bool|null $optOutOfCustomerEmail True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
+    */
     private ?bool $optOutOfCustomerEmail = null;
     
-    /** @var DateInterval|null $postBuffer The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format. */
+    /**
+     * @var DateInterval|null $postBuffer The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.
+    */
     private ?DateInterval $postBuffer = null;
     
-    /** @var DateInterval|null $preBuffer The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format. */
+    /**
+     * @var DateInterval|null $preBuffer The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.
+    */
     private ?DateInterval $preBuffer = null;
     
-    /** @var float|null $price The regular price for an appointment for the specified bookingService. */
+    /**
+     * @var float|null $price The regular price for an appointment for the specified bookingService.
+    */
     private ?float $price = null;
     
-    /** @var BookingPriceType|null $priceType A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue. */
+    /**
+     * @var BookingPriceType|null $priceType A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
+    */
     private ?BookingPriceType $priceType = null;
     
-    /** @var array<BookingReminder>|null $reminders The collection of customer reminders sent for this appointment. The value of this property is available only when reading this bookingAppointment by its ID. */
+    /**
+     * @var array<BookingReminder>|null $reminders The collection of customer reminders sent for this appointment. The value of this property is available only when reading this bookingAppointment by its ID.
+    */
     private ?array $reminders = null;
     
-    /** @var string|null $selfServiceAppointmentId An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1. */
+    /**
+     * @var string|null $selfServiceAppointmentId An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
+    */
     private ?string $selfServiceAppointmentId = null;
     
-    /** @var string|null $serviceId The ID of the bookingService associated with this appointment. */
+    /**
+     * @var string|null $serviceId The ID of the bookingService associated with this appointment.
+    */
     private ?string $serviceId = null;
     
-    /** @var Location|null $serviceLocation The location where the service is delivered. */
+    /**
+     * @var Location|null $serviceLocation The location where the service is delivered.
+    */
     private ?Location $serviceLocation = null;
     
-    /** @var string|null $serviceName The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it is computed from the service associated with the appointment by the serviceId property. */
+    /**
+     * @var string|null $serviceName The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it is computed from the service associated with the appointment by the serviceId property.
+    */
     private ?string $serviceName = null;
     
-    /** @var string|null $serviceNotes Notes from a bookingStaffMember. The value of this property is available only when reading this bookingAppointment by its ID. */
+    /**
+     * @var string|null $serviceNotes Notes from a bookingStaffMember. The value of this property is available only when reading this bookingAppointment by its ID.
+    */
     private ?string $serviceNotes = null;
     
-    /** @var bool|null $smsNotificationsEnabled If true, indicates SMS notifications will be sent to the customers for the appointment. Default value is false. */
+    /**
+     * @var bool|null $smsNotificationsEnabled True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
+    */
     private ?bool $smsNotificationsEnabled = null;
     
-    /** @var array<string>|null $staffMemberIds The ID of each bookingStaffMember who is scheduled in this appointment. */
+    /**
+     * @var array<string>|null $staffMemberIds The ID of each bookingStaffMember who is scheduled in this appointment.
+    */
     private ?array $staffMemberIds = null;
     
-    /** @var DateTimeTimeZone|null $startDateTime The startDateTime property */
+    /**
+     * @var DateTimeTimeZone|null $startDateTime The startDateTime property
+    */
     private ?DateTimeTimeZone $startDateTime = null;
     
     /**
@@ -90,7 +136,7 @@ class BookingAppointment extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return BookingAppointment
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): BookingAppointment {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): BookingAppointment {
         return new BookingAppointment();
     }
 
@@ -139,35 +185,36 @@ class BookingAppointment extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'additionalInformation' => function (self $o, ParseNode $n) { $o->setAdditionalInformation($n->getStringValue()); },
-            'customers' => function (self $o, ParseNode $n) { $o->setCustomers($n->getCollectionOfObjectValues(BookingCustomerInformationBase::class)); },
-            'customerTimeZone' => function (self $o, ParseNode $n) { $o->setCustomerTimeZone($n->getStringValue()); },
-            'duration' => function (self $o, ParseNode $n) { $o->setDuration($n->getDateIntervalValue()); },
-            'endDateTime' => function (self $o, ParseNode $n) { $o->setEndDateTime($n->getObjectValue(DateTimeTimeZone::class)); },
-            'filledAttendeesCount' => function (self $o, ParseNode $n) { $o->setFilledAttendeesCount($n->getIntegerValue()); },
-            'isLocationOnline' => function (self $o, ParseNode $n) { $o->setIsLocationOnline($n->getBooleanValue()); },
-            'joinWebUrl' => function (self $o, ParseNode $n) { $o->setJoinWebUrl($n->getStringValue()); },
-            'maximumAttendeesCount' => function (self $o, ParseNode $n) { $o->setMaximumAttendeesCount($n->getIntegerValue()); },
-            'optOutOfCustomerEmail' => function (self $o, ParseNode $n) { $o->setOptOutOfCustomerEmail($n->getBooleanValue()); },
-            'postBuffer' => function (self $o, ParseNode $n) { $o->setPostBuffer($n->getDateIntervalValue()); },
-            'preBuffer' => function (self $o, ParseNode $n) { $o->setPreBuffer($n->getDateIntervalValue()); },
-            'price' => function (self $o, ParseNode $n) { $o->setPrice($n->getFloatValue()); },
-            'priceType' => function (self $o, ParseNode $n) { $o->setPriceType($n->getEnumValue(BookingPriceType::class)); },
-            'reminders' => function (self $o, ParseNode $n) { $o->setReminders($n->getCollectionOfObjectValues(BookingReminder::class)); },
-            'selfServiceAppointmentId' => function (self $o, ParseNode $n) { $o->setSelfServiceAppointmentId($n->getStringValue()); },
-            'serviceId' => function (self $o, ParseNode $n) { $o->setServiceId($n->getStringValue()); },
-            'serviceLocation' => function (self $o, ParseNode $n) { $o->setServiceLocation($n->getObjectValue(Location::class)); },
-            'serviceName' => function (self $o, ParseNode $n) { $o->setServiceName($n->getStringValue()); },
-            'serviceNotes' => function (self $o, ParseNode $n) { $o->setServiceNotes($n->getStringValue()); },
-            'smsNotificationsEnabled' => function (self $o, ParseNode $n) { $o->setSmsNotificationsEnabled($n->getBooleanValue()); },
-            'staffMemberIds' => function (self $o, ParseNode $n) { $o->setStaffMemberIds($n->getCollectionOfPrimitiveValues()); },
-            'startDateTime' => function (self $o, ParseNode $n) { $o->setStartDateTime($n->getObjectValue(DateTimeTimeZone::class)); },
+            'additionalInformation' => function (ParseNode $n) use ($o) { $o->setAdditionalInformation($n->getStringValue()); },
+            'customers' => function (ParseNode $n) use ($o) { $o->setCustomers($n->getCollectionOfObjectValues(array(BookingCustomerInformationBase::class, 'createFromDiscriminatorValue'))); },
+            'customerTimeZone' => function (ParseNode $n) use ($o) { $o->setCustomerTimeZone($n->getStringValue()); },
+            'duration' => function (ParseNode $n) use ($o) { $o->setDuration($n->getDateIntervalValue()); },
+            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
+            'filledAttendeesCount' => function (ParseNode $n) use ($o) { $o->setFilledAttendeesCount($n->getIntegerValue()); },
+            'isLocationOnline' => function (ParseNode $n) use ($o) { $o->setIsLocationOnline($n->getBooleanValue()); },
+            'joinWebUrl' => function (ParseNode $n) use ($o) { $o->setJoinWebUrl($n->getStringValue()); },
+            'maximumAttendeesCount' => function (ParseNode $n) use ($o) { $o->setMaximumAttendeesCount($n->getIntegerValue()); },
+            'optOutOfCustomerEmail' => function (ParseNode $n) use ($o) { $o->setOptOutOfCustomerEmail($n->getBooleanValue()); },
+            'postBuffer' => function (ParseNode $n) use ($o) { $o->setPostBuffer($n->getDateIntervalValue()); },
+            'preBuffer' => function (ParseNode $n) use ($o) { $o->setPreBuffer($n->getDateIntervalValue()); },
+            'price' => function (ParseNode $n) use ($o) { $o->setPrice($n->getFloatValue()); },
+            'priceType' => function (ParseNode $n) use ($o) { $o->setPriceType($n->getEnumValue(BookingPriceType::class)); },
+            'reminders' => function (ParseNode $n) use ($o) { $o->setReminders($n->getCollectionOfObjectValues(array(BookingReminder::class, 'createFromDiscriminatorValue'))); },
+            'selfServiceAppointmentId' => function (ParseNode $n) use ($o) { $o->setSelfServiceAppointmentId($n->getStringValue()); },
+            'serviceId' => function (ParseNode $n) use ($o) { $o->setServiceId($n->getStringValue()); },
+            'serviceLocation' => function (ParseNode $n) use ($o) { $o->setServiceLocation($n->getObjectValue(array(Location::class, 'createFromDiscriminatorValue'))); },
+            'serviceName' => function (ParseNode $n) use ($o) { $o->setServiceName($n->getStringValue()); },
+            'serviceNotes' => function (ParseNode $n) use ($o) { $o->setServiceNotes($n->getStringValue()); },
+            'smsNotificationsEnabled' => function (ParseNode $n) use ($o) { $o->setSmsNotificationsEnabled($n->getBooleanValue()); },
+            'staffMemberIds' => function (ParseNode $n) use ($o) { $o->setStaffMemberIds($n->getCollectionOfPrimitiveValues()); },
+            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
     /**
-     * Gets the filledAttendeesCount property value. The current number of customers in the appointment
+     * Gets the filledAttendeesCount property value. The current number of customers in the appointment.
      * @return int|null
     */
     public function getFilledAttendeesCount(): ?int {
@@ -175,7 +222,7 @@ class BookingAppointment extends Entity
     }
 
     /**
-     * Gets the isLocationOnline property value. If true, indicates that the appointment will be held online. Default value is false.
+     * Gets the isLocationOnline property value. True indicates that the appointment will be held online. Default value is false.
      * @return bool|null
     */
     public function getIsLocationOnline(): ?bool {
@@ -199,7 +246,7 @@ class BookingAppointment extends Entity
     }
 
     /**
-     * Gets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
+     * Gets the optOutOfCustomerEmail property value. True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
      * @return bool|null
     */
     public function getOptOutOfCustomerEmail(): ?bool {
@@ -247,7 +294,7 @@ class BookingAppointment extends Entity
     }
 
     /**
-     * Gets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1.
+     * Gets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
      * @return string|null
     */
     public function getSelfServiceAppointmentId(): ?string {
@@ -287,7 +334,7 @@ class BookingAppointment extends Entity
     }
 
     /**
-     * Gets the smsNotificationsEnabled property value. If true, indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
+     * Gets the smsNotificationsEnabled property value. True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
      * @return bool|null
     */
     public function getSmsNotificationsEnabled(): ?bool {
@@ -382,7 +429,7 @@ class BookingAppointment extends Entity
     }
 
     /**
-     * Sets the filledAttendeesCount property value. The current number of customers in the appointment
+     * Sets the filledAttendeesCount property value. The current number of customers in the appointment.
      *  @param int|null $value Value to set for the filledAttendeesCount property.
     */
     public function setFilledAttendeesCount(?int $value ): void {
@@ -390,7 +437,7 @@ class BookingAppointment extends Entity
     }
 
     /**
-     * Sets the isLocationOnline property value. If true, indicates that the appointment will be held online. Default value is false.
+     * Sets the isLocationOnline property value. True indicates that the appointment will be held online. Default value is false.
      *  @param bool|null $value Value to set for the isLocationOnline property.
     */
     public function setIsLocationOnline(?bool $value ): void {
@@ -414,7 +461,7 @@ class BookingAppointment extends Entity
     }
 
     /**
-     * Sets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
+     * Sets the optOutOfCustomerEmail property value. True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
      *  @param bool|null $value Value to set for the optOutOfCustomerEmail property.
     */
     public function setOptOutOfCustomerEmail(?bool $value ): void {
@@ -462,7 +509,7 @@ class BookingAppointment extends Entity
     }
 
     /**
-     * Sets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1.
+     * Sets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
      *  @param string|null $value Value to set for the selfServiceAppointmentId property.
     */
     public function setSelfServiceAppointmentId(?string $value ): void {
@@ -502,7 +549,7 @@ class BookingAppointment extends Entity
     }
 
     /**
-     * Sets the smsNotificationsEnabled property value. If true, indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
+     * Sets the smsNotificationsEnabled property value. True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
      *  @param bool|null $value Value to set for the smsNotificationsEnabled property.
     */
     public function setSmsNotificationsEnabled(?bool $value ): void {

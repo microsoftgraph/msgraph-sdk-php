@@ -6,27 +6,41 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AccessPackageSubject extends Entity 
+class AccessPackageSubject extends Entity implements Parsable 
 {
-    /** @var ConnectedOrganization|null $connectedOrganization The connected organization of the subject. Read-only. Nullable. */
+    /**
+     * @var ConnectedOrganization|null $connectedOrganization The connected organization of the subject. Read-only. Nullable.
+    */
     private ?ConnectedOrganization $connectedOrganization = null;
     
-    /** @var string|null $displayName The display name of the subject. */
+    /**
+     * @var string|null $displayName The display name of the subject.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $email The email address of the subject. */
+    /**
+     * @var string|null $email The email address of the subject.
+    */
     private ?string $email = null;
     
-    /** @var string|null $objectId The object identifier of the subject. null if the subject is not yet a user in the tenant. */
+    /**
+     * @var string|null $objectId The object identifier of the subject. null if the subject is not yet a user in the tenant.
+    */
     private ?string $objectId = null;
     
-    /** @var string|null $onPremisesSecurityIdentifier A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier. */
+    /**
+     * @var string|null $onPremisesSecurityIdentifier A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
+    */
     private ?string $onPremisesSecurityIdentifier = null;
     
-    /** @var string|null $principalName The principal name, if known, of the subject. */
+    /**
+     * @var string|null $principalName The principal name, if known, of the subject.
+    */
     private ?string $principalName = null;
     
-    /** @var AccessPackageSubjectType|null $subjectType The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue. */
+    /**
+     * @var AccessPackageSubjectType|null $subjectType The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
+    */
     private ?AccessPackageSubjectType $subjectType = null;
     
     /**
@@ -41,7 +55,7 @@ class AccessPackageSubject extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AccessPackageSubject
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageSubject {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageSubject {
         return new AccessPackageSubject();
     }
 
@@ -74,14 +88,15 @@ class AccessPackageSubject extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'connectedOrganization' => function (self $o, ParseNode $n) { $o->setConnectedOrganization($n->getObjectValue(ConnectedOrganization::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'email' => function (self $o, ParseNode $n) { $o->setEmail($n->getStringValue()); },
-            'objectId' => function (self $o, ParseNode $n) { $o->setObjectId($n->getStringValue()); },
-            'onPremisesSecurityIdentifier' => function (self $o, ParseNode $n) { $o->setOnPremisesSecurityIdentifier($n->getStringValue()); },
-            'principalName' => function (self $o, ParseNode $n) { $o->setPrincipalName($n->getStringValue()); },
-            'subjectType' => function (self $o, ParseNode $n) { $o->setSubjectType($n->getEnumValue(AccessPackageSubjectType::class)); },
+            'connectedOrganization' => function (ParseNode $n) use ($o) { $o->setConnectedOrganization($n->getObjectValue(array(ConnectedOrganization::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
+            'objectId' => function (ParseNode $n) use ($o) { $o->setObjectId($n->getStringValue()); },
+            'onPremisesSecurityIdentifier' => function (ParseNode $n) use ($o) { $o->setOnPremisesSecurityIdentifier($n->getStringValue()); },
+            'principalName' => function (ParseNode $n) use ($o) { $o->setPrincipalName($n->getStringValue()); },
+            'subjectType' => function (ParseNode $n) use ($o) { $o->setSubjectType($n->getEnumValue(AccessPackageSubjectType::class)); },
         ]);
     }
 

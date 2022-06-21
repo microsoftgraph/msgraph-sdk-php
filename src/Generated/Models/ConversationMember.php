@@ -7,15 +7,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ConversationMember extends Entity 
+class ConversationMember extends Entity implements Parsable 
 {
-    /** @var string|null $displayName The display name of the user. */
+    /**
+     * @var string|null $displayName The display name of the user.
+    */
     private ?string $displayName = null;
     
-    /** @var array<string>|null $roles The roles for that user. */
+    /**
+     * @var array<string>|null $roles The roles for that user. This property only contains additional qualifiers when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is a guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property.
+    */
     private ?array $roles = null;
     
-    /** @var DateTime|null $visibleHistoryStartDateTime The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat. */
+    /**
+     * @var DateTime|null $visibleHistoryStartDateTime The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.
+    */
     private ?DateTime $visibleHistoryStartDateTime = null;
     
     /**
@@ -30,7 +36,14 @@ class ConversationMember extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ConversationMember
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ConversationMember {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ConversationMember {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.aadUserConversationMember': return new AadUserConversationMember();
+            }
+        }
         return new ConversationMember();
     }
 
@@ -47,15 +60,16 @@ class ConversationMember extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'roles' => function (self $o, ParseNode $n) { $o->setRoles($n->getCollectionOfPrimitiveValues()); },
-            'visibleHistoryStartDateTime' => function (self $o, ParseNode $n) { $o->setVisibleHistoryStartDateTime($n->getDateTimeValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'roles' => function (ParseNode $n) use ($o) { $o->setRoles($n->getCollectionOfPrimitiveValues()); },
+            'visibleHistoryStartDateTime' => function (ParseNode $n) use ($o) { $o->setVisibleHistoryStartDateTime($n->getDateTimeValue()); },
         ]);
     }
 
     /**
-     * Gets the roles property value. The roles for that user.
+     * Gets the roles property value. The roles for that user. This property only contains additional qualifiers when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is a guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property.
      * @return array<string>|null
     */
     public function getRoles(): ?array {
@@ -90,7 +104,7 @@ class ConversationMember extends Entity
     }
 
     /**
-     * Sets the roles property value. The roles for that user.
+     * Sets the roles property value. The roles for that user. This property only contains additional qualifiers when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is a guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property.
      *  @param array<string>|null $value Value to set for the roles property.
     */
     public function setRoles(?array $value ): void {

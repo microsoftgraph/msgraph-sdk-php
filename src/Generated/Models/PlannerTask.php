@@ -7,78 +7,131 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class PlannerTask extends Entity 
+class PlannerTask extends Entity implements Parsable 
 {
-    /** @var int|null $activeChecklistItemCount Number of checklist items with value set to false, representing incomplete items. */
+    /**
+     * @var int|null $activeChecklistItemCount Number of checklist items with value set to false, representing incomplete items.
+    */
     private ?int $activeChecklistItemCount = null;
     
-    /** @var PlannerAppliedCategories|null $appliedCategories The categories to which the task has been applied. See applied Categories for possible values. */
+    /**
+     * @var PlannerAppliedCategories|null $appliedCategories The categories to which the task has been applied. See applied Categories for possible values.
+    */
     private ?PlannerAppliedCategories $appliedCategories = null;
     
-    /** @var PlannerAssignedToTaskBoardTaskFormat|null $assignedToTaskBoardFormat Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo. */
+    /**
+     * @var PlannerAssignedToTaskBoardTaskFormat|null $assignedToTaskBoardFormat Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
+    */
     private ?PlannerAssignedToTaskBoardTaskFormat $assignedToTaskBoardFormat = null;
     
-    /** @var string|null $assigneePriority Hint used to order items of this type in a list view. The format is defined as outlined here. */
+    /**
+     * @var string|null $assigneePriority Hint used to order items of this type in a list view. The format is defined as outlined here.
+    */
     private ?string $assigneePriority = null;
     
-    /** @var PlannerAssignments|null $assignments The set of assignees the task is assigned to. */
+    /**
+     * @var PlannerAssignments|null $assignments The set of assignees the task is assigned to.
+    */
     private ?PlannerAssignments $assignments = null;
     
-    /** @var string|null $bucketId Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service. */
+    /**
+     * @var string|null $bucketId Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
+    */
     private ?string $bucketId = null;
     
-    /** @var PlannerBucketTaskBoardTaskFormat|null $bucketTaskBoardFormat Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket. */
+    /**
+     * @var PlannerBucketTaskBoardTaskFormat|null $bucketTaskBoardFormat Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
+    */
     private ?PlannerBucketTaskBoardTaskFormat $bucketTaskBoardFormat = null;
     
-    /** @var int|null $checklistItemCount Number of checklist items that are present on the task. */
+    /**
+     * @var int|null $checklistItemCount Number of checklist items that are present on the task.
+    */
     private ?int $checklistItemCount = null;
     
-    /** @var IdentitySet|null $completedBy Identity of the user that completed the task. */
+    /**
+     * @var IdentitySet|null $completedBy Identity of the user that completed the task.
+    */
     private ?IdentitySet $completedBy = null;
     
-    /** @var DateTime|null $completedDateTime Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $completedDateTime Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $completedDateTime = null;
     
-    /** @var string|null $conversationThreadId Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group. */
+    /**
+     * @var string|null $conversationThreadId Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
+    */
     private ?string $conversationThreadId = null;
     
-    /** @var IdentitySet|null $createdBy Identity of the user that created the task. */
+    /**
+     * @var IdentitySet|null $createdBy Identity of the user that created the task.
+    */
     private ?IdentitySet $createdBy = null;
     
-    /** @var DateTime|null $createdDateTime Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $createdDateTime Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var PlannerTaskDetails|null $details Read-only. Nullable. Additional details about the task. */
+    /**
+     * @var PlannerTaskDetails|null $details Read-only. Nullable. Additional details about the task.
+    */
     private ?PlannerTaskDetails $details = null;
     
-    /** @var DateTime|null $dueDateTime Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $dueDateTime Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $dueDateTime = null;
     
-    /** @var bool|null $hasDescription Read-only. Value is true if the details object of the task has a non-empty description and false otherwise. */
+    /**
+     * @var bool|null $hasDescription Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
+    */
     private ?bool $hasDescription = null;
     
-    /** @var string|null $orderHint Hint used to order items of this type in a list view. The format is defined as outlined here. */
+    /**
+     * @var string|null $orderHint Hint used to order items of this type in a list view. The format is defined as outlined here.
+    */
     private ?string $orderHint = null;
     
-    /** @var int|null $percentComplete Percentage of task completion. When set to 100, the task is considered completed. */
+    /**
+     * @var int|null $percentComplete Percentage of task completion. When set to 100, the task is considered completed.
+    */
     private ?int $percentComplete = null;
     
-    /** @var string|null $planId Plan ID to which the task belongs. */
+    /**
+     * @var string|null $planId Plan ID to which the task belongs.
+    */
     private ?string $planId = null;
     
-    /** @var PlannerPreviewType|null $previewType This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. */
+    /**
+     * @var PlannerPreviewType|null $previewType This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
+    */
     private ?PlannerPreviewType $previewType = null;
     
-    /** @var PlannerProgressTaskBoardTaskFormat|null $progressTaskBoardFormat Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress. */
+    /**
+     * @var int|null $priority Priority of the task. Valid range of values is between 0 and 10 (inclusive), with increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Currently, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
+    */
+    private ?int $priority = null;
+    
+    /**
+     * @var PlannerProgressTaskBoardTaskFormat|null $progressTaskBoardFormat Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
+    */
     private ?PlannerProgressTaskBoardTaskFormat $progressTaskBoardFormat = null;
     
-    /** @var int|null $referenceCount Number of external references that exist on the task. */
+    /**
+     * @var int|null $referenceCount Number of external references that exist on the task.
+    */
     private ?int $referenceCount = null;
     
-    /** @var DateTime|null $startDateTime Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $startDateTime Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $startDateTime = null;
     
-    /** @var string|null $title Title of the task. */
+    /**
+     * @var string|null $title Title of the task.
+    */
     private ?string $title = null;
     
     /**
@@ -93,7 +146,7 @@ class PlannerTask extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PlannerTask
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PlannerTask {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PlannerTask {
         return new PlannerTask();
     }
 
@@ -222,31 +275,33 @@ class PlannerTask extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activeChecklistItemCount' => function (self $o, ParseNode $n) { $o->setActiveChecklistItemCount($n->getIntegerValue()); },
-            'appliedCategories' => function (self $o, ParseNode $n) { $o->setAppliedCategories($n->getObjectValue(PlannerAppliedCategories::class)); },
-            'assignedToTaskBoardFormat' => function (self $o, ParseNode $n) { $o->setAssignedToTaskBoardFormat($n->getObjectValue(PlannerAssignedToTaskBoardTaskFormat::class)); },
-            'assigneePriority' => function (self $o, ParseNode $n) { $o->setAssigneePriority($n->getStringValue()); },
-            'assignments' => function (self $o, ParseNode $n) { $o->setAssignments($n->getObjectValue(PlannerAssignments::class)); },
-            'bucketId' => function (self $o, ParseNode $n) { $o->setBucketId($n->getStringValue()); },
-            'bucketTaskBoardFormat' => function (self $o, ParseNode $n) { $o->setBucketTaskBoardFormat($n->getObjectValue(PlannerBucketTaskBoardTaskFormat::class)); },
-            'checklistItemCount' => function (self $o, ParseNode $n) { $o->setChecklistItemCount($n->getIntegerValue()); },
-            'completedBy' => function (self $o, ParseNode $n) { $o->setCompletedBy($n->getObjectValue(IdentitySet::class)); },
-            'completedDateTime' => function (self $o, ParseNode $n) { $o->setCompletedDateTime($n->getDateTimeValue()); },
-            'conversationThreadId' => function (self $o, ParseNode $n) { $o->setConversationThreadId($n->getStringValue()); },
-            'createdBy' => function (self $o, ParseNode $n) { $o->setCreatedBy($n->getObjectValue(IdentitySet::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'details' => function (self $o, ParseNode $n) { $o->setDetails($n->getObjectValue(PlannerTaskDetails::class)); },
-            'dueDateTime' => function (self $o, ParseNode $n) { $o->setDueDateTime($n->getDateTimeValue()); },
-            'hasDescription' => function (self $o, ParseNode $n) { $o->setHasDescription($n->getBooleanValue()); },
-            'orderHint' => function (self $o, ParseNode $n) { $o->setOrderHint($n->getStringValue()); },
-            'percentComplete' => function (self $o, ParseNode $n) { $o->setPercentComplete($n->getIntegerValue()); },
-            'planId' => function (self $o, ParseNode $n) { $o->setPlanId($n->getStringValue()); },
-            'previewType' => function (self $o, ParseNode $n) { $o->setPreviewType($n->getEnumValue(PlannerPreviewType::class)); },
-            'progressTaskBoardFormat' => function (self $o, ParseNode $n) { $o->setProgressTaskBoardFormat($n->getObjectValue(PlannerProgressTaskBoardTaskFormat::class)); },
-            'referenceCount' => function (self $o, ParseNode $n) { $o->setReferenceCount($n->getIntegerValue()); },
-            'startDateTime' => function (self $o, ParseNode $n) { $o->setStartDateTime($n->getDateTimeValue()); },
-            'title' => function (self $o, ParseNode $n) { $o->setTitle($n->getStringValue()); },
+            'activeChecklistItemCount' => function (ParseNode $n) use ($o) { $o->setActiveChecklistItemCount($n->getIntegerValue()); },
+            'appliedCategories' => function (ParseNode $n) use ($o) { $o->setAppliedCategories($n->getObjectValue(array(PlannerAppliedCategories::class, 'createFromDiscriminatorValue'))); },
+            'assignedToTaskBoardFormat' => function (ParseNode $n) use ($o) { $o->setAssignedToTaskBoardFormat($n->getObjectValue(array(PlannerAssignedToTaskBoardTaskFormat::class, 'createFromDiscriminatorValue'))); },
+            'assigneePriority' => function (ParseNode $n) use ($o) { $o->setAssigneePriority($n->getStringValue()); },
+            'assignments' => function (ParseNode $n) use ($o) { $o->setAssignments($n->getObjectValue(array(PlannerAssignments::class, 'createFromDiscriminatorValue'))); },
+            'bucketId' => function (ParseNode $n) use ($o) { $o->setBucketId($n->getStringValue()); },
+            'bucketTaskBoardFormat' => function (ParseNode $n) use ($o) { $o->setBucketTaskBoardFormat($n->getObjectValue(array(PlannerBucketTaskBoardTaskFormat::class, 'createFromDiscriminatorValue'))); },
+            'checklistItemCount' => function (ParseNode $n) use ($o) { $o->setChecklistItemCount($n->getIntegerValue()); },
+            'completedBy' => function (ParseNode $n) use ($o) { $o->setCompletedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'completedDateTime' => function (ParseNode $n) use ($o) { $o->setCompletedDateTime($n->getDateTimeValue()); },
+            'conversationThreadId' => function (ParseNode $n) use ($o) { $o->setConversationThreadId($n->getStringValue()); },
+            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'details' => function (ParseNode $n) use ($o) { $o->setDetails($n->getObjectValue(array(PlannerTaskDetails::class, 'createFromDiscriminatorValue'))); },
+            'dueDateTime' => function (ParseNode $n) use ($o) { $o->setDueDateTime($n->getDateTimeValue()); },
+            'hasDescription' => function (ParseNode $n) use ($o) { $o->setHasDescription($n->getBooleanValue()); },
+            'orderHint' => function (ParseNode $n) use ($o) { $o->setOrderHint($n->getStringValue()); },
+            'percentComplete' => function (ParseNode $n) use ($o) { $o->setPercentComplete($n->getIntegerValue()); },
+            'planId' => function (ParseNode $n) use ($o) { $o->setPlanId($n->getStringValue()); },
+            'previewType' => function (ParseNode $n) use ($o) { $o->setPreviewType($n->getEnumValue(PlannerPreviewType::class)); },
+            'priority' => function (ParseNode $n) use ($o) { $o->setPriority($n->getIntegerValue()); },
+            'progressTaskBoardFormat' => function (ParseNode $n) use ($o) { $o->setProgressTaskBoardFormat($n->getObjectValue(array(PlannerProgressTaskBoardTaskFormat::class, 'createFromDiscriminatorValue'))); },
+            'referenceCount' => function (ParseNode $n) use ($o) { $o->setReferenceCount($n->getIntegerValue()); },
+            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
+            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getStringValue()); },
         ]);
     }
 
@@ -283,11 +338,19 @@ class PlannerTask extends Entity
     }
 
     /**
-     * Gets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
+     * Gets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
      * @return PlannerPreviewType|null
     */
     public function getPreviewType(): ?PlannerPreviewType {
         return $this->previewType;
+    }
+
+    /**
+     * Gets the priority property value. Priority of the task. Valid range of values is between 0 and 10 (inclusive), with increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Currently, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
+     * @return int|null
+    */
+    public function getPriority(): ?int {
+        return $this->priority;
     }
 
     /**
@@ -348,6 +411,7 @@ class PlannerTask extends Entity
         $writer->writeIntegerValue('percentComplete', $this->percentComplete);
         $writer->writeStringValue('planId', $this->planId);
         $writer->writeEnumValue('previewType', $this->previewType);
+        $writer->writeIntegerValue('priority', $this->priority);
         $writer->writeObjectValue('progressTaskBoardFormat', $this->progressTaskBoardFormat);
         $writer->writeIntegerValue('referenceCount', $this->referenceCount);
         $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
@@ -507,11 +571,19 @@ class PlannerTask extends Entity
     }
 
     /**
-     * Sets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
+     * Sets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
      *  @param PlannerPreviewType|null $value Value to set for the previewType property.
     */
     public function setPreviewType(?PlannerPreviewType $value ): void {
         $this->previewType = $value;
+    }
+
+    /**
+     * Sets the priority property value. Priority of the task. Valid range of values is between 0 and 10 (inclusive), with increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Currently, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
+     *  @param int|null $value Value to set for the priority property.
+    */
+    public function setPriority(?int $value ): void {
+        $this->priority = $value;
     }
 
     /**

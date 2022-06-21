@@ -7,21 +7,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Trending extends Entity 
+class Trending extends Entity implements Parsable 
 {
-    /** @var DateTime|null $lastModifiedDateTime The lastModifiedDateTime property */
+    /**
+     * @var DateTime|null $lastModifiedDateTime The lastModifiedDateTime property
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var Entity|null $resource Used for navigating to the trending document. */
+    /**
+     * @var Entity|null $resource Used for navigating to the trending document.
+    */
     private ?Entity $resource = null;
     
-    /** @var ResourceReference|null $resourceReference Reference properties of the trending document, such as the url and type of the document. */
+    /**
+     * @var ResourceReference|null $resourceReference Reference properties of the trending document, such as the url and type of the document.
+    */
     private ?ResourceReference $resourceReference = null;
     
-    /** @var ResourceVisualization|null $resourceVisualization Properties that you can use to visualize the document in your experience. */
+    /**
+     * @var ResourceVisualization|null $resourceVisualization Properties that you can use to visualize the document in your experience.
+    */
     private ?ResourceVisualization $resourceVisualization = null;
     
-    /** @var float|null $weight Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value. */
+    /**
+     * @var float|null $weight Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
+    */
     private ?float $weight = null;
     
     /**
@@ -36,7 +46,7 @@ class Trending extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Trending
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Trending {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Trending {
         return new Trending();
     }
 
@@ -45,12 +55,13 @@ class Trending extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'resource' => function (self $o, ParseNode $n) { $o->setResource($n->getObjectValue(Entity::class)); },
-            'resourceReference' => function (self $o, ParseNode $n) { $o->setResourceReference($n->getObjectValue(ResourceReference::class)); },
-            'resourceVisualization' => function (self $o, ParseNode $n) { $o->setResourceVisualization($n->getObjectValue(ResourceVisualization::class)); },
-            'weight' => function (self $o, ParseNode $n) { $o->setWeight($n->getFloatValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'resource' => function (ParseNode $n) use ($o) { $o->setResource($n->getObjectValue(array(Entity::class, 'createFromDiscriminatorValue'))); },
+            'resourceReference' => function (ParseNode $n) use ($o) { $o->setResourceReference($n->getObjectValue(array(ResourceReference::class, 'createFromDiscriminatorValue'))); },
+            'resourceVisualization' => function (ParseNode $n) use ($o) { $o->setResourceVisualization($n->getObjectValue(array(ResourceVisualization::class, 'createFromDiscriminatorValue'))); },
+            'weight' => function (ParseNode $n) use ($o) { $o->setWeight($n->getFloatValue()); },
         ]);
     }
 

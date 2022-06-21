@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AuthenticationMethodsRegistrationCampaignIncludeTarget implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $id The object identifier of an Azure Active Directory user or group. */
+    /**
+     * @var string|null $id The object identifier of an Azure AD user or group.
+    */
     private ?string $id = null;
     
-    /** @var string|null $targetedAuthenticationMethod The authentication method that the user is prompted to register. The value must be microsoftAuthenticator. */
+    /**
+     * @var string|null $targetedAuthenticationMethod The authentication method that the user is prompted to register. The value must be microsoftAuthenticator.
+    */
     private ?string $targetedAuthenticationMethod = null;
     
-    /** @var AuthenticationMethodTargetType|null $targetType The type of the authentication method target. Possible values are: user, group, unknownFutureValue. */
+    /**
+     * @var AuthenticationMethodTargetType|null $targetType The type of the authentication method target. Possible values are: user, group, unknownFutureValue.
+    */
     private ?AuthenticationMethodTargetType $targetType = null;
     
     /**
@@ -33,7 +41,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AuthenticationMethodsRegistrationCampaignIncludeTarget
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AuthenticationMethodsRegistrationCampaignIncludeTarget {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AuthenticationMethodsRegistrationCampaignIncludeTarget {
         return new AuthenticationMethodsRegistrationCampaignIncludeTarget();
     }
 
@@ -50,15 +58,16 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'id' => function (self $o, ParseNode $n) { $o->setId($n->getStringValue()); },
-            'targetedAuthenticationMethod' => function (self $o, ParseNode $n) { $o->setTargetedAuthenticationMethod($n->getStringValue()); },
-            'targetType' => function (self $o, ParseNode $n) { $o->setTargetType($n->getEnumValue(AuthenticationMethodTargetType::class)); },
+            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            'targetedAuthenticationMethod' => function (ParseNode $n) use ($o) { $o->setTargetedAuthenticationMethod($n->getStringValue()); },
+            'targetType' => function (ParseNode $n) use ($o) { $o->setTargetType($n->getEnumValue(AuthenticationMethodTargetType::class)); },
         ];
     }
 
     /**
-     * Gets the id property value. The object identifier of an Azure Active Directory user or group.
+     * Gets the id property value. The object identifier of an Azure AD user or group.
      * @return string|null
     */
     public function getId(): ?string {
@@ -101,7 +110,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
     }
 
     /**
-     * Sets the id property value. The object identifier of an Azure Active Directory user or group.
+     * Sets the id property value. The object identifier of an Azure AD user or group.
      *  @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value ): void {

@@ -6,7 +6,7 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Extension extends Entity 
+class Extension extends Entity implements Parsable 
 {
     /**
      * Instantiates a new extension and sets the default values.
@@ -20,7 +20,14 @@ class Extension extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Extension
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Extension {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Extension {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.openTypeExtension': return new OpenTypeExtension();
+            }
+        }
         return new Extension();
     }
 
@@ -29,6 +36,7 @@ class Extension extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

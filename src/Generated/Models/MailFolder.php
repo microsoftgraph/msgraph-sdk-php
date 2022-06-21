@@ -6,39 +6,61 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class MailFolder extends Entity 
+class MailFolder extends Entity implements Parsable 
 {
-    /** @var int|null $childFolderCount The number of immediate child mailFolders in the current mailFolder. */
+    /**
+     * @var int|null $childFolderCount The number of immediate child mailFolders in the current mailFolder.
+    */
     private ?int $childFolderCount = null;
     
-    /** @var array<MailFolder>|null $childFolders The collection of child folders in the mailFolder. */
+    /**
+     * @var array<MailFolder>|null $childFolders The collection of child folders in the mailFolder.
+    */
     private ?array $childFolders = null;
     
-    /** @var string|null $displayName The mailFolder's display name. */
+    /**
+     * @var string|null $displayName The mailFolder's display name.
+    */
     private ?string $displayName = null;
     
-    /** @var bool|null $isHidden Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders. */
+    /**
+     * @var bool|null $isHidden Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
+    */
     private ?bool $isHidden = null;
     
-    /** @var array<MessageRule>|null $messageRules The collection of rules that apply to the user's Inbox folder. */
+    /**
+     * @var array<MessageRule>|null $messageRules The collection of rules that apply to the user's Inbox folder.
+    */
     private ?array $messageRules = null;
     
-    /** @var array<Message>|null $messages The collection of messages in the mailFolder. */
+    /**
+     * @var array<Message>|null $messages The collection of messages in the mailFolder.
+    */
     private ?array $messages = null;
     
-    /** @var array<MultiValueLegacyExtendedProperty>|null $multiValueExtendedProperties The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable. */
+    /**
+     * @var array<MultiValueLegacyExtendedProperty>|null $multiValueExtendedProperties The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
+    */
     private ?array $multiValueExtendedProperties = null;
     
-    /** @var string|null $parentFolderId The unique identifier for the mailFolder's parent mailFolder. */
+    /**
+     * @var string|null $parentFolderId The unique identifier for the mailFolder's parent mailFolder.
+    */
     private ?string $parentFolderId = null;
     
-    /** @var array<SingleValueLegacyExtendedProperty>|null $singleValueExtendedProperties The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable. */
+    /**
+     * @var array<SingleValueLegacyExtendedProperty>|null $singleValueExtendedProperties The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
+    */
     private ?array $singleValueExtendedProperties = null;
     
-    /** @var int|null $totalItemCount The number of items in the mailFolder. */
+    /**
+     * @var int|null $totalItemCount The number of items in the mailFolder.
+    */
     private ?int $totalItemCount = null;
     
-    /** @var int|null $unreadItemCount The number of items in the mailFolder marked as unread. */
+    /**
+     * @var int|null $unreadItemCount The number of items in the mailFolder marked as unread.
+    */
     private ?int $unreadItemCount = null;
     
     /**
@@ -53,7 +75,14 @@ class MailFolder extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return MailFolder
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): MailFolder {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): MailFolder {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.mailSearchFolder': return new MailSearchFolder();
+            }
+        }
         return new MailFolder();
     }
 
@@ -86,18 +115,19 @@ class MailFolder extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'childFolderCount' => function (self $o, ParseNode $n) { $o->setChildFolderCount($n->getIntegerValue()); },
-            'childFolders' => function (self $o, ParseNode $n) { $o->setChildFolders($n->getCollectionOfObjectValues(MailFolder::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'isHidden' => function (self $o, ParseNode $n) { $o->setIsHidden($n->getBooleanValue()); },
-            'messageRules' => function (self $o, ParseNode $n) { $o->setMessageRules($n->getCollectionOfObjectValues(MessageRule::class)); },
-            'messages' => function (self $o, ParseNode $n) { $o->setMessages($n->getCollectionOfObjectValues(Message::class)); },
-            'multiValueExtendedProperties' => function (self $o, ParseNode $n) { $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::class)); },
-            'parentFolderId' => function (self $o, ParseNode $n) { $o->setParentFolderId($n->getStringValue()); },
-            'singleValueExtendedProperties' => function (self $o, ParseNode $n) { $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::class)); },
-            'totalItemCount' => function (self $o, ParseNode $n) { $o->setTotalItemCount($n->getIntegerValue()); },
-            'unreadItemCount' => function (self $o, ParseNode $n) { $o->setUnreadItemCount($n->getIntegerValue()); },
+            'childFolderCount' => function (ParseNode $n) use ($o) { $o->setChildFolderCount($n->getIntegerValue()); },
+            'childFolders' => function (ParseNode $n) use ($o) { $o->setChildFolders($n->getCollectionOfObjectValues(array(MailFolder::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'isHidden' => function (ParseNode $n) use ($o) { $o->setIsHidden($n->getBooleanValue()); },
+            'messageRules' => function (ParseNode $n) use ($o) { $o->setMessageRules($n->getCollectionOfObjectValues(array(MessageRule::class, 'createFromDiscriminatorValue'))); },
+            'messages' => function (ParseNode $n) use ($o) { $o->setMessages($n->getCollectionOfObjectValues(array(Message::class, 'createFromDiscriminatorValue'))); },
+            'multiValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues(array(MultiValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
+            'parentFolderId' => function (ParseNode $n) use ($o) { $o->setParentFolderId($n->getStringValue()); },
+            'singleValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues(array(SingleValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
+            'totalItemCount' => function (ParseNode $n) use ($o) { $o->setTotalItemCount($n->getIntegerValue()); },
+            'unreadItemCount' => function (ParseNode $n) use ($o) { $o->setUnreadItemCount($n->getIntegerValue()); },
         ]);
     }
 

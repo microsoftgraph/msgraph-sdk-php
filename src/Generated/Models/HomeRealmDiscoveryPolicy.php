@@ -6,10 +6,10 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class HomeRealmDiscoveryPolicy extends StsPolicy 
+class HomeRealmDiscoveryPolicy extends StsPolicy implements Parsable 
 {
     /**
-     * Instantiates a new homeRealmDiscoveryPolicy and sets the default values.
+     * Instantiates a new HomeRealmDiscoveryPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -20,7 +20,7 @@ class HomeRealmDiscoveryPolicy extends StsPolicy
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return HomeRealmDiscoveryPolicy
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): HomeRealmDiscoveryPolicy {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): HomeRealmDiscoveryPolicy {
         return new HomeRealmDiscoveryPolicy();
     }
 
@@ -29,6 +29,7 @@ class HomeRealmDiscoveryPolicy extends StsPolicy
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

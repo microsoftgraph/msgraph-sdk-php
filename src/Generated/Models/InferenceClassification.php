@@ -6,9 +6,11 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class InferenceClassification extends Entity 
+class InferenceClassification extends Entity implements Parsable 
 {
-    /** @var array<InferenceClassificationOverride>|null $overrides A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable. */
+    /**
+     * @var array<InferenceClassificationOverride>|null $overrides A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
+    */
     private ?array $overrides = null;
     
     /**
@@ -23,7 +25,7 @@ class InferenceClassification extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return InferenceClassification
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): InferenceClassification {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): InferenceClassification {
         return new InferenceClassification();
     }
 
@@ -32,8 +34,9 @@ class InferenceClassification extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'overrides' => function (self $o, ParseNode $n) { $o->setOverrides($n->getCollectionOfObjectValues(InferenceClassificationOverride::class)); },
+            'overrides' => function (ParseNode $n) use ($o) { $o->setOverrides($n->getCollectionOfObjectValues(array(InferenceClassificationOverride::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

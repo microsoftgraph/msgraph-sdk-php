@@ -7,15 +7,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ChangeTrackedEntity extends Entity 
+class ChangeTrackedEntity extends Entity implements Parsable 
 {
-    /** @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var IdentitySet|null $lastModifiedBy Identity of the person who last modified the entity. */
+    /**
+     * @var IdentitySet|null $lastModifiedBy Identity of the person who last modified the entity.
+    */
     private ?IdentitySet $lastModifiedBy = null;
     
-    /** @var DateTime|null $lastModifiedDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $lastModifiedDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
     /**
@@ -30,7 +36,21 @@ class ChangeTrackedEntity extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ChangeTrackedEntity
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ChangeTrackedEntity {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ChangeTrackedEntity {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.openShift': return new OpenShift();
+                case '#microsoft.graph.scheduleChangeRequest': return new ScheduleChangeRequest();
+                case '#microsoft.graph.schedulingGroup': return new SchedulingGroup();
+                case '#microsoft.graph.shift': return new Shift();
+                case '#microsoft.graph.shiftPreferences': return new ShiftPreferences();
+                case '#microsoft.graph.timeOff': return new TimeOff();
+                case '#microsoft.graph.timeOffReason': return new TimeOffReason();
+                case '#microsoft.graph.workforceIntegration': return new WorkforceIntegration();
+            }
+        }
         return new ChangeTrackedEntity();
     }
 
@@ -47,10 +67,11 @@ class ChangeTrackedEntity extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'lastModifiedBy' => function (self $o, ParseNode $n) { $o->setLastModifiedBy($n->getObjectValue(IdentitySet::class)); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'lastModifiedBy' => function (ParseNode $n) use ($o) { $o->setLastModifiedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
         ]);
     }
 

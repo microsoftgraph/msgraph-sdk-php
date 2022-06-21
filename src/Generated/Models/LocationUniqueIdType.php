@@ -8,6 +8,6 @@ class LocationUniqueIdType extends Enum {
     public const UNKNOWN = 'unknown';
     public const LOCATION_STORE = 'locationStore';
     public const DIRECTORY = 'directory';
-    public const ESCAPED_PRIVATE = 'EscapedPrivate';
+    public const ESCAPED_PRIVATE = 'private';
     public const BING = 'bing';
 }

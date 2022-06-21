@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ContentTypeOrder implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $EscapedDefault Whether this is the default Content Type */
+    /**
+     * @var bool|null $EscapedDefault Whether this is the default Content Type
+    */
     private ?bool $escapedDefault = null;
     
-    /** @var int|null $position Specifies the position in which the Content Type appears in the selection UI. */
+    /**
+     * @var int|null $position Specifies the position in which the Content Type appears in the selection UI.
+    */
     private ?int $position = null;
     
     /**
@@ -30,7 +36,7 @@ class ContentTypeOrder implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ContentTypeOrder
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ContentTypeOrder {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ContentTypeOrder {
         return new ContentTypeOrder();
     }
 
@@ -55,9 +61,10 @@ class ContentTypeOrder implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'default' => function (self $o, ParseNode $n) { $o->setEscapedDefault($n->getBooleanValue()); },
-            'position' => function (self $o, ParseNode $n) { $o->setPosition($n->getIntegerValue()); },
+            'default' => function (ParseNode $n) use ($o) { $o->setDefault($n->getBooleanValue()); },
+            'position' => function (ParseNode $n) use ($o) { $o->setPosition($n->getIntegerValue()); },
         ];
     }
 

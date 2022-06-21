@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $deviceErrorCode Device error code reported by Device Directory Service(DDS). */
+    /**
+     * @var int|null $deviceErrorCode Device error code reported by Device Directory Service(DDS).
+    */
     private ?int $deviceErrorCode = null;
     
-    /** @var string|null $deviceErrorName Device error name reported by Device Directory Service(DDS). */
+    /**
+     * @var string|null $deviceErrorName Device error name reported by Device Directory Service(DDS).
+    */
     private ?string $deviceErrorName = null;
     
-    /** @var ImportedWindowsAutopilotDeviceIdentityImportStatus|null $deviceImportStatus Device status reported by Device Directory Service(DDS). Possible values are: unknown, pending, partial, complete, error. */
+    /**
+     * @var ImportedWindowsAutopilotDeviceIdentityImportStatus|null $deviceImportStatus Device status reported by Device Directory Service(DDS). Possible values are: unknown, pending, partial, complete, error.
+    */
     private ?ImportedWindowsAutopilotDeviceIdentityImportStatus $deviceImportStatus = null;
     
-    /** @var string|null $deviceRegistrationId Device Registration ID for successfully added device reported by Device Directory Service(DDS). */
+    /**
+     * @var string|null $deviceRegistrationId Device Registration ID for successfully added device reported by Device Directory Service(DDS).
+    */
     private ?string $deviceRegistrationId = null;
     
     /**
@@ -36,7 +46,7 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ImportedWindowsAutopilotDeviceIdentityState
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ImportedWindowsAutopilotDeviceIdentityState {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ImportedWindowsAutopilotDeviceIdentityState {
         return new ImportedWindowsAutopilotDeviceIdentityState();
     }
 
@@ -85,11 +95,12 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'deviceErrorCode' => function (self $o, ParseNode $n) { $o->setDeviceErrorCode($n->getIntegerValue()); },
-            'deviceErrorName' => function (self $o, ParseNode $n) { $o->setDeviceErrorName($n->getStringValue()); },
-            'deviceImportStatus' => function (self $o, ParseNode $n) { $o->setDeviceImportStatus($n->getEnumValue(ImportedWindowsAutopilotDeviceIdentityImportStatus::class)); },
-            'deviceRegistrationId' => function (self $o, ParseNode $n) { $o->setDeviceRegistrationId($n->getStringValue()); },
+            'deviceErrorCode' => function (ParseNode $n) use ($o) { $o->setDeviceErrorCode($n->getIntegerValue()); },
+            'deviceErrorName' => function (ParseNode $n) use ($o) { $o->setDeviceErrorName($n->getStringValue()); },
+            'deviceImportStatus' => function (ParseNode $n) use ($o) { $o->setDeviceImportStatus($n->getEnumValue(ImportedWindowsAutopilotDeviceIdentityImportStatus::class)); },
+            'deviceRegistrationId' => function (ParseNode $n) use ($o) { $o->setDeviceRegistrationId($n->getStringValue()); },
         ];
     }
 

@@ -7,22 +7,30 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
+class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel implements Parsable 
 {
-    /** @var IdentitySet|null $createdBy Identity of the user, device, and application which created the item. Read-only. */
+    /**
+     * @var IdentitySet|null $createdBy Identity of the user, device, and application which created the item. Read-only.
+    */
     private ?IdentitySet $createdBy = null;
     
-    /** @var string|null $displayName The name of the notebook. */
+    /**
+     * @var string|null $displayName The name of the notebook.
+    */
     private ?string $displayName = null;
     
-    /** @var IdentitySet|null $lastModifiedBy Identity of the user, device, and application which created the item. Read-only. */
+    /**
+     * @var IdentitySet|null $lastModifiedBy Identity of the user, device, and application which created the item. Read-only.
+    */
     private ?IdentitySet $lastModifiedBy = null;
     
-    /** @var DateTime|null $lastModifiedDateTime The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
     /**
-     * Instantiates a new onenoteEntityHierarchyModel and sets the default values.
+     * Instantiates a new OnenoteEntityHierarchyModel and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -33,7 +41,16 @@ class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return OnenoteEntityHierarchyModel
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): OnenoteEntityHierarchyModel {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): OnenoteEntityHierarchyModel {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.notebook': return new Notebook();
+                case '#microsoft.graph.onenoteSection': return new OnenoteSection();
+                case '#microsoft.graph.sectionGroup': return new SectionGroup();
+            }
+        }
         return new OnenoteEntityHierarchyModel();
     }
 
@@ -58,11 +75,12 @@ class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdBy' => function (self $o, ParseNode $n) { $o->setCreatedBy($n->getObjectValue(IdentitySet::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'lastModifiedBy' => function (self $o, ParseNode $n) { $o->setLastModifiedBy($n->getObjectValue(IdentitySet::class)); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'lastModifiedBy' => function (ParseNode $n) use ($o) { $o->setLastModifiedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
         ]);
     }
 

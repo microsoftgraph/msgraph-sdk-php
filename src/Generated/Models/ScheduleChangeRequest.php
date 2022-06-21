@@ -7,34 +7,50 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ScheduleChangeRequest extends ChangeTrackedEntity 
+class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable 
 {
-    /** @var ScheduleChangeRequestActor|null $assignedTo The assignedTo property */
+    /**
+     * @var ScheduleChangeRequestActor|null $assignedTo The assignedTo property
+    */
     private ?ScheduleChangeRequestActor $assignedTo = null;
     
-    /** @var DateTime|null $managerActionDateTime The managerActionDateTime property */
+    /**
+     * @var DateTime|null $managerActionDateTime The managerActionDateTime property
+    */
     private ?DateTime $managerActionDateTime = null;
     
-    /** @var string|null $managerActionMessage The managerActionMessage property */
+    /**
+     * @var string|null $managerActionMessage The managerActionMessage property
+    */
     private ?string $managerActionMessage = null;
     
-    /** @var string|null $managerUserId The managerUserId property */
+    /**
+     * @var string|null $managerUserId The managerUserId property
+    */
     private ?string $managerUserId = null;
     
-    /** @var DateTime|null $senderDateTime The senderDateTime property */
+    /**
+     * @var DateTime|null $senderDateTime The senderDateTime property
+    */
     private ?DateTime $senderDateTime = null;
     
-    /** @var string|null $senderMessage The senderMessage property */
+    /**
+     * @var string|null $senderMessage The senderMessage property
+    */
     private ?string $senderMessage = null;
     
-    /** @var string|null $senderUserId The senderUserId property */
+    /**
+     * @var string|null $senderUserId The senderUserId property
+    */
     private ?string $senderUserId = null;
     
-    /** @var ScheduleChangeState|null $state The state property */
+    /**
+     * @var ScheduleChangeState|null $state The state property
+    */
     private ?ScheduleChangeState $state = null;
     
     /**
-     * Instantiates a new scheduleChangeRequest and sets the default values.
+     * Instantiates a new ScheduleChangeRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -45,7 +61,16 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ScheduleChangeRequest
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ScheduleChangeRequest {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ScheduleChangeRequest {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.offerShiftRequest': return new OfferShiftRequest();
+                case '#microsoft.graph.openShiftChangeRequest': return new OpenShiftChangeRequest();
+                case '#microsoft.graph.timeOffRequest': return new TimeOffRequest();
+            }
+        }
         return new ScheduleChangeRequest();
     }
 
@@ -62,15 +87,16 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignedTo' => function (self $o, ParseNode $n) { $o->setAssignedTo($n->getEnumValue(ScheduleChangeRequestActor::class)); },
-            'managerActionDateTime' => function (self $o, ParseNode $n) { $o->setManagerActionDateTime($n->getDateTimeValue()); },
-            'managerActionMessage' => function (self $o, ParseNode $n) { $o->setManagerActionMessage($n->getStringValue()); },
-            'managerUserId' => function (self $o, ParseNode $n) { $o->setManagerUserId($n->getStringValue()); },
-            'senderDateTime' => function (self $o, ParseNode $n) { $o->setSenderDateTime($n->getDateTimeValue()); },
-            'senderMessage' => function (self $o, ParseNode $n) { $o->setSenderMessage($n->getStringValue()); },
-            'senderUserId' => function (self $o, ParseNode $n) { $o->setSenderUserId($n->getStringValue()); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getEnumValue(ScheduleChangeState::class)); },
+            'assignedTo' => function (ParseNode $n) use ($o) { $o->setAssignedTo($n->getEnumValue(ScheduleChangeRequestActor::class)); },
+            'managerActionDateTime' => function (ParseNode $n) use ($o) { $o->setManagerActionDateTime($n->getDateTimeValue()); },
+            'managerActionMessage' => function (ParseNode $n) use ($o) { $o->setManagerActionMessage($n->getStringValue()); },
+            'managerUserId' => function (ParseNode $n) use ($o) { $o->setManagerUserId($n->getStringValue()); },
+            'senderDateTime' => function (ParseNode $n) use ($o) { $o->setSenderDateTime($n->getDateTimeValue()); },
+            'senderMessage' => function (ParseNode $n) use ($o) { $o->setSenderMessage($n->getStringValue()); },
+            'senderUserId' => function (ParseNode $n) use ($o) { $o->setSenderUserId($n->getStringValue()); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(ScheduleChangeState::class)); },
         ]);
     }
 

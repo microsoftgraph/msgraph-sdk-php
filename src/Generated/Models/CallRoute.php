@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class CallRoute implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var IdentitySet|null $EscapedFinal The final property */
+    /**
+     * @var IdentitySet|null $EscapedFinal The final property
+    */
     private ?IdentitySet $escapedFinal = null;
     
-    /** @var IdentitySet|null $original The original property */
+    /**
+     * @var IdentitySet|null $original The original property
+    */
     private ?IdentitySet $original = null;
     
-    /** @var RoutingType|null $routingType Possible values are: forwarded, lookup, selfFork. */
+    /**
+     * @var RoutingType|null $routingType Possible values are: forwarded, lookup, selfFork.
+    */
     private ?RoutingType $routingType = null;
     
     /**
@@ -33,7 +41,7 @@ class CallRoute implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return CallRoute
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): CallRoute {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): CallRoute {
         return new CallRoute();
     }
 
@@ -50,10 +58,11 @@ class CallRoute implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'final' => function (self $o, ParseNode $n) { $o->setEscapedFinal($n->getObjectValue(IdentitySet::class)); },
-            'original' => function (self $o, ParseNode $n) { $o->setOriginal($n->getObjectValue(IdentitySet::class)); },
-            'routingType' => function (self $o, ParseNode $n) { $o->setRoutingType($n->getEnumValue(RoutingType::class)); },
+            'final' => function (ParseNode $n) use ($o) { $o->setFinal($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'original' => function (ParseNode $n) use ($o) { $o->setOriginal($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'routingType' => function (ParseNode $n) use ($o) { $o->setRoutingType($n->getEnumValue(RoutingType::class)); },
         ];
     }
 

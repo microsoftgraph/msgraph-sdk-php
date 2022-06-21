@@ -10,22 +10,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var IdentitySet|null $changedBy Identity of the user who changed the  subject rights request. */
+    /**
+     * @var IdentitySet|null $changedBy Identity of the user who changed the  subject rights request.
+    */
     private ?IdentitySet $changedBy = null;
     
-    /** @var DateTime|null $eventDateTime Data and time when the entity was changed. */
+    /**
+     * @var DateTime|null $eventDateTime Data and time when the entity was changed.
+    */
     private ?DateTime $eventDateTime = null;
     
-    /** @var SubjectRightsRequestStage|null $stage The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue. */
+    /**
+     * @var SubjectRightsRequestStage|null $stage The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
+    */
     private ?SubjectRightsRequestStage $stage = null;
     
-    /** @var SubjectRightsRequestStageStatus|null $stageStatus The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue. */
+    /**
+     * @var SubjectRightsRequestStageStatus|null $stageStatus The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
+    */
     private ?SubjectRightsRequestStageStatus $stageStatus = null;
     
-    /** @var string|null $type Type of history. */
+    /**
+     * @var string|null $type Type of history.
+    */
     private ?string $type = null;
     
     /**
@@ -40,7 +52,7 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SubjectRightsRequestHistory
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SubjectRightsRequestHistory {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SubjectRightsRequestHistory {
         return new SubjectRightsRequestHistory();
     }
 
@@ -73,12 +85,13 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'changedBy' => function (self $o, ParseNode $n) { $o->setChangedBy($n->getObjectValue(IdentitySet::class)); },
-            'eventDateTime' => function (self $o, ParseNode $n) { $o->setEventDateTime($n->getDateTimeValue()); },
-            'stage' => function (self $o, ParseNode $n) { $o->setStage($n->getEnumValue(SubjectRightsRequestStage::class)); },
-            'stageStatus' => function (self $o, ParseNode $n) { $o->setStageStatus($n->getEnumValue(SubjectRightsRequestStageStatus::class)); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getStringValue()); },
+            'changedBy' => function (ParseNode $n) use ($o) { $o->setChangedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'eventDateTime' => function (ParseNode $n) use ($o) { $o->setEventDateTime($n->getDateTimeValue()); },
+            'stage' => function (ParseNode $n) use ($o) { $o->setStage($n->getEnumValue(SubjectRightsRequestStage::class)); },
+            'stageStatus' => function (ParseNode $n) use ($o) { $o->setStageStatus($n->getEnumValue(SubjectRightsRequestStageStatus::class)); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
         ];
     }
 

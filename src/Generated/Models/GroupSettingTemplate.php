@@ -6,19 +6,25 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class GroupSettingTemplate extends DirectoryObject 
+class GroupSettingTemplate extends DirectoryObject implements Parsable 
 {
-    /** @var string|null $description Description of the template. */
+    /**
+     * @var string|null $description Description of the template.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName Display name of the template. The template named Group.Unified can be used to configure tenant-wide Microsoft 365 group settings, while the template named Group.Unified.Guest can be used to configure group-specific settings. */
+    /**
+     * @var string|null $displayName Display name of the template. The template named Group.Unified can be used to configure tenant-wide Microsoft 365 group settings, while the template named Group.Unified.Guest can be used to configure group-specific settings.
+    */
     private ?string $displayName = null;
     
-    /** @var array<SettingTemplateValue>|null $values Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template. */
+    /**
+     * @var array<SettingTemplateValue>|null $values Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
+    */
     private ?array $values = null;
     
     /**
-     * Instantiates a new groupSettingTemplate and sets the default values.
+     * Instantiates a new GroupSettingTemplate and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -29,7 +35,7 @@ class GroupSettingTemplate extends DirectoryObject
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return GroupSettingTemplate
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): GroupSettingTemplate {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): GroupSettingTemplate {
         return new GroupSettingTemplate();
     }
 
@@ -54,10 +60,11 @@ class GroupSettingTemplate extends DirectoryObject
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'values' => function (self $o, ParseNode $n) { $o->setValues($n->getCollectionOfObjectValues(SettingTemplateValue::class)); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'values' => function (ParseNode $n) use ($o) { $o->setValues($n->getCollectionOfObjectValues(array(SettingTemplateValue::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

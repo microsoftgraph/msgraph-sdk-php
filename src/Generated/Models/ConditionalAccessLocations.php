@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ConditionalAccessLocations implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<string>|null $excludeLocations Location IDs excluded from scope of policy. */
+    /**
+     * @var array<string>|null $excludeLocations Location IDs excluded from scope of policy.
+    */
     private ?array $excludeLocations = null;
     
-    /** @var array<string>|null $includeLocations Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted. */
+    /**
+     * @var array<string>|null $includeLocations Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted.
+    */
     private ?array $includeLocations = null;
     
     /**
@@ -30,7 +36,7 @@ class ConditionalAccessLocations implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ConditionalAccessLocations
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessLocations {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessLocations {
         return new ConditionalAccessLocations();
     }
 
@@ -55,9 +61,10 @@ class ConditionalAccessLocations implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'excludeLocations' => function (self $o, ParseNode $n) { $o->setExcludeLocations($n->getCollectionOfPrimitiveValues()); },
-            'includeLocations' => function (self $o, ParseNode $n) { $o->setIncludeLocations($n->getCollectionOfPrimitiveValues()); },
+            'excludeLocations' => function (ParseNode $n) use ($o) { $o->setExcludeLocations($n->getCollectionOfPrimitiveValues()); },
+            'includeLocations' => function (ParseNode $n) use ($o) { $o->setIncludeLocations($n->getCollectionOfPrimitiveValues()); },
         ];
     }
 

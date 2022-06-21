@@ -7,85 +7,135 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Organization extends DirectoryObject 
+class Organization extends DirectoryObject implements Parsable 
 {
-    /** @var array<AssignedPlan>|null $assignedPlans The collection of service plans associated with the tenant. Not nullable. */
+    /**
+     * @var array<AssignedPlan>|null $assignedPlans The collection of service plans associated with the tenant. Not nullable.
+    */
     private ?array $assignedPlans = null;
     
-    /** @var OrganizationalBranding|null $branding The branding property */
+    /**
+     * @var OrganizationalBranding|null $branding Resource to manage the default branding for the organization. Nullable.
+    */
     private ?OrganizationalBranding $branding = null;
     
-    /** @var array<string>|null $businessPhones Telephone number for the organization. Although this is a string collection, only one number can be set for this property. */
+    /**
+     * @var array<string>|null $businessPhones Telephone number for the organization. Although this is a string collection, only one number can be set for this property.
+    */
     private ?array $businessPhones = null;
     
-    /** @var array<CertificateBasedAuthConfiguration>|null $certificateBasedAuthConfiguration Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection. */
+    /**
+     * @var array<CertificateBasedAuthConfiguration>|null $certificateBasedAuthConfiguration Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
+    */
     private ?array $certificateBasedAuthConfiguration = null;
     
-    /** @var string|null $city City name of the address for the organization. */
+    /**
+     * @var string|null $city City name of the address for the organization.
+    */
     private ?string $city = null;
     
-    /** @var string|null $country Country/region name of the address for the organization. */
+    /**
+     * @var string|null $country Country/region name of the address for the organization.
+    */
     private ?string $country = null;
     
-    /** @var string|null $countryLetterCode Country or region abbreviation for the organization in ISO 3166-2 format. */
+    /**
+     * @var string|null $countryLetterCode Country or region abbreviation for the organization in ISO 3166-2 format.
+    */
     private ?string $countryLetterCode = null;
     
-    /** @var DateTime|null $createdDateTime Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * @var DateTime|null $createdDateTime Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $displayName The display name for the tenant. */
+    /**
+     * @var string|null $displayName The display name for the tenant.
+    */
     private ?string $displayName = null;
     
-    /** @var array<Extension>|null $extensions The collection of open extensions defined for the organization. Read-only. Nullable. */
+    /**
+     * @var array<Extension>|null $extensions The collection of open extensions defined for the organization resource. Nullable.
+    */
     private ?array $extensions = null;
     
-    /** @var array<string>|null $marketingNotificationEmails Not nullable. */
+    /**
+     * @var array<string>|null $marketingNotificationEmails Not nullable.
+    */
     private ?array $marketingNotificationEmails = null;
     
-    /** @var MdmAuthority|null $mobileDeviceManagementAuthority Mobile device management authority. Possible values are: unknown, intune, sccm, office365. */
+    /**
+     * @var MdmAuthority|null $mobileDeviceManagementAuthority Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
+    */
     private ?MdmAuthority $mobileDeviceManagementAuthority = null;
     
-    /** @var DateTime|null $onPremisesLastSyncDateTime The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * @var DateTime|null $onPremisesLastSyncDateTime The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    */
     private ?DateTime $onPremisesLastSyncDateTime = null;
     
-    /** @var bool|null $onPremisesSyncEnabled true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default). */
+    /**
+     * @var bool|null $onPremisesSyncEnabled true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null if this object has never been synced from an on-premises directory (default).
+    */
     private ?bool $onPremisesSyncEnabled = null;
     
-    /** @var string|null $postalCode Postal code of the address for the organization. */
+    /**
+     * @var string|null $postalCode Postal code of the address for the organization.
+    */
     private ?string $postalCode = null;
     
-    /** @var string|null $preferredLanguage The preferred language for the organization. Should follow ISO 639-1 Code; for example, en. */
+    /**
+     * @var string|null $preferredLanguage The preferred language for the organization. Should follow ISO 639-1 Code; for example en.
+    */
     private ?string $preferredLanguage = null;
     
-    /** @var PrivacyProfile|null $privacyProfile The privacy profile of an organization. */
+    /**
+     * @var PrivacyProfile|null $privacyProfile The privacy profile of an organization.
+    */
     private ?PrivacyProfile $privacyProfile = null;
     
-    /** @var array<ProvisionedPlan>|null $provisionedPlans Not nullable. */
+    /**
+     * @var array<ProvisionedPlan>|null $provisionedPlans Not nullable.
+    */
     private ?array $provisionedPlans = null;
     
-    /** @var array<string>|null $securityComplianceNotificationMails The securityComplianceNotificationMails property */
+    /**
+     * @var array<string>|null $securityComplianceNotificationMails The securityComplianceNotificationMails property
+    */
     private ?array $securityComplianceNotificationMails = null;
     
-    /** @var array<string>|null $securityComplianceNotificationPhones The securityComplianceNotificationPhones property */
+    /**
+     * @var array<string>|null $securityComplianceNotificationPhones The securityComplianceNotificationPhones property
+    */
     private ?array $securityComplianceNotificationPhones = null;
     
-    /** @var string|null $state State name of the address for the organization. */
+    /**
+     * @var string|null $state State name of the address for the organization.
+    */
     private ?string $state = null;
     
-    /** @var string|null $street Street name of the address for organization. */
+    /**
+     * @var string|null $street Street name of the address for organization.
+    */
     private ?string $street = null;
     
-    /** @var array<string>|null $technicalNotificationMails Not nullable. */
+    /**
+     * @var array<string>|null $technicalNotificationMails Not nullable.
+    */
     private ?array $technicalNotificationMails = null;
     
-    /** @var string|null $tenantType The tenantType property */
+    /**
+     * @var string|null $tenantType The tenantType property
+    */
     private ?string $tenantType = null;
     
-    /** @var array<VerifiedDomain>|null $verifiedDomains The collection of domains associated with this tenant. Not nullable. */
+    /**
+     * @var array<VerifiedDomain>|null $verifiedDomains The collection of domains associated with this tenant. Not nullable.
+    */
     private ?array $verifiedDomains = null;
     
     /**
-     * Instantiates a new organization and sets the default values.
+     * Instantiates a new Organization and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -96,7 +146,7 @@ class Organization extends DirectoryObject
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Organization
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Organization {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Organization {
         return new Organization();
     }
 
@@ -109,7 +159,7 @@ class Organization extends DirectoryObject
     }
 
     /**
-     * Gets the branding property value. The branding property
+     * Gets the branding property value. Resource to manage the default branding for the organization. Nullable.
      * @return OrganizationalBranding|null
     */
     public function getBranding(): ?OrganizationalBranding {
@@ -173,7 +223,7 @@ class Organization extends DirectoryObject
     }
 
     /**
-     * Gets the extensions property value. The collection of open extensions defined for the organization. Read-only. Nullable.
+     * Gets the extensions property value. The collection of open extensions defined for the organization resource. Nullable.
      * @return array<Extension>|null
     */
     public function getExtensions(): ?array {
@@ -185,32 +235,33 @@ class Organization extends DirectoryObject
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignedPlans' => function (self $o, ParseNode $n) { $o->setAssignedPlans($n->getCollectionOfObjectValues(AssignedPlan::class)); },
-            'branding' => function (self $o, ParseNode $n) { $o->setBranding($n->getObjectValue(OrganizationalBranding::class)); },
-            'businessPhones' => function (self $o, ParseNode $n) { $o->setBusinessPhones($n->getCollectionOfPrimitiveValues()); },
-            'certificateBasedAuthConfiguration' => function (self $o, ParseNode $n) { $o->setCertificateBasedAuthConfiguration($n->getCollectionOfObjectValues(CertificateBasedAuthConfiguration::class)); },
-            'city' => function (self $o, ParseNode $n) { $o->setCity($n->getStringValue()); },
-            'country' => function (self $o, ParseNode $n) { $o->setCountry($n->getStringValue()); },
-            'countryLetterCode' => function (self $o, ParseNode $n) { $o->setCountryLetterCode($n->getStringValue()); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'extensions' => function (self $o, ParseNode $n) { $o->setExtensions($n->getCollectionOfObjectValues(Extension::class)); },
-            'marketingNotificationEmails' => function (self $o, ParseNode $n) { $o->setMarketingNotificationEmails($n->getCollectionOfPrimitiveValues()); },
-            'mobileDeviceManagementAuthority' => function (self $o, ParseNode $n) { $o->setMobileDeviceManagementAuthority($n->getEnumValue(MdmAuthority::class)); },
-            'onPremisesLastSyncDateTime' => function (self $o, ParseNode $n) { $o->setOnPremisesLastSyncDateTime($n->getDateTimeValue()); },
-            'onPremisesSyncEnabled' => function (self $o, ParseNode $n) { $o->setOnPremisesSyncEnabled($n->getBooleanValue()); },
-            'postalCode' => function (self $o, ParseNode $n) { $o->setPostalCode($n->getStringValue()); },
-            'preferredLanguage' => function (self $o, ParseNode $n) { $o->setPreferredLanguage($n->getStringValue()); },
-            'privacyProfile' => function (self $o, ParseNode $n) { $o->setPrivacyProfile($n->getObjectValue(PrivacyProfile::class)); },
-            'provisionedPlans' => function (self $o, ParseNode $n) { $o->setProvisionedPlans($n->getCollectionOfObjectValues(ProvisionedPlan::class)); },
-            'securityComplianceNotificationMails' => function (self $o, ParseNode $n) { $o->setSecurityComplianceNotificationMails($n->getCollectionOfPrimitiveValues()); },
-            'securityComplianceNotificationPhones' => function (self $o, ParseNode $n) { $o->setSecurityComplianceNotificationPhones($n->getCollectionOfPrimitiveValues()); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getStringValue()); },
-            'street' => function (self $o, ParseNode $n) { $o->setStreet($n->getStringValue()); },
-            'technicalNotificationMails' => function (self $o, ParseNode $n) { $o->setTechnicalNotificationMails($n->getCollectionOfPrimitiveValues()); },
-            'tenantType' => function (self $o, ParseNode $n) { $o->setTenantType($n->getStringValue()); },
-            'verifiedDomains' => function (self $o, ParseNode $n) { $o->setVerifiedDomains($n->getCollectionOfObjectValues(VerifiedDomain::class)); },
+            'assignedPlans' => function (ParseNode $n) use ($o) { $o->setAssignedPlans($n->getCollectionOfObjectValues(array(AssignedPlan::class, 'createFromDiscriminatorValue'))); },
+            'branding' => function (ParseNode $n) use ($o) { $o->setBranding($n->getObjectValue(array(OrganizationalBranding::class, 'createFromDiscriminatorValue'))); },
+            'businessPhones' => function (ParseNode $n) use ($o) { $o->setBusinessPhones($n->getCollectionOfPrimitiveValues()); },
+            'certificateBasedAuthConfiguration' => function (ParseNode $n) use ($o) { $o->setCertificateBasedAuthConfiguration($n->getCollectionOfObjectValues(array(CertificateBasedAuthConfiguration::class, 'createFromDiscriminatorValue'))); },
+            'city' => function (ParseNode $n) use ($o) { $o->setCity($n->getStringValue()); },
+            'country' => function (ParseNode $n) use ($o) { $o->setCountry($n->getStringValue()); },
+            'countryLetterCode' => function (ParseNode $n) use ($o) { $o->setCountryLetterCode($n->getStringValue()); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'extensions' => function (ParseNode $n) use ($o) { $o->setExtensions($n->getCollectionOfObjectValues(array(Extension::class, 'createFromDiscriminatorValue'))); },
+            'marketingNotificationEmails' => function (ParseNode $n) use ($o) { $o->setMarketingNotificationEmails($n->getCollectionOfPrimitiveValues()); },
+            'mobileDeviceManagementAuthority' => function (ParseNode $n) use ($o) { $o->setMobileDeviceManagementAuthority($n->getEnumValue(MdmAuthority::class)); },
+            'onPremisesLastSyncDateTime' => function (ParseNode $n) use ($o) { $o->setOnPremisesLastSyncDateTime($n->getDateTimeValue()); },
+            'onPremisesSyncEnabled' => function (ParseNode $n) use ($o) { $o->setOnPremisesSyncEnabled($n->getBooleanValue()); },
+            'postalCode' => function (ParseNode $n) use ($o) { $o->setPostalCode($n->getStringValue()); },
+            'preferredLanguage' => function (ParseNode $n) use ($o) { $o->setPreferredLanguage($n->getStringValue()); },
+            'privacyProfile' => function (ParseNode $n) use ($o) { $o->setPrivacyProfile($n->getObjectValue(array(PrivacyProfile::class, 'createFromDiscriminatorValue'))); },
+            'provisionedPlans' => function (ParseNode $n) use ($o) { $o->setProvisionedPlans($n->getCollectionOfObjectValues(array(ProvisionedPlan::class, 'createFromDiscriminatorValue'))); },
+            'securityComplianceNotificationMails' => function (ParseNode $n) use ($o) { $o->setSecurityComplianceNotificationMails($n->getCollectionOfPrimitiveValues()); },
+            'securityComplianceNotificationPhones' => function (ParseNode $n) use ($o) { $o->setSecurityComplianceNotificationPhones($n->getCollectionOfPrimitiveValues()); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getStringValue()); },
+            'street' => function (ParseNode $n) use ($o) { $o->setStreet($n->getStringValue()); },
+            'technicalNotificationMails' => function (ParseNode $n) use ($o) { $o->setTechnicalNotificationMails($n->getCollectionOfPrimitiveValues()); },
+            'tenantType' => function (ParseNode $n) use ($o) { $o->setTenantType($n->getStringValue()); },
+            'verifiedDomains' => function (ParseNode $n) use ($o) { $o->setVerifiedDomains($n->getCollectionOfObjectValues(array(VerifiedDomain::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -231,7 +282,7 @@ class Organization extends DirectoryObject
     }
 
     /**
-     * Gets the onPremisesLastSyncDateTime property value. The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Gets the onPremisesLastSyncDateTime property value. The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getOnPremisesLastSyncDateTime(): ?DateTime {
@@ -239,7 +290,7 @@ class Organization extends DirectoryObject
     }
 
     /**
-     * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).
+     * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null if this object has never been synced from an on-premises directory (default).
      * @return bool|null
     */
     public function getOnPremisesSyncEnabled(): ?bool {
@@ -255,7 +306,7 @@ class Organization extends DirectoryObject
     }
 
     /**
-     * Gets the preferredLanguage property value. The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.
+     * Gets the preferredLanguage property value. The preferred language for the organization. Should follow ISO 639-1 Code; for example en.
      * @return string|null
     */
     public function getPreferredLanguage(): ?string {
@@ -376,7 +427,7 @@ class Organization extends DirectoryObject
     }
 
     /**
-     * Sets the branding property value. The branding property
+     * Sets the branding property value. Resource to manage the default branding for the organization. Nullable.
      *  @param OrganizationalBranding|null $value Value to set for the branding property.
     */
     public function setBranding(?OrganizationalBranding $value ): void {
@@ -440,7 +491,7 @@ class Organization extends DirectoryObject
     }
 
     /**
-     * Sets the extensions property value. The collection of open extensions defined for the organization. Read-only. Nullable.
+     * Sets the extensions property value. The collection of open extensions defined for the organization resource. Nullable.
      *  @param array<Extension>|null $value Value to set for the extensions property.
     */
     public function setExtensions(?array $value ): void {
@@ -464,7 +515,7 @@ class Organization extends DirectoryObject
     }
 
     /**
-     * Sets the onPremisesLastSyncDateTime property value. The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Sets the onPremisesLastSyncDateTime property value. The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      *  @param DateTime|null $value Value to set for the onPremisesLastSyncDateTime property.
     */
     public function setOnPremisesLastSyncDateTime(?DateTime $value ): void {
@@ -472,7 +523,7 @@ class Organization extends DirectoryObject
     }
 
     /**
-     * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).
+     * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null if this object has never been synced from an on-premises directory (default).
      *  @param bool|null $value Value to set for the onPremisesSyncEnabled property.
     */
     public function setOnPremisesSyncEnabled(?bool $value ): void {
@@ -488,7 +539,7 @@ class Organization extends DirectoryObject
     }
 
     /**
-     * Sets the preferredLanguage property value. The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.
+     * Sets the preferredLanguage property value. The preferred language for the organization. Should follow ISO 639-1 Code; for example en.
      *  @param string|null $value Value to set for the preferredLanguage property.
     */
     public function setPreferredLanguage(?string $value ): void {

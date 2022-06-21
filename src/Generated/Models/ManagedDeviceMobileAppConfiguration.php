@@ -7,39 +7,61 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ManagedDeviceMobileAppConfiguration extends Entity 
+class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable 
 {
-    /** @var array<ManagedDeviceMobileAppConfigurationAssignment>|null $assignments The list of group assignemenets for app configration. */
+    /**
+     * @var array<ManagedDeviceMobileAppConfigurationAssignment>|null $assignments The list of group assignemenets for app configration.
+    */
     private ?array $assignments = null;
     
-    /** @var DateTime|null $createdDateTime DateTime the object was created. */
+    /**
+     * @var DateTime|null $createdDateTime DateTime the object was created.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $description Admin provided description of the Device Configuration. */
+    /**
+     * @var string|null $description Admin provided description of the Device Configuration.
+    */
     private ?string $description = null;
     
-    /** @var array<ManagedDeviceMobileAppConfigurationDeviceStatus>|null $deviceStatuses List of ManagedDeviceMobileAppConfigurationDeviceStatus. */
+    /**
+     * @var array<ManagedDeviceMobileAppConfigurationDeviceStatus>|null $deviceStatuses List of ManagedDeviceMobileAppConfigurationDeviceStatus.
+    */
     private ?array $deviceStatuses = null;
     
-    /** @var ManagedDeviceMobileAppConfigurationDeviceSummary|null $deviceStatusSummary App configuration device status summary. */
+    /**
+     * @var ManagedDeviceMobileAppConfigurationDeviceSummary|null $deviceStatusSummary App configuration device status summary.
+    */
     private ?ManagedDeviceMobileAppConfigurationDeviceSummary $deviceStatusSummary = null;
     
-    /** @var string|null $displayName Admin provided name of the device configuration. */
+    /**
+     * @var string|null $displayName Admin provided name of the device configuration.
+    */
     private ?string $displayName = null;
     
-    /** @var DateTime|null $lastModifiedDateTime DateTime the object was last modified. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime DateTime the object was last modified.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var array<string>|null $targetedMobileApps the associated app. */
+    /**
+     * @var array<string>|null $targetedMobileApps the associated app.
+    */
     private ?array $targetedMobileApps = null;
     
-    /** @var array<ManagedDeviceMobileAppConfigurationUserStatus>|null $userStatuses List of ManagedDeviceMobileAppConfigurationUserStatus. */
+    /**
+     * @var array<ManagedDeviceMobileAppConfigurationUserStatus>|null $userStatuses List of ManagedDeviceMobileAppConfigurationUserStatus.
+    */
     private ?array $userStatuses = null;
     
-    /** @var ManagedDeviceMobileAppConfigurationUserSummary|null $userStatusSummary App configuration user status summary. */
+    /**
+     * @var ManagedDeviceMobileAppConfigurationUserSummary|null $userStatusSummary App configuration user status summary.
+    */
     private ?ManagedDeviceMobileAppConfigurationUserSummary $userStatusSummary = null;
     
-    /** @var int|null $version Version of the device configuration. */
+    /**
+     * @var int|null $version Version of the device configuration.
+    */
     private ?int $version = null;
     
     /**
@@ -54,7 +76,14 @@ class ManagedDeviceMobileAppConfiguration extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ManagedDeviceMobileAppConfiguration
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ManagedDeviceMobileAppConfiguration {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedDeviceMobileAppConfiguration {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.iosMobileAppConfiguration': return new IosMobileAppConfiguration();
+            }
+        }
         return new ManagedDeviceMobileAppConfiguration();
     }
 
@@ -111,18 +140,19 @@ class ManagedDeviceMobileAppConfiguration extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignments' => function (self $o, ParseNode $n) { $o->setAssignments($n->getCollectionOfObjectValues(ManagedDeviceMobileAppConfigurationAssignment::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'deviceStatuses' => function (self $o, ParseNode $n) { $o->setDeviceStatuses($n->getCollectionOfObjectValues(ManagedDeviceMobileAppConfigurationDeviceStatus::class)); },
-            'deviceStatusSummary' => function (self $o, ParseNode $n) { $o->setDeviceStatusSummary($n->getObjectValue(ManagedDeviceMobileAppConfigurationDeviceSummary::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'targetedMobileApps' => function (self $o, ParseNode $n) { $o->setTargetedMobileApps($n->getCollectionOfPrimitiveValues()); },
-            'userStatuses' => function (self $o, ParseNode $n) { $o->setUserStatuses($n->getCollectionOfObjectValues(ManagedDeviceMobileAppConfigurationUserStatus::class)); },
-            'userStatusSummary' => function (self $o, ParseNode $n) { $o->setUserStatusSummary($n->getObjectValue(ManagedDeviceMobileAppConfigurationUserSummary::class)); },
-            'version' => function (self $o, ParseNode $n) { $o->setVersion($n->getIntegerValue()); },
+            'assignments' => function (ParseNode $n) use ($o) { $o->setAssignments($n->getCollectionOfObjectValues(array(ManagedDeviceMobileAppConfigurationAssignment::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'deviceStatuses' => function (ParseNode $n) use ($o) { $o->setDeviceStatuses($n->getCollectionOfObjectValues(array(ManagedDeviceMobileAppConfigurationDeviceStatus::class, 'createFromDiscriminatorValue'))); },
+            'deviceStatusSummary' => function (ParseNode $n) use ($o) { $o->setDeviceStatusSummary($n->getObjectValue(array(ManagedDeviceMobileAppConfigurationDeviceSummary::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'targetedMobileApps' => function (ParseNode $n) use ($o) { $o->setTargetedMobileApps($n->getCollectionOfPrimitiveValues()); },
+            'userStatuses' => function (ParseNode $n) use ($o) { $o->setUserStatuses($n->getCollectionOfObjectValues(array(ManagedDeviceMobileAppConfigurationUserStatus::class, 'createFromDiscriminatorValue'))); },
+            'userStatusSummary' => function (ParseNode $n) use ($o) { $o->setUserStatusSummary($n->getObjectValue(array(ManagedDeviceMobileAppConfigurationUserSummary::class, 'createFromDiscriminatorValue'))); },
+            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getIntegerValue()); },
         ]);
     }
 

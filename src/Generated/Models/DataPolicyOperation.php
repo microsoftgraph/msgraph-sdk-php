@@ -7,24 +7,36 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DataPolicyOperation extends Entity 
+class DataPolicyOperation extends Entity implements Parsable 
 {
-    /** @var DateTime|null $completedDateTime Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Null until the operation completes. */
+    /**
+     * @var DateTime|null $completedDateTime Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Null until the operation completes.
+    */
     private ?DateTime $completedDateTime = null;
     
-    /** @var float|null $progress Specifies the progress of an operation. */
+    /**
+     * @var float|null $progress Specifies the progress of an operation.
+    */
     private ?float $progress = null;
     
-    /** @var DataPolicyOperationStatus|null $status Possible values are: notStarted, running, complete, failed, unknownFutureValue. */
+    /**
+     * @var DataPolicyOperationStatus|null $status Possible values are: notStarted, running, complete, failed, unknownFutureValue.
+    */
     private ?DataPolicyOperationStatus $status = null;
     
-    /** @var string|null $storageLocation The URL location to where data is being exported for export requests. */
+    /**
+     * @var string|null $storageLocation The URL location to where data is being exported for export requests.
+    */
     private ?string $storageLocation = null;
     
-    /** @var DateTime|null $submittedDateTime Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $submittedDateTime Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $submittedDateTime = null;
     
-    /** @var string|null $userId The id for the user on whom the operation is performed. */
+    /**
+     * @var string|null $userId The id for the user on whom the operation is performed.
+    */
     private ?string $userId = null;
     
     /**
@@ -39,7 +51,7 @@ class DataPolicyOperation extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DataPolicyOperation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DataPolicyOperation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DataPolicyOperation {
         return new DataPolicyOperation();
     }
 
@@ -56,13 +68,14 @@ class DataPolicyOperation extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'completedDateTime' => function (self $o, ParseNode $n) { $o->setCompletedDateTime($n->getDateTimeValue()); },
-            'progress' => function (self $o, ParseNode $n) { $o->setProgress($n->getFloatValue()); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(DataPolicyOperationStatus::class)); },
-            'storageLocation' => function (self $o, ParseNode $n) { $o->setStorageLocation($n->getStringValue()); },
-            'submittedDateTime' => function (self $o, ParseNode $n) { $o->setSubmittedDateTime($n->getDateTimeValue()); },
-            'userId' => function (self $o, ParseNode $n) { $o->setUserId($n->getStringValue()); },
+            'completedDateTime' => function (ParseNode $n) use ($o) { $o->setCompletedDateTime($n->getDateTimeValue()); },
+            'progress' => function (ParseNode $n) use ($o) { $o->setProgress($n->getFloatValue()); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(DataPolicyOperationStatus::class)); },
+            'storageLocation' => function (ParseNode $n) use ($o) { $o->setStorageLocation($n->getStringValue()); },
+            'submittedDateTime' => function (ParseNode $n) use ($o) { $o->setSubmittedDateTime($n->getDateTimeValue()); },
+            'userId' => function (ParseNode $n) use ($o) { $o->setUserId($n->getStringValue()); },
         ]);
     }
 

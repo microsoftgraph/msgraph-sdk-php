@@ -6,52 +6,80 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class EducationSchool extends EducationOrganization 
+class EducationSchool extends EducationOrganization implements Parsable 
 {
-    /** @var PhysicalAddress|null $address Address of the school. */
+    /**
+     * @var PhysicalAddress|null $address Address of the school.
+    */
     private ?PhysicalAddress $address = null;
     
-    /** @var AdministrativeUnit|null $administrativeUnit The underlying administrativeUnit for this school. */
+    /**
+     * @var AdministrativeUnit|null $administrativeUnit The underlying administrativeUnit for this school.
+    */
     private ?AdministrativeUnit $administrativeUnit = null;
     
-    /** @var array<EducationClass>|null $classes Classes taught at the school. Nullable. */
+    /**
+     * @var array<EducationClass>|null $classes Classes taught at the school. Nullable.
+    */
     private ?array $classes = null;
     
-    /** @var IdentitySet|null $createdBy Entity who created the school. */
+    /**
+     * @var IdentitySet|null $createdBy Entity who created the school.
+    */
     private ?IdentitySet $createdBy = null;
     
-    /** @var string|null $externalId ID of school in syncing system. */
+    /**
+     * @var string|null $externalId ID of school in syncing system.
+    */
     private ?string $externalId = null;
     
-    /** @var string|null $externalPrincipalId ID of principal in syncing system. */
+    /**
+     * @var string|null $externalPrincipalId ID of principal in syncing system.
+    */
     private ?string $externalPrincipalId = null;
     
-    /** @var string|null $fax The fax property */
+    /**
+     * @var string|null $fax The fax property
+    */
     private ?string $fax = null;
     
-    /** @var string|null $highestGrade Highest grade taught. */
+    /**
+     * @var string|null $highestGrade Highest grade taught.
+    */
     private ?string $highestGrade = null;
     
-    /** @var string|null $lowestGrade Lowest grade taught. */
+    /**
+     * @var string|null $lowestGrade Lowest grade taught.
+    */
     private ?string $lowestGrade = null;
     
-    /** @var string|null $phone Phone number of school. */
+    /**
+     * @var string|null $phone Phone number of school.
+    */
     private ?string $phone = null;
     
-    /** @var string|null $principalEmail Email address of the principal. */
+    /**
+     * @var string|null $principalEmail Email address of the principal.
+    */
     private ?string $principalEmail = null;
     
-    /** @var string|null $principalName Name of the principal. */
+    /**
+     * @var string|null $principalName Name of the principal.
+    */
     private ?string $principalName = null;
     
-    /** @var string|null $schoolNumber School Number. */
+    /**
+     * @var string|null $schoolNumber School Number.
+    */
     private ?string $schoolNumber = null;
     
-    /** @var array<EducationUser>|null $users Users in the school. Nullable. */
+    /**
+     * @var array<EducationUser>|null $users Users in the school. Nullable.
+    */
     private ?array $users = null;
     
     /**
-     * Instantiates a new educationSchool and sets the default values.
+     * Instantiates a new EducationSchool and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -62,7 +90,7 @@ class EducationSchool extends EducationOrganization
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return EducationSchool
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): EducationSchool {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): EducationSchool {
         return new EducationSchool();
     }
 
@@ -127,21 +155,22 @@ class EducationSchool extends EducationOrganization
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'address' => function (self $o, ParseNode $n) { $o->setAddress($n->getObjectValue(PhysicalAddress::class)); },
-            'administrativeUnit' => function (self $o, ParseNode $n) { $o->setAdministrativeUnit($n->getObjectValue(AdministrativeUnit::class)); },
-            'classes' => function (self $o, ParseNode $n) { $o->setClasses($n->getCollectionOfObjectValues(EducationClass::class)); },
-            'createdBy' => function (self $o, ParseNode $n) { $o->setCreatedBy($n->getObjectValue(IdentitySet::class)); },
-            'externalId' => function (self $o, ParseNode $n) { $o->setExternalId($n->getStringValue()); },
-            'externalPrincipalId' => function (self $o, ParseNode $n) { $o->setExternalPrincipalId($n->getStringValue()); },
-            'fax' => function (self $o, ParseNode $n) { $o->setFax($n->getStringValue()); },
-            'highestGrade' => function (self $o, ParseNode $n) { $o->setHighestGrade($n->getStringValue()); },
-            'lowestGrade' => function (self $o, ParseNode $n) { $o->setLowestGrade($n->getStringValue()); },
-            'phone' => function (self $o, ParseNode $n) { $o->setPhone($n->getStringValue()); },
-            'principalEmail' => function (self $o, ParseNode $n) { $o->setPrincipalEmail($n->getStringValue()); },
-            'principalName' => function (self $o, ParseNode $n) { $o->setPrincipalName($n->getStringValue()); },
-            'schoolNumber' => function (self $o, ParseNode $n) { $o->setSchoolNumber($n->getStringValue()); },
-            'users' => function (self $o, ParseNode $n) { $o->setUsers($n->getCollectionOfObjectValues(EducationUser::class)); },
+            'address' => function (ParseNode $n) use ($o) { $o->setAddress($n->getObjectValue(array(PhysicalAddress::class, 'createFromDiscriminatorValue'))); },
+            'administrativeUnit' => function (ParseNode $n) use ($o) { $o->setAdministrativeUnit($n->getObjectValue(array(AdministrativeUnit::class, 'createFromDiscriminatorValue'))); },
+            'classes' => function (ParseNode $n) use ($o) { $o->setClasses($n->getCollectionOfObjectValues(array(EducationClass::class, 'createFromDiscriminatorValue'))); },
+            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'externalId' => function (ParseNode $n) use ($o) { $o->setExternalId($n->getStringValue()); },
+            'externalPrincipalId' => function (ParseNode $n) use ($o) { $o->setExternalPrincipalId($n->getStringValue()); },
+            'fax' => function (ParseNode $n) use ($o) { $o->setFax($n->getStringValue()); },
+            'highestGrade' => function (ParseNode $n) use ($o) { $o->setHighestGrade($n->getStringValue()); },
+            'lowestGrade' => function (ParseNode $n) use ($o) { $o->setLowestGrade($n->getStringValue()); },
+            'phone' => function (ParseNode $n) use ($o) { $o->setPhone($n->getStringValue()); },
+            'principalEmail' => function (ParseNode $n) use ($o) { $o->setPrincipalEmail($n->getStringValue()); },
+            'principalName' => function (ParseNode $n) use ($o) { $o->setPrincipalName($n->getStringValue()); },
+            'schoolNumber' => function (ParseNode $n) use ($o) { $o->setSchoolNumber($n->getStringValue()); },
+            'users' => function (ParseNode $n) use ($o) { $o->setUsers($n->getCollectionOfObjectValues(array(EducationUser::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

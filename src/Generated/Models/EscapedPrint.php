@@ -9,28 +9,44 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class EscapedPrint implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<PrintConnector>|null $connectors The list of available print connectors. */
+    /**
+     * @var array<PrintConnector>|null $connectors The list of available print connectors.
+    */
     private ?array $connectors = null;
     
-    /** @var array<PrintOperation>|null $operations The list of print long running operations. */
+    /**
+     * @var array<PrintOperation>|null $operations The list of print long running operations.
+    */
     private ?array $operations = null;
     
-    /** @var array<Printer>|null $printers The list of printers registered in the tenant. */
+    /**
+     * @var array<Printer>|null $printers The list of printers registered in the tenant.
+    */
     private ?array $printers = null;
     
-    /** @var array<PrintService>|null $services The list of available Universal Print service endpoints. */
+    /**
+     * @var array<PrintService>|null $services The list of available Universal Print service endpoints.
+    */
     private ?array $services = null;
     
-    /** @var PrintSettings|null $settings Tenant-wide settings for the Universal Print service. */
+    /**
+     * @var PrintSettings|null $settings Tenant-wide settings for the Universal Print service.
+    */
     private ?PrintSettings $settings = null;
     
-    /** @var array<PrinterShare>|null $shares The list of printer shares registered in the tenant. */
+    /**
+     * @var array<PrinterShare>|null $shares The list of printer shares registered in the tenant.
+    */
     private ?array $shares = null;
     
-    /** @var array<PrintTaskDefinition>|null $taskDefinitions List of abstract definition for a task that can be triggered when various events occur within Universal Print. */
+    /**
+     * @var array<PrintTaskDefinition>|null $taskDefinitions List of abstract definition for a task that can be triggered when various events occur within Universal Print.
+    */
     private ?array $taskDefinitions = null;
     
     /**
@@ -45,7 +61,7 @@ class EscapedPrint implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return EscapedPrint
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): EscapedPrint {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): EscapedPrint {
         return new EscapedPrint();
     }
 
@@ -70,14 +86,15 @@ class EscapedPrint implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'connectors' => function (self $o, ParseNode $n) { $o->setConnectors($n->getCollectionOfObjectValues(PrintConnector::class)); },
-            'operations' => function (self $o, ParseNode $n) { $o->setOperations($n->getCollectionOfObjectValues(PrintOperation::class)); },
-            'printers' => function (self $o, ParseNode $n) { $o->setPrinters($n->getCollectionOfObjectValues(Printer::class)); },
-            'services' => function (self $o, ParseNode $n) { $o->setServices($n->getCollectionOfObjectValues(PrintService::class)); },
-            'settings' => function (self $o, ParseNode $n) { $o->setSettings($n->getObjectValue(PrintSettings::class)); },
-            'shares' => function (self $o, ParseNode $n) { $o->setShares($n->getCollectionOfObjectValues(PrinterShare::class)); },
-            'taskDefinitions' => function (self $o, ParseNode $n) { $o->setTaskDefinitions($n->getCollectionOfObjectValues(PrintTaskDefinition::class)); },
+            'connectors' => function (ParseNode $n) use ($o) { $o->setConnectors($n->getCollectionOfObjectValues(array(PrintConnector::class, 'createFromDiscriminatorValue'))); },
+            'operations' => function (ParseNode $n) use ($o) { $o->setOperations($n->getCollectionOfObjectValues(array(PrintOperation::class, 'createFromDiscriminatorValue'))); },
+            'printers' => function (ParseNode $n) use ($o) { $o->setPrinters($n->getCollectionOfObjectValues(array(Printer::class, 'createFromDiscriminatorValue'))); },
+            'services' => function (ParseNode $n) use ($o) { $o->setServices($n->getCollectionOfObjectValues(array(PrintService::class, 'createFromDiscriminatorValue'))); },
+            'settings' => function (ParseNode $n) use ($o) { $o->setSettings($n->getObjectValue(array(PrintSettings::class, 'createFromDiscriminatorValue'))); },
+            'shares' => function (ParseNode $n) use ($o) { $o->setShares($n->getCollectionOfObjectValues(array(PrinterShare::class, 'createFromDiscriminatorValue'))); },
+            'taskDefinitions' => function (ParseNode $n) use ($o) { $o->setTaskDefinitions($n->getCollectionOfObjectValues(array(PrintTaskDefinition::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

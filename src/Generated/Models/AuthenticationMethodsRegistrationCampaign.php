@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<ExcludeTarget>|null $excludeTargets Users and groups of users that are excluded from being prompted to set up the authentication method. */
+    /**
+     * @var array<ExcludeTarget>|null $excludeTargets Users and groups of users that are excluded from being prompted to set up the authentication method.
+    */
     private ?array $excludeTargets = null;
     
-    /** @var array<AuthenticationMethodsRegistrationCampaignIncludeTarget>|null $includeTargets Users and groups of users that are prompted to set up the authentication method. */
+    /**
+     * @var array<AuthenticationMethodsRegistrationCampaignIncludeTarget>|null $includeTargets Users and groups of users that are prompted to set up the authentication method.
+    */
     private ?array $includeTargets = null;
     
-    /** @var int|null $snoozeDurationInDays Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum: 0 days. Maximum: 14 days. If the value is '0', the user is prompted during every MFA attempt. */
+    /**
+     * @var int|null $snoozeDurationInDays Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt.
+    */
     private ?int $snoozeDurationInDays = null;
     
-    /** @var AdvancedConfigState|null $state Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure Active Directory for the setting. The default value is disabled. */
+    /**
+     * @var AdvancedConfigState|null $state Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
+    */
     private ?AdvancedConfigState $state = null;
     
     /**
@@ -36,7 +46,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AuthenticationMethodsRegistrationCampaign
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AuthenticationMethodsRegistrationCampaign {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AuthenticationMethodsRegistrationCampaign {
         return new AuthenticationMethodsRegistrationCampaign();
     }
 
@@ -61,11 +71,12 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'excludeTargets' => function (self $o, ParseNode $n) { $o->setExcludeTargets($n->getCollectionOfObjectValues(ExcludeTarget::class)); },
-            'includeTargets' => function (self $o, ParseNode $n) { $o->setIncludeTargets($n->getCollectionOfObjectValues(AuthenticationMethodsRegistrationCampaignIncludeTarget::class)); },
-            'snoozeDurationInDays' => function (self $o, ParseNode $n) { $o->setSnoozeDurationInDays($n->getIntegerValue()); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getEnumValue(AdvancedConfigState::class)); },
+            'excludeTargets' => function (ParseNode $n) use ($o) { $o->setExcludeTargets($n->getCollectionOfObjectValues(array(ExcludeTarget::class, 'createFromDiscriminatorValue'))); },
+            'includeTargets' => function (ParseNode $n) use ($o) { $o->setIncludeTargets($n->getCollectionOfObjectValues(array(AuthenticationMethodsRegistrationCampaignIncludeTarget::class, 'createFromDiscriminatorValue'))); },
+            'snoozeDurationInDays' => function (ParseNode $n) use ($o) { $o->setSnoozeDurationInDays($n->getIntegerValue()); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(AdvancedConfigState::class)); },
         ];
     }
 
@@ -78,7 +89,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum: 0 days. Maximum: 14 days. If the value is '0', the user is prompted during every MFA attempt.
+     * Gets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt.
      * @return int|null
     */
     public function getSnoozeDurationInDays(): ?int {
@@ -86,7 +97,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure Active Directory for the setting. The default value is disabled.
+     * Gets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
      * @return AdvancedConfigState|null
     */
     public function getState(): ?AdvancedConfigState {
@@ -130,7 +141,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum: 0 days. Maximum: 14 days. If the value is '0', the user is prompted during every MFA attempt.
+     * Sets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt.
      *  @param int|null $value Value to set for the snoozeDurationInDays property.
     */
     public function setSnoozeDurationInDays(?int $value ): void {
@@ -138,7 +149,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure Active Directory for the setting. The default value is disabled.
+     * Sets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
      *  @param AdvancedConfigState|null $value Value to set for the state property.
     */
     public function setState(?AdvancedConfigState $value ): void {

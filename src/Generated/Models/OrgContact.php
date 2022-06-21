@@ -7,64 +7,100 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class OrgContact extends DirectoryObject 
+class OrgContact extends DirectoryObject implements Parsable 
 {
-    /** @var array<PhysicalOfficeAddress>|null $addresses Postal addresses for this organizational contact. For now a contact can only have one physical address. */
+    /**
+     * @var array<PhysicalOfficeAddress>|null $addresses Postal addresses for this organizational contact. For now a contact can only have one physical address.
+    */
     private ?array $addresses = null;
     
-    /** @var string|null $companyName Name of the company that this organizational contact belong to. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
+    /**
+     * @var string|null $companyName Name of the company that this organizational contact belong to. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+    */
     private ?string $companyName = null;
     
-    /** @var string|null $department The name for the department in which the contact works. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
+    /**
+     * @var string|null $department The name for the department in which the contact works. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+    */
     private ?string $department = null;
     
-    /** @var array<DirectoryObject>|null $directReports The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand. */
+    /**
+     * @var array<DirectoryObject>|null $directReports The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand.
+    */
     private ?array $directReports = null;
     
-    /** @var string|null $displayName Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
+    /**
+     * @var string|null $displayName Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $givenName First name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
+    /**
+     * @var string|null $givenName First name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+    */
     private ?string $givenName = null;
     
-    /** @var string|null $jobTitle Job title for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
+    /**
+     * @var string|null $jobTitle Job title for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+    */
     private ?string $jobTitle = null;
     
-    /** @var string|null $mail The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
+    /**
+     * @var string|null $mail The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+    */
     private ?string $mail = null;
     
-    /** @var string|null $mailNickname Email alias (portion of email address pre-pending the @ symbol) for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
+    /**
+     * @var string|null $mailNickname Email alias (portion of email address pre-pending the @ symbol) for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+    */
     private ?string $mailNickname = null;
     
-    /** @var DirectoryObject|null $manager The user or contact that is this contact's manager. Read-only. Supports $expand. */
+    /**
+     * @var DirectoryObject|null $manager The user or contact that is this contact's manager. Read-only. Supports $expand.
+    */
     private ?DirectoryObject $manager = null;
     
-    /** @var array<DirectoryObject>|null $memberOf Groups that this contact is a member of. Read-only. Nullable. Supports $expand. */
+    /**
+     * @var array<DirectoryObject>|null $memberOf Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
+    */
     private ?array $memberOf = null;
     
-    /** @var DateTime|null $onPremisesLastSyncDateTime Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, not, ge, le, in). */
+    /**
+     * @var DateTime|null $onPremisesLastSyncDateTime Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, not, ge, le, in).
+    */
     private ?DateTime $onPremisesLastSyncDateTime = null;
     
-    /** @var array<OnPremisesProvisioningError>|null $onPremisesProvisioningErrors List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, not). */
+    /**
+     * @var array<OnPremisesProvisioningError>|null $onPremisesProvisioningErrors List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, not).
+    */
     private ?array $onPremisesProvisioningErrors = null;
     
-    /** @var bool|null $onPremisesSyncEnabled true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).  Supports $filter (eq, ne, not, in, and eq on null values). */
+    /**
+     * @var bool|null $onPremisesSyncEnabled true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).  Supports $filter (eq, ne, not, in, and eq on null values).
+    */
     private ?bool $onPremisesSyncEnabled = null;
     
-    /** @var array<Phone>|null $phones List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection. Supports $filter (eq, ne, not, in). */
+    /**
+     * @var array<Phone>|null $phones List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection. Supports $filter (eq, ne, not, in).
+    */
     private ?array $phones = null;
     
-    /** @var array<string>|null $proxyAddresses For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith). */
+    /**
+     * @var array<string>|null $proxyAddresses For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
+    */
     private ?array $proxyAddresses = null;
     
-    /** @var string|null $surname Last name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) */
+    /**
+     * @var string|null $surname Last name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values)
+    */
     private ?string $surname = null;
     
-    /** @var array<DirectoryObject>|null $transitiveMemberOf The transitiveMemberOf property */
+    /**
+     * @var array<DirectoryObject>|null $transitiveMemberOf The transitiveMemberOf property
+    */
     private ?array $transitiveMemberOf = null;
     
     /**
-     * Instantiates a new orgContact and sets the default values.
+     * Instantiates a new OrgContact and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -75,7 +111,7 @@ class OrgContact extends DirectoryObject
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return OrgContact
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): OrgContact {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): OrgContact {
         return new OrgContact();
     }
 
@@ -124,25 +160,26 @@ class OrgContact extends DirectoryObject
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'addresses' => function (self $o, ParseNode $n) { $o->setAddresses($n->getCollectionOfObjectValues(PhysicalOfficeAddress::class)); },
-            'companyName' => function (self $o, ParseNode $n) { $o->setCompanyName($n->getStringValue()); },
-            'department' => function (self $o, ParseNode $n) { $o->setDepartment($n->getStringValue()); },
-            'directReports' => function (self $o, ParseNode $n) { $o->setDirectReports($n->getCollectionOfObjectValues(DirectoryObject::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'givenName' => function (self $o, ParseNode $n) { $o->setGivenName($n->getStringValue()); },
-            'jobTitle' => function (self $o, ParseNode $n) { $o->setJobTitle($n->getStringValue()); },
-            'mail' => function (self $o, ParseNode $n) { $o->setMail($n->getStringValue()); },
-            'mailNickname' => function (self $o, ParseNode $n) { $o->setMailNickname($n->getStringValue()); },
-            'manager' => function (self $o, ParseNode $n) { $o->setManager($n->getObjectValue(DirectoryObject::class)); },
-            'memberOf' => function (self $o, ParseNode $n) { $o->setMemberOf($n->getCollectionOfObjectValues(DirectoryObject::class)); },
-            'onPremisesLastSyncDateTime' => function (self $o, ParseNode $n) { $o->setOnPremisesLastSyncDateTime($n->getDateTimeValue()); },
-            'onPremisesProvisioningErrors' => function (self $o, ParseNode $n) { $o->setOnPremisesProvisioningErrors($n->getCollectionOfObjectValues(OnPremisesProvisioningError::class)); },
-            'onPremisesSyncEnabled' => function (self $o, ParseNode $n) { $o->setOnPremisesSyncEnabled($n->getBooleanValue()); },
-            'phones' => function (self $o, ParseNode $n) { $o->setPhones($n->getCollectionOfObjectValues(Phone::class)); },
-            'proxyAddresses' => function (self $o, ParseNode $n) { $o->setProxyAddresses($n->getCollectionOfPrimitiveValues()); },
-            'surname' => function (self $o, ParseNode $n) { $o->setSurname($n->getStringValue()); },
-            'transitiveMemberOf' => function (self $o, ParseNode $n) { $o->setTransitiveMemberOf($n->getCollectionOfObjectValues(DirectoryObject::class)); },
+            'addresses' => function (ParseNode $n) use ($o) { $o->setAddresses($n->getCollectionOfObjectValues(array(PhysicalOfficeAddress::class, 'createFromDiscriminatorValue'))); },
+            'companyName' => function (ParseNode $n) use ($o) { $o->setCompanyName($n->getStringValue()); },
+            'department' => function (ParseNode $n) use ($o) { $o->setDepartment($n->getStringValue()); },
+            'directReports' => function (ParseNode $n) use ($o) { $o->setDirectReports($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'givenName' => function (ParseNode $n) use ($o) { $o->setGivenName($n->getStringValue()); },
+            'jobTitle' => function (ParseNode $n) use ($o) { $o->setJobTitle($n->getStringValue()); },
+            'mail' => function (ParseNode $n) use ($o) { $o->setMail($n->getStringValue()); },
+            'mailNickname' => function (ParseNode $n) use ($o) { $o->setMailNickname($n->getStringValue()); },
+            'manager' => function (ParseNode $n) use ($o) { $o->setManager($n->getObjectValue(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
+            'memberOf' => function (ParseNode $n) use ($o) { $o->setMemberOf($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
+            'onPremisesLastSyncDateTime' => function (ParseNode $n) use ($o) { $o->setOnPremisesLastSyncDateTime($n->getDateTimeValue()); },
+            'onPremisesProvisioningErrors' => function (ParseNode $n) use ($o) { $o->setOnPremisesProvisioningErrors($n->getCollectionOfObjectValues(array(OnPremisesProvisioningError::class, 'createFromDiscriminatorValue'))); },
+            'onPremisesSyncEnabled' => function (ParseNode $n) use ($o) { $o->setOnPremisesSyncEnabled($n->getBooleanValue()); },
+            'phones' => function (ParseNode $n) use ($o) { $o->setPhones($n->getCollectionOfObjectValues(array(Phone::class, 'createFromDiscriminatorValue'))); },
+            'proxyAddresses' => function (ParseNode $n) use ($o) { $o->setProxyAddresses($n->getCollectionOfPrimitiveValues()); },
+            'surname' => function (ParseNode $n) use ($o) { $o->setSurname($n->getStringValue()); },
+            'transitiveMemberOf' => function (ParseNode $n) use ($o) { $o->setTransitiveMemberOf($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -227,7 +264,7 @@ class OrgContact extends DirectoryObject
     }
 
     /**
-     * Gets the proxyAddresses property value. For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith).
+     * Gets the proxyAddresses property value. For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
      * @return array<string>|null
     */
     public function getProxyAddresses(): ?array {
@@ -397,7 +434,7 @@ class OrgContact extends DirectoryObject
     }
 
     /**
-     * Sets the proxyAddresses property value. For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith).
+     * Sets the proxyAddresses property value. For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
      *  @param array<string>|null $value Value to set for the proxyAddresses property.
     */
     public function setProxyAddresses(?array $value ): void {

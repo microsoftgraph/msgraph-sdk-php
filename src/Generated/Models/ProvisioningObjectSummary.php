@@ -7,54 +7,86 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ProvisioningObjectSummary extends Entity 
+class ProvisioningObjectSummary extends Entity implements Parsable 
 {
-    /** @var DateTime|null $activityDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * @var DateTime|null $activityDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $activityDateTime = null;
     
-    /** @var string|null $changeId Unique ID of this change in this cycle. */
+    /**
+     * @var string|null $changeId Unique ID of this change in this cycle.
+    */
     private ?string $changeId = null;
     
-    /** @var string|null $cycleId Unique ID per job iteration. */
+    /**
+     * @var string|null $cycleId Unique ID per job iteration.
+    */
     private ?string $cycleId = null;
     
-    /** @var int|null $durationInMilliseconds Indicates how long this provisioning action took to finish. Measured in milliseconds. */
+    /**
+     * @var int|null $durationInMilliseconds Indicates how long this provisioning action took to finish. Measured in milliseconds.
+    */
     private ?int $durationInMilliseconds = null;
     
-    /** @var Initiator|null $initiatedBy Details of who initiated this provisioning. */
+    /**
+     * @var Initiator|null $initiatedBy Details of who initiated this provisioning.
+    */
     private ?Initiator $initiatedBy = null;
     
-    /** @var string|null $jobId The unique ID for the whole provisioning job. */
+    /**
+     * @var string|null $jobId The unique ID for the whole provisioning job.
+    */
     private ?string $jobId = null;
     
-    /** @var array<ModifiedProperty>|null $modifiedProperties Details of each property that was modified in this provisioning action on this object. */
+    /**
+     * @var array<ModifiedProperty>|null $modifiedProperties Details of each property that was modified in this provisioning action on this object.
+    */
     private ?array $modifiedProperties = null;
     
-    /** @var ProvisioningAction|null $provisioningAction Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. */
+    /**
+     * @var ProvisioningAction|null $provisioningAction Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list.
+    */
     private ?ProvisioningAction $provisioningAction = null;
     
-    /** @var ProvisioningStatusInfo|null $provisioningStatusInfo Details of provisioning status. */
+    /**
+     * @var ProvisioningStatusInfo|null $provisioningStatusInfo Details of provisioning status.
+    */
     private ?ProvisioningStatusInfo $provisioningStatusInfo = null;
     
-    /** @var array<ProvisioningStep>|null $provisioningSteps Details of each step in provisioning. */
+    /**
+     * @var array<ProvisioningStep>|null $provisioningSteps Details of each step in provisioning.
+    */
     private ?array $provisioningSteps = null;
     
-    /** @var ProvisioningServicePrincipal|null $servicePrincipal Represents the service principal used for provisioning. */
+    /**
+     * @var ProvisioningServicePrincipal|null $servicePrincipal Represents the service principal used for provisioning.
+    */
     private ?ProvisioningServicePrincipal $servicePrincipal = null;
     
-    /** @var ProvisionedIdentity|null $sourceIdentity Details of source object being provisioned. */
+    /**
+     * @var ProvisionedIdentity|null $sourceIdentity Details of source object being provisioned.
+    */
     private ?ProvisionedIdentity $sourceIdentity = null;
     
-    /** @var ProvisioningSystem|null $sourceSystem Details of source system of the object being provisioned. */
+    /**
+     * @var ProvisioningSystem|null $sourceSystem Details of source system of the object being provisioned.
+    */
     private ?ProvisioningSystem $sourceSystem = null;
     
-    /** @var ProvisionedIdentity|null $targetIdentity Details of target object being provisioned. */
+    /**
+     * @var ProvisionedIdentity|null $targetIdentity Details of target object being provisioned.
+    */
     private ?ProvisionedIdentity $targetIdentity = null;
     
-    /** @var ProvisioningSystem|null $targetSystem Details of target system of the object being provisioned. */
+    /**
+     * @var ProvisioningSystem|null $targetSystem Details of target system of the object being provisioned.
+    */
     private ?ProvisioningSystem $targetSystem = null;
     
-    /** @var string|null $tenantId Unique Azure AD tenant ID. */
+    /**
+     * @var string|null $tenantId Unique Azure AD tenant ID.
+    */
     private ?string $tenantId = null;
     
     /**
@@ -69,7 +101,7 @@ class ProvisioningObjectSummary extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ProvisioningObjectSummary
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ProvisioningObjectSummary {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ProvisioningObjectSummary {
         return new ProvisioningObjectSummary();
     }
 
@@ -110,23 +142,24 @@ class ProvisioningObjectSummary extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activityDateTime' => function (self $o, ParseNode $n) { $o->setActivityDateTime($n->getDateTimeValue()); },
-            'changeId' => function (self $o, ParseNode $n) { $o->setChangeId($n->getStringValue()); },
-            'cycleId' => function (self $o, ParseNode $n) { $o->setCycleId($n->getStringValue()); },
-            'durationInMilliseconds' => function (self $o, ParseNode $n) { $o->setDurationInMilliseconds($n->getIntegerValue()); },
-            'initiatedBy' => function (self $o, ParseNode $n) { $o->setInitiatedBy($n->getObjectValue(Initiator::class)); },
-            'jobId' => function (self $o, ParseNode $n) { $o->setJobId($n->getStringValue()); },
-            'modifiedProperties' => function (self $o, ParseNode $n) { $o->setModifiedProperties($n->getCollectionOfObjectValues(ModifiedProperty::class)); },
-            'provisioningAction' => function (self $o, ParseNode $n) { $o->setProvisioningAction($n->getEnumValue(ProvisioningAction::class)); },
-            'provisioningStatusInfo' => function (self $o, ParseNode $n) { $o->setProvisioningStatusInfo($n->getObjectValue(ProvisioningStatusInfo::class)); },
-            'provisioningSteps' => function (self $o, ParseNode $n) { $o->setProvisioningSteps($n->getCollectionOfObjectValues(ProvisioningStep::class)); },
-            'servicePrincipal' => function (self $o, ParseNode $n) { $o->setServicePrincipal($n->getObjectValue(ProvisioningServicePrincipal::class)); },
-            'sourceIdentity' => function (self $o, ParseNode $n) { $o->setSourceIdentity($n->getObjectValue(ProvisionedIdentity::class)); },
-            'sourceSystem' => function (self $o, ParseNode $n) { $o->setSourceSystem($n->getObjectValue(ProvisioningSystem::class)); },
-            'targetIdentity' => function (self $o, ParseNode $n) { $o->setTargetIdentity($n->getObjectValue(ProvisionedIdentity::class)); },
-            'targetSystem' => function (self $o, ParseNode $n) { $o->setTargetSystem($n->getObjectValue(ProvisioningSystem::class)); },
-            'tenantId' => function (self $o, ParseNode $n) { $o->setTenantId($n->getStringValue()); },
+            'activityDateTime' => function (ParseNode $n) use ($o) { $o->setActivityDateTime($n->getDateTimeValue()); },
+            'changeId' => function (ParseNode $n) use ($o) { $o->setChangeId($n->getStringValue()); },
+            'cycleId' => function (ParseNode $n) use ($o) { $o->setCycleId($n->getStringValue()); },
+            'durationInMilliseconds' => function (ParseNode $n) use ($o) { $o->setDurationInMilliseconds($n->getIntegerValue()); },
+            'initiatedBy' => function (ParseNode $n) use ($o) { $o->setInitiatedBy($n->getObjectValue(array(Initiator::class, 'createFromDiscriminatorValue'))); },
+            'jobId' => function (ParseNode $n) use ($o) { $o->setJobId($n->getStringValue()); },
+            'modifiedProperties' => function (ParseNode $n) use ($o) { $o->setModifiedProperties($n->getCollectionOfObjectValues(array(ModifiedProperty::class, 'createFromDiscriminatorValue'))); },
+            'provisioningAction' => function (ParseNode $n) use ($o) { $o->setProvisioningAction($n->getEnumValue(ProvisioningAction::class)); },
+            'provisioningStatusInfo' => function (ParseNode $n) use ($o) { $o->setProvisioningStatusInfo($n->getObjectValue(array(ProvisioningStatusInfo::class, 'createFromDiscriminatorValue'))); },
+            'provisioningSteps' => function (ParseNode $n) use ($o) { $o->setProvisioningSteps($n->getCollectionOfObjectValues(array(ProvisioningStep::class, 'createFromDiscriminatorValue'))); },
+            'servicePrincipal' => function (ParseNode $n) use ($o) { $o->setServicePrincipal($n->getObjectValue(array(ProvisioningServicePrincipal::class, 'createFromDiscriminatorValue'))); },
+            'sourceIdentity' => function (ParseNode $n) use ($o) { $o->setSourceIdentity($n->getObjectValue(array(ProvisionedIdentity::class, 'createFromDiscriminatorValue'))); },
+            'sourceSystem' => function (ParseNode $n) use ($o) { $o->setSourceSystem($n->getObjectValue(array(ProvisioningSystem::class, 'createFromDiscriminatorValue'))); },
+            'targetIdentity' => function (ParseNode $n) use ($o) { $o->setTargetIdentity($n->getObjectValue(array(ProvisionedIdentity::class, 'createFromDiscriminatorValue'))); },
+            'targetSystem' => function (ParseNode $n) use ($o) { $o->setTargetSystem($n->getObjectValue(array(ProvisioningSystem::class, 'createFromDiscriminatorValue'))); },
+            'tenantId' => function (ParseNode $n) use ($o) { $o->setTenantId($n->getStringValue()); },
         ]);
     }
 

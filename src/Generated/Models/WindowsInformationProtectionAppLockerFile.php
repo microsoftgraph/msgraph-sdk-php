@@ -7,18 +7,26 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Psr\Http\Message\StreamInterface;
 
-class WindowsInformationProtectionAppLockerFile extends Entity 
+class WindowsInformationProtectionAppLockerFile extends Entity implements Parsable 
 {
-    /** @var string|null $displayName The friendly name */
+    /**
+     * @var string|null $displayName The friendly name
+    */
     private ?string $displayName = null;
     
-    /** @var StreamInterface|null $file File as a byte array */
+    /**
+     * @var StreamInterface|null $file File as a byte array
+    */
     private ?StreamInterface $file = null;
     
-    /** @var string|null $fileHash SHA256 hash of the file */
+    /**
+     * @var string|null $fileHash SHA256 hash of the file
+    */
     private ?string $fileHash = null;
     
-    /** @var string|null $version Version of the entity. */
+    /**
+     * @var string|null $version Version of the entity.
+    */
     private ?string $version = null;
     
     /**
@@ -33,7 +41,7 @@ class WindowsInformationProtectionAppLockerFile extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WindowsInformationProtectionAppLockerFile
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WindowsInformationProtectionAppLockerFile {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WindowsInformationProtectionAppLockerFile {
         return new WindowsInformationProtectionAppLockerFile();
     }
 
@@ -50,11 +58,12 @@ class WindowsInformationProtectionAppLockerFile extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'file' => function (self $o, ParseNode $n) { $o->setFile($n->getBinaryContent()); },
-            'fileHash' => function (self $o, ParseNode $n) { $o->setFileHash($n->getStringValue()); },
-            'version' => function (self $o, ParseNode $n) { $o->setVersion($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'file' => function (ParseNode $n) use ($o) { $o->setFile($n->getBinaryContent()); },
+            'fileHash' => function (ParseNode $n) use ($o) { $o->setFileHash($n->getStringValue()); },
+            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getStringValue()); },
         ]);
     }
 

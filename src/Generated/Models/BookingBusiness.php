@@ -6,57 +6,91 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class BookingBusiness extends Entity 
+class BookingBusiness extends Entity implements Parsable 
 {
-    /** @var PhysicalAddress|null $address The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others. */
+    /**
+     * @var PhysicalAddress|null $address The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
+    */
     private ?PhysicalAddress $address = null;
     
-    /** @var array<BookingAppointment>|null $appointments All the appointments of this business. Read-only. Nullable. */
+    /**
+     * @var array<BookingAppointment>|null $appointments All the appointments of this business. Read-only. Nullable.
+    */
     private ?array $appointments = null;
     
-    /** @var array<BookingWorkHours>|null $businessHours The hours of operation for the business. */
+    /**
+     * @var array<BookingWorkHours>|null $businessHours The hours of operation for the business.
+    */
     private ?array $businessHours = null;
     
-    /** @var string|null $businessType The type of business. */
+    /**
+     * @var string|null $businessType The type of business.
+    */
     private ?string $businessType = null;
     
-    /** @var array<BookingAppointment>|null $calendarView The set of appointments of this business in a specified date range. Read-only. Nullable. */
+    /**
+     * @var array<BookingAppointment>|null $calendarView The set of appointments of this business in a specified date range. Read-only. Nullable.
+    */
     private ?array $calendarView = null;
     
-    /** @var array<BookingCustomerBase>|null $customers All the customers of this business. Read-only. Nullable. */
+    /**
+     * @var array<BookingCustomerBase>|null $customers All the customers of this business. Read-only. Nullable.
+    */
     private ?array $customers = null;
     
-    /** @var array<BookingCustomQuestion>|null $customQuestions All the custom questions of this business. Read-only. Nullable. */
+    /**
+     * @var array<BookingCustomQuestion>|null $customQuestions All the custom questions of this business. Read-only. Nullable.
+    */
     private ?array $customQuestions = null;
     
-    /** @var string|null $defaultCurrencyIso The code for the currency that the business operates in on Microsoft Bookings. */
+    /**
+     * @var string|null $defaultCurrencyIso The code for the currency that the business operates in on Microsoft Bookings.
+    */
     private ?string $defaultCurrencyIso = null;
     
-    /** @var string|null $displayName The name of the business, which interfaces with customers. This name appears at the top of the business scheduling page. */
+    /**
+     * @var string|null $displayName The name of the business, which interfaces with customers. This name appears at the top of the business scheduling page.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $email The email address for the business. */
+    /**
+     * @var string|null $email The email address for the business.
+    */
     private ?string $email = null;
     
-    /** @var bool|null $isPublished The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only. */
+    /**
+     * @var bool|null $isPublished The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.
+    */
     private ?bool $isPublished = null;
     
-    /** @var string|null $phone The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page. */
+    /**
+     * @var string|null $phone The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
+    */
     private ?string $phone = null;
     
-    /** @var string|null $publicUrl The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only. */
+    /**
+     * @var string|null $publicUrl The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
+    */
     private ?string $publicUrl = null;
     
-    /** @var BookingSchedulingPolicy|null $schedulingPolicy Specifies how bookings can be created for this business. */
+    /**
+     * @var BookingSchedulingPolicy|null $schedulingPolicy Specifies how bookings can be created for this business.
+    */
     private ?BookingSchedulingPolicy $schedulingPolicy = null;
     
-    /** @var array<BookingService>|null $services All the services offered by this business. Read-only. Nullable. */
+    /**
+     * @var array<BookingService>|null $services All the services offered by this business. Read-only. Nullable.
+    */
     private ?array $services = null;
     
-    /** @var array<BookingStaffMemberBase>|null $staffMembers All the staff members that provide services in this business. Read-only. Nullable. */
+    /**
+     * @var array<BookingStaffMemberBase>|null $staffMembers All the staff members that provide services in this business. Read-only. Nullable.
+    */
     private ?array $staffMembers = null;
     
-    /** @var string|null $webSiteUrl The URL of the business web site. The webSiteUrl property, together with address, phone, appear in the footer of a business scheduling page. */
+    /**
+     * @var string|null $webSiteUrl The URL of the business web site. The webSiteUrl property, together with address, phone, appear in the footer of a business scheduling page.
+    */
     private ?string $webSiteUrl = null;
     
     /**
@@ -71,12 +105,12 @@ class BookingBusiness extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return BookingBusiness
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): BookingBusiness {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): BookingBusiness {
         return new BookingBusiness();
     }
 
     /**
-     * Gets the address property value. The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
+     * Gets the address property value. The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
      * @return PhysicalAddress|null
     */
     public function getAddress(): ?PhysicalAddress {
@@ -160,24 +194,25 @@ class BookingBusiness extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'address' => function (self $o, ParseNode $n) { $o->setAddress($n->getObjectValue(PhysicalAddress::class)); },
-            'appointments' => function (self $o, ParseNode $n) { $o->setAppointments($n->getCollectionOfObjectValues(BookingAppointment::class)); },
-            'businessHours' => function (self $o, ParseNode $n) { $o->setBusinessHours($n->getCollectionOfObjectValues(BookingWorkHours::class)); },
-            'businessType' => function (self $o, ParseNode $n) { $o->setBusinessType($n->getStringValue()); },
-            'calendarView' => function (self $o, ParseNode $n) { $o->setCalendarView($n->getCollectionOfObjectValues(BookingAppointment::class)); },
-            'customers' => function (self $o, ParseNode $n) { $o->setCustomers($n->getCollectionOfObjectValues(BookingCustomerBase::class)); },
-            'customQuestions' => function (self $o, ParseNode $n) { $o->setCustomQuestions($n->getCollectionOfObjectValues(BookingCustomQuestion::class)); },
-            'defaultCurrencyIso' => function (self $o, ParseNode $n) { $o->setDefaultCurrencyIso($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'email' => function (self $o, ParseNode $n) { $o->setEmail($n->getStringValue()); },
-            'isPublished' => function (self $o, ParseNode $n) { $o->setIsPublished($n->getBooleanValue()); },
-            'phone' => function (self $o, ParseNode $n) { $o->setPhone($n->getStringValue()); },
-            'publicUrl' => function (self $o, ParseNode $n) { $o->setPublicUrl($n->getStringValue()); },
-            'schedulingPolicy' => function (self $o, ParseNode $n) { $o->setSchedulingPolicy($n->getObjectValue(BookingSchedulingPolicy::class)); },
-            'services' => function (self $o, ParseNode $n) { $o->setServices($n->getCollectionOfObjectValues(BookingService::class)); },
-            'staffMembers' => function (self $o, ParseNode $n) { $o->setStaffMembers($n->getCollectionOfObjectValues(BookingStaffMemberBase::class)); },
-            'webSiteUrl' => function (self $o, ParseNode $n) { $o->setWebSiteUrl($n->getStringValue()); },
+            'address' => function (ParseNode $n) use ($o) { $o->setAddress($n->getObjectValue(array(PhysicalAddress::class, 'createFromDiscriminatorValue'))); },
+            'appointments' => function (ParseNode $n) use ($o) { $o->setAppointments($n->getCollectionOfObjectValues(array(BookingAppointment::class, 'createFromDiscriminatorValue'))); },
+            'businessHours' => function (ParseNode $n) use ($o) { $o->setBusinessHours($n->getCollectionOfObjectValues(array(BookingWorkHours::class, 'createFromDiscriminatorValue'))); },
+            'businessType' => function (ParseNode $n) use ($o) { $o->setBusinessType($n->getStringValue()); },
+            'calendarView' => function (ParseNode $n) use ($o) { $o->setCalendarView($n->getCollectionOfObjectValues(array(BookingAppointment::class, 'createFromDiscriminatorValue'))); },
+            'customers' => function (ParseNode $n) use ($o) { $o->setCustomers($n->getCollectionOfObjectValues(array(BookingCustomerBase::class, 'createFromDiscriminatorValue'))); },
+            'customQuestions' => function (ParseNode $n) use ($o) { $o->setCustomQuestions($n->getCollectionOfObjectValues(array(BookingCustomQuestion::class, 'createFromDiscriminatorValue'))); },
+            'defaultCurrencyIso' => function (ParseNode $n) use ($o) { $o->setDefaultCurrencyIso($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
+            'isPublished' => function (ParseNode $n) use ($o) { $o->setIsPublished($n->getBooleanValue()); },
+            'phone' => function (ParseNode $n) use ($o) { $o->setPhone($n->getStringValue()); },
+            'publicUrl' => function (ParseNode $n) use ($o) { $o->setPublicUrl($n->getStringValue()); },
+            'schedulingPolicy' => function (ParseNode $n) use ($o) { $o->setSchedulingPolicy($n->getObjectValue(array(BookingSchedulingPolicy::class, 'createFromDiscriminatorValue'))); },
+            'services' => function (ParseNode $n) use ($o) { $o->setServices($n->getCollectionOfObjectValues(array(BookingService::class, 'createFromDiscriminatorValue'))); },
+            'staffMembers' => function (ParseNode $n) use ($o) { $o->setStaffMembers($n->getCollectionOfObjectValues(array(BookingStaffMemberBase::class, 'createFromDiscriminatorValue'))); },
+            'webSiteUrl' => function (ParseNode $n) use ($o) { $o->setWebSiteUrl($n->getStringValue()); },
         ]);
     }
 
@@ -263,7 +298,7 @@ class BookingBusiness extends Entity
     }
 
     /**
-     * Sets the address property value. The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
+     * Sets the address property value. The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
      *  @param PhysicalAddress|null $value Value to set for the address property.
     */
     public function setAddress(?PhysicalAddress $value ): void {

@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class PasswordProfile implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var bool|null $forceChangePasswordNextSignIn true if the user must change her password on the next login; otherwise false. If not set, default is false. NOTE:  For Azure B2C tenants, set to false and instead use custom policies and user flows to force password reset at first sign in. See Force password reset at first logon. */
+    /**
+     * @var bool|null $forceChangePasswordNextSignIn true if the user must change her password on the next login; otherwise false. If not set, default is false. NOTE:  For Azure B2C tenants, set to false and instead use custom policies and user flows to force password reset at first sign in. See Force password reset at first logon.
+    */
     private ?bool $forceChangePasswordNextSignIn = null;
     
-    /** @var bool|null $forceChangePasswordNextSignInWithMfa If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false. */
+    /**
+     * @var bool|null $forceChangePasswordNextSignInWithMfa If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
+    */
     private ?bool $forceChangePasswordNextSignInWithMfa = null;
     
-    /** @var string|null $password The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user’s passwordPolicies property. By default, a strong password is required. */
+    /**
+     * @var string|null $password The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user’s passwordPolicies property. By default, a strong password is required.
+    */
     private ?string $password = null;
     
     /**
@@ -33,7 +41,7 @@ class PasswordProfile implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PasswordProfile
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PasswordProfile {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PasswordProfile {
         return new PasswordProfile();
     }
 
@@ -50,10 +58,11 @@ class PasswordProfile implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'forceChangePasswordNextSignIn' => function (self $o, ParseNode $n) { $o->setForceChangePasswordNextSignIn($n->getBooleanValue()); },
-            'forceChangePasswordNextSignInWithMfa' => function (self $o, ParseNode $n) { $o->setForceChangePasswordNextSignInWithMfa($n->getBooleanValue()); },
-            'password' => function (self $o, ParseNode $n) { $o->setPassword($n->getStringValue()); },
+            'forceChangePasswordNextSignIn' => function (ParseNode $n) use ($o) { $o->setForceChangePasswordNextSignIn($n->getBooleanValue()); },
+            'forceChangePasswordNextSignInWithMfa' => function (ParseNode $n) use ($o) { $o->setForceChangePasswordNextSignInWithMfa($n->getBooleanValue()); },
+            'password' => function (ParseNode $n) use ($o) { $o->setPassword($n->getStringValue()); },
         ];
     }
 

@@ -6,15 +6,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Security extends Entity 
+class Security extends Entity implements Parsable 
 {
-    /** @var array<Alert>|null $alerts Read-only. Nullable. */
+    /**
+     * @var array<Alert>|null $alerts Notifications for suspicious or potential security issues in a customer’s tenant.
+    */
     private ?array $alerts = null;
     
-    /** @var array<SecureScoreControlProfile>|null $secureScoreControlProfiles The secureScoreControlProfiles property */
+    /**
+     * @var array<SecureScoreControlProfile>|null $secureScoreControlProfiles The secureScoreControlProfiles property
+    */
     private ?array $secureScoreControlProfiles = null;
     
-    /** @var array<SecureScore>|null $secureScores The secureScores property */
+    /**
+     * @var array<SecureScore>|null $secureScores The secureScores property
+    */
     private ?array $secureScores = null;
     
     /**
@@ -29,12 +35,12 @@ class Security extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Security
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Security {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Security {
         return new Security();
     }
 
     /**
-     * Gets the alerts property value. Read-only. Nullable.
+     * Gets the alerts property value. Notifications for suspicious or potential security issues in a customer’s tenant.
      * @return array<Alert>|null
     */
     public function getAlerts(): ?array {
@@ -46,10 +52,11 @@ class Security extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'alerts' => function (self $o, ParseNode $n) { $o->setAlerts($n->getCollectionOfObjectValues(Alert::class)); },
-            'secureScoreControlProfiles' => function (self $o, ParseNode $n) { $o->setSecureScoreControlProfiles($n->getCollectionOfObjectValues(SecureScoreControlProfile::class)); },
-            'secureScores' => function (self $o, ParseNode $n) { $o->setSecureScores($n->getCollectionOfObjectValues(SecureScore::class)); },
+            'alerts' => function (ParseNode $n) use ($o) { $o->setAlerts($n->getCollectionOfObjectValues(array(Alert::class, 'createFromDiscriminatorValue'))); },
+            'secureScoreControlProfiles' => function (ParseNode $n) use ($o) { $o->setSecureScoreControlProfiles($n->getCollectionOfObjectValues(array(SecureScoreControlProfile::class, 'createFromDiscriminatorValue'))); },
+            'secureScores' => function (ParseNode $n) use ($o) { $o->setSecureScores($n->getCollectionOfObjectValues(array(SecureScore::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -81,7 +88,7 @@ class Security extends Entity
     }
 
     /**
-     * Sets the alerts property value. Read-only. Nullable.
+     * Sets the alerts property value. Notifications for suspicious or potential security issues in a customer’s tenant.
      *  @param array<Alert>|null $value Value to set for the alerts property.
     */
     public function setAlerts(?array $value ): void {

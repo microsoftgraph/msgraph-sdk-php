@@ -6,42 +6,66 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WorkbookChart extends Entity 
+class WorkbookChart extends Entity implements Parsable 
 {
-    /** @var WorkbookChartAxes|null $axes Represents chart axes. Read-only. */
+    /**
+     * @var WorkbookChartAxes|null $axes Represents chart axes. Read-only.
+    */
     private ?WorkbookChartAxes $axes = null;
     
-    /** @var WorkbookChartDataLabels|null $dataLabels Represents the datalabels on the chart. Read-only. */
+    /**
+     * @var WorkbookChartDataLabels|null $dataLabels Represents the datalabels on the chart. Read-only.
+    */
     private ?WorkbookChartDataLabels $dataLabels = null;
     
-    /** @var WorkbookChartAreaFormat|null $format Encapsulates the format properties for the chart area. Read-only. */
+    /**
+     * @var WorkbookChartAreaFormat|null $format Encapsulates the format properties for the chart area. Read-only.
+    */
     private ?WorkbookChartAreaFormat $format = null;
     
-    /** @var float|null $height Represents the height, in points, of the chart object. */
+    /**
+     * @var float|null $height Represents the height, in points, of the chart object.
+    */
     private ?float $height = null;
     
-    /** @var float|null $left The distance, in points, from the left side of the chart to the worksheet origin. */
+    /**
+     * @var float|null $left The distance, in points, from the left side of the chart to the worksheet origin.
+    */
     private ?float $left = null;
     
-    /** @var WorkbookChartLegend|null $legend Represents the legend for the chart. Read-only. */
+    /**
+     * @var WorkbookChartLegend|null $legend Represents the legend for the chart. Read-only.
+    */
     private ?WorkbookChartLegend $legend = null;
     
-    /** @var string|null $name Represents the name of a chart object. */
+    /**
+     * @var string|null $name Represents the name of a chart object.
+    */
     private ?string $name = null;
     
-    /** @var array<WorkbookChartSeries>|null $series Represents either a single series or collection of series in the chart. Read-only. */
+    /**
+     * @var array<WorkbookChartSeries>|null $series Represents either a single series or collection of series in the chart. Read-only.
+    */
     private ?array $series = null;
     
-    /** @var WorkbookChartTitle|null $title Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only. */
+    /**
+     * @var WorkbookChartTitle|null $title Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
+    */
     private ?WorkbookChartTitle $title = null;
     
-    /** @var float|null $top Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart). */
+    /**
+     * @var float|null $top Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart).
+    */
     private ?float $top = null;
     
-    /** @var float|null $width Represents the width, in points, of the chart object. */
+    /**
+     * @var float|null $width Represents the width, in points, of the chart object.
+    */
     private ?float $width = null;
     
-    /** @var WorkbookWorksheet|null $worksheet The worksheet containing the current chart. Read-only. */
+    /**
+     * @var WorkbookWorksheet|null $worksheet The worksheet containing the current chart. Read-only.
+    */
     private ?WorkbookWorksheet $worksheet = null;
     
     /**
@@ -56,7 +80,7 @@ class WorkbookChart extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookChart
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookChart {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookChart {
         return new WorkbookChart();
     }
 
@@ -81,19 +105,20 @@ class WorkbookChart extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'axes' => function (self $o, ParseNode $n) { $o->setAxes($n->getObjectValue(WorkbookChartAxes::class)); },
-            'dataLabels' => function (self $o, ParseNode $n) { $o->setDataLabels($n->getObjectValue(WorkbookChartDataLabels::class)); },
-            'format' => function (self $o, ParseNode $n) { $o->setFormat($n->getObjectValue(WorkbookChartAreaFormat::class)); },
-            'height' => function (self $o, ParseNode $n) { $o->setHeight($n->getFloatValue()); },
-            'left' => function (self $o, ParseNode $n) { $o->setLeft($n->getFloatValue()); },
-            'legend' => function (self $o, ParseNode $n) { $o->setLegend($n->getObjectValue(WorkbookChartLegend::class)); },
-            'name' => function (self $o, ParseNode $n) { $o->setName($n->getStringValue()); },
-            'series' => function (self $o, ParseNode $n) { $o->setSeries($n->getCollectionOfObjectValues(WorkbookChartSeries::class)); },
-            'title' => function (self $o, ParseNode $n) { $o->setTitle($n->getObjectValue(WorkbookChartTitle::class)); },
-            'top' => function (self $o, ParseNode $n) { $o->setTop($n->getFloatValue()); },
-            'width' => function (self $o, ParseNode $n) { $o->setWidth($n->getFloatValue()); },
-            'worksheet' => function (self $o, ParseNode $n) { $o->setWorksheet($n->getObjectValue(WorkbookWorksheet::class)); },
+            'axes' => function (ParseNode $n) use ($o) { $o->setAxes($n->getObjectValue(array(WorkbookChartAxes::class, 'createFromDiscriminatorValue'))); },
+            'dataLabels' => function (ParseNode $n) use ($o) { $o->setDataLabels($n->getObjectValue(array(WorkbookChartDataLabels::class, 'createFromDiscriminatorValue'))); },
+            'format' => function (ParseNode $n) use ($o) { $o->setFormat($n->getObjectValue(array(WorkbookChartAreaFormat::class, 'createFromDiscriminatorValue'))); },
+            'height' => function (ParseNode $n) use ($o) { $o->setHeight($n->getFloatValue()); },
+            'left' => function (ParseNode $n) use ($o) { $o->setLeft($n->getFloatValue()); },
+            'legend' => function (ParseNode $n) use ($o) { $o->setLegend($n->getObjectValue(array(WorkbookChartLegend::class, 'createFromDiscriminatorValue'))); },
+            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'series' => function (ParseNode $n) use ($o) { $o->setSeries($n->getCollectionOfObjectValues(array(WorkbookChartSeries::class, 'createFromDiscriminatorValue'))); },
+            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getObjectValue(array(WorkbookChartTitle::class, 'createFromDiscriminatorValue'))); },
+            'top' => function (ParseNode $n) use ($o) { $o->setTop($n->getFloatValue()); },
+            'width' => function (ParseNode $n) use ($o) { $o->setWidth($n->getFloatValue()); },
+            'worksheet' => function (ParseNode $n) use ($o) { $o->setWorksheet($n->getObjectValue(array(WorkbookWorksheet::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

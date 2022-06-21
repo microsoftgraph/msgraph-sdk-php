@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class IdentitySet implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var Identity|null $application Optional. The application associated with this action. */
+    /**
+     * @var Identity|null $application Optional. The application associated with this action.
+    */
     private ?Identity $application = null;
     
-    /** @var Identity|null $device Optional. The device associated with this action. */
+    /**
+     * @var Identity|null $device Optional. The device associated with this action.
+    */
     private ?Identity $device = null;
     
-    /** @var Identity|null $user Optional. The user associated with this action. */
+    /**
+     * @var Identity|null $user Optional. The user associated with this action.
+    */
     private ?Identity $user = null;
     
     /**
@@ -33,7 +41,7 @@ class IdentitySet implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return IdentitySet
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): IdentitySet {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): IdentitySet {
         return new IdentitySet();
     }
 
@@ -66,10 +74,11 @@ class IdentitySet implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'application' => function (self $o, ParseNode $n) { $o->setApplication($n->getObjectValue(Identity::class)); },
-            'device' => function (self $o, ParseNode $n) { $o->setDevice($n->getObjectValue(Identity::class)); },
-            'user' => function (self $o, ParseNode $n) { $o->setUser($n->getObjectValue(Identity::class)); },
+            'application' => function (ParseNode $n) use ($o) { $o->setApplication($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
+            'device' => function (ParseNode $n) use ($o) { $o->setDevice($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
+            'user' => function (ParseNode $n) use ($o) { $o->setUser($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

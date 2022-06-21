@@ -7,27 +7,41 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AgreementFileProperties extends Entity 
+class AgreementFileProperties extends Entity implements Parsable 
 {
-    /** @var DateTime|null $createdDateTime The date time representing when the file was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $createdDateTime The date time representing when the file was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $displayName Localized display name of the policy file of an agreement. The localized display name is shown to end users who view the agreement. */
+    /**
+     * @var string|null $displayName Localized display name of the policy file of an agreement. The localized display name is shown to end users who view the agreement.
+    */
     private ?string $displayName = null;
     
-    /** @var AgreementFileData|null $fileData Data that represents the terms of use PDF document. Read-only. */
+    /**
+     * @var AgreementFileData|null $fileData Data that represents the terms of use PDF document. Read-only.
+    */
     private ?AgreementFileData $fileData = null;
     
-    /** @var string|null $fileName Name of the agreement file (for example, TOU.pdf). Read-only. */
+    /**
+     * @var string|null $fileName Name of the agreement file (for example, TOU.pdf). Read-only.
+    */
     private ?string $fileName = null;
     
-    /** @var bool|null $isDefault If none of the languages matches the client preference, indicates whether this is the default agreement file . If none of the files are marked as default, the first one is treated as the default. Read-only. */
+    /**
+     * @var bool|null $isDefault If none of the languages matches the client preference, indicates whether this is the default agreement file . If none of the files are marked as default, the first one is treated as the default. Read-only.
+    */
     private ?bool $isDefault = null;
     
-    /** @var bool|null $isMajorVersion Indicates whether the agreement file is a major version update. Major version updates invalidate the agreement's acceptances on the corresponding language. */
+    /**
+     * @var bool|null $isMajorVersion Indicates whether the agreement file is a major version update. Major version updates invalidate the agreement's acceptances on the corresponding language.
+    */
     private ?bool $isMajorVersion = null;
     
-    /** @var string|null $language The language of the agreement file in the format 'languagecode2-country/regioncode2'. 'languagecode2' is a lowercase two-letter code derived from ISO 639-1, while 'country/regioncode2' is derived from ISO 3166 and usually consists of two uppercase letters, or a BCP-47 language tag. For example, U.S. English is en-US. Read-only. */
+    /**
+     * @var string|null $language The language of the agreement file in the format 'languagecode2-country/regioncode2'. 'languagecode2' is a lowercase two-letter code derived from ISO 639-1, while 'country/regioncode2' is derived from ISO 3166 and usually consists of two uppercase letters, or a BCP-47 language tag. For example, U.S. English is en-US. Read-only.
+    */
     private ?string $language = null;
     
     /**
@@ -42,7 +56,16 @@ class AgreementFileProperties extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AgreementFileProperties
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AgreementFileProperties {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AgreementFileProperties {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.agreementFile': return new AgreementFile();
+                case '#microsoft.graph.agreementFileLocalization': return new AgreementFileLocalization();
+                case '#microsoft.graph.agreementFileVersion': return new AgreementFileVersion();
+            }
+        }
         return new AgreementFileProperties();
     }
 
@@ -67,14 +90,15 @@ class AgreementFileProperties extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'fileData' => function (self $o, ParseNode $n) { $o->setFileData($n->getObjectValue(AgreementFileData::class)); },
-            'fileName' => function (self $o, ParseNode $n) { $o->setFileName($n->getStringValue()); },
-            'isDefault' => function (self $o, ParseNode $n) { $o->setIsDefault($n->getBooleanValue()); },
-            'isMajorVersion' => function (self $o, ParseNode $n) { $o->setIsMajorVersion($n->getBooleanValue()); },
-            'language' => function (self $o, ParseNode $n) { $o->setLanguage($n->getStringValue()); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'fileData' => function (ParseNode $n) use ($o) { $o->setFileData($n->getObjectValue(array(AgreementFileData::class, 'createFromDiscriminatorValue'))); },
+            'fileName' => function (ParseNode $n) use ($o) { $o->setFileName($n->getStringValue()); },
+            'isDefault' => function (ParseNode $n) use ($o) { $o->setIsDefault($n->getBooleanValue()); },
+            'isMajorVersion' => function (ParseNode $n) use ($o) { $o->setIsMajorVersion($n->getBooleanValue()); },
+            'language' => function (ParseNode $n) use ($o) { $o->setLanguage($n->getStringValue()); },
         ]);
     }
 

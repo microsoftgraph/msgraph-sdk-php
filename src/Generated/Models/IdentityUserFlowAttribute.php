@@ -6,18 +6,26 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class IdentityUserFlowAttribute extends Entity 
+class IdentityUserFlowAttribute extends Entity implements Parsable 
 {
-    /** @var IdentityUserFlowAttributeDataType|null $dataType The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are: string , boolean , int64 , stringCollection , dateTime. */
+    /**
+     * @var IdentityUserFlowAttributeDataType|null $dataType The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are: string , boolean , int64 , stringCollection , dateTime.
+    */
     private ?IdentityUserFlowAttributeDataType $dataType = null;
     
-    /** @var string|null $description The description of the user flow attribute that's shown to the user at the time of sign-up. */
+    /**
+     * @var string|null $description The description of the user flow attribute that's shown to the user at the time of sign-up.
+    */
     private ?string $description = null;
     
-    /** @var string|null $displayName The display name of the user flow attribute. */
+    /**
+     * @var string|null $displayName The display name of the user flow attribute.
+    */
     private ?string $displayName = null;
     
-    /** @var IdentityUserFlowAttributeType|null $userFlowAttributeType The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn, custom, or required. */
+    /**
+     * @var IdentityUserFlowAttributeType|null $userFlowAttributeType The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn, custom, or required.
+    */
     private ?IdentityUserFlowAttributeType $userFlowAttributeType = null;
     
     /**
@@ -32,7 +40,15 @@ class IdentityUserFlowAttribute extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return IdentityUserFlowAttribute
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): IdentityUserFlowAttribute {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): IdentityUserFlowAttribute {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.identityBuiltInUserFlowAttribute': return new IdentityBuiltInUserFlowAttribute();
+                case '#microsoft.graph.identityCustomUserFlowAttribute': return new IdentityCustomUserFlowAttribute();
+            }
+        }
         return new IdentityUserFlowAttribute();
     }
 
@@ -65,11 +81,12 @@ class IdentityUserFlowAttribute extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'dataType' => function (self $o, ParseNode $n) { $o->setDataType($n->getEnumValue(IdentityUserFlowAttributeDataType::class)); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'userFlowAttributeType' => function (self $o, ParseNode $n) { $o->setUserFlowAttributeType($n->getEnumValue(IdentityUserFlowAttributeType::class)); },
+            'dataType' => function (ParseNode $n) use ($o) { $o->setDataType($n->getEnumValue(IdentityUserFlowAttributeDataType::class)); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'userFlowAttributeType' => function (ParseNode $n) use ($o) { $o->setUserFlowAttributeType($n->getEnumValue(IdentityUserFlowAttributeType::class)); },
         ]);
     }
 

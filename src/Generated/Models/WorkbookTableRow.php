@@ -6,12 +6,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class WorkbookTableRow extends Entity 
+class WorkbookTableRow extends Entity implements Parsable 
 {
-    /** @var int|null $index Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only. */
+    /**
+     * @var int|null $index Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only.
+    */
     private ?int $index = null;
     
-    /** @var Json|null $values Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string. */
+    /**
+     * @var Json|null $values Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+    */
     private ?Json $values = null;
     
     /**
@@ -26,7 +30,7 @@ class WorkbookTableRow extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return WorkbookTableRow
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookTableRow {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): WorkbookTableRow {
         return new WorkbookTableRow();
     }
 
@@ -35,9 +39,10 @@ class WorkbookTableRow extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'index' => function (self $o, ParseNode $n) { $o->setIndex($n->getIntegerValue()); },
-            'values' => function (self $o, ParseNode $n) { $o->setValues($n->getObjectValue(Json::class)); },
+            'index' => function (ParseNode $n) use ($o) { $o->setIndex($n->getIntegerValue()); },
+            'values' => function (ParseNode $n) use ($o) { $o->setValues($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

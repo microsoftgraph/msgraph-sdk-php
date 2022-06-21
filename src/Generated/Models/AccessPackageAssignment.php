@@ -7,27 +7,41 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AccessPackageAssignment extends Entity 
+class AccessPackageAssignment extends Entity implements Parsable 
 {
-    /** @var AccessPackage|null $accessPackage Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters. */
+    /**
+     * @var AccessPackage|null $accessPackage Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
+    */
     private ?AccessPackage $accessPackage = null;
     
-    /** @var AccessPackageAssignmentPolicy|null $assignmentPolicy Read-only. Supports $filter (eq) on the id property and $expand query parameters. */
+    /**
+     * @var AccessPackageAssignmentPolicy|null $assignmentPolicy Read-only. Supports $filter (eq) on the id property and $expand query parameters.
+    */
     private ?AccessPackageAssignmentPolicy $assignmentPolicy = null;
     
-    /** @var DateTime|null $expiredDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * @var DateTime|null $expiredDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    */
     private ?DateTime $expiredDateTime = null;
     
-    /** @var EntitlementManagementSchedule|null $schedule When the access assignment is to be in place. Read-only. */
+    /**
+     * @var EntitlementManagementSchedule|null $schedule When the access assignment is to be in place. Read-only.
+    */
     private ?EntitlementManagementSchedule $schedule = null;
     
-    /** @var AccessPackageAssignmentState|null $state The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq). */
+    /**
+     * @var AccessPackageAssignmentState|null $state The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq).
+    */
     private ?AccessPackageAssignmentState $state = null;
     
-    /** @var string|null $status More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only. */
+    /**
+     * @var string|null $status More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
+    */
     private ?string $status = null;
     
-    /** @var AccessPackageSubject|null $target The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId. */
+    /**
+     * @var AccessPackageSubject|null $target The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
+    */
     private ?AccessPackageSubject $target = null;
     
     /**
@@ -42,7 +56,7 @@ class AccessPackageAssignment extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AccessPackageAssignment
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageAssignment {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageAssignment {
         return new AccessPackageAssignment();
     }
 
@@ -63,7 +77,7 @@ class AccessPackageAssignment extends Entity
     }
 
     /**
-     * Gets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return DateTime|null
     */
     public function getExpiredDateTime(): ?DateTime {
@@ -75,14 +89,15 @@ class AccessPackageAssignment extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'accessPackage' => function (self $o, ParseNode $n) { $o->setAccessPackage($n->getObjectValue(AccessPackage::class)); },
-            'assignmentPolicy' => function (self $o, ParseNode $n) { $o->setAssignmentPolicy($n->getObjectValue(AccessPackageAssignmentPolicy::class)); },
-            'expiredDateTime' => function (self $o, ParseNode $n) { $o->setExpiredDateTime($n->getDateTimeValue()); },
-            'schedule' => function (self $o, ParseNode $n) { $o->setSchedule($n->getObjectValue(EntitlementManagementSchedule::class)); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getEnumValue(AccessPackageAssignmentState::class)); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getStringValue()); },
-            'target' => function (self $o, ParseNode $n) { $o->setTarget($n->getObjectValue(AccessPackageSubject::class)); },
+            'accessPackage' => function (ParseNode $n) use ($o) { $o->setAccessPackage($n->getObjectValue(array(AccessPackage::class, 'createFromDiscriminatorValue'))); },
+            'assignmentPolicy' => function (ParseNode $n) use ($o) { $o->setAssignmentPolicy($n->getObjectValue(array(AccessPackageAssignmentPolicy::class, 'createFromDiscriminatorValue'))); },
+            'expiredDateTime' => function (ParseNode $n) use ($o) { $o->setExpiredDateTime($n->getDateTimeValue()); },
+            'schedule' => function (ParseNode $n) use ($o) { $o->setSchedule($n->getObjectValue(array(EntitlementManagementSchedule::class, 'createFromDiscriminatorValue'))); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(AccessPackageAssignmentState::class)); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getStringValue()); },
+            'target' => function (ParseNode $n) use ($o) { $o->setTarget($n->getObjectValue(array(AccessPackageSubject::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -150,7 +165,7 @@ class AccessPackageAssignment extends Entity
     }
 
     /**
-     * Sets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the expiredDateTime property.
     */
     public function setExpiredDateTime(?DateTime $value ): void {

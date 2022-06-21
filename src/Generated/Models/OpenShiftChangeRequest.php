@@ -6,13 +6,15 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class OpenShiftChangeRequest extends ScheduleChangeRequest 
+class OpenShiftChangeRequest extends ScheduleChangeRequest implements Parsable 
 {
-    /** @var string|null $openShiftId ID for the open shift. */
+    /**
+     * @var string|null $openShiftId ID for the open shift.
+    */
     private ?string $openShiftId = null;
     
     /**
-     * Instantiates a new openShiftChangeRequest and sets the default values.
+     * Instantiates a new OpenShiftChangeRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -23,7 +25,7 @@ class OpenShiftChangeRequest extends ScheduleChangeRequest
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return OpenShiftChangeRequest
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): OpenShiftChangeRequest {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): OpenShiftChangeRequest {
         return new OpenShiftChangeRequest();
     }
 
@@ -32,8 +34,9 @@ class OpenShiftChangeRequest extends ScheduleChangeRequest
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'openShiftId' => function (self $o, ParseNode $n) { $o->setOpenShiftId($n->getStringValue()); },
+            'openShiftId' => function (ParseNode $n) use ($o) { $o->setOpenShiftId($n->getStringValue()); },
         ]);
     }
 

@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Phone implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $language The language property */
+    /**
+     * @var string|null $language The language property
+    */
     private ?string $language = null;
     
-    /** @var string|null $number The phone number. */
+    /**
+     * @var string|null $number The phone number.
+    */
     private ?string $number = null;
     
-    /** @var string|null $region The region property */
+    /**
+     * @var string|null $region The region property
+    */
     private ?string $region = null;
     
-    /** @var PhoneType|null $type The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio. */
+    /**
+     * @var PhoneType|null $type The type of phone number. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
+    */
     private ?PhoneType $type = null;
     
     /**
@@ -36,7 +46,7 @@ class Phone implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Phone
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Phone {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Phone {
         return new Phone();
     }
 
@@ -53,11 +63,12 @@ class Phone implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'language' => function (self $o, ParseNode $n) { $o->setLanguage($n->getStringValue()); },
-            'number' => function (self $o, ParseNode $n) { $o->setNumber($n->getStringValue()); },
-            'region' => function (self $o, ParseNode $n) { $o->setRegion($n->getStringValue()); },
-            'type' => function (self $o, ParseNode $n) { $o->setType($n->getEnumValue(PhoneType::class)); },
+            'language' => function (ParseNode $n) use ($o) { $o->setLanguage($n->getStringValue()); },
+            'number' => function (ParseNode $n) use ($o) { $o->setNumber($n->getStringValue()); },
+            'region' => function (ParseNode $n) use ($o) { $o->setRegion($n->getStringValue()); },
+            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(PhoneType::class)); },
         ];
     }
 
@@ -86,7 +97,7 @@ class Phone implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the type property value. The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
+     * Gets the type property value. The type of phone number. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
      * @return PhoneType|null
     */
     public function getType(): ?PhoneType {
@@ -138,7 +149,7 @@ class Phone implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the type property value. The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
+     * Sets the type property value. The type of phone number. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
      *  @param PhoneType|null $value Value to set for the type property.
     */
     public function setType(?PhoneType $value ): void {

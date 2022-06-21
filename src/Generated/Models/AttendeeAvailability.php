@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AttendeeAvailability implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var AttendeeBase|null $attendee The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person. */
+    /**
+     * @var AttendeeBase|null $attendee The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
+    */
     private ?AttendeeBase $attendee = null;
     
-    /** @var FreeBusyStatus|null $availability The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown. */
+    /**
+     * @var FreeBusyStatus|null $availability The availability status of the attendee. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+    */
     private ?FreeBusyStatus $availability = null;
     
     /**
@@ -30,7 +36,7 @@ class AttendeeAvailability implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AttendeeAvailability
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AttendeeAvailability {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AttendeeAvailability {
         return new AttendeeAvailability();
     }
 
@@ -51,7 +57,7 @@ class AttendeeAvailability implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the availability property value. The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Gets the availability property value. The availability status of the attendee. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @return FreeBusyStatus|null
     */
     public function getAvailability(): ?FreeBusyStatus {
@@ -63,9 +69,10 @@ class AttendeeAvailability implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'attendee' => function (self $o, ParseNode $n) { $o->setAttendee($n->getObjectValue(AttendeeBase::class)); },
-            'availability' => function (self $o, ParseNode $n) { $o->setAvailability($n->getEnumValue(FreeBusyStatus::class)); },
+            'attendee' => function (ParseNode $n) use ($o) { $o->setAttendee($n->getObjectValue(array(AttendeeBase::class, 'createFromDiscriminatorValue'))); },
+            'availability' => function (ParseNode $n) use ($o) { $o->setAvailability($n->getEnumValue(FreeBusyStatus::class)); },
         ];
     }
 
@@ -96,7 +103,7 @@ class AttendeeAvailability implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the availability property value. The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Sets the availability property value. The availability status of the attendee. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      *  @param FreeBusyStatus|null $value Value to set for the availability property.
     */
     public function setAvailability(?FreeBusyStatus $value ): void {

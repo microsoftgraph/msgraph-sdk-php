@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class AggregationOption implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var BucketAggregationDefinition|null $bucketDefinition The bucketDefinition property */
+    /**
+     * @var BucketAggregationDefinition|null $bucketDefinition The bucketDefinition property
+    */
     private ?BucketAggregationDefinition $bucketDefinition = null;
     
-    /** @var string|null $field Computes aggregation on the field while the field exists in current entity type. Required. */
+    /**
+     * @var string|null $field Computes aggregation on the field while the field exists in current entity type. Required.
+    */
     private ?string $field = null;
     
-    /** @var int|null $size The number of searchBucket resources to be returned. This is not required when the range is provided manually in the search request. Optional. */
+    /**
+     * @var int|null $size The number of searchBucket resources to be returned. This is not required when the range is provided manually in the search request. Optional.
+    */
     private ?int $size = null;
     
     /**
@@ -33,7 +41,7 @@ class AggregationOption implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AggregationOption
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AggregationOption {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AggregationOption {
         return new AggregationOption();
     }
 
@@ -66,10 +74,11 @@ class AggregationOption implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'bucketDefinition' => function (self $o, ParseNode $n) { $o->setBucketDefinition($n->getObjectValue(BucketAggregationDefinition::class)); },
-            'field' => function (self $o, ParseNode $n) { $o->setField($n->getStringValue()); },
-            'size' => function (self $o, ParseNode $n) { $o->setSize($n->getIntegerValue()); },
+            'bucketDefinition' => function (ParseNode $n) use ($o) { $o->setBucketDefinition($n->getObjectValue(array(BucketAggregationDefinition::class, 'createFromDiscriminatorValue'))); },
+            'field' => function (ParseNode $n) use ($o) { $o->setField($n->getStringValue()); },
+            'size' => function (ParseNode $n) use ($o) { $o->setSize($n->getIntegerValue()); },
         ];
     }
 

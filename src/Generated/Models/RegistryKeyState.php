@@ -9,37 +9,59 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class RegistryKeyState implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var RegistryHive|null $hive A Windows registry hive : HKEY_CURRENT_CONFIG HKEY_CURRENT_USER HKEY_LOCAL_MACHINE/SAM HKEY_LOCAL_MACHINE/Security HKEY_LOCAL_MACHINE/Software HKEY_LOCAL_MACHINE/System HKEY_USERS/.Default. Possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault. */
+    /**
+     * @var RegistryHive|null $hive A Windows registry hive : HKEY_CURRENT_CONFIG HKEY_CURRENT_USER HKEY_LOCAL_MACHINE/SAM HKEY_LOCAL_MACHINE/Security HKEY_LOCAL_MACHINE/Software HKEY_LOCAL_MACHINE/System HKEY_USERS/.Default. Possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault.
+    */
     private ?RegistryHive $hive = null;
     
-    /** @var string|null $key Current (i.e. changed) registry key (excludes HIVE). */
+    /**
+     * @var string|null $key Current (i.e. changed) registry key (excludes HIVE).
+    */
     private ?string $key = null;
     
-    /** @var string|null $oldKey Previous (i.e. before changed) registry key (excludes HIVE). */
+    /**
+     * @var string|null $oldKey Previous (i.e. before changed) registry key (excludes HIVE).
+    */
     private ?string $oldKey = null;
     
-    /** @var string|null $oldValueData Previous (i.e. before changed) registry key value data (contents). */
+    /**
+     * @var string|null $oldValueData Previous (i.e. before changed) registry key value data (contents).
+    */
     private ?string $oldValueData = null;
     
-    /** @var string|null $oldValueName Previous (i.e. before changed) registry key value name. */
+    /**
+     * @var string|null $oldValueName Previous (i.e. before changed) registry key value name.
+    */
     private ?string $oldValueName = null;
     
-    /** @var RegistryOperation|null $operation Operation that changed the registry key name and/or value. Possible values are: unknown, create, modify, delete. */
+    /**
+     * @var RegistryOperation|null $operation Operation that changed the registry key name and/or value. Possible values are: unknown, create, modify, delete.
+    */
     private ?RegistryOperation $operation = null;
     
-    /** @var int|null $processId Process ID (PID) of the process that modified the registry key (process details will appear in the alert 'processes' collection). */
+    /**
+     * @var int|null $processId Process ID (PID) of the process that modified the registry key (process details will appear in the alert 'processes' collection).
+    */
     private ?int $processId = null;
     
-    /** @var string|null $valueData Current (i.e. changed) registry key value data (contents). */
+    /**
+     * @var string|null $valueData Current (i.e. changed) registry key value data (contents).
+    */
     private ?string $valueData = null;
     
-    /** @var string|null $valueName Current (i.e. changed) registry key value name */
+    /**
+     * @var string|null $valueName Current (i.e. changed) registry key value name
+    */
     private ?string $valueName = null;
     
-    /** @var RegistryValueType|null $valueType Registry key value type REG_BINARY REG_DWORD REG_DWORD_LITTLE_ENDIAN REG_DWORD_BIG_ENDIANREG_EXPAND_SZ REG_LINK REG_MULTI_SZ REG_NONE REG_QWORD REG_QWORD_LITTLE_ENDIAN REG_SZ Possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz. */
+    /**
+     * @var RegistryValueType|null $valueType Registry key value type REG_BINARY REG_DWORD REG_DWORD_LITTLE_ENDIAN REG_DWORD_BIG_ENDIANREG_EXPAND_SZ REG_LINK REG_MULTI_SZ REG_NONE REG_QWORD REG_QWORD_LITTLE_ENDIAN REG_SZ Possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz.
+    */
     private ?RegistryValueType $valueType = null;
     
     /**
@@ -54,7 +76,7 @@ class RegistryKeyState implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return RegistryKeyState
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): RegistryKeyState {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): RegistryKeyState {
         return new RegistryKeyState();
     }
 
@@ -71,17 +93,18 @@ class RegistryKeyState implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'hive' => function (self $o, ParseNode $n) { $o->setHive($n->getEnumValue(RegistryHive::class)); },
-            'key' => function (self $o, ParseNode $n) { $o->setKey($n->getStringValue()); },
-            'oldKey' => function (self $o, ParseNode $n) { $o->setOldKey($n->getStringValue()); },
-            'oldValueData' => function (self $o, ParseNode $n) { $o->setOldValueData($n->getStringValue()); },
-            'oldValueName' => function (self $o, ParseNode $n) { $o->setOldValueName($n->getStringValue()); },
-            'operation' => function (self $o, ParseNode $n) { $o->setOperation($n->getEnumValue(RegistryOperation::class)); },
-            'processId' => function (self $o, ParseNode $n) { $o->setProcessId($n->getIntegerValue()); },
-            'valueData' => function (self $o, ParseNode $n) { $o->setValueData($n->getStringValue()); },
-            'valueName' => function (self $o, ParseNode $n) { $o->setValueName($n->getStringValue()); },
-            'valueType' => function (self $o, ParseNode $n) { $o->setValueType($n->getEnumValue(RegistryValueType::class)); },
+            'hive' => function (ParseNode $n) use ($o) { $o->setHive($n->getEnumValue(RegistryHive::class)); },
+            'key' => function (ParseNode $n) use ($o) { $o->setKey($n->getStringValue()); },
+            'oldKey' => function (ParseNode $n) use ($o) { $o->setOldKey($n->getStringValue()); },
+            'oldValueData' => function (ParseNode $n) use ($o) { $o->setOldValueData($n->getStringValue()); },
+            'oldValueName' => function (ParseNode $n) use ($o) { $o->setOldValueName($n->getStringValue()); },
+            'operation' => function (ParseNode $n) use ($o) { $o->setOperation($n->getEnumValue(RegistryOperation::class)); },
+            'processId' => function (ParseNode $n) use ($o) { $o->setProcessId($n->getIntegerValue()); },
+            'valueData' => function (ParseNode $n) use ($o) { $o->setValueData($n->getStringValue()); },
+            'valueName' => function (ParseNode $n) use ($o) { $o->setValueName($n->getStringValue()); },
+            'valueType' => function (ParseNode $n) use ($o) { $o->setValueType($n->getEnumValue(RegistryValueType::class)); },
         ];
     }
 

@@ -9,31 +9,49 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Reminder implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $changeKey Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. */
+    /**
+     * @var string|null $changeKey Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object.
+    */
     private ?string $changeKey = null;
     
-    /** @var DateTimeTimeZone|null $eventEndTime The date, time and time zone that the event ends. */
+    /**
+     * @var DateTimeTimeZone|null $eventEndTime The date, time and time zone that the event ends.
+    */
     private ?DateTimeTimeZone $eventEndTime = null;
     
-    /** @var string|null $eventId The unique ID of the event. Read only. */
+    /**
+     * @var string|null $eventId The unique ID of the event. Read only.
+    */
     private ?string $eventId = null;
     
-    /** @var Location|null $eventLocation The location of the event. */
+    /**
+     * @var Location|null $eventLocation The location of the event.
+    */
     private ?Location $eventLocation = null;
     
-    /** @var DateTimeTimeZone|null $eventStartTime The date, time, and time zone that the event starts. */
+    /**
+     * @var DateTimeTimeZone|null $eventStartTime The date, time, and time zone that the event starts.
+    */
     private ?DateTimeTimeZone $eventStartTime = null;
     
-    /** @var string|null $eventSubject The text of the event's subject line. */
+    /**
+     * @var string|null $eventSubject The text of the event's subject line.
+    */
     private ?string $eventSubject = null;
     
-    /** @var string|null $eventWebLink The URL to open the event in Outlook on the web.The event will open in the browser if you are logged in to your mailbox via Outlook on the web. You will be prompted to login if you are not already logged in with the browser.This URL cannot be accessed from within an iFrame. */
+    /**
+     * @var string|null $eventWebLink The URL to open the event in Outlook on the web.The event will open in the browser if you are logged in to your mailbox via Outlook on the web. You will be prompted to login if you are not already logged in with the browser.This URL cannot be accessed from within an iFrame.
+    */
     private ?string $eventWebLink = null;
     
-    /** @var DateTimeTimeZone|null $reminderFireTime The date, time, and time zone that the reminder is set to occur. */
+    /**
+     * @var DateTimeTimeZone|null $reminderFireTime The date, time, and time zone that the reminder is set to occur.
+    */
     private ?DateTimeTimeZone $reminderFireTime = null;
     
     /**
@@ -48,7 +66,7 @@ class Reminder implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Reminder
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Reminder {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Reminder {
         return new Reminder();
     }
 
@@ -121,15 +139,16 @@ class Reminder implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'changeKey' => function (self $o, ParseNode $n) { $o->setChangeKey($n->getStringValue()); },
-            'eventEndTime' => function (self $o, ParseNode $n) { $o->setEventEndTime($n->getObjectValue(DateTimeTimeZone::class)); },
-            'eventId' => function (self $o, ParseNode $n) { $o->setEventId($n->getStringValue()); },
-            'eventLocation' => function (self $o, ParseNode $n) { $o->setEventLocation($n->getObjectValue(Location::class)); },
-            'eventStartTime' => function (self $o, ParseNode $n) { $o->setEventStartTime($n->getObjectValue(DateTimeTimeZone::class)); },
-            'eventSubject' => function (self $o, ParseNode $n) { $o->setEventSubject($n->getStringValue()); },
-            'eventWebLink' => function (self $o, ParseNode $n) { $o->setEventWebLink($n->getStringValue()); },
-            'reminderFireTime' => function (self $o, ParseNode $n) { $o->setReminderFireTime($n->getObjectValue(DateTimeTimeZone::class)); },
+            'changeKey' => function (ParseNode $n) use ($o) { $o->setChangeKey($n->getStringValue()); },
+            'eventEndTime' => function (ParseNode $n) use ($o) { $o->setEventEndTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
+            'eventId' => function (ParseNode $n) use ($o) { $o->setEventId($n->getStringValue()); },
+            'eventLocation' => function (ParseNode $n) use ($o) { $o->setEventLocation($n->getObjectValue(array(Location::class, 'createFromDiscriminatorValue'))); },
+            'eventStartTime' => function (ParseNode $n) use ($o) { $o->setEventStartTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
+            'eventSubject' => function (ParseNode $n) use ($o) { $o->setEventSubject($n->getStringValue()); },
+            'eventWebLink' => function (ParseNode $n) use ($o) { $o->setEventWebLink($n->getStringValue()); },
+            'reminderFireTime' => function (ParseNode $n) use ($o) { $o->setReminderFireTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

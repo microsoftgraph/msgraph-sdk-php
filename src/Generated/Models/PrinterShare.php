@@ -7,21 +7,31 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class PrinterShare extends PrinterBase 
+class PrinterShare extends PrinterBase implements Parsable 
 {
-    /** @var bool|null $allowAllUsers If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties. */
+    /**
+     * @var bool|null $allowAllUsers If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties.
+    */
     private ?bool $allowAllUsers = null;
     
-    /** @var array<Group>|null $allowedGroups The groups whose users have access to print using the printer. */
+    /**
+     * @var array<Group>|null $allowedGroups The groups whose users have access to print using the printer.
+    */
     private ?array $allowedGroups = null;
     
-    /** @var array<User>|null $allowedUsers The users who have access to print using the printer. */
+    /**
+     * @var array<User>|null $allowedUsers The users who have access to print using the printer.
+    */
     private ?array $allowedUsers = null;
     
-    /** @var DateTime|null $createdDateTime The DateTimeOffset when the printer share was created. Read-only. */
+    /**
+     * @var DateTime|null $createdDateTime The DateTimeOffset when the printer share was created. Read-only.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var Printer|null $printer The printer that this printer share is related to. */
+    /**
+     * @var Printer|null $printer The printer that this printer share is related to.
+    */
     private ?Printer $printer = null;
     
     /**
@@ -36,7 +46,7 @@ class PrinterShare extends PrinterBase
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrinterShare
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrinterShare {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrinterShare {
         return new PrinterShare();
     }
 
@@ -77,12 +87,13 @@ class PrinterShare extends PrinterBase
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowAllUsers' => function (self $o, ParseNode $n) { $o->setAllowAllUsers($n->getBooleanValue()); },
-            'allowedGroups' => function (self $o, ParseNode $n) { $o->setAllowedGroups($n->getCollectionOfObjectValues(Group::class)); },
-            'allowedUsers' => function (self $o, ParseNode $n) { $o->setAllowedUsers($n->getCollectionOfObjectValues(User::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'printer' => function (self $o, ParseNode $n) { $o->setPrinter($n->getObjectValue(Printer::class)); },
+            'allowAllUsers' => function (ParseNode $n) use ($o) { $o->setAllowAllUsers($n->getBooleanValue()); },
+            'allowedGroups' => function (ParseNode $n) use ($o) { $o->setAllowedGroups($n->getCollectionOfObjectValues(array(Group::class, 'createFromDiscriminatorValue'))); },
+            'allowedUsers' => function (ParseNode $n) use ($o) { $o->setAllowedUsers($n->getCollectionOfObjectValues(array(User::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'printer' => function (ParseNode $n) use ($o) { $o->setPrinter($n->getObjectValue(array(Printer::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

@@ -6,7 +6,7 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AuthenticationMethod extends Entity 
+class AuthenticationMethod extends Entity implements Parsable 
 {
     /**
      * Instantiates a new authenticationMethod and sets the default values.
@@ -20,7 +20,17 @@ class AuthenticationMethod extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AuthenticationMethod
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AuthenticationMethod {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AuthenticationMethod {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.fido2AuthenticationMethod': return new Fido2AuthenticationMethod();
+                case '#microsoft.graph.microsoftAuthenticatorAuthenticationMethod': return new MicrosoftAuthenticatorAuthenticationMethod();
+                case '#microsoft.graph.temporaryAccessPassAuthenticationMethod': return new TemporaryAccessPassAuthenticationMethod();
+                case '#microsoft.graph.windowsHelloForBusinessAuthenticationMethod': return new WindowsHelloForBusinessAuthenticationMethod();
+            }
+        }
         return new AuthenticationMethod();
     }
 
@@ -29,6 +39,7 @@ class AuthenticationMethod extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
         ]);
     }

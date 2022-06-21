@@ -9,70 +9,114 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class DeviceInfo implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $captureDeviceDriver Name of the capture device driver used by the media endpoint. */
+    /**
+     * @var string|null $captureDeviceDriver Name of the capture device driver used by the media endpoint.
+    */
     private ?string $captureDeviceDriver = null;
     
-    /** @var string|null $captureDeviceName Name of the capture device used by the media endpoint. */
+    /**
+     * @var string|null $captureDeviceName Name of the capture device used by the media endpoint.
+    */
     private ?string $captureDeviceName = null;
     
-    /** @var float|null $captureNotFunctioningEventRatio Fraction of the call that the media endpoint detected the capture device was not working properly. */
+    /**
+     * @var float|null $captureNotFunctioningEventRatio Fraction of the call that the media endpoint detected the capture device was not working properly.
+    */
     private ?float $captureNotFunctioningEventRatio = null;
     
-    /** @var float|null $cpuInsufficentEventRatio Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received. */
+    /**
+     * @var float|null $cpuInsufficentEventRatio Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received.
+    */
     private ?float $cpuInsufficentEventRatio = null;
     
-    /** @var float|null $deviceClippingEventRatio Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent. */
+    /**
+     * @var float|null $deviceClippingEventRatio Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent.
+    */
     private ?float $deviceClippingEventRatio = null;
     
-    /** @var float|null $deviceGlitchEventRatio Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received. */
+    /**
+     * @var float|null $deviceGlitchEventRatio Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received.
+    */
     private ?float $deviceGlitchEventRatio = null;
     
-    /** @var int|null $howlingEventCount Number of times during the call that the media endpoint detected howling or screeching audio. */
+    /**
+     * @var int|null $howlingEventCount Number of times during the call that the media endpoint detected howling or screeching audio.
+    */
     private ?int $howlingEventCount = null;
     
-    /** @var float|null $initialSignalLevelRootMeanSquare The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call. */
+    /**
+     * @var float|null $initialSignalLevelRootMeanSquare The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.
+    */
     private ?float $initialSignalLevelRootMeanSquare = null;
     
-    /** @var float|null $lowSpeechLevelEventRatio Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent. */
+    /**
+     * @var float|null $lowSpeechLevelEventRatio Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent.
+    */
     private ?float $lowSpeechLevelEventRatio = null;
     
-    /** @var float|null $lowSpeechToNoiseEventRatio Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent. */
+    /**
+     * @var float|null $lowSpeechToNoiseEventRatio Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.
+    */
     private ?float $lowSpeechToNoiseEventRatio = null;
     
-    /** @var float|null $micGlitchRate Glitches per 5 minute interval for the media endpoint's microphone. */
+    /**
+     * @var float|null $micGlitchRate Glitches per 5 minute interval for the media endpoint's microphone.
+    */
     private ?float $micGlitchRate = null;
     
-    /** @var int|null $receivedNoiseLevel Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint. */
+    /**
+     * @var int|null $receivedNoiseLevel Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
+    */
     private ?int $receivedNoiseLevel = null;
     
-    /** @var int|null $receivedSignalLevel Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint. */
+    /**
+     * @var int|null $receivedSignalLevel Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
+    */
     private ?int $receivedSignalLevel = null;
     
-    /** @var string|null $renderDeviceDriver Name of the render device driver used by the media endpoint. */
+    /**
+     * @var string|null $renderDeviceDriver Name of the render device driver used by the media endpoint.
+    */
     private ?string $renderDeviceDriver = null;
     
-    /** @var string|null $renderDeviceName Name of the render device used by the media endpoint. */
+    /**
+     * @var string|null $renderDeviceName Name of the render device used by the media endpoint.
+    */
     private ?string $renderDeviceName = null;
     
-    /** @var float|null $renderMuteEventRatio Fraction of the call that media endpoint detected device render is muted. */
+    /**
+     * @var float|null $renderMuteEventRatio Fraction of the call that media endpoint detected device render is muted.
+    */
     private ?float $renderMuteEventRatio = null;
     
-    /** @var float|null $renderNotFunctioningEventRatio Fraction of the call that the media endpoint detected the render device was not working properly. */
+    /**
+     * @var float|null $renderNotFunctioningEventRatio Fraction of the call that the media endpoint detected the render device was not working properly.
+    */
     private ?float $renderNotFunctioningEventRatio = null;
     
-    /** @var float|null $renderZeroVolumeEventRatio Fraction of the call that media endpoint detected device render volume is set to 0. */
+    /**
+     * @var float|null $renderZeroVolumeEventRatio Fraction of the call that media endpoint detected device render volume is set to 0.
+    */
     private ?float $renderZeroVolumeEventRatio = null;
     
-    /** @var int|null $sentNoiseLevel Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint. */
+    /**
+     * @var int|null $sentNoiseLevel Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
+    */
     private ?int $sentNoiseLevel = null;
     
-    /** @var int|null $sentSignalLevel Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint. */
+    /**
+     * @var int|null $sentSignalLevel Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
+    */
     private ?int $sentSignalLevel = null;
     
-    /** @var float|null $speakerGlitchRate Glitches per 5 minute internal for the media endpoint's loudspeaker. */
+    /**
+     * @var float|null $speakerGlitchRate Glitches per 5 minute internal for the media endpoint's loudspeaker.
+    */
     private ?float $speakerGlitchRate = null;
     
     /**
@@ -87,7 +131,7 @@ class DeviceInfo implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceInfo
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceInfo {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceInfo {
         return new DeviceInfo();
     }
 
@@ -152,28 +196,29 @@ class DeviceInfo implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'captureDeviceDriver' => function (self $o, ParseNode $n) { $o->setCaptureDeviceDriver($n->getStringValue()); },
-            'captureDeviceName' => function (self $o, ParseNode $n) { $o->setCaptureDeviceName($n->getStringValue()); },
-            'captureNotFunctioningEventRatio' => function (self $o, ParseNode $n) { $o->setCaptureNotFunctioningEventRatio($n->getFloatValue()); },
-            'cpuInsufficentEventRatio' => function (self $o, ParseNode $n) { $o->setCpuInsufficentEventRatio($n->getFloatValue()); },
-            'deviceClippingEventRatio' => function (self $o, ParseNode $n) { $o->setDeviceClippingEventRatio($n->getFloatValue()); },
-            'deviceGlitchEventRatio' => function (self $o, ParseNode $n) { $o->setDeviceGlitchEventRatio($n->getFloatValue()); },
-            'howlingEventCount' => function (self $o, ParseNode $n) { $o->setHowlingEventCount($n->getIntegerValue()); },
-            'initialSignalLevelRootMeanSquare' => function (self $o, ParseNode $n) { $o->setInitialSignalLevelRootMeanSquare($n->getFloatValue()); },
-            'lowSpeechLevelEventRatio' => function (self $o, ParseNode $n) { $o->setLowSpeechLevelEventRatio($n->getFloatValue()); },
-            'lowSpeechToNoiseEventRatio' => function (self $o, ParseNode $n) { $o->setLowSpeechToNoiseEventRatio($n->getFloatValue()); },
-            'micGlitchRate' => function (self $o, ParseNode $n) { $o->setMicGlitchRate($n->getFloatValue()); },
-            'receivedNoiseLevel' => function (self $o, ParseNode $n) { $o->setReceivedNoiseLevel($n->getIntegerValue()); },
-            'receivedSignalLevel' => function (self $o, ParseNode $n) { $o->setReceivedSignalLevel($n->getIntegerValue()); },
-            'renderDeviceDriver' => function (self $o, ParseNode $n) { $o->setRenderDeviceDriver($n->getStringValue()); },
-            'renderDeviceName' => function (self $o, ParseNode $n) { $o->setRenderDeviceName($n->getStringValue()); },
-            'renderMuteEventRatio' => function (self $o, ParseNode $n) { $o->setRenderMuteEventRatio($n->getFloatValue()); },
-            'renderNotFunctioningEventRatio' => function (self $o, ParseNode $n) { $o->setRenderNotFunctioningEventRatio($n->getFloatValue()); },
-            'renderZeroVolumeEventRatio' => function (self $o, ParseNode $n) { $o->setRenderZeroVolumeEventRatio($n->getFloatValue()); },
-            'sentNoiseLevel' => function (self $o, ParseNode $n) { $o->setSentNoiseLevel($n->getIntegerValue()); },
-            'sentSignalLevel' => function (self $o, ParseNode $n) { $o->setSentSignalLevel($n->getIntegerValue()); },
-            'speakerGlitchRate' => function (self $o, ParseNode $n) { $o->setSpeakerGlitchRate($n->getFloatValue()); },
+            'captureDeviceDriver' => function (ParseNode $n) use ($o) { $o->setCaptureDeviceDriver($n->getStringValue()); },
+            'captureDeviceName' => function (ParseNode $n) use ($o) { $o->setCaptureDeviceName($n->getStringValue()); },
+            'captureNotFunctioningEventRatio' => function (ParseNode $n) use ($o) { $o->setCaptureNotFunctioningEventRatio($n->getFloatValue()); },
+            'cpuInsufficentEventRatio' => function (ParseNode $n) use ($o) { $o->setCpuInsufficentEventRatio($n->getFloatValue()); },
+            'deviceClippingEventRatio' => function (ParseNode $n) use ($o) { $o->setDeviceClippingEventRatio($n->getFloatValue()); },
+            'deviceGlitchEventRatio' => function (ParseNode $n) use ($o) { $o->setDeviceGlitchEventRatio($n->getFloatValue()); },
+            'howlingEventCount' => function (ParseNode $n) use ($o) { $o->setHowlingEventCount($n->getIntegerValue()); },
+            'initialSignalLevelRootMeanSquare' => function (ParseNode $n) use ($o) { $o->setInitialSignalLevelRootMeanSquare($n->getFloatValue()); },
+            'lowSpeechLevelEventRatio' => function (ParseNode $n) use ($o) { $o->setLowSpeechLevelEventRatio($n->getFloatValue()); },
+            'lowSpeechToNoiseEventRatio' => function (ParseNode $n) use ($o) { $o->setLowSpeechToNoiseEventRatio($n->getFloatValue()); },
+            'micGlitchRate' => function (ParseNode $n) use ($o) { $o->setMicGlitchRate($n->getFloatValue()); },
+            'receivedNoiseLevel' => function (ParseNode $n) use ($o) { $o->setReceivedNoiseLevel($n->getIntegerValue()); },
+            'receivedSignalLevel' => function (ParseNode $n) use ($o) { $o->setReceivedSignalLevel($n->getIntegerValue()); },
+            'renderDeviceDriver' => function (ParseNode $n) use ($o) { $o->setRenderDeviceDriver($n->getStringValue()); },
+            'renderDeviceName' => function (ParseNode $n) use ($o) { $o->setRenderDeviceName($n->getStringValue()); },
+            'renderMuteEventRatio' => function (ParseNode $n) use ($o) { $o->setRenderMuteEventRatio($n->getFloatValue()); },
+            'renderNotFunctioningEventRatio' => function (ParseNode $n) use ($o) { $o->setRenderNotFunctioningEventRatio($n->getFloatValue()); },
+            'renderZeroVolumeEventRatio' => function (ParseNode $n) use ($o) { $o->setRenderZeroVolumeEventRatio($n->getFloatValue()); },
+            'sentNoiseLevel' => function (ParseNode $n) use ($o) { $o->setSentNoiseLevel($n->getIntegerValue()); },
+            'sentSignalLevel' => function (ParseNode $n) use ($o) { $o->setSentSignalLevel($n->getIntegerValue()); },
+            'speakerGlitchRate' => function (ParseNode $n) use ($o) { $o->setSpeakerGlitchRate($n->getFloatValue()); },
         ];
     }
 

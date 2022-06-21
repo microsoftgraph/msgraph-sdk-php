@@ -7,39 +7,61 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class DeviceConfiguration extends Entity 
+class DeviceConfiguration extends Entity implements Parsable 
 {
-    /** @var array<DeviceConfigurationAssignment>|null $assignments The list of assignments for the device configuration profile. */
+    /**
+     * @var array<DeviceConfigurationAssignment>|null $assignments The list of assignments for the device configuration profile.
+    */
     private ?array $assignments = null;
     
-    /** @var DateTime|null $createdDateTime DateTime the object was created. */
+    /**
+     * @var DateTime|null $createdDateTime DateTime the object was created.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var string|null $description Admin provided description of the Device Configuration. */
+    /**
+     * @var string|null $description Admin provided description of the Device Configuration.
+    */
     private ?string $description = null;
     
-    /** @var array<SettingStateDeviceSummary>|null $deviceSettingStateSummaries Device Configuration Setting State Device Summary */
+    /**
+     * @var array<SettingStateDeviceSummary>|null $deviceSettingStateSummaries Device Configuration Setting State Device Summary
+    */
     private ?array $deviceSettingStateSummaries = null;
     
-    /** @var array<DeviceConfigurationDeviceStatus>|null $deviceStatuses Device configuration installation status by device. */
+    /**
+     * @var array<DeviceConfigurationDeviceStatus>|null $deviceStatuses Device configuration installation status by device.
+    */
     private ?array $deviceStatuses = null;
     
-    /** @var DeviceConfigurationDeviceOverview|null $deviceStatusOverview Device Configuration devices status overview */
+    /**
+     * @var DeviceConfigurationDeviceOverview|null $deviceStatusOverview Device Configuration devices status overview
+    */
     private ?DeviceConfigurationDeviceOverview $deviceStatusOverview = null;
     
-    /** @var string|null $displayName Admin provided name of the device configuration. */
+    /**
+     * @var string|null $displayName Admin provided name of the device configuration.
+    */
     private ?string $displayName = null;
     
-    /** @var DateTime|null $lastModifiedDateTime DateTime the object was last modified. */
+    /**
+     * @var DateTime|null $lastModifiedDateTime DateTime the object was last modified.
+    */
     private ?DateTime $lastModifiedDateTime = null;
     
-    /** @var array<DeviceConfigurationUserStatus>|null $userStatuses Device configuration installation status by user. */
+    /**
+     * @var array<DeviceConfigurationUserStatus>|null $userStatuses Device configuration installation status by user.
+    */
     private ?array $userStatuses = null;
     
-    /** @var DeviceConfigurationUserOverview|null $userStatusOverview Device Configuration users status overview */
+    /**
+     * @var DeviceConfigurationUserOverview|null $userStatusOverview Device Configuration users status overview
+    */
     private ?DeviceConfigurationUserOverview $userStatusOverview = null;
     
-    /** @var int|null $version Version of the device configuration. */
+    /**
+     * @var int|null $version Version of the device configuration.
+    */
     private ?int $version = null;
     
     /**
@@ -54,7 +76,37 @@ class DeviceConfiguration extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceConfiguration
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceConfiguration {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceConfiguration {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.androidCustomConfiguration': return new AndroidCustomConfiguration();
+                case '#microsoft.graph.androidGeneralDeviceConfiguration': return new AndroidGeneralDeviceConfiguration();
+                case '#microsoft.graph.androidWorkProfileCustomConfiguration': return new AndroidWorkProfileCustomConfiguration();
+                case '#microsoft.graph.androidWorkProfileGeneralDeviceConfiguration': return new AndroidWorkProfileGeneralDeviceConfiguration();
+                case '#microsoft.graph.appleDeviceFeaturesConfigurationBase': return new AppleDeviceFeaturesConfigurationBase();
+                case '#microsoft.graph.editionUpgradeConfiguration': return new EditionUpgradeConfiguration();
+                case '#microsoft.graph.iosCertificateProfile': return new IosCertificateProfile();
+                case '#microsoft.graph.iosCustomConfiguration': return new IosCustomConfiguration();
+                case '#microsoft.graph.iosGeneralDeviceConfiguration': return new IosGeneralDeviceConfiguration();
+                case '#microsoft.graph.iosUpdateConfiguration': return new IosUpdateConfiguration();
+                case '#microsoft.graph.macOSCustomConfiguration': return new MacOSCustomConfiguration();
+                case '#microsoft.graph.macOSGeneralDeviceConfiguration': return new MacOSGeneralDeviceConfiguration();
+                case '#microsoft.graph.sharedPCConfiguration': return new SharedPCConfiguration();
+                case '#microsoft.graph.windows10CustomConfiguration': return new Windows10CustomConfiguration();
+                case '#microsoft.graph.windows10EndpointProtectionConfiguration': return new Windows10EndpointProtectionConfiguration();
+                case '#microsoft.graph.windows10EnterpriseModernAppManagementConfiguration': return new Windows10EnterpriseModernAppManagementConfiguration();
+                case '#microsoft.graph.windows10GeneralConfiguration': return new Windows10GeneralConfiguration();
+                case '#microsoft.graph.windows10SecureAssessmentConfiguration': return new Windows10SecureAssessmentConfiguration();
+                case '#microsoft.graph.windows10TeamGeneralConfiguration': return new Windows10TeamGeneralConfiguration();
+                case '#microsoft.graph.windows81GeneralConfiguration': return new Windows81GeneralConfiguration();
+                case '#microsoft.graph.windowsDefenderAdvancedThreatProtectionConfiguration': return new WindowsDefenderAdvancedThreatProtectionConfiguration();
+                case '#microsoft.graph.windowsPhone81CustomConfiguration': return new WindowsPhone81CustomConfiguration();
+                case '#microsoft.graph.windowsPhone81GeneralConfiguration': return new WindowsPhone81GeneralConfiguration();
+                case '#microsoft.graph.windowsUpdateForBusinessConfiguration': return new WindowsUpdateForBusinessConfiguration();
+            }
+        }
         return new DeviceConfiguration();
     }
 
@@ -119,18 +171,19 @@ class DeviceConfiguration extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignments' => function (self $o, ParseNode $n) { $o->setAssignments($n->getCollectionOfObjectValues(DeviceConfigurationAssignment::class)); },
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (self $o, ParseNode $n) { $o->setDescription($n->getStringValue()); },
-            'deviceSettingStateSummaries' => function (self $o, ParseNode $n) { $o->setDeviceSettingStateSummaries($n->getCollectionOfObjectValues(SettingStateDeviceSummary::class)); },
-            'deviceStatuses' => function (self $o, ParseNode $n) { $o->setDeviceStatuses($n->getCollectionOfObjectValues(DeviceConfigurationDeviceStatus::class)); },
-            'deviceStatusOverview' => function (self $o, ParseNode $n) { $o->setDeviceStatusOverview($n->getObjectValue(DeviceConfigurationDeviceOverview::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'lastModifiedDateTime' => function (self $o, ParseNode $n) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'userStatuses' => function (self $o, ParseNode $n) { $o->setUserStatuses($n->getCollectionOfObjectValues(DeviceConfigurationUserStatus::class)); },
-            'userStatusOverview' => function (self $o, ParseNode $n) { $o->setUserStatusOverview($n->getObjectValue(DeviceConfigurationUserOverview::class)); },
-            'version' => function (self $o, ParseNode $n) { $o->setVersion($n->getIntegerValue()); },
+            'assignments' => function (ParseNode $n) use ($o) { $o->setAssignments($n->getCollectionOfObjectValues(array(DeviceConfigurationAssignment::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'deviceSettingStateSummaries' => function (ParseNode $n) use ($o) { $o->setDeviceSettingStateSummaries($n->getCollectionOfObjectValues(array(SettingStateDeviceSummary::class, 'createFromDiscriminatorValue'))); },
+            'deviceStatuses' => function (ParseNode $n) use ($o) { $o->setDeviceStatuses($n->getCollectionOfObjectValues(array(DeviceConfigurationDeviceStatus::class, 'createFromDiscriminatorValue'))); },
+            'deviceStatusOverview' => function (ParseNode $n) use ($o) { $o->setDeviceStatusOverview($n->getObjectValue(array(DeviceConfigurationDeviceOverview::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            'userStatuses' => function (ParseNode $n) use ($o) { $o->setUserStatuses($n->getCollectionOfObjectValues(array(DeviceConfigurationUserStatus::class, 'createFromDiscriminatorValue'))); },
+            'userStatusOverview' => function (ParseNode $n) use ($o) { $o->setUserStatusOverview($n->getObjectValue(array(DeviceConfigurationUserOverview::class, 'createFromDiscriminatorValue'))); },
+            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getIntegerValue()); },
         ]);
     }
 

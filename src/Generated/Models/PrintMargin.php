@@ -9,19 +9,29 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class PrintMargin implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var int|null $bottom The margin in microns from the bottom edge. */
+    /**
+     * @var int|null $bottom The margin in microns from the bottom edge.
+    */
     private ?int $bottom = null;
     
-    /** @var int|null $left The margin in microns from the left edge. */
+    /**
+     * @var int|null $left The margin in microns from the left edge.
+    */
     private ?int $left = null;
     
-    /** @var int|null $right The margin in microns from the right edge. */
+    /**
+     * @var int|null $right The margin in microns from the right edge.
+    */
     private ?int $right = null;
     
-    /** @var int|null $top The margin in microns from the top edge. */
+    /**
+     * @var int|null $top The margin in microns from the top edge.
+    */
     private ?int $top = null;
     
     /**
@@ -36,7 +46,7 @@ class PrintMargin implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrintMargin
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrintMargin {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrintMargin {
         return new PrintMargin();
     }
 
@@ -61,11 +71,12 @@ class PrintMargin implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'bottom' => function (self $o, ParseNode $n) { $o->setBottom($n->getIntegerValue()); },
-            'left' => function (self $o, ParseNode $n) { $o->setLeft($n->getIntegerValue()); },
-            'right' => function (self $o, ParseNode $n) { $o->setRight($n->getIntegerValue()); },
-            'top' => function (self $o, ParseNode $n) { $o->setTop($n->getIntegerValue()); },
+            'bottom' => function (ParseNode $n) use ($o) { $o->setBottom($n->getIntegerValue()); },
+            'left' => function (ParseNode $n) use ($o) { $o->setLeft($n->getIntegerValue()); },
+            'right' => function (ParseNode $n) use ($o) { $o->setRight($n->getIntegerValue()); },
+            'top' => function (ParseNode $n) use ($o) { $o->setTop($n->getIntegerValue()); },
         ];
     }
 

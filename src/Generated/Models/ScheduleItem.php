@@ -9,25 +9,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ScheduleItem implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var DateTimeTimeZone|null $end The date, time, and time zone that the corresponding event ends. */
+    /**
+     * @var DateTimeTimeZone|null $end The date, time, and time zone that the corresponding event ends.
+    */
     private ?DateTimeTimeZone $end = null;
     
-    /** @var bool|null $isPrivate The sensitivity of the corresponding event. True if the event is marked private, false otherwise. Optional. */
+    /**
+     * @var bool|null $isPrivate The sensitivity of the corresponding event. True if the event is marked private, false otherwise. Optional.
+    */
     private ?bool $isPrivate = null;
     
-    /** @var string|null $location The location where the corresponding event is held or attended from. Optional. */
+    /**
+     * @var string|null $location The location where the corresponding event is held or attended from. Optional.
+    */
     private ?string $location = null;
     
-    /** @var DateTimeTimeZone|null $start The date, time, and time zone that the corresponding event starts. */
+    /**
+     * @var DateTimeTimeZone|null $start The date, time, and time zone that the corresponding event starts.
+    */
     private ?DateTimeTimeZone $start = null;
     
-    /** @var FreeBusyStatus|null $status The availability status of the user or resource during the corresponding event. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown. */
+    /**
+     * @var FreeBusyStatus|null $status The availability status of the user or resource during the corresponding event. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+    */
     private ?FreeBusyStatus $status = null;
     
-    /** @var string|null $subject The corresponding event's subject line. Optional. */
+    /**
+     * @var string|null $subject The corresponding event's subject line. Optional.
+    */
     private ?string $subject = null;
     
     /**
@@ -42,7 +56,7 @@ class ScheduleItem implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ScheduleItem
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ScheduleItem {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ScheduleItem {
         return new ScheduleItem();
     }
 
@@ -67,13 +81,14 @@ class ScheduleItem implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'end' => function (self $o, ParseNode $n) { $o->setEnd($n->getObjectValue(DateTimeTimeZone::class)); },
-            'isPrivate' => function (self $o, ParseNode $n) { $o->setIsPrivate($n->getBooleanValue()); },
-            'location' => function (self $o, ParseNode $n) { $o->setLocation($n->getStringValue()); },
-            'start' => function (self $o, ParseNode $n) { $o->setStart($n->getObjectValue(DateTimeTimeZone::class)); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getEnumValue(FreeBusyStatus::class)); },
-            'subject' => function (self $o, ParseNode $n) { $o->setSubject($n->getStringValue()); },
+            'end' => function (ParseNode $n) use ($o) { $o->setEnd($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
+            'isPrivate' => function (ParseNode $n) use ($o) { $o->setIsPrivate($n->getBooleanValue()); },
+            'location' => function (ParseNode $n) use ($o) { $o->setLocation($n->getStringValue()); },
+            'start' => function (ParseNode $n) use ($o) { $o->setStart($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(FreeBusyStatus::class)); },
+            'subject' => function (ParseNode $n) use ($o) { $o->setSubject($n->getStringValue()); },
         ];
     }
 

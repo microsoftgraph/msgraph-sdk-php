@@ -9,43 +9,69 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $currentValue Current value of setting on device */
+    /**
+     * @var string|null $currentValue Current value of setting on device
+    */
     private ?string $currentValue = null;
     
-    /** @var int|null $errorCode Error code for the setting */
+    /**
+     * @var int|null $errorCode Error code for the setting
+    */
     private ?int $errorCode = null;
     
-    /** @var string|null $errorDescription Error description */
+    /**
+     * @var string|null $errorDescription Error description
+    */
     private ?string $errorDescription = null;
     
-    /** @var string|null $instanceDisplayName Name of setting instance that is being reported. */
+    /**
+     * @var string|null $instanceDisplayName Name of setting instance that is being reported.
+    */
     private ?string $instanceDisplayName = null;
     
-    /** @var string|null $setting The setting that is being reported */
+    /**
+     * @var string|null $setting The setting that is being reported
+    */
     private ?string $setting = null;
     
-    /** @var string|null $settingName Localized/user friendly setting name that is being reported */
+    /**
+     * @var string|null $settingName Localized/user friendly setting name that is being reported
+    */
     private ?string $settingName = null;
     
-    /** @var array<SettingSource>|null $sources Contributing policies */
+    /**
+     * @var array<SettingSource>|null $sources Contributing policies
+    */
     private ?array $sources = null;
     
-    /** @var ComplianceStatus|null $state The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned. */
+    /**
+     * @var ComplianceStatus|null $state The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+    */
     private ?ComplianceStatus $state = null;
     
-    /** @var string|null $userEmail UserEmail */
+    /**
+     * @var string|null $userEmail UserEmail
+    */
     private ?string $userEmail = null;
     
-    /** @var string|null $userId UserId */
+    /**
+     * @var string|null $userId UserId
+    */
     private ?string $userId = null;
     
-    /** @var string|null $userName UserName */
+    /**
+     * @var string|null $userName UserName
+    */
     private ?string $userName = null;
     
-    /** @var string|null $userPrincipalName UserPrincipalName. */
+    /**
+     * @var string|null $userPrincipalName UserPrincipalName.
+    */
     private ?string $userPrincipalName = null;
     
     /**
@@ -60,7 +86,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Parsab
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return DeviceCompliancePolicySettingState
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): DeviceCompliancePolicySettingState {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceCompliancePolicySettingState {
         return new DeviceCompliancePolicySettingState();
     }
 
@@ -101,19 +127,20 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Parsab
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'currentValue' => function (self $o, ParseNode $n) { $o->setCurrentValue($n->getStringValue()); },
-            'errorCode' => function (self $o, ParseNode $n) { $o->setErrorCode($n->getIntegerValue()); },
-            'errorDescription' => function (self $o, ParseNode $n) { $o->setErrorDescription($n->getStringValue()); },
-            'instanceDisplayName' => function (self $o, ParseNode $n) { $o->setInstanceDisplayName($n->getStringValue()); },
-            'setting' => function (self $o, ParseNode $n) { $o->setSetting($n->getStringValue()); },
-            'settingName' => function (self $o, ParseNode $n) { $o->setSettingName($n->getStringValue()); },
-            'sources' => function (self $o, ParseNode $n) { $o->setSources($n->getCollectionOfObjectValues(SettingSource::class)); },
-            'state' => function (self $o, ParseNode $n) { $o->setState($n->getEnumValue(ComplianceStatus::class)); },
-            'userEmail' => function (self $o, ParseNode $n) { $o->setUserEmail($n->getStringValue()); },
-            'userId' => function (self $o, ParseNode $n) { $o->setUserId($n->getStringValue()); },
-            'userName' => function (self $o, ParseNode $n) { $o->setUserName($n->getStringValue()); },
-            'userPrincipalName' => function (self $o, ParseNode $n) { $o->setUserPrincipalName($n->getStringValue()); },
+            'currentValue' => function (ParseNode $n) use ($o) { $o->setCurrentValue($n->getStringValue()); },
+            'errorCode' => function (ParseNode $n) use ($o) { $o->setErrorCode($n->getIntegerValue()); },
+            'errorDescription' => function (ParseNode $n) use ($o) { $o->setErrorDescription($n->getStringValue()); },
+            'instanceDisplayName' => function (ParseNode $n) use ($o) { $o->setInstanceDisplayName($n->getStringValue()); },
+            'setting' => function (ParseNode $n) use ($o) { $o->setSetting($n->getStringValue()); },
+            'settingName' => function (ParseNode $n) use ($o) { $o->setSettingName($n->getStringValue()); },
+            'sources' => function (ParseNode $n) use ($o) { $o->setSources($n->getCollectionOfObjectValues(array(SettingSource::class, 'createFromDiscriminatorValue'))); },
+            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(ComplianceStatus::class)); },
+            'userEmail' => function (ParseNode $n) use ($o) { $o->setUserEmail($n->getStringValue()); },
+            'userId' => function (ParseNode $n) use ($o) { $o->setUserId($n->getStringValue()); },
+            'userName' => function (ParseNode $n) use ($o) { $o->setUserName($n->getStringValue()); },
+            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
         ];
     }
 

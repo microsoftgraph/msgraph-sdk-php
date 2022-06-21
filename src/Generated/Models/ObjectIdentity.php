@@ -9,16 +9,24 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ObjectIdentity implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var string|null $issuer Specifies the issuer of the identity, for example facebook.com.For local accounts (where signInType is not federated), this property is the local B2C tenant default domain name, for example contoso.onmicrosoft.com.For external users from other Azure AD organization, this will be the domain of the federated organization, for example contoso.com.Supports $filter. 512 character limit. */
+    /**
+     * @var string|null $issuer Specifies the issuer of the identity, for example facebook.com.For local accounts (where signInType is not federated), this property is the local B2C tenant default domain name, for example contoso.onmicrosoft.com.For external users from other Azure AD organization, this will be the domain of the federated organization, for example contoso.com.Supports $filter. 512 character limit.
+    */
     private ?string $issuer = null;
     
-    /** @var string|null $issuerAssignedId Specifies the unique identifier assigned to the user by the issuer. The combination of issuer and issuerAssignedId must be unique within the organization. Represents the sign-in name for the user, when signInType is set to emailAddress or userName (also known as local accounts).When signInType is set to: emailAddress, (or a custom string that starts with emailAddress like emailAddress1) issuerAssignedId must be a valid email addressuserName, issuerAssignedId must be a valid local part of an email addressSupports $filter. 100 character limit. */
+    /**
+     * @var string|null $issuerAssignedId Specifies the unique identifier assigned to the user by the issuer. The combination of issuer and issuerAssignedId must be unique within the organization. Represents the sign-in name for the user, when signInType is set to emailAddress or userName (also known as local accounts).When signInType is set to: emailAddress, (or a custom string that starts with emailAddress like emailAddress1) issuerAssignedId must be a valid email addressuserName, issuerAssignedId must be a valid local part of an email addressSupports $filter. 100 character limit.
+    */
     private ?string $issuerAssignedId = null;
     
-    /** @var string|null $signInType Specifies the user sign-in types in your directory, such as emailAddress, userName, federated, or userPrincipalName. federated represents a unique identifier for a user from an issuer, that can be in any format chosen by the issuer. Setting or updating a userPrincipalName identity will update the value of the userPrincipalName property on the user object. The validations performed on the userPrincipalName property on the user object, for example, verified domains and acceptable characters, will be performed when setting or updating a userPrincipalName identity. Additional validation is enforced on issuerAssignedId when the sign-in type is set to emailAddress or userName. This property can also be set to any custom string. */
+    /**
+     * @var string|null $signInType Specifies the user sign-in types in your directory, such as emailAddress, userName, federated, or userPrincipalName. federated represents a unique identifier for a user from an issuer, that can be in any format chosen by the issuer. Setting or updating a userPrincipalName identity will update the value of the userPrincipalName property on the user object. The validations performed on the userPrincipalName property on the user object, for example, verified domains and acceptable characters, will be performed when setting or updating a userPrincipalName identity. Additional validation is enforced on issuerAssignedId when the sign-in type is set to emailAddress or userName. This property can also be set to any custom string.
+    */
     private ?string $signInType = null;
     
     /**
@@ -33,7 +41,7 @@ class ObjectIdentity implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ObjectIdentity
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ObjectIdentity {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ObjectIdentity {
         return new ObjectIdentity();
     }
 
@@ -50,10 +58,11 @@ class ObjectIdentity implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'issuer' => function (self $o, ParseNode $n) { $o->setIssuer($n->getStringValue()); },
-            'issuerAssignedId' => function (self $o, ParseNode $n) { $o->setIssuerAssignedId($n->getStringValue()); },
-            'signInType' => function (self $o, ParseNode $n) { $o->setSignInType($n->getStringValue()); },
+            'issuer' => function (ParseNode $n) use ($o) { $o->setIssuer($n->getStringValue()); },
+            'issuerAssignedId' => function (ParseNode $n) use ($o) { $o->setIssuerAssignedId($n->getStringValue()); },
+            'signInType' => function (ParseNode $n) use ($o) { $o->setSignInType($n->getStringValue()); },
         ];
     }
 

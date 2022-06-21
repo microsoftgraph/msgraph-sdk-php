@@ -10,22 +10,34 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class SharingDetail implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var InsightIdentity|null $sharedBy The user who shared the document. */
+    /**
+     * @var InsightIdentity|null $sharedBy The user who shared the document.
+    */
     private ?InsightIdentity $sharedBy = null;
     
-    /** @var DateTime|null $sharedDateTime The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * @var DateTime|null $sharedDateTime The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+    */
     private ?DateTime $sharedDateTime = null;
     
-    /** @var ResourceReference|null $sharingReference The sharingReference property */
+    /**
+     * @var ResourceReference|null $sharingReference The sharingReference property
+    */
     private ?ResourceReference $sharingReference = null;
     
-    /** @var string|null $sharingSubject The subject with which the document was shared. */
+    /**
+     * @var string|null $sharingSubject The subject with which the document was shared.
+    */
     private ?string $sharingSubject = null;
     
-    /** @var string|null $sharingType Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'. */
+    /**
+     * @var string|null $sharingType Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
+    */
     private ?string $sharingType = null;
     
     /**
@@ -40,7 +52,7 @@ class SharingDetail implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return SharingDetail
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): SharingDetail {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): SharingDetail {
         return new SharingDetail();
     }
 
@@ -57,12 +69,13 @@ class SharingDetail implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'sharedBy' => function (self $o, ParseNode $n) { $o->setSharedBy($n->getObjectValue(InsightIdentity::class)); },
-            'sharedDateTime' => function (self $o, ParseNode $n) { $o->setSharedDateTime($n->getDateTimeValue()); },
-            'sharingReference' => function (self $o, ParseNode $n) { $o->setSharingReference($n->getObjectValue(ResourceReference::class)); },
-            'sharingSubject' => function (self $o, ParseNode $n) { $o->setSharingSubject($n->getStringValue()); },
-            'sharingType' => function (self $o, ParseNode $n) { $o->setSharingType($n->getStringValue()); },
+            'sharedBy' => function (ParseNode $n) use ($o) { $o->setSharedBy($n->getObjectValue(array(InsightIdentity::class, 'createFromDiscriminatorValue'))); },
+            'sharedDateTime' => function (ParseNode $n) use ($o) { $o->setSharedDateTime($n->getDateTimeValue()); },
+            'sharingReference' => function (ParseNode $n) use ($o) { $o->setSharingReference($n->getObjectValue(array(ResourceReference::class, 'createFromDiscriminatorValue'))); },
+            'sharingSubject' => function (ParseNode $n) use ($o) { $o->setSharingSubject($n->getStringValue()); },
+            'sharingType' => function (ParseNode $n) use ($o) { $o->setSharingType($n->getStringValue()); },
         ];
     }
 

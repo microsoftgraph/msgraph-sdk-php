@@ -6,15 +6,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class OfficeGraphInsights extends Entity 
+class OfficeGraphInsights extends Entity implements Parsable 
 {
-    /** @var array<SharedInsight>|null $shared Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share. */
+    /**
+     * @var array<SharedInsight>|null $shared Access this property from the derived type itemInsights.
+    */
     private ?array $shared = null;
     
-    /** @var array<Trending>|null $trending Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before. */
+    /**
+     * @var array<Trending>|null $trending Access this property from the derived type itemInsights.
+    */
     private ?array $trending = null;
     
-    /** @var array<UsedInsight>|null $used Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use. */
+    /**
+     * @var array<UsedInsight>|null $used Access this property from the derived type itemInsights.
+    */
     private ?array $used = null;
     
     /**
@@ -29,7 +35,7 @@ class OfficeGraphInsights extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return OfficeGraphInsights
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): OfficeGraphInsights {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): OfficeGraphInsights {
         return new OfficeGraphInsights();
     }
 
@@ -38,15 +44,16 @@ class OfficeGraphInsights extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'shared' => function (self $o, ParseNode $n) { $o->setShared($n->getCollectionOfObjectValues(SharedInsight::class)); },
-            'trending' => function (self $o, ParseNode $n) { $o->setTrending($n->getCollectionOfObjectValues(Trending::class)); },
-            'used' => function (self $o, ParseNode $n) { $o->setUsed($n->getCollectionOfObjectValues(UsedInsight::class)); },
+            'shared' => function (ParseNode $n) use ($o) { $o->setShared($n->getCollectionOfObjectValues(array(SharedInsight::class, 'createFromDiscriminatorValue'))); },
+            'trending' => function (ParseNode $n) use ($o) { $o->setTrending($n->getCollectionOfObjectValues(array(Trending::class, 'createFromDiscriminatorValue'))); },
+            'used' => function (ParseNode $n) use ($o) { $o->setUsed($n->getCollectionOfObjectValues(array(UsedInsight::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
     /**
-     * Gets the shared property value. Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
+     * Gets the shared property value. Access this property from the derived type itemInsights.
      * @return array<SharedInsight>|null
     */
     public function getShared(): ?array {
@@ -54,7 +61,7 @@ class OfficeGraphInsights extends Entity
     }
 
     /**
-     * Gets the trending property value. Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
+     * Gets the trending property value. Access this property from the derived type itemInsights.
      * @return array<Trending>|null
     */
     public function getTrending(): ?array {
@@ -62,7 +69,7 @@ class OfficeGraphInsights extends Entity
     }
 
     /**
-     * Gets the used property value. Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
+     * Gets the used property value. Access this property from the derived type itemInsights.
      * @return array<UsedInsight>|null
     */
     public function getUsed(): ?array {
@@ -81,7 +88,7 @@ class OfficeGraphInsights extends Entity
     }
 
     /**
-     * Sets the shared property value. Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
+     * Sets the shared property value. Access this property from the derived type itemInsights.
      *  @param array<SharedInsight>|null $value Value to set for the shared property.
     */
     public function setShared(?array $value ): void {
@@ -89,7 +96,7 @@ class OfficeGraphInsights extends Entity
     }
 
     /**
-     * Sets the trending property value. Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
+     * Sets the trending property value. Access this property from the derived type itemInsights.
      *  @param array<Trending>|null $value Value to set for the trending property.
     */
     public function setTrending(?array $value ): void {
@@ -97,7 +104,7 @@ class OfficeGraphInsights extends Entity
     }
 
     /**
-     * Sets the used property value. Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
+     * Sets the used property value. Access this property from the derived type itemInsights.
      *  @param array<UsedInsight>|null $value Value to set for the used property.
     */
     public function setUsed(?array $value ): void {

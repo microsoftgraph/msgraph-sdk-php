@@ -6,15 +6,21 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class IdentityApiConnector extends Entity 
+class IdentityApiConnector extends Entity implements Parsable 
 {
-    /** @var ApiAuthenticationConfigurationBase|null $authenticationConfiguration The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported. */
+    /**
+     * @var ApiAuthenticationConfigurationBase|null $authenticationConfiguration The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported.
+    */
     private ?ApiAuthenticationConfigurationBase $authenticationConfiguration = null;
     
-    /** @var string|null $displayName The name of the API connector. */
+    /**
+     * @var string|null $displayName The name of the API connector.
+    */
     private ?string $displayName = null;
     
-    /** @var string|null $targetUrl The URL of the API endpoint to call. */
+    /**
+     * @var string|null $targetUrl The URL of the API endpoint to call.
+    */
     private ?string $targetUrl = null;
     
     /**
@@ -29,7 +35,7 @@ class IdentityApiConnector extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return IdentityApiConnector
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): IdentityApiConnector {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): IdentityApiConnector {
         return new IdentityApiConnector();
     }
 
@@ -54,10 +60,11 @@ class IdentityApiConnector extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'authenticationConfiguration' => function (self $o, ParseNode $n) { $o->setAuthenticationConfiguration($n->getObjectValue(ApiAuthenticationConfigurationBase::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'targetUrl' => function (self $o, ParseNode $n) { $o->setTargetUrl($n->getStringValue()); },
+            'authenticationConfiguration' => function (ParseNode $n) use ($o) { $o->setAuthenticationConfiguration($n->getObjectValue(array(ApiAuthenticationConfigurationBase::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'targetUrl' => function (ParseNode $n) use ($o) { $o->setTargetUrl($n->getStringValue()); },
         ]);
     }
 

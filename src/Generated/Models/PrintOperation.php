@@ -7,12 +7,16 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class PrintOperation extends Entity 
+class PrintOperation extends Entity implements Parsable 
 {
-    /** @var DateTime|null $createdDateTime The DateTimeOffset when the operation was created. Read-only. */
+    /**
+     * @var DateTime|null $createdDateTime The DateTimeOffset when the operation was created. Read-only.
+    */
     private ?DateTime $createdDateTime = null;
     
-    /** @var PrintOperationStatus|null $status The status property */
+    /**
+     * @var PrintOperationStatus|null $status The status property
+    */
     private ?PrintOperationStatus $status = null;
     
     /**
@@ -27,7 +31,14 @@ class PrintOperation extends Entity
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PrintOperation
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PrintOperation {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PrintOperation {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.printerCreateOperation': return new PrinterCreateOperation();
+            }
+        }
         return new PrintOperation();
     }
 
@@ -44,9 +55,10 @@ class PrintOperation extends Entity
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => function (self $o, ParseNode $n) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'status' => function (self $o, ParseNode $n) { $o->setStatus($n->getObjectValue(PrintOperationStatus::class)); },
+            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getObjectValue(array(PrintOperationStatus::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

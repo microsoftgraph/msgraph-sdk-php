@@ -6,13 +6,15 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class AgreementFile extends AgreementFileProperties 
+class AgreementFile extends AgreementFileProperties implements Parsable 
 {
-    /** @var array<AgreementFileLocalization>|null $localizations The localized version of the terms of use agreement files attached to the agreement. */
+    /**
+     * @var array<AgreementFileLocalization>|null $localizations The localized version of the terms of use agreement files attached to the agreement.
+    */
     private ?array $localizations = null;
     
     /**
-     * Instantiates a new agreementFile and sets the default values.
+     * Instantiates a new AgreementFile and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -23,7 +25,7 @@ class AgreementFile extends AgreementFileProperties
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return AgreementFile
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): AgreementFile {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): AgreementFile {
         return new AgreementFile();
     }
 
@@ -32,8 +34,9 @@ class AgreementFile extends AgreementFileProperties
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'localizations' => function (self $o, ParseNode $n) { $o->setLocalizations($n->getCollectionOfObjectValues(AgreementFileLocalization::class)); },
+            'localizations' => function (ParseNode $n) use ($o) { $o->setLocalizations($n->getCollectionOfObjectValues(array(AgreementFileLocalization::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 

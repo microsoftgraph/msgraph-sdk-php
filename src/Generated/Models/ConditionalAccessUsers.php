@@ -9,25 +9,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class ConditionalAccessUsers implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var array<string>|null $excludeGroups Group IDs excluded from scope of policy. */
+    /**
+     * @var array<string>|null $excludeGroups Group IDs excluded from scope of policy.
+    */
     private ?array $excludeGroups = null;
     
-    /** @var array<string>|null $excludeRoles Role IDs excluded from scope of policy. */
+    /**
+     * @var array<string>|null $excludeRoles Role IDs excluded from scope of policy.
+    */
     private ?array $excludeRoles = null;
     
-    /** @var array<string>|null $excludeUsers User IDs excluded from scope of policy and/or GuestsOrExternalUsers. */
+    /**
+     * @var array<string>|null $excludeUsers User IDs excluded from scope of policy and/or GuestsOrExternalUsers.
+    */
     private ?array $excludeUsers = null;
     
-    /** @var array<string>|null $includeGroups Group IDs in scope of policy unless explicitly excluded, or All. */
+    /**
+     * @var array<string>|null $includeGroups Group IDs in scope of policy unless explicitly excluded, or All.
+    */
     private ?array $includeGroups = null;
     
-    /** @var array<string>|null $includeRoles Role IDs in scope of policy unless explicitly excluded, or All. */
+    /**
+     * @var array<string>|null $includeRoles Role IDs in scope of policy unless explicitly excluded, or All.
+    */
     private ?array $includeRoles = null;
     
-    /** @var array<string>|null $includeUsers User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers. */
+    /**
+     * @var array<string>|null $includeUsers User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
+    */
     private ?array $includeUsers = null;
     
     /**
@@ -42,7 +56,7 @@ class ConditionalAccessUsers implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return ConditionalAccessUsers
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessUsers {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessUsers {
         return new ConditionalAccessUsers();
     }
 
@@ -83,13 +97,14 @@ class ConditionalAccessUsers implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'excludeGroups' => function (self $o, ParseNode $n) { $o->setExcludeGroups($n->getCollectionOfPrimitiveValues()); },
-            'excludeRoles' => function (self $o, ParseNode $n) { $o->setExcludeRoles($n->getCollectionOfPrimitiveValues()); },
-            'excludeUsers' => function (self $o, ParseNode $n) { $o->setExcludeUsers($n->getCollectionOfPrimitiveValues()); },
-            'includeGroups' => function (self $o, ParseNode $n) { $o->setIncludeGroups($n->getCollectionOfPrimitiveValues()); },
-            'includeRoles' => function (self $o, ParseNode $n) { $o->setIncludeRoles($n->getCollectionOfPrimitiveValues()); },
-            'includeUsers' => function (self $o, ParseNode $n) { $o->setIncludeUsers($n->getCollectionOfPrimitiveValues()); },
+            'excludeGroups' => function (ParseNode $n) use ($o) { $o->setExcludeGroups($n->getCollectionOfPrimitiveValues()); },
+            'excludeRoles' => function (ParseNode $n) use ($o) { $o->setExcludeRoles($n->getCollectionOfPrimitiveValues()); },
+            'excludeUsers' => function (ParseNode $n) use ($o) { $o->setExcludeUsers($n->getCollectionOfPrimitiveValues()); },
+            'includeGroups' => function (ParseNode $n) use ($o) { $o->setIncludeGroups($n->getCollectionOfPrimitiveValues()); },
+            'includeRoles' => function (ParseNode $n) use ($o) { $o->setIncludeRoles($n->getCollectionOfPrimitiveValues()); },
+            'includeUsers' => function (ParseNode $n) use ($o) { $o->setIncludeUsers($n->getCollectionOfPrimitiveValues()); },
         ];
     }
 

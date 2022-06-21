@@ -9,13 +9,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class PageLinks implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var ExternalLink|null $oneNoteClientUrl Opens the page in the OneNote native client if it's installed. */
+    /**
+     * @var ExternalLink|null $oneNoteClientUrl Opens the page in the OneNote native client if it's installed.
+    */
     private ?ExternalLink $oneNoteClientUrl = null;
     
-    /** @var ExternalLink|null $oneNoteWebUrl Opens the page in OneNote on the web. */
+    /**
+     * @var ExternalLink|null $oneNoteWebUrl Opens the page in OneNote on the web.
+    */
     private ?ExternalLink $oneNoteWebUrl = null;
     
     /**
@@ -30,7 +36,7 @@ class PageLinks implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return PageLinks
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): PageLinks {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): PageLinks {
         return new PageLinks();
     }
 
@@ -47,9 +53,10 @@ class PageLinks implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'oneNoteClientUrl' => function (self $o, ParseNode $n) { $o->setOneNoteClientUrl($n->getObjectValue(ExternalLink::class)); },
-            'oneNoteWebUrl' => function (self $o, ParseNode $n) { $o->setOneNoteWebUrl($n->getObjectValue(ExternalLink::class)); },
+            'oneNoteClientUrl' => function (ParseNode $n) use ($o) { $o->setOneNoteClientUrl($n->getObjectValue(array(ExternalLink::class, 'createFromDiscriminatorValue'))); },
+            'oneNoteWebUrl' => function (ParseNode $n) use ($o) { $o->setOneNoteWebUrl($n->getObjectValue(array(ExternalLink::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

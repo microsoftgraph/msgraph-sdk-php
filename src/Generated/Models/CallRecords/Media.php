@@ -9,25 +9,39 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 class Media implements AdditionalDataHolder, Parsable 
 {
-    /** @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    */
     private array $additionalData;
     
-    /** @var DeviceInfo|null $calleeDevice Device information associated with the callee endpoint of this media. */
+    /**
+     * @var DeviceInfo|null $calleeDevice Device information associated with the callee endpoint of this media.
+    */
     private ?DeviceInfo $calleeDevice = null;
     
-    /** @var NetworkInfo|null $calleeNetwork Network information associated with the callee endpoint of this media. */
+    /**
+     * @var NetworkInfo|null $calleeNetwork Network information associated with the callee endpoint of this media.
+    */
     private ?NetworkInfo $calleeNetwork = null;
     
-    /** @var DeviceInfo|null $callerDevice Device information associated with the caller endpoint of this media. */
+    /**
+     * @var DeviceInfo|null $callerDevice Device information associated with the caller endpoint of this media.
+    */
     private ?DeviceInfo $callerDevice = null;
     
-    /** @var NetworkInfo|null $callerNetwork Network information associated with the caller endpoint of this media. */
+    /**
+     * @var NetworkInfo|null $callerNetwork Network information associated with the caller endpoint of this media.
+    */
     private ?NetworkInfo $callerNetwork = null;
     
-    /** @var string|null $label How the media was identified during media negotiation stage. */
+    /**
+     * @var string|null $label How the media was identified during media negotiation stage.
+    */
     private ?string $label = null;
     
-    /** @var array<MediaStream>|null $streams Network streams associated with this media. */
+    /**
+     * @var array<MediaStream>|null $streams Network streams associated with this media.
+    */
     private ?array $streams = null;
     
     /**
@@ -42,7 +56,7 @@ class Media implements AdditionalDataHolder, Parsable
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Media
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Media {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Media {
         return new Media();
     }
 
@@ -91,13 +105,14 @@ class Media implements AdditionalDataHolder, Parsable
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return  [
-            'calleeDevice' => function (self $o, ParseNode $n) { $o->setCalleeDevice($n->getObjectValue(DeviceInfo::class)); },
-            'calleeNetwork' => function (self $o, ParseNode $n) { $o->setCalleeNetwork($n->getObjectValue(NetworkInfo::class)); },
-            'callerDevice' => function (self $o, ParseNode $n) { $o->setCallerDevice($n->getObjectValue(DeviceInfo::class)); },
-            'callerNetwork' => function (self $o, ParseNode $n) { $o->setCallerNetwork($n->getObjectValue(NetworkInfo::class)); },
-            'label' => function (self $o, ParseNode $n) { $o->setLabel($n->getStringValue()); },
-            'streams' => function (self $o, ParseNode $n) { $o->setStreams($n->getCollectionOfObjectValues(MediaStream::class)); },
+            'calleeDevice' => function (ParseNode $n) use ($o) { $o->setCalleeDevice($n->getObjectValue(array(DeviceInfo::class, 'createFromDiscriminatorValue'))); },
+            'calleeNetwork' => function (ParseNode $n) use ($o) { $o->setCalleeNetwork($n->getObjectValue(array(NetworkInfo::class, 'createFromDiscriminatorValue'))); },
+            'callerDevice' => function (ParseNode $n) use ($o) { $o->setCallerDevice($n->getObjectValue(array(DeviceInfo::class, 'createFromDiscriminatorValue'))); },
+            'callerNetwork' => function (ParseNode $n) use ($o) { $o->setCallerNetwork($n->getObjectValue(array(NetworkInfo::class, 'createFromDiscriminatorValue'))); },
+            'label' => function (ParseNode $n) use ($o) { $o->setLabel($n->getStringValue()); },
+            'streams' => function (ParseNode $n) use ($o) { $o->setStreams($n->getCollectionOfObjectValues(array(MediaStream::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 

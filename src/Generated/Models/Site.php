@@ -7,64 +7,105 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class Site extends BaseItem 
+class Site extends BaseItem implements Parsable 
 {
-    /** @var ItemAnalytics|null $analytics Analytics about the view activities that took place in this site. */
+    /**
+     * @var ItemAnalytics|null $analytics Analytics about the view activities that took place in this site.
+    */
     private ?ItemAnalytics $analytics = null;
     
-    /** @var array<ColumnDefinition>|null $columns The collection of column definitions reusable across lists under this site. */
+    /**
+     * @var array<ColumnDefinition>|null $columns The collection of column definitions reusable across lists under this site.
+    */
     private ?array $columns = null;
     
-    /** @var array<ContentType>|null $contentTypes The collection of content types defined for this site. */
+    /**
+     * @var array<ContentType>|null $contentTypes The collection of content types defined for this site.
+    */
     private ?array $contentTypes = null;
     
-    /** @var string|null $displayName The full title for the site. Read-only. */
+    /**
+     * @var string|null $displayName The full title for the site. Read-only.
+    */
     private ?string $displayName = null;
     
-    /** @var Drive|null $drive The default drive (document library) for this site. */
+    /**
+     * @var Drive|null $drive The default drive (document library) for this site.
+    */
     private ?Drive $drive = null;
     
-    /** @var array<Drive>|null $drives The collection of drives (document libraries) under this site. */
+    /**
+     * @var array<Drive>|null $drives The collection of drives (document libraries) under this site.
+    */
     private ?array $drives = null;
     
-    /** @var PublicError|null $error The error property */
+    /**
+     * @var PublicError|null $error The error property
+    */
     private ?PublicError $error = null;
     
-    /** @var array<ColumnDefinition>|null $externalColumns The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site. */
+    /**
+     * @var array<ColumnDefinition>|null $externalColumns The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+    */
     private ?array $externalColumns = null;
     
-    /** @var array<BaseItem>|null $items Used to address any item contained in this site. This collection can't be enumerated. */
+    /**
+     * @var array<BaseItem>|null $items Used to address any item contained in this site. This collection cannot be enumerated.
+    */
     private ?array $items = null;
     
-    /** @var array<EscapedList>|null $lists The collection of lists under this site. */
+    /**
+     * @var array<EscapedList>|null $lists The collection of lists under this site.
+    */
     private ?array $lists = null;
     
-    /** @var Onenote|null $onenote Calls the OneNote service for notebook related operations. */
+    /**
+     * @var Onenote|null $onenote Calls the OneNote service for notebook related operations.
+    */
     private ?Onenote $onenote = null;
     
-    /** @var array<Permission>|null $permissions The permissions associated with the site. Nullable. */
+    /**
+     * @var array<RichLongRunningOperation>|null $operations The collection of long running operations for the site.
+    */
+    private ?array $operations = null;
+    
+    /**
+     * @var array<Permission>|null $permissions The permissions associated with the site. Nullable.
+    */
     private ?array $permissions = null;
     
-    /** @var Root|null $root If present, indicates that this is the root site in the site collection. Read-only. */
+    /**
+     * @var Root|null $root If present, indicates that this is the root site in the site collection. Read-only.
+    */
     private ?Root $root = null;
     
-    /** @var SharepointIds|null $sharepointIds Returns identifiers useful for SharePoint REST compatibility. Read-only. */
+    /**
+     * @var SharepointIds|null $sharepointIds Returns identifiers useful for SharePoint REST compatibility. Read-only.
+    */
     private ?SharepointIds $sharepointIds = null;
     
-    /** @var SiteCollection|null $siteCollection Provides details about the site's site collection. Available only on the root site. Read-only. */
+    /**
+     * @var SiteCollection|null $siteCollection Provides details about the site's site collection. Available only on the root site. Read-only.
+    */
     private ?SiteCollection $siteCollection = null;
     
-    /** @var array<Site>|null $sites The collection of the sub-sites under this site. */
+    /**
+     * @var array<Site>|null $sites The collection of the sub-sites under this site.
+    */
     private ?array $sites = null;
     
-    /** @var Store|null $termStore The default termStore under this site. */
+    /**
+     * @var Store|null $termStore The termStore under this site.
+    */
     private ?Store $termStore = null;
     
-    /** @var array<Store>|null $termStores The collection of termStores under this site. */
+    /**
+     * @var array<Store>|null $termStores The collection of termStores under this site.
+    */
     private ?array $termStores = null;
     
     /**
-     * Instantiates a new site and sets the default values.
+     * Instantiates a new Site and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -75,7 +116,7 @@ class Site extends BaseItem
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
      * @return Site
     */
-    public function createFromDiscriminatorValue(ParseNode $parseNode): Site {
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): Site {
         return new Site();
     }
 
@@ -148,30 +189,32 @@ class Site extends BaseItem
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
+        $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'analytics' => function (self $o, ParseNode $n) { $o->setAnalytics($n->getObjectValue(ItemAnalytics::class)); },
-            'columns' => function (self $o, ParseNode $n) { $o->setColumns($n->getCollectionOfObjectValues(ColumnDefinition::class)); },
-            'contentTypes' => function (self $o, ParseNode $n) { $o->setContentTypes($n->getCollectionOfObjectValues(ContentType::class)); },
-            'displayName' => function (self $o, ParseNode $n) { $o->setDisplayName($n->getStringValue()); },
-            'drive' => function (self $o, ParseNode $n) { $o->setDrive($n->getObjectValue(Drive::class)); },
-            'drives' => function (self $o, ParseNode $n) { $o->setDrives($n->getCollectionOfObjectValues(Drive::class)); },
-            'error' => function (self $o, ParseNode $n) { $o->setError($n->getObjectValue(PublicError::class)); },
-            'externalColumns' => function (self $o, ParseNode $n) { $o->setExternalColumns($n->getCollectionOfObjectValues(ColumnDefinition::class)); },
-            'items' => function (self $o, ParseNode $n) { $o->setItems($n->getCollectionOfObjectValues(BaseItem::class)); },
-            'lists' => function (self $o, ParseNode $n) { $o->setLists($n->getCollectionOfObjectValues(EscapedList::class)); },
-            'onenote' => function (self $o, ParseNode $n) { $o->setOnenote($n->getObjectValue(Onenote::class)); },
-            'permissions' => function (self $o, ParseNode $n) { $o->setPermissions($n->getCollectionOfObjectValues(Permission::class)); },
-            'root' => function (self $o, ParseNode $n) { $o->setRoot($n->getObjectValue(Root::class)); },
-            'sharepointIds' => function (self $o, ParseNode $n) { $o->setSharepointIds($n->getObjectValue(SharepointIds::class)); },
-            'siteCollection' => function (self $o, ParseNode $n) { $o->setSiteCollection($n->getObjectValue(SiteCollection::class)); },
-            'sites' => function (self $o, ParseNode $n) { $o->setSites($n->getCollectionOfObjectValues(Site::class)); },
-            'termStore' => function (self $o, ParseNode $n) { $o->setTermStore($n->getObjectValue(Store::class)); },
-            'termStores' => function (self $o, ParseNode $n) { $o->setTermStores($n->getCollectionOfObjectValues(Store::class)); },
+            'analytics' => function (ParseNode $n) use ($o) { $o->setAnalytics($n->getObjectValue(array(ItemAnalytics::class, 'createFromDiscriminatorValue'))); },
+            'columns' => function (ParseNode $n) use ($o) { $o->setColumns($n->getCollectionOfObjectValues(array(ColumnDefinition::class, 'createFromDiscriminatorValue'))); },
+            'contentTypes' => function (ParseNode $n) use ($o) { $o->setContentTypes($n->getCollectionOfObjectValues(array(ContentType::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'drive' => function (ParseNode $n) use ($o) { $o->setDrive($n->getObjectValue(array(Drive::class, 'createFromDiscriminatorValue'))); },
+            'drives' => function (ParseNode $n) use ($o) { $o->setDrives($n->getCollectionOfObjectValues(array(Drive::class, 'createFromDiscriminatorValue'))); },
+            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getObjectValue(array(PublicError::class, 'createFromDiscriminatorValue'))); },
+            'externalColumns' => function (ParseNode $n) use ($o) { $o->setExternalColumns($n->getCollectionOfObjectValues(array(ColumnDefinition::class, 'createFromDiscriminatorValue'))); },
+            'items' => function (ParseNode $n) use ($o) { $o->setItems($n->getCollectionOfObjectValues(array(BaseItem::class, 'createFromDiscriminatorValue'))); },
+            'lists' => function (ParseNode $n) use ($o) { $o->setLists($n->getCollectionOfObjectValues(array(EscapedList::class, 'createFromDiscriminatorValue'))); },
+            'onenote' => function (ParseNode $n) use ($o) { $o->setOnenote($n->getObjectValue(array(Onenote::class, 'createFromDiscriminatorValue'))); },
+            'operations' => function (ParseNode $n) use ($o) { $o->setOperations($n->getCollectionOfObjectValues(array(RichLongRunningOperation::class, 'createFromDiscriminatorValue'))); },
+            'permissions' => function (ParseNode $n) use ($o) { $o->setPermissions($n->getCollectionOfObjectValues(array(Permission::class, 'createFromDiscriminatorValue'))); },
+            'root' => function (ParseNode $n) use ($o) { $o->setRoot($n->getObjectValue(array(Root::class, 'createFromDiscriminatorValue'))); },
+            'sharepointIds' => function (ParseNode $n) use ($o) { $o->setSharepointIds($n->getObjectValue(array(SharepointIds::class, 'createFromDiscriminatorValue'))); },
+            'siteCollection' => function (ParseNode $n) use ($o) { $o->setSiteCollection($n->getObjectValue(array(SiteCollection::class, 'createFromDiscriminatorValue'))); },
+            'sites' => function (ParseNode $n) use ($o) { $o->setSites($n->getCollectionOfObjectValues(array(Site::class, 'createFromDiscriminatorValue'))); },
+            'termStore' => function (ParseNode $n) use ($o) { $o->setTermStore($n->getObjectValue(array(Store::class, 'createFromDiscriminatorValue'))); },
+            'termStores' => function (ParseNode $n) use ($o) { $o->setTermStores($n->getCollectionOfObjectValues(array(Store::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
     /**
-     * Gets the items property value. Used to address any item contained in this site. This collection can't be enumerated.
+     * Gets the items property value. Used to address any item contained in this site. This collection cannot be enumerated.
      * @return array<BaseItem>|null
     */
     public function getItems(): ?array {
@@ -192,6 +235,14 @@ class Site extends BaseItem
     */
     public function getOnenote(): ?Onenote {
         return $this->onenote;
+    }
+
+    /**
+     * Gets the operations property value. The collection of long running operations for the site.
+     * @return array<RichLongRunningOperation>|null
+    */
+    public function getOperations(): ?array {
+        return $this->operations;
     }
 
     /**
@@ -235,7 +286,7 @@ class Site extends BaseItem
     }
 
     /**
-     * Gets the termStore property value. The default termStore under this site.
+     * Gets the termStore property value. The termStore under this site.
      * @return Store|null
     */
     public function getTermStore(): ?Store {
@@ -267,6 +318,7 @@ class Site extends BaseItem
         $writer->writeCollectionOfObjectValues('items', $this->items);
         $writer->writeCollectionOfObjectValues('lists', $this->lists);
         $writer->writeObjectValue('onenote', $this->onenote);
+        $writer->writeCollectionOfObjectValues('operations', $this->operations);
         $writer->writeCollectionOfObjectValues('permissions', $this->permissions);
         $writer->writeObjectValue('root', $this->root);
         $writer->writeObjectValue('sharepointIds', $this->sharepointIds);
@@ -341,7 +393,7 @@ class Site extends BaseItem
     }
 
     /**
-     * Sets the items property value. Used to address any item contained in this site. This collection can't be enumerated.
+     * Sets the items property value. Used to address any item contained in this site. This collection cannot be enumerated.
      *  @param array<BaseItem>|null $value Value to set for the items property.
     */
     public function setItems(?array $value ): void {
@@ -362,6 +414,14 @@ class Site extends BaseItem
     */
     public function setOnenote(?Onenote $value ): void {
         $this->onenote = $value;
+    }
+
+    /**
+     * Sets the operations property value. The collection of long running operations for the site.
+     *  @param array<RichLongRunningOperation>|null $value Value to set for the operations property.
+    */
+    public function setOperations(?array $value ): void {
+        $this->operations = $value;
     }
 
     /**
@@ -405,7 +465,7 @@ class Site extends BaseItem
     }
 
     /**
-     * Sets the termStore property value. The default termStore under this site.
+     * Sets the termStore property value. The termStore under this site.
      *  @param Store|null $value Value to set for the termStore property.
     */
     public function setTermStore(?Store $value ): void {
