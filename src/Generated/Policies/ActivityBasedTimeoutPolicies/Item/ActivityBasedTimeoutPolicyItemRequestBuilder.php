@@ -45,7 +45,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder
 
     /**
      * Delete navigation property activityBasedTimeoutPolicies for policies
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ActivityBasedTimeoutPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createDeleteRequestInformation(?ActivityBasedTimeoutPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -66,7 +66,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder
 
     /**
      * The policy that controls the idle time out for web sessions for applications.
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createGetRequestInformation(?ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -74,6 +74,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
+        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
@@ -91,7 +92,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder
     /**
      * Update the navigation property activityBasedTimeoutPolicies in policies
      * @param ActivityBasedTimeoutPolicy $body 
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ActivityBasedTimeoutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createPatchRequestInformation(ActivityBasedTimeoutPolicy $body, ?ActivityBasedTimeoutPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -113,7 +114,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder
 
     /**
      * Delete navigation property activityBasedTimeoutPolicies for policies
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ActivityBasedTimeoutPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -121,8 +122,8 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder
         $requestInfo = $this->createDeleteRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
@@ -132,7 +133,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder
 
     /**
      * The policy that controls the idle time out for web sessions for applications.
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -140,8 +141,8 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder
         $requestInfo = $this->createGetRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendAsync($requestInfo, array(ActivityBasedTimeoutPolicy::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
@@ -152,7 +153,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder
     /**
      * Update the navigation property activityBasedTimeoutPolicies in policies
      * @param ActivityBasedTimeoutPolicy $body 
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ActivityBasedTimeoutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -160,8 +161,8 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder
         $requestInfo = $this->createPatchRequestInformation($body, $requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {

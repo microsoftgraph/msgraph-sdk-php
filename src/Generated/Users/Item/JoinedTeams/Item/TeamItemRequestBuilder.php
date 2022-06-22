@@ -7,12 +7,16 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Team;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\AllChannels\AllChannelsRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\AllChannels\Item\ChannelItemRequestBuilder as MicrosoftGraphGeneratedUsersItemJoinedTeamsItemAllChannelsItemChannelItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Archive\ArchiveRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\ChannelsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\ChannelItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\ChannelItemRequestBuilder as MicrosoftGraphGeneratedUsersItemJoinedTeamsItemChannelsItemChannelItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\CompleteMigration\CompleteMigrationRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\EscapedClone\CloneRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Group\GroupRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\IncomingChannels\IncomingChannelsRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\IncomingChannels\Item\ChannelItemRequestBuilder as MicrosoftGraphGeneratedUsersItemJoinedTeamsItemIncomingChannelsItemChannelItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\InstalledApps\InstalledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Members\Item\ConversationMemberItemRequestBuilder;
@@ -34,6 +38,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class TeamItemRequestBuilder 
 {
+    /**
+     * The allChannels property
+    */
+    public function allChannels(): AllChannelsRequestBuilder {
+        return new AllChannelsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * The archive property
     */
@@ -67,6 +78,13 @@ class TeamItemRequestBuilder
     */
     public function group(): GroupRequestBuilder {
         return new GroupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The incomingChannels property
+    */
+    public function incomingChannels(): IncomingChannelsRequestBuilder {
+        return new IncomingChannelsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -141,14 +159,25 @@ class TeamItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.joinedTeams.item.channels.item collection
+     * Gets an item from the Microsoft\Graph\Generated.users.item.joinedTeams.item.allChannels.item collection
      * @param string $id Unique identifier of the item
-     * @return ChannelItemRequestBuilder
+     * @return MicrosoftGraphGeneratedUsersItemJoinedTeamsItemAllChannelsItemChannelItemRequestBuilder
     */
-    public function channelsById(string $id): ChannelItemRequestBuilder {
+    public function allChannelsById(string $id): MicrosoftGraphGeneratedUsersItemJoinedTeamsItemAllChannelsItemChannelItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['channel%2Did'] = $id;
-        return new ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedUsersItemJoinedTeamsItemAllChannelsItemChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
+     * Gets an item from the Microsoft\Graph\Generated.users.item.joinedTeams.item.channels.item collection
+     * @param string $id Unique identifier of the item
+     * @return MicrosoftGraphGeneratedUsersItemJoinedTeamsItemChannelsItemChannelItemRequestBuilder
+    */
+    public function channelsById(string $id): MicrosoftGraphGeneratedUsersItemJoinedTeamsItemChannelsItemChannelItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['channel%2Did'] = $id;
+        return new MicrosoftGraphGeneratedUsersItemJoinedTeamsItemChannelsItemChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -164,7 +193,7 @@ class TeamItemRequestBuilder
 
     /**
      * Delete navigation property joinedTeams for users
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createDeleteRequestInformation(?TeamItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -185,7 +214,7 @@ class TeamItemRequestBuilder
 
     /**
      * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createGetRequestInformation(?TeamItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -193,6 +222,7 @@ class TeamItemRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
+        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
@@ -210,7 +240,7 @@ class TeamItemRequestBuilder
     /**
      * Update the navigation property joinedTeams in users
      * @param Team $body 
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createPatchRequestInformation(Team $body, ?TeamItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -232,7 +262,7 @@ class TeamItemRequestBuilder
 
     /**
      * Delete navigation property joinedTeams for users
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -240,8 +270,8 @@ class TeamItemRequestBuilder
         $requestInfo = $this->createDeleteRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
@@ -251,7 +281,7 @@ class TeamItemRequestBuilder
 
     /**
      * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -259,13 +289,24 @@ class TeamItemRequestBuilder
         $requestInfo = $this->createGetRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendAsync($requestInfo, array(Team::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
+    }
+
+    /**
+     * Gets an item from the Microsoft\Graph\Generated.users.item.joinedTeams.item.incomingChannels.item collection
+     * @param string $id Unique identifier of the item
+     * @return MicrosoftGraphGeneratedUsersItemJoinedTeamsItemIncomingChannelsItemChannelItemRequestBuilder
+    */
+    public function incomingChannelsById(string $id): MicrosoftGraphGeneratedUsersItemJoinedTeamsItemIncomingChannelsItemChannelItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['channel%2Did'] = $id;
+        return new MicrosoftGraphGeneratedUsersItemJoinedTeamsItemIncomingChannelsItemChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -304,7 +345,7 @@ class TeamItemRequestBuilder
     /**
      * Update the navigation property joinedTeams in users
      * @param Team $body 
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -312,8 +353,8 @@ class TeamItemRequestBuilder
         $requestInfo = $this->createPatchRequestInformation($body, $requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {

@@ -15,7 +15,7 @@ class ConversationMember extends Entity implements Parsable
     private ?string $displayName = null;
     
     /**
-     * @var array<string>|null $roles The roles for that user.
+     * @var array<string>|null $roles The roles for that user. This property only contains additional qualifiers when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is a guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property.
     */
     private ?array $roles = null;
     
@@ -69,7 +69,7 @@ class ConversationMember extends Entity implements Parsable
     }
 
     /**
-     * Gets the roles property value. The roles for that user.
+     * Gets the roles property value. The roles for that user. This property only contains additional qualifiers when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is a guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property.
      * @return array<string>|null
     */
     public function getRoles(): ?array {
@@ -104,7 +104,7 @@ class ConversationMember extends Entity implements Parsable
     }
 
     /**
-     * Sets the roles property value. The roles for that user.
+     * Sets the roles property value. The roles for that user. This property only contains additional qualifiers when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is a guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property.
      *  @param array<string>|null $value Value to set for the roles property.
     */
     public function setRoles(?array $value ): void {

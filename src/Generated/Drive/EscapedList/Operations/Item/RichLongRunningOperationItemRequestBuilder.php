@@ -45,7 +45,7 @@ class RichLongRunningOperationItemRequestBuilder
 
     /**
      * Delete navigation property operations for drive
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RichLongRunningOperationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createDeleteRequestInformation(?RichLongRunningOperationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -66,7 +66,7 @@ class RichLongRunningOperationItemRequestBuilder
 
     /**
      * The collection of long running operations for the list.
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RichLongRunningOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createGetRequestInformation(?RichLongRunningOperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -74,6 +74,7 @@ class RichLongRunningOperationItemRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
+        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
@@ -91,7 +92,7 @@ class RichLongRunningOperationItemRequestBuilder
     /**
      * Update the navigation property operations in drive
      * @param RichLongRunningOperation $body 
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RichLongRunningOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createPatchRequestInformation(RichLongRunningOperation $body, ?RichLongRunningOperationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -113,7 +114,7 @@ class RichLongRunningOperationItemRequestBuilder
 
     /**
      * Delete navigation property operations for drive
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RichLongRunningOperationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -121,8 +122,8 @@ class RichLongRunningOperationItemRequestBuilder
         $requestInfo = $this->createDeleteRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
@@ -132,7 +133,7 @@ class RichLongRunningOperationItemRequestBuilder
 
     /**
      * The collection of long running operations for the list.
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RichLongRunningOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -140,8 +141,8 @@ class RichLongRunningOperationItemRequestBuilder
         $requestInfo = $this->createGetRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendAsync($requestInfo, array(RichLongRunningOperation::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
@@ -152,7 +153,7 @@ class RichLongRunningOperationItemRequestBuilder
     /**
      * Update the navigation property operations in drive
      * @param RichLongRunningOperation $body 
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RichLongRunningOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -160,8 +161,8 @@ class RichLongRunningOperationItemRequestBuilder
         $requestInfo = $this->createPatchRequestInformation($body, $requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {

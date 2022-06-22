@@ -53,7 +53,7 @@ class TrendingItemRequestBuilder
 
     /**
      * Delete navigation property trending for users
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TrendingItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createDeleteRequestInformation(?TrendingItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -74,7 +74,7 @@ class TrendingItemRequestBuilder
 
     /**
      * Access this property from the derived type itemInsights.
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TrendingItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createGetRequestInformation(?TrendingItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -82,6 +82,7 @@ class TrendingItemRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
+        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
@@ -99,7 +100,7 @@ class TrendingItemRequestBuilder
     /**
      * Update the navigation property trending in users
      * @param Trending $body 
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TrendingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createPatchRequestInformation(Trending $body, ?TrendingItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -121,7 +122,7 @@ class TrendingItemRequestBuilder
 
     /**
      * Delete navigation property trending for users
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TrendingItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -129,8 +130,8 @@ class TrendingItemRequestBuilder
         $requestInfo = $this->createDeleteRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
@@ -140,7 +141,7 @@ class TrendingItemRequestBuilder
 
     /**
      * Access this property from the derived type itemInsights.
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TrendingItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -148,8 +149,8 @@ class TrendingItemRequestBuilder
         $requestInfo = $this->createGetRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendAsync($requestInfo, array(Trending::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
@@ -160,7 +161,7 @@ class TrendingItemRequestBuilder
     /**
      * Update the navigation property trending in users
      * @param Trending $body 
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TrendingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -168,8 +169,8 @@ class TrendingItemRequestBuilder
         $requestInfo = $this->createPatchRequestInformation($body, $requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {

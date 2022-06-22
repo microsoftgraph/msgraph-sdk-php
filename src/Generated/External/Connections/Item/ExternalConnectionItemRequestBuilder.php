@@ -80,7 +80,7 @@ class ExternalConnectionItemRequestBuilder
 
     /**
      * Delete navigation property connections for external
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExternalConnectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createDeleteRequestInformation(?ExternalConnectionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -101,7 +101,7 @@ class ExternalConnectionItemRequestBuilder
 
     /**
      * Get connections from external
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExternalConnectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createGetRequestInformation(?ExternalConnectionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -109,6 +109,7 @@ class ExternalConnectionItemRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
+        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
@@ -126,7 +127,7 @@ class ExternalConnectionItemRequestBuilder
     /**
      * Update the navigation property connections in external
      * @param ExternalConnection $body 
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExternalConnectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createPatchRequestInformation(ExternalConnection $body, ?ExternalConnectionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -148,7 +149,7 @@ class ExternalConnectionItemRequestBuilder
 
     /**
      * Delete navigation property connections for external
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExternalConnectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -156,8 +157,8 @@ class ExternalConnectionItemRequestBuilder
         $requestInfo = $this->createDeleteRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
@@ -167,7 +168,7 @@ class ExternalConnectionItemRequestBuilder
 
     /**
      * Get connections from external
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExternalConnectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -175,8 +176,8 @@ class ExternalConnectionItemRequestBuilder
         $requestInfo = $this->createGetRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendAsync($requestInfo, array(ExternalConnection::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
@@ -220,7 +221,7 @@ class ExternalConnectionItemRequestBuilder
     /**
      * Update the navigation property connections in external
      * @param ExternalConnection $body 
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExternalConnectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -228,8 +229,8 @@ class ExternalConnectionItemRequestBuilder
         $requestInfo = $this->createPatchRequestInformation($body, $requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {

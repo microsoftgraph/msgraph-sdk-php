@@ -69,7 +69,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
     private ?bool $windowsHelloForBusinessBlocked = null;
     
     /**
-     * Instantiates a new windowsInformationProtectionPolicy and sets the default values.
+     * Instantiates a new WindowsInformationProtectionPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

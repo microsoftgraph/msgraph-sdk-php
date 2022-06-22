@@ -54,7 +54,7 @@ class MobileThreatDefenseConnectorsRequestBuilder
 
     /**
      * The list of Mobile threat Defense connectors configured by the tenant.
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileThreatDefenseConnectorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createGetRequestInformation(?MobileThreatDefenseConnectorsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -62,6 +62,7 @@ class MobileThreatDefenseConnectorsRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
+        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
@@ -79,7 +80,7 @@ class MobileThreatDefenseConnectorsRequestBuilder
     /**
      * Create new navigation property to mobileThreatDefenseConnectors for deviceManagement
      * @param MobileThreatDefenseConnector $body 
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileThreatDefenseConnectorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createPostRequestInformation(MobileThreatDefenseConnector $body, ?MobileThreatDefenseConnectorsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -87,6 +88,7 @@ class MobileThreatDefenseConnectorsRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
+        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
@@ -101,7 +103,7 @@ class MobileThreatDefenseConnectorsRequestBuilder
 
     /**
      * The list of Mobile threat Defense connectors configured by the tenant.
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileThreatDefenseConnectorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -109,8 +111,8 @@ class MobileThreatDefenseConnectorsRequestBuilder
         $requestInfo = $this->createGetRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendAsync($requestInfo, array(MobileThreatDefenseConnectorCollectionResponse::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
@@ -121,7 +123,7 @@ class MobileThreatDefenseConnectorsRequestBuilder
     /**
      * Create new navigation property to mobileThreatDefenseConnectors for deviceManagement
      * @param MobileThreatDefenseConnector $body 
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileThreatDefenseConnectorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -129,8 +131,8 @@ class MobileThreatDefenseConnectorsRequestBuilder
         $requestInfo = $this->createPostRequestInformation($body, $requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendAsync($requestInfo, array(MobileThreatDefenseConnector::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {

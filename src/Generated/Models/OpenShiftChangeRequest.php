@@ -14,7 +14,7 @@ class OpenShiftChangeRequest extends ScheduleChangeRequest implements Parsable
     private ?string $openShiftId = null;
     
     /**
-     * Instantiates a new openShiftChangeRequest and sets the default values.
+     * Instantiates a new OpenShiftChangeRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();

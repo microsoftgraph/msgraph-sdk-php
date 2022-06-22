@@ -40,7 +40,7 @@ class SecureScore extends Entity implements Parsable
     private ?float $currentScore = null;
     
     /**
-     * @var array<string>|null $enabledServices Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
+     * @var array<string>|null $enabledServices Microsoft-provided services for the tenant (for example, Exchange online, Skype, SharePoint).
     */
     private ?array $enabledServices = null;
     
@@ -124,7 +124,7 @@ class SecureScore extends Entity implements Parsable
     }
 
     /**
-     * Gets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
+     * Gets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, SharePoint).
      * @return array<string>|null
     */
     public function getEnabledServices(): ?array {
@@ -242,7 +242,7 @@ class SecureScore extends Entity implements Parsable
     }
 
     /**
-     * Sets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
+     * Sets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, SharePoint).
      *  @param array<string>|null $value Value to set for the enabledServices property.
     */
     public function setEnabledServices(?array $value ): void {

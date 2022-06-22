@@ -31,6 +31,15 @@ class ManagedApp extends MobileApp implements Parsable
      * @return ManagedApp
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedApp {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.managedAndroidStoreApp': return new ManagedAndroidStoreApp();
+                case '#microsoft.graph.managedIOSStoreApp': return new ManagedIOSStoreApp();
+                case '#microsoft.graph.managedMobileLobApp': return new ManagedMobileLobApp();
+            }
+        }
         return new ManagedApp();
     }
 

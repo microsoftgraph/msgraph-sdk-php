@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\Channel;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\CompleteMigration\CompleteMigrationRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalName\DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\FilesFolder\FilesFolderRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Members\Item\ConversationMemberItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Members\MembersRequestBuilder;
@@ -15,6 +16,8 @@ use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Message
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\MessagesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\ProvisionEmail\ProvisionEmailRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\RemoveEmail\RemoveEmailRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\SharedWithTeams\Item\SharedWithChannelTeamInfoItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\SharedWithTeams\SharedWithTeamsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Tabs\Item\TeamsTabItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Tabs\TabsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -80,6 +83,13 @@ class PrimaryChannelRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
+     * The sharedWithTeams property
+    */
+    public function sharedWithTeams(): SharedWithTeamsRequestBuilder {
+        return new SharedWithTeamsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * The tabs property
     */
     public function tabs(): TabsRequestBuilder {
@@ -104,7 +114,7 @@ class PrimaryChannelRequestBuilder
 
     /**
      * Delete navigation property primaryChannel for users
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrimaryChannelRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createDeleteRequestInformation(?PrimaryChannelRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -125,7 +135,7 @@ class PrimaryChannelRequestBuilder
 
     /**
      * The general channel for the team.
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrimaryChannelRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createGetRequestInformation(?PrimaryChannelRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -133,6 +143,7 @@ class PrimaryChannelRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
+        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
@@ -150,7 +161,7 @@ class PrimaryChannelRequestBuilder
     /**
      * Update the navigation property primaryChannel in users
      * @param Channel $body 
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrimaryChannelRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createPatchRequestInformation(Channel $body, ?PrimaryChannelRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -172,7 +183,7 @@ class PrimaryChannelRequestBuilder
 
     /**
      * Delete navigation property primaryChannel for users
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrimaryChannelRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -180,8 +191,8 @@ class PrimaryChannelRequestBuilder
         $requestInfo = $this->createDeleteRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
@@ -190,8 +201,16 @@ class PrimaryChannelRequestBuilder
     }
 
     /**
+     * Provides operations to call the doesUserHaveAccess method.
+     * @return DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder
+    */
+    public function doesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalName(): DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder {
+        return new DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+
+    /**
      * The general channel for the team.
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrimaryChannelRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -199,8 +218,8 @@ class PrimaryChannelRequestBuilder
         $requestInfo = $this->createGetRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendAsync($requestInfo, array(Channel::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
@@ -233,7 +252,7 @@ class PrimaryChannelRequestBuilder
     /**
      * Update the navigation property primaryChannel in users
      * @param Channel $body 
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrimaryChannelRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -241,13 +260,24 @@ class PrimaryChannelRequestBuilder
         $requestInfo = $this->createPatchRequestInformation($body, $requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
+    }
+
+    /**
+     * Gets an item from the Microsoft\Graph\Generated.users.item.joinedTeams.item.primaryChannel.sharedWithTeams.item collection
+     * @param string $id Unique identifier of the item
+     * @return SharedWithChannelTeamInfoItemRequestBuilder
+    */
+    public function sharedWithTeamsById(string $id): SharedWithChannelTeamInfoItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['sharedWithChannelTeamInfo%2Did'] = $id;
+        return new SharedWithChannelTeamInfoItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

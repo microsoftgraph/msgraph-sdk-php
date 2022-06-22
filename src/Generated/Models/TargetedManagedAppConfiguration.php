@@ -34,7 +34,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements
     private ?bool $isAssigned = null;
     
     /**
-     * Instantiates a new targetedManagedAppConfiguration and sets the default values.
+     * Instantiates a new TargetedManagedAppConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

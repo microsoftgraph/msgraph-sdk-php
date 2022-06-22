@@ -7,6 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserTeamwork;
+use Microsoft\Graph\Generated\Users\Item\Teamwork\AssociatedTeams\AssociatedTeamsRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Teamwork\AssociatedTeams\Item\AssociatedTeamInfoItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\InstalledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\Item\UserScopeTeamsAppInstallationItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Teamwork\SendActivityNotification\SendActivityNotificationRequestBuilder;
@@ -20,6 +22,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class TeamworkRequestBuilder 
 {
+    /**
+     * The associatedTeams property
+    */
+    public function associatedTeams(): AssociatedTeamsRequestBuilder {
+        return new AssociatedTeamsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * The installedApps property
     */
@@ -50,6 +59,17 @@ class TeamworkRequestBuilder
     private string $urlTemplate;
     
     /**
+     * Gets an item from the Microsoft\Graph\Generated.users.item.teamwork.associatedTeams.item collection
+     * @param string $id Unique identifier of the item
+     * @return AssociatedTeamInfoItemRequestBuilder
+    */
+    public function associatedTeamsById(string $id): AssociatedTeamInfoItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['associatedTeamInfo%2Did'] = $id;
+        return new AssociatedTeamInfoItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
      * Instantiates a new TeamworkRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -62,7 +82,7 @@ class TeamworkRequestBuilder
 
     /**
      * Delete navigation property teamwork for users
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamworkRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createDeleteRequestInformation(?TeamworkRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -83,7 +103,7 @@ class TeamworkRequestBuilder
 
     /**
      * A container for Microsoft Teams features available for the user. Read-only. Nullable.
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamworkRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createGetRequestInformation(?TeamworkRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -91,6 +111,7 @@ class TeamworkRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
+        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
@@ -108,7 +129,7 @@ class TeamworkRequestBuilder
     /**
      * Update the navigation property teamwork in users
      * @param UserTeamwork $body 
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamworkRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function createPatchRequestInformation(UserTeamwork $body, ?TeamworkRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
@@ -130,7 +151,7 @@ class TeamworkRequestBuilder
 
     /**
      * Delete navigation property teamwork for users
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamworkRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -138,8 +159,8 @@ class TeamworkRequestBuilder
         $requestInfo = $this->createDeleteRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
@@ -149,7 +170,7 @@ class TeamworkRequestBuilder
 
     /**
      * A container for Microsoft Teams features available for the user. Read-only. Nullable.
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamworkRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -157,8 +178,8 @@ class TeamworkRequestBuilder
         $requestInfo = $this->createGetRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendAsync($requestInfo, array(UserTeamwork::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
@@ -180,7 +201,7 @@ class TeamworkRequestBuilder
     /**
      * Update the navigation property teamwork in users
      * @param UserTeamwork $body 
-     * @param array<string, mixed>|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamworkRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
@@ -188,8 +209,8 @@ class TeamworkRequestBuilder
         $requestInfo = $this->createPatchRequestInformation($body, $requestConfiguration);
         try {
             $errorMappings = [
-            '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
             return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {

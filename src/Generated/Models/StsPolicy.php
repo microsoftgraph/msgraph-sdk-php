@@ -36,6 +36,17 @@ class StsPolicy extends PolicyBase implements Parsable
      * @return StsPolicy
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): StsPolicy {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.activityBasedTimeoutPolicy': return new ActivityBasedTimeoutPolicy();
+                case '#microsoft.graph.claimsMappingPolicy': return new ClaimsMappingPolicy();
+                case '#microsoft.graph.homeRealmDiscoveryPolicy': return new HomeRealmDiscoveryPolicy();
+                case '#microsoft.graph.tokenIssuancePolicy': return new TokenIssuancePolicy();
+                case '#microsoft.graph.tokenLifetimePolicy': return new TokenLifetimePolicy();
+            }
+        }
         return new StsPolicy();
     }
 

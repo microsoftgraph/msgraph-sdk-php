@@ -27,6 +27,14 @@ class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel implements P
      * @return OnenoteEntitySchemaObjectModel
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): OnenoteEntitySchemaObjectModel {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.onenoteEntityHierarchyModel': return new OnenoteEntityHierarchyModel();
+                case '#microsoft.graph.onenotePage': return new OnenotePage();
+            }
+        }
         return new OnenoteEntitySchemaObjectModel();
     }
 

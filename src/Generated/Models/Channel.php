@@ -55,9 +55,19 @@ class Channel extends Entity implements Parsable
     private ?array $messages = null;
     
     /**
+     * @var array<SharedWithChannelTeamInfo>|null $sharedWithTeams A collection of teams with which a channel is shared.
+    */
+    private ?array $sharedWithTeams = null;
+    
+    /**
      * @var array<TeamsTab>|null $tabs A collection of all the tabs in the channel. A navigation property.
     */
     private ?array $tabs = null;
+    
+    /**
+     * @var string|null $tenantId The ID of the Azure Active Directory tenant.
+    */
+    private ?string $tenantId = null;
     
     /**
      * @var string|null $webUrl A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
@@ -128,7 +138,9 @@ class Channel extends Entity implements Parsable
             'members' => function (ParseNode $n) use ($o) { $o->setMembers($n->getCollectionOfObjectValues(array(ConversationMember::class, 'createFromDiscriminatorValue'))); },
             'membershipType' => function (ParseNode $n) use ($o) { $o->setMembershipType($n->getEnumValue(ChannelMembershipType::class)); },
             'messages' => function (ParseNode $n) use ($o) { $o->setMessages($n->getCollectionOfObjectValues(array(ChatMessage::class, 'createFromDiscriminatorValue'))); },
+            'sharedWithTeams' => function (ParseNode $n) use ($o) { $o->setSharedWithTeams($n->getCollectionOfObjectValues(array(SharedWithChannelTeamInfo::class, 'createFromDiscriminatorValue'))); },
             'tabs' => function (ParseNode $n) use ($o) { $o->setTabs($n->getCollectionOfObjectValues(array(TeamsTab::class, 'createFromDiscriminatorValue'))); },
+            'tenantId' => function (ParseNode $n) use ($o) { $o->setTenantId($n->getStringValue()); },
             'webUrl' => function (ParseNode $n) use ($o) { $o->setWebUrl($n->getStringValue()); },
         ]);
     }
@@ -174,11 +186,27 @@ class Channel extends Entity implements Parsable
     }
 
     /**
+     * Gets the sharedWithTeams property value. A collection of teams with which a channel is shared.
+     * @return array<SharedWithChannelTeamInfo>|null
+    */
+    public function getSharedWithTeams(): ?array {
+        return $this->sharedWithTeams;
+    }
+
+    /**
      * Gets the tabs property value. A collection of all the tabs in the channel. A navigation property.
      * @return array<TeamsTab>|null
     */
     public function getTabs(): ?array {
         return $this->tabs;
+    }
+
+    /**
+     * Gets the tenantId property value. The ID of the Azure Active Directory tenant.
+     * @return string|null
+    */
+    public function getTenantId(): ?string {
+        return $this->tenantId;
     }
 
     /**
@@ -204,7 +232,9 @@ class Channel extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('members', $this->members);
         $writer->writeEnumValue('membershipType', $this->membershipType);
         $writer->writeCollectionOfObjectValues('messages', $this->messages);
+        $writer->writeCollectionOfObjectValues('sharedWithTeams', $this->sharedWithTeams);
         $writer->writeCollectionOfObjectValues('tabs', $this->tabs);
+        $writer->writeStringValue('tenantId', $this->tenantId);
         $writer->writeStringValue('webUrl', $this->webUrl);
     }
 
@@ -281,11 +311,27 @@ class Channel extends Entity implements Parsable
     }
 
     /**
+     * Sets the sharedWithTeams property value. A collection of teams with which a channel is shared.
+     *  @param array<SharedWithChannelTeamInfo>|null $value Value to set for the sharedWithTeams property.
+    */
+    public function setSharedWithTeams(?array $value ): void {
+        $this->sharedWithTeams = $value;
+    }
+
+    /**
      * Sets the tabs property value. A collection of all the tabs in the channel. A navigation property.
      *  @param array<TeamsTab>|null $value Value to set for the tabs property.
     */
     public function setTabs(?array $value ): void {
         $this->tabs = $value;
+    }
+
+    /**
+     * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
+     *  @param string|null $value Value to set for the tenantId property.
+    */
+    public function setTenantId(?string $value ): void {
+        $this->tenantId = $value;
     }
 
     /**

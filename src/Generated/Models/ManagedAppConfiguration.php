@@ -26,6 +26,13 @@ class ManagedAppConfiguration extends ManagedAppPolicy implements Parsable
      * @return ManagedAppConfiguration
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedAppConfiguration {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.targetedManagedAppConfiguration': return new TargetedManagedAppConfiguration();
+            }
+        }
         return new ManagedAppConfiguration();
     }
 

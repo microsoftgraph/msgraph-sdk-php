@@ -21,6 +21,14 @@ class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration implement
      * @return AppleDeviceFeaturesConfigurationBase
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): AppleDeviceFeaturesConfigurationBase {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.iosDeviceFeaturesConfiguration': return new IosDeviceFeaturesConfiguration();
+                case '#microsoft.graph.macOSDeviceFeaturesConfiguration': return new MacOSDeviceFeaturesConfiguration();
+            }
+        }
         return new AppleDeviceFeaturesConfigurationBase();
     }
 

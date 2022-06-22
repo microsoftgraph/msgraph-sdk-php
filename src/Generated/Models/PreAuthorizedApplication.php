@@ -15,7 +15,7 @@ class PreAuthorizedApplication implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $appId The unique identifier for the application.
+     * @var string|null $appId The unique identifier for the client application.
     */
     private ?string $appId = null;
     
@@ -49,7 +49,7 @@ class PreAuthorizedApplication implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the appId property value. The unique identifier for the application.
+     * Gets the appId property value. The unique identifier for the client application.
      * @return string|null
     */
     public function getAppId(): ?string {
@@ -95,7 +95,7 @@ class PreAuthorizedApplication implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the appId property value. The unique identifier for the application.
+     * Sets the appId property value. The unique identifier for the client application.
      *  @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value ): void {

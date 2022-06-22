@@ -25,7 +25,7 @@ class TimeOffRequest extends ScheduleChangeRequest implements Parsable
     private ?string $timeOffReasonId = null;
     
     /**
-     * Instantiates a new timeOffRequest and sets the default values.
+     * Instantiates a new TimeOffRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();

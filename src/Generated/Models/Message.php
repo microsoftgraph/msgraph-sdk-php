@@ -173,6 +173,14 @@ class Message extends OutlookItem implements Parsable
      * @return Message
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): Message {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.calendarSharingMessage': return new CalendarSharingMessage();
+                case '#microsoft.graph.eventMessage': return new EventMessage();
+            }
+        }
         return new Message();
     }
 

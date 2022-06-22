@@ -146,6 +146,14 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
      * @return WindowsInformationProtection
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): WindowsInformationProtection {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.mdmWindowsInformationProtectionPolicy': return new MdmWindowsInformationProtectionPolicy();
+                case '#microsoft.graph.windowsInformationProtectionPolicy': return new WindowsInformationProtectionPolicy();
+            }
+        }
         return new WindowsInformationProtection();
     }
 

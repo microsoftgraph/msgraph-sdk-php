@@ -19,12 +19,12 @@ class OAuth2PermissionGrant extends Entity implements Parsable
     private ?string $consentType = null;
     
     /**
-     * @var string|null $principalId The id of the user on behalf of whom the client is authorized to access the resource, when consentType is Principal. If consentType is AllPrincipals this value is null. Required when consentType is Principal.
+     * @var string|null $principalId The id of the user on behalf of whom the client is authorized to access the resource, when consentType is Principal. If consentType is AllPrincipals this value is null. Required when consentType is Principal. Supports $filter (eq only).
     */
     private ?string $principalId = null;
     
     /**
-     * @var string|null $resourceId The id of the resource service principal to which access is authorized. This identifies the API which the client is authorized to attempt to call on behalf of a signed-in user.
+     * @var string|null $resourceId The id of the resource service principal to which access is authorized. This identifies the API which the client is authorized to attempt to call on behalf of a signed-in user. Supports $filter (eq only).
     */
     private ?string $resourceId = null;
     
@@ -81,7 +81,7 @@ class OAuth2PermissionGrant extends Entity implements Parsable
     }
 
     /**
-     * Gets the principalId property value. The id of the user on behalf of whom the client is authorized to access the resource, when consentType is Principal. If consentType is AllPrincipals this value is null. Required when consentType is Principal.
+     * Gets the principalId property value. The id of the user on behalf of whom the client is authorized to access the resource, when consentType is Principal. If consentType is AllPrincipals this value is null. Required when consentType is Principal. Supports $filter (eq only).
      * @return string|null
     */
     public function getPrincipalId(): ?string {
@@ -89,7 +89,7 @@ class OAuth2PermissionGrant extends Entity implements Parsable
     }
 
     /**
-     * Gets the resourceId property value. The id of the resource service principal to which access is authorized. This identifies the API which the client is authorized to attempt to call on behalf of a signed-in user.
+     * Gets the resourceId property value. The id of the resource service principal to which access is authorized. This identifies the API which the client is authorized to attempt to call on behalf of a signed-in user. Supports $filter (eq only).
      * @return string|null
     */
     public function getResourceId(): ?string {
@@ -134,7 +134,7 @@ class OAuth2PermissionGrant extends Entity implements Parsable
     }
 
     /**
-     * Sets the principalId property value. The id of the user on behalf of whom the client is authorized to access the resource, when consentType is Principal. If consentType is AllPrincipals this value is null. Required when consentType is Principal.
+     * Sets the principalId property value. The id of the user on behalf of whom the client is authorized to access the resource, when consentType is Principal. If consentType is AllPrincipals this value is null. Required when consentType is Principal. Supports $filter (eq only).
      *  @param string|null $value Value to set for the principalId property.
     */
     public function setPrincipalId(?string $value ): void {
@@ -142,7 +142,7 @@ class OAuth2PermissionGrant extends Entity implements Parsable
     }
 
     /**
-     * Sets the resourceId property value. The id of the resource service principal to which access is authorized. This identifies the API which the client is authorized to attempt to call on behalf of a signed-in user.
+     * Sets the resourceId property value. The id of the resource service principal to which access is authorized. This identifies the API which the client is authorized to attempt to call on behalf of a signed-in user. Supports $filter (eq only).
      *  @param string|null $value Value to set for the resourceId property.
     */
     public function setResourceId(?string $value ): void {

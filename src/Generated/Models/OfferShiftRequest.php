@@ -30,7 +30,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     private ?string $senderShiftId = null;
     
     /**
-     * Instantiates a new offerShiftRequest and sets the default values.
+     * Instantiates a new OfferShiftRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();

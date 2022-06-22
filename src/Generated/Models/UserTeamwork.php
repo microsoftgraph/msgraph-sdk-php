@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserTeamwork extends Entity implements Parsable 
 {
     /**
+     * @var array<AssociatedTeamInfo>|null $associatedTeams The list of associatedTeamInfo objects that a user is associated with.
+    */
+    private ?array $associatedTeams = null;
+    
+    /**
      * @var array<UserScopeTeamsAppInstallation>|null $installedApps The apps installed in the personal scope of this user.
     */
     private ?array $installedApps = null;
@@ -30,12 +35,21 @@ class UserTeamwork extends Entity implements Parsable
     }
 
     /**
+     * Gets the associatedTeams property value. The list of associatedTeamInfo objects that a user is associated with.
+     * @return array<AssociatedTeamInfo>|null
+    */
+    public function getAssociatedTeams(): ?array {
+        return $this->associatedTeams;
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'associatedTeams' => function (ParseNode $n) use ($o) { $o->setAssociatedTeams($n->getCollectionOfObjectValues(array(AssociatedTeamInfo::class, 'createFromDiscriminatorValue'))); },
             'installedApps' => function (ParseNode $n) use ($o) { $o->setInstalledApps($n->getCollectionOfObjectValues(array(UserScopeTeamsAppInstallation::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
@@ -54,7 +68,16 @@ class UserTeamwork extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('associatedTeams', $this->associatedTeams);
         $writer->writeCollectionOfObjectValues('installedApps', $this->installedApps);
+    }
+
+    /**
+     * Sets the associatedTeams property value. The list of associatedTeamInfo objects that a user is associated with.
+     *  @param array<AssociatedTeamInfo>|null $value Value to set for the associatedTeams property.
+    */
+    public function setAssociatedTeams(?array $value ): void {
+        $this->associatedTeams = $value;
     }
 
     /**

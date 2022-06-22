@@ -69,7 +69,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
     private ?bool $screenCaptureBlocked = null;
     
     /**
-     * Instantiates a new defaultManagedAppProtection and sets the default values.
+     * Instantiates a new DefaultManagedAppProtection and sets the default values.
     */
     public function __construct() {
         parent::__construct();

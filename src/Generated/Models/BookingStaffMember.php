@@ -24,7 +24,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     private ?string $emailAddress = null;
     
     /**
-     * @var BookingStaffRole|null $role The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest and unknownFutureValue. Required.
+     * @var BookingStaffRole|null $role The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest, unknownFutureValue, scheduler and member. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: scheduler, member. Required.
     */
     private ?BookingStaffRole $role = null;
     
@@ -101,7 +101,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     }
 
     /**
-     * Gets the role property value. The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest and unknownFutureValue. Required.
+     * Gets the role property value. The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest, unknownFutureValue, scheduler and member. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: scheduler, member. Required.
      * @return BookingStaffRole|null
     */
     public function getRole(): ?BookingStaffRole {
@@ -172,7 +172,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     }
 
     /**
-     * Sets the role property value. The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest and unknownFutureValue. Required.
+     * Sets the role property value. The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest, unknownFutureValue, scheduler and member. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: scheduler, member. Required.
      *  @param BookingStaffRole|null $value Value to set for the role property.
     */
     public function setRole(?BookingStaffRole $value ): void {

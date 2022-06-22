@@ -157,6 +157,14 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return ManagedAppProtection
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ManagedAppProtection {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.defaultManagedAppProtection': return new DefaultManagedAppProtection();
+                case '#microsoft.graph.targetedManagedAppProtection': return new TargetedManagedAppProtection();
+            }
+        }
         return new ManagedAppProtection();
     }
 

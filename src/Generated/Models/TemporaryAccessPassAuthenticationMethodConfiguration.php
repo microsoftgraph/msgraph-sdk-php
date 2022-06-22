@@ -9,12 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TemporaryAccessPassAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * @var int|null $defaultLength Default length, in characters, of a temporaryAccessPass, between 8 and 48 characters.
+     * @var int|null $defaultLength Default length in characters of a Temporary Access Pass object. Must be between 8 and 48 characters.
     */
     private ?int $defaultLength = null;
     
     /**
-     * @var int|null $defaultLifetimeInMinutes Default lifetime, in minutes, for a temporaryAccessPass. Value can be between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
+     * @var int|null $defaultLifetimeInMinutes Default lifetime in minutes for a Temporary Access Pass. Value can be any integer between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
     */
     private ?int $defaultLifetimeInMinutes = null;
     
@@ -24,17 +24,17 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     private ?array $includeTargets = null;
     
     /**
-     * @var bool|null $isUsableOnce If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or multiple time use.
+     * @var bool|null $isUsableOnce If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or reusable.
     */
     private ?bool $isUsableOnce = null;
     
     /**
-     * @var int|null $maximumLifetimeInMinutes Maximum lifetime in minutes for any temporaryAccessPass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
+     * @var int|null $maximumLifetimeInMinutes Maximum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
     */
     private ?int $maximumLifetimeInMinutes = null;
     
     /**
-     * @var int|null $minimumLifetimeInMinutes Minimum lifetime in minutes for any temporaryAccessPass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
+     * @var int|null $minimumLifetimeInMinutes Minimum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
     */
     private ?int $minimumLifetimeInMinutes = null;
     
@@ -55,7 +55,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     }
 
     /**
-     * Gets the defaultLength property value. Default length, in characters, of a temporaryAccessPass, between 8 and 48 characters.
+     * Gets the defaultLength property value. Default length in characters of a Temporary Access Pass object. Must be between 8 and 48 characters.
      * @return int|null
     */
     public function getDefaultLength(): ?int {
@@ -63,7 +63,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     }
 
     /**
-     * Gets the defaultLifetimeInMinutes property value. Default lifetime, in minutes, for a temporaryAccessPass. Value can be between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
+     * Gets the defaultLifetimeInMinutes property value. Default lifetime in minutes for a Temporary Access Pass. Value can be any integer between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
      * @return int|null
     */
     public function getDefaultLifetimeInMinutes(): ?int {
@@ -95,7 +95,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     }
 
     /**
-     * Gets the isUsableOnce property value. If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or multiple time use.
+     * Gets the isUsableOnce property value. If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or reusable.
      * @return bool|null
     */
     public function getIsUsableOnce(): ?bool {
@@ -103,7 +103,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     }
 
     /**
-     * Gets the maximumLifetimeInMinutes property value. Maximum lifetime in minutes for any temporaryAccessPass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
+     * Gets the maximumLifetimeInMinutes property value. Maximum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
      * @return int|null
     */
     public function getMaximumLifetimeInMinutes(): ?int {
@@ -111,7 +111,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     }
 
     /**
-     * Gets the minimumLifetimeInMinutes property value. Minimum lifetime in minutes for any temporaryAccessPass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
+     * Gets the minimumLifetimeInMinutes property value. Minimum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
      * @return int|null
     */
     public function getMinimumLifetimeInMinutes(): ?int {
@@ -133,7 +133,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     }
 
     /**
-     * Sets the defaultLength property value. Default length, in characters, of a temporaryAccessPass, between 8 and 48 characters.
+     * Sets the defaultLength property value. Default length in characters of a Temporary Access Pass object. Must be between 8 and 48 characters.
      *  @param int|null $value Value to set for the defaultLength property.
     */
     public function setDefaultLength(?int $value ): void {
@@ -141,7 +141,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     }
 
     /**
-     * Sets the defaultLifetimeInMinutes property value. Default lifetime, in minutes, for a temporaryAccessPass. Value can be between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
+     * Sets the defaultLifetimeInMinutes property value. Default lifetime in minutes for a Temporary Access Pass. Value can be any integer between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
      *  @param int|null $value Value to set for the defaultLifetimeInMinutes property.
     */
     public function setDefaultLifetimeInMinutes(?int $value ): void {
@@ -157,7 +157,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     }
 
     /**
-     * Sets the isUsableOnce property value. If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or multiple time use.
+     * Sets the isUsableOnce property value. If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or reusable.
      *  @param bool|null $value Value to set for the isUsableOnce property.
     */
     public function setIsUsableOnce(?bool $value ): void {
@@ -165,7 +165,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     }
 
     /**
-     * Sets the maximumLifetimeInMinutes property value. Maximum lifetime in minutes for any temporaryAccessPass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
+     * Sets the maximumLifetimeInMinutes property value. Maximum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
      *  @param int|null $value Value to set for the maximumLifetimeInMinutes property.
     */
     public function setMaximumLifetimeInMinutes(?int $value ): void {
@@ -173,7 +173,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     }
 
     /**
-     * Sets the minimumLifetimeInMinutes property value. Minimum lifetime in minutes for any temporaryAccessPass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
+     * Sets the minimumLifetimeInMinutes property value. Minimum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
      *  @param int|null $value Value to set for the minimumLifetimeInMinutes property.
     */
     public function setMinimumLifetimeInMinutes(?int $value ): void {

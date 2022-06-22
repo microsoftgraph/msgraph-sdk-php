@@ -36,6 +36,11 @@ class Application extends DirectoryObject implements Parsable
     private ?array $appRoles = null;
     
     /**
+     * @var Certification|null $certification Specifies the certification status of the application.
+    */
+    private ?Certification $certification = null;
+    
+    /**
      * @var DateTime|null $createdDateTime The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy.
     */
     private ?DateTime $createdDateTime = null;
@@ -252,6 +257,14 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the certification property value. Specifies the certification status of the application.
+     * @return Certification|null
+    */
+    public function getCertification(): ?Certification {
+        return $this->certification;
+    }
+
+    /**
      * Gets the createdDateTime property value. The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy.
      * @return DateTime|null
     */
@@ -311,6 +324,7 @@ class Application extends DirectoryObject implements Parsable
             'appId' => function (ParseNode $n) use ($o) { $o->setAppId($n->getStringValue()); },
             'applicationTemplateId' => function (ParseNode $n) use ($o) { $o->setApplicationTemplateId($n->getStringValue()); },
             'appRoles' => function (ParseNode $n) use ($o) { $o->setAppRoles($n->getCollectionOfObjectValues(array(AppRole::class, 'createFromDiscriminatorValue'))); },
+            'certification' => function (ParseNode $n) use ($o) { $o->setCertification($n->getObjectValue(array(Certification::class, 'createFromDiscriminatorValue'))); },
             'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
             'createdOnBehalfOf' => function (ParseNode $n) use ($o) { $o->setCreatedOnBehalfOf($n->getObjectValue(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
             'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
@@ -565,6 +579,7 @@ class Application extends DirectoryObject implements Parsable
         $writer->writeStringValue('appId', $this->appId);
         $writer->writeStringValue('applicationTemplateId', $this->applicationTemplateId);
         $writer->writeCollectionOfObjectValues('appRoles', $this->appRoles);
+        $writer->writeObjectValue('certification', $this->certification);
         $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
         $writer->writeObjectValue('createdOnBehalfOf', $this->createdOnBehalfOf);
         $writer->writeStringValue('description', $this->description);
@@ -637,6 +652,14 @@ class Application extends DirectoryObject implements Parsable
     */
     public function setAppRoles(?array $value ): void {
         $this->appRoles = $value;
+    }
+
+    /**
+     * Sets the certification property value. Specifies the certification status of the application.
+     *  @param Certification|null $value Value to set for the certification property.
+    */
+    public function setCertification(?Certification $value ): void {
+        $this->certification = $value;
     }
 
     /**
