@@ -1,4 +1,0 @@
-[submodule "msgraph-sdk-php-core"]
-	path = msgraph-sdk-php-core
-	url = https://github.com/microsoftgraph/msgraph-sdk-php-core
-	branch = feat/kiota-integration

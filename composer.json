@@ -11,68 +11,12 @@
 			"role": "Developer"
 		}
 	],
-	"repositories": [
-		{
-			"type": "path",
-			"url": "./msgraph-sdk-php-core",
-			"only": ["microsoft/microsoft-graph-core"],
-			"options": {
-				"symlink": false
-			}
-		},
-		{
-			"type": "path",
-			"url": "./msgraph-sdk-php-core/kiota/abstractions/php",
-			"only": ["microsoft/kiota-abstractions"],
-			"options": {
-				"symlink": false
-			}
-		},
-		{
-			"type": "path",
-			"url": "./msgraph-sdk-php-core/kiota/authentication/php/phpleague",
-			"only": ["microsoft/kiota-authentication-phpleague"],
-			"options": {
-				"symlink": false
-			}
-		},
-		{
-			"type": "path",
-			"url": "./msgraph-sdk-php-core/kiota/http/php/guzzle",
-			"only": ["microsoft/kiota-http-guzzle"],
-			"options": {
-				"symlink": false
-			}
-		},
-		{
-			"type": "path",
-			"url": "./msgraph-sdk-php-core/kiota/serialization/php/json",
-			"only": ["microsoft/kiota-serialization-json"],
-			"options": {
-				"symlink": false
-			}
-		},
-		{
-			"type": "path",
-			"url": "./msgraph-sdk-php-core/kiota/serialization/php/text",
-			"only": ["microsoft/kiota-serialization-text"],
-			"options": {
-				"symlink": false
-			}
-		}
-	],
 	"require": {
 		"php": "^8.0 || ^7.4",
-		"microsoft/microsoft-graph-core": "@dev",
-		"microsoft/kiota-authentication-phpleague": "@dev",
-		"microsoft/kiota-http-guzzle": "@dev",
-		"microsoft/kiota-serialization-json": "@dev",
-		"microsoft/kiota-serialization-text": "@dev",
-		"microsoft/kiota-abstractions": "@dev"
+		"microsoft/microsoft-graph-core": "dev-feat/kiota-integration"
     },
 	"require-dev": {
 		"phpunit/phpunit": "^8.0 || ^9.0",
-		"mikey179/vfsstream": "^1.2",
 		"phpstan/phpstan": "^0.12.90 || ^1.0.0"
 	},
 	"autoload": {
