@@ -31,6 +31,7 @@ $guzzleConfig = [
 ];
 $httpClient = GraphClientFactory::createWithConfig($guzzleConfig);
 $requestAdapter = GraphRequestAdapter::withHttpClient($httpClient)::withTokenRequestContext($tokenRequestContex, $scopes);
+$graphServiceClient = new GraphServiceClient($requestAdapter);
 
 ```
 
@@ -183,7 +184,7 @@ $requestAdapter = GraphRequestAdapter::withTokenRequestContext($tokenRequestCont
 $graphServiceClient = new GraphServiceClient($requestAdapter);
 
 try {
-    $fileContents = $graphClient->drivesById('driveId')->itemsById('itemId')->content()->get()->wait();
+    $fileContents = $graphServiceclient->drivesById('driveId')->itemsById('itemId')->content()->get()->wait();
 
 } catch (ApiException $ex) {
     echo $ex->getMessage();
@@ -201,8 +202,49 @@ try {
 ```
 
 ## Passing request headers
+Each execution method i.e. get(), post(), put(), patch(), delete() accepts a Request Configuration object where the request headers can be set:
+
+```php
+
+use Microsoft\Graph\Generated\Users\Item\Messages\MessagesRequestBuilderGetRequestConfiguration;
+
+$requestConfig = new MessagesRequestBuilderGetRequestConfiguration();
+$requestConfig->headers = ['Prefer' => 'outlook.body-content-type=text'];
+
+$messages = $graphServiceclient->me()->messages()->get($requestConfig)->wait();
+
+```
 
 ## Passing query parameters
 
+```php
+
+use Microsoft\Graph\Generated\Users\Item\Messages\MessagesRequestBuilderGetQueryParameters;
+use Microsoft\Graph\Generated\Users\Item\Messages\MessagesRequestBuilderGetRequestConfiguration;
+
+$requestConfig = new MessagesRequestBuilderGetRequestConfiguration();
+$requestConfig->queryParameters = new MessagesRequestBuilderGetQueryParameters();
+$requestConfig->queryParameters->select = ['subject', 'from'];
+$requestConfig->queryParameters->skip = 2;
+$requestConfig->queryParameters->top = 3;
+
+$messages = $graphServiceClient->me()->messages()->get($requestConfig)->wait();
+```
+
 ## Customizing middleware configuration
 
+```php
+
+use Microsoft\Graph\Generated\Users\Item\Messages\MessagesRequestBuilderGetRequestConfiguration;
+use Microsoft\Kiota\Http\Middleware\Options\RetryOption;
+
+$retryOption = new RetryOption();
+$retryOption->setMaxRetries(2);
+$retryOption->setDelay(5);
+
+$requestConfig = new MessagesRequestBuilderGetRequestConfiguration();
+$requestConfig->options = [RetryOption::class => $retryOption];
+
+$messages = $graphServiceClient->me()->messages()->get($requestConfig)->wait();
+
+```
