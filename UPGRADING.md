@@ -14,7 +14,7 @@ This guide highlights breaking changes, bug fixes and new features introduced du
 ## Authentication Provider support
 Version 2 introduces an Authentication Provider that handles the fetching, caching and refreshing of tokens ensuring all your requests are always authenticated.
 
-The Authentication Provider provided wraps around PHP League's [OAuth 2.0 client](https://oauth2-client.thephpleague.com/) hence its name - `PhpLeagueAuthenticationProvider`. The `PhpLeagueAuthenticationProvider` currently supports the `client_credentials`, `authorization_code` and `on_behalf_of` OAuth 2.0 flows. It also supports using certificate-based client authentication alongside token-based client authentication.
+The Authentication Provider provided wraps around PHP League's [OAuth 2.0 client](https://oauth2-client.thephpleague.com/) hence its name - `PhpLeagueAuthenticationProvider`. The `PhpLeagueAuthenticationProvider` currently supports the `client_credentials`, `authorization_code` and `on_behalf_of` OAuth 2.0 flows. It also supports using certificate-based client authentication alongside secret-based client authentication.
 
 ```php
 
@@ -65,7 +65,9 @@ Hopefully this makes it more intuitive to work with the SDK and reduces time che
 A configurable RetryHandler has been added by default to the Guzzle handler stack that
 respects the `Retry-After` header values. It also exponentially backs-off should retried requests continue to fail.
 
-See [example](docs/Examples.md#customizing-middleware-configuration) on how to customize middleware.
+This would be mostly helpful for handling [throttling scenarios](https://docs.microsoft.com/en-us/graph/throttling) on the Microsoft Graph API.
+
+See [this example](docs/Examples.md#customizing-middleware-configuration) on how to customize middleware.
 
 # Breaking Changes
 The following breaking changes were introduced in v2.0.0 with more detailed upgrade steps in the following section:
