@@ -14,7 +14,7 @@ This guide highlights breaking changes, bug fixes and new features introduced du
 ## Authentication Provider support
 Version 2 introduces an Authentication Provider that handles the fetching, caching and refreshing of tokens ensuring all your requests are always authenticated.
 
-The Authentication Provider provided wraps around PHP League's [OAuth 2.0 client](https://oauth2-client.thephpleague.com/) hence its name - `PhpLeagueAuthenticationProvider`. The `PhpLeagueAuthenticationProvider` currently supports the `client_credentials`, `authorization_code` and `on_behalf_of` OAuth 2.0 flows. It also supports using certificate-based alongside token-based client authentication.
+The Authentication Provider provided wraps around PHP League's [OAuth 2.0 client](https://oauth2-client.thephpleague.com/) hence its name - `PhpLeagueAuthenticationProvider`. The `PhpLeagueAuthenticationProvider` currently supports the `client_credentials`, `authorization_code` and `on_behalf_of` OAuth 2.0 flows. It also supports using certificate-based client authentication alongside token-based client authentication.
 
 ```php
 
