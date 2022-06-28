@@ -122,6 +122,37 @@ class Admin implements \JsonSerializable
     }
 
     /**
+    * Gets the reportSettings
+    *
+    * @return AdminReportSettings|null The reportSettings
+    */
+    public function getReportSettings()
+    {
+        if (array_key_exists("reportSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["reportSettings"], "\Beta\Microsoft\Graph\Model\AdminReportSettings") || is_null($this->_propDict["reportSettings"])) {
+                return $this->_propDict["reportSettings"];
+            } else {
+                $this->_propDict["reportSettings"] = new AdminReportSettings($this->_propDict["reportSettings"]);
+                return $this->_propDict["reportSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the reportSettings
+    *
+    * @param AdminReportSettings $val The reportSettings
+    *
+    * @return Admin
+    */
+    public function setReportSettings($val)
+    {
+        $this->_propDict["reportSettings"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the windows
     * A container for all Windows Update for Business deployment service functionality. Read-only.
     *

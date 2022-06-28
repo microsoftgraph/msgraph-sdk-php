@@ -270,6 +270,7 @@ class AccessReviewInstanceDecisionItem extends Entity
 
     /**
     * Gets the principalResourceMembership
+    * Every decision item in an access review represents a principal's membership to a resource. This property provides the details of the membership. For example, whether the principal has direct access or indirect access to the resource. Supports $select. Read-only.
     *
     * @return DecisionItemPrincipalResourceMembership|null The principalResourceMembership
     */
@@ -288,6 +289,7 @@ class AccessReviewInstanceDecisionItem extends Entity
 
     /**
     * Sets the principalResourceMembership
+    * Every decision item in an access review represents a principal's membership to a resource. This property provides the details of the membership. For example, whether the principal has direct access or indirect access to the resource. Supports $select. Read-only.
     *
     * @param DecisionItemPrincipalResourceMembership $val The principalResourceMembership
     *
