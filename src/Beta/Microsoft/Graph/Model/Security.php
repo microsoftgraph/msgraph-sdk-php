@@ -175,6 +175,99 @@ class Security extends Entity
         return $this;
     }
 
+    /**
+    * Gets the labels
+    *
+    * @return \Beta\Microsoft\Graph\SecurityNamespace\Model\LabelsRoot|null The labels
+    */
+    public function getLabels()
+    {
+        if (array_key_exists("labels", $this->_propDict)) {
+            if (is_a($this->_propDict["labels"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\LabelsRoot") || is_null($this->_propDict["labels"])) {
+                return $this->_propDict["labels"];
+            } else {
+                $this->_propDict["labels"] = new \Beta\Microsoft\Graph\SecurityNamespace\Model\LabelsRoot($this->_propDict["labels"]);
+                return $this->_propDict["labels"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the labels
+    *
+    * @param \Beta\Microsoft\Graph\SecurityNamespace\Model\LabelsRoot $val The labels
+    *
+    * @return Security
+    */
+    public function setLabels($val)
+    {
+        $this->_propDict["labels"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the triggers
+    *
+    * @return \Beta\Microsoft\Graph\SecurityNamespace\Model\TriggersRoot|null The triggers
+    */
+    public function getTriggers()
+    {
+        if (array_key_exists("triggers", $this->_propDict)) {
+            if (is_a($this->_propDict["triggers"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\TriggersRoot") || is_null($this->_propDict["triggers"])) {
+                return $this->_propDict["triggers"];
+            } else {
+                $this->_propDict["triggers"] = new \Beta\Microsoft\Graph\SecurityNamespace\Model\TriggersRoot($this->_propDict["triggers"]);
+                return $this->_propDict["triggers"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the triggers
+    *
+    * @param \Beta\Microsoft\Graph\SecurityNamespace\Model\TriggersRoot $val The triggers
+    *
+    * @return Security
+    */
+    public function setTriggers($val)
+    {
+        $this->_propDict["triggers"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the triggerTypes
+    *
+    * @return \Beta\Microsoft\Graph\SecurityNamespace\Model\TriggerTypesRoot|null The triggerTypes
+    */
+    public function getTriggerTypes()
+    {
+        if (array_key_exists("triggerTypes", $this->_propDict)) {
+            if (is_a($this->_propDict["triggerTypes"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\TriggerTypesRoot") || is_null($this->_propDict["triggerTypes"])) {
+                return $this->_propDict["triggerTypes"];
+            } else {
+                $this->_propDict["triggerTypes"] = new \Beta\Microsoft\Graph\SecurityNamespace\Model\TriggerTypesRoot($this->_propDict["triggerTypes"]);
+                return $this->_propDict["triggerTypes"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the triggerTypes
+    *
+    * @param \Beta\Microsoft\Graph\SecurityNamespace\Model\TriggerTypesRoot $val The triggerTypes
+    *
+    * @return Security
+    */
+    public function setTriggerTypes($val)
+    {
+        $this->_propDict["triggerTypes"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the alerts
