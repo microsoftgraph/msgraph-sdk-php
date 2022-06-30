@@ -13,8 +13,6 @@ use GuzzleHttp\Client;
 use Microsoft\Graph\Core\BaseGraphRequestAdapter;
 use Microsoft\Graph\Core\Middleware\Option\GraphTelemetryOption;
 use Microsoft\Kiota\Abstractions\Authentication\AuthenticationProvider;
-use Microsoft\Kiota\Authentication\Oauth\TokenRequestContext;
-use Microsoft\Kiota\Authentication\PhpLeagueAuthenticationProvider;
 
 /**
  * Class GraphRequestAdapter
@@ -26,57 +24,20 @@ use Microsoft\Kiota\Authentication\PhpLeagueAuthenticationProvider;
 class GraphRequestAdapter extends BaseGraphRequestAdapter
 {
     /**
-     * @var AuthenticationProvider|null
+     * Create new
+     *
+     * @param AuthenticationProvider $authenticationProvider
+     * @param Client|null $httpClient
      */
-    private static ?AuthenticationProvider $authProvider = null;
-    /**
-     * @var Client|null
-     */
-    private static ?Client $httpClient = null;
-
-    /**
-     * @param TokenRequestContext $context
-     * @param array $scopes
-     * @return GraphRequestAdapter
-     */
-    public static function withTokenRequestContext(TokenRequestContext $context, array $scopes = []): self
+    public function __construct(AuthenticationProvider $authenticationProvider, Client $httpClient = null)
     {
-        self::$authProvider = new PhpLeagueAuthenticationProvider($context, $scopes);
-        return self::getInstance();
-    }
-
-    /**
-     * @param AuthenticationProvider $authProvider
-     * @return static
-     */
-    public static function withAuthenticationProvider(AuthenticationProvider $authProvider): self
-    {
-        self::$authProvider = $authProvider;
-        return self::getInstance();
-    }
-
-    /**
-     * @param Client $client
-     * @return static
-     */
-    public static function withHttpClient(Client $client): self
-    {
-        self::$httpClient = $client;
-        return self::getInstance();
-    }
-
-    /**
-     * @return static
-     */
-    private static function getInstance(): self
-    {
-        return new GraphRequestAdapter(self::$authProvider, self::getTelemetryConfig(), null, null, self::$httpClient);
+        parent::__construct($authenticationProvider, $this->getTelemetryConfig(), null, null, $httpClient);
     }
 
     /**
      * @return GraphTelemetryOption
      */
-    private static function getTelemetryConfig(): GraphTelemetryOption
+    private function getTelemetryConfig(): GraphTelemetryOption
     {
         return new GraphTelemetryOption(GraphConstants::API_VERSION, GraphConstants::SDK_VERSION);
     }
