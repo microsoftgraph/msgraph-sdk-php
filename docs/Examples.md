@@ -10,12 +10,15 @@ use Microsoft\Graph\GraphServiceClient;
 use Microsoft\Kiota\Authentication\Oauth\ClientCredentialContext;
 use Microsoft\Kiota\Authentication\PhpLeagueAuthenticationProvider;
 
-$tokenRequestContext = new ClientCredentialContext(
+$tokenRequestContext = new AuthorizationCodeContext(
     'tenantId',
     'clientId',
-    'clientSecret'
+    'clientSecret',
+    'authCode',
+    'redirectUri'
 );
-$scopes = ['https://graph.microsoft.com/.default'];
+$scopes = ['User.Read', 'Mail.ReadWrite'];
+$authProvider = new PhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
 $authProvider = new PhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
 $requestAdapter = new GraphRequestAdapter($authProvider);
 $graphServiceClient = new GraphServiceClient($requestAdapter);
@@ -45,61 +48,55 @@ See [Microsoft Graph Permissions](https://docs.microsoft.com/en-us/graph/auth/au
 
 
 ```php
-
-use Microsoft\Graph\GraphRequestAdapter;
-use Microsoft\Graph\GraphServiceClient;
-use Microsoft\Kiota\Abstractions\ApiException;
-use Microsoft\Kiota\Authentication\Oauth\AuthorizationCodeContext;
-use Microsoft\Kiota\Authentication\PhpLeagueAuthenticationProvider;
-
-$tokenRequestContext = new AuthorizationCodeContext(
-    'tenantId',
-    'clientId',
-    'clientSecret',
-    'authCode',
-    'redirectUri'
-);
-$scopes = ['User.Read'];
-$authProvider = new PhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
-$requestAdapter = new GraphRequestAdapter($authProvider);
-$graphServiceClient = new GraphServiceClient($requestAdapter);
-
-try {
-    $response = $graphServiceClient->me()->get();
-    $user = $response->wait();
-} catch (ApiException $ex) {
-    echo $ex->getMessage();
-}
-
+$user = $graphServiceClient->me()->get()->wait();
 ```
 
 ## Get a collection of items
 Some queries against Microsoft Graph return multiple pages of data either due to server-side paging or due to the use of the $top query parameter to specifically limit the page size in a request. When a result set spans multiple pages, Microsoft Graph returns an @odata.nextLink property in the response that contains a URL to the next page of results.
 
-This snippet retrieves the file names in the root of your OneDrive. Ensure you have the [correct permissions](https://docs.microsoft.com/en-us/graph/api/driveitem-list-children?view=graph-rest-1.0&tabs=http#permissions) set.
-The Graph API response is deserialized into a collection of `DriveItem` - a model class provided by the SDK.
+This snippet retrieves the messages in the signed-in user's mailbox. Ensure you have the [correct permissions](https://docs.microsoft.com/en-us/graph/api/user-list-messages?view=graph-rest-1.0&tabs=http#permissions) set.
+The Graph API response is deserialized into a collection of `Message` - a model class provided by the SDK.
 
 ```php
+use Microsoft\Graph\Generated\Users\Item\Messages\MessagesRequestBuilderGetQueryParameters;
+use Microsoft\Graph\Generated\Users\Item\Messages\MessagesRequestBuilderGetRequestConfiguration;
 
-//TODO: /me/drive/root/children?$top=2
+$requestConfig = new MessagesRequestBuilderGetRequestConfiguration();
+$requestConfig->queryParameters = new MessagesRequestBuilderGetQueryParameters();
+$requestConfig->queryParameters->select = ['subject'];
+$requestConfig->queryParameters->top = 2;
+$requestConfig->headers = ['Prefer' => 'outlook.body-content-type=text'];
 
+$messages = $graphServiceClient->usersById(USER_ID)->messages()->get($requestConfig)->wait();
+
+foreach ($messages->getValue() as $message) {
+    echo "Subject: {$message->getSubject()}\n";
+}
 ```
 
 For now, you can page through the collection using the @odata.nextLink value. We intend to introduce a Page Iterator component in the future releases:
 
 ```php
 
-// TODO: Page through a collection using nextLink
+while ($messages->getOdatanextLink()) {
+    $requestInfo = $graphServiceClient->usersById(USER_ID)->messages()->createGetRequestInformation($requestConfig);
+    $requestInfo->setUri($messages->getOdatanextLink());
+    $messages = $requestAdapter->sendAsync($requestInfo, [MessageCollectionResponse::class, 'createFromDiscriminatorValue'])->wait();
+
+    foreach ($messages->getValue() as $message) {
+        echo "Subject: {$message->getSubject()}\n";
+    }
+}
 
 ```
 
 ## Get the raw response
-The SDK allows passing your own response handler (a callable) which will be invoked with the raw PSR-7 response.
+The SDK provides a default response handler which returns the raw PSR-7 response.
 
 To get the raw response:
 ```php
 
-//TODO: Default raw response handler?
+$user = $graphServiceClient->me()->get(null, new NativeResponseHandler())->wait();
 
 ```
 
@@ -207,7 +204,10 @@ try {
 
 ```php
 
-//TODO: /me/drive/root/children/copydoc.docx/content
+$driveItemId = 'root:/upload.txt:';
+
+$inputStream = Utils::streamFor(fopen('upload.txt', 'r'));
+$uploadItem = $graphServiceClient->drivesById('[driveId]')->itemsById($driveItemId)->content()->put($inputStream)->wait();
 
 ```
 
