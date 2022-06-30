@@ -116,7 +116,8 @@ $tokenRequestContext = new ClientCredentialContext(
     'clientSecret'
 );
 $scopes = ['https://graph.microsoft.com/.default'];
-$requestAdapter = GraphRequestAdapter::withTokenRequestContext($tokenRequestContext, $scopes);
+$authProvider = new PhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
+$requestAdapter = new GraphRequestAdapter($authProvider);
 $graphServiceClient = new GraphServiceClient($requestAdapter);
 
 ```
