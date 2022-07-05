@@ -1148,6 +1148,34 @@ class ServicePrincipal extends DirectoryObject
 
 
      /**
+     * Gets the federatedIdentityCredentials
+     *
+     * @return array|null The federatedIdentityCredentials
+     */
+    public function getFederatedIdentityCredentials()
+    {
+        if (array_key_exists("federatedIdentityCredentials", $this->_propDict)) {
+           return $this->_propDict["federatedIdentityCredentials"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the federatedIdentityCredentials
+    *
+    * @param FederatedIdentityCredential[] $val The federatedIdentityCredentials
+    *
+    * @return ServicePrincipal
+    */
+    public function setFederatedIdentityCredentials($val)
+    {
+        $this->_propDict["federatedIdentityCredentials"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the homeRealmDiscoveryPolicies
     * The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
      *

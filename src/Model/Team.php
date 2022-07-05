@@ -368,6 +368,39 @@ class Team extends Entity
     }
 
     /**
+    * Gets the summary
+    * Contains summary information about the team, including number of owners, members, and guests.
+    *
+    * @return TeamSummary|null The summary
+    */
+    public function getSummary()
+    {
+        if (array_key_exists("summary", $this->_propDict)) {
+            if (is_a($this->_propDict["summary"], "\Microsoft\Graph\Model\TeamSummary") || is_null($this->_propDict["summary"])) {
+                return $this->_propDict["summary"];
+            } else {
+                $this->_propDict["summary"] = new TeamSummary($this->_propDict["summary"]);
+                return $this->_propDict["summary"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the summary
+    * Contains summary information about the team, including number of owners, members, and guests.
+    *
+    * @param TeamSummary $val The summary
+    *
+    * @return Team
+    */
+    public function setSummary($val)
+    {
+        $this->_propDict["summary"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the tenantId
     * The ID of the Azure Active Directory tenant.
     *
