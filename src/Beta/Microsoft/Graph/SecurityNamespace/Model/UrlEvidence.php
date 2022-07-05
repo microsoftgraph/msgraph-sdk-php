@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* EntityType File
+* UrlEvidence File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,9 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
+namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 /**
-* EntityType class
+* UrlEvidence class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,21 +21,32 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class EntityType extends Enum
+class UrlEvidence extends AlertEvidence
 {
     /**
-    * The Enum EntityType
+    * Gets the url
+    *
+    * @return string|null The url
     */
-    const EVENT = "event";
-    const MESSAGE = "message";
-    const DRIVE_ITEM = "driveItem";
-    const EXTERNAL_ITEM = "externalItem";
-    const SITE = "site";
-    const GRAPHLIST = "list";
-    const LIST_ITEM = "listItem";
-    const DRIVE = "drive";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const ACRONYM = "acronym";
-    const BOOKMARK = "bookmark";
-    const CHAT_MESSAGE = "chatMessage";
+    public function getUrl()
+    {
+        if (array_key_exists("url", $this->_propDict)) {
+            return $this->_propDict["url"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the url
+    *
+    * @param string $val The value of the url
+    *
+    * @return UrlEvidence
+    */
+    public function setUrl($val)
+    {
+        $this->_propDict["url"] = $val;
+        return $this;
+    }
 }

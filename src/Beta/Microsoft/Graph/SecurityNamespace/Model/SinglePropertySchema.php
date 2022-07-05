@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ExtensionSchemaProperty File
+* SinglePropertySchema File
 * PHP version 7
 *
 * @category  Library
@@ -11,9 +11,9 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 /**
-* ExtensionSchemaProperty class
+* SinglePropertySchema class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,11 +21,10 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ExtensionSchemaProperty extends Entity
+class SinglePropertySchema extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the name
-    * The name of the strongly typed property defined as part of a schema extension.
     *
     * @return string|null The name
     */
@@ -40,11 +39,10 @@ class ExtensionSchemaProperty extends Entity
 
     /**
     * Sets the name
-    * The name of the strongly typed property defined as part of a schema extension.
     *
     * @param string $val The value of the name
     *
-    * @return ExtensionSchemaProperty
+    * @return SinglePropertySchema
     */
     public function setName($val)
     {
@@ -53,7 +51,6 @@ class ExtensionSchemaProperty extends Entity
     }
     /**
     * Gets the type
-    * The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table below for more details.
     *
     * @return string|null The type
     */
@@ -68,11 +65,10 @@ class ExtensionSchemaProperty extends Entity
 
     /**
     * Sets the type
-    * The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table below for more details.
     *
     * @param string $val The value of the type
     *
-    * @return ExtensionSchemaProperty
+    * @return SinglePropertySchema
     */
     public function setType($val)
     {

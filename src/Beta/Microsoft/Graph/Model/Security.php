@@ -142,6 +142,62 @@ class Security extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the alertsV2
+     *
+     * @return array|null The alertsV2
+     */
+    public function getAlertsV2()
+    {
+        if (array_key_exists("alertsV2", $this->_propDict)) {
+           return $this->_propDict["alertsV2"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the alertsV2
+    *
+    * @param \Beta\Microsoft\Graph\SecurityNamespace\Model\Alert[] $val The alertsV2
+    *
+    * @return Security
+    */
+    public function setAlertsV2($val)
+    {
+        $this->_propDict["alertsV2"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the incidents
+     *
+     * @return array|null The incidents
+     */
+    public function getIncidents()
+    {
+        if (array_key_exists("incidents", $this->_propDict)) {
+           return $this->_propDict["incidents"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the incidents
+    *
+    * @param \Beta\Microsoft\Graph\SecurityNamespace\Model\Incident[] $val The incidents
+    *
+    * @return Security
+    */
+    public function setIncidents($val)
+    {
+        $this->_propDict["incidents"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the attackSimulation
     * Provides tenants capability to launch a simulated and realistic phishing attack and learn from it.
