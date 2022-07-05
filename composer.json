@@ -13,7 +13,7 @@
 	],
 	"require": {
 		"php": "^8.0 || ^7.4",
-		"microsoft/microsoft-graph-core": "dev-feat/kiota-integration"
+		"microsoft/microsoft-graph-core": "2.0.0-RC4"
     },
 	"require-dev": {
 		"phpunit/phpunit": "^8.0 || ^9.0",

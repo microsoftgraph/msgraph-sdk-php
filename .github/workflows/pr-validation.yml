@@ -31,4 +31,4 @@ jobs:
         vendor/bin/phpunit --coverage-text
     - name: Run static analysis
       run: |
-        vendor/bin/phpstan analyse --memory-limit=1500M --error-format=github
+        vendor/bin/phpstan analyse --memory-limit=8G --error-format=github
