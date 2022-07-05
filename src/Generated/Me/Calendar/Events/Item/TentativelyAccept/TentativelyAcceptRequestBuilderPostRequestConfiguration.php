@@ -2,15 +2,17 @@
 
 namespace Microsoft\Graph\Generated\Me\Calendar\Events\Item\TentativelyAccept;
 
+use Microsoft\Kiota\Abstractions\RequestOption;
+
 class TentativelyAcceptRequestBuilderPostRequestConfiguration 
 {
     /**
-     * @var array|null $headers Request headers
+     * @var array<string, string>|null $headers Request headers
     */
     public ?array $headers = null;
     
     /**
-     * @var array|null $options Request options
+     * @var array<string, RequestOption>|null $options Request options
     */
     public ?array $options = null;
     

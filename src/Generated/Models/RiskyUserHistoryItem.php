@@ -24,7 +24,7 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
     private ?string $userId = null;
     
     /**
-     * Instantiates a new RiskyUserHistoryItem and sets the default values.
+     * Instantiates a new riskyUserHistoryItem and sets the default values.
     */
     public function __construct() {
         parent::__construct();

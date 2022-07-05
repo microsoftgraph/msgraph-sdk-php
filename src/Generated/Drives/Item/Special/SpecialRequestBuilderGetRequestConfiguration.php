@@ -2,15 +2,17 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Special;
 
+use Microsoft\Kiota\Abstractions\RequestOption;
+
 class SpecialRequestBuilderGetRequestConfiguration 
 {
     /**
-     * @var array|null $headers Request headers
+     * @var array<string, string>|null $headers Request headers
     */
     public ?array $headers = null;
     
     /**
-     * @var array|null $options Request options
+     * @var array<string, RequestOption>|null $options Request options
     */
     public ?array $options = null;
     

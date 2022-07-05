@@ -29,7 +29,7 @@ class Contract extends DirectoryObject implements Parsable
     private ?string $displayName = null;
     
     /**
-     * Instantiates a new Contract and sets the default values.
+     * Instantiates a new contract and sets the default values.
     */
     public function __construct() {
         parent::__construct();

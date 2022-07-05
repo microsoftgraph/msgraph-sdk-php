@@ -2,15 +2,17 @@
 
 namespace Microsoft\Graph\Generated\Groups\Item\CalendarView\Item\SingleValueExtendedProperties\Item;
 
+use Microsoft\Kiota\Abstractions\RequestOption;
+
 class SingleValueLegacyExtendedPropertyItemRequestBuilderGetRequestConfiguration 
 {
     /**
-     * @var array|null $headers Request headers
+     * @var array<string, string>|null $headers Request headers
     */
     public ?array $headers = null;
     
     /**
-     * @var array|null $options Request options
+     * @var array<string, RequestOption>|null $options Request options
     */
     public ?array $options = null;
     

@@ -19,7 +19,7 @@ class DirectoryRoleTemplate extends DirectoryObject implements Parsable
     private ?string $displayName = null;
     
     /**
-     * Instantiates a new DirectoryRoleTemplate and sets the default values.
+     * Instantiates a new directoryRoleTemplate and sets the default values.
     */
     public function __construct() {
         parent::__construct();

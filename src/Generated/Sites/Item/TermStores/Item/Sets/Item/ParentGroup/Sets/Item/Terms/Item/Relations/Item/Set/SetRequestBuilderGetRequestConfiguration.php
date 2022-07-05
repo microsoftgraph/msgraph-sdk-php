@@ -2,15 +2,17 @@
 
 namespace Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\Sets\Item\Terms\Item\Relations\Item\Set;
 
+use Microsoft\Kiota\Abstractions\RequestOption;
+
 class SetRequestBuilderGetRequestConfiguration 
 {
     /**
-     * @var array|null $headers Request headers
+     * @var array<string, string>|null $headers Request headers
     */
     public ?array $headers = null;
     
     /**
-     * @var array|null $options Request options
+     * @var array<string, RequestOption>|null $options Request options
     */
     public ?array $options = null;
     

@@ -8,6 +8,7 @@
 
 namespace Microsoft\Graph;
 
+use Microsoft\Graph\Generated\BaseGraphClient;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
 /**
@@ -18,7 +19,7 @@ use Microsoft\Kiota\Abstractions\RequestAdapter;
  * @license https://opensource.org/licenses/MIT MIT License
  * @link https://developer.microsoft.com/graph
  */
-class GraphServiceClient extends Generated\BaseGraphClient
+class GraphServiceClient extends BaseGraphClient
 {
     /**
      * @param RequestAdapter $requestAdapter
