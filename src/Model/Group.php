@@ -177,7 +177,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the displayName
-    * The display name for the group. Required. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+    * The display name for the group. Required. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
     *
     * @return string|null The displayName
     */
@@ -192,7 +192,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the displayName
-    * The display name for the group. Required. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+    * The display name for the group. Required. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
     *
     * @param string $val The displayName
     *
@@ -919,7 +919,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the visibility
-    * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
+    * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
     *
     * @return string|null The visibility
     */
@@ -934,7 +934,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the visibility
-    * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
+    * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
     *
     * @param string $val The visibility
     *
@@ -1245,7 +1245,7 @@ class Group extends DirectoryObject
 
      /**
      * Gets the members
-    * Members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=members($select=id,userPrincipalName,displayName).
+    * Direct members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=members($select=id,userPrincipalName,displayName).
      *
      * @return array|null The members
      */
@@ -1260,7 +1260,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the members
-    * Members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=members($select=id,userPrincipalName,displayName).
+    * Direct members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&amp;$select=id,displayName&amp;$expand=members($select=id,userPrincipalName,displayName).
     *
     * @param DirectoryObject[] $val The members
     *
@@ -1395,6 +1395,7 @@ class Group extends DirectoryObject
 
      /**
      * Gets the transitiveMemberOf
+    * The groups that a group is a member of, either directly and through nested membership. Nullable.
      *
      * @return array|null The transitiveMemberOf
      */
@@ -1409,6 +1410,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the transitiveMemberOf
+    * The groups that a group is a member of, either directly and through nested membership. Nullable.
     *
     * @param DirectoryObject[] $val The transitiveMemberOf
     *
@@ -1423,6 +1425,7 @@ class Group extends DirectoryObject
 
      /**
      * Gets the transitiveMembers
+    * The direct and transitive members of a group. Nullable.
      *
      * @return array|null The transitiveMembers
      */
@@ -1437,6 +1440,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the transitiveMembers
+    * The direct and transitive members of a group. Nullable.
     *
     * @param DirectoryObject[] $val The transitiveMembers
     *
