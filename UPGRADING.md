@@ -149,6 +149,21 @@ $messages = $graphClient->me()->messages()->get($requestConfig)->wait();
 
 See [the examples](docs/Examples.md) on how to pass headers and query parameters in your requests.
 
+## Exception Handling
+
+Any `4xx` or `5xx` responses from the Graph API will result in an `ApiException` being thrown.
+The error response payload can be retrieved using `getError()` on the exception object.
+
+```php
+
+try {
+
+} catch (ApiException $ex) {
+    echo "{$ex->getError()->getCode()} : {$ex->getError()->getMessage()}";
+
+}
+```
+
 ## Changes to the base Enum class
 `has()` and `toArray()` have been made static methods.
 
