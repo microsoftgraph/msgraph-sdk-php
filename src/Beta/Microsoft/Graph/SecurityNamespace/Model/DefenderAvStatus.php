@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* EntityType File
+* DefenderAvStatus File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* EntityType class
+* DefenderAvStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,21 +24,16 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class EntityType extends Enum
+class DefenderAvStatus extends Enum
 {
     /**
-    * The Enum EntityType
+    * The Enum DefenderAvStatus
     */
-    const EVENT = "event";
-    const MESSAGE = "message";
-    const DRIVE_ITEM = "driveItem";
-    const EXTERNAL_ITEM = "externalItem";
-    const SITE = "site";
-    const GRAPHLIST = "list";
-    const LIST_ITEM = "listItem";
-    const DRIVE = "drive";
+    const NOT_REPORTING = "notReporting";
+    const DISABLED = "disabled";
+    const NOT_UPDATED = "notUpdated";
+    const UPDATED = "updated";
+    const UNKNOWN = "unknown";
+    const NOT_SUPPORTED = "notSupported";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const ACRONYM = "acronym";
-    const BOOKMARK = "bookmark";
-    const CHAT_MESSAGE = "chatMessage";
 }

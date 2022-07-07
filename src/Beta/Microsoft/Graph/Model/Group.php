@@ -1145,6 +1145,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the writebackConfiguration
+    * Specifies whether or not a group is configured to write back group object properties to on-premise Active Directory. These properties are used when group writeback is configured in the Azure AD Connect sync client.
     *
     * @return GroupWritebackConfiguration|null The writebackConfiguration
     */
@@ -1163,6 +1164,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the writebackConfiguration
+    * Specifies whether or not a group is configured to write back group object properties to on-premise Active Directory. These properties are used when group writeback is configured in the Azure AD Connect sync client.
     *
     * @param GroupWritebackConfiguration $val The writebackConfiguration
     *

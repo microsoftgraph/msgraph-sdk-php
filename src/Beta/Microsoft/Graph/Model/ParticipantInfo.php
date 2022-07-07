@@ -145,6 +145,37 @@ class ParticipantInfo extends Entity
         $this->_propDict["languageId"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the nonAnonymizedIdentity
+    *
+    * @return IdentitySet|null The nonAnonymizedIdentity
+    */
+    public function getNonAnonymizedIdentity()
+    {
+        if (array_key_exists("nonAnonymizedIdentity", $this->_propDict)) {
+            if (is_a($this->_propDict["nonAnonymizedIdentity"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["nonAnonymizedIdentity"])) {
+                return $this->_propDict["nonAnonymizedIdentity"];
+            } else {
+                $this->_propDict["nonAnonymizedIdentity"] = new IdentitySet($this->_propDict["nonAnonymizedIdentity"]);
+                return $this->_propDict["nonAnonymizedIdentity"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the nonAnonymizedIdentity
+    *
+    * @param IdentitySet $val The value to assign to the nonAnonymizedIdentity
+    *
+    * @return ParticipantInfo The ParticipantInfo
+    */
+    public function setNonAnonymizedIdentity($val)
+    {
+        $this->_propDict["nonAnonymizedIdentity"] = $val;
+         return $this;
+    }
     /**
     * Gets the participantId
     * The participant ID of the participant. Read-only.
