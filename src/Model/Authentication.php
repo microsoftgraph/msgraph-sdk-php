@@ -116,6 +116,64 @@ class Authentication extends Entity
 
 
      /**
+     * Gets the operations
+     *
+     * @return array|null The operations
+     */
+    public function getOperations()
+    {
+        if (array_key_exists("operations", $this->_propDict)) {
+           return $this->_propDict["operations"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the operations
+    *
+    * @param LongRunningOperation[] $val The operations
+    *
+    * @return Authentication
+    */
+    public function setOperations($val)
+    {
+        $this->_propDict["operations"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the passwordMethods
+    * Represents the details of the password authentication method registered to a user for authentication.
+     *
+     * @return array|null The passwordMethods
+     */
+    public function getPasswordMethods()
+    {
+        if (array_key_exists("passwordMethods", $this->_propDict)) {
+           return $this->_propDict["passwordMethods"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the passwordMethods
+    * Represents the details of the password authentication method registered to a user for authentication.
+    *
+    * @param PasswordAuthenticationMethod[] $val The passwordMethods
+    *
+    * @return Authentication
+    */
+    public function setPasswordMethods($val)
+    {
+        $this->_propDict["passwordMethods"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the temporaryAccessPassMethods
     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
      *

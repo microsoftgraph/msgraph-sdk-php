@@ -24,39 +24,6 @@ namespace Microsoft\Graph\Model;
 */
 class IdentityContainer extends Entity
 {
-    /**
-    * Gets the conditionalAccess
-    * the entry point for the Conditional Access (CA) object model.
-    *
-    * @return ConditionalAccessRoot|null The conditionalAccess
-    */
-    public function getConditionalAccess()
-    {
-        if (array_key_exists("conditionalAccess", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionalAccess"], "\Microsoft\Graph\Model\ConditionalAccessRoot") || is_null($this->_propDict["conditionalAccess"])) {
-                return $this->_propDict["conditionalAccess"];
-            } else {
-                $this->_propDict["conditionalAccess"] = new ConditionalAccessRoot($this->_propDict["conditionalAccess"]);
-                return $this->_propDict["conditionalAccess"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the conditionalAccess
-    * the entry point for the Conditional Access (CA) object model.
-    *
-    * @param ConditionalAccessRoot $val The conditionalAccess
-    *
-    * @return IdentityContainer
-    */
-    public function setConditionalAccess($val)
-    {
-        $this->_propDict["conditionalAccess"] = $val;
-        return $this;
-    }
-
 
      /**
      * Gets the apiConnectors
@@ -174,6 +141,39 @@ class IdentityContainer extends Entity
     public function setUserFlowAttributes($val)
     {
         $this->_propDict["userFlowAttributes"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the conditionalAccess
+    * the entry point for the Conditional Access (CA) object model.
+    *
+    * @return ConditionalAccessRoot|null The conditionalAccess
+    */
+    public function getConditionalAccess()
+    {
+        if (array_key_exists("conditionalAccess", $this->_propDict)) {
+            if (is_a($this->_propDict["conditionalAccess"], "\Microsoft\Graph\Model\ConditionalAccessRoot") || is_null($this->_propDict["conditionalAccess"])) {
+                return $this->_propDict["conditionalAccess"];
+            } else {
+                $this->_propDict["conditionalAccess"] = new ConditionalAccessRoot($this->_propDict["conditionalAccess"]);
+                return $this->_propDict["conditionalAccess"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the conditionalAccess
+    * the entry point for the Conditional Access (CA) object model.
+    *
+    * @param ConditionalAccessRoot $val The conditionalAccess
+    *
+    * @return IdentityContainer
+    */
+    public function setConditionalAccess($val)
+    {
+        $this->_propDict["conditionalAccess"] = $val;
         return $this;
     }
 
