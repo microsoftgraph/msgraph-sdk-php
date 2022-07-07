@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* EntityType File
+* EvidenceRemediationStatus File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* EntityType class
+* EvidenceRemediationStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,21 +24,20 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class EntityType extends Enum
+class EvidenceRemediationStatus extends Enum
 {
     /**
-    * The Enum EntityType
+    * The Enum EvidenceRemediationStatus
     */
-    const EVENT = "event";
-    const MESSAGE = "message";
-    const DRIVE_ITEM = "driveItem";
-    const EXTERNAL_ITEM = "externalItem";
-    const SITE = "site";
-    const GRAPHLIST = "list";
-    const LIST_ITEM = "listItem";
-    const DRIVE = "drive";
+    const NONE = "none";
+    const REMEDIATED = "remediated";
+    const PREVENTED = "prevented";
+    const BLOCKED = "blocked";
+    const NOT_FOUND = "notFound";
+    const ACTIVE = "active";
+    const PENDING_APPROVAL = "pendingApproval";
+    const DECLINED = "declined";
+    const NOT_REMEDIATED = "notRemediated";
+    const RUNNING = "running";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const ACRONYM = "acronym";
-    const BOOKMARK = "bookmark";
-    const CHAT_MESSAGE = "chatMessage";
 }
