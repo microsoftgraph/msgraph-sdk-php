@@ -172,7 +172,8 @@ try {
 - PHP 7.4 is the new minimum supported PHP version.
 - Guzzle 6 support is deprecated.
 
-
+## Strongly typed models
+This version leverages PHP 7's strong typing capabilities. Models as well as other components have strongly typed attributes, methods arguments and return types.
 
 
 # Bug Fixes
