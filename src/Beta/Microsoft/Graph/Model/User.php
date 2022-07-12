@@ -1724,6 +1724,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the securityIdentifier
+    * Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith).
     *
     * @return string|null The securityIdentifier
     */
@@ -1738,6 +1739,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the securityIdentifier
+    * Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith).
     *
     * @param string $val The securityIdentifier
     *
@@ -2830,6 +2832,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the transitiveMemberOf
+    * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      *
      * @return array|null The transitiveMemberOf
      */
@@ -2844,6 +2847,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the transitiveMemberOf
+    * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
     *
     * @param DirectoryObject[] $val The transitiveMemberOf
     *
