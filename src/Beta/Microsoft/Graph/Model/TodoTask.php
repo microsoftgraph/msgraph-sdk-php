@@ -220,6 +220,7 @@ class TodoTask extends Entity
 
     /**
     * Gets the hasAttachments
+    * Indicates whether the task has attachments.
     *
     * @return bool|null The hasAttachments
     */
@@ -234,6 +235,7 @@ class TodoTask extends Entity
 
     /**
     * Sets the hasAttachments
+    * Indicates whether the task has attachments.
     *
     * @param bool $val The hasAttachments
     *
@@ -502,6 +504,7 @@ class TodoTask extends Entity
 
      /**
      * Gets the attachments
+    * A collection of file attachments for the task.
      *
      * @return array|null The attachments
      */
@@ -516,6 +519,7 @@ class TodoTask extends Entity
 
     /**
     * Sets the attachments
+    * A collection of file attachments for the task.
     *
     * @param AttachmentBase[] $val The attachments
     *

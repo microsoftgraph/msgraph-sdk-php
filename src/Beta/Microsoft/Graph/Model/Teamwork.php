@@ -116,6 +116,7 @@ class Teamwork extends Entity
 
     /**
     * Gets the teamsAppSettings
+    * Represents tenant-wide settings for all Teams apps in the tenant.
     *
     * @return TeamsAppSettings|null The teamsAppSettings
     */
@@ -134,6 +135,7 @@ class Teamwork extends Entity
 
     /**
     * Sets the teamsAppSettings
+    * Represents tenant-wide settings for all Teams apps in the tenant.
     *
     * @param TeamsAppSettings $val The teamsAppSettings
     *

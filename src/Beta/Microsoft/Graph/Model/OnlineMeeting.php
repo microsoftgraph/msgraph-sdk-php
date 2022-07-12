@@ -586,6 +586,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the joinMeetingIdSettings
+    * Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode.
     *
     * @return JoinMeetingIdSettings|null The joinMeetingIdSettings
     */
@@ -604,6 +605,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the joinMeetingIdSettings
+    * Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode.
     *
     * @param JoinMeetingIdSettings $val The joinMeetingIdSettings
     *

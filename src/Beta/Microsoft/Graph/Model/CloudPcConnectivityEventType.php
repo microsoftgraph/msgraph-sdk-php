@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* DeviceManagementConfigurationTechnologies File
+* CloudPcConnectivityEventType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* DeviceManagementConfigurationTechnologies class
+* CloudPcConnectivityEventType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,19 +24,14 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class DeviceManagementConfigurationTechnologies extends Enum
+class CloudPcConnectivityEventType extends Enum
 {
     /**
-    * The Enum DeviceManagementConfigurationTechnologies
+    * The Enum CloudPcConnectivityEventType
     */
-    const NONE = "none";
-    const MDM = "mdm";
-    const WINDOWS10_X_MANAGEMENT = "windows10XManagement";
-    const CONFIG_MANAGER = "configManager";
-    const APPLE_REMOTE_MANAGEMENT = "appleRemoteManagement";
-    const MICROSOFT_SENSE = "microsoftSense";
-    const EXCHANGE_ONLINE = "exchangeOnline";
-    const LINUX_MDM = "linuxMdm";
-    const ENROLLMENT = "enrollment";
+    const UNKNOWN = "unknown";
+    const USER_CONNECTION = "userConnection";
+    const USER_TROUBLESHOOTING = "userTroubleshooting";
+    const DEVICE_HEALTH_CHECK = "deviceHealthCheck";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
