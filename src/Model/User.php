@@ -2442,6 +2442,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the transitiveMemberOf
+    * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      *
      * @return array|null The transitiveMemberOf
      */
@@ -2456,6 +2457,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the transitiveMemberOf
+    * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
     *
     * @param DirectoryObject[] $val The transitiveMemberOf
     *
