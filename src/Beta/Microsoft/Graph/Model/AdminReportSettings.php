@@ -26,6 +26,7 @@ class AdminReportSettings extends Entity
 {
     /**
     * Gets the displayConcealedNames
+    * If set to true, all reports will conceal user information such as usernames, groups, and sites. If false, all reports will show identifiable information. This property represents a setting in the Microsoft 365 admin center. Required.
     *
     * @return bool|null The displayConcealedNames
     */
@@ -40,6 +41,7 @@ class AdminReportSettings extends Entity
 
     /**
     * Sets the displayConcealedNames
+    * If set to true, all reports will conceal user information such as usernames, groups, and sites. If false, all reports will show identifiable information. This property represents a setting in the Microsoft 365 admin center. Required.
     *
     * @param bool $val The displayConcealedNames
     *
