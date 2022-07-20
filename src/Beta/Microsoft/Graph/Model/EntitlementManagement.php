@@ -417,4 +417,32 @@ class EntitlementManagement extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the subjects
+     *
+     * @return array|null The subjects
+     */
+    public function getSubjects()
+    {
+        if (array_key_exists("subjects", $this->_propDict)) {
+           return $this->_propDict["subjects"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the subjects
+    *
+    * @param AccessPackageSubject[] $val The subjects
+    *
+    * @return EntitlementManagement
+    */
+    public function setSubjects($val)
+    {
+        $this->_propDict["subjects"] = $val;
+        return $this;
+    }
+
 }

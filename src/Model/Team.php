@@ -703,6 +703,39 @@ class Team extends Entity
     }
 
     /**
+    * Gets the photo
+    * The team photo.
+    *
+    * @return ProfilePhoto|null The photo
+    */
+    public function getPhoto()
+    {
+        if (array_key_exists("photo", $this->_propDict)) {
+            if (is_a($this->_propDict["photo"], "\Microsoft\Graph\Model\ProfilePhoto") || is_null($this->_propDict["photo"])) {
+                return $this->_propDict["photo"];
+            } else {
+                $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
+                return $this->_propDict["photo"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the photo
+    * The team photo.
+    *
+    * @param ProfilePhoto $val The photo
+    *
+    * @return Team
+    */
+    public function setPhoto($val)
+    {
+        $this->_propDict["photo"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the primaryChannel
     * The general channel for the team.
     *

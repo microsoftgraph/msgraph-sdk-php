@@ -58,6 +58,37 @@ class AccessPackageAssignmentPolicy extends Entity
     }
 
     /**
+    * Gets the automaticRequestSettings
+    *
+    * @return AccessPackageAutomaticRequestSettings|null The automaticRequestSettings
+    */
+    public function getAutomaticRequestSettings()
+    {
+        if (array_key_exists("automaticRequestSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["automaticRequestSettings"], "\Microsoft\Graph\Model\AccessPackageAutomaticRequestSettings") || is_null($this->_propDict["automaticRequestSettings"])) {
+                return $this->_propDict["automaticRequestSettings"];
+            } else {
+                $this->_propDict["automaticRequestSettings"] = new AccessPackageAutomaticRequestSettings($this->_propDict["automaticRequestSettings"]);
+                return $this->_propDict["automaticRequestSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the automaticRequestSettings
+    *
+    * @param AccessPackageAutomaticRequestSettings $val The automaticRequestSettings
+    *
+    * @return AccessPackageAssignmentPolicy
+    */
+    public function setAutomaticRequestSettings($val)
+    {
+        $this->_propDict["automaticRequestSettings"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
