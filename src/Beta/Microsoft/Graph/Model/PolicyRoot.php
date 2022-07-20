@@ -373,6 +373,7 @@ class PolicyRoot implements \JsonSerializable
 
     /**
     * Gets the externalIdentitiesPolicy
+    * Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
     *
     * @return ExternalIdentitiesPolicy|null The externalIdentitiesPolicy
     */
@@ -391,6 +392,7 @@ class PolicyRoot implements \JsonSerializable
 
     /**
     * Sets the externalIdentitiesPolicy
+    * Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
     *
     * @param ExternalIdentitiesPolicy $val The externalIdentitiesPolicy
     *

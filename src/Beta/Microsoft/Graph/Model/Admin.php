@@ -123,6 +123,7 @@ class Admin implements \JsonSerializable
 
     /**
     * Gets the reportSettings
+    * A container for administrative resources to manage reports.
     *
     * @return AdminReportSettings|null The reportSettings
     */
@@ -141,6 +142,7 @@ class Admin implements \JsonSerializable
 
     /**
     * Sets the reportSettings
+    * A container for administrative resources to manage reports.
     *
     * @param AdminReportSettings $val The reportSettings
     *

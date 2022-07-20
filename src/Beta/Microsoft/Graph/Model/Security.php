@@ -324,6 +324,39 @@ class Security extends Entity
         return $this;
     }
 
+    /**
+    * Gets the threatSubmission
+    * A threat submission sent to Microsoft; for example, a suspicious email threat, URL threat, or file threat.
+    *
+    * @return \Beta\Microsoft\Graph\SecurityNamespace\Model\ThreatSubmissionRoot|null The threatSubmission
+    */
+    public function getThreatSubmission()
+    {
+        if (array_key_exists("threatSubmission", $this->_propDict)) {
+            if (is_a($this->_propDict["threatSubmission"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\ThreatSubmissionRoot") || is_null($this->_propDict["threatSubmission"])) {
+                return $this->_propDict["threatSubmission"];
+            } else {
+                $this->_propDict["threatSubmission"] = new \Beta\Microsoft\Graph\SecurityNamespace\Model\ThreatSubmissionRoot($this->_propDict["threatSubmission"]);
+                return $this->_propDict["threatSubmission"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the threatSubmission
+    * A threat submission sent to Microsoft; for example, a suspicious email threat, URL threat, or file threat.
+    *
+    * @param \Beta\Microsoft\Graph\SecurityNamespace\Model\ThreatSubmissionRoot $val The threatSubmission
+    *
+    * @return Security
+    */
+    public function setThreatSubmission($val)
+    {
+        $this->_propDict["threatSubmission"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the alerts

@@ -530,33 +530,6 @@ class Group extends DirectoryObject
     }
 
     /**
-    * Gets the mdmAppId
-    *
-    * @return string|null The mdmAppId
-    */
-    public function getMdmAppId()
-    {
-        if (array_key_exists("mdmAppId", $this->_propDict)) {
-            return $this->_propDict["mdmAppId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the mdmAppId
-    *
-    * @param string $val The mdmAppId
-    *
-    * @return Group
-    */
-    public function setMdmAppId($val)
-    {
-        $this->_propDict["mdmAppId"] = $val;
-        return $this;
-    }
-
-    /**
     * Gets the membershipRule
     * The rule that determines members for this group if the group is a dynamic group (groupTypes contains DynamicMembership). For more information about the syntax of the membership rule, see Membership Rules syntax. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith).
     *
