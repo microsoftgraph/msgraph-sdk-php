@@ -226,6 +226,37 @@ class AccessPackageSubject extends Entity
     }
 
     /**
+    * Gets the subjectLifecycle
+    *
+    * @return AccessPackageSubjectLifecycle|null The subjectLifecycle
+    */
+    public function getSubjectLifecycle()
+    {
+        if (array_key_exists("subjectLifecycle", $this->_propDict)) {
+            if (is_a($this->_propDict["subjectLifecycle"], "\Beta\Microsoft\Graph\Model\AccessPackageSubjectLifecycle") || is_null($this->_propDict["subjectLifecycle"])) {
+                return $this->_propDict["subjectLifecycle"];
+            } else {
+                $this->_propDict["subjectLifecycle"] = new AccessPackageSubjectLifecycle($this->_propDict["subjectLifecycle"]);
+                return $this->_propDict["subjectLifecycle"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the subjectLifecycle
+    *
+    * @param AccessPackageSubjectLifecycle $val The subjectLifecycle
+    *
+    * @return AccessPackageSubject
+    */
+    public function setSubjectLifecycle($val)
+    {
+        $this->_propDict["subjectLifecycle"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the type
     * The resource type of the subject.
     *
