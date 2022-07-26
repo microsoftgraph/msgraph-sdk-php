@@ -25,6 +25,7 @@ class CommunicationsUserIdentity extends Identity
 {
     /**
     * Gets the tenantId
+    * The user's tenant ID.
     *
     * @return string|null The tenantId
     */
@@ -39,6 +40,7 @@ class CommunicationsUserIdentity extends Identity
 
     /**
     * Sets the tenantId
+    * The user's tenant ID.
     *
     * @param string $val The value of the tenantId
     *

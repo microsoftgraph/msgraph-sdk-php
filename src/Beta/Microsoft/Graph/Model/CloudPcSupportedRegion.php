@@ -55,6 +55,7 @@ class CloudPcSupportedRegion extends Entity
 
     /**
     * Gets the regionStatus
+    * The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
     *
     * @return CloudPcSupportedRegionStatus|null The regionStatus
     */
@@ -73,6 +74,7 @@ class CloudPcSupportedRegion extends Entity
 
     /**
     * Sets the regionStatus
+    * The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
     *
     * @param CloudPcSupportedRegionStatus $val The regionStatus
     *

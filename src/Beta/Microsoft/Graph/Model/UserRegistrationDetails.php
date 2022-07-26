@@ -58,6 +58,33 @@ class UserRegistrationDetails extends Entity
     }
 
     /**
+    * Gets the isAdmin
+    *
+    * @return bool|null The isAdmin
+    */
+    public function getIsAdmin()
+    {
+        if (array_key_exists("isAdmin", $this->_propDict)) {
+            return $this->_propDict["isAdmin"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isAdmin
+    *
+    * @param bool $val The isAdmin
+    *
+    * @return UserRegistrationDetails
+    */
+    public function setIsAdmin($val)
+    {
+        $this->_propDict["isAdmin"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the isMfaCapable
     * Whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
     *
@@ -315,6 +342,37 @@ class UserRegistrationDetails extends Entity
     public function setUserPrincipalName($val)
     {
         $this->_propDict["userPrincipalName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the userType
+    *
+    * @return SignInUserType|null The userType
+    */
+    public function getUserType()
+    {
+        if (array_key_exists("userType", $this->_propDict)) {
+            if (is_a($this->_propDict["userType"], "\Beta\Microsoft\Graph\Model\SignInUserType") || is_null($this->_propDict["userType"])) {
+                return $this->_propDict["userType"];
+            } else {
+                $this->_propDict["userType"] = new SignInUserType($this->_propDict["userType"]);
+                return $this->_propDict["userType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userType
+    *
+    * @param SignInUserType $val The userType
+    *
+    * @return UserRegistrationDetails
+    */
+    public function setUserType($val)
+    {
+        $this->_propDict["userType"] = $val;
         return $this;
     }
 

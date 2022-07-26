@@ -373,6 +373,7 @@ class ReportRoot extends Entity
 
     /**
     * Gets the security
+    * Provides the ability to launch a realistic simulated phishing attack that organizations can learn from.
     *
     * @return SecurityReportsRoot|null The security
     */
@@ -391,6 +392,7 @@ class ReportRoot extends Entity
 
     /**
     * Sets the security
+    * Provides the ability to launch a realistic simulated phishing attack that organizations can learn from.
     *
     * @param SecurityReportsRoot $val The security
     *
