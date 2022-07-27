@@ -26,6 +26,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Gets the assertedIdentity
+    * An identity the participant would like to present itself as to the other participants in the call.
     *
     * @return Identity|null The assertedIdentity
     */
@@ -44,6 +45,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Sets the assertedIdentity
+    * An identity the participant would like to present itself as to the other participants in the call.
     *
     * @param Identity $val The value to assign to the assertedIdentity
     *
@@ -57,6 +59,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Gets the azureCommunicationServicesUser
+    * The Azure Communication Services user associated with this action.
     *
     * @return Identity|null The azureCommunicationServicesUser
     */
@@ -75,6 +78,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Sets the azureCommunicationServicesUser
+    * The Azure Communication Services user associated with this action.
     *
     * @param Identity $val The value to assign to the azureCommunicationServicesUser
     *
@@ -88,6 +92,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Gets the endpointType
+    * Type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
     *
     * @return EndpointType|null The endpointType
     */
@@ -106,6 +111,7 @@ class CommunicationsIdentitySet extends IdentitySet
 
     /**
     * Sets the endpointType
+    * Type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
     *
     * @param EndpointType $val The value to assign to the endpointType
     *
