@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -50,6 +50,11 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     private ?bool $enableTargetsToSelfUpdateAccess = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var array<SubjectSet>|null $onBehalfRequestors The principals who can request on-behalf-of others.
     */
     private ?array $onBehalfRequestors = null;
@@ -58,7 +63,8 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * Instantiates a new accessPackageAssignmentRequestorSettings and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.accessPackageAssignmentRequestorSettings');
     }
 
     /**
@@ -148,8 +154,17 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
             'enableTargetsToSelfAddAccess' => function (ParseNode $n) use ($o) { $o->setEnableTargetsToSelfAddAccess($n->getBooleanValue()); },
             'enableTargetsToSelfRemoveAccess' => function (ParseNode $n) use ($o) { $o->setEnableTargetsToSelfRemoveAccess($n->getBooleanValue()); },
             'enableTargetsToSelfUpdateAccess' => function (ParseNode $n) use ($o) { $o->setEnableTargetsToSelfUpdateAccess($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'onBehalfRequestors' => function (ParseNode $n) use ($o) { $o->setOnBehalfRequestors($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -172,6 +187,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
         $writer->writeBooleanValue('enableTargetsToSelfAddAccess', $this->enableTargetsToSelfAddAccess);
         $writer->writeBooleanValue('enableTargetsToSelfRemoveAccess', $this->enableTargetsToSelfRemoveAccess);
         $writer->writeBooleanValue('enableTargetsToSelfUpdateAccess', $this->enableTargetsToSelfUpdateAccess);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfObjectValues('onBehalfRequestors', $this->onBehalfRequestors);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -238,6 +254,14 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     */
     public function setEnableTargetsToSelfUpdateAccess(?bool $value ): void {
         $this->enableTargetsToSelfUpdateAccess = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

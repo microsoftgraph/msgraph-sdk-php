@@ -14,7 +14,7 @@ class DeviceConfigurationState extends Entity implements Parsable
     private ?string $displayName = null;
     
     /**
-     * @var PolicyPlatformType|null $platformType Platform type that the policy applies to
+     * @var PolicyPlatformType|null $platformType Supported platform types for policies.
     */
     private ?PolicyPlatformType $platformType = null;
     
@@ -29,7 +29,7 @@ class DeviceConfigurationState extends Entity implements Parsable
     private ?array $settingStates = null;
     
     /**
-     * @var ComplianceStatus|null $state The compliance state of the policy
+     * @var ComplianceStatus|null $state The state property
     */
     private ?ComplianceStatus $state = null;
     
@@ -43,6 +43,7 @@ class DeviceConfigurationState extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.deviceConfigurationState');
     }
 
     /**
@@ -79,7 +80,7 @@ class DeviceConfigurationState extends Entity implements Parsable
     }
 
     /**
-     * Gets the platformType property value. Platform type that the policy applies to
+     * Gets the platformType property value. Supported platform types for policies.
      * @return PolicyPlatformType|null
     */
     public function getPlatformType(): ?PolicyPlatformType {
@@ -103,7 +104,7 @@ class DeviceConfigurationState extends Entity implements Parsable
     }
 
     /**
-     * Gets the state property value. The compliance state of the policy
+     * Gets the state property value. The state property
      * @return ComplianceStatus|null
     */
     public function getState(): ?ComplianceStatus {
@@ -141,7 +142,7 @@ class DeviceConfigurationState extends Entity implements Parsable
     }
 
     /**
-     * Sets the platformType property value. Platform type that the policy applies to
+     * Sets the platformType property value. Supported platform types for policies.
      *  @param PolicyPlatformType|null $value Value to set for the platformType property.
     */
     public function setPlatformType(?PolicyPlatformType $value ): void {
@@ -165,7 +166,7 @@ class DeviceConfigurationState extends Entity implements Parsable
     }
 
     /**
-     * Sets the state property value. The compliance state of the policy
+     * Sets the state property value. The state property
      *  @param ComplianceStatus|null $value Value to set for the state property.
     */
     public function setState(?ComplianceStatus $value ): void {

@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -31,6 +31,11 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable
     private ?DateInterval $minimumLeadTime = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var bool|null $sendConfirmationsToOwner True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
     */
     private ?bool $sendConfirmationsToOwner = null;
@@ -44,7 +49,8 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable
      * Instantiates a new bookingSchedulingPolicy and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.bookingSchedulingPolicy');
     }
 
     /**
@@ -82,6 +88,7 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable
             'allowStaffSelection' => function (ParseNode $n) use ($o) { $o->setAllowStaffSelection($n->getBooleanValue()); },
             'maximumAdvance' => function (ParseNode $n) use ($o) { $o->setMaximumAdvance($n->getDateIntervalValue()); },
             'minimumLeadTime' => function (ParseNode $n) use ($o) { $o->setMinimumLeadTime($n->getDateIntervalValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'sendConfirmationsToOwner' => function (ParseNode $n) use ($o) { $o->setSendConfirmationsToOwner($n->getBooleanValue()); },
             'timeSlotInterval' => function (ParseNode $n) use ($o) { $o->setTimeSlotInterval($n->getDateIntervalValue()); },
         ];
@@ -101,6 +108,14 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable
     */
     public function getMinimumLeadTime(): ?DateInterval {
         return $this->minimumLeadTime;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -127,6 +142,7 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('allowStaffSelection', $this->allowStaffSelection);
         $writer->writeDateIntervalValue('maximumAdvance', $this->maximumAdvance);
         $writer->writeDateIntervalValue('minimumLeadTime', $this->minimumLeadTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeBooleanValue('sendConfirmationsToOwner', $this->sendConfirmationsToOwner);
         $writer->writeDateIntervalValue('timeSlotInterval', $this->timeSlotInterval);
         $writer->writeAdditionalData($this->additionalData);
@@ -162,6 +178,14 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable
     */
     public function setMinimumLeadTime(?DateInterval $value ): void {
         $this->minimumLeadTime = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

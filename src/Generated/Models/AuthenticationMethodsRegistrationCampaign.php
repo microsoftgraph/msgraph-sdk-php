@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,12 +25,17 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
     private ?array $includeTargets = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var int|null $snoozeDurationInDays Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt.
     */
     private ?int $snoozeDurationInDays = null;
     
     /**
-     * @var AdvancedConfigState|null $state Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
+     * @var AdvancedConfigState|null $state The state property
     */
     private ?AdvancedConfigState $state = null;
     
@@ -38,7 +43,8 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
      * Instantiates a new authenticationMethodsRegistrationCampaign and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.authenticationMethodsRegistrationCampaign');
     }
 
     /**
@@ -75,6 +81,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
         return  [
             'excludeTargets' => function (ParseNode $n) use ($o) { $o->setExcludeTargets($n->getCollectionOfObjectValues(array(ExcludeTarget::class, 'createFromDiscriminatorValue'))); },
             'includeTargets' => function (ParseNode $n) use ($o) { $o->setIncludeTargets($n->getCollectionOfObjectValues(array(AuthenticationMethodsRegistrationCampaignIncludeTarget::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'snoozeDurationInDays' => function (ParseNode $n) use ($o) { $o->setSnoozeDurationInDays($n->getIntegerValue()); },
             'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(AdvancedConfigState::class)); },
         ];
@@ -89,6 +96,14 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt.
      * @return int|null
     */
@@ -97,7 +112,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
+     * Gets the state property value. The state property
      * @return AdvancedConfigState|null
     */
     public function getState(): ?AdvancedConfigState {
@@ -111,6 +126,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
     public function serialize(SerializationWriter $writer): void {
         $writer->writeCollectionOfObjectValues('excludeTargets', $this->excludeTargets);
         $writer->writeCollectionOfObjectValues('includeTargets', $this->includeTargets);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('snoozeDurationInDays', $this->snoozeDurationInDays);
         $writer->writeEnumValue('state', $this->state);
         $writer->writeAdditionalData($this->additionalData);
@@ -141,6 +157,14 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
     }
 
     /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
      * Sets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt.
      *  @param int|null $value Value to set for the snoozeDurationInDays property.
     */
@@ -149,7 +173,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
+     * Sets the state property value. The state property
      *  @param AdvancedConfigState|null $value Value to set for the state property.
     */
     public function setState(?AdvancedConfigState $value ): void {

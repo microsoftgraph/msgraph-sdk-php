@@ -165,6 +165,7 @@ class Message extends OutlookItem implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.message');
     }
 
     /**
@@ -179,6 +180,8 @@ class Message extends OutlookItem implements Parsable
             switch ($mappingValue) {
                 case '#microsoft.graph.calendarSharingMessage': return new CalendarSharingMessage();
                 case '#microsoft.graph.eventMessage': return new EventMessage();
+                case '#microsoft.graph.eventMessageRequest': return new EventMessageRequest();
+                case '#microsoft.graph.eventMessageResponse': return new EventMessageResponse();
             }
         }
         return new Message();

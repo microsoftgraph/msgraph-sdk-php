@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,10 +30,16 @@ class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder, Parsa
     private ?array $matchedConditionDescriptions = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new chatMessagePolicyViolationPolicyTip and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.chatMessagePolicyViolationPolicyTip');
     }
 
     /**
@@ -71,6 +77,7 @@ class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder, Parsa
             'complianceUrl' => function (ParseNode $n) use ($o) { $o->setComplianceUrl($n->getStringValue()); },
             'generalText' => function (ParseNode $n) use ($o) { $o->setGeneralText($n->getStringValue()); },
             'matchedConditionDescriptions' => function (ParseNode $n) use ($o) { $o->setMatchedConditionDescriptions($n->getCollectionOfPrimitiveValues()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
 
@@ -91,6 +98,14 @@ class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder, Parsa
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -98,6 +113,7 @@ class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder, Parsa
         $writer->writeStringValue('complianceUrl', $this->complianceUrl);
         $writer->writeStringValue('generalText', $this->generalText);
         $writer->writeCollectionOfPrimitiveValues('matchedConditionDescriptions', $this->matchedConditionDescriptions);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -131,6 +147,14 @@ class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder, Parsa
     */
     public function setMatchedConditionDescriptions(?array $value ): void {
         $this->matchedConditionDescriptions = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

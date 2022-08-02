@@ -10,9 +10,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var int|null $returnCode Return code.
@@ -20,7 +25,7 @@ class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable
     private ?int $returnCode = null;
     
     /**
-     * @var Win32LobAppReturnCodeType|null $type The type of return code. Possible values are: failed, success, softReboot, hardReboot, retry.
+     * @var Win32LobAppReturnCodeType|null $type Indicates the type of return code.
     */
     private ?Win32LobAppReturnCodeType $type = null;
     
@@ -28,7 +33,8 @@ class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable
      * Instantiates a new win32LobAppReturnCode and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.win32LobAppReturnCode');
     }
 
     /**
@@ -55,9 +61,18 @@ class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'returnCode' => function (ParseNode $n) use ($o) { $o->setReturnCode($n->getIntegerValue()); },
             'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(Win32LobAppReturnCodeType::class)); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -69,7 +84,7 @@ class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the type property value. The type of return code. Possible values are: failed, success, softReboot, hardReboot, retry.
+     * Gets the type property value. Indicates the type of return code.
      * @return Win32LobAppReturnCodeType|null
     */
     public function getType(): ?Win32LobAppReturnCodeType {
@@ -81,6 +96,7 @@ class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('returnCode', $this->returnCode);
         $writer->writeEnumValue('type', $this->type);
         $writer->writeAdditionalData($this->additionalData);
@@ -95,6 +111,14 @@ class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
      * Sets the returnCode property value. Return code.
      *  @param int|null $value Value to set for the returnCode property.
     */
@@ -103,7 +127,7 @@ class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the type property value. The type of return code. Possible values are: failed, success, softReboot, hardReboot, retry.
+     * Sets the type property value. Indicates the type of return code.
      *  @param Win32LobAppReturnCodeType|null $value Value to set for the type property.
     */
     public function setType(?Win32LobAppReturnCodeType $value ): void {

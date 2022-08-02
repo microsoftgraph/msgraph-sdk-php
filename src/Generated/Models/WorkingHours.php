@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 class WorkingHours implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -24,6 +24,11 @@ class WorkingHours implements AdditionalDataHolder, Parsable
      * @var Time|null $endTime The time of the day that the user stops working.
     */
     private ?Time $endTime = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var Time|null $startTime The time of the day that the user starts working.
@@ -39,7 +44,8 @@ class WorkingHours implements AdditionalDataHolder, Parsable
      * Instantiates a new workingHours and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.workingHours');
     }
 
     /**
@@ -84,9 +90,18 @@ class WorkingHours implements AdditionalDataHolder, Parsable
         return  [
             'daysOfWeek' => function (ParseNode $n) use ($o) { $o->setDaysOfWeek($n->getCollectionOfPrimitiveValues()); },
             'endTime' => function (ParseNode $n) use ($o) { $o->setEndTime($n->getTimeValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'startTime' => function (ParseNode $n) use ($o) { $o->setStartTime($n->getTimeValue()); },
             'timeZone' => function (ParseNode $n) use ($o) { $o->setTimeZone($n->getObjectValue(array(TimeZoneBase::class, 'createFromDiscriminatorValue'))); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -112,6 +127,7 @@ class WorkingHours implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeCollectionOfPrimitiveValues('daysOfWeek', $this->daysOfWeek);
         $writer->writeTimeValue('endTime', $this->endTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeTimeValue('startTime', $this->startTime);
         $writer->writeObjectValue('timeZone', $this->timeZone);
         $writer->writeAdditionalData($this->additionalData);
@@ -139,6 +155,14 @@ class WorkingHours implements AdditionalDataHolder, Parsable
     */
     public function setEndTime(?Time $value ): void {
         $this->endTime = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

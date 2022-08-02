@@ -63,6 +63,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.androidManagedAppProtection');
     }
 
     /**

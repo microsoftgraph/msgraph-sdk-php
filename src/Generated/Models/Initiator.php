@@ -14,10 +14,11 @@ class Initiator extends Identity implements Parsable
     private ?InitiatorType $initiatorType = null;
     
     /**
-     * Instantiates a new initiator and sets the default values.
+     * Instantiates a new Initiator and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.initiator');
     }
 
     /**

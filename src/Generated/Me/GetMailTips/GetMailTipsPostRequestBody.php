@@ -11,17 +11,17 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var array<string>|null $EmailAddresses The EmailAddresses property
+     * @var array<string>|null $emailAddresses The EmailAddresses property
     */
     private ?array $emailAddresses = null;
     
     /**
-     * @var MailTipsType|null $MailTipsOptions The MailTipsOptions property
+     * @var MailTipsType|null $mailTipsOptions The MailTipsOptions property
     */
     private ?MailTipsType $mailTipsOptions = null;
     
@@ -29,7 +29,7 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsable
      * Instantiates a new getMailTipsPostRequestBody and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
     }
 
     /**

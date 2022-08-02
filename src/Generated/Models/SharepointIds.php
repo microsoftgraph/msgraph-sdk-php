@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SharepointIds implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -28,6 +28,11 @@ class SharepointIds implements AdditionalDataHolder, Parsable
      * @var string|null $listItemUniqueId The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site.
     */
     private ?string $listItemUniqueId = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $siteId The unique identifier (guid) for the item's site collection (SPSite).
@@ -53,7 +58,8 @@ class SharepointIds implements AdditionalDataHolder, Parsable
      * Instantiates a new sharepointIds and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.sharepointIds');
     }
 
     /**
@@ -83,6 +89,7 @@ class SharepointIds implements AdditionalDataHolder, Parsable
             'listId' => function (ParseNode $n) use ($o) { $o->setListId($n->getStringValue()); },
             'listItemId' => function (ParseNode $n) use ($o) { $o->setListItemId($n->getStringValue()); },
             'listItemUniqueId' => function (ParseNode $n) use ($o) { $o->setListItemUniqueId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'siteId' => function (ParseNode $n) use ($o) { $o->setSiteId($n->getStringValue()); },
             'siteUrl' => function (ParseNode $n) use ($o) { $o->setSiteUrl($n->getStringValue()); },
             'tenantId' => function (ParseNode $n) use ($o) { $o->setTenantId($n->getStringValue()); },
@@ -112,6 +119,14 @@ class SharepointIds implements AdditionalDataHolder, Parsable
     */
     public function getListItemUniqueId(): ?string {
         return $this->listItemUniqueId;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -154,6 +169,7 @@ class SharepointIds implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('listId', $this->listId);
         $writer->writeStringValue('listItemId', $this->listItemId);
         $writer->writeStringValue('listItemUniqueId', $this->listItemUniqueId);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('siteId', $this->siteId);
         $writer->writeStringValue('siteUrl', $this->siteUrl);
         $writer->writeStringValue('tenantId', $this->tenantId);
@@ -191,6 +207,14 @@ class SharepointIds implements AdditionalDataHolder, Parsable
     */
     public function setListItemUniqueId(?string $value ): void {
         $this->listItemUniqueId = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

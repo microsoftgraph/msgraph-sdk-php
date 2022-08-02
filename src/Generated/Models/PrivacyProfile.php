@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrivacyProfile implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class PrivacyProfile implements AdditionalDataHolder, Parsable
      * @var string|null $contactEmail A valid smtp email address for the privacy statement contact. Not required.
     */
     private ?string $contactEmail = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $statementUrl A valid URL format that begins with http:// or https://. Maximum length is 255 characters. The URL that directs to the company's privacy statement. Not required.
@@ -28,7 +33,8 @@ class PrivacyProfile implements AdditionalDataHolder, Parsable
      * Instantiates a new privacyProfile and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.privacyProfile');
     }
 
     /**
@@ -64,8 +70,17 @@ class PrivacyProfile implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'contactEmail' => function (ParseNode $n) use ($o) { $o->setContactEmail($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'statementUrl' => function (ParseNode $n) use ($o) { $o->setStatementUrl($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class PrivacyProfile implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('contactEmail', $this->contactEmail);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('statementUrl', $this->statementUrl);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -100,6 +116,14 @@ class PrivacyProfile implements AdditionalDataHolder, Parsable
     */
     public function setContactEmail(?string $value ): void {
         $this->contactEmail = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

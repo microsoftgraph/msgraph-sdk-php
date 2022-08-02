@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ProvisioningStep implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,6 +30,11 @@ class ProvisioningStep implements AdditionalDataHolder, Parsable
     private ?string $name = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var ProvisioningStepType|null $provisioningStepType Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
     */
     private ?ProvisioningStepType $provisioningStepType = null;
@@ -43,7 +48,8 @@ class ProvisioningStep implements AdditionalDataHolder, Parsable
      * Instantiates a new provisioningStep and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.provisioningStep');
     }
 
     /**
@@ -89,6 +95,7 @@ class ProvisioningStep implements AdditionalDataHolder, Parsable
             'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
             'details' => function (ParseNode $n) use ($o) { $o->setDetails($n->getObjectValue(array(DetailsInfo::class, 'createFromDiscriminatorValue'))); },
             'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'provisioningStepType' => function (ParseNode $n) use ($o) { $o->setProvisioningStepType($n->getEnumValue(ProvisioningStepType::class)); },
             'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(ProvisioningResult::class)); },
         ];
@@ -100,6 +107,14 @@ class ProvisioningStep implements AdditionalDataHolder, Parsable
     */
     public function getName(): ?string {
         return $this->name;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -126,6 +141,7 @@ class ProvisioningStep implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('description', $this->description);
         $writer->writeObjectValue('details', $this->details);
         $writer->writeStringValue('name', $this->name);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('provisioningStepType', $this->provisioningStepType);
         $writer->writeEnumValue('status', $this->status);
         $writer->writeAdditionalData($this->additionalData);
@@ -161,6 +177,14 @@ class ProvisioningStep implements AdditionalDataHolder, Parsable
     */
     public function setName(?string $value ): void {
         $this->name = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

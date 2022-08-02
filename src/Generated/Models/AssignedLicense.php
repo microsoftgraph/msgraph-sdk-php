@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AssignedLicense implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class AssignedLicense implements AdditionalDataHolder, Parsable
      * @var array<string>|null $disabledPlans A collection of the unique identifiers for plans that have been disabled.
     */
     private ?array $disabledPlans = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $skuId The unique identifier for the SKU.
@@ -28,7 +33,8 @@ class AssignedLicense implements AdditionalDataHolder, Parsable
      * Instantiates a new assignedLicense and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.assignedLicense');
     }
 
     /**
@@ -64,8 +70,17 @@ class AssignedLicense implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'disabledPlans' => function (ParseNode $n) use ($o) { $o->setDisabledPlans($n->getCollectionOfPrimitiveValues()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'skuId' => function (ParseNode $n) use ($o) { $o->setSkuId($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class AssignedLicense implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeCollectionOfPrimitiveValues('disabledPlans', $this->disabledPlans);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('skuId', $this->skuId);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -100,6 +116,14 @@ class AssignedLicense implements AdditionalDataHolder, Parsable
     */
     public function setDisabledPlans(?array $value ): void {
         $this->disabledPlans = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

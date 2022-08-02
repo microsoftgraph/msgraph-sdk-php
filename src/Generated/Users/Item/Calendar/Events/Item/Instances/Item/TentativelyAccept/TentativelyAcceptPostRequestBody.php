@@ -11,22 +11,22 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var string|null $Comment The Comment property
+     * @var string|null $comment The Comment property
     */
     private ?string $comment = null;
     
     /**
-     * @var TimeSlot|null $ProposedNewTime The ProposedNewTime property
+     * @var TimeSlot|null $proposedNewTime The ProposedNewTime property
     */
     private ?TimeSlot $proposedNewTime = null;
     
     /**
-     * @var bool|null $SendResponse The SendResponse property
+     * @var bool|null $sendResponse The SendResponse property
     */
     private ?bool $sendResponse = null;
     
@@ -34,7 +34,7 @@ class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, Parsable
      * Instantiates a new tentativelyAcceptPostRequestBody and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
     }
 
     /**

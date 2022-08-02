@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationRoot implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class EducationRoot implements AdditionalDataHolder, Parsable
      * @var EducationUser|null $me The me property
     */
     private ?EducationUser $me = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var array<EducationSchool>|null $schools The schools property
@@ -38,7 +43,8 @@ class EducationRoot implements AdditionalDataHolder, Parsable
      * Instantiates a new EducationRoot and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.educationRoot');
     }
 
     /**
@@ -75,6 +81,7 @@ class EducationRoot implements AdditionalDataHolder, Parsable
         return  [
             'classes' => function (ParseNode $n) use ($o) { $o->setClasses($n->getCollectionOfObjectValues(array(EducationClass::class, 'createFromDiscriminatorValue'))); },
             'me' => function (ParseNode $n) use ($o) { $o->setMe($n->getObjectValue(array(EducationUser::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'schools' => function (ParseNode $n) use ($o) { $o->setSchools($n->getCollectionOfObjectValues(array(EducationSchool::class, 'createFromDiscriminatorValue'))); },
             'users' => function (ParseNode $n) use ($o) { $o->setUsers($n->getCollectionOfObjectValues(array(EducationUser::class, 'createFromDiscriminatorValue'))); },
         ];
@@ -86,6 +93,14 @@ class EducationRoot implements AdditionalDataHolder, Parsable
     */
     public function getMe(): ?EducationUser {
         return $this->me;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -111,6 +126,7 @@ class EducationRoot implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeCollectionOfObjectValues('classes', $this->classes);
         $writer->writeObjectValue('me', $this->me);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfObjectValues('schools', $this->schools);
         $writer->writeCollectionOfObjectValues('users', $this->users);
         $writer->writeAdditionalData($this->additionalData);
@@ -138,6 +154,14 @@ class EducationRoot implements AdditionalDataHolder, Parsable
     */
     public function setMe(?EducationUser $value ): void {
         $this->me = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

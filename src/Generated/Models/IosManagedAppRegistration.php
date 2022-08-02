@@ -13,6 +13,7 @@ class IosManagedAppRegistration extends ManagedAppRegistration implements Parsab
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.iosManagedAppRegistration');
     }
 
     /**

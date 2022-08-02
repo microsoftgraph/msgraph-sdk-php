@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ProxiedDomain implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class ProxiedDomain implements AdditionalDataHolder, Parsable
      * @var string|null $ipAddressOrFQDN The IP address or FQDN
     */
     private ?string $ipAddressOrFQDN = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $proxy Proxy IP or FQDN
@@ -28,7 +33,8 @@ class ProxiedDomain implements AdditionalDataHolder, Parsable
      * Instantiates a new proxiedDomain and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.proxiedDomain');
     }
 
     /**
@@ -56,6 +62,7 @@ class ProxiedDomain implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'ipAddressOrFQDN' => function (ParseNode $n) use ($o) { $o->setIpAddressOrFQDN($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'proxy' => function (ParseNode $n) use ($o) { $o->setProxy($n->getStringValue()); },
         ];
     }
@@ -66,6 +73,14 @@ class ProxiedDomain implements AdditionalDataHolder, Parsable
     */
     public function getIpAddressOrFQDN(): ?string {
         return $this->ipAddressOrFQDN;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class ProxiedDomain implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('ipAddressOrFQDN', $this->ipAddressOrFQDN);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('proxy', $this->proxy);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -100,6 +116,14 @@ class ProxiedDomain implements AdditionalDataHolder, Parsable
     */
     public function setIpAddressOrFQDN(?string $value ): void {
         $this->ipAddressOrFQDN = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

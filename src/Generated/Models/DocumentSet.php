@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DocumentSet implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class DocumentSet implements AdditionalDataHolder, Parsable
      * @var array<DocumentSetContent>|null $defaultContents Default contents of document set.
     */
     private ?array $defaultContents = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var bool|null $propagateWelcomePageChanges Indicates whether to add the name of the document set to each file name.
@@ -53,7 +58,8 @@ class DocumentSet implements AdditionalDataHolder, Parsable
      * Instantiates a new documentSet and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.documentSet');
     }
 
     /**
@@ -98,12 +104,21 @@ class DocumentSet implements AdditionalDataHolder, Parsable
         return  [
             'allowedContentTypes' => function (ParseNode $n) use ($o) { $o->setAllowedContentTypes($n->getCollectionOfObjectValues(array(ContentTypeInfo::class, 'createFromDiscriminatorValue'))); },
             'defaultContents' => function (ParseNode $n) use ($o) { $o->setDefaultContents($n->getCollectionOfObjectValues(array(DocumentSetContent::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'propagateWelcomePageChanges' => function (ParseNode $n) use ($o) { $o->setPropagateWelcomePageChanges($n->getBooleanValue()); },
             'sharedColumns' => function (ParseNode $n) use ($o) { $o->setSharedColumns($n->getCollectionOfObjectValues(array(ColumnDefinition::class, 'createFromDiscriminatorValue'))); },
             'shouldPrefixNameToFile' => function (ParseNode $n) use ($o) { $o->setShouldPrefixNameToFile($n->getBooleanValue()); },
             'welcomePageColumns' => function (ParseNode $n) use ($o) { $o->setWelcomePageColumns($n->getCollectionOfObjectValues(array(ColumnDefinition::class, 'createFromDiscriminatorValue'))); },
             'welcomePageUrl' => function (ParseNode $n) use ($o) { $o->setWelcomePageUrl($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -153,6 +168,7 @@ class DocumentSet implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeCollectionOfObjectValues('allowedContentTypes', $this->allowedContentTypes);
         $writer->writeCollectionOfObjectValues('defaultContents', $this->defaultContents);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeBooleanValue('propagateWelcomePageChanges', $this->propagateWelcomePageChanges);
         $writer->writeCollectionOfObjectValues('sharedColumns', $this->sharedColumns);
         $writer->writeBooleanValue('shouldPrefixNameToFile', $this->shouldPrefixNameToFile);
@@ -183,6 +199,14 @@ class DocumentSet implements AdditionalDataHolder, Parsable
     */
     public function setDefaultContents(?array $value ): void {
         $this->defaultContents = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

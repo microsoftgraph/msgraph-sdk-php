@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuthenticationMethodsRegistrationCampaignIncludeTarget implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -20,12 +20,17 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
     private ?string $id = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $targetedAuthenticationMethod The authentication method that the user is prompted to register. The value must be microsoftAuthenticator.
     */
     private ?string $targetedAuthenticationMethod = null;
     
     /**
-     * @var AuthenticationMethodTargetType|null $targetType The type of the authentication method target. Possible values are: user, group, unknownFutureValue.
+     * @var AuthenticationMethodTargetType|null $targetType The targetType property
     */
     private ?AuthenticationMethodTargetType $targetType = null;
     
@@ -33,7 +38,8 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
      * Instantiates a new authenticationMethodsRegistrationCampaignIncludeTarget and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.authenticationMethodsRegistrationCampaignIncludeTarget');
     }
 
     /**
@@ -61,6 +67,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
         $o = $this;
         return  [
             'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'targetedAuthenticationMethod' => function (ParseNode $n) use ($o) { $o->setTargetedAuthenticationMethod($n->getStringValue()); },
             'targetType' => function (ParseNode $n) use ($o) { $o->setTargetType($n->getEnumValue(AuthenticationMethodTargetType::class)); },
         ];
@@ -75,6 +82,14 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the targetedAuthenticationMethod property value. The authentication method that the user is prompted to register. The value must be microsoftAuthenticator.
      * @return string|null
     */
@@ -83,7 +98,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
     }
 
     /**
-     * Gets the targetType property value. The type of the authentication method target. Possible values are: user, group, unknownFutureValue.
+     * Gets the targetType property value. The targetType property
      * @return AuthenticationMethodTargetType|null
     */
     public function getTargetType(): ?AuthenticationMethodTargetType {
@@ -96,6 +111,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('id', $this->id);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('targetedAuthenticationMethod', $this->targetedAuthenticationMethod);
         $writer->writeEnumValue('targetType', $this->targetType);
         $writer->writeAdditionalData($this->additionalData);
@@ -118,6 +134,14 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
     }
 
     /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
      * Sets the targetedAuthenticationMethod property value. The authentication method that the user is prompted to register. The value must be microsoftAuthenticator.
      *  @param string|null $value Value to set for the targetedAuthenticationMethod property.
     */
@@ -126,7 +150,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
     }
 
     /**
-     * Sets the targetType property value. The type of the authentication method target. Possible values are: user, group, unknownFutureValue.
+     * Sets the targetType property value. The targetType property
      *  @param AuthenticationMethodTargetType|null $value Value to set for the targetType property.
     */
     public function setTargetType(?AuthenticationMethodTargetType $value ): void {

@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChatMessageReaction implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -19,6 +19,11 @@ class ChatMessageReaction implements AdditionalDataHolder, Parsable
      * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     */
     private ?DateTime $createdDateTime = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $reactionType Supported values are like, angry, sad, laugh, heart, surprised.
@@ -34,7 +39,8 @@ class ChatMessageReaction implements AdditionalDataHolder, Parsable
      * Instantiates a new chatMessageReaction and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.chatMessageReaction');
     }
 
     /**
@@ -70,9 +76,18 @@ class ChatMessageReaction implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'reactionType' => function (ParseNode $n) use ($o) { $o->setReactionType($n->getStringValue()); },
             'user' => function (ParseNode $n) use ($o) { $o->setUser($n->getObjectValue(array(ChatMessageReactionIdentitySet::class, 'createFromDiscriminatorValue'))); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -97,6 +112,7 @@ class ChatMessageReaction implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('reactionType', $this->reactionType);
         $writer->writeObjectValue('user', $this->user);
         $writer->writeAdditionalData($this->additionalData);
@@ -116,6 +132,14 @@ class ChatMessageReaction implements AdditionalDataHolder, Parsable
     */
     public function setCreatedDateTime(?DateTime $value ): void {
         $this->createdDateTime = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

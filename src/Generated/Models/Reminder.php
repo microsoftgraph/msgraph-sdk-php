@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Reminder implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -50,6 +50,11 @@ class Reminder implements AdditionalDataHolder, Parsable
     private ?string $eventWebLink = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var DateTimeTimeZone|null $reminderFireTime The date, time, and time zone that the reminder is set to occur.
     */
     private ?DateTimeTimeZone $reminderFireTime = null;
@@ -58,7 +63,8 @@ class Reminder implements AdditionalDataHolder, Parsable
      * Instantiates a new reminder and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.reminder');
     }
 
     /**
@@ -148,8 +154,17 @@ class Reminder implements AdditionalDataHolder, Parsable
             'eventStartTime' => function (ParseNode $n) use ($o) { $o->setEventStartTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
             'eventSubject' => function (ParseNode $n) use ($o) { $o->setEventSubject($n->getStringValue()); },
             'eventWebLink' => function (ParseNode $n) use ($o) { $o->setEventWebLink($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'reminderFireTime' => function (ParseNode $n) use ($o) { $o->setReminderFireTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -172,6 +187,7 @@ class Reminder implements AdditionalDataHolder, Parsable
         $writer->writeObjectValue('eventStartTime', $this->eventStartTime);
         $writer->writeStringValue('eventSubject', $this->eventSubject);
         $writer->writeStringValue('eventWebLink', $this->eventWebLink);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('reminderFireTime', $this->reminderFireTime);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -238,6 +254,14 @@ class Reminder implements AdditionalDataHolder, Parsable
     */
     public function setEventWebLink(?string $value ): void {
         $this->eventWebLink = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

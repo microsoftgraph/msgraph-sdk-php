@@ -21,7 +21,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class EventsRequestBuilder 
 {
     /**
-     * The count property
+     * The Count property
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);

@@ -18,6 +18,7 @@ class Windows10CustomConfiguration extends DeviceConfiguration implements Parsab
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.windows10CustomConfiguration');
     }
 
     /**

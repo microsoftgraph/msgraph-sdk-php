@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TermsExpiration implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -20,6 +20,11 @@ class TermsExpiration implements AdditionalDataHolder, Parsable
      * @var DateInterval|null $frequency Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of 1 month.
     */
     private ?DateInterval $frequency = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var DateTime|null $startDateTime The DateTime when the agreement is set to expire for all users. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -30,7 +35,8 @@ class TermsExpiration implements AdditionalDataHolder, Parsable
      * Instantiates a new termsExpiration and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.termsExpiration');
     }
 
     /**
@@ -58,6 +64,7 @@ class TermsExpiration implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'frequency' => function (ParseNode $n) use ($o) { $o->setFrequency($n->getDateIntervalValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
         ];
     }
@@ -68,6 +75,14 @@ class TermsExpiration implements AdditionalDataHolder, Parsable
     */
     public function getFrequency(): ?DateInterval {
         return $this->frequency;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -84,6 +99,7 @@ class TermsExpiration implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeDateIntervalValue('frequency', $this->frequency);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -102,6 +118,14 @@ class TermsExpiration implements AdditionalDataHolder, Parsable
     */
     public function setFrequency(?DateInterval $value ): void {
         $this->frequency = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

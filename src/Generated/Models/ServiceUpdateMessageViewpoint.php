@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,10 +30,16 @@ class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Parsable
     private ?bool $isRead = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new serviceUpdateMessageViewpoint and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.serviceUpdateMessageViewpoint');
     }
 
     /**
@@ -63,6 +69,7 @@ class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Parsable
             'isArchived' => function (ParseNode $n) use ($o) { $o->setIsArchived($n->getBooleanValue()); },
             'isFavorited' => function (ParseNode $n) use ($o) { $o->setIsFavorited($n->getBooleanValue()); },
             'isRead' => function (ParseNode $n) use ($o) { $o->setIsRead($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
 
@@ -91,6 +98,14 @@ class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -98,6 +113,7 @@ class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('isArchived', $this->isArchived);
         $writer->writeBooleanValue('isFavorited', $this->isFavorited);
         $writer->writeBooleanValue('isRead', $this->isRead);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -131,6 +147,14 @@ class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Parsable
     */
     public function setIsRead(?bool $value ): void {
         $this->isRead = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

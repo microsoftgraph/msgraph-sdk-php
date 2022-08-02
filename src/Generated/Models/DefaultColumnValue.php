@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DefaultColumnValue implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class DefaultColumnValue implements AdditionalDataHolder, Parsable
      * @var string|null $formula The formula used to compute the default value for this column.
     */
     private ?string $formula = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $value The direct value to use as the default value for this column.
@@ -28,7 +33,8 @@ class DefaultColumnValue implements AdditionalDataHolder, Parsable
      * Instantiates a new defaultColumnValue and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.defaultColumnValue');
     }
 
     /**
@@ -56,6 +62,7 @@ class DefaultColumnValue implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'formula' => function (ParseNode $n) use ($o) { $o->setFormula($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getStringValue()); },
         ];
     }
@@ -66,6 +73,14 @@ class DefaultColumnValue implements AdditionalDataHolder, Parsable
     */
     public function getFormula(): ?string {
         return $this->formula;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class DefaultColumnValue implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('formula', $this->formula);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('value', $this->value);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -100,6 +116,14 @@ class DefaultColumnValue implements AdditionalDataHolder, Parsable
     */
     public function setFormula(?string $value ): void {
         $this->formula = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

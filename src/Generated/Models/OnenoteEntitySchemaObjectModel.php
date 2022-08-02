@@ -19,6 +19,7 @@ class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel implements P
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.onenoteEntitySchemaObjectModel');
     }
 
     /**
@@ -31,8 +32,11 @@ class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel implements P
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.notebook': return new Notebook();
                 case '#microsoft.graph.onenoteEntityHierarchyModel': return new OnenoteEntityHierarchyModel();
                 case '#microsoft.graph.onenotePage': return new OnenotePage();
+                case '#microsoft.graph.onenoteSection': return new OnenoteSection();
+                case '#microsoft.graph.sectionGroup': return new SectionGroup();
             }
         }
         return new OnenoteEntitySchemaObjectModel();

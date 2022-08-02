@@ -10,14 +10,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CallRoute implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var IdentitySet|null $EscapedFinal The final property
+     * @var IdentitySet|null $escapedFinal The final property
     */
     private ?IdentitySet $escapedFinal = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var IdentitySet|null $original The original property
@@ -25,7 +30,7 @@ class CallRoute implements AdditionalDataHolder, Parsable
     private ?IdentitySet $original = null;
     
     /**
-     * @var RoutingType|null $routingType Possible values are: forwarded, lookup, selfFork.
+     * @var RoutingType|null $routingType The routingType property
     */
     private ?RoutingType $routingType = null;
     
@@ -33,7 +38,8 @@ class CallRoute implements AdditionalDataHolder, Parsable
      * Instantiates a new callRoute and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.callRoute');
     }
 
     /**
@@ -61,6 +67,7 @@ class CallRoute implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'final' => function (ParseNode $n) use ($o) { $o->setFinal($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'original' => function (ParseNode $n) use ($o) { $o->setOriginal($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
             'routingType' => function (ParseNode $n) use ($o) { $o->setRoutingType($n->getEnumValue(RoutingType::class)); },
         ];
@@ -75,6 +82,14 @@ class CallRoute implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the original property value. The original property
      * @return IdentitySet|null
     */
@@ -83,7 +98,7 @@ class CallRoute implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the routingType property value. Possible values are: forwarded, lookup, selfFork.
+     * Gets the routingType property value. The routingType property
      * @return RoutingType|null
     */
     public function getRoutingType(): ?RoutingType {
@@ -96,6 +111,7 @@ class CallRoute implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('final', $this->escapedFinal);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('original', $this->original);
         $writer->writeEnumValue('routingType', $this->routingType);
         $writer->writeAdditionalData($this->additionalData);
@@ -118,6 +134,14 @@ class CallRoute implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
      * Sets the original property value. The original property
      *  @param IdentitySet|null $value Value to set for the original property.
     */
@@ -126,7 +150,7 @@ class CallRoute implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the routingType property value. Possible values are: forwarded, lookup, selfFork.
+     * Sets the routingType property value. The routingType property
      *  @param RoutingType|null $value Value to set for the routingType property.
     */
     public function setRoutingType(?RoutingType $value ): void {

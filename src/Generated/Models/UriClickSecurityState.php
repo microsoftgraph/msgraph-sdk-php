@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UriClickSecurityState implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -29,6 +29,11 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
      * @var string|null $id The id property
     */
     private ?string $id = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $sourceId The sourceId property
@@ -49,7 +54,8 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
      * Instantiates a new uriClickSecurityState and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.uriClickSecurityState');
     }
 
     /**
@@ -95,6 +101,7 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
             'clickAction' => function (ParseNode $n) use ($o) { $o->setClickAction($n->getStringValue()); },
             'clickDateTime' => function (ParseNode $n) use ($o) { $o->setClickDateTime($n->getDateTimeValue()); },
             'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'sourceId' => function (ParseNode $n) use ($o) { $o->setSourceId($n->getStringValue()); },
             'uriDomain' => function (ParseNode $n) use ($o) { $o->setUriDomain($n->getStringValue()); },
             'verdict' => function (ParseNode $n) use ($o) { $o->setVerdict($n->getStringValue()); },
@@ -107,6 +114,14 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
     */
     public function getId(): ?string {
         return $this->id;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -141,6 +156,7 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('clickAction', $this->clickAction);
         $writer->writeDateTimeValue('clickDateTime', $this->clickDateTime);
         $writer->writeStringValue('id', $this->id);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('sourceId', $this->sourceId);
         $writer->writeStringValue('uriDomain', $this->uriDomain);
         $writer->writeStringValue('verdict', $this->verdict);
@@ -177,6 +193,14 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
     */
     public function setId(?string $value ): void {
         $this->id = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

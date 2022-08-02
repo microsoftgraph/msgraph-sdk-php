@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosManagedAppProtection extends TargetedManagedAppProtection implements Parsable 
 {
     /**
-     * @var ManagedAppDataEncryptionType|null $appDataEncryptionType Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
+     * @var ManagedAppDataEncryptionType|null $appDataEncryptionType Represents the level to which app data is encrypted for managed apps
     */
     private ?ManagedAppDataEncryptionType $appDataEncryptionType = null;
     
@@ -48,6 +48,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.iosManagedAppProtection');
     }
 
     /**
@@ -60,7 +61,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
     }
 
     /**
-     * Gets the appDataEncryptionType property value. Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
+     * Gets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
      * @return ManagedAppDataEncryptionType|null
     */
     public function getAppDataEncryptionType(): ?ManagedAppDataEncryptionType {
@@ -148,7 +149,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
     }
 
     /**
-     * Sets the appDataEncryptionType property value. Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
+     * Sets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
      *  @param ManagedAppDataEncryptionType|null $value Value to set for the appDataEncryptionType property.
     */
     public function setAppDataEncryptionType(?ManagedAppDataEncryptionType $value ): void {

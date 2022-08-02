@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -70,10 +70,16 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
     private ?bool $allowSort = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new workbookWorksheetProtectionOptions and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.workbookWorksheetProtectionOptions');
     }
 
     /**
@@ -199,7 +205,16 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
             'allowInsertRows' => function (ParseNode $n) use ($o) { $o->setAllowInsertRows($n->getBooleanValue()); },
             'allowPivotTables' => function (ParseNode $n) use ($o) { $o->setAllowPivotTables($n->getBooleanValue()); },
             'allowSort' => function (ParseNode $n) use ($o) { $o->setAllowSort($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -218,6 +233,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
         $writer->writeBooleanValue('allowInsertRows', $this->allowInsertRows);
         $writer->writeBooleanValue('allowPivotTables', $this->allowPivotTables);
         $writer->writeBooleanValue('allowSort', $this->allowSort);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -315,6 +331,14 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
     */
     public function setAllowSort(?bool $value ): void {
         $this->allowSort = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

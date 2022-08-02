@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -35,6 +35,11 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
     private ?string $exchangeServer = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var bool|null $passwordRotationEnabled Not yet documented
     */
     private ?bool $passwordRotationEnabled = null;
@@ -48,7 +53,8 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
      * Instantiates a new updateWindowsDeviceAccountActionParameter and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.updateWindowsDeviceAccountActionParameter');
     }
 
     /**
@@ -111,9 +117,18 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
             'deviceAccount' => function (ParseNode $n) use ($o) { $o->setDeviceAccount($n->getObjectValue(array(WindowsDeviceAccount::class, 'createFromDiscriminatorValue'))); },
             'deviceAccountEmail' => function (ParseNode $n) use ($o) { $o->setDeviceAccountEmail($n->getStringValue()); },
             'exchangeServer' => function (ParseNode $n) use ($o) { $o->setExchangeServer($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'passwordRotationEnabled' => function (ParseNode $n) use ($o) { $o->setPasswordRotationEnabled($n->getBooleanValue()); },
             'sessionInitiationProtocalAddress' => function (ParseNode $n) use ($o) { $o->setSessionInitiationProtocalAddress($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -141,6 +156,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
         $writer->writeObjectValue('deviceAccount', $this->deviceAccount);
         $writer->writeStringValue('deviceAccountEmail', $this->deviceAccountEmail);
         $writer->writeStringValue('exchangeServer', $this->exchangeServer);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeBooleanValue('passwordRotationEnabled', $this->passwordRotationEnabled);
         $writer->writeStringValue('sessionInitiationProtocalAddress', $this->sessionInitiationProtocalAddress);
         $writer->writeAdditionalData($this->additionalData);
@@ -184,6 +200,14 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
     */
     public function setExchangeServer(?string $value ): void {
         $this->exchangeServer = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

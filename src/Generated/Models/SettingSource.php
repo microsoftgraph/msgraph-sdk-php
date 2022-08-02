@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SettingSource implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,7 +25,12 @@ class SettingSource implements AdditionalDataHolder, Parsable
     private ?string $id = null;
     
     /**
-     * @var SettingSourceType|null $sourceType Not yet documented. Possible values are: deviceConfiguration, deviceIntent.
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
+     * @var SettingSourceType|null $sourceType The sourceType property
     */
     private ?SettingSourceType $sourceType = null;
     
@@ -33,7 +38,8 @@ class SettingSource implements AdditionalDataHolder, Parsable
      * Instantiates a new settingSource and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.settingSource');
     }
 
     /**
@@ -70,6 +76,7 @@ class SettingSource implements AdditionalDataHolder, Parsable
         return  [
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'sourceType' => function (ParseNode $n) use ($o) { $o->setSourceType($n->getEnumValue(SettingSourceType::class)); },
         ];
     }
@@ -83,7 +90,15 @@ class SettingSource implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the sourceType property value. Not yet documented. Possible values are: deviceConfiguration, deviceIntent.
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
+     * Gets the sourceType property value. The sourceType property
      * @return SettingSourceType|null
     */
     public function getSourceType(): ?SettingSourceType {
@@ -97,6 +112,7 @@ class SettingSource implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeStringValue('id', $this->id);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('sourceType', $this->sourceType);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -126,7 +142,15 @@ class SettingSource implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the sourceType property value. Not yet documented. Possible values are: deviceConfiguration, deviceIntent.
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
+     * Sets the sourceType property value. The sourceType property
      *  @param SettingSourceType|null $value Value to set for the sourceType property.
     */
     public function setSourceType(?SettingSourceType $value ): void {

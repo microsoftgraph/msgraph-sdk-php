@@ -18,6 +18,7 @@ class OrganizationalBranding extends OrganizationalBrandingProperties implements
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.organizationalBranding');
     }
 
     /**

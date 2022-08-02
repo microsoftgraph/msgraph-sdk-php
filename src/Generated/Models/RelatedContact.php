@@ -15,7 +15,7 @@ class RelatedContact implements AdditionalDataHolder, Parsable
     private ?bool $accessConsent = null;
     
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -35,7 +35,12 @@ class RelatedContact implements AdditionalDataHolder, Parsable
     private ?string $mobilePhone = null;
     
     /**
-     * @var ContactRelationship|null $relationship Relationship to the user. Possible values are: parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
+     * @var ContactRelationship|null $relationship The relationship property
     */
     private ?ContactRelationship $relationship = null;
     
@@ -43,7 +48,8 @@ class RelatedContact implements AdditionalDataHolder, Parsable
      * Instantiates a new relatedContact and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.relatedContact');
     }
 
     /**
@@ -98,6 +104,7 @@ class RelatedContact implements AdditionalDataHolder, Parsable
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'emailAddress' => function (ParseNode $n) use ($o) { $o->setEmailAddress($n->getStringValue()); },
             'mobilePhone' => function (ParseNode $n) use ($o) { $o->setMobilePhone($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'relationship' => function (ParseNode $n) use ($o) { $o->setRelationship($n->getEnumValue(ContactRelationship::class)); },
         ];
     }
@@ -111,7 +118,15 @@ class RelatedContact implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the relationship property value. Relationship to the user. Possible values are: parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
+     * Gets the relationship property value. The relationship property
      * @return ContactRelationship|null
     */
     public function getRelationship(): ?ContactRelationship {
@@ -127,6 +142,7 @@ class RelatedContact implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeStringValue('emailAddress', $this->emailAddress);
         $writer->writeStringValue('mobilePhone', $this->mobilePhone);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('relationship', $this->relationship);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -172,7 +188,15 @@ class RelatedContact implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the relationship property value. Relationship to the user. Possible values are: parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
+     * Sets the relationship property value. The relationship property
      *  @param ContactRelationship|null $value Value to set for the relationship property.
     */
     public function setRelationship(?ContactRelationship $value ): void {

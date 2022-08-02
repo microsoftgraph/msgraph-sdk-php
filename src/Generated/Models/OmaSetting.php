@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OmaSetting implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class OmaSetting implements AdditionalDataHolder, Parsable
     private ?string $displayName = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $omaUri OMA.
     */
     private ?string $omaUri = null;
@@ -33,7 +38,8 @@ class OmaSetting implements AdditionalDataHolder, Parsable
      * Instantiates a new omaSetting and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.omaSetting');
     }
 
     /**
@@ -42,6 +48,19 @@ class OmaSetting implements AdditionalDataHolder, Parsable
      * @return OmaSetting
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): OmaSetting {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.omaSettingBase64': return new OmaSettingBase64();
+                case '#microsoft.graph.omaSettingBoolean': return new OmaSettingBoolean();
+                case '#microsoft.graph.omaSettingDateTime': return new OmaSettingDateTime();
+                case '#microsoft.graph.omaSettingFloatingPoint': return new OmaSettingFloatingPoint();
+                case '#microsoft.graph.omaSettingInteger': return new OmaSettingInteger();
+                case '#microsoft.graph.omaSettingString': return new OmaSettingString();
+                case '#microsoft.graph.omaSettingStringXml': return new OmaSettingStringXml();
+            }
+        }
         return new OmaSetting();
     }
 
@@ -78,8 +97,17 @@ class OmaSetting implements AdditionalDataHolder, Parsable
         return  [
             'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'omaUri' => function (ParseNode $n) use ($o) { $o->setOmaUri($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -97,6 +125,7 @@ class OmaSetting implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('description', $this->description);
         $writer->writeStringValue('displayName', $this->displayName);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('omaUri', $this->omaUri);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +152,14 @@ class OmaSetting implements AdditionalDataHolder, Parsable
     */
     public function setDisplayName(?string $value ): void {
         $this->displayName = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

@@ -44,10 +44,11 @@ class SubscribedSku extends Entity implements Parsable
     private ?string $skuPartNumber = null;
     
     /**
-     * Instantiates a new subscribedSku and sets the default values.
+     * Instantiates a new SubscribedSku and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.subscribedSku');
     }
 
     /**

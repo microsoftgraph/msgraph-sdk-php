@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -40,9 +40,19 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     private ?ConditionalAccessLocations $locations = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var ConditionalAccessPlatforms|null $platforms Platforms included in and excluded from the policy.
     */
     private ?ConditionalAccessPlatforms $platforms = null;
+    
+    /**
+     * @var array<string>|null $servicePrincipalRiskLevels Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
+    */
+    private ?array $servicePrincipalRiskLevels = null;
     
     /**
      * @var array<string>|null $signInRiskLevels Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
@@ -63,7 +73,8 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
      * Instantiates a new conditionalAccessConditionSet and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.conditionalAccessConditionSet');
     }
 
     /**
@@ -127,7 +138,9 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
             'clientAppTypes' => function (ParseNode $n) use ($o) { $o->setClientAppTypes($n->getCollectionOfPrimitiveValues()); },
             'devices' => function (ParseNode $n) use ($o) { $o->setDevices($n->getObjectValue(array(ConditionalAccessDevices::class, 'createFromDiscriminatorValue'))); },
             'locations' => function (ParseNode $n) use ($o) { $o->setLocations($n->getObjectValue(array(ConditionalAccessLocations::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'platforms' => function (ParseNode $n) use ($o) { $o->setPlatforms($n->getObjectValue(array(ConditionalAccessPlatforms::class, 'createFromDiscriminatorValue'))); },
+            'servicePrincipalRiskLevels' => function (ParseNode $n) use ($o) { $o->setServicePrincipalRiskLevels($n->getCollectionOfPrimitiveValues()); },
             'signInRiskLevels' => function (ParseNode $n) use ($o) { $o->setSignInRiskLevels($n->getCollectionOfPrimitiveValues()); },
             'userRiskLevels' => function (ParseNode $n) use ($o) { $o->setUserRiskLevels($n->getCollectionOfPrimitiveValues()); },
             'users' => function (ParseNode $n) use ($o) { $o->setUsers($n->getObjectValue(array(ConditionalAccessUsers::class, 'createFromDiscriminatorValue'))); },
@@ -143,11 +156,27 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the platforms property value. Platforms included in and excluded from the policy.
      * @return ConditionalAccessPlatforms|null
     */
     public function getPlatforms(): ?ConditionalAccessPlatforms {
         return $this->platforms;
+    }
+
+    /**
+     * Gets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
+     * @return array<string>|null
+    */
+    public function getServicePrincipalRiskLevels(): ?array {
+        return $this->servicePrincipalRiskLevels;
     }
 
     /**
@@ -184,7 +213,9 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
         $writer->writeCollectionOfPrimitiveValues('clientAppTypes', $this->clientAppTypes);
         $writer->writeObjectValue('devices', $this->devices);
         $writer->writeObjectValue('locations', $this->locations);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('platforms', $this->platforms);
+        $writer->writeCollectionOfPrimitiveValues('servicePrincipalRiskLevels', $this->servicePrincipalRiskLevels);
         $writer->writeCollectionOfPrimitiveValues('signInRiskLevels', $this->signInRiskLevels);
         $writer->writeCollectionOfPrimitiveValues('userRiskLevels', $this->userRiskLevels);
         $writer->writeObjectValue('users', $this->users);
@@ -240,11 +271,27 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
      * Sets the platforms property value. Platforms included in and excluded from the policy.
      *  @param ConditionalAccessPlatforms|null $value Value to set for the platforms property.
     */
     public function setPlatforms(?ConditionalAccessPlatforms $value ): void {
         $this->platforms = $value;
+    }
+
+    /**
+     * Sets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
+     *  @param array<string>|null $value Value to set for the servicePrincipalRiskLevels property.
+    */
+    public function setServicePrincipalRiskLevels(?array $value ): void {
+        $this->servicePrincipalRiskLevels = $value;
     }
 
     /**

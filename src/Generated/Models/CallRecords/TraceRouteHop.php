@@ -11,12 +11,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TraceRouteHop implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var int|null $hopCount The network path count of this hop that was used to compute the RTT.
+     * @var int|null $hopCount The network path count of this hop that was used to compute the round-trip time.
     */
     private ?int $hopCount = null;
     
@@ -24,6 +24,11 @@ class TraceRouteHop implements AdditionalDataHolder, Parsable
      * @var string|null $ipAddress IP address used for this hop in the network trace.
     */
     private ?string $ipAddress = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var DateInterval|null $roundTripTime The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in [ISO 8601][] format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
@@ -34,7 +39,8 @@ class TraceRouteHop implements AdditionalDataHolder, Parsable
      * Instantiates a new traceRouteHop and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.callRecords.traceRouteHop');
     }
 
     /**
@@ -63,12 +69,13 @@ class TraceRouteHop implements AdditionalDataHolder, Parsable
         return  [
             'hopCount' => function (ParseNode $n) use ($o) { $o->setHopCount($n->getIntegerValue()); },
             'ipAddress' => function (ParseNode $n) use ($o) { $o->setIpAddress($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'roundTripTime' => function (ParseNode $n) use ($o) { $o->setRoundTripTime($n->getDateIntervalValue()); },
         ];
     }
 
     /**
-     * Gets the hopCount property value. The network path count of this hop that was used to compute the RTT.
+     * Gets the hopCount property value. The network path count of this hop that was used to compute the round-trip time.
      * @return int|null
     */
     public function getHopCount(): ?int {
@@ -81,6 +88,14 @@ class TraceRouteHop implements AdditionalDataHolder, Parsable
     */
     public function getIpAddress(): ?string {
         return $this->ipAddress;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -98,6 +113,7 @@ class TraceRouteHop implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeIntegerValue('hopCount', $this->hopCount);
         $writer->writeStringValue('ipAddress', $this->ipAddress);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeDateIntervalValue('roundTripTime', $this->roundTripTime);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -111,7 +127,7 @@ class TraceRouteHop implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the hopCount property value. The network path count of this hop that was used to compute the RTT.
+     * Sets the hopCount property value. The network path count of this hop that was used to compute the round-trip time.
      *  @param int|null $value Value to set for the hopCount property.
     */
     public function setHopCount(?int $value ): void {
@@ -124,6 +140,14 @@ class TraceRouteHop implements AdditionalDataHolder, Parsable
     */
     public function setIpAddress(?string $value ): void {
         $this->ipAddress = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

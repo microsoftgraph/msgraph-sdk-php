@@ -20,10 +20,11 @@ class PrintOperation extends Entity implements Parsable
     private ?PrintOperationStatus $status = null;
     
     /**
-     * Instantiates a new printOperation and sets the default values.
+     * Instantiates a new PrintOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.printOperation');
     }
 
     /**

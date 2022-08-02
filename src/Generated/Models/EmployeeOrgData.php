@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EmployeeOrgData implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,10 +25,16 @@ class EmployeeOrgData implements AdditionalDataHolder, Parsable
     private ?string $division = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new employeeOrgData and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.employeeOrgData');
     }
 
     /**
@@ -73,7 +79,16 @@ class EmployeeOrgData implements AdditionalDataHolder, Parsable
         return  [
             'costCenter' => function (ParseNode $n) use ($o) { $o->setCostCenter($n->getStringValue()); },
             'division' => function (ParseNode $n) use ($o) { $o->setDivision($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -83,6 +98,7 @@ class EmployeeOrgData implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('costCenter', $this->costCenter);
         $writer->writeStringValue('division', $this->division);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -108,6 +124,14 @@ class EmployeeOrgData implements AdditionalDataHolder, Parsable
     */
     public function setDivision(?string $value ): void {
         $this->division = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

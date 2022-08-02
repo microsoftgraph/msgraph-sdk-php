@@ -10,17 +10,17 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * @var AutomaticUpdateMode|null $automaticUpdateMode Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl, windowsDefault.
+     * @var AutomaticUpdateMode|null $automaticUpdateMode Possible values for automatic update mode.
     */
     private ?AutomaticUpdateMode $automaticUpdateMode = null;
     
     /**
-     * @var WindowsUpdateType|null $businessReadyUpdatesOnly Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
+     * @var WindowsUpdateType|null $businessReadyUpdatesOnly Which branch devices will receive their updates from
     */
     private ?WindowsUpdateType $businessReadyUpdatesOnly = null;
     
     /**
-     * @var WindowsDeliveryOptimizationMode|null $deliveryOptimizationMode Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+     * @var WindowsDeliveryOptimizationMode|null $deliveryOptimizationMode Delivery optimization mode for peer distribution
     */
     private ?WindowsDeliveryOptimizationMode $deliveryOptimizationMode = null;
     
@@ -55,7 +55,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     private ?bool $microsoftUpdateServiceAllowed = null;
     
     /**
-     * @var PrereleaseFeatures|null $prereleaseFeatures The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
+     * @var PrereleaseFeatures|null $prereleaseFeatures Possible values for pre-release features.
     */
     private ?PrereleaseFeatures $prereleaseFeatures = null;
     
@@ -79,6 +79,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.windowsUpdateForBusinessConfiguration');
     }
 
     /**
@@ -91,7 +92,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Gets the automaticUpdateMode property value. Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl, windowsDefault.
+     * Gets the automaticUpdateMode property value. Possible values for automatic update mode.
      * @return AutomaticUpdateMode|null
     */
     public function getAutomaticUpdateMode(): ?AutomaticUpdateMode {
@@ -99,7 +100,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Gets the businessReadyUpdatesOnly property value. Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
+     * Gets the businessReadyUpdatesOnly property value. Which branch devices will receive their updates from
      * @return WindowsUpdateType|null
     */
     public function getBusinessReadyUpdatesOnly(): ?WindowsUpdateType {
@@ -107,7 +108,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Gets the deliveryOptimizationMode property value. Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+     * Gets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
      * @return WindowsDeliveryOptimizationMode|null
     */
     public function getDeliveryOptimizationMode(): ?WindowsDeliveryOptimizationMode {
@@ -186,7 +187,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Gets the prereleaseFeatures property value. The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
+     * Gets the prereleaseFeatures property value. Possible values for pre-release features.
      * @return PrereleaseFeatures|null
     */
     public function getPrereleaseFeatures(): ?PrereleaseFeatures {
@@ -239,7 +240,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Sets the automaticUpdateMode property value. Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl, windowsDefault.
+     * Sets the automaticUpdateMode property value. Possible values for automatic update mode.
      *  @param AutomaticUpdateMode|null $value Value to set for the automaticUpdateMode property.
     */
     public function setAutomaticUpdateMode(?AutomaticUpdateMode $value ): void {
@@ -247,7 +248,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Sets the businessReadyUpdatesOnly property value. Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
+     * Sets the businessReadyUpdatesOnly property value. Which branch devices will receive their updates from
      *  @param WindowsUpdateType|null $value Value to set for the businessReadyUpdatesOnly property.
     */
     public function setBusinessReadyUpdatesOnly(?WindowsUpdateType $value ): void {
@@ -255,7 +256,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Sets the deliveryOptimizationMode property value. Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+     * Sets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
      *  @param WindowsDeliveryOptimizationMode|null $value Value to set for the deliveryOptimizationMode property.
     */
     public function setDeliveryOptimizationMode(?WindowsDeliveryOptimizationMode $value ): void {
@@ -311,7 +312,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Sets the prereleaseFeatures property value. The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
+     * Sets the prereleaseFeatures property value. Possible values for pre-release features.
      *  @param PrereleaseFeatures|null $value Value to set for the prereleaseFeatures property.
     */
     public function setPrereleaseFeatures(?PrereleaseFeatures $value ): void {

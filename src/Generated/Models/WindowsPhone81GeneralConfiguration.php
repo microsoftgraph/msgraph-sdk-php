@@ -34,7 +34,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
     private ?bool $cellularBlockWifiTethering = null;
     
     /**
-     * @var AppListType|null $compliantAppListType List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * @var AppListType|null $compliantAppListType Possible values of the compliance app list.
     */
     private ?AppListType $compliantAppListType = null;
     
@@ -104,7 +104,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
     private ?bool $passwordRequired = null;
     
     /**
-     * @var RequiredPasswordType|null $passwordRequiredType Password type that is required. Possible values are: deviceDefault, alphanumeric, numeric.
+     * @var RequiredPasswordType|null $passwordRequiredType Possible values of required passwords.
     */
     private ?RequiredPasswordType $passwordRequiredType = null;
     
@@ -158,6 +158,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.windowsPhone81GeneralConfiguration');
     }
 
     /**
@@ -210,7 +211,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
     }
 
     /**
-     * Gets the compliantAppListType property value. List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * Gets the compliantAppListType property value. Possible values of the compliance app list.
      * @return AppListType|null
     */
     public function getCompliantAppListType(): ?AppListType {
@@ -361,7 +362,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
     }
 
     /**
-     * Gets the passwordRequiredType property value. Password type that is required. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return RequiredPasswordType|null
     */
     public function getPasswordRequiredType(): ?RequiredPasswordType {
@@ -518,7 +519,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
     }
 
     /**
-     * Sets the compliantAppListType property value. List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * Sets the compliantAppListType property value. Possible values of the compliance app list.
      *  @param AppListType|null $value Value to set for the compliantAppListType property.
     */
     public function setCompliantAppListType(?AppListType $value ): void {
@@ -630,7 +631,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
     }
 
     /**
-     * Sets the passwordRequiredType property value. Password type that is required. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Sets the passwordRequiredType property value. Possible values of required passwords.
      *  @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
     */
     public function setPasswordRequiredType(?RequiredPasswordType $value ): void {

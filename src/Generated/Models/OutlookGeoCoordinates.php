@@ -15,7 +15,7 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable
     private ?float $accuracy = null;
     
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -40,10 +40,16 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable
     private ?float $longitude = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new outlookGeoCoordinates and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.outlookGeoCoordinates');
     }
 
     /**
@@ -99,6 +105,7 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable
             'altitudeAccuracy' => function (ParseNode $n) use ($o) { $o->setAltitudeAccuracy($n->getFloatValue()); },
             'latitude' => function (ParseNode $n) use ($o) { $o->setLatitude($n->getFloatValue()); },
             'longitude' => function (ParseNode $n) use ($o) { $o->setLongitude($n->getFloatValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
 
@@ -119,6 +126,14 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -128,6 +143,7 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable
         $writer->writeFloatValue('altitudeAccuracy', $this->altitudeAccuracy);
         $writer->writeFloatValue('latitude', $this->latitude);
         $writer->writeFloatValue('longitude', $this->longitude);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -177,6 +193,14 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable
     */
     public function setLongitude(?float $value ): void {
         $this->longitude = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

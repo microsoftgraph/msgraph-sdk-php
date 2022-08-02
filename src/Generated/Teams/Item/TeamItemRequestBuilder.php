@@ -23,6 +23,7 @@ use Microsoft\Graph\Generated\Teams\Item\Members\Item\ConversationMemberItemRequ
 use Microsoft\Graph\Generated\Teams\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Operations\Item\TeamsAsyncOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\Photo\PhotoRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\PrimaryChannelRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Schedule\ScheduleRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
@@ -112,6 +113,13 @@ class TeamItemRequestBuilder
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * The photo property
+    */
+    public function photo(): PhotoRequestBuilder {
+        return new PhotoRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * The primaryChannel property

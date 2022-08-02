@@ -10,17 +10,22 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MediaContentRatingGermany implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var RatingGermanyMoviesType|null $movieRating Movies rating selected for Germany. Possible values are: allAllowed, allBlocked, general, agesAbove6, agesAbove12, agesAbove16, adults.
+     * @var RatingGermanyMoviesType|null $movieRating Movies rating labels in Germany
     */
     private ?RatingGermanyMoviesType $movieRating = null;
     
     /**
-     * @var RatingGermanyTelevisionType|null $tvRating TV rating selected for Germany. Possible values are: allAllowed, allBlocked, general, agesAbove6, agesAbove12, agesAbove16, adults.
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
+     * @var RatingGermanyTelevisionType|null $tvRating TV content rating labels in Germany
     */
     private ?RatingGermanyTelevisionType $tvRating = null;
     
@@ -28,7 +33,8 @@ class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
      * Instantiates a new mediaContentRatingGermany and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.mediaContentRatingGermany');
     }
 
     /**
@@ -56,12 +62,13 @@ class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'movieRating' => function (ParseNode $n) use ($o) { $o->setMovieRating($n->getEnumValue(RatingGermanyMoviesType::class)); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'tvRating' => function (ParseNode $n) use ($o) { $o->setTvRating($n->getEnumValue(RatingGermanyTelevisionType::class)); },
         ];
     }
 
     /**
-     * Gets the movieRating property value. Movies rating selected for Germany. Possible values are: allAllowed, allBlocked, general, agesAbove6, agesAbove12, agesAbove16, adults.
+     * Gets the movieRating property value. Movies rating labels in Germany
      * @return RatingGermanyMoviesType|null
     */
     public function getMovieRating(): ?RatingGermanyMoviesType {
@@ -69,7 +76,15 @@ class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the tvRating property value. TV rating selected for Germany. Possible values are: allAllowed, allBlocked, general, agesAbove6, agesAbove12, agesAbove16, adults.
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
+     * Gets the tvRating property value. TV content rating labels in Germany
      * @return RatingGermanyTelevisionType|null
     */
     public function getTvRating(): ?RatingGermanyTelevisionType {
@@ -82,6 +97,7 @@ class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeEnumValue('movieRating', $this->movieRating);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('tvRating', $this->tvRating);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -95,7 +111,7 @@ class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the movieRating property value. Movies rating selected for Germany. Possible values are: allAllowed, allBlocked, general, agesAbove6, agesAbove12, agesAbove16, adults.
+     * Sets the movieRating property value. Movies rating labels in Germany
      *  @param RatingGermanyMoviesType|null $value Value to set for the movieRating property.
     */
     public function setMovieRating(?RatingGermanyMoviesType $value ): void {
@@ -103,7 +119,15 @@ class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the tvRating property value. TV rating selected for Germany. Possible values are: allAllowed, allBlocked, general, agesAbove6, agesAbove12, agesAbove16, adults.
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
+     * Sets the tvRating property value. TV content rating labels in Germany
      *  @param RatingGermanyTelevisionType|null $value Value to set for the tvRating property.
     */
     public function setTvRating(?RatingGermanyTelevisionType $value ): void {

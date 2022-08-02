@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IncomingContext implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class IncomingContext implements AdditionalDataHolder, Parsable
      * @var string|null $observedParticipantId The id of the participant that is under observation. Read-only.
     */
     private ?string $observedParticipantId = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var IdentitySet|null $onBehalfOf The identity that the call is happening on behalf of.
@@ -38,7 +43,8 @@ class IncomingContext implements AdditionalDataHolder, Parsable
      * Instantiates a new incomingContext and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.incomingContext');
     }
 
     /**
@@ -66,6 +72,7 @@ class IncomingContext implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'observedParticipantId' => function (ParseNode $n) use ($o) { $o->setObservedParticipantId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'onBehalfOf' => function (ParseNode $n) use ($o) { $o->setOnBehalfOf($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
             'sourceParticipantId' => function (ParseNode $n) use ($o) { $o->setSourceParticipantId($n->getStringValue()); },
             'transferor' => function (ParseNode $n) use ($o) { $o->setTransferor($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
@@ -78,6 +85,14 @@ class IncomingContext implements AdditionalDataHolder, Parsable
     */
     public function getObservedParticipantId(): ?string {
         return $this->observedParticipantId;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -110,6 +125,7 @@ class IncomingContext implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('observedParticipantId', $this->observedParticipantId);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('onBehalfOf', $this->onBehalfOf);
         $writer->writeStringValue('sourceParticipantId', $this->sourceParticipantId);
         $writer->writeObjectValue('transferor', $this->transferor);
@@ -130,6 +146,14 @@ class IncomingContext implements AdditionalDataHolder, Parsable
     */
     public function setObservedParticipantId(?string $value ): void {
         $this->observedParticipantId = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

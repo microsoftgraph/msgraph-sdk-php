@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable
      * @var LocaleInfo|null $messageLanguage The language that the automatic reply message is in.
     */
     private ?LocaleInfo $messageLanguage = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var DateTimeTimeZone|null $scheduledEndTime The date and time that automatic replies are set to end.
@@ -38,7 +43,8 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable
      * Instantiates a new automaticRepliesMailTips and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.automaticRepliesMailTips');
     }
 
     /**
@@ -67,6 +73,7 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable
         return  [
             'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getStringValue()); },
             'messageLanguage' => function (ParseNode $n) use ($o) { $o->setMessageLanguage($n->getObjectValue(array(LocaleInfo::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'scheduledEndTime' => function (ParseNode $n) use ($o) { $o->setScheduledEndTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
             'scheduledStartTime' => function (ParseNode $n) use ($o) { $o->setScheduledStartTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
         ];
@@ -86,6 +93,14 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable
     */
     public function getMessageLanguage(): ?LocaleInfo {
         return $this->messageLanguage;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -111,6 +126,7 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('message', $this->message);
         $writer->writeObjectValue('messageLanguage', $this->messageLanguage);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('scheduledEndTime', $this->scheduledEndTime);
         $writer->writeObjectValue('scheduledStartTime', $this->scheduledStartTime);
         $writer->writeAdditionalData($this->additionalData);
@@ -138,6 +154,14 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable
     */
     public function setMessageLanguage(?LocaleInfo $value ): void {
         $this->messageLanguage = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

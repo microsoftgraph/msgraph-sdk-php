@@ -13,7 +13,7 @@ class EducationUserItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The ref property
+     * The Ref property
     */
     public function ref(): RefRequestBuilder {
         return new RefRequestBuilder($this->pathParameters, $this->requestAdapter);

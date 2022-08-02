@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -20,7 +20,12 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable
     private ?string $name = null;
     
     /**
-     * @var string|null $type The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String.  See the table below for more details.
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
+     * @var string|null $type The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table below for more details.
     */
     private ?string $type = null;
     
@@ -28,7 +33,8 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable
      * Instantiates a new extensionSchemaProperty and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.extensionSchemaProperty');
     }
 
     /**
@@ -56,6 +62,7 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
         ];
     }
@@ -69,7 +76,15 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String.  See the table below for more details.
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
+     * Gets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table below for more details.
      * @return string|null
     */
     public function getType(): ?string {
@@ -82,6 +97,7 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('name', $this->name);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('type', $this->type);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -103,7 +119,15 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String.  See the table below for more details.
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
+     * Sets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table below for more details.
      *  @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value ): void {

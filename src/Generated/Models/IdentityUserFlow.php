@@ -19,10 +19,11 @@ class IdentityUserFlow extends Entity implements Parsable
     private ?float $userFlowTypeVersion = null;
     
     /**
-     * Instantiates a new identityUserFlow and sets the default values.
+     * Instantiates a new IdentityUserFlow and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.identityUserFlow');
     }
 
     /**

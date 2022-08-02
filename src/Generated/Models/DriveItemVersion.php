@@ -24,6 +24,7 @@ class DriveItemVersion extends BaseItemVersion implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.driveItemVersion');
     }
 
     /**

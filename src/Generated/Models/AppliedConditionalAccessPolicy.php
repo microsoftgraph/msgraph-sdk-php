@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -35,6 +35,11 @@ class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Parsable
     private ?string $id = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var AppliedConditionalAccessPolicyResult|null $result Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
     */
     private ?AppliedConditionalAccessPolicyResult $result = null;
@@ -43,7 +48,8 @@ class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Parsable
      * Instantiates a new appliedConditionalAccessPolicy and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.appliedConditionalAccessPolicy');
     }
 
     /**
@@ -98,6 +104,7 @@ class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Parsable
             'enforcedGrantControls' => function (ParseNode $n) use ($o) { $o->setEnforcedGrantControls($n->getCollectionOfPrimitiveValues()); },
             'enforcedSessionControls' => function (ParseNode $n) use ($o) { $o->setEnforcedSessionControls($n->getCollectionOfPrimitiveValues()); },
             'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'result' => function (ParseNode $n) use ($o) { $o->setResult($n->getEnumValue(AppliedConditionalAccessPolicyResult::class)); },
         ];
     }
@@ -108,6 +115,14 @@ class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Parsable
     */
     public function getId(): ?string {
         return $this->id;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -127,6 +142,7 @@ class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Parsable
         $writer->writeCollectionOfPrimitiveValues('enforcedGrantControls', $this->enforcedGrantControls);
         $writer->writeCollectionOfPrimitiveValues('enforcedSessionControls', $this->enforcedSessionControls);
         $writer->writeStringValue('id', $this->id);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('result', $this->result);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -169,6 +185,14 @@ class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Parsable
     */
     public function setId(?string $value ): void {
         $this->id = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

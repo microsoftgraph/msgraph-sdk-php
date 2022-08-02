@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MeetingParticipantInfo implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
      * @var IdentitySet|null $identity Identity information of the participant.
     */
     private ?IdentitySet $identity = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var OnlineMeetingRole|null $role Specifies the participant's role in the meeting.
@@ -33,7 +38,8 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
      * Instantiates a new meetingParticipantInfo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.meetingParticipantInfo');
     }
 
     /**
@@ -61,6 +67,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'identity' => function (ParseNode $n) use ($o) { $o->setIdentity($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'role' => function (ParseNode $n) use ($o) { $o->setRole($n->getEnumValue(OnlineMeetingRole::class)); },
             'upn' => function (ParseNode $n) use ($o) { $o->setUpn($n->getStringValue()); },
         ];
@@ -72,6 +79,14 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
     */
     public function getIdentity(): ?IdentitySet {
         return $this->identity;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -96,6 +111,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('identity', $this->identity);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('role', $this->role);
         $writer->writeStringValue('upn', $this->upn);
         $writer->writeAdditionalData($this->additionalData);
@@ -115,6 +131,14 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
     */
     public function setIdentity(?IdentitySet $value ): void {
         $this->identity = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

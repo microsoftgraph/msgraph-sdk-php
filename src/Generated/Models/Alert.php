@@ -155,7 +155,7 @@ class Alert extends Entity implements Parsable
     private ?array $securityResources = null;
     
     /**
-     * @var AlertSeverity|null $severity Alert severity - set by vendor/provider. Possible values are: unknown, informational, low, medium, high. Required.
+     * @var AlertSeverity|null $severity The severity property
     */
     private ?AlertSeverity $severity = null;
     
@@ -165,7 +165,7 @@ class Alert extends Entity implements Parsable
     private ?array $sourceMaterials = null;
     
     /**
-     * @var AlertStatus|null $status Alert lifecycle status (stage). Possible values are: unknown, newAlert, inProgress, resolved. (supports update). Required.
+     * @var AlertStatus|null $status The status property
     */
     private ?AlertStatus $status = null;
     
@@ -209,6 +209,7 @@ class Alert extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.alert');
     }
 
     /**
@@ -502,7 +503,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the severity property value. Alert severity - set by vendor/provider. Possible values are: unknown, informational, low, medium, high. Required.
+     * Gets the severity property value. The severity property
      * @return AlertSeverity|null
     */
     public function getSeverity(): ?AlertSeverity {
@@ -518,7 +519,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Alert lifecycle status (stage). Possible values are: unknown, newAlert, inProgress, resolved. (supports update). Required.
+     * Gets the status property value. The status property
      * @return AlertStatus|null
     */
     public function getStatus(): ?AlertStatus {
@@ -861,7 +862,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the severity property value. Alert severity - set by vendor/provider. Possible values are: unknown, informational, low, medium, high. Required.
+     * Sets the severity property value. The severity property
      *  @param AlertSeverity|null $value Value to set for the severity property.
     */
     public function setSeverity(?AlertSeverity $value ): void {
@@ -877,7 +878,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Alert lifecycle status (stage). Possible values are: unknown, newAlert, inProgress, resolved. (supports update). Required.
+     * Sets the status property value. The status property
      *  @param AlertStatus|null $value Value to set for the status property.
     */
     public function setStatus(?AlertStatus $value ): void {

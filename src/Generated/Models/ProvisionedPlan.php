@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ProvisionedPlan implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class ProvisionedPlan implements AdditionalDataHolder, Parsable
      * @var string|null $capabilityStatus For example, 'Enabled'.
     */
     private ?string $capabilityStatus = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $provisioningStatus For example, 'Success'.
@@ -33,7 +38,8 @@ class ProvisionedPlan implements AdditionalDataHolder, Parsable
      * Instantiates a new provisionedPlan and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.provisionedPlan');
     }
 
     /**
@@ -69,9 +75,18 @@ class ProvisionedPlan implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'capabilityStatus' => function (ParseNode $n) use ($o) { $o->setCapabilityStatus($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'provisioningStatus' => function (ParseNode $n) use ($o) { $o->setProvisioningStatus($n->getStringValue()); },
             'service' => function (ParseNode $n) use ($o) { $o->setService($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -96,6 +111,7 @@ class ProvisionedPlan implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('capabilityStatus', $this->capabilityStatus);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('provisioningStatus', $this->provisioningStatus);
         $writer->writeStringValue('service', $this->service);
         $writer->writeAdditionalData($this->additionalData);
@@ -115,6 +131,14 @@ class ProvisionedPlan implements AdditionalDataHolder, Parsable
     */
     public function setCapabilityStatus(?string $value ): void {
         $this->capabilityStatus = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

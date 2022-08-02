@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, P
     private ?bool $isApprovalRequiredForUpdate = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var array<AccessPackageApprovalStage>|null $stages If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required.
     */
     private ?array $stages = null;
@@ -33,7 +38,8 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, P
      * Instantiates a new accessPackageAssignmentApprovalSettings and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.accessPackageAssignmentApprovalSettings');
     }
 
     /**
@@ -62,6 +68,7 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, P
         return  [
             'isApprovalRequiredForAdd' => function (ParseNode $n) use ($o) { $o->setIsApprovalRequiredForAdd($n->getBooleanValue()); },
             'isApprovalRequiredForUpdate' => function (ParseNode $n) use ($o) { $o->setIsApprovalRequiredForUpdate($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'stages' => function (ParseNode $n) use ($o) { $o->setStages($n->getCollectionOfObjectValues(array(AccessPackageApprovalStage::class, 'createFromDiscriminatorValue'))); },
         ];
     }
@@ -83,6 +90,14 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, P
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the stages property value. If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required.
      * @return array<AccessPackageApprovalStage>|null
     */
@@ -97,6 +112,7 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, P
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('isApprovalRequiredForAdd', $this->isApprovalRequiredForAdd);
         $writer->writeBooleanValue('isApprovalRequiredForUpdate', $this->isApprovalRequiredForUpdate);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfObjectValues('stages', $this->stages);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +139,14 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, P
     */
     public function setIsApprovalRequiredForUpdate(?bool $value ): void {
         $this->isApprovalRequiredForUpdate = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

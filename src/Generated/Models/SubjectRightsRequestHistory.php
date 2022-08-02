@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -24,6 +24,11 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsable
      * @var DateTime|null $eventDateTime Data and time when the entity was changed.
     */
     private ?DateTime $eventDateTime = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var SubjectRightsRequestStage|null $stage The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
@@ -44,7 +49,8 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsable
      * Instantiates a new subjectRightsRequestHistory and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.subjectRightsRequestHistory');
     }
 
     /**
@@ -89,10 +95,19 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsable
         return  [
             'changedBy' => function (ParseNode $n) use ($o) { $o->setChangedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
             'eventDateTime' => function (ParseNode $n) use ($o) { $o->setEventDateTime($n->getDateTimeValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'stage' => function (ParseNode $n) use ($o) { $o->setStage($n->getEnumValue(SubjectRightsRequestStage::class)); },
             'stageStatus' => function (ParseNode $n) use ($o) { $o->setStageStatus($n->getEnumValue(SubjectRightsRequestStageStatus::class)); },
             'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -126,6 +141,7 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('changedBy', $this->changedBy);
         $writer->writeDateTimeValue('eventDateTime', $this->eventDateTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('stage', $this->stage);
         $writer->writeEnumValue('stageStatus', $this->stageStatus);
         $writer->writeStringValue('type', $this->type);
@@ -154,6 +170,14 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsable
     */
     public function setEventDateTime(?DateTime $value ): void {
         $this->eventDateTime = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

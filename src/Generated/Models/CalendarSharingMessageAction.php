@@ -20,7 +20,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, Parsable
     private ?CalendarSharingActionType $actionType = null;
     
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,10 +30,16 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, Parsable
     private ?CalendarSharingActionImportance $importance = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new calendarSharingMessageAction and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.calendarSharingMessageAction');
     }
 
     /**
@@ -79,6 +85,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, Parsable
             'action' => function (ParseNode $n) use ($o) { $o->setAction($n->getEnumValue(CalendarSharingAction::class)); },
             'actionType' => function (ParseNode $n) use ($o) { $o->setActionType($n->getEnumValue(CalendarSharingActionType::class)); },
             'importance' => function (ParseNode $n) use ($o) { $o->setImportance($n->getEnumValue(CalendarSharingActionImportance::class)); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
 
@@ -91,6 +98,14 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -98,6 +113,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, Parsable
         $writer->writeEnumValue('action', $this->action);
         $writer->writeEnumValue('actionType', $this->actionType);
         $writer->writeEnumValue('importance', $this->importance);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -131,6 +147,14 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, Parsable
     */
     public function setImportance(?CalendarSharingActionImportance $value ): void {
         $this->importance = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

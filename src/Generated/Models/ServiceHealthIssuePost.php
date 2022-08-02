@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -26,6 +26,11 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable
     private ?ItemBody $description = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var PostType|null $postType The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
     */
     private ?PostType $postType = null;
@@ -34,7 +39,8 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable
      * Instantiates a new serviceHealthIssuePost and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.serviceHealthIssuePost');
     }
 
     /**
@@ -79,8 +85,17 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable
         return  [
             'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
             'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getObjectValue(array(ItemBody::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'postType' => function (ParseNode $n) use ($o) { $o->setPostType($n->getEnumValue(PostType::class)); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -98,6 +113,7 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
         $writer->writeObjectValue('description', $this->description);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('postType', $this->postType);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -124,6 +140,14 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable
     */
     public function setDescription(?ItemBody $value ): void {
         $this->description = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

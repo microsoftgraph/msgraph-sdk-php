@@ -23,6 +23,7 @@ class WindowsInformationProtectionNetworkLearningSummary extends Entity implemen
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.windowsInformationProtectionNetworkLearningSummary');
     }
 
     /**

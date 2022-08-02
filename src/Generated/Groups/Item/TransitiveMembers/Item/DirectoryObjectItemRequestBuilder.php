@@ -92,7 +92,7 @@ class DirectoryObjectItemRequestBuilder
     }
 
     /**
-     * Get transitiveMembers from groups
+     * The direct and transitive members of a group. Nullable.
      * @param DirectoryObjectItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -117,7 +117,7 @@ class DirectoryObjectItemRequestBuilder
     }
 
     /**
-     * Get transitiveMembers from groups
+     * The direct and transitive members of a group. Nullable.
      * @param DirectoryObjectItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

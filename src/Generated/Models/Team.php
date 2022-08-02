@@ -95,6 +95,11 @@ class Team extends Entity implements Parsable
     private ?array $operations = null;
     
     /**
+     * @var ProfilePhoto|null $photo The team photo.
+    */
+    private ?ProfilePhoto $photo = null;
+    
+    /**
      * @var Channel|null $primaryChannel The general channel for the team.
     */
     private ?Channel $primaryChannel = null;
@@ -108,6 +113,11 @@ class Team extends Entity implements Parsable
      * @var TeamSpecialization|null $specialization Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
     */
     private ?TeamSpecialization $specialization = null;
+    
+    /**
+     * @var TeamSummary|null $summary Contains summary information about the team, including number of owners, members, and guests.
+    */
+    private ?TeamSummary $summary = null;
     
     /**
      * @var TeamsTemplate|null $template The template this team was created from. See available templates.
@@ -134,6 +144,7 @@ class Team extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.team');
     }
 
     /**
@@ -217,9 +228,11 @@ class Team extends Entity implements Parsable
             'memberSettings' => function (ParseNode $n) use ($o) { $o->setMemberSettings($n->getObjectValue(array(TeamMemberSettings::class, 'createFromDiscriminatorValue'))); },
             'messagingSettings' => function (ParseNode $n) use ($o) { $o->setMessagingSettings($n->getObjectValue(array(TeamMessagingSettings::class, 'createFromDiscriminatorValue'))); },
             'operations' => function (ParseNode $n) use ($o) { $o->setOperations($n->getCollectionOfObjectValues(array(TeamsAsyncOperation::class, 'createFromDiscriminatorValue'))); },
+            'photo' => function (ParseNode $n) use ($o) { $o->setPhoto($n->getObjectValue(array(ProfilePhoto::class, 'createFromDiscriminatorValue'))); },
             'primaryChannel' => function (ParseNode $n) use ($o) { $o->setPrimaryChannel($n->getObjectValue(array(Channel::class, 'createFromDiscriminatorValue'))); },
             'schedule' => function (ParseNode $n) use ($o) { $o->setSchedule($n->getObjectValue(array(Schedule::class, 'createFromDiscriminatorValue'))); },
             'specialization' => function (ParseNode $n) use ($o) { $o->setSpecialization($n->getEnumValue(TeamSpecialization::class)); },
+            'summary' => function (ParseNode $n) use ($o) { $o->setSummary($n->getObjectValue(array(TeamSummary::class, 'createFromDiscriminatorValue'))); },
             'template' => function (ParseNode $n) use ($o) { $o->setTemplate($n->getObjectValue(array(TeamsTemplate::class, 'createFromDiscriminatorValue'))); },
             'tenantId' => function (ParseNode $n) use ($o) { $o->setTenantId($n->getStringValue()); },
             'visibility' => function (ParseNode $n) use ($o) { $o->setVisibility($n->getEnumValue(TeamVisibilityType::class)); },
@@ -316,6 +329,14 @@ class Team extends Entity implements Parsable
     }
 
     /**
+     * Gets the photo property value. The team photo.
+     * @return ProfilePhoto|null
+    */
+    public function getPhoto(): ?ProfilePhoto {
+        return $this->photo;
+    }
+
+    /**
      * Gets the primaryChannel property value. The general channel for the team.
      * @return Channel|null
     */
@@ -337,6 +358,14 @@ class Team extends Entity implements Parsable
     */
     public function getSpecialization(): ?TeamSpecialization {
         return $this->specialization;
+    }
+
+    /**
+     * Gets the summary property value. Contains summary information about the team, including number of owners, members, and guests.
+     * @return TeamSummary|null
+    */
+    public function getSummary(): ?TeamSummary {
+        return $this->summary;
     }
 
     /**
@@ -394,9 +423,11 @@ class Team extends Entity implements Parsable
         $writer->writeObjectValue('memberSettings', $this->memberSettings);
         $writer->writeObjectValue('messagingSettings', $this->messagingSettings);
         $writer->writeCollectionOfObjectValues('operations', $this->operations);
+        $writer->writeObjectValue('photo', $this->photo);
         $writer->writeObjectValue('primaryChannel', $this->primaryChannel);
         $writer->writeObjectValue('schedule', $this->schedule);
         $writer->writeEnumValue('specialization', $this->specialization);
+        $writer->writeObjectValue('summary', $this->summary);
         $writer->writeObjectValue('template', $this->template);
         $writer->writeStringValue('tenantId', $this->tenantId);
         $writer->writeEnumValue('visibility', $this->visibility);
@@ -540,6 +571,14 @@ class Team extends Entity implements Parsable
     }
 
     /**
+     * Sets the photo property value. The team photo.
+     *  @param ProfilePhoto|null $value Value to set for the photo property.
+    */
+    public function setPhoto(?ProfilePhoto $value ): void {
+        $this->photo = $value;
+    }
+
+    /**
      * Sets the primaryChannel property value. The general channel for the team.
      *  @param Channel|null $value Value to set for the primaryChannel property.
     */
@@ -561,6 +600,14 @@ class Team extends Entity implements Parsable
     */
     public function setSpecialization(?TeamSpecialization $value ): void {
         $this->specialization = $value;
+    }
+
+    /**
+     * Sets the summary property value. Contains summary information about the team, including number of owners, members, and guests.
+     *  @param TeamSummary|null $value Value to set for the summary property.
+    */
+    public function setSummary(?TeamSummary $value ): void {
+        $this->summary = $value;
     }
 
     /**

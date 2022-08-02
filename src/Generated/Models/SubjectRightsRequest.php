@@ -105,10 +105,11 @@ class SubjectRightsRequest extends Entity implements Parsable
     private ?SubjectRightsRequestType $type = null;
     
     /**
-     * Instantiates a new subjectRightsRequest and sets the default values.
+     * Instantiates a new SubjectRightsRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.subjectRightsRequest');
     }
 
     /**

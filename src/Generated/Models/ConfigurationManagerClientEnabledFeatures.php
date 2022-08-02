@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -35,6 +35,11 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
     private ?bool $modernApps = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var bool|null $resourceAccess Whether resource access is managed by Intune
     */
     private ?bool $resourceAccess = null;
@@ -48,7 +53,8 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * Instantiates a new configurationManagerClientEnabledFeatures and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.configurationManagerClientEnabledFeatures');
     }
 
     /**
@@ -95,6 +101,7 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
             'deviceConfiguration' => function (ParseNode $n) use ($o) { $o->setDeviceConfiguration($n->getBooleanValue()); },
             'inventory' => function (ParseNode $n) use ($o) { $o->setInventory($n->getBooleanValue()); },
             'modernApps' => function (ParseNode $n) use ($o) { $o->setModernApps($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'resourceAccess' => function (ParseNode $n) use ($o) { $o->setResourceAccess($n->getBooleanValue()); },
             'windowsUpdateForBusiness' => function (ParseNode $n) use ($o) { $o->setWindowsUpdateForBusiness($n->getBooleanValue()); },
         ];
@@ -114,6 +121,14 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
     */
     public function getModernApps(): ?bool {
         return $this->modernApps;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -141,6 +156,7 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
         $writer->writeBooleanValue('deviceConfiguration', $this->deviceConfiguration);
         $writer->writeBooleanValue('inventory', $this->inventory);
         $writer->writeBooleanValue('modernApps', $this->modernApps);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeBooleanValue('resourceAccess', $this->resourceAccess);
         $writer->writeBooleanValue('windowsUpdateForBusiness', $this->windowsUpdateForBusiness);
         $writer->writeAdditionalData($this->additionalData);
@@ -184,6 +200,14 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
     */
     public function setModernApps(?bool $value ): void {
         $this->modernApps = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

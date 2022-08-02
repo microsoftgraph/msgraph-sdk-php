@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CallOptions implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -20,10 +20,16 @@ class CallOptions implements AdditionalDataHolder, Parsable
     private ?bool $hideBotAfterEscalation = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new callOptions and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.callOptions');
     }
 
     /**
@@ -32,6 +38,14 @@ class CallOptions implements AdditionalDataHolder, Parsable
      * @return CallOptions
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): CallOptions {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.incomingCallOptions': return new IncomingCallOptions();
+                case '#microsoft.graph.outgoingCallOptions': return new OutgoingCallOptions();
+            }
+        }
         return new CallOptions();
     }
 
@@ -51,6 +65,7 @@ class CallOptions implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'hideBotAfterEscalation' => function (ParseNode $n) use ($o) { $o->setHideBotAfterEscalation($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
 
@@ -63,11 +78,20 @@ class CallOptions implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('hideBotAfterEscalation', $this->hideBotAfterEscalation);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -85,6 +109,14 @@ class CallOptions implements AdditionalDataHolder, Parsable
     */
     public function setHideBotAfterEscalation(?bool $value ): void {
         $this->hideBotAfterEscalation = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

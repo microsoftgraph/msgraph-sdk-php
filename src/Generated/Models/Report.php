@@ -11,7 +11,7 @@ use Psr\Http\Message\StreamInterface;
 class Report implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -21,10 +21,16 @@ class Report implements AdditionalDataHolder, Parsable
     private ?StreamInterface $content = null;
     
     /**
-     * Instantiates a new Report and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
+     * Instantiates a new report and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.report');
     }
 
     /**
@@ -60,7 +66,16 @@ class Report implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getBinaryContent()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -69,6 +84,7 @@ class Report implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBinaryContent('content', $this->content);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -86,6 +102,14 @@ class Report implements AdditionalDataHolder, Parsable
     */
     public function setContent(?StreamInterface $value ): void {
         $this->content = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

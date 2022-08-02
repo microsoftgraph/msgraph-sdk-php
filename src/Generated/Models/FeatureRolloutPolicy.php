@@ -24,7 +24,7 @@ class FeatureRolloutPolicy extends Entity implements Parsable
     private ?string $displayName = null;
     
     /**
-     * @var StagedFeatureName|null $feature Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, emailAsAlternateId, unknownFutureValue.
+     * @var StagedFeatureName|null $feature The feature property
     */
     private ?StagedFeatureName $feature = null;
     
@@ -43,6 +43,7 @@ class FeatureRolloutPolicy extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.featureRolloutPolicy');
     }
 
     /**
@@ -79,7 +80,7 @@ class FeatureRolloutPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the feature property value. Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, emailAsAlternateId, unknownFutureValue.
+     * Gets the feature property value. The feature property
      * @return StagedFeatureName|null
     */
     public function getFeature(): ?StagedFeatureName {
@@ -157,7 +158,7 @@ class FeatureRolloutPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the feature property value. Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, emailAsAlternateId, unknownFutureValue.
+     * Sets the feature property value. The feature property
      *  @param StagedFeatureName|null $value Value to set for the feature property.
     */
     public function setFeature(?StagedFeatureName $value ): void {

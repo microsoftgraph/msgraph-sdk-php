@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RecurrencePattern implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -45,6 +45,11 @@ class RecurrencePattern implements AdditionalDataHolder, Parsable
     private ?int $month = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var RecurrencePatternType|null $type The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property.
     */
     private ?RecurrencePatternType $type = null;
@@ -53,7 +58,8 @@ class RecurrencePattern implements AdditionalDataHolder, Parsable
      * Instantiates a new recurrencePattern and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.recurrencePattern');
     }
 
     /**
@@ -102,6 +108,7 @@ class RecurrencePattern implements AdditionalDataHolder, Parsable
             'index' => function (ParseNode $n) use ($o) { $o->setIndex($n->getEnumValue(WeekIndex::class)); },
             'interval' => function (ParseNode $n) use ($o) { $o->setInterval($n->getIntegerValue()); },
             'month' => function (ParseNode $n) use ($o) { $o->setMonth($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(RecurrencePatternType::class)); },
         ];
     }
@@ -139,6 +146,14 @@ class RecurrencePattern implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the type property value. The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property.
      * @return RecurrencePatternType|null
     */
@@ -157,6 +172,7 @@ class RecurrencePattern implements AdditionalDataHolder, Parsable
         $writer->writeEnumValue('index', $this->index);
         $writer->writeIntegerValue('interval', $this->interval);
         $writer->writeIntegerValue('month', $this->month);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('type', $this->type);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -215,6 +231,14 @@ class RecurrencePattern implements AdditionalDataHolder, Parsable
     */
     public function setMonth(?int $value ): void {
         $this->month = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MailTips implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -60,6 +60,11 @@ class MailTips implements AdditionalDataHolder, Parsable
     private ?int $maxMessageSize = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var RecipientScopeType|null $recipientScope The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
     */
     private ?RecipientScopeType $recipientScope = null;
@@ -78,7 +83,8 @@ class MailTips implements AdditionalDataHolder, Parsable
      * Instantiates a new mailTips and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.mailTips');
     }
 
     /**
@@ -162,6 +168,7 @@ class MailTips implements AdditionalDataHolder, Parsable
             'isModerated' => function (ParseNode $n) use ($o) { $o->setIsModerated($n->getBooleanValue()); },
             'mailboxFull' => function (ParseNode $n) use ($o) { $o->setMailboxFull($n->getBooleanValue()); },
             'maxMessageSize' => function (ParseNode $n) use ($o) { $o->setMaxMessageSize($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'recipientScope' => function (ParseNode $n) use ($o) { $o->setRecipientScope($n->getEnumValue(RecipientScopeType::class)); },
             'recipientSuggestions' => function (ParseNode $n) use ($o) { $o->setRecipientSuggestions($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
             'totalMemberCount' => function (ParseNode $n) use ($o) { $o->setTotalMemberCount($n->getIntegerValue()); },
@@ -190,6 +197,14 @@ class MailTips implements AdditionalDataHolder, Parsable
     */
     public function getMaxMessageSize(): ?int {
         return $this->maxMessageSize;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -230,6 +245,7 @@ class MailTips implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('isModerated', $this->isModerated);
         $writer->writeBooleanValue('mailboxFull', $this->mailboxFull);
         $writer->writeIntegerValue('maxMessageSize', $this->maxMessageSize);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('recipientScope', $this->recipientScope);
         $writer->writeCollectionOfObjectValues('recipientSuggestions', $this->recipientSuggestions);
         $writer->writeIntegerValue('totalMemberCount', $this->totalMemberCount);
@@ -314,6 +330,14 @@ class MailTips implements AdditionalDataHolder, Parsable
     */
     public function setMaxMessageSize(?int $value ): void {
         $this->maxMessageSize = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

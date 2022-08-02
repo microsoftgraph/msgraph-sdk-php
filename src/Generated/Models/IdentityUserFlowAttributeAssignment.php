@@ -34,7 +34,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
     private ?array $userAttributeValues = null;
     
     /**
-     * @var IdentityUserFlowAttributeInputType|null $userInputType The input type of the user flow attribute. Possible values are: textBox, dateTimeDropdown, radioSingleSelect, dropdownSingleSelect, emailBox, checkboxMultiSelect.
+     * @var IdentityUserFlowAttributeInputType|null $userInputType The userInputType property
     */
     private ?IdentityUserFlowAttributeInputType $userInputType = null;
     
@@ -43,6 +43,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.identityUserFlowAttributeAssignment');
     }
 
     /**
@@ -111,7 +112,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the userInputType property value. The input type of the user flow attribute. Possible values are: textBox, dateTimeDropdown, radioSingleSelect, dropdownSingleSelect, emailBox, checkboxMultiSelect.
+     * Gets the userInputType property value. The userInputType property
      * @return IdentityUserFlowAttributeInputType|null
     */
     public function getUserInputType(): ?IdentityUserFlowAttributeInputType {
@@ -173,7 +174,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the userInputType property value. The input type of the user flow attribute. Possible values are: textBox, dateTimeDropdown, radioSingleSelect, dropdownSingleSelect, emailBox, checkboxMultiSelect.
+     * Sets the userInputType property value. The userInputType property
      *  @param IdentityUserFlowAttributeInputType|null $value Value to set for the userInputType property.
     */
     public function setUserInputType(?IdentityUserFlowAttributeInputType $value ): void {

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AppConfigurationSettingItem implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -20,7 +20,7 @@ class AppConfigurationSettingItem implements AdditionalDataHolder, Parsable
     private ?string $appConfigKey = null;
     
     /**
-     * @var MdmAppConfigKeyType|null $appConfigKeyType app configuration key type. Possible values are: stringType, integerType, realType, booleanType, tokenType.
+     * @var MdmAppConfigKeyType|null $appConfigKeyType App configuration key types.
     */
     private ?MdmAppConfigKeyType $appConfigKeyType = null;
     
@@ -30,10 +30,16 @@ class AppConfigurationSettingItem implements AdditionalDataHolder, Parsable
     private ?string $appConfigKeyValue = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new appConfigurationSettingItem and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.appConfigurationSettingItem');
     }
 
     /**
@@ -62,7 +68,7 @@ class AppConfigurationSettingItem implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the appConfigKeyType property value. app configuration key type. Possible values are: stringType, integerType, realType, booleanType, tokenType.
+     * Gets the appConfigKeyType property value. App configuration key types.
      * @return MdmAppConfigKeyType|null
     */
     public function getAppConfigKeyType(): ?MdmAppConfigKeyType {
@@ -87,7 +93,16 @@ class AppConfigurationSettingItem implements AdditionalDataHolder, Parsable
             'appConfigKey' => function (ParseNode $n) use ($o) { $o->setAppConfigKey($n->getStringValue()); },
             'appConfigKeyType' => function (ParseNode $n) use ($o) { $o->setAppConfigKeyType($n->getEnumValue(MdmAppConfigKeyType::class)); },
             'appConfigKeyValue' => function (ParseNode $n) use ($o) { $o->setAppConfigKeyValue($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -98,6 +113,7 @@ class AppConfigurationSettingItem implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('appConfigKey', $this->appConfigKey);
         $writer->writeEnumValue('appConfigKeyType', $this->appConfigKeyType);
         $writer->writeStringValue('appConfigKeyValue', $this->appConfigKeyValue);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -118,7 +134,7 @@ class AppConfigurationSettingItem implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the appConfigKeyType property value. app configuration key type. Possible values are: stringType, integerType, realType, booleanType, tokenType.
+     * Sets the appConfigKeyType property value. App configuration key types.
      *  @param MdmAppConfigKeyType|null $value Value to set for the appConfigKeyType property.
     */
     public function setAppConfigKeyType(?MdmAppConfigKeyType $value ): void {
@@ -131,6 +147,14 @@ class AppConfigurationSettingItem implements AdditionalDataHolder, Parsable
     */
     public function setAppConfigKeyValue(?string $value ): void {
         $this->appConfigKeyValue = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

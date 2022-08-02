@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Certification implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -41,10 +41,16 @@ class Certification implements AdditionalDataHolder, Parsable
     private ?DateTime $lastCertificationDateTime = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new certification and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.certification');
     }
 
     /**
@@ -92,6 +98,7 @@ class Certification implements AdditionalDataHolder, Parsable
             'isCertifiedByMicrosoft' => function (ParseNode $n) use ($o) { $o->setIsCertifiedByMicrosoft($n->getBooleanValue()); },
             'isPublisherAttested' => function (ParseNode $n) use ($o) { $o->setIsPublisherAttested($n->getBooleanValue()); },
             'lastCertificationDateTime' => function (ParseNode $n) use ($o) { $o->setLastCertificationDateTime($n->getDateTimeValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
 
@@ -120,6 +127,14 @@ class Certification implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -129,6 +144,7 @@ class Certification implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('isCertifiedByMicrosoft', $this->isCertifiedByMicrosoft);
         $writer->writeBooleanValue('isPublisherAttested', $this->isPublisherAttested);
         $writer->writeDateTimeValue('lastCertificationDateTime', $this->lastCertificationDateTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -178,6 +194,14 @@ class Certification implements AdditionalDataHolder, Parsable
     */
     public function setLastCertificationDateTime(?DateTime $value ): void {
         $this->lastCertificationDateTime = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

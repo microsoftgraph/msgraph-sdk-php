@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AppIdentity implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class AppIdentity implements AdditionalDataHolder, Parsable
      * @var string|null $displayName Refers to the Application Name displayed in the Azure Portal.
     */
     private ?string $displayName = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $servicePrincipalId Refers to the unique identifier indicating Service Principal Id in Azure Active Directory for the corresponding App.
@@ -38,7 +43,8 @@ class AppIdentity implements AdditionalDataHolder, Parsable
      * Instantiates a new appIdentity and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.appIdentity');
     }
 
     /**
@@ -83,9 +89,18 @@ class AppIdentity implements AdditionalDataHolder, Parsable
         return  [
             'appId' => function (ParseNode $n) use ($o) { $o->setAppId($n->getStringValue()); },
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'servicePrincipalId' => function (ParseNode $n) use ($o) { $o->setServicePrincipalId($n->getStringValue()); },
             'servicePrincipalName' => function (ParseNode $n) use ($o) { $o->setServicePrincipalName($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -111,6 +126,7 @@ class AppIdentity implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('appId', $this->appId);
         $writer->writeStringValue('displayName', $this->displayName);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('servicePrincipalId', $this->servicePrincipalId);
         $writer->writeStringValue('servicePrincipalName', $this->servicePrincipalName);
         $writer->writeAdditionalData($this->additionalData);
@@ -138,6 +154,14 @@ class AppIdentity implements AdditionalDataHolder, Parsable
     */
     public function setDisplayName(?string $value ): void {
         $this->displayName = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

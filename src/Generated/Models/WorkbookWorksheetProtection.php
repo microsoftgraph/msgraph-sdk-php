@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookWorksheetProtection extends Entity implements Parsable 
 {
     /**
-     * @var bool|null $EscapedProtected Indicates if the worksheet is protected.  Read-only.
+     * @var bool|null $escapedProtected Indicates if the worksheet is protected.  Read-only.
     */
     private ?bool $escapedProtected = null;
     
@@ -23,6 +23,7 @@ class WorkbookWorksheetProtection extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.workbookWorksheetProtection');
     }
 
     /**

@@ -21,7 +21,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?bool $antiTheftModeBlocked = null;
     
     /**
-     * @var StateManagementSetting|null $appsAllowTrustedAppsSideloading Indicates whether apps from AppX packages signed with a trusted certificate can be side loaded. Possible values are: notConfigured, blocked, allowed.
+     * @var StateManagementSetting|null $appsAllowTrustedAppsSideloading State Management Setting.
     */
     private ?StateManagementSetting $appsAllowTrustedAppsSideloading = null;
     
@@ -101,7 +101,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?bool $defenderBlockEndUserAccess = null;
     
     /**
-     * @var DefenderCloudBlockLevelType|null $defenderCloudBlockLevel Specifies the level of cloud-delivered protection. Possible values are: notConfigured, high, highPlus, zeroTolerance.
+     * @var DefenderCloudBlockLevelType|null $defenderCloudBlockLevel Possible values of Cloud Block Level
     */
     private ?DefenderCloudBlockLevelType $defenderCloudBlockLevel = null;
     
@@ -126,7 +126,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?array $defenderFilesAndFoldersToExclude = null;
     
     /**
-     * @var DefenderMonitorFileActivity|null $defenderMonitorFileActivity Value for monitoring file activity. Possible values are: userDefined, disable, monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
+     * @var DefenderMonitorFileActivity|null $defenderMonitorFileActivity Possible values for monitoring file activity.
     */
     private ?DefenderMonitorFileActivity $defenderMonitorFileActivity = null;
     
@@ -136,7 +136,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?array $defenderProcessesToExclude = null;
     
     /**
-     * @var DefenderPromptForSampleSubmission|null $defenderPromptForSampleSubmission The configuration for how to prompt user for sample submission. Possible values are: userDefined, alwaysPrompt, promptBeforeSendingPersonalData, neverSendData, sendAllDataWithoutPrompting.
+     * @var DefenderPromptForSampleSubmission|null $defenderPromptForSampleSubmission Possible values for prompting user for samples submission.
     */
     private ?DefenderPromptForSampleSubmission $defenderPromptForSampleSubmission = null;
     
@@ -201,7 +201,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?bool $defenderScanScriptsLoadedInInternetExplorer = null;
     
     /**
-     * @var DefenderScanType|null $defenderScanType The defender system scan type. Possible values are: userDefined, disabled, quick, full.
+     * @var DefenderScanType|null $defenderScanType Possible values for system scan type.
     */
     private ?DefenderScanType $defenderScanType = null;
     
@@ -221,12 +221,12 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?int $defenderSignatureUpdateIntervalInHours = null;
     
     /**
-     * @var WeeklySchedule|null $defenderSystemScanSchedule Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
+     * @var WeeklySchedule|null $defenderSystemScanSchedule Possible values for a weekly schedule.
     */
     private ?WeeklySchedule $defenderSystemScanSchedule = null;
     
     /**
-     * @var StateManagementSetting|null $developerUnlockSetting Indicates whether or not to allow developer unlock. Possible values are: notConfigured, blocked, allowed.
+     * @var StateManagementSetting|null $developerUnlockSetting State Management Setting.
     */
     private ?StateManagementSetting $developerUnlockSetting = null;
     
@@ -241,7 +241,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?bool $deviceManagementBlockManualUnenroll = null;
     
     /**
-     * @var DiagnosticDataSubmissionMode|null $diagnosticsDataSubmissionMode Gets or sets a value allowing the device to send diagnostic and usage telemetry data, such as Watson. Possible values are: userDefined, none, basic, enhanced, full.
+     * @var DiagnosticDataSubmissionMode|null $diagnosticsDataSubmissionMode Allow the device to send diagnostic and usage telemetry data, such as Watson.
     */
     private ?DiagnosticDataSubmissionMode $diagnosticsDataSubmissionMode = null;
     
@@ -331,7 +331,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?bool $edgeClearBrowsingDataOnExit = null;
     
     /**
-     * @var EdgeCookiePolicy|null $edgeCookiePolicy Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
+     * @var EdgeCookiePolicy|null $edgeCookiePolicy Possible values to specify which cookies are allowed in Microsoft Edge.
     */
     private ?EdgeCookiePolicy $edgeCookiePolicy = null;
     
@@ -541,7 +541,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?bool $passwordRequired = null;
     
     /**
-     * @var RequiredPasswordType|null $passwordRequiredType The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * @var RequiredPasswordType|null $passwordRequiredType Possible values of required passwords.
     */
     private ?RequiredPasswordType $passwordRequiredType = null;
     
@@ -566,7 +566,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?string $personalizationLockScreenImageUrl = null;
     
     /**
-     * @var StateManagementSetting|null $privacyAdvertisingId Enables or disables the use of advertising ID. Added in Windows 10, version 1607. Possible values are: notConfigured, blocked, allowed.
+     * @var StateManagementSetting|null $privacyAdvertisingId State Management Setting.
     */
     private ?StateManagementSetting $privacyAdvertisingId = null;
     
@@ -586,7 +586,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?bool $resetProtectionModeBlocked = null;
     
     /**
-     * @var SafeSearchFilterType|null $safeSearchFilter Specifies what filter level of safe search is required. Possible values are: userDefined, strict, moderate.
+     * @var SafeSearchFilterType|null $safeSearchFilter Specifies what level of safe search (filtering adult content) is required
     */
     private ?SafeSearchFilterType $safeSearchFilter = null;
     
@@ -751,7 +751,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?bool $startBlockUnpinningAppsFromTaskbar = null;
     
     /**
-     * @var WindowsStartMenuAppListVisibilityType|null $startMenuAppListVisibility Setting the value of this collapses the app list, removes the app list entirely, or disables the corresponding toggle in the Settings app. Possible values are: userDefined, collapse, remove, disableSettingsApp.
+     * @var WindowsStartMenuAppListVisibilityType|null $startMenuAppListVisibility Type of start menu app list visibility.
     */
     private ?WindowsStartMenuAppListVisibilityType $startMenuAppListVisibility = null;
     
@@ -831,57 +831,57 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?StreamInterface $startMenuLayoutXml = null;
     
     /**
-     * @var WindowsStartMenuModeType|null $startMenuMode Allows admins to decide how the Start menu is displayed. Possible values are: userDefined, fullScreen, nonFullScreen.
+     * @var WindowsStartMenuModeType|null $startMenuMode Type of display modes for the start menu.
     */
     private ?WindowsStartMenuModeType $startMenuMode = null;
     
     /**
-     * @var VisibilitySetting|null $startMenuPinnedFolderDocuments Enforces the visibility (Show/Hide) of the Documents folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * @var VisibilitySetting|null $startMenuPinnedFolderDocuments Generic visibility state.
     */
     private ?VisibilitySetting $startMenuPinnedFolderDocuments = null;
     
     /**
-     * @var VisibilitySetting|null $startMenuPinnedFolderDownloads Enforces the visibility (Show/Hide) of the Downloads folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * @var VisibilitySetting|null $startMenuPinnedFolderDownloads Generic visibility state.
     */
     private ?VisibilitySetting $startMenuPinnedFolderDownloads = null;
     
     /**
-     * @var VisibilitySetting|null $startMenuPinnedFolderFileExplorer Enforces the visibility (Show/Hide) of the FileExplorer shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * @var VisibilitySetting|null $startMenuPinnedFolderFileExplorer Generic visibility state.
     */
     private ?VisibilitySetting $startMenuPinnedFolderFileExplorer = null;
     
     /**
-     * @var VisibilitySetting|null $startMenuPinnedFolderHomeGroup Enforces the visibility (Show/Hide) of the HomeGroup folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * @var VisibilitySetting|null $startMenuPinnedFolderHomeGroup Generic visibility state.
     */
     private ?VisibilitySetting $startMenuPinnedFolderHomeGroup = null;
     
     /**
-     * @var VisibilitySetting|null $startMenuPinnedFolderMusic Enforces the visibility (Show/Hide) of the Music folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * @var VisibilitySetting|null $startMenuPinnedFolderMusic Generic visibility state.
     */
     private ?VisibilitySetting $startMenuPinnedFolderMusic = null;
     
     /**
-     * @var VisibilitySetting|null $startMenuPinnedFolderNetwork Enforces the visibility (Show/Hide) of the Network folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * @var VisibilitySetting|null $startMenuPinnedFolderNetwork Generic visibility state.
     */
     private ?VisibilitySetting $startMenuPinnedFolderNetwork = null;
     
     /**
-     * @var VisibilitySetting|null $startMenuPinnedFolderPersonalFolder Enforces the visibility (Show/Hide) of the PersonalFolder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * @var VisibilitySetting|null $startMenuPinnedFolderPersonalFolder Generic visibility state.
     */
     private ?VisibilitySetting $startMenuPinnedFolderPersonalFolder = null;
     
     /**
-     * @var VisibilitySetting|null $startMenuPinnedFolderPictures Enforces the visibility (Show/Hide) of the Pictures folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * @var VisibilitySetting|null $startMenuPinnedFolderPictures Generic visibility state.
     */
     private ?VisibilitySetting $startMenuPinnedFolderPictures = null;
     
     /**
-     * @var VisibilitySetting|null $startMenuPinnedFolderSettings Enforces the visibility (Show/Hide) of the Settings folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * @var VisibilitySetting|null $startMenuPinnedFolderSettings Generic visibility state.
     */
     private ?VisibilitySetting $startMenuPinnedFolderSettings = null;
     
     /**
-     * @var VisibilitySetting|null $startMenuPinnedFolderVideos Enforces the visibility (Show/Hide) of the Videos folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * @var VisibilitySetting|null $startMenuPinnedFolderVideos Generic visibility state.
     */
     private ?VisibilitySetting $startMenuPinnedFolderVideos = null;
     
@@ -981,7 +981,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?bool $windowsSpotlightBlockWindowsTips = null;
     
     /**
-     * @var WindowsSpotlightEnablementSettings|null $windowsSpotlightConfigureOnLockScreen Specifies the type of Spotlight. Possible values are: notConfigured, disabled, enabled.
+     * @var WindowsSpotlightEnablementSettings|null $windowsSpotlightConfigureOnLockScreen Allows IT admind to set a predefined default search engine for MDM-Controlled devices
     */
     private ?WindowsSpotlightEnablementSettings $windowsSpotlightConfigureOnLockScreen = null;
     
@@ -1020,6 +1020,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.windows10GeneralConfiguration');
     }
 
     /**
@@ -1048,7 +1049,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the appsAllowTrustedAppsSideloading property value. Indicates whether apps from AppX packages signed with a trusted certificate can be side loaded. Possible values are: notConfigured, blocked, allowed.
+     * Gets the appsAllowTrustedAppsSideloading property value. State Management Setting.
      * @return StateManagementSetting|null
     */
     public function getAppsAllowTrustedAppsSideloading(): ?StateManagementSetting {
@@ -1176,7 +1177,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the defenderCloudBlockLevel property value. Specifies the level of cloud-delivered protection. Possible values are: notConfigured, high, highPlus, zeroTolerance.
+     * Gets the defenderCloudBlockLevel property value. Possible values of Cloud Block Level
      * @return DefenderCloudBlockLevelType|null
     */
     public function getDefenderCloudBlockLevel(): ?DefenderCloudBlockLevelType {
@@ -1216,7 +1217,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the defenderMonitorFileActivity property value. Value for monitoring file activity. Possible values are: userDefined, disable, monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
+     * Gets the defenderMonitorFileActivity property value. Possible values for monitoring file activity.
      * @return DefenderMonitorFileActivity|null
     */
     public function getDefenderMonitorFileActivity(): ?DefenderMonitorFileActivity {
@@ -1232,7 +1233,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the defenderPromptForSampleSubmission property value. The configuration for how to prompt user for sample submission. Possible values are: userDefined, alwaysPrompt, promptBeforeSendingPersonalData, neverSendData, sendAllDataWithoutPrompting.
+     * Gets the defenderPromptForSampleSubmission property value. Possible values for prompting user for samples submission.
      * @return DefenderPromptForSampleSubmission|null
     */
     public function getDefenderPromptForSampleSubmission(): ?DefenderPromptForSampleSubmission {
@@ -1336,7 +1337,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the defenderScanType property value. The defender system scan type. Possible values are: userDefined, disabled, quick, full.
+     * Gets the defenderScanType property value. Possible values for system scan type.
      * @return DefenderScanType|null
     */
     public function getDefenderScanType(): ?DefenderScanType {
@@ -1368,7 +1369,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the defenderSystemScanSchedule property value. Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
+     * Gets the defenderSystemScanSchedule property value. Possible values for a weekly schedule.
      * @return WeeklySchedule|null
     */
     public function getDefenderSystemScanSchedule(): ?WeeklySchedule {
@@ -1376,7 +1377,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the developerUnlockSetting property value. Indicates whether or not to allow developer unlock. Possible values are: notConfigured, blocked, allowed.
+     * Gets the developerUnlockSetting property value. State Management Setting.
      * @return StateManagementSetting|null
     */
     public function getDeveloperUnlockSetting(): ?StateManagementSetting {
@@ -1400,7 +1401,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the diagnosticsDataSubmissionMode property value. Gets or sets a value allowing the device to send diagnostic and usage telemetry data, such as Watson. Possible values are: userDefined, none, basic, enhanced, full.
+     * Gets the diagnosticsDataSubmissionMode property value. Allow the device to send diagnostic and usage telemetry data, such as Watson.
      * @return DiagnosticDataSubmissionMode|null
     */
     public function getDiagnosticsDataSubmissionMode(): ?DiagnosticDataSubmissionMode {
@@ -1544,7 +1545,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the edgeCookiePolicy property value. Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
+     * Gets the edgeCookiePolicy property value. Possible values to specify which cookies are allowed in Microsoft Edge.
      * @return EdgeCookiePolicy|null
     */
     public function getEdgeCookiePolicy(): ?EdgeCookiePolicy {
@@ -2091,7 +2092,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return RequiredPasswordType|null
     */
     public function getPasswordRequiredType(): ?RequiredPasswordType {
@@ -2131,7 +2132,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the privacyAdvertisingId property value. Enables or disables the use of advertising ID. Added in Windows 10, version 1607. Possible values are: notConfigured, blocked, allowed.
+     * Gets the privacyAdvertisingId property value. State Management Setting.
      * @return StateManagementSetting|null
     */
     public function getPrivacyAdvertisingId(): ?StateManagementSetting {
@@ -2163,7 +2164,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the safeSearchFilter property value. Specifies what filter level of safe search is required. Possible values are: userDefined, strict, moderate.
+     * Gets the safeSearchFilter property value. Specifies what level of safe search (filtering adult content) is required
      * @return SafeSearchFilterType|null
     */
     public function getSafeSearchFilter(): ?SafeSearchFilterType {
@@ -2427,7 +2428,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the startMenuAppListVisibility property value. Setting the value of this collapses the app list, removes the app list entirely, or disables the corresponding toggle in the Settings app. Possible values are: userDefined, collapse, remove, disableSettingsApp.
+     * Gets the startMenuAppListVisibility property value. Type of start menu app list visibility.
      * @return WindowsStartMenuAppListVisibilityType|null
     */
     public function getStartMenuAppListVisibility(): ?WindowsStartMenuAppListVisibilityType {
@@ -2555,7 +2556,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the startMenuMode property value. Allows admins to decide how the Start menu is displayed. Possible values are: userDefined, fullScreen, nonFullScreen.
+     * Gets the startMenuMode property value. Type of display modes for the start menu.
      * @return WindowsStartMenuModeType|null
     */
     public function getStartMenuMode(): ?WindowsStartMenuModeType {
@@ -2563,7 +2564,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the startMenuPinnedFolderDocuments property value. Enforces the visibility (Show/Hide) of the Documents folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderDocuments property value. Generic visibility state.
      * @return VisibilitySetting|null
     */
     public function getStartMenuPinnedFolderDocuments(): ?VisibilitySetting {
@@ -2571,7 +2572,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the startMenuPinnedFolderDownloads property value. Enforces the visibility (Show/Hide) of the Downloads folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderDownloads property value. Generic visibility state.
      * @return VisibilitySetting|null
     */
     public function getStartMenuPinnedFolderDownloads(): ?VisibilitySetting {
@@ -2579,7 +2580,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the startMenuPinnedFolderFileExplorer property value. Enforces the visibility (Show/Hide) of the FileExplorer shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderFileExplorer property value. Generic visibility state.
      * @return VisibilitySetting|null
     */
     public function getStartMenuPinnedFolderFileExplorer(): ?VisibilitySetting {
@@ -2587,7 +2588,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the startMenuPinnedFolderHomeGroup property value. Enforces the visibility (Show/Hide) of the HomeGroup folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderHomeGroup property value. Generic visibility state.
      * @return VisibilitySetting|null
     */
     public function getStartMenuPinnedFolderHomeGroup(): ?VisibilitySetting {
@@ -2595,7 +2596,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the startMenuPinnedFolderMusic property value. Enforces the visibility (Show/Hide) of the Music folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderMusic property value. Generic visibility state.
      * @return VisibilitySetting|null
     */
     public function getStartMenuPinnedFolderMusic(): ?VisibilitySetting {
@@ -2603,7 +2604,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the startMenuPinnedFolderNetwork property value. Enforces the visibility (Show/Hide) of the Network folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderNetwork property value. Generic visibility state.
      * @return VisibilitySetting|null
     */
     public function getStartMenuPinnedFolderNetwork(): ?VisibilitySetting {
@@ -2611,7 +2612,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the startMenuPinnedFolderPersonalFolder property value. Enforces the visibility (Show/Hide) of the PersonalFolder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderPersonalFolder property value. Generic visibility state.
      * @return VisibilitySetting|null
     */
     public function getStartMenuPinnedFolderPersonalFolder(): ?VisibilitySetting {
@@ -2619,7 +2620,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the startMenuPinnedFolderPictures property value. Enforces the visibility (Show/Hide) of the Pictures folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderPictures property value. Generic visibility state.
      * @return VisibilitySetting|null
     */
     public function getStartMenuPinnedFolderPictures(): ?VisibilitySetting {
@@ -2627,7 +2628,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the startMenuPinnedFolderSettings property value. Enforces the visibility (Show/Hide) of the Settings folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderSettings property value. Generic visibility state.
      * @return VisibilitySetting|null
     */
     public function getStartMenuPinnedFolderSettings(): ?VisibilitySetting {
@@ -2635,7 +2636,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the startMenuPinnedFolderVideos property value. Enforces the visibility (Show/Hide) of the Videos folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderVideos property value. Generic visibility state.
      * @return VisibilitySetting|null
     */
     public function getStartMenuPinnedFolderVideos(): ?VisibilitySetting {
@@ -2795,7 +2796,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the windowsSpotlightConfigureOnLockScreen property value. Specifies the type of Spotlight. Possible values are: notConfigured, disabled, enabled.
+     * Gets the windowsSpotlightConfigureOnLockScreen property value. Allows IT admind to set a predefined default search engine for MDM-Controlled devices
      * @return WindowsSpotlightEnablementSettings|null
     */
     public function getWindowsSpotlightConfigureOnLockScreen(): ?WindowsSpotlightEnablementSettings {
@@ -3076,7 +3077,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the appsAllowTrustedAppsSideloading property value. Indicates whether apps from AppX packages signed with a trusted certificate can be side loaded. Possible values are: notConfigured, blocked, allowed.
+     * Sets the appsAllowTrustedAppsSideloading property value. State Management Setting.
      *  @param StateManagementSetting|null $value Value to set for the appsAllowTrustedAppsSideloading property.
     */
     public function setAppsAllowTrustedAppsSideloading(?StateManagementSetting $value ): void {
@@ -3204,7 +3205,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the defenderCloudBlockLevel property value. Specifies the level of cloud-delivered protection. Possible values are: notConfigured, high, highPlus, zeroTolerance.
+     * Sets the defenderCloudBlockLevel property value. Possible values of Cloud Block Level
      *  @param DefenderCloudBlockLevelType|null $value Value to set for the defenderCloudBlockLevel property.
     */
     public function setDefenderCloudBlockLevel(?DefenderCloudBlockLevelType $value ): void {
@@ -3244,7 +3245,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the defenderMonitorFileActivity property value. Value for monitoring file activity. Possible values are: userDefined, disable, monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
+     * Sets the defenderMonitorFileActivity property value. Possible values for monitoring file activity.
      *  @param DefenderMonitorFileActivity|null $value Value to set for the defenderMonitorFileActivity property.
     */
     public function setDefenderMonitorFileActivity(?DefenderMonitorFileActivity $value ): void {
@@ -3260,7 +3261,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the defenderPromptForSampleSubmission property value. The configuration for how to prompt user for sample submission. Possible values are: userDefined, alwaysPrompt, promptBeforeSendingPersonalData, neverSendData, sendAllDataWithoutPrompting.
+     * Sets the defenderPromptForSampleSubmission property value. Possible values for prompting user for samples submission.
      *  @param DefenderPromptForSampleSubmission|null $value Value to set for the defenderPromptForSampleSubmission property.
     */
     public function setDefenderPromptForSampleSubmission(?DefenderPromptForSampleSubmission $value ): void {
@@ -3364,7 +3365,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the defenderScanType property value. The defender system scan type. Possible values are: userDefined, disabled, quick, full.
+     * Sets the defenderScanType property value. Possible values for system scan type.
      *  @param DefenderScanType|null $value Value to set for the defenderScanType property.
     */
     public function setDefenderScanType(?DefenderScanType $value ): void {
@@ -3396,7 +3397,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the defenderSystemScanSchedule property value. Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
+     * Sets the defenderSystemScanSchedule property value. Possible values for a weekly schedule.
      *  @param WeeklySchedule|null $value Value to set for the defenderSystemScanSchedule property.
     */
     public function setDefenderSystemScanSchedule(?WeeklySchedule $value ): void {
@@ -3404,7 +3405,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the developerUnlockSetting property value. Indicates whether or not to allow developer unlock. Possible values are: notConfigured, blocked, allowed.
+     * Sets the developerUnlockSetting property value. State Management Setting.
      *  @param StateManagementSetting|null $value Value to set for the developerUnlockSetting property.
     */
     public function setDeveloperUnlockSetting(?StateManagementSetting $value ): void {
@@ -3428,7 +3429,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the diagnosticsDataSubmissionMode property value. Gets or sets a value allowing the device to send diagnostic and usage telemetry data, such as Watson. Possible values are: userDefined, none, basic, enhanced, full.
+     * Sets the diagnosticsDataSubmissionMode property value. Allow the device to send diagnostic and usage telemetry data, such as Watson.
      *  @param DiagnosticDataSubmissionMode|null $value Value to set for the diagnosticsDataSubmissionMode property.
     */
     public function setDiagnosticsDataSubmissionMode(?DiagnosticDataSubmissionMode $value ): void {
@@ -3572,7 +3573,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the edgeCookiePolicy property value. Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
+     * Sets the edgeCookiePolicy property value. Possible values to specify which cookies are allowed in Microsoft Edge.
      *  @param EdgeCookiePolicy|null $value Value to set for the edgeCookiePolicy property.
     */
     public function setEdgeCookiePolicy(?EdgeCookiePolicy $value ): void {
@@ -3908,7 +3909,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Sets the passwordRequiredType property value. Possible values of required passwords.
      *  @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
     */
     public function setPasswordRequiredType(?RequiredPasswordType $value ): void {
@@ -3948,7 +3949,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the privacyAdvertisingId property value. Enables or disables the use of advertising ID. Added in Windows 10, version 1607. Possible values are: notConfigured, blocked, allowed.
+     * Sets the privacyAdvertisingId property value. State Management Setting.
      *  @param StateManagementSetting|null $value Value to set for the privacyAdvertisingId property.
     */
     public function setPrivacyAdvertisingId(?StateManagementSetting $value ): void {
@@ -3980,7 +3981,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the safeSearchFilter property value. Specifies what filter level of safe search is required. Possible values are: userDefined, strict, moderate.
+     * Sets the safeSearchFilter property value. Specifies what level of safe search (filtering adult content) is required
      *  @param SafeSearchFilterType|null $value Value to set for the safeSearchFilter property.
     */
     public function setSafeSearchFilter(?SafeSearchFilterType $value ): void {
@@ -4244,7 +4245,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the startMenuAppListVisibility property value. Setting the value of this collapses the app list, removes the app list entirely, or disables the corresponding toggle in the Settings app. Possible values are: userDefined, collapse, remove, disableSettingsApp.
+     * Sets the startMenuAppListVisibility property value. Type of start menu app list visibility.
      *  @param WindowsStartMenuAppListVisibilityType|null $value Value to set for the startMenuAppListVisibility property.
     */
     public function setStartMenuAppListVisibility(?WindowsStartMenuAppListVisibilityType $value ): void {
@@ -4372,7 +4373,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the startMenuMode property value. Allows admins to decide how the Start menu is displayed. Possible values are: userDefined, fullScreen, nonFullScreen.
+     * Sets the startMenuMode property value. Type of display modes for the start menu.
      *  @param WindowsStartMenuModeType|null $value Value to set for the startMenuMode property.
     */
     public function setStartMenuMode(?WindowsStartMenuModeType $value ): void {
@@ -4380,7 +4381,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the startMenuPinnedFolderDocuments property value. Enforces the visibility (Show/Hide) of the Documents folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderDocuments property value. Generic visibility state.
      *  @param VisibilitySetting|null $value Value to set for the startMenuPinnedFolderDocuments property.
     */
     public function setStartMenuPinnedFolderDocuments(?VisibilitySetting $value ): void {
@@ -4388,7 +4389,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the startMenuPinnedFolderDownloads property value. Enforces the visibility (Show/Hide) of the Downloads folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderDownloads property value. Generic visibility state.
      *  @param VisibilitySetting|null $value Value to set for the startMenuPinnedFolderDownloads property.
     */
     public function setStartMenuPinnedFolderDownloads(?VisibilitySetting $value ): void {
@@ -4396,7 +4397,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the startMenuPinnedFolderFileExplorer property value. Enforces the visibility (Show/Hide) of the FileExplorer shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderFileExplorer property value. Generic visibility state.
      *  @param VisibilitySetting|null $value Value to set for the startMenuPinnedFolderFileExplorer property.
     */
     public function setStartMenuPinnedFolderFileExplorer(?VisibilitySetting $value ): void {
@@ -4404,7 +4405,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the startMenuPinnedFolderHomeGroup property value. Enforces the visibility (Show/Hide) of the HomeGroup folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderHomeGroup property value. Generic visibility state.
      *  @param VisibilitySetting|null $value Value to set for the startMenuPinnedFolderHomeGroup property.
     */
     public function setStartMenuPinnedFolderHomeGroup(?VisibilitySetting $value ): void {
@@ -4412,7 +4413,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the startMenuPinnedFolderMusic property value. Enforces the visibility (Show/Hide) of the Music folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderMusic property value. Generic visibility state.
      *  @param VisibilitySetting|null $value Value to set for the startMenuPinnedFolderMusic property.
     */
     public function setStartMenuPinnedFolderMusic(?VisibilitySetting $value ): void {
@@ -4420,7 +4421,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the startMenuPinnedFolderNetwork property value. Enforces the visibility (Show/Hide) of the Network folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderNetwork property value. Generic visibility state.
      *  @param VisibilitySetting|null $value Value to set for the startMenuPinnedFolderNetwork property.
     */
     public function setStartMenuPinnedFolderNetwork(?VisibilitySetting $value ): void {
@@ -4428,7 +4429,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the startMenuPinnedFolderPersonalFolder property value. Enforces the visibility (Show/Hide) of the PersonalFolder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderPersonalFolder property value. Generic visibility state.
      *  @param VisibilitySetting|null $value Value to set for the startMenuPinnedFolderPersonalFolder property.
     */
     public function setStartMenuPinnedFolderPersonalFolder(?VisibilitySetting $value ): void {
@@ -4436,7 +4437,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the startMenuPinnedFolderPictures property value. Enforces the visibility (Show/Hide) of the Pictures folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderPictures property value. Generic visibility state.
      *  @param VisibilitySetting|null $value Value to set for the startMenuPinnedFolderPictures property.
     */
     public function setStartMenuPinnedFolderPictures(?VisibilitySetting $value ): void {
@@ -4444,7 +4445,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the startMenuPinnedFolderSettings property value. Enforces the visibility (Show/Hide) of the Settings folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderSettings property value. Generic visibility state.
      *  @param VisibilitySetting|null $value Value to set for the startMenuPinnedFolderSettings property.
     */
     public function setStartMenuPinnedFolderSettings(?VisibilitySetting $value ): void {
@@ -4452,7 +4453,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the startMenuPinnedFolderVideos property value. Enforces the visibility (Show/Hide) of the Videos folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderVideos property value. Generic visibility state.
      *  @param VisibilitySetting|null $value Value to set for the startMenuPinnedFolderVideos property.
     */
     public function setStartMenuPinnedFolderVideos(?VisibilitySetting $value ): void {
@@ -4612,7 +4613,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the windowsSpotlightConfigureOnLockScreen property value. Specifies the type of Spotlight. Possible values are: notConfigured, disabled, enabled.
+     * Sets the windowsSpotlightConfigureOnLockScreen property value. Allows IT admind to set a predefined default search engine for MDM-Controlled devices
      *  @param WindowsSpotlightEnablementSettings|null $value Value to set for the windowsSpotlightConfigureOnLockScreen property.
     */
     public function setWindowsSpotlightConfigureOnLockScreen(?WindowsSpotlightEnablementSettings $value ): void {

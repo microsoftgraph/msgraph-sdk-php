@@ -199,6 +199,7 @@ class Contact extends OutlookItem implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.contact');
     }
 
     /**

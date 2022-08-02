@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IncompleteData implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -19,6 +19,11 @@ class IncompleteData implements AdditionalDataHolder, Parsable
      * @var DateTime|null $missingDataBeforeDateTime The service does not have source data before the specified time.
     */
     private ?DateTime $missingDataBeforeDateTime = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var bool|null $wasThrottled Some data was not recorded due to excessive activity.
@@ -29,7 +34,8 @@ class IncompleteData implements AdditionalDataHolder, Parsable
      * Instantiates a new incompleteData and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.incompleteData');
     }
 
     /**
@@ -57,6 +63,7 @@ class IncompleteData implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'missingDataBeforeDateTime' => function (ParseNode $n) use ($o) { $o->setMissingDataBeforeDateTime($n->getDateTimeValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'wasThrottled' => function (ParseNode $n) use ($o) { $o->setWasThrottled($n->getBooleanValue()); },
         ];
     }
@@ -67,6 +74,14 @@ class IncompleteData implements AdditionalDataHolder, Parsable
     */
     public function getMissingDataBeforeDateTime(): ?DateTime {
         return $this->missingDataBeforeDateTime;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -83,6 +98,7 @@ class IncompleteData implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeDateTimeValue('missingDataBeforeDateTime', $this->missingDataBeforeDateTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeBooleanValue('wasThrottled', $this->wasThrottled);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -101,6 +117,14 @@ class IncompleteData implements AdditionalDataHolder, Parsable
     */
     public function setMissingDataBeforeDateTime(?DateTime $value ): void {
         $this->missingDataBeforeDateTime = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

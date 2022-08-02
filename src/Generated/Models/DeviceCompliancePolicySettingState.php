@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -35,6 +35,11 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Parsab
     private ?string $instanceDisplayName = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $setting The setting that is being reported
     */
     private ?string $setting = null;
@@ -50,7 +55,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Parsab
     private ?array $sources = null;
     
     /**
-     * @var ComplianceStatus|null $state The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * @var ComplianceStatus|null $state The state property
     */
     private ?ComplianceStatus $state = null;
     
@@ -78,7 +83,8 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Parsab
      * Instantiates a new deviceCompliancePolicySettingState and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.deviceCompliancePolicySettingState');
     }
 
     /**
@@ -133,6 +139,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Parsab
             'errorCode' => function (ParseNode $n) use ($o) { $o->setErrorCode($n->getIntegerValue()); },
             'errorDescription' => function (ParseNode $n) use ($o) { $o->setErrorDescription($n->getStringValue()); },
             'instanceDisplayName' => function (ParseNode $n) use ($o) { $o->setInstanceDisplayName($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'setting' => function (ParseNode $n) use ($o) { $o->setSetting($n->getStringValue()); },
             'settingName' => function (ParseNode $n) use ($o) { $o->setSettingName($n->getStringValue()); },
             'sources' => function (ParseNode $n) use ($o) { $o->setSources($n->getCollectionOfObjectValues(array(SettingSource::class, 'createFromDiscriminatorValue'))); },
@@ -150,6 +157,14 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Parsab
     */
     public function getInstanceDisplayName(): ?string {
         return $this->instanceDisplayName;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -177,7 +192,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Parsab
     }
 
     /**
-     * Gets the state property value. The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Gets the state property value. The state property
      * @return ComplianceStatus|null
     */
     public function getState(): ?ComplianceStatus {
@@ -225,6 +240,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Parsab
         $writer->writeIntegerValue('errorCode', $this->errorCode);
         $writer->writeStringValue('errorDescription', $this->errorDescription);
         $writer->writeStringValue('instanceDisplayName', $this->instanceDisplayName);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('setting', $this->setting);
         $writer->writeStringValue('settingName', $this->settingName);
         $writer->writeCollectionOfObjectValues('sources', $this->sources);
@@ -277,6 +293,14 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Parsab
     }
 
     /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
      * Sets the setting property value. The setting that is being reported
      *  @param string|null $value Value to set for the setting property.
     */
@@ -301,7 +325,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Parsab
     }
 
     /**
-     * Sets the state property value. The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Sets the state property value. The state property
      *  @param ComplianceStatus|null $value Value to set for the state property.
     */
     public function setState(?ComplianceStatus $value ): void {

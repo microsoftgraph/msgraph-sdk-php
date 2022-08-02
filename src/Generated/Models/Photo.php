@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Photo implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -51,6 +51,11 @@ class Photo implements AdditionalDataHolder, Parsable
     private ?int $iso = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var int|null $orientation The orientation value from the camera. Writable on OneDrive Personal.
     */
     private ?int $orientation = null;
@@ -64,7 +69,8 @@ class Photo implements AdditionalDataHolder, Parsable
      * Instantiates a new photo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.photo');
     }
 
     /**
@@ -130,6 +136,7 @@ class Photo implements AdditionalDataHolder, Parsable
             'fNumber' => function (ParseNode $n) use ($o) { $o->setFNumber($n->getFloatValue()); },
             'focalLength' => function (ParseNode $n) use ($o) { $o->setFocalLength($n->getFloatValue()); },
             'iso' => function (ParseNode $n) use ($o) { $o->setIso($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'orientation' => function (ParseNode $n) use ($o) { $o->setOrientation($n->getIntegerValue()); },
             'takenDateTime' => function (ParseNode $n) use ($o) { $o->setTakenDateTime($n->getDateTimeValue()); },
         ];
@@ -160,6 +167,14 @@ class Photo implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the orientation property value. The orientation value from the camera. Writable on OneDrive Personal.
      * @return int|null
     */
@@ -187,6 +202,7 @@ class Photo implements AdditionalDataHolder, Parsable
         $writer->writeFloatValue('fNumber', $this->fNumber);
         $writer->writeFloatValue('focalLength', $this->focalLength);
         $writer->writeIntegerValue('iso', $this->iso);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('orientation', $this->orientation);
         $writer->writeDateTimeValue('takenDateTime', $this->takenDateTime);
         $writer->writeAdditionalData($this->additionalData);
@@ -254,6 +270,14 @@ class Photo implements AdditionalDataHolder, Parsable
     */
     public function setIso(?int $value ): void {
         $this->iso = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

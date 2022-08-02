@@ -63,6 +63,7 @@ class EventMessage extends Message implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.eventMessage');
     }
 
     /**

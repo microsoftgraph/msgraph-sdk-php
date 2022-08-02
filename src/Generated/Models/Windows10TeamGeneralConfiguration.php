@@ -50,7 +50,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
     private ?bool $miracastBlocked = null;
     
     /**
-     * @var MiracastChannel|null $miracastChannel The channel. Possible values are: userDefined, one, two, three, four, five, six, seven, eight, nine, ten, eleven, thirtySix, forty, fortyFour, fortyEight, oneHundredFortyNine, oneHundredFiftyThree, oneHundredFiftySeven, oneHundredSixtyOne, oneHundredSixtyFive.
+     * @var MiracastChannel|null $miracastChannel Possible values for Miracast channel.
     */
     private ?MiracastChannel $miracastChannel = null;
     
@@ -105,7 +105,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
     private ?bool $welcomeScreenBlockAutomaticWakeUp = null;
     
     /**
-     * @var WelcomeScreenMeetingInformation|null $welcomeScreenMeetingInformation The welcome screen meeting information shown. Possible values are: userDefined, showOrganizerAndTimeOnly, showOrganizerAndTimeAndSubject.
+     * @var WelcomeScreenMeetingInformation|null $welcomeScreenMeetingInformation Possible values for welcome screen meeting information.
     */
     private ?WelcomeScreenMeetingInformation $welcomeScreenMeetingInformation = null;
     
@@ -114,6 +114,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.windows10TeamGeneralConfiguration');
     }
 
     /**
@@ -220,7 +221,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
     }
 
     /**
-     * Gets the miracastChannel property value. The channel. Possible values are: userDefined, one, two, three, four, five, six, seven, eight, nine, ten, eleven, thirtySix, forty, fortyFour, fortyEight, oneHundredFortyNine, oneHundredFiftyThree, oneHundredFiftySeven, oneHundredSixtyOne, oneHundredSixtyFive.
+     * Gets the miracastChannel property value. Possible values for Miracast channel.
      * @return MiracastChannel|null
     */
     public function getMiracastChannel(): ?MiracastChannel {
@@ -308,7 +309,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
     }
 
     /**
-     * Gets the welcomeScreenMeetingInformation property value. The welcome screen meeting information shown. Possible values are: userDefined, showOrganizerAndTimeOnly, showOrganizerAndTimeAndSubject.
+     * Gets the welcomeScreenMeetingInformation property value. Possible values for welcome screen meeting information.
      * @return WelcomeScreenMeetingInformation|null
     */
     public function getWelcomeScreenMeetingInformation(): ?WelcomeScreenMeetingInformation {
@@ -408,7 +409,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
     }
 
     /**
-     * Sets the miracastChannel property value. The channel. Possible values are: userDefined, one, two, three, four, five, six, seven, eight, nine, ten, eleven, thirtySix, forty, fortyFour, fortyEight, oneHundredFortyNine, oneHundredFiftyThree, oneHundredFiftySeven, oneHundredSixtyOne, oneHundredSixtyFive.
+     * Sets the miracastChannel property value. Possible values for Miracast channel.
      *  @param MiracastChannel|null $value Value to set for the miracastChannel property.
     */
     public function setMiracastChannel(?MiracastChannel $value ): void {
@@ -496,7 +497,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
     }
 
     /**
-     * Sets the welcomeScreenMeetingInformation property value. The welcome screen meeting information shown. Possible values are: userDefined, showOrganizerAndTimeOnly, showOrganizerAndTimeAndSubject.
+     * Sets the welcomeScreenMeetingInformation property value. Possible values for welcome screen meeting information.
      *  @param WelcomeScreenMeetingInformation|null $value Value to set for the welcomeScreenMeetingInformation property.
     */
     public function setWelcomeScreenMeetingInformation(?WelcomeScreenMeetingInformation $value ): void {

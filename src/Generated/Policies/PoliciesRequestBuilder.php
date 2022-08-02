@@ -17,6 +17,7 @@ use Microsoft\Graph\Generated\Policies\ClaimsMappingPolicies\ClaimsMappingPolici
 use Microsoft\Graph\Generated\Policies\ClaimsMappingPolicies\Item\ClaimsMappingPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\Policies\ConditionalAccessPolicies\ConditionalAccessPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Policies\ConditionalAccessPolicies\Item\ConditionalAccessPolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\CrossTenantAccessPolicyRequestBuilder;
 use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\FeatureRolloutPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\FeatureRolloutPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\Policies\HomeRealmDiscoveryPolicies\HomeRealmDiscoveryPoliciesRequestBuilder;
@@ -89,6 +90,13 @@ class PoliciesRequestBuilder
     */
     public function conditionalAccessPolicies(): ConditionalAccessPoliciesRequestBuilder {
         return new ConditionalAccessPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The crossTenantAccessPolicy property
+    */
+    public function crossTenantAccessPolicy(): CrossTenantAccessPolicyRequestBuilder {
+        return new CrossTenantAccessPolicyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

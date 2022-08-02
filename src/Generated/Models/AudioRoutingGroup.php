@@ -14,7 +14,7 @@ class AudioRoutingGroup extends Entity implements Parsable
     private ?array $receivers = null;
     
     /**
-     * @var RoutingMode|null $routingMode Routing group mode.  Possible values are: oneToOne, multicast.
+     * @var RoutingMode|null $routingMode The routingMode property
     */
     private ?RoutingMode $routingMode = null;
     
@@ -28,6 +28,7 @@ class AudioRoutingGroup extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.audioRoutingGroup');
     }
 
     /**
@@ -61,7 +62,7 @@ class AudioRoutingGroup extends Entity implements Parsable
     }
 
     /**
-     * Gets the routingMode property value. Routing group mode.  Possible values are: oneToOne, multicast.
+     * Gets the routingMode property value. The routingMode property
      * @return RoutingMode|null
     */
     public function getRoutingMode(): ?RoutingMode {
@@ -96,7 +97,7 @@ class AudioRoutingGroup extends Entity implements Parsable
     }
 
     /**
-     * Sets the routingMode property value. Routing group mode.  Possible values are: oneToOne, multicast.
+     * Sets the routingMode property value. The routingMode property
      *  @param RoutingMode|null $value Value to set for the routingMode property.
     */
     public function setRoutingMode(?RoutingMode $value ): void {

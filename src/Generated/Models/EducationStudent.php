@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\Date;
 class EducationStudent implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -41,6 +41,11 @@ class EducationStudent implements AdditionalDataHolder, Parsable
     private ?string $graduationYear = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $studentNumber Student Number.
     */
     private ?string $studentNumber = null;
@@ -49,7 +54,8 @@ class EducationStudent implements AdditionalDataHolder, Parsable
      * Instantiates a new educationStudent and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.educationStudent');
     }
 
     /**
@@ -97,6 +103,7 @@ class EducationStudent implements AdditionalDataHolder, Parsable
             'gender' => function (ParseNode $n) use ($o) { $o->setGender($n->getEnumValue(EducationGender::class)); },
             'grade' => function (ParseNode $n) use ($o) { $o->setGrade($n->getStringValue()); },
             'graduationYear' => function (ParseNode $n) use ($o) { $o->setGraduationYear($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'studentNumber' => function (ParseNode $n) use ($o) { $o->setStudentNumber($n->getStringValue()); },
         ];
     }
@@ -126,6 +133,14 @@ class EducationStudent implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the studentNumber property value. Student Number.
      * @return string|null
     */
@@ -143,6 +158,7 @@ class EducationStudent implements AdditionalDataHolder, Parsable
         $writer->writeEnumValue('gender', $this->gender);
         $writer->writeStringValue('grade', $this->grade);
         $writer->writeStringValue('graduationYear', $this->graduationYear);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('studentNumber', $this->studentNumber);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -193,6 +209,14 @@ class EducationStudent implements AdditionalDataHolder, Parsable
     */
     public function setGraduationYear(?string $value ): void {
         $this->graduationYear = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

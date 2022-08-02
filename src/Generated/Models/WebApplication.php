@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WebApplication implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,6 +30,11 @@ class WebApplication implements AdditionalDataHolder, Parsable
     private ?string $logoutUrl = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var array<string>|null $redirectUris Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
     */
     private ?array $redirectUris = null;
@@ -38,7 +43,8 @@ class WebApplication implements AdditionalDataHolder, Parsable
      * Instantiates a new webApplication and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.webApplication');
     }
 
     /**
@@ -68,6 +74,7 @@ class WebApplication implements AdditionalDataHolder, Parsable
             'homePageUrl' => function (ParseNode $n) use ($o) { $o->setHomePageUrl($n->getStringValue()); },
             'implicitGrantSettings' => function (ParseNode $n) use ($o) { $o->setImplicitGrantSettings($n->getObjectValue(array(ImplicitGrantSettings::class, 'createFromDiscriminatorValue'))); },
             'logoutUrl' => function (ParseNode $n) use ($o) { $o->setLogoutUrl($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'redirectUris' => function (ParseNode $n) use ($o) { $o->setRedirectUris($n->getCollectionOfPrimitiveValues()); },
         ];
     }
@@ -97,6 +104,14 @@ class WebApplication implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the redirectUris property value. Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
      * @return array<string>|null
     */
@@ -112,6 +127,7 @@ class WebApplication implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('homePageUrl', $this->homePageUrl);
         $writer->writeObjectValue('implicitGrantSettings', $this->implicitGrantSettings);
         $writer->writeStringValue('logoutUrl', $this->logoutUrl);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfPrimitiveValues('redirectUris', $this->redirectUris);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -146,6 +162,14 @@ class WebApplication implements AdditionalDataHolder, Parsable
     */
     public function setLogoutUrl(?string $value ): void {
         $this->logoutUrl = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

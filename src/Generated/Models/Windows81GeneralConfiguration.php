@@ -64,12 +64,12 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?string $browserEnterpriseModeSiteListLocation = null;
     
     /**
-     * @var InternetSiteSecurityLevel|null $browserInternetSecurityLevel The internet security level. Possible values are: userDefined, medium, mediumHigh, high.
+     * @var InternetSiteSecurityLevel|null $browserInternetSecurityLevel Possible values for internet site security level.
     */
     private ?InternetSiteSecurityLevel $browserInternetSecurityLevel = null;
     
     /**
-     * @var SiteSecurityLevel|null $browserIntranetSecurityLevel The Intranet security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
+     * @var SiteSecurityLevel|null $browserIntranetSecurityLevel Possible values for site security level.
     */
     private ?SiteSecurityLevel $browserIntranetSecurityLevel = null;
     
@@ -99,7 +99,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?bool $browserRequireSmartScreen = null;
     
     /**
-     * @var SiteSecurityLevel|null $browserTrustedSitesSecurityLevel The trusted sites security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
+     * @var SiteSecurityLevel|null $browserTrustedSitesSecurityLevel Possible values for site security level.
     */
     private ?SiteSecurityLevel $browserTrustedSitesSecurityLevel = null;
     
@@ -144,7 +144,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?int $passwordPreviousPasswordBlockCount = null;
     
     /**
-     * @var RequiredPasswordType|null $passwordRequiredType The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * @var RequiredPasswordType|null $passwordRequiredType Possible values of required passwords.
     */
     private ?RequiredPasswordType $passwordRequiredType = null;
     
@@ -164,7 +164,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     private ?bool $updatesRequireAutomaticUpdates = null;
     
     /**
-     * @var WindowsUserAccountControlSettings|null $userAccountControlSettings The user account control settings. Possible values are: userDefined, alwaysNotify, notifyOnAppChanges, notifyOnAppChangesWithoutDimming, neverNotify.
+     * @var WindowsUserAccountControlSettings|null $userAccountControlSettings Possible values for Windows user account control settings.
     */
     private ?WindowsUserAccountControlSettings $userAccountControlSettings = null;
     
@@ -178,6 +178,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.windows81GeneralConfiguration');
     }
 
     /**
@@ -278,7 +279,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the browserInternetSecurityLevel property value. The internet security level. Possible values are: userDefined, medium, mediumHigh, high.
+     * Gets the browserInternetSecurityLevel property value. Possible values for internet site security level.
      * @return InternetSiteSecurityLevel|null
     */
     public function getBrowserInternetSecurityLevel(): ?InternetSiteSecurityLevel {
@@ -286,7 +287,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the browserIntranetSecurityLevel property value. The Intranet security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
+     * Gets the browserIntranetSecurityLevel property value. Possible values for site security level.
      * @return SiteSecurityLevel|null
     */
     public function getBrowserIntranetSecurityLevel(): ?SiteSecurityLevel {
@@ -334,7 +335,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the browserTrustedSitesSecurityLevel property value. The trusted sites security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
+     * Gets the browserTrustedSitesSecurityLevel property value. Possible values for site security level.
      * @return SiteSecurityLevel|null
     */
     public function getBrowserTrustedSitesSecurityLevel(): ?SiteSecurityLevel {
@@ -449,7 +450,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return RequiredPasswordType|null
     */
     public function getPasswordRequiredType(): ?RequiredPasswordType {
@@ -481,7 +482,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the userAccountControlSettings property value. The user account control settings. Possible values are: userDefined, alwaysNotify, notifyOnAppChanges, notifyOnAppChangesWithoutDimming, neverNotify.
+     * Gets the userAccountControlSettings property value. Possible values for Windows user account control settings.
      * @return WindowsUserAccountControlSettings|null
     */
     public function getUserAccountControlSettings(): ?WindowsUserAccountControlSettings {
@@ -626,7 +627,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the browserInternetSecurityLevel property value. The internet security level. Possible values are: userDefined, medium, mediumHigh, high.
+     * Sets the browserInternetSecurityLevel property value. Possible values for internet site security level.
      *  @param InternetSiteSecurityLevel|null $value Value to set for the browserInternetSecurityLevel property.
     */
     public function setBrowserInternetSecurityLevel(?InternetSiteSecurityLevel $value ): void {
@@ -634,7 +635,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the browserIntranetSecurityLevel property value. The Intranet security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
+     * Sets the browserIntranetSecurityLevel property value. Possible values for site security level.
      *  @param SiteSecurityLevel|null $value Value to set for the browserIntranetSecurityLevel property.
     */
     public function setBrowserIntranetSecurityLevel(?SiteSecurityLevel $value ): void {
@@ -682,7 +683,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the browserTrustedSitesSecurityLevel property value. The trusted sites security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
+     * Sets the browserTrustedSitesSecurityLevel property value. Possible values for site security level.
      *  @param SiteSecurityLevel|null $value Value to set for the browserTrustedSitesSecurityLevel property.
     */
     public function setBrowserTrustedSitesSecurityLevel(?SiteSecurityLevel $value ): void {
@@ -754,7 +755,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Sets the passwordRequiredType property value. Possible values of required passwords.
      *  @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
     */
     public function setPasswordRequiredType(?RequiredPasswordType $value ): void {
@@ -786,7 +787,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the userAccountControlSettings property value. The user account control settings. Possible values are: userDefined, alwaysNotify, notifyOnAppChanges, notifyOnAppChangesWithoutDimming, neverNotify.
+     * Sets the userAccountControlSettings property value. Possible values for Windows user account control settings.
      *  @param WindowsUserAccountControlSettings|null $value Value to set for the userAccountControlSettings property.
     */
     public function setUserAccountControlSettings(?WindowsUserAccountControlSettings $value ): void {

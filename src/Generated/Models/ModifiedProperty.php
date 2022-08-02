@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ModifiedProperty implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class ModifiedProperty implements AdditionalDataHolder, Parsable
     private ?string $newValue = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $oldValue Old property value.
     */
     private ?string $oldValue = null;
@@ -33,7 +38,8 @@ class ModifiedProperty implements AdditionalDataHolder, Parsable
      * Instantiates a new modifiedProperty and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.modifiedProperty');
     }
 
     /**
@@ -70,6 +76,7 @@ class ModifiedProperty implements AdditionalDataHolder, Parsable
         return  [
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'newValue' => function (ParseNode $n) use ($o) { $o->setNewValue($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'oldValue' => function (ParseNode $n) use ($o) { $o->setOldValue($n->getStringValue()); },
         ];
     }
@@ -80,6 +87,14 @@ class ModifiedProperty implements AdditionalDataHolder, Parsable
     */
     public function getNewValue(): ?string {
         return $this->newValue;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -97,6 +112,7 @@ class ModifiedProperty implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeStringValue('newValue', $this->newValue);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('oldValue', $this->oldValue);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +139,14 @@ class ModifiedProperty implements AdditionalDataHolder, Parsable
     */
     public function setNewValue(?string $value ): void {
         $this->newValue = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

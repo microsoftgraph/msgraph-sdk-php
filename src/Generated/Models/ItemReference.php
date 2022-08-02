@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ItemReference implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -33,6 +33,11 @@ class ItemReference implements AdditionalDataHolder, Parsable
      * @var string|null $name The name of the item being referenced. Read-only.
     */
     private ?string $name = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $path Path that can be used to navigate to the item. Read-only.
@@ -58,7 +63,8 @@ class ItemReference implements AdditionalDataHolder, Parsable
      * Instantiates a new itemReference and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.itemReference');
     }
 
     /**
@@ -105,6 +111,7 @@ class ItemReference implements AdditionalDataHolder, Parsable
             'driveType' => function (ParseNode $n) use ($o) { $o->setDriveType($n->getStringValue()); },
             'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
             'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'path' => function (ParseNode $n) use ($o) { $o->setPath($n->getStringValue()); },
             'shareId' => function (ParseNode $n) use ($o) { $o->setShareId($n->getStringValue()); },
             'sharepointIds' => function (ParseNode $n) use ($o) { $o->setSharepointIds($n->getObjectValue(array(SharepointIds::class, 'createFromDiscriminatorValue'))); },
@@ -126,6 +133,14 @@ class ItemReference implements AdditionalDataHolder, Parsable
     */
     public function getName(): ?string {
         return $this->name;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -169,6 +184,7 @@ class ItemReference implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('driveType', $this->driveType);
         $writer->writeStringValue('id', $this->id);
         $writer->writeStringValue('name', $this->name);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('path', $this->path);
         $writer->writeStringValue('shareId', $this->shareId);
         $writer->writeObjectValue('sharepointIds', $this->sharepointIds);
@@ -214,6 +230,14 @@ class ItemReference implements AdditionalDataHolder, Parsable
     */
     public function setName(?string $value ): void {
         $this->name = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

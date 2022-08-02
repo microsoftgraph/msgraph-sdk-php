@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CopyNotebookModel implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -31,7 +31,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
     private ?DateTime $createdTime = null;
     
     /**
-     * @var string|null $EscapedSelf The self property
+     * @var string|null $escapedSelf The self property
     */
     private ?string $escapedSelf = null;
     
@@ -76,6 +76,11 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
     private ?string $name = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $sectionGroupsUrl The sectionGroupsUrl property
     */
     private ?string $sectionGroupsUrl = null;
@@ -94,7 +99,8 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * Instantiates a new CopyNotebookModel and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.CopyNotebookModel');
     }
 
     /**
@@ -157,6 +163,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
             'lastModifiedTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedTime($n->getDateTimeValue()); },
             'links' => function (ParseNode $n) use ($o) { $o->setLinks($n->getObjectValue(array(NotebookLinks::class, 'createFromDiscriminatorValue'))); },
             'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'sectionGroupsUrl' => function (ParseNode $n) use ($o) { $o->setSectionGroupsUrl($n->getStringValue()); },
             'sectionsUrl' => function (ParseNode $n) use ($o) { $o->setSectionsUrl($n->getStringValue()); },
             'userRole' => function (ParseNode $n) use ($o) { $o->setUserRole($n->getEnumValue(OnenoteUserRole::class)); },
@@ -228,6 +235,14 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the sectionGroupsUrl property value. The sectionGroupsUrl property
      * @return string|null
     */
@@ -276,6 +291,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
         $writer->writeDateTimeValue('lastModifiedTime', $this->lastModifiedTime);
         $writer->writeObjectValue('links', $this->links);
         $writer->writeStringValue('name', $this->name);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('sectionGroupsUrl', $this->sectionGroupsUrl);
         $writer->writeStringValue('sectionsUrl', $this->sectionsUrl);
         $writer->writeEnumValue('userRole', $this->userRole);
@@ -376,6 +392,14 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
     */
     public function setName(?string $value ): void {
         $this->name = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

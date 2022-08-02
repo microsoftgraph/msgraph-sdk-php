@@ -19,10 +19,11 @@ class TermsOfUseContainer extends Entity implements Parsable
     private ?array $agreements = null;
     
     /**
-     * Instantiates a new termsOfUseContainer and sets the default values.
+     * Instantiates a new TermsOfUseContainer and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.termsOfUseContainer');
     }
 
     /**

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IdentitySet implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class IdentitySet implements AdditionalDataHolder, Parsable
     private ?Identity $device = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var Identity|null $user Optional. The user associated with this action.
     */
     private ?Identity $user = null;
@@ -33,7 +38,8 @@ class IdentitySet implements AdditionalDataHolder, Parsable
      * Instantiates a new identitySet and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.identitySet');
     }
 
     /**
@@ -42,6 +48,16 @@ class IdentitySet implements AdditionalDataHolder, Parsable
      * @return IdentitySet
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): IdentitySet {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.chatMessageFromIdentitySet': return new ChatMessageFromIdentitySet();
+                case '#microsoft.graph.chatMessageMentionedIdentitySet': return new ChatMessageMentionedIdentitySet();
+                case '#microsoft.graph.chatMessageReactionIdentitySet': return new ChatMessageReactionIdentitySet();
+                case '#microsoft.graph.sharePointIdentitySet': return new SharePointIdentitySet();
+            }
+        }
         return new IdentitySet();
     }
 
@@ -78,8 +94,17 @@ class IdentitySet implements AdditionalDataHolder, Parsable
         return  [
             'application' => function (ParseNode $n) use ($o) { $o->setApplication($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
             'device' => function (ParseNode $n) use ($o) { $o->setDevice($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'user' => function (ParseNode $n) use ($o) { $o->setUser($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -97,6 +122,7 @@ class IdentitySet implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('application', $this->application);
         $writer->writeObjectValue('device', $this->device);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('user', $this->user);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +149,14 @@ class IdentitySet implements AdditionalDataHolder, Parsable
     */
     public function setDevice(?Identity $value ): void {
         $this->device = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

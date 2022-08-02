@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TermColumn implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -20,6 +20,11 @@ class TermColumn implements AdditionalDataHolder, Parsable
      * @var bool|null $allowMultipleValues Specifies whether the column will allow more than one value
     */
     private ?bool $allowMultipleValues = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var Term|null $parentTerm The parentTerm property
@@ -40,7 +45,8 @@ class TermColumn implements AdditionalDataHolder, Parsable
      * Instantiates a new termColumn and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.termColumn');
     }
 
     /**
@@ -76,10 +82,19 @@ class TermColumn implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'allowMultipleValues' => function (ParseNode $n) use ($o) { $o->setAllowMultipleValues($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'parentTerm' => function (ParseNode $n) use ($o) { $o->setParentTerm($n->getObjectValue(array(Term::class, 'createFromDiscriminatorValue'))); },
             'showFullyQualifiedName' => function (ParseNode $n) use ($o) { $o->setShowFullyQualifiedName($n->getBooleanValue()); },
             'termSet' => function (ParseNode $n) use ($o) { $o->setTermSet($n->getObjectValue(array(Set::class, 'createFromDiscriminatorValue'))); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -112,6 +127,7 @@ class TermColumn implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('allowMultipleValues', $this->allowMultipleValues);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('parentTerm', $this->parentTerm);
         $writer->writeBooleanValue('showFullyQualifiedName', $this->showFullyQualifiedName);
         $writer->writeObjectValue('termSet', $this->termSet);
@@ -132,6 +148,14 @@ class TermColumn implements AdditionalDataHolder, Parsable
     */
     public function setAllowMultipleValues(?bool $value ): void {
         $this->allowMultipleValues = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

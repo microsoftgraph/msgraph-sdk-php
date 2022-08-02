@@ -34,6 +34,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.offerShiftRequest');
     }
 
     /**

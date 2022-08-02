@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class File implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class File implements AdditionalDataHolder, Parsable
     private ?string $mimeType = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var bool|null $processingMetadata The processingMetadata property
     */
     private ?bool $processingMetadata = null;
@@ -33,7 +38,8 @@ class File implements AdditionalDataHolder, Parsable
      * Instantiates a new file and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.file');
     }
 
     /**
@@ -62,6 +68,7 @@ class File implements AdditionalDataHolder, Parsable
         return  [
             'hashes' => function (ParseNode $n) use ($o) { $o->setHashes($n->getObjectValue(array(Hashes::class, 'createFromDiscriminatorValue'))); },
             'mimeType' => function (ParseNode $n) use ($o) { $o->setMimeType($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'processingMetadata' => function (ParseNode $n) use ($o) { $o->setProcessingMetadata($n->getBooleanValue()); },
         ];
     }
@@ -83,6 +90,14 @@ class File implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the processingMetadata property value. The processingMetadata property
      * @return bool|null
     */
@@ -97,6 +112,7 @@ class File implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('hashes', $this->hashes);
         $writer->writeStringValue('mimeType', $this->mimeType);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeBooleanValue('processingMetadata', $this->processingMetadata);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +139,14 @@ class File implements AdditionalDataHolder, Parsable
     */
     public function setMimeType(?string $value ): void {
         $this->mimeType = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

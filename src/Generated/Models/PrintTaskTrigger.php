@@ -14,7 +14,7 @@ class PrintTaskTrigger extends Entity implements Parsable
     private ?PrintTaskDefinition $definition = null;
     
     /**
-     * @var PrintEvent|null $event The Universal Print event that will cause a new printTask to be triggered. Valid values are described in the following table.
+     * @var PrintEvent|null $event The event property
     */
     private ?PrintEvent $event = null;
     
@@ -23,6 +23,7 @@ class PrintTaskTrigger extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.printTaskTrigger');
     }
 
     /**
@@ -43,7 +44,7 @@ class PrintTaskTrigger extends Entity implements Parsable
     }
 
     /**
-     * Gets the event property value. The Universal Print event that will cause a new printTask to be triggered. Valid values are described in the following table.
+     * Gets the event property value. The event property
      * @return PrintEvent|null
     */
     public function getEvent(): ?PrintEvent {
@@ -81,7 +82,7 @@ class PrintTaskTrigger extends Entity implements Parsable
     }
 
     /**
-     * Sets the event property value. The Universal Print event that will cause a new printTask to be triggered. Valid values are described in the following table.
+     * Sets the event property value. The event property
      *  @param PrintEvent|null $value Value to set for the event property.
     */
     public function setEvent(?PrintEvent $value ): void {

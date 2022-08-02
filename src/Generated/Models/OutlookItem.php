@@ -34,6 +34,7 @@ class OutlookItem extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.outlookItem');
     }
 
     /**
@@ -46,8 +47,12 @@ class OutlookItem extends Entity implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.calendarSharingMessage': return new CalendarSharingMessage();
                 case '#microsoft.graph.contact': return new Contact();
                 case '#microsoft.graph.event': return new Event();
+                case '#microsoft.graph.eventMessage': return new EventMessage();
+                case '#microsoft.graph.eventMessageRequest': return new EventMessageRequest();
+                case '#microsoft.graph.eventMessageResponse': return new EventMessageResponse();
                 case '#microsoft.graph.message': return new Message();
                 case '#microsoft.graph.post': return new Post();
             }

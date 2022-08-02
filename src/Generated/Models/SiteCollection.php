@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SiteCollection implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class SiteCollection implements AdditionalDataHolder, Parsable
     private ?string $hostname = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var Root|null $root If present, indicates that this is a root site collection in SharePoint. Read-only.
     */
     private ?Root $root = null;
@@ -33,7 +38,8 @@ class SiteCollection implements AdditionalDataHolder, Parsable
      * Instantiates a new siteCollection and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.siteCollection');
     }
 
     /**
@@ -70,6 +76,7 @@ class SiteCollection implements AdditionalDataHolder, Parsable
         return  [
             'dataLocationCode' => function (ParseNode $n) use ($o) { $o->setDataLocationCode($n->getStringValue()); },
             'hostname' => function (ParseNode $n) use ($o) { $o->setHostname($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'root' => function (ParseNode $n) use ($o) { $o->setRoot($n->getObjectValue(array(Root::class, 'createFromDiscriminatorValue'))); },
         ];
     }
@@ -80,6 +87,14 @@ class SiteCollection implements AdditionalDataHolder, Parsable
     */
     public function getHostname(): ?string {
         return $this->hostname;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -97,6 +112,7 @@ class SiteCollection implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('dataLocationCode', $this->dataLocationCode);
         $writer->writeStringValue('hostname', $this->hostname);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('root', $this->root);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +139,14 @@ class SiteCollection implements AdditionalDataHolder, Parsable
     */
     public function setHostname(?string $value ): void {
         $this->hostname = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceInfo implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -70,6 +70,11 @@ class DeviceInfo implements AdditionalDataHolder, Parsable
     private ?float $micGlitchRate = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var int|null $receivedNoiseLevel Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
     */
     private ?int $receivedNoiseLevel = null;
@@ -123,7 +128,8 @@ class DeviceInfo implements AdditionalDataHolder, Parsable
      * Instantiates a new deviceInfo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.callRecords.deviceInfo');
     }
 
     /**
@@ -209,6 +215,7 @@ class DeviceInfo implements AdditionalDataHolder, Parsable
             'lowSpeechLevelEventRatio' => function (ParseNode $n) use ($o) { $o->setLowSpeechLevelEventRatio($n->getFloatValue()); },
             'lowSpeechToNoiseEventRatio' => function (ParseNode $n) use ($o) { $o->setLowSpeechToNoiseEventRatio($n->getFloatValue()); },
             'micGlitchRate' => function (ParseNode $n) use ($o) { $o->setMicGlitchRate($n->getFloatValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'receivedNoiseLevel' => function (ParseNode $n) use ($o) { $o->setReceivedNoiseLevel($n->getIntegerValue()); },
             'receivedSignalLevel' => function (ParseNode $n) use ($o) { $o->setReceivedSignalLevel($n->getIntegerValue()); },
             'renderDeviceDriver' => function (ParseNode $n) use ($o) { $o->setRenderDeviceDriver($n->getStringValue()); },
@@ -260,6 +267,14 @@ class DeviceInfo implements AdditionalDataHolder, Parsable
     */
     public function getMicGlitchRate(): ?float {
         return $this->micGlitchRate;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -358,6 +373,7 @@ class DeviceInfo implements AdditionalDataHolder, Parsable
         $writer->writeFloatValue('lowSpeechLevelEventRatio', $this->lowSpeechLevelEventRatio);
         $writer->writeFloatValue('lowSpeechToNoiseEventRatio', $this->lowSpeechToNoiseEventRatio);
         $writer->writeFloatValue('micGlitchRate', $this->micGlitchRate);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('receivedNoiseLevel', $this->receivedNoiseLevel);
         $writer->writeIntegerValue('receivedSignalLevel', $this->receivedSignalLevel);
         $writer->writeStringValue('renderDeviceDriver', $this->renderDeviceDriver);
@@ -465,6 +481,14 @@ class DeviceInfo implements AdditionalDataHolder, Parsable
     */
     public function setMicGlitchRate(?float $value ): void {
         $this->micGlitchRate = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

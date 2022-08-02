@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MailboxSettings implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -40,6 +40,11 @@ class MailboxSettings implements AdditionalDataHolder, Parsable
     private ?LocaleInfo $language = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $timeFormat The time format for the user's mailbox.
     */
     private ?string $timeFormat = null;
@@ -63,7 +68,8 @@ class MailboxSettings implements AdditionalDataHolder, Parsable
      * Instantiates a new mailboxSettings and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.mailboxSettings');
     }
 
     /**
@@ -127,6 +133,7 @@ class MailboxSettings implements AdditionalDataHolder, Parsable
             'dateFormat' => function (ParseNode $n) use ($o) { $o->setDateFormat($n->getStringValue()); },
             'delegateMeetingMessageDeliveryOptions' => function (ParseNode $n) use ($o) { $o->setDelegateMeetingMessageDeliveryOptions($n->getEnumValue(DelegateMeetingMessageDeliveryOptions::class)); },
             'language' => function (ParseNode $n) use ($o) { $o->setLanguage($n->getObjectValue(array(LocaleInfo::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'timeFormat' => function (ParseNode $n) use ($o) { $o->setTimeFormat($n->getStringValue()); },
             'timeZone' => function (ParseNode $n) use ($o) { $o->setTimeZone($n->getStringValue()); },
             'userPurpose' => function (ParseNode $n) use ($o) { $o->setUserPurpose($n->getEnumValue(UserPurpose::class)); },
@@ -140,6 +147,14 @@ class MailboxSettings implements AdditionalDataHolder, Parsable
     */
     public function getLanguage(): ?LocaleInfo {
         return $this->language;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -184,6 +199,7 @@ class MailboxSettings implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('dateFormat', $this->dateFormat);
         $writer->writeEnumValue('delegateMeetingMessageDeliveryOptions', $this->delegateMeetingMessageDeliveryOptions);
         $writer->writeObjectValue('language', $this->language);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('timeFormat', $this->timeFormat);
         $writer->writeStringValue('timeZone', $this->timeZone);
         $writer->writeEnumValue('userPurpose', $this->userPurpose);
@@ -237,6 +253,14 @@ class MailboxSettings implements AdditionalDataHolder, Parsable
     */
     public function setLanguage(?LocaleInfo $value ): void {
         $this->language = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

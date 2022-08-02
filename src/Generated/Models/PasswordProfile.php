@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PasswordProfile implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class PasswordProfile implements AdditionalDataHolder, Parsable
     private ?bool $forceChangePasswordNextSignInWithMfa = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $password The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user’s passwordPolicies property. By default, a strong password is required.
     */
     private ?string $password = null;
@@ -33,7 +38,8 @@ class PasswordProfile implements AdditionalDataHolder, Parsable
      * Instantiates a new passwordProfile and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.passwordProfile');
     }
 
     /**
@@ -62,6 +68,7 @@ class PasswordProfile implements AdditionalDataHolder, Parsable
         return  [
             'forceChangePasswordNextSignIn' => function (ParseNode $n) use ($o) { $o->setForceChangePasswordNextSignIn($n->getBooleanValue()); },
             'forceChangePasswordNextSignInWithMfa' => function (ParseNode $n) use ($o) { $o->setForceChangePasswordNextSignInWithMfa($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'password' => function (ParseNode $n) use ($o) { $o->setPassword($n->getStringValue()); },
         ];
     }
@@ -83,6 +90,14 @@ class PasswordProfile implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user’s passwordPolicies property. By default, a strong password is required.
      * @return string|null
     */
@@ -97,6 +112,7 @@ class PasswordProfile implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('forceChangePasswordNextSignIn', $this->forceChangePasswordNextSignIn);
         $writer->writeBooleanValue('forceChangePasswordNextSignInWithMfa', $this->forceChangePasswordNextSignInWithMfa);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('password', $this->password);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +139,14 @@ class PasswordProfile implements AdditionalDataHolder, Parsable
     */
     public function setForceChangePasswordNextSignInWithMfa(?bool $value ): void {
         $this->forceChangePasswordNextSignInWithMfa = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

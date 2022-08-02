@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRolePermission implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,10 +30,16 @@ class UnifiedRolePermission implements AdditionalDataHolder, Parsable
     private ?array $excludedResourceActions = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new unifiedRolePermission and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.unifiedRolePermission');
     }
 
     /**
@@ -87,7 +93,16 @@ class UnifiedRolePermission implements AdditionalDataHolder, Parsable
             'allowedResourceActions' => function (ParseNode $n) use ($o) { $o->setAllowedResourceActions($n->getCollectionOfPrimitiveValues()); },
             'condition' => function (ParseNode $n) use ($o) { $o->setCondition($n->getStringValue()); },
             'excludedResourceActions' => function (ParseNode $n) use ($o) { $o->setExcludedResourceActions($n->getCollectionOfPrimitiveValues()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -98,6 +113,7 @@ class UnifiedRolePermission implements AdditionalDataHolder, Parsable
         $writer->writeCollectionOfPrimitiveValues('allowedResourceActions', $this->allowedResourceActions);
         $writer->writeStringValue('condition', $this->condition);
         $writer->writeCollectionOfPrimitiveValues('excludedResourceActions', $this->excludedResourceActions);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -131,6 +147,14 @@ class UnifiedRolePermission implements AdditionalDataHolder, Parsable
     */
     public function setExcludedResourceActions(?array $value ): void {
         $this->excludedResourceActions = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

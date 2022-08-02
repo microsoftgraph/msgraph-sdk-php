@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RecentNotebook implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -31,6 +31,11 @@ class RecentNotebook implements AdditionalDataHolder, Parsable
     private ?RecentNotebookLinks $links = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var OnenoteSourceService|null $sourceService The backend store where the Notebook resides, either OneDriveForBusiness or OneDrive.
     */
     private ?OnenoteSourceService $sourceService = null;
@@ -39,7 +44,8 @@ class RecentNotebook implements AdditionalDataHolder, Parsable
      * Instantiates a new recentNotebook and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.recentNotebook');
     }
 
     /**
@@ -77,6 +83,7 @@ class RecentNotebook implements AdditionalDataHolder, Parsable
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'lastAccessedTime' => function (ParseNode $n) use ($o) { $o->setLastAccessedTime($n->getDateTimeValue()); },
             'links' => function (ParseNode $n) use ($o) { $o->setLinks($n->getObjectValue(array(RecentNotebookLinks::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'sourceService' => function (ParseNode $n) use ($o) { $o->setSourceService($n->getEnumValue(OnenoteSourceService::class)); },
         ];
     }
@@ -98,6 +105,14 @@ class RecentNotebook implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the sourceService property value. The backend store where the Notebook resides, either OneDriveForBusiness or OneDrive.
      * @return OnenoteSourceService|null
     */
@@ -113,6 +128,7 @@ class RecentNotebook implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeDateTimeValue('lastAccessedTime', $this->lastAccessedTime);
         $writer->writeObjectValue('links', $this->links);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('sourceService', $this->sourceService);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -147,6 +163,14 @@ class RecentNotebook implements AdditionalDataHolder, Parsable
     */
     public function setLinks(?RecentNotebookLinks $value ): void {
         $this->links = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -111,6 +111,11 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
     private ?string $lastUpdateDateTime = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $operatingSystemKernelDebugging When operatingSystemKernelDebugging is enabled, the device is used in development and testing
     */
     private ?string $operatingSystemKernelDebugging = null;
@@ -179,7 +184,8 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * Instantiates a new deviceHealthAttestationState and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.deviceHealthAttestationState');
     }
 
     /**
@@ -345,6 +351,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
             'healthStatusMismatchInfo' => function (ParseNode $n) use ($o) { $o->setHealthStatusMismatchInfo($n->getStringValue()); },
             'issuedDateTime' => function (ParseNode $n) use ($o) { $o->setIssuedDateTime($n->getDateTimeValue()); },
             'lastUpdateDateTime' => function (ParseNode $n) use ($o) { $o->setLastUpdateDateTime($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'operatingSystemKernelDebugging' => function (ParseNode $n) use ($o) { $o->setOperatingSystemKernelDebugging($n->getStringValue()); },
             'operatingSystemRevListInfo' => function (ParseNode $n) use ($o) { $o->setOperatingSystemRevListInfo($n->getStringValue()); },
             'pcr0' => function (ParseNode $n) use ($o) { $o->setPcr0($n->getStringValue()); },
@@ -391,6 +398,14 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
     */
     public function getLastUpdateDateTime(): ?string {
         return $this->lastUpdateDateTime;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -521,6 +536,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('healthStatusMismatchInfo', $this->healthStatusMismatchInfo);
         $writer->writeDateTimeValue('issuedDateTime', $this->issuedDateTime);
         $writer->writeStringValue('lastUpdateDateTime', $this->lastUpdateDateTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('operatingSystemKernelDebugging', $this->operatingSystemKernelDebugging);
         $writer->writeStringValue('operatingSystemRevListInfo', $this->operatingSystemRevListInfo);
         $writer->writeStringValue('pcr0', $this->pcr0);
@@ -695,6 +711,14 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
     */
     public function setLastUpdateDateTime(?string $value ): void {
         $this->lastUpdateDateTime = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

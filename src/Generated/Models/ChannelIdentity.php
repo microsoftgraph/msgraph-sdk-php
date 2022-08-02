@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChannelIdentity implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class ChannelIdentity implements AdditionalDataHolder, Parsable
      * @var string|null $channelId The identity of the channel in which the message was posted.
     */
     private ?string $channelId = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $teamId The identity of the team in which the message was posted.
@@ -28,7 +33,8 @@ class ChannelIdentity implements AdditionalDataHolder, Parsable
      * Instantiates a new channelIdentity and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.channelIdentity');
     }
 
     /**
@@ -64,8 +70,17 @@ class ChannelIdentity implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'channelId' => function (ParseNode $n) use ($o) { $o->setChannelId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'teamId' => function (ParseNode $n) use ($o) { $o->setTeamId($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class ChannelIdentity implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('channelId', $this->channelId);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('teamId', $this->teamId);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -100,6 +116,14 @@ class ChannelIdentity implements AdditionalDataHolder, Parsable
     */
     public function setChannelId(?string $value ): void {
         $this->channelId = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

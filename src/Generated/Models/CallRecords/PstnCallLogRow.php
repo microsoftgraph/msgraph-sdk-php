@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PstnCallLogRow implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -96,6 +96,11 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
     private ?string $licenseCapability = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $operator The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
     */
     private ?string $operator = null;
@@ -134,7 +139,8 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * Instantiates a new pstnCallLogRow and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.callRecords.pstnCallLogRow');
     }
 
     /**
@@ -281,6 +287,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
             'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
             'inventoryType' => function (ParseNode $n) use ($o) { $o->setInventoryType($n->getStringValue()); },
             'licenseCapability' => function (ParseNode $n) use ($o) { $o->setLicenseCapability($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'operator' => function (ParseNode $n) use ($o) { $o->setOperator($n->getStringValue()); },
             'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
             'tenantCountryCode' => function (ParseNode $n) use ($o) { $o->setTenantCountryCode($n->getStringValue()); },
@@ -313,6 +320,14 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
     */
     public function getLicenseCapability(): ?string {
         return $this->licenseCapability;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -392,6 +407,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('id', $this->id);
         $writer->writeStringValue('inventoryType', $this->inventoryType);
         $writer->writeStringValue('licenseCapability', $this->licenseCapability);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('operator', $this->operator);
         $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
         $writer->writeStringValue('tenantCountryCode', $this->tenantCountryCode);
@@ -536,6 +552,14 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
     */
     public function setLicenseCapability(?string $value ): void {
         $this->licenseCapability = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

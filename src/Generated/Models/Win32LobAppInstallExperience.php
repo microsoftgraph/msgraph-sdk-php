@@ -10,17 +10,22 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var Win32LobAppRestartBehavior|null $deviceRestartBehavior Device restart behavior. Possible values are: basedOnReturnCode, allow, suppress, force.
+     * @var Win32LobAppRestartBehavior|null $deviceRestartBehavior Indicates the type of restart action.
     */
     private ?Win32LobAppRestartBehavior $deviceRestartBehavior = null;
     
     /**
-     * @var RunAsAccountType|null $runAsAccount Indicates the type of execution context the app runs in. Possible values are: system, user.
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
+     * @var RunAsAccountType|null $runAsAccount Indicates the type of execution context the app runs in.
     */
     private ?RunAsAccountType $runAsAccount = null;
     
@@ -28,7 +33,8 @@ class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsable
      * Instantiates a new win32LobAppInstallExperience and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.win32LobAppInstallExperience');
     }
 
     /**
@@ -49,7 +55,7 @@ class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the deviceRestartBehavior property value. Device restart behavior. Possible values are: basedOnReturnCode, allow, suppress, force.
+     * Gets the deviceRestartBehavior property value. Indicates the type of restart action.
      * @return Win32LobAppRestartBehavior|null
     */
     public function getDeviceRestartBehavior(): ?Win32LobAppRestartBehavior {
@@ -64,12 +70,21 @@ class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'deviceRestartBehavior' => function (ParseNode $n) use ($o) { $o->setDeviceRestartBehavior($n->getEnumValue(Win32LobAppRestartBehavior::class)); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'runAsAccount' => function (ParseNode $n) use ($o) { $o->setRunAsAccount($n->getEnumValue(RunAsAccountType::class)); },
         ];
     }
 
     /**
-     * Gets the runAsAccount property value. Indicates the type of execution context the app runs in. Possible values are: system, user.
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
+     * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @return RunAsAccountType|null
     */
     public function getRunAsAccount(): ?RunAsAccountType {
@@ -82,6 +97,7 @@ class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeEnumValue('deviceRestartBehavior', $this->deviceRestartBehavior);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('runAsAccount', $this->runAsAccount);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -95,7 +111,7 @@ class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the deviceRestartBehavior property value. Device restart behavior. Possible values are: basedOnReturnCode, allow, suppress, force.
+     * Sets the deviceRestartBehavior property value. Indicates the type of restart action.
      *  @param Win32LobAppRestartBehavior|null $value Value to set for the deviceRestartBehavior property.
     */
     public function setDeviceRestartBehavior(?Win32LobAppRestartBehavior $value ): void {
@@ -103,7 +119,15 @@ class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the runAsAccount property value. Indicates the type of execution context the app runs in. Possible values are: system, user.
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
+     * Sets the runAsAccount property value. Indicates the type of execution context the app runs in.
      *  @param RunAsAccountType|null $value Value to set for the runAsAccount property.
     */
     public function setRunAsAccount(?RunAsAccountType $value ): void {

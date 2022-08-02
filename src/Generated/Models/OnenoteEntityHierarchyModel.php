@@ -34,6 +34,7 @@ class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel impleme
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.onenoteEntityHierarchyModel');
     }
 
     /**

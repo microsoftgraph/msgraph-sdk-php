@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrinterCapabilities implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -100,6 +100,11 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
     private ?array $multipageLayouts = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var array<string>|null $orientations The print orientations supported by the printer. Valid values are described in the following table.
     */
     private ?array $orientations = null;
@@ -143,7 +148,8 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
      * Instantiates a new printerCapabilities and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.printerCapabilities');
     }
 
     /**
@@ -251,6 +257,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
             'mediaSizes' => function (ParseNode $n) use ($o) { $o->setMediaSizes($n->getCollectionOfPrimitiveValues()); },
             'mediaTypes' => function (ParseNode $n) use ($o) { $o->setMediaTypes($n->getCollectionOfPrimitiveValues()); },
             'multipageLayouts' => function (ParseNode $n) use ($o) { $o->setMultipageLayouts($n->getCollectionOfPrimitiveValues()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'orientations' => function (ParseNode $n) use ($o) { $o->setOrientations($n->getCollectionOfPrimitiveValues()); },
             'outputBins' => function (ParseNode $n) use ($o) { $o->setOutputBins($n->getCollectionOfPrimitiveValues()); },
             'pagesPerSheet' => function (ParseNode $n) use ($o) { $o->setPagesPerSheet($n->getCollectionOfPrimitiveValues()); },
@@ -332,6 +339,14 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
     */
     public function getMultipageLayouts(): ?array {
         return $this->multipageLayouts;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -420,6 +435,7 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
         $writer->writeCollectionOfPrimitiveValues('mediaSizes', $this->mediaSizes);
         $writer->writeCollectionOfPrimitiveValues('mediaTypes', $this->mediaTypes);
         $writer->writeCollectionOfPrimitiveValues('multipageLayouts', $this->multipageLayouts);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfPrimitiveValues('orientations', $this->orientations);
         $writer->writeCollectionOfPrimitiveValues('outputBins', $this->outputBins);
         $writer->writeCollectionOfPrimitiveValues('pagesPerSheet', $this->pagesPerSheet);
@@ -573,6 +589,14 @@ class PrinterCapabilities implements AdditionalDataHolder, Parsable
     */
     public function setMultipageLayouts(?array $value ): void {
         $this->multipageLayouts = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

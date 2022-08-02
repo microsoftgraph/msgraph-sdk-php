@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class VisualInfo implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -40,10 +40,16 @@ class VisualInfo implements AdditionalDataHolder, Parsable
     private ?string $displayText = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new visualInfo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.visualInfo');
     }
 
     /**
@@ -115,7 +121,16 @@ class VisualInfo implements AdditionalDataHolder, Parsable
             'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
             'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
             'displayText' => function (ParseNode $n) use ($o) { $o->setDisplayText($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -128,6 +143,7 @@ class VisualInfo implements AdditionalDataHolder, Parsable
         $writer->writeObjectValue('content', $this->content);
         $writer->writeStringValue('description', $this->description);
         $writer->writeStringValue('displayText', $this->displayText);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -177,6 +193,14 @@ class VisualInfo implements AdditionalDataHolder, Parsable
     */
     public function setDisplayText(?string $value ): void {
         $this->displayText = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

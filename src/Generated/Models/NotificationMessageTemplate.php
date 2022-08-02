@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class NotificationMessageTemplate extends Entity implements Parsable 
 {
     /**
-     * @var NotificationTemplateBrandingOptions|null $brandingOptions The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink.
+     * @var NotificationTemplateBrandingOptions|null $brandingOptions Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
     */
     private ?NotificationTemplateBrandingOptions $brandingOptions = null;
     
@@ -39,6 +39,7 @@ class NotificationMessageTemplate extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.notificationMessageTemplate');
     }
 
     /**
@@ -51,7 +52,7 @@ class NotificationMessageTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the brandingOptions property value. The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink.
+     * Gets the brandingOptions property value. Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
      * @return NotificationTemplateBrandingOptions|null
     */
     public function getBrandingOptions(): ?NotificationTemplateBrandingOptions {
@@ -119,7 +120,7 @@ class NotificationMessageTemplate extends Entity implements Parsable
     }
 
     /**
-     * Sets the brandingOptions property value. The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink.
+     * Sets the brandingOptions property value. Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
      *  @param NotificationTemplateBrandingOptions|null $value Value to set for the brandingOptions property.
     */
     public function setBrandingOptions(?NotificationTemplateBrandingOptions $value ): void {

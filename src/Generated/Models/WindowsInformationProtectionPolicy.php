@@ -39,7 +39,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
     private ?int $pinExpirationDays = null;
     
     /**
-     * @var WindowsInformationProtectionPinCharacterRequirements|null $pinLowercaseLetters Integer value that configures the use of lowercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
+     * @var WindowsInformationProtectionPinCharacterRequirements|null $pinLowercaseLetters Pin Character Requirements
     */
     private ?WindowsInformationProtectionPinCharacterRequirements $pinLowercaseLetters = null;
     
@@ -49,12 +49,12 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
     private ?int $pinMinimumLength = null;
     
     /**
-     * @var WindowsInformationProtectionPinCharacterRequirements|null $pinSpecialCharacters Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! ' # $ % & ' ( )  + , - . / : ; < = > ? @ [ / ] ^  ` {
+     * @var WindowsInformationProtectionPinCharacterRequirements|null $pinSpecialCharacters Pin Character Requirements
     */
     private ?WindowsInformationProtectionPinCharacterRequirements $pinSpecialCharacters = null;
     
     /**
-     * @var WindowsInformationProtectionPinCharacterRequirements|null $pinUppercaseLetters Integer value that configures the use of uppercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
+     * @var WindowsInformationProtectionPinCharacterRequirements|null $pinUppercaseLetters Pin Character Requirements
     */
     private ?WindowsInformationProtectionPinCharacterRequirements $pinUppercaseLetters = null;
     
@@ -73,6 +73,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.windowsInformationProtectionPolicy');
     }
 
     /**
@@ -155,7 +156,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
     }
 
     /**
-     * Gets the pinLowercaseLetters property value. Integer value that configures the use of lowercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
+     * Gets the pinLowercaseLetters property value. Pin Character Requirements
      * @return WindowsInformationProtectionPinCharacterRequirements|null
     */
     public function getPinLowercaseLetters(): ?WindowsInformationProtectionPinCharacterRequirements {
@@ -171,7 +172,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
     }
 
     /**
-     * Gets the pinSpecialCharacters property value. Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! ' # $ % & ' ( )  + , - . / : ; < = > ? @ [ / ] ^  ` {
+     * Gets the pinSpecialCharacters property value. Pin Character Requirements
      * @return WindowsInformationProtectionPinCharacterRequirements|null
     */
     public function getPinSpecialCharacters(): ?WindowsInformationProtectionPinCharacterRequirements {
@@ -179,7 +180,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
     }
 
     /**
-     * Gets the pinUppercaseLetters property value. Integer value that configures the use of uppercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
+     * Gets the pinUppercaseLetters property value. Pin Character Requirements
      * @return WindowsInformationProtectionPinCharacterRequirements|null
     */
     public function getPinUppercaseLetters(): ?WindowsInformationProtectionPinCharacterRequirements {
@@ -271,7 +272,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
     }
 
     /**
-     * Sets the pinLowercaseLetters property value. Integer value that configures the use of lowercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
+     * Sets the pinLowercaseLetters property value. Pin Character Requirements
      *  @param WindowsInformationProtectionPinCharacterRequirements|null $value Value to set for the pinLowercaseLetters property.
     */
     public function setPinLowercaseLetters(?WindowsInformationProtectionPinCharacterRequirements $value ): void {
@@ -287,7 +288,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
     }
 
     /**
-     * Sets the pinSpecialCharacters property value. Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! ' # $ % & ' ( )  + , - . / : ; < = > ? @ [ / ] ^  ` {
+     * Sets the pinSpecialCharacters property value. Pin Character Requirements
      *  @param WindowsInformationProtectionPinCharacterRequirements|null $value Value to set for the pinSpecialCharacters property.
     */
     public function setPinSpecialCharacters(?WindowsInformationProtectionPinCharacterRequirements $value ): void {
@@ -295,7 +296,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
     }
 
     /**
-     * Sets the pinUppercaseLetters property value. Integer value that configures the use of uppercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
+     * Sets the pinUppercaseLetters property value. Pin Character Requirements
      *  @param WindowsInformationProtectionPinCharacterRequirements|null $value Value to set for the pinUppercaseLetters property.
     */
     public function setPinUppercaseLetters(?WindowsInformationProtectionPinCharacterRequirements $value ): void {

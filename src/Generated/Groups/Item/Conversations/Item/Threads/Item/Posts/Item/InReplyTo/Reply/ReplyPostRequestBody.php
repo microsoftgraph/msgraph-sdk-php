@@ -11,12 +11,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ReplyPostRequestBody implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var Post|null $Post The Post property
+     * @var Post|null $post The Post property
     */
     private ?Post $post = null;
     
@@ -24,7 +24,7 @@ class ReplyPostRequestBody implements AdditionalDataHolder, Parsable
      * Instantiates a new replyPostRequestBody and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
     }
 
     /**

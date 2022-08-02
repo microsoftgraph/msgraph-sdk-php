@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ExpirationPattern implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -27,6 +27,11 @@ class ExpirationPattern implements AdditionalDataHolder, Parsable
     private ?DateTime $endDateTime = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var ExpirationPatternType|null $type The requestor's desired expiration pattern type.
     */
     private ?ExpirationPatternType $type = null;
@@ -35,7 +40,8 @@ class ExpirationPattern implements AdditionalDataHolder, Parsable
      * Instantiates a new expirationPattern and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.expirationPattern');
     }
 
     /**
@@ -80,8 +86,17 @@ class ExpirationPattern implements AdditionalDataHolder, Parsable
         return  [
             'duration' => function (ParseNode $n) use ($o) { $o->setDuration($n->getDateIntervalValue()); },
             'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(ExpirationPatternType::class)); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -99,6 +114,7 @@ class ExpirationPattern implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeDateIntervalValue('duration', $this->duration);
         $writer->writeDateTimeValue('endDateTime', $this->endDateTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('type', $this->type);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -125,6 +141,14 @@ class ExpirationPattern implements AdditionalDataHolder, Parsable
     */
     public function setEndDateTime(?DateTime $value ): void {
         $this->endDateTime = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

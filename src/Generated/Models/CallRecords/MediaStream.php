@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MediaStream implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -117,6 +117,11 @@ class MediaStream implements AdditionalDataHolder, Parsable
     private ?DateInterval $maxRoundTripTime = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var int|null $packetUtilization Packet count for the stream.
     */
     private ?int $packetUtilization = null;
@@ -132,7 +137,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
     private ?DateTime $startDateTime = null;
     
     /**
-     * @var MediaStreamDirection|null $streamDirection Indicates the direction of the media stream. Possible values are: callerToCallee, calleeToCaller.
+     * @var MediaStreamDirection|null $streamDirection The streamDirection property
     */
     private ?MediaStreamDirection $streamDirection = null;
     
@@ -155,7 +160,8 @@ class MediaStream implements AdditionalDataHolder, Parsable
      * Instantiates a new mediaStream and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.callRecords.mediaStream');
     }
 
     /**
@@ -306,6 +312,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
             'maxPacketLossRate' => function (ParseNode $n) use ($o) { $o->setMaxPacketLossRate($n->getFloatValue()); },
             'maxRatioOfConcealedSamples' => function (ParseNode $n) use ($o) { $o->setMaxRatioOfConcealedSamples($n->getFloatValue()); },
             'maxRoundTripTime' => function (ParseNode $n) use ($o) { $o->setMaxRoundTripTime($n->getDateIntervalValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'packetUtilization' => function (ParseNode $n) use ($o) { $o->setPacketUtilization($n->getIntegerValue()); },
             'postForwardErrorCorrectionPacketLossRate' => function (ParseNode $n) use ($o) { $o->setPostForwardErrorCorrectionPacketLossRate($n->getFloatValue()); },
             'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
@@ -373,6 +380,14 @@ class MediaStream implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the packetUtilization property value. Packet count for the stream.
      * @return int|null
     */
@@ -397,7 +412,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the streamDirection property value. Indicates the direction of the media stream. Possible values are: callerToCallee, calleeToCaller.
+     * Gets the streamDirection property value. The streamDirection property
      * @return MediaStreamDirection|null
     */
     public function getStreamDirection(): ?MediaStreamDirection {
@@ -453,6 +468,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
         $writer->writeFloatValue('maxPacketLossRate', $this->maxPacketLossRate);
         $writer->writeFloatValue('maxRatioOfConcealedSamples', $this->maxRatioOfConcealedSamples);
         $writer->writeDateIntervalValue('maxRoundTripTime', $this->maxRoundTripTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('packetUtilization', $this->packetUtilization);
         $writer->writeFloatValue('postForwardErrorCorrectionPacketLossRate', $this->postForwardErrorCorrectionPacketLossRate);
         $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
@@ -632,6 +648,14 @@ class MediaStream implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
      * Sets the packetUtilization property value. Packet count for the stream.
      *  @param int|null $value Value to set for the packetUtilization property.
     */
@@ -656,7 +680,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the streamDirection property value. Indicates the direction of the media stream. Possible values are: callerToCallee, calleeToCaller.
+     * Sets the streamDirection property value. The streamDirection property
      *  @param MediaStreamDirection|null $value Value to set for the streamDirection property.
     */
     public function setStreamDirection(?MediaStreamDirection $value ): void {

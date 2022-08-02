@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -106,6 +106,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, Parsable
     private ?int $networkLinkSpeedInBytes = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var int|null $outboundPackets The total number of the outbound packets.
     */
     private ?int $outboundPackets = null;
@@ -124,7 +129,8 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, Parsable
      * Instantiates a new teleconferenceDeviceMediaQuality and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.teleconferenceDeviceMediaQuality');
     }
 
     /**
@@ -133,6 +139,15 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, Parsable
      * @return TeleconferenceDeviceMediaQuality
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): TeleconferenceDeviceMediaQuality {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.teleconferenceDeviceAudioQuality': return new TeleconferenceDeviceAudioQuality();
+                case '#microsoft.graph.teleconferenceDeviceScreenSharingQuality': return new TeleconferenceDeviceScreenSharingQuality();
+                case '#microsoft.graph.teleconferenceDeviceVideoQuality': return new TeleconferenceDeviceVideoQuality();
+            }
+        }
         return new TeleconferenceDeviceMediaQuality();
     }
 
@@ -225,6 +240,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, Parsable
             'maximumOutboundRoundTripDelay' => function (ParseNode $n) use ($o) { $o->setMaximumOutboundRoundTripDelay($n->getDateIntervalValue()); },
             'mediaDuration' => function (ParseNode $n) use ($o) { $o->setMediaDuration($n->getDateIntervalValue()); },
             'networkLinkSpeedInBytes' => function (ParseNode $n) use ($o) { $o->setNetworkLinkSpeedInBytes($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'outboundPackets' => function (ParseNode $n) use ($o) { $o->setOutboundPackets($n->getIntegerValue()); },
             'remoteIPAddress' => function (ParseNode $n) use ($o) { $o->setRemoteIPAddress($n->getStringValue()); },
             'remotePort' => function (ParseNode $n) use ($o) { $o->setRemotePort($n->getIntegerValue()); },
@@ -320,6 +336,14 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the outboundPackets property value. The total number of the outbound packets.
      * @return int|null
     */
@@ -366,6 +390,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, Parsable
         $writer->writeDateIntervalValue('maximumOutboundRoundTripDelay', $this->maximumOutboundRoundTripDelay);
         $writer->writeDateIntervalValue('mediaDuration', $this->mediaDuration);
         $writer->writeIntegerValue('networkLinkSpeedInBytes', $this->networkLinkSpeedInBytes);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('outboundPackets', $this->outboundPackets);
         $writer->writeStringValue('remoteIPAddress', $this->remoteIPAddress);
         $writer->writeIntegerValue('remotePort', $this->remotePort);
@@ -522,6 +547,14 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, Parsable
     */
     public function setNetworkLinkSpeedInBytes(?int $value ): void {
         $this->networkLinkSpeedInBytes = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

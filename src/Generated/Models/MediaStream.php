@@ -10,12 +10,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MediaStream implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var MediaDirection|null $direction The direction. The possible values are inactive, sendOnly, receiveOnly, sendReceive.
+     * @var MediaDirection|null $direction The direction property
     */
     private ?MediaDirection $direction = null;
     
@@ -25,9 +25,14 @@ class MediaStream implements AdditionalDataHolder, Parsable
     private ?string $label = null;
     
     /**
-     * @var Modality|null $mediaType The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
+     * @var Modality|null $mediaType The mediaType property
     */
     private ?Modality $mediaType = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var bool|null $serverMuted Indicates whether the media is muted by the server.
@@ -43,7 +48,8 @@ class MediaStream implements AdditionalDataHolder, Parsable
      * Instantiates a new mediaStream and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.mediaStream');
     }
 
     /**
@@ -64,7 +70,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the direction property value. The direction. The possible values are inactive, sendOnly, receiveOnly, sendReceive.
+     * Gets the direction property value. The direction property
      * @return MediaDirection|null
     */
     public function getDirection(): ?MediaDirection {
@@ -81,6 +87,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
             'direction' => function (ParseNode $n) use ($o) { $o->setDirection($n->getEnumValue(MediaDirection::class)); },
             'label' => function (ParseNode $n) use ($o) { $o->setLabel($n->getStringValue()); },
             'mediaType' => function (ParseNode $n) use ($o) { $o->setMediaType($n->getEnumValue(Modality::class)); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'serverMuted' => function (ParseNode $n) use ($o) { $o->setServerMuted($n->getBooleanValue()); },
             'sourceId' => function (ParseNode $n) use ($o) { $o->setSourceId($n->getStringValue()); },
         ];
@@ -95,11 +102,19 @@ class MediaStream implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the mediaType property value. The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
+     * Gets the mediaType property value. The mediaType property
      * @return Modality|null
     */
     public function getMediaType(): ?Modality {
         return $this->mediaType;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -126,6 +141,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
         $writer->writeEnumValue('direction', $this->direction);
         $writer->writeStringValue('label', $this->label);
         $writer->writeEnumValue('mediaType', $this->mediaType);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeBooleanValue('serverMuted', $this->serverMuted);
         $writer->writeStringValue('sourceId', $this->sourceId);
         $writer->writeAdditionalData($this->additionalData);
@@ -140,7 +156,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the direction property value. The direction. The possible values are inactive, sendOnly, receiveOnly, sendReceive.
+     * Sets the direction property value. The direction property
      *  @param MediaDirection|null $value Value to set for the direction property.
     */
     public function setDirection(?MediaDirection $value ): void {
@@ -156,11 +172,19 @@ class MediaStream implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the mediaType property value. The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
+     * Sets the mediaType property value. The mediaType property
      *  @param Modality|null $value Value to set for the mediaType property.
     */
     public function setMediaType(?Modality $value ): void {
         $this->mediaType = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

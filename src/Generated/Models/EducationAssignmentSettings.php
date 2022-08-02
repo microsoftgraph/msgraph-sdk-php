@@ -14,10 +14,11 @@ class EducationAssignmentSettings extends Entity implements Parsable
     private ?bool $submissionAnimationDisabled = null;
     
     /**
-     * Instantiates a new educationAssignmentSettings and sets the default values.
+     * Instantiates a new EducationAssignmentSettings and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.educationAssignmentSettings');
     }
 
     /**

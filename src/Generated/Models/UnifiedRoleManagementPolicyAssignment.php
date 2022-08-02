@@ -9,27 +9,27 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable 
 {
     /**
-     * @var UnifiedRoleManagementPolicy|null $policy The policy for the assignment.
+     * @var UnifiedRoleManagementPolicy|null $policy The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
     */
     private ?UnifiedRoleManagementPolicy $policy = null;
     
     /**
-     * @var string|null $policyId The id of the policy.
+     * @var string|null $policyId The id of the policy. Inherited from entity.
     */
     private ?string $policyId = null;
     
     /**
-     * @var string|null $roleDefinitionId The id of the role definition where the policy applies. If not specified, the policy applies to all roles.
+     * @var string|null $roleDefinitionId The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
     */
     private ?string $roleDefinitionId = null;
     
     /**
-     * @var string|null $scopeId The id of the scope where the policy is assigned. E.g. '/', groupId, etc.
+     * @var string|null $scopeId The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
     */
     private ?string $scopeId = null;
     
     /**
-     * @var string|null $scopeType The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group.
+     * @var string|null $scopeType The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
     */
     private ?string $scopeType = null;
     
@@ -38,6 +38,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.unifiedRoleManagementPolicyAssignment');
     }
 
     /**
@@ -65,7 +66,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the policy property value. The policy for the assignment.
+     * Gets the policy property value. The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
      * @return UnifiedRoleManagementPolicy|null
     */
     public function getPolicy(): ?UnifiedRoleManagementPolicy {
@@ -73,7 +74,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the policyId property value. The id of the policy.
+     * Gets the policyId property value. The id of the policy. Inherited from entity.
      * @return string|null
     */
     public function getPolicyId(): ?string {
@@ -81,7 +82,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the roleDefinitionId property value. The id of the role definition where the policy applies. If not specified, the policy applies to all roles.
+     * Gets the roleDefinitionId property value. The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
      * @return string|null
     */
     public function getRoleDefinitionId(): ?string {
@@ -89,7 +90,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the scopeId property value. The id of the scope where the policy is assigned. E.g. '/', groupId, etc.
+     * Gets the scopeId property value. The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
      * @return string|null
     */
     public function getScopeId(): ?string {
@@ -97,7 +98,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group.
+     * Gets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
      * @return string|null
     */
     public function getScopeType(): ?string {
@@ -118,7 +119,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the policy property value. The policy for the assignment.
+     * Sets the policy property value. The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
      *  @param UnifiedRoleManagementPolicy|null $value Value to set for the policy property.
     */
     public function setPolicy(?UnifiedRoleManagementPolicy $value ): void {
@@ -126,7 +127,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the policyId property value. The id of the policy.
+     * Sets the policyId property value. The id of the policy. Inherited from entity.
      *  @param string|null $value Value to set for the policyId property.
     */
     public function setPolicyId(?string $value ): void {
@@ -134,7 +135,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the roleDefinitionId property value. The id of the role definition where the policy applies. If not specified, the policy applies to all roles.
+     * Sets the roleDefinitionId property value. The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
      *  @param string|null $value Value to set for the roleDefinitionId property.
     */
     public function setRoleDefinitionId(?string $value ): void {
@@ -142,7 +143,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the scopeId property value. The id of the scope where the policy is assigned. E.g. '/', groupId, etc.
+     * Sets the scopeId property value. The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
      *  @param string|null $value Value to set for the scopeId property.
     */
     public function setScopeId(?string $value ): void {
@@ -150,7 +151,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group.
+     * Sets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
      *  @param string|null $value Value to set for the scopeType property.
     */
     public function setScopeType(?string $value ): void {

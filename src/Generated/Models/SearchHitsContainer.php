@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SearchHitsContainer implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,6 +30,11 @@ class SearchHitsContainer implements AdditionalDataHolder, Parsable
     private ?bool $moreResultsAvailable = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var int|null $total The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
     */
     private ?int $total = null;
@@ -38,7 +43,8 @@ class SearchHitsContainer implements AdditionalDataHolder, Parsable
      * Instantiates a new searchHitsContainer and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.searchHitsContainer');
     }
 
     /**
@@ -76,6 +82,7 @@ class SearchHitsContainer implements AdditionalDataHolder, Parsable
             'aggregations' => function (ParseNode $n) use ($o) { $o->setAggregations($n->getCollectionOfObjectValues(array(SearchAggregation::class, 'createFromDiscriminatorValue'))); },
             'hits' => function (ParseNode $n) use ($o) { $o->setHits($n->getCollectionOfObjectValues(array(SearchHit::class, 'createFromDiscriminatorValue'))); },
             'moreResultsAvailable' => function (ParseNode $n) use ($o) { $o->setMoreResultsAvailable($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'total' => function (ParseNode $n) use ($o) { $o->setTotal($n->getIntegerValue()); },
         ];
     }
@@ -97,6 +104,14 @@ class SearchHitsContainer implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the total property value. The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
      * @return int|null
     */
@@ -112,6 +127,7 @@ class SearchHitsContainer implements AdditionalDataHolder, Parsable
         $writer->writeCollectionOfObjectValues('aggregations', $this->aggregations);
         $writer->writeCollectionOfObjectValues('hits', $this->hits);
         $writer->writeBooleanValue('moreResultsAvailable', $this->moreResultsAvailable);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('total', $this->total);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -146,6 +162,14 @@ class SearchHitsContainer implements AdditionalDataHolder, Parsable
     */
     public function setMoreResultsAvailable(?bool $value ): void {
         $this->moreResultsAvailable = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

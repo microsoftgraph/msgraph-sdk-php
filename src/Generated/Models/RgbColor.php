@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RgbColor implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class RgbColor implements AdditionalDataHolder, Parsable
     private ?string $g = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $r Red value
     */
     private ?string $r = null;
@@ -33,7 +38,8 @@ class RgbColor implements AdditionalDataHolder, Parsable
      * Instantiates a new rgbColor and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.rgbColor');
     }
 
     /**
@@ -70,6 +76,7 @@ class RgbColor implements AdditionalDataHolder, Parsable
         return  [
             'b' => function (ParseNode $n) use ($o) { $o->setB($n->getStringValue()); },
             'g' => function (ParseNode $n) use ($o) { $o->setG($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'r' => function (ParseNode $n) use ($o) { $o->setR($n->getStringValue()); },
         ];
     }
@@ -80,6 +87,14 @@ class RgbColor implements AdditionalDataHolder, Parsable
     */
     public function getG(): ?string {
         return $this->g;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -97,6 +112,7 @@ class RgbColor implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('b', $this->b);
         $writer->writeStringValue('g', $this->g);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('r', $this->r);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +139,14 @@ class RgbColor implements AdditionalDataHolder, Parsable
     */
     public function setG(?string $value ): void {
         $this->g = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,10 +30,16 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable
     private ?string $messageLanguage = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new invitedUserMessageInfo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.invitedUserMessageInfo');
     }
 
     /**
@@ -79,6 +85,7 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable
             'ccRecipients' => function (ParseNode $n) use ($o) { $o->setCcRecipients($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
             'customizedMessageBody' => function (ParseNode $n) use ($o) { $o->setCustomizedMessageBody($n->getStringValue()); },
             'messageLanguage' => function (ParseNode $n) use ($o) { $o->setMessageLanguage($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
 
@@ -91,6 +98,14 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -98,6 +113,7 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable
         $writer->writeCollectionOfObjectValues('ccRecipients', $this->ccRecipients);
         $writer->writeStringValue('customizedMessageBody', $this->customizedMessageBody);
         $writer->writeStringValue('messageLanguage', $this->messageLanguage);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -131,6 +147,14 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable
     */
     public function setMessageLanguage(?string $value ): void {
         $this->messageLanguage = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

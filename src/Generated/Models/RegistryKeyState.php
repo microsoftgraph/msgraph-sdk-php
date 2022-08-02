@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RegistryKeyState implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class RegistryKeyState implements AdditionalDataHolder, Parsable
      * @var string|null $key Current (i.e. changed) registry key (excludes HIVE).
     */
     private ?string $key = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $oldKey Previous (i.e. before changed) registry key (excludes HIVE).
@@ -68,7 +73,8 @@ class RegistryKeyState implements AdditionalDataHolder, Parsable
      * Instantiates a new registryKeyState and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.registryKeyState');
     }
 
     /**
@@ -97,6 +103,7 @@ class RegistryKeyState implements AdditionalDataHolder, Parsable
         return  [
             'hive' => function (ParseNode $n) use ($o) { $o->setHive($n->getEnumValue(RegistryHive::class)); },
             'key' => function (ParseNode $n) use ($o) { $o->setKey($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'oldKey' => function (ParseNode $n) use ($o) { $o->setOldKey($n->getStringValue()); },
             'oldValueData' => function (ParseNode $n) use ($o) { $o->setOldValueData($n->getStringValue()); },
             'oldValueName' => function (ParseNode $n) use ($o) { $o->setOldValueName($n->getStringValue()); },
@@ -122,6 +129,14 @@ class RegistryKeyState implements AdditionalDataHolder, Parsable
     */
     public function getKey(): ?string {
         return $this->key;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -195,6 +210,7 @@ class RegistryKeyState implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeEnumValue('hive', $this->hive);
         $writer->writeStringValue('key', $this->key);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('oldKey', $this->oldKey);
         $writer->writeStringValue('oldValueData', $this->oldValueData);
         $writer->writeStringValue('oldValueName', $this->oldValueName);
@@ -228,6 +244,14 @@ class RegistryKeyState implements AdditionalDataHolder, Parsable
     */
     public function setKey(?string $value ): void {
         $this->key = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

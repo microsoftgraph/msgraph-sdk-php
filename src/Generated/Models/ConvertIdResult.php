@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConvertIdResult implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class ConvertIdResult implements AdditionalDataHolder, Parsable
      * @var GenericError|null $errorDetails An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
     */
     private ?GenericError $errorDetails = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $sourceId The identifier that was converted. This value is the original, un-converted identifier.
@@ -33,7 +38,8 @@ class ConvertIdResult implements AdditionalDataHolder, Parsable
      * Instantiates a new convertIdResult and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.convertIdResult');
     }
 
     /**
@@ -69,9 +75,18 @@ class ConvertIdResult implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'errorDetails' => function (ParseNode $n) use ($o) { $o->setErrorDetails($n->getObjectValue(array(GenericError::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'sourceId' => function (ParseNode $n) use ($o) { $o->setSourceId($n->getStringValue()); },
             'targetId' => function (ParseNode $n) use ($o) { $o->setTargetId($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -96,6 +111,7 @@ class ConvertIdResult implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('errorDetails', $this->errorDetails);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('sourceId', $this->sourceId);
         $writer->writeStringValue('targetId', $this->targetId);
         $writer->writeAdditionalData($this->additionalData);
@@ -115,6 +131,14 @@ class ConvertIdResult implements AdditionalDataHolder, Parsable
     */
     public function setErrorDetails(?GenericError $value ): void {
         $this->errorDetails = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

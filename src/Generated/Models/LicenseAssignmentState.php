@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LicenseAssignmentState implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -36,6 +36,11 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     private ?DateTime $lastUpdatedDateTime = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $skuId The unique identifier for the SKU. Read-Only.
     */
     private ?string $skuId = null;
@@ -49,7 +54,8 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
      * Instantiates a new licenseAssignmentState and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.licenseAssignmentState');
     }
 
     /**
@@ -104,6 +110,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
             'disabledPlans' => function (ParseNode $n) use ($o) { $o->setDisabledPlans($n->getCollectionOfPrimitiveValues()); },
             'error' => function (ParseNode $n) use ($o) { $o->setError($n->getStringValue()); },
             'lastUpdatedDateTime' => function (ParseNode $n) use ($o) { $o->setLastUpdatedDateTime($n->getDateTimeValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'skuId' => function (ParseNode $n) use ($o) { $o->setSkuId($n->getStringValue()); },
             'state' => function (ParseNode $n) use ($o) { $o->setState($n->getStringValue()); },
         ];
@@ -115,6 +122,14 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     */
     public function getLastUpdatedDateTime(): ?DateTime {
         return $this->lastUpdatedDateTime;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -142,6 +157,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
         $writer->writeCollectionOfPrimitiveValues('disabledPlans', $this->disabledPlans);
         $writer->writeStringValue('error', $this->error);
         $writer->writeDateTimeValue('lastUpdatedDateTime', $this->lastUpdatedDateTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('skuId', $this->skuId);
         $writer->writeStringValue('state', $this->state);
         $writer->writeAdditionalData($this->additionalData);
@@ -185,6 +201,14 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     */
     public function setLastUpdatedDateTime(?DateTime $value ): void {
         $this->lastUpdatedDateTime = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

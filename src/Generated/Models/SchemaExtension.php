@@ -24,20 +24,21 @@ class SchemaExtension extends Entity implements Parsable
     private ?array $properties = null;
     
     /**
-     * @var string|null $status The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. Schema extensions provides more information on the possible state transitions and behaviors. Supports $filter (eq).
+     * @var string|null $status The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. For more information about the possible state transitions and behaviors, see Schema extensions lifecycle. Supports $filter (eq).
     */
     private ?string $status = null;
     
     /**
-     * @var array<string>|null $targetTypes Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, or user.
+     * @var array<string>|null $targetTypes Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, todoTask, todoTaskList, or user.
     */
     private ?array $targetTypes = null;
     
     /**
-     * Instantiates a new schemaExtension and sets the default values.
+     * Instantiates a new SchemaExtension and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.schemaExtension');
     }
 
     /**
@@ -89,7 +90,7 @@ class SchemaExtension extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. Schema extensions provides more information on the possible state transitions and behaviors. Supports $filter (eq).
+     * Gets the status property value. The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. For more information about the possible state transitions and behaviors, see Schema extensions lifecycle. Supports $filter (eq).
      * @return string|null
     */
     public function getStatus(): ?string {
@@ -97,7 +98,7 @@ class SchemaExtension extends Entity implements Parsable
     }
 
     /**
-     * Gets the targetTypes property value. Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, or user.
+     * Gets the targetTypes property value. Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, todoTask, todoTaskList, or user.
      * @return array<string>|null
     */
     public function getTargetTypes(): ?array {
@@ -142,7 +143,7 @@ class SchemaExtension extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. Schema extensions provides more information on the possible state transitions and behaviors. Supports $filter (eq).
+     * Sets the status property value. The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. For more information about the possible state transitions and behaviors, see Schema extensions lifecycle. Supports $filter (eq).
      *  @param string|null $value Value to set for the status property.
     */
     public function setStatus(?string $value ): void {
@@ -150,7 +151,7 @@ class SchemaExtension extends Entity implements Parsable
     }
 
     /**
-     * Sets the targetTypes property value. Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, or user.
+     * Sets the targetTypes property value. Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, todoTask, todoTaskList, or user.
      *  @param array<string>|null $value Value to set for the targetTypes property.
     */
     public function setTargetTypes(?array $value ): void {

@@ -6,6 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\ListItem\Analytics\AnalyticsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\ListItem\DocumentSetVersions\DocumentSetVersionsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\ListItem\DocumentSetVersions\Item\DocumentSetVersionItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\ListItem\DriveItem\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\ListItem\Fields\FieldsRequestBuilder;
 use Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\ListItem\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
@@ -29,6 +31,13 @@ class ListItemRequestBuilder
     */
     public function analytics(): AnalyticsRequestBuilder {
         return new AnalyticsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The documentSetVersions property
+    */
+    public function documentSetVersions(): DocumentSetVersionsRequestBuilder {
+        return new DocumentSetVersionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -164,6 +173,17 @@ class ListItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
+    }
+
+    /**
+     * Gets an item from the Microsoft\Graph\Generated.me.drives.item.items.item.listItem.documentSetVersions.item collection
+     * @param string $id Unique identifier of the item
+     * @return DocumentSetVersionItemRequestBuilder
+    */
+    public function documentSetVersionsById(string $id): DocumentSetVersionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['documentSetVersion%2Did'] = $id;
+        return new DocumentSetVersionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DomainState implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -19,6 +19,11 @@ class DomainState implements AdditionalDataHolder, Parsable
      * @var DateTime|null $lastActionDateTime Timestamp for when the last activity occurred. The value is updated when an operation is scheduled, the asynchronous task starts, and when the operation completes.
     */
     private ?DateTime $lastActionDateTime = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $operation Type of asynchronous operation. The values can be ForceDelete or Verification
@@ -34,7 +39,8 @@ class DomainState implements AdditionalDataHolder, Parsable
      * Instantiates a new domainState and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.domainState');
     }
 
     /**
@@ -62,6 +68,7 @@ class DomainState implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'lastActionDateTime' => function (ParseNode $n) use ($o) { $o->setLastActionDateTime($n->getDateTimeValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'operation' => function (ParseNode $n) use ($o) { $o->setOperation($n->getStringValue()); },
             'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getStringValue()); },
         ];
@@ -73,6 +80,14 @@ class DomainState implements AdditionalDataHolder, Parsable
     */
     public function getLastActionDateTime(): ?DateTime {
         return $this->lastActionDateTime;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -97,6 +112,7 @@ class DomainState implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeDateTimeValue('lastActionDateTime', $this->lastActionDateTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('operation', $this->operation);
         $writer->writeStringValue('status', $this->status);
         $writer->writeAdditionalData($this->additionalData);
@@ -116,6 +132,14 @@ class DomainState implements AdditionalDataHolder, Parsable
     */
     public function setLastActionDateTime(?DateTime $value ): void {
         $this->lastActionDateTime = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

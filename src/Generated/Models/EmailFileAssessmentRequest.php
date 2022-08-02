@@ -28,6 +28,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Pars
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.emailFileAssessmentRequest');
     }
 
     /**

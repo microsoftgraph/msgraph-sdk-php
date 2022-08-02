@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ShiftActivity implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -36,6 +36,11 @@ class ShiftActivity implements AdditionalDataHolder, Parsable
     private ?bool $isPaid = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var DateTime|null $startDateTime The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
     */
     private ?DateTime $startDateTime = null;
@@ -49,7 +54,8 @@ class ShiftActivity implements AdditionalDataHolder, Parsable
      * Instantiates a new shiftActivity and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.shiftActivity');
     }
 
     /**
@@ -104,6 +110,7 @@ class ShiftActivity implements AdditionalDataHolder, Parsable
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
             'isPaid' => function (ParseNode $n) use ($o) { $o->setIsPaid($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
             'theme' => function (ParseNode $n) use ($o) { $o->setTheme($n->getEnumValue(ScheduleEntityTheme::class)); },
         ];
@@ -115,6 +122,14 @@ class ShiftActivity implements AdditionalDataHolder, Parsable
     */
     public function getIsPaid(): ?bool {
         return $this->isPaid;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -142,6 +157,7 @@ class ShiftActivity implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeDateTimeValue('endDateTime', $this->endDateTime);
         $writer->writeBooleanValue('isPaid', $this->isPaid);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
         $writer->writeEnumValue('theme', $this->theme);
         $writer->writeAdditionalData($this->additionalData);
@@ -185,6 +201,14 @@ class ShiftActivity implements AdditionalDataHolder, Parsable
     */
     public function setIsPaid(?bool $value ): void {
         $this->isPaid = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

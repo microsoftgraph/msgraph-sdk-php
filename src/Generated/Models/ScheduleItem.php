@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ScheduleItem implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -28,6 +28,11 @@ class ScheduleItem implements AdditionalDataHolder, Parsable
      * @var string|null $location The location where the corresponding event is held or attended from. Optional.
     */
     private ?string $location = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var DateTimeTimeZone|null $start The date, time, and time zone that the corresponding event starts.
@@ -48,7 +53,8 @@ class ScheduleItem implements AdditionalDataHolder, Parsable
      * Instantiates a new scheduleItem and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.scheduleItem');
     }
 
     /**
@@ -86,6 +92,7 @@ class ScheduleItem implements AdditionalDataHolder, Parsable
             'end' => function (ParseNode $n) use ($o) { $o->setEnd($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
             'isPrivate' => function (ParseNode $n) use ($o) { $o->setIsPrivate($n->getBooleanValue()); },
             'location' => function (ParseNode $n) use ($o) { $o->setLocation($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'start' => function (ParseNode $n) use ($o) { $o->setStart($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
             'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(FreeBusyStatus::class)); },
             'subject' => function (ParseNode $n) use ($o) { $o->setSubject($n->getStringValue()); },
@@ -106,6 +113,14 @@ class ScheduleItem implements AdditionalDataHolder, Parsable
     */
     public function getLocation(): ?string {
         return $this->location;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -140,6 +155,7 @@ class ScheduleItem implements AdditionalDataHolder, Parsable
         $writer->writeObjectValue('end', $this->end);
         $writer->writeBooleanValue('isPrivate', $this->isPrivate);
         $writer->writeStringValue('location', $this->location);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('start', $this->start);
         $writer->writeEnumValue('status', $this->status);
         $writer->writeStringValue('subject', $this->subject);
@@ -176,6 +192,14 @@ class ScheduleItem implements AdditionalDataHolder, Parsable
     */
     public function setLocation(?string $value ): void {
         $this->location = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

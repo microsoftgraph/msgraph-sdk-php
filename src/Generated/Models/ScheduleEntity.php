@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ScheduleEntity implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -19,6 +19,11 @@ class ScheduleEntity implements AdditionalDataHolder, Parsable
      * @var DateTime|null $endDateTime The endDateTime property
     */
     private ?DateTime $endDateTime = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var DateTime|null $startDateTime The startDateTime property
@@ -34,7 +39,8 @@ class ScheduleEntity implements AdditionalDataHolder, Parsable
      * Instantiates a new scheduleEntity and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.scheduleEntity');
     }
 
     /**
@@ -43,6 +49,15 @@ class ScheduleEntity implements AdditionalDataHolder, Parsable
      * @return ScheduleEntity
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ScheduleEntity {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.openShiftItem': return new OpenShiftItem();
+                case '#microsoft.graph.shiftItem': return new ShiftItem();
+                case '#microsoft.graph.timeOffItem': return new TimeOffItem();
+            }
+        }
         return new ScheduleEntity();
     }
 
@@ -70,9 +85,18 @@ class ScheduleEntity implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
             'theme' => function (ParseNode $n) use ($o) { $o->setTheme($n->getEnumValue(ScheduleEntityTheme::class)); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -97,6 +121,7 @@ class ScheduleEntity implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeDateTimeValue('endDateTime', $this->endDateTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
         $writer->writeEnumValue('theme', $this->theme);
         $writer->writeAdditionalData($this->additionalData);
@@ -116,6 +141,14 @@ class ScheduleEntity implements AdditionalDataHolder, Parsable
     */
     public function setEndDateTime(?DateTime $value ): void {
         $this->endDateTime = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

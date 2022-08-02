@@ -25,10 +25,11 @@ class AuthoredNote extends Entity implements Parsable
     private ?DateTime $createdDateTime = null;
     
     /**
-     * Instantiates a new authoredNote and sets the default values.
+     * Instantiates a new AuthoredNote and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.authoredNote');
     }
 
     /**

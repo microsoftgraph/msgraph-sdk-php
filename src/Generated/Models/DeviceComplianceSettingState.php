@@ -40,7 +40,7 @@ class DeviceComplianceSettingState extends Entity implements Parsable
     private ?string $settingName = null;
     
     /**
-     * @var ComplianceStatus|null $state The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * @var ComplianceStatus|null $state The state property
     */
     private ?ComplianceStatus $state = null;
     
@@ -69,6 +69,7 @@ class DeviceComplianceSettingState extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.deviceComplianceSettingState');
     }
 
     /**
@@ -150,7 +151,7 @@ class DeviceComplianceSettingState extends Entity implements Parsable
     }
 
     /**
-     * Gets the state property value. The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Gets the state property value. The state property
      * @return ComplianceStatus|null
     */
     public function getState(): ?ComplianceStatus {
@@ -257,7 +258,7 @@ class DeviceComplianceSettingState extends Entity implements Parsable
     }
 
     /**
-     * Sets the state property value. The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Sets the state property value. The state property
      *  @param ComplianceStatus|null $value Value to set for the state property.
     */
     public function setState(?ComplianceStatus $value ): void {

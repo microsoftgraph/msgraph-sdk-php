@@ -30,12 +30,12 @@ class TeamsAsyncOperation extends Entity implements Parsable
     private ?DateTime $lastActionDateTime = null;
     
     /**
-     * @var TeamsAsyncOperationType|null $operationType Denotes the type of operation being described.
+     * @var TeamsAsyncOperationType|null $operationType The operationType property
     */
     private ?TeamsAsyncOperationType $operationType = null;
     
     /**
-     * @var TeamsAsyncOperationStatus|null $status Operation status.
+     * @var TeamsAsyncOperationStatus|null $status The status property
     */
     private ?TeamsAsyncOperationStatus $status = null;
     
@@ -54,6 +54,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.teamsAsyncOperation');
     }
 
     /**
@@ -116,7 +117,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the operationType property value. Denotes the type of operation being described.
+     * Gets the operationType property value. The operationType property
      * @return TeamsAsyncOperationType|null
     */
     public function getOperationType(): ?TeamsAsyncOperationType {
@@ -124,7 +125,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Operation status.
+     * Gets the status property value. The status property
      * @return TeamsAsyncOperationStatus|null
     */
     public function getStatus(): ?TeamsAsyncOperationStatus {
@@ -196,7 +197,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the operationType property value. Denotes the type of operation being described.
+     * Sets the operationType property value. The operationType property
      *  @param TeamsAsyncOperationType|null $value Value to set for the operationType property.
     */
     public function setOperationType(?TeamsAsyncOperationType $value ): void {
@@ -204,7 +205,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Operation status.
+     * Sets the status property value. The status property
      *  @param TeamsAsyncOperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?TeamsAsyncOperationStatus $value ): void {

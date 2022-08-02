@@ -10,17 +10,22 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MediaContentRatingJapan implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var RatingJapanMoviesType|null $movieRating Movies rating selected for Japan. Possible values are: allAllowed, allBlocked, general, parentalGuidance, agesAbove15, agesAbove18.
+     * @var RatingJapanMoviesType|null $movieRating Movies rating labels in Japan
     */
     private ?RatingJapanMoviesType $movieRating = null;
     
     /**
-     * @var RatingJapanTelevisionType|null $tvRating TV rating selected for Japan. Possible values are: allAllowed, allBlocked, explicitAllowed.
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
+     * @var RatingJapanTelevisionType|null $tvRating TV content rating labels in Japan
     */
     private ?RatingJapanTelevisionType $tvRating = null;
     
@@ -28,7 +33,8 @@ class MediaContentRatingJapan implements AdditionalDataHolder, Parsable
      * Instantiates a new mediaContentRatingJapan and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.mediaContentRatingJapan');
     }
 
     /**
@@ -56,12 +62,13 @@ class MediaContentRatingJapan implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'movieRating' => function (ParseNode $n) use ($o) { $o->setMovieRating($n->getEnumValue(RatingJapanMoviesType::class)); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'tvRating' => function (ParseNode $n) use ($o) { $o->setTvRating($n->getEnumValue(RatingJapanTelevisionType::class)); },
         ];
     }
 
     /**
-     * Gets the movieRating property value. Movies rating selected for Japan. Possible values are: allAllowed, allBlocked, general, parentalGuidance, agesAbove15, agesAbove18.
+     * Gets the movieRating property value. Movies rating labels in Japan
      * @return RatingJapanMoviesType|null
     */
     public function getMovieRating(): ?RatingJapanMoviesType {
@@ -69,7 +76,15 @@ class MediaContentRatingJapan implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the tvRating property value. TV rating selected for Japan. Possible values are: allAllowed, allBlocked, explicitAllowed.
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
+     * Gets the tvRating property value. TV content rating labels in Japan
      * @return RatingJapanTelevisionType|null
     */
     public function getTvRating(): ?RatingJapanTelevisionType {
@@ -82,6 +97,7 @@ class MediaContentRatingJapan implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeEnumValue('movieRating', $this->movieRating);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('tvRating', $this->tvRating);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -95,7 +111,7 @@ class MediaContentRatingJapan implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the movieRating property value. Movies rating selected for Japan. Possible values are: allAllowed, allBlocked, general, parentalGuidance, agesAbove15, agesAbove18.
+     * Sets the movieRating property value. Movies rating labels in Japan
      *  @param RatingJapanMoviesType|null $value Value to set for the movieRating property.
     */
     public function setMovieRating(?RatingJapanMoviesType $value ): void {
@@ -103,7 +119,15 @@ class MediaContentRatingJapan implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the tvRating property value. TV rating selected for Japan. Possible values are: allAllowed, allBlocked, explicitAllowed.
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
+     * Sets the tvRating property value. TV content rating labels in Japan
      *  @param RatingJapanTelevisionType|null $value Value to set for the tvRating property.
     */
     public function setTvRating(?RatingJapanTelevisionType $value ): void {

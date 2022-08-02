@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ScoredEmailAddress implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class ScoredEmailAddress implements AdditionalDataHolder, Parsable
      * @var string|null $itemId The itemId property
     */
     private ?string $itemId = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var float|null $relevanceScore The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user’s communication and collaboration patterns and business relationships.
@@ -38,7 +43,8 @@ class ScoredEmailAddress implements AdditionalDataHolder, Parsable
      * Instantiates a new scoredEmailAddress and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.scoredEmailAddress');
     }
 
     /**
@@ -75,6 +81,7 @@ class ScoredEmailAddress implements AdditionalDataHolder, Parsable
         return  [
             'address' => function (ParseNode $n) use ($o) { $o->setAddress($n->getStringValue()); },
             'itemId' => function (ParseNode $n) use ($o) { $o->setItemId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'relevanceScore' => function (ParseNode $n) use ($o) { $o->setRelevanceScore($n->getFloatValue()); },
             'selectionLikelihood' => function (ParseNode $n) use ($o) { $o->setSelectionLikelihood($n->getEnumValue(SelectionLikelihoodInfo::class)); },
         ];
@@ -86,6 +93,14 @@ class ScoredEmailAddress implements AdditionalDataHolder, Parsable
     */
     public function getItemId(): ?string {
         return $this->itemId;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -111,6 +126,7 @@ class ScoredEmailAddress implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('address', $this->address);
         $writer->writeStringValue('itemId', $this->itemId);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeFloatValue('relevanceScore', $this->relevanceScore);
         $writer->writeEnumValue('selectionLikelihood', $this->selectionLikelihood);
         $writer->writeAdditionalData($this->additionalData);
@@ -138,6 +154,14 @@ class ScoredEmailAddress implements AdditionalDataHolder, Parsable
     */
     public function setItemId(?string $value ): void {
         $this->itemId = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

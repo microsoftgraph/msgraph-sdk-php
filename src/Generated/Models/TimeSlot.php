@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TimeSlot implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class TimeSlot implements AdditionalDataHolder, Parsable
      * @var DateTimeTimeZone|null $end The end property
     */
     private ?DateTimeTimeZone $end = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var DateTimeTimeZone|null $start The start property
@@ -28,7 +33,8 @@ class TimeSlot implements AdditionalDataHolder, Parsable
      * Instantiates a new timeSlot and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.timeSlot');
     }
 
     /**
@@ -64,8 +70,17 @@ class TimeSlot implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'end' => function (ParseNode $n) use ($o) { $o->setEnd($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'start' => function (ParseNode $n) use ($o) { $o->setStart($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class TimeSlot implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('end', $this->end);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('start', $this->start);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -100,6 +116,14 @@ class TimeSlot implements AdditionalDataHolder, Parsable
     */
     public function setEnd(?DateTimeTimeZone $value ): void {
         $this->end = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

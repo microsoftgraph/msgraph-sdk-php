@@ -10,15 +10,21 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * Instantiates a new deviceAndAppManagementAssignmentTarget and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.deviceAndAppManagementAssignmentTarget');
     }
 
     /**
@@ -27,6 +33,17 @@ class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHolder, Pa
      * @return DeviceAndAppManagementAssignmentTarget
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceAndAppManagementAssignmentTarget {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.allDevicesAssignmentTarget': return new AllDevicesAssignmentTarget();
+                case '#microsoft.graph.allLicensedUsersAssignmentTarget': return new AllLicensedUsersAssignmentTarget();
+                case '#microsoft.graph.configurationManagerCollectionAssignmentTarget': return new ConfigurationManagerCollectionAssignmentTarget();
+                case '#microsoft.graph.exclusionGroupAssignmentTarget': return new ExclusionGroupAssignmentTarget();
+                case '#microsoft.graph.groupAssignmentTarget': return new GroupAssignmentTarget();
+            }
+        }
         return new DeviceAndAppManagementAssignmentTarget();
     }
 
@@ -45,7 +62,16 @@ class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHolder, Pa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -53,6 +79,7 @@ class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHolder, Pa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -62,6 +89,14 @@ class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHolder, Pa
     */
     public function setAdditionalData(?array $value ): void {
         $this->additionalData = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

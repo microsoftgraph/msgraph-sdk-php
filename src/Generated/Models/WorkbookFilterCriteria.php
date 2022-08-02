@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -45,6 +45,11 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable
     private ?WorkbookIcon $icon = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $operator The operator property
     */
     private ?string $operator = null;
@@ -58,7 +63,8 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable
      * Instantiates a new workbookFilterCriteria and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.workbookFilterCriteria');
     }
 
     /**
@@ -123,6 +129,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable
             'dynamicCriteria' => function (ParseNode $n) use ($o) { $o->setDynamicCriteria($n->getStringValue()); },
             'filterOn' => function (ParseNode $n) use ($o) { $o->setFilterOn($n->getStringValue()); },
             'icon' => function (ParseNode $n) use ($o) { $o->setIcon($n->getObjectValue(array(WorkbookIcon::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'operator' => function (ParseNode $n) use ($o) { $o->setOperator($n->getStringValue()); },
             'values' => function (ParseNode $n) use ($o) { $o->setValues($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
         ];
@@ -142,6 +149,14 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable
     */
     public function getIcon(): ?WorkbookIcon {
         return $this->icon;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -171,6 +186,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('dynamicCriteria', $this->dynamicCriteria);
         $writer->writeStringValue('filterOn', $this->filterOn);
         $writer->writeObjectValue('icon', $this->icon);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('operator', $this->operator);
         $writer->writeObjectValue('values', $this->values);
         $writer->writeAdditionalData($this->additionalData);
@@ -230,6 +246,14 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable
     */
     public function setIcon(?WorkbookIcon $value ): void {
         $this->icon = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

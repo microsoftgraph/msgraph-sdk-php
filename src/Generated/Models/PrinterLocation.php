@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrinterLocation implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -53,6 +53,11 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @var float|null $longitude The longitude that the printer is located at.
     */
     private ?float $longitude = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var array<string>|null $organization The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
@@ -103,7 +108,8 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * Instantiates a new printerLocation and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.printerLocation');
     }
 
     /**
@@ -170,6 +176,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
             'floorDescription' => function (ParseNode $n) use ($o) { $o->setFloorDescription($n->getStringValue()); },
             'latitude' => function (ParseNode $n) use ($o) { $o->setLatitude($n->getFloatValue()); },
             'longitude' => function (ParseNode $n) use ($o) { $o->setLongitude($n->getFloatValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'organization' => function (ParseNode $n) use ($o) { $o->setOrganization($n->getCollectionOfPrimitiveValues()); },
             'postalCode' => function (ParseNode $n) use ($o) { $o->setPostalCode($n->getStringValue()); },
             'roomDescription' => function (ParseNode $n) use ($o) { $o->setRoomDescription($n->getStringValue()); },
@@ -212,6 +219,14 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
     */
     public function getLongitude(): ?float {
         return $this->longitude;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -299,6 +314,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('floorDescription', $this->floorDescription);
         $writer->writeFloatValue('latitude', $this->latitude);
         $writer->writeFloatValue('longitude', $this->longitude);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfPrimitiveValues('organization', $this->organization);
         $writer->writeStringValue('postalCode', $this->postalCode);
         $writer->writeStringValue('roomDescription', $this->roomDescription);
@@ -381,6 +397,14 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
     */
     public function setLongitude(?float $value ): void {
         $this->longitude = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

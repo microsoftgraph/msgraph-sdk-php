@@ -20,7 +20,7 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
     private ?string $exchangeAlias = null;
     
     /**
-     * @var DeviceManagementExchangeConnectorType|null $exchangeConnectorType The type of Exchange Connector Configured. Possible values are: onPremises, hosted, serviceToService, dedicated.
+     * @var DeviceManagementExchangeConnectorType|null $exchangeConnectorType The type of Exchange Connector.
     */
     private ?DeviceManagementExchangeConnectorType $exchangeConnectorType = null;
     
@@ -45,7 +45,7 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
     private ?string $serverName = null;
     
     /**
-     * @var DeviceManagementExchangeConnectorStatus|null $status Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected.
+     * @var DeviceManagementExchangeConnectorStatus|null $status The current status of the Exchange Connector.
     */
     private ?DeviceManagementExchangeConnectorStatus $status = null;
     
@@ -59,6 +59,7 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.deviceManagementExchangeConnector');
     }
 
     /**
@@ -87,7 +88,7 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
     }
 
     /**
-     * Gets the exchangeConnectorType property value. The type of Exchange Connector Configured. Possible values are: onPremises, hosted, serviceToService, dedicated.
+     * Gets the exchangeConnectorType property value. The type of Exchange Connector.
      * @return DeviceManagementExchangeConnectorType|null
     */
     public function getExchangeConnectorType(): ?DeviceManagementExchangeConnectorType {
@@ -146,7 +147,7 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected.
+     * Gets the status property value. The current status of the Exchange Connector.
      * @return DeviceManagementExchangeConnectorStatus|null
     */
     public function getStatus(): ?DeviceManagementExchangeConnectorStatus {
@@ -195,7 +196,7 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
     }
 
     /**
-     * Sets the exchangeConnectorType property value. The type of Exchange Connector Configured. Possible values are: onPremises, hosted, serviceToService, dedicated.
+     * Sets the exchangeConnectorType property value. The type of Exchange Connector.
      *  @param DeviceManagementExchangeConnectorType|null $value Value to set for the exchangeConnectorType property.
     */
     public function setExchangeConnectorType(?DeviceManagementExchangeConnectorType $value ): void {
@@ -235,7 +236,7 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected.
+     * Sets the status property value. The current status of the Exchange Connector.
      *  @param DeviceManagementExchangeConnectorStatus|null $value Value to set for the status property.
     */
     public function setStatus(?DeviceManagementExchangeConnectorStatus $value ): void {

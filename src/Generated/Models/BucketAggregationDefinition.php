@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BucketAggregationDefinition implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class BucketAggregationDefinition implements AdditionalDataHolder, Parsable
     private ?int $minimumCount = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $prefixFilter A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
     */
     private ?string $prefixFilter = null;
@@ -35,7 +40,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, Parsable
     private ?array $ranges = null;
     
     /**
-     * @var BucketAggregationSortProperty|null $sortBy The possible values are count to sort by the number of matches in the aggregation, keyAsStringto sort alphabeticaly based on the key in the aggregation, keyAsNumber for numerical sorting based on the key in the aggregation. Required.
+     * @var BucketAggregationSortProperty|null $sortBy The sortBy property
     */
     private ?BucketAggregationSortProperty $sortBy = null;
     
@@ -43,7 +48,8 @@ class BucketAggregationDefinition implements AdditionalDataHolder, Parsable
      * Instantiates a new bucketAggregationDefinition and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.bucketAggregationDefinition');
     }
 
     /**
@@ -72,6 +78,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, Parsable
         return  [
             'isDescending' => function (ParseNode $n) use ($o) { $o->setIsDescending($n->getBooleanValue()); },
             'minimumCount' => function (ParseNode $n) use ($o) { $o->setMinimumCount($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'prefixFilter' => function (ParseNode $n) use ($o) { $o->setPrefixFilter($n->getStringValue()); },
             'ranges' => function (ParseNode $n) use ($o) { $o->setRanges($n->getCollectionOfObjectValues(array(BucketAggregationRange::class, 'createFromDiscriminatorValue'))); },
             'sortBy' => function (ParseNode $n) use ($o) { $o->setSortBy($n->getEnumValue(BucketAggregationSortProperty::class)); },
@@ -95,6 +102,14 @@ class BucketAggregationDefinition implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the prefixFilter property value. A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
      * @return string|null
     */
@@ -111,7 +126,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the sortBy property value. The possible values are count to sort by the number of matches in the aggregation, keyAsStringto sort alphabeticaly based on the key in the aggregation, keyAsNumber for numerical sorting based on the key in the aggregation. Required.
+     * Gets the sortBy property value. The sortBy property
      * @return BucketAggregationSortProperty|null
     */
     public function getSortBy(): ?BucketAggregationSortProperty {
@@ -125,6 +140,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('isDescending', $this->isDescending);
         $writer->writeIntegerValue('minimumCount', $this->minimumCount);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('prefixFilter', $this->prefixFilter);
         $writer->writeCollectionOfObjectValues('ranges', $this->ranges);
         $writer->writeEnumValue('sortBy', $this->sortBy);
@@ -156,6 +172,14 @@ class BucketAggregationDefinition implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
      * Sets the prefixFilter property value. A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
      *  @param string|null $value Value to set for the prefixFilter property.
     */
@@ -172,7 +196,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the sortBy property value. The possible values are count to sort by the number of matches in the aggregation, keyAsStringto sort alphabeticaly based on the key in the aggregation, keyAsNumber for numerical sorting based on the key in the aggregation. Required.
+     * Sets the sortBy property value. The sortBy property
      *  @param BucketAggregationSortProperty|null $value Value to set for the sortBy property.
     */
     public function setSortBy(?BucketAggregationSortProperty $value ): void {

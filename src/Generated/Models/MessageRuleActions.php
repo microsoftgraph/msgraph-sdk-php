@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MessageRuleActions implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -55,6 +55,11 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
     private ?string $moveToFolder = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var bool|null $permanentDelete Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
     */
     private ?bool $permanentDelete = null;
@@ -73,7 +78,8 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
      * Instantiates a new messageRuleActions and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.messageRuleActions');
     }
 
     /**
@@ -132,6 +138,7 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
             'markAsRead' => function (ParseNode $n) use ($o) { $o->setMarkAsRead($n->getBooleanValue()); },
             'markImportance' => function (ParseNode $n) use ($o) { $o->setMarkImportance($n->getEnumValue(Importance::class)); },
             'moveToFolder' => function (ParseNode $n) use ($o) { $o->setMoveToFolder($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'permanentDelete' => function (ParseNode $n) use ($o) { $o->setPermanentDelete($n->getBooleanValue()); },
             'redirectTo' => function (ParseNode $n) use ($o) { $o->setRedirectTo($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
             'stopProcessingRules' => function (ParseNode $n) use ($o) { $o->setStopProcessingRules($n->getBooleanValue()); },
@@ -179,6 +186,14 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the permanentDelete property value. Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
      * @return bool|null
     */
@@ -215,6 +230,7 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('markAsRead', $this->markAsRead);
         $writer->writeEnumValue('markImportance', $this->markImportance);
         $writer->writeStringValue('moveToFolder', $this->moveToFolder);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeBooleanValue('permanentDelete', $this->permanentDelete);
         $writer->writeCollectionOfObjectValues('redirectTo', $this->redirectTo);
         $writer->writeBooleanValue('stopProcessingRules', $this->stopProcessingRules);
@@ -291,6 +307,14 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
     */
     public function setMoveToFolder(?string $value ): void {
         $this->moveToFolder = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

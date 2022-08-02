@@ -75,7 +75,7 @@ class BookingAppointment extends Entity implements Parsable
     private ?float $price = null;
     
     /**
-     * @var BookingPriceType|null $priceType A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
+     * @var BookingPriceType|null $priceType Represents the type of pricing of a booking service.
     */
     private ?BookingPriceType $priceType = null;
     
@@ -125,10 +125,11 @@ class BookingAppointment extends Entity implements Parsable
     private ?DateTimeTimeZone $startDateTime = null;
     
     /**
-     * Instantiates a new bookingAppointment and sets the default values.
+     * Instantiates a new BookingAppointment and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.bookingAppointment');
     }
 
     /**
@@ -278,7 +279,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the priceType property value. A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
+     * Gets the priceType property value. Represents the type of pricing of a booking service.
      * @return BookingPriceType|null
     */
     public function getPriceType(): ?BookingPriceType {
@@ -493,7 +494,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the priceType property value. A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
+     * Sets the priceType property value. Represents the type of pricing of a booking service.
      *  @param BookingPriceType|null $value Value to set for the priceType property.
     */
     public function setPriceType(?BookingPriceType $value ): void {

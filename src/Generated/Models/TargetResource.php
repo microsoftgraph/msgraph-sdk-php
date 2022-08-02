@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TargetResource implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -35,6 +35,11 @@ class TargetResource implements AdditionalDataHolder, Parsable
     private ?array $modifiedProperties = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $type Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User.
     */
     private ?string $type = null;
@@ -48,7 +53,8 @@ class TargetResource implements AdditionalDataHolder, Parsable
      * Instantiates a new targetResource and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.targetResource');
     }
 
     /**
@@ -87,6 +93,7 @@ class TargetResource implements AdditionalDataHolder, Parsable
             'groupType' => function (ParseNode $n) use ($o) { $o->setGroupType($n->getEnumValue(GroupType::class)); },
             'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
             'modifiedProperties' => function (ParseNode $n) use ($o) { $o->setModifiedProperties($n->getCollectionOfObjectValues(array(ModifiedProperty::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
             'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
         ];
@@ -117,6 +124,14 @@ class TargetResource implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the type property value. Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User.
      * @return string|null
     */
@@ -141,6 +156,7 @@ class TargetResource implements AdditionalDataHolder, Parsable
         $writer->writeEnumValue('groupType', $this->groupType);
         $writer->writeStringValue('id', $this->id);
         $writer->writeCollectionOfObjectValues('modifiedProperties', $this->modifiedProperties);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('type', $this->type);
         $writer->writeStringValue('userPrincipalName', $this->userPrincipalName);
         $writer->writeAdditionalData($this->additionalData);
@@ -184,6 +200,14 @@ class TargetResource implements AdditionalDataHolder, Parsable
     */
     public function setModifiedProperties(?array $value ): void {
         $this->modifiedProperties = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

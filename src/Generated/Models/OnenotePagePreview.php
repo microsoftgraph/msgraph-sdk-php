@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OnenotePagePreview implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -20,15 +20,21 @@ class OnenotePagePreview implements AdditionalDataHolder, Parsable
     private ?OnenotePagePreviewLinks $links = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $previewText The previewText property
     */
     private ?string $previewText = null;
     
     /**
-     * Instantiates a new OnenotePagePreview and sets the default values.
+     * Instantiates a new onenotePagePreview and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.onenotePagePreview');
     }
 
     /**
@@ -56,6 +62,7 @@ class OnenotePagePreview implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'links' => function (ParseNode $n) use ($o) { $o->setLinks($n->getObjectValue(array(OnenotePagePreviewLinks::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'previewText' => function (ParseNode $n) use ($o) { $o->setPreviewText($n->getStringValue()); },
         ];
     }
@@ -66,6 +73,14 @@ class OnenotePagePreview implements AdditionalDataHolder, Parsable
     */
     public function getLinks(): ?OnenotePagePreviewLinks {
         return $this->links;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class OnenotePagePreview implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('links', $this->links);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('previewText', $this->previewText);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -100,6 +116,14 @@ class OnenotePagePreview implements AdditionalDataHolder, Parsable
     */
     public function setLinks(?OnenotePagePreviewLinks $value ): void {
         $this->links = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

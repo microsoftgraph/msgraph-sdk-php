@@ -10,12 +10,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosNotificationSettings implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var IosNotificationAlertType|null $alertType Indicates the type of alert for notifications for this app. Possible values are: deviceDefault, banner, modal, none.
+     * @var IosNotificationAlertType|null $alertType Notification Settings Alert Type.
     */
     private ?IosNotificationAlertType $alertType = null;
     
@@ -38,6 +38,11 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
      * @var bool|null $enabled Indicates whether notifications are allowed for this app.
     */
     private ?bool $enabled = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $publisher Publisher to be associated with the bundleID.
@@ -63,7 +68,8 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
      * Instantiates a new iosNotificationSettings and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.iosNotificationSettings');
     }
 
     /**
@@ -84,7 +90,7 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the alertType property value. Indicates the type of alert for notifications for this app. Possible values are: deviceDefault, banner, modal, none.
+     * Gets the alertType property value. Notification Settings Alert Type.
      * @return IosNotificationAlertType|null
     */
     public function getAlertType(): ?IosNotificationAlertType {
@@ -135,11 +141,20 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
             'badgesEnabled' => function (ParseNode $n) use ($o) { $o->setBadgesEnabled($n->getBooleanValue()); },
             'bundleID' => function (ParseNode $n) use ($o) { $o->setBundleID($n->getStringValue()); },
             'enabled' => function (ParseNode $n) use ($o) { $o->setEnabled($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'publisher' => function (ParseNode $n) use ($o) { $o->setPublisher($n->getStringValue()); },
             'showInNotificationCenter' => function (ParseNode $n) use ($o) { $o->setShowInNotificationCenter($n->getBooleanValue()); },
             'showOnLockScreen' => function (ParseNode $n) use ($o) { $o->setShowOnLockScreen($n->getBooleanValue()); },
             'soundsEnabled' => function (ParseNode $n) use ($o) { $o->setSoundsEnabled($n->getBooleanValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -184,6 +199,7 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('badgesEnabled', $this->badgesEnabled);
         $writer->writeStringValue('bundleID', $this->bundleID);
         $writer->writeBooleanValue('enabled', $this->enabled);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('publisher', $this->publisher);
         $writer->writeBooleanValue('showInNotificationCenter', $this->showInNotificationCenter);
         $writer->writeBooleanValue('showOnLockScreen', $this->showOnLockScreen);
@@ -200,7 +216,7 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the alertType property value. Indicates the type of alert for notifications for this app. Possible values are: deviceDefault, banner, modal, none.
+     * Sets the alertType property value. Notification Settings Alert Type.
      *  @param IosNotificationAlertType|null $value Value to set for the alertType property.
     */
     public function setAlertType(?IosNotificationAlertType $value ): void {
@@ -237,6 +253,14 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
     */
     public function setEnabled(?bool $value ): void {
         $this->enabled = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

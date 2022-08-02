@@ -80,7 +80,7 @@ class MobileApp extends Entity implements Parsable
     private ?string $publisher = null;
     
     /**
-     * @var MobileAppPublishingState|null $publishingState The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published.
+     * @var MobileAppPublishingState|null $publishingState Indicates the publishing state of an app.
     */
     private ?MobileAppPublishingState $publishingState = null;
     
@@ -89,6 +89,7 @@ class MobileApp extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.mobileApp');
     }
 
     /**
@@ -101,14 +102,24 @@ class MobileApp extends Entity implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.androidLobApp': return new AndroidLobApp();
                 case '#microsoft.graph.androidStoreApp': return new AndroidStoreApp();
+                case '#microsoft.graph.iosLobApp': return new IosLobApp();
                 case '#microsoft.graph.iosStoreApp': return new IosStoreApp();
                 case '#microsoft.graph.iosVppApp': return new IosVppApp();
                 case '#microsoft.graph.macOSOfficeSuiteApp': return new MacOSOfficeSuiteApp();
+                case '#microsoft.graph.managedAndroidLobApp': return new ManagedAndroidLobApp();
+                case '#microsoft.graph.managedAndroidStoreApp': return new ManagedAndroidStoreApp();
                 case '#microsoft.graph.managedApp': return new ManagedApp();
+                case '#microsoft.graph.managedIOSLobApp': return new ManagedIOSLobApp();
+                case '#microsoft.graph.managedIOSStoreApp': return new ManagedIOSStoreApp();
+                case '#microsoft.graph.managedMobileLobApp': return new ManagedMobileLobApp();
                 case '#microsoft.graph.microsoftStoreForBusinessApp': return new MicrosoftStoreForBusinessApp();
                 case '#microsoft.graph.mobileLobApp': return new MobileLobApp();
                 case '#microsoft.graph.webApp': return new WebApp();
+                case '#microsoft.graph.win32LobApp': return new Win32LobApp();
+                case '#microsoft.graph.windowsMobileMSI': return new WindowsMobileMSI();
+                case '#microsoft.graph.windowsUniversalAppX': return new WindowsUniversalAppX();
             }
         }
         return new MobileApp();
@@ -252,7 +263,7 @@ class MobileApp extends Entity implements Parsable
     }
 
     /**
-     * Gets the publishingState property value. The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published.
+     * Gets the publishingState property value. Indicates the publishing state of an app.
      * @return MobileAppPublishingState|null
     */
     public function getPublishingState(): ?MobileAppPublishingState {
@@ -395,7 +406,7 @@ class MobileApp extends Entity implements Parsable
     }
 
     /**
-     * Sets the publishingState property value. The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published.
+     * Sets the publishingState property value. Indicates the publishing state of an app.
      *  @param MobileAppPublishingState|null $value Value to set for the publishingState property.
     */
     public function setPublishingState(?MobileAppPublishingState $value ): void {

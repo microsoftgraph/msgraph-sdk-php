@@ -15,7 +15,7 @@ class ImageInfo implements AdditionalDataHolder, Parsable
     private ?bool $addImageQuery = null;
     
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -35,10 +35,16 @@ class ImageInfo implements AdditionalDataHolder, Parsable
     private ?string $iconUrl = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new imageInfo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.imageInfo');
     }
 
     /**
@@ -93,6 +99,7 @@ class ImageInfo implements AdditionalDataHolder, Parsable
             'alternateText' => function (ParseNode $n) use ($o) { $o->setAlternateText($n->getStringValue()); },
             'alternativeText' => function (ParseNode $n) use ($o) { $o->setAlternativeText($n->getStringValue()); },
             'iconUrl' => function (ParseNode $n) use ($o) { $o->setIconUrl($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
 
@@ -105,6 +112,14 @@ class ImageInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -113,6 +128,7 @@ class ImageInfo implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('alternateText', $this->alternateText);
         $writer->writeStringValue('alternativeText', $this->alternativeText);
         $writer->writeStringValue('iconUrl', $this->iconUrl);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -154,6 +170,14 @@ class ImageInfo implements AdditionalDataHolder, Parsable
     */
     public function setIconUrl(?string $value ): void {
         $this->iconUrl = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

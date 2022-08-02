@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ExcludeTarget implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -20,7 +20,12 @@ class ExcludeTarget implements AdditionalDataHolder, Parsable
     private ?string $id = null;
     
     /**
-     * @var AuthenticationMethodTargetType|null $targetType The type of the authentication method target. Possible values are: user, group, unknownFutureValue.
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
+     * @var AuthenticationMethodTargetType|null $targetType The targetType property
     */
     private ?AuthenticationMethodTargetType $targetType = null;
     
@@ -28,7 +33,8 @@ class ExcludeTarget implements AdditionalDataHolder, Parsable
      * Instantiates a new excludeTarget and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.excludeTarget');
     }
 
     /**
@@ -56,6 +62,7 @@ class ExcludeTarget implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'targetType' => function (ParseNode $n) use ($o) { $o->setTargetType($n->getEnumValue(AuthenticationMethodTargetType::class)); },
         ];
     }
@@ -69,7 +76,15 @@ class ExcludeTarget implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the targetType property value. The type of the authentication method target. Possible values are: user, group, unknownFutureValue.
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
+     * Gets the targetType property value. The targetType property
      * @return AuthenticationMethodTargetType|null
     */
     public function getTargetType(): ?AuthenticationMethodTargetType {
@@ -82,6 +97,7 @@ class ExcludeTarget implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('id', $this->id);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('targetType', $this->targetType);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -103,7 +119,15 @@ class ExcludeTarget implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the targetType property value. The type of the authentication method target. Possible values are: user, group, unknownFutureValue.
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
+     * Sets the targetType property value. The targetType property
      *  @param AuthenticationMethodTargetType|null $value Value to set for the targetType property.
     */
     public function setTargetType(?AuthenticationMethodTargetType $value ): void {

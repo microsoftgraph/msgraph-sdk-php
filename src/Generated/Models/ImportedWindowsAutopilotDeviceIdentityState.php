@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,7 +25,7 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
     private ?string $deviceErrorName = null;
     
     /**
-     * @var ImportedWindowsAutopilotDeviceIdentityImportStatus|null $deviceImportStatus Device status reported by Device Directory Service(DDS). Possible values are: unknown, pending, partial, complete, error.
+     * @var ImportedWindowsAutopilotDeviceIdentityImportStatus|null $deviceImportStatus The deviceImportStatus property
     */
     private ?ImportedWindowsAutopilotDeviceIdentityImportStatus $deviceImportStatus = null;
     
@@ -35,10 +35,16 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
     private ?string $deviceRegistrationId = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new importedWindowsAutopilotDeviceIdentityState and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.importedWindowsAutopilotDeviceIdentityState');
     }
 
     /**
@@ -75,7 +81,7 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
     }
 
     /**
-     * Gets the deviceImportStatus property value. Device status reported by Device Directory Service(DDS). Possible values are: unknown, pending, partial, complete, error.
+     * Gets the deviceImportStatus property value. The deviceImportStatus property
      * @return ImportedWindowsAutopilotDeviceIdentityImportStatus|null
     */
     public function getDeviceImportStatus(): ?ImportedWindowsAutopilotDeviceIdentityImportStatus {
@@ -101,7 +107,16 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
             'deviceErrorName' => function (ParseNode $n) use ($o) { $o->setDeviceErrorName($n->getStringValue()); },
             'deviceImportStatus' => function (ParseNode $n) use ($o) { $o->setDeviceImportStatus($n->getEnumValue(ImportedWindowsAutopilotDeviceIdentityImportStatus::class)); },
             'deviceRegistrationId' => function (ParseNode $n) use ($o) { $o->setDeviceRegistrationId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -113,6 +128,7 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
         $writer->writeStringValue('deviceErrorName', $this->deviceErrorName);
         $writer->writeEnumValue('deviceImportStatus', $this->deviceImportStatus);
         $writer->writeStringValue('deviceRegistrationId', $this->deviceRegistrationId);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -141,7 +157,7 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
     }
 
     /**
-     * Sets the deviceImportStatus property value. Device status reported by Device Directory Service(DDS). Possible values are: unknown, pending, partial, complete, error.
+     * Sets the deviceImportStatus property value. The deviceImportStatus property
      *  @param ImportedWindowsAutopilotDeviceIdentityImportStatus|null $value Value to set for the deviceImportStatus property.
     */
     public function setDeviceImportStatus(?ImportedWindowsAutopilotDeviceIdentityImportStatus $value ): void {
@@ -154,6 +170,14 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
     */
     public function setDeviceRegistrationId(?string $value ): void {
         $this->deviceRegistrationId = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

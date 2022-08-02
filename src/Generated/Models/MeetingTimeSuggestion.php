@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -35,6 +35,11 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable
     private ?TimeSlot $meetingTimeSlot = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var int|null $order Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence.
     */
     private ?int $order = null;
@@ -53,7 +58,8 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable
      * Instantiates a new meetingTimeSuggestion and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.meetingTimeSuggestion');
     }
 
     /**
@@ -100,6 +106,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable
             'confidence' => function (ParseNode $n) use ($o) { $o->setConfidence($n->getFloatValue()); },
             'locations' => function (ParseNode $n) use ($o) { $o->setLocations($n->getCollectionOfObjectValues(array(Location::class, 'createFromDiscriminatorValue'))); },
             'meetingTimeSlot' => function (ParseNode $n) use ($o) { $o->setMeetingTimeSlot($n->getObjectValue(array(TimeSlot::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'order' => function (ParseNode $n) use ($o) { $o->setOrder($n->getIntegerValue()); },
             'organizerAvailability' => function (ParseNode $n) use ($o) { $o->setOrganizerAvailability($n->getEnumValue(FreeBusyStatus::class)); },
             'suggestionReason' => function (ParseNode $n) use ($o) { $o->setSuggestionReason($n->getStringValue()); },
@@ -120,6 +127,14 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable
     */
     public function getMeetingTimeSlot(): ?TimeSlot {
         return $this->meetingTimeSlot;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -155,6 +170,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable
         $writer->writeFloatValue('confidence', $this->confidence);
         $writer->writeCollectionOfObjectValues('locations', $this->locations);
         $writer->writeObjectValue('meetingTimeSlot', $this->meetingTimeSlot);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('order', $this->order);
         $writer->writeEnumValue('organizerAvailability', $this->organizerAvailability);
         $writer->writeStringValue('suggestionReason', $this->suggestionReason);
@@ -199,6 +215,14 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable
     */
     public function setMeetingTimeSlot(?TimeSlot $value ): void {
         $this->meetingTimeSlot = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

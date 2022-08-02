@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OnPremisesProvisioningError implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -24,6 +24,11 @@ class OnPremisesProvisioningError implements AdditionalDataHolder, Parsable
      * @var DateTime|null $occurredDateTime The date and time at which the error occurred.
     */
     private ?DateTime $occurredDateTime = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $propertyCausingError Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress
@@ -39,7 +44,8 @@ class OnPremisesProvisioningError implements AdditionalDataHolder, Parsable
      * Instantiates a new onPremisesProvisioningError and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.onPremisesProvisioningError');
     }
 
     /**
@@ -76,6 +82,7 @@ class OnPremisesProvisioningError implements AdditionalDataHolder, Parsable
         return  [
             'category' => function (ParseNode $n) use ($o) { $o->setCategory($n->getStringValue()); },
             'occurredDateTime' => function (ParseNode $n) use ($o) { $o->setOccurredDateTime($n->getDateTimeValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'propertyCausingError' => function (ParseNode $n) use ($o) { $o->setPropertyCausingError($n->getStringValue()); },
             'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getStringValue()); },
         ];
@@ -87,6 +94,14 @@ class OnPremisesProvisioningError implements AdditionalDataHolder, Parsable
     */
     public function getOccurredDateTime(): ?DateTime {
         return $this->occurredDateTime;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -112,6 +127,7 @@ class OnPremisesProvisioningError implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('category', $this->category);
         $writer->writeDateTimeValue('occurredDateTime', $this->occurredDateTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('propertyCausingError', $this->propertyCausingError);
         $writer->writeStringValue('value', $this->value);
         $writer->writeAdditionalData($this->additionalData);
@@ -139,6 +155,14 @@ class OnPremisesProvisioningError implements AdditionalDataHolder, Parsable
     */
     public function setOccurredDateTime(?DateTime $value ): void {
         $this->occurredDateTime = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

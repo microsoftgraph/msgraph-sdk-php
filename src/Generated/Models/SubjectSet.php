@@ -10,15 +10,21 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SubjectSet implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * Instantiates a new subjectSet and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.subjectSet');
     }
 
     /**
@@ -27,6 +33,22 @@ class SubjectSet implements AdditionalDataHolder, Parsable
      * @return SubjectSet
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): SubjectSet {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.attributeRuleMembers': return new AttributeRuleMembers();
+                case '#microsoft.graph.connectedOrganizationMembers': return new ConnectedOrganizationMembers();
+                case '#microsoft.graph.externalSponsors': return new ExternalSponsors();
+                case '#microsoft.graph.groupMembers': return new GroupMembers();
+                case '#microsoft.graph.internalSponsors': return new InternalSponsors();
+                case '#microsoft.graph.requestorManager': return new RequestorManager();
+                case '#microsoft.graph.singleServicePrincipal': return new SingleServicePrincipal();
+                case '#microsoft.graph.singleUser': return new SingleUser();
+                case '#microsoft.graph.targetApplicationOwners': return new TargetApplicationOwners();
+                case '#microsoft.graph.targetManager': return new TargetManager();
+            }
+        }
         return new SubjectSet();
     }
 
@@ -45,7 +67,16 @@ class SubjectSet implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -53,6 +84,7 @@ class SubjectSet implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -62,6 +94,14 @@ class SubjectSet implements AdditionalDataHolder, Parsable
     */
     public function setAdditionalData(?array $value ): void {
         $this->additionalData = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

@@ -9,10 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IncomingCallOptions extends CallOptions implements Parsable 
 {
     /**
-     * Instantiates a new incomingCallOptions and sets the default values.
+     * Instantiates a new IncomingCallOptions and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.incomingCallOptions');
     }
 
     /**

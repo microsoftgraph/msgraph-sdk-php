@@ -14,7 +14,7 @@ class SharedDriveItem extends BaseItem implements Parsable
     private ?DriveItem $driveItem = null;
     
     /**
-     * @var EscapedList|null $EscapedList Used to access the underlying list
+     * @var EscapedList|null $escapedList Used to access the underlying list
     */
     private ?EscapedList $escapedList = null;
     
@@ -53,6 +53,7 @@ class SharedDriveItem extends BaseItem implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.sharedDriveItem');
     }
 
     /**

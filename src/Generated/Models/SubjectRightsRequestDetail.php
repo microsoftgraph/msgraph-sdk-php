@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -35,6 +35,11 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
     private ?int $itemNeedReview = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var array<KeyValuePair>|null $productItemCounts Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams.
     */
     private ?array $productItemCounts = null;
@@ -53,7 +58,8 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
      * Instantiates a new subjectRightsRequestDetail and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.subjectRightsRequestDetail');
     }
 
     /**
@@ -92,6 +98,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
             'insightCounts' => function (ParseNode $n) use ($o) { $o->setInsightCounts($n->getCollectionOfObjectValues(array(KeyValuePair::class, 'createFromDiscriminatorValue'))); },
             'itemCount' => function (ParseNode $n) use ($o) { $o->setItemCount($n->getIntegerValue()); },
             'itemNeedReview' => function (ParseNode $n) use ($o) { $o->setItemNeedReview($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'productItemCounts' => function (ParseNode $n) use ($o) { $o->setProductItemCounts($n->getCollectionOfObjectValues(array(KeyValuePair::class, 'createFromDiscriminatorValue'))); },
             'signedOffItemCount' => function (ParseNode $n) use ($o) { $o->setSignedOffItemCount($n->getIntegerValue()); },
             'totalItemSize' => function (ParseNode $n) use ($o) { $o->setTotalItemSize($n->getIntegerValue()); },
@@ -120,6 +127,14 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
     */
     public function getItemNeedReview(): ?int {
         return $this->itemNeedReview;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -155,6 +170,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
         $writer->writeCollectionOfObjectValues('insightCounts', $this->insightCounts);
         $writer->writeIntegerValue('itemCount', $this->itemCount);
         $writer->writeIntegerValue('itemNeedReview', $this->itemNeedReview);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfObjectValues('productItemCounts', $this->productItemCounts);
         $writer->writeIntegerValue('signedOffItemCount', $this->signedOffItemCount);
         $writer->writeIntegerValue('totalItemSize', $this->totalItemSize);
@@ -199,6 +215,14 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
     */
     public function setItemNeedReview(?int $value ): void {
         $this->itemNeedReview = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

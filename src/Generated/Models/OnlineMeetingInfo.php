@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OnlineMeetingInfo implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class OnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * @var string|null $joinUrl The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
     */
     private ?string $joinUrl = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var array<Phone>|null $phones All of the phone numbers associated with this conference.
@@ -48,7 +53,8 @@ class OnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * Instantiates a new onlineMeetingInfo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.onlineMeetingInfo');
     }
 
     /**
@@ -85,6 +91,7 @@ class OnlineMeetingInfo implements AdditionalDataHolder, Parsable
         return  [
             'conferenceId' => function (ParseNode $n) use ($o) { $o->setConferenceId($n->getStringValue()); },
             'joinUrl' => function (ParseNode $n) use ($o) { $o->setJoinUrl($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'phones' => function (ParseNode $n) use ($o) { $o->setPhones($n->getCollectionOfObjectValues(array(Phone::class, 'createFromDiscriminatorValue'))); },
             'quickDial' => function (ParseNode $n) use ($o) { $o->setQuickDial($n->getStringValue()); },
             'tollFreeNumbers' => function (ParseNode $n) use ($o) { $o->setTollFreeNumbers($n->getCollectionOfPrimitiveValues()); },
@@ -98,6 +105,14 @@ class OnlineMeetingInfo implements AdditionalDataHolder, Parsable
     */
     public function getJoinUrl(): ?string {
         return $this->joinUrl;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -139,6 +154,7 @@ class OnlineMeetingInfo implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('conferenceId', $this->conferenceId);
         $writer->writeStringValue('joinUrl', $this->joinUrl);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfObjectValues('phones', $this->phones);
         $writer->writeStringValue('quickDial', $this->quickDial);
         $writer->writeCollectionOfPrimitiveValues('tollFreeNumbers', $this->tollFreeNumbers);
@@ -168,6 +184,14 @@ class OnlineMeetingInfo implements AdditionalDataHolder, Parsable
     */
     public function setJoinUrl(?string $value ): void {
         $this->joinUrl = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

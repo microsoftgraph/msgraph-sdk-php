@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class VerifiedDomain implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -35,6 +35,11 @@ class VerifiedDomain implements AdditionalDataHolder, Parsable
     private ?string $name = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $type For example, Managed.
     */
     private ?string $type = null;
@@ -43,7 +48,8 @@ class VerifiedDomain implements AdditionalDataHolder, Parsable
      * Instantiates a new verifiedDomain and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.verifiedDomain');
     }
 
     /**
@@ -82,6 +88,7 @@ class VerifiedDomain implements AdditionalDataHolder, Parsable
             'isDefault' => function (ParseNode $n) use ($o) { $o->setIsDefault($n->getBooleanValue()); },
             'isInitial' => function (ParseNode $n) use ($o) { $o->setIsInitial($n->getBooleanValue()); },
             'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
         ];
     }
@@ -111,6 +118,14 @@ class VerifiedDomain implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the type property value. For example, Managed.
      * @return string|null
     */
@@ -127,6 +142,7 @@ class VerifiedDomain implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('isDefault', $this->isDefault);
         $writer->writeBooleanValue('isInitial', $this->isInitial);
         $writer->writeStringValue('name', $this->name);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('type', $this->type);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -169,6 +185,14 @@ class VerifiedDomain implements AdditionalDataHolder, Parsable
     */
     public function setName(?string $value ): void {
         $this->name = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -28,6 +28,11 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
      * @var string|null $internalReplyMessage The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
     */
     private ?string $internalReplyMessage = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var DateTimeTimeZone|null $scheduledEndDateTime The date and time that automatic replies are set to end, if Status is set to Scheduled.
@@ -48,7 +53,8 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
      * Instantiates a new automaticRepliesSetting and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.automaticRepliesSetting');
     }
 
     /**
@@ -94,6 +100,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
             'externalAudience' => function (ParseNode $n) use ($o) { $o->setExternalAudience($n->getEnumValue(ExternalAudienceScope::class)); },
             'externalReplyMessage' => function (ParseNode $n) use ($o) { $o->setExternalReplyMessage($n->getStringValue()); },
             'internalReplyMessage' => function (ParseNode $n) use ($o) { $o->setInternalReplyMessage($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'scheduledEndDateTime' => function (ParseNode $n) use ($o) { $o->setScheduledEndDateTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
             'scheduledStartDateTime' => function (ParseNode $n) use ($o) { $o->setScheduledStartDateTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
             'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(AutomaticRepliesStatus::class)); },
@@ -106,6 +113,14 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
     */
     public function getInternalReplyMessage(): ?string {
         return $this->internalReplyMessage;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -140,6 +155,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
         $writer->writeEnumValue('externalAudience', $this->externalAudience);
         $writer->writeStringValue('externalReplyMessage', $this->externalReplyMessage);
         $writer->writeStringValue('internalReplyMessage', $this->internalReplyMessage);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('scheduledEndDateTime', $this->scheduledEndDateTime);
         $writer->writeObjectValue('scheduledStartDateTime', $this->scheduledStartDateTime);
         $writer->writeEnumValue('status', $this->status);
@@ -176,6 +192,14 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
     */
     public function setInternalReplyMessage(?string $value ): void {
         $this->internalReplyMessage = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

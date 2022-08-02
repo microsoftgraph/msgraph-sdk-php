@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrintMargin implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class PrintMargin implements AdditionalDataHolder, Parsable
      * @var int|null $left The margin in microns from the left edge.
     */
     private ?int $left = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var int|null $right The margin in microns from the right edge.
@@ -38,7 +43,8 @@ class PrintMargin implements AdditionalDataHolder, Parsable
      * Instantiates a new printMargin and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.printMargin');
     }
 
     /**
@@ -75,6 +81,7 @@ class PrintMargin implements AdditionalDataHolder, Parsable
         return  [
             'bottom' => function (ParseNode $n) use ($o) { $o->setBottom($n->getIntegerValue()); },
             'left' => function (ParseNode $n) use ($o) { $o->setLeft($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'right' => function (ParseNode $n) use ($o) { $o->setRight($n->getIntegerValue()); },
             'top' => function (ParseNode $n) use ($o) { $o->setTop($n->getIntegerValue()); },
         ];
@@ -86,6 +93,14 @@ class PrintMargin implements AdditionalDataHolder, Parsable
     */
     public function getLeft(): ?int {
         return $this->left;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -111,6 +126,7 @@ class PrintMargin implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeIntegerValue('bottom', $this->bottom);
         $writer->writeIntegerValue('left', $this->left);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('right', $this->right);
         $writer->writeIntegerValue('top', $this->top);
         $writer->writeAdditionalData($this->additionalData);
@@ -138,6 +154,14 @@ class PrintMargin implements AdditionalDataHolder, Parsable
     */
     public function setLeft(?int $value ): void {
         $this->left = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

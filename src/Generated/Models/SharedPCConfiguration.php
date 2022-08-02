@@ -15,7 +15,7 @@ class SharedPCConfiguration extends DeviceConfiguration implements Parsable
     private ?SharedPCAccountManagerPolicy $accountManagerPolicy = null;
     
     /**
-     * @var SharedPCAllowedAccountType|null $allowedAccounts Indicates which type of accounts are allowed to use on a shared PC. Possible values are: notConfigured, guest, domain.
+     * @var SharedPCAllowedAccountType|null $allowedAccounts Type of accounts that are allowed to share the PC.
     */
     private ?SharedPCAllowedAccountType $allowedAccounts = null;
     
@@ -74,6 +74,7 @@ class SharedPCConfiguration extends DeviceConfiguration implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.sharedPCConfiguration');
     }
 
     /**
@@ -94,7 +95,7 @@ class SharedPCConfiguration extends DeviceConfiguration implements Parsable
     }
 
     /**
-     * Gets the allowedAccounts property value. Indicates which type of accounts are allowed to use on a shared PC. Possible values are: notConfigured, guest, domain.
+     * Gets the allowedAccounts property value. Type of accounts that are allowed to share the PC.
      * @return SharedPCAllowedAccountType|null
     */
     public function getAllowedAccounts(): ?SharedPCAllowedAccountType {
@@ -232,7 +233,7 @@ class SharedPCConfiguration extends DeviceConfiguration implements Parsable
     }
 
     /**
-     * Sets the allowedAccounts property value. Indicates which type of accounts are allowed to use on a shared PC. Possible values are: notConfigured, guest, domain.
+     * Sets the allowedAccounts property value. Type of accounts that are allowed to share the PC.
      *  @param SharedPCAllowedAccountType|null $value Value to set for the allowedAccounts property.
     */
     public function setAllowedAccounts(?SharedPCAllowedAccountType $value ): void {

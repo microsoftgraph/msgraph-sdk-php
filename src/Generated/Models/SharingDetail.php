@@ -11,9 +11,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SharingDetail implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var InsightIdentity|null $sharedBy The user who shared the document.
@@ -44,7 +49,8 @@ class SharingDetail implements AdditionalDataHolder, Parsable
      * Instantiates a new sharingDetail and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.sharingDetail');
     }
 
     /**
@@ -71,12 +77,21 @@ class SharingDetail implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'sharedBy' => function (ParseNode $n) use ($o) { $o->setSharedBy($n->getObjectValue(array(InsightIdentity::class, 'createFromDiscriminatorValue'))); },
             'sharedDateTime' => function (ParseNode $n) use ($o) { $o->setSharedDateTime($n->getDateTimeValue()); },
             'sharingReference' => function (ParseNode $n) use ($o) { $o->setSharingReference($n->getObjectValue(array(ResourceReference::class, 'createFromDiscriminatorValue'))); },
             'sharingSubject' => function (ParseNode $n) use ($o) { $o->setSharingSubject($n->getStringValue()); },
             'sharingType' => function (ParseNode $n) use ($o) { $o->setSharingType($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -124,6 +139,7 @@ class SharingDetail implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('sharedBy', $this->sharedBy);
         $writer->writeDateTimeValue('sharedDateTime', $this->sharedDateTime);
         $writer->writeObjectValue('sharingReference', $this->sharingReference);
@@ -138,6 +154,14 @@ class SharingDetail implements AdditionalDataHolder, Parsable
     */
     public function setAdditionalData(?array $value ): void {
         $this->additionalData = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

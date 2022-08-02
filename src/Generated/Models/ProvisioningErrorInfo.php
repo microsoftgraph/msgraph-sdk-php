@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,6 +30,11 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable
     private ?string $errorCode = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $reason Summarizes the status and describes why the status happened.
     */
     private ?string $reason = null;
@@ -43,7 +48,8 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable
      * Instantiates a new provisioningErrorInfo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.provisioningErrorInfo');
     }
 
     /**
@@ -97,9 +103,18 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable
             'additionalDetails' => function (ParseNode $n) use ($o) { $o->setAdditionalDetails($n->getStringValue()); },
             'errorCategory' => function (ParseNode $n) use ($o) { $o->setErrorCategory($n->getEnumValue(ProvisioningStatusErrorCategory::class)); },
             'errorCode' => function (ParseNode $n) use ($o) { $o->setErrorCode($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'reason' => function (ParseNode $n) use ($o) { $o->setReason($n->getStringValue()); },
             'recommendedAction' => function (ParseNode $n) use ($o) { $o->setRecommendedAction($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -126,6 +141,7 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('additionalDetails', $this->additionalDetails);
         $writer->writeEnumValue('errorCategory', $this->errorCategory);
         $writer->writeStringValue('errorCode', $this->errorCode);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('reason', $this->reason);
         $writer->writeStringValue('recommendedAction', $this->recommendedAction);
         $writer->writeAdditionalData($this->additionalData);
@@ -161,6 +177,14 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable
     */
     public function setErrorCode(?string $value ): void {
         $this->errorCode = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

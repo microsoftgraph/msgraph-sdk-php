@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AudioConferencing implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class AudioConferencing implements AdditionalDataHolder, Parsable
      * @var string|null $dialinUrl A URL to the externally-accessible web page that contains dial-in information.
     */
     private ?string $dialinUrl = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $tollFreeNumber The tollFreeNumber property
@@ -48,7 +53,8 @@ class AudioConferencing implements AdditionalDataHolder, Parsable
      * Instantiates a new audioConferencing and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.audioConferencing');
     }
 
     /**
@@ -93,11 +99,20 @@ class AudioConferencing implements AdditionalDataHolder, Parsable
         return  [
             'conferenceId' => function (ParseNode $n) use ($o) { $o->setConferenceId($n->getStringValue()); },
             'dialinUrl' => function (ParseNode $n) use ($o) { $o->setDialinUrl($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'tollFreeNumber' => function (ParseNode $n) use ($o) { $o->setTollFreeNumber($n->getStringValue()); },
             'tollFreeNumbers' => function (ParseNode $n) use ($o) { $o->setTollFreeNumbers($n->getCollectionOfPrimitiveValues()); },
             'tollNumber' => function (ParseNode $n) use ($o) { $o->setTollNumber($n->getStringValue()); },
             'tollNumbers' => function (ParseNode $n) use ($o) { $o->setTollNumbers($n->getCollectionOfPrimitiveValues()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -139,6 +154,7 @@ class AudioConferencing implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('conferenceId', $this->conferenceId);
         $writer->writeStringValue('dialinUrl', $this->dialinUrl);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('tollFreeNumber', $this->tollFreeNumber);
         $writer->writeCollectionOfPrimitiveValues('tollFreeNumbers', $this->tollFreeNumbers);
         $writer->writeStringValue('tollNumber', $this->tollNumber);
@@ -168,6 +184,14 @@ class AudioConferencing implements AdditionalDataHolder, Parsable
     */
     public function setDialinUrl(?string $value ): void {
         $this->dialinUrl = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

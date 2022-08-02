@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SearchHit implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -20,9 +20,14 @@ class SearchHit implements AdditionalDataHolder, Parsable
     private ?string $contentSource = null;
     
     /**
-     * @var string|null $hitId The internal identifier for the item.
+     * @var string|null $hitId The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format.
     */
     private ?string $hitId = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var int|null $rank The rank or the order of the result.
@@ -48,7 +53,8 @@ class SearchHit implements AdditionalDataHolder, Parsable
      * Instantiates a new searchHit and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.searchHit');
     }
 
     /**
@@ -85,6 +91,7 @@ class SearchHit implements AdditionalDataHolder, Parsable
         return  [
             'contentSource' => function (ParseNode $n) use ($o) { $o->setContentSource($n->getStringValue()); },
             'hitId' => function (ParseNode $n) use ($o) { $o->setHitId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'rank' => function (ParseNode $n) use ($o) { $o->setRank($n->getIntegerValue()); },
             'resource' => function (ParseNode $n) use ($o) { $o->setResource($n->getObjectValue(array(Entity::class, 'createFromDiscriminatorValue'))); },
             'resultTemplateId' => function (ParseNode $n) use ($o) { $o->setResultTemplateId($n->getStringValue()); },
@@ -93,11 +100,19 @@ class SearchHit implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the hitId property value. The internal identifier for the item.
+     * Gets the hitId property value. The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format.
      * @return string|null
     */
     public function getHitId(): ?string {
         return $this->hitId;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -139,6 +154,7 @@ class SearchHit implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('contentSource', $this->contentSource);
         $writer->writeStringValue('hitId', $this->hitId);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('rank', $this->rank);
         $writer->writeObjectValue('resource', $this->resource);
         $writer->writeStringValue('resultTemplateId', $this->resultTemplateId);
@@ -163,11 +179,19 @@ class SearchHit implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the hitId property value. The internal identifier for the item.
+     * Sets the hitId property value. The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format.
      *  @param string|null $value Value to set for the hitId property.
     */
     public function setHitId(?string $value ): void {
         $this->hitId = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

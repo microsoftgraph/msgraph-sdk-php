@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SecureScoreControlStateUpdate implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -24,6 +24,11 @@ class SecureScoreControlStateUpdate implements AdditionalDataHolder, Parsable
      * @var string|null $comment Provides optional comment about the control.
     */
     private ?string $comment = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $state State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty).
@@ -44,7 +49,8 @@ class SecureScoreControlStateUpdate implements AdditionalDataHolder, Parsable
      * Instantiates a new secureScoreControlStateUpdate and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.secureScoreControlStateUpdate');
     }
 
     /**
@@ -89,10 +95,19 @@ class SecureScoreControlStateUpdate implements AdditionalDataHolder, Parsable
         return  [
             'assignedTo' => function (ParseNode $n) use ($o) { $o->setAssignedTo($n->getStringValue()); },
             'comment' => function (ParseNode $n) use ($o) { $o->setComment($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'state' => function (ParseNode $n) use ($o) { $o->setState($n->getStringValue()); },
             'updatedBy' => function (ParseNode $n) use ($o) { $o->setUpdatedBy($n->getStringValue()); },
             'updatedDateTime' => function (ParseNode $n) use ($o) { $o->setUpdatedDateTime($n->getDateTimeValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -126,6 +141,7 @@ class SecureScoreControlStateUpdate implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('assignedTo', $this->assignedTo);
         $writer->writeStringValue('comment', $this->comment);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('state', $this->state);
         $writer->writeStringValue('updatedBy', $this->updatedBy);
         $writer->writeDateTimeValue('updatedDateTime', $this->updatedDateTime);
@@ -154,6 +170,14 @@ class SecureScoreControlStateUpdate implements AdditionalDataHolder, Parsable
     */
     public function setComment(?string $value ): void {
         $this->comment = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

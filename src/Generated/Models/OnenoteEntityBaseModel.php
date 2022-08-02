@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OnenoteEntityBaseModel extends Entity implements Parsable 
 {
     /**
-     * @var string|null $EscapedSelf The endpoint where you can get details about the page. Read-only.
+     * @var string|null $escapedSelf The endpoint where you can get details about the page. Read-only.
     */
     private ?string $escapedSelf = null;
     
@@ -18,6 +18,7 @@ class OnenoteEntityBaseModel extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.onenoteEntityBaseModel');
     }
 
     /**
@@ -30,8 +31,13 @@ class OnenoteEntityBaseModel extends Entity implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.notebook': return new Notebook();
+                case '#microsoft.graph.onenoteEntityHierarchyModel': return new OnenoteEntityHierarchyModel();
                 case '#microsoft.graph.onenoteEntitySchemaObjectModel': return new OnenoteEntitySchemaObjectModel();
+                case '#microsoft.graph.onenotePage': return new OnenotePage();
                 case '#microsoft.graph.onenoteResource': return new OnenoteResource();
+                case '#microsoft.graph.onenoteSection': return new OnenoteSection();
+                case '#microsoft.graph.sectionGroup': return new SectionGroup();
             }
         }
         return new OnenoteEntityBaseModel();

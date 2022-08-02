@@ -10,17 +10,22 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MediaContentRatingIreland implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var RatingIrelandMoviesType|null $movieRating Movies rating selected for Ireland. Possible values are: allAllowed, allBlocked, general, parentalGuidance, agesAbove12, agesAbove15, agesAbove16, adults.
+     * @var RatingIrelandMoviesType|null $movieRating Movies rating labels in Ireland
     */
     private ?RatingIrelandMoviesType $movieRating = null;
     
     /**
-     * @var RatingIrelandTelevisionType|null $tvRating TV rating selected for Ireland. Possible values are: allAllowed, allBlocked, general, children, youngAdults, parentalSupervision, mature.
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
+     * @var RatingIrelandTelevisionType|null $tvRating TV content rating labels in Ireland
     */
     private ?RatingIrelandTelevisionType $tvRating = null;
     
@@ -28,7 +33,8 @@ class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
      * Instantiates a new mediaContentRatingIreland and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.mediaContentRatingIreland');
     }
 
     /**
@@ -56,12 +62,13 @@ class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'movieRating' => function (ParseNode $n) use ($o) { $o->setMovieRating($n->getEnumValue(RatingIrelandMoviesType::class)); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'tvRating' => function (ParseNode $n) use ($o) { $o->setTvRating($n->getEnumValue(RatingIrelandTelevisionType::class)); },
         ];
     }
 
     /**
-     * Gets the movieRating property value. Movies rating selected for Ireland. Possible values are: allAllowed, allBlocked, general, parentalGuidance, agesAbove12, agesAbove15, agesAbove16, adults.
+     * Gets the movieRating property value. Movies rating labels in Ireland
      * @return RatingIrelandMoviesType|null
     */
     public function getMovieRating(): ?RatingIrelandMoviesType {
@@ -69,7 +76,15 @@ class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the tvRating property value. TV rating selected for Ireland. Possible values are: allAllowed, allBlocked, general, children, youngAdults, parentalSupervision, mature.
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
+     * Gets the tvRating property value. TV content rating labels in Ireland
      * @return RatingIrelandTelevisionType|null
     */
     public function getTvRating(): ?RatingIrelandTelevisionType {
@@ -82,6 +97,7 @@ class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeEnumValue('movieRating', $this->movieRating);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('tvRating', $this->tvRating);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -95,7 +111,7 @@ class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the movieRating property value. Movies rating selected for Ireland. Possible values are: allAllowed, allBlocked, general, parentalGuidance, agesAbove12, agesAbove15, agesAbove16, adults.
+     * Sets the movieRating property value. Movies rating labels in Ireland
      *  @param RatingIrelandMoviesType|null $value Value to set for the movieRating property.
     */
     public function setMovieRating(?RatingIrelandMoviesType $value ): void {
@@ -103,7 +119,15 @@ class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the tvRating property value. TV rating selected for Ireland. Possible values are: allAllowed, allBlocked, general, children, youngAdults, parentalSupervision, mature.
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
+     * Sets the tvRating property value. TV content rating labels in Ireland
      *  @param RatingIrelandTelevisionType|null $value Value to set for the tvRating property.
     */
     public function setTvRating(?RatingIrelandTelevisionType $value ): void {

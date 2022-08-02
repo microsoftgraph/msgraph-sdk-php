@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable
      * @var array<string>|null $customAuthenticationFactors List of custom controls IDs required by the policy. To learn more about custom control, see Custom controls (preview).
     */
     private ?array $customAuthenticationFactors = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $operator Defines the relationship of the grant controls. Possible values: AND, OR.
@@ -38,7 +43,8 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable
      * Instantiates a new conditionalAccessGrantControls and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.conditionalAccessGrantControls');
     }
 
     /**
@@ -83,9 +89,18 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable
         return  [
             'builtInControls' => function (ParseNode $n) use ($o) { $o->setBuiltInControls($n->getCollectionOfPrimitiveValues()); },
             'customAuthenticationFactors' => function (ParseNode $n) use ($o) { $o->setCustomAuthenticationFactors($n->getCollectionOfPrimitiveValues()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'operator' => function (ParseNode $n) use ($o) { $o->setOperator($n->getStringValue()); },
             'termsOfUse' => function (ParseNode $n) use ($o) { $o->setTermsOfUse($n->getCollectionOfPrimitiveValues()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -111,6 +126,7 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeCollectionOfPrimitiveValues('builtInControls', $this->builtInControls);
         $writer->writeCollectionOfPrimitiveValues('customAuthenticationFactors', $this->customAuthenticationFactors);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('operator', $this->operator);
         $writer->writeCollectionOfPrimitiveValues('termsOfUse', $this->termsOfUse);
         $writer->writeAdditionalData($this->additionalData);
@@ -138,6 +154,14 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable
     */
     public function setCustomAuthenticationFactors(?array $value ): void {
         $this->customAuthenticationFactors = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

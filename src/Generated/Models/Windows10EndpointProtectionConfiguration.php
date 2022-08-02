@@ -35,12 +35,12 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
     private ?bool $applicationGuardAllowPrintToXPS = null;
     
     /**
-     * @var ApplicationGuardBlockClipboardSharingType|null $applicationGuardBlockClipboardSharing Block clipboard to share data from Host to Container, or from Container to Host, or both ways, or neither ways. Possible values are: notConfigured, blockBoth, blockHostToContainer, blockContainerToHost, blockNone.
+     * @var ApplicationGuardBlockClipboardSharingType|null $applicationGuardBlockClipboardSharing Possible values for applicationGuardBlockClipboardSharingType
     */
     private ?ApplicationGuardBlockClipboardSharingType $applicationGuardBlockClipboardSharing = null;
     
     /**
-     * @var ApplicationGuardBlockFileTransferType|null $applicationGuardBlockFileTransfer Block clipboard to transfer image file, text file or neither of them. Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
+     * @var ApplicationGuardBlockFileTransferType|null $applicationGuardBlockFileTransfer Possible values for applicationGuardBlockFileTransfer
     */
     private ?ApplicationGuardBlockFileTransferType $applicationGuardBlockFileTransfer = null;
     
@@ -60,7 +60,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
     private ?bool $applicationGuardForceAuditing = null;
     
     /**
-     * @var AppLockerApplicationControlType|null $appLockerApplicationControl Enables the Admin to choose what types of app to allow on devices. Possible values are: notConfigured, enforceComponentsAndStoreApps, auditComponentsAndStoreApps, enforceComponentsStoreAppsAndSmartlocker, auditComponentsStoreAppsAndSmartlocker.
+     * @var AppLockerApplicationControlType|null $appLockerApplicationControl Possible values of AppLocker Application Control Types
     */
     private ?AppLockerApplicationControlType $appLockerApplicationControl = null;
     
@@ -120,7 +120,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
     private ?bool $firewallBlockStatefulFTP = null;
     
     /**
-     * @var FirewallCertificateRevocationListCheckMethodType|null $firewallCertificateRevocationListCheckMethod Specify how the certificate revocation list is to be enforced. Possible values are: deviceDefault, none, attempt, require.
+     * @var FirewallCertificateRevocationListCheckMethodType|null $firewallCertificateRevocationListCheckMethod Possible values for firewallCertificateRevocationListCheckMethod
     */
     private ?FirewallCertificateRevocationListCheckMethodType $firewallCertificateRevocationListCheckMethod = null;
     
@@ -155,12 +155,12 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
     private ?bool $firewallMergeKeyingModuleSettings = null;
     
     /**
-     * @var FirewallPacketQueueingMethodType|null $firewallPacketQueueingMethod Configures how packet queueing should be applied in the tunnel gateway scenario. Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
+     * @var FirewallPacketQueueingMethodType|null $firewallPacketQueueingMethod Possible values for firewallPacketQueueingMethod
     */
     private ?FirewallPacketQueueingMethodType $firewallPacketQueueingMethod = null;
     
     /**
-     * @var FirewallPreSharedKeyEncodingMethodType|null $firewallPreSharedKeyEncodingMethod Select the preshared key encoding to be used. Possible values are: deviceDefault, none, utF8.
+     * @var FirewallPreSharedKeyEncodingMethodType|null $firewallPreSharedKeyEncodingMethod Possible values for firewallPreSharedKeyEncodingMethod
     */
     private ?FirewallPreSharedKeyEncodingMethodType $firewallPreSharedKeyEncodingMethod = null;
     
@@ -194,6 +194,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.windows10EndpointProtectionConfiguration');
     }
 
     /**
@@ -246,7 +247,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
     }
 
     /**
-     * Gets the applicationGuardBlockClipboardSharing property value. Block clipboard to share data from Host to Container, or from Container to Host, or both ways, or neither ways. Possible values are: notConfigured, blockBoth, blockHostToContainer, blockContainerToHost, blockNone.
+     * Gets the applicationGuardBlockClipboardSharing property value. Possible values for applicationGuardBlockClipboardSharingType
      * @return ApplicationGuardBlockClipboardSharingType|null
     */
     public function getApplicationGuardBlockClipboardSharing(): ?ApplicationGuardBlockClipboardSharingType {
@@ -254,7 +255,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
     }
 
     /**
-     * Gets the applicationGuardBlockFileTransfer property value. Block clipboard to transfer image file, text file or neither of them. Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
+     * Gets the applicationGuardBlockFileTransfer property value. Possible values for applicationGuardBlockFileTransfer
      * @return ApplicationGuardBlockFileTransferType|null
     */
     public function getApplicationGuardBlockFileTransfer(): ?ApplicationGuardBlockFileTransferType {
@@ -286,7 +287,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
     }
 
     /**
-     * Gets the appLockerApplicationControl property value. Enables the Admin to choose what types of app to allow on devices. Possible values are: notConfigured, enforceComponentsAndStoreApps, auditComponentsAndStoreApps, enforceComponentsStoreAppsAndSmartlocker, auditComponentsStoreAppsAndSmartlocker.
+     * Gets the appLockerApplicationControl property value. Possible values of AppLocker Application Control Types
      * @return AppLockerApplicationControlType|null
     */
     public function getAppLockerApplicationControl(): ?AppLockerApplicationControlType {
@@ -428,7 +429,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
     }
 
     /**
-     * Gets the firewallCertificateRevocationListCheckMethod property value. Specify how the certificate revocation list is to be enforced. Possible values are: deviceDefault, none, attempt, require.
+     * Gets the firewallCertificateRevocationListCheckMethod property value. Possible values for firewallCertificateRevocationListCheckMethod
      * @return FirewallCertificateRevocationListCheckMethodType|null
     */
     public function getFirewallCertificateRevocationListCheckMethod(): ?FirewallCertificateRevocationListCheckMethodType {
@@ -484,7 +485,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
     }
 
     /**
-     * Gets the firewallPacketQueueingMethod property value. Configures how packet queueing should be applied in the tunnel gateway scenario. Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
+     * Gets the firewallPacketQueueingMethod property value. Possible values for firewallPacketQueueingMethod
      * @return FirewallPacketQueueingMethodType|null
     */
     public function getFirewallPacketQueueingMethod(): ?FirewallPacketQueueingMethodType {
@@ -492,7 +493,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
     }
 
     /**
-     * Gets the firewallPreSharedKeyEncodingMethod property value. Select the preshared key encoding to be used. Possible values are: deviceDefault, none, utF8.
+     * Gets the firewallPreSharedKeyEncodingMethod property value. Possible values for firewallPreSharedKeyEncodingMethod
      * @return FirewallPreSharedKeyEncodingMethodType|null
     */
     public function getFirewallPreSharedKeyEncodingMethod(): ?FirewallPreSharedKeyEncodingMethodType {
@@ -624,7 +625,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
     }
 
     /**
-     * Sets the applicationGuardBlockClipboardSharing property value. Block clipboard to share data from Host to Container, or from Container to Host, or both ways, or neither ways. Possible values are: notConfigured, blockBoth, blockHostToContainer, blockContainerToHost, blockNone.
+     * Sets the applicationGuardBlockClipboardSharing property value. Possible values for applicationGuardBlockClipboardSharingType
      *  @param ApplicationGuardBlockClipboardSharingType|null $value Value to set for the applicationGuardBlockClipboardSharing property.
     */
     public function setApplicationGuardBlockClipboardSharing(?ApplicationGuardBlockClipboardSharingType $value ): void {
@@ -632,7 +633,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
     }
 
     /**
-     * Sets the applicationGuardBlockFileTransfer property value. Block clipboard to transfer image file, text file or neither of them. Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
+     * Sets the applicationGuardBlockFileTransfer property value. Possible values for applicationGuardBlockFileTransfer
      *  @param ApplicationGuardBlockFileTransferType|null $value Value to set for the applicationGuardBlockFileTransfer property.
     */
     public function setApplicationGuardBlockFileTransfer(?ApplicationGuardBlockFileTransferType $value ): void {
@@ -664,7 +665,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
     }
 
     /**
-     * Sets the appLockerApplicationControl property value. Enables the Admin to choose what types of app to allow on devices. Possible values are: notConfigured, enforceComponentsAndStoreApps, auditComponentsAndStoreApps, enforceComponentsStoreAppsAndSmartlocker, auditComponentsStoreAppsAndSmartlocker.
+     * Sets the appLockerApplicationControl property value. Possible values of AppLocker Application Control Types
      *  @param AppLockerApplicationControlType|null $value Value to set for the appLockerApplicationControl property.
     */
     public function setAppLockerApplicationControl(?AppLockerApplicationControlType $value ): void {
@@ -760,7 +761,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
     }
 
     /**
-     * Sets the firewallCertificateRevocationListCheckMethod property value. Specify how the certificate revocation list is to be enforced. Possible values are: deviceDefault, none, attempt, require.
+     * Sets the firewallCertificateRevocationListCheckMethod property value. Possible values for firewallCertificateRevocationListCheckMethod
      *  @param FirewallCertificateRevocationListCheckMethodType|null $value Value to set for the firewallCertificateRevocationListCheckMethod property.
     */
     public function setFirewallCertificateRevocationListCheckMethod(?FirewallCertificateRevocationListCheckMethodType $value ): void {
@@ -816,7 +817,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
     }
 
     /**
-     * Sets the firewallPacketQueueingMethod property value. Configures how packet queueing should be applied in the tunnel gateway scenario. Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
+     * Sets the firewallPacketQueueingMethod property value. Possible values for firewallPacketQueueingMethod
      *  @param FirewallPacketQueueingMethodType|null $value Value to set for the firewallPacketQueueingMethod property.
     */
     public function setFirewallPacketQueueingMethod(?FirewallPacketQueueingMethodType $value ): void {
@@ -824,7 +825,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
     }
 
     /**
-     * Sets the firewallPreSharedKeyEncodingMethod property value. Select the preshared key encoding to be used. Possible values are: deviceDefault, none, utF8.
+     * Sets the firewallPreSharedKeyEncodingMethod property value. Possible values for firewallPreSharedKeyEncodingMethod
      *  @param FirewallPreSharedKeyEncodingMethodType|null $value Value to set for the firewallPreSharedKeyEncodingMethod property.
     */
     public function setFirewallPreSharedKeyEncodingMethod(?FirewallPreSharedKeyEncodingMethodType $value ): void {

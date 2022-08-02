@@ -13,6 +13,7 @@ class IdentityCustomUserFlowAttribute extends IdentityUserFlowAttribute implemen
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.identityCustomUserFlowAttribute');
     }
 
     /**

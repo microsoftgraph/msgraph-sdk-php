@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CallTranscriptionInfo implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -21,7 +21,12 @@ class CallTranscriptionInfo implements AdditionalDataHolder, Parsable
     private ?DateTime $lastModifiedDateTime = null;
     
     /**
-     * @var CallTranscriptionState|null $state Possible values are: notStarted, active, inactive.
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
+     * @var CallTranscriptionState|null $state The state property
     */
     private ?CallTranscriptionState $state = null;
     
@@ -29,7 +34,8 @@ class CallTranscriptionInfo implements AdditionalDataHolder, Parsable
      * Instantiates a new callTranscriptionInfo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.callTranscriptionInfo');
     }
 
     /**
@@ -57,6 +63,7 @@ class CallTranscriptionInfo implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(CallTranscriptionState::class)); },
         ];
     }
@@ -70,7 +77,15 @@ class CallTranscriptionInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the state property value. Possible values are: notStarted, active, inactive.
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
+     * Gets the state property value. The state property
      * @return CallTranscriptionState|null
     */
     public function getState(): ?CallTranscriptionState {
@@ -83,6 +98,7 @@ class CallTranscriptionInfo implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('state', $this->state);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -104,7 +120,15 @@ class CallTranscriptionInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the state property value. Possible values are: notStarted, active, inactive.
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
+     * Sets the state property value. The state property
      *  @param CallTranscriptionState|null $value Value to set for the state property.
     */
     public function setState(?CallTranscriptionState $value ): void {
