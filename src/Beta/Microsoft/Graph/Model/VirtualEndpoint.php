@@ -117,6 +117,7 @@ class VirtualEndpoint extends Entity
 
      /**
      * Gets the externalPartnerSettings
+    * The external partner settings on a Cloud PC.
      *
      * @return array|null The externalPartnerSettings
      */
@@ -131,6 +132,7 @@ class VirtualEndpoint extends Entity
 
     /**
     * Sets the externalPartnerSettings
+    * The external partner settings on a Cloud PC.
     *
     * @param CloudPcExternalPartnerSetting[] $val The externalPartnerSettings
     *

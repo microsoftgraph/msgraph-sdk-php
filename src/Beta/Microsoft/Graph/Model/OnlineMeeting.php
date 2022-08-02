@@ -1020,6 +1020,7 @@ class OnlineMeeting extends Entity
 
      /**
      * Gets the transcripts
+    * The transcripts of an online meeting. Read-only.
      *
      * @return array|null The transcripts
      */
@@ -1034,6 +1035,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the transcripts
+    * The transcripts of an online meeting. Read-only.
     *
     * @param CallTranscript[] $val The transcripts
     *

@@ -142,7 +142,7 @@ class ExtensionProperty extends DirectoryObject
 
     /**
     * Gets the targetObjects
-    * Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication
+    * Following values are supported. Not nullable. UserGroupAdministrativeUnitApplicationDeviceOrganization
     *
     * @return string|null The targetObjects
     */
@@ -157,7 +157,7 @@ class ExtensionProperty extends DirectoryObject
 
     /**
     * Sets the targetObjects
-    * Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication
+    * Following values are supported. Not nullable. UserGroupAdministrativeUnitApplicationDeviceOrganization
     *
     * @param string $val The targetObjects
     *

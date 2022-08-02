@@ -25,7 +25,7 @@ class AndroidFotaDeploymentAssignment extends Entity
 {
     /**
     * Gets the id
-    * Key for the Android FOTA Assignment entity
+    * A unique identifier assigned to each Android FOTA Assignment entity
     *
     * @return string|null The id
     */
@@ -40,7 +40,7 @@ class AndroidFotaDeploymentAssignment extends Entity
 
     /**
     * Sets the id
-    * Key for the Android FOTA Assignment entity
+    * A unique identifier assigned to each Android FOTA Assignment entity
     *
     * @param string $val The value of the id
     *
