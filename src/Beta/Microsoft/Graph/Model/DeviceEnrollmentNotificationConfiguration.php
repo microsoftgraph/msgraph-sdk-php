@@ -26,7 +26,7 @@ class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentConfigur
 {
     /**
     * Gets the brandingOptions
-    * Branding Options for the Enrollment Notification. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink, includeDeviceDetails.
+    * Branding Options for the Enrollment Notification. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink, includeDeviceDetails, unknownFutureValue.
     *
     * @return EnrollmentNotificationBrandingOptions|null The brandingOptions
     */
@@ -45,7 +45,7 @@ class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentConfigur
 
     /**
     * Sets the brandingOptions
-    * Branding Options for the Enrollment Notification. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink, includeDeviceDetails.
+    * Branding Options for the Enrollment Notification. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink, includeDeviceDetails, unknownFutureValue.
     *
     * @param EnrollmentNotificationBrandingOptions $val The brandingOptions
     *

@@ -26,6 +26,7 @@ class CallTranscript extends Entity
 {
     /**
     * Gets the content
+    * A field representing the content of the transcript. Read-only.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The content
     */
@@ -44,6 +45,7 @@ class CallTranscript extends Entity
 
     /**
     * Sets the content
+    * A field representing the content of the transcript. Read-only.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The content
     *
@@ -57,6 +59,7 @@ class CallTranscript extends Entity
 
     /**
     * Gets the createdDateTime
+    * Date and time at which the transcript was created. Read-only.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -75,6 +78,7 @@ class CallTranscript extends Entity
 
     /**
     * Sets the createdDateTime
+    * Date and time at which the transcript was created. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
