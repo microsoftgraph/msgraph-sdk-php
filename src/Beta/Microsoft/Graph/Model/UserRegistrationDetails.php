@@ -59,6 +59,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the isAdmin
+    * Whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
     *
     * @return bool|null The isAdmin
     */
@@ -73,6 +74,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the isAdmin
+    * Whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
     *
     * @param bool $val The isAdmin
     *
@@ -347,6 +349,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the userType
+    * Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
     *
     * @return SignInUserType|null The userType
     */
@@ -365,6 +368,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the userType
+    * Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
     *
     * @param SignInUserType $val The userType
     *

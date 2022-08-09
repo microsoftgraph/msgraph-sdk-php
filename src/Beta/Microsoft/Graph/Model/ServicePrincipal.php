@@ -1333,6 +1333,7 @@ class ServicePrincipal extends DirectoryObject
 
      /**
      * Gets the federatedIdentityCredentials
+    * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
      *
      * @return array|null The federatedIdentityCredentials
      */
@@ -1347,6 +1348,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Sets the federatedIdentityCredentials
+    * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
     *
     * @param FederatedIdentityCredential[] $val The federatedIdentityCredentials
     *

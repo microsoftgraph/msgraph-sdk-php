@@ -116,6 +116,35 @@ class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentConfigur
     }
 
     /**
+    * Gets the notificationTemplates
+    * The list of notification data -
+    *
+    * @return string|null The notificationTemplates
+    */
+    public function getNotificationTemplates()
+    {
+        if (array_key_exists("notificationTemplates", $this->_propDict)) {
+            return $this->_propDict["notificationTemplates"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the notificationTemplates
+    * The list of notification data -
+    *
+    * @param string $val The notificationTemplates
+    *
+    * @return DeviceEnrollmentNotificationConfiguration
+    */
+    public function setNotificationTemplates($val)
+    {
+        $this->_propDict["notificationTemplates"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the platformType
     * Platform type of the Enrollment Notification. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, mac.
     *

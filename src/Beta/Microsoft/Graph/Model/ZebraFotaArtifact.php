@@ -54,6 +54,35 @@ class ZebraFotaArtifact extends Entity
     }
 
     /**
+    * Gets the description
+    * Artifact description. (e.g.: `LifeGuard Update 98 (released 24-September-2021)
+    *
+    * @return string|null The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the description
+    * Artifact description. (e.g.: `LifeGuard Update 98 (released 24-September-2021)
+    *
+    * @param string $val The description
+    *
+    * @return ZebraFotaArtifact
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the deviceModel
     * Applicable device model (e.g.: TC8300)
     *

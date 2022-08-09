@@ -2500,6 +2500,34 @@ class User extends DirectoryObject
 
 
      /**
+     * Gets the appRoleAssignedResources
+     *
+     * @return array|null The appRoleAssignedResources
+     */
+    public function getAppRoleAssignedResources()
+    {
+        if (array_key_exists("appRoleAssignedResources", $this->_propDict)) {
+           return $this->_propDict["appRoleAssignedResources"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the appRoleAssignedResources
+    *
+    * @param ServicePrincipal[] $val The appRoleAssignedResources
+    *
+    * @return User
+    */
+    public function setAppRoleAssignedResources($val)
+    {
+        $this->_propDict["appRoleAssignedResources"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the appRoleAssignments
     * Represents the app roles a user has been granted for an application. Supports $expand.
      *

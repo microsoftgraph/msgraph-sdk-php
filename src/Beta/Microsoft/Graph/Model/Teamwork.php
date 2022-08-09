@@ -147,4 +147,34 @@ class Teamwork extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the teamTemplates
+    * The templates associated with a team.
+     *
+     * @return array|null The teamTemplates
+     */
+    public function getTeamTemplates()
+    {
+        if (array_key_exists("teamTemplates", $this->_propDict)) {
+           return $this->_propDict["teamTemplates"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the teamTemplates
+    * The templates associated with a team.
+    *
+    * @param TeamTemplate[] $val The teamTemplates
+    *
+    * @return Teamwork
+    */
+    public function setTeamTemplates($val)
+    {
+        $this->_propDict["teamTemplates"] = $val;
+        return $this;
+    }
+
 }
