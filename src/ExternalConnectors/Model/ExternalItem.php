@@ -56,7 +56,7 @@ class ExternalItem extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the content
-    * A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
+    * A plain-text representation of the contents of the item. The text in this property is full-text indexed. Optional.
     *
     * @return ExternalItemContent|null The content
     */
@@ -75,7 +75,7 @@ class ExternalItem extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the content
-    * A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
+    * A plain-text representation of the contents of the item. The text in this property is full-text indexed. Optional.
     *
     * @param ExternalItemContent $val The content
     *

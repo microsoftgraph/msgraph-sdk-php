@@ -25,33 +25,35 @@ class AvailabilityItem extends Entity
 {
 
     /**
-    * Gets the endTime
+    * Gets the endDateTime
+    * The end time of the time slot.
     *
-    * @return TimeOfDay|null The endTime
+    * @return DateTimeTimeZone|null The endDateTime
     */
-    public function getEndTime()
+    public function getEndDateTime()
     {
-        if (array_key_exists("endTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endTime"], "\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["endTime"])) {
-                return $this->_propDict["endTime"];
+        if (array_key_exists("endDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["endDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["endDateTime"])) {
+                return $this->_propDict["endDateTime"];
             } else {
-                $this->_propDict["endTime"] = new TimeOfDay($this->_propDict["endTime"]);
-                return $this->_propDict["endTime"];
+                $this->_propDict["endDateTime"] = new DateTimeTimeZone($this->_propDict["endDateTime"]);
+                return $this->_propDict["endDateTime"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the endTime
+    * Sets the endDateTime
+    * The end time of the time slot.
     *
-    * @param TimeOfDay $val The value to assign to the endTime
+    * @param DateTimeTimeZone $val The value to assign to the endDateTime
     *
     * @return AvailabilityItem The AvailabilityItem
     */
-    public function setEndTime($val)
+    public function setEndDateTime($val)
     {
-        $this->_propDict["endTime"] = $val;
+        $this->_propDict["endDateTime"] = $val;
          return $this;
     }
     /**
@@ -84,33 +86,35 @@ class AvailabilityItem extends Entity
     }
 
     /**
-    * Gets the startTime
+    * Gets the startDateTime
+    * The start time of the time slot.
     *
-    * @return TimeOfDay|null The startTime
+    * @return DateTimeTimeZone|null The startDateTime
     */
-    public function getStartTime()
+    public function getStartDateTime()
     {
-        if (array_key_exists("startTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startTime"], "\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["startTime"])) {
-                return $this->_propDict["startTime"];
+        if (array_key_exists("startDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["startDateTime"])) {
+                return $this->_propDict["startDateTime"];
             } else {
-                $this->_propDict["startTime"] = new TimeOfDay($this->_propDict["startTime"]);
-                return $this->_propDict["startTime"];
+                $this->_propDict["startDateTime"] = new DateTimeTimeZone($this->_propDict["startDateTime"]);
+                return $this->_propDict["startDateTime"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the startTime
+    * Sets the startDateTime
+    * The start time of the time slot.
     *
-    * @param TimeOfDay $val The value to assign to the startTime
+    * @param DateTimeTimeZone $val The value to assign to the startDateTime
     *
     * @return AvailabilityItem The AvailabilityItem
     */
-    public function setStartTime($val)
+    public function setStartDateTime($val)
     {
-        $this->_propDict["startTime"] = $val;
+        $this->_propDict["startDateTime"] = $val;
          return $this;
     }
 

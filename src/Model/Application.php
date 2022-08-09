@@ -89,7 +89,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the appId
-    * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
+    * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
     *
     * @return string|null The appId
     */
@@ -104,7 +104,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the appId
-    * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
+    * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
     *
     * @param string $val The appId
     *
@@ -1030,6 +1030,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the createdOnBehalfOf
+    * Supports $filter (eq when counting empty collections). Read-only.
     *
     * @return DirectoryObject|null The createdOnBehalfOf
     */
@@ -1048,6 +1049,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the createdOnBehalfOf
+    * Supports $filter (eq when counting empty collections). Read-only.
     *
     * @param DirectoryObject $val The createdOnBehalfOf
     *
@@ -1062,7 +1064,7 @@ class Application extends DirectoryObject
 
      /**
      * Gets the extensionProperties
-    * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+    * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      *
      * @return array|null The extensionProperties
      */
@@ -1077,7 +1079,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the extensionProperties
-    * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+    * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
     *
     * @param ExtensionProperty[] $val The extensionProperties
     *
@@ -1150,7 +1152,7 @@ class Application extends DirectoryObject
 
      /**
      * Gets the owners
-    * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+    * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      *
      * @return array|null The owners
      */
@@ -1165,7 +1167,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the owners
-    * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+    * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
     *
     * @param DirectoryObject[] $val The owners
     *
