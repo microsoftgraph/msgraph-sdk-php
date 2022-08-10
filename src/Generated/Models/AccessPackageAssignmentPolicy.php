@@ -20,6 +20,11 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     private ?AllowedTargetScope $allowedTargetScope = null;
     
     /**
+     * @var AccessPackageAutomaticRequestSettings|null $automaticRequestSettings The automaticRequestSettings property
+    */
+    private ?AccessPackageAutomaticRequestSettings $automaticRequestSettings = null;
+    
+    /**
      * @var AccessPackageCatalog|null $catalog Catalog of the access package containing this policy. Read-only.
     */
     private ?AccessPackageCatalog $catalog = null;
@@ -74,6 +79,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.accessPackageAssignmentPolicy');
     }
 
     /**
@@ -99,6 +105,14 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     */
     public function getAllowedTargetScope(): ?AllowedTargetScope {
         return $this->allowedTargetScope;
+    }
+
+    /**
+     * Gets the automaticRequestSettings property value. The automaticRequestSettings property
+     * @return AccessPackageAutomaticRequestSettings|null
+    */
+    public function getAutomaticRequestSettings(): ?AccessPackageAutomaticRequestSettings {
+        return $this->automaticRequestSettings;
     }
 
     /**
@@ -150,6 +164,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'accessPackage' => function (ParseNode $n) use ($o) { $o->setAccessPackage($n->getObjectValue(array(AccessPackage::class, 'createFromDiscriminatorValue'))); },
             'allowedTargetScope' => function (ParseNode $n) use ($o) { $o->setAllowedTargetScope($n->getEnumValue(AllowedTargetScope::class)); },
+            'automaticRequestSettings' => function (ParseNode $n) use ($o) { $o->setAutomaticRequestSettings($n->getObjectValue(array(AccessPackageAutomaticRequestSettings::class, 'createFromDiscriminatorValue'))); },
             'catalog' => function (ParseNode $n) use ($o) { $o->setCatalog($n->getObjectValue(array(AccessPackageCatalog::class, 'createFromDiscriminatorValue'))); },
             'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
             'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
@@ -211,6 +226,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('accessPackage', $this->accessPackage);
         $writer->writeEnumValue('allowedTargetScope', $this->allowedTargetScope);
+        $writer->writeObjectValue('automaticRequestSettings', $this->automaticRequestSettings);
         $writer->writeObjectValue('catalog', $this->catalog);
         $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
         $writer->writeStringValue('description', $this->description);
@@ -237,6 +253,14 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     */
     public function setAllowedTargetScope(?AllowedTargetScope $value ): void {
         $this->allowedTargetScope = $value;
+    }
+
+    /**
+     * Sets the automaticRequestSettings property value. The automaticRequestSettings property
+     *  @param AccessPackageAutomaticRequestSettings|null $value Value to set for the automaticRequestSettings property.
+    */
+    public function setAutomaticRequestSettings(?AccessPackageAutomaticRequestSettings $value ): void {
+        $this->automaticRequestSettings = $value;
     }
 
     /**

@@ -18,6 +18,7 @@ class Windows10EnterpriseModernAppManagementConfiguration extends DeviceConfigur
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.windows10EnterpriseModernAppManagementConfiguration');
     }
 
     /**

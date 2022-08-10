@@ -10,9 +10,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AssignmentOrder implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var array<string>|null $order A list of identityUserFlowAttribute IDs provided to determine the order in which attributes should be collected within a user flow.
@@ -20,10 +25,11 @@ class AssignmentOrder implements AdditionalDataHolder, Parsable
     private ?array $order = null;
     
     /**
-     * Instantiates a new AssignmentOrder and sets the default values.
+     * Instantiates a new assignmentOrder and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.assignmentOrder');
     }
 
     /**
@@ -50,8 +56,17 @@ class AssignmentOrder implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'order' => function (ParseNode $n) use ($o) { $o->setOrder($n->getCollectionOfPrimitiveValues()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -67,6 +82,7 @@ class AssignmentOrder implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfPrimitiveValues('order', $this->order);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -77,6 +93,14 @@ class AssignmentOrder implements AdditionalDataHolder, Parsable
     */
     public function setAdditionalData(?array $value ): void {
         $this->additionalData = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

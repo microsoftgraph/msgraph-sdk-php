@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Location implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -45,6 +45,11 @@ class Location implements AdditionalDataHolder, Parsable
     private ?string $locationUri = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $uniqueId For internal use only.
     */
     private ?string $uniqueId = null;
@@ -58,7 +63,8 @@ class Location implements AdditionalDataHolder, Parsable
      * Instantiates a new location and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.location');
     }
 
     /**
@@ -67,6 +73,13 @@ class Location implements AdditionalDataHolder, Parsable
      * @return Location
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): Location {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.locationConstraintItem': return new LocationConstraintItem();
+            }
+        }
         return new Location();
     }
 
@@ -115,6 +128,7 @@ class Location implements AdditionalDataHolder, Parsable
             'locationEmailAddress' => function (ParseNode $n) use ($o) { $o->setLocationEmailAddress($n->getStringValue()); },
             'locationType' => function (ParseNode $n) use ($o) { $o->setLocationType($n->getEnumValue(LocationType::class)); },
             'locationUri' => function (ParseNode $n) use ($o) { $o->setLocationUri($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'uniqueId' => function (ParseNode $n) use ($o) { $o->setUniqueId($n->getStringValue()); },
             'uniqueIdType' => function (ParseNode $n) use ($o) { $o->setUniqueIdType($n->getEnumValue(LocationUniqueIdType::class)); },
         ];
@@ -145,6 +159,14 @@ class Location implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the uniqueId property value. For internal use only.
      * @return string|null
     */
@@ -171,6 +193,7 @@ class Location implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('locationEmailAddress', $this->locationEmailAddress);
         $writer->writeEnumValue('locationType', $this->locationType);
         $writer->writeStringValue('locationUri', $this->locationUri);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('uniqueId', $this->uniqueId);
         $writer->writeEnumValue('uniqueIdType', $this->uniqueIdType);
         $writer->writeAdditionalData($this->additionalData);
@@ -230,6 +253,14 @@ class Location implements AdditionalDataHolder, Parsable
     */
     public function setLocationUri(?string $value ): void {
         $this->locationUri = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

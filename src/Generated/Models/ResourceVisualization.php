@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ResourceVisualization implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -33,6 +33,11 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
      * @var string|null $mediaType The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
     */
     private ?string $mediaType = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $previewImageUrl A URL leading to the preview image for the item.
@@ -58,7 +63,8 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
      * Instantiates a new resourceVisualization and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.resourceVisualization');
     }
 
     /**
@@ -113,6 +119,7 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
             'containerType' => function (ParseNode $n) use ($o) { $o->setContainerType($n->getStringValue()); },
             'containerWebUrl' => function (ParseNode $n) use ($o) { $o->setContainerWebUrl($n->getStringValue()); },
             'mediaType' => function (ParseNode $n) use ($o) { $o->setMediaType($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'previewImageUrl' => function (ParseNode $n) use ($o) { $o->setPreviewImageUrl($n->getStringValue()); },
             'previewText' => function (ParseNode $n) use ($o) { $o->setPreviewText($n->getStringValue()); },
             'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getStringValue()); },
@@ -126,6 +133,14 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
     */
     public function getMediaType(): ?string {
         return $this->mediaType;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -169,6 +184,7 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('containerType', $this->containerType);
         $writer->writeStringValue('containerWebUrl', $this->containerWebUrl);
         $writer->writeStringValue('mediaType', $this->mediaType);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('previewImageUrl', $this->previewImageUrl);
         $writer->writeStringValue('previewText', $this->previewText);
         $writer->writeStringValue('title', $this->title);
@@ -214,6 +230,14 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
     */
     public function setMediaType(?string $value ): void {
         $this->mediaType = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

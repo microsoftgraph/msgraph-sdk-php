@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable 
 {
     /**
-     * @var ServiceHealthClassificationType|null $classification The type of service health issue. Possible values are: advisory, incident, unknownFutureValue.
+     * @var ServiceHealthClassificationType|null $classification The classification property
     */
     private ?ServiceHealthClassificationType $classification = null;
     
@@ -34,7 +34,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
     private ?bool $isResolved = null;
     
     /**
-     * @var ServiceHealthOrigin|null $origin Indicates the origin of the service issue. Possible values are: microsoft, thirdParty, customer, unknownFutureValue.
+     * @var ServiceHealthOrigin|null $origin The origin property
     */
     private ?ServiceHealthOrigin $origin = null;
     
@@ -49,7 +49,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
     private ?string $service = null;
     
     /**
-     * @var ServiceHealthStatus|null $status The status of the service issue. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. For more details, see serviceHealthStatus values.
+     * @var ServiceHealthStatus|null $status The status property
     */
     private ?ServiceHealthStatus $status = null;
     
@@ -58,6 +58,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.serviceHealthIssue');
     }
 
     /**
@@ -70,7 +71,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Gets the classification property value. The type of service health issue. Possible values are: advisory, incident, unknownFutureValue.
+     * Gets the classification property value. The classification property
      * @return ServiceHealthClassificationType|null
     */
     public function getClassification(): ?ServiceHealthClassificationType {
@@ -129,7 +130,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Gets the origin property value. Indicates the origin of the service issue. Possible values are: microsoft, thirdParty, customer, unknownFutureValue.
+     * Gets the origin property value. The origin property
      * @return ServiceHealthOrigin|null
     */
     public function getOrigin(): ?ServiceHealthOrigin {
@@ -153,7 +154,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Gets the status property value. The status of the service issue. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. For more details, see serviceHealthStatus values.
+     * Gets the status property value. The status property
      * @return ServiceHealthStatus|null
     */
     public function getStatus(): ?ServiceHealthStatus {
@@ -178,7 +179,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Sets the classification property value. The type of service health issue. Possible values are: advisory, incident, unknownFutureValue.
+     * Sets the classification property value. The classification property
      *  @param ServiceHealthClassificationType|null $value Value to set for the classification property.
     */
     public function setClassification(?ServiceHealthClassificationType $value ): void {
@@ -218,7 +219,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Sets the origin property value. Indicates the origin of the service issue. Possible values are: microsoft, thirdParty, customer, unknownFutureValue.
+     * Sets the origin property value. The origin property
      *  @param ServiceHealthOrigin|null $value Value to set for the origin property.
     */
     public function setOrigin(?ServiceHealthOrigin $value ): void {
@@ -242,7 +243,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Sets the status property value. The status of the service issue. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. For more details, see serviceHealthStatus values.
+     * Sets the status property value. The status property
      *  @param ServiceHealthStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ServiceHealthStatus $value ): void {

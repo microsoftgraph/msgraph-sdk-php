@@ -11,22 +11,22 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var array<string>|null $InputIds The InputIds property
+     * @var array<string>|null $inputIds The InputIds property
     */
     private ?array $inputIds = null;
     
     /**
-     * @var ExchangeIdFormat|null $SourceIdType The SourceIdType property
+     * @var ExchangeIdFormat|null $sourceIdType The SourceIdType property
     */
     private ?ExchangeIdFormat $sourceIdType = null;
     
     /**
-     * @var ExchangeIdFormat|null $TargetIdType The TargetIdType property
+     * @var ExchangeIdFormat|null $targetIdType The TargetIdType property
     */
     private ?ExchangeIdFormat $targetIdType = null;
     
@@ -34,7 +34,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Parsa
      * Instantiates a new translateExchangeIdsPostRequestBody and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
     }
 
     /**

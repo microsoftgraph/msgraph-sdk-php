@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ThreatAssessmentRequest extends Entity implements Parsable 
 {
     /**
-     * @var ThreatCategory|null $category The threat category. Possible values are: spam, phishing, malware.
+     * @var ThreatCategory|null $category The category property
     */
     private ?ThreatCategory $category = null;
     
@@ -30,7 +30,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     private ?DateTime $createdDateTime = null;
     
     /**
-     * @var ThreatExpectedAssessment|null $expectedAssessment The expected assessment from submitter. Possible values are: block, unblock.
+     * @var ThreatExpectedAssessment|null $expectedAssessment The expectedAssessment property
     */
     private ?ThreatExpectedAssessment $expectedAssessment = null;
     
@@ -54,6 +54,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.threatAssessmentRequest');
     }
 
     /**
@@ -76,7 +77,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the category property value. The threat category. Possible values are: spam, phishing, malware.
+     * Gets the category property value. The category property
      * @return ThreatCategory|null
     */
     public function getCategory(): ?ThreatCategory {
@@ -108,7 +109,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the expectedAssessment property value. The expected assessment from submitter. Possible values are: block, unblock.
+     * Gets the expectedAssessment property value. The expectedAssessment property
      * @return ThreatExpectedAssessment|null
     */
     public function getExpectedAssessment(): ?ThreatExpectedAssessment {
@@ -174,7 +175,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the category property value. The threat category. Possible values are: spam, phishing, malware.
+     * Sets the category property value. The category property
      *  @param ThreatCategory|null $value Value to set for the category property.
     */
     public function setCategory(?ThreatCategory $value ): void {
@@ -206,7 +207,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the expectedAssessment property value. The expected assessment from submitter. Possible values are: block, unblock.
+     * Sets the expectedAssessment property value. The expectedAssessment property
      *  @param ThreatExpectedAssessment|null $value Value to set for the expectedAssessment property.
     */
     public function setExpectedAssessment(?ThreatExpectedAssessment $value ): void {

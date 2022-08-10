@@ -24,6 +24,7 @@ class OnenoteResource extends OnenoteEntityBaseModel implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.onenoteResource');
     }
 
     /**

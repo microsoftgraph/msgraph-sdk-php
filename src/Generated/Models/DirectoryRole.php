@@ -34,10 +34,11 @@ class DirectoryRole extends DirectoryObject implements Parsable
     private ?array $scopedMembers = null;
     
     /**
-     * Instantiates a new directoryRole and sets the default values.
+     * Instantiates a new DirectoryRole and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.directoryRole');
     }
 
     /**

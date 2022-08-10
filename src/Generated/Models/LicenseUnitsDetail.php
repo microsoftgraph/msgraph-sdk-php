@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LicenseUnitsDetail implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class LicenseUnitsDetail implements AdditionalDataHolder, Parsable
      * @var int|null $enabled The number of units that are enabled for the active subscription of the service SKU.
     */
     private ?int $enabled = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var int|null $suspended The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
@@ -33,7 +38,8 @@ class LicenseUnitsDetail implements AdditionalDataHolder, Parsable
      * Instantiates a new licenseUnitsDetail and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.licenseUnitsDetail');
     }
 
     /**
@@ -69,9 +75,18 @@ class LicenseUnitsDetail implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'enabled' => function (ParseNode $n) use ($o) { $o->setEnabled($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'suspended' => function (ParseNode $n) use ($o) { $o->setSuspended($n->getIntegerValue()); },
             'warning' => function (ParseNode $n) use ($o) { $o->setWarning($n->getIntegerValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -96,6 +111,7 @@ class LicenseUnitsDetail implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeIntegerValue('enabled', $this->enabled);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('suspended', $this->suspended);
         $writer->writeIntegerValue('warning', $this->warning);
         $writer->writeAdditionalData($this->additionalData);
@@ -115,6 +131,14 @@ class LicenseUnitsDetail implements AdditionalDataHolder, Parsable
     */
     public function setEnabled(?int $value ): void {
         $this->enabled = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

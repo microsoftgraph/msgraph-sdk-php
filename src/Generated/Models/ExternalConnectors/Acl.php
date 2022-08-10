@@ -10,17 +10,22 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Acl implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var AccessType|null $accessType The access granted to the identity. Possible values are: grant, deny.
+     * @var AccessType|null $accessType The accessType property
     */
     private ?AccessType $accessType = null;
     
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var AclType|null $type The type of identity. Possible values are: user, group, everyone, everyoneExceptGuests if the identitySource is azureActiveDirectory and just group if the identitySource is external.
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
+     * @var AclType|null $type The type property
     */
     private ?AclType $type = null;
     
@@ -33,7 +38,8 @@ class Acl implements AdditionalDataHolder, Parsable
      * Instantiates a new acl and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.externalConnectors.acl');
     }
 
     /**
@@ -46,7 +52,7 @@ class Acl implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the accessType property value. The access granted to the identity. Possible values are: grant, deny.
+     * Gets the accessType property value. The accessType property
      * @return AccessType|null
     */
     public function getAccessType(): ?AccessType {
@@ -69,13 +75,22 @@ class Acl implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'accessType' => function (ParseNode $n) use ($o) { $o->setAccessType($n->getEnumValue(AccessType::class)); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(AclType::class)); },
             'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getStringValue()); },
         ];
     }
 
     /**
-     * Gets the type property value. The type of identity. Possible values are: user, group, everyone, everyoneExceptGuests if the identitySource is azureActiveDirectory and just group if the identitySource is external.
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
+     * Gets the type property value. The type property
      * @return AclType|null
     */
     public function getType(): ?AclType {
@@ -96,13 +111,14 @@ class Acl implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeEnumValue('accessType', $this->accessType);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('type', $this->type);
         $writer->writeStringValue('value', $this->value);
         $writer->writeAdditionalData($this->additionalData);
     }
 
     /**
-     * Sets the accessType property value. The access granted to the identity. Possible values are: grant, deny.
+     * Sets the accessType property value. The accessType property
      *  @param AccessType|null $value Value to set for the accessType property.
     */
     public function setAccessType(?AccessType $value ): void {
@@ -118,7 +134,15 @@ class Acl implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the type property value. The type of identity. Possible values are: user, group, everyone, everyoneExceptGuests if the identitySource is azureActiveDirectory and just group if the identitySource is external.
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
+     * Sets the type property value. The type property
      *  @param AclType|null $value Value to set for the type property.
     */
     public function setType(?AclType $value ): void {

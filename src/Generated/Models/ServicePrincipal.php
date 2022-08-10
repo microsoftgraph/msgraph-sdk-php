@@ -104,6 +104,11 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     private ?array $endpoints = null;
     
     /**
+     * @var array<FederatedIdentityCredential>|null $federatedIdentityCredentials The federatedIdentityCredentials property
+    */
+    private ?array $federatedIdentityCredentials = null;
+    
+    /**
      * @var string|null $homepage Home page or landing page of the application.
     */
     private ?string $homepage = null;
@@ -243,6 +248,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.servicePrincipal');
     }
 
     /**
@@ -407,6 +413,14 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the federatedIdentityCredentials property value. The federatedIdentityCredentials property
+     * @return array<FederatedIdentityCredential>|null
+    */
+    public function getFederatedIdentityCredentials(): ?array {
+        return $this->federatedIdentityCredentials;
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable>
     */
@@ -432,6 +446,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
             'disabledByMicrosoftStatus' => function (ParseNode $n) use ($o) { $o->setDisabledByMicrosoftStatus($n->getStringValue()); },
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'endpoints' => function (ParseNode $n) use ($o) { $o->setEndpoints($n->getCollectionOfObjectValues(array(Endpoint::class, 'createFromDiscriminatorValue'))); },
+            'federatedIdentityCredentials' => function (ParseNode $n) use ($o) { $o->setFederatedIdentityCredentials($n->getCollectionOfObjectValues(array(FederatedIdentityCredential::class, 'createFromDiscriminatorValue'))); },
             'homepage' => function (ParseNode $n) use ($o) { $o->setHomepage($n->getStringValue()); },
             'homeRealmDiscoveryPolicies' => function (ParseNode $n) use ($o) { $o->setHomeRealmDiscoveryPolicies($n->getCollectionOfObjectValues(array(HomeRealmDiscoveryPolicy::class, 'createFromDiscriminatorValue'))); },
             'info' => function (ParseNode $n) use ($o) { $o->setInfo($n->getObjectValue(array(InformationalUrl::class, 'createFromDiscriminatorValue'))); },
@@ -703,6 +718,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
         $writer->writeStringValue('disabledByMicrosoftStatus', $this->disabledByMicrosoftStatus);
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeCollectionOfObjectValues('endpoints', $this->endpoints);
+        $writer->writeCollectionOfObjectValues('federatedIdentityCredentials', $this->federatedIdentityCredentials);
         $writer->writeStringValue('homepage', $this->homepage);
         $writer->writeCollectionOfObjectValues('homeRealmDiscoveryPolicies', $this->homeRealmDiscoveryPolicies);
         $writer->writeObjectValue('info', $this->info);
@@ -882,6 +898,14 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     */
     public function setEndpoints(?array $value ): void {
         $this->endpoints = $value;
+    }
+
+    /**
+     * Sets the federatedIdentityCredentials property value. The federatedIdentityCredentials property
+     *  @param array<FederatedIdentityCredential>|null $value Value to set for the federatedIdentityCredentials property.
+    */
+    public function setFederatedIdentityCredentials(?array $value ): void {
+        $this->federatedIdentityCredentials = $value;
     }
 
     /**

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PhysicalAddress implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class PhysicalAddress implements AdditionalDataHolder, Parsable
      * @var string|null $countryOrRegion The country or region. It's a free-format string value, for example, 'United States'.
     */
     private ?string $countryOrRegion = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $postalCode The postal code.
@@ -43,7 +48,8 @@ class PhysicalAddress implements AdditionalDataHolder, Parsable
      * Instantiates a new physicalAddress and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.physicalAddress');
     }
 
     /**
@@ -88,10 +94,19 @@ class PhysicalAddress implements AdditionalDataHolder, Parsable
         return  [
             'city' => function (ParseNode $n) use ($o) { $o->setCity($n->getStringValue()); },
             'countryOrRegion' => function (ParseNode $n) use ($o) { $o->setCountryOrRegion($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'postalCode' => function (ParseNode $n) use ($o) { $o->setPostalCode($n->getStringValue()); },
             'state' => function (ParseNode $n) use ($o) { $o->setState($n->getStringValue()); },
             'street' => function (ParseNode $n) use ($o) { $o->setStreet($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -125,6 +140,7 @@ class PhysicalAddress implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('city', $this->city);
         $writer->writeStringValue('countryOrRegion', $this->countryOrRegion);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('postalCode', $this->postalCode);
         $writer->writeStringValue('state', $this->state);
         $writer->writeStringValue('street', $this->street);
@@ -153,6 +169,14 @@ class PhysicalAddress implements AdditionalDataHolder, Parsable
     */
     public function setCountryOrRegion(?string $value ): void {
         $this->countryOrRegion = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

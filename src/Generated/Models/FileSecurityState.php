@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class FileSecurityState implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class FileSecurityState implements AdditionalDataHolder, Parsable
      * @var string|null $name File name (without path).
     */
     private ?string $name = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $path Full file path of the file/imageFile.
@@ -38,7 +43,8 @@ class FileSecurityState implements AdditionalDataHolder, Parsable
      * Instantiates a new fileSecurityState and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.fileSecurityState');
     }
 
     /**
@@ -67,6 +73,7 @@ class FileSecurityState implements AdditionalDataHolder, Parsable
         return  [
             'fileHash' => function (ParseNode $n) use ($o) { $o->setFileHash($n->getObjectValue(array(FileHash::class, 'createFromDiscriminatorValue'))); },
             'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'path' => function (ParseNode $n) use ($o) { $o->setPath($n->getStringValue()); },
             'riskScore' => function (ParseNode $n) use ($o) { $o->setRiskScore($n->getStringValue()); },
         ];
@@ -86,6 +93,14 @@ class FileSecurityState implements AdditionalDataHolder, Parsable
     */
     public function getName(): ?string {
         return $this->name;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -111,6 +126,7 @@ class FileSecurityState implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('fileHash', $this->fileHash);
         $writer->writeStringValue('name', $this->name);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('path', $this->path);
         $writer->writeStringValue('riskScore', $this->riskScore);
         $writer->writeAdditionalData($this->additionalData);
@@ -138,6 +154,14 @@ class FileSecurityState implements AdditionalDataHolder, Parsable
     */
     public function setName(?string $value ): void {
         $this->name = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ObjectIdentity implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class ObjectIdentity implements AdditionalDataHolder, Parsable
     private ?string $issuerAssignedId = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $signInType Specifies the user sign-in types in your directory, such as emailAddress, userName, federated, or userPrincipalName. federated represents a unique identifier for a user from an issuer, that can be in any format chosen by the issuer. Setting or updating a userPrincipalName identity will update the value of the userPrincipalName property on the user object. The validations performed on the userPrincipalName property on the user object, for example, verified domains and acceptable characters, will be performed when setting or updating a userPrincipalName identity. Additional validation is enforced on issuerAssignedId when the sign-in type is set to emailAddress or userName. This property can also be set to any custom string.
     */
     private ?string $signInType = null;
@@ -33,7 +38,8 @@ class ObjectIdentity implements AdditionalDataHolder, Parsable
      * Instantiates a new objectIdentity and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.objectIdentity');
     }
 
     /**
@@ -62,6 +68,7 @@ class ObjectIdentity implements AdditionalDataHolder, Parsable
         return  [
             'issuer' => function (ParseNode $n) use ($o) { $o->setIssuer($n->getStringValue()); },
             'issuerAssignedId' => function (ParseNode $n) use ($o) { $o->setIssuerAssignedId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'signInType' => function (ParseNode $n) use ($o) { $o->setSignInType($n->getStringValue()); },
         ];
     }
@@ -83,6 +90,14 @@ class ObjectIdentity implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the signInType property value. Specifies the user sign-in types in your directory, such as emailAddress, userName, federated, or userPrincipalName. federated represents a unique identifier for a user from an issuer, that can be in any format chosen by the issuer. Setting or updating a userPrincipalName identity will update the value of the userPrincipalName property on the user object. The validations performed on the userPrincipalName property on the user object, for example, verified domains and acceptable characters, will be performed when setting or updating a userPrincipalName identity. Additional validation is enforced on issuerAssignedId when the sign-in type is set to emailAddress or userName. This property can also be set to any custom string.
      * @return string|null
     */
@@ -97,6 +112,7 @@ class ObjectIdentity implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('issuer', $this->issuer);
         $writer->writeStringValue('issuerAssignedId', $this->issuerAssignedId);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('signInType', $this->signInType);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +139,14 @@ class ObjectIdentity implements AdditionalDataHolder, Parsable
     */
     public function setIssuerAssignedId(?string $value ): void {
         $this->issuerAssignedId = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

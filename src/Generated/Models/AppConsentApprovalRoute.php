@@ -14,10 +14,11 @@ class AppConsentApprovalRoute extends Entity implements Parsable
     private ?array $appConsentRequests = null;
     
     /**
-     * Instantiates a new appConsentApprovalRoute and sets the default values.
+     * Instantiates a new AppConsentApprovalRoute and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.appConsentApprovalRoute');
     }
 
     /**

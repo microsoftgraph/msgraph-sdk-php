@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SharingInvitation implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class SharingInvitation implements AdditionalDataHolder, Parsable
      * @var IdentitySet|null $invitedBy Provides information about who sent the invitation that created this permission, if that information is available. Read-only.
     */
     private ?IdentitySet $invitedBy = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $redeemedBy The redeemedBy property
@@ -38,7 +43,8 @@ class SharingInvitation implements AdditionalDataHolder, Parsable
      * Instantiates a new sharingInvitation and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.sharingInvitation');
     }
 
     /**
@@ -75,6 +81,7 @@ class SharingInvitation implements AdditionalDataHolder, Parsable
         return  [
             'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
             'invitedBy' => function (ParseNode $n) use ($o) { $o->setInvitedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'redeemedBy' => function (ParseNode $n) use ($o) { $o->setRedeemedBy($n->getStringValue()); },
             'signInRequired' => function (ParseNode $n) use ($o) { $o->setSignInRequired($n->getBooleanValue()); },
         ];
@@ -86,6 +93,14 @@ class SharingInvitation implements AdditionalDataHolder, Parsable
     */
     public function getInvitedBy(): ?IdentitySet {
         return $this->invitedBy;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -111,6 +126,7 @@ class SharingInvitation implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('email', $this->email);
         $writer->writeObjectValue('invitedBy', $this->invitedBy);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('redeemedBy', $this->redeemedBy);
         $writer->writeBooleanValue('signInRequired', $this->signInRequired);
         $writer->writeAdditionalData($this->additionalData);
@@ -138,6 +154,14 @@ class SharingInvitation implements AdditionalDataHolder, Parsable
     */
     public function setInvitedBy(?IdentitySet $value ): void {
         $this->invitedBy = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

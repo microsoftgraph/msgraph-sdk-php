@@ -10,9 +10,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var PatternedRecurrence|null $recurrence The recurrence property
@@ -28,7 +33,8 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Parsa
      * Instantiates a new accessReviewHistoryScheduleSettings and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.accessReviewHistoryScheduleSettings');
     }
 
     /**
@@ -55,9 +61,18 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'recurrence' => function (ParseNode $n) use ($o) { $o->setRecurrence($n->getObjectValue(array(PatternedRecurrence::class, 'createFromDiscriminatorValue'))); },
             'reportRange' => function (ParseNode $n) use ($o) { $o->setReportRange($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -81,6 +96,7 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('recurrence', $this->recurrence);
         $writer->writeStringValue('reportRange', $this->reportRange);
         $writer->writeAdditionalData($this->additionalData);
@@ -92,6 +108,14 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Parsa
     */
     public function setAdditionalData(?array $value ): void {
         $this->additionalData = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

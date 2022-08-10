@@ -54,6 +54,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.scheduleChangeRequest');
     }
 
     /**
@@ -68,6 +69,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
             switch ($mappingValue) {
                 case '#microsoft.graph.offerShiftRequest': return new OfferShiftRequest();
                 case '#microsoft.graph.openShiftChangeRequest': return new OpenShiftChangeRequest();
+                case '#microsoft.graph.swapShiftsChangeRequest': return new SwapShiftsChangeRequest();
                 case '#microsoft.graph.timeOffRequest': return new TimeOffRequest();
             }
         }

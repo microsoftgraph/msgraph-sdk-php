@@ -29,6 +29,7 @@ class ChangeTrackedEntity extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.changeTrackedEntity');
     }
 
     /**
@@ -41,13 +42,17 @@ class ChangeTrackedEntity extends Entity implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.offerShiftRequest': return new OfferShiftRequest();
                 case '#microsoft.graph.openShift': return new OpenShift();
+                case '#microsoft.graph.openShiftChangeRequest': return new OpenShiftChangeRequest();
                 case '#microsoft.graph.scheduleChangeRequest': return new ScheduleChangeRequest();
                 case '#microsoft.graph.schedulingGroup': return new SchedulingGroup();
                 case '#microsoft.graph.shift': return new Shift();
                 case '#microsoft.graph.shiftPreferences': return new ShiftPreferences();
+                case '#microsoft.graph.swapShiftsChangeRequest': return new SwapShiftsChangeRequest();
                 case '#microsoft.graph.timeOff': return new TimeOff();
                 case '#microsoft.graph.timeOffReason': return new TimeOffReason();
+                case '#microsoft.graph.timeOffRequest': return new TimeOffRequest();
                 case '#microsoft.graph.workforceIntegration': return new WorkforceIntegration();
             }
         }

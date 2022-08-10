@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Video implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -60,6 +60,11 @@ class Video implements AdditionalDataHolder, Parsable
     private ?int $height = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var int|null $width Width of the video, in pixels.
     */
     private ?int $width = null;
@@ -68,7 +73,8 @@ class Video implements AdditionalDataHolder, Parsable
      * Instantiates a new video and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.video');
     }
 
     /**
@@ -152,6 +158,7 @@ class Video implements AdditionalDataHolder, Parsable
             'fourCC' => function (ParseNode $n) use ($o) { $o->setFourCC($n->getStringValue()); },
             'frameRate' => function (ParseNode $n) use ($o) { $o->setFrameRate($n->getFloatValue()); },
             'height' => function (ParseNode $n) use ($o) { $o->setHeight($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'width' => function (ParseNode $n) use ($o) { $o->setWidth($n->getIntegerValue()); },
         ];
     }
@@ -181,6 +188,14 @@ class Video implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the width property value. Width of the video, in pixels.
      * @return int|null
     */
@@ -202,6 +217,7 @@ class Video implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('fourCC', $this->fourCC);
         $writer->writeFloatValue('frameRate', $this->frameRate);
         $writer->writeIntegerValue('height', $this->height);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('width', $this->width);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -284,6 +300,14 @@ class Video implements AdditionalDataHolder, Parsable
     */
     public function setHeight(?int $value ): void {
         $this->height = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

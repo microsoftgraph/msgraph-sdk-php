@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TextColumn implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -35,6 +35,11 @@ class TextColumn implements AdditionalDataHolder, Parsable
     private ?int $maxLength = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $textType The type of text being stored. Must be one of plain or richText
     */
     private ?string $textType = null;
@@ -43,7 +48,8 @@ class TextColumn implements AdditionalDataHolder, Parsable
      * Instantiates a new textColumn and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.textColumn');
     }
 
     /**
@@ -90,6 +96,7 @@ class TextColumn implements AdditionalDataHolder, Parsable
             'appendChangesToExistingText' => function (ParseNode $n) use ($o) { $o->setAppendChangesToExistingText($n->getBooleanValue()); },
             'linesForEditing' => function (ParseNode $n) use ($o) { $o->setLinesForEditing($n->getIntegerValue()); },
             'maxLength' => function (ParseNode $n) use ($o) { $o->setMaxLength($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'textType' => function (ParseNode $n) use ($o) { $o->setTextType($n->getStringValue()); },
         ];
     }
@@ -111,6 +118,14 @@ class TextColumn implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the textType property value. The type of text being stored. Must be one of plain or richText
      * @return string|null
     */
@@ -127,6 +142,7 @@ class TextColumn implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('appendChangesToExistingText', $this->appendChangesToExistingText);
         $writer->writeIntegerValue('linesForEditing', $this->linesForEditing);
         $writer->writeIntegerValue('maxLength', $this->maxLength);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('textType', $this->textType);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -169,6 +185,14 @@ class TextColumn implements AdditionalDataHolder, Parsable
     */
     public function setMaxLength(?int $value ): void {
         $this->maxLength = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

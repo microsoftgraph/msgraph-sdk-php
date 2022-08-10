@@ -38,6 +38,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.resourceSpecificPermissionGrant');
     }
 
     /**

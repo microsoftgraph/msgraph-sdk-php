@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DateTimeTimeZone implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class DateTimeTimeZone implements AdditionalDataHolder, Parsable
      * @var string|null $dateTime A single point of time in a combined date and time representation ({date}T{time}). For example, '2019-04-16T09:00:00'.
     */
     private ?string $dateTime = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $timeZone Represents a time zone, for example, 'Pacific Standard Time'. See below for possible values.
@@ -28,7 +33,8 @@ class DateTimeTimeZone implements AdditionalDataHolder, Parsable
      * Instantiates a new dateTimeTimeZone and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.dateTimeTimeZone');
     }
 
     /**
@@ -64,8 +70,17 @@ class DateTimeTimeZone implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'dateTime' => function (ParseNode $n) use ($o) { $o->setDateTime($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'timeZone' => function (ParseNode $n) use ($o) { $o->setTimeZone($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class DateTimeTimeZone implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('dateTime', $this->dateTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('timeZone', $this->timeZone);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -100,6 +116,14 @@ class DateTimeTimeZone implements AdditionalDataHolder, Parsable
     */
     public function setDateTime(?string $value ): void {
         $this->dateTime = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

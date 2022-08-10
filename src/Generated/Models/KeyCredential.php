@@ -12,7 +12,7 @@ use Psr\Http\Message\StreamInterface;
 class KeyCredential implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -42,6 +42,11 @@ class KeyCredential implements AdditionalDataHolder, Parsable
     private ?string $keyId = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var DateTime|null $startDateTime The date and time at which the credential becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     */
     private ?DateTime $startDateTime = null;
@@ -60,7 +65,8 @@ class KeyCredential implements AdditionalDataHolder, Parsable
      * Instantiates a new keyCredential and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.keyCredential');
     }
 
     /**
@@ -116,6 +122,7 @@ class KeyCredential implements AdditionalDataHolder, Parsable
             'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
             'key' => function (ParseNode $n) use ($o) { $o->setKey($n->getBinaryContent()); },
             'keyId' => function (ParseNode $n) use ($o) { $o->setKeyId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
             'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
             'usage' => function (ParseNode $n) use ($o) { $o->setUsage($n->getStringValue()); },
@@ -136,6 +143,14 @@ class KeyCredential implements AdditionalDataHolder, Parsable
     */
     public function getKeyId(): ?string {
         return $this->keyId;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -172,6 +187,7 @@ class KeyCredential implements AdditionalDataHolder, Parsable
         $writer->writeDateTimeValue('endDateTime', $this->endDateTime);
         $writer->writeBinaryContent('key', $this->key);
         $writer->writeStringValue('keyId', $this->keyId);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
         $writer->writeStringValue('type', $this->type);
         $writer->writeStringValue('usage', $this->usage);
@@ -224,6 +240,14 @@ class KeyCredential implements AdditionalDataHolder, Parsable
     */
     public function setKeyId(?string $value ): void {
         $this->keyId = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

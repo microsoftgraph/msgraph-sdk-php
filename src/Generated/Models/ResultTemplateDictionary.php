@@ -9,10 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ResultTemplateDictionary extends Dictionary implements Parsable 
 {
     /**
-     * Instantiates a new resultTemplateDictionary and sets the default values.
+     * Instantiates a new ResultTemplateDictionary and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.resultTemplateDictionary');
     }
 
     /**

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookIcon implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class WorkbookIcon implements AdditionalDataHolder, Parsable
      * @var int|null $index Represents the index of the icon in the given set.
     */
     private ?int $index = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $set Represents the set that the icon is part of. Possible values are: Invalid, ThreeArrows, ThreeArrowsGray, ThreeFlags, ThreeTrafficLights1, ThreeTrafficLights2, ThreeSigns, ThreeSymbols, ThreeSymbols2, FourArrows, FourArrowsGray, FourRedToBlack, FourRating, FourTrafficLights, FiveArrows, FiveArrowsGray, FiveRating, FiveQuarters, ThreeStars, ThreeTriangles, FiveBoxes.
@@ -28,7 +33,8 @@ class WorkbookIcon implements AdditionalDataHolder, Parsable
      * Instantiates a new workbookIcon and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.workbookIcon');
     }
 
     /**
@@ -56,6 +62,7 @@ class WorkbookIcon implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'index' => function (ParseNode $n) use ($o) { $o->setIndex($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'set' => function (ParseNode $n) use ($o) { $o->setSet($n->getStringValue()); },
         ];
     }
@@ -66,6 +73,14 @@ class WorkbookIcon implements AdditionalDataHolder, Parsable
     */
     public function getIndex(): ?int {
         return $this->index;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class WorkbookIcon implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeIntegerValue('index', $this->index);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('set', $this->set);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -100,6 +116,14 @@ class WorkbookIcon implements AdditionalDataHolder, Parsable
     */
     public function setIndex(?int $value ): void {
         $this->index = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

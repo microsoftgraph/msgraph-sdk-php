@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IdentityUserFlowAttribute extends Entity implements Parsable 
 {
     /**
-     * @var IdentityUserFlowAttributeDataType|null $dataType The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are: string , boolean , int64 , stringCollection , dateTime.
+     * @var IdentityUserFlowAttributeDataType|null $dataType The dataType property
     */
     private ?IdentityUserFlowAttributeDataType $dataType = null;
     
@@ -24,7 +24,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
     private ?string $displayName = null;
     
     /**
-     * @var IdentityUserFlowAttributeType|null $userFlowAttributeType The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn, custom, or required.
+     * @var IdentityUserFlowAttributeType|null $userFlowAttributeType The userFlowAttributeType property
     */
     private ?IdentityUserFlowAttributeType $userFlowAttributeType = null;
     
@@ -33,6 +33,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.identityUserFlowAttribute');
     }
 
     /**
@@ -53,7 +54,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
     }
 
     /**
-     * Gets the dataType property value. The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are: string , boolean , int64 , stringCollection , dateTime.
+     * Gets the dataType property value. The dataType property
      * @return IdentityUserFlowAttributeDataType|null
     */
     public function getDataType(): ?IdentityUserFlowAttributeDataType {
@@ -91,7 +92,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
     }
 
     /**
-     * Gets the userFlowAttributeType property value. The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn, custom, or required.
+     * Gets the userFlowAttributeType property value. The userFlowAttributeType property
      * @return IdentityUserFlowAttributeType|null
     */
     public function getUserFlowAttributeType(): ?IdentityUserFlowAttributeType {
@@ -111,7 +112,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
     }
 
     /**
-     * Sets the dataType property value. The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are: string , boolean , int64 , stringCollection , dateTime.
+     * Sets the dataType property value. The dataType property
      *  @param IdentityUserFlowAttributeDataType|null $value Value to set for the dataType property.
     */
     public function setDataType(?IdentityUserFlowAttributeDataType $value ): void {
@@ -135,7 +136,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
     }
 
     /**
-     * Sets the userFlowAttributeType property value. The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn, custom, or required.
+     * Sets the userFlowAttributeType property value. The userFlowAttributeType property
      *  @param IdentityUserFlowAttributeType|null $value Value to set for the userFlowAttributeType property.
     */
     public function setUserFlowAttributeType(?IdentityUserFlowAttributeType $value ): void {

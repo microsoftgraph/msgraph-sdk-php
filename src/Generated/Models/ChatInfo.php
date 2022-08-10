@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChatInfo implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class ChatInfo implements AdditionalDataHolder, Parsable
      * @var string|null $messageId The unique identifier for a message in a Microsoft Teams channel.
     */
     private ?string $messageId = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $replyChainMessageId The ID of the reply message.
@@ -33,7 +38,8 @@ class ChatInfo implements AdditionalDataHolder, Parsable
      * Instantiates a new chatInfo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.chatInfo');
     }
 
     /**
@@ -61,6 +67,7 @@ class ChatInfo implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'messageId' => function (ParseNode $n) use ($o) { $o->setMessageId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'replyChainMessageId' => function (ParseNode $n) use ($o) { $o->setReplyChainMessageId($n->getStringValue()); },
             'threadId' => function (ParseNode $n) use ($o) { $o->setThreadId($n->getStringValue()); },
         ];
@@ -72,6 +79,14 @@ class ChatInfo implements AdditionalDataHolder, Parsable
     */
     public function getMessageId(): ?string {
         return $this->messageId;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -96,6 +111,7 @@ class ChatInfo implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('messageId', $this->messageId);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('replyChainMessageId', $this->replyChainMessageId);
         $writer->writeStringValue('threadId', $this->threadId);
         $writer->writeAdditionalData($this->additionalData);
@@ -115,6 +131,14 @@ class ChatInfo implements AdditionalDataHolder, Parsable
     */
     public function setMessageId(?string $value ): void {
         $this->messageId = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

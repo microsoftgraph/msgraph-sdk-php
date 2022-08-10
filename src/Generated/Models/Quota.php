@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Quota implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class Quota implements AdditionalDataHolder, Parsable
      * @var int|null $deleted Total space consumed by files in the recycle bin, in bytes. Read-only.
     */
     private ?int $deleted = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var int|null $remaining Total space remaining before reaching the quota limit, in bytes. Read-only.
@@ -48,7 +53,8 @@ class Quota implements AdditionalDataHolder, Parsable
      * Instantiates a new quota and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.quota');
     }
 
     /**
@@ -84,12 +90,21 @@ class Quota implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'deleted' => function (ParseNode $n) use ($o) { $o->setDeleted($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'remaining' => function (ParseNode $n) use ($o) { $o->setRemaining($n->getIntegerValue()); },
             'state' => function (ParseNode $n) use ($o) { $o->setState($n->getStringValue()); },
             'storagePlanInformation' => function (ParseNode $n) use ($o) { $o->setStoragePlanInformation($n->getObjectValue(array(StoragePlanInformation::class, 'createFromDiscriminatorValue'))); },
             'total' => function (ParseNode $n) use ($o) { $o->setTotal($n->getIntegerValue()); },
             'used' => function (ParseNode $n) use ($o) { $o->setUsed($n->getIntegerValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -138,6 +153,7 @@ class Quota implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeIntegerValue('deleted', $this->deleted);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('remaining', $this->remaining);
         $writer->writeStringValue('state', $this->state);
         $writer->writeObjectValue('storagePlanInformation', $this->storagePlanInformation);
@@ -160,6 +176,14 @@ class Quota implements AdditionalDataHolder, Parsable
     */
     public function setDeleted(?int $value ): void {
         $this->deleted = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

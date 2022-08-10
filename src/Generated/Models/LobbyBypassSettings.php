@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LobbyBypassSettings implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class LobbyBypassSettings implements AdditionalDataHolder, Parsable
      * @var bool|null $isDialInBypassEnabled Specifies whether or not to always let dial-in callers bypass the lobby. Optional.
     */
     private ?bool $isDialInBypassEnabled = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var LobbyBypassScope|null $scope Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
@@ -28,7 +33,8 @@ class LobbyBypassSettings implements AdditionalDataHolder, Parsable
      * Instantiates a new lobbyBypassSettings and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.lobbyBypassSettings');
     }
 
     /**
@@ -56,6 +62,7 @@ class LobbyBypassSettings implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'isDialInBypassEnabled' => function (ParseNode $n) use ($o) { $o->setIsDialInBypassEnabled($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'scope' => function (ParseNode $n) use ($o) { $o->setScope($n->getEnumValue(LobbyBypassScope::class)); },
         ];
     }
@@ -66,6 +73,14 @@ class LobbyBypassSettings implements AdditionalDataHolder, Parsable
     */
     public function getIsDialInBypassEnabled(): ?bool {
         return $this->isDialInBypassEnabled;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class LobbyBypassSettings implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('isDialInBypassEnabled', $this->isDialInBypassEnabled);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('scope', $this->scope);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -100,6 +116,14 @@ class LobbyBypassSettings implements AdditionalDataHolder, Parsable
     */
     public function setIsDialInBypassEnabled(?bool $value ): void {
         $this->isDialInBypassEnabled = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

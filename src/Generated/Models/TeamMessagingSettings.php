@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamMessagingSettings implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -40,10 +40,16 @@ class TeamMessagingSettings implements AdditionalDataHolder, Parsable
     private ?bool $allowUserEditMessages = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new teamMessagingSettings and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.teamMessagingSettings');
     }
 
     /**
@@ -115,7 +121,16 @@ class TeamMessagingSettings implements AdditionalDataHolder, Parsable
             'allowTeamMentions' => function (ParseNode $n) use ($o) { $o->setAllowTeamMentions($n->getBooleanValue()); },
             'allowUserDeleteMessages' => function (ParseNode $n) use ($o) { $o->setAllowUserDeleteMessages($n->getBooleanValue()); },
             'allowUserEditMessages' => function (ParseNode $n) use ($o) { $o->setAllowUserEditMessages($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -128,6 +143,7 @@ class TeamMessagingSettings implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('allowTeamMentions', $this->allowTeamMentions);
         $writer->writeBooleanValue('allowUserDeleteMessages', $this->allowUserDeleteMessages);
         $writer->writeBooleanValue('allowUserEditMessages', $this->allowUserEditMessages);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -177,6 +193,14 @@ class TeamMessagingSettings implements AdditionalDataHolder, Parsable
     */
     public function setAllowUserEditMessages(?bool $value ): void {
         $this->allowUserEditMessages = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

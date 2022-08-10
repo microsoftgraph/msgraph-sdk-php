@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationResource implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -41,10 +41,16 @@ class EducationResource implements AdditionalDataHolder, Parsable
     private ?DateTime $lastModifiedDateTime = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new educationResource and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.educationResource');
     }
 
     /**
@@ -53,6 +59,20 @@ class EducationResource implements AdditionalDataHolder, Parsable
      * @return EducationResource
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): EducationResource {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.educationExcelResource': return new EducationExcelResource();
+                case '#microsoft.graph.educationExternalResource': return new EducationExternalResource();
+                case '#microsoft.graph.educationFileResource': return new EducationFileResource();
+                case '#microsoft.graph.educationLinkResource': return new EducationLinkResource();
+                case '#microsoft.graph.educationMediaResource': return new EducationMediaResource();
+                case '#microsoft.graph.educationPowerPointResource': return new EducationPowerPointResource();
+                case '#microsoft.graph.educationTeamsAppResource': return new EducationTeamsAppResource();
+                case '#microsoft.graph.educationWordResource': return new EducationWordResource();
+            }
+        }
         return new EducationResource();
     }
 
@@ -100,6 +120,7 @@ class EducationResource implements AdditionalDataHolder, Parsable
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'lastModifiedBy' => function (ParseNode $n) use ($o) { $o->setLastModifiedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
             'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
 
@@ -120,6 +141,14 @@ class EducationResource implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -129,6 +158,7 @@ class EducationResource implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeObjectValue('lastModifiedBy', $this->lastModifiedBy);
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -178,6 +208,14 @@ class EducationResource implements AdditionalDataHolder, Parsable
     */
     public function setLastModifiedDateTime(?DateTime $value ): void {
         $this->lastModifiedDateTime = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

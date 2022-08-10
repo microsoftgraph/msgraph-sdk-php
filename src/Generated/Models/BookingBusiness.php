@@ -94,10 +94,11 @@ class BookingBusiness extends Entity implements Parsable
     private ?string $webSiteUrl = null;
     
     /**
-     * Instantiates a new bookingBusiness and sets the default values.
+     * Instantiates a new BookingBusiness and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.bookingBusiness');
     }
 
     /**

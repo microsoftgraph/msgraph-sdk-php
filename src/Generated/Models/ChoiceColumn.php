@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChoiceColumn implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,10 +30,16 @@ class ChoiceColumn implements AdditionalDataHolder, Parsable
     private ?string $displayAs = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new choiceColumn and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.choiceColumn');
     }
 
     /**
@@ -87,7 +93,16 @@ class ChoiceColumn implements AdditionalDataHolder, Parsable
             'allowTextEntry' => function (ParseNode $n) use ($o) { $o->setAllowTextEntry($n->getBooleanValue()); },
             'choices' => function (ParseNode $n) use ($o) { $o->setChoices($n->getCollectionOfPrimitiveValues()); },
             'displayAs' => function (ParseNode $n) use ($o) { $o->setDisplayAs($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -98,6 +113,7 @@ class ChoiceColumn implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('allowTextEntry', $this->allowTextEntry);
         $writer->writeCollectionOfPrimitiveValues('choices', $this->choices);
         $writer->writeStringValue('displayAs', $this->displayAs);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -131,6 +147,14 @@ class ChoiceColumn implements AdditionalDataHolder, Parsable
     */
     public function setDisplayAs(?string $value ): void {
         $this->displayAs = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

@@ -29,6 +29,7 @@ class ConversationMember extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.conversationMember');
     }
 
     /**

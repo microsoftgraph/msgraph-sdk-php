@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ControlScore implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,6 +30,11 @@ class ControlScore implements AdditionalDataHolder, Parsable
     private ?string $description = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var float|null $score Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
     */
     private ?float $score = null;
@@ -38,7 +43,8 @@ class ControlScore implements AdditionalDataHolder, Parsable
      * Instantiates a new controlScore and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.controlScore');
     }
 
     /**
@@ -92,8 +98,17 @@ class ControlScore implements AdditionalDataHolder, Parsable
             'controlCategory' => function (ParseNode $n) use ($o) { $o->setControlCategory($n->getStringValue()); },
             'controlName' => function (ParseNode $n) use ($o) { $o->setControlName($n->getStringValue()); },
             'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'score' => function (ParseNode $n) use ($o) { $o->setScore($n->getFloatValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -112,6 +127,7 @@ class ControlScore implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('controlCategory', $this->controlCategory);
         $writer->writeStringValue('controlName', $this->controlName);
         $writer->writeStringValue('description', $this->description);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeFloatValue('score', $this->score);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -146,6 +162,14 @@ class ControlScore implements AdditionalDataHolder, Parsable
     */
     public function setDescription(?string $value ): void {
         $this->description = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

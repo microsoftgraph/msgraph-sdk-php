@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DirectRoutingLogRow implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -86,6 +86,11 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
     private ?string $mediaPathLocation = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $signalingLocation The datacenter used for signaling for both bypass and non-bypass calls.
     */
     private ?string $signalingLocation = null;
@@ -124,7 +129,8 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * Instantiates a new directRoutingLogRow and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.callRecords.directRoutingLogRow');
     }
 
     /**
@@ -229,6 +235,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
             'inviteDateTime' => function (ParseNode $n) use ($o) { $o->setInviteDateTime($n->getDateTimeValue()); },
             'mediaBypassEnabled' => function (ParseNode $n) use ($o) { $o->setMediaBypassEnabled($n->getBooleanValue()); },
             'mediaPathLocation' => function (ParseNode $n) use ($o) { $o->setMediaPathLocation($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'signalingLocation' => function (ParseNode $n) use ($o) { $o->setSignalingLocation($n->getStringValue()); },
             'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
             'successfulCall' => function (ParseNode $n) use ($o) { $o->setSuccessfulCall($n->getBooleanValue()); },
@@ -285,6 +292,14 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
     */
     public function getMediaPathLocation(): ?string {
         return $this->mediaPathLocation;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -362,6 +377,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
         $writer->writeDateTimeValue('inviteDateTime', $this->inviteDateTime);
         $writer->writeBooleanValue('mediaBypassEnabled', $this->mediaBypassEnabled);
         $writer->writeStringValue('mediaPathLocation', $this->mediaPathLocation);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('signalingLocation', $this->signalingLocation);
         $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
         $writer->writeBooleanValue('successfulCall', $this->successfulCall);
@@ -490,6 +506,14 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
     */
     public function setMediaPathLocation(?string $value ): void {
         $this->mediaPathLocation = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

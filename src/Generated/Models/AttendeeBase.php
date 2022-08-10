@@ -14,10 +14,11 @@ class AttendeeBase extends Recipient implements Parsable
     private ?AttendeeType $type = null;
     
     /**
-     * Instantiates a new attendeeBase and sets the default values.
+     * Instantiates a new AttendeeBase and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.attendeeBase');
     }
 
     /**
@@ -26,6 +27,13 @@ class AttendeeBase extends Recipient implements Parsable
      * @return AttendeeBase
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): AttendeeBase {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.attendee': return new Attendee();
+            }
+        }
         return new AttendeeBase();
     }
 

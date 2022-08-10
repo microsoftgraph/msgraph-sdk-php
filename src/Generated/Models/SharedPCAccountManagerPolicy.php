@@ -10,12 +10,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var SharedPCAccountDeletionPolicyType|null $accountDeletionPolicy Configures when accounts are deleted. Possible values are: immediate, diskSpaceThreshold, diskSpaceThresholdOrInactiveThreshold.
+     * @var SharedPCAccountDeletionPolicyType|null $accountDeletionPolicy Possible values for when accounts are deleted on a shared PC.
     */
     private ?SharedPCAccountDeletionPolicyType $accountDeletionPolicy = null;
     
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,6 +30,11 @@ class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsable
     private ?int $inactiveThresholdDays = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var int|null $removeAccountsBelowDiskFreePercentage Sets the percentage of disk space remaining on a PC before cached accounts will be deleted to free disk space. Accounts that have been inactive the longest will be deleted first. Only applies when AccountDeletionPolicy is DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
     */
     private ?int $removeAccountsBelowDiskFreePercentage = null;
@@ -38,7 +43,8 @@ class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsable
      * Instantiates a new sharedPCAccountManagerPolicy and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.sharedPCAccountManagerPolicy');
     }
 
     /**
@@ -51,7 +57,7 @@ class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the accountDeletionPolicy property value. Configures when accounts are deleted. Possible values are: immediate, diskSpaceThreshold, diskSpaceThresholdOrInactiveThreshold.
+     * Gets the accountDeletionPolicy property value. Possible values for when accounts are deleted on a shared PC.
      * @return SharedPCAccountDeletionPolicyType|null
     */
     public function getAccountDeletionPolicy(): ?SharedPCAccountDeletionPolicyType {
@@ -84,6 +90,7 @@ class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsable
             'accountDeletionPolicy' => function (ParseNode $n) use ($o) { $o->setAccountDeletionPolicy($n->getEnumValue(SharedPCAccountDeletionPolicyType::class)); },
             'cacheAccountsAboveDiskFreePercentage' => function (ParseNode $n) use ($o) { $o->setCacheAccountsAboveDiskFreePercentage($n->getIntegerValue()); },
             'inactiveThresholdDays' => function (ParseNode $n) use ($o) { $o->setInactiveThresholdDays($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'removeAccountsBelowDiskFreePercentage' => function (ParseNode $n) use ($o) { $o->setRemoveAccountsBelowDiskFreePercentage($n->getIntegerValue()); },
         ];
     }
@@ -94,6 +101,14 @@ class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsable
     */
     public function getInactiveThresholdDays(): ?int {
         return $this->inactiveThresholdDays;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -112,12 +127,13 @@ class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsable
         $writer->writeEnumValue('accountDeletionPolicy', $this->accountDeletionPolicy);
         $writer->writeIntegerValue('cacheAccountsAboveDiskFreePercentage', $this->cacheAccountsAboveDiskFreePercentage);
         $writer->writeIntegerValue('inactiveThresholdDays', $this->inactiveThresholdDays);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('removeAccountsBelowDiskFreePercentage', $this->removeAccountsBelowDiskFreePercentage);
         $writer->writeAdditionalData($this->additionalData);
     }
 
     /**
-     * Sets the accountDeletionPolicy property value. Configures when accounts are deleted. Possible values are: immediate, diskSpaceThreshold, diskSpaceThresholdOrInactiveThreshold.
+     * Sets the accountDeletionPolicy property value. Possible values for when accounts are deleted on a shared PC.
      *  @param SharedPCAccountDeletionPolicyType|null $value Value to set for the accountDeletionPolicy property.
     */
     public function setAccountDeletionPolicy(?SharedPCAccountDeletionPolicyType $value ): void {
@@ -146,6 +162,14 @@ class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsable
     */
     public function setInactiveThresholdDays(?int $value ): void {
         $this->inactiveThresholdDays = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

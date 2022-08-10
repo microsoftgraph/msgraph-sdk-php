@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
     private ?string $id = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $type Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackageAssignmentPolicy.
     */
     private ?string $type = null;
@@ -33,7 +38,8 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
      * Instantiates a new accessReviewInstanceDecisionItemResource and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.accessReviewInstanceDecisionItemResource');
     }
 
     /**
@@ -42,6 +48,15 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
      * @return AccessReviewInstanceDecisionItemResource
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessReviewInstanceDecisionItemResource {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.accessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource': return new AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource();
+                case '#microsoft.graph.accessReviewInstanceDecisionItemAzureRoleResource': return new AccessReviewInstanceDecisionItemAzureRoleResource();
+                case '#microsoft.graph.accessReviewInstanceDecisionItemServicePrincipalResource': return new AccessReviewInstanceDecisionItemServicePrincipalResource();
+            }
+        }
         return new AccessReviewInstanceDecisionItemResource();
     }
 
@@ -70,6 +85,7 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
         return  [
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
         ];
     }
@@ -80,6 +96,14 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
     */
     public function getId(): ?string {
         return $this->id;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -97,6 +121,7 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeStringValue('id', $this->id);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('type', $this->type);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +148,14 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
     */
     public function setId(?string $value ): void {
         $this->id = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

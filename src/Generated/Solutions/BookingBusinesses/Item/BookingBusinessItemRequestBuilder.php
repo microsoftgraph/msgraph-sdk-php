@@ -15,6 +15,7 @@ use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Customers\Custome
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Customers\Item\BookingCustomerBaseItemRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CustomQuestions\CustomQuestionsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CustomQuestions\Item\BookingCustomQuestionItemRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\GetStaffAvailability\GetStaffAvailabilityRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Publish\PublishRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Services\Item\BookingServiceItemRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Services\ServicesRequestBuilder;
@@ -57,6 +58,13 @@ class BookingBusinessItemRequestBuilder
     */
     public function customQuestions(): CustomQuestionsRequestBuilder {
         return new CustomQuestionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The getStaffAvailability property
+    */
+    public function getStaffAvailability(): GetStaffAvailabilityRequestBuilder {
+        return new GetStaffAvailabilityRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

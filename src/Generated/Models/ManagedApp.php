@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedApp extends MobileApp implements Parsable 
 {
     /**
-     * @var ManagedAppAvailability|null $appAvailability The Application's availability. Possible values are: global, lineOfBusiness.
+     * @var ManagedAppAvailability|null $appAvailability A managed (MAM) application's availability.
     */
     private ?ManagedAppAvailability $appAvailability = null;
     
@@ -23,6 +23,7 @@ class ManagedApp extends MobileApp implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.managedApp');
     }
 
     /**
@@ -35,7 +36,9 @@ class ManagedApp extends MobileApp implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.managedAndroidLobApp': return new ManagedAndroidLobApp();
                 case '#microsoft.graph.managedAndroidStoreApp': return new ManagedAndroidStoreApp();
+                case '#microsoft.graph.managedIOSLobApp': return new ManagedIOSLobApp();
                 case '#microsoft.graph.managedIOSStoreApp': return new ManagedIOSStoreApp();
                 case '#microsoft.graph.managedMobileLobApp': return new ManagedMobileLobApp();
             }
@@ -44,7 +47,7 @@ class ManagedApp extends MobileApp implements Parsable
     }
 
     /**
-     * Gets the appAvailability property value. The Application's availability. Possible values are: global, lineOfBusiness.
+     * Gets the appAvailability property value. A managed (MAM) application's availability.
      * @return ManagedAppAvailability|null
     */
     public function getAppAvailability(): ?ManagedAppAvailability {
@@ -82,7 +85,7 @@ class ManagedApp extends MobileApp implements Parsable
     }
 
     /**
-     * Sets the appAvailability property value. The Application's availability. Possible values are: global, lineOfBusiness.
+     * Sets the appAvailability property value. A managed (MAM) application's availability.
      *  @param ManagedAppAvailability|null $value Value to set for the appAvailability property.
     */
     public function setAppAvailability(?ManagedAppAvailability $value ): void {

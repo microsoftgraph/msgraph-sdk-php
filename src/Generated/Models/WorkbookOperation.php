@@ -19,7 +19,7 @@ class WorkbookOperation extends Entity implements Parsable
     private ?string $resourceLocation = null;
     
     /**
-     * @var WorkbookOperationStatus|null $status The current status of the operation. Possible values are: notStarted, running, succeeded, failed.
+     * @var WorkbookOperationStatus|null $status The status property
     */
     private ?WorkbookOperationStatus $status = null;
     
@@ -28,6 +28,7 @@ class WorkbookOperation extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.workbookOperation');
     }
 
     /**
@@ -69,7 +70,7 @@ class WorkbookOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The current status of the operation. Possible values are: notStarted, running, succeeded, failed.
+     * Gets the status property value. The status property
      * @return WorkbookOperationStatus|null
     */
     public function getStatus(): ?WorkbookOperationStatus {
@@ -104,7 +105,7 @@ class WorkbookOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The current status of the operation. Possible values are: notStarted, running, succeeded, failed.
+     * Sets the status property value. The status property
      *  @param WorkbookOperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?WorkbookOperationStatus $value ): void {

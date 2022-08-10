@@ -23,6 +23,7 @@ class PrinterCreateOperation extends PrintOperation implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.printerCreateOperation');
     }
 
     /**

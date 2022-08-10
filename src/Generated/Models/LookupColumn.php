@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LookupColumn implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -35,6 +35,11 @@ class LookupColumn implements AdditionalDataHolder, Parsable
     private ?string $listId = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $primaryLookupColumnId If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here.
     */
     private ?string $primaryLookupColumnId = null;
@@ -43,7 +48,8 @@ class LookupColumn implements AdditionalDataHolder, Parsable
      * Instantiates a new lookupColumn and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.lookupColumn');
     }
 
     /**
@@ -98,6 +104,7 @@ class LookupColumn implements AdditionalDataHolder, Parsable
             'allowUnlimitedLength' => function (ParseNode $n) use ($o) { $o->setAllowUnlimitedLength($n->getBooleanValue()); },
             'columnName' => function (ParseNode $n) use ($o) { $o->setColumnName($n->getStringValue()); },
             'listId' => function (ParseNode $n) use ($o) { $o->setListId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'primaryLookupColumnId' => function (ParseNode $n) use ($o) { $o->setPrimaryLookupColumnId($n->getStringValue()); },
         ];
     }
@@ -108,6 +115,14 @@ class LookupColumn implements AdditionalDataHolder, Parsable
     */
     public function getListId(): ?string {
         return $this->listId;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -127,6 +142,7 @@ class LookupColumn implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('allowUnlimitedLength', $this->allowUnlimitedLength);
         $writer->writeStringValue('columnName', $this->columnName);
         $writer->writeStringValue('listId', $this->listId);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('primaryLookupColumnId', $this->primaryLookupColumnId);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -169,6 +185,14 @@ class LookupColumn implements AdditionalDataHolder, Parsable
     */
     public function setListId(?string $value ): void {
         $this->listId = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

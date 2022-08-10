@@ -9,12 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsUniversalAppX extends MobileLobApp implements Parsable 
 {
     /**
-     * @var WindowsArchitecture|null $applicableArchitectures The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * @var WindowsArchitecture|null $applicableArchitectures Contains properties for Windows architecture.
     */
     private ?WindowsArchitecture $applicableArchitectures = null;
     
     /**
-     * @var WindowsDeviceType|null $applicableDeviceTypes The Windows device type(s) for which this app can run on. Possible values are: none, desktop, mobile, holographic, team.
+     * @var WindowsDeviceType|null $applicableDeviceTypes Contains properties for Windows device type.
     */
     private ?WindowsDeviceType $applicableDeviceTypes = null;
     
@@ -53,6 +53,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.windowsUniversalAppX');
     }
 
     /**
@@ -65,7 +66,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Gets the applicableArchitectures property value. The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * Gets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @return WindowsArchitecture|null
     */
     public function getApplicableArchitectures(): ?WindowsArchitecture {
@@ -73,7 +74,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Gets the applicableDeviceTypes property value. The Windows device type(s) for which this app can run on. Possible values are: none, desktop, mobile, holographic, team.
+     * Gets the applicableDeviceTypes property value. Contains properties for Windows device type.
      * @return WindowsDeviceType|null
     */
     public function getApplicableDeviceTypes(): ?WindowsDeviceType {
@@ -163,7 +164,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Sets the applicableArchitectures property value. The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * Sets the applicableArchitectures property value. Contains properties for Windows architecture.
      *  @param WindowsArchitecture|null $value Value to set for the applicableArchitectures property.
     */
     public function setApplicableArchitectures(?WindowsArchitecture $value ): void {
@@ -171,7 +172,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Sets the applicableDeviceTypes property value. The Windows device type(s) for which this app can run on. Possible values are: none, desktop, mobile, holographic, team.
+     * Sets the applicableDeviceTypes property value. Contains properties for Windows device type.
      *  @param WindowsDeviceType|null $value Value to set for the applicableDeviceTypes property.
     */
     public function setApplicableDeviceTypes(?WindowsDeviceType $value ): void {

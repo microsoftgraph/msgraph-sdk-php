@@ -15,7 +15,7 @@ class ApiApplication implements AdditionalDataHolder, Parsable
     private ?bool $acceptMappedClaims = null;
     
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -28,6 +28,11 @@ class ApiApplication implements AdditionalDataHolder, Parsable
      * @var array<PermissionScope>|null $oauth2PermissionScopes The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.
     */
     private ?array $oauth2PermissionScopes = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var array<PreAuthorizedApplication>|null $preAuthorizedApplications Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
@@ -43,7 +48,8 @@ class ApiApplication implements AdditionalDataHolder, Parsable
      * Instantiates a new apiApplication and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.apiApplication');
     }
 
     /**
@@ -81,6 +87,7 @@ class ApiApplication implements AdditionalDataHolder, Parsable
             'acceptMappedClaims' => function (ParseNode $n) use ($o) { $o->setAcceptMappedClaims($n->getBooleanValue()); },
             'knownClientApplications' => function (ParseNode $n) use ($o) { $o->setKnownClientApplications($n->getCollectionOfPrimitiveValues()); },
             'oauth2PermissionScopes' => function (ParseNode $n) use ($o) { $o->setOauth2PermissionScopes($n->getCollectionOfObjectValues(array(PermissionScope::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'preAuthorizedApplications' => function (ParseNode $n) use ($o) { $o->setPreAuthorizedApplications($n->getCollectionOfObjectValues(array(PreAuthorizedApplication::class, 'createFromDiscriminatorValue'))); },
             'requestedAccessTokenVersion' => function (ParseNode $n) use ($o) { $o->setRequestedAccessTokenVersion($n->getIntegerValue()); },
         ];
@@ -100,6 +107,14 @@ class ApiApplication implements AdditionalDataHolder, Parsable
     */
     public function getOauth2PermissionScopes(): ?array {
         return $this->oauth2PermissionScopes;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -126,6 +141,7 @@ class ApiApplication implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('acceptMappedClaims', $this->acceptMappedClaims);
         $writer->writeCollectionOfPrimitiveValues('knownClientApplications', $this->knownClientApplications);
         $writer->writeCollectionOfObjectValues('oauth2PermissionScopes', $this->oauth2PermissionScopes);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfObjectValues('preAuthorizedApplications', $this->preAuthorizedApplications);
         $writer->writeIntegerValue('requestedAccessTokenVersion', $this->requestedAccessTokenVersion);
         $writer->writeAdditionalData($this->additionalData);
@@ -161,6 +177,14 @@ class ApiApplication implements AdditionalDataHolder, Parsable
     */
     public function setOauth2PermissionScopes(?array $value ): void {
         $this->oauth2PermissionScopes = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

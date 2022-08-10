@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class NetworkConnection implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -81,6 +81,11 @@ class NetworkConnection implements AdditionalDataHolder, Parsable
     private ?string $natSourcePort = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var SecurityNetworkProtocol|null $protocol Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
     */
     private ?SecurityNetworkProtocol $protocol = null;
@@ -119,7 +124,8 @@ class NetworkConnection implements AdditionalDataHolder, Parsable
      * Instantiates a new networkConnection and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.networkConnection');
     }
 
     /**
@@ -223,6 +229,7 @@ class NetworkConnection implements AdditionalDataHolder, Parsable
             'natDestinationPort' => function (ParseNode $n) use ($o) { $o->setNatDestinationPort($n->getStringValue()); },
             'natSourceAddress' => function (ParseNode $n) use ($o) { $o->setNatSourceAddress($n->getStringValue()); },
             'natSourcePort' => function (ParseNode $n) use ($o) { $o->setNatSourcePort($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'protocol' => function (ParseNode $n) use ($o) { $o->setProtocol($n->getEnumValue(SecurityNetworkProtocol::class)); },
             'riskScore' => function (ParseNode $n) use ($o) { $o->setRiskScore($n->getStringValue()); },
             'sourceAddress' => function (ParseNode $n) use ($o) { $o->setSourceAddress($n->getStringValue()); },
@@ -271,6 +278,14 @@ class NetworkConnection implements AdditionalDataHolder, Parsable
     */
     public function getNatSourcePort(): ?string {
         return $this->natSourcePort;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -347,6 +362,7 @@ class NetworkConnection implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('natDestinationPort', $this->natDestinationPort);
         $writer->writeStringValue('natSourceAddress', $this->natSourceAddress);
         $writer->writeStringValue('natSourcePort', $this->natSourcePort);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('protocol', $this->protocol);
         $writer->writeStringValue('riskScore', $this->riskScore);
         $writer->writeStringValue('sourceAddress', $this->sourceAddress);
@@ -467,6 +483,14 @@ class NetworkConnection implements AdditionalDataHolder, Parsable
     */
     public function setNatSourcePort(?string $value ): void {
         $this->natSourcePort = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

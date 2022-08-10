@@ -24,7 +24,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     private ?string $emailAddress = null;
     
     /**
-     * @var BookingStaffRole|null $role The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest, unknownFutureValue, scheduler and member. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: scheduler, member. Required.
+     * @var BookingStaffRole|null $role The role property
     */
     private ?BookingStaffRole $role = null;
     
@@ -48,6 +48,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.bookingStaffMember');
     }
 
     /**
@@ -101,7 +102,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     }
 
     /**
-     * Gets the role property value. The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest, unknownFutureValue, scheduler and member. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: scheduler, member. Required.
+     * Gets the role property value. The role property
      * @return BookingStaffRole|null
     */
     public function getRole(): ?BookingStaffRole {
@@ -172,7 +173,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     }
 
     /**
-     * Sets the role property value. The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest, unknownFutureValue, scheduler and member. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: scheduler, member. Required.
+     * Sets the role property value. The role property
      *  @param BookingStaffRole|null $value Value to set for the role property.
     */
     public function setRole(?BookingStaffRole $value ): void {

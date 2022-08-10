@@ -18,6 +18,7 @@ class ListItemVersion extends BaseItemVersion implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.listItemVersion');
     }
 
     /**
@@ -26,6 +27,13 @@ class ListItemVersion extends BaseItemVersion implements Parsable
      * @return ListItemVersion
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ListItemVersion {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.documentSetVersion': return new DocumentSetVersion();
+            }
+        }
         return new ListItemVersion();
     }
 

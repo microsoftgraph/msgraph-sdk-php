@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ApplicationServicePrincipal implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -20,15 +20,21 @@ class ApplicationServicePrincipal implements AdditionalDataHolder, Parsable
     private ?Application $application = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var ServicePrincipal|null $servicePrincipal The servicePrincipal property
     */
     private ?ServicePrincipal $servicePrincipal = null;
     
     /**
-     * Instantiates a new ApplicationServicePrincipal and sets the default values.
+     * Instantiates a new applicationServicePrincipal and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.applicationServicePrincipal');
     }
 
     /**
@@ -64,8 +70,17 @@ class ApplicationServicePrincipal implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'application' => function (ParseNode $n) use ($o) { $o->setApplication($n->getObjectValue(array(Application::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'servicePrincipal' => function (ParseNode $n) use ($o) { $o->setServicePrincipal($n->getObjectValue(array(ServicePrincipal::class, 'createFromDiscriminatorValue'))); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class ApplicationServicePrincipal implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('application', $this->application);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('servicePrincipal', $this->servicePrincipal);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -100,6 +116,14 @@ class ApplicationServicePrincipal implements AdditionalDataHolder, Parsable
     */
     public function setApplication(?Application $value ): void {
         $this->application = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

@@ -19,6 +19,11 @@ class ListItem extends BaseItem implements Parsable
     private ?ContentTypeInfo $contentType = null;
     
     /**
+     * @var array<DocumentSetVersion>|null $documentSetVersions Version information for a document set version created by a user.
+    */
+    private ?array $documentSetVersions = null;
+    
+    /**
      * @var DriveItem|null $driveItem For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
     */
     private ?DriveItem $driveItem = null;
@@ -43,6 +48,7 @@ class ListItem extends BaseItem implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.listItem');
     }
 
     /**
@@ -71,6 +77,14 @@ class ListItem extends BaseItem implements Parsable
     }
 
     /**
+     * Gets the documentSetVersions property value. Version information for a document set version created by a user.
+     * @return array<DocumentSetVersion>|null
+    */
+    public function getDocumentSetVersions(): ?array {
+        return $this->documentSetVersions;
+    }
+
+    /**
      * Gets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
      * @return DriveItem|null
     */
@@ -87,6 +101,7 @@ class ListItem extends BaseItem implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'analytics' => function (ParseNode $n) use ($o) { $o->setAnalytics($n->getObjectValue(array(ItemAnalytics::class, 'createFromDiscriminatorValue'))); },
             'contentType' => function (ParseNode $n) use ($o) { $o->setContentType($n->getObjectValue(array(ContentTypeInfo::class, 'createFromDiscriminatorValue'))); },
+            'documentSetVersions' => function (ParseNode $n) use ($o) { $o->setDocumentSetVersions($n->getCollectionOfObjectValues(array(DocumentSetVersion::class, 'createFromDiscriminatorValue'))); },
             'driveItem' => function (ParseNode $n) use ($o) { $o->setDriveItem($n->getObjectValue(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
             'fields' => function (ParseNode $n) use ($o) { $o->setFields($n->getObjectValue(array(FieldValueSet::class, 'createFromDiscriminatorValue'))); },
             'sharepointIds' => function (ParseNode $n) use ($o) { $o->setSharepointIds($n->getObjectValue(array(SharepointIds::class, 'createFromDiscriminatorValue'))); },
@@ -126,6 +141,7 @@ class ListItem extends BaseItem implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('analytics', $this->analytics);
         $writer->writeObjectValue('contentType', $this->contentType);
+        $writer->writeCollectionOfObjectValues('documentSetVersions', $this->documentSetVersions);
         $writer->writeObjectValue('driveItem', $this->driveItem);
         $writer->writeObjectValue('fields', $this->fields);
         $writer->writeObjectValue('sharepointIds', $this->sharepointIds);
@@ -146,6 +162,14 @@ class ListItem extends BaseItem implements Parsable
     */
     public function setContentType(?ContentTypeInfo $value ): void {
         $this->contentType = $value;
+    }
+
+    /**
+     * Sets the documentSetVersions property value. Version information for a document set version created by a user.
+     *  @param array<DocumentSetVersion>|null $value Value to set for the documentSetVersions property.
+    */
+    public function setDocumentSetVersions(?array $value ): void {
+        $this->documentSetVersions = $value;
     }
 
     /**

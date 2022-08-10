@@ -29,7 +29,7 @@ class EscapedList extends BaseItem implements Parsable
     private ?Drive $drive = null;
     
     /**
-     * @var ListInfo|null $EscapedList Provides additional details about the list.
+     * @var ListInfo|null $escapedList Provides additional details about the list.
     */
     private ?ListInfo $escapedList = null;
     
@@ -63,6 +63,7 @@ class EscapedList extends BaseItem implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.list');
     }
 
     /**

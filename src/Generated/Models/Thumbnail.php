@@ -11,7 +11,7 @@ use Psr\Http\Message\StreamInterface;
 class Thumbnail implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -24,6 +24,11 @@ class Thumbnail implements AdditionalDataHolder, Parsable
      * @var int|null $height The height of the thumbnail, in pixels.
     */
     private ?int $height = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $sourceItemId The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
@@ -44,7 +49,8 @@ class Thumbnail implements AdditionalDataHolder, Parsable
      * Instantiates a new thumbnail and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.thumbnail');
     }
 
     /**
@@ -81,6 +87,7 @@ class Thumbnail implements AdditionalDataHolder, Parsable
         return  [
             'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getBinaryContent()); },
             'height' => function (ParseNode $n) use ($o) { $o->setHeight($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'sourceItemId' => function (ParseNode $n) use ($o) { $o->setSourceItemId($n->getStringValue()); },
             'url' => function (ParseNode $n) use ($o) { $o->setUrl($n->getStringValue()); },
             'width' => function (ParseNode $n) use ($o) { $o->setWidth($n->getIntegerValue()); },
@@ -93,6 +100,14 @@ class Thumbnail implements AdditionalDataHolder, Parsable
     */
     public function getHeight(): ?int {
         return $this->height;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -126,6 +141,7 @@ class Thumbnail implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBinaryContent('content', $this->content);
         $writer->writeIntegerValue('height', $this->height);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('sourceItemId', $this->sourceItemId);
         $writer->writeStringValue('url', $this->url);
         $writer->writeIntegerValue('width', $this->width);
@@ -154,6 +170,14 @@ class Thumbnail implements AdditionalDataHolder, Parsable
     */
     public function setHeight(?int $value ): void {
         $this->height = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

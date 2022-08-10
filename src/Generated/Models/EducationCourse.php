@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationCourse implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -35,6 +35,11 @@ class EducationCourse implements AdditionalDataHolder, Parsable
     private ?string $externalId = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $subject Subject of the course.
     */
     private ?string $subject = null;
@@ -43,7 +48,8 @@ class EducationCourse implements AdditionalDataHolder, Parsable
      * Instantiates a new educationCourse and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.educationCourse');
     }
 
     /**
@@ -106,8 +112,17 @@ class EducationCourse implements AdditionalDataHolder, Parsable
             'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'externalId' => function (ParseNode $n) use ($o) { $o->setExternalId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'subject' => function (ParseNode $n) use ($o) { $o->setSubject($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -127,6 +142,7 @@ class EducationCourse implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('description', $this->description);
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeStringValue('externalId', $this->externalId);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('subject', $this->subject);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -169,6 +185,14 @@ class EducationCourse implements AdditionalDataHolder, Parsable
     */
     public function setExternalId(?string $value ): void {
         $this->externalId = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

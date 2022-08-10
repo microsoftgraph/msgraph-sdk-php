@@ -84,7 +84,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
     private ?array $appsVisibilityList = null;
     
     /**
-     * @var AppListType|null $appsVisibilityListType Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * @var AppListType|null $appsVisibilityListType Possible values of the compliance app list.
     */
     private ?AppListType $appsVisibilityListType = null;
     
@@ -139,7 +139,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
     private ?bool $classroomAppForceUnpromptedScreenObservation = null;
     
     /**
-     * @var AppListType|null $compliantAppListType List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * @var AppListType|null $compliantAppListType Possible values of the compliance app list.
     */
     private ?AppListType $compliantAppListType = null;
     
@@ -444,7 +444,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
     private ?bool $lockScreenBlockTodayView = null;
     
     /**
-     * @var RatingAppsType|null $mediaContentRatingApps Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
+     * @var RatingAppsType|null $mediaContentRatingApps Apps rating as in media content
     */
     private ?RatingAppsType $mediaContentRatingApps = null;
     
@@ -564,7 +564,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
     private ?bool $passcodeRequired = null;
     
     /**
-     * @var RequiredPasswordType|null $passcodeRequiredType Type of passcode that is required. Possible values are: deviceDefault, alphanumeric, numeric.
+     * @var RequiredPasswordType|null $passcodeRequiredType Possible values of required passwords.
     */
     private ?RequiredPasswordType $passcodeRequiredType = null;
     
@@ -599,7 +599,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
     private ?bool $safariBlockPopups = null;
     
     /**
-     * @var WebBrowserCookieSettings|null $safariCookieSettings Cookie settings for Safari. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways.
+     * @var WebBrowserCookieSettings|null $safariCookieSettings Web Browser Cookie Settings.
     */
     private ?WebBrowserCookieSettings $safariCookieSettings = null;
     
@@ -668,6 +668,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.iosGeneralDeviceConfiguration');
     }
 
     /**
@@ -800,7 +801,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the appsVisibilityListType property value. Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * Gets the appsVisibilityListType property value. Possible values of the compliance app list.
      * @return AppListType|null
     */
     public function getAppsVisibilityListType(): ?AppListType {
@@ -888,7 +889,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the compliantAppListType property value. List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * Gets the compliantAppListType property value. Possible values of the compliance app list.
      * @return AppListType|null
     */
     public function getCompliantAppListType(): ?AppListType {
@@ -1517,7 +1518,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the mediaContentRatingApps property value. Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
+     * Gets the mediaContentRatingApps property value. Apps rating as in media content
      * @return RatingAppsType|null
     */
     public function getMediaContentRatingApps(): ?RatingAppsType {
@@ -1709,7 +1710,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the passcodeRequiredType property value. Type of passcode that is required. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Gets the passcodeRequiredType property value. Possible values of required passwords.
      * @return RequiredPasswordType|null
     */
     public function getPasscodeRequiredType(): ?RequiredPasswordType {
@@ -1765,7 +1766,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Gets the safariCookieSettings property value. Cookie settings for Safari. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways.
+     * Gets the safariCookieSettings property value. Web Browser Cookie Settings.
      * @return WebBrowserCookieSettings|null
     */
     public function getSafariCookieSettings(): ?WebBrowserCookieSettings {
@@ -2128,7 +2129,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the appsVisibilityListType property value. Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * Sets the appsVisibilityListType property value. Possible values of the compliance app list.
      *  @param AppListType|null $value Value to set for the appsVisibilityListType property.
     */
     public function setAppsVisibilityListType(?AppListType $value ): void {
@@ -2216,7 +2217,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the compliantAppListType property value. List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * Sets the compliantAppListType property value. Possible values of the compliance app list.
      *  @param AppListType|null $value Value to set for the compliantAppListType property.
     */
     public function setCompliantAppListType(?AppListType $value ): void {
@@ -2704,7 +2705,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the mediaContentRatingApps property value. Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
+     * Sets the mediaContentRatingApps property value. Apps rating as in media content
      *  @param RatingAppsType|null $value Value to set for the mediaContentRatingApps property.
     */
     public function setMediaContentRatingApps(?RatingAppsType $value ): void {
@@ -2896,7 +2897,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the passcodeRequiredType property value. Type of passcode that is required. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Sets the passcodeRequiredType property value. Possible values of required passwords.
      *  @param RequiredPasswordType|null $value Value to set for the passcodeRequiredType property.
     */
     public function setPasscodeRequiredType(?RequiredPasswordType $value ): void {
@@ -2952,7 +2953,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
     }
 
     /**
-     * Sets the safariCookieSettings property value. Cookie settings for Safari. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways.
+     * Sets the safariCookieSettings property value. Web Browser Cookie Settings.
      *  @param WebBrowserCookieSettings|null $value Value to set for the safariCookieSettings property.
     */
     public function setSafariCookieSettings(?WebBrowserCookieSettings $value ): void {

@@ -45,7 +45,7 @@ class IosVppApp extends MobileApp implements Parsable
     private ?int $usedLicenseCount = null;
     
     /**
-     * @var VppTokenAccountType|null $vppTokenAccountType The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
+     * @var VppTokenAccountType|null $vppTokenAccountType Possible types of an Apple Volume Purchase Program token.
     */
     private ?VppTokenAccountType $vppTokenAccountType = null;
     
@@ -64,6 +64,7 @@ class IosVppApp extends MobileApp implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.iosVppApp');
     }
 
     /**
@@ -152,7 +153,7 @@ class IosVppApp extends MobileApp implements Parsable
     }
 
     /**
-     * Gets the vppTokenAccountType property value. The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
+     * Gets the vppTokenAccountType property value. Possible types of an Apple Volume Purchase Program token.
      * @return VppTokenAccountType|null
     */
     public function getVppTokenAccountType(): ?VppTokenAccountType {
@@ -250,7 +251,7 @@ class IosVppApp extends MobileApp implements Parsable
     }
 
     /**
-     * Sets the vppTokenAccountType property value. The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
+     * Sets the vppTokenAccountType property value. Possible types of an Apple Volume Purchase Program token.
      *  @param VppTokenAccountType|null $value Value to set for the vppTokenAccountType property.
     */
     public function setVppTokenAccountType(?VppTokenAccountType $value ): void {

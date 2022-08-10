@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ListInfo implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class ListInfo implements AdditionalDataHolder, Parsable
     private ?bool $hidden = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $template An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
     */
     private ?string $template = null;
@@ -33,7 +38,8 @@ class ListInfo implements AdditionalDataHolder, Parsable
      * Instantiates a new listInfo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.listInfo');
     }
 
     /**
@@ -70,6 +76,7 @@ class ListInfo implements AdditionalDataHolder, Parsable
         return  [
             'contentTypesEnabled' => function (ParseNode $n) use ($o) { $o->setContentTypesEnabled($n->getBooleanValue()); },
             'hidden' => function (ParseNode $n) use ($o) { $o->setHidden($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'template' => function (ParseNode $n) use ($o) { $o->setTemplate($n->getStringValue()); },
         ];
     }
@@ -80,6 +87,14 @@ class ListInfo implements AdditionalDataHolder, Parsable
     */
     public function getHidden(): ?bool {
         return $this->hidden;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -97,6 +112,7 @@ class ListInfo implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('contentTypesEnabled', $this->contentTypesEnabled);
         $writer->writeBooleanValue('hidden', $this->hidden);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('template', $this->template);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +139,14 @@ class ListInfo implements AdditionalDataHolder, Parsable
     */
     public function setHidden(?bool $value ): void {
         $this->hidden = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

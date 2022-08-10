@@ -14,10 +14,11 @@ class Bitlocker extends Entity implements Parsable
     private ?array $recoveryKeys = null;
     
     /**
-     * Instantiates a new bitlocker and sets the default values.
+     * Instantiates a new Bitlocker and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.bitlocker');
     }
 
     /**

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PublicErrorDetail implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class PublicErrorDetail implements AdditionalDataHolder, Parsable
     private ?string $message = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $target The target of the error.
     */
     private ?string $target = null;
@@ -33,7 +38,8 @@ class PublicErrorDetail implements AdditionalDataHolder, Parsable
      * Instantiates a new publicErrorDetail and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.publicErrorDetail');
     }
 
     /**
@@ -70,6 +76,7 @@ class PublicErrorDetail implements AdditionalDataHolder, Parsable
         return  [
             'code' => function (ParseNode $n) use ($o) { $o->setCode($n->getStringValue()); },
             'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'target' => function (ParseNode $n) use ($o) { $o->setTarget($n->getStringValue()); },
         ];
     }
@@ -80,6 +87,14 @@ class PublicErrorDetail implements AdditionalDataHolder, Parsable
     */
     public function getMessage(): ?string {
         return $this->message;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -97,6 +112,7 @@ class PublicErrorDetail implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('code', $this->code);
         $writer->writeStringValue('message', $this->message);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('target', $this->target);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +139,14 @@ class PublicErrorDetail implements AdditionalDataHolder, Parsable
     */
     public function setMessage(?string $value ): void {
         $this->message = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

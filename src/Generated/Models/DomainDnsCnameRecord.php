@@ -18,6 +18,7 @@ class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.domainDnsCnameRecord');
     }
 
     /**

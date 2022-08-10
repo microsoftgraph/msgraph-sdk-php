@@ -19,10 +19,11 @@ class UserIdentity extends Identity implements Parsable
     private ?string $userPrincipalName = null;
     
     /**
-     * Instantiates a new userIdentity and sets the default values.
+     * Instantiates a new UserIdentity and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.userIdentity');
     }
 
     /**

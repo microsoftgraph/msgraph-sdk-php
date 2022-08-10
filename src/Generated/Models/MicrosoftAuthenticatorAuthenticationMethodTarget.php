@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMethodTarget implements Parsable 
 {
     /**
-     * @var MicrosoftAuthenticatorAuthenticationMode|null $authenticationMode Determines which types of notifications can be used for sign-in. The possible values are: deviceBasedPush (passwordless only), push, and any.
+     * @var MicrosoftAuthenticatorAuthenticationMode|null $authenticationMode The authenticationMode property
     */
     private ?MicrosoftAuthenticatorAuthenticationMode $authenticationMode = null;
     
@@ -18,6 +18,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.microsoftAuthenticatorAuthenticationMethodTarget');
     }
 
     /**
@@ -30,7 +31,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     }
 
     /**
-     * Gets the authenticationMode property value. Determines which types of notifications can be used for sign-in. The possible values are: deviceBasedPush (passwordless only), push, and any.
+     * Gets the authenticationMode property value. The authenticationMode property
      * @return MicrosoftAuthenticatorAuthenticationMode|null
     */
     public function getAuthenticationMode(): ?MicrosoftAuthenticatorAuthenticationMode {
@@ -58,7 +59,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     }
 
     /**
-     * Sets the authenticationMode property value. Determines which types of notifications can be used for sign-in. The possible values are: deviceBasedPush (passwordless only), push, and any.
+     * Sets the authenticationMode property value. The authenticationMode property
      *  @param MicrosoftAuthenticatorAuthenticationMode|null $value Value to set for the authenticationMode property.
     */
     public function setAuthenticationMode(?MicrosoftAuthenticatorAuthenticationMode $value ): void {

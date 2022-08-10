@@ -24,6 +24,7 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration impl
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.iosMobileAppConfiguration');
     }
 
     /**

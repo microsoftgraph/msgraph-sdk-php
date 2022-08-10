@@ -25,7 +25,7 @@ class DeviceInstallState extends Entity implements Parsable
     private ?string $errorCode = null;
     
     /**
-     * @var InstallState|null $installState The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed, unknown.
+     * @var InstallState|null $installState Possible values for install state.
     */
     private ?InstallState $installState = null;
     
@@ -54,6 +54,7 @@ class DeviceInstallState extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.deviceInstallState');
     }
 
     /**
@@ -108,7 +109,7 @@ class DeviceInstallState extends Entity implements Parsable
     }
 
     /**
-     * Gets the installState property value. The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed, unknown.
+     * Gets the installState property value. Possible values for install state.
      * @return InstallState|null
     */
     public function getInstallState(): ?InstallState {
@@ -188,7 +189,7 @@ class DeviceInstallState extends Entity implements Parsable
     }
 
     /**
-     * Sets the installState property value. The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed, unknown.
+     * Sets the installState property value. Possible values for install state.
      *  @param InstallState|null $value Value to set for the installState property.
     */
     public function setInstallState(?InstallState $value ): void {

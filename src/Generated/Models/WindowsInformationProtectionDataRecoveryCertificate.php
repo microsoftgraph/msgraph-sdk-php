@@ -12,7 +12,7 @@ use Psr\Http\Message\StreamInterface;
 class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -32,6 +32,11 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
     private ?DateTime $expirationDateTime = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $subjectName Data recovery Certificate subject name
     */
     private ?string $subjectName = null;
@@ -40,7 +45,8 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
      * Instantiates a new windowsInformationProtectionDataRecoveryCertificate and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.windowsInformationProtectionDataRecoveryCertificate');
     }
 
     /**
@@ -94,8 +100,17 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
             'certificate' => function (ParseNode $n) use ($o) { $o->setCertificate($n->getBinaryContent()); },
             'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
             'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'subjectName' => function (ParseNode $n) use ($o) { $o->setSubjectName($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -114,6 +129,7 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
         $writer->writeBinaryContent('certificate', $this->certificate);
         $writer->writeStringValue('description', $this->description);
         $writer->writeDateTimeValue('expirationDateTime', $this->expirationDateTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('subjectName', $this->subjectName);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -148,6 +164,14 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
     */
     public function setExpirationDateTime(?DateTime $value ): void {
         $this->expirationDateTime = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

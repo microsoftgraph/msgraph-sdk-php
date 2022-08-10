@@ -20,12 +20,12 @@ class DeviceManagementExportJob extends Entity implements Parsable
     private ?string $filter = null;
     
     /**
-     * @var DeviceManagementReportFileFormat|null $format Format of the exported report. Possible values are: csv, pdf.
+     * @var DeviceManagementReportFileFormat|null $format Possible values for the file format of a report
     */
     private ?DeviceManagementReportFileFormat $format = null;
     
     /**
-     * @var DeviceManagementExportJobLocalizationType|null $localizationType Configures how the requested export job is localized. Possible values are: localizedValuesAsAdditionalColumn, replaceLocalizableValues.
+     * @var DeviceManagementExportJobLocalizationType|null $localizationType Configures how the requested export job is localized
     */
     private ?DeviceManagementExportJobLocalizationType $localizationType = null;
     
@@ -50,7 +50,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     private ?string $snapshotId = null;
     
     /**
-     * @var DeviceManagementReportStatus|null $status Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed.
+     * @var DeviceManagementReportStatus|null $status Possible statuses associated with a generated report
     */
     private ?DeviceManagementReportStatus $status = null;
     
@@ -64,6 +64,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.deviceManagementExportJob');
     }
 
     /**
@@ -112,7 +113,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the format property value. Format of the exported report. Possible values are: csv, pdf.
+     * Gets the format property value. Possible values for the file format of a report
      * @return DeviceManagementReportFileFormat|null
     */
     public function getFormat(): ?DeviceManagementReportFileFormat {
@@ -120,7 +121,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the localizationType property value. Configures how the requested export job is localized. Possible values are: localizedValuesAsAdditionalColumn, replaceLocalizableValues.
+     * Gets the localizationType property value. Configures how the requested export job is localized
      * @return DeviceManagementExportJobLocalizationType|null
     */
     public function getLocalizationType(): ?DeviceManagementExportJobLocalizationType {
@@ -160,7 +161,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed.
+     * Gets the status property value. Possible statuses associated with a generated report
      * @return DeviceManagementReportStatus|null
     */
     public function getStatus(): ?DeviceManagementReportStatus {
@@ -210,7 +211,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the format property value. Format of the exported report. Possible values are: csv, pdf.
+     * Sets the format property value. Possible values for the file format of a report
      *  @param DeviceManagementReportFileFormat|null $value Value to set for the format property.
     */
     public function setFormat(?DeviceManagementReportFileFormat $value ): void {
@@ -218,7 +219,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the localizationType property value. Configures how the requested export job is localized. Possible values are: localizedValuesAsAdditionalColumn, replaceLocalizableValues.
+     * Sets the localizationType property value. Configures how the requested export job is localized
      *  @param DeviceManagementExportJobLocalizationType|null $value Value to set for the localizationType property.
     */
     public function setLocalizationType(?DeviceManagementExportJobLocalizationType $value ): void {
@@ -258,7 +259,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed.
+     * Sets the status property value. Possible statuses associated with a generated report
      *  @param DeviceManagementReportStatus|null $value Value to set for the status property.
     */
     public function setStatus(?DeviceManagementReportStatus $value ): void {

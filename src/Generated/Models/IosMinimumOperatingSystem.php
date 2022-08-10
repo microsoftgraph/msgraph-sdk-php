@@ -10,9 +10,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var bool|null $v10_0 Version 10.0 or later.
@@ -53,7 +58,8 @@ class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * Instantiates a new iosMinimumOperatingSystem and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.iosMinimumOperatingSystem');
     }
 
     /**
@@ -80,6 +86,7 @@ class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'v10_0' => function (ParseNode $n) use ($o) { $o->setV10_0($n->getBooleanValue()); },
             'v11_0' => function (ParseNode $n) use ($o) { $o->setV11_0($n->getBooleanValue()); },
             'v12_0' => function (ParseNode $n) use ($o) { $o->setV12_0($n->getBooleanValue()); },
@@ -88,6 +95,14 @@ class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
             'v8_0' => function (ParseNode $n) use ($o) { $o->setV8_0($n->getBooleanValue()); },
             'v9_0' => function (ParseNode $n) use ($o) { $o->setV9_0($n->getBooleanValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -151,6 +166,7 @@ class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeBooleanValue('v10_0', $this->v10_0);
         $writer->writeBooleanValue('v11_0', $this->v11_0);
         $writer->writeBooleanValue('v12_0', $this->v12_0);
@@ -167,6 +183,14 @@ class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     */
     public function setAdditionalData(?array $value ): void {
         $this->additionalData = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

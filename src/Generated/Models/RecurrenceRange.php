@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\Date;
 class RecurrenceRange implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -24,6 +24,11 @@ class RecurrenceRange implements AdditionalDataHolder, Parsable
      * @var int|null $numberOfOccurrences The number of times to repeat the event. Required and must be positive if type is numbered.
     */
     private ?int $numberOfOccurrences = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $recurrenceTimeZone Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
@@ -44,7 +49,8 @@ class RecurrenceRange implements AdditionalDataHolder, Parsable
      * Instantiates a new recurrenceRange and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.recurrenceRange');
     }
 
     /**
@@ -81,6 +87,7 @@ class RecurrenceRange implements AdditionalDataHolder, Parsable
         return  [
             'endDate' => function (ParseNode $n) use ($o) { $o->setEndDate($n->getDateValue()); },
             'numberOfOccurrences' => function (ParseNode $n) use ($o) { $o->setNumberOfOccurrences($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'recurrenceTimeZone' => function (ParseNode $n) use ($o) { $o->setRecurrenceTimeZone($n->getStringValue()); },
             'startDate' => function (ParseNode $n) use ($o) { $o->setStartDate($n->getDateValue()); },
             'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(RecurrenceRangeType::class)); },
@@ -93,6 +100,14 @@ class RecurrenceRange implements AdditionalDataHolder, Parsable
     */
     public function getNumberOfOccurrences(): ?int {
         return $this->numberOfOccurrences;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -126,6 +141,7 @@ class RecurrenceRange implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeDateValue('endDate', $this->endDate);
         $writer->writeIntegerValue('numberOfOccurrences', $this->numberOfOccurrences);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('recurrenceTimeZone', $this->recurrenceTimeZone);
         $writer->writeDateValue('startDate', $this->startDate);
         $writer->writeEnumValue('type', $this->type);
@@ -154,6 +170,14 @@ class RecurrenceRange implements AdditionalDataHolder, Parsable
     */
     public function setNumberOfOccurrences(?int $value ): void {
         $this->numberOfOccurrences = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

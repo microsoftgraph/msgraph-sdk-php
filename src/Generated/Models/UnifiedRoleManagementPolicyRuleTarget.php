@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -35,6 +35,11 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Par
     private ?string $level = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var array<string>|null $operations The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
     */
     private ?array $operations = null;
@@ -48,7 +53,8 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Par
      * Instantiates a new unifiedRoleManagementPolicyRuleTarget and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.unifiedRoleManagementPolicyRuleTarget');
     }
 
     /**
@@ -95,6 +101,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Par
             'enforcedSettings' => function (ParseNode $n) use ($o) { $o->setEnforcedSettings($n->getCollectionOfPrimitiveValues()); },
             'inheritableSettings' => function (ParseNode $n) use ($o) { $o->setInheritableSettings($n->getCollectionOfPrimitiveValues()); },
             'level' => function (ParseNode $n) use ($o) { $o->setLevel($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'operations' => function (ParseNode $n) use ($o) { $o->setOperations($n->getCollectionOfPrimitiveValues()); },
             'targetObjects' => function (ParseNode $n) use ($o) { $o->setTargetObjects($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
         ];
@@ -114,6 +121,14 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Par
     */
     public function getLevel(): ?string {
         return $this->level;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -141,6 +156,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Par
         $writer->writeCollectionOfPrimitiveValues('enforcedSettings', $this->enforcedSettings);
         $writer->writeCollectionOfPrimitiveValues('inheritableSettings', $this->inheritableSettings);
         $writer->writeStringValue('level', $this->level);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfPrimitiveValues('operations', $this->operations);
         $writer->writeCollectionOfObjectValues('targetObjects', $this->targetObjects);
         $writer->writeAdditionalData($this->additionalData);
@@ -184,6 +200,14 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Par
     */
     public function setLevel(?string $value ): void {
         $this->level = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

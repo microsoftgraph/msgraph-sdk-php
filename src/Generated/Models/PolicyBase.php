@@ -23,6 +23,7 @@ class PolicyBase extends DirectoryObject implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.policyBase');
     }
 
     /**
@@ -35,10 +36,16 @@ class PolicyBase extends DirectoryObject implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.activityBasedTimeoutPolicy': return new ActivityBasedTimeoutPolicy();
                 case '#microsoft.graph.authorizationPolicy': return new AuthorizationPolicy();
+                case '#microsoft.graph.claimsMappingPolicy': return new ClaimsMappingPolicy();
+                case '#microsoft.graph.crossTenantAccessPolicy': return new CrossTenantAccessPolicy();
+                case '#microsoft.graph.homeRealmDiscoveryPolicy': return new HomeRealmDiscoveryPolicy();
                 case '#microsoft.graph.identitySecurityDefaultsEnforcementPolicy': return new IdentitySecurityDefaultsEnforcementPolicy();
                 case '#microsoft.graph.permissionGrantPolicy': return new PermissionGrantPolicy();
                 case '#microsoft.graph.stsPolicy': return new StsPolicy();
+                case '#microsoft.graph.tokenIssuancePolicy': return new TokenIssuancePolicy();
+                case '#microsoft.graph.tokenLifetimePolicy': return new TokenLifetimePolicy();
             }
         }
         return new PolicyBase();

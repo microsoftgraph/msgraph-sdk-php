@@ -43,6 +43,7 @@ class WorkforceIntegration extends ChangeTrackedEntity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.workforceIntegration');
     }
 
     /**

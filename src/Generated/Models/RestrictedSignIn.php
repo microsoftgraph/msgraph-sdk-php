@@ -18,6 +18,7 @@ class RestrictedSignIn extends SignIn implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.restrictedSignIn');
     }
 
     /**

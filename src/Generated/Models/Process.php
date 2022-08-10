@@ -16,7 +16,7 @@ class Process implements AdditionalDataHolder, Parsable
     private ?string $accountName = null;
     
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -51,6 +51,11 @@ class Process implements AdditionalDataHolder, Parsable
     private ?string $name = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var DateTime|null $parentProcessCreatedDateTime DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     */
     private ?DateTime $parentProcessCreatedDateTime = null;
@@ -79,7 +84,8 @@ class Process implements AdditionalDataHolder, Parsable
      * Instantiates a new process and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.process');
     }
 
     /**
@@ -137,6 +143,7 @@ class Process implements AdditionalDataHolder, Parsable
             'integrityLevel' => function (ParseNode $n) use ($o) { $o->setIntegrityLevel($n->getEnumValue(ProcessIntegrityLevel::class)); },
             'isElevated' => function (ParseNode $n) use ($o) { $o->setIsElevated($n->getBooleanValue()); },
             'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'parentProcessCreatedDateTime' => function (ParseNode $n) use ($o) { $o->setParentProcessCreatedDateTime($n->getDateTimeValue()); },
             'parentProcessId' => function (ParseNode $n) use ($o) { $o->setParentProcessId($n->getIntegerValue()); },
             'parentProcessName' => function (ParseNode $n) use ($o) { $o->setParentProcessName($n->getStringValue()); },
@@ -175,6 +182,14 @@ class Process implements AdditionalDataHolder, Parsable
     */
     public function getName(): ?string {
         return $this->name;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -229,6 +244,7 @@ class Process implements AdditionalDataHolder, Parsable
         $writer->writeEnumValue('integrityLevel', $this->integrityLevel);
         $writer->writeBooleanValue('isElevated', $this->isElevated);
         $writer->writeStringValue('name', $this->name);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeDateTimeValue('parentProcessCreatedDateTime', $this->parentProcessCreatedDateTime);
         $writer->writeIntegerValue('parentProcessId', $this->parentProcessId);
         $writer->writeStringValue('parentProcessName', $this->parentProcessName);
@@ -299,6 +315,14 @@ class Process implements AdditionalDataHolder, Parsable
     */
     public function setName(?string $value ): void {
         $this->name = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

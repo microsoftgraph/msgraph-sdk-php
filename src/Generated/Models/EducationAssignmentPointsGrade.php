@@ -14,10 +14,11 @@ class EducationAssignmentPointsGrade extends EducationAssignmentGrade implements
     private ?float $points = null;
     
     /**
-     * Instantiates a new educationAssignmentPointsGrade and sets the default values.
+     * Instantiates a new EducationAssignmentPointsGrade and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.educationAssignmentPointsGrade');
     }
 
     /**

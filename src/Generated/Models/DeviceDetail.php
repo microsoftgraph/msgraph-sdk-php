@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceDetail implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -40,6 +40,11 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
     private ?bool $isManaged = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $operatingSystem Indicates the OS name and version used for signing-in.
     */
     private ?string $operatingSystem = null;
@@ -53,7 +58,8 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
      * Instantiates a new deviceDetail and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.deviceDetail');
     }
 
     /**
@@ -109,6 +115,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'isCompliant' => function (ParseNode $n) use ($o) { $o->setIsCompliant($n->getBooleanValue()); },
             'isManaged' => function (ParseNode $n) use ($o) { $o->setIsManaged($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'operatingSystem' => function (ParseNode $n) use ($o) { $o->setOperatingSystem($n->getStringValue()); },
             'trustType' => function (ParseNode $n) use ($o) { $o->setTrustType($n->getStringValue()); },
         ];
@@ -128,6 +135,14 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
     */
     public function getIsManaged(): ?bool {
         return $this->isManaged;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -156,6 +171,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeBooleanValue('isCompliant', $this->isCompliant);
         $writer->writeBooleanValue('isManaged', $this->isManaged);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('operatingSystem', $this->operatingSystem);
         $writer->writeStringValue('trustType', $this->trustType);
         $writer->writeAdditionalData($this->additionalData);
@@ -207,6 +223,14 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
     */
     public function setIsManaged(?bool $value ): void {
         $this->isManaged = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

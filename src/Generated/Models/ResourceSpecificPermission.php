@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ResourceSpecificPermission implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -35,6 +35,11 @@ class ResourceSpecificPermission implements AdditionalDataHolder, Parsable
     private ?bool $isEnabled = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $value The value of the permission.
     */
     private ?string $value = null;
@@ -43,7 +48,8 @@ class ResourceSpecificPermission implements AdditionalDataHolder, Parsable
      * Instantiates a new resourceSpecificPermission and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.resourceSpecificPermission');
     }
 
     /**
@@ -90,6 +96,7 @@ class ResourceSpecificPermission implements AdditionalDataHolder, Parsable
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
             'isEnabled' => function (ParseNode $n) use ($o) { $o->setIsEnabled($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getStringValue()); },
         ];
     }
@@ -111,6 +118,14 @@ class ResourceSpecificPermission implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the value property value. The value of the permission.
      * @return string|null
     */
@@ -127,6 +142,7 @@ class ResourceSpecificPermission implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeStringValue('id', $this->id);
         $writer->writeBooleanValue('isEnabled', $this->isEnabled);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('value', $this->value);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -169,6 +185,14 @@ class ResourceSpecificPermission implements AdditionalDataHolder, Parsable
     */
     public function setIsEnabled(?bool $value ): void {
         $this->isEnabled = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

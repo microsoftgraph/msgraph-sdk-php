@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ResultInfo implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class ResultInfo implements AdditionalDataHolder, Parsable
     private ?string $message = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var int|null $subcode The result sub-code.
     */
     private ?int $subcode = null;
@@ -33,7 +38,8 @@ class ResultInfo implements AdditionalDataHolder, Parsable
      * Instantiates a new resultInfo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.resultInfo');
     }
 
     /**
@@ -70,6 +76,7 @@ class ResultInfo implements AdditionalDataHolder, Parsable
         return  [
             'code' => function (ParseNode $n) use ($o) { $o->setCode($n->getIntegerValue()); },
             'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'subcode' => function (ParseNode $n) use ($o) { $o->setSubcode($n->getIntegerValue()); },
         ];
     }
@@ -80,6 +87,14 @@ class ResultInfo implements AdditionalDataHolder, Parsable
     */
     public function getMessage(): ?string {
         return $this->message;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -97,6 +112,7 @@ class ResultInfo implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeIntegerValue('code', $this->code);
         $writer->writeStringValue('message', $this->message);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('subcode', $this->subcode);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +139,14 @@ class ResultInfo implements AdditionalDataHolder, Parsable
     */
     public function setMessage(?string $value ): void {
         $this->message = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

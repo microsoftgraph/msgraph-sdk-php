@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PermissionScope implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -33,6 +33,11 @@ class PermissionScope implements AdditionalDataHolder, Parsable
      * @var bool|null $isEnabled When creating or updating a permission, this property must be set to true (which is the default). To delete a permission, this property must first be set to false.  At that point, in a subsequent call, the permission may be removed.
     */
     private ?bool $isEnabled = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $origin The origin property
@@ -63,7 +68,8 @@ class PermissionScope implements AdditionalDataHolder, Parsable
      * Instantiates a new permissionScope and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.permissionScope');
     }
 
     /**
@@ -110,6 +116,7 @@ class PermissionScope implements AdditionalDataHolder, Parsable
             'adminConsentDisplayName' => function (ParseNode $n) use ($o) { $o->setAdminConsentDisplayName($n->getStringValue()); },
             'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
             'isEnabled' => function (ParseNode $n) use ($o) { $o->setIsEnabled($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'origin' => function (ParseNode $n) use ($o) { $o->setOrigin($n->getStringValue()); },
             'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
             'userConsentDescription' => function (ParseNode $n) use ($o) { $o->setUserConsentDescription($n->getStringValue()); },
@@ -132,6 +139,14 @@ class PermissionScope implements AdditionalDataHolder, Parsable
     */
     public function getIsEnabled(): ?bool {
         return $this->isEnabled;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -183,6 +198,7 @@ class PermissionScope implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('adminConsentDisplayName', $this->adminConsentDisplayName);
         $writer->writeStringValue('id', $this->id);
         $writer->writeBooleanValue('isEnabled', $this->isEnabled);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('origin', $this->origin);
         $writer->writeStringValue('type', $this->type);
         $writer->writeStringValue('userConsentDescription', $this->userConsentDescription);
@@ -229,6 +245,14 @@ class PermissionScope implements AdditionalDataHolder, Parsable
     */
     public function setIsEnabled(?bool $value ): void {
         $this->isEnabled = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

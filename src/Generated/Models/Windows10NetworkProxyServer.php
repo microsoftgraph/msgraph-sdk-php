@@ -10,12 +10,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var string|null $address Address to the proxy server. Specify an address in the format <server>[':'<port>]
+     * @var string|null $address Address to the proxy server. Specify an address in the format [':']
     */
     private ?string $address = null;
     
@@ -23,6 +23,11 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable
      * @var array<string>|null $exceptions Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node.
     */
     private ?array $exceptions = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var bool|null $useForLocalAddresses Specifies whether the proxy server should be used for local (intranet) addresses.
@@ -33,7 +38,8 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable
      * Instantiates a new windows10NetworkProxyServer and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.windows10NetworkProxyServer');
     }
 
     /**
@@ -54,7 +60,7 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the address property value. Address to the proxy server. Specify an address in the format <server>[':'<port>]
+     * Gets the address property value. Address to the proxy server. Specify an address in the format [':']
      * @return string|null
     */
     public function getAddress(): ?string {
@@ -78,8 +84,17 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable
         return  [
             'address' => function (ParseNode $n) use ($o) { $o->setAddress($n->getStringValue()); },
             'exceptions' => function (ParseNode $n) use ($o) { $o->setExceptions($n->getCollectionOfPrimitiveValues()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'useForLocalAddresses' => function (ParseNode $n) use ($o) { $o->setUseForLocalAddresses($n->getBooleanValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -97,6 +112,7 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('address', $this->address);
         $writer->writeCollectionOfPrimitiveValues('exceptions', $this->exceptions);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeBooleanValue('useForLocalAddresses', $this->useForLocalAddresses);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -110,7 +126,7 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the address property value. Address to the proxy server. Specify an address in the format <server>[':'<port>]
+     * Sets the address property value. Address to the proxy server. Specify an address in the format [':']
      *  @param string|null $value Value to set for the address property.
     */
     public function setAddress(?string $value ): void {
@@ -123,6 +139,14 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable
     */
     public function setExceptions(?array $value ): void {
         $this->exceptions = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

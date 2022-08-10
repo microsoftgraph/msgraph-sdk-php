@@ -39,7 +39,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration i
     private ?int $passwordPreviousPasswordBlockCount = null;
     
     /**
-     * @var AndroidWorkProfileRequiredPasswordType|null $passwordRequiredType Type of password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
+     * @var AndroidWorkProfileRequiredPasswordType|null $passwordRequiredType Android Work Profile required password type.
     */
     private ?AndroidWorkProfileRequiredPasswordType $passwordRequiredType = null;
     
@@ -94,12 +94,12 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration i
     private ?bool $workProfileBluetoothEnableContactSharing = null;
     
     /**
-     * @var AndroidWorkProfileCrossProfileDataSharingType|null $workProfileDataSharingType Type of data sharing that is allowed. Possible values are: deviceDefault, preventAny, allowPersonalToWork, noRestrictions.
+     * @var AndroidWorkProfileCrossProfileDataSharingType|null $workProfileDataSharingType Android Work Profile cross profile data sharing type.
     */
     private ?AndroidWorkProfileCrossProfileDataSharingType $workProfileDataSharingType = null;
     
     /**
-     * @var AndroidWorkProfileDefaultAppPermissionPolicyType|null $workProfileDefaultAppPermissionPolicy Type of password that is required. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
+     * @var AndroidWorkProfileDefaultAppPermissionPolicyType|null $workProfileDefaultAppPermissionPolicy Android Work Profile default app permission policy type.
     */
     private ?AndroidWorkProfileDefaultAppPermissionPolicyType $workProfileDefaultAppPermissionPolicy = null;
     
@@ -164,7 +164,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration i
     private ?int $workProfilePasswordPreviousPasswordBlockCount = null;
     
     /**
-     * @var AndroidWorkProfileRequiredPasswordType|null $workProfilePasswordRequiredType Type of work profile password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
+     * @var AndroidWorkProfileRequiredPasswordType|null $workProfilePasswordRequiredType Android Work Profile required password type.
     */
     private ?AndroidWorkProfileRequiredPasswordType $workProfilePasswordRequiredType = null;
     
@@ -183,6 +183,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration i
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.androidWorkProfileGeneralDeviceConfiguration');
     }
 
     /**
@@ -287,7 +288,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration i
     }
 
     /**
-     * Gets the passwordRequiredType property value. Type of password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
+     * Gets the passwordRequiredType property value. Android Work Profile required password type.
      * @return AndroidWorkProfileRequiredPasswordType|null
     */
     public function getPasswordRequiredType(): ?AndroidWorkProfileRequiredPasswordType {
@@ -375,7 +376,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration i
     }
 
     /**
-     * Gets the workProfileDataSharingType property value. Type of data sharing that is allowed. Possible values are: deviceDefault, preventAny, allowPersonalToWork, noRestrictions.
+     * Gets the workProfileDataSharingType property value. Android Work Profile cross profile data sharing type.
      * @return AndroidWorkProfileCrossProfileDataSharingType|null
     */
     public function getWorkProfileDataSharingType(): ?AndroidWorkProfileCrossProfileDataSharingType {
@@ -383,7 +384,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration i
     }
 
     /**
-     * Gets the workProfileDefaultAppPermissionPolicy property value. Type of password that is required. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
+     * Gets the workProfileDefaultAppPermissionPolicy property value. Android Work Profile default app permission policy type.
      * @return AndroidWorkProfileDefaultAppPermissionPolicyType|null
     */
     public function getWorkProfileDefaultAppPermissionPolicy(): ?AndroidWorkProfileDefaultAppPermissionPolicyType {
@@ -487,7 +488,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration i
     }
 
     /**
-     * Gets the workProfilePasswordRequiredType property value. Type of work profile password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
+     * Gets the workProfilePasswordRequiredType property value. Android Work Profile required password type.
      * @return AndroidWorkProfileRequiredPasswordType|null
     */
     public function getWorkProfilePasswordRequiredType(): ?AndroidWorkProfileRequiredPasswordType {
@@ -601,7 +602,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration i
     }
 
     /**
-     * Sets the passwordRequiredType property value. Type of password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
+     * Sets the passwordRequiredType property value. Android Work Profile required password type.
      *  @param AndroidWorkProfileRequiredPasswordType|null $value Value to set for the passwordRequiredType property.
     */
     public function setPasswordRequiredType(?AndroidWorkProfileRequiredPasswordType $value ): void {
@@ -689,7 +690,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration i
     }
 
     /**
-     * Sets the workProfileDataSharingType property value. Type of data sharing that is allowed. Possible values are: deviceDefault, preventAny, allowPersonalToWork, noRestrictions.
+     * Sets the workProfileDataSharingType property value. Android Work Profile cross profile data sharing type.
      *  @param AndroidWorkProfileCrossProfileDataSharingType|null $value Value to set for the workProfileDataSharingType property.
     */
     public function setWorkProfileDataSharingType(?AndroidWorkProfileCrossProfileDataSharingType $value ): void {
@@ -697,7 +698,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration i
     }
 
     /**
-     * Sets the workProfileDefaultAppPermissionPolicy property value. Type of password that is required. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
+     * Sets the workProfileDefaultAppPermissionPolicy property value. Android Work Profile default app permission policy type.
      *  @param AndroidWorkProfileDefaultAppPermissionPolicyType|null $value Value to set for the workProfileDefaultAppPermissionPolicy property.
     */
     public function setWorkProfileDefaultAppPermissionPolicy(?AndroidWorkProfileDefaultAppPermissionPolicyType $value ): void {
@@ -801,7 +802,7 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration i
     }
 
     /**
-     * Sets the workProfilePasswordRequiredType property value. Type of work profile password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
+     * Sets the workProfilePasswordRequiredType property value. Android Work Profile required password type.
      *  @param AndroidWorkProfileRequiredPasswordType|null $value Value to set for the workProfilePasswordRequiredType property.
     */
     public function setWorkProfilePasswordRequiredType(?AndroidWorkProfileRequiredPasswordType $value ): void {

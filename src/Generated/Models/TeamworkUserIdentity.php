@@ -14,10 +14,11 @@ class TeamworkUserIdentity extends Identity implements Parsable
     private ?TeamworkUserIdentityType $userIdentityType = null;
     
     /**
-     * Instantiates a new teamworkUserIdentity and sets the default values.
+     * Instantiates a new TeamworkUserIdentity and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.teamworkUserIdentity');
     }
 
     /**

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Chat extends Entity implements Parsable 
 {
     /**
-     * @var ChatType|null $chatType Specifies the type of chat. Possible values are: group, oneOnOne, meeting, unknownFutureValue.
+     * @var ChatType|null $chatType The chatType property
     */
     private ?ChatType $chatType = null;
     
@@ -69,6 +69,7 @@ class Chat extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.chat');
     }
 
     /**
@@ -81,7 +82,7 @@ class Chat extends Entity implements Parsable
     }
 
     /**
-     * Gets the chatType property value. Specifies the type of chat. Possible values are: group, oneOnOne, meeting, unknownFutureValue.
+     * Gets the chatType property value. The chatType property
      * @return ChatType|null
     */
     public function getChatType(): ?ChatType {
@@ -209,7 +210,7 @@ class Chat extends Entity implements Parsable
     }
 
     /**
-     * Sets the chatType property value. Specifies the type of chat. Possible values are: group, oneOnOne, meeting, unknownFutureValue.
+     * Sets the chatType property value. The chatType property
      *  @param ChatType|null $value Value to set for the chatType property.
     */
     public function setChatType(?ChatType $value ): void {

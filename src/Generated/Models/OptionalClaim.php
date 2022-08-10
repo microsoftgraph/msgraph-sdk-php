@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OptionalClaim implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,6 +30,11 @@ class OptionalClaim implements AdditionalDataHolder, Parsable
     private ?string $name = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $source The source (directory object) of the claim. There are predefined claims and user-defined claims from extension properties. If the source value is null, the claim is a predefined optional claim. If the source value is user, the value in the name property is the extension property from the user object.
     */
     private ?string $source = null;
@@ -38,7 +43,8 @@ class OptionalClaim implements AdditionalDataHolder, Parsable
      * Instantiates a new optionalClaim and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.optionalClaim');
     }
 
     /**
@@ -84,6 +90,7 @@ class OptionalClaim implements AdditionalDataHolder, Parsable
             'additionalProperties' => function (ParseNode $n) use ($o) { $o->setAdditionalProperties($n->getCollectionOfPrimitiveValues()); },
             'essential' => function (ParseNode $n) use ($o) { $o->setEssential($n->getBooleanValue()); },
             'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'source' => function (ParseNode $n) use ($o) { $o->setSource($n->getStringValue()); },
         ];
     }
@@ -94,6 +101,14 @@ class OptionalClaim implements AdditionalDataHolder, Parsable
     */
     public function getName(): ?string {
         return $this->name;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -112,6 +127,7 @@ class OptionalClaim implements AdditionalDataHolder, Parsable
         $writer->writeCollectionOfPrimitiveValues('additionalProperties', $this->additionalProperties);
         $writer->writeBooleanValue('essential', $this->essential);
         $writer->writeStringValue('name', $this->name);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('source', $this->source);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -146,6 +162,14 @@ class OptionalClaim implements AdditionalDataHolder, Parsable
     */
     public function setName(?string $value ): void {
         $this->name = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

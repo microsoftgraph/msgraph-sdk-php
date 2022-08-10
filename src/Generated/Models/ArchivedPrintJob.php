@@ -21,7 +21,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
     private ?DateTime $acquiredDateTime = null;
     
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -51,12 +51,17 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
     private ?string $id = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $printerId The printer ID that the job was queued for. Read-only.
     */
     private ?string $printerId = null;
     
     /**
-     * @var PrintJobProcessingState|null $processingState The print job's final processing state. Read-only.
+     * @var PrintJobProcessingState|null $processingState The processingState property
     */
     private ?PrintJobProcessingState $processingState = null;
     
@@ -64,7 +69,8 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
      * Instantiates a new archivedPrintJob and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.archivedPrintJob');
     }
 
     /**
@@ -146,6 +152,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
             'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(UserIdentity::class, 'createFromDiscriminatorValue'))); },
             'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
             'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'printerId' => function (ParseNode $n) use ($o) { $o->setPrinterId($n->getStringValue()); },
             'processingState' => function (ParseNode $n) use ($o) { $o->setProcessingState($n->getEnumValue(PrintJobProcessingState::class)); },
         ];
@@ -160,6 +167,14 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the printerId property value. The printer ID that the job was queued for. Read-only.
      * @return string|null
     */
@@ -168,7 +183,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the processingState property value. The print job's final processing state. Read-only.
+     * Gets the processingState property value. The processingState property
      * @return PrintJobProcessingState|null
     */
     public function getProcessingState(): ?PrintJobProcessingState {
@@ -187,6 +202,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
         $writer->writeObjectValue('createdBy', $this->createdBy);
         $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
         $writer->writeStringValue('id', $this->id);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('printerId', $this->printerId);
         $writer->writeEnumValue('processingState', $this->processingState);
         $writer->writeAdditionalData($this->additionalData);
@@ -257,6 +273,14 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
      * Sets the printerId property value. The printer ID that the job was queued for. Read-only.
      *  @param string|null $value Value to set for the printerId property.
     */
@@ -265,7 +289,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the processingState property value. The print job's final processing state. Read-only.
+     * Sets the processingState property value. The processingState property
      *  @param PrintJobProcessingState|null $value Value to set for the processingState property.
     */
     public function setProcessingState(?PrintJobProcessingState $value ): void {

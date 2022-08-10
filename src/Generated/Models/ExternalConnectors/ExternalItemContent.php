@@ -10,12 +10,17 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ExternalItemContent implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var ExternalItemContentType|null $type The type of content in the value property. Possible values are text and html. These are the content types that the indexer supports, and not the file extension types allowed. Required.
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
+     * @var ExternalItemContentType|null $type The type property
     */
     private ?ExternalItemContentType $type = null;
     
@@ -28,7 +33,8 @@ class ExternalItemContent implements AdditionalDataHolder, Parsable
      * Instantiates a new externalItemContent and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.externalConnectors.externalItemContent');
     }
 
     /**
@@ -55,13 +61,22 @@ class ExternalItemContent implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(ExternalItemContentType::class)); },
             'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getStringValue()); },
         ];
     }
 
     /**
-     * Gets the type property value. The type of content in the value property. Possible values are text and html. These are the content types that the indexer supports, and not the file extension types allowed. Required.
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
+     * Gets the type property value. The type property
      * @return ExternalItemContentType|null
     */
     public function getType(): ?ExternalItemContentType {
@@ -81,6 +96,7 @@ class ExternalItemContent implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('type', $this->type);
         $writer->writeStringValue('value', $this->value);
         $writer->writeAdditionalData($this->additionalData);
@@ -95,7 +111,15 @@ class ExternalItemContent implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the type property value. The type of content in the value property. Possible values are text and html. These are the content types that the indexer supports, and not the file extension types allowed. Required.
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
+     * Sets the type property value. The type property
      *  @param ExternalItemContentType|null $value Value to set for the type property.
     */
     public function setType(?ExternalItemContentType $value ): void {

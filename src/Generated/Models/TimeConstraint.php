@@ -15,9 +15,14 @@ class TimeConstraint implements AdditionalDataHolder, Parsable
     private ?ActivityDomain $activityDomain = null;
     
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var array<TimeSlot>|null $timeSlots The timeSlots property
@@ -28,7 +33,8 @@ class TimeConstraint implements AdditionalDataHolder, Parsable
      * Instantiates a new timeConstraint and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.timeConstraint');
     }
 
     /**
@@ -64,8 +70,17 @@ class TimeConstraint implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'activityDomain' => function (ParseNode $n) use ($o) { $o->setActivityDomain($n->getEnumValue(ActivityDomain::class)); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'timeSlots' => function (ParseNode $n) use ($o) { $o->setTimeSlots($n->getCollectionOfObjectValues(array(TimeSlot::class, 'createFromDiscriminatorValue'))); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class TimeConstraint implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeEnumValue('activityDomain', $this->activityDomain);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfObjectValues('timeSlots', $this->timeSlots);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -100,6 +116,14 @@ class TimeConstraint implements AdditionalDataHolder, Parsable
     */
     public function setAdditionalData(?array $value ): void {
         $this->additionalData = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

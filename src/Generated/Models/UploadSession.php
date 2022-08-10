@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UploadSession implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -26,15 +26,21 @@ class UploadSession implements AdditionalDataHolder, Parsable
     private ?array $nextExpectedRanges = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $uploadUrl The URL endpoint that accepts PUT requests for byte ranges of the file.
     */
     private ?string $uploadUrl = null;
     
     /**
-     * Instantiates a new UploadSession and sets the default values.
+     * Instantiates a new uploadSession and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.uploadSession');
     }
 
     /**
@@ -71,6 +77,7 @@ class UploadSession implements AdditionalDataHolder, Parsable
         return  [
             'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
             'nextExpectedRanges' => function (ParseNode $n) use ($o) { $o->setNextExpectedRanges($n->getCollectionOfPrimitiveValues()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'uploadUrl' => function (ParseNode $n) use ($o) { $o->setUploadUrl($n->getStringValue()); },
         ];
     }
@@ -81,6 +88,14 @@ class UploadSession implements AdditionalDataHolder, Parsable
     */
     public function getNextExpectedRanges(): ?array {
         return $this->nextExpectedRanges;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -98,6 +113,7 @@ class UploadSession implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeDateTimeValue('expirationDateTime', $this->expirationDateTime);
         $writer->writeCollectionOfPrimitiveValues('nextExpectedRanges', $this->nextExpectedRanges);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('uploadUrl', $this->uploadUrl);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -124,6 +140,14 @@ class UploadSession implements AdditionalDataHolder, Parsable
     */
     public function setNextExpectedRanges(?array $value ): void {
         $this->nextExpectedRanges = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

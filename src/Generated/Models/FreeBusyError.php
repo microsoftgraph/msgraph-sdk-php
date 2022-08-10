@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class FreeBusyError implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class FreeBusyError implements AdditionalDataHolder, Parsable
      * @var string|null $message Describes the error.
     */
     private ?string $message = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $responseCode The response code from querying for the availability of the user, distribution list, or resource.
@@ -28,7 +33,8 @@ class FreeBusyError implements AdditionalDataHolder, Parsable
      * Instantiates a new freeBusyError and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.freeBusyError');
     }
 
     /**
@@ -56,6 +62,7 @@ class FreeBusyError implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'responseCode' => function (ParseNode $n) use ($o) { $o->setResponseCode($n->getStringValue()); },
         ];
     }
@@ -66,6 +73,14 @@ class FreeBusyError implements AdditionalDataHolder, Parsable
     */
     public function getMessage(): ?string {
         return $this->message;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class FreeBusyError implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('message', $this->message);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('responseCode', $this->responseCode);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -100,6 +116,14 @@ class FreeBusyError implements AdditionalDataHolder, Parsable
     */
     public function setMessage(?string $value ): void {
         $this->message = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

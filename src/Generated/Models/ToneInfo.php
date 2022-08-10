@@ -10,9 +10,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ToneInfo implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var int|null $sequenceId An incremental identifier used for ordering DTMF events.
@@ -20,7 +25,7 @@ class ToneInfo implements AdditionalDataHolder, Parsable
     private ?int $sequenceId = null;
     
     /**
-     * @var Tone|null $tone Possible values are: tone0, tone1, tone2, tone3, tone4, tone5, tone6, tone7, tone8, tone9, star, pound, a, b, c, d, flash.
+     * @var Tone|null $tone The tone property
     */
     private ?Tone $tone = null;
     
@@ -28,7 +33,8 @@ class ToneInfo implements AdditionalDataHolder, Parsable
      * Instantiates a new toneInfo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.toneInfo');
     }
 
     /**
@@ -55,9 +61,18 @@ class ToneInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'sequenceId' => function (ParseNode $n) use ($o) { $o->setSequenceId($n->getIntegerValue()); },
             'tone' => function (ParseNode $n) use ($o) { $o->setTone($n->getEnumValue(Tone::class)); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -69,7 +84,7 @@ class ToneInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the tone property value. Possible values are: tone0, tone1, tone2, tone3, tone4, tone5, tone6, tone7, tone8, tone9, star, pound, a, b, c, d, flash.
+     * Gets the tone property value. The tone property
      * @return Tone|null
     */
     public function getTone(): ?Tone {
@@ -81,6 +96,7 @@ class ToneInfo implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('sequenceId', $this->sequenceId);
         $writer->writeEnumValue('tone', $this->tone);
         $writer->writeAdditionalData($this->additionalData);
@@ -95,6 +111,14 @@ class ToneInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
      * Sets the sequenceId property value. An incremental identifier used for ordering DTMF events.
      *  @param int|null $value Value to set for the sequenceId property.
     */
@@ -103,7 +127,7 @@ class ToneInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the tone property value. Possible values are: tone0, tone1, tone2, tone3, tone4, tone5, tone6, tone7, tone8, tone9, star, pound, a, b, c, d, flash.
+     * Sets the tone property value. The tone property
      *  @param Tone|null $value Value to set for the tone property.
     */
     public function setTone(?Tone $value ): void {

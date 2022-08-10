@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Parsable
     private ?BitLockerEncryptionMethod $encryptionMethod = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var bool|null $requireEncryptionForWriteAccess Indicates whether to block write access to devices configured in another organization.  If requireEncryptionForWriteAccess is false, this value does not affect.
     */
     private ?bool $requireEncryptionForWriteAccess = null;
@@ -33,7 +38,8 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Parsable
      * Instantiates a new bitLockerRemovableDrivePolicy and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.bitLockerRemovableDrivePolicy');
     }
 
     /**
@@ -78,8 +84,17 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Parsable
         return  [
             'blockCrossOrganizationWriteAccess' => function (ParseNode $n) use ($o) { $o->setBlockCrossOrganizationWriteAccess($n->getBooleanValue()); },
             'encryptionMethod' => function (ParseNode $n) use ($o) { $o->setEncryptionMethod($n->getEnumValue(BitLockerEncryptionMethod::class)); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'requireEncryptionForWriteAccess' => function (ParseNode $n) use ($o) { $o->setRequireEncryptionForWriteAccess($n->getBooleanValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -97,6 +112,7 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('blockCrossOrganizationWriteAccess', $this->blockCrossOrganizationWriteAccess);
         $writer->writeEnumValue('encryptionMethod', $this->encryptionMethod);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeBooleanValue('requireEncryptionForWriteAccess', $this->requireEncryptionForWriteAccess);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +139,14 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Parsable
     */
     public function setEncryptionMethod(?BitLockerEncryptionMethod $value ): void {
         $this->encryptionMethod = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

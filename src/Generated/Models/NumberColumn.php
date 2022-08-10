@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class NumberColumn implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -35,10 +35,16 @@ class NumberColumn implements AdditionalDataHolder, Parsable
     private ?float $minimum = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new numberColumn and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.numberColumn');
     }
 
     /**
@@ -85,6 +91,7 @@ class NumberColumn implements AdditionalDataHolder, Parsable
             'displayAs' => function (ParseNode $n) use ($o) { $o->setDisplayAs($n->getStringValue()); },
             'maximum' => function (ParseNode $n) use ($o) { $o->setMaximum($n->getFloatValue()); },
             'minimum' => function (ParseNode $n) use ($o) { $o->setMinimum($n->getFloatValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
 
@@ -105,6 +112,14 @@ class NumberColumn implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -113,6 +128,7 @@ class NumberColumn implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('displayAs', $this->displayAs);
         $writer->writeFloatValue('maximum', $this->maximum);
         $writer->writeFloatValue('minimum', $this->minimum);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -154,6 +170,14 @@ class NumberColumn implements AdditionalDataHolder, Parsable
     */
     public function setMinimum(?float $value ): void {
         $this->minimum = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

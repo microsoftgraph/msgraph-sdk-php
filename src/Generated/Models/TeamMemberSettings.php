@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamMemberSettings implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -45,10 +45,16 @@ class TeamMemberSettings implements AdditionalDataHolder, Parsable
     private ?bool $allowDeleteChannels = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new teamMemberSettings and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.teamMemberSettings');
     }
 
     /**
@@ -129,7 +135,16 @@ class TeamMemberSettings implements AdditionalDataHolder, Parsable
             'allowCreateUpdateRemoveConnectors' => function (ParseNode $n) use ($o) { $o->setAllowCreateUpdateRemoveConnectors($n->getBooleanValue()); },
             'allowCreateUpdateRemoveTabs' => function (ParseNode $n) use ($o) { $o->setAllowCreateUpdateRemoveTabs($n->getBooleanValue()); },
             'allowDeleteChannels' => function (ParseNode $n) use ($o) { $o->setAllowDeleteChannels($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -143,6 +158,7 @@ class TeamMemberSettings implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('allowCreateUpdateRemoveConnectors', $this->allowCreateUpdateRemoveConnectors);
         $writer->writeBooleanValue('allowCreateUpdateRemoveTabs', $this->allowCreateUpdateRemoveTabs);
         $writer->writeBooleanValue('allowDeleteChannels', $this->allowDeleteChannels);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -200,6 +216,14 @@ class TeamMemberSettings implements AdditionalDataHolder, Parsable
     */
     public function setAllowDeleteChannels(?bool $value ): void {
         $this->allowDeleteChannels = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

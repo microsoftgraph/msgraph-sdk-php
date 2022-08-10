@@ -38,6 +38,7 @@ class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.b2xIdentityUserFlow');
     }
 
     /**

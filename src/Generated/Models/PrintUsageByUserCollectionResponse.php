@@ -10,14 +10,14 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrintUsageByUserCollectionResponse implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var string|null $nextLink The nextLink property
+     * @var string|null $odataNextLink The OdataNextLink property
     */
-    private ?string $nextLink = null;
+    private ?string $odataNextLink = null;
     
     /**
      * @var array<PrintUsageByUser>|null $value The value property
@@ -28,7 +28,7 @@ class PrintUsageByUserCollectionResponse implements AdditionalDataHolder, Parsab
      * Instantiates a new PrintUsageByUserCollectionResponse and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
     }
 
     /**
@@ -55,17 +55,17 @@ class PrintUsageByUserCollectionResponse implements AdditionalDataHolder, Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.nextLink' => function (ParseNode $n) use ($o) { $o->setOdatanextLink($n->getStringValue()); },
+            '@odata.nextLink' => function (ParseNode $n) use ($o) { $o->setOdataNextLink($n->getStringValue()); },
             'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(PrintUsageByUser::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 
     /**
-     * Gets the @odata.nextLink property value. The nextLink property
+     * Gets the @odata.nextLink property value. The OdataNextLink property
      * @return string|null
     */
-    public function getOdatanextLink(): ?string {
-        return $this->nextLink;
+    public function getOdataNextLink(): ?string {
+        return $this->odataNextLink;
     }
 
     /**
@@ -81,7 +81,7 @@ class PrintUsageByUserCollectionResponse implements AdditionalDataHolder, Parsab
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('@odata.nextLink', $this->nextLink);
+        $writer->writeStringValue('@odata.nextLink', $this->odataNextLink);
         $writer->writeCollectionOfObjectValues('value', $this->value);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -95,11 +95,11 @@ class PrintUsageByUserCollectionResponse implements AdditionalDataHolder, Parsab
     }
 
     /**
-     * Sets the @odata.nextLink property value. The nextLink property
-     *  @param string|null $value Value to set for the nextLink property.
+     * Sets the @odata.nextLink property value. The OdataNextLink property
+     *  @param string|null $value Value to set for the OdataNextLink property.
     */
-    public function setOdatanextLink(?string $value ): void {
-        $this->nextLink = $value;
+    public function setOdataNextLink(?string $value ): void {
+        $this->odataNextLink = $value;
     }
 
     /**

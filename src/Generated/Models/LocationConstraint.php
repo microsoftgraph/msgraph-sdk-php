@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LocationConstraint implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class LocationConstraint implements AdditionalDataHolder, Parsable
     private ?array $locations = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var bool|null $suggestLocation The client requests the service to suggest one or more meeting locations.
     */
     private ?bool $suggestLocation = null;
@@ -33,7 +38,8 @@ class LocationConstraint implements AdditionalDataHolder, Parsable
      * Instantiates a new locationConstraint and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.locationConstraint');
     }
 
     /**
@@ -62,6 +68,7 @@ class LocationConstraint implements AdditionalDataHolder, Parsable
         return  [
             'isRequired' => function (ParseNode $n) use ($o) { $o->setIsRequired($n->getBooleanValue()); },
             'locations' => function (ParseNode $n) use ($o) { $o->setLocations($n->getCollectionOfObjectValues(array(LocationConstraintItem::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'suggestLocation' => function (ParseNode $n) use ($o) { $o->setSuggestLocation($n->getBooleanValue()); },
         ];
     }
@@ -83,6 +90,14 @@ class LocationConstraint implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the suggestLocation property value. The client requests the service to suggest one or more meeting locations.
      * @return bool|null
     */
@@ -97,6 +112,7 @@ class LocationConstraint implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('isRequired', $this->isRequired);
         $writer->writeCollectionOfObjectValues('locations', $this->locations);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeBooleanValue('suggestLocation', $this->suggestLocation);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +139,14 @@ class LocationConstraint implements AdditionalDataHolder, Parsable
     */
     public function setLocations(?array $value ): void {
         $this->locations = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ReferenceUpdateSchema;
+use Microsoft\Graph\Generated\Models\ReferenceUpdate;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -88,11 +88,11 @@ class RefRequestBuilder
 
     /**
      * Update the ref of navigation property manager in users
-     * @param ReferenceUpdateSchema $body 
+     * @param ReferenceUpdate $body 
      * @param RefRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createPutRequestInformation(ReferenceUpdateSchema $body, ?RefRequestBuilderPutRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function createPutRequestInformation(ReferenceUpdate $body, ?RefRequestBuilderPutRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -149,12 +149,12 @@ class RefRequestBuilder
 
     /**
      * Update the ref of navigation property manager in users
-     * @param ReferenceUpdateSchema $body 
+     * @param ReferenceUpdate $body 
      * @param RefRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
-    public function put(ReferenceUpdateSchema $body, ?RefRequestBuilderPutRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+    public function put(ReferenceUpdate $body, ?RefRequestBuilderPutRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
         $requestInfo = $this->createPutRequestInformation($body, $requestConfiguration);
         try {
             $errorMappings = [

@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageApprovalStage implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -51,6 +51,11 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, Parsable
     private ?bool $isEscalationEnabled = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var array<SubjectSet>|null $primaryApprovers The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors.
     */
     private ?array $primaryApprovers = null;
@@ -59,7 +64,8 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, Parsable
      * Instantiates a new accessPackageApprovalStage and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.accessPackageApprovalStage');
     }
 
     /**
@@ -133,6 +139,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, Parsable
             'fallbackPrimaryApprovers' => function (ParseNode $n) use ($o) { $o->setFallbackPrimaryApprovers($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
             'isApproverJustificationRequired' => function (ParseNode $n) use ($o) { $o->setIsApproverJustificationRequired($n->getBooleanValue()); },
             'isEscalationEnabled' => function (ParseNode $n) use ($o) { $o->setIsEscalationEnabled($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'primaryApprovers' => function (ParseNode $n) use ($o) { $o->setPrimaryApprovers($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
         ];
     }
@@ -151,6 +158,14 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, Parsable
     */
     public function getIsEscalationEnabled(): ?bool {
         return $this->isEscalationEnabled;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -173,6 +188,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, Parsable
         $writer->writeCollectionOfObjectValues('fallbackPrimaryApprovers', $this->fallbackPrimaryApprovers);
         $writer->writeBooleanValue('isApproverJustificationRequired', $this->isApproverJustificationRequired);
         $writer->writeBooleanValue('isEscalationEnabled', $this->isEscalationEnabled);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfObjectValues('primaryApprovers', $this->primaryApprovers);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -239,6 +255,14 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, Parsable
     */
     public function setIsEscalationEnabled(?bool $value ): void {
         $this->isEscalationEnabled = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

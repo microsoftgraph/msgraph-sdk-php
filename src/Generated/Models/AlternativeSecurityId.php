@@ -11,7 +11,7 @@ use Psr\Http\Message\StreamInterface;
 class AlternativeSecurityId implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -26,6 +26,11 @@ class AlternativeSecurityId implements AdditionalDataHolder, Parsable
     private ?StreamInterface $key = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var int|null $type For internal use only
     */
     private ?int $type = null;
@@ -34,7 +39,8 @@ class AlternativeSecurityId implements AdditionalDataHolder, Parsable
      * Instantiates a new alternativeSecurityId and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.alternativeSecurityId');
     }
 
     /**
@@ -63,6 +69,7 @@ class AlternativeSecurityId implements AdditionalDataHolder, Parsable
         return  [
             'identityProvider' => function (ParseNode $n) use ($o) { $o->setIdentityProvider($n->getStringValue()); },
             'key' => function (ParseNode $n) use ($o) { $o->setKey($n->getBinaryContent()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'type' => function (ParseNode $n) use ($o) { $o->setType($n->getIntegerValue()); },
         ];
     }
@@ -84,6 +91,14 @@ class AlternativeSecurityId implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the type property value. For internal use only
      * @return int|null
     */
@@ -98,6 +113,7 @@ class AlternativeSecurityId implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('identityProvider', $this->identityProvider);
         $writer->writeBinaryContent('key', $this->key);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('type', $this->type);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -124,6 +140,14 @@ class AlternativeSecurityId implements AdditionalDataHolder, Parsable
     */
     public function setKey(?StreamInterface $value ): void {
         $this->key = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

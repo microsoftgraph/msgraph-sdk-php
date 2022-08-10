@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DataSubject implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,6 +30,11 @@ class DataSubject implements AdditionalDataHolder, Parsable
     private ?string $lastName = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $residency The country/region of residency. The residency information is uesed only for internal reporting but not for the content search.
     */
     private ?string $residency = null;
@@ -38,7 +43,8 @@ class DataSubject implements AdditionalDataHolder, Parsable
      * Instantiates a new dataSubject and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.dataSubject');
     }
 
     /**
@@ -76,6 +82,7 @@ class DataSubject implements AdditionalDataHolder, Parsable
             'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
             'firstName' => function (ParseNode $n) use ($o) { $o->setFirstName($n->getStringValue()); },
             'lastName' => function (ParseNode $n) use ($o) { $o->setLastName($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'residency' => function (ParseNode $n) use ($o) { $o->setResidency($n->getStringValue()); },
         ];
     }
@@ -97,6 +104,14 @@ class DataSubject implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the residency property value. The country/region of residency. The residency information is uesed only for internal reporting but not for the content search.
      * @return string|null
     */
@@ -112,6 +127,7 @@ class DataSubject implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('email', $this->email);
         $writer->writeStringValue('firstName', $this->firstName);
         $writer->writeStringValue('lastName', $this->lastName);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('residency', $this->residency);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -146,6 +162,14 @@ class DataSubject implements AdditionalDataHolder, Parsable
     */
     public function setLastName(?string $value ): void {
         $this->lastName = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

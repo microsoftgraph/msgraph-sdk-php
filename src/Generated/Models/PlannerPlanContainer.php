@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PlannerPlanContainer implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -20,7 +20,12 @@ class PlannerPlanContainer implements AdditionalDataHolder, Parsable
     private ?string $containerId = null;
     
     /**
-     * @var PlannerContainerType|null $type The type of the resource that contains the plan. See the previous table for supported types. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster.
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
+     * @var PlannerContainerType|null $type The type property
     */
     private ?PlannerContainerType $type = null;
     
@@ -33,7 +38,8 @@ class PlannerPlanContainer implements AdditionalDataHolder, Parsable
      * Instantiates a new plannerPlanContainer and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.plannerPlanContainer');
     }
 
     /**
@@ -69,13 +75,22 @@ class PlannerPlanContainer implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'containerId' => function (ParseNode $n) use ($o) { $o->setContainerId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(PlannerContainerType::class)); },
             'url' => function (ParseNode $n) use ($o) { $o->setUrl($n->getStringValue()); },
         ];
     }
 
     /**
-     * Gets the type property value. The type of the resource that contains the plan. See the previous table for supported types. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster.
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
+     * Gets the type property value. The type property
      * @return PlannerContainerType|null
     */
     public function getType(): ?PlannerContainerType {
@@ -96,6 +111,7 @@ class PlannerPlanContainer implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('containerId', $this->containerId);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('type', $this->type);
         $writer->writeStringValue('url', $this->url);
         $writer->writeAdditionalData($this->additionalData);
@@ -118,7 +134,15 @@ class PlannerPlanContainer implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the type property value. The type of the resource that contains the plan. See the previous table for supported types. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster.
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
+     * Sets the type property value. The type property
      *  @param PlannerContainerType|null $value Value to set for the type property.
     */
     public function setType(?PlannerContainerType $value ): void {

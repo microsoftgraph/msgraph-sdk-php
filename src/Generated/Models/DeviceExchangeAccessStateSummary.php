@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable
      * @var int|null $blockedDeviceCount Total count of devices with Exchange Access State: Blocked.
     */
     private ?int $blockedDeviceCount = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var int|null $quarantinedDeviceCount Total count of devices with Exchange Access State: Quarantined.
@@ -43,7 +48,8 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable
      * Instantiates a new deviceExchangeAccessStateSummary and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.deviceExchangeAccessStateSummary');
     }
 
     /**
@@ -88,10 +94,19 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable
         return  [
             'allowedDeviceCount' => function (ParseNode $n) use ($o) { $o->setAllowedDeviceCount($n->getIntegerValue()); },
             'blockedDeviceCount' => function (ParseNode $n) use ($o) { $o->setBlockedDeviceCount($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'quarantinedDeviceCount' => function (ParseNode $n) use ($o) { $o->setQuarantinedDeviceCount($n->getIntegerValue()); },
             'unavailableDeviceCount' => function (ParseNode $n) use ($o) { $o->setUnavailableDeviceCount($n->getIntegerValue()); },
             'unknownDeviceCount' => function (ParseNode $n) use ($o) { $o->setUnknownDeviceCount($n->getIntegerValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -125,6 +140,7 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeIntegerValue('allowedDeviceCount', $this->allowedDeviceCount);
         $writer->writeIntegerValue('blockedDeviceCount', $this->blockedDeviceCount);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('quarantinedDeviceCount', $this->quarantinedDeviceCount);
         $writer->writeIntegerValue('unavailableDeviceCount', $this->unavailableDeviceCount);
         $writer->writeIntegerValue('unknownDeviceCount', $this->unknownDeviceCount);
@@ -153,6 +169,14 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable
     */
     public function setBlockedDeviceCount(?int $value ): void {
         $this->blockedDeviceCount = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

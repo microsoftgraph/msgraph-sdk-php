@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class KeyValue implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class KeyValue implements AdditionalDataHolder, Parsable
      * @var string|null $key Contains the name of the field that a value is associated with. When a sign in or domain hint is included in the sign-in request, corresponding fields are included as key-value pairs. Possible keys: Login hint present, Domain hint present.
     */
     private ?string $key = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $value Contains the corresponding value for the specified key. The value is true if a sign in hint was included in the sign-in request; otherwise false. The value is true if a domain hint was included in the sign-in request; otherwise false.
@@ -28,7 +33,8 @@ class KeyValue implements AdditionalDataHolder, Parsable
      * Instantiates a new keyValue and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.keyValue');
     }
 
     /**
@@ -56,6 +62,7 @@ class KeyValue implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'key' => function (ParseNode $n) use ($o) { $o->setKey($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getStringValue()); },
         ];
     }
@@ -66,6 +73,14 @@ class KeyValue implements AdditionalDataHolder, Parsable
     */
     public function getKey(): ?string {
         return $this->key;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class KeyValue implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('key', $this->key);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('value', $this->value);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -100,6 +116,14 @@ class KeyValue implements AdditionalDataHolder, Parsable
     */
     public function setKey(?string $value ): void {
         $this->key = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

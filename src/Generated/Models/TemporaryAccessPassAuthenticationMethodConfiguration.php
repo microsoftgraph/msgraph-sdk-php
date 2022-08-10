@@ -43,6 +43,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration');
     }
 
     /**

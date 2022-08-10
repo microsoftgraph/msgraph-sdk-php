@@ -52,7 +52,7 @@ class CallRecord extends Entity implements Parsable
     private ?DateTime $startDateTime = null;
     
     /**
-     * @var CallType|null $type Indicates the type of the call. Possible values are: unknown, groupCall, peerToPeer, unknownFutureValue.
+     * @var CallType|null $type The type property
     */
     private ?CallType $type = null;
     
@@ -66,6 +66,7 @@ class CallRecord extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.callRecords.callRecord');
     }
 
     /**
@@ -162,7 +163,7 @@ class CallRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the type property value. Indicates the type of the call. Possible values are: unknown, groupCall, peerToPeer, unknownFutureValue.
+     * Gets the type property value. The type property
      * @return CallType|null
     */
     public function getType(): ?CallType {
@@ -260,7 +261,7 @@ class CallRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the type property value. Indicates the type of the call. Possible values are: unknown, groupCall, peerToPeer, unknownFutureValue.
+     * Sets the type property value. The type property
      *  @param CallType|null $value Value to set for the type property.
     */
     public function setType(?CallType $value ): void {

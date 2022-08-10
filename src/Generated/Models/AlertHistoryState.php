@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AlertHistoryState implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -36,6 +36,11 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     private ?AlertFeedback $feedback = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var AlertStatus|null $status Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.
     */
     private ?AlertStatus $status = null;
@@ -54,7 +59,8 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
      * Instantiates a new alertHistoryState and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.alertHistoryState');
     }
 
     /**
@@ -117,10 +123,19 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
             'assignedTo' => function (ParseNode $n) use ($o) { $o->setAssignedTo($n->getStringValue()); },
             'comments' => function (ParseNode $n) use ($o) { $o->setComments($n->getCollectionOfPrimitiveValues()); },
             'feedback' => function (ParseNode $n) use ($o) { $o->setFeedback($n->getEnumValue(AlertFeedback::class)); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(AlertStatus::class)); },
             'updatedDateTime' => function (ParseNode $n) use ($o) { $o->setUpdatedDateTime($n->getDateTimeValue()); },
             'user' => function (ParseNode $n) use ($o) { $o->setUser($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -156,6 +171,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('assignedTo', $this->assignedTo);
         $writer->writeCollectionOfPrimitiveValues('comments', $this->comments);
         $writer->writeEnumValue('feedback', $this->feedback);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('status', $this->status);
         $writer->writeDateTimeValue('updatedDateTime', $this->updatedDateTime);
         $writer->writeStringValue('user', $this->user);
@@ -200,6 +216,14 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     */
     public function setFeedback(?AlertFeedback $value ): void {
         $this->feedback = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

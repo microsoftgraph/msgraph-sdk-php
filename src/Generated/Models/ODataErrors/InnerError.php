@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class InnerError implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -21,9 +21,14 @@ class InnerError implements AdditionalDataHolder, Parsable
     private ?string $clientRequestId = null;
     
     /**
-     * @var DateTime|null $Date Date when the error occured.
+     * @var DateTime|null $date Date when the error occured.
     */
     private ?DateTime $date = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $requestId Request Id as tracked internally by the service
@@ -34,7 +39,8 @@ class InnerError implements AdditionalDataHolder, Parsable
      * Instantiates a new InnerError and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.InnerError');
     }
 
     /**
@@ -79,8 +85,17 @@ class InnerError implements AdditionalDataHolder, Parsable
         return  [
             'client-request-id' => function (ParseNode $n) use ($o) { $o->setClientRequestId($n->getStringValue()); },
             'date' => function (ParseNode $n) use ($o) { $o->setDate($n->getDateTimeValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'request-id' => function (ParseNode $n) use ($o) { $o->setRequestId($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -98,6 +113,7 @@ class InnerError implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('client-request-id', $this->clientRequestId);
         $writer->writeDateTimeValue('date', $this->date);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('request-id', $this->requestId);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -124,6 +140,14 @@ class InnerError implements AdditionalDataHolder, Parsable
     */
     public function setDate(?DateTime $value ): void {
         $this->date = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

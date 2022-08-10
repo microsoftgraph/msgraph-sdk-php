@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamFunSettings implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -35,10 +35,16 @@ class TeamFunSettings implements AdditionalDataHolder, Parsable
     private ?GiphyRatingType $giphyContentRating = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new teamFunSettings and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.teamFunSettings');
     }
 
     /**
@@ -93,6 +99,7 @@ class TeamFunSettings implements AdditionalDataHolder, Parsable
             'allowGiphy' => function (ParseNode $n) use ($o) { $o->setAllowGiphy($n->getBooleanValue()); },
             'allowStickersAndMemes' => function (ParseNode $n) use ($o) { $o->setAllowStickersAndMemes($n->getBooleanValue()); },
             'giphyContentRating' => function (ParseNode $n) use ($o) { $o->setGiphyContentRating($n->getEnumValue(GiphyRatingType::class)); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
 
@@ -105,6 +112,14 @@ class TeamFunSettings implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -113,6 +128,7 @@ class TeamFunSettings implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('allowGiphy', $this->allowGiphy);
         $writer->writeBooleanValue('allowStickersAndMemes', $this->allowStickersAndMemes);
         $writer->writeEnumValue('giphyContentRating', $this->giphyContentRating);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -154,6 +170,14 @@ class TeamFunSettings implements AdditionalDataHolder, Parsable
     */
     public function setGiphyContentRating(?GiphyRatingType $value ): void {
         $this->giphyContentRating = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

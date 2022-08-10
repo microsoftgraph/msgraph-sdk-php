@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Image implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class Image implements AdditionalDataHolder, Parsable
      * @var int|null $height Optional. Height of the image, in pixels. Read-only.
     */
     private ?int $height = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var int|null $width Optional. Width of the image, in pixels. Read-only.
@@ -28,7 +33,8 @@ class Image implements AdditionalDataHolder, Parsable
      * Instantiates a new image and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.image');
     }
 
     /**
@@ -56,6 +62,7 @@ class Image implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'height' => function (ParseNode $n) use ($o) { $o->setHeight($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'width' => function (ParseNode $n) use ($o) { $o->setWidth($n->getIntegerValue()); },
         ];
     }
@@ -66,6 +73,14 @@ class Image implements AdditionalDataHolder, Parsable
     */
     public function getHeight(): ?int {
         return $this->height;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class Image implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeIntegerValue('height', $this->height);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('width', $this->width);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -100,6 +116,14 @@ class Image implements AdditionalDataHolder, Parsable
     */
     public function setHeight(?int $value ): void {
         $this->height = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

@@ -9,10 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SearchEntity extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new searchEntity and sets the default values.
+     * Instantiates a new SearchEntity and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.searchEntity');
     }
 
     /**

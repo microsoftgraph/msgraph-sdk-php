@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ItemPreviewInfo implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class ItemPreviewInfo implements AdditionalDataHolder, Parsable
      * @var string|null $getUrl The getUrl property
     */
     private ?string $getUrl = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $postParameters The postParameters property
@@ -30,10 +35,11 @@ class ItemPreviewInfo implements AdditionalDataHolder, Parsable
     private ?string $postUrl = null;
     
     /**
-     * Instantiates a new ItemPreviewInfo and sets the default values.
+     * Instantiates a new itemPreviewInfo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.itemPreviewInfo');
     }
 
     /**
@@ -61,6 +67,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'getUrl' => function (ParseNode $n) use ($o) { $o->setGetUrl($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'postParameters' => function (ParseNode $n) use ($o) { $o->setPostParameters($n->getStringValue()); },
             'postUrl' => function (ParseNode $n) use ($o) { $o->setPostUrl($n->getStringValue()); },
         ];
@@ -72,6 +79,14 @@ class ItemPreviewInfo implements AdditionalDataHolder, Parsable
     */
     public function getGetUrl(): ?string {
         return $this->getUrl;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -96,6 +111,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('getUrl', $this->getUrl);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('postParameters', $this->postParameters);
         $writer->writeStringValue('postUrl', $this->postUrl);
         $writer->writeAdditionalData($this->additionalData);
@@ -115,6 +131,14 @@ class ItemPreviewInfo implements AdditionalDataHolder, Parsable
     */
     public function setGetUrl(?string $value ): void {
         $this->getUrl = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

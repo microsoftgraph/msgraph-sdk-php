@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 class TimeRange implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -19,6 +19,11 @@ class TimeRange implements AdditionalDataHolder, Parsable
      * @var Time|null $endTime End time for the time range.
     */
     private ?Time $endTime = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var Time|null $startTime Start time for the time range.
@@ -29,7 +34,8 @@ class TimeRange implements AdditionalDataHolder, Parsable
      * Instantiates a new timeRange and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.timeRange');
     }
 
     /**
@@ -65,8 +71,17 @@ class TimeRange implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'endTime' => function (ParseNode $n) use ($o) { $o->setEndTime($n->getTimeValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'startTime' => function (ParseNode $n) use ($o) { $o->setStartTime($n->getTimeValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -83,6 +98,7 @@ class TimeRange implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeTimeValue('endTime', $this->endTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeTimeValue('startTime', $this->startTime);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -101,6 +117,14 @@ class TimeRange implements AdditionalDataHolder, Parsable
     */
     public function setEndTime(?Time $value ): void {
         $this->endTime = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class DeviceManagementSettings implements AdditionalDataHolder, Parsable
     private ?bool $isScheduledActionEnabled = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var bool|null $secureByDefault Device should be noncompliant when there is no compliance policy targeted when this is true
     */
     private ?bool $secureByDefault = null;
@@ -33,7 +38,8 @@ class DeviceManagementSettings implements AdditionalDataHolder, Parsable
      * Instantiates a new deviceManagementSettings and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.deviceManagementSettings');
     }
 
     /**
@@ -70,6 +76,7 @@ class DeviceManagementSettings implements AdditionalDataHolder, Parsable
         return  [
             'deviceComplianceCheckinThresholdDays' => function (ParseNode $n) use ($o) { $o->setDeviceComplianceCheckinThresholdDays($n->getIntegerValue()); },
             'isScheduledActionEnabled' => function (ParseNode $n) use ($o) { $o->setIsScheduledActionEnabled($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'secureByDefault' => function (ParseNode $n) use ($o) { $o->setSecureByDefault($n->getBooleanValue()); },
         ];
     }
@@ -80,6 +87,14 @@ class DeviceManagementSettings implements AdditionalDataHolder, Parsable
     */
     public function getIsScheduledActionEnabled(): ?bool {
         return $this->isScheduledActionEnabled;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -97,6 +112,7 @@ class DeviceManagementSettings implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeIntegerValue('deviceComplianceCheckinThresholdDays', $this->deviceComplianceCheckinThresholdDays);
         $writer->writeBooleanValue('isScheduledActionEnabled', $this->isScheduledActionEnabled);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeBooleanValue('secureByDefault', $this->secureByDefault);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +139,14 @@ class DeviceManagementSettings implements AdditionalDataHolder, Parsable
     */
     public function setIsScheduledActionEnabled(?bool $value ): void {
         $this->isScheduledActionEnabled = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

@@ -39,6 +39,7 @@ class ManagedAppPolicy extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.managedAppPolicy');
     }
 
     /**
@@ -51,9 +52,16 @@ class ManagedAppPolicy extends Entity implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.androidManagedAppProtection': return new AndroidManagedAppProtection();
+                case '#microsoft.graph.defaultManagedAppProtection': return new DefaultManagedAppProtection();
+                case '#microsoft.graph.iosManagedAppProtection': return new IosManagedAppProtection();
                 case '#microsoft.graph.managedAppConfiguration': return new ManagedAppConfiguration();
                 case '#microsoft.graph.managedAppProtection': return new ManagedAppProtection();
+                case '#microsoft.graph.mdmWindowsInformationProtectionPolicy': return new MdmWindowsInformationProtectionPolicy();
+                case '#microsoft.graph.targetedManagedAppConfiguration': return new TargetedManagedAppConfiguration();
+                case '#microsoft.graph.targetedManagedAppProtection': return new TargetedManagedAppProtection();
                 case '#microsoft.graph.windowsInformationProtection': return new WindowsInformationProtection();
+                case '#microsoft.graph.windowsInformationProtectionPolicy': return new WindowsInformationProtectionPolicy();
             }
         }
         return new ManagedAppPolicy();

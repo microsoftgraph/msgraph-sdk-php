@@ -35,7 +35,7 @@ class BookingService extends Entity implements Parsable
     private ?float $defaultPrice = null;
     
     /**
-     * @var BookingPriceType|null $defaultPriceType The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
+     * @var BookingPriceType|null $defaultPriceType Represents the type of pricing of a booking service.
     */
     private ?BookingPriceType $defaultPriceType = null;
     
@@ -109,6 +109,7 @@ class BookingService extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.bookingService');
     }
 
     /**
@@ -161,7 +162,7 @@ class BookingService extends Entity implements Parsable
     }
 
     /**
-     * Gets the defaultPriceType property value. The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
+     * Gets the defaultPriceType property value. Represents the type of pricing of a booking service.
      * @return BookingPriceType|null
     */
     public function getDefaultPriceType(): ?BookingPriceType {
@@ -369,7 +370,7 @@ class BookingService extends Entity implements Parsable
     }
 
     /**
-     * Sets the defaultPriceType property value. The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
+     * Sets the defaultPriceType property value. Represents the type of pricing of a booking service.
      *  @param BookingPriceType|null $value Value to set for the defaultPriceType property.
     */
     public function setDefaultPriceType(?BookingPriceType $value ): void {

@@ -32,7 +32,7 @@ class TransitiveMemberOfRequestBuilder
     }
     
     /**
-     * The count property
+     * The Count property
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -100,7 +100,7 @@ class TransitiveMemberOfRequestBuilder
     }
 
     /**
-     * Get transitiveMemberOf from groups
+     * The groups that a group is a member of, either directly and through nested membership. Nullable.
      * @param TransitiveMemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +125,7 @@ class TransitiveMemberOfRequestBuilder
     }
 
     /**
-     * Get transitiveMemberOf from groups
+     * The groups that a group is a member of, either directly and through nested membership. Nullable.
      * @param TransitiveMemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

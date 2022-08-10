@@ -21,7 +21,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
     private ?string $accountName = null;
     
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -66,6 +66,11 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
     private ?LogonType $logonType = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $onPremisesSecurityIdentifier Active Directory (on-premises) Security Identifier (SID) of the user.
     */
     private ?string $onPremisesSecurityIdentifier = null;
@@ -89,7 +94,8 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * Instantiates a new userSecurityState and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.userSecurityState');
     }
 
     /**
@@ -158,6 +164,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
             'logonIp' => function (ParseNode $n) use ($o) { $o->setLogonIp($n->getStringValue()); },
             'logonLocation' => function (ParseNode $n) use ($o) { $o->setLogonLocation($n->getStringValue()); },
             'logonType' => function (ParseNode $n) use ($o) { $o->setLogonType($n->getEnumValue(LogonType::class)); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'onPremisesSecurityIdentifier' => function (ParseNode $n) use ($o) { $o->setOnPremisesSecurityIdentifier($n->getStringValue()); },
             'riskScore' => function (ParseNode $n) use ($o) { $o->setRiskScore($n->getStringValue()); },
             'userAccountType' => function (ParseNode $n) use ($o) { $o->setUserAccountType($n->getEnumValue(UserAccountSecurityType::class)); },
@@ -214,6 +221,14 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the onPremisesSecurityIdentifier property value. Active Directory (on-premises) Security Identifier (SID) of the user.
      * @return string|null
     */
@@ -260,6 +275,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('logonIp', $this->logonIp);
         $writer->writeStringValue('logonLocation', $this->logonLocation);
         $writer->writeEnumValue('logonType', $this->logonType);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('onPremisesSecurityIdentifier', $this->onPremisesSecurityIdentifier);
         $writer->writeStringValue('riskScore', $this->riskScore);
         $writer->writeEnumValue('userAccountType', $this->userAccountType);
@@ -353,6 +369,14 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
     */
     public function setLogonType(?LogonType $value ): void {
         $this->logonType = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

@@ -11,7 +11,7 @@ use Psr\Http\Message\StreamInterface;
 class CertificateAuthority implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -46,10 +46,16 @@ class CertificateAuthority implements AdditionalDataHolder, Parsable
     private ?string $issuerSki = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new certificateAuthority and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.certificateAuthority');
     }
 
     /**
@@ -106,6 +112,7 @@ class CertificateAuthority implements AdditionalDataHolder, Parsable
             'isRootAuthority' => function (ParseNode $n) use ($o) { $o->setIsRootAuthority($n->getBooleanValue()); },
             'issuer' => function (ParseNode $n) use ($o) { $o->setIssuer($n->getStringValue()); },
             'issuerSki' => function (ParseNode $n) use ($o) { $o->setIssuerSki($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
 
@@ -134,6 +141,14 @@ class CertificateAuthority implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -144,6 +159,7 @@ class CertificateAuthority implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('isRootAuthority', $this->isRootAuthority);
         $writer->writeStringValue('issuer', $this->issuer);
         $writer->writeStringValue('issuerSki', $this->issuerSki);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -201,6 +217,14 @@ class CertificateAuthority implements AdditionalDataHolder, Parsable
     */
     public function setIssuerSki(?string $value ): void {
         $this->issuerSki = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

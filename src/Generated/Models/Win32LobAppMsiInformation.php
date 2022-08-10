@@ -10,12 +10,17 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var Win32LobAppMsiPackageType|null $packageType The MSI package type. Possible values are: perMachine, perUser, dualPurpose.
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
+     * @var Win32LobAppMsiPackageType|null $packageType Indicates the package type of an MSI Win32LobApp.
     */
     private ?Win32LobAppMsiPackageType $packageType = null;
     
@@ -53,7 +58,8 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * Instantiates a new win32LobAppMsiInformation and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.win32LobAppMsiInformation');
     }
 
     /**
@@ -80,6 +86,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'packageType' => function (ParseNode $n) use ($o) { $o->setPackageType($n->getEnumValue(Win32LobAppMsiPackageType::class)); },
             'productCode' => function (ParseNode $n) use ($o) { $o->setProductCode($n->getStringValue()); },
             'productName' => function (ParseNode $n) use ($o) { $o->setProductName($n->getStringValue()); },
@@ -91,7 +98,15 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the packageType property value. The MSI package type. Possible values are: perMachine, perUser, dualPurpose.
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
+     * Gets the packageType property value. Indicates the package type of an MSI Win32LobApp.
      * @return Win32LobAppMsiPackageType|null
     */
     public function getPackageType(): ?Win32LobAppMsiPackageType {
@@ -151,6 +166,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('packageType', $this->packageType);
         $writer->writeStringValue('productCode', $this->productCode);
         $writer->writeStringValue('productName', $this->productName);
@@ -170,7 +186,15 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the packageType property value. The MSI package type. Possible values are: perMachine, perUser, dualPurpose.
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
+     * Sets the packageType property value. Indicates the package type of an MSI Win32LobApp.
      *  @param Win32LobAppMsiPackageType|null $value Value to set for the packageType property.
     */
     public function setPackageType(?Win32LobAppMsiPackageType $value ): void {

@@ -14,7 +14,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
     private ?bool $deviceThreatProtectionEnabled = null;
     
     /**
-     * @var DeviceThreatProtectionLevel|null $deviceThreatProtectionRequiredSecurityLevel Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * @var DeviceThreatProtectionLevel|null $deviceThreatProtectionRequiredSecurityLevel Device threat protection levels for the Device Threat Protection API.
     */
     private ?DeviceThreatProtectionLevel $deviceThreatProtectionRequiredSecurityLevel = null;
     
@@ -79,7 +79,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
     private ?bool $passwordRequired = null;
     
     /**
-     * @var RequiredPasswordType|null $passwordRequiredType The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * @var RequiredPasswordType|null $passwordRequiredType Possible values of required passwords.
     */
     private ?RequiredPasswordType $passwordRequiredType = null;
     
@@ -98,6 +98,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.macOSCompliancePolicy');
     }
 
     /**
@@ -118,7 +119,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
     }
 
     /**
-     * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @return DeviceThreatProtectionLevel|null
     */
     public function getDeviceThreatProtectionRequiredSecurityLevel(): ?DeviceThreatProtectionLevel {
@@ -249,7 +250,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
     }
 
     /**
-     * Gets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return RequiredPasswordType|null
     */
     public function getPasswordRequiredType(): ?RequiredPasswordType {
@@ -306,7 +307,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
     }
 
     /**
-     * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      *  @param DeviceThreatProtectionLevel|null $value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
     */
     public function setDeviceThreatProtectionRequiredSecurityLevel(?DeviceThreatProtectionLevel $value ): void {
@@ -410,7 +411,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
     }
 
     /**
-     * Sets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Sets the passwordRequiredType property value. Possible values of required passwords.
      *  @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
     */
     public function setPasswordRequiredType(?RequiredPasswordType $value ): void {

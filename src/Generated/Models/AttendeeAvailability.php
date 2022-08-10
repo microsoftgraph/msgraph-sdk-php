@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AttendeeAvailability implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,10 +25,16 @@ class AttendeeAvailability implements AdditionalDataHolder, Parsable
     private ?FreeBusyStatus $availability = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new attendeeAvailability and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.attendeeAvailability');
     }
 
     /**
@@ -73,7 +79,16 @@ class AttendeeAvailability implements AdditionalDataHolder, Parsable
         return  [
             'attendee' => function (ParseNode $n) use ($o) { $o->setAttendee($n->getObjectValue(array(AttendeeBase::class, 'createFromDiscriminatorValue'))); },
             'availability' => function (ParseNode $n) use ($o) { $o->setAvailability($n->getEnumValue(FreeBusyStatus::class)); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -83,6 +98,7 @@ class AttendeeAvailability implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('attendee', $this->attendee);
         $writer->writeEnumValue('availability', $this->availability);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -108,6 +124,14 @@ class AttendeeAvailability implements AdditionalDataHolder, Parsable
     */
     public function setAvailability(?FreeBusyStatus $value ): void {
         $this->availability = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

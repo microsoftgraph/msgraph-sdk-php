@@ -15,7 +15,7 @@ class IdentityGovernance implements AdditionalDataHolder, Parsable
     private ?AccessReviewSet $accessReviews = null;
     
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,6 +30,11 @@ class IdentityGovernance implements AdditionalDataHolder, Parsable
     private ?EntitlementManagement $entitlementManagement = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var TermsOfUseContainer|null $termsOfUse The termsOfUse property
     */
     private ?TermsOfUseContainer $termsOfUse = null;
@@ -38,7 +43,8 @@ class IdentityGovernance implements AdditionalDataHolder, Parsable
      * Instantiates a new IdentityGovernance and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.identityGovernance');
     }
 
     /**
@@ -92,8 +98,17 @@ class IdentityGovernance implements AdditionalDataHolder, Parsable
             'accessReviews' => function (ParseNode $n) use ($o) { $o->setAccessReviews($n->getObjectValue(array(AccessReviewSet::class, 'createFromDiscriminatorValue'))); },
             'appConsent' => function (ParseNode $n) use ($o) { $o->setAppConsent($n->getObjectValue(array(AppConsentApprovalRoute::class, 'createFromDiscriminatorValue'))); },
             'entitlementManagement' => function (ParseNode $n) use ($o) { $o->setEntitlementManagement($n->getObjectValue(array(EntitlementManagement::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'termsOfUse' => function (ParseNode $n) use ($o) { $o->setTermsOfUse($n->getObjectValue(array(TermsOfUseContainer::class, 'createFromDiscriminatorValue'))); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -112,6 +127,7 @@ class IdentityGovernance implements AdditionalDataHolder, Parsable
         $writer->writeObjectValue('accessReviews', $this->accessReviews);
         $writer->writeObjectValue('appConsent', $this->appConsent);
         $writer->writeObjectValue('entitlementManagement', $this->entitlementManagement);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('termsOfUse', $this->termsOfUse);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -146,6 +162,14 @@ class IdentityGovernance implements AdditionalDataHolder, Parsable
     */
     public function setEntitlementManagement(?EntitlementManagement $value ): void {
         $this->entitlementManagement = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

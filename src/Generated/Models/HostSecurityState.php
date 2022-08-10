@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class HostSecurityState implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -40,6 +40,11 @@ class HostSecurityState implements AdditionalDataHolder, Parsable
     private ?string $netBiosName = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $os Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
     */
     private ?string $os = null;
@@ -63,7 +68,8 @@ class HostSecurityState implements AdditionalDataHolder, Parsable
      * Instantiates a new hostSecurityState and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.hostSecurityState');
     }
 
     /**
@@ -95,6 +101,7 @@ class HostSecurityState implements AdditionalDataHolder, Parsable
             'isAzureAdRegistered' => function (ParseNode $n) use ($o) { $o->setIsAzureAdRegistered($n->getBooleanValue()); },
             'isHybridAzureDomainJoined' => function (ParseNode $n) use ($o) { $o->setIsHybridAzureDomainJoined($n->getBooleanValue()); },
             'netBiosName' => function (ParseNode $n) use ($o) { $o->setNetBiosName($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'os' => function (ParseNode $n) use ($o) { $o->setOs($n->getStringValue()); },
             'privateIpAddress' => function (ParseNode $n) use ($o) { $o->setPrivateIpAddress($n->getStringValue()); },
             'publicIpAddress' => function (ParseNode $n) use ($o) { $o->setPublicIpAddress($n->getStringValue()); },
@@ -143,6 +150,14 @@ class HostSecurityState implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the os property value. Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
      * @return string|null
     */
@@ -184,6 +199,7 @@ class HostSecurityState implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('isAzureAdRegistered', $this->isAzureAdRegistered);
         $writer->writeBooleanValue('isHybridAzureDomainJoined', $this->isHybridAzureDomainJoined);
         $writer->writeStringValue('netBiosName', $this->netBiosName);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('os', $this->os);
         $writer->writeStringValue('privateIpAddress', $this->privateIpAddress);
         $writer->writeStringValue('publicIpAddress', $this->publicIpAddress);
@@ -237,6 +253,14 @@ class HostSecurityState implements AdditionalDataHolder, Parsable
     */
     public function setNetBiosName(?string $value ): void {
         $this->netBiosName = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

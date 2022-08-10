@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,10 +25,16 @@ class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable
     private ?array $meetingTimeSuggestions = null;
     
     /**
-     * Instantiates a new MeetingTimeSuggestionsResult and sets the default values.
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
+     * Instantiates a new meetingTimeSuggestionsResult and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.meetingTimeSuggestionsResult');
     }
 
     /**
@@ -65,6 +71,7 @@ class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable
         return  [
             'emptySuggestionsReason' => function (ParseNode $n) use ($o) { $o->setEmptySuggestionsReason($n->getStringValue()); },
             'meetingTimeSuggestions' => function (ParseNode $n) use ($o) { $o->setMeetingTimeSuggestions($n->getCollectionOfObjectValues(array(MeetingTimeSuggestion::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
 
@@ -77,12 +84,21 @@ class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('emptySuggestionsReason', $this->emptySuggestionsReason);
         $writer->writeCollectionOfObjectValues('meetingTimeSuggestions', $this->meetingTimeSuggestions);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -108,6 +124,14 @@ class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable
     */
     public function setMeetingTimeSuggestions(?array $value ): void {
         $this->meetingTimeSuggestions = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

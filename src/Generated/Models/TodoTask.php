@@ -15,7 +15,7 @@ class TodoTask extends Entity implements Parsable
     private ?ItemBody $body = null;
     
     /**
-     * @var DateTime|null $bodyLastModifiedDateTime The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
+     * @var DateTime|null $bodyLastModifiedDateTime The date and time when the task body was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
     */
     private ?DateTime $bodyLastModifiedDateTime = null;
     
@@ -50,7 +50,7 @@ class TodoTask extends Entity implements Parsable
     private ?array $extensions = null;
     
     /**
-     * @var Importance|null $importance The importance of the task. Possible values are: low, normal, high.
+     * @var Importance|null $importance The importance property
     */
     private ?Importance $importance = null;
     
@@ -80,7 +80,7 @@ class TodoTask extends Entity implements Parsable
     private ?DateTimeTimeZone $reminderDateTime = null;
     
     /**
-     * @var TaskStatus|null $status Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
+     * @var TaskStatus|null $status The status property
     */
     private ?TaskStatus $status = null;
     
@@ -94,6 +94,7 @@ class TodoTask extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.todoTask');
     }
 
     /**
@@ -114,7 +115,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Gets the bodyLastModifiedDateTime property value. The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
+     * Gets the bodyLastModifiedDateTime property value. The date and time when the task body was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
      * @return DateTime|null
     */
     public function getBodyLastModifiedDateTime(): ?DateTime {
@@ -196,7 +197,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Gets the importance property value. The importance of the task. Possible values are: low, normal, high.
+     * Gets the importance property value. The importance property
      * @return Importance|null
     */
     public function getImportance(): ?Importance {
@@ -244,7 +245,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
+     * Gets the status property value. The status property
      * @return TaskStatus|null
     */
     public function getStatus(): ?TaskStatus {
@@ -292,7 +293,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Sets the bodyLastModifiedDateTime property value. The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
+     * Sets the bodyLastModifiedDateTime property value. The date and time when the task body was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
      *  @param DateTime|null $value Value to set for the bodyLastModifiedDateTime property.
     */
     public function setBodyLastModifiedDateTime(?DateTime $value ): void {
@@ -348,7 +349,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Sets the importance property value. The importance of the task. Possible values are: low, normal, high.
+     * Sets the importance property value. The importance property
      *  @param Importance|null $value Value to set for the importance property.
     */
     public function setImportance(?Importance $value ): void {
@@ -396,7 +397,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
+     * Sets the status property value. The status property
      *  @param TaskStatus|null $value Value to set for the status property.
     */
     public function setStatus(?TaskStatus $value ): void {

@@ -34,7 +34,7 @@ class TodoTaskList extends Entity implements Parsable
     private ?array $tasks = null;
     
     /**
-     * @var WellknownListName|null $wellknownListName Property indicating the list name if the given list is a well-known list. Possible values are: none, defaultList, flaggedEmails, unknownFutureValue.
+     * @var WellknownListName|null $wellknownListName The wellknownListName property
     */
     private ?WellknownListName $wellknownListName = null;
     
@@ -43,6 +43,7 @@ class TodoTaskList extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.todoTaskList');
     }
 
     /**
@@ -111,7 +112,7 @@ class TodoTaskList extends Entity implements Parsable
     }
 
     /**
-     * Gets the wellknownListName property value. Property indicating the list name if the given list is a well-known list. Possible values are: none, defaultList, flaggedEmails, unknownFutureValue.
+     * Gets the wellknownListName property value. The wellknownListName property
      * @return WellknownListName|null
     */
     public function getWellknownListName(): ?WellknownListName {
@@ -173,7 +174,7 @@ class TodoTaskList extends Entity implements Parsable
     }
 
     /**
-     * Sets the wellknownListName property value. Property indicating the list name if the given list is a well-known list. Possible values are: none, defaultList, flaggedEmails, unknownFutureValue.
+     * Sets the wellknownListName property value. The wellknownListName property
      *  @param WellknownListName|null $value Value to set for the wellknownListName property.
     */
     public function setWellknownListName(?WellknownListName $value ): void {

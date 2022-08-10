@@ -18,6 +18,7 @@ class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration i
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.deviceEnrollmentLimitConfiguration');
     }
 
     /**

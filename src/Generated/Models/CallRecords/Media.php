@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Media implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -40,6 +40,11 @@ class Media implements AdditionalDataHolder, Parsable
     private ?string $label = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var array<MediaStream>|null $streams Network streams associated with this media.
     */
     private ?array $streams = null;
@@ -48,7 +53,8 @@ class Media implements AdditionalDataHolder, Parsable
      * Instantiates a new media and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.callRecords.media');
     }
 
     /**
@@ -112,6 +118,7 @@ class Media implements AdditionalDataHolder, Parsable
             'callerDevice' => function (ParseNode $n) use ($o) { $o->setCallerDevice($n->getObjectValue(array(DeviceInfo::class, 'createFromDiscriminatorValue'))); },
             'callerNetwork' => function (ParseNode $n) use ($o) { $o->setCallerNetwork($n->getObjectValue(array(NetworkInfo::class, 'createFromDiscriminatorValue'))); },
             'label' => function (ParseNode $n) use ($o) { $o->setLabel($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'streams' => function (ParseNode $n) use ($o) { $o->setStreams($n->getCollectionOfObjectValues(array(MediaStream::class, 'createFromDiscriminatorValue'))); },
         ];
     }
@@ -122,6 +129,14 @@ class Media implements AdditionalDataHolder, Parsable
     */
     public function getLabel(): ?string {
         return $this->label;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -142,6 +157,7 @@ class Media implements AdditionalDataHolder, Parsable
         $writer->writeObjectValue('callerDevice', $this->callerDevice);
         $writer->writeObjectValue('callerNetwork', $this->callerNetwork);
         $writer->writeStringValue('label', $this->label);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfObjectValues('streams', $this->streams);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -192,6 +208,14 @@ class Media implements AdditionalDataHolder, Parsable
     */
     public function setLabel(?string $value ): void {
         $this->label = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

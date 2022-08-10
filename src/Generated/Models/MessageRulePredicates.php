@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MessageRulePredicates implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -115,6 +115,11 @@ class MessageRulePredicates implements AdditionalDataHolder, Parsable
     private ?bool $notSentToMe = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var array<string>|null $recipientContains Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.
     */
     private ?array $recipientContains = null;
@@ -168,7 +173,8 @@ class MessageRulePredicates implements AdditionalDataHolder, Parsable
      * Instantiates a new messageRulePredicates and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.messageRulePredicates');
     }
 
     /**
@@ -239,6 +245,7 @@ class MessageRulePredicates implements AdditionalDataHolder, Parsable
             'isVoicemail' => function (ParseNode $n) use ($o) { $o->setIsVoicemail($n->getBooleanValue()); },
             'messageActionFlag' => function (ParseNode $n) use ($o) { $o->setMessageActionFlag($n->getEnumValue(MessageActionFlag::class)); },
             'notSentToMe' => function (ParseNode $n) use ($o) { $o->setNotSentToMe($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'recipientContains' => function (ParseNode $n) use ($o) { $o->setRecipientContains($n->getCollectionOfPrimitiveValues()); },
             'senderContains' => function (ParseNode $n) use ($o) { $o->setSenderContains($n->getCollectionOfPrimitiveValues()); },
             'sensitivity' => function (ParseNode $n) use ($o) { $o->setSensitivity($n->getEnumValue(Sensitivity::class)); },
@@ -389,6 +396,14 @@ class MessageRulePredicates implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the recipientContains property value. Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.
      * @return array<string>|null
     */
@@ -493,6 +508,7 @@ class MessageRulePredicates implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('isVoicemail', $this->isVoicemail);
         $writer->writeEnumValue('messageActionFlag', $this->messageActionFlag);
         $writer->writeBooleanValue('notSentToMe', $this->notSentToMe);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfPrimitiveValues('recipientContains', $this->recipientContains);
         $writer->writeCollectionOfPrimitiveValues('senderContains', $this->senderContains);
         $writer->writeEnumValue('sensitivity', $this->sensitivity);
@@ -672,6 +688,14 @@ class MessageRulePredicates implements AdditionalDataHolder, Parsable
     */
     public function setNotSentToMe(?bool $value ): void {
         $this->notSentToMe = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

@@ -10,12 +10,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var OnenotePatchActionType|null $action The action to perform on the target element. Possible values are: replace, append, delete, insert, or prepend.
+     * @var OnenotePatchActionType|null $action The action property
     */
     private ?OnenotePatchActionType $action = null;
     
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
      * @var string|null $content A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
     */
     private ?string $content = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var OnenotePatchInsertPosition|null $position The location to add the supplied content, relative to the target element. Possible values are: after (default) or before.
@@ -38,7 +43,8 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
      * Instantiates a new onenotePatchContentCommand and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.onenotePatchContentCommand');
     }
 
     /**
@@ -51,7 +57,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the action property value. The action to perform on the target element. Possible values are: replace, append, delete, insert, or prepend.
+     * Gets the action property value. The action property
      * @return OnenotePatchActionType|null
     */
     public function getAction(): ?OnenotePatchActionType {
@@ -83,9 +89,18 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
         return  [
             'action' => function (ParseNode $n) use ($o) { $o->setAction($n->getEnumValue(OnenotePatchActionType::class)); },
             'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'position' => function (ParseNode $n) use ($o) { $o->setPosition($n->getEnumValue(OnenotePatchInsertPosition::class)); },
             'target' => function (ParseNode $n) use ($o) { $o->setTarget($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -111,13 +126,14 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeEnumValue('action', $this->action);
         $writer->writeStringValue('content', $this->content);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('position', $this->position);
         $writer->writeStringValue('target', $this->target);
         $writer->writeAdditionalData($this->additionalData);
     }
 
     /**
-     * Sets the action property value. The action to perform on the target element. Possible values are: replace, append, delete, insert, or prepend.
+     * Sets the action property value. The action property
      *  @param OnenotePatchActionType|null $value Value to set for the action property.
     */
     public function setAction(?OnenotePatchActionType $value ): void {
@@ -138,6 +154,14 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
     */
     public function setContent(?string $value ): void {
         $this->content = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

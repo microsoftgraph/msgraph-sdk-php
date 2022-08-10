@@ -39,6 +39,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.microsoftAuthenticatorAuthenticationMethod');
     }
 
     /**

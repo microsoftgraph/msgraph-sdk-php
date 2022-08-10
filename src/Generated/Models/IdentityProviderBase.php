@@ -14,10 +14,11 @@ class IdentityProviderBase extends Entity implements Parsable
     private ?string $displayName = null;
     
     /**
-     * Instantiates a new identityProviderBase and sets the default values.
+     * Instantiates a new IdentityProviderBase and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.identityProviderBase');
     }
 
     /**
@@ -32,6 +33,8 @@ class IdentityProviderBase extends Entity implements Parsable
             switch ($mappingValue) {
                 case '#microsoft.graph.appleManagedIdentityProvider': return new AppleManagedIdentityProvider();
                 case '#microsoft.graph.builtInIdentityProvider': return new BuiltInIdentityProvider();
+                case '#microsoft.graph.internalDomainFederation': return new InternalDomainFederation();
+                case '#microsoft.graph.samlOrWsFedExternalDomainFederation': return new SamlOrWsFedExternalDomainFederation();
                 case '#microsoft.graph.samlOrWsFedProvider': return new SamlOrWsFedProvider();
                 case '#microsoft.graph.socialIdentityProvider': return new SocialIdentityProvider();
             }

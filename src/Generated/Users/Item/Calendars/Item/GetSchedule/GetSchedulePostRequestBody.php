@@ -11,27 +11,27 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var int|null $AvailabilityViewInterval The AvailabilityViewInterval property
+     * @var int|null $availabilityViewInterval The AvailabilityViewInterval property
     */
     private ?int $availabilityViewInterval = null;
     
     /**
-     * @var DateTimeTimeZone|null $EndTime The EndTime property
+     * @var DateTimeTimeZone|null $endTime The EndTime property
     */
     private ?DateTimeTimeZone $endTime = null;
     
     /**
-     * @var array<string>|null $Schedules The Schedules property
+     * @var array<string>|null $schedules The Schedules property
     */
     private ?array $schedules = null;
     
     /**
-     * @var DateTimeTimeZone|null $StartTime The StartTime property
+     * @var DateTimeTimeZone|null $startTime The StartTime property
     */
     private ?DateTimeTimeZone $startTime = null;
     
@@ -39,7 +39,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsable
      * Instantiates a new getSchedulePostRequestBody and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
     }
 
     /**

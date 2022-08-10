@@ -10,14 +10,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BookingWorkHours implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var DayOfWeek|null $day The day of the week represented by this instance. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * @var DayOfWeek|null $day The day property
     */
     private ?DayOfWeek $day = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var array<BookingWorkTimeSlot>|null $timeSlots A list of start/end times during a day.
@@ -28,7 +33,8 @@ class BookingWorkHours implements AdditionalDataHolder, Parsable
      * Instantiates a new bookingWorkHours and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.bookingWorkHours');
     }
 
     /**
@@ -49,7 +55,7 @@ class BookingWorkHours implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the day property value. The day of the week represented by this instance. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * Gets the day property value. The day property
      * @return DayOfWeek|null
     */
     public function getDay(): ?DayOfWeek {
@@ -64,8 +70,17 @@ class BookingWorkHours implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'day' => function (ParseNode $n) use ($o) { $o->setDay($n->getEnumValue(DayOfWeek::class)); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'timeSlots' => function (ParseNode $n) use ($o) { $o->setTimeSlots($n->getCollectionOfObjectValues(array(BookingWorkTimeSlot::class, 'createFromDiscriminatorValue'))); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class BookingWorkHours implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeEnumValue('day', $this->day);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfObjectValues('timeSlots', $this->timeSlots);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -95,11 +111,19 @@ class BookingWorkHours implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the day property value. The day of the week represented by this instance. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * Sets the day property value. The day property
      *  @param DayOfWeek|null $value Value to set for the day property.
     */
     public function setDay(?DayOfWeek $value ): void {
         $this->day = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

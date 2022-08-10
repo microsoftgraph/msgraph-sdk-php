@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ScheduleInformation implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class ScheduleInformation implements AdditionalDataHolder, Parsable
      * @var FreeBusyError|null $error Error information from attempting to get the availability of the user, distribution list, or resource.
     */
     private ?FreeBusyError $error = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $scheduleId An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
@@ -43,7 +48,8 @@ class ScheduleInformation implements AdditionalDataHolder, Parsable
      * Instantiates a new scheduleInformation and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.scheduleInformation');
     }
 
     /**
@@ -88,10 +94,19 @@ class ScheduleInformation implements AdditionalDataHolder, Parsable
         return  [
             'availabilityView' => function (ParseNode $n) use ($o) { $o->setAvailabilityView($n->getStringValue()); },
             'error' => function (ParseNode $n) use ($o) { $o->setError($n->getObjectValue(array(FreeBusyError::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'scheduleId' => function (ParseNode $n) use ($o) { $o->setScheduleId($n->getStringValue()); },
             'scheduleItems' => function (ParseNode $n) use ($o) { $o->setScheduleItems($n->getCollectionOfObjectValues(array(ScheduleItem::class, 'createFromDiscriminatorValue'))); },
             'workingHours' => function (ParseNode $n) use ($o) { $o->setWorkingHours($n->getObjectValue(array(WorkingHours::class, 'createFromDiscriminatorValue'))); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -125,6 +140,7 @@ class ScheduleInformation implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('availabilityView', $this->availabilityView);
         $writer->writeObjectValue('error', $this->error);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('scheduleId', $this->scheduleId);
         $writer->writeCollectionOfObjectValues('scheduleItems', $this->scheduleItems);
         $writer->writeObjectValue('workingHours', $this->workingHours);
@@ -153,6 +169,14 @@ class ScheduleInformation implements AdditionalDataHolder, Parsable
     */
     public function setError(?FreeBusyError $value ): void {
         $this->error = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

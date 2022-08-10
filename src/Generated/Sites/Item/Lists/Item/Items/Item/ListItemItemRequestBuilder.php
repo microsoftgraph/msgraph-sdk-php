@@ -8,6 +8,8 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ListItem;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\Analytics\AnalyticsRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\DocumentSetVersions\DocumentSetVersionsRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\DocumentSetVersions\Item\DocumentSetVersionItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\DriveItem\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\Fields\FieldsRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
@@ -29,6 +31,13 @@ class ListItemItemRequestBuilder
     */
     public function analytics(): AnalyticsRequestBuilder {
         return new AnalyticsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The documentSetVersions property
+    */
+    public function documentSetVersions(): DocumentSetVersionsRequestBuilder {
+        return new DocumentSetVersionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -164,6 +173,17 @@ class ListItemItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
+    }
+
+    /**
+     * Gets an item from the Microsoft\Graph\Generated.sites.item.lists.item.items.item.documentSetVersions.item collection
+     * @param string $id Unique identifier of the item
+     * @return DocumentSetVersionItemRequestBuilder
+    */
+    public function documentSetVersionsById(string $id): DocumentSetVersionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['documentSetVersion%2Did'] = $id;
+        return new DocumentSetVersionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

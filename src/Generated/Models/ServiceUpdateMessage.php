@@ -31,7 +31,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     private ?ItemBody $body = null;
     
     /**
-     * @var ServiceUpdateCategory|null $category The service message category. Possible values are: preventOrFixIssue, planForChange, stayInformed, unknownFutureValue.
+     * @var ServiceUpdateCategory|null $category The category property
     */
     private ?ServiceUpdateCategory $category = null;
     
@@ -51,7 +51,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     private ?array $services = null;
     
     /**
-     * @var ServiceUpdateSeverity|null $severity The severity of the service message. Possible values are: normal, high, critical, unknownFutureValue.
+     * @var ServiceUpdateSeverity|null $severity The severity property
     */
     private ?ServiceUpdateSeverity $severity = null;
     
@@ -70,6 +70,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.serviceUpdateMessage');
     }
 
     /**
@@ -114,7 +115,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Gets the category property value. The service message category. Possible values are: preventOrFixIssue, planForChange, stayInformed, unknownFutureValue.
+     * Gets the category property value. The category property
      * @return ServiceUpdateCategory|null
     */
     public function getCategory(): ?ServiceUpdateCategory {
@@ -167,7 +168,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Gets the severity property value. The severity of the service message. Possible values are: normal, high, critical, unknownFutureValue.
+     * Gets the severity property value. The severity property
      * @return ServiceUpdateSeverity|null
     */
     public function getSeverity(): ?ServiceUpdateSeverity {
@@ -242,7 +243,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Sets the category property value. The service message category. Possible values are: preventOrFixIssue, planForChange, stayInformed, unknownFutureValue.
+     * Sets the category property value. The category property
      *  @param ServiceUpdateCategory|null $value Value to set for the category property.
     */
     public function setCategory(?ServiceUpdateCategory $value ): void {
@@ -274,7 +275,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Sets the severity property value. The severity of the service message. Possible values are: normal, high, critical, unknownFutureValue.
+     * Sets the severity property value. The severity property
      *  @param ServiceUpdateSeverity|null $value Value to set for the severity property.
     */
     public function setSeverity(?ServiceUpdateSeverity $value ): void {

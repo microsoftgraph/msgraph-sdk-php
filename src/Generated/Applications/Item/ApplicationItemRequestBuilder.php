@@ -12,6 +12,8 @@ use Microsoft\Graph\Generated\Applications\Item\CheckMemberObjects\CheckMemberOb
 use Microsoft\Graph\Generated\Applications\Item\CreatedOnBehalfOf\CreatedOnBehalfOfRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\ExtensionProperties\ExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\ExtensionProperties\Item\ExtensionPropertyItemRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\FederatedIdentityCredentials\FederatedIdentityCredentialsRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\FederatedIdentityCredentials\Item\FederatedIdentityCredentialItemRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\HomeRealmDiscoveryPolicies\HomeRealmDiscoveryPoliciesRequestBuilder;
@@ -80,6 +82,13 @@ class ApplicationItemRequestBuilder
     */
     public function extensionProperties(): ExtensionPropertiesRequestBuilder {
         return new ExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The federatedIdentityCredentials property
+    */
+    public function federatedIdentityCredentials(): FederatedIdentityCredentialsRequestBuilder {
+        return new FederatedIdentityCredentialsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -289,6 +298,17 @@ class ApplicationItemRequestBuilder
         $urlTplParams = $this->pathParameters;
         $urlTplParams['extensionProperty%2Did'] = $id;
         return new ExtensionPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
+     * Gets an item from the Microsoft\Graph\Generated.applications.item.federatedIdentityCredentials.item collection
+     * @param string $id Unique identifier of the item
+     * @return FederatedIdentityCredentialItemRequestBuilder
+    */
+    public function federatedIdentityCredentialsById(string $id): FederatedIdentityCredentialItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['federatedIdentityCredential%2Did'] = $id;
+        return new FederatedIdentityCredentialItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

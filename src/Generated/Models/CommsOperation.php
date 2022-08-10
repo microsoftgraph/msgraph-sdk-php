@@ -19,7 +19,7 @@ class CommsOperation extends Entity implements Parsable
     private ?ResultInfo $resultInfo = null;
     
     /**
-     * @var OperationStatus|null $status Possible values are: notStarted, running, completed, failed. Read-only.
+     * @var OperationStatus|null $status The status property
     */
     private ?OperationStatus $status = null;
     
@@ -28,6 +28,7 @@ class CommsOperation extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.commsOperation');
     }
 
     /**
@@ -85,7 +86,7 @@ class CommsOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Possible values are: notStarted, running, completed, failed. Read-only.
+     * Gets the status property value. The status property
      * @return OperationStatus|null
     */
     public function getStatus(): ?OperationStatus {
@@ -120,7 +121,7 @@ class CommsOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Possible values are: notStarted, running, completed, failed. Read-only.
+     * Sets the status property value. The status property
      *  @param OperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?OperationStatus $value ): void {

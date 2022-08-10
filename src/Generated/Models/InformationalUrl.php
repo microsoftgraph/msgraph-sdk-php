@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class InformationalUrl implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class InformationalUrl implements AdditionalDataHolder, Parsable
      * @var string|null $marketingUrl Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
     */
     private ?string $marketingUrl = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $privacyStatementUrl Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
@@ -43,7 +48,8 @@ class InformationalUrl implements AdditionalDataHolder, Parsable
      * Instantiates a new informationalUrl and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.informationalUrl');
     }
 
     /**
@@ -72,6 +78,7 @@ class InformationalUrl implements AdditionalDataHolder, Parsable
         return  [
             'logoUrl' => function (ParseNode $n) use ($o) { $o->setLogoUrl($n->getStringValue()); },
             'marketingUrl' => function (ParseNode $n) use ($o) { $o->setMarketingUrl($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'privacyStatementUrl' => function (ParseNode $n) use ($o) { $o->setPrivacyStatementUrl($n->getStringValue()); },
             'supportUrl' => function (ParseNode $n) use ($o) { $o->setSupportUrl($n->getStringValue()); },
             'termsOfServiceUrl' => function (ParseNode $n) use ($o) { $o->setTermsOfServiceUrl($n->getStringValue()); },
@@ -92,6 +99,14 @@ class InformationalUrl implements AdditionalDataHolder, Parsable
     */
     public function getMarketingUrl(): ?string {
         return $this->marketingUrl;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -125,6 +140,7 @@ class InformationalUrl implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('logoUrl', $this->logoUrl);
         $writer->writeStringValue('marketingUrl', $this->marketingUrl);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('privacyStatementUrl', $this->privacyStatementUrl);
         $writer->writeStringValue('supportUrl', $this->supportUrl);
         $writer->writeStringValue('termsOfServiceUrl', $this->termsOfServiceUrl);
@@ -153,6 +169,14 @@ class InformationalUrl implements AdditionalDataHolder, Parsable
     */
     public function setMarketingUrl(?string $value ): void {
         $this->marketingUrl = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

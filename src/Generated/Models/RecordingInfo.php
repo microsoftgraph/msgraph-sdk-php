@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RecordingInfo implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -20,7 +20,12 @@ class RecordingInfo implements AdditionalDataHolder, Parsable
     private ?IdentitySet $initiator = null;
     
     /**
-     * @var RecordingStatus|null $recordingStatus Possible values are: unknown, notRecording, recording, or failed.
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
+     * @var RecordingStatus|null $recordingStatus The recordingStatus property
     */
     private ?RecordingStatus $recordingStatus = null;
     
@@ -28,7 +33,8 @@ class RecordingInfo implements AdditionalDataHolder, Parsable
      * Instantiates a new recordingInfo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.recordingInfo');
     }
 
     /**
@@ -56,6 +62,7 @@ class RecordingInfo implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'initiator' => function (ParseNode $n) use ($o) { $o->setInitiator($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'recordingStatus' => function (ParseNode $n) use ($o) { $o->setRecordingStatus($n->getEnumValue(RecordingStatus::class)); },
         ];
     }
@@ -69,7 +76,15 @@ class RecordingInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the recordingStatus property value. Possible values are: unknown, notRecording, recording, or failed.
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
+     * Gets the recordingStatus property value. The recordingStatus property
      * @return RecordingStatus|null
     */
     public function getRecordingStatus(): ?RecordingStatus {
@@ -82,6 +97,7 @@ class RecordingInfo implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('initiator', $this->initiator);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('recordingStatus', $this->recordingStatus);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -103,7 +119,15 @@ class RecordingInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the recordingStatus property value. Possible values are: unknown, notRecording, recording, or failed.
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
+    }
+
+    /**
+     * Sets the recordingStatus property value. The recordingStatus property
      *  @param RecordingStatus|null $value Value to set for the recordingStatus property.
     */
     public function setRecordingStatus(?RecordingStatus $value ): void {

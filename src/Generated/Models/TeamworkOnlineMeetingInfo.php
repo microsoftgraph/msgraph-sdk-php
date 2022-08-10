@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,6 +25,11 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
     private ?string $joinWebUrl = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var TeamworkUserIdentity|null $organizer The organizer of the meeting.
     */
     private ?TeamworkUserIdentity $organizer = null;
@@ -33,7 +38,8 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * Instantiates a new teamworkOnlineMeetingInfo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.teamworkOnlineMeetingInfo');
     }
 
     /**
@@ -70,6 +76,7 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
         return  [
             'calendarEventId' => function (ParseNode $n) use ($o) { $o->setCalendarEventId($n->getStringValue()); },
             'joinWebUrl' => function (ParseNode $n) use ($o) { $o->setJoinWebUrl($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'organizer' => function (ParseNode $n) use ($o) { $o->setOrganizer($n->getObjectValue(array(TeamworkUserIdentity::class, 'createFromDiscriminatorValue'))); },
         ];
     }
@@ -80,6 +87,14 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
     */
     public function getJoinWebUrl(): ?string {
         return $this->joinWebUrl;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -97,6 +112,7 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('calendarEventId', $this->calendarEventId);
         $writer->writeStringValue('joinWebUrl', $this->joinWebUrl);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('organizer', $this->organizer);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +139,14 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
     */
     public function setJoinWebUrl(?string $value ): void {
         $this->joinWebUrl = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

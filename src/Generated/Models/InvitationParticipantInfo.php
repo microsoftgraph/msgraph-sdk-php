@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class InvitationParticipantInfo implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * @var IdentitySet|null $identity The identity property
     */
     private ?IdentitySet $identity = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $participantId Optional. The ID of the target participant.
@@ -43,7 +48,8 @@ class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * Instantiates a new invitationParticipantInfo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.invitationParticipantInfo');
     }
 
     /**
@@ -72,6 +78,7 @@ class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
         return  [
             'hidden' => function (ParseNode $n) use ($o) { $o->setHidden($n->getBooleanValue()); },
             'identity' => function (ParseNode $n) use ($o) { $o->setIdentity($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'participantId' => function (ParseNode $n) use ($o) { $o->setParticipantId($n->getStringValue()); },
             'removeFromDefaultAudioRoutingGroup' => function (ParseNode $n) use ($o) { $o->setRemoveFromDefaultAudioRoutingGroup($n->getBooleanValue()); },
             'replacesCallId' => function (ParseNode $n) use ($o) { $o->setReplacesCallId($n->getStringValue()); },
@@ -92,6 +99,14 @@ class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     */
     public function getIdentity(): ?IdentitySet {
         return $this->identity;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -125,6 +140,7 @@ class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('hidden', $this->hidden);
         $writer->writeObjectValue('identity', $this->identity);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('participantId', $this->participantId);
         $writer->writeBooleanValue('removeFromDefaultAudioRoutingGroup', $this->removeFromDefaultAudioRoutingGroup);
         $writer->writeStringValue('replacesCallId', $this->replacesCallId);
@@ -153,6 +169,14 @@ class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     */
     public function setIdentity(?IdentitySet $value ): void {
         $this->identity = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

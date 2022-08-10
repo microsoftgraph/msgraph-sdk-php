@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RubricQuality implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,6 +30,11 @@ class RubricQuality implements AdditionalDataHolder, Parsable
     private ?string $displayName = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $qualityId The ID of this resource.
     */
     private ?string $qualityId = null;
@@ -43,7 +48,8 @@ class RubricQuality implements AdditionalDataHolder, Parsable
      * Instantiates a new rubricQuality and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.rubricQuality');
     }
 
     /**
@@ -97,9 +103,18 @@ class RubricQuality implements AdditionalDataHolder, Parsable
             'criteria' => function (ParseNode $n) use ($o) { $o->setCriteria($n->getCollectionOfObjectValues(array(RubricCriterion::class, 'createFromDiscriminatorValue'))); },
             'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getObjectValue(array(EducationItemBody::class, 'createFromDiscriminatorValue'))); },
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'qualityId' => function (ParseNode $n) use ($o) { $o->setQualityId($n->getStringValue()); },
             'weight' => function (ParseNode $n) use ($o) { $o->setWeight($n->getFloatValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -126,6 +141,7 @@ class RubricQuality implements AdditionalDataHolder, Parsable
         $writer->writeCollectionOfObjectValues('criteria', $this->criteria);
         $writer->writeObjectValue('description', $this->description);
         $writer->writeStringValue('displayName', $this->displayName);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('qualityId', $this->qualityId);
         $writer->writeFloatValue('weight', $this->weight);
         $writer->writeAdditionalData($this->additionalData);
@@ -161,6 +177,14 @@ class RubricQuality implements AdditionalDataHolder, Parsable
     */
     public function setDisplayName(?string $value ): void {
         $this->displayName = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

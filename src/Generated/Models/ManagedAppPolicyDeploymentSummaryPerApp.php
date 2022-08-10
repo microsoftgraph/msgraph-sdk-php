@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,10 +25,16 @@ class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHolder, P
     private ?MobileAppIdentifier $mobileAppIdentifier = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new managedAppPolicyDeploymentSummaryPerApp and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.managedAppPolicyDeploymentSummaryPerApp');
     }
 
     /**
@@ -65,6 +71,7 @@ class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHolder, P
         return  [
             'configurationAppliedUserCount' => function (ParseNode $n) use ($o) { $o->setConfigurationAppliedUserCount($n->getIntegerValue()); },
             'mobileAppIdentifier' => function (ParseNode $n) use ($o) { $o->setMobileAppIdentifier($n->getObjectValue(array(MobileAppIdentifier::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
 
@@ -77,12 +84,21 @@ class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHolder, P
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeIntegerValue('configurationAppliedUserCount', $this->configurationAppliedUserCount);
         $writer->writeObjectValue('mobileAppIdentifier', $this->mobileAppIdentifier);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -108,6 +124,14 @@ class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHolder, P
     */
     public function setMobileAppIdentifier(?MobileAppIdentifier $value ): void {
         $this->mobileAppIdentifier = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

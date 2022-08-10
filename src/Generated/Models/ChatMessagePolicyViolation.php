@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable
      * @var string|null $justificationText Justification text provided by the sender of the message when overriding a policy violation.
     */
     private ?string $justificationText = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var ChatMessagePolicyViolationPolicyTip|null $policyTip Information to display to the message sender about why the message was flagged as a violation.
@@ -43,7 +48,8 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable
      * Instantiates a new chatMessagePolicyViolation and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.chatMessagePolicyViolation');
     }
 
     /**
@@ -80,6 +86,7 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable
         return  [
             'dlpAction' => function (ParseNode $n) use ($o) { $o->setDlpAction($n->getEnumValue(ChatMessagePolicyViolationDlpActionTypes::class)); },
             'justificationText' => function (ParseNode $n) use ($o) { $o->setJustificationText($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'policyTip' => function (ParseNode $n) use ($o) { $o->setPolicyTip($n->getObjectValue(array(ChatMessagePolicyViolationPolicyTip::class, 'createFromDiscriminatorValue'))); },
             'userAction' => function (ParseNode $n) use ($o) { $o->setUserAction($n->getEnumValue(ChatMessagePolicyViolationUserActionTypes::class)); },
             'verdictDetails' => function (ParseNode $n) use ($o) { $o->setVerdictDetails($n->getEnumValue(ChatMessagePolicyViolationVerdictDetailsTypes::class)); },
@@ -92,6 +99,14 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable
     */
     public function getJustificationText(): ?string {
         return $this->justificationText;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -125,6 +140,7 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeEnumValue('dlpAction', $this->dlpAction);
         $writer->writeStringValue('justificationText', $this->justificationText);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('policyTip', $this->policyTip);
         $writer->writeEnumValue('userAction', $this->userAction);
         $writer->writeEnumValue('verdictDetails', $this->verdictDetails);
@@ -153,6 +169,14 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable
     */
     public function setJustificationText(?string $value ): void {
         $this->justificationText = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

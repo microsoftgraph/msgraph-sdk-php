@@ -33,6 +33,7 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.richLongRunningOperation');
     }
 
     /**

@@ -34,6 +34,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.unifiedRoleEligibilityScheduleInstance');
     }
 
     /**

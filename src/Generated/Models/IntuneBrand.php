@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IntuneBrand implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -48,6 +48,11 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @var MimeContent|null $lightBackgroundLogo Logo image displayed in Company Portal apps which have a light background behind the logo.
     */
     private ?MimeContent $lightBackgroundLogo = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $onlineSupportSiteName Display name of the company/organization’s IT helpdesk site.
@@ -88,7 +93,8 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * Instantiates a new intuneBrand and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.intuneBrand');
     }
 
     /**
@@ -170,6 +176,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
             'darkBackgroundLogo' => function (ParseNode $n) use ($o) { $o->setDarkBackgroundLogo($n->getObjectValue(array(MimeContent::class, 'createFromDiscriminatorValue'))); },
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'lightBackgroundLogo' => function (ParseNode $n) use ($o) { $o->setLightBackgroundLogo($n->getObjectValue(array(MimeContent::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'onlineSupportSiteName' => function (ParseNode $n) use ($o) { $o->setOnlineSupportSiteName($n->getStringValue()); },
             'onlineSupportSiteUrl' => function (ParseNode $n) use ($o) { $o->setOnlineSupportSiteUrl($n->getStringValue()); },
             'privacyUrl' => function (ParseNode $n) use ($o) { $o->setPrivacyUrl($n->getStringValue()); },
@@ -186,6 +193,14 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
     */
     public function getLightBackgroundLogo(): ?MimeContent {
         return $this->lightBackgroundLogo;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -256,6 +271,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
         $writer->writeObjectValue('darkBackgroundLogo', $this->darkBackgroundLogo);
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeObjectValue('lightBackgroundLogo', $this->lightBackgroundLogo);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('onlineSupportSiteName', $this->onlineSupportSiteName);
         $writer->writeStringValue('onlineSupportSiteUrl', $this->onlineSupportSiteUrl);
         $writer->writeStringValue('privacyUrl', $this->privacyUrl);
@@ -328,6 +344,14 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
     */
     public function setLightBackgroundLogo(?MimeContent $value ): void {
         $this->lightBackgroundLogo = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

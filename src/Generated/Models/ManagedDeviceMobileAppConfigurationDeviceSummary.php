@@ -49,6 +49,7 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity implements
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.managedDeviceMobileAppConfigurationDeviceSummary');
     }
 
     /**

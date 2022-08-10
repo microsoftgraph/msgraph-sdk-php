@@ -15,7 +15,7 @@ class OptionalClaims implements AdditionalDataHolder, Parsable
     private ?array $accessToken = null;
     
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -23,6 +23,11 @@ class OptionalClaims implements AdditionalDataHolder, Parsable
      * @var array<OptionalClaim>|null $idToken The optional claims returned in the JWT ID token.
     */
     private ?array $idToken = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var array<OptionalClaim>|null $saml2Token The optional claims returned in the SAML token.
@@ -33,7 +38,8 @@ class OptionalClaims implements AdditionalDataHolder, Parsable
      * Instantiates a new optionalClaims and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.optionalClaims');
     }
 
     /**
@@ -70,6 +76,7 @@ class OptionalClaims implements AdditionalDataHolder, Parsable
         return  [
             'accessToken' => function (ParseNode $n) use ($o) { $o->setAccessToken($n->getCollectionOfObjectValues(array(OptionalClaim::class, 'createFromDiscriminatorValue'))); },
             'idToken' => function (ParseNode $n) use ($o) { $o->setIdToken($n->getCollectionOfObjectValues(array(OptionalClaim::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'saml2Token' => function (ParseNode $n) use ($o) { $o->setSaml2Token($n->getCollectionOfObjectValues(array(OptionalClaim::class, 'createFromDiscriminatorValue'))); },
         ];
     }
@@ -80,6 +87,14 @@ class OptionalClaims implements AdditionalDataHolder, Parsable
     */
     public function getIdToken(): ?array {
         return $this->idToken;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -97,6 +112,7 @@ class OptionalClaims implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeCollectionOfObjectValues('accessToken', $this->accessToken);
         $writer->writeCollectionOfObjectValues('idToken', $this->idToken);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfObjectValues('saml2Token', $this->saml2Token);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -123,6 +139,14 @@ class OptionalClaims implements AdditionalDataHolder, Parsable
     */
     public function setIdToken(?array $value ): void {
         $this->idToken = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

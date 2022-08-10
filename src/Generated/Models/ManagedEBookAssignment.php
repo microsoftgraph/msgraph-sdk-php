@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedEBookAssignment extends Entity implements Parsable 
 {
     /**
-     * @var InstallIntent|null $installIntent The install intent for eBook. Possible values are: available, required, uninstall, availableWithoutEnrollment.
+     * @var InstallIntent|null $installIntent Possible values for the install intent chosen by the admin.
     */
     private ?InstallIntent $installIntent = null;
     
@@ -23,6 +23,7 @@ class ManagedEBookAssignment extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.managedEBookAssignment');
     }
 
     /**
@@ -54,7 +55,7 @@ class ManagedEBookAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the installIntent property value. The install intent for eBook. Possible values are: available, required, uninstall, availableWithoutEnrollment.
+     * Gets the installIntent property value. Possible values for the install intent chosen by the admin.
      * @return InstallIntent|null
     */
     public function getInstallIntent(): ?InstallIntent {
@@ -80,7 +81,7 @@ class ManagedEBookAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the installIntent property value. The install intent for eBook. Possible values are: available, required, uninstall, availableWithoutEnrollment.
+     * Sets the installIntent property value. Possible values for the install intent chosen by the admin.
      *  @param InstallIntent|null $value Value to set for the installIntent property.
     */
     public function setInstallIntent(?InstallIntent $value ): void {

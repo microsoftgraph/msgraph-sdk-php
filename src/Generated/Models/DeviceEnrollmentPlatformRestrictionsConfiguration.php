@@ -38,6 +38,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.deviceEnrollmentPlatformRestrictionsConfiguration');
     }
 
     /**

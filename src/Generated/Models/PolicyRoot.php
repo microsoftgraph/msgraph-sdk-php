@@ -44,6 +44,11 @@ class PolicyRoot extends Entity implements Parsable
     private ?array $conditionalAccessPolicies = null;
     
     /**
+     * @var CrossTenantAccessPolicy|null $crossTenantAccessPolicy The custom rules that define an access scenario when interacting with external Azure AD tenants.
+    */
+    private ?CrossTenantAccessPolicy $crossTenantAccessPolicy = null;
+    
+    /**
      * @var array<FeatureRolloutPolicy>|null $featureRolloutPolicies The feature rollout policy associated with a directory object.
     */
     private ?array $featureRolloutPolicies = null;
@@ -84,10 +89,11 @@ class PolicyRoot extends Entity implements Parsable
     private ?array $tokenLifetimePolicies = null;
     
     /**
-     * Instantiates a new policyRoot and sets the default values.
+     * Instantiates a new PolicyRoot and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.policyRoot');
     }
 
     /**
@@ -156,6 +162,14 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
+     * Gets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Azure AD tenants.
+     * @return CrossTenantAccessPolicy|null
+    */
+    public function getCrossTenantAccessPolicy(): ?CrossTenantAccessPolicy {
+        return $this->crossTenantAccessPolicy;
+    }
+
+    /**
      * Gets the featureRolloutPolicies property value. The feature rollout policy associated with a directory object.
      * @return array<FeatureRolloutPolicy>|null
     */
@@ -177,6 +191,7 @@ class PolicyRoot extends Entity implements Parsable
             'authorizationPolicy' => function (ParseNode $n) use ($o) { $o->setAuthorizationPolicy($n->getObjectValue(array(AuthorizationPolicy::class, 'createFromDiscriminatorValue'))); },
             'claimsMappingPolicies' => function (ParseNode $n) use ($o) { $o->setClaimsMappingPolicies($n->getCollectionOfObjectValues(array(ClaimsMappingPolicy::class, 'createFromDiscriminatorValue'))); },
             'conditionalAccessPolicies' => function (ParseNode $n) use ($o) { $o->setConditionalAccessPolicies($n->getCollectionOfObjectValues(array(ConditionalAccessPolicy::class, 'createFromDiscriminatorValue'))); },
+            'crossTenantAccessPolicy' => function (ParseNode $n) use ($o) { $o->setCrossTenantAccessPolicy($n->getObjectValue(array(CrossTenantAccessPolicy::class, 'createFromDiscriminatorValue'))); },
             'featureRolloutPolicies' => function (ParseNode $n) use ($o) { $o->setFeatureRolloutPolicies($n->getCollectionOfObjectValues(array(FeatureRolloutPolicy::class, 'createFromDiscriminatorValue'))); },
             'homeRealmDiscoveryPolicies' => function (ParseNode $n) use ($o) { $o->setHomeRealmDiscoveryPolicies($n->getCollectionOfObjectValues(array(HomeRealmDiscoveryPolicy::class, 'createFromDiscriminatorValue'))); },
             'identitySecurityDefaultsEnforcementPolicy' => function (ParseNode $n) use ($o) { $o->setIdentitySecurityDefaultsEnforcementPolicy($n->getObjectValue(array(IdentitySecurityDefaultsEnforcementPolicy::class, 'createFromDiscriminatorValue'))); },
@@ -257,6 +272,7 @@ class PolicyRoot extends Entity implements Parsable
         $writer->writeObjectValue('authorizationPolicy', $this->authorizationPolicy);
         $writer->writeCollectionOfObjectValues('claimsMappingPolicies', $this->claimsMappingPolicies);
         $writer->writeCollectionOfObjectValues('conditionalAccessPolicies', $this->conditionalAccessPolicies);
+        $writer->writeObjectValue('crossTenantAccessPolicy', $this->crossTenantAccessPolicy);
         $writer->writeCollectionOfObjectValues('featureRolloutPolicies', $this->featureRolloutPolicies);
         $writer->writeCollectionOfObjectValues('homeRealmDiscoveryPolicies', $this->homeRealmDiscoveryPolicies);
         $writer->writeObjectValue('identitySecurityDefaultsEnforcementPolicy', $this->identitySecurityDefaultsEnforcementPolicy);
@@ -321,6 +337,14 @@ class PolicyRoot extends Entity implements Parsable
     */
     public function setConditionalAccessPolicies(?array $value ): void {
         $this->conditionalAccessPolicies = $value;
+    }
+
+    /**
+     * Sets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Azure AD tenants.
+     *  @param CrossTenantAccessPolicy|null $value Value to set for the crossTenantAccessPolicy property.
+    */
+    public function setCrossTenantAccessPolicy(?CrossTenantAccessPolicy $value ): void {
+        $this->crossTenantAccessPolicy = $value;
     }
 
     /**

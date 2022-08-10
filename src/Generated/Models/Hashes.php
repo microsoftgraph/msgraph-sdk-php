@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Hashes implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class Hashes implements AdditionalDataHolder, Parsable
      * @var string|null $crc32Hash The CRC32 value of the file (if available). Read-only.
     */
     private ?string $crc32Hash = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $quickXorHash A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
@@ -38,7 +43,8 @@ class Hashes implements AdditionalDataHolder, Parsable
      * Instantiates a new hashes and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.hashes');
     }
 
     /**
@@ -74,10 +80,19 @@ class Hashes implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'crc32Hash' => function (ParseNode $n) use ($o) { $o->setCrc32Hash($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'quickXorHash' => function (ParseNode $n) use ($o) { $o->setQuickXorHash($n->getStringValue()); },
             'sha1Hash' => function (ParseNode $n) use ($o) { $o->setSha1Hash($n->getStringValue()); },
             'sha256Hash' => function (ParseNode $n) use ($o) { $o->setSha256Hash($n->getStringValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -110,6 +125,7 @@ class Hashes implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('crc32Hash', $this->crc32Hash);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('quickXorHash', $this->quickXorHash);
         $writer->writeStringValue('sha1Hash', $this->sha1Hash);
         $writer->writeStringValue('sha256Hash', $this->sha256Hash);
@@ -130,6 +146,14 @@ class Hashes implements AdditionalDataHolder, Parsable
     */
     public function setCrc32Hash(?string $value ): void {
         $this->crc32Hash = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

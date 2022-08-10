@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrinterDefaults implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -75,6 +75,11 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
     private ?PrintMultipageLayout $multipageLayout = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var PrintOrientation|null $orientation The default orientation to use when printing the document. Valid values are described in the following table.
     */
     private ?PrintOrientation $orientation = null;
@@ -103,7 +108,8 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
      * Instantiates a new printerDefaults and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.printerDefaults');
     }
 
     /**
@@ -182,6 +188,7 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
             'mediaSize' => function (ParseNode $n) use ($o) { $o->setMediaSize($n->getStringValue()); },
             'mediaType' => function (ParseNode $n) use ($o) { $o->setMediaType($n->getStringValue()); },
             'multipageLayout' => function (ParseNode $n) use ($o) { $o->setMultipageLayout($n->getEnumValue(PrintMultipageLayout::class)); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'orientation' => function (ParseNode $n) use ($o) { $o->setOrientation($n->getEnumValue(PrintOrientation::class)); },
             'outputBin' => function (ParseNode $n) use ($o) { $o->setOutputBin($n->getStringValue()); },
             'pagesPerSheet' => function (ParseNode $n) use ($o) { $o->setPagesPerSheet($n->getIntegerValue()); },
@@ -247,6 +254,14 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the orientation property value. The default orientation to use when printing the document. Valid values are described in the following table.
      * @return PrintOrientation|null
     */
@@ -303,6 +318,7 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('mediaSize', $this->mediaSize);
         $writer->writeStringValue('mediaType', $this->mediaType);
         $writer->writeEnumValue('multipageLayout', $this->multipageLayout);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('orientation', $this->orientation);
         $writer->writeStringValue('outputBin', $this->outputBin);
         $writer->writeIntegerValue('pagesPerSheet', $this->pagesPerSheet);
@@ -413,6 +429,14 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
     */
     public function setMultipageLayout(?PrintMultipageLayout $value ): void {
         $this->multipageLayout = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

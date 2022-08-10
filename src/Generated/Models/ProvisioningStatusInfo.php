@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ProvisioningStatusInfo implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, Parsable
      * @var ProvisioningErrorInfo|null $errorInformation The errorInformation property
     */
     private ?ProvisioningErrorInfo $errorInformation = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var ProvisioningResult|null $status Possible values are: success, warning, failure, skipped, unknownFutureValue.
@@ -28,7 +33,8 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, Parsable
      * Instantiates a new provisioningStatusInfo and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.provisioningStatusInfo');
     }
 
     /**
@@ -64,8 +70,17 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'errorInformation' => function (ParseNode $n) use ($o) { $o->setErrorInformation($n->getObjectValue(array(ProvisioningErrorInfo::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(ProvisioningResult::class)); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('errorInformation', $this->errorInformation);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('status', $this->status);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -100,6 +116,14 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, Parsable
     */
     public function setErrorInformation(?ProvisioningErrorInfo $value ): void {
         $this->errorInformation = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

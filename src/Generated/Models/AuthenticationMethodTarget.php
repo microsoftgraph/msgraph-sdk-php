@@ -14,7 +14,7 @@ class AuthenticationMethodTarget extends Entity implements Parsable
     private ?bool $isRegistrationRequired = null;
     
     /**
-     * @var AuthenticationMethodTargetType|null $targetType Possible values are: user, group, and unknownFutureValue.
+     * @var AuthenticationMethodTargetType|null $targetType The targetType property
     */
     private ?AuthenticationMethodTargetType $targetType = null;
     
@@ -23,6 +23,7 @@ class AuthenticationMethodTarget extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.authenticationMethodTarget');
     }
 
     /**
@@ -62,7 +63,7 @@ class AuthenticationMethodTarget extends Entity implements Parsable
     }
 
     /**
-     * Gets the targetType property value. Possible values are: user, group, and unknownFutureValue.
+     * Gets the targetType property value. The targetType property
      * @return AuthenticationMethodTargetType|null
     */
     public function getTargetType(): ?AuthenticationMethodTargetType {
@@ -88,7 +89,7 @@ class AuthenticationMethodTarget extends Entity implements Parsable
     }
 
     /**
-     * Sets the targetType property value. Possible values are: user, group, and unknownFutureValue.
+     * Sets the targetType property value. The targetType property
      *  @param AuthenticationMethodTargetType|null $value Value to set for the targetType property.
     */
     public function setTargetType(?AuthenticationMethodTargetType $value ): void {

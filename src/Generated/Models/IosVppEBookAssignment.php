@@ -13,6 +13,7 @@ class IosVppEBookAssignment extends ManagedEBookAssignment implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.iosVppEBookAssignment');
     }
 
     /**

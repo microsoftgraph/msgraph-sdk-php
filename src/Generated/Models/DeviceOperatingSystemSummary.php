@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -28,6 +28,11 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable
      * @var int|null $macOSCount Number of Mac OS X device count.
     */
     private ?int $macOSCount = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var int|null $unknownCount Number of unknown device count.
@@ -48,7 +53,8 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable
      * Instantiates a new deviceOperatingSystemSummary and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.deviceOperatingSystemSummary');
     }
 
     /**
@@ -86,6 +92,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable
             'androidCount' => function (ParseNode $n) use ($o) { $o->setAndroidCount($n->getIntegerValue()); },
             'iosCount' => function (ParseNode $n) use ($o) { $o->setIosCount($n->getIntegerValue()); },
             'macOSCount' => function (ParseNode $n) use ($o) { $o->setMacOSCount($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'unknownCount' => function (ParseNode $n) use ($o) { $o->setUnknownCount($n->getIntegerValue()); },
             'windowsCount' => function (ParseNode $n) use ($o) { $o->setWindowsCount($n->getIntegerValue()); },
             'windowsMobileCount' => function (ParseNode $n) use ($o) { $o->setWindowsMobileCount($n->getIntegerValue()); },
@@ -106,6 +113,14 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable
     */
     public function getMacOSCount(): ?int {
         return $this->macOSCount;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -140,6 +155,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable
         $writer->writeIntegerValue('androidCount', $this->androidCount);
         $writer->writeIntegerValue('iosCount', $this->iosCount);
         $writer->writeIntegerValue('macOSCount', $this->macOSCount);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeIntegerValue('unknownCount', $this->unknownCount);
         $writer->writeIntegerValue('windowsCount', $this->windowsCount);
         $writer->writeIntegerValue('windowsMobileCount', $this->windowsMobileCount);
@@ -176,6 +192,14 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable
     */
     public function setMacOSCount(?int $value ): void {
         $this->macOSCount = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

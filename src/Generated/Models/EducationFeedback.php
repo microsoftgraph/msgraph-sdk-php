@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationFeedback implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -26,6 +26,11 @@ class EducationFeedback implements AdditionalDataHolder, Parsable
     private ?DateTime $feedbackDateTime = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var EducationItemBody|null $text Feedback.
     */
     private ?EducationItemBody $text = null;
@@ -34,7 +39,8 @@ class EducationFeedback implements AdditionalDataHolder, Parsable
      * Instantiates a new educationFeedback and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.educationFeedback');
     }
 
     /**
@@ -79,8 +85,17 @@ class EducationFeedback implements AdditionalDataHolder, Parsable
         return  [
             'feedbackBy' => function (ParseNode $n) use ($o) { $o->setFeedbackBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
             'feedbackDateTime' => function (ParseNode $n) use ($o) { $o->setFeedbackDateTime($n->getDateTimeValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'text' => function (ParseNode $n) use ($o) { $o->setText($n->getObjectValue(array(EducationItemBody::class, 'createFromDiscriminatorValue'))); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -98,6 +113,7 @@ class EducationFeedback implements AdditionalDataHolder, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('feedbackBy', $this->feedbackBy);
         $writer->writeDateTimeValue('feedbackDateTime', $this->feedbackDateTime);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('text', $this->text);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -124,6 +140,14 @@ class EducationFeedback implements AdditionalDataHolder, Parsable
     */
     public function setFeedbackDateTime(?DateTime $value ): void {
         $this->feedbackDateTime = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

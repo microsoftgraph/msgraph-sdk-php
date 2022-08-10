@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -60,6 +60,11 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
     private ?array $mediaQualityList = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $participantId A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
     */
     private ?string $participantId = null;
@@ -68,7 +73,8 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
      * Instantiates a new teleconferenceDeviceQuality and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.teleconferenceDeviceQuality');
     }
 
     /**
@@ -160,6 +166,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
             'deviceName' => function (ParseNode $n) use ($o) { $o->setDeviceName($n->getStringValue()); },
             'mediaLegId' => function (ParseNode $n) use ($o) { $o->setMediaLegId($n->getStringValue()); },
             'mediaQualityList' => function (ParseNode $n) use ($o) { $o->setMediaQualityList($n->getCollectionOfObjectValues(array(TeleconferenceDeviceMediaQuality::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'participantId' => function (ParseNode $n) use ($o) { $o->setParticipantId($n->getStringValue()); },
         ];
     }
@@ -178,6 +185,14 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
     */
     public function getMediaQualityList(): ?array {
         return $this->mediaQualityList;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -202,6 +217,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('deviceName', $this->deviceName);
         $writer->writeStringValue('mediaLegId', $this->mediaLegId);
         $writer->writeCollectionOfObjectValues('mediaQualityList', $this->mediaQualityList);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('participantId', $this->participantId);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -284,6 +300,14 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
     */
     public function setMediaQualityList(?array $value ): void {
         $this->mediaQualityList = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

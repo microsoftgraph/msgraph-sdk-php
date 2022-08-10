@@ -14,7 +14,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy implemen
     private ?bool $deviceThreatProtectionEnabled = null;
     
     /**
-     * @var DeviceThreatProtectionLevel|null $deviceThreatProtectionRequiredSecurityLevel Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * @var DeviceThreatProtectionLevel|null $deviceThreatProtectionRequiredSecurityLevel Device threat protection levels for the Device Threat Protection API.
     */
     private ?DeviceThreatProtectionLevel $deviceThreatProtectionRequiredSecurityLevel = null;
     
@@ -59,7 +59,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy implemen
     private ?bool $passwordRequired = null;
     
     /**
-     * @var AndroidRequiredPasswordType|null $passwordRequiredType Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
+     * @var AndroidRequiredPasswordType|null $passwordRequiredType Android required password type.
     */
     private ?AndroidRequiredPasswordType $passwordRequiredType = null;
     
@@ -118,6 +118,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy implemen
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.androidWorkProfileCompliancePolicy');
     }
 
     /**
@@ -138,7 +139,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy implemen
     }
 
     /**
-     * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @return DeviceThreatProtectionLevel|null
     */
     public function getDeviceThreatProtectionRequiredSecurityLevel(): ?DeviceThreatProtectionLevel {
@@ -241,7 +242,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy implemen
     }
 
     /**
-     * Gets the passwordRequiredType property value. Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
+     * Gets the passwordRequiredType property value. Android required password type.
      * @return AndroidRequiredPasswordType|null
     */
     public function getPasswordRequiredType(): ?AndroidRequiredPasswordType {
@@ -366,7 +367,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy implemen
     }
 
     /**
-     * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      *  @param DeviceThreatProtectionLevel|null $value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
     */
     public function setDeviceThreatProtectionRequiredSecurityLevel(?DeviceThreatProtectionLevel $value ): void {
@@ -438,7 +439,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy implemen
     }
 
     /**
-     * Sets the passwordRequiredType property value. Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
+     * Sets the passwordRequiredType property value. Android required password type.
      *  @param AndroidRequiredPasswordType|null $value Value to set for the passwordRequiredType property.
     */
     public function setPasswordRequiredType(?AndroidRequiredPasswordType $value ): void {

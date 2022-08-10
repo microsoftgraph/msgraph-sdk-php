@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SearchResponse implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class SearchResponse implements AdditionalDataHolder, Parsable
      * @var array<SearchHitsContainer>|null $hitsContainers A collection of search results.
     */
     private ?array $hitsContainers = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var AlterationResponse|null $queryAlterationResponse Provides details of query alteration response for spelling correction.
@@ -38,7 +43,8 @@ class SearchResponse implements AdditionalDataHolder, Parsable
      * Instantiates a new searchResponse and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.searchResponse');
     }
 
     /**
@@ -66,6 +72,7 @@ class SearchResponse implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'hitsContainers' => function (ParseNode $n) use ($o) { $o->setHitsContainers($n->getCollectionOfObjectValues(array(SearchHitsContainer::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'queryAlterationResponse' => function (ParseNode $n) use ($o) { $o->setQueryAlterationResponse($n->getObjectValue(array(AlterationResponse::class, 'createFromDiscriminatorValue'))); },
             'resultTemplates' => function (ParseNode $n) use ($o) { $o->setResultTemplates($n->getObjectValue(array(ResultTemplateDictionary::class, 'createFromDiscriminatorValue'))); },
             'searchTerms' => function (ParseNode $n) use ($o) { $o->setSearchTerms($n->getCollectionOfPrimitiveValues()); },
@@ -78,6 +85,14 @@ class SearchResponse implements AdditionalDataHolder, Parsable
     */
     public function getHitsContainers(): ?array {
         return $this->hitsContainers;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -110,6 +125,7 @@ class SearchResponse implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeCollectionOfObjectValues('hitsContainers', $this->hitsContainers);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('queryAlterationResponse', $this->queryAlterationResponse);
         $writer->writeObjectValue('resultTemplates', $this->resultTemplates);
         $writer->writeCollectionOfPrimitiveValues('searchTerms', $this->searchTerms);
@@ -130,6 +146,14 @@ class SearchResponse implements AdditionalDataHolder, Parsable
     */
     public function setHitsContainers(?array $value ): void {
         $this->hitsContainers = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

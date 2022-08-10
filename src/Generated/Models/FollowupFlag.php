@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class FollowupFlag implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,6 +30,11 @@ class FollowupFlag implements AdditionalDataHolder, Parsable
     private ?FollowupFlagStatus $flagStatus = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var DateTimeTimeZone|null $startDateTime The date and time that the follow-up is to begin.
     */
     private ?DateTimeTimeZone $startDateTime = null;
@@ -38,7 +43,8 @@ class FollowupFlag implements AdditionalDataHolder, Parsable
      * Instantiates a new followupFlag and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.followupFlag');
     }
 
     /**
@@ -84,6 +90,7 @@ class FollowupFlag implements AdditionalDataHolder, Parsable
             'completedDateTime' => function (ParseNode $n) use ($o) { $o->setCompletedDateTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
             'dueDateTime' => function (ParseNode $n) use ($o) { $o->setDueDateTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
             'flagStatus' => function (ParseNode $n) use ($o) { $o->setFlagStatus($n->getEnumValue(FollowupFlagStatus::class)); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
         ];
     }
@@ -94,6 +101,14 @@ class FollowupFlag implements AdditionalDataHolder, Parsable
     */
     public function getFlagStatus(): ?FollowupFlagStatus {
         return $this->flagStatus;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -112,6 +127,7 @@ class FollowupFlag implements AdditionalDataHolder, Parsable
         $writer->writeObjectValue('completedDateTime', $this->completedDateTime);
         $writer->writeObjectValue('dueDateTime', $this->dueDateTime);
         $writer->writeEnumValue('flagStatus', $this->flagStatus);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('startDateTime', $this->startDateTime);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -146,6 +162,14 @@ class FollowupFlag implements AdditionalDataHolder, Parsable
     */
     public function setFlagStatus(?FollowupFlagStatus $value ): void {
         $this->flagStatus = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

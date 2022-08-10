@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -45,6 +45,11 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
     private ?bool $isSelfReview = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var array<SubjectSet>|null $primaryReviewers This collection specifies the users or group of users who will review the access package assignments.
     */
     private ?array $primaryReviewers = null;
@@ -58,7 +63,8 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
      * Instantiates a new accessPackageAssignmentReviewSettings and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.accessPackageAssignmentReviewSettings');
     }
 
     /**
@@ -107,6 +113,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
             'isRecommendationEnabled' => function (ParseNode $n) use ($o) { $o->setIsRecommendationEnabled($n->getBooleanValue()); },
             'isReviewerJustificationRequired' => function (ParseNode $n) use ($o) { $o->setIsReviewerJustificationRequired($n->getBooleanValue()); },
             'isSelfReview' => function (ParseNode $n) use ($o) { $o->setIsSelfReview($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'primaryReviewers' => function (ParseNode $n) use ($o) { $o->setPrimaryReviewers($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
             'schedule' => function (ParseNode $n) use ($o) { $o->setSchedule($n->getObjectValue(array(EntitlementManagementSchedule::class, 'createFromDiscriminatorValue'))); },
         ];
@@ -145,6 +152,14 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the primaryReviewers property value. This collection specifies the users or group of users who will review the access package assignments.
      * @return array<SubjectSet>|null
     */
@@ -171,6 +186,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
         $writer->writeBooleanValue('isRecommendationEnabled', $this->isRecommendationEnabled);
         $writer->writeBooleanValue('isReviewerJustificationRequired', $this->isReviewerJustificationRequired);
         $writer->writeBooleanValue('isSelfReview', $this->isSelfReview);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfObjectValues('primaryReviewers', $this->primaryReviewers);
         $writer->writeObjectValue('schedule', $this->schedule);
         $writer->writeAdditionalData($this->additionalData);
@@ -230,6 +246,14 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
     */
     public function setIsSelfReview(?bool $value ): void {
         $this->isSelfReview = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

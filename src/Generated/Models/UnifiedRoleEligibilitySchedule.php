@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements Parsable 
 {
     /**
-     * @var string|null $memberType Membership type of the eligible assignment. It can either be Inherited, Direct, or Group.
+     * @var string|null $memberType Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
     */
     private ?string $memberType = null;
     
@@ -23,6 +23,7 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements 
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.unifiedRoleEligibilitySchedule');
     }
 
     /**
@@ -47,7 +48,7 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements 
     }
 
     /**
-     * Gets the memberType property value. Membership type of the eligible assignment. It can either be Inherited, Direct, or Group.
+     * Gets the memberType property value. Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
      * @return string|null
     */
     public function getMemberType(): ?string {
@@ -73,7 +74,7 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements 
     }
 
     /**
-     * Sets the memberType property value. Membership type of the eligible assignment. It can either be Inherited, Direct, or Group.
+     * Sets the memberType property value. Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
      *  @param string|null $value Value to set for the memberType property.
     */
     public function setMemberType(?string $value ): void {

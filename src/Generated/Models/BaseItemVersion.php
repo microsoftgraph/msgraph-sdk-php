@@ -29,6 +29,7 @@ class BaseItemVersion extends Entity implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.baseItemVersion');
     }
 
     /**
@@ -41,6 +42,7 @@ class BaseItemVersion extends Entity implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.documentSetVersion': return new DocumentSetVersion();
                 case '#microsoft.graph.driveItemVersion': return new DriveItemVersion();
                 case '#microsoft.graph.listItemVersion': return new ListItemVersion();
             }

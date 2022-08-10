@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\Date;
 class EducationTerm implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -31,6 +31,11 @@ class EducationTerm implements AdditionalDataHolder, Parsable
     private ?string $externalId = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var Date|null $startDate Start of the term.
     */
     private ?Date $startDate = null;
@@ -39,7 +44,8 @@ class EducationTerm implements AdditionalDataHolder, Parsable
      * Instantiates a new educationTerm and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.educationTerm');
     }
 
     /**
@@ -93,8 +99,17 @@ class EducationTerm implements AdditionalDataHolder, Parsable
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'endDate' => function (ParseNode $n) use ($o) { $o->setEndDate($n->getDateValue()); },
             'externalId' => function (ParseNode $n) use ($o) { $o->setExternalId($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'startDate' => function (ParseNode $n) use ($o) { $o->setStartDate($n->getDateValue()); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -113,6 +128,7 @@ class EducationTerm implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeDateValue('endDate', $this->endDate);
         $writer->writeStringValue('externalId', $this->externalId);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeDateValue('startDate', $this->startDate);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -147,6 +163,14 @@ class EducationTerm implements AdditionalDataHolder, Parsable
     */
     public function setExternalId(?string $value ): void {
         $this->externalId = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

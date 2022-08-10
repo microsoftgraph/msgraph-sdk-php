@@ -10,14 +10,19 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConditionalAccessFilter implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
     /**
-     * @var FilterMode|null $mode Mode to use for the filter. Possible values are include or exclude.
+     * @var FilterMode|null $mode The mode property
     */
     private ?FilterMode $mode = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var string|null $rule Rule syntax is similar to that used for membership rules for groups in Azure Active Directory. For details, see rules with multiple expressions
@@ -28,7 +33,8 @@ class ConditionalAccessFilter implements AdditionalDataHolder, Parsable
      * Instantiates a new conditionalAccessFilter and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.conditionalAccessFilter');
     }
 
     /**
@@ -56,16 +62,25 @@ class ConditionalAccessFilter implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'mode' => function (ParseNode $n) use ($o) { $o->setMode($n->getEnumValue(FilterMode::class)); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'rule' => function (ParseNode $n) use ($o) { $o->setRule($n->getStringValue()); },
         ];
     }
 
     /**
-     * Gets the mode property value. Mode to use for the filter. Possible values are include or exclude.
+     * Gets the mode property value. The mode property
      * @return FilterMode|null
     */
     public function getMode(): ?FilterMode {
         return $this->mode;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeEnumValue('mode', $this->mode);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('rule', $this->rule);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -95,11 +111,19 @@ class ConditionalAccessFilter implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the mode property value. Mode to use for the filter. Possible values are include or exclude.
+     * Sets the mode property value. The mode property
      *  @param FilterMode|null $value Value to set for the mode property.
     */
     public function setMode(?FilterMode $value ): void {
         $this->mode = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

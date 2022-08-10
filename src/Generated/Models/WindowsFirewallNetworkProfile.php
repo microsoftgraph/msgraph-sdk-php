@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -25,7 +25,7 @@ class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Parsable
     private ?bool $connectionSecurityRulesFromGroupPolicyMerged = null;
     
     /**
-     * @var StateManagementSetting|null $firewallEnabled Configures the host device to allow or block the firewall and advanced security enforcement for the network profile. Possible values are: notConfigured, blocked, allowed.
+     * @var StateManagementSetting|null $firewallEnabled State Management Setting.
     */
     private ?StateManagementSetting $firewallEnabled = null;
     
@@ -48,6 +48,11 @@ class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Parsable
      * @var bool|null $incomingTrafficBlocked Configures the firewall to block all incoming traffic regardless of other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
     */
     private ?bool $incomingTrafficBlocked = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var bool|null $outboundConnectionsBlocked Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
@@ -78,7 +83,8 @@ class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Parsable
      * Instantiates a new windowsFirewallNetworkProfile and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.windowsFirewallNetworkProfile');
     }
 
     /**
@@ -128,6 +134,7 @@ class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Parsable
             'inboundConnectionsBlocked' => function (ParseNode $n) use ($o) { $o->setInboundConnectionsBlocked($n->getBooleanValue()); },
             'inboundNotificationsBlocked' => function (ParseNode $n) use ($o) { $o->setInboundNotificationsBlocked($n->getBooleanValue()); },
             'incomingTrafficBlocked' => function (ParseNode $n) use ($o) { $o->setIncomingTrafficBlocked($n->getBooleanValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'outboundConnectionsBlocked' => function (ParseNode $n) use ($o) { $o->setOutboundConnectionsBlocked($n->getBooleanValue()); },
             'policyRulesFromGroupPolicyMerged' => function (ParseNode $n) use ($o) { $o->setPolicyRulesFromGroupPolicyMerged($n->getBooleanValue()); },
             'securedPacketExemptionAllowed' => function (ParseNode $n) use ($o) { $o->setSecuredPacketExemptionAllowed($n->getBooleanValue()); },
@@ -137,7 +144,7 @@ class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the firewallEnabled property value. Configures the host device to allow or block the firewall and advanced security enforcement for the network profile. Possible values are: notConfigured, blocked, allowed.
+     * Gets the firewallEnabled property value. State Management Setting.
      * @return StateManagementSetting|null
     */
     public function getFirewallEnabled(): ?StateManagementSetting {
@@ -174,6 +181,14 @@ class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Parsable
     */
     public function getIncomingTrafficBlocked(): ?bool {
         return $this->incomingTrafficBlocked;
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -228,6 +243,7 @@ class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('inboundConnectionsBlocked', $this->inboundConnectionsBlocked);
         $writer->writeBooleanValue('inboundNotificationsBlocked', $this->inboundNotificationsBlocked);
         $writer->writeBooleanValue('incomingTrafficBlocked', $this->incomingTrafficBlocked);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeBooleanValue('outboundConnectionsBlocked', $this->outboundConnectionsBlocked);
         $writer->writeBooleanValue('policyRulesFromGroupPolicyMerged', $this->policyRulesFromGroupPolicyMerged);
         $writer->writeBooleanValue('securedPacketExemptionAllowed', $this->securedPacketExemptionAllowed);
@@ -261,7 +277,7 @@ class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the firewallEnabled property value. Configures the host device to allow or block the firewall and advanced security enforcement for the network profile. Possible values are: notConfigured, blocked, allowed.
+     * Sets the firewallEnabled property value. State Management Setting.
      *  @param StateManagementSetting|null $value Value to set for the firewallEnabled property.
     */
     public function setFirewallEnabled(?StateManagementSetting $value ): void {
@@ -298,6 +314,14 @@ class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Parsable
     */
     public function setIncomingTrafficBlocked(?bool $value ): void {
         $this->incomingTrafficBlocked = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

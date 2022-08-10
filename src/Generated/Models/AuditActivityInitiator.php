@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuditActivityInitiator implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -18,6 +18,11 @@ class AuditActivityInitiator implements AdditionalDataHolder, Parsable
      * @var AppIdentity|null $app If the actor initiating the activity is an app, this property indicates all its identification information including appId, displayName, servicePrincipalId, and servicePrincipalName.
     */
     private ?AppIdentity $app = null;
+    
+    /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
     
     /**
      * @var UserIdentity|null $user If the actor initiating the activity is a user, this property indicates their identification information including their id, displayName, and userPrincipalName.
@@ -28,7 +33,8 @@ class AuditActivityInitiator implements AdditionalDataHolder, Parsable
      * Instantiates a new auditActivityInitiator and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.auditActivityInitiator');
     }
 
     /**
@@ -64,8 +70,17 @@ class AuditActivityInitiator implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'app' => function (ParseNode $n) use ($o) { $o->setApp($n->getObjectValue(array(AppIdentity::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'user' => function (ParseNode $n) use ($o) { $o->setUser($n->getObjectValue(array(UserIdentity::class, 'createFromDiscriminatorValue'))); },
         ];
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
     }
 
     /**
@@ -82,6 +97,7 @@ class AuditActivityInitiator implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('app', $this->app);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('user', $this->user);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -100,6 +116,14 @@ class AuditActivityInitiator implements AdditionalDataHolder, Parsable
     */
     public function setApp(?AppIdentity $value ): void {
         $this->app = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

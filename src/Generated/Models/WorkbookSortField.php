@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookSortField implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -40,6 +40,11 @@ class WorkbookSortField implements AdditionalDataHolder, Parsable
     private ?int $key = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * @var string|null $sortOn Represents the type of sorting of this condition. Possible values are: Value, CellColor, FontColor, Icon.
     */
     private ?string $sortOn = null;
@@ -48,7 +53,8 @@ class WorkbookSortField implements AdditionalDataHolder, Parsable
      * Instantiates a new workbookSortField and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.workbookSortField');
     }
 
     /**
@@ -104,6 +110,7 @@ class WorkbookSortField implements AdditionalDataHolder, Parsable
             'dataOption' => function (ParseNode $n) use ($o) { $o->setDataOption($n->getStringValue()); },
             'icon' => function (ParseNode $n) use ($o) { $o->setIcon($n->getObjectValue(array(WorkbookIcon::class, 'createFromDiscriminatorValue'))); },
             'key' => function (ParseNode $n) use ($o) { $o->setKey($n->getIntegerValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'sortOn' => function (ParseNode $n) use ($o) { $o->setSortOn($n->getStringValue()); },
         ];
     }
@@ -125,6 +132,14 @@ class WorkbookSortField implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Gets the sortOn property value. Represents the type of sorting of this condition. Possible values are: Value, CellColor, FontColor, Icon.
      * @return string|null
     */
@@ -142,6 +157,7 @@ class WorkbookSortField implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('dataOption', $this->dataOption);
         $writer->writeObjectValue('icon', $this->icon);
         $writer->writeIntegerValue('key', $this->key);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeStringValue('sortOn', $this->sortOn);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -192,6 +208,14 @@ class WorkbookSortField implements AdditionalDataHolder, Parsable
     */
     public function setKey(?int $value ): void {
         $this->key = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
     /**

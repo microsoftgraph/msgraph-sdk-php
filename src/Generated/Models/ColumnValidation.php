@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ColumnValidation implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string, mixed> $AdditionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
     */
     private array $additionalData;
     
@@ -30,10 +30,16 @@ class ColumnValidation implements AdditionalDataHolder, Parsable
     private ?string $formula = null;
     
     /**
+     * @var string|null $odataType The OdataType property
+    */
+    private ?string $odataType = null;
+    
+    /**
      * Instantiates a new columnValidation and sets the default values.
     */
     public function __construct() {
-        $this->additionalData = [];
+        $this->setAdditionalData([]);
+        $this->setOdataType('#microsoft.graph.columnValidation');
     }
 
     /**
@@ -79,6 +85,7 @@ class ColumnValidation implements AdditionalDataHolder, Parsable
             'defaultLanguage' => function (ParseNode $n) use ($o) { $o->setDefaultLanguage($n->getStringValue()); },
             'descriptions' => function (ParseNode $n) use ($o) { $o->setDescriptions($n->getCollectionOfObjectValues(array(DisplayNameLocalization::class, 'createFromDiscriminatorValue'))); },
             'formula' => function (ParseNode $n) use ($o) { $o->setFormula($n->getStringValue()); },
+            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
 
@@ -91,6 +98,14 @@ class ColumnValidation implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        return $this->odataType;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -98,6 +113,7 @@ class ColumnValidation implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('defaultLanguage', $this->defaultLanguage);
         $writer->writeCollectionOfObjectValues('descriptions', $this->descriptions);
         $writer->writeStringValue('formula', $this->formula);
+        $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -131,6 +147,14 @@ class ColumnValidation implements AdditionalDataHolder, Parsable
     */
     public function setFormula(?string $value ): void {
         $this->formula = $value;
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     *  @param string|null $value Value to set for the OdataType property.
+    */
+    public function setOdataType(?string $value ): void {
+        $this->odataType = $value;
     }
 
 }

@@ -24,10 +24,11 @@ class ServiceAnnouncement extends Entity implements Parsable
     private ?array $messages = null;
     
     /**
-     * Instantiates a new serviceAnnouncement and sets the default values.
+     * Instantiates a new ServiceAnnouncement and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.serviceAnnouncement');
     }
 
     /**
