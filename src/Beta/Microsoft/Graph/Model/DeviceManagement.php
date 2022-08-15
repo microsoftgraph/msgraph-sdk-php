@@ -4652,6 +4652,66 @@ class DeviceManagement extends Entity
 
 
      /**
+     * Gets the organizationalMessageDetails
+    * A list of OrganizationalMessageDetails
+     *
+     * @return array|null The organizationalMessageDetails
+     */
+    public function getOrganizationalMessageDetails()
+    {
+        if (array_key_exists("organizationalMessageDetails", $this->_propDict)) {
+           return $this->_propDict["organizationalMessageDetails"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the organizationalMessageDetails
+    * A list of OrganizationalMessageDetails
+    *
+    * @param OrganizationalMessageDetail[] $val The organizationalMessageDetails
+    *
+    * @return DeviceManagement
+    */
+    public function setOrganizationalMessageDetails($val)
+    {
+        $this->_propDict["organizationalMessageDetails"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the organizationalMessageGuidedContents
+    * A list of OrganizationalMessageGuidedContents
+     *
+     * @return array|null The organizationalMessageGuidedContents
+     */
+    public function getOrganizationalMessageGuidedContents()
+    {
+        if (array_key_exists("organizationalMessageGuidedContents", $this->_propDict)) {
+           return $this->_propDict["organizationalMessageGuidedContents"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the organizationalMessageGuidedContents
+    * A list of OrganizationalMessageGuidedContents
+    *
+    * @param OrganizationalMessageGuidedContent[] $val The organizationalMessageGuidedContents
+    *
+    * @return DeviceManagement
+    */
+    public function setOrganizationalMessageGuidedContents($val)
+    {
+        $this->_propDict["organizationalMessageGuidedContents"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the resourceOperations
     * The Resource Operations.
      *

@@ -697,6 +697,37 @@ class Application extends DirectoryObject
         return $this;
     }
 
+    /**
+    * Gets the requestSignatureVerification
+    *
+    * @return RequestSignatureVerification|null The requestSignatureVerification
+    */
+    public function getRequestSignatureVerification()
+    {
+        if (array_key_exists("requestSignatureVerification", $this->_propDict)) {
+            if (is_a($this->_propDict["requestSignatureVerification"], "\Beta\Microsoft\Graph\Model\RequestSignatureVerification") || is_null($this->_propDict["requestSignatureVerification"])) {
+                return $this->_propDict["requestSignatureVerification"];
+            } else {
+                $this->_propDict["requestSignatureVerification"] = new RequestSignatureVerification($this->_propDict["requestSignatureVerification"]);
+                return $this->_propDict["requestSignatureVerification"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the requestSignatureVerification
+    *
+    * @param RequestSignatureVerification $val The requestSignatureVerification
+    *
+    * @return Application
+    */
+    public function setRequestSignatureVerification($val)
+    {
+        $this->_propDict["requestSignatureVerification"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the requiredResourceAccess
@@ -1098,6 +1129,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the createdOnBehalfOf
+    * Supports $filter (eq when counting empty collections). Read-only.
     *
     * @return DirectoryObject|null The createdOnBehalfOf
     */
@@ -1116,6 +1148,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the createdOnBehalfOf
+    * Supports $filter (eq when counting empty collections). Read-only.
     *
     * @param DirectoryObject $val The createdOnBehalfOf
     *
@@ -1218,7 +1251,7 @@ class Application extends DirectoryObject
 
      /**
      * Gets the owners
-    * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+    * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      *
      * @return array|null The owners
      */
@@ -1233,7 +1266,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the owners
-    * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+    * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
     *
     * @param DirectoryObject[] $val The owners
     *
