@@ -26,6 +26,7 @@ class Workspace extends Place
 {
     /**
     * Gets the building
+    * Specifies the building name or building number that the workspace is in.
     *
     * @return string|null The building
     */
@@ -40,6 +41,7 @@ class Workspace extends Place
 
     /**
     * Sets the building
+    * Specifies the building name or building number that the workspace is in.
     *
     * @param string $val The building
     *
@@ -53,6 +55,7 @@ class Workspace extends Place
 
     /**
     * Gets the capacity
+    * Specifies the capacity of the workspace.
     *
     * @return int|null The capacity
     */
@@ -67,6 +70,7 @@ class Workspace extends Place
 
     /**
     * Sets the capacity
+    * Specifies the capacity of the workspace.
     *
     * @param int $val The capacity
     *
@@ -80,6 +84,7 @@ class Workspace extends Place
 
     /**
     * Gets the emailAddress
+    * Email address of the workspace.
     *
     * @return string|null The emailAddress
     */
@@ -94,6 +99,7 @@ class Workspace extends Place
 
     /**
     * Sets the emailAddress
+    * Email address of the workspace.
     *
     * @param string $val The emailAddress
     *
@@ -107,6 +113,7 @@ class Workspace extends Place
 
     /**
     * Gets the floorLabel
+    * Specifies a descriptive label for the floor, for example, P.
     *
     * @return string|null The floorLabel
     */
@@ -121,6 +128,7 @@ class Workspace extends Place
 
     /**
     * Sets the floorLabel
+    * Specifies a descriptive label for the floor, for example, P.
     *
     * @param string $val The floorLabel
     *
@@ -134,6 +142,7 @@ class Workspace extends Place
 
     /**
     * Gets the floorNumber
+    * Specifies the floor number that the workspace is on.
     *
     * @return int|null The floorNumber
     */
@@ -148,6 +157,7 @@ class Workspace extends Place
 
     /**
     * Sets the floorNumber
+    * Specifies the floor number that the workspace is on.
     *
     * @param int $val The floorNumber
     *
@@ -161,6 +171,7 @@ class Workspace extends Place
 
     /**
     * Gets the isWheelChairAccessible
+    * Specifies whether the workspace is wheelchair accessible.
     *
     * @return bool|null The isWheelChairAccessible
     */
@@ -175,6 +186,7 @@ class Workspace extends Place
 
     /**
     * Sets the isWheelChairAccessible
+    * Specifies whether the workspace is wheelchair accessible.
     *
     * @param bool $val The isWheelChairAccessible
     *
@@ -188,6 +200,7 @@ class Workspace extends Place
 
     /**
     * Gets the label
+    * Specifies a descriptive label for the workspace, for example, a number or name.
     *
     * @return string|null The label
     */
@@ -202,6 +215,7 @@ class Workspace extends Place
 
     /**
     * Sets the label
+    * Specifies a descriptive label for the workspace, for example, a number or name.
     *
     * @param string $val The label
     *
@@ -215,6 +229,7 @@ class Workspace extends Place
 
     /**
     * Gets the nickname
+    * Specifies a nickname for the workspace, for example, 'quiet workspace'.
     *
     * @return string|null The nickname
     */
@@ -229,6 +244,7 @@ class Workspace extends Place
 
     /**
     * Sets the nickname
+    * Specifies a nickname for the workspace, for example, 'quiet workspace'.
     *
     * @param string $val The nickname
     *
@@ -242,6 +258,7 @@ class Workspace extends Place
 
     /**
     * Gets the tags
+    * Specifies additional features of the workspace, for example, details like the type of view or furniture type.
     *
     * @return string|null The tags
     */
@@ -256,6 +273,7 @@ class Workspace extends Place
 
     /**
     * Sets the tags
+    * Specifies additional features of the workspace, for example, details like the type of view or furniture type.
     *
     * @param string $val The tags
     *

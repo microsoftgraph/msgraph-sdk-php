@@ -26,6 +26,7 @@ class CloudPcConnectivityResult extends Entity
 
     /**
     * Gets the failedHealthCheckItems
+    * A list of failed health check items. If the status property is available, this property will be empty.
     *
     * @return CloudPcHealthCheckItem|null The failedHealthCheckItems
     */
@@ -44,6 +45,7 @@ class CloudPcConnectivityResult extends Entity
 
     /**
     * Sets the failedHealthCheckItems
+    * A list of failed health check items. If the status property is available, this property will be empty.
     *
     * @param CloudPcHealthCheckItem $val The value to assign to the failedHealthCheckItems
     *
@@ -57,6 +59,7 @@ class CloudPcConnectivityResult extends Entity
 
     /**
     * Gets the status
+    * Connectivity status of the Cloud PC. Possible values are: unknown, available, availableWithWarning, unavailable, and unknownFutureValue.
     *
     * @return CloudPcConnectivityStatus|null The status
     */
@@ -75,6 +78,7 @@ class CloudPcConnectivityResult extends Entity
 
     /**
     * Sets the status
+    * Connectivity status of the Cloud PC. Possible values are: unknown, available, availableWithWarning, unavailable, and unknownFutureValue.
     *
     * @param CloudPcConnectivityStatus $val The value to assign to the status
     *
@@ -88,6 +92,7 @@ class CloudPcConnectivityResult extends Entity
 
     /**
     * Gets the updatedDateTime
+    * Datetime when the status was updated. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The updatedDateTime
     */
@@ -106,6 +111,7 @@ class CloudPcConnectivityResult extends Entity
 
     /**
     * Sets the updatedDateTime
+    * Datetime when the status was updated. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the updatedDateTime
     *
