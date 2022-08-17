@@ -369,7 +369,6 @@ class Team extends Entity
 
     /**
     * Gets the summary
-    * Contains summary information about the team, including number of owners, members, and guests.
     *
     * @return TeamSummary|null The summary
     */
@@ -388,7 +387,6 @@ class Team extends Entity
 
     /**
     * Sets the summary
-    * Contains summary information about the team, including number of owners, members, and guests.
     *
     * @param TeamSummary $val The summary
     *
@@ -704,7 +702,7 @@ class Team extends Entity
 
     /**
     * Gets the photo
-    * The team photo.
+    * The profile photo for the team.
     *
     * @return ProfilePhoto|null The photo
     */
@@ -723,7 +721,7 @@ class Team extends Entity
 
     /**
     * Sets the photo
-    * The team photo.
+    * The profile photo for the team.
     *
     * @param ProfilePhoto $val The photo
     *
