@@ -26,6 +26,7 @@ class CloudPcConnectivityEvent extends Entity
 
     /**
     * Gets the eventDateTime
+    * Indicates the date and time when this event was created. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The eventDateTime
     */
@@ -44,6 +45,7 @@ class CloudPcConnectivityEvent extends Entity
 
     /**
     * Sets the eventDateTime
+    * Indicates the date and time when this event was created. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the eventDateTime
     *
@@ -56,6 +58,7 @@ class CloudPcConnectivityEvent extends Entity
     }
     /**
     * Gets the eventName
+    * Name of the event.
     *
     * @return string|null The eventName
     */
@@ -70,6 +73,7 @@ class CloudPcConnectivityEvent extends Entity
 
     /**
     * Sets the eventName
+    * Name of the event.
     *
     * @param string $val The value of the eventName
     *
@@ -83,6 +87,7 @@ class CloudPcConnectivityEvent extends Entity
 
     /**
     * Gets the eventResult
+    * Result of this event. Possible values are: unknown, success, failure, and unknownFutureValue.
     *
     * @return CloudPcConnectivityEventResult|null The eventResult
     */
@@ -101,6 +106,7 @@ class CloudPcConnectivityEvent extends Entity
 
     /**
     * Sets the eventResult
+    * Result of this event. Possible values are: unknown, success, failure, and unknownFutureValue.
     *
     * @param CloudPcConnectivityEventResult $val The value to assign to the eventResult
     *
@@ -114,6 +120,7 @@ class CloudPcConnectivityEvent extends Entity
 
     /**
     * Gets the eventType
+    * Type of this event. Possible values are: unknown, userConnection, userTroubleshooting, deviceHealthCheck, and unknownFutureValue.
     *
     * @return CloudPcConnectivityEventType|null The eventType
     */
@@ -132,6 +139,7 @@ class CloudPcConnectivityEvent extends Entity
 
     /**
     * Sets the eventType
+    * Type of this event. Possible values are: unknown, userConnection, userTroubleshooting, deviceHealthCheck, and unknownFutureValue.
     *
     * @param CloudPcConnectivityEventType $val The value to assign to the eventType
     *
@@ -144,6 +152,7 @@ class CloudPcConnectivityEvent extends Entity
     }
     /**
     * Gets the message
+    * Additional message for this event.
     *
     * @return string|null The message
     */
@@ -158,6 +167,7 @@ class CloudPcConnectivityEvent extends Entity
 
     /**
     * Sets the message
+    * Additional message for this event.
     *
     * @param string $val The value of the message
     *
