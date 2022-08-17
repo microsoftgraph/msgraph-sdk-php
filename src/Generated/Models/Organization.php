@@ -15,7 +15,7 @@ class Organization extends DirectoryObject implements Parsable
     private ?array $assignedPlans = null;
     
     /**
-     * @var OrganizationalBranding|null $branding Resource to manage the default branding for the organization. Nullable.
+     * @var OrganizationalBranding|null $branding Branding for the organization. Nullable.
     */
     private ?OrganizationalBranding $branding = null;
     
@@ -55,7 +55,7 @@ class Organization extends DirectoryObject implements Parsable
     private ?string $displayName = null;
     
     /**
-     * @var array<Extension>|null $extensions The collection of open extensions defined for the organization resource. Nullable.
+     * @var array<Extension>|null $extensions The collection of open extensions defined for the organization. Read-only. Nullable.
     */
     private ?array $extensions = null;
     
@@ -70,12 +70,12 @@ class Organization extends DirectoryObject implements Parsable
     private ?MdmAuthority $mobileDeviceManagementAuthority = null;
     
     /**
-     * @var DateTime|null $onPremisesLastSyncDateTime The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @var DateTime|null $onPremisesLastSyncDateTime The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     */
     private ?DateTime $onPremisesLastSyncDateTime = null;
     
     /**
-     * @var bool|null $onPremisesSyncEnabled true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null if this object has never been synced from an on-premises directory (default).
+     * @var bool|null $onPremisesSyncEnabled true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).
     */
     private ?bool $onPremisesSyncEnabled = null;
     
@@ -85,7 +85,7 @@ class Organization extends DirectoryObject implements Parsable
     private ?string $postalCode = null;
     
     /**
-     * @var string|null $preferredLanguage The preferred language for the organization. Should follow ISO 639-1 Code; for example en.
+     * @var string|null $preferredLanguage The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.
     */
     private ?string $preferredLanguage = null;
     
@@ -160,7 +160,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the branding property value. Resource to manage the default branding for the organization. Nullable.
+     * Gets the branding property value. Branding for the organization. Nullable.
      * @return OrganizationalBranding|null
     */
     public function getBranding(): ?OrganizationalBranding {
@@ -224,7 +224,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the extensions property value. The collection of open extensions defined for the organization resource. Nullable.
+     * Gets the extensions property value. The collection of open extensions defined for the organization. Read-only. Nullable.
      * @return array<Extension>|null
     */
     public function getExtensions(): ?array {
@@ -283,7 +283,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onPremisesLastSyncDateTime property value. The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the onPremisesLastSyncDateTime property value. The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return DateTime|null
     */
     public function getOnPremisesLastSyncDateTime(): ?DateTime {
@@ -291,7 +291,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null if this object has never been synced from an on-premises directory (default).
+     * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).
      * @return bool|null
     */
     public function getOnPremisesSyncEnabled(): ?bool {
@@ -307,7 +307,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the preferredLanguage property value. The preferred language for the organization. Should follow ISO 639-1 Code; for example en.
+     * Gets the preferredLanguage property value. The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.
      * @return string|null
     */
     public function getPreferredLanguage(): ?string {
@@ -428,7 +428,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the branding property value. Resource to manage the default branding for the organization. Nullable.
+     * Sets the branding property value. Branding for the organization. Nullable.
      *  @param OrganizationalBranding|null $value Value to set for the branding property.
     */
     public function setBranding(?OrganizationalBranding $value ): void {
@@ -492,7 +492,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the extensions property value. The collection of open extensions defined for the organization resource. Nullable.
+     * Sets the extensions property value. The collection of open extensions defined for the organization. Read-only. Nullable.
      *  @param array<Extension>|null $value Value to set for the extensions property.
     */
     public function setExtensions(?array $value ): void {
@@ -516,7 +516,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onPremisesLastSyncDateTime property value. The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the onPremisesLastSyncDateTime property value. The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      *  @param DateTime|null $value Value to set for the onPremisesLastSyncDateTime property.
     */
     public function setOnPremisesLastSyncDateTime(?DateTime $value ): void {
@@ -524,7 +524,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null if this object has never been synced from an on-premises directory (default).
+     * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).
      *  @param bool|null $value Value to set for the onPremisesSyncEnabled property.
     */
     public function setOnPremisesSyncEnabled(?bool $value ): void {
@@ -540,7 +540,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the preferredLanguage property value. The preferred language for the organization. Should follow ISO 639-1 Code; for example en.
+     * Sets the preferredLanguage property value. The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.
      *  @param string|null $value Value to set for the preferredLanguage property.
     */
     public function setPreferredLanguage(?string $value ): void {

@@ -16,7 +16,7 @@ class AgreementFileData implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var StreamInterface|null $data Data that represents the terms of use PDF document. Read-only. Note: You can use the .NET Convert.ToBase64String method to convert your file to binary data for uploading using the Create agreements API. A sample syntax using this method in PowerShell is [convert]::ToBase64String((Get-Content -path 'your_file_path' -Encoding byte)).
+     * @var StreamInterface|null $data Data that represents the terms of use PDF document. Read-only.
     */
     private ?StreamInterface $data = null;
     
@@ -51,7 +51,7 @@ class AgreementFileData implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the data property value. Data that represents the terms of use PDF document. Read-only. Note: You can use the .NET Convert.ToBase64String method to convert your file to binary data for uploading using the Create agreements API. A sample syntax using this method in PowerShell is [convert]::ToBase64String((Get-Content -path 'your_file_path' -Encoding byte)).
+     * Gets the data property value. Data that represents the terms of use PDF document. Read-only.
      * @return StreamInterface|null
     */
     public function getData(): ?StreamInterface {
@@ -97,7 +97,7 @@ class AgreementFileData implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the data property value. Data that represents the terms of use PDF document. Read-only. Note: You can use the .NET Convert.ToBase64String method to convert your file to binary data for uploading using the Create agreements API. A sample syntax using this method in PowerShell is [convert]::ToBase64String((Get-Content -path 'your_file_path' -Encoding byte)).
+     * Sets the data property value. Data that represents the terms of use PDF document. Read-only.
      *  @param StreamInterface|null $value Value to set for the data property.
     */
     public function setData(?StreamInterface $value ): void {

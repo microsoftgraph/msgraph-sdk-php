@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Event extends OutlookItem implements Parsable 
 {
     /**
-     * @var bool|null $allowNewTimeProposals true if the meeting organizer allows invitees to propose a new time when responding; otherwise false. Optional. Default is true.
+     * @var bool|null $allowNewTimeProposals true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
     */
     private ?bool $allowNewTimeProposals = null;
     
@@ -237,7 +237,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise false. Optional. Default is true.
+     * Gets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
      * @return bool|null
     */
     public function getAllowNewTimeProposals(): ?bool {
@@ -675,7 +675,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise false. Optional. Default is true.
+     * Sets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
      *  @param bool|null $value Value to set for the allowNewTimeProposals property.
     */
     public function setAllowNewTimeProposals(?bool $value ): void {

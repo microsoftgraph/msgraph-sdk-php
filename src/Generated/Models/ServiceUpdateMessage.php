@@ -21,7 +21,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     private ?array $attachments = null;
     
     /**
-     * @var StreamInterface|null $attachmentsArchive The zip file of all attachments for a message.
+     * @var StreamInterface|null $attachmentsArchive The zip file that contains all attachments for a message.
     */
     private ?StreamInterface $attachmentsArchive = null;
     
@@ -99,7 +99,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Gets the attachmentsArchive property value. The zip file of all attachments for a message.
+     * Gets the attachmentsArchive property value. The zip file that contains all attachments for a message.
      * @return StreamInterface|null
     */
     public function getAttachmentsArchive(): ?StreamInterface {
@@ -227,7 +227,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Sets the attachmentsArchive property value. The zip file of all attachments for a message.
+     * Sets the attachmentsArchive property value. The zip file that contains all attachments for a message.
      *  @param StreamInterface|null $value Value to set for the attachmentsArchive property.
     */
     public function setAttachmentsArchive(?StreamInterface $value ): void {

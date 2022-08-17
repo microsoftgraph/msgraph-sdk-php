@@ -53,7 +53,7 @@ class FilesRequestBuilder
     }
 
     /**
-     * PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
+     * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      * @param FilesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +102,7 @@ class FilesRequestBuilder
     }
 
     /**
-     * PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
+     * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      * @param FilesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

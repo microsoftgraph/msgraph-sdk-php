@@ -15,7 +15,7 @@ class MeetingParticipants implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var array<MeetingParticipantInfo>|null $attendees Information of the meeting attendees.
+     * @var array<MeetingParticipantInfo>|null $attendees The attendees property
     */
     private ?array $attendees = null;
     
@@ -25,7 +25,7 @@ class MeetingParticipants implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var MeetingParticipantInfo|null $organizer Information of the meeting organizer.
+     * @var MeetingParticipantInfo|null $organizer The organizer property
     */
     private ?MeetingParticipantInfo $organizer = null;
     
@@ -55,7 +55,7 @@ class MeetingParticipants implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the attendees property value. Information of the meeting attendees.
+     * Gets the attendees property value. The attendees property
      * @return array<MeetingParticipantInfo>|null
     */
     public function getAttendees(): ?array {
@@ -84,7 +84,7 @@ class MeetingParticipants implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the organizer property value. Information of the meeting organizer.
+     * Gets the organizer property value. The organizer property
      * @return MeetingParticipantInfo|null
     */
     public function getOrganizer(): ?MeetingParticipantInfo {
@@ -111,7 +111,7 @@ class MeetingParticipants implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the attendees property value. Information of the meeting attendees.
+     * Sets the attendees property value. The attendees property
      *  @param array<MeetingParticipantInfo>|null $value Value to set for the attendees property.
     */
     public function setAttendees(?array $value ): void {
@@ -127,7 +127,7 @@ class MeetingParticipants implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the organizer property value. Information of the meeting organizer.
+     * Sets the organizer property value. The organizer property
      *  @param MeetingParticipantInfo|null $value Value to set for the organizer property.
     */
     public function setOrganizer(?MeetingParticipantInfo $value ): void {

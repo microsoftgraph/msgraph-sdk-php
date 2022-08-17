@@ -15,12 +15,12 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var array<string>|null $excludePlatforms Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue, linux.
+     * @var array<string>|null $excludePlatforms Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
     */
     private ?array $excludePlatforms = null;
     
     /**
-     * @var array<string>|null $includePlatforms Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue,linux``.
+     * @var array<string>|null $includePlatforms Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
     */
     private ?array $includePlatforms = null;
     
@@ -55,7 +55,7 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue, linux.
+     * Gets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      * @return array<string>|null
     */
     public function getExcludePlatforms(): ?array {
@@ -76,7 +76,7 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue,linux``.
+     * Gets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      * @return array<string>|null
     */
     public function getIncludePlatforms(): ?array {
@@ -111,7 +111,7 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue, linux.
+     * Sets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      *  @param array<string>|null $value Value to set for the excludePlatforms property.
     */
     public function setExcludePlatforms(?array $value ): void {
@@ -119,7 +119,7 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue,linux``.
+     * Sets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      *  @param array<string>|null $value Value to set for the includePlatforms property.
     */
     public function setIncludePlatforms(?array $value ): void {

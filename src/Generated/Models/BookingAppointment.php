@@ -35,12 +35,12 @@ class BookingAppointment extends Entity implements Parsable
     private ?DateTimeTimeZone $endDateTime = null;
     
     /**
-     * @var int|null $filledAttendeesCount The current number of customers in the appointment.
+     * @var int|null $filledAttendeesCount The current number of customers in the appointment
     */
     private ?int $filledAttendeesCount = null;
     
     /**
-     * @var bool|null $isLocationOnline True indicates that the appointment will be held online. Default value is false.
+     * @var bool|null $isLocationOnline If true, indicates that the appointment will be held online. Default value is false.
     */
     private ?bool $isLocationOnline = null;
     
@@ -55,7 +55,7 @@ class BookingAppointment extends Entity implements Parsable
     private ?int $maximumAttendeesCount = null;
     
     /**
-     * @var bool|null $optOutOfCustomerEmail True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
+     * @var bool|null $optOutOfCustomerEmail If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
     */
     private ?bool $optOutOfCustomerEmail = null;
     
@@ -85,7 +85,7 @@ class BookingAppointment extends Entity implements Parsable
     private ?array $reminders = null;
     
     /**
-     * @var string|null $selfServiceAppointmentId An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
+     * @var string|null $selfServiceAppointmentId An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1.
     */
     private ?string $selfServiceAppointmentId = null;
     
@@ -110,7 +110,7 @@ class BookingAppointment extends Entity implements Parsable
     private ?string $serviceNotes = null;
     
     /**
-     * @var bool|null $smsNotificationsEnabled True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
+     * @var bool|null $smsNotificationsEnabled If true, indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
     */
     private ?bool $smsNotificationsEnabled = null;
     
@@ -215,7 +215,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the filledAttendeesCount property value. The current number of customers in the appointment.
+     * Gets the filledAttendeesCount property value. The current number of customers in the appointment
      * @return int|null
     */
     public function getFilledAttendeesCount(): ?int {
@@ -223,7 +223,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the isLocationOnline property value. True indicates that the appointment will be held online. Default value is false.
+     * Gets the isLocationOnline property value. If true, indicates that the appointment will be held online. Default value is false.
      * @return bool|null
     */
     public function getIsLocationOnline(): ?bool {
@@ -247,7 +247,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the optOutOfCustomerEmail property value. True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
+     * Gets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
      * @return bool|null
     */
     public function getOptOutOfCustomerEmail(): ?bool {
@@ -295,7 +295,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
+     * Gets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1.
      * @return string|null
     */
     public function getSelfServiceAppointmentId(): ?string {
@@ -335,7 +335,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the smsNotificationsEnabled property value. True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
+     * Gets the smsNotificationsEnabled property value. If true, indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
      * @return bool|null
     */
     public function getSmsNotificationsEnabled(): ?bool {
@@ -430,7 +430,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the filledAttendeesCount property value. The current number of customers in the appointment.
+     * Sets the filledAttendeesCount property value. The current number of customers in the appointment
      *  @param int|null $value Value to set for the filledAttendeesCount property.
     */
     public function setFilledAttendeesCount(?int $value ): void {
@@ -438,7 +438,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the isLocationOnline property value. True indicates that the appointment will be held online. Default value is false.
+     * Sets the isLocationOnline property value. If true, indicates that the appointment will be held online. Default value is false.
      *  @param bool|null $value Value to set for the isLocationOnline property.
     */
     public function setIsLocationOnline(?bool $value ): void {
@@ -462,7 +462,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the optOutOfCustomerEmail property value. True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
+     * Sets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
      *  @param bool|null $value Value to set for the optOutOfCustomerEmail property.
     */
     public function setOptOutOfCustomerEmail(?bool $value ): void {
@@ -510,7 +510,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
+     * Sets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1.
      *  @param string|null $value Value to set for the selfServiceAppointmentId property.
     */
     public function setSelfServiceAppointmentId(?string $value ): void {
@@ -550,7 +550,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the smsNotificationsEnabled property value. True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
+     * Sets the smsNotificationsEnabled property value. If true, indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
      *  @param bool|null $value Value to set for the smsNotificationsEnabled property.
     */
     public function setSmsNotificationsEnabled(?bool $value ): void {

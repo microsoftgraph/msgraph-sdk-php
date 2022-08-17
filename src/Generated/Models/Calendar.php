@@ -24,17 +24,17 @@ class Calendar extends Entity implements Parsable
     private ?array $calendarView = null;
     
     /**
-     * @var bool|null $canEdit true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
+     * @var bool|null $canEdit true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
     */
     private ?bool $canEdit = null;
     
     /**
-     * @var bool|null $canShare true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
+     * @var bool|null $canShare true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
     */
     private ?bool $canShare = null;
     
     /**
-     * @var bool|null $canViewPrivateItems true if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
+     * @var bool|null $canViewPrivateItems true if the user can read calendar items that have been marked private, false otherwise.
     */
     private ?bool $canViewPrivateItems = null;
     
@@ -59,7 +59,7 @@ class Calendar extends Entity implements Parsable
     private ?array $events = null;
     
     /**
-     * @var string|null $hexColor The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
+     * @var string|null $hexColor The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is empty. Read-only.
     */
     private ?string $hexColor = null;
     
@@ -89,7 +89,7 @@ class Calendar extends Entity implements Parsable
     private ?string $name = null;
     
     /**
-     * @var EmailAddress|null $owner If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user. Read-only.
+     * @var EmailAddress|null $owner If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
     */
     private ?EmailAddress $owner = null;
     
@@ -140,7 +140,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Gets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
+     * Gets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
      * @return bool|null
     */
     public function getCanEdit(): ?bool {
@@ -148,7 +148,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Gets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
+     * Gets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
      * @return bool|null
     */
     public function getCanShare(): ?bool {
@@ -156,7 +156,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Gets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
+     * Gets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise.
      * @return bool|null
     */
     public function getCanViewPrivateItems(): ?bool {
@@ -224,7 +224,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Gets the hexColor property value. The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
+     * Gets the hexColor property value. The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is empty. Read-only.
      * @return string|null
     */
     public function getHexColor(): ?string {
@@ -272,7 +272,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Gets the owner property value. If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user. Read-only.
+     * Gets the owner property value. If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
      * @return EmailAddress|null
     */
     public function getOwner(): ?EmailAddress {
@@ -338,7 +338,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Sets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
+     * Sets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
      *  @param bool|null $value Value to set for the canEdit property.
     */
     public function setCanEdit(?bool $value ): void {
@@ -346,7 +346,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Sets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
+     * Sets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
      *  @param bool|null $value Value to set for the canShare property.
     */
     public function setCanShare(?bool $value ): void {
@@ -354,7 +354,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Sets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
+     * Sets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise.
      *  @param bool|null $value Value to set for the canViewPrivateItems property.
     */
     public function setCanViewPrivateItems(?bool $value ): void {
@@ -394,7 +394,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Sets the hexColor property value. The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
+     * Sets the hexColor property value. The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is empty. Read-only.
      *  @param string|null $value Value to set for the hexColor property.
     */
     public function setHexColor(?string $value ): void {
@@ -442,7 +442,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Sets the owner property value. If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user. Read-only.
+     * Sets the owner property value. If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
      *  @param EmailAddress|null $value Value to set for the owner property.
     */
     public function setOwner(?EmailAddress $value ): void {

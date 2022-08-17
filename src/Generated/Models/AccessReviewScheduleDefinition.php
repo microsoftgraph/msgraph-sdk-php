@@ -50,7 +50,7 @@ class AccessReviewScheduleDefinition extends Entity implements Parsable
     private ?AccessReviewScope $instanceEnumerationScope = null;
     
     /**
-     * @var array<AccessReviewInstance>|null $instances Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.
+     * @var array<AccessReviewInstance>|null $instances If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.
     */
     private ?array $instances = null;
     
@@ -191,7 +191,7 @@ class AccessReviewScheduleDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the instances property value. Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.
+     * Gets the instances property value. If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.
      * @return array<AccessReviewInstance>|null
     */
     public function getInstances(): ?array {
@@ -334,7 +334,7 @@ class AccessReviewScheduleDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the instances property value. Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.
+     * Sets the instances property value. If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.
      *  @param array<AccessReviewInstance>|null $value Value to set for the instances property.
     */
     public function setInstances(?array $value ): void {

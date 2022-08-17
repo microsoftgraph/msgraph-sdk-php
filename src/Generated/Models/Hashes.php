@@ -15,7 +15,7 @@ class Hashes implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $crc32Hash The CRC32 value of the file (if available). Read-only.
+     * @var string|null $crc32Hash The CRC32 value of the file in little endian (if available). Read-only.
     */
     private ?string $crc32Hash = null;
     
@@ -65,7 +65,7 @@ class Hashes implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the crc32Hash property value. The CRC32 value of the file (if available). Read-only.
+     * Gets the crc32Hash property value. The CRC32 value of the file in little endian (if available). Read-only.
      * @return string|null
     */
     public function getCrc32Hash(): ?string {
@@ -141,7 +141,7 @@ class Hashes implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the crc32Hash property value. The CRC32 value of the file (if available). Read-only.
+     * Sets the crc32Hash property value. The CRC32 value of the file in little endian (if available). Read-only.
      *  @param string|null $value Value to set for the crc32Hash property.
     */
     public function setCrc32Hash(?string $value ): void {

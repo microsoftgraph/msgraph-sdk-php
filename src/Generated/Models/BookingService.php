@@ -65,7 +65,7 @@ class BookingService extends Entity implements Parsable
     private ?bool $isLocationOnline = null;
     
     /**
-     * @var int|null $maximumAttendeesCount The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment.  To create a customer, use the Create bookingCustomer operation.
+     * @var int|null $maximumAttendeesCount The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
     */
     private ?int $maximumAttendeesCount = null;
     
@@ -239,7 +239,7 @@ class BookingService extends Entity implements Parsable
     }
 
     /**
-     * Gets the maximumAttendeesCount property value. The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment.  To create a customer, use the Create bookingCustomer operation.
+     * Gets the maximumAttendeesCount property value. The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
      * @return int|null
     */
     public function getMaximumAttendeesCount(): ?int {
@@ -418,7 +418,7 @@ class BookingService extends Entity implements Parsable
     }
 
     /**
-     * Sets the maximumAttendeesCount property value. The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment.  To create a customer, use the Create bookingCustomer operation.
+     * Sets the maximumAttendeesCount property value. The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
      *  @param int|null $value Value to set for the maximumAttendeesCount property.
     */
     public function setMaximumAttendeesCount(?int $value ): void {

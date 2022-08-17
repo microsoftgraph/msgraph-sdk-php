@@ -30,12 +30,12 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var OnenotePatchInsertPosition|null $position The location to add the supplied content, relative to the target element. Possible values are: after (default) or before.
+     * @var OnenotePatchInsertPosition|null $position The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
     */
     private ?OnenotePatchInsertPosition $position = null;
     
     /**
-     * @var string|null $target The element to update. Must be the #<data-id> or the generated {id} of the element, or the body or title keyword.
+     * @var string|null $target The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
     */
     private ?string $target = null;
     
@@ -104,7 +104,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the position property value. The location to add the supplied content, relative to the target element. Possible values are: after (default) or before.
+     * Gets the position property value. The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
      * @return OnenotePatchInsertPosition|null
     */
     public function getPosition(): ?OnenotePatchInsertPosition {
@@ -112,7 +112,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the target property value. The element to update. Must be the #<data-id> or the generated {id} of the element, or the body or title keyword.
+     * Gets the target property value. The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
      * @return string|null
     */
     public function getTarget(): ?string {
@@ -165,7 +165,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the position property value. The location to add the supplied content, relative to the target element. Possible values are: after (default) or before.
+     * Sets the position property value. The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
      *  @param OnenotePatchInsertPosition|null $value Value to set for the position property.
     */
     public function setPosition(?OnenotePatchInsertPosition $value ): void {
@@ -173,7 +173,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the target property value. The element to update. Must be the #<data-id> or the generated {id} of the element, or the body or title keyword.
+     * Sets the target property value. The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
      *  @param string|null $value Value to set for the target property.
     */
     public function setTarget(?string $value ): void {

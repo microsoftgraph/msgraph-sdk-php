@@ -9,12 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleAssignment extends Entity implements Parsable 
 {
     /**
-     * @var AppScope|null $appScope Details of the app specific scope when the assignment scope is app specific. Containment entity.
+     * @var AppScope|null $appScope Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
     */
     private ?AppScope $appScope = null;
     
     /**
-     * @var string|null $appScopeId Identifier of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.  For the entitlement management provider, use app scopes to specify a catalog, for example /AccessPackageCatalog/beedadfe-01d5-4025-910b-84abb9369997.
+     * @var string|null $appScopeId Identifier of the app-specific scope when the assignment scope is app-specific.  Either this property or directoryScopeId is required. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, in).
     */
     private ?string $appScopeId = null;
     
@@ -24,32 +24,32 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     private ?string $condition = null;
     
     /**
-     * @var DirectoryObject|null $directoryScope The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
+     * @var DirectoryObject|null $directoryScope The directory object that is the scope of the assignment. Read-only. Supports $expand.
     */
     private ?DirectoryObject $directoryScope = null;
     
     /**
-     * @var string|null $directoryScopeId Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
+     * @var string|null $directoryScopeId Identifier of the directory object representing the scope of the assignment.  Either this property or appScopeId is required. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, in).
     */
     private ?string $directoryScopeId = null;
     
     /**
-     * @var DirectoryObject|null $principal The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
+     * @var DirectoryObject|null $principal Referencing the assigned principal. Read-only. Supports $expand.
     */
     private ?DirectoryObject $principal = null;
     
     /**
-     * @var string|null $principalId Identifier of the principal to which the assignment is granted. Supports $filter (eq operator only).
+     * @var string|null $principalId Identifier of the principal to which the assignment is granted. Supports $filter (eq, in).
     */
     private ?string $principalId = null;
     
     /**
-     * @var UnifiedRoleDefinition|null $roleDefinition The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
+     * @var UnifiedRoleDefinition|null $roleDefinition The roleDefinition the assignment is for.  Supports $expand. roleDefinition.Id will be auto expanded.
     */
     private ?UnifiedRoleDefinition $roleDefinition = null;
     
     /**
-     * @var string|null $roleDefinitionId Identifier of the unifiedRoleDefinition the assignment is for. Read-only. Supports $filter (eq operator only).
+     * @var string|null $roleDefinitionId Identifier of the role definition the assignment is for. Read only. Supports $filter (eq, in).
     */
     private ?string $roleDefinitionId = null;
     
@@ -71,7 +71,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the appScope property value. Details of the app specific scope when the assignment scope is app specific. Containment entity.
+     * Gets the appScope property value. Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
      * @return AppScope|null
     */
     public function getAppScope(): ?AppScope {
@@ -79,7 +79,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the appScopeId property value. Identifier of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.  For the entitlement management provider, use app scopes to specify a catalog, for example /AccessPackageCatalog/beedadfe-01d5-4025-910b-84abb9369997.
+     * Gets the appScopeId property value. Identifier of the app-specific scope when the assignment scope is app-specific.  Either this property or directoryScopeId is required. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, in).
      * @return string|null
     */
     public function getAppScopeId(): ?string {
@@ -95,7 +95,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the directoryScope property value. The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
+     * Gets the directoryScope property value. The directory object that is the scope of the assignment. Read-only. Supports $expand.
      * @return DirectoryObject|null
     */
     public function getDirectoryScope(): ?DirectoryObject {
@@ -103,7 +103,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the directoryScopeId property value. Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
+     * Gets the directoryScopeId property value. Identifier of the directory object representing the scope of the assignment.  Either this property or appScopeId is required. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, in).
      * @return string|null
     */
     public function getDirectoryScopeId(): ?string {
@@ -130,7 +130,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the principal property value. The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
+     * Gets the principal property value. Referencing the assigned principal. Read-only. Supports $expand.
      * @return DirectoryObject|null
     */
     public function getPrincipal(): ?DirectoryObject {
@@ -138,7 +138,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the principalId property value. Identifier of the principal to which the assignment is granted. Supports $filter (eq operator only).
+     * Gets the principalId property value. Identifier of the principal to which the assignment is granted. Supports $filter (eq, in).
      * @return string|null
     */
     public function getPrincipalId(): ?string {
@@ -146,7 +146,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the roleDefinition property value. The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
+     * Gets the roleDefinition property value. The roleDefinition the assignment is for.  Supports $expand. roleDefinition.Id will be auto expanded.
      * @return UnifiedRoleDefinition|null
     */
     public function getRoleDefinition(): ?UnifiedRoleDefinition {
@@ -154,7 +154,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition the assignment is for. Read-only. Supports $filter (eq operator only).
+     * Gets the roleDefinitionId property value. Identifier of the role definition the assignment is for. Read only. Supports $filter (eq, in).
      * @return string|null
     */
     public function getRoleDefinitionId(): ?string {
@@ -179,7 +179,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the appScope property value. Details of the app specific scope when the assignment scope is app specific. Containment entity.
+     * Sets the appScope property value. Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
      *  @param AppScope|null $value Value to set for the appScope property.
     */
     public function setAppScope(?AppScope $value ): void {
@@ -187,7 +187,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the appScopeId property value. Identifier of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.  For the entitlement management provider, use app scopes to specify a catalog, for example /AccessPackageCatalog/beedadfe-01d5-4025-910b-84abb9369997.
+     * Sets the appScopeId property value. Identifier of the app-specific scope when the assignment scope is app-specific.  Either this property or directoryScopeId is required. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, in).
      *  @param string|null $value Value to set for the appScopeId property.
     */
     public function setAppScopeId(?string $value ): void {
@@ -203,7 +203,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the directoryScope property value. The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
+     * Sets the directoryScope property value. The directory object that is the scope of the assignment. Read-only. Supports $expand.
      *  @param DirectoryObject|null $value Value to set for the directoryScope property.
     */
     public function setDirectoryScope(?DirectoryObject $value ): void {
@@ -211,7 +211,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the directoryScopeId property value. Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
+     * Sets the directoryScopeId property value. Identifier of the directory object representing the scope of the assignment.  Either this property or appScopeId is required. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, in).
      *  @param string|null $value Value to set for the directoryScopeId property.
     */
     public function setDirectoryScopeId(?string $value ): void {
@@ -219,7 +219,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the principal property value. The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
+     * Sets the principal property value. Referencing the assigned principal. Read-only. Supports $expand.
      *  @param DirectoryObject|null $value Value to set for the principal property.
     */
     public function setPrincipal(?DirectoryObject $value ): void {
@@ -227,7 +227,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the principalId property value. Identifier of the principal to which the assignment is granted. Supports $filter (eq operator only).
+     * Sets the principalId property value. Identifier of the principal to which the assignment is granted. Supports $filter (eq, in).
      *  @param string|null $value Value to set for the principalId property.
     */
     public function setPrincipalId(?string $value ): void {
@@ -235,7 +235,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the roleDefinition property value. The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
+     * Sets the roleDefinition property value. The roleDefinition the assignment is for.  Supports $expand. roleDefinition.Id will be auto expanded.
      *  @param UnifiedRoleDefinition|null $value Value to set for the roleDefinition property.
     */
     public function setRoleDefinition(?UnifiedRoleDefinition $value ): void {
@@ -243,7 +243,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition the assignment is for. Read-only. Supports $filter (eq operator only).
+     * Sets the roleDefinitionId property value. Identifier of the role definition the assignment is for. Read only. Supports $filter (eq, in).
      *  @param string|null $value Value to set for the roleDefinitionId property.
     */
     public function setRoleDefinitionId(?string $value ): void {

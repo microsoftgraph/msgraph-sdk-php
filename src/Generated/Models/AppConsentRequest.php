@@ -19,12 +19,12 @@ class AppConsentRequest extends Entity implements Parsable
     private ?string $appId = null;
     
     /**
-     * @var array<AppConsentRequestScope>|null $pendingScopes A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required.
+     * @var array<AppConsentRequestScope>|null $pendingScopes A list of pending scopes waiting for approval. Required.
     */
     private ?array $pendingScopes = null;
     
     /**
-     * @var array<UserConsentRequest>|null $userConsentRequests A list of pending user consent requests.
+     * @var array<UserConsentRequest>|null $userConsentRequests A list of pending user consent requests. Supports $filter (eq).
     */
     private ?array $userConsentRequests = null;
     
@@ -76,7 +76,7 @@ class AppConsentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the pendingScopes property value. A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required.
+     * Gets the pendingScopes property value. A list of pending scopes waiting for approval. Required.
      * @return array<AppConsentRequestScope>|null
     */
     public function getPendingScopes(): ?array {
@@ -84,7 +84,7 @@ class AppConsentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the userConsentRequests property value. A list of pending user consent requests.
+     * Gets the userConsentRequests property value. A list of pending user consent requests. Supports $filter (eq).
      * @return array<UserConsentRequest>|null
     */
     public function getUserConsentRequests(): ?array {
@@ -120,7 +120,7 @@ class AppConsentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the pendingScopes property value. A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required.
+     * Sets the pendingScopes property value. A list of pending scopes waiting for approval. Required.
      *  @param array<AppConsentRequestScope>|null $value Value to set for the pendingScopes property.
     */
     public function setPendingScopes(?array $value ): void {
@@ -128,7 +128,7 @@ class AppConsentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the userConsentRequests property value. A list of pending user consent requests.
+     * Sets the userConsentRequests property value. A list of pending user consent requests. Supports $filter (eq).
      *  @param array<UserConsentRequest>|null $value Value to set for the userConsentRequests property.
     */
     public function setUserConsentRequests(?array $value ): void {

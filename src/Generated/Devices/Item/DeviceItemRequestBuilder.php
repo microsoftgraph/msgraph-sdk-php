@@ -150,7 +150,7 @@ class DeviceItemRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a device object. Since the **device** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **device** instance.
+     * Get the properties and relationships of a device object.
      * @param DeviceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -175,7 +175,7 @@ class DeviceItemRequestBuilder
     }
 
     /**
-     * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps.
+     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps.
      * @param Device $body 
      * @param DeviceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -228,7 +228,7 @@ class DeviceItemRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a device object. Since the **device** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **device** instance.
+     * Get the properties and relationships of a device object.
      * @param DeviceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -258,7 +258,7 @@ class DeviceItemRequestBuilder
     }
 
     /**
-     * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps.
+     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps.
      * @param Device $body 
      * @param DeviceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

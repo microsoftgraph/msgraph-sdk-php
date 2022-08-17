@@ -25,7 +25,7 @@ class RelatedContact implements AdditionalDataHolder, Parsable
     private ?string $displayName = null;
     
     /**
-     * @var string|null $emailAddress Email address of the contact.
+     * @var string|null $emailAddress Primary email address of the contact. Required.
     */
     private ?string $emailAddress = null;
     
@@ -86,7 +86,7 @@ class RelatedContact implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the emailAddress property value. Email address of the contact.
+     * Gets the emailAddress property value. Primary email address of the contact. Required.
      * @return string|null
     */
     public function getEmailAddress(): ?string {
@@ -172,7 +172,7 @@ class RelatedContact implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the emailAddress property value. Email address of the contact.
+     * Sets the emailAddress property value. Primary email address of the contact. Required.
      *  @param string|null $value Value to set for the emailAddress property.
     */
     public function setEmailAddress(?string $value ): void {

@@ -15,12 +15,12 @@ class EmailAddress implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $address The email address of an entity instance.
+     * @var string|null $address The email address of the person or entity.
     */
     private ?string $address = null;
     
     /**
-     * @var string|null $name The display name of an entity instance.
+     * @var string|null $name The display name of the person or entity.
     */
     private ?string $name = null;
     
@@ -55,7 +55,7 @@ class EmailAddress implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the address property value. The email address of an entity instance.
+     * Gets the address property value. The email address of the person or entity.
      * @return string|null
     */
     public function getAddress(): ?string {
@@ -76,7 +76,7 @@ class EmailAddress implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the name property value. The display name of an entity instance.
+     * Gets the name property value. The display name of the person or entity.
      * @return string|null
     */
     public function getName(): ?string {
@@ -111,7 +111,7 @@ class EmailAddress implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the address property value. The email address of an entity instance.
+     * Sets the address property value. The email address of the person or entity.
      *  @param string|null $value Value to set for the address property.
     */
     public function setAddress(?string $value ): void {
@@ -119,7 +119,7 @@ class EmailAddress implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the name property value. The display name of an entity instance.
+     * Sets the name property value. The display name of the person or entity.
      *  @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value ): void {

@@ -16,12 +16,12 @@ class AssignedPlan implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var DateTime|null $assignedDateTime The date and time at which the plan was assigned; for example: 2013-01-02T19:32:30Z. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * @var DateTime|null $assignedDateTime The date and time at which the plan was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     */
     private ?DateTime $assignedDateTime = null;
     
     /**
-     * @var string|null $capabilityStatus Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut.
+     * @var string|null $capabilityStatus Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut. See a detailed description of each value.
     */
     private ?string $capabilityStatus = null;
     
@@ -66,7 +66,7 @@ class AssignedPlan implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the assignedDateTime property value. The date and time at which the plan was assigned; for example: 2013-01-02T19:32:30Z. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the assignedDateTime property value. The date and time at which the plan was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getAssignedDateTime(): ?DateTime {
@@ -74,7 +74,7 @@ class AssignedPlan implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the capabilityStatus property value. Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut.
+     * Gets the capabilityStatus property value. Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut. See a detailed description of each value.
      * @return string|null
     */
     public function getCapabilityStatus(): ?string {
@@ -142,7 +142,7 @@ class AssignedPlan implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the assignedDateTime property value. The date and time at which the plan was assigned; for example: 2013-01-02T19:32:30Z. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the assignedDateTime property value. The date and time at which the plan was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      *  @param DateTime|null $value Value to set for the assignedDateTime property.
     */
     public function setAssignedDateTime(?DateTime $value ): void {
@@ -150,7 +150,7 @@ class AssignedPlan implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the capabilityStatus property value. Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut.
+     * Sets the capabilityStatus property value. Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut. See a detailed description of each value.
      *  @param string|null $value Value to set for the capabilityStatus property.
     */
     public function setCapabilityStatus(?string $value ): void {

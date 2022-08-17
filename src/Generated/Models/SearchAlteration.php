@@ -15,7 +15,7 @@ class SearchAlteration implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $alteredHighlightedQueryString Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is (/ue000, /ue001)
+     * @var string|null $alteredHighlightedQueryString Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is: /ue000, /ue001.
     */
     private ?string $alteredHighlightedQueryString = null;
     
@@ -25,7 +25,7 @@ class SearchAlteration implements AdditionalDataHolder, Parsable
     private ?string $alteredQueryString = null;
     
     /**
-     * @var array<AlteredQueryToken>|null $alteredQueryTokens Represents changed segments with respect to original query.
+     * @var array<AlteredQueryToken>|null $alteredQueryTokens Represents changed segments related to an original user query.
     */
     private ?array $alteredQueryTokens = null;
     
@@ -60,7 +60,7 @@ class SearchAlteration implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the alteredHighlightedQueryString property value. Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is (/ue000, /ue001)
+     * Gets the alteredHighlightedQueryString property value. Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is: /ue000, /ue001.
      * @return string|null
     */
     public function getAlteredHighlightedQueryString(): ?string {
@@ -76,7 +76,7 @@ class SearchAlteration implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the alteredQueryTokens property value. Represents changed segments with respect to original query.
+     * Gets the alteredQueryTokens property value. Represents changed segments related to an original user query.
      * @return array<AlteredQueryToken>|null
     */
     public function getAlteredQueryTokens(): ?array {
@@ -126,7 +126,7 @@ class SearchAlteration implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the alteredHighlightedQueryString property value. Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is (/ue000, /ue001)
+     * Sets the alteredHighlightedQueryString property value. Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is: /ue000, /ue001.
      *  @param string|null $value Value to set for the alteredHighlightedQueryString property.
     */
     public function setAlteredHighlightedQueryString(?string $value ): void {
@@ -142,7 +142,7 @@ class SearchAlteration implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the alteredQueryTokens property value. Represents changed segments with respect to original query.
+     * Sets the alteredQueryTokens property value. Represents changed segments related to an original user query.
      *  @param array<AlteredQueryToken>|null $value Value to set for the alteredQueryTokens property.
     */
     public function setAlteredQueryTokens(?array $value ): void {

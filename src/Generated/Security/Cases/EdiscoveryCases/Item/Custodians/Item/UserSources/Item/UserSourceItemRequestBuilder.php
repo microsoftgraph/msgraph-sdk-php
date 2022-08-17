@@ -65,7 +65,7 @@ class UserSourceItemRequestBuilder
     }
 
     /**
-     * Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @param UserSourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -132,7 +132,7 @@ class UserSourceItemRequestBuilder
     }
 
     /**
-     * Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @param UserSourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

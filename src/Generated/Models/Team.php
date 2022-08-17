@@ -95,7 +95,7 @@ class Team extends Entity implements Parsable
     private ?array $operations = null;
     
     /**
-     * @var ProfilePhoto|null $photo The team photo.
+     * @var ProfilePhoto|null $photo The profile photo for the team.
     */
     private ?ProfilePhoto $photo = null;
     
@@ -115,7 +115,7 @@ class Team extends Entity implements Parsable
     private ?TeamSpecialization $specialization = null;
     
     /**
-     * @var TeamSummary|null $summary Contains summary information about the team, including number of owners, members, and guests.
+     * @var TeamSummary|null $summary The summary property
     */
     private ?TeamSummary $summary = null;
     
@@ -329,7 +329,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Gets the photo property value. The team photo.
+     * Gets the photo property value. The profile photo for the team.
      * @return ProfilePhoto|null
     */
     public function getPhoto(): ?ProfilePhoto {
@@ -361,7 +361,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Gets the summary property value. Contains summary information about the team, including number of owners, members, and guests.
+     * Gets the summary property value. The summary property
      * @return TeamSummary|null
     */
     public function getSummary(): ?TeamSummary {
@@ -571,7 +571,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Sets the photo property value. The team photo.
+     * Sets the photo property value. The profile photo for the team.
      *  @param ProfilePhoto|null $value Value to set for the photo property.
     */
     public function setPhoto(?ProfilePhoto $value ): void {
@@ -603,7 +603,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Sets the summary property value. Contains summary information about the team, including number of owners, members, and guests.
+     * Sets the summary property value. The summary property
      *  @param TeamSummary|null $value Value to set for the summary property.
     */
     public function setSummary(?TeamSummary $value ): void {

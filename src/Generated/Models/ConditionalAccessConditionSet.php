@@ -50,7 +50,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     private ?ConditionalAccessPlatforms $platforms = null;
     
     /**
-     * @var array<string>|null $servicePrincipalRiskLevels Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
+     * @var array<string>|null $servicePrincipalRiskLevels The servicePrincipalRiskLevels property
     */
     private ?array $servicePrincipalRiskLevels = null;
     
@@ -65,7 +65,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     private ?array $userRiskLevels = null;
     
     /**
-     * @var ConditionalAccessUsers|null $users Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
+     * @var ConditionalAccessUsers|null $users Users, groups, and roles included in and excluded from the policy. Required.
     */
     private ?ConditionalAccessUsers $users = null;
     
@@ -172,7 +172,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
+     * Gets the servicePrincipalRiskLevels property value. The servicePrincipalRiskLevels property
      * @return array<string>|null
     */
     public function getServicePrincipalRiskLevels(): ?array {
@@ -196,7 +196,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the users property value. Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
+     * Gets the users property value. Users, groups, and roles included in and excluded from the policy. Required.
      * @return ConditionalAccessUsers|null
     */
     public function getUsers(): ?ConditionalAccessUsers {
@@ -287,7 +287,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
+     * Sets the servicePrincipalRiskLevels property value. The servicePrincipalRiskLevels property
      *  @param array<string>|null $value Value to set for the servicePrincipalRiskLevels property.
     */
     public function setServicePrincipalRiskLevels(?array $value ): void {
@@ -311,7 +311,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the users property value. Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
+     * Sets the users property value. Users, groups, and roles included in and excluded from the policy. Required.
      *  @param ConditionalAccessUsers|null $value Value to set for the users property.
     */
     public function setUsers(?ConditionalAccessUsers $value ): void {

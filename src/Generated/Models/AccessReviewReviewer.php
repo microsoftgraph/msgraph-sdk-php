@@ -20,7 +20,7 @@ class AccessReviewReviewer extends Entity implements Parsable
     private ?string $displayName = null;
     
     /**
-     * @var string|null $userPrincipalName User principal name of the user.
+     * @var string|null $userPrincipalName User principal name of the reviewer.
     */
     private ?string $userPrincipalName = null;
     
@@ -71,7 +71,7 @@ class AccessReviewReviewer extends Entity implements Parsable
     }
 
     /**
-     * Gets the userPrincipalName property value. User principal name of the user.
+     * Gets the userPrincipalName property value. User principal name of the reviewer.
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
@@ -106,7 +106,7 @@ class AccessReviewReviewer extends Entity implements Parsable
     }
 
     /**
-     * Sets the userPrincipalName property value. User principal name of the user.
+     * Sets the userPrincipalName property value. User principal name of the reviewer.
      *  @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value ): void {

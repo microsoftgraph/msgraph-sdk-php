@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Teamwork extends Entity implements Parsable 
 {
     /**
-     * @var array<WorkforceIntegration>|null $workforceIntegrations A workforce integration with shifts.
+     * @var array<WorkforceIntegration>|null $workforceIntegrations The workforceIntegrations property
     */
     private ?array $workforceIntegrations = null;
     
@@ -42,7 +42,7 @@ class Teamwork extends Entity implements Parsable
     }
 
     /**
-     * Gets the workforceIntegrations property value. A workforce integration with shifts.
+     * Gets the workforceIntegrations property value. The workforceIntegrations property
      * @return array<WorkforceIntegration>|null
     */
     public function getWorkforceIntegrations(): ?array {
@@ -59,7 +59,7 @@ class Teamwork extends Entity implements Parsable
     }
 
     /**
-     * Sets the workforceIntegrations property value. A workforce integration with shifts.
+     * Sets the workforceIntegrations property value. The workforceIntegrations property
      *  @param array<WorkforceIntegration>|null $value Value to set for the workforceIntegrations property.
     */
     public function setWorkforceIntegrations(?array $value ): void {

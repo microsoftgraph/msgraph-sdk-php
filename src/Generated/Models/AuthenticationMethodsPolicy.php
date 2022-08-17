@@ -15,22 +15,22 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
     private ?array $authenticationMethodConfigurations = null;
     
     /**
-     * @var string|null $description A description of the policy.
+     * @var string|null $description A description of the policy. Read-only.
     */
     private ?string $description = null;
     
     /**
-     * @var string|null $displayName The name of the policy.
+     * @var string|null $displayName The name of the policy. Read-only.
     */
     private ?string $displayName = null;
     
     /**
-     * @var DateTime|null $lastModifiedDateTime The date and time of the last update to the policy.
+     * @var DateTime|null $lastModifiedDateTime The date and time of the last update to the policy. Read-only.
     */
     private ?DateTime $lastModifiedDateTime = null;
     
     /**
-     * @var string|null $policyVersion The version of the policy in use.
+     * @var string|null $policyVersion The version of the policy in use. Read-only.
     */
     private ?string $policyVersion = null;
     
@@ -70,7 +70,7 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. A description of the policy.
+     * Gets the description property value. A description of the policy. Read-only.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -78,7 +78,7 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The name of the policy.
+     * Gets the displayName property value. The name of the policy. Read-only.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -103,7 +103,7 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The date and time of the last update to the policy.
+     * Gets the lastModifiedDateTime property value. The date and time of the last update to the policy. Read-only.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -111,7 +111,7 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the policyVersion property value. The version of the policy in use.
+     * Gets the policyVersion property value. The version of the policy in use. Read-only.
      * @return string|null
     */
     public function getPolicyVersion(): ?string {
@@ -158,7 +158,7 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. A description of the policy.
+     * Sets the description property value. A description of the policy. Read-only.
      *  @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value ): void {
@@ -166,7 +166,7 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The name of the policy.
+     * Sets the displayName property value. The name of the policy. Read-only.
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -174,7 +174,7 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The date and time of the last update to the policy.
+     * Sets the lastModifiedDateTime property value. The date and time of the last update to the policy. Read-only.
      *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value ): void {
@@ -182,7 +182,7 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the policyVersion property value. The version of the policy in use.
+     * Sets the policyVersion property value. The version of the policy in use. Read-only.
      *  @param string|null $value Value to set for the policyVersion property.
     */
     public function setPolicyVersion(?string $value ): void {

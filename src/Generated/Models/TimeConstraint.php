@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TimeConstraint implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var ActivityDomain|null $activityDomain The nature of the activity, optional. Possible values are: work, personal, unrestricted, or unknown.
+     * @var ActivityDomain|null $activityDomain The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
     */
     private ?ActivityDomain $activityDomain = null;
     
@@ -47,7 +47,7 @@ class TimeConstraint implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the activityDomain property value. The nature of the activity, optional. Possible values are: work, personal, unrestricted, or unknown.
+     * Gets the activityDomain property value. The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
      * @return ActivityDomain|null
     */
     public function getActivityDomain(): ?ActivityDomain {
@@ -103,7 +103,7 @@ class TimeConstraint implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the activityDomain property value. The nature of the activity, optional. Possible values are: work, personal, unrestricted, or unknown.
+     * Sets the activityDomain property value. The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
      *  @param ActivityDomain|null $value Value to set for the activityDomain property.
     */
     public function setActivityDomain(?ActivityDomain $value ): void {

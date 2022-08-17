@@ -29,7 +29,7 @@ class Workbook extends Entity implements Parsable
     private ?array $names = null;
     
     /**
-     * @var array<WorkbookOperation>|null $operations The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
+     * @var array<WorkbookOperation>|null $operations The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
     */
     private ?array $operations = null;
     
@@ -110,7 +110,7 @@ class Workbook extends Entity implements Parsable
     }
 
     /**
-     * Gets the operations property value. The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
+     * Gets the operations property value. The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
      * @return array<WorkbookOperation>|null
     */
     public function getOperations(): ?array {
@@ -181,7 +181,7 @@ class Workbook extends Entity implements Parsable
     }
 
     /**
-     * Sets the operations property value. The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
+     * Sets the operations property value. The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
      *  @param array<WorkbookOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value ): void {

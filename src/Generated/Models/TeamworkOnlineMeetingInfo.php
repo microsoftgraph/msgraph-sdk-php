@@ -20,7 +20,7 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
     private ?string $calendarEventId = null;
     
     /**
-     * @var string|null $joinWebUrl The URL which can be clicked on to join or uniquely identify the meeting.
+     * @var string|null $joinWebUrl The URL that users click to join or uniquely identify the meeting.
     */
     private ?string $joinWebUrl = null;
     
@@ -82,7 +82,7 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the joinWebUrl property value. The URL which can be clicked on to join or uniquely identify the meeting.
+     * Gets the joinWebUrl property value. The URL that users click to join or uniquely identify the meeting.
      * @return string|null
     */
     public function getJoinWebUrl(): ?string {
@@ -134,7 +134,7 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the joinWebUrl property value. The URL which can be clicked on to join or uniquely identify the meeting.
+     * Sets the joinWebUrl property value. The URL that users click to join or uniquely identify the meeting.
      *  @param string|null $value Value to set for the joinWebUrl property.
     */
     public function setJoinWebUrl(?string $value ): void {

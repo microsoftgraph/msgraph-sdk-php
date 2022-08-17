@@ -25,7 +25,7 @@ class ConditionalAccessApplications implements AdditionalDataHolder, Parsable
     private ?array $includeApplications = null;
     
     /**
-     * @var array<string>|null $includeAuthenticationContextClassReferences Authentication context class references include. Supported values are c1 through c25.
+     * @var array<string>|null $includeAuthenticationContextClassReferences The includeAuthenticationContextClassReferences property
     */
     private ?array $includeAuthenticationContextClassReferences = null;
     
@@ -96,7 +96,7 @@ class ConditionalAccessApplications implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the includeAuthenticationContextClassReferences property value. Authentication context class references include. Supported values are c1 through c25.
+     * Gets the includeAuthenticationContextClassReferences property value. The includeAuthenticationContextClassReferences property
      * @return array<string>|null
     */
     public function getIncludeAuthenticationContextClassReferences(): ?array {
@@ -157,7 +157,7 @@ class ConditionalAccessApplications implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the includeAuthenticationContextClassReferences property value. Authentication context class references include. Supported values are c1 through c25.
+     * Sets the includeAuthenticationContextClassReferences property value. The includeAuthenticationContextClassReferences property
      *  @param array<string>|null $value Value to set for the includeAuthenticationContextClassReferences property.
     */
     public function setIncludeAuthenticationContextClassReferences(?array $value ): void {

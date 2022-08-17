@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationUser extends Entity implements Parsable 
 {
     /**
-     * @var bool|null $accountEnabled True if the account is enabled; otherwise, false. This property is required when a user is created. Supports /$filter.
+     * @var bool|null $accountEnabled True if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter.
     */
     private ?bool $accountEnabled = null;
     
@@ -25,7 +25,7 @@ class EducationUser extends Entity implements Parsable
     private ?array $assignedPlans = null;
     
     /**
-     * @var array<EducationAssignment>|null $assignments List of assignments for the user. Nullable.
+     * @var array<EducationAssignment>|null $assignments Assignments belonging to the user.
     */
     private ?array $assignments = null;
     
@@ -40,52 +40,52 @@ class EducationUser extends Entity implements Parsable
     private ?array $classes = null;
     
     /**
-     * @var IdentitySet|null $createdBy Entity who created the user.
+     * @var IdentitySet|null $createdBy The entity who created the user.
     */
     private ?IdentitySet $createdBy = null;
     
     /**
-     * @var string|null $department The name for the department in which the user works. Supports /$filter.
+     * @var string|null $department The name for the department in which the user works. Supports $filter.
     */
     private ?string $department = null;
     
     /**
-     * @var string|null $displayName The name displayed in the address book for the user. Supports $filter and $orderby.
+     * @var string|null $displayName The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.
     */
     private ?string $displayName = null;
     
     /**
-     * @var EducationExternalSource|null $externalSource The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
+     * @var EducationExternalSource|null $externalSource Where this user was created from. Possible values are: sis, manual.
     */
     private ?EducationExternalSource $externalSource = null;
     
     /**
-     * @var string|null $externalSourceDetail The name of the external source this resources was generated from.
+     * @var string|null $externalSourceDetail The name of the external source this resource was generated from.
     */
     private ?string $externalSourceDetail = null;
     
     /**
-     * @var string|null $givenName The given name (first name) of the user. Supports /$filter.
+     * @var string|null $givenName The given name (first name) of the user. Supports $filter.
     */
     private ?string $givenName = null;
     
     /**
-     * @var string|null $mail The SMTP address for the user; for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports /$filter.
+     * @var string|null $mail The SMTP address for the user, for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.
     */
     private ?string $mail = null;
     
     /**
-     * @var PhysicalAddress|null $mailingAddress Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.
+     * @var PhysicalAddress|null $mailingAddress The mail address of the user.
     */
     private ?PhysicalAddress $mailingAddress = null;
     
     /**
-     * @var string|null $mailNickname The mail alias for the user. This property must be specified when a user is created. Supports /$filter.
+     * @var string|null $mailNickname The mail alias for the user. This property must be specified when a user is created. Supports $filter.
     */
     private ?string $mailNickname = null;
     
     /**
-     * @var string|null $middleName The middle name of user.
+     * @var string|null $middleName The middle name of the user.
     */
     private ?string $middleName = null;
     
@@ -100,22 +100,22 @@ class EducationUser extends Entity implements Parsable
     private ?string $officeLocation = null;
     
     /**
-     * @var EducationOnPremisesInfo|null $onPremisesInfo Additional information used to associate the AAD user with it's Active Directory counterpart.
+     * @var EducationOnPremisesInfo|null $onPremisesInfo Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
     */
     private ?EducationOnPremisesInfo $onPremisesInfo = null;
     
     /**
-     * @var string|null $passwordPolicies Specifies password policies for the user. See standard [user] resource for additional details.
+     * @var string|null $passwordPolicies Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two can be specified together; for example: DisablePasswordExpiration, DisableStrongPassword.
     */
     private ?string $passwordPolicies = null;
     
     /**
-     * @var PasswordProfile|null $passwordProfile Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for additional details.
+     * @var PasswordProfile|null $passwordProfile Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
     */
     private ?PasswordProfile $passwordProfile = null;
     
     /**
-     * @var string|null $preferredLanguage The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'.
+     * @var string|null $preferredLanguage The preferred language for the user that should follow the ISO 639-1 code, for example, en-US.
     */
     private ?string $preferredLanguage = null;
     
@@ -135,12 +135,12 @@ class EducationUser extends Entity implements Parsable
     private ?DateTime $refreshTokensValidFromDateTime = null;
     
     /**
-     * @var array<RelatedContact>|null $relatedContacts Related records related to the user. Possible relationships are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue
+     * @var array<RelatedContact>|null $relatedContacts Related records associated with the user. Read-only.
     */
     private ?array $relatedContacts = null;
     
     /**
-     * @var PhysicalAddress|null $residenceAddress Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.
+     * @var PhysicalAddress|null $residenceAddress The address where the user lives.
     */
     private ?PhysicalAddress $residenceAddress = null;
     
@@ -165,7 +165,7 @@ class EducationUser extends Entity implements Parsable
     private ?EducationStudent $student = null;
     
     /**
-     * @var string|null $surname The user's surname (family name or last name). Supports /$filter.
+     * @var string|null $surname The user's surname (family name or last name). Supports $filter.
     */
     private ?string $surname = null;
     
@@ -180,7 +180,7 @@ class EducationUser extends Entity implements Parsable
     private ?EducationTeacher $teacher = null;
     
     /**
-     * @var string|null $usageLocation A two-letter country code ([ISO 3166 Alpha-2]). Required for users who will be assigned licenses. Not nullable. Supports /$filter.
+     * @var string|null $usageLocation A two-letter country code (ISO standard 3166). Required for users who will be assigned licenses due to a legal requirement to check for availability of services in countries or regions. Examples include: US, JP, and GB. Not nullable. Supports $filter.
     */
     private ?string $usageLocation = null;
     
@@ -190,12 +190,12 @@ class EducationUser extends Entity implements Parsable
     private ?User $user = null;
     
     /**
-     * @var string|null $userPrincipalName The user principal name (UPN) for the user. Supports $filter and $orderby. See standard [user] resource for additional details.
+     * @var string|null $userPrincipalName The user principal name (UPN) of the user. The UPN is an internet-style login name for the user based on the internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of the organization. Supports $filter and $orderby.
     */
     private ?string $userPrincipalName = null;
     
     /**
-     * @var string|null $userType A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports /$filter.
+     * @var string|null $userType A string value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter.
     */
     private ?string $userType = null;
     
@@ -217,7 +217,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the accountEnabled property value. True if the account is enabled; otherwise, false. This property is required when a user is created. Supports /$filter.
+     * Gets the accountEnabled property value. True if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter.
      * @return bool|null
     */
     public function getAccountEnabled(): ?bool {
@@ -241,7 +241,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the assignments property value. List of assignments for the user. Nullable.
+     * Gets the assignments property value. Assignments belonging to the user.
      * @return array<EducationAssignment>|null
     */
     public function getAssignments(): ?array {
@@ -265,7 +265,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. Entity who created the user.
+     * Gets the createdBy property value. The entity who created the user.
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
@@ -273,7 +273,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the department property value. The name for the department in which the user works. Supports /$filter.
+     * Gets the department property value. The name for the department in which the user works. Supports $filter.
      * @return string|null
     */
     public function getDepartment(): ?string {
@@ -281,7 +281,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The name displayed in the address book for the user. Supports $filter and $orderby.
+     * Gets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -289,7 +289,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the externalSource property value. The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
+     * Gets the externalSource property value. Where this user was created from. Possible values are: sis, manual.
      * @return EducationExternalSource|null
     */
     public function getExternalSource(): ?EducationExternalSource {
@@ -297,7 +297,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the externalSourceDetail property value. The name of the external source this resources was generated from.
+     * Gets the externalSourceDetail property value. The name of the external source this resource was generated from.
      * @return string|null
     */
     public function getExternalSourceDetail(): ?string {
@@ -353,7 +353,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the givenName property value. The given name (first name) of the user. Supports /$filter.
+     * Gets the givenName property value. The given name (first name) of the user. Supports $filter.
      * @return string|null
     */
     public function getGivenName(): ?string {
@@ -361,7 +361,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the mail property value. The SMTP address for the user; for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports /$filter.
+     * Gets the mail property value. The SMTP address for the user, for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.
      * @return string|null
     */
     public function getMail(): ?string {
@@ -369,7 +369,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the mailingAddress property value. Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.
+     * Gets the mailingAddress property value. The mail address of the user.
      * @return PhysicalAddress|null
     */
     public function getMailingAddress(): ?PhysicalAddress {
@@ -377,7 +377,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the mailNickname property value. The mail alias for the user. This property must be specified when a user is created. Supports /$filter.
+     * Gets the mailNickname property value. The mail alias for the user. This property must be specified when a user is created. Supports $filter.
      * @return string|null
     */
     public function getMailNickname(): ?string {
@@ -385,7 +385,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the middleName property value. The middle name of user.
+     * Gets the middleName property value. The middle name of the user.
      * @return string|null
     */
     public function getMiddleName(): ?string {
@@ -409,7 +409,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the onPremisesInfo property value. Additional information used to associate the AAD user with it's Active Directory counterpart.
+     * Gets the onPremisesInfo property value. Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
      * @return EducationOnPremisesInfo|null
     */
     public function getOnPremisesInfo(): ?EducationOnPremisesInfo {
@@ -417,7 +417,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the passwordPolicies property value. Specifies password policies for the user. See standard [user] resource for additional details.
+     * Gets the passwordPolicies property value. Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two can be specified together; for example: DisablePasswordExpiration, DisableStrongPassword.
      * @return string|null
     */
     public function getPasswordPolicies(): ?string {
@@ -425,7 +425,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for additional details.
+     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
      * @return PasswordProfile|null
     */
     public function getPasswordProfile(): ?PasswordProfile {
@@ -433,7 +433,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the preferredLanguage property value. The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'.
+     * Gets the preferredLanguage property value. The preferred language for the user that should follow the ISO 639-1 code, for example, en-US.
      * @return string|null
     */
     public function getPreferredLanguage(): ?string {
@@ -465,7 +465,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the relatedContacts property value. Related records related to the user. Possible relationships are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue
+     * Gets the relatedContacts property value. Related records associated with the user. Read-only.
      * @return array<RelatedContact>|null
     */
     public function getRelatedContacts(): ?array {
@@ -473,7 +473,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the residenceAddress property value. Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.
+     * Gets the residenceAddress property value. The address where the user lives.
      * @return PhysicalAddress|null
     */
     public function getResidenceAddress(): ?PhysicalAddress {
@@ -513,7 +513,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the surname property value. The user's surname (family name or last name). Supports /$filter.
+     * Gets the surname property value. The user's surname (family name or last name). Supports $filter.
      * @return string|null
     */
     public function getSurname(): ?string {
@@ -537,7 +537,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the usageLocation property value. A two-letter country code ([ISO 3166 Alpha-2]). Required for users who will be assigned licenses. Not nullable. Supports /$filter.
+     * Gets the usageLocation property value. A two-letter country code (ISO standard 3166). Required for users who will be assigned licenses due to a legal requirement to check for availability of services in countries or regions. Examples include: US, JP, and GB. Not nullable. Supports $filter.
      * @return string|null
     */
     public function getUsageLocation(): ?string {
@@ -553,7 +553,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the userPrincipalName property value. The user principal name (UPN) for the user. Supports $filter and $orderby. See standard [user] resource for additional details.
+     * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an internet-style login name for the user based on the internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of the organization. Supports $filter and $orderby.
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
@@ -561,7 +561,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the userType property value. A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports /$filter.
+     * Gets the userType property value. A string value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter.
      * @return string|null
     */
     public function getUserType(): ?string {
@@ -615,7 +615,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the accountEnabled property value. True if the account is enabled; otherwise, false. This property is required when a user is created. Supports /$filter.
+     * Sets the accountEnabled property value. True if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter.
      *  @param bool|null $value Value to set for the accountEnabled property.
     */
     public function setAccountEnabled(?bool $value ): void {
@@ -639,7 +639,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the assignments property value. List of assignments for the user. Nullable.
+     * Sets the assignments property value. Assignments belonging to the user.
      *  @param array<EducationAssignment>|null $value Value to set for the assignments property.
     */
     public function setAssignments(?array $value ): void {
@@ -663,7 +663,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. Entity who created the user.
+     * Sets the createdBy property value. The entity who created the user.
      *  @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value ): void {
@@ -671,7 +671,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the department property value. The name for the department in which the user works. Supports /$filter.
+     * Sets the department property value. The name for the department in which the user works. Supports $filter.
      *  @param string|null $value Value to set for the department property.
     */
     public function setDepartment(?string $value ): void {
@@ -679,7 +679,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The name displayed in the address book for the user. Supports $filter and $orderby.
+     * Sets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -687,7 +687,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the externalSource property value. The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
+     * Sets the externalSource property value. Where this user was created from. Possible values are: sis, manual.
      *  @param EducationExternalSource|null $value Value to set for the externalSource property.
     */
     public function setExternalSource(?EducationExternalSource $value ): void {
@@ -695,7 +695,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the externalSourceDetail property value. The name of the external source this resources was generated from.
+     * Sets the externalSourceDetail property value. The name of the external source this resource was generated from.
      *  @param string|null $value Value to set for the externalSourceDetail property.
     */
     public function setExternalSourceDetail(?string $value ): void {
@@ -703,7 +703,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the givenName property value. The given name (first name) of the user. Supports /$filter.
+     * Sets the givenName property value. The given name (first name) of the user. Supports $filter.
      *  @param string|null $value Value to set for the givenName property.
     */
     public function setGivenName(?string $value ): void {
@@ -711,7 +711,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the mail property value. The SMTP address for the user; for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports /$filter.
+     * Sets the mail property value. The SMTP address for the user, for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.
      *  @param string|null $value Value to set for the mail property.
     */
     public function setMail(?string $value ): void {
@@ -719,7 +719,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the mailingAddress property value. Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.
+     * Sets the mailingAddress property value. The mail address of the user.
      *  @param PhysicalAddress|null $value Value to set for the mailingAddress property.
     */
     public function setMailingAddress(?PhysicalAddress $value ): void {
@@ -727,7 +727,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the mailNickname property value. The mail alias for the user. This property must be specified when a user is created. Supports /$filter.
+     * Sets the mailNickname property value. The mail alias for the user. This property must be specified when a user is created. Supports $filter.
      *  @param string|null $value Value to set for the mailNickname property.
     */
     public function setMailNickname(?string $value ): void {
@@ -735,7 +735,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the middleName property value. The middle name of user.
+     * Sets the middleName property value. The middle name of the user.
      *  @param string|null $value Value to set for the middleName property.
     */
     public function setMiddleName(?string $value ): void {
@@ -759,7 +759,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the onPremisesInfo property value. Additional information used to associate the AAD user with it's Active Directory counterpart.
+     * Sets the onPremisesInfo property value. Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
      *  @param EducationOnPremisesInfo|null $value Value to set for the onPremisesInfo property.
     */
     public function setOnPremisesInfo(?EducationOnPremisesInfo $value ): void {
@@ -767,7 +767,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the passwordPolicies property value. Specifies password policies for the user. See standard [user] resource for additional details.
+     * Sets the passwordPolicies property value. Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two can be specified together; for example: DisablePasswordExpiration, DisableStrongPassword.
      *  @param string|null $value Value to set for the passwordPolicies property.
     */
     public function setPasswordPolicies(?string $value ): void {
@@ -775,7 +775,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for additional details.
+     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
      *  @param PasswordProfile|null $value Value to set for the passwordProfile property.
     */
     public function setPasswordProfile(?PasswordProfile $value ): void {
@@ -783,7 +783,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the preferredLanguage property value. The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'.
+     * Sets the preferredLanguage property value. The preferred language for the user that should follow the ISO 639-1 code, for example, en-US.
      *  @param string|null $value Value to set for the preferredLanguage property.
     */
     public function setPreferredLanguage(?string $value ): void {
@@ -815,7 +815,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the relatedContacts property value. Related records related to the user. Possible relationships are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue
+     * Sets the relatedContacts property value. Related records associated with the user. Read-only.
      *  @param array<RelatedContact>|null $value Value to set for the relatedContacts property.
     */
     public function setRelatedContacts(?array $value ): void {
@@ -823,7 +823,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the residenceAddress property value. Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.
+     * Sets the residenceAddress property value. The address where the user lives.
      *  @param PhysicalAddress|null $value Value to set for the residenceAddress property.
     */
     public function setResidenceAddress(?PhysicalAddress $value ): void {
@@ -863,7 +863,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the surname property value. The user's surname (family name or last name). Supports /$filter.
+     * Sets the surname property value. The user's surname (family name or last name). Supports $filter.
      *  @param string|null $value Value to set for the surname property.
     */
     public function setSurname(?string $value ): void {
@@ -887,7 +887,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the usageLocation property value. A two-letter country code ([ISO 3166 Alpha-2]). Required for users who will be assigned licenses. Not nullable. Supports /$filter.
+     * Sets the usageLocation property value. A two-letter country code (ISO standard 3166). Required for users who will be assigned licenses due to a legal requirement to check for availability of services in countries or regions. Examples include: US, JP, and GB. Not nullable. Supports $filter.
      *  @param string|null $value Value to set for the usageLocation property.
     */
     public function setUsageLocation(?string $value ): void {
@@ -903,7 +903,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the userPrincipalName property value. The user principal name (UPN) for the user. Supports $filter and $orderby. See standard [user] resource for additional details.
+     * Sets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an internet-style login name for the user based on the internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of the organization. Supports $filter and $orderby.
      *  @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value ): void {
@@ -911,7 +911,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the userType property value. A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports /$filter.
+     * Sets the userType property value. A string value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter.
      *  @param string|null $value Value to set for the userType property.
     */
     public function setUserType(?string $value ): void {

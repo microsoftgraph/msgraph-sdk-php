@@ -5,6 +5,10 @@ namespace Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\Attachments\AttachmentsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\Attachments\Item\AttachmentBaseItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\AttachmentSessions\AttachmentSessionsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\AttachmentSessions\Item\AttachmentSessionItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\ChecklistItems\ChecklistItemsRequestBuilder;
 use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\ChecklistItems\Item\ChecklistItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\Extensions\ExtensionsRequestBuilder;
@@ -23,6 +27,20 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class TodoTaskItemRequestBuilder 
 {
+    /**
+     * The attachments property
+    */
+    public function attachments(): AttachmentsRequestBuilder {
+        return new AttachmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The attachmentSessions property
+    */
+    public function attachmentSessions(): AttachmentSessionsRequestBuilder {
+        return new AttachmentSessionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * The checklistItems property
     */
@@ -59,6 +77,28 @@ class TodoTaskItemRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Gets an item from the Microsoft\Graph\Generated.me.todo.lists.item.tasks.item.attachments.item collection
+     * @param string $id Unique identifier of the item
+     * @return AttachmentBaseItemRequestBuilder
+    */
+    public function attachmentsById(string $id): AttachmentBaseItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['attachmentBase%2Did'] = $id;
+        return new AttachmentBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
+     * Gets an item from the Microsoft\Graph\Generated.me.todo.lists.item.tasks.item.attachmentSessions.item collection
+     * @param string $id Unique identifier of the item
+     * @return AttachmentSessionItemRequestBuilder
+    */
+    public function attachmentSessionsById(string $id): AttachmentSessionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['attachmentSession%2Did'] = $id;
+        return new AttachmentSessionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Gets an item from the Microsoft\Graph\Generated.me.todo.lists.item.tasks.item.checklistItems.item collection
      * @param string $id Unique identifier of the item

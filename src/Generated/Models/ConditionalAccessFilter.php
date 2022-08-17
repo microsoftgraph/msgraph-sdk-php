@@ -25,7 +25,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var string|null $rule Rule syntax is similar to that used for membership rules for groups in Azure Active Directory. For details, see rules with multiple expressions
+     * @var string|null $rule Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions
     */
     private ?string $rule = null;
     
@@ -84,7 +84,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory. For details, see rules with multiple expressions
+     * Gets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions
      * @return string|null
     */
     public function getRule(): ?string {
@@ -127,7 +127,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory. For details, see rules with multiple expressions
+     * Sets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions
      *  @param string|null $value Value to set for the rule property.
     */
     public function setRule(?string $value ): void {

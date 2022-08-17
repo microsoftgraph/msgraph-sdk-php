@@ -20,7 +20,7 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var string|null $query The query specifying who will be the reviewer. See table for examples.
+     * @var string|null $query The query specifying who will be the reviewer.
     */
     private ?string $query = null;
     
@@ -82,7 +82,7 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the query property value. The query specifying who will be the reviewer. See table for examples.
+     * Gets the query property value. The query specifying who will be the reviewer.
      * @return string|null
     */
     public function getQuery(): ?string {
@@ -134,7 +134,7 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the query property value. The query specifying who will be the reviewer. See table for examples.
+     * Sets the query property value. The query specifying who will be the reviewer.
      *  @param string|null $value Value to set for the query property.
     */
     public function setQuery(?string $value ): void {

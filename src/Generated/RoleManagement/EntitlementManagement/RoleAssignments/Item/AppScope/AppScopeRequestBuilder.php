@@ -65,7 +65,7 @@ class AppScopeRequestBuilder
     }
 
     /**
-     * Details of the app specific scope when the assignment scope is app specific. Containment entity.
+     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
      * @param AppScopeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -132,7 +132,7 @@ class AppScopeRequestBuilder
     }
 
     /**
-     * Details of the app specific scope when the assignment scope is app specific. Containment entity.
+     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
      * @param AppScopeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

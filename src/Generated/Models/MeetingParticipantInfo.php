@@ -25,7 +25,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var OnlineMeetingRole|null $role Specifies the participant's role in the meeting.
+     * @var OnlineMeetingRole|null $role Specifies the participant's role in the meeting.  Possible values are attendee, presenter, producer, and unknownFutureValue.
     */
     private ?OnlineMeetingRole $role = null;
     
@@ -90,7 +90,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the role property value. Specifies the participant's role in the meeting.
+     * Gets the role property value. Specifies the participant's role in the meeting.  Possible values are attendee, presenter, producer, and unknownFutureValue.
      * @return OnlineMeetingRole|null
     */
     public function getRole(): ?OnlineMeetingRole {
@@ -142,7 +142,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the role property value. Specifies the participant's role in the meeting.
+     * Sets the role property value. Specifies the participant's role in the meeting.  Possible values are attendee, presenter, producer, and unknownFutureValue.
      *  @param OnlineMeetingRole|null $value Value to set for the role property.
     */
     public function setRole(?OnlineMeetingRole $value ): void {

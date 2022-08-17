@@ -15,7 +15,7 @@ class DriveItem extends BaseItem implements Parsable
     private ?ItemAnalytics $analytics = null;
     
     /**
-     * @var Audio|null $audio Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal.
+     * @var Audio|null $audio Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
     */
     private ?Audio $audio = null;
     
@@ -85,7 +85,7 @@ class DriveItem extends BaseItem implements Parsable
     private ?Package $package = null;
     
     /**
-     * @var PendingOperations|null $pendingOperations If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
+     * @var PendingOperations|null $pendingOperations If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
     */
     private ?PendingOperations $pendingOperations = null;
     
@@ -195,7 +195,7 @@ class DriveItem extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the audio property value. Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal.
+     * Gets the audio property value. Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
      * @return Audio|null
     */
     public function getAudio(): ?Audio {
@@ -349,7 +349,7 @@ class DriveItem extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the pendingOperations property value. If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
+     * Gets the pendingOperations property value. If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
      * @return PendingOperations|null
     */
     public function getPendingOperations(): ?PendingOperations {
@@ -533,7 +533,7 @@ class DriveItem extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the audio property value. Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal.
+     * Sets the audio property value. Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
      *  @param Audio|null $value Value to set for the audio property.
     */
     public function setAudio(?Audio $value ): void {
@@ -645,7 +645,7 @@ class DriveItem extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the pendingOperations property value. If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
+     * Sets the pendingOperations property value. If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
      *  @param PendingOperations|null $value Value to set for the pendingOperations property.
     */
     public function setPendingOperations(?PendingOperations $value ): void {

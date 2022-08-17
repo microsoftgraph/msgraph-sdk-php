@@ -14,7 +14,7 @@ class PrintTask extends Entity implements Parsable
     private ?PrintTaskDefinition $definition = null;
     
     /**
-     * @var string|null $parentUrl The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/beta/print/printers/{printerId}/jobs/{jobId}. Read-only.
+     * @var string|null $parentUrl The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
     */
     private ?string $parentUrl = null;
     
@@ -68,7 +68,7 @@ class PrintTask extends Entity implements Parsable
     }
 
     /**
-     * Gets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/beta/print/printers/{printerId}/jobs/{jobId}. Read-only.
+     * Gets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
      * @return string|null
     */
     public function getParentUrl(): ?string {
@@ -112,7 +112,7 @@ class PrintTask extends Entity implements Parsable
     }
 
     /**
-     * Sets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/beta/print/printers/{printerId}/jobs/{jobId}. Read-only.
+     * Sets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
      *  @param string|null $value Value to set for the parentUrl property.
     */
     public function setParentUrl(?string $value ): void {

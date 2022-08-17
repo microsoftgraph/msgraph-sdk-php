@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EventMessage extends Message implements Parsable 
 {
     /**
-     * @var DateTimeTimeZone|null $endDateTime The end time of the requested meeting.
+     * @var DateTimeTimeZone|null $endDateTime The endDateTime property
     */
     private ?DateTimeTimeZone $endDateTime = null;
     
@@ -84,7 +84,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the endDateTime property value. The end time of the requested meeting.
+     * Gets the endDateTime property value. The endDateTime property
      * @return DateTimeTimeZone|null
     */
     public function getEndDateTime(): ?DateTimeTimeZone {
@@ -202,7 +202,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the endDateTime property value. The end time of the requested meeting.
+     * Sets the endDateTime property value. The endDateTime property
      *  @param DateTimeTimeZone|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTimeTimeZone $value ): void {

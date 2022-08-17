@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BookingCustomer extends BookingCustomerBase implements Parsable 
 {
     /**
-     * @var array<PhysicalAddress>|null $addresses Addresses associated with the customer, including home, business and other addresses.
+     * @var array<PhysicalAddress>|null $addresses Addresses associated with the customer. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
     */
     private ?array $addresses = null;
     
@@ -46,7 +46,7 @@ class BookingCustomer extends BookingCustomerBase implements Parsable
     }
 
     /**
-     * Gets the addresses property value. Addresses associated with the customer, including home, business and other addresses.
+     * Gets the addresses property value. Addresses associated with the customer. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
      * @return array<PhysicalAddress>|null
     */
     public function getAddresses(): ?array {
@@ -104,7 +104,7 @@ class BookingCustomer extends BookingCustomerBase implements Parsable
     }
 
     /**
-     * Sets the addresses property value. Addresses associated with the customer, including home, business and other addresses.
+     * Sets the addresses property value. Addresses associated with the customer. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
      *  @param array<PhysicalAddress>|null $value Value to set for the addresses property.
     */
     public function setAddresses(?array $value ): void {

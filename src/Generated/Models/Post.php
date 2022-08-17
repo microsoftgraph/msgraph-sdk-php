@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Post extends OutlookItem implements Parsable 
 {
     /**
-     * @var array<Attachment>|null $attachments The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand.
+     * @var array<Attachment>|null $attachments Read-only. Nullable. Supports $expand.
     */
     private ?array $attachments = null;
     
@@ -45,7 +45,7 @@ class Post extends OutlookItem implements Parsable
     private ?bool $hasAttachments = null;
     
     /**
-     * @var Post|null $inReplyTo The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand.
+     * @var Post|null $inReplyTo Read-only. Supports $expand.
     */
     private ?Post $inReplyTo = null;
     
@@ -92,7 +92,7 @@ class Post extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the attachments property value. The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand.
+     * Gets the attachments property value. Read-only. Nullable. Supports $expand.
      * @return array<Attachment>|null
     */
     public function getAttachments(): ?array {
@@ -171,7 +171,7 @@ class Post extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the inReplyTo property value. The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand.
+     * Gets the inReplyTo property value. Read-only. Supports $expand.
      * @return Post|null
     */
     public function getInReplyTo(): ?Post {
@@ -240,7 +240,7 @@ class Post extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the attachments property value. The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand.
+     * Sets the attachments property value. Read-only. Nullable. Supports $expand.
      *  @param array<Attachment>|null $value Value to set for the attachments property.
     */
     public function setAttachments(?array $value ): void {
@@ -296,7 +296,7 @@ class Post extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the inReplyTo property value. The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand.
+     * Sets the inReplyTo property value. Read-only. Supports $expand.
      *  @param Post|null $value Value to set for the inReplyTo property.
     */
     public function setInReplyTo(?Post $value ): void {

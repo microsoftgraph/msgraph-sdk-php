@@ -25,12 +25,12 @@ class Agreement extends Entity implements Parsable
     private ?AgreementFile $file = null;
     
     /**
-     * @var array<AgreementFileLocalization>|null $files PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
+     * @var array<AgreementFileLocalization>|null $files PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
     */
     private ?array $files = null;
     
     /**
-     * @var bool|null $isPerDeviceAcceptanceRequired This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
+     * @var bool|null $isPerDeviceAcceptanceRequired Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
     */
     private ?bool $isPerDeviceAcceptanceRequired = null;
     
@@ -40,12 +40,12 @@ class Agreement extends Entity implements Parsable
     private ?bool $isViewingBeforeAcceptanceRequired = null;
     
     /**
-     * @var TermsExpiration|null $termsExpiration Expiration schedule and frequency of agreement for all users.  Supports $filter (eq).
+     * @var TermsExpiration|null $termsExpiration Expiration schedule and frequency of agreement for all users. Supports $filter (eq).
     */
     private ?TermsExpiration $termsExpiration = null;
     
     /**
-     * @var DateInterval|null $userReacceptRequiredFrequency The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
+     * @var DateInterval|null $userReacceptRequiredFrequency The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
     */
     private ?DateInterval $userReacceptRequiredFrequency = null;
     
@@ -109,7 +109,7 @@ class Agreement extends Entity implements Parsable
     }
 
     /**
-     * Gets the files property value. PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
+     * Gets the files property value. PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      * @return array<AgreementFileLocalization>|null
     */
     public function getFiles(): ?array {
@@ -117,7 +117,7 @@ class Agreement extends Entity implements Parsable
     }
 
     /**
-     * Gets the isPerDeviceAcceptanceRequired property value. This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
+     * Gets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
      * @return bool|null
     */
     public function getIsPerDeviceAcceptanceRequired(): ?bool {
@@ -133,7 +133,7 @@ class Agreement extends Entity implements Parsable
     }
 
     /**
-     * Gets the termsExpiration property value. Expiration schedule and frequency of agreement for all users.  Supports $filter (eq).
+     * Gets the termsExpiration property value. Expiration schedule and frequency of agreement for all users. Supports $filter (eq).
      * @return TermsExpiration|null
     */
     public function getTermsExpiration(): ?TermsExpiration {
@@ -141,7 +141,7 @@ class Agreement extends Entity implements Parsable
     }
 
     /**
-     * Gets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
+     * Gets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
      * @return DateInterval|null
     */
     public function getUserReacceptRequiredFrequency(): ?DateInterval {
@@ -189,7 +189,7 @@ class Agreement extends Entity implements Parsable
     }
 
     /**
-     * Sets the files property value. PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
+     * Sets the files property value. PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      *  @param array<AgreementFileLocalization>|null $value Value to set for the files property.
     */
     public function setFiles(?array $value ): void {
@@ -197,7 +197,7 @@ class Agreement extends Entity implements Parsable
     }
 
     /**
-     * Sets the isPerDeviceAcceptanceRequired property value. This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
+     * Sets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
      *  @param bool|null $value Value to set for the isPerDeviceAcceptanceRequired property.
     */
     public function setIsPerDeviceAcceptanceRequired(?bool $value ): void {
@@ -213,7 +213,7 @@ class Agreement extends Entity implements Parsable
     }
 
     /**
-     * Sets the termsExpiration property value. Expiration schedule and frequency of agreement for all users.  Supports $filter (eq).
+     * Sets the termsExpiration property value. Expiration schedule and frequency of agreement for all users. Supports $filter (eq).
      *  @param TermsExpiration|null $value Value to set for the termsExpiration property.
     */
     public function setTermsExpiration(?TermsExpiration $value ): void {
@@ -221,7 +221,7 @@ class Agreement extends Entity implements Parsable
     }
 
     /**
-     * Sets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
+     * Sets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
      *  @param DateInterval|null $value Value to set for the userReacceptRequiredFrequency property.
     */
     public function setUserReacceptRequiredFrequency(?DateInterval $value ): void {

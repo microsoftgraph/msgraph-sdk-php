@@ -19,7 +19,7 @@ class Invitation extends Entity implements Parsable
     private ?string $invitedUserDisplayName = null;
     
     /**
-     * @var string|null $invitedUserEmailAddress The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
+     * @var string|null $invitedUserEmailAddress The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
     */
     private ?string $invitedUserEmailAddress = null;
     
@@ -29,7 +29,7 @@ class Invitation extends Entity implements Parsable
     private ?InvitedUserMessageInfo $invitedUserMessageInfo = null;
     
     /**
-     * @var string|null $invitedUserType The userType of the user being invited. By default, this is Guest. You can invite as Member if you're are company administrator. The default is false.
+     * @var string|null $invitedUserType The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
     */
     private ?string $invitedUserType = null;
     
@@ -39,7 +39,7 @@ class Invitation extends Entity implements Parsable
     private ?string $inviteRedeemUrl = null;
     
     /**
-     * @var string|null $inviteRedirectUrl The URL user should be redirected to once the invitation is redeemed. Required.
+     * @var string|null $inviteRedirectUrl The URL the user should be redirected to once the invitation is redeemed. Required.
     */
     private ?string $inviteRedirectUrl = null;
     
@@ -49,7 +49,7 @@ class Invitation extends Entity implements Parsable
     private ?bool $sendInvitationMessage = null;
     
     /**
-     * @var string|null $status The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error
+     * @var string|null $status The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.
     */
     private ?string $status = null;
     
@@ -106,7 +106,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Gets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
+     * Gets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
      * @return string|null
     */
     public function getInvitedUserEmailAddress(): ?string {
@@ -122,7 +122,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Gets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you're are company administrator. The default is false.
+     * Gets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
      * @return string|null
     */
     public function getInvitedUserType(): ?string {
@@ -138,7 +138,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Gets the inviteRedirectUrl property value. The URL user should be redirected to once the invitation is redeemed. Required.
+     * Gets the inviteRedirectUrl property value. The URL the user should be redirected to once the invitation is redeemed. Required.
      * @return string|null
     */
     public function getInviteRedirectUrl(): ?string {
@@ -154,7 +154,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error
+     * Gets the status property value. The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.
      * @return string|null
     */
     public function getStatus(): ?string {
@@ -195,7 +195,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Sets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
+     * Sets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
      *  @param string|null $value Value to set for the invitedUserEmailAddress property.
     */
     public function setInvitedUserEmailAddress(?string $value ): void {
@@ -211,7 +211,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Sets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you're are company administrator. The default is false.
+     * Sets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
      *  @param string|null $value Value to set for the invitedUserType property.
     */
     public function setInvitedUserType(?string $value ): void {
@@ -227,7 +227,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Sets the inviteRedirectUrl property value. The URL user should be redirected to once the invitation is redeemed. Required.
+     * Sets the inviteRedirectUrl property value. The URL the user should be redirected to once the invitation is redeemed. Required.
      *  @param string|null $value Value to set for the inviteRedirectUrl property.
     */
     public function setInviteRedirectUrl(?string $value ): void {
@@ -243,7 +243,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error
+     * Sets the status property value. The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.
      *  @param string|null $value Value to set for the status property.
     */
     public function setStatus(?string $value ): void {

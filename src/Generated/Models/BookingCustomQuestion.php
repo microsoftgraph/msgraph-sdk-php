@@ -19,7 +19,7 @@ class BookingCustomQuestion extends Entity implements Parsable
     private ?array $answerOptions = null;
     
     /**
-     * @var string|null $displayName Display name of this entity.
+     * @var string|null $displayName The question.
     */
     private ?string $displayName = null;
     
@@ -57,7 +57,7 @@ class BookingCustomQuestion extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. Display name of this entity.
+     * Gets the displayName property value. The question.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -105,7 +105,7 @@ class BookingCustomQuestion extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. Display name of this entity.
+     * Sets the displayName property value. The question.
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {

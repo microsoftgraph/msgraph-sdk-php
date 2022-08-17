@@ -14,7 +14,7 @@ class ConditionalAccessRoot extends Entity implements Parsable
     private ?array $namedLocations = null;
     
     /**
-     * @var array<ConditionalAccessPolicy>|null $policies Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
+     * @var array<ConditionalAccessPolicy>|null $policies Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
     */
     private ?array $policies = null;
     
@@ -56,7 +56,7 @@ class ConditionalAccessRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the policies property value. Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
+     * Gets the policies property value. Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @return array<ConditionalAccessPolicy>|null
     */
     public function getPolicies(): ?array {
@@ -82,7 +82,7 @@ class ConditionalAccessRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the policies property value. Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
+     * Sets the policies property value. Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      *  @param array<ConditionalAccessPolicy>|null $value Value to set for the policies property.
     */
     public function setPolicies(?array $value ): void {

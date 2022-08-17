@@ -20,7 +20,7 @@ class Operation extends Entity implements Parsable
     private ?DateTime $lastActionDateTime = null;
     
     /**
-     * @var OperationStatus|null $status Possible values are: notStarted, running, completed, failed. Read-only.
+     * @var OperationStatus|null $status The current status of the operation: notStarted, running, completed, failed
     */
     private ?OperationStatus $status = null;
     
@@ -78,7 +78,7 @@ class Operation extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Possible values are: notStarted, running, completed, failed. Read-only.
+     * Gets the status property value. The current status of the operation: notStarted, running, completed, failed
      * @return OperationStatus|null
     */
     public function getStatus(): ?OperationStatus {
@@ -113,7 +113,7 @@ class Operation extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Possible values are: notStarted, running, completed, failed. Read-only.
+     * Sets the status property value. The current status of the operation: notStarted, running, completed, failed
      *  @param OperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?OperationStatus $value ): void {

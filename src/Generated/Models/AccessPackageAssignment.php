@@ -20,7 +20,7 @@ class AccessPackageAssignment extends Entity implements Parsable
     private ?AccessPackageAssignmentPolicy $assignmentPolicy = null;
     
     /**
-     * @var DateTime|null $expiredDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * @var DateTime|null $expiredDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     */
     private ?DateTime $expiredDateTime = null;
     
@@ -78,7 +78,7 @@ class AccessPackageAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return DateTime|null
     */
     public function getExpiredDateTime(): ?DateTime {
@@ -166,7 +166,7 @@ class AccessPackageAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      *  @param DateTime|null $value Value to set for the expiredDateTime property.
     */
     public function setExpiredDateTime(?DateTime $value ): void {

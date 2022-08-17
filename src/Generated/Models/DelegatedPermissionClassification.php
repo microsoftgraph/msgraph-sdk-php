@@ -14,12 +14,12 @@ class DelegatedPermissionClassification extends Entity implements Parsable
     private ?PermissionClassificationType $classification = null;
     
     /**
-     * @var string|null $permissionId The unique identifier (id) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
+     * @var string|null $permissionId The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
     */
     private ?string $permissionId = null;
     
     /**
-     * @var string|null $permissionName The claim value (value) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Does not support $filter.
+     * @var string|null $permissionName The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter.
     */
     private ?string $permissionName = null;
     
@@ -62,7 +62,7 @@ class DelegatedPermissionClassification extends Entity implements Parsable
     }
 
     /**
-     * Gets the permissionId property value. The unique identifier (id) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
+     * Gets the permissionId property value. The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
      * @return string|null
     */
     public function getPermissionId(): ?string {
@@ -70,7 +70,7 @@ class DelegatedPermissionClassification extends Entity implements Parsable
     }
 
     /**
-     * Gets the permissionName property value. The claim value (value) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Does not support $filter.
+     * Gets the permissionName property value. The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter.
      * @return string|null
     */
     public function getPermissionName(): ?string {
@@ -97,7 +97,7 @@ class DelegatedPermissionClassification extends Entity implements Parsable
     }
 
     /**
-     * Sets the permissionId property value. The unique identifier (id) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
+     * Sets the permissionId property value. The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
      *  @param string|null $value Value to set for the permissionId property.
     */
     public function setPermissionId(?string $value ): void {
@@ -105,7 +105,7 @@ class DelegatedPermissionClassification extends Entity implements Parsable
     }
 
     /**
-     * Sets the permissionName property value. The claim value (value) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Does not support $filter.
+     * Sets the permissionName property value. The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter.
      *  @param string|null $value Value to set for the permissionName property.
     */
     public function setPermissionName(?string $value ): void {

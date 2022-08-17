@@ -81,7 +81,7 @@ class PhoneAuthenticationMethodItemRequestBuilder
     }
 
     /**
-     * Represents the phone registered to a user for authentication.
+     * The phone numbers registered to a user for authentication.
      * @param PhoneAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -148,7 +148,7 @@ class PhoneAuthenticationMethodItemRequestBuilder
     }
 
     /**
-     * Represents the phone registered to a user for authentication.
+     * The phone numbers registered to a user for authentication.
      * @param PhoneAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

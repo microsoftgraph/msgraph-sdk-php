@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Security extends Entity implements Parsable 
 {
     /**
-     * @var array<Alert>|null $alerts Notifications for suspicious or potential security issues in a customer’s tenant.
+     * @var array<Alert>|null $alerts The alerts property
     */
     private ?array $alerts = null;
     
@@ -47,7 +47,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Gets the alerts property value. Notifications for suspicious or potential security issues in a customer’s tenant.
+     * Gets the alerts property value. The alerts property
      * @return array<Alert>|null
     */
     public function getAlerts(): ?array {
@@ -105,7 +105,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Sets the alerts property value. Notifications for suspicious or potential security issues in a customer’s tenant.
+     * Sets the alerts property value. The alerts property
      *  @param array<Alert>|null $value Value to set for the alerts property.
     */
     public function setAlerts(?array $value ): void {

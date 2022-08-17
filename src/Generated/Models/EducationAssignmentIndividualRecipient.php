@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationAssignmentIndividualRecipient extends EducationAssignmentRecipient implements Parsable 
 {
     /**
-     * @var array<string>|null $recipients A collection of ids of the recipients.
+     * @var array<string>|null $recipients A collection of IDs of the recipients.
     */
     private ?array $recipients = null;
     
@@ -42,7 +42,7 @@ class EducationAssignmentIndividualRecipient extends EducationAssignmentRecipien
     }
 
     /**
-     * Gets the recipients property value. A collection of ids of the recipients.
+     * Gets the recipients property value. A collection of IDs of the recipients.
      * @return array<string>|null
     */
     public function getRecipients(): ?array {
@@ -59,7 +59,7 @@ class EducationAssignmentIndividualRecipient extends EducationAssignmentRecipien
     }
 
     /**
-     * Sets the recipients property value. A collection of ids of the recipients.
+     * Sets the recipients property value. A collection of IDs of the recipients.
      *  @param array<string>|null $value Value to set for the recipients property.
     */
     public function setRecipients(?array $value ): void {

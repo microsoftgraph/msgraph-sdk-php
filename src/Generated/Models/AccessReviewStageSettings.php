@@ -50,7 +50,7 @@ class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
     private ?array $reviewers = null;
     
     /**
-     * @var string|null $stageId Unique identifier of the accessReviewStageSettings. The stageId will be used in dependsOn property to indicate the stage relationship. Required.
+     * @var string|null $stageId Unique identifier of the accessReviewStageSettings object. The stageId will be used by the dependsOn property to indicate the order of the stages. Required.
     */
     private ?string $stageId = null;
     
@@ -154,7 +154,7 @@ class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the stageId property value. Unique identifier of the accessReviewStageSettings. The stageId will be used in dependsOn property to indicate the stage relationship. Required.
+     * Gets the stageId property value. Unique identifier of the accessReviewStageSettings object. The stageId will be used by the dependsOn property to indicate the order of the stages. Required.
      * @return string|null
     */
     public function getStageId(): ?string {
@@ -242,7 +242,7 @@ class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the stageId property value. Unique identifier of the accessReviewStageSettings. The stageId will be used in dependsOn property to indicate the stage relationship. Required.
+     * Sets the stageId property value. Unique identifier of the accessReviewStageSettings object. The stageId will be used by the dependsOn property to indicate the order of the stages. Required.
      *  @param string|null $value Value to set for the stageId property.
     */
     public function setStageId(?string $value ): void {

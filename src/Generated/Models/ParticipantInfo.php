@@ -20,7 +20,7 @@ class ParticipantInfo implements AdditionalDataHolder, Parsable
     private ?string $countryCode = null;
     
     /**
-     * @var EndpointType|null $endpointType The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only.
+     * @var EndpointType|null $endpointType The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
     */
     private ?EndpointType $endpointType = null;
     
@@ -45,7 +45,7 @@ class ParticipantInfo implements AdditionalDataHolder, Parsable
     private ?string $participantId = null;
     
     /**
-     * @var string|null $region The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only.
+     * @var string|null $region The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
     */
     private ?string $region = null;
     
@@ -83,7 +83,7 @@ class ParticipantInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only.
+     * Gets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
      * @return EndpointType|null
     */
     public function getEndpointType(): ?EndpointType {
@@ -140,7 +140,7 @@ class ParticipantInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only.
+     * Gets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
      * @return string|null
     */
     public function getRegion(): ?string {
@@ -179,7 +179,7 @@ class ParticipantInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only.
+     * Sets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
      *  @param EndpointType|null $value Value to set for the endpointType property.
     */
     public function setEndpointType(?EndpointType $value ): void {
@@ -219,7 +219,7 @@ class ParticipantInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only.
+     * Sets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
      *  @param string|null $value Value to set for the region property.
     */
     public function setRegion(?string $value ): void {

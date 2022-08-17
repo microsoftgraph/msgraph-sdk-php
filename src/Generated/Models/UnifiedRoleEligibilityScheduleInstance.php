@@ -10,22 +10,22 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstanceBase implements Parsable 
 {
     /**
-     * @var DateTime|null $endDateTime Time that the roleEligibilityScheduleInstance will expire.
+     * @var DateTime|null $endDateTime The end date of the schedule instance.
     */
     private ?DateTime $endDateTime = null;
     
     /**
-     * @var string|null $memberType Membership type of the assignment. It can either be Inherited, Direct, or Group.
+     * @var string|null $memberType How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
     */
     private ?string $memberType = null;
     
     /**
-     * @var string|null $roleEligibilityScheduleId Identifier of the parent roleEligibilitySchedule for this instance.
+     * @var string|null $roleEligibilityScheduleId The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne).
     */
     private ?string $roleEligibilityScheduleId = null;
     
     /**
-     * @var DateTime|null $startDateTime Time that the roleEligibilityScheduleInstance will start.
+     * @var DateTime|null $startDateTime When this instance starts.
     */
     private ?DateTime $startDateTime = null;
     
@@ -47,7 +47,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     }
 
     /**
-     * Gets the endDateTime property value. Time that the roleEligibilityScheduleInstance will expire.
+     * Gets the endDateTime property value. The end date of the schedule instance.
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
@@ -69,7 +69,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     }
 
     /**
-     * Gets the memberType property value. Membership type of the assignment. It can either be Inherited, Direct, or Group.
+     * Gets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
      * @return string|null
     */
     public function getMemberType(): ?string {
@@ -77,7 +77,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     }
 
     /**
-     * Gets the roleEligibilityScheduleId property value. Identifier of the parent roleEligibilitySchedule for this instance.
+     * Gets the roleEligibilityScheduleId property value. The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne).
      * @return string|null
     */
     public function getRoleEligibilityScheduleId(): ?string {
@@ -85,7 +85,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     }
 
     /**
-     * Gets the startDateTime property value. Time that the roleEligibilityScheduleInstance will start.
+     * Gets the startDateTime property value. When this instance starts.
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
@@ -105,7 +105,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     }
 
     /**
-     * Sets the endDateTime property value. Time that the roleEligibilityScheduleInstance will expire.
+     * Sets the endDateTime property value. The end date of the schedule instance.
      *  @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value ): void {
@@ -113,7 +113,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     }
 
     /**
-     * Sets the memberType property value. Membership type of the assignment. It can either be Inherited, Direct, or Group.
+     * Sets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
      *  @param string|null $value Value to set for the memberType property.
     */
     public function setMemberType(?string $value ): void {
@@ -121,7 +121,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     }
 
     /**
-     * Sets the roleEligibilityScheduleId property value. Identifier of the parent roleEligibilitySchedule for this instance.
+     * Sets the roleEligibilityScheduleId property value. The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne).
      *  @param string|null $value Value to set for the roleEligibilityScheduleId property.
     */
     public function setRoleEligibilityScheduleId(?string $value ): void {
@@ -129,7 +129,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     }
 
     /**
-     * Sets the startDateTime property value. Time that the roleEligibilityScheduleInstance will start.
+     * Sets the startDateTime property value. When this instance starts.
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value ): void {

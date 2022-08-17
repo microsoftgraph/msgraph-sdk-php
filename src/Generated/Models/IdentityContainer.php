@@ -14,7 +14,7 @@ class IdentityContainer extends Entity implements Parsable
     private ?array $apiConnectors = null;
     
     /**
-     * @var array<B2xIdentityUserFlow>|null $b2xUserFlows Represents entry point for B2X and self-service sign-up identity userflows.
+     * @var array<B2xIdentityUserFlow>|null $b2xUserFlows Represents entry point for B2X/self-service sign-up identity userflows.
     */
     private ?array $b2xUserFlows = null;
     
@@ -24,7 +24,7 @@ class IdentityContainer extends Entity implements Parsable
     private ?ConditionalAccessRoot $conditionalAccess = null;
     
     /**
-     * @var array<IdentityProviderBase>|null $identityProviders Represents entry point for identity provider base.
+     * @var array<IdentityProviderBase>|null $identityProviders The identityProviders property
     */
     private ?array $identityProviders = null;
     
@@ -59,7 +59,7 @@ class IdentityContainer extends Entity implements Parsable
     }
 
     /**
-     * Gets the b2xUserFlows property value. Represents entry point for B2X and self-service sign-up identity userflows.
+     * Gets the b2xUserFlows property value. Represents entry point for B2X/self-service sign-up identity userflows.
      * @return array<B2xIdentityUserFlow>|null
     */
     public function getB2xUserFlows(): ?array {
@@ -90,7 +90,7 @@ class IdentityContainer extends Entity implements Parsable
     }
 
     /**
-     * Gets the identityProviders property value. Represents entry point for identity provider base.
+     * Gets the identityProviders property value. The identityProviders property
      * @return array<IdentityProviderBase>|null
     */
     public function getIdentityProviders(): ?array {
@@ -127,7 +127,7 @@ class IdentityContainer extends Entity implements Parsable
     }
 
     /**
-     * Sets the b2xUserFlows property value. Represents entry point for B2X and self-service sign-up identity userflows.
+     * Sets the b2xUserFlows property value. Represents entry point for B2X/self-service sign-up identity userflows.
      *  @param array<B2xIdentityUserFlow>|null $value Value to set for the b2xUserFlows property.
     */
     public function setB2xUserFlows(?array $value ): void {
@@ -143,7 +143,7 @@ class IdentityContainer extends Entity implements Parsable
     }
 
     /**
-     * Sets the identityProviders property value. Represents entry point for identity provider base.
+     * Sets the identityProviders property value. The identityProviders property
      *  @param array<IdentityProviderBase>|null $value Value to set for the identityProviders property.
     */
     public function setIdentityProviders(?array $value ): void {

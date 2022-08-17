@@ -15,7 +15,7 @@ class ChatInfo implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $messageId The unique identifier for a message in a Microsoft Teams channel.
+     * @var string|null $messageId The unique identifier of a message in a Microsoft Teams channel.
     */
     private ?string $messageId = null;
     
@@ -74,7 +74,7 @@ class ChatInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the messageId property value. The unique identifier for a message in a Microsoft Teams channel.
+     * Gets the messageId property value. The unique identifier of a message in a Microsoft Teams channel.
      * @return string|null
     */
     public function getMessageId(): ?string {
@@ -126,7 +126,7 @@ class ChatInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the messageId property value. The unique identifier for a message in a Microsoft Teams channel.
+     * Sets the messageId property value. The unique identifier of a message in a Microsoft Teams channel.
      *  @param string|null $value Value to set for the messageId property.
     */
     public function setMessageId(?string $value ): void {

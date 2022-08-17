@@ -34,7 +34,7 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
     private ?array $scopedRoleMembers = null;
     
     /**
-     * @var string|null $visibility Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, the default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
+     * @var string|null $visibility Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
     */
     private ?string $visibility = null;
     
@@ -112,7 +112,7 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, the default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
+     * Gets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
      * @return string|null
     */
     public function getVisibility(): ?string {
@@ -174,7 +174,7 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, the default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
+     * Sets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
      *  @param string|null $value Value to set for the visibility property.
     */
     public function setVisibility(?string $value ): void {

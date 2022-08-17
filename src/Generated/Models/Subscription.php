@@ -20,12 +20,12 @@ class Subscription extends Entity implements Parsable
     private ?string $changeType = null;
     
     /**
-     * @var string|null $clientState Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 255 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
+     * @var string|null $clientState Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
     */
     private ?string $clientState = null;
     
     /**
-     * @var string|null $creatorId Optional. Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the ID of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the ID of the service principal corresponding to the app. Read-only.
+     * @var string|null $creatorId Optional. Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
     */
     private ?string $creatorId = null;
     
@@ -35,7 +35,7 @@ class Subscription extends Entity implements Parsable
     private ?string $encryptionCertificate = null;
     
     /**
-     * @var string|null $encryptionCertificateId Optional. A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Required when includeResourceData is true.
+     * @var string|null $encryptionCertificateId Optional. A custom app-provided identifier to help identify the certificate needed to decrypt resource data.
     */
     private ?string $encryptionCertificateId = null;
     
@@ -60,12 +60,12 @@ class Subscription extends Entity implements Parsable
     private ?string $lifecycleNotificationUrl = null;
     
     /**
-     * @var string|null $notificationQueryOptions Optional.  OData query options for specifying the value for the targeting resource. Clients receive notifications when the resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.
+     * @var string|null $notificationQueryOptions Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.
     */
     private ?string $notificationQueryOptions = null;
     
     /**
-     * @var string|null $notificationUrl Required. The URL of the endpoint that receives the change notifications. This URL must make use of the HTTPS protocol.
+     * @var string|null $notificationUrl Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
     */
     private ?string $notificationUrl = null;
     
@@ -75,7 +75,7 @@ class Subscription extends Entity implements Parsable
     private ?string $notificationUrlAppId = null;
     
     /**
-     * @var string|null $resource Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/beta/). See the possible resource path values for each supported resource.
+     * @var string|null $resource Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
     */
     private ?string $resource = null;
     
@@ -113,7 +113,7 @@ class Subscription extends Entity implements Parsable
     }
 
     /**
-     * Gets the clientState property value. Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 255 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
+     * Gets the clientState property value. Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
      * @return string|null
     */
     public function getClientState(): ?string {
@@ -121,7 +121,7 @@ class Subscription extends Entity implements Parsable
     }
 
     /**
-     * Gets the creatorId property value. Optional. Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the ID of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the ID of the service principal corresponding to the app. Read-only.
+     * Gets the creatorId property value. Optional. Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
      * @return string|null
     */
     public function getCreatorId(): ?string {
@@ -137,7 +137,7 @@ class Subscription extends Entity implements Parsable
     }
 
     /**
-     * Gets the encryptionCertificateId property value. Optional. A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Required when includeResourceData is true.
+     * Gets the encryptionCertificateId property value. Optional. A custom app-provided identifier to help identify the certificate needed to decrypt resource data.
      * @return string|null
     */
     public function getEncryptionCertificateId(): ?string {
@@ -201,7 +201,7 @@ class Subscription extends Entity implements Parsable
     }
 
     /**
-     * Gets the notificationQueryOptions property value. Optional.  OData query options for specifying the value for the targeting resource. Clients receive notifications when the resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.
+     * Gets the notificationQueryOptions property value. Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.
      * @return string|null
     */
     public function getNotificationQueryOptions(): ?string {
@@ -209,7 +209,7 @@ class Subscription extends Entity implements Parsable
     }
 
     /**
-     * Gets the notificationUrl property value. Required. The URL of the endpoint that receives the change notifications. This URL must make use of the HTTPS protocol.
+     * Gets the notificationUrl property value. Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
      * @return string|null
     */
     public function getNotificationUrl(): ?string {
@@ -225,7 +225,7 @@ class Subscription extends Entity implements Parsable
     }
 
     /**
-     * Gets the resource property value. Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/beta/). See the possible resource path values for each supported resource.
+     * Gets the resource property value. Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
      * @return string|null
     */
     public function getResource(): ?string {
@@ -271,7 +271,7 @@ class Subscription extends Entity implements Parsable
     }
 
     /**
-     * Sets the clientState property value. Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 255 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
+     * Sets the clientState property value. Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
      *  @param string|null $value Value to set for the clientState property.
     */
     public function setClientState(?string $value ): void {
@@ -279,7 +279,7 @@ class Subscription extends Entity implements Parsable
     }
 
     /**
-     * Sets the creatorId property value. Optional. Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the ID of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the ID of the service principal corresponding to the app. Read-only.
+     * Sets the creatorId property value. Optional. Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
      *  @param string|null $value Value to set for the creatorId property.
     */
     public function setCreatorId(?string $value ): void {
@@ -295,7 +295,7 @@ class Subscription extends Entity implements Parsable
     }
 
     /**
-     * Sets the encryptionCertificateId property value. Optional. A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Required when includeResourceData is true.
+     * Sets the encryptionCertificateId property value. Optional. A custom app-provided identifier to help identify the certificate needed to decrypt resource data.
      *  @param string|null $value Value to set for the encryptionCertificateId property.
     */
     public function setEncryptionCertificateId(?string $value ): void {
@@ -335,7 +335,7 @@ class Subscription extends Entity implements Parsable
     }
 
     /**
-     * Sets the notificationQueryOptions property value. Optional.  OData query options for specifying the value for the targeting resource. Clients receive notifications when the resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.
+     * Sets the notificationQueryOptions property value. Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.
      *  @param string|null $value Value to set for the notificationQueryOptions property.
     */
     public function setNotificationQueryOptions(?string $value ): void {
@@ -343,7 +343,7 @@ class Subscription extends Entity implements Parsable
     }
 
     /**
-     * Sets the notificationUrl property value. Required. The URL of the endpoint that receives the change notifications. This URL must make use of the HTTPS protocol.
+     * Sets the notificationUrl property value. Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
      *  @param string|null $value Value to set for the notificationUrl property.
     */
     public function setNotificationUrl(?string $value ): void {
@@ -359,7 +359,7 @@ class Subscription extends Entity implements Parsable
     }
 
     /**
-     * Sets the resource property value. Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/beta/). See the possible resource path values for each supported resource.
+     * Sets the resource property value. Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
      *  @param string|null $value Value to set for the resource property.
     */
     public function setResource(?string $value ): void {

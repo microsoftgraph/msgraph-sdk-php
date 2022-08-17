@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BookingBusiness extends Entity implements Parsable 
 {
     /**
-     * @var PhysicalAddress|null $address The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
+     * @var PhysicalAddress|null $address The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
     */
     private ?PhysicalAddress $address = null;
     
@@ -111,7 +111,7 @@ class BookingBusiness extends Entity implements Parsable
     }
 
     /**
-     * Gets the address property value. The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
+     * Gets the address property value. The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
      * @return PhysicalAddress|null
     */
     public function getAddress(): ?PhysicalAddress {
@@ -299,7 +299,7 @@ class BookingBusiness extends Entity implements Parsable
     }
 
     /**
-     * Sets the address property value. The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
+     * Sets the address property value. The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
      *  @param PhysicalAddress|null $value Value to set for the address property.
     */
     public function setAddress(?PhysicalAddress $value ): void {

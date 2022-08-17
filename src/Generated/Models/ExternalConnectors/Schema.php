@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Schema extends Entity implements Parsable 
 {
     /**
-     * @var string|null $baseType Must be set to microsoft.graph.externalItem. Required.
+     * @var string|null $baseType Must be set to microsoft.graph.externalConnector.externalItem. Required.
     */
     private ?string $baseType = null;
     
@@ -37,7 +37,7 @@ class Schema extends Entity implements Parsable
     }
 
     /**
-     * Gets the baseType property value. Must be set to microsoft.graph.externalItem. Required.
+     * Gets the baseType property value. Must be set to microsoft.graph.externalConnector.externalItem. Required.
      * @return string|null
     */
     public function getBaseType(): ?string {
@@ -75,7 +75,7 @@ class Schema extends Entity implements Parsable
     }
 
     /**
-     * Sets the baseType property value. Must be set to microsoft.graph.externalItem. Required.
+     * Sets the baseType property value. Must be set to microsoft.graph.externalConnector.externalItem. Required.
      *  @param string|null $value Value to set for the baseType property.
     */
     public function setBaseType(?string $value ): void {

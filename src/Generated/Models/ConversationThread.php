@@ -25,7 +25,7 @@ class ConversationThread extends Entity implements Parsable
     private ?bool $isLocked = null;
     
     /**
-     * @var DateTime|null $lastDeliveredDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default.
+     * @var DateTime|null $lastDeliveredDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default.
     */
     private ?DateTime $lastDeliveredDateTime = null;
     
@@ -115,7 +115,7 @@ class ConversationThread extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default.
+     * Gets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default.
      * @return DateTime|null
     */
     public function getLastDeliveredDateTime(): ?DateTime {
@@ -204,7 +204,7 @@ class ConversationThread extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default.
+     * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default.
      *  @param DateTime|null $value Value to set for the lastDeliveredDateTime property.
     */
     public function setLastDeliveredDateTime(?DateTime $value ): void {

@@ -34,7 +34,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     private ?float $size = null;
     
     /**
-     * @var string|null $underline Type of underline applied to the font. Possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
+     * @var string|null $underline Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
     */
     private ?string $underline = null;
     
@@ -112,7 +112,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Gets the underline property value. Type of underline applied to the font. Possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
+     * Gets the underline property value. Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
      * @return string|null
     */
     public function getUnderline(): ?string {
@@ -174,7 +174,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Sets the underline property value. Type of underline applied to the font. Possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
+     * Sets the underline property value. Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
      *  @param string|null $value Value to set for the underline property.
     */
     public function setUnderline(?string $value ): void {

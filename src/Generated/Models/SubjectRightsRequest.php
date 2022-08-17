@@ -75,7 +75,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     private ?DateTime $lastModifiedDateTime = null;
     
     /**
-     * @var array<AuthoredNote>|null $notes List of notes associated with the request.
+     * @var array<AuthoredNote>|null $notes List of notes associcated with the request.
     */
     private ?array $notes = null;
     
@@ -90,7 +90,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     private ?array $stages = null;
     
     /**
-     * @var SubjectRightsRequestStatus|null $status The status of the request. Possible values are: active, closed, unknownFutureValue.
+     * @var SubjectRightsRequestStatus|null $status The status of the request.. Possible values are: active, closed, unknownFutureValue.
     */
     private ?SubjectRightsRequestStatus $status = null;
     
@@ -100,7 +100,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     private ?Team $team = null;
     
     /**
-     * @var SubjectRightsRequestType|null $type The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
+     * @var SubjectRightsRequestType|null $type The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
     */
     private ?SubjectRightsRequestType $type = null;
     
@@ -255,7 +255,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the notes property value. List of notes associated with the request.
+     * Gets the notes property value. List of notes associcated with the request.
      * @return array<AuthoredNote>|null
     */
     public function getNotes(): ?array {
@@ -279,7 +279,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
+     * Gets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
      * @return SubjectRightsRequestStatus|null
     */
     public function getStatus(): ?SubjectRightsRequestStatus {
@@ -295,7 +295,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the type property value. The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
+     * Gets the type property value. The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
      * @return SubjectRightsRequestType|null
     */
     public function getType(): ?SubjectRightsRequestType {
@@ -434,7 +434,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the notes property value. List of notes associated with the request.
+     * Sets the notes property value. List of notes associcated with the request.
      *  @param array<AuthoredNote>|null $value Value to set for the notes property.
     */
     public function setNotes(?array $value ): void {
@@ -458,7 +458,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
+     * Sets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
      *  @param SubjectRightsRequestStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SubjectRightsRequestStatus $value ): void {
@@ -474,7 +474,7 @@ class SubjectRightsRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the type property value. The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
+     * Sets the type property value. The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
      *  @param SubjectRightsRequestType|null $value Value to set for the type property.
     */
     public function setType(?SubjectRightsRequestType $value ): void {

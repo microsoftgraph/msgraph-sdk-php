@@ -15,7 +15,7 @@ class DirectoryAudit extends Entity implements Parsable
     private ?DateTime $activityDateTime = null;
     
     /**
-     * @var string|null $activityDisplayName Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure Ad activity list.
+     * @var string|null $activityDisplayName Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
     */
     private ?string $activityDisplayName = null;
     
@@ -60,7 +60,7 @@ class DirectoryAudit extends Entity implements Parsable
     private ?string $resultReason = null;
     
     /**
-     * @var array<TargetResource>|null $targetResources Information about the resource that changed due to the activity.
+     * @var array<TargetResource>|null $targetResources Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy or Other.
     */
     private ?array $targetResources = null;
     
@@ -90,7 +90,7 @@ class DirectoryAudit extends Entity implements Parsable
     }
 
     /**
-     * Gets the activityDisplayName property value. Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure Ad activity list.
+     * Gets the activityDisplayName property value. Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
      * @return string|null
     */
     public function getActivityDisplayName(): ?string {
@@ -183,7 +183,7 @@ class DirectoryAudit extends Entity implements Parsable
     }
 
     /**
-     * Gets the targetResources property value. Information about the resource that changed due to the activity.
+     * Gets the targetResources property value. Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy or Other.
      * @return array<TargetResource>|null
     */
     public function getTargetResources(): ?array {
@@ -218,7 +218,7 @@ class DirectoryAudit extends Entity implements Parsable
     }
 
     /**
-     * Sets the activityDisplayName property value. Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure Ad activity list.
+     * Sets the activityDisplayName property value. Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
      *  @param string|null $value Value to set for the activityDisplayName property.
     */
     public function setActivityDisplayName(?string $value ): void {
@@ -290,7 +290,7 @@ class DirectoryAudit extends Entity implements Parsable
     }
 
     /**
-     * Sets the targetResources property value. Information about the resource that changed due to the activity.
+     * Sets the targetResources property value. Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy or Other.
      *  @param array<TargetResource>|null $value Value to set for the targetResources property.
     */
     public function setTargetResources(?array $value ): void {

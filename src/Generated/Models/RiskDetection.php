@@ -10,17 +10,17 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RiskDetection extends Entity implements Parsable 
 {
     /**
-     * @var ActivityType|null $activity Indicates the activity type the detected risk is linked to. The possible values are signin, user, unknownFutureValue.
+     * @var ActivityType|null $activity Indicates the activity type the detected risk is linked to. Possible values are: signin, user, unknownFutureValue.
     */
     private ?ActivityType $activity = null;
     
     /**
-     * @var DateTime|null $activityDateTime Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * @var DateTime|null $activityDateTime Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
     */
     private ?DateTime $activityDateTime = null;
     
     /**
-     * @var string|null $additionalInfo Additional information associated with the risk detection in JSON format.
+     * @var string|null $additionalInfo Additional information associated with the risk detection in JSON format. For example, '[{/'Key/':/'userAgent/',/'Value/':/'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36/'}]'. Possible keys in the additionalInfo JSON string are: userAgent, alertUrl, relatedEventTimeInUtc, relatedUserAgent, deviceInformation, relatedLocation, requestId, correlationId, lastActivityTimeInUtc, malwareName, clientLocation, clientIp, riskReasons. For more information about riskReasons and possible values, see riskReasons values.
     */
     private ?string $additionalInfo = null;
     
@@ -30,12 +30,12 @@ class RiskDetection extends Entity implements Parsable
     private ?string $correlationId = null;
     
     /**
-     * @var DateTime|null $detectedDateTime Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * @var DateTime|null $detectedDateTime Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: 2014-01-01T00:00:00Z
     */
     private ?DateTime $detectedDateTime = null;
     
     /**
-     * @var RiskDetectionTimingType|null $detectionTimingType Timing of the detected risk (real-time/offline). The possible values are notDefined, realtime, nearRealtime, offline, unknownFutureValue.
+     * @var RiskDetectionTimingType|null $detectionTimingType Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
     */
     private ?RiskDetectionTimingType $detectionTimingType = null;
     
@@ -45,7 +45,7 @@ class RiskDetection extends Entity implements Parsable
     private ?string $ipAddress = null;
     
     /**
-     * @var DateTime|null $lastUpdatedDateTime Date and time that the risk detection was last updated.
+     * @var DateTime|null $lastUpdatedDateTime Date and time that the risk detection was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
     */
     private ?DateTime $lastUpdatedDateTime = null;
     
@@ -60,22 +60,22 @@ class RiskDetection extends Entity implements Parsable
     private ?string $requestId = null;
     
     /**
-     * @var RiskDetail|null $riskDetail Details of the detected risk. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
+     * @var RiskDetail|null $riskDetail Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
     */
     private ?RiskDetail $riskDetail = null;
     
     /**
-     * @var string|null $riskEventType The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue.  For more information about each value, see riskEventType values.
+     * @var string|null $riskEventType The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, passwordSpray, impossibleTravel, newCountry, anomalousToken, tokenIssuerAnomaly,suspiciousBrowser, riskyIPAddress, mcasSuspiciousInboxManipulationRules, suspiciousInboxForwarding, and unknownFutureValue. If the risk detection is a premium detection, will show generic. For more information about each value, see riskEventType values.
     */
     private ?string $riskEventType = null;
     
     /**
-     * @var RiskLevel|null $riskLevel Level of the detected risk. The possible values are low, medium, high, hidden, none, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
+     * @var RiskLevel|null $riskLevel Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
     */
     private ?RiskLevel $riskLevel = null;
     
     /**
-     * @var RiskState|null $riskState The state of a detected risky user or sign-in. The possible values are none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, and unknownFutureValue.
+     * @var RiskState|null $riskState The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
     */
     private ?RiskState $riskState = null;
     
@@ -85,17 +85,17 @@ class RiskDetection extends Entity implements Parsable
     private ?string $source = null;
     
     /**
-     * @var TokenIssuerType|null $tokenIssuerType Indicates the type of token issuer for the detected sign-in risk. The possible values are AzureAD, ADFederationServices, and unknownFutureValue.
+     * @var TokenIssuerType|null $tokenIssuerType Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
     */
     private ?TokenIssuerType $tokenIssuerType = null;
     
     /**
-     * @var string|null $userDisplayName Name of the user.
+     * @var string|null $userDisplayName The user principal name (UPN) of the user.
     */
     private ?string $userDisplayName = null;
     
     /**
-     * @var string|null $userId Unique ID of the user.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * @var string|null $userId Unique ID of the user.
     */
     private ?string $userId = null;
     
@@ -122,7 +122,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the activity property value. Indicates the activity type the detected risk is linked to. The possible values are signin, user, unknownFutureValue.
+     * Gets the activity property value. Indicates the activity type the detected risk is linked to. Possible values are: signin, user, unknownFutureValue.
      * @return ActivityType|null
     */
     public function getActivity(): ?ActivityType {
@@ -130,7 +130,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the activityDateTime property value. Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the activityDateTime property value. Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
      * @return DateTime|null
     */
     public function getActivityDateTime(): ?DateTime {
@@ -138,7 +138,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the additionalInfo property value. Additional information associated with the risk detection in JSON format.
+     * Gets the additionalInfo property value. Additional information associated with the risk detection in JSON format. For example, '[{/'Key/':/'userAgent/',/'Value/':/'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36/'}]'. Possible keys in the additionalInfo JSON string are: userAgent, alertUrl, relatedEventTimeInUtc, relatedUserAgent, deviceInformation, relatedLocation, requestId, correlationId, lastActivityTimeInUtc, malwareName, clientLocation, clientIp, riskReasons. For more information about riskReasons and possible values, see riskReasons values.
      * @return string|null
     */
     public function getAdditionalInfo(): ?string {
@@ -154,7 +154,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the detectedDateTime property value. Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the detectedDateTime property value. Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: 2014-01-01T00:00:00Z
      * @return DateTime|null
     */
     public function getDetectedDateTime(): ?DateTime {
@@ -162,7 +162,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the detectionTimingType property value. Timing of the detected risk (real-time/offline). The possible values are notDefined, realtime, nearRealtime, offline, unknownFutureValue.
+     * Gets the detectionTimingType property value. Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
      * @return RiskDetectionTimingType|null
     */
     public function getDetectionTimingType(): ?RiskDetectionTimingType {
@@ -207,7 +207,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastUpdatedDateTime property value. Date and time that the risk detection was last updated.
+     * Gets the lastUpdatedDateTime property value. Date and time that the risk detection was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
      * @return DateTime|null
     */
     public function getLastUpdatedDateTime(): ?DateTime {
@@ -231,7 +231,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the riskDetail property value. Details of the detected risk. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
+     * Gets the riskDetail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      * @return RiskDetail|null
     */
     public function getRiskDetail(): ?RiskDetail {
@@ -239,7 +239,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the riskEventType property value. The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue.  For more information about each value, see riskEventType values.
+     * Gets the riskEventType property value. The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, passwordSpray, impossibleTravel, newCountry, anomalousToken, tokenIssuerAnomaly,suspiciousBrowser, riskyIPAddress, mcasSuspiciousInboxManipulationRules, suspiciousInboxForwarding, and unknownFutureValue. If the risk detection is a premium detection, will show generic. For more information about each value, see riskEventType values.
      * @return string|null
     */
     public function getRiskEventType(): ?string {
@@ -247,7 +247,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the riskLevel property value. Level of the detected risk. The possible values are low, medium, high, hidden, none, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
+     * Gets the riskLevel property value. Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
      * @return RiskLevel|null
     */
     public function getRiskLevel(): ?RiskLevel {
@@ -255,7 +255,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the riskState property value. The state of a detected risky user or sign-in. The possible values are none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, and unknownFutureValue.
+     * Gets the riskState property value. The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @return RiskState|null
     */
     public function getRiskState(): ?RiskState {
@@ -271,7 +271,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. The possible values are AzureAD, ADFederationServices, and unknownFutureValue.
+     * Gets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
      * @return TokenIssuerType|null
     */
     public function getTokenIssuerType(): ?TokenIssuerType {
@@ -279,7 +279,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the userDisplayName property value. Name of the user.
+     * Gets the userDisplayName property value. The user principal name (UPN) of the user.
      * @return string|null
     */
     public function getUserDisplayName(): ?string {
@@ -287,7 +287,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the userId property value. Unique ID of the user.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the userId property value. Unique ID of the user.
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -330,7 +330,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the activity property value. Indicates the activity type the detected risk is linked to. The possible values are signin, user, unknownFutureValue.
+     * Sets the activity property value. Indicates the activity type the detected risk is linked to. Possible values are: signin, user, unknownFutureValue.
      *  @param ActivityType|null $value Value to set for the activity property.
     */
     public function setActivity(?ActivityType $value ): void {
@@ -338,7 +338,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the activityDateTime property value. Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the activityDateTime property value. Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the activityDateTime property.
     */
     public function setActivityDateTime(?DateTime $value ): void {
@@ -346,7 +346,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the additionalInfo property value. Additional information associated with the risk detection in JSON format.
+     * Sets the additionalInfo property value. Additional information associated with the risk detection in JSON format. For example, '[{/'Key/':/'userAgent/',/'Value/':/'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36/'}]'. Possible keys in the additionalInfo JSON string are: userAgent, alertUrl, relatedEventTimeInUtc, relatedUserAgent, deviceInformation, relatedLocation, requestId, correlationId, lastActivityTimeInUtc, malwareName, clientLocation, clientIp, riskReasons. For more information about riskReasons and possible values, see riskReasons values.
      *  @param string|null $value Value to set for the additionalInfo property.
     */
     public function setAdditionalInfo(?string $value ): void {
@@ -362,7 +362,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the detectedDateTime property value. Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the detectedDateTime property value. Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the detectedDateTime property.
     */
     public function setDetectedDateTime(?DateTime $value ): void {
@@ -370,7 +370,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the detectionTimingType property value. Timing of the detected risk (real-time/offline). The possible values are notDefined, realtime, nearRealtime, offline, unknownFutureValue.
+     * Sets the detectionTimingType property value. Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
      *  @param RiskDetectionTimingType|null $value Value to set for the detectionTimingType property.
     */
     public function setDetectionTimingType(?RiskDetectionTimingType $value ): void {
@@ -386,7 +386,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastUpdatedDateTime property value. Date and time that the risk detection was last updated.
+     * Sets the lastUpdatedDateTime property value. Date and time that the risk detection was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the lastUpdatedDateTime property.
     */
     public function setLastUpdatedDateTime(?DateTime $value ): void {
@@ -410,7 +410,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the riskDetail property value. Details of the detected risk. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
+     * Sets the riskDetail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      *  @param RiskDetail|null $value Value to set for the riskDetail property.
     */
     public function setRiskDetail(?RiskDetail $value ): void {
@@ -418,7 +418,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the riskEventType property value. The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue.  For more information about each value, see riskEventType values.
+     * Sets the riskEventType property value. The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, passwordSpray, impossibleTravel, newCountry, anomalousToken, tokenIssuerAnomaly,suspiciousBrowser, riskyIPAddress, mcasSuspiciousInboxManipulationRules, suspiciousInboxForwarding, and unknownFutureValue. If the risk detection is a premium detection, will show generic. For more information about each value, see riskEventType values.
      *  @param string|null $value Value to set for the riskEventType property.
     */
     public function setRiskEventType(?string $value ): void {
@@ -426,7 +426,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the riskLevel property value. Level of the detected risk. The possible values are low, medium, high, hidden, none, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
+     * Sets the riskLevel property value. Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
      *  @param RiskLevel|null $value Value to set for the riskLevel property.
     */
     public function setRiskLevel(?RiskLevel $value ): void {
@@ -434,7 +434,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the riskState property value. The state of a detected risky user or sign-in. The possible values are none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, and unknownFutureValue.
+     * Sets the riskState property value. The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      *  @param RiskState|null $value Value to set for the riskState property.
     */
     public function setRiskState(?RiskState $value ): void {
@@ -450,7 +450,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. The possible values are AzureAD, ADFederationServices, and unknownFutureValue.
+     * Sets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
      *  @param TokenIssuerType|null $value Value to set for the tokenIssuerType property.
     */
     public function setTokenIssuerType(?TokenIssuerType $value ): void {
@@ -458,7 +458,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the userDisplayName property value. Name of the user.
+     * Sets the userDisplayName property value. The user principal name (UPN) of the user.
      *  @param string|null $value Value to set for the userDisplayName property.
     */
     public function setUserDisplayName(?string $value ): void {
@@ -466,7 +466,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the userId property value. Unique ID of the user.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the userId property value. Unique ID of the user.
      *  @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value ): void {

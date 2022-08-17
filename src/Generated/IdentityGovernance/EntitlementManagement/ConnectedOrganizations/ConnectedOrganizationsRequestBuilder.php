@@ -53,7 +53,7 @@ class ConnectedOrganizationsRequestBuilder
     }
 
     /**
-     * Represents references to a directory or domain of another organization whose users can request access.
+     * References to a directory or domain of another organization whose users can request access.
      * @param ConnectedOrganizationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +102,7 @@ class ConnectedOrganizationsRequestBuilder
     }
 
     /**
-     * Represents references to a directory or domain of another organization whose users can request access.
+     * References to a directory or domain of another organization whose users can request access.
      * @param ConnectedOrganizationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

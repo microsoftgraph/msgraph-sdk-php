@@ -19,7 +19,7 @@ class EducationOrganization extends Entity implements Parsable
     private ?string $displayName = null;
     
     /**
-     * @var EducationExternalSource|null $externalSource Where this user was created from. Possible values are: sis, lms, or manual.
+     * @var EducationExternalSource|null $externalSource Source where this organization was created from. Possible values are: sis, manual.
     */
     private ?EducationExternalSource $externalSource = null;
     
@@ -69,7 +69,7 @@ class EducationOrganization extends Entity implements Parsable
     }
 
     /**
-     * Gets the externalSource property value. Where this user was created from. Possible values are: sis, lms, or manual.
+     * Gets the externalSource property value. Source where this organization was created from. Possible values are: sis, manual.
      * @return EducationExternalSource|null
     */
     public function getExternalSource(): ?EducationExternalSource {
@@ -127,7 +127,7 @@ class EducationOrganization extends Entity implements Parsable
     }
 
     /**
-     * Sets the externalSource property value. Where this user was created from. Possible values are: sis, lms, or manual.
+     * Sets the externalSource property value. Source where this organization was created from. Possible values are: sis, manual.
      *  @param EducationExternalSource|null $value Value to set for the externalSource property.
     */
     public function setExternalSource(?EducationExternalSource $value ): void {

@@ -15,7 +15,7 @@ class RecordingInfo implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var IdentitySet|null $initiator The identities of recording initiator.
+     * @var IdentitySet|null $initiator The identities of the recording initiator.
     */
     private ?IdentitySet $initiator = null;
     
@@ -68,7 +68,7 @@ class RecordingInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the initiator property value. The identities of recording initiator.
+     * Gets the initiator property value. The identities of the recording initiator.
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
@@ -111,7 +111,7 @@ class RecordingInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the initiator property value. The identities of recording initiator.
+     * Sets the initiator property value. The identities of the recording initiator.
      *  @param IdentitySet|null $value Value to set for the initiator property.
     */
     public function setInitiator(?IdentitySet $value ): void {

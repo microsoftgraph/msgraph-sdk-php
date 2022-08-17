@@ -44,12 +44,12 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     private ?string $applicationTemplateId = null;
     
     /**
-     * @var string|null $appOwnerOrganizationId Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).
+     * @var string|null $appOwnerOrganizationId Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
     */
     private ?string $appOwnerOrganizationId = null;
     
     /**
-     * @var array<AppRoleAssignment>|null $appRoleAssignedTo App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+     * @var array<AppRoleAssignment>|null $appRoleAssignedTo App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
     */
     private ?array $appRoleAssignedTo = null;
     
@@ -79,7 +79,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     private ?array $createdObjects = null;
     
     /**
-     * @var array<DelegatedPermissionClassification>|null $delegatedPermissionClassifications The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
+     * @var array<DelegatedPermissionClassification>|null $delegatedPermissionClassifications The delegatedPermissionClassifications property
     */
     private ?array $delegatedPermissionClassifications = null;
     
@@ -99,12 +99,12 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     private ?string $displayName = null;
     
     /**
-     * @var array<Endpoint>|null $endpoints Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+     * @var array<Endpoint>|null $endpoints The endpoints property
     */
     private ?array $endpoints = null;
     
     /**
-     * @var array<FederatedIdentityCredential>|null $federatedIdentityCredentials The federatedIdentityCredentials property
+     * @var array<FederatedIdentityCredential>|null $federatedIdentityCredentials Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
     */
     private ?array $federatedIdentityCredentials = null;
     
@@ -174,7 +174,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     private ?array $owners = null;
     
     /**
-     * @var array<PasswordCredential>|null $passwordCredentials The collection of password credentials associated with the service principal. Not nullable.
+     * @var array<PasswordCredential>|null $passwordCredentials The collection of password credentials associated with the application. Not nullable.
     */
     private ?array $passwordCredentials = null;
     
@@ -184,7 +184,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     private ?string $preferredSingleSignOnMode = null;
     
     /**
-     * @var string|null $preferredTokenSigningKeyThumbprint Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
+     * @var string|null $preferredTokenSigningKeyThumbprint The preferredTokenSigningKeyThumbprint property
     */
     private ?string $preferredTokenSigningKeyThumbprint = null;
     
@@ -209,7 +209,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     private ?array $servicePrincipalNames = null;
     
     /**
-     * @var string|null $servicePrincipalType Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use.
+     * @var string|null $servicePrincipalType Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.
     */
     private ?string $servicePrincipalType = null;
     
@@ -229,12 +229,12 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     private ?string $tokenEncryptionKeyId = null;
     
     /**
-     * @var array<TokenIssuancePolicy>|null $tokenIssuancePolicies The tokenIssuancePolicies assigned to this service principal. Supports $expand.
+     * @var array<TokenIssuancePolicy>|null $tokenIssuancePolicies The tokenIssuancePolicies assigned to this service principal.
     */
     private ?array $tokenIssuancePolicies = null;
     
     /**
-     * @var array<TokenLifetimePolicy>|null $tokenLifetimePolicies The tokenLifetimePolicies assigned to this service principal. Supports $expand.
+     * @var array<TokenLifetimePolicy>|null $tokenLifetimePolicies The tokenLifetimePolicies assigned to this service principal.
     */
     private ?array $tokenLifetimePolicies = null;
     
@@ -317,7 +317,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).
+     * Gets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
      * @return string|null
     */
     public function getAppOwnerOrganizationId(): ?string {
@@ -325,7 +325,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the appRoleAssignedTo property value. App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+     * Gets the appRoleAssignedTo property value. App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      * @return array<AppRoleAssignment>|null
     */
     public function getAppRoleAssignedTo(): ?array {
@@ -373,7 +373,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the delegatedPermissionClassifications property value. The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
+     * Gets the delegatedPermissionClassifications property value. The delegatedPermissionClassifications property
      * @return array<DelegatedPermissionClassification>|null
     */
     public function getDelegatedPermissionClassifications(): ?array {
@@ -405,7 +405,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the endpoints property value. Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+     * Gets the endpoints property value. The endpoints property
      * @return array<Endpoint>|null
     */
     public function getEndpoints(): ?array {
@@ -413,7 +413,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the federatedIdentityCredentials property value. The federatedIdentityCredentials property
+     * Gets the federatedIdentityCredentials property value. Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
      * @return array<FederatedIdentityCredential>|null
     */
     public function getFederatedIdentityCredentials(): ?array {
@@ -582,7 +582,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the passwordCredentials property value. The collection of password credentials associated with the service principal. Not nullable.
+     * Gets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
      * @return array<PasswordCredential>|null
     */
     public function getPasswordCredentials(): ?array {
@@ -598,7 +598,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the preferredTokenSigningKeyThumbprint property value. Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
+     * Gets the preferredTokenSigningKeyThumbprint property value. The preferredTokenSigningKeyThumbprint property
      * @return string|null
     */
     public function getPreferredTokenSigningKeyThumbprint(): ?string {
@@ -638,7 +638,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the servicePrincipalType property value. Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use.
+     * Gets the servicePrincipalType property value. Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.
      * @return string|null
     */
     public function getServicePrincipalType(): ?string {
@@ -670,7 +670,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the tokenIssuancePolicies property value. The tokenIssuancePolicies assigned to this service principal. Supports $expand.
+     * Gets the tokenIssuancePolicies property value. The tokenIssuancePolicies assigned to this service principal.
      * @return array<TokenIssuancePolicy>|null
     */
     public function getTokenIssuancePolicies(): ?array {
@@ -678,7 +678,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this service principal. Supports $expand.
+     * Gets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this service principal.
      * @return array<TokenLifetimePolicy>|null
     */
     public function getTokenLifetimePolicies(): ?array {
@@ -805,7 +805,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).
+     * Sets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
      *  @param string|null $value Value to set for the appOwnerOrganizationId property.
     */
     public function setAppOwnerOrganizationId(?string $value ): void {
@@ -813,7 +813,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the appRoleAssignedTo property value. App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+     * Sets the appRoleAssignedTo property value. App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      *  @param array<AppRoleAssignment>|null $value Value to set for the appRoleAssignedTo property.
     */
     public function setAppRoleAssignedTo(?array $value ): void {
@@ -861,7 +861,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the delegatedPermissionClassifications property value. The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
+     * Sets the delegatedPermissionClassifications property value. The delegatedPermissionClassifications property
      *  @param array<DelegatedPermissionClassification>|null $value Value to set for the delegatedPermissionClassifications property.
     */
     public function setDelegatedPermissionClassifications(?array $value ): void {
@@ -893,7 +893,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the endpoints property value. Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+     * Sets the endpoints property value. The endpoints property
      *  @param array<Endpoint>|null $value Value to set for the endpoints property.
     */
     public function setEndpoints(?array $value ): void {
@@ -901,7 +901,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the federatedIdentityCredentials property value. The federatedIdentityCredentials property
+     * Sets the federatedIdentityCredentials property value. Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
      *  @param array<FederatedIdentityCredential>|null $value Value to set for the federatedIdentityCredentials property.
     */
     public function setFederatedIdentityCredentials(?array $value ): void {
@@ -1013,7 +1013,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the passwordCredentials property value. The collection of password credentials associated with the service principal. Not nullable.
+     * Sets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
      *  @param array<PasswordCredential>|null $value Value to set for the passwordCredentials property.
     */
     public function setPasswordCredentials(?array $value ): void {
@@ -1029,7 +1029,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the preferredTokenSigningKeyThumbprint property value. Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
+     * Sets the preferredTokenSigningKeyThumbprint property value. The preferredTokenSigningKeyThumbprint property
      *  @param string|null $value Value to set for the preferredTokenSigningKeyThumbprint property.
     */
     public function setPreferredTokenSigningKeyThumbprint(?string $value ): void {
@@ -1069,7 +1069,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the servicePrincipalType property value. Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use.
+     * Sets the servicePrincipalType property value. Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.
      *  @param string|null $value Value to set for the servicePrincipalType property.
     */
     public function setServicePrincipalType(?string $value ): void {
@@ -1101,7 +1101,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the tokenIssuancePolicies property value. The tokenIssuancePolicies assigned to this service principal. Supports $expand.
+     * Sets the tokenIssuancePolicies property value. The tokenIssuancePolicies assigned to this service principal.
      *  @param array<TokenIssuancePolicy>|null $value Value to set for the tokenIssuancePolicies property.
     */
     public function setTokenIssuancePolicies(?array $value ): void {
@@ -1109,7 +1109,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this service principal. Supports $expand.
+     * Sets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this service principal.
      *  @param array<TokenLifetimePolicy>|null $value Value to set for the tokenLifetimePolicies property.
     */
     public function setTokenLifetimePolicies(?array $value ): void {

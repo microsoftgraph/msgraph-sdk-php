@@ -15,7 +15,7 @@ class EntitlementManagementSettings extends Entity implements Parsable
     private ?DateInterval $durationUntilExternalUserDeletedAfterBlocked = null;
     
     /**
-     * @var AccessPackageExternalUserLifecycleAction|null $externalUserLifecycleAction One of None, BlockSignIn, or BlockSignInAndDelete.
+     * @var AccessPackageExternalUserLifecycleAction|null $externalUserLifecycleAction Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
     */
     private ?AccessPackageExternalUserLifecycleAction $externalUserLifecycleAction = null;
     
@@ -45,7 +45,7 @@ class EntitlementManagementSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the externalUserLifecycleAction property value. One of None, BlockSignIn, or BlockSignInAndDelete.
+     * Gets the externalUserLifecycleAction property value. Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
      * @return AccessPackageExternalUserLifecycleAction|null
     */
     public function getExternalUserLifecycleAction(): ?AccessPackageExternalUserLifecycleAction {
@@ -83,7 +83,7 @@ class EntitlementManagementSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the externalUserLifecycleAction property value. One of None, BlockSignIn, or BlockSignInAndDelete.
+     * Sets the externalUserLifecycleAction property value. Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
      *  @param AccessPackageExternalUserLifecycleAction|null $value Value to set for the externalUserLifecycleAction property.
     */
     public function setExternalUserLifecycleAction(?AccessPackageExternalUserLifecycleAction $value ): void {

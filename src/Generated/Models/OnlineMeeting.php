@@ -21,7 +21,7 @@ class OnlineMeeting extends Entity implements Parsable
     private ?bool $allowAttendeeToEnableMic = null;
     
     /**
-     * @var OnlineMeetingPresenters|null $allowedPresenters Specifies who can be a presenter in a meeting.
+     * @var OnlineMeetingPresenters|null $allowedPresenters Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
     */
     private ?OnlineMeetingPresenters $allowedPresenters = null;
     
@@ -31,7 +31,7 @@ class OnlineMeeting extends Entity implements Parsable
     private ?MeetingChatMode $allowMeetingChat = null;
     
     /**
-     * @var bool|null $allowTeamworkReactions Indicates if Teams reactions are enabled for the meeting.
+     * @var bool|null $allowTeamworkReactions Indicates whether Teams reactions are enabled for the meeting.
     */
     private ?bool $allowTeamworkReactions = null;
     
@@ -41,7 +41,7 @@ class OnlineMeeting extends Entity implements Parsable
     private ?array $attendanceReports = null;
     
     /**
-     * @var StreamInterface|null $attendeeReport The content stream of the attendee report of a Teams live event. Read-only.
+     * @var StreamInterface|null $attendeeReport The content stream of the attendee report of a Microsoft Teams live event. Read-only.
     */
     private ?StreamInterface $attendeeReport = null;
     
@@ -71,12 +71,12 @@ class OnlineMeeting extends Entity implements Parsable
     private ?DateTime $endDateTime = null;
     
     /**
-     * @var string|null $externalId The external ID. A custom ID. Optional.
+     * @var string|null $externalId The externalId property
     */
     private ?string $externalId = null;
     
     /**
-     * @var bool|null $isBroadcast Indicates whether this is a Teams live event.
+     * @var bool|null $isBroadcast Indicates if this is a Teams live event.
     */
     private ?bool $isBroadcast = null;
     
@@ -86,7 +86,7 @@ class OnlineMeeting extends Entity implements Parsable
     private ?bool $isEntryExitAnnounced = null;
     
     /**
-     * @var ItemBody|null $joinInformation The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only.
+     * @var ItemBody|null $joinInformation The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
     */
     private ?ItemBody $joinInformation = null;
     
@@ -96,12 +96,12 @@ class OnlineMeeting extends Entity implements Parsable
     private ?string $joinWebUrl = null;
     
     /**
-     * @var LobbyBypassSettings|null $lobbyBypassSettings Specifies which participants can bypass the meeting lobby.
+     * @var LobbyBypassSettings|null $lobbyBypassSettings Specifies which participants can bypass the meeting   lobby.
     */
     private ?LobbyBypassSettings $lobbyBypassSettings = null;
     
     /**
-     * @var MeetingParticipants|null $participants The participants associated with the online meeting. This includes the organizer and the attendees.
+     * @var MeetingParticipants|null $participants The participants associated with the online meeting.  This includes the organizer and the attendees.
     */
     private ?MeetingParticipants $participants = null;
     
@@ -159,7 +159,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting.
+     * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
      * @return OnlineMeetingPresenters|null
     */
     public function getAllowedPresenters(): ?OnlineMeetingPresenters {
@@ -175,7 +175,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowTeamworkReactions property value. Indicates if Teams reactions are enabled for the meeting.
+     * Gets the allowTeamworkReactions property value. Indicates whether Teams reactions are enabled for the meeting.
      * @return bool|null
     */
     public function getAllowTeamworkReactions(): ?bool {
@@ -191,7 +191,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Gets the attendeeReport property value. The content stream of the attendee report of a Teams live event. Read-only.
+     * Gets the attendeeReport property value. The content stream of the attendee report of a Microsoft Teams live event. Read-only.
      * @return StreamInterface|null
     */
     public function getAttendeeReport(): ?StreamInterface {
@@ -239,7 +239,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Gets the externalId property value. The external ID. A custom ID. Optional.
+     * Gets the externalId property value. The externalId property
      * @return string|null
     */
     public function getExternalId(): ?string {
@@ -280,7 +280,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Gets the isBroadcast property value. Indicates whether this is a Teams live event.
+     * Gets the isBroadcast property value. Indicates if this is a Teams live event.
      * @return bool|null
     */
     public function getIsBroadcast(): ?bool {
@@ -296,7 +296,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Gets the joinInformation property value. The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only.
+     * Gets the joinInformation property value. The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
      * @return ItemBody|null
     */
     public function getJoinInformation(): ?ItemBody {
@@ -312,7 +312,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Gets the lobbyBypassSettings property value. Specifies which participants can bypass the meeting lobby.
+     * Gets the lobbyBypassSettings property value. Specifies which participants can bypass the meeting   lobby.
      * @return LobbyBypassSettings|null
     */
     public function getLobbyBypassSettings(): ?LobbyBypassSettings {
@@ -320,7 +320,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Gets the participants property value. The participants associated with the online meeting. This includes the organizer and the attendees.
+     * Gets the participants property value. The participants associated with the online meeting.  This includes the organizer and the attendees.
      * @return MeetingParticipants|null
     */
     public function getParticipants(): ?MeetingParticipants {
@@ -407,7 +407,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowedPresenters property value. Specifies who can be a presenter in a meeting.
+     * Sets the allowedPresenters property value. Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
      *  @param OnlineMeetingPresenters|null $value Value to set for the allowedPresenters property.
     */
     public function setAllowedPresenters(?OnlineMeetingPresenters $value ): void {
@@ -423,7 +423,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowTeamworkReactions property value. Indicates if Teams reactions are enabled for the meeting.
+     * Sets the allowTeamworkReactions property value. Indicates whether Teams reactions are enabled for the meeting.
      *  @param bool|null $value Value to set for the allowTeamworkReactions property.
     */
     public function setAllowTeamworkReactions(?bool $value ): void {
@@ -439,7 +439,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Sets the attendeeReport property value. The content stream of the attendee report of a Teams live event. Read-only.
+     * Sets the attendeeReport property value. The content stream of the attendee report of a Microsoft Teams live event. Read-only.
      *  @param StreamInterface|null $value Value to set for the attendeeReport property.
     */
     public function setAttendeeReport(?StreamInterface $value ): void {
@@ -487,7 +487,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Sets the externalId property value. The external ID. A custom ID. Optional.
+     * Sets the externalId property value. The externalId property
      *  @param string|null $value Value to set for the externalId property.
     */
     public function setExternalId(?string $value ): void {
@@ -495,7 +495,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Sets the isBroadcast property value. Indicates whether this is a Teams live event.
+     * Sets the isBroadcast property value. Indicates if this is a Teams live event.
      *  @param bool|null $value Value to set for the isBroadcast property.
     */
     public function setIsBroadcast(?bool $value ): void {
@@ -511,7 +511,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Sets the joinInformation property value. The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only.
+     * Sets the joinInformation property value. The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
      *  @param ItemBody|null $value Value to set for the joinInformation property.
     */
     public function setJoinInformation(?ItemBody $value ): void {
@@ -527,7 +527,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Sets the lobbyBypassSettings property value. Specifies which participants can bypass the meeting lobby.
+     * Sets the lobbyBypassSettings property value. Specifies which participants can bypass the meeting   lobby.
      *  @param LobbyBypassSettings|null $value Value to set for the lobbyBypassSettings property.
     */
     public function setLobbyBypassSettings(?LobbyBypassSettings $value ): void {
@@ -535,7 +535,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Sets the participants property value. The participants associated with the online meeting. This includes the organizer and the attendees.
+     * Sets the participants property value. The participants associated with the online meeting.  This includes the organizer and the attendees.
      *  @param MeetingParticipants|null $value Value to set for the participants property.
     */
     public function setParticipants(?MeetingParticipants $value ): void {

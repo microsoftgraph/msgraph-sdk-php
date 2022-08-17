@@ -59,7 +59,7 @@ class Person extends Entity implements Parsable
     private ?string $personNotes = null;
     
     /**
-     * @var PersonType|null $personType The type of person, for example distribution list.
+     * @var PersonType|null $personType The type of person.
     */
     private ?PersonType $personType = null;
     
@@ -230,7 +230,7 @@ class Person extends Entity implements Parsable
     }
 
     /**
-     * Gets the personType property value. The type of person, for example distribution list.
+     * Gets the personType property value. The type of person.
      * @return PersonType|null
     */
     public function getPersonType(): ?PersonType {
@@ -409,7 +409,7 @@ class Person extends Entity implements Parsable
     }
 
     /**
-     * Sets the personType property value. The type of person, for example distribution list.
+     * Sets the personType property value. The type of person.
      *  @param PersonType|null $value Value to set for the personType property.
     */
     public function setPersonType(?PersonType $value ): void {

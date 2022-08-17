@@ -25,7 +25,7 @@ class ColumnValidation implements AdditionalDataHolder, Parsable
     private ?array $descriptions = null;
     
     /**
-     * @var string|null $formula The formula to validate column value. For examples, see Examples of common formulas in lists
+     * @var string|null $formula The formula to validate column value. For examples, see Examples of common formulas in lists.
     */
     private ?string $formula = null;
     
@@ -90,7 +90,7 @@ class ColumnValidation implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists
+     * Gets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists.
      * @return string|null
     */
     public function getFormula(): ?string {
@@ -142,7 +142,7 @@ class ColumnValidation implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists
+     * Sets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists.
      *  @param string|null $value Value to set for the formula property.
     */
     public function setFormula(?string $value ): void {

@@ -45,12 +45,12 @@ class Site extends BaseItem implements Parsable
     private ?PublicError $error = null;
     
     /**
-     * @var array<ColumnDefinition>|null $externalColumns The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * @var array<ColumnDefinition>|null $externalColumns The externalColumns property
     */
     private ?array $externalColumns = null;
     
     /**
-     * @var array<BaseItem>|null $items Used to address any item contained in this site. This collection cannot be enumerated.
+     * @var array<BaseItem>|null $items Used to address any item contained in this site. This collection can't be enumerated.
     */
     private ?array $items = null;
     
@@ -65,7 +65,7 @@ class Site extends BaseItem implements Parsable
     private ?Onenote $onenote = null;
     
     /**
-     * @var array<RichLongRunningOperation>|null $operations The collection of long running operations for the site.
+     * @var array<RichLongRunningOperation>|null $operations The collection of long-running operations on the site.
     */
     private ?array $operations = null;
     
@@ -95,7 +95,7 @@ class Site extends BaseItem implements Parsable
     private ?array $sites = null;
     
     /**
-     * @var Store|null $termStore The termStore under this site.
+     * @var Store|null $termStore The default termStore under this site.
     */
     private ?Store $termStore = null;
     
@@ -178,7 +178,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the externalColumns property value. The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * Gets the externalColumns property value. The externalColumns property
      * @return array<ColumnDefinition>|null
     */
     public function getExternalColumns(): ?array {
@@ -215,7 +215,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the items property value. Used to address any item contained in this site. This collection cannot be enumerated.
+     * Gets the items property value. Used to address any item contained in this site. This collection can't be enumerated.
      * @return array<BaseItem>|null
     */
     public function getItems(): ?array {
@@ -239,7 +239,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the operations property value. The collection of long running operations for the site.
+     * Gets the operations property value. The collection of long-running operations on the site.
      * @return array<RichLongRunningOperation>|null
     */
     public function getOperations(): ?array {
@@ -287,7 +287,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the termStore property value. The termStore under this site.
+     * Gets the termStore property value. The default termStore under this site.
      * @return Store|null
     */
     public function getTermStore(): ?Store {
@@ -386,7 +386,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the externalColumns property value. The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * Sets the externalColumns property value. The externalColumns property
      *  @param array<ColumnDefinition>|null $value Value to set for the externalColumns property.
     */
     public function setExternalColumns(?array $value ): void {
@@ -394,7 +394,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the items property value. Used to address any item contained in this site. This collection cannot be enumerated.
+     * Sets the items property value. Used to address any item contained in this site. This collection can't be enumerated.
      *  @param array<BaseItem>|null $value Value to set for the items property.
     */
     public function setItems(?array $value ): void {
@@ -418,7 +418,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the operations property value. The collection of long running operations for the site.
+     * Sets the operations property value. The collection of long-running operations on the site.
      *  @param array<RichLongRunningOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value ): void {
@@ -466,7 +466,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the termStore property value. The termStore under this site.
+     * Sets the termStore property value. The default termStore under this site.
      *  @param Store|null $value Value to set for the termStore property.
     */
     public function setTermStore(?Store $value ): void {

@@ -9,22 +9,22 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationTeamsAppResource extends EducationResource implements Parsable 
 {
     /**
-     * @var string|null $appIconWebUrl URL that points to the app's icon.
+     * @var string|null $appIconWebUrl The appIconWebUrl property
     */
     private ?string $appIconWebUrl = null;
     
     /**
-     * @var string|null $appId Teams App ID of the application.
+     * @var string|null $appId The appId property
     */
     private ?string $appId = null;
     
     /**
-     * @var string|null $teamsEmbeddedContentUrl URL for the app resource that will be opened by Teams.
+     * @var string|null $teamsEmbeddedContentUrl The teamsEmbeddedContentUrl property
     */
     private ?string $teamsEmbeddedContentUrl = null;
     
     /**
-     * @var string|null $webUrl URL for the app resource that can be opened in the browser.
+     * @var string|null $webUrl The webUrl property
     */
     private ?string $webUrl = null;
     
@@ -46,7 +46,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     }
 
     /**
-     * Gets the appIconWebUrl property value. URL that points to the app's icon.
+     * Gets the appIconWebUrl property value. The appIconWebUrl property
      * @return string|null
     */
     public function getAppIconWebUrl(): ?string {
@@ -54,7 +54,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     }
 
     /**
-     * Gets the appId property value. Teams App ID of the application.
+     * Gets the appId property value. The appId property
      * @return string|null
     */
     public function getAppId(): ?string {
@@ -76,7 +76,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     }
 
     /**
-     * Gets the teamsEmbeddedContentUrl property value. URL for the app resource that will be opened by Teams.
+     * Gets the teamsEmbeddedContentUrl property value. The teamsEmbeddedContentUrl property
      * @return string|null
     */
     public function getTeamsEmbeddedContentUrl(): ?string {
@@ -84,7 +84,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     }
 
     /**
-     * Gets the webUrl property value. URL for the app resource that can be opened in the browser.
+     * Gets the webUrl property value. The webUrl property
      * @return string|null
     */
     public function getWebUrl(): ?string {
@@ -104,7 +104,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     }
 
     /**
-     * Sets the appIconWebUrl property value. URL that points to the app's icon.
+     * Sets the appIconWebUrl property value. The appIconWebUrl property
      *  @param string|null $value Value to set for the appIconWebUrl property.
     */
     public function setAppIconWebUrl(?string $value ): void {
@@ -112,7 +112,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     }
 
     /**
-     * Sets the appId property value. Teams App ID of the application.
+     * Sets the appId property value. The appId property
      *  @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value ): void {
@@ -120,7 +120,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     }
 
     /**
-     * Sets the teamsEmbeddedContentUrl property value. URL for the app resource that will be opened by Teams.
+     * Sets the teamsEmbeddedContentUrl property value. The teamsEmbeddedContentUrl property
      *  @param string|null $value Value to set for the teamsEmbeddedContentUrl property.
     */
     public function setTeamsEmbeddedContentUrl(?string $value ): void {
@@ -128,7 +128,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     }
 
     /**
-     * Sets the webUrl property value. URL for the app resource that can be opened in the browser.
+     * Sets the webUrl property value. The webUrl property
      *  @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value ): void {

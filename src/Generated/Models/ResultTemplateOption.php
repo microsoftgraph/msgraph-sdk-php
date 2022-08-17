@@ -15,7 +15,7 @@ class ResultTemplateOption implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var bool|null $enableResultTemplate Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. This property is optional.
+     * @var bool|null $enableResultTemplate Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. Optional.
     */
     private ?bool $enableResultTemplate = null;
     
@@ -50,7 +50,7 @@ class ResultTemplateOption implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the enableResultTemplate property value. Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. This property is optional.
+     * Gets the enableResultTemplate property value. Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. Optional.
      * @return bool|null
     */
     public function getEnableResultTemplate(): ?bool {
@@ -96,7 +96,7 @@ class ResultTemplateOption implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the enableResultTemplate property value. Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. This property is optional.
+     * Sets the enableResultTemplate property value. Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. Optional.
      *  @param bool|null $value Value to set for the enableResultTemplate property.
     */
     public function setEnableResultTemplate(?bool $value ): void {

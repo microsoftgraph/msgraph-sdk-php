@@ -30,7 +30,7 @@ class ConnectedOrganization extends Entity implements Parsable
     private ?array $externalSponsors = null;
     
     /**
-     * @var array<IdentitySource>|null $identitySources The identity sources in this connected organization, one of azureActiveDirectoryTenant, crossCloudAzureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Read-only. Nullable. Supports $select and $filter(eq). To filter by the derived types, you must declare the resource using its full OData cast, for example, $filter=identitySources/any(is:is/microsoft.graph.azureActiveDirectoryTenant/tenantId eq 'bcfdfff4-cbc3-43f2-9000-ba7b7515054f').
+     * @var array<IdentitySource>|null $identitySources The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Nullable.
     */
     private ?array $identitySources = null;
     
@@ -45,7 +45,7 @@ class ConnectedOrganization extends Entity implements Parsable
     private ?DateTime $modifiedDateTime = null;
     
     /**
-     * @var ConnectedOrganizationState|null $state The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
+     * @var ConnectedOrganizationState|null $state The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
     */
     private ?ConnectedOrganizationState $state = null;
     
@@ -117,7 +117,7 @@ class ConnectedOrganization extends Entity implements Parsable
     }
 
     /**
-     * Gets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, crossCloudAzureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Read-only. Nullable. Supports $select and $filter(eq). To filter by the derived types, you must declare the resource using its full OData cast, for example, $filter=identitySources/any(is:is/microsoft.graph.azureActiveDirectoryTenant/tenantId eq 'bcfdfff4-cbc3-43f2-9000-ba7b7515054f').
+     * Gets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Nullable.
      * @return array<IdentitySource>|null
     */
     public function getIdentitySources(): ?array {
@@ -141,7 +141,7 @@ class ConnectedOrganization extends Entity implements Parsable
     }
 
     /**
-     * Gets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
+     * Gets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
      * @return ConnectedOrganizationState|null
     */
     public function getState(): ?ConnectedOrganizationState {
@@ -197,7 +197,7 @@ class ConnectedOrganization extends Entity implements Parsable
     }
 
     /**
-     * Sets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, crossCloudAzureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Read-only. Nullable. Supports $select and $filter(eq). To filter by the derived types, you must declare the resource using its full OData cast, for example, $filter=identitySources/any(is:is/microsoft.graph.azureActiveDirectoryTenant/tenantId eq 'bcfdfff4-cbc3-43f2-9000-ba7b7515054f').
+     * Sets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Nullable.
      *  @param array<IdentitySource>|null $value Value to set for the identitySources property.
     */
     public function setIdentitySources(?array $value ): void {
@@ -221,7 +221,7 @@ class ConnectedOrganization extends Entity implements Parsable
     }
 
     /**
-     * Sets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
+     * Sets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
      *  @param ConnectedOrganizationState|null $value Value to set for the state property.
     */
     public function setState(?ConnectedOrganizationState $value ): void {

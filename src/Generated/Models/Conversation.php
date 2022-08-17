@@ -15,12 +15,12 @@ class Conversation extends Entity implements Parsable
     private ?bool $hasAttachments = null;
     
     /**
-     * @var DateTime|null $lastDeliveredDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, le, ge).
+     * @var DateTime|null $lastDeliveredDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     */
     private ?DateTime $lastDeliveredDateTime = null;
     
     /**
-     * @var string|null $preview A short summary from the body of the latest post in this conversation.
+     * @var string|null $preview A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
     */
     private ?string $preview = null;
     
@@ -81,7 +81,7 @@ class Conversation extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, le, ge).
+     * Gets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return DateTime|null
     */
     public function getLastDeliveredDateTime(): ?DateTime {
@@ -89,7 +89,7 @@ class Conversation extends Entity implements Parsable
     }
 
     /**
-     * Gets the preview property value. A short summary from the body of the latest post in this conversation.
+     * Gets the preview property value. A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
      * @return string|null
     */
     public function getPreview(): ?string {
@@ -143,7 +143,7 @@ class Conversation extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, le, ge).
+     * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the lastDeliveredDateTime property.
     */
     public function setLastDeliveredDateTime(?DateTime $value ): void {
@@ -151,7 +151,7 @@ class Conversation extends Entity implements Parsable
     }
 
     /**
-     * Sets the preview property value. A short summary from the body of the latest post in this conversation.
+     * Sets the preview property value. A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
      *  @param string|null $value Value to set for the preview property.
     */
     public function setPreview(?string $value ): void {

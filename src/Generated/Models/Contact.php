@@ -60,7 +60,7 @@ class Contact extends OutlookItem implements Parsable
     private ?array $emailAddresses = null;
     
     /**
-     * @var array<Extension>|null $extensions The collection of open extensions defined for the contact. Nullable.
+     * @var array<Extension>|null $extensions The collection of open extensions defined for the contact. Read-only. Nullable.
     */
     private ?array $extensions = null;
     
@@ -292,7 +292,7 @@ class Contact extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the extensions property value. The collection of open extensions defined for the contact. Nullable.
+     * Gets the extensions property value. The collection of open extensions defined for the contact. Read-only. Nullable.
      * @return array<Extension>|null
     */
     public function getExtensions(): ?array {
@@ -680,7 +680,7 @@ class Contact extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the extensions property value. The collection of open extensions defined for the contact. Nullable.
+     * Sets the extensions property value. The collection of open extensions defined for the contact. Read-only. Nullable.
      *  @param array<Extension>|null $value Value to set for the extensions property.
     */
     public function setExtensions(?array $value ): void {

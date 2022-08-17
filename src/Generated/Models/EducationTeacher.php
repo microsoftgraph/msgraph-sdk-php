@@ -15,7 +15,7 @@ class EducationTeacher implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $externalId Id of the Teacher in external source system.
+     * @var string|null $externalId ID of the teacher in the source system.
     */
     private ?string $externalId = null;
     
@@ -55,7 +55,7 @@ class EducationTeacher implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the externalId property value. Id of the Teacher in external source system.
+     * Gets the externalId property value. ID of the teacher in the source system.
      * @return string|null
     */
     public function getExternalId(): ?string {
@@ -111,7 +111,7 @@ class EducationTeacher implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the externalId property value. Id of the Teacher in external source system.
+     * Sets the externalId property value. ID of the teacher in the source system.
      *  @param string|null $value Value to set for the externalId property.
     */
     public function setExternalId(?string $value ): void {

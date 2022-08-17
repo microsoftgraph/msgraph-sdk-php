@@ -14,7 +14,7 @@ class ConnectedOrganizationMembers extends SubjectSet implements Parsable
     private ?string $connectedOrganizationId = null;
     
     /**
-     * @var string|null $description The name of the connected organization. Read only.
+     * @var string|null $description The name of the connected organization.
     */
     private ?string $description = null;
     
@@ -44,7 +44,7 @@ class ConnectedOrganizationMembers extends SubjectSet implements Parsable
     }
 
     /**
-     * Gets the description property value. The name of the connected organization. Read only.
+     * Gets the description property value. The name of the connected organization.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -82,7 +82,7 @@ class ConnectedOrganizationMembers extends SubjectSet implements Parsable
     }
 
     /**
-     * Sets the description property value. The name of the connected organization. Read only.
+     * Sets the description property value. The name of the connected organization.
      *  @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value ): void {

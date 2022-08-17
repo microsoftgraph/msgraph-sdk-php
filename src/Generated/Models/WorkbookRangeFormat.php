@@ -29,7 +29,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     private ?WorkbookRangeFont $font = null;
     
     /**
-     * @var string|null $horizontalAlignment Represents the horizontal alignment for the specified object. Possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
+     * @var string|null $horizontalAlignment Represents the horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
     */
     private ?string $horizontalAlignment = null;
     
@@ -44,7 +44,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     private ?float $rowHeight = null;
     
     /**
-     * @var string|null $verticalAlignment Represents the vertical alignment for the specified object. Possible values are: Top, Center, Bottom, Justify, Distributed.
+     * @var string|null $verticalAlignment Represents the vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed.
     */
     private ?string $verticalAlignment = null;
     
@@ -122,7 +122,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Gets the horizontalAlignment property value. Represents the horizontal alignment for the specified object. Possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
+     * Gets the horizontalAlignment property value. Represents the horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
      * @return string|null
     */
     public function getHorizontalAlignment(): ?string {
@@ -146,7 +146,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Gets the verticalAlignment property value. Represents the vertical alignment for the specified object. Possible values are: Top, Center, Bottom, Justify, Distributed.
+     * Gets the verticalAlignment property value. Represents the vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed.
      * @return string|null
     */
     public function getVerticalAlignment(): ?string {
@@ -211,7 +211,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Sets the horizontalAlignment property value. Represents the horizontal alignment for the specified object. Possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
+     * Sets the horizontalAlignment property value. Represents the horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
      *  @param string|null $value Value to set for the horizontalAlignment property.
     */
     public function setHorizontalAlignment(?string $value ): void {
@@ -235,7 +235,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Sets the verticalAlignment property value. Represents the vertical alignment for the specified object. Possible values are: Top, Center, Bottom, Justify, Distributed.
+     * Sets the verticalAlignment property value. Represents the vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed.
      *  @param string|null $value Value to set for the verticalAlignment property.
     */
     public function setVerticalAlignment(?string $value ): void {

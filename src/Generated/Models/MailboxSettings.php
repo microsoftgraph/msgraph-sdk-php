@@ -15,7 +15,7 @@ class MailboxSettings implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $archiveFolder Folder ID of an archive folder for the user. Read only.
+     * @var string|null $archiveFolder Folder ID of an archive folder for the user.
     */
     private ?string $archiveFolder = null;
     
@@ -30,7 +30,7 @@ class MailboxSettings implements AdditionalDataHolder, Parsable
     private ?string $dateFormat = null;
     
     /**
-     * @var DelegateMeetingMessageDeliveryOptions|null $delegateMeetingMessageDeliveryOptions If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. The default is sendToDelegateOnly.
+     * @var DelegateMeetingMessageDeliveryOptions|null $delegateMeetingMessageDeliveryOptions If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
     */
     private ?DelegateMeetingMessageDeliveryOptions $delegateMeetingMessageDeliveryOptions = null;
     
@@ -55,7 +55,7 @@ class MailboxSettings implements AdditionalDataHolder, Parsable
     private ?string $timeZone = null;
     
     /**
-     * @var UserPurpose|null $userPurpose The purpose of the mailbox. Used to differentiate a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Read only.
+     * @var UserPurpose|null $userPurpose The userPurpose property
     */
     private ?UserPurpose $userPurpose = null;
     
@@ -90,7 +90,7 @@ class MailboxSettings implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the archiveFolder property value. Folder ID of an archive folder for the user. Read only.
+     * Gets the archiveFolder property value. Folder ID of an archive folder for the user.
      * @return string|null
     */
     public function getArchiveFolder(): ?string {
@@ -114,7 +114,7 @@ class MailboxSettings implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. The default is sendToDelegateOnly.
+     * Gets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
      * @return DelegateMeetingMessageDeliveryOptions|null
     */
     public function getDelegateMeetingMessageDeliveryOptions(): ?DelegateMeetingMessageDeliveryOptions {
@@ -174,7 +174,7 @@ class MailboxSettings implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the userPurpose property value. The purpose of the mailbox. Used to differentiate a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Read only.
+     * Gets the userPurpose property value. The userPurpose property
      * @return UserPurpose|null
     */
     public function getUserPurpose(): ?UserPurpose {
@@ -216,7 +216,7 @@ class MailboxSettings implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the archiveFolder property value. Folder ID of an archive folder for the user. Read only.
+     * Sets the archiveFolder property value. Folder ID of an archive folder for the user.
      *  @param string|null $value Value to set for the archiveFolder property.
     */
     public function setArchiveFolder(?string $value ): void {
@@ -240,7 +240,7 @@ class MailboxSettings implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. The default is sendToDelegateOnly.
+     * Sets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
      *  @param DelegateMeetingMessageDeliveryOptions|null $value Value to set for the delegateMeetingMessageDeliveryOptions property.
     */
     public function setDelegateMeetingMessageDeliveryOptions(?DelegateMeetingMessageDeliveryOptions $value ): void {
@@ -280,7 +280,7 @@ class MailboxSettings implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the userPurpose property value. The purpose of the mailbox. Used to differentiate a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Read only.
+     * Sets the userPurpose property value. The userPurpose property
      *  @param UserPurpose|null $value Value to set for the userPurpose property.
     */
     public function setUserPurpose(?UserPurpose $value ): void {

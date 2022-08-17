@@ -16,7 +16,7 @@ class TraceRouteHop implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var int|null $hopCount The network path count of this hop that was used to compute the round-trip time.
+     * @var int|null $hopCount The network path count of this hop that was used to compute the RTT.
     */
     private ?int $hopCount = null;
     
@@ -75,7 +75,7 @@ class TraceRouteHop implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the hopCount property value. The network path count of this hop that was used to compute the round-trip time.
+     * Gets the hopCount property value. The network path count of this hop that was used to compute the RTT.
      * @return int|null
     */
     public function getHopCount(): ?int {
@@ -127,7 +127,7 @@ class TraceRouteHop implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the hopCount property value. The network path count of this hop that was used to compute the round-trip time.
+     * Sets the hopCount property value. The network path count of this hop that was used to compute the RTT.
      *  @param int|null $value Value to set for the hopCount property.
     */
     public function setHopCount(?int $value ): void {

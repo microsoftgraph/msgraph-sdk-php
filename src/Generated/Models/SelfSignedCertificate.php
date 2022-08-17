@@ -17,27 +17,27 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var StreamInterface|null $customKeyIdentifier Custom key identifier.
+     * @var StreamInterface|null $customKeyIdentifier The customKeyIdentifier property
     */
     private ?StreamInterface $customKeyIdentifier = null;
     
     /**
-     * @var string|null $displayName The friendly name for the key.
+     * @var string|null $displayName The displayName property
     */
     private ?string $displayName = null;
     
     /**
-     * @var DateTime|null $endDateTime The date and time at which the credential expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @var DateTime|null $endDateTime The endDateTime property
     */
     private ?DateTime $endDateTime = null;
     
     /**
-     * @var StreamInterface|null $key The value for the key credential. Should be a base-64 encoded value.
+     * @var StreamInterface|null $key The key property
     */
     private ?StreamInterface $key = null;
     
     /**
-     * @var string|null $keyId The unique identifier (GUID) for the key.
+     * @var string|null $keyId The keyId property
     */
     private ?string $keyId = null;
     
@@ -47,22 +47,22 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var DateTime|null $startDateTime The date and time at which the credential becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @var DateTime|null $startDateTime The startDateTime property
     */
     private ?DateTime $startDateTime = null;
     
     /**
-     * @var string|null $thumbprint The thumbprint value for the key.
+     * @var string|null $thumbprint The thumbprint property
     */
     private ?string $thumbprint = null;
     
     /**
-     * @var string|null $type The type of key credential. 'AsymmetricX509Cert'.
+     * @var string|null $type The type property
     */
     private ?string $type = null;
     
     /**
-     * @var string|null $usage A string that describes the purpose for which the key can be used. For example, 'Verify'.
+     * @var string|null $usage The usage property
     */
     private ?string $usage = null;
     
@@ -92,7 +92,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the customKeyIdentifier property value. Custom key identifier.
+     * Gets the customKeyIdentifier property value. The customKeyIdentifier property
      * @return StreamInterface|null
     */
     public function getCustomKeyIdentifier(): ?StreamInterface {
@@ -100,7 +100,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the displayName property value. The friendly name for the key.
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -108,7 +108,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the endDateTime property value. The date and time at which the credential expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the endDateTime property value. The endDateTime property
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
@@ -136,7 +136,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the key property value. The value for the key credential. Should be a base-64 encoded value.
+     * Gets the key property value. The key property
      * @return StreamInterface|null
     */
     public function getKey(): ?StreamInterface {
@@ -144,7 +144,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the keyId property value. The unique identifier (GUID) for the key.
+     * Gets the keyId property value. The keyId property
      * @return string|null
     */
     public function getKeyId(): ?string {
@@ -160,7 +160,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the startDateTime property value. The date and time at which the credential becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the startDateTime property value. The startDateTime property
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
@@ -168,7 +168,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the thumbprint property value. The thumbprint value for the key.
+     * Gets the thumbprint property value. The thumbprint property
      * @return string|null
     */
     public function getThumbprint(): ?string {
@@ -176,7 +176,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the type property value. The type of key credential. 'AsymmetricX509Cert'.
+     * Gets the type property value. The type property
      * @return string|null
     */
     public function getType(): ?string {
@@ -184,7 +184,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the usage property value. A string that describes the purpose for which the key can be used. For example, 'Verify'.
+     * Gets the usage property value. The usage property
      * @return string|null
     */
     public function getUsage(): ?string {
@@ -218,7 +218,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the customKeyIdentifier property value. Custom key identifier.
+     * Sets the customKeyIdentifier property value. The customKeyIdentifier property
      *  @param StreamInterface|null $value Value to set for the customKeyIdentifier property.
     */
     public function setCustomKeyIdentifier(?StreamInterface $value ): void {
@@ -226,7 +226,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the displayName property value. The friendly name for the key.
+     * Sets the displayName property value. The displayName property
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -234,7 +234,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the endDateTime property value. The date and time at which the credential expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the endDateTime property value. The endDateTime property
      *  @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value ): void {
@@ -242,7 +242,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the key property value. The value for the key credential. Should be a base-64 encoded value.
+     * Sets the key property value. The key property
      *  @param StreamInterface|null $value Value to set for the key property.
     */
     public function setKey(?StreamInterface $value ): void {
@@ -250,7 +250,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the keyId property value. The unique identifier (GUID) for the key.
+     * Sets the keyId property value. The keyId property
      *  @param string|null $value Value to set for the keyId property.
     */
     public function setKeyId(?string $value ): void {
@@ -266,7 +266,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the startDateTime property value. The date and time at which the credential becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the startDateTime property value. The startDateTime property
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value ): void {
@@ -274,7 +274,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the thumbprint property value. The thumbprint value for the key.
+     * Sets the thumbprint property value. The thumbprint property
      *  @param string|null $value Value to set for the thumbprint property.
     */
     public function setThumbprint(?string $value ): void {
@@ -282,7 +282,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the type property value. The type of key credential. 'AsymmetricX509Cert'.
+     * Sets the type property value. The type property
      *  @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value ): void {
@@ -290,7 +290,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the usage property value. A string that describes the purpose for which the key can be used. For example, 'Verify'.
+     * Sets the usage property value. The usage property
      *  @param string|null $value Value to set for the usage property.
     */
     public function setUsage(?string $value ): void {

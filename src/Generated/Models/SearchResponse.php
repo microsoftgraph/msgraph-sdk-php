@@ -25,7 +25,7 @@ class SearchResponse implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var AlterationResponse|null $queryAlterationResponse Provides details of query alteration response for spelling correction.
+     * @var AlterationResponse|null $queryAlterationResponse Provides information related to spelling corrections in the alteration response.
     */
     private ?AlterationResponse $queryAlterationResponse = null;
     
@@ -96,7 +96,7 @@ class SearchResponse implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the queryAlterationResponse property value. Provides details of query alteration response for spelling correction.
+     * Gets the queryAlterationResponse property value. Provides information related to spelling corrections in the alteration response.
      * @return AlterationResponse|null
     */
     public function getQueryAlterationResponse(): ?AlterationResponse {
@@ -157,7 +157,7 @@ class SearchResponse implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the queryAlterationResponse property value. Provides details of query alteration response for spelling correction.
+     * Sets the queryAlterationResponse property value. Provides information related to spelling corrections in the alteration response.
      *  @param AlterationResponse|null $value Value to set for the queryAlterationResponse property.
     */
     public function setQueryAlterationResponse(?AlterationResponse $value ): void {

@@ -47,7 +47,7 @@ class CallRecord extends Entity implements Parsable
     private ?array $sessions = null;
     
     /**
-     * @var DateTime|null $startDateTime UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * @var DateTime|null $startDateTime UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     */
     private ?DateTime $startDateTime = null;
     
@@ -57,7 +57,7 @@ class CallRecord extends Entity implements Parsable
     private ?CallType $type = null;
     
     /**
-     * @var int|null $version Monotonically increasing version of the call record. Higher version call records with the same ID includes additional data compared to the lower version.
+     * @var int|null $version Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
     */
     private ?int $version = null;
     
@@ -155,7 +155,7 @@ class CallRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the startDateTime property value. UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the startDateTime property value. UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
@@ -171,7 +171,7 @@ class CallRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the version property value. Monotonically increasing version of the call record. Higher version call records with the same ID includes additional data compared to the lower version.
+     * Gets the version property value. Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
      * @return int|null
     */
     public function getVersion(): ?int {
@@ -253,7 +253,7 @@ class CallRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the startDateTime property value. UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the startDateTime property value. UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value ): void {
@@ -269,7 +269,7 @@ class CallRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the version property value. Monotonically increasing version of the call record. Higher version call records with the same ID includes additional data compared to the lower version.
+     * Sets the version property value. Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
      *  @param int|null $value Value to set for the version property.
     */
     public function setVersion(?int $value ): void {

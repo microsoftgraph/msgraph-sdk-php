@@ -25,7 +25,7 @@ class ApprovalStage extends Entity implements Parsable
     private ?string $justification = null;
     
     /**
-     * @var Identity|null $reviewedBy The identifier of the reviewer. Read-only.
+     * @var Identity|null $reviewedBy The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
     */
     private ?Identity $reviewedBy = null;
     
@@ -103,7 +103,7 @@ class ApprovalStage extends Entity implements Parsable
     }
 
     /**
-     * Gets the reviewedBy property value. The identifier of the reviewer. Read-only.
+     * Gets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
      * @return Identity|null
     */
     public function getReviewedBy(): ?Identity {
@@ -174,7 +174,7 @@ class ApprovalStage extends Entity implements Parsable
     }
 
     /**
-     * Sets the reviewedBy property value. The identifier of the reviewer. Read-only.
+     * Sets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
      *  @param Identity|null $value Value to set for the reviewedBy property.
     */
     public function setReviewedBy(?Identity $value ): void {

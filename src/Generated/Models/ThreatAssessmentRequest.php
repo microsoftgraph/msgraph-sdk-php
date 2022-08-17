@@ -35,7 +35,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     private ?ThreatExpectedAssessment $expectedAssessment = null;
     
     /**
-     * @var ThreatAssessmentRequestSource|null $requestSource The source of the threat assessment request. Possible values are: user, administrator.
+     * @var ThreatAssessmentRequestSource|null $requestSource The source of the threat assessment request. Possible values are: administrator.
     */
     private ?ThreatAssessmentRequestSource $requestSource = null;
     
@@ -135,7 +135,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the requestSource property value. The source of the threat assessment request. Possible values are: user, administrator.
+     * Gets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
      * @return ThreatAssessmentRequestSource|null
     */
     public function getRequestSource(): ?ThreatAssessmentRequestSource {
@@ -215,7 +215,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the requestSource property value. The source of the threat assessment request. Possible values are: user, administrator.
+     * Sets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
      *  @param ThreatAssessmentRequestSource|null $value Value to set for the requestSource property.
     */
     public function setRequestSource(?ThreatAssessmentRequestSource $value ): void {

@@ -21,7 +21,7 @@ class Application extends DirectoryObject implements Parsable
     private ?ApiApplication $api = null;
     
     /**
-     * @var string|null $appId The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
+     * @var string|null $appId The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only. Supports $filter (eq).
     */
     private ?string $appId = null;
     
@@ -46,12 +46,12 @@ class Application extends DirectoryObject implements Parsable
     private ?DateTime $createdDateTime = null;
     
     /**
-     * @var DirectoryObject|null $createdOnBehalfOf The createdOnBehalfOf property
+     * @var DirectoryObject|null $createdOnBehalfOf Supports $filter (eq when counting empty collections). Read-only.
     */
     private ?DirectoryObject $createdOnBehalfOf = null;
     
     /**
-     * @var string|null $description Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
+     * @var string|null $description Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
     */
     private ?string $description = null;
     
@@ -76,7 +76,7 @@ class Application extends DirectoryObject implements Parsable
     private ?array $federatedIdentityCredentials = null;
     
     /**
-     * @var string|null $groupMembershipClaims Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+     * @var string|null $groupMembershipClaims Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
     */
     private ?string $groupMembershipClaims = null;
     
@@ -91,7 +91,7 @@ class Application extends DirectoryObject implements Parsable
     private ?array $identifierUris = null;
     
     /**
-     * @var InformationalUrl|null $info Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+     * @var InformationalUrl|null $info Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
     */
     private ?InformationalUrl $info = null;
     
@@ -101,7 +101,7 @@ class Application extends DirectoryObject implements Parsable
     private ?bool $isDeviceOnlyAuthSupported = null;
     
     /**
-     * @var bool|null $isFallbackPublicClient Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+     * @var bool|null $isFallbackPublicClient Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
     */
     private ?bool $isFallbackPublicClient = null;
     
@@ -131,7 +131,7 @@ class Application extends DirectoryObject implements Parsable
     private ?OptionalClaims $optionalClaims = null;
     
     /**
-     * @var array<DirectoryObject>|null $owners Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+     * @var array<DirectoryObject>|null $owners Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
     */
     private ?array $owners = null;
     
@@ -151,7 +151,7 @@ class Application extends DirectoryObject implements Parsable
     private ?PublicClientApplication $publicClient = null;
     
     /**
-     * @var string|null $publisherDomain The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith).
+     * @var string|null $publisherDomain The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain. Supports $filter (eq, ne, ge, le, startsWith).
     */
     private ?string $publisherDomain = null;
     
@@ -181,7 +181,7 @@ class Application extends DirectoryObject implements Parsable
     private ?SpaApplication $spa = null;
     
     /**
-     * @var array<string>|null $tags Custom strings that can be used to categorize and identify the application. Not nullable.Supports $filter (eq, not, ge, le, startsWith).
+     * @var array<string>|null $tags Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
     */
     private ?array $tags = null;
     
@@ -196,7 +196,7 @@ class Application extends DirectoryObject implements Parsable
     private ?array $tokenIssuancePolicies = null;
     
     /**
-     * @var array<TokenLifetimePolicy>|null $tokenLifetimePolicies The tokenLifetimePolicies assigned to this application. Supports $expand.
+     * @var array<TokenLifetimePolicy>|null $tokenLifetimePolicies The tokenLifetimePolicies property
     */
     private ?array $tokenLifetimePolicies = null;
     
@@ -244,7 +244,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the appId property value. The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
+     * Gets the appId property value. The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only. Supports $filter (eq).
      * @return string|null
     */
     public function getAppId(): ?string {
@@ -284,7 +284,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the createdOnBehalfOf property value. The createdOnBehalfOf property
+     * Gets the createdOnBehalfOf property value. Supports $filter (eq when counting empty collections). Read-only.
      * @return DirectoryObject|null
     */
     public function getCreatedOnBehalfOf(): ?DirectoryObject {
@@ -292,7 +292,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
+     * Gets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -382,7 +382,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+     * Gets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
      * @return string|null
     */
     public function getGroupMembershipClaims(): ?string {
@@ -406,7 +406,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the info property value. Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+     * Gets the info property value. Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
      * @return InformationalUrl|null
     */
     public function getInfo(): ?InformationalUrl {
@@ -422,7 +422,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+     * Gets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
      * @return bool|null
     */
     public function getIsFallbackPublicClient(): ?bool {
@@ -470,7 +470,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+     * Gets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @return array<DirectoryObject>|null
     */
     public function getOwners(): ?array {
@@ -502,7 +502,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the publisherDomain property value. The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith).
+     * Gets the publisherDomain property value. The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain. Supports $filter (eq, ne, ge, le, startsWith).
      * @return string|null
     */
     public function getPublisherDomain(): ?string {
@@ -550,7 +550,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable.Supports $filter (eq, not, ge, le, startsWith).
+     * Gets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
      * @return array<string>|null
     */
     public function getTags(): ?array {
@@ -574,7 +574,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this application. Supports $expand.
+     * Gets the tokenLifetimePolicies property value. The tokenLifetimePolicies property
      * @return array<TokenLifetimePolicy>|null
     */
     public function getTokenLifetimePolicies(): ?array {
@@ -662,7 +662,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the appId property value. The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
+     * Sets the appId property value. The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only. Supports $filter (eq).
      *  @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value ): void {
@@ -702,7 +702,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the createdOnBehalfOf property value. The createdOnBehalfOf property
+     * Sets the createdOnBehalfOf property value. Supports $filter (eq when counting empty collections). Read-only.
      *  @param DirectoryObject|null $value Value to set for the createdOnBehalfOf property.
     */
     public function setCreatedOnBehalfOf(?DirectoryObject $value ): void {
@@ -710,7 +710,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
+     * Sets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
      *  @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value ): void {
@@ -750,7 +750,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+     * Sets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
      *  @param string|null $value Value to set for the groupMembershipClaims property.
     */
     public function setGroupMembershipClaims(?string $value ): void {
@@ -774,7 +774,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the info property value. Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+     * Sets the info property value. Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
      *  @param InformationalUrl|null $value Value to set for the info property.
     */
     public function setInfo(?InformationalUrl $value ): void {
@@ -790,7 +790,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+     * Sets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
      *  @param bool|null $value Value to set for the isFallbackPublicClient property.
     */
     public function setIsFallbackPublicClient(?bool $value ): void {
@@ -838,7 +838,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+     * Sets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      *  @param array<DirectoryObject>|null $value Value to set for the owners property.
     */
     public function setOwners(?array $value ): void {
@@ -870,7 +870,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the publisherDomain property value. The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith).
+     * Sets the publisherDomain property value. The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain. Supports $filter (eq, ne, ge, le, startsWith).
      *  @param string|null $value Value to set for the publisherDomain property.
     */
     public function setPublisherDomain(?string $value ): void {
@@ -918,7 +918,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable.Supports $filter (eq, not, ge, le, startsWith).
+     * Sets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
      *  @param array<string>|null $value Value to set for the tags property.
     */
     public function setTags(?array $value ): void {
@@ -942,7 +942,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this application. Supports $expand.
+     * Sets the tokenLifetimePolicies property value. The tokenLifetimePolicies property
      *  @param array<TokenLifetimePolicy>|null $value Value to set for the tokenLifetimePolicies property.
     */
     public function setTokenLifetimePolicies(?array $value ): void {

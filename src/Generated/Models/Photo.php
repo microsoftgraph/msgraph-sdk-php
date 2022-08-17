@@ -61,7 +61,7 @@ class Photo implements AdditionalDataHolder, Parsable
     private ?int $orientation = null;
     
     /**
-     * @var DateTime|null $takenDateTime The date and time the photo was taken in UTC time. Read-only.
+     * @var DateTime|null $takenDateTime Represents the date and time the photo was taken. Read-only.
     */
     private ?DateTime $takenDateTime = null;
     
@@ -183,7 +183,7 @@ class Photo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the takenDateTime property value. The date and time the photo was taken in UTC time. Read-only.
+     * Gets the takenDateTime property value. Represents the date and time the photo was taken. Read-only.
      * @return DateTime|null
     */
     public function getTakenDateTime(): ?DateTime {
@@ -289,7 +289,7 @@ class Photo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the takenDateTime property value. The date and time the photo was taken in UTC time. Read-only.
+     * Sets the takenDateTime property value. Represents the date and time the photo was taken. Read-only.
      *  @param DateTime|null $value Value to set for the takenDateTime property.
     */
     public function setTakenDateTime(?DateTime $value ): void {

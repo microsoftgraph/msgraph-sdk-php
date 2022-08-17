@@ -32,12 +32,12 @@ class KeyCredential implements AdditionalDataHolder, Parsable
     private ?DateTime $endDateTime = null;
     
     /**
-     * @var StreamInterface|null $key Value for the key credential. Should be a Base64 encoded value. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.
+     * @var StreamInterface|null $key The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.
     */
     private ?StreamInterface $key = null;
     
     /**
-     * @var string|null $keyId The unique identifier for the key.
+     * @var string|null $keyId The unique identifier (GUID) for the key.
     */
     private ?string $keyId = null;
     
@@ -130,7 +130,7 @@ class KeyCredential implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the key property value. Value for the key credential. Should be a Base64 encoded value. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.
+     * Gets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.
      * @return StreamInterface|null
     */
     public function getKey(): ?StreamInterface {
@@ -138,7 +138,7 @@ class KeyCredential implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the keyId property value. The unique identifier for the key.
+     * Gets the keyId property value. The unique identifier (GUID) for the key.
      * @return string|null
     */
     public function getKeyId(): ?string {
@@ -227,7 +227,7 @@ class KeyCredential implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the key property value. Value for the key credential. Should be a Base64 encoded value. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.
+     * Sets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.
      *  @param StreamInterface|null $value Value to set for the key property.
     */
     public function setKey(?StreamInterface $value ): void {
@@ -235,7 +235,7 @@ class KeyCredential implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the keyId property value. The unique identifier for the key.
+     * Sets the keyId property value. The unique identifier (GUID) for the key.
      *  @param string|null $value Value to set for the keyId property.
     */
     public function setKeyId(?string $value ): void {

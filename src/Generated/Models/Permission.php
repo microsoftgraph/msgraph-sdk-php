@@ -35,7 +35,7 @@ class Permission extends Entity implements Parsable
     private ?SharePointIdentitySet $grantedToV2 = null;
     
     /**
-     * @var bool|null $hasPassword Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only.
+     * @var bool|null $hasPassword Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only..
     */
     private ?bool $hasPassword = null;
     
@@ -60,7 +60,7 @@ class Permission extends Entity implements Parsable
     private ?array $roles = null;
     
     /**
-     * @var string|null $shareId A unique token that can be used to access this shared item via the [shares API][]. Read-only.
+     * @var string|null $shareId A unique token that can be used to access this shared item via the **shares** API. Read-only.
     */
     private ?string $shareId = null;
     
@@ -143,7 +143,7 @@ class Permission extends Entity implements Parsable
     }
 
     /**
-     * Gets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only.
+     * Gets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only..
      * @return bool|null
     */
     public function getHasPassword(): ?bool {
@@ -183,7 +183,7 @@ class Permission extends Entity implements Parsable
     }
 
     /**
-     * Gets the shareId property value. A unique token that can be used to access this shared item via the [shares API][]. Read-only.
+     * Gets the shareId property value. A unique token that can be used to access this shared item via the **shares** API. Read-only.
      * @return string|null
     */
     public function getShareId(): ?string {
@@ -250,7 +250,7 @@ class Permission extends Entity implements Parsable
     }
 
     /**
-     * Sets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only.
+     * Sets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only..
      *  @param bool|null $value Value to set for the hasPassword property.
     */
     public function setHasPassword(?bool $value ): void {
@@ -290,7 +290,7 @@ class Permission extends Entity implements Parsable
     }
 
     /**
-     * Sets the shareId property value. A unique token that can be used to access this shared item via the [shares API][]. Read-only.
+     * Sets the shareId property value. A unique token that can be used to access this shared item via the **shares** API. Read-only.
      *  @param string|null $value Value to set for the shareId property.
     */
     public function setShareId(?string $value ): void {

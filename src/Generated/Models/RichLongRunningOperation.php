@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RichLongRunningOperation extends LongRunningOperation implements Parsable 
 {
     /**
-     * @var PublicError|null $error Error due to which the operation failed.
+     * @var PublicError|null $error Error that caused the operation to fail.
     */
     private ?PublicError $error = null;
     
@@ -19,12 +19,12 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
     private ?int $percentageComplete = null;
     
     /**
-     * @var string|null $resourceId A unique identifier for the result.
+     * @var string|null $resourceId The unique identifier for the result.
     */
     private ?string $resourceId = null;
     
     /**
-     * @var string|null $type Type of the operation.
+     * @var string|null $type The type of the operation.
     */
     private ?string $type = null;
     
@@ -46,7 +46,7 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
     }
 
     /**
-     * Gets the error property value. Error due to which the operation failed.
+     * Gets the error property value. Error that caused the operation to fail.
      * @return PublicError|null
     */
     public function getError(): ?PublicError {
@@ -76,7 +76,7 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
     }
 
     /**
-     * Gets the resourceId property value. A unique identifier for the result.
+     * Gets the resourceId property value. The unique identifier for the result.
      * @return string|null
     */
     public function getResourceId(): ?string {
@@ -84,7 +84,7 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
     }
 
     /**
-     * Gets the type property value. Type of the operation.
+     * Gets the type property value. The type of the operation.
      * @return string|null
     */
     public function getType(): ?string {
@@ -104,7 +104,7 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
     }
 
     /**
-     * Sets the error property value. Error due to which the operation failed.
+     * Sets the error property value. Error that caused the operation to fail.
      *  @param PublicError|null $value Value to set for the error property.
     */
     public function setError(?PublicError $value ): void {
@@ -120,7 +120,7 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
     }
 
     /**
-     * Sets the resourceId property value. A unique identifier for the result.
+     * Sets the resourceId property value. The unique identifier for the result.
      *  @param string|null $value Value to set for the resourceId property.
     */
     public function setResourceId(?string $value ): void {
@@ -128,7 +128,7 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
     }
 
     /**
-     * Sets the type property value. Type of the operation.
+     * Sets the type property value. The type of the operation.
      *  @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value ): void {

@@ -22,7 +22,7 @@ class Set extends Entity implements Parsable
     private ?DateTime $createdDateTime = null;
     
     /**
-     * @var string|null $description Description giving details on the term usage.
+     * @var string|null $description Description that gives details on the term usage.
     */
     private ?string $description = null;
     
@@ -85,7 +85,7 @@ class Set extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. Description giving details on the term usage.
+     * Gets the description property value. Description that gives details on the term usage.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -183,7 +183,7 @@ class Set extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. Description giving details on the term usage.
+     * Sets the description property value. Description that gives details on the term usage.
      *  @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value ): void {
