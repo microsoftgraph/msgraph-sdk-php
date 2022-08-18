@@ -53,7 +53,7 @@ class PoliciesRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @param PoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +102,7 @@ class PoliciesRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @param PoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

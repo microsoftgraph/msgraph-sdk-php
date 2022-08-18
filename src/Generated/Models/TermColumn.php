@@ -17,7 +17,7 @@ class TermColumn implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var bool|null $allowMultipleValues Specifies whether the column will allow more than one value
+     * @var bool|null $allowMultipleValues Specifies whether the column will allow more than one value.
     */
     private ?bool $allowMultipleValues = null;
     
@@ -67,7 +67,7 @@ class TermColumn implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the allowMultipleValues property value. Specifies whether the column will allow more than one value
+     * Gets the allowMultipleValues property value. Specifies whether the column will allow more than one value.
      * @return bool|null
     */
     public function getAllowMultipleValues(): ?bool {
@@ -143,7 +143,7 @@ class TermColumn implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the allowMultipleValues property value. Specifies whether the column will allow more than one value
+     * Sets the allowMultipleValues property value. Specifies whether the column will allow more than one value.
      *  @param bool|null $value Value to set for the allowMultipleValues property.
     */
     public function setAllowMultipleValues(?bool $value ): void {

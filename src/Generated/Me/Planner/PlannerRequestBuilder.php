@@ -83,7 +83,7 @@ class PlannerRequestBuilder
     }
 
     /**
-     * Selective Planner services available to the user. Read-only. Nullable.
+     * Entry-point to the Planner resource that might exist for a user. Read-only.
      * @param PlannerRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -150,7 +150,7 @@ class PlannerRequestBuilder
     }
 
     /**
-     * Selective Planner services available to the user. Read-only. Nullable.
+     * Entry-point to the Planner resource that might exist for a user. Read-only.
      * @param PlannerRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

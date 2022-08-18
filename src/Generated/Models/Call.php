@@ -24,7 +24,7 @@ class Call extends Entity implements Parsable
     private ?string $callChainId = null;
     
     /**
-     * @var CallOptions|null $callOptions Contains the optional features for the call.
+     * @var CallOptions|null $callOptions The callOptions property
     */
     private ?CallOptions $callOptions = null;
     
@@ -34,7 +34,7 @@ class Call extends Entity implements Parsable
     private ?array $callRoutes = null;
     
     /**
-     * @var ChatInfo|null $chatInfo The chat information. Required information for meeting scenarios.
+     * @var ChatInfo|null $chatInfo The chat information. Required information for joining a meeting.
     */
     private ?ChatInfo $chatInfo = null;
     
@@ -44,12 +44,12 @@ class Call extends Entity implements Parsable
     private ?CallDirection $direction = null;
     
     /**
-     * @var IncomingContext|null $incomingContext The context associated with an incoming call. Read-only. Server generated.
+     * @var IncomingContext|null $incomingContext The incomingContext property
     */
     private ?IncomingContext $incomingContext = null;
     
     /**
-     * @var MediaConfig|null $mediaConfig The media configuration. Required information for creating peer to peer calls or joining meetings.
+     * @var MediaConfig|null $mediaConfig The media configuration. Required.
     */
     private ?MediaConfig $mediaConfig = null;
     
@@ -59,7 +59,7 @@ class Call extends Entity implements Parsable
     private ?CallMediaState $mediaState = null;
     
     /**
-     * @var MeetingInfo|null $meetingInfo The meeting information. Required information for meeting scenarios.
+     * @var MeetingInfo|null $meetingInfo The meeting information that's required for joining a meeting.
     */
     private ?MeetingInfo $meetingInfo = null;
     
@@ -119,7 +119,7 @@ class Call extends Entity implements Parsable
     private ?ToneInfo $toneInfo = null;
     
     /**
-     * @var CallTranscriptionInfo|null $transcription The transcription information for the call. Read-only.
+     * @var CallTranscriptionInfo|null $transcription The transcription property
     */
     private ?CallTranscriptionInfo $transcription = null;
     
@@ -165,7 +165,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the callOptions property value. Contains the optional features for the call.
+     * Gets the callOptions property value. The callOptions property
      * @return CallOptions|null
     */
     public function getCallOptions(): ?CallOptions {
@@ -181,7 +181,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the chatInfo property value. The chat information. Required information for meeting scenarios.
+     * Gets the chatInfo property value. The chat information. Required information for joining a meeting.
      * @return ChatInfo|null
     */
     public function getChatInfo(): ?ChatInfo {
@@ -230,7 +230,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the incomingContext property value. The context associated with an incoming call. Read-only. Server generated.
+     * Gets the incomingContext property value. The incomingContext property
      * @return IncomingContext|null
     */
     public function getIncomingContext(): ?IncomingContext {
@@ -238,7 +238,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the mediaConfig property value. The media configuration. Required information for creating peer to peer calls or joining meetings.
+     * Gets the mediaConfig property value. The media configuration. Required.
      * @return MediaConfig|null
     */
     public function getMediaConfig(): ?MediaConfig {
@@ -254,7 +254,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the meetingInfo property value. The meeting information. Required information for meeting scenarios.
+     * Gets the meetingInfo property value. The meeting information that's required for joining a meeting.
      * @return MeetingInfo|null
     */
     public function getMeetingInfo(): ?MeetingInfo {
@@ -350,7 +350,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the transcription property value. The transcription information for the call. Read-only.
+     * Gets the transcription property value. The transcription property
      * @return CallTranscriptionInfo|null
     */
     public function getTranscription(): ?CallTranscriptionInfo {
@@ -413,7 +413,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the callOptions property value. Contains the optional features for the call.
+     * Sets the callOptions property value. The callOptions property
      *  @param CallOptions|null $value Value to set for the callOptions property.
     */
     public function setCallOptions(?CallOptions $value ): void {
@@ -429,7 +429,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the chatInfo property value. The chat information. Required information for meeting scenarios.
+     * Sets the chatInfo property value. The chat information. Required information for joining a meeting.
      *  @param ChatInfo|null $value Value to set for the chatInfo property.
     */
     public function setChatInfo(?ChatInfo $value ): void {
@@ -445,7 +445,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the incomingContext property value. The context associated with an incoming call. Read-only. Server generated.
+     * Sets the incomingContext property value. The incomingContext property
      *  @param IncomingContext|null $value Value to set for the incomingContext property.
     */
     public function setIncomingContext(?IncomingContext $value ): void {
@@ -453,7 +453,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the mediaConfig property value. The media configuration. Required information for creating peer to peer calls or joining meetings.
+     * Sets the mediaConfig property value. The media configuration. Required.
      *  @param MediaConfig|null $value Value to set for the mediaConfig property.
     */
     public function setMediaConfig(?MediaConfig $value ): void {
@@ -469,7 +469,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the meetingInfo property value. The meeting information. Required information for meeting scenarios.
+     * Sets the meetingInfo property value. The meeting information that's required for joining a meeting.
      *  @param MeetingInfo|null $value Value to set for the meetingInfo property.
     */
     public function setMeetingInfo(?MeetingInfo $value ): void {
@@ -565,7 +565,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the transcription property value. The transcription information for the call. Read-only.
+     * Sets the transcription property value. The transcription property
      *  @param CallTranscriptionInfo|null $value Value to set for the transcription property.
     */
     public function setTranscription(?CallTranscriptionInfo $value ): void {

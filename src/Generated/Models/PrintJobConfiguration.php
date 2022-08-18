@@ -65,7 +65,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
     private ?PrintMargin $margin = null;
     
     /**
-     * @var string|null $mediaSize The media sizeto use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
+     * @var string|null $mediaSize The media size to use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values listed in the printerCapabilities topic.
     */
     private ?string $mediaSize = null;
     
@@ -250,7 +250,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the mediaSize property value. The media sizeto use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
+     * Gets the mediaSize property value. The media size to use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values listed in the printerCapabilities topic.
      * @return string|null
     */
     public function getMediaSize(): ?string {
@@ -446,7 +446,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the mediaSize property value. The media sizeto use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
+     * Sets the mediaSize property value. The media size to use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values listed in the printerCapabilities topic.
      *  @param string|null $value Value to set for the mediaSize property.
     */
     public function setMediaSize(?string $value ): void {

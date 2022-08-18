@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamworkConversationIdentity extends Identity implements Parsable 
 {
     /**
-     * @var TeamworkConversationIdentityType|null $conversationIdentityType Type of conversation. Possible values are: team, channel, and chat.
+     * @var TeamworkConversationIdentityType|null $conversationIdentityType Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
     */
     private ?TeamworkConversationIdentityType $conversationIdentityType = null;
     
@@ -31,7 +31,7 @@ class TeamworkConversationIdentity extends Identity implements Parsable
     }
 
     /**
-     * Gets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, and chat.
+     * Gets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
      * @return TeamworkConversationIdentityType|null
     */
     public function getConversationIdentityType(): ?TeamworkConversationIdentityType {
@@ -59,7 +59,7 @@ class TeamworkConversationIdentity extends Identity implements Parsable
     }
 
     /**
-     * Sets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, and chat.
+     * Sets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
      *  @param TeamworkConversationIdentityType|null $value Value to set for the conversationIdentityType property.
     */
     public function setConversationIdentityType(?TeamworkConversationIdentityType $value ): void {

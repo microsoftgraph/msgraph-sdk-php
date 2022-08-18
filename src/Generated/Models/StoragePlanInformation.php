@@ -20,7 +20,7 @@ class StoragePlanInformation implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var bool|null $upgradeAvailable Indicates if there are higher storage quota plans available. Read-only.
+     * @var bool|null $upgradeAvailable Indicates whether there are higher storage quota plans available. Read-only.
     */
     private ?bool $upgradeAvailable = null;
     
@@ -70,7 +70,7 @@ class StoragePlanInformation implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the upgradeAvailable property value. Indicates if there are higher storage quota plans available. Read-only.
+     * Gets the upgradeAvailable property value. Indicates whether there are higher storage quota plans available. Read-only.
      * @return bool|null
     */
     public function getUpgradeAvailable(): ?bool {
@@ -104,7 +104,7 @@ class StoragePlanInformation implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the upgradeAvailable property value. Indicates if there are higher storage quota plans available. Read-only.
+     * Sets the upgradeAvailable property value. Indicates whether there are higher storage quota plans available. Read-only.
      *  @param bool|null $value Value to set for the upgradeAvailable property.
     */
     public function setUpgradeAvailable(?bool $value ): void {

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookComment extends Entity implements Parsable 
 {
     /**
-     * @var string|null $content The content of the comment.
+     * @var string|null $content The content of comment.
     */
     private ?string $content = null;
     
@@ -41,7 +41,7 @@ class WorkbookComment extends Entity implements Parsable
     }
 
     /**
-     * Gets the content property value. The content of the comment.
+     * Gets the content property value. The content of comment.
      * @return string|null
     */
     public function getContent(): ?string {
@@ -89,7 +89,7 @@ class WorkbookComment extends Entity implements Parsable
     }
 
     /**
-     * Sets the content property value. The content of the comment.
+     * Sets the content property value. The content of comment.
      *  @param string|null $value Value to set for the content property.
     */
     public function setContent(?string $value ): void {

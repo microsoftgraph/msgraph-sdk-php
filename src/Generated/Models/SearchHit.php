@@ -15,7 +15,7 @@ class SearchHit implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $contentSource The name of the content source which the externalItem is part of .
+     * @var string|null $contentSource The name of the content source that the externalItem is part of.
     */
     private ?string $contentSource = null;
     
@@ -40,7 +40,7 @@ class SearchHit implements AdditionalDataHolder, Parsable
     private ?Entity $resource = null;
     
     /**
-     * @var string|null $resultTemplateId ID of the result template for rendering the search result. This ID must map to a display layout in the resultTemplates dictionary, included in the searchresponse as well.
+     * @var string|null $resultTemplateId ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse.
     */
     private ?string $resultTemplateId = null;
     
@@ -75,7 +75,7 @@ class SearchHit implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the contentSource property value. The name of the content source which the externalItem is part of .
+     * Gets the contentSource property value. The name of the content source that the externalItem is part of.
      * @return string|null
     */
     public function getContentSource(): ?string {
@@ -132,7 +132,7 @@ class SearchHit implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the resultTemplateId property value. ID of the result template for rendering the search result. This ID must map to a display layout in the resultTemplates dictionary, included in the searchresponse as well.
+     * Gets the resultTemplateId property value. ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse.
      * @return string|null
     */
     public function getResultTemplateId(): ?string {
@@ -171,7 +171,7 @@ class SearchHit implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the contentSource property value. The name of the content source which the externalItem is part of .
+     * Sets the contentSource property value. The name of the content source that the externalItem is part of.
      *  @param string|null $value Value to set for the contentSource property.
     */
     public function setContentSource(?string $value ): void {
@@ -211,7 +211,7 @@ class SearchHit implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the resultTemplateId property value. ID of the result template for rendering the search result. This ID must map to a display layout in the resultTemplates dictionary, included in the searchresponse as well.
+     * Sets the resultTemplateId property value. ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse.
      *  @param string|null $value Value to set for the resultTemplateId property.
     */
     public function setResultTemplateId(?string $value ): void {

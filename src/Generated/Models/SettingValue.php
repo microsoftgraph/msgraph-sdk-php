@@ -15,7 +15,7 @@ class SettingValue implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $name Name of the setting (as defined by the directorySettingTemplate).
+     * @var string|null $name Name of the setting (as defined by the groupSettingTemplate).
     */
     private ?string $name = null;
     
@@ -68,7 +68,7 @@ class SettingValue implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the name property value. Name of the setting (as defined by the directorySettingTemplate).
+     * Gets the name property value. Name of the setting (as defined by the groupSettingTemplate).
      * @return string|null
     */
     public function getName(): ?string {
@@ -111,7 +111,7 @@ class SettingValue implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the name property value. Name of the setting (as defined by the directorySettingTemplate).
+     * Sets the name property value. Name of the setting (as defined by the groupSettingTemplate).
      *  @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value ): void {

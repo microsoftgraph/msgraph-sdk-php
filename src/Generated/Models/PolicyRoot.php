@@ -69,12 +69,12 @@ class PolicyRoot extends Entity implements Parsable
     private ?array $permissionGrantPolicies = null;
     
     /**
-     * @var array<UnifiedRoleManagementPolicy>|null $roleManagementPolicies Represents the role management policies.
+     * @var array<UnifiedRoleManagementPolicy>|null $roleManagementPolicies Specifies the various policies associated with scopes and roles.
     */
     private ?array $roleManagementPolicies = null;
     
     /**
-     * @var array<UnifiedRoleManagementPolicyAssignment>|null $roleManagementPolicyAssignments Represents the role management policy assignments.
+     * @var array<UnifiedRoleManagementPolicyAssignment>|null $roleManagementPolicyAssignments The assignment of a role management policy to a role definition object.
     */
     private ?array $roleManagementPolicyAssignments = null;
     
@@ -228,7 +228,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the roleManagementPolicies property value. Represents the role management policies.
+     * Gets the roleManagementPolicies property value. Specifies the various policies associated with scopes and roles.
      * @return array<UnifiedRoleManagementPolicy>|null
     */
     public function getRoleManagementPolicies(): ?array {
@@ -236,7 +236,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the roleManagementPolicyAssignments property value. Represents the role management policy assignments.
+     * Gets the roleManagementPolicyAssignments property value. The assignment of a role management policy to a role definition object.
      * @return array<UnifiedRoleManagementPolicyAssignment>|null
     */
     public function getRoleManagementPolicyAssignments(): ?array {
@@ -380,7 +380,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the roleManagementPolicies property value. Represents the role management policies.
+     * Sets the roleManagementPolicies property value. Specifies the various policies associated with scopes and roles.
      *  @param array<UnifiedRoleManagementPolicy>|null $value Value to set for the roleManagementPolicies property.
     */
     public function setRoleManagementPolicies(?array $value ): void {
@@ -388,7 +388,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the roleManagementPolicyAssignments property value. Represents the role management policy assignments.
+     * Sets the roleManagementPolicyAssignments property value. The assignment of a role management policy to a role definition object.
      *  @param array<UnifiedRoleManagementPolicyAssignment>|null $value Value to set for the roleManagementPolicyAssignments property.
     */
     public function setRoleManagementPolicyAssignments(?array $value ): void {

@@ -15,7 +15,7 @@ class IncomingContext implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $observedParticipantId The id of the participant that is under observation. Read-only.
+     * @var string|null $observedParticipantId The ID of the participant that is under observation. Read-only.
     */
     private ?string $observedParticipantId = null;
     
@@ -30,7 +30,7 @@ class IncomingContext implements AdditionalDataHolder, Parsable
     private ?IdentitySet $onBehalfOf = null;
     
     /**
-     * @var string|null $sourceParticipantId The id of the participant that triggered the incoming call. Read-only.
+     * @var string|null $sourceParticipantId The ID of the participant that triggered the incoming call. Read-only.
     */
     private ?string $sourceParticipantId = null;
     
@@ -80,7 +80,7 @@ class IncomingContext implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the observedParticipantId property value. The id of the participant that is under observation. Read-only.
+     * Gets the observedParticipantId property value. The ID of the participant that is under observation. Read-only.
      * @return string|null
     */
     public function getObservedParticipantId(): ?string {
@@ -104,7 +104,7 @@ class IncomingContext implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the sourceParticipantId property value. The id of the participant that triggered the incoming call. Read-only.
+     * Gets the sourceParticipantId property value. The ID of the participant that triggered the incoming call. Read-only.
      * @return string|null
     */
     public function getSourceParticipantId(): ?string {
@@ -141,7 +141,7 @@ class IncomingContext implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the observedParticipantId property value. The id of the participant that is under observation. Read-only.
+     * Sets the observedParticipantId property value. The ID of the participant that is under observation. Read-only.
      *  @param string|null $value Value to set for the observedParticipantId property.
     */
     public function setObservedParticipantId(?string $value ): void {
@@ -165,7 +165,7 @@ class IncomingContext implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the sourceParticipantId property value. The id of the participant that triggered the incoming call. Read-only.
+     * Sets the sourceParticipantId property value. The ID of the participant that triggered the incoming call. Read-only.
      *  @param string|null $value Value to set for the sourceParticipantId property.
     */
     public function setSourceParticipantId(?string $value ): void {

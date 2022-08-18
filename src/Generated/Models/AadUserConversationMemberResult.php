@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AadUserConversationMemberResult extends ActionResultPart implements Parsable 
 {
     /**
-     * @var string|null $userId The user object ID of the Azure AD user that was being added as part of the bulk operation.
+     * @var string|null $userId The userId property
     */
     private ?string $userId = null;
     
@@ -42,7 +42,7 @@ class AadUserConversationMemberResult extends ActionResultPart implements Parsab
     }
 
     /**
-     * Gets the userId property value. The user object ID of the Azure AD user that was being added as part of the bulk operation.
+     * Gets the userId property value. The userId property
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -59,7 +59,7 @@ class AadUserConversationMemberResult extends ActionResultPart implements Parsab
     }
 
     /**
-     * Sets the userId property value. The user object ID of the Azure AD user that was being added as part of the bulk operation.
+     * Sets the userId property value. The userId property
      *  @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value ): void {

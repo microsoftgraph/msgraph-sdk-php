@@ -53,7 +53,7 @@ class DataPolicyOperationsRequestBuilder
     }
 
     /**
-     * Retrieve the properties of the dataPolicyOperation object.
+     * Retrieve the properties of a **dataPolicyOperation** object.
      * @param DataPolicyOperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +102,7 @@ class DataPolicyOperationsRequestBuilder
     }
 
     /**
-     * Retrieve the properties of the dataPolicyOperation object.
+     * Retrieve the properties of a **dataPolicyOperation** object.
      * @param DataPolicyOperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

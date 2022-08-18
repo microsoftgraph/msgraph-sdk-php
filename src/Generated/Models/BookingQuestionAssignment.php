@@ -15,7 +15,7 @@ class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var bool|null $isRequired Indicates whether it is mandatory to answer the custom question.
+     * @var bool|null $isRequired The ID of the custom question.
     */
     private ?bool $isRequired = null;
     
@@ -25,7 +25,7 @@ class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var string|null $questionId If it is mandatory to answer the custom question.
+     * @var string|null $questionId Indicates whether it is mandatory to answer the custom question.
     */
     private ?string $questionId = null;
     
@@ -68,7 +68,7 @@ class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
+     * Gets the isRequired property value. The ID of the custom question.
      * @return bool|null
     */
     public function getIsRequired(): ?bool {
@@ -84,7 +84,7 @@ class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the questionId property value. If it is mandatory to answer the custom question.
+     * Gets the questionId property value. Indicates whether it is mandatory to answer the custom question.
      * @return string|null
     */
     public function getQuestionId(): ?string {
@@ -111,7 +111,7 @@ class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
+     * Sets the isRequired property value. The ID of the custom question.
      *  @param bool|null $value Value to set for the isRequired property.
     */
     public function setIsRequired(?bool $value ): void {
@@ -127,7 +127,7 @@ class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the questionId property value. If it is mandatory to answer the custom question.
+     * Sets the questionId property value. Indicates whether it is mandatory to answer the custom question.
      *  @param string|null $value Value to set for the questionId property.
     */
     public function setQuestionId(?string $value ): void {

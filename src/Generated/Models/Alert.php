@@ -90,7 +90,7 @@ class Alert extends Entity implements Parsable
     private ?array $fileStates = null;
     
     /**
-     * @var array<AlertHistoryState>|null $historyStates A collection of alertHistoryStates comprising an audit log of all updates made to an alert.
+     * @var array<AlertHistoryState>|null $historyStates The historyStates property
     */
     private ?array $historyStates = null;
     
@@ -399,7 +399,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the historyStates property value. A collection of alertHistoryStates comprising an audit log of all updates made to an alert.
+     * Gets the historyStates property value. The historyStates property
      * @return array<AlertHistoryState>|null
     */
     public function getHistoryStates(): ?array {
@@ -758,7 +758,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the historyStates property value. A collection of alertHistoryStates comprising an audit log of all updates made to an alert.
+     * Sets the historyStates property value. The historyStates property
      *  @param array<AlertHistoryState>|null $value Value to set for the historyStates property.
     */
     public function setHistoryStates(?array $value ): void {

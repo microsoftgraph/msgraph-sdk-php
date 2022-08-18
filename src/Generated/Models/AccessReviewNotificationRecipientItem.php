@@ -20,7 +20,7 @@ class AccessReviewNotificationRecipientItem implements AdditionalDataHolder, Par
     private ?AccessReviewNotificationRecipientScope $notificationRecipientScope = null;
     
     /**
-     * @var string|null $notificationTemplateType Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients which sends review completion notifications to the recipients.
+     * @var string|null $notificationTemplateType Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients, which sends review completion notifications to the recipients.
     */
     private ?string $notificationTemplateType = null;
     
@@ -76,7 +76,7 @@ class AccessReviewNotificationRecipientItem implements AdditionalDataHolder, Par
     }
 
     /**
-     * Gets the notificationTemplateType property value. Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients which sends review completion notifications to the recipients.
+     * Gets the notificationTemplateType property value. Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients, which sends review completion notifications to the recipients.
      * @return string|null
     */
     public function getNotificationTemplateType(): ?string {
@@ -119,7 +119,7 @@ class AccessReviewNotificationRecipientItem implements AdditionalDataHolder, Par
     }
 
     /**
-     * Sets the notificationTemplateType property value. Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients which sends review completion notifications to the recipients.
+     * Sets the notificationTemplateType property value. Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients, which sends review completion notifications to the recipients.
      *  @param string|null $value Value to set for the notificationTemplateType property.
     */
     public function setNotificationTemplateType(?string $value ): void {

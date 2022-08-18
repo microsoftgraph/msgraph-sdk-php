@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageAssignmentPolicy extends Entity implements Parsable 
 {
     /**
-     * @var AccessPackage|null $accessPackage The access package with this policy. Read-only. Nullable. Supports $expand.
+     * @var AccessPackage|null $accessPackage Access package containing this policy. Read-only.
     */
     private ?AccessPackage $accessPackage = null;
     
@@ -30,7 +30,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     private ?AccessPackageCatalog $catalog = null;
     
     /**
-     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     */
     private ?DateTime $createdDateTime = null;
     
@@ -40,7 +40,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     private ?string $description = null;
     
     /**
-     * @var string|null $displayName The display name of the policy. Supports $filter (eq).
+     * @var string|null $displayName The display name of the policy.
     */
     private ?string $displayName = null;
     
@@ -50,17 +50,17 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     private ?ExpirationPattern $expiration = null;
     
     /**
-     * @var DateTime|null $modifiedDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * @var DateTime|null $modifiedDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     */
     private ?DateTime $modifiedDateTime = null;
     
     /**
-     * @var AccessPackageAssignmentApprovalSettings|null $requestApprovalSettings Who must approve requests for access package in this policy.
+     * @var AccessPackageAssignmentApprovalSettings|null $requestApprovalSettings Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests.
     */
     private ?AccessPackageAssignmentApprovalSettings $requestApprovalSettings = null;
     
     /**
-     * @var AccessPackageAssignmentRequestorSettings|null $requestorSettings Who can request this access package from this policy.
+     * @var AccessPackageAssignmentRequestorSettings|null $requestorSettings Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request.
     */
     private ?AccessPackageAssignmentRequestorSettings $requestorSettings = null;
     
@@ -92,7 +92,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the accessPackage property value. The access package with this policy. Read-only. Nullable. Supports $expand.
+     * Gets the accessPackage property value. Access package containing this policy. Read-only.
      * @return AccessPackage|null
     */
     public function getAccessPackage(): ?AccessPackage {
@@ -124,7 +124,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -140,7 +140,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The display name of the policy. Supports $filter (eq).
+     * Gets the displayName property value. The display name of the policy.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -179,7 +179,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getModifiedDateTime(): ?DateTime {
@@ -187,7 +187,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the requestApprovalSettings property value. Who must approve requests for access package in this policy.
+     * Gets the requestApprovalSettings property value. Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests.
      * @return AccessPackageAssignmentApprovalSettings|null
     */
     public function getRequestApprovalSettings(): ?AccessPackageAssignmentApprovalSettings {
@@ -195,7 +195,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the requestorSettings property value. Who can request this access package from this policy.
+     * Gets the requestorSettings property value. Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request.
      * @return AccessPackageAssignmentRequestorSettings|null
     */
     public function getRequestorSettings(): ?AccessPackageAssignmentRequestorSettings {
@@ -240,7 +240,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the accessPackage property value. The access package with this policy. Read-only. Nullable. Supports $expand.
+     * Sets the accessPackage property value. Access package containing this policy. Read-only.
      *  @param AccessPackage|null $value Value to set for the accessPackage property.
     */
     public function setAccessPackage(?AccessPackage $value ): void {
@@ -272,7 +272,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value ): void {
@@ -288,7 +288,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The display name of the policy. Supports $filter (eq).
+     * Sets the displayName property value. The display name of the policy.
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -304,7 +304,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      *  @param DateTime|null $value Value to set for the modifiedDateTime property.
     */
     public function setModifiedDateTime(?DateTime $value ): void {
@@ -312,7 +312,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the requestApprovalSettings property value. Who must approve requests for access package in this policy.
+     * Sets the requestApprovalSettings property value. Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests.
      *  @param AccessPackageAssignmentApprovalSettings|null $value Value to set for the requestApprovalSettings property.
     */
     public function setRequestApprovalSettings(?AccessPackageAssignmentApprovalSettings $value ): void {
@@ -320,7 +320,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the requestorSettings property value. Who can request this access package from this policy.
+     * Sets the requestorSettings property value. Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request.
      *  @param AccessPackageAssignmentRequestorSettings|null $value Value to set for the requestorSettings property.
     */
     public function setRequestorSettings(?AccessPackageAssignmentRequestorSettings $value ): void {

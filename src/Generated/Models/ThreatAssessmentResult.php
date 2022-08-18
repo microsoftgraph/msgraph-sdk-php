@@ -20,7 +20,7 @@ class ThreatAssessmentResult extends Entity implements Parsable
     private ?string $message = null;
     
     /**
-     * @var ThreatAssessmentResultType|null $resultType The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan.
+     * @var ThreatAssessmentResultType|null $resultType The threat assessment result type. Possible values are: checkPolicy, rescan.
     */
     private ?ThreatAssessmentResultType $resultType = null;
     
@@ -71,7 +71,7 @@ class ThreatAssessmentResult extends Entity implements Parsable
     }
 
     /**
-     * Gets the resultType property value. The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan.
+     * Gets the resultType property value. The threat assessment result type. Possible values are: checkPolicy, rescan.
      * @return ThreatAssessmentResultType|null
     */
     public function getResultType(): ?ThreatAssessmentResultType {
@@ -106,7 +106,7 @@ class ThreatAssessmentResult extends Entity implements Parsable
     }
 
     /**
-     * Sets the resultType property value. The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan.
+     * Sets the resultType property value. The threat assessment result type. Possible values are: checkPolicy, rescan.
      *  @param ThreatAssessmentResultType|null $value Value to set for the resultType property.
     */
     public function setResultType(?ThreatAssessmentResultType $value ): void {

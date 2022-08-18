@@ -20,7 +20,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
     private ?DateTime $createdDateTime = null;
     
     /**
-     * @var string|null $description Not used.
+     * @var string|null $description The description property
     */
     private ?string $description = null;
     
@@ -83,7 +83,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. Not used.
+     * Gets the description property value. The description property
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -181,7 +181,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. Not used.
+     * Sets the description property value. The description property
      *  @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value ): void {

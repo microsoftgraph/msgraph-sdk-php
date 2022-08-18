@@ -29,7 +29,7 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
     private ?int $requestDurationInDays = null;
     
     /**
-     * @var array<AccessReviewReviewerScope>|null $reviewers Required.
+     * @var array<AccessReviewReviewerScope>|null $reviewers The list of reviewers for the admin consent. Required.
     */
     private ?array $reviewers = null;
     
@@ -104,7 +104,7 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the reviewers property value. Required.
+     * Gets the reviewers property value. The list of reviewers for the admin consent. Required.
      * @return array<AccessReviewReviewerScope>|null
     */
     public function getReviewers(): ?array {
@@ -166,7 +166,7 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the reviewers property value. Required.
+     * Sets the reviewers property value. The list of reviewers for the admin consent. Required.
      *  @param array<AccessReviewReviewerScope>|null $value Value to set for the reviewers property.
     */
     public function setReviewers(?array $value ): void {

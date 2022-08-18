@@ -30,7 +30,7 @@ class Website implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var WebsiteType|null $type Possible values are: other, home, work, blog, profile.
+     * @var WebsiteType|null $type The possible values are: other, home, work, blog, profile.
     */
     private ?WebsiteType $type = null;
     
@@ -98,7 +98,7 @@ class Website implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the type property value. Possible values are: other, home, work, blog, profile.
+     * Gets the type property value. The possible values are: other, home, work, blog, profile.
      * @return WebsiteType|null
     */
     public function getType(): ?WebsiteType {
@@ -150,7 +150,7 @@ class Website implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the type property value. Possible values are: other, home, work, blog, profile.
+     * Sets the type property value. The possible values are: other, home, work, blog, profile.
      *  @param WebsiteType|null $value Value to set for the type property.
     */
     public function setType(?WebsiteType $value ): void {

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsable 
 {
     /**
-     * @var string|null $recipientShiftId Shift ID for the recipient user with whom the request is to swap.
+     * @var string|null $recipientShiftId ShiftId for the recipient user with whom the request is to swap.
     */
     private ?string $recipientShiftId = null;
     
@@ -42,7 +42,7 @@ class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsable
     }
 
     /**
-     * Gets the recipientShiftId property value. Shift ID for the recipient user with whom the request is to swap.
+     * Gets the recipientShiftId property value. ShiftId for the recipient user with whom the request is to swap.
      * @return string|null
     */
     public function getRecipientShiftId(): ?string {
@@ -59,7 +59,7 @@ class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsable
     }
 
     /**
-     * Sets the recipientShiftId property value. Shift ID for the recipient user with whom the request is to swap.
+     * Sets the recipientShiftId property value. ShiftId for the recipient user with whom the request is to swap.
      *  @param string|null $value Value to set for the recipientShiftId property.
     */
     public function setRecipientShiftId(?string $value ): void {

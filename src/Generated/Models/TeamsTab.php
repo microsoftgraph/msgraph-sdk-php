@@ -19,7 +19,7 @@ class TeamsTab extends Entity implements Parsable
     private ?string $displayName = null;
     
     /**
-     * @var TeamsApp|null $teamsApp The application that is linked to the tab.
+     * @var TeamsApp|null $teamsApp The application that is linked to the tab. This cannot be changed after tab creation.
     */
     private ?TeamsApp $teamsApp = null;
     
@@ -76,7 +76,7 @@ class TeamsTab extends Entity implements Parsable
     }
 
     /**
-     * Gets the teamsApp property value. The application that is linked to the tab.
+     * Gets the teamsApp property value. The application that is linked to the tab. This cannot be changed after tab creation.
      * @return TeamsApp|null
     */
     public function getTeamsApp(): ?TeamsApp {
@@ -120,7 +120,7 @@ class TeamsTab extends Entity implements Parsable
     }
 
     /**
-     * Sets the teamsApp property value. The application that is linked to the tab.
+     * Sets the teamsApp property value. The application that is linked to the tab. This cannot be changed after tab creation.
      *  @param TeamsApp|null $value Value to set for the teamsApp property.
     */
     public function setTeamsApp(?TeamsApp $value ): void {

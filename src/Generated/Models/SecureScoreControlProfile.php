@@ -25,17 +25,17 @@ class SecureScoreControlProfile extends Entity implements Parsable
     private ?string $azureTenantId = null;
     
     /**
-     * @var array<ComplianceInformation>|null $complianceInformation The collection of compliance information associated with secure score control
+     * @var array<ComplianceInformation>|null $complianceInformation The complianceInformation property
     */
     private ?array $complianceInformation = null;
     
     /**
-     * @var string|null $controlCategory Control action category (Account, Data, Device, Apps, Infrastructure).
+     * @var string|null $controlCategory Control action category (Identity, Data, Device, Apps, Infrastructure).
     */
     private ?string $controlCategory = null;
     
     /**
-     * @var array<SecureScoreControlStateUpdate>|null $controlStateUpdates Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update).
+     * @var array<SecureScoreControlStateUpdate>|null $controlStateUpdates The controlStateUpdates property
     */
     private ?array $controlStateUpdates = null;
     
@@ -55,7 +55,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     private ?DateTime $lastModifiedDateTime = null;
     
     /**
-     * @var float|null $maxScore Current obtained max score on specified date.
+     * @var float|null $maxScore max attainable score for the control.
     */
     private ?float $maxScore = null;
     
@@ -80,12 +80,12 @@ class SecureScoreControlProfile extends Entity implements Parsable
     private ?string $service = null;
     
     /**
-     * @var array<string>|null $threats List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing).
+     * @var array<string>|null $threats List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
     */
     private ?array $threats = null;
     
     /**
-     * @var string|null $tier Control tier (Core, Defense in Depth, Advanced.)
+     * @var string|null $tier The tier property
     */
     private ?string $tier = null;
     
@@ -95,7 +95,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     private ?string $title = null;
     
     /**
-     * @var string|null $userImpact User impact of implementing control (low, moderate, high).
+     * @var string|null $userImpact The userImpact property
     */
     private ?string $userImpact = null;
     
@@ -146,7 +146,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the complianceInformation property value. The collection of compliance information associated with secure score control
+     * Gets the complianceInformation property value. The complianceInformation property
      * @return array<ComplianceInformation>|null
     */
     public function getComplianceInformation(): ?array {
@@ -154,7 +154,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the controlCategory property value. Control action category (Account, Data, Device, Apps, Infrastructure).
+     * Gets the controlCategory property value. Control action category (Identity, Data, Device, Apps, Infrastructure).
      * @return string|null
     */
     public function getControlCategory(): ?string {
@@ -162,7 +162,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the controlStateUpdates property value. Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update).
+     * Gets the controlStateUpdates property value. The controlStateUpdates property
      * @return array<SecureScoreControlStateUpdate>|null
     */
     public function getControlStateUpdates(): ?array {
@@ -223,7 +223,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the maxScore property value. Current obtained max score on specified date.
+     * Gets the maxScore property value. max attainable score for the control.
      * @return float|null
     */
     public function getMaxScore(): ?float {
@@ -263,7 +263,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing).
+     * Gets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
      * @return array<string>|null
     */
     public function getThreats(): ?array {
@@ -271,7 +271,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the tier property value. Control tier (Core, Defense in Depth, Advanced.)
+     * Gets the tier property value. The tier property
      * @return string|null
     */
     public function getTier(): ?string {
@@ -287,7 +287,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the userImpact property value. User impact of implementing control (low, moderate, high).
+     * Gets the userImpact property value. The userImpact property
      * @return string|null
     */
     public function getUserImpact(): ?string {
@@ -354,7 +354,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the complianceInformation property value. The collection of compliance information associated with secure score control
+     * Sets the complianceInformation property value. The complianceInformation property
      *  @param array<ComplianceInformation>|null $value Value to set for the complianceInformation property.
     */
     public function setComplianceInformation(?array $value ): void {
@@ -362,7 +362,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the controlCategory property value. Control action category (Account, Data, Device, Apps, Infrastructure).
+     * Sets the controlCategory property value. Control action category (Identity, Data, Device, Apps, Infrastructure).
      *  @param string|null $value Value to set for the controlCategory property.
     */
     public function setControlCategory(?string $value ): void {
@@ -370,7 +370,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the controlStateUpdates property value. Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update).
+     * Sets the controlStateUpdates property value. The controlStateUpdates property
      *  @param array<SecureScoreControlStateUpdate>|null $value Value to set for the controlStateUpdates property.
     */
     public function setControlStateUpdates(?array $value ): void {
@@ -402,7 +402,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the maxScore property value. Current obtained max score on specified date.
+     * Sets the maxScore property value. max attainable score for the control.
      *  @param float|null $value Value to set for the maxScore property.
     */
     public function setMaxScore(?float $value ): void {
@@ -442,7 +442,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing).
+     * Sets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
      *  @param array<string>|null $value Value to set for the threats property.
     */
     public function setThreats(?array $value ): void {
@@ -450,7 +450,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the tier property value. Control tier (Core, Defense in Depth, Advanced.)
+     * Sets the tier property value. The tier property
      *  @param string|null $value Value to set for the tier property.
     */
     public function setTier(?string $value ): void {
@@ -466,7 +466,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the userImpact property value. User impact of implementing control (low, moderate, high).
+     * Sets the userImpact property value. The userImpact property
      *  @param string|null $value Value to set for the userImpact property.
     */
     public function setUserImpact(?string $value ): void {

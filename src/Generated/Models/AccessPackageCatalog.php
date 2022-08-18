@@ -10,12 +10,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageCatalog extends Entity implements Parsable 
 {
     /**
-     * @var array<AccessPackage>|null $accessPackages The access packages in this catalog. Read-only. Nullable. Supports $expand.
+     * @var array<AccessPackage>|null $accessPackages The access packages in this catalog. Read-only. Nullable.
     */
     private ?array $accessPackages = null;
     
     /**
-     * @var AccessPackageCatalogType|null $catalogType One of UserManaged or ServiceDefault.
+     * @var AccessPackageCatalogType|null $catalogType Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
     */
     private ?AccessPackageCatalogType $catalogType = null;
     
@@ -30,7 +30,7 @@ class AccessPackageCatalog extends Entity implements Parsable
     private ?string $description = null;
     
     /**
-     * @var string|null $displayName The display name of the access package catalog. Supports $filter (eq, contains).
+     * @var string|null $displayName The display name of the access package catalog.
     */
     private ?string $displayName = null;
     
@@ -67,7 +67,7 @@ class AccessPackageCatalog extends Entity implements Parsable
     }
 
     /**
-     * Gets the accessPackages property value. The access packages in this catalog. Read-only. Nullable. Supports $expand.
+     * Gets the accessPackages property value. The access packages in this catalog. Read-only. Nullable.
      * @return array<AccessPackage>|null
     */
     public function getAccessPackages(): ?array {
@@ -75,7 +75,7 @@ class AccessPackageCatalog extends Entity implements Parsable
     }
 
     /**
-     * Gets the catalogType property value. One of UserManaged or ServiceDefault.
+     * Gets the catalogType property value. Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
      * @return AccessPackageCatalogType|null
     */
     public function getCatalogType(): ?AccessPackageCatalogType {
@@ -99,7 +99,7 @@ class AccessPackageCatalog extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The display name of the access package catalog. Supports $filter (eq, contains).
+     * Gets the displayName property value. The display name of the access package catalog.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -165,7 +165,7 @@ class AccessPackageCatalog extends Entity implements Parsable
     }
 
     /**
-     * Sets the accessPackages property value. The access packages in this catalog. Read-only. Nullable. Supports $expand.
+     * Sets the accessPackages property value. The access packages in this catalog. Read-only. Nullable.
      *  @param array<AccessPackage>|null $value Value to set for the accessPackages property.
     */
     public function setAccessPackages(?array $value ): void {
@@ -173,7 +173,7 @@ class AccessPackageCatalog extends Entity implements Parsable
     }
 
     /**
-     * Sets the catalogType property value. One of UserManaged or ServiceDefault.
+     * Sets the catalogType property value. Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
      *  @param AccessPackageCatalogType|null $value Value to set for the catalogType property.
     */
     public function setCatalogType(?AccessPackageCatalogType $value ): void {
@@ -197,7 +197,7 @@ class AccessPackageCatalog extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The display name of the access package catalog. Supports $filter (eq, contains).
+     * Sets the displayName property value. The display name of the access package catalog.
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {

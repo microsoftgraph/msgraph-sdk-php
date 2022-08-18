@@ -127,7 +127,7 @@ class EducationAssignmentItemRequestBuilder
     }
 
     /**
-     * List of assignments for the user. Nullable.
+     * Assignments belonging to the user.
      * @param EducationAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -194,7 +194,7 @@ class EducationAssignmentItemRequestBuilder
     }
 
     /**
-     * List of assignments for the user. Nullable.
+     * Assignments belonging to the user.
      * @param EducationAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

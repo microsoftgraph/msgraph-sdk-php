@@ -92,6 +92,8 @@ class Entity implements AdditionalDataHolder, Parsable
                 case '#microsoft.graph.appScope': return new AppScope();
                 case '#microsoft.graph.associatedTeamInfo': return new AssociatedTeamInfo();
                 case '#microsoft.graph.attachment': return new Attachment();
+                case '#microsoft.graph.attachmentBase': return new AttachmentBase();
+                case '#microsoft.graph.attachmentSession': return new AttachmentSession();
                 case '#microsoft.graph.attendanceRecord': return new AttendanceRecord();
                 case '#microsoft.graph.audioRoutingGroup': return new AudioRoutingGroup();
                 case '#microsoft.graph.auditLogRoot': return new AuditLogRoot();
@@ -512,6 +514,7 @@ class Entity implements AdditionalDataHolder, Parsable
                 case '#microsoft.graph.targetedManagedAppConfiguration': return new TargetedManagedAppConfiguration();
                 case '#microsoft.graph.targetedManagedAppPolicyAssignment': return new TargetedManagedAppPolicyAssignment();
                 case '#microsoft.graph.targetedManagedAppProtection': return new TargetedManagedAppProtection();
+                case '#microsoft.graph.taskFileAttachment': return new TaskFileAttachment();
                 case '#microsoft.graph.team': return new Team();
                 case '#microsoft.graph.teamInfo': return new TeamInfo();
                 case '#microsoft.graph.teamsApp': return new TeamsApp();

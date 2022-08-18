@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
 {
     /**
-     * @var UnifiedRoleManagementPolicyRuleTarget|null $target Not implemented. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
+     * @var UnifiedRoleManagementPolicyRuleTarget|null $target Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
     */
     private ?UnifiedRoleManagementPolicyRuleTarget $target = null;
     
@@ -53,7 +53,7 @@ class UnifiedRoleManagementPolicyRule extends Entity implements Parsable
     }
 
     /**
-     * Gets the target property value. Not implemented. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
+     * Gets the target property value. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
      * @return UnifiedRoleManagementPolicyRuleTarget|null
     */
     public function getTarget(): ?UnifiedRoleManagementPolicyRuleTarget {
@@ -70,7 +70,7 @@ class UnifiedRoleManagementPolicyRule extends Entity implements Parsable
     }
 
     /**
-     * Sets the target property value. Not implemented. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
+     * Sets the target property value. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
      *  @param UnifiedRoleManagementPolicyRuleTarget|null $value Value to set for the target property.
     */
     public function setTarget(?UnifiedRoleManagementPolicyRuleTarget $value ): void {

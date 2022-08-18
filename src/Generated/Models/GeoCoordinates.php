@@ -20,12 +20,12 @@ class GeoCoordinates implements AdditionalDataHolder, Parsable
     private ?float $altitude = null;
     
     /**
-     * @var float|null $latitude Optional. The latitude, in decimal, for the item. Writable on OneDrive Personal.
+     * @var float|null $latitude Optional. The latitude, in decimal, for the item. Read-only.
     */
     private ?float $latitude = null;
     
     /**
-     * @var float|null $longitude Optional. The longitude, in decimal, for the item. Writable on OneDrive Personal.
+     * @var float|null $longitude Optional. The longitude, in decimal, for the item. Read-only.
     */
     private ?float $longitude = null;
     
@@ -82,7 +82,7 @@ class GeoCoordinates implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the latitude property value. Optional. The latitude, in decimal, for the item. Writable on OneDrive Personal.
+     * Gets the latitude property value. Optional. The latitude, in decimal, for the item. Read-only.
      * @return float|null
     */
     public function getLatitude(): ?float {
@@ -90,7 +90,7 @@ class GeoCoordinates implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the longitude property value. Optional. The longitude, in decimal, for the item. Writable on OneDrive Personal.
+     * Gets the longitude property value. Optional. The longitude, in decimal, for the item. Read-only.
      * @return float|null
     */
     public function getLongitude(): ?float {
@@ -134,7 +134,7 @@ class GeoCoordinates implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the latitude property value. Optional. The latitude, in decimal, for the item. Writable on OneDrive Personal.
+     * Sets the latitude property value. Optional. The latitude, in decimal, for the item. Read-only.
      *  @param float|null $value Value to set for the latitude property.
     */
     public function setLatitude(?float $value ): void {
@@ -142,7 +142,7 @@ class GeoCoordinates implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the longitude property value. Optional. The longitude, in decimal, for the item. Writable on OneDrive Personal.
+     * Sets the longitude property value. Optional. The longitude, in decimal, for the item. Read-only.
      *  @param float|null $value Value to set for the longitude property.
     */
     public function setLongitude(?float $value ): void {

@@ -16,22 +16,22 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $appId The Application ID of the calling application that submitted an update (PATCH) to the alert. The appId should be extracted from the auth token and not entered manually by the calling application.
+     * @var string|null $appId The appId property
     */
     private ?string $appId = null;
     
     /**
-     * @var string|null $assignedTo UPN of user the alert was assigned to (note: alert.assignedTo only stores the last value/UPN).
+     * @var string|null $assignedTo The assignedTo property
     */
     private ?string $assignedTo = null;
     
     /**
-     * @var array<string>|null $comments Comment entered by signed-in user.
+     * @var array<string>|null $comments The comments property
     */
     private ?array $comments = null;
     
     /**
-     * @var AlertFeedback|null $feedback Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive.
+     * @var AlertFeedback|null $feedback The feedback property
     */
     private ?AlertFeedback $feedback = null;
     
@@ -41,17 +41,17 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var AlertStatus|null $status Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.
+     * @var AlertStatus|null $status The status property
     */
     private ?AlertStatus $status = null;
     
     /**
-     * @var DateTime|null $updatedDateTime Date and time of the alert update. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * @var DateTime|null $updatedDateTime The updatedDateTime property
     */
     private ?DateTime $updatedDateTime = null;
     
     /**
-     * @var string|null $user UPN of the signed-in user that updated the alert (taken from the bearer token - if in user/delegated auth mode).
+     * @var string|null $user The user property
     */
     private ?string $user = null;
     
@@ -81,7 +81,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the appId property value. The Application ID of the calling application that submitted an update (PATCH) to the alert. The appId should be extracted from the auth token and not entered manually by the calling application.
+     * Gets the appId property value. The appId property
      * @return string|null
     */
     public function getAppId(): ?string {
@@ -89,7 +89,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the assignedTo property value. UPN of user the alert was assigned to (note: alert.assignedTo only stores the last value/UPN).
+     * Gets the assignedTo property value. The assignedTo property
      * @return string|null
     */
     public function getAssignedTo(): ?string {
@@ -97,7 +97,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the comments property value. Comment entered by signed-in user.
+     * Gets the comments property value. The comments property
      * @return array<string>|null
     */
     public function getComments(): ?array {
@@ -105,7 +105,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the feedback property value. Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive.
+     * Gets the feedback property value. The feedback property
      * @return AlertFeedback|null
     */
     public function getFeedback(): ?AlertFeedback {
@@ -139,7 +139,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the status property value. Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.
+     * Gets the status property value. The status property
      * @return AlertStatus|null
     */
     public function getStatus(): ?AlertStatus {
@@ -147,7 +147,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the updatedDateTime property value. Date and time of the alert update. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the updatedDateTime property value. The updatedDateTime property
      * @return DateTime|null
     */
     public function getUpdatedDateTime(): ?DateTime {
@@ -155,7 +155,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the user property value. UPN of the signed-in user that updated the alert (taken from the bearer token - if in user/delegated auth mode).
+     * Gets the user property value. The user property
      * @return string|null
     */
     public function getUser(): ?string {
@@ -187,7 +187,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the appId property value. The Application ID of the calling application that submitted an update (PATCH) to the alert. The appId should be extracted from the auth token and not entered manually by the calling application.
+     * Sets the appId property value. The appId property
      *  @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value ): void {
@@ -195,7 +195,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the assignedTo property value. UPN of user the alert was assigned to (note: alert.assignedTo only stores the last value/UPN).
+     * Sets the assignedTo property value. The assignedTo property
      *  @param string|null $value Value to set for the assignedTo property.
     */
     public function setAssignedTo(?string $value ): void {
@@ -203,7 +203,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the comments property value. Comment entered by signed-in user.
+     * Sets the comments property value. The comments property
      *  @param array<string>|null $value Value to set for the comments property.
     */
     public function setComments(?array $value ): void {
@@ -211,7 +211,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the feedback property value. Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive.
+     * Sets the feedback property value. The feedback property
      *  @param AlertFeedback|null $value Value to set for the feedback property.
     */
     public function setFeedback(?AlertFeedback $value ): void {
@@ -227,7 +227,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the status property value. Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.
+     * Sets the status property value. The status property
      *  @param AlertStatus|null $value Value to set for the status property.
     */
     public function setStatus(?AlertStatus $value ): void {
@@ -235,7 +235,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the updatedDateTime property value. Date and time of the alert update. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the updatedDateTime property value. The updatedDateTime property
      *  @param DateTime|null $value Value to set for the updatedDateTime property.
     */
     public function setUpdatedDateTime(?DateTime $value ): void {
@@ -243,7 +243,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the user property value. UPN of the signed-in user that updated the alert (taken from the bearer token - if in user/delegated auth mode).
+     * Sets the user property value. The user property
      *  @param string|null $value Value to set for the user property.
     */
     public function setUser(?string $value ): void {

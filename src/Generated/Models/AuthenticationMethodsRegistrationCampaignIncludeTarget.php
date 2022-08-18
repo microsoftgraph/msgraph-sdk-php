@@ -15,7 +15,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
     private array $additionalData;
     
     /**
-     * @var string|null $id The object identifier of an Azure AD user or group.
+     * @var string|null $id The object identifier of an Azure Active Directory user or group.
     */
     private ?string $id = null;
     
@@ -74,7 +74,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
     }
 
     /**
-     * Gets the id property value. The object identifier of an Azure AD user or group.
+     * Gets the id property value. The object identifier of an Azure Active Directory user or group.
      * @return string|null
     */
     public function getId(): ?string {
@@ -126,7 +126,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
     }
 
     /**
-     * Sets the id property value. The object identifier of an Azure AD user or group.
+     * Sets the id property value. The object identifier of an Azure Active Directory user or group.
      *  @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value ): void {

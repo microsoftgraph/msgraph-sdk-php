@@ -32,7 +32,7 @@ class ExpirationPattern implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var ExpirationPatternType|null $type The requestor's desired expiration pattern type.
+     * @var ExpirationPatternType|null $type The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
     */
     private ?ExpirationPatternType $type = null;
     
@@ -100,7 +100,7 @@ class ExpirationPattern implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the type property value. The requestor's desired expiration pattern type.
+     * Gets the type property value. The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
      * @return ExpirationPatternType|null
     */
     public function getType(): ?ExpirationPatternType {
@@ -152,7 +152,7 @@ class ExpirationPattern implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the type property value. The requestor's desired expiration pattern type.
+     * Sets the type property value. The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
      *  @param ExpirationPatternType|null $value Value to set for the type property.
     */
     public function setType(?ExpirationPatternType $value ): void {

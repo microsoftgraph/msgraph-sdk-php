@@ -14,7 +14,7 @@ class EntitlementManagement extends Entity implements Parsable
     private ?array $accessPackageAssignmentApprovals = null;
     
     /**
-     * @var array<AccessPackage>|null $accessPackages Represents access package objects.
+     * @var array<AccessPackage>|null $accessPackages Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
     */
     private ?array $accessPackages = null;
     
@@ -39,12 +39,12 @@ class EntitlementManagement extends Entity implements Parsable
     private ?array $catalogs = null;
     
     /**
-     * @var array<ConnectedOrganization>|null $connectedOrganizations Represents references to a directory or domain of another organization whose users can request access.
+     * @var array<ConnectedOrganization>|null $connectedOrganizations References to a directory or domain of another organization whose users can request access.
     */
     private ?array $connectedOrganizations = null;
     
     /**
-     * @var EntitlementManagementSettings|null $settings Represents the settings that control the behavior of Azure AD entitlement management.
+     * @var EntitlementManagementSettings|null $settings The settings that control the behavior of Azure AD entitlement management.
     */
     private ?EntitlementManagementSettings $settings = null;
     
@@ -74,7 +74,7 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
-     * Gets the accessPackages property value. Represents access package objects.
+     * Gets the accessPackages property value. Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      * @return array<AccessPackage>|null
     */
     public function getAccessPackages(): ?array {
@@ -114,7 +114,7 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
-     * Gets the connectedOrganizations property value. Represents references to a directory or domain of another organization whose users can request access.
+     * Gets the connectedOrganizations property value. References to a directory or domain of another organization whose users can request access.
      * @return array<ConnectedOrganization>|null
     */
     public function getConnectedOrganizations(): ?array {
@@ -140,7 +140,7 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
-     * Gets the settings property value. Represents the settings that control the behavior of Azure AD entitlement management.
+     * Gets the settings property value. The settings that control the behavior of Azure AD entitlement management.
      * @return EntitlementManagementSettings|null
     */
     public function getSettings(): ?EntitlementManagementSettings {
@@ -172,7 +172,7 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
-     * Sets the accessPackages property value. Represents access package objects.
+     * Sets the accessPackages property value. Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      *  @param array<AccessPackage>|null $value Value to set for the accessPackages property.
     */
     public function setAccessPackages(?array $value ): void {
@@ -212,7 +212,7 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
-     * Sets the connectedOrganizations property value. Represents references to a directory or domain of another organization whose users can request access.
+     * Sets the connectedOrganizations property value. References to a directory or domain of another organization whose users can request access.
      *  @param array<ConnectedOrganization>|null $value Value to set for the connectedOrganizations property.
     */
     public function setConnectedOrganizations(?array $value ): void {
@@ -220,7 +220,7 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
-     * Sets the settings property value. Represents the settings that control the behavior of Azure AD entitlement management.
+     * Sets the settings property value. The settings that control the behavior of Azure AD entitlement management.
      *  @param EntitlementManagementSettings|null $value Value to set for the settings property.
     */
     public function setSettings(?EntitlementManagementSettings $value ): void {

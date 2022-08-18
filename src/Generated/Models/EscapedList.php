@@ -39,7 +39,7 @@ class EscapedList extends BaseItem implements Parsable
     private ?array $items = null;
     
     /**
-     * @var array<RichLongRunningOperation>|null $operations The collection of long running operations for the list.
+     * @var array<RichLongRunningOperation>|null $operations The collection of long-running operations on the list.
     */
     private ?array $operations = null;
     
@@ -144,7 +144,7 @@ class EscapedList extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the operations property value. The collection of long running operations for the list.
+     * Gets the operations property value. The collection of long-running operations on the list.
      * @return array<RichLongRunningOperation>|null
     */
     public function getOperations(): ?array {
@@ -242,7 +242,7 @@ class EscapedList extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the operations property value. The collection of long running operations for the list.
+     * Sets the operations property value. The collection of long-running operations on the list.
      *  @param array<RichLongRunningOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value ): void {

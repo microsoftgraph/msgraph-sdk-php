@@ -21,7 +21,7 @@ class VerifiedPublisher implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $displayName The verified publisher name from the app publisher's Microsoft Partner Network (MPN) account.
+     * @var string|null $displayName The verified publisher name from the app publisher's Partner Center account.
     */
     private ?string $displayName = null;
     
@@ -69,7 +69,7 @@ class VerifiedPublisher implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the displayName property value. The verified publisher name from the app publisher's Microsoft Partner Network (MPN) account.
+     * Gets the displayName property value. The verified publisher name from the app publisher's Partner Center account.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -135,7 +135,7 @@ class VerifiedPublisher implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the displayName property value. The verified publisher name from the app publisher's Microsoft Partner Network (MPN) account.
+     * Sets the displayName property value. The verified publisher name from the app publisher's Partner Center account.
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {

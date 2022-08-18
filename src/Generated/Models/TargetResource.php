@@ -20,7 +20,7 @@ class TargetResource implements AdditionalDataHolder, Parsable
     private ?string $displayName = null;
     
     /**
-     * @var GroupType|null $groupType When type is set to Group, this indicates the group type.  Possible values are: unifiedGroups, azureAD, and unknownFutureValue
+     * @var GroupType|null $groupType When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
     */
     private ?GroupType $groupType = null;
     
@@ -100,7 +100,7 @@ class TargetResource implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the groupType property value. When type is set to Group, this indicates the group type.  Possible values are: unifiedGroups, azureAD, and unknownFutureValue
+     * Gets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
      * @return GroupType|null
     */
     public function getGroupType(): ?GroupType {
@@ -179,7 +179,7 @@ class TargetResource implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the groupType property value. When type is set to Group, this indicates the group type.  Possible values are: unifiedGroups, azureAD, and unknownFutureValue
+     * Sets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
      *  @param GroupType|null $value Value to set for the groupType property.
     */
     public function setGroupType(?GroupType $value ): void {

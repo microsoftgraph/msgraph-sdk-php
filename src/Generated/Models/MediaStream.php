@@ -35,7 +35,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var bool|null $serverMuted Indicates whether the media is muted by the server.
+     * @var bool|null $serverMuted If the media is muted by the server.
     */
     private ?bool $serverMuted = null;
     
@@ -118,7 +118,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the serverMuted property value. Indicates whether the media is muted by the server.
+     * Gets the serverMuted property value. If the media is muted by the server.
      * @return bool|null
     */
     public function getServerMuted(): ?bool {
@@ -188,7 +188,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the serverMuted property value. Indicates whether the media is muted by the server.
+     * Sets the serverMuted property value. If the media is muted by the server.
      *  @param bool|null $value Value to set for the serverMuted property.
     */
     public function setServerMuted(?bool $value ): void {

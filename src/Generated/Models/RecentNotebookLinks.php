@@ -20,7 +20,7 @@ class RecentNotebookLinks implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var ExternalLink|null $oneNoteClientUrl Opens the notebook in the OneNote client, if it's installed.
+     * @var ExternalLink|null $oneNoteClientUrl Opens the notebook in the OneNote native client if it's installed.
     */
     private ?ExternalLink $oneNoteClientUrl = null;
     
@@ -76,7 +76,7 @@ class RecentNotebookLinks implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the oneNoteClientUrl property value. Opens the notebook in the OneNote client, if it's installed.
+     * Gets the oneNoteClientUrl property value. Opens the notebook in the OneNote native client if it's installed.
      * @return ExternalLink|null
     */
     public function getOneNoteClientUrl(): ?ExternalLink {
@@ -119,7 +119,7 @@ class RecentNotebookLinks implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the oneNoteClientUrl property value. Opens the notebook in the OneNote client, if it's installed.
+     * Sets the oneNoteClientUrl property value. Opens the notebook in the OneNote native client if it's installed.
      *  @param ExternalLink|null $value Value to set for the oneNoteClientUrl property.
     */
     public function setOneNoteClientUrl(?ExternalLink $value ): void {

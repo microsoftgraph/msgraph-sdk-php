@@ -15,7 +15,7 @@ class AppIdentity implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $appId Refers to the unique identifier representing Application Id in the Azure Active Directory.
+     * @var string|null $appId Refers to the Unique GUID representing Application Id in the Azure Active Directory.
     */
     private ?string $appId = null;
     
@@ -30,7 +30,7 @@ class AppIdentity implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var string|null $servicePrincipalId Refers to the unique identifier indicating Service Principal Id in Azure Active Directory for the corresponding App.
+     * @var string|null $servicePrincipalId Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
     */
     private ?string $servicePrincipalId = null;
     
@@ -65,7 +65,7 @@ class AppIdentity implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the appId property value. Refers to the unique identifier representing Application Id in the Azure Active Directory.
+     * Gets the appId property value. Refers to the Unique GUID representing Application Id in the Azure Active Directory.
      * @return string|null
     */
     public function getAppId(): ?string {
@@ -104,7 +104,7 @@ class AppIdentity implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the servicePrincipalId property value. Refers to the unique identifier indicating Service Principal Id in Azure Active Directory for the corresponding App.
+     * Gets the servicePrincipalId property value. Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
      * @return string|null
     */
     public function getServicePrincipalId(): ?string {
@@ -141,7 +141,7 @@ class AppIdentity implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the appId property value. Refers to the unique identifier representing Application Id in the Azure Active Directory.
+     * Sets the appId property value. Refers to the Unique GUID representing Application Id in the Azure Active Directory.
      *  @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value ): void {
@@ -165,7 +165,7 @@ class AppIdentity implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the servicePrincipalId property value. Refers to the unique identifier indicating Service Principal Id in Azure Active Directory for the corresponding App.
+     * Sets the servicePrincipalId property value. Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
      *  @param string|null $value Value to set for the servicePrincipalId property.
     */
     public function setServicePrincipalId(?string $value ): void {

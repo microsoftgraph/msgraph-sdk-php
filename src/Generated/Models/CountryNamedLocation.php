@@ -9,12 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CountryNamedLocation extends NamedLocation implements Parsable 
 {
     /**
-     * @var array<string>|null $countriesAndRegions List of countries and/or regions in two-letter format specified by ISO 3166-2.
+     * @var array<string>|null $countriesAndRegions List of countries and/or regions in two-letter format specified by ISO 3166-2. Required.
     */
     private ?array $countriesAndRegions = null;
     
     /**
-     * @var CountryLookupMethodType|null $countryLookupMethod Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress (default) and authenticatorAppGps.
+     * @var CountryLookupMethodType|null $countryLookupMethod Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
     */
     private ?CountryLookupMethodType $countryLookupMethod = null;
     
@@ -41,7 +41,7 @@ class CountryNamedLocation extends NamedLocation implements Parsable
     }
 
     /**
-     * Gets the countriesAndRegions property value. List of countries and/or regions in two-letter format specified by ISO 3166-2.
+     * Gets the countriesAndRegions property value. List of countries and/or regions in two-letter format specified by ISO 3166-2. Required.
      * @return array<string>|null
     */
     public function getCountriesAndRegions(): ?array {
@@ -49,7 +49,7 @@ class CountryNamedLocation extends NamedLocation implements Parsable
     }
 
     /**
-     * Gets the countryLookupMethod property value. Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress (default) and authenticatorAppGps.
+     * Gets the countryLookupMethod property value. Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
      * @return CountryLookupMethodType|null
     */
     public function getCountryLookupMethod(): ?CountryLookupMethodType {
@@ -89,7 +89,7 @@ class CountryNamedLocation extends NamedLocation implements Parsable
     }
 
     /**
-     * Sets the countriesAndRegions property value. List of countries and/or regions in two-letter format specified by ISO 3166-2.
+     * Sets the countriesAndRegions property value. List of countries and/or regions in two-letter format specified by ISO 3166-2. Required.
      *  @param array<string>|null $value Value to set for the countriesAndRegions property.
     */
     public function setCountriesAndRegions(?array $value ): void {
@@ -97,7 +97,7 @@ class CountryNamedLocation extends NamedLocation implements Parsable
     }
 
     /**
-     * Sets the countryLookupMethod property value. Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress (default) and authenticatorAppGps.
+     * Sets the countryLookupMethod property value. Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
      *  @param CountryLookupMethodType|null $value Value to set for the countryLookupMethod property.
     */
     public function setCountryLookupMethod(?CountryLookupMethodType $value ): void {

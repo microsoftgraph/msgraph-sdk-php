@@ -15,37 +15,37 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var array<string>|null $aggregationFilters Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
+     * @var array<string>|null $aggregationFilters The aggregationFilters property
     */
     private ?array $aggregationFilters = null;
     
     /**
-     * @var array<AggregationOption>|null $aggregations Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
+     * @var array<AggregationOption>|null $aggregations The aggregations property
     */
     private ?array $aggregations = null;
     
     /**
-     * @var array<string>|null $contentSources Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note: contentSource is only applicable when entityType=externalItem. Optional.
+     * @var array<string>|null $contentSources The contentSources property
     */
     private ?array $contentSources = null;
     
     /**
-     * @var bool|null $enableTopResults This triggers hybrid sort for messages: the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional.
+     * @var bool|null $enableTopResults The enableTopResults property
     */
     private ?bool $enableTopResults = null;
     
     /**
-     * @var array<string>|null $entityTypes One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
+     * @var array<string>|null $entityTypes The entityTypes property
     */
     private ?array $entityTypes = null;
     
     /**
-     * @var array<string>|null $fields Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft Graph connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is label as title, you can retrieve it using the following syntax : label_title.Optional.
+     * @var array<string>|null $fields The fields property
     */
     private ?array $fields = null;
     
     /**
-     * @var int|null $from Specifies the offset for the search results. Offset 0 returns the very first result. Optional.
+     * @var int|null $from The from property
     */
     private ?int $from = null;
     
@@ -60,22 +60,22 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     private ?SearchQuery $query = null;
     
     /**
-     * @var SearchAlterationOptions|null $queryAlterationOptions Provides query alteration options formatted as a JSON blob that contains two optional flags related to spelling correction. Optional.
+     * @var SearchAlterationOptions|null $queryAlterationOptions The queryAlterationOptions property
     */
     private ?SearchAlterationOptions $queryAlterationOptions = null;
     
     /**
-     * @var ResultTemplateOption|null $resultTemplateOptions Provides the search result templates options for rendering connectors search results.
+     * @var ResultTemplateOption|null $resultTemplateOptions The resultTemplateOptions property
     */
     private ?ResultTemplateOption $resultTemplateOptions = null;
     
     /**
-     * @var int|null $size The size of the page to be retrieved. Optional.
+     * @var int|null $size The size property
     */
     private ?int $size = null;
     
     /**
-     * @var array<SortProperty>|null $sortProperties Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
+     * @var array<SortProperty>|null $sortProperties The sortProperties property
     */
     private ?array $sortProperties = null;
     
@@ -105,7 +105,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the aggregationFilters property value. Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
+     * Gets the aggregationFilters property value. The aggregationFilters property
      * @return array<string>|null
     */
     public function getAggregationFilters(): ?array {
@@ -113,7 +113,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the aggregations property value. Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
+     * Gets the aggregations property value. The aggregations property
      * @return array<AggregationOption>|null
     */
     public function getAggregations(): ?array {
@@ -121,7 +121,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the contentSources property value. Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note: contentSource is only applicable when entityType=externalItem. Optional.
+     * Gets the contentSources property value. The contentSources property
      * @return array<string>|null
     */
     public function getContentSources(): ?array {
@@ -129,7 +129,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the enableTopResults property value. This triggers hybrid sort for messages: the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional.
+     * Gets the enableTopResults property value. The enableTopResults property
      * @return bool|null
     */
     public function getEnableTopResults(): ?bool {
@@ -137,7 +137,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the entityTypes property value. One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
+     * Gets the entityTypes property value. The entityTypes property
      * @return array<string>|null
     */
     public function getEntityTypes(): ?array {
@@ -168,7 +168,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the fields property value. Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft Graph connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is label as title, you can retrieve it using the following syntax : label_title.Optional.
+     * Gets the fields property value. The fields property
      * @return array<string>|null
     */
     public function getFields(): ?array {
@@ -176,7 +176,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the from property value. Specifies the offset for the search results. Offset 0 returns the very first result. Optional.
+     * Gets the from property value. The from property
      * @return int|null
     */
     public function getFrom(): ?int {
@@ -200,7 +200,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the queryAlterationOptions property value. Provides query alteration options formatted as a JSON blob that contains two optional flags related to spelling correction. Optional.
+     * Gets the queryAlterationOptions property value. The queryAlterationOptions property
      * @return SearchAlterationOptions|null
     */
     public function getQueryAlterationOptions(): ?SearchAlterationOptions {
@@ -208,7 +208,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the resultTemplateOptions property value. Provides the search result templates options for rendering connectors search results.
+     * Gets the resultTemplateOptions property value. The resultTemplateOptions property
      * @return ResultTemplateOption|null
     */
     public function getResultTemplateOptions(): ?ResultTemplateOption {
@@ -216,7 +216,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the size property value. The size of the page to be retrieved. Optional.
+     * Gets the size property value. The size property
      * @return int|null
     */
     public function getSize(): ?int {
@@ -224,7 +224,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the sortProperties property value. Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
+     * Gets the sortProperties property value. The sortProperties property
      * @return array<SortProperty>|null
     */
     public function getSortProperties(): ?array {
@@ -261,7 +261,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the aggregationFilters property value. Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
+     * Sets the aggregationFilters property value. The aggregationFilters property
      *  @param array<string>|null $value Value to set for the aggregationFilters property.
     */
     public function setAggregationFilters(?array $value ): void {
@@ -269,7 +269,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the aggregations property value. Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
+     * Sets the aggregations property value. The aggregations property
      *  @param array<AggregationOption>|null $value Value to set for the aggregations property.
     */
     public function setAggregations(?array $value ): void {
@@ -277,7 +277,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the contentSources property value. Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note: contentSource is only applicable when entityType=externalItem. Optional.
+     * Sets the contentSources property value. The contentSources property
      *  @param array<string>|null $value Value to set for the contentSources property.
     */
     public function setContentSources(?array $value ): void {
@@ -285,7 +285,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the enableTopResults property value. This triggers hybrid sort for messages: the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional.
+     * Sets the enableTopResults property value. The enableTopResults property
      *  @param bool|null $value Value to set for the enableTopResults property.
     */
     public function setEnableTopResults(?bool $value ): void {
@@ -293,7 +293,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the entityTypes property value. One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
+     * Sets the entityTypes property value. The entityTypes property
      *  @param array<string>|null $value Value to set for the entityTypes property.
     */
     public function setEntityTypes(?array $value ): void {
@@ -301,7 +301,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the fields property value. Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft Graph connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is label as title, you can retrieve it using the following syntax : label_title.Optional.
+     * Sets the fields property value. The fields property
      *  @param array<string>|null $value Value to set for the fields property.
     */
     public function setFields(?array $value ): void {
@@ -309,7 +309,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the from property value. Specifies the offset for the search results. Offset 0 returns the very first result. Optional.
+     * Sets the from property value. The from property
      *  @param int|null $value Value to set for the from property.
     */
     public function setFrom(?int $value ): void {
@@ -333,7 +333,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the queryAlterationOptions property value. Provides query alteration options formatted as a JSON blob that contains two optional flags related to spelling correction. Optional.
+     * Sets the queryAlterationOptions property value. The queryAlterationOptions property
      *  @param SearchAlterationOptions|null $value Value to set for the queryAlterationOptions property.
     */
     public function setQueryAlterationOptions(?SearchAlterationOptions $value ): void {
@@ -341,7 +341,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the resultTemplateOptions property value. Provides the search result templates options for rendering connectors search results.
+     * Sets the resultTemplateOptions property value. The resultTemplateOptions property
      *  @param ResultTemplateOption|null $value Value to set for the resultTemplateOptions property.
     */
     public function setResultTemplateOptions(?ResultTemplateOption $value ): void {
@@ -349,7 +349,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the size property value. The size of the page to be retrieved. Optional.
+     * Sets the size property value. The size property
      *  @param int|null $value Value to set for the size property.
     */
     public function setSize(?int $value ): void {
@@ -357,7 +357,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the sortProperties property value. Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
+     * Sets the sortProperties property value. The sortProperties property
      *  @param array<SortProperty>|null $value Value to set for the sortProperties property.
     */
     public function setSortProperties(?array $value ): void {

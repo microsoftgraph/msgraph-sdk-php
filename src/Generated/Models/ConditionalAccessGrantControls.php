@@ -20,7 +20,7 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable
     private ?array $builtInControls = null;
     
     /**
-     * @var array<string>|null $customAuthenticationFactors List of custom controls IDs required by the policy. To learn more about custom control, see Custom controls (preview).
+     * @var array<string>|null $customAuthenticationFactors List of custom controls IDs required by the policy. For more information, see Custom controls.
     */
     private ?array $customAuthenticationFactors = null;
     
@@ -73,7 +73,7 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. To learn more about custom control, see Custom controls (preview).
+     * Gets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. For more information, see Custom controls.
      * @return array<string>|null
     */
     public function getCustomAuthenticationFactors(): ?array {
@@ -149,7 +149,7 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. To learn more about custom control, see Custom controls (preview).
+     * Sets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. For more information, see Custom controls.
      *  @param array<string>|null $value Value to set for the customAuthenticationFactors property.
     */
     public function setCustomAuthenticationFactors(?array $value ): void {

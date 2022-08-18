@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageAssignmentRequest extends Entity implements Parsable 
 {
     /**
-     * @var AccessPackage|null $accessPackage The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable. Supports $expand.
+     * @var AccessPackage|null $accessPackage The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
     */
     private ?AccessPackage $accessPackage = null;
     
@@ -25,7 +25,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     private ?DateTime $completedDateTime = null;
     
     /**
-     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter.
     */
     private ?DateTime $createdDateTime = null;
     
@@ -35,17 +35,17 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     private ?AccessPackageSubject $requestor = null;
     
     /**
-     * @var AccessPackageRequestType|null $requestType One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
+     * @var AccessPackageRequestType|null $requestType The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set.
     */
     private ?AccessPackageRequestType $requestType = null;
     
     /**
-     * @var EntitlementManagementSchedule|null $schedule The range of dates that access is to be assigned to the requestor. Read-only.
+     * @var EntitlementManagementSchedule|null $schedule The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
     */
     private ?EntitlementManagementSchedule $schedule = null;
     
     /**
-     * @var AccessPackageRequestState|null $state The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only.
+     * @var AccessPackageRequestState|null $state The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq).
     */
     private ?AccessPackageRequestState $state = null;
     
@@ -72,7 +72,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the accessPackage property value. The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable. Supports $expand.
+     * Gets the accessPackage property value. The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
      * @return AccessPackage|null
     */
     public function getAccessPackage(): ?AccessPackage {
@@ -96,7 +96,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -131,7 +131,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the requestType property value. One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
+     * Gets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set.
      * @return AccessPackageRequestType|null
     */
     public function getRequestType(): ?AccessPackageRequestType {
@@ -139,7 +139,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the schedule property value. The range of dates that access is to be assigned to the requestor. Read-only.
+     * Gets the schedule property value. The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
      * @return EntitlementManagementSchedule|null
     */
     public function getSchedule(): ?EntitlementManagementSchedule {
@@ -147,7 +147,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the state property value. The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only.
+     * Gets the state property value. The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq).
      * @return AccessPackageRequestState|null
     */
     public function getState(): ?AccessPackageRequestState {
@@ -180,7 +180,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the accessPackage property value. The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable. Supports $expand.
+     * Sets the accessPackage property value. The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
      *  @param AccessPackage|null $value Value to set for the accessPackage property.
     */
     public function setAccessPackage(?AccessPackage $value ): void {
@@ -204,7 +204,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value ): void {
@@ -220,7 +220,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the requestType property value. One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
+     * Sets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set.
      *  @param AccessPackageRequestType|null $value Value to set for the requestType property.
     */
     public function setRequestType(?AccessPackageRequestType $value ): void {
@@ -228,7 +228,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the schedule property value. The range of dates that access is to be assigned to the requestor. Read-only.
+     * Sets the schedule property value. The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
      *  @param EntitlementManagementSchedule|null $value Value to set for the schedule property.
     */
     public function setSchedule(?EntitlementManagementSchedule $value ): void {
@@ -236,7 +236,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the state property value. The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only.
+     * Sets the state property value. The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq).
      *  @param AccessPackageRequestState|null $value Value to set for the state property.
     */
     public function setState(?AccessPackageRequestState $value ): void {

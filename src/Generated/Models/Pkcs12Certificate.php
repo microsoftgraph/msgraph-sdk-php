@@ -9,12 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Parsable 
 {
     /**
-     * @var string|null $password This is the password for the pfx file. Required. If no password is used, must still provide a value of ''.
+     * @var string|null $password The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
     */
     private ?string $password = null;
     
     /**
-     * @var string|null $pkcs12Value This is the field for sending pfx content. The value should be a base-64 encoded version of the actual certificate content. Required.
+     * @var string|null $pkcs12Value Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
     */
     private ?string $pkcs12Value = null;
     
@@ -48,7 +48,7 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Pa
     }
 
     /**
-     * Gets the password property value. This is the password for the pfx file. Required. If no password is used, must still provide a value of ''.
+     * Gets the password property value. The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
      * @return string|null
     */
     public function getPassword(): ?string {
@@ -56,7 +56,7 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Pa
     }
 
     /**
-     * Gets the pkcs12Value property value. This is the field for sending pfx content. The value should be a base-64 encoded version of the actual certificate content. Required.
+     * Gets the pkcs12Value property value. Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
      * @return string|null
     */
     public function getPkcs12Value(): ?string {
@@ -74,7 +74,7 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Pa
     }
 
     /**
-     * Sets the password property value. This is the password for the pfx file. Required. If no password is used, must still provide a value of ''.
+     * Sets the password property value. The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
      *  @param string|null $value Value to set for the password property.
     */
     public function setPassword(?string $value ): void {
@@ -82,7 +82,7 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Pa
     }
 
     /**
-     * Sets the pkcs12Value property value. This is the field for sending pfx content. The value should be a base-64 encoded version of the actual certificate content. Required.
+     * Sets the pkcs12Value property value. Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
      *  @param string|null $value Value to set for the pkcs12Value property.
     */
     public function setPkcs12Value(?string $value ): void {

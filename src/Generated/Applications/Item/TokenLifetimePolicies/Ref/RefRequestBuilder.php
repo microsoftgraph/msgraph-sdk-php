@@ -45,7 +45,7 @@ class RefRequestBuilder
     }
 
     /**
-     * The tokenLifetimePolicies assigned to this application. Supports $expand.
+     * Get ref of tokenLifetimePolicies from applications
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -93,7 +93,7 @@ class RefRequestBuilder
     }
 
     /**
-     * The tokenLifetimePolicies assigned to this application. Supports $expand.
+     * Get ref of tokenLifetimePolicies from applications
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

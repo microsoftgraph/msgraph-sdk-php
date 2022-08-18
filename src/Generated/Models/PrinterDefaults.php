@@ -50,7 +50,7 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
     private ?bool $fitPdfToPage = null;
     
     /**
-     * @var string|null $inputBin The default input bin that serves as the paper source.
+     * @var string|null $inputBin The inputBin property
     */
     private ?string $inputBin = null;
     
@@ -214,7 +214,7 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the inputBin property value. The default input bin that serves as the paper source.
+     * Gets the inputBin property value. The inputBin property
      * @return string|null
     */
     public function getInputBin(): ?string {
@@ -392,7 +392,7 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the inputBin property value. The default input bin that serves as the paper source.
+     * Sets the inputBin property value. The inputBin property
      *  @param string|null $value Value to set for the inputBin property.
     */
     public function setInputBin(?string $value ): void {

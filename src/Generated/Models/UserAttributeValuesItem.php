@@ -15,12 +15,12 @@ class UserAttributeValuesItem implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var bool|null $isDefault Used to set the value as the default.
+     * @var bool|null $isDefault Determines whether the value is set as the default.
     */
     private ?bool $isDefault = null;
     
     /**
-     * @var string|null $name The display name of the property displayed to the end user in the user flow.
+     * @var string|null $name The display name of the property displayed to the user in the user flow.
     */
     private ?string $name = null;
     
@@ -74,7 +74,7 @@ class UserAttributeValuesItem implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the isDefault property value. Used to set the value as the default.
+     * Gets the isDefault property value. Determines whether the value is set as the default.
      * @return bool|null
     */
     public function getIsDefault(): ?bool {
@@ -82,7 +82,7 @@ class UserAttributeValuesItem implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the name property value. The display name of the property displayed to the end user in the user flow.
+     * Gets the name property value. The display name of the property displayed to the user in the user flow.
      * @return string|null
     */
     public function getName(): ?string {
@@ -126,7 +126,7 @@ class UserAttributeValuesItem implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the isDefault property value. Used to set the value as the default.
+     * Sets the isDefault property value. Determines whether the value is set as the default.
      *  @param bool|null $value Value to set for the isDefault property.
     */
     public function setIsDefault(?bool $value ): void {
@@ -134,7 +134,7 @@ class UserAttributeValuesItem implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the name property value. The display name of the property displayed to the end user in the user flow.
+     * Sets the name property value. The display name of the property displayed to the user in the user flow.
      *  @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value ): void {

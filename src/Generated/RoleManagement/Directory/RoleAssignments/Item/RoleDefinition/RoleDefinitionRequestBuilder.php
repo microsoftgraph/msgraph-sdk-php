@@ -44,7 +44,7 @@ class RoleDefinitionRequestBuilder
     }
 
     /**
-     * The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
+     * The roleDefinition the assignment is for.  Supports $expand. roleDefinition.Id will be auto expanded.
      * @param RoleDefinitionRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -69,7 +69,7 @@ class RoleDefinitionRequestBuilder
     }
 
     /**
-     * The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
+     * The roleDefinition the assignment is for.  Supports $expand. roleDefinition.Id will be auto expanded.
      * @param RoleDefinitionRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

@@ -79,7 +79,7 @@ class DeviceManagement extends Entity implements Parsable
     private ?array $importedWindowsAutopilotDeviceIdentities = null;
     
     /**
-     * @var string|null $intuneAccountId Intune Account ID for given tenant
+     * @var string|null $intuneAccountId Intune Account Id for given tenant
     */
     private ?string $intuneAccountId = null;
     
@@ -184,7 +184,7 @@ class DeviceManagement extends Entity implements Parsable
     private ?array $windowsInformationProtectionNetworkLearningSummaries = null;
     
     /**
-     * Instantiates a new deviceManagement and sets the default values.
+     * Instantiates a new DeviceManagement and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -358,7 +358,7 @@ class DeviceManagement extends Entity implements Parsable
     }
 
     /**
-     * Gets the intuneAccountId property value. Intune Account ID for given tenant
+     * Gets the intuneAccountId property value. Intune Account Id for given tenant
      * @return string|null
     */
     public function getIntuneAccountId(): ?string {
@@ -681,7 +681,7 @@ class DeviceManagement extends Entity implements Parsable
     }
 
     /**
-     * Sets the intuneAccountId property value. Intune Account ID for given tenant
+     * Sets the intuneAccountId property value. Intune Account Id for given tenant
      *  @param string|null $value Value to set for the intuneAccountId property.
     */
     public function setIntuneAccountId(?string $value ): void {

@@ -79,7 +79,7 @@ class ColumnDefinition extends Entity implements Parsable
     private ?HyperlinkOrPictureColumn $hyperlinkOrPicture = null;
     
     /**
-     * @var bool|null $indexed Specifies whether the column values can used for sorting and searching.
+     * @var bool|null $indexed Specifies whether the column values can be used for sorting and searching.
     */
     private ?bool $indexed = null;
     
@@ -119,7 +119,7 @@ class ColumnDefinition extends Entity implements Parsable
     private ?PersonOrGroupColumn $personOrGroup = null;
     
     /**
-     * @var bool|null $propagateChanges If true, changes to this column will be propagated to lists that implement the column.
+     * @var bool|null $propagateChanges If 'true', changes to this column will be propagated to lists that implement the column.
     */
     private ?bool $propagateChanges = null;
     
@@ -134,12 +134,12 @@ class ColumnDefinition extends Entity implements Parsable
     private ?bool $required = null;
     
     /**
-     * @var ColumnDefinition|null $sourceColumn The source column for content type column.
+     * @var ColumnDefinition|null $sourceColumn The source column for the content type column.
     */
     private ?ColumnDefinition $sourceColumn = null;
     
     /**
-     * @var ContentTypeInfo|null $sourceContentType ContentType from which this column is inherited from. Used only to fetch contentTypes columns.
+     * @var ContentTypeInfo|null $sourceContentType ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
     */
     private ?ContentTypeInfo $sourceContentType = null;
     
@@ -340,7 +340,7 @@ class ColumnDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the indexed property value. Specifies whether the column values can used for sorting and searching.
+     * Gets the indexed property value. Specifies whether the column values can be used for sorting and searching.
      * @return bool|null
     */
     public function getIndexed(): ?bool {
@@ -404,7 +404,7 @@ class ColumnDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the propagateChanges property value. If true, changes to this column will be propagated to lists that implement the column.
+     * Gets the propagateChanges property value. If 'true', changes to this column will be propagated to lists that implement the column.
      * @return bool|null
     */
     public function getPropagateChanges(): ?bool {
@@ -428,7 +428,7 @@ class ColumnDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the sourceColumn property value. The source column for content type column.
+     * Gets the sourceColumn property value. The source column for the content type column.
      * @return ColumnDefinition|null
     */
     public function getSourceColumn(): ?ColumnDefinition {
@@ -436,7 +436,7 @@ class ColumnDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the sourceContentType property value. ContentType from which this column is inherited from. Used only to fetch contentTypes columns.
+     * Gets the sourceContentType property value. ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
      * @return ContentTypeInfo|null
     */
     public function getSourceContentType(): ?ContentTypeInfo {
@@ -636,7 +636,7 @@ class ColumnDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the indexed property value. Specifies whether the column values can used for sorting and searching.
+     * Sets the indexed property value. Specifies whether the column values can be used for sorting and searching.
      *  @param bool|null $value Value to set for the indexed property.
     */
     public function setIndexed(?bool $value ): void {
@@ -700,7 +700,7 @@ class ColumnDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the propagateChanges property value. If true, changes to this column will be propagated to lists that implement the column.
+     * Sets the propagateChanges property value. If 'true', changes to this column will be propagated to lists that implement the column.
      *  @param bool|null $value Value to set for the propagateChanges property.
     */
     public function setPropagateChanges(?bool $value ): void {
@@ -724,7 +724,7 @@ class ColumnDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the sourceColumn property value. The source column for content type column.
+     * Sets the sourceColumn property value. The source column for the content type column.
      *  @param ColumnDefinition|null $value Value to set for the sourceColumn property.
     */
     public function setSourceColumn(?ColumnDefinition $value ): void {
@@ -732,7 +732,7 @@ class ColumnDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the sourceContentType property value. ContentType from which this column is inherited from. Used only to fetch contentTypes columns.
+     * Sets the sourceContentType property value. ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
      *  @param ContentTypeInfo|null $value Value to set for the sourceContentType property.
     */
     public function setSourceContentType(?ContentTypeInfo $value ): void {

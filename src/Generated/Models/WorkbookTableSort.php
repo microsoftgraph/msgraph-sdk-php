@@ -19,7 +19,7 @@ class WorkbookTableSort extends Entity implements Parsable
     private ?bool $matchCase = null;
     
     /**
-     * @var string|null $method Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.
+     * @var string|null $method Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
     */
     private ?string $method = null;
     
@@ -70,7 +70,7 @@ class WorkbookTableSort extends Entity implements Parsable
     }
 
     /**
-     * Gets the method property value. Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.
+     * Gets the method property value. Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
      * @return string|null
     */
     public function getMethod(): ?string {
@@ -105,7 +105,7 @@ class WorkbookTableSort extends Entity implements Parsable
     }
 
     /**
-     * Sets the method property value. Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.
+     * Sets the method property value. Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
      *  @param string|null $value Value to set for the method property.
     */
     public function setMethod(?string $value ): void {

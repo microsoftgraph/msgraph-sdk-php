@@ -20,7 +20,7 @@ class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsa
     private ?array $members = null;
     
     /**
-     * @var DateTime|null $visibleHistoryStartDateTime The timestamp denoting how far back a conversation's history is shared with the conversation members.
+     * @var DateTime|null $visibleHistoryStartDateTime The timestamp that denotes how far back a conversation's history is shared with the conversation members.
     */
     private ?DateTime $visibleHistoryStartDateTime = null;
     
@@ -71,7 +71,7 @@ class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsa
     }
 
     /**
-     * Gets the visibleHistoryStartDateTime property value. The timestamp denoting how far back a conversation's history is shared with the conversation members.
+     * Gets the visibleHistoryStartDateTime property value. The timestamp that denotes how far back a conversation's history is shared with the conversation members.
      * @return DateTime|null
     */
     public function getVisibleHistoryStartDateTime(): ?DateTime {
@@ -106,7 +106,7 @@ class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsa
     }
 
     /**
-     * Sets the visibleHistoryStartDateTime property value. The timestamp denoting how far back a conversation's history is shared with the conversation members.
+     * Sets the visibleHistoryStartDateTime property value. The timestamp that denotes how far back a conversation's history is shared with the conversation members.
      *  @param DateTime|null $value Value to set for the visibleHistoryStartDateTime property.
     */
     public function setVisibleHistoryStartDateTime(?DateTime $value ): void {

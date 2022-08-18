@@ -25,7 +25,7 @@ class Attachment extends Entity implements Parsable
     private ?DateTime $lastModifiedDateTime = null;
     
     /**
-     * @var string|null $name The display name of the attachment. This does not need to be the actual file name.
+     * @var string|null $name The attachment's file name.
     */
     private ?string $name = null;
     
@@ -100,7 +100,7 @@ class Attachment extends Entity implements Parsable
     }
 
     /**
-     * Gets the name property value. The display name of the attachment. This does not need to be the actual file name.
+     * Gets the name property value. The attachment's file name.
      * @return string|null
     */
     public function getName(): ?string {
@@ -153,7 +153,7 @@ class Attachment extends Entity implements Parsable
     }
 
     /**
-     * Sets the name property value. The display name of the attachment. This does not need to be the actual file name.
+     * Sets the name property value. The attachment's file name.
      *  @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value ): void {

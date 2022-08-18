@@ -16,7 +16,7 @@ class ConnectionOperation extends Entity implements Parsable
     private ?PublicError $error = null;
     
     /**
-     * @var ConnectionOperationStatus|null $status Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed.
+     * @var ConnectionOperationStatus|null $status Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
     */
     private ?ConnectionOperationStatus $status = null;
     
@@ -58,7 +58,7 @@ class ConnectionOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed.
+     * Gets the status property value. Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
      * @return ConnectionOperationStatus|null
     */
     public function getStatus(): ?ConnectionOperationStatus {
@@ -84,7 +84,7 @@ class ConnectionOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed.
+     * Sets the status property value. Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
      *  @param ConnectionOperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ConnectionOperationStatus $value ): void {

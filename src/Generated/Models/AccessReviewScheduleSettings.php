@@ -40,7 +40,7 @@ class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsable
     private ?bool $defaultDecisionEnabled = null;
     
     /**
-     * @var int|null $instanceDurationInDays Duration of each recurrence of review (accessReviewInstance) in number of days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.
+     * @var int|null $instanceDurationInDays Duration of an access review instance in days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.
     */
     private ?int $instanceDurationInDays = null;
     
@@ -162,7 +162,7 @@ class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the instanceDurationInDays property value. Duration of each recurrence of review (accessReviewInstance) in number of days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.
+     * Gets the instanceDurationInDays property value. Duration of an access review instance in days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.
      * @return int|null
     */
     public function getInstanceDurationInDays(): ?int {
@@ -286,7 +286,7 @@ class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the instanceDurationInDays property value. Duration of each recurrence of review (accessReviewInstance) in number of days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.
+     * Sets the instanceDurationInDays property value. Duration of an access review instance in days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.
      *  @param int|null $value Value to set for the instanceDurationInDays property.
     */
     public function setInstanceDurationInDays(?int $value ): void {

@@ -24,7 +24,7 @@ class ExtensionProperty extends DirectoryObject implements Parsable
     private ?bool $isSyncedFromOnPremises = null;
     
     /**
-     * @var string|null $name Name of the extension property. Not nullable.
+     * @var string|null $name Name of the extension property. Not nullable. Supports $filter (eq).
     */
     private ?string $name = null;
     
@@ -90,7 +90,7 @@ class ExtensionProperty extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the name property value. Name of the extension property. Not nullable.
+     * Gets the name property value. Name of the extension property. Not nullable. Supports $filter (eq).
      * @return string|null
     */
     public function getName(): ?string {
@@ -143,7 +143,7 @@ class ExtensionProperty extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the name property value. Name of the extension property. Not nullable.
+     * Sets the name property value. Name of the extension property. Not nullable. Supports $filter (eq).
      *  @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value ): void {

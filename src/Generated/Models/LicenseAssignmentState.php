@@ -16,22 +16,22 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $assignedByGroup The id of the group that assigns this license. If the assignment is a direct-assigned license, this field will be Null. Read-Only.
+     * @var string|null $assignedByGroup The assignedByGroup property
     */
     private ?string $assignedByGroup = null;
     
     /**
-     * @var array<string>|null $disabledPlans The service plans that are disabled in this assignment. Read-Only.
+     * @var array<string>|null $disabledPlans The disabledPlans property
     */
     private ?array $disabledPlans = null;
     
     /**
-     * @var string|null $error License assignment failure error. If the license is assigned successfully, this field will be Null. Read-Only. The possible values are CountViolation, MutuallyExclusiveViolation, DependencyViolation, ProhibitedInUsageLocationViolation, UniquenessViolation, and Other. For more information on how to identify and resolve license assignment errors see here.
+     * @var string|null $error The error property
     */
     private ?string $error = null;
     
     /**
-     * @var DateTime|null $lastUpdatedDateTime The timestamp when the state of the license assignment was last updated.
+     * @var DateTime|null $lastUpdatedDateTime The lastUpdatedDateTime property
     */
     private ?DateTime $lastUpdatedDateTime = null;
     
@@ -41,12 +41,12 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var string|null $skuId The unique identifier for the SKU. Read-Only.
+     * @var string|null $skuId The skuId property
     */
     private ?string $skuId = null;
     
     /**
-     * @var string|null $state Indicate the current state of this assignment. Read-Only. The possible values are Active, ActiveWithError, Disabled, and Error.
+     * @var string|null $state The state property
     */
     private ?string $state = null;
     
@@ -76,7 +76,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the assignedByGroup property value. The id of the group that assigns this license. If the assignment is a direct-assigned license, this field will be Null. Read-Only.
+     * Gets the assignedByGroup property value. The assignedByGroup property
      * @return string|null
     */
     public function getAssignedByGroup(): ?string {
@@ -84,7 +84,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the disabledPlans property value. The service plans that are disabled in this assignment. Read-Only.
+     * Gets the disabledPlans property value. The disabledPlans property
      * @return array<string>|null
     */
     public function getDisabledPlans(): ?array {
@@ -92,7 +92,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the error property value. License assignment failure error. If the license is assigned successfully, this field will be Null. Read-Only. The possible values are CountViolation, MutuallyExclusiveViolation, DependencyViolation, ProhibitedInUsageLocationViolation, UniquenessViolation, and Other. For more information on how to identify and resolve license assignment errors see here.
+     * Gets the error property value. The error property
      * @return string|null
     */
     public function getError(): ?string {
@@ -117,7 +117,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the lastUpdatedDateTime property value. The timestamp when the state of the license assignment was last updated.
+     * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
      * @return DateTime|null
     */
     public function getLastUpdatedDateTime(): ?DateTime {
@@ -133,7 +133,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the skuId property value. The unique identifier for the SKU. Read-Only.
+     * Gets the skuId property value. The skuId property
      * @return string|null
     */
     public function getSkuId(): ?string {
@@ -141,7 +141,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the state property value. Indicate the current state of this assignment. Read-Only. The possible values are Active, ActiveWithError, Disabled, and Error.
+     * Gets the state property value. The state property
      * @return string|null
     */
     public function getState(): ?string {
@@ -172,7 +172,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the assignedByGroup property value. The id of the group that assigns this license. If the assignment is a direct-assigned license, this field will be Null. Read-Only.
+     * Sets the assignedByGroup property value. The assignedByGroup property
      *  @param string|null $value Value to set for the assignedByGroup property.
     */
     public function setAssignedByGroup(?string $value ): void {
@@ -180,7 +180,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the disabledPlans property value. The service plans that are disabled in this assignment. Read-Only.
+     * Sets the disabledPlans property value. The disabledPlans property
      *  @param array<string>|null $value Value to set for the disabledPlans property.
     */
     public function setDisabledPlans(?array $value ): void {
@@ -188,7 +188,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the error property value. License assignment failure error. If the license is assigned successfully, this field will be Null. Read-Only. The possible values are CountViolation, MutuallyExclusiveViolation, DependencyViolation, ProhibitedInUsageLocationViolation, UniquenessViolation, and Other. For more information on how to identify and resolve license assignment errors see here.
+     * Sets the error property value. The error property
      *  @param string|null $value Value to set for the error property.
     */
     public function setError(?string $value ): void {
@@ -196,7 +196,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the lastUpdatedDateTime property value. The timestamp when the state of the license assignment was last updated.
+     * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
      *  @param DateTime|null $value Value to set for the lastUpdatedDateTime property.
     */
     public function setLastUpdatedDateTime(?DateTime $value ): void {
@@ -212,7 +212,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the skuId property value. The unique identifier for the SKU. Read-Only.
+     * Sets the skuId property value. The skuId property
      *  @param string|null $value Value to set for the skuId property.
     */
     public function setSkuId(?string $value ): void {
@@ -220,7 +220,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the state property value. Indicate the current state of this assignment. Read-Only. The possible values are Active, ActiveWithError, Disabled, and Error.
+     * Sets the state property value. The state property
      *  @param string|null $value Value to set for the state property.
     */
     public function setState(?string $value ): void {

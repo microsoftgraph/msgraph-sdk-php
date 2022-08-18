@@ -15,7 +15,7 @@ class ConditionalAccessDevices implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var ConditionalAccessFilter|null $deviceFilter Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set.
+     * @var ConditionalAccessFilter|null $deviceFilter Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them.
     */
     private ?ConditionalAccessFilter $deviceFilter = null;
     
@@ -50,7 +50,7 @@ class ConditionalAccessDevices implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the deviceFilter property value. Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set.
+     * Gets the deviceFilter property value. Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them.
      * @return ConditionalAccessFilter|null
     */
     public function getDeviceFilter(): ?ConditionalAccessFilter {
@@ -96,7 +96,7 @@ class ConditionalAccessDevices implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the deviceFilter property value. Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set.
+     * Sets the deviceFilter property value. Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them.
      *  @param ConditionalAccessFilter|null $value Value to set for the deviceFilter property.
     */
     public function setDeviceFilter(?ConditionalAccessFilter $value ): void {

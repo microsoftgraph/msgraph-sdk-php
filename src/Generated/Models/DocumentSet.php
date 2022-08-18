@@ -30,7 +30,7 @@ class DocumentSet implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var bool|null $propagateWelcomePageChanges Indicates whether to add the name of the document set to each file name.
+     * @var bool|null $propagateWelcomePageChanges Specifies whether to push welcome page changes to inherited content types.
     */
     private ?bool $propagateWelcomePageChanges = null;
     
@@ -40,7 +40,7 @@ class DocumentSet implements AdditionalDataHolder, Parsable
     private ?array $sharedColumns = null;
     
     /**
-     * @var bool|null $shouldPrefixNameToFile Add the name of the Document Set to each file name.
+     * @var bool|null $shouldPrefixNameToFile Indicates whether to add the name of the document set to each file name.
     */
     private ?bool $shouldPrefixNameToFile = null;
     
@@ -122,7 +122,7 @@ class DocumentSet implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the propagateWelcomePageChanges property value. Indicates whether to add the name of the document set to each file name.
+     * Gets the propagateWelcomePageChanges property value. Specifies whether to push welcome page changes to inherited content types.
      * @return bool|null
     */
     public function getPropagateWelcomePageChanges(): ?bool {
@@ -138,7 +138,7 @@ class DocumentSet implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the shouldPrefixNameToFile property value. Add the name of the Document Set to each file name.
+     * Gets the shouldPrefixNameToFile property value. Indicates whether to add the name of the document set to each file name.
      * @return bool|null
     */
     public function getShouldPrefixNameToFile(): ?bool {
@@ -210,7 +210,7 @@ class DocumentSet implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the propagateWelcomePageChanges property value. Indicates whether to add the name of the document set to each file name.
+     * Sets the propagateWelcomePageChanges property value. Specifies whether to push welcome page changes to inherited content types.
      *  @param bool|null $value Value to set for the propagateWelcomePageChanges property.
     */
     public function setPropagateWelcomePageChanges(?bool $value ): void {
@@ -226,7 +226,7 @@ class DocumentSet implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the shouldPrefixNameToFile property value. Add the name of the Document Set to each file name.
+     * Sets the shouldPrefixNameToFile property value. Indicates whether to add the name of the document set to each file name.
      *  @param bool|null $value Value to set for the shouldPrefixNameToFile property.
     */
     public function setShouldPrefixNameToFile(?bool $value ): void {

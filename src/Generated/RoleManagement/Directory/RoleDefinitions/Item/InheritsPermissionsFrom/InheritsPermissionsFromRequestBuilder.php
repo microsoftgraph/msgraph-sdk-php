@@ -53,7 +53,7 @@ class InheritsPermissionsFromRequestBuilder
     }
 
     /**
-     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
+     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      * @param InheritsPermissionsFromRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +102,7 @@ class InheritsPermissionsFromRequestBuilder
     }
 
     /**
-     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
+     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      * @param InheritsPermissionsFromRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

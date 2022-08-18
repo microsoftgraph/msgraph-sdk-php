@@ -16,7 +16,7 @@ class Report implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var StreamInterface|null $content Report content; details vary by report type.
+     * @var StreamInterface|null $content Not yet documented
     */
     private ?StreamInterface $content = null;
     
@@ -51,7 +51,7 @@ class Report implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the content property value. Report content; details vary by report type.
+     * Gets the content property value. Not yet documented
      * @return StreamInterface|null
     */
     public function getContent(): ?StreamInterface {
@@ -97,7 +97,7 @@ class Report implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the content property value. Report content; details vary by report type.
+     * Sets the content property value. Not yet documented
      *  @param StreamInterface|null $value Value to set for the content property.
     */
     public function setContent(?StreamInterface $value ): void {

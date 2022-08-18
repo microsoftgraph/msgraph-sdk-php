@@ -25,7 +25,7 @@ class TeamMemberSettings implements AdditionalDataHolder, Parsable
     private ?bool $allowCreatePrivateChannels = null;
     
     /**
-     * @var bool|null $allowCreateUpdateChannels If set to true, members can add and update any channels.
+     * @var bool|null $allowCreateUpdateChannels If set to true, members can add and update channels.
     */
     private ?bool $allowCreateUpdateChannels = null;
     
@@ -91,7 +91,7 @@ class TeamMemberSettings implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the allowCreateUpdateChannels property value. If set to true, members can add and update any channels.
+     * Gets the allowCreateUpdateChannels property value. If set to true, members can add and update channels.
      * @return bool|null
     */
     public function getAllowCreateUpdateChannels(): ?bool {
@@ -187,7 +187,7 @@ class TeamMemberSettings implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the allowCreateUpdateChannels property value. If set to true, members can add and update any channels.
+     * Sets the allowCreateUpdateChannels property value. If set to true, members can add and update channels.
      *  @param bool|null $value Value to set for the allowCreateUpdateChannels property.
     */
     public function setAllowCreateUpdateChannels(?bool $value ): void {

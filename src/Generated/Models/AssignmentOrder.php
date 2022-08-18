@@ -20,7 +20,7 @@ class AssignmentOrder implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var array<string>|null $order A list of identityUserFlowAttribute IDs provided to determine the order in which attributes should be collected within a user flow.
+     * @var array<string>|null $order A list of identityUserFlowAttribute object identifiers that determine the order in which attributes should be collected within a user flow.
     */
     private ?array $order = null;
     
@@ -70,7 +70,7 @@ class AssignmentOrder implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the order property value. A list of identityUserFlowAttribute IDs provided to determine the order in which attributes should be collected within a user flow.
+     * Gets the order property value. A list of identityUserFlowAttribute object identifiers that determine the order in which attributes should be collected within a user flow.
      * @return array<string>|null
     */
     public function getOrder(): ?array {
@@ -104,7 +104,7 @@ class AssignmentOrder implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the order property value. A list of identityUserFlowAttribute IDs provided to determine the order in which attributes should be collected within a user flow.
+     * Sets the order property value. A list of identityUserFlowAttribute object identifiers that determine the order in which attributes should be collected within a user flow.
      *  @param array<string>|null $value Value to set for the order property.
     */
     public function setOrder(?array $value ): void {

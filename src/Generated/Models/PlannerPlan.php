@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PlannerPlan extends Entity implements Parsable 
 {
     /**
-     * @var array<PlannerBucket>|null $buckets Collection of buckets in the plan. Read-only. Nullable.
+     * @var array<PlannerBucket>|null $buckets Read-only. Nullable. Collection of buckets in the plan.
     */
     private ?array $buckets = null;
     
@@ -30,7 +30,7 @@ class PlannerPlan extends Entity implements Parsable
     private ?DateTime $createdDateTime = null;
     
     /**
-     * @var PlannerPlanDetails|null $details Additional details about the plan. Read-only. Nullable.
+     * @var PlannerPlanDetails|null $details Read-only. Nullable. Additional details about the plan.
     */
     private ?PlannerPlanDetails $details = null;
     
@@ -40,7 +40,7 @@ class PlannerPlan extends Entity implements Parsable
     private ?string $owner = null;
     
     /**
-     * @var array<PlannerTask>|null $tasks Collection of tasks in the plan. Read-only. Nullable.
+     * @var array<PlannerTask>|null $tasks Read-only. Nullable. Collection of tasks in the plan.
     */
     private ?array $tasks = null;
     
@@ -67,7 +67,7 @@ class PlannerPlan extends Entity implements Parsable
     }
 
     /**
-     * Gets the buckets property value. Collection of buckets in the plan. Read-only. Nullable.
+     * Gets the buckets property value. Read-only. Nullable. Collection of buckets in the plan.
      * @return array<PlannerBucket>|null
     */
     public function getBuckets(): ?array {
@@ -99,7 +99,7 @@ class PlannerPlan extends Entity implements Parsable
     }
 
     /**
-     * Gets the details property value. Additional details about the plan. Read-only. Nullable.
+     * Gets the details property value. Read-only. Nullable. Additional details about the plan.
      * @return PlannerPlanDetails|null
     */
     public function getDetails(): ?PlannerPlanDetails {
@@ -133,7 +133,7 @@ class PlannerPlan extends Entity implements Parsable
     }
 
     /**
-     * Gets the tasks property value. Collection of tasks in the plan. Read-only. Nullable.
+     * Gets the tasks property value. Read-only. Nullable. Collection of tasks in the plan.
      * @return array<PlannerTask>|null
     */
     public function getTasks(): ?array {
@@ -165,7 +165,7 @@ class PlannerPlan extends Entity implements Parsable
     }
 
     /**
-     * Sets the buckets property value. Collection of buckets in the plan. Read-only. Nullable.
+     * Sets the buckets property value. Read-only. Nullable. Collection of buckets in the plan.
      *  @param array<PlannerBucket>|null $value Value to set for the buckets property.
     */
     public function setBuckets(?array $value ): void {
@@ -197,7 +197,7 @@ class PlannerPlan extends Entity implements Parsable
     }
 
     /**
-     * Sets the details property value. Additional details about the plan. Read-only. Nullable.
+     * Sets the details property value. Read-only. Nullable. Additional details about the plan.
      *  @param PlannerPlanDetails|null $value Value to set for the details property.
     */
     public function setDetails(?PlannerPlanDetails $value ): void {
@@ -213,7 +213,7 @@ class PlannerPlan extends Entity implements Parsable
     }
 
     /**
-     * Sets the tasks property value. Collection of tasks in the plan. Read-only. Nullable.
+     * Sets the tasks property value. Read-only. Nullable. Collection of tasks in the plan.
      *  @param array<PlannerTask>|null $value Value to set for the tasks property.
     */
     public function setTasks(?array $value ): void {

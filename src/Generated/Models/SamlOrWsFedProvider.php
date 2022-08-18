@@ -24,7 +24,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
     private ?string $passiveSignInUri = null;
     
     /**
-     * @var AuthenticationProtocol|null $preferredAuthenticationProtocol Preferred authentication protocol. Supported values include saml or wsfed.
+     * @var AuthenticationProtocol|null $preferredAuthenticationProtocol Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue.
     */
     private ?AuthenticationProtocol $preferredAuthenticationProtocol = null;
     
@@ -98,7 +98,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
     }
 
     /**
-     * Gets the preferredAuthenticationProtocol property value. Preferred authentication protocol. Supported values include saml or wsfed.
+     * Gets the preferredAuthenticationProtocol property value. Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue.
      * @return AuthenticationProtocol|null
     */
     public function getPreferredAuthenticationProtocol(): ?AuthenticationProtocol {
@@ -151,7 +151,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
     }
 
     /**
-     * Sets the preferredAuthenticationProtocol property value. Preferred authentication protocol. Supported values include saml or wsfed.
+     * Sets the preferredAuthenticationProtocol property value. Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue.
      *  @param AuthenticationProtocol|null $value Value to set for the preferredAuthenticationProtocol property.
     */
     public function setPreferredAuthenticationProtocol(?AuthenticationProtocol $value ): void {

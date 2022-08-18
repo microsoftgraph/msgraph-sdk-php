@@ -65,7 +65,7 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
     private ?bool $permanentDelete = null;
     
     /**
-     * @var array<Recipient>|null $redirectTo The email address to which a message should be redirected.
+     * @var array<Recipient>|null $redirectTo The email addresses to which a message should be redirected.
     */
     private ?array $redirectTo = null;
     
@@ -202,7 +202,7 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the redirectTo property value. The email address to which a message should be redirected.
+     * Gets the redirectTo property value. The email addresses to which a message should be redirected.
      * @return array<Recipient>|null
     */
     public function getRedirectTo(): ?array {
@@ -326,7 +326,7 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the redirectTo property value. The email address to which a message should be redirected.
+     * Sets the redirectTo property value. The email addresses to which a message should be redirected.
      *  @param array<Recipient>|null $value Value to set for the redirectTo property.
     */
     public function setRedirectTo(?array $value ): void {

@@ -10,27 +10,27 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LongRunningOperation extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $createdDateTime The createdDateTime property
+     * @var DateTime|null $createdDateTime The start time of the operation.
     */
     private ?DateTime $createdDateTime = null;
     
     /**
-     * @var DateTime|null $lastActionDateTime The lastActionDateTime property
+     * @var DateTime|null $lastActionDateTime The time of the last action in the operation.
     */
     private ?DateTime $lastActionDateTime = null;
     
     /**
-     * @var string|null $resourceLocation The resourceLocation property
+     * @var string|null $resourceLocation URI of the resource that the operation is performed on.
     */
     private ?string $resourceLocation = null;
     
     /**
-     * @var LongRunningOperationStatus|null $status The status property
+     * @var LongRunningOperationStatus|null $status The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
     */
     private ?LongRunningOperationStatus $status = null;
     
     /**
-     * @var string|null $statusDetail The statusDetail property
+     * @var string|null $statusDetail Details about the status of the operation.
     */
     private ?string $statusDetail = null;
     
@@ -59,7 +59,7 @@ class LongRunningOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The start time of the operation.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -82,7 +82,7 @@ class LongRunningOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastActionDateTime property value. The lastActionDateTime property
+     * Gets the lastActionDateTime property value. The time of the last action in the operation.
      * @return DateTime|null
     */
     public function getLastActionDateTime(): ?DateTime {
@@ -90,7 +90,7 @@ class LongRunningOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the resourceLocation property value. The resourceLocation property
+     * Gets the resourceLocation property value. URI of the resource that the operation is performed on.
      * @return string|null
     */
     public function getResourceLocation(): ?string {
@@ -98,7 +98,7 @@ class LongRunningOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
      * @return LongRunningOperationStatus|null
     */
     public function getStatus(): ?LongRunningOperationStatus {
@@ -106,7 +106,7 @@ class LongRunningOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the statusDetail property value. The statusDetail property
+     * Gets the statusDetail property value. Details about the status of the operation.
      * @return string|null
     */
     public function getStatusDetail(): ?string {
@@ -127,7 +127,7 @@ class LongRunningOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The start time of the operation.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value ): void {
@@ -135,7 +135,7 @@ class LongRunningOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastActionDateTime property value. The lastActionDateTime property
+     * Sets the lastActionDateTime property value. The time of the last action in the operation.
      *  @param DateTime|null $value Value to set for the lastActionDateTime property.
     */
     public function setLastActionDateTime(?DateTime $value ): void {
@@ -143,7 +143,7 @@ class LongRunningOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the resourceLocation property value. The resourceLocation property
+     * Sets the resourceLocation property value. URI of the resource that the operation is performed on.
      *  @param string|null $value Value to set for the resourceLocation property.
     */
     public function setResourceLocation(?string $value ): void {
@@ -151,7 +151,7 @@ class LongRunningOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
      *  @param LongRunningOperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?LongRunningOperationStatus $value ): void {
@@ -159,7 +159,7 @@ class LongRunningOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the statusDetail property value. The statusDetail property
+     * Sets the statusDetail property value. Details about the status of the operation.
      *  @param string|null $value Value to set for the statusDetail property.
     */
     public function setStatusDetail(?string $value ): void {

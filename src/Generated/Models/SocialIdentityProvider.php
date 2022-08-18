@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SocialIdentityProvider extends IdentityProviderBase implements Parsable 
 {
     /**
-     * @var string|null $clientId The client identifier for the application obtained when registering the application with the identity provider. Required.
+     * @var string|null $clientId The identifier for the client application obtained when registering the application with the identity provider. Required.
     */
     private ?string $clientId = null;
     
@@ -41,7 +41,7 @@ class SocialIdentityProvider extends IdentityProviderBase implements Parsable
     }
 
     /**
-     * Gets the clientId property value. The client identifier for the application obtained when registering the application with the identity provider. Required.
+     * Gets the clientId property value. The identifier for the client application obtained when registering the application with the identity provider. Required.
      * @return string|null
     */
     public function getClientId(): ?string {
@@ -89,7 +89,7 @@ class SocialIdentityProvider extends IdentityProviderBase implements Parsable
     }
 
     /**
-     * Sets the clientId property value. The client identifier for the application obtained when registering the application with the identity provider. Required.
+     * Sets the clientId property value. The identifier for the client application obtained when registering the application with the identity provider. Required.
      *  @param string|null $value Value to set for the clientId property.
     */
     public function setClientId(?string $value ): void {

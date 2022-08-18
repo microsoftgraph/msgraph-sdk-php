@@ -62,7 +62,7 @@ class IdentityProvidersRequestBuilder
     }
 
     /**
-     * Retrieve a list of identityProviders objects.
+     * Retrieve all identityProviders in the directory.
      * @param IdentityProvidersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -87,7 +87,7 @@ class IdentityProvidersRequestBuilder
     }
 
     /**
-     * Create a new identityProvider object.
+     * Add new entity to identityProviders
      * @param IdentityProvider $body 
      * @param IdentityProvidersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -111,7 +111,7 @@ class IdentityProvidersRequestBuilder
     }
 
     /**
-     * Retrieve a list of identityProviders objects.
+     * Retrieve all identityProviders in the directory.
      * @param IdentityProvidersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -130,7 +130,7 @@ class IdentityProvidersRequestBuilder
     }
 
     /**
-     * Create a new identityProvider object.
+     * Add new entity to identityProviders
      * @param IdentityProvider $body 
      * @param IdentityProvidersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

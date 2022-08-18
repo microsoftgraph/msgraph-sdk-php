@@ -15,7 +15,7 @@ class SearchHitsContainer implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var array<SearchAggregation>|null $aggregations Contains the collection of aggregations computed based on the provided aggregationOption specified in the request.
+     * @var array<SearchAggregation>|null $aggregations The aggregations property
     */
     private ?array $aggregations = null;
     
@@ -65,7 +65,7 @@ class SearchHitsContainer implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the aggregations property value. Contains the collection of aggregations computed based on the provided aggregationOption specified in the request.
+     * Gets the aggregations property value. The aggregations property
      * @return array<SearchAggregation>|null
     */
     public function getAggregations(): ?array {
@@ -141,7 +141,7 @@ class SearchHitsContainer implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the aggregations property value. Contains the collection of aggregations computed based on the provided aggregationOption specified in the request.
+     * Sets the aggregations property value. The aggregations property
      *  @param array<SearchAggregation>|null $value Value to set for the aggregations property.
     */
     public function setAggregations(?array $value ): void {

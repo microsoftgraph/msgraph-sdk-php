@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AudioRoutingGroup extends Entity implements Parsable 
 {
     /**
-     * @var array<string>|null $receivers List of receiving participant ids.
+     * @var array<string>|null $receivers The receivers property
     */
     private ?array $receivers = null;
     
@@ -19,7 +19,7 @@ class AudioRoutingGroup extends Entity implements Parsable
     private ?RoutingMode $routingMode = null;
     
     /**
-     * @var array<string>|null $sources List of source participant ids.
+     * @var array<string>|null $sources The sources property
     */
     private ?array $sources = null;
     
@@ -54,7 +54,7 @@ class AudioRoutingGroup extends Entity implements Parsable
     }
 
     /**
-     * Gets the receivers property value. List of receiving participant ids.
+     * Gets the receivers property value. The receivers property
      * @return array<string>|null
     */
     public function getReceivers(): ?array {
@@ -70,7 +70,7 @@ class AudioRoutingGroup extends Entity implements Parsable
     }
 
     /**
-     * Gets the sources property value. List of source participant ids.
+     * Gets the sources property value. The sources property
      * @return array<string>|null
     */
     public function getSources(): ?array {
@@ -89,7 +89,7 @@ class AudioRoutingGroup extends Entity implements Parsable
     }
 
     /**
-     * Sets the receivers property value. List of receiving participant ids.
+     * Sets the receivers property value. The receivers property
      *  @param array<string>|null $value Value to set for the receivers property.
     */
     public function setReceivers(?array $value ): void {
@@ -105,7 +105,7 @@ class AudioRoutingGroup extends Entity implements Parsable
     }
 
     /**
-     * Sets the sources property value. List of source participant ids.
+     * Sets the sources property value. The sources property
      *  @param array<string>|null $value Value to set for the sources property.
     */
     public function setSources(?array $value ): void {

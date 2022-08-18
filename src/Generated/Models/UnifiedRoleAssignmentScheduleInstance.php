@@ -30,12 +30,12 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     private ?string $memberType = null;
     
     /**
-     * @var string|null $roleAssignmentOriginId The identifier of the role assignment in Azure AD.
+     * @var string|null $roleAssignmentOriginId The identifier of the role assignment in Azure AD. Supports $filter (eq, ne).
     */
     private ?string $roleAssignmentOriginId = null;
     
     /**
-     * @var string|null $roleAssignmentScheduleId The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created.
+     * @var string|null $roleAssignmentScheduleId The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created. Supports $filter (eq, ne).
     */
     private ?string $roleAssignmentScheduleId = null;
     
@@ -111,7 +111,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     }
 
     /**
-     * Gets the roleAssignmentOriginId property value. The identifier of the role assignment in Azure AD.
+     * Gets the roleAssignmentOriginId property value. The identifier of the role assignment in Azure AD. Supports $filter (eq, ne).
      * @return string|null
     */
     public function getRoleAssignmentOriginId(): ?string {
@@ -119,7 +119,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     }
 
     /**
-     * Gets the roleAssignmentScheduleId property value. The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created.
+     * Gets the roleAssignmentScheduleId property value. The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created. Supports $filter (eq, ne).
      * @return string|null
     */
     public function getRoleAssignmentScheduleId(): ?string {
@@ -182,7 +182,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     }
 
     /**
-     * Sets the roleAssignmentOriginId property value. The identifier of the role assignment in Azure AD.
+     * Sets the roleAssignmentOriginId property value. The identifier of the role assignment in Azure AD. Supports $filter (eq, ne).
      *  @param string|null $value Value to set for the roleAssignmentOriginId property.
     */
     public function setRoleAssignmentOriginId(?string $value ): void {
@@ -190,7 +190,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     }
 
     /**
-     * Sets the roleAssignmentScheduleId property value. The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created.
+     * Sets the roleAssignmentScheduleId property value. The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created. Supports $filter (eq, ne).
      *  @param string|null $value Value to set for the roleAssignmentScheduleId property.
     */
     public function setRoleAssignmentScheduleId(?string $value ): void {

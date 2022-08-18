@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamInterface;
 class DriveItemVersion extends BaseItemVersion implements Parsable 
 {
     /**
-     * @var StreamInterface|null $content The content property
+     * @var StreamInterface|null $content The content stream for this version of the item.
     */
     private ?StreamInterface $content = null;
     
@@ -37,7 +37,7 @@ class DriveItemVersion extends BaseItemVersion implements Parsable
     }
 
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. The content stream for this version of the item.
      * @return StreamInterface|null
     */
     public function getContent(): ?StreamInterface {
@@ -75,7 +75,7 @@ class DriveItemVersion extends BaseItemVersion implements Parsable
     }
 
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. The content stream for this version of the item.
      *  @param StreamInterface|null $value Value to set for the content property.
     */
     public function setContent(?StreamInterface $value ): void {

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ItemAttachment extends Attachment implements Parsable 
 {
     /**
-     * @var OutlookItem|null $item The attached contact, message or event. Navigation property.
+     * @var OutlookItem|null $item The attached message or event. Navigation property.
     */
     private ?OutlookItem $item = null;
     
@@ -42,7 +42,7 @@ class ItemAttachment extends Attachment implements Parsable
     }
 
     /**
-     * Gets the item property value. The attached contact, message or event. Navigation property.
+     * Gets the item property value. The attached message or event. Navigation property.
      * @return OutlookItem|null
     */
     public function getItem(): ?OutlookItem {
@@ -59,7 +59,7 @@ class ItemAttachment extends Attachment implements Parsable
     }
 
     /**
-     * Sets the item property value. The attached contact, message or event. Navigation property.
+     * Sets the item property value. The attached message or event. Navigation property.
      *  @param OutlookItem|null $value Value to set for the item property.
     */
     public function setItem(?OutlookItem $value ): void {

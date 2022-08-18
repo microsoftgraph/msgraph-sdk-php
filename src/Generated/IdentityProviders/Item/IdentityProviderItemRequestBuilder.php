@@ -44,7 +44,7 @@ class IdentityProviderItemRequestBuilder
     }
 
     /**
-     * Delete an identityProvider.
+     * Delete an existing identityProvider.
      * @param IdentityProviderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -65,7 +65,7 @@ class IdentityProviderItemRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an identityProvider.
+     * Retrieve the properties of an existing identityProvider.
      * @param IdentityProviderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -90,7 +90,7 @@ class IdentityProviderItemRequestBuilder
     }
 
     /**
-     * Update entity in identityProviders
+     * Update properties in an existing identityProvider.
      * @param IdentityProvider $body 
      * @param IdentityProviderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -113,7 +113,7 @@ class IdentityProviderItemRequestBuilder
     }
 
     /**
-     * Delete an identityProvider.
+     * Delete an existing identityProvider.
      * @param IdentityProviderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -132,7 +132,7 @@ class IdentityProviderItemRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an identityProvider.
+     * Retrieve the properties of an existing identityProvider.
      * @param IdentityProviderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -151,7 +151,7 @@ class IdentityProviderItemRequestBuilder
     }
 
     /**
-     * Update entity in identityProviders
+     * Update properties in an existing identityProvider.
      * @param IdentityProvider $body 
      * @param IdentityProviderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

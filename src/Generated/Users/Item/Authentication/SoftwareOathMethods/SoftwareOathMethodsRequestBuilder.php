@@ -53,7 +53,7 @@ class SoftwareOathMethodsRequestBuilder
     }
 
     /**
-     * Get softwareOathMethods from users
+     * The software OATH TOTP applications registered to a user for authentication.
      * @param SoftwareOathMethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +102,7 @@ class SoftwareOathMethodsRequestBuilder
     }
 
     /**
-     * Get softwareOathMethods from users
+     * The software OATH TOTP applications registered to a user for authentication.
      * @param SoftwareOathMethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

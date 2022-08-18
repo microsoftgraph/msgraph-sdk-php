@@ -26,7 +26,7 @@ class EducationStudent implements AdditionalDataHolder, Parsable
     private ?string $externalId = null;
     
     /**
-     * @var EducationGender|null $gender Possible values are: female, male, other.
+     * @var EducationGender|null $gender The possible values are: female, male, other, unknownFutureValue.
     */
     private ?EducationGender $gender = null;
     
@@ -109,7 +109,7 @@ class EducationStudent implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the gender property value. Possible values are: female, male, other.
+     * Gets the gender property value. The possible values are: female, male, other, unknownFutureValue.
      * @return EducationGender|null
     */
     public function getGender(): ?EducationGender {
@@ -188,7 +188,7 @@ class EducationStudent implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the gender property value. Possible values are: female, male, other.
+     * Sets the gender property value. The possible values are: female, male, other, unknownFutureValue.
      *  @param EducationGender|null $value Value to set for the gender property.
     */
     public function setGender(?EducationGender $value ): void {

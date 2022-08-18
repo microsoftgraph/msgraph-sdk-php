@@ -24,7 +24,7 @@ class WorkbookNamedItem extends Entity implements Parsable
     private ?string $scope = null;
     
     /**
-     * @var string|null $type Indicates what type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only.
+     * @var string|null $type Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
     */
     private ?string $type = null;
     
@@ -102,7 +102,7 @@ class WorkbookNamedItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the type property value. Indicates what type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only.
+     * Gets the type property value. Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
      * @return string|null
     */
     public function getType(): ?string {
@@ -173,7 +173,7 @@ class WorkbookNamedItem extends Entity implements Parsable
     }
 
     /**
-     * Sets the type property value. Indicates what type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only.
+     * Sets the type property value. Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
      *  @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value ): void {

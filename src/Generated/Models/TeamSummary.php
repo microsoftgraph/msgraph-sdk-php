@@ -15,12 +15,12 @@ class TeamSummary implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var int|null $guestsCount Count of guests in a team.
+     * @var int|null $guestsCount The guestsCount property
     */
     private ?int $guestsCount = null;
     
     /**
-     * @var int|null $membersCount Count of members in a team.
+     * @var int|null $membersCount The membersCount property
     */
     private ?int $membersCount = null;
     
@@ -30,7 +30,7 @@ class TeamSummary implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var int|null $ownersCount Count of owners in a team.
+     * @var int|null $ownersCount The ownersCount property
     */
     private ?int $ownersCount = null;
     
@@ -74,7 +74,7 @@ class TeamSummary implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the guestsCount property value. Count of guests in a team.
+     * Gets the guestsCount property value. The guestsCount property
      * @return int|null
     */
     public function getGuestsCount(): ?int {
@@ -82,7 +82,7 @@ class TeamSummary implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the membersCount property value. Count of members in a team.
+     * Gets the membersCount property value. The membersCount property
      * @return int|null
     */
     public function getMembersCount(): ?int {
@@ -98,7 +98,7 @@ class TeamSummary implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the ownersCount property value. Count of owners in a team.
+     * Gets the ownersCount property value. The ownersCount property
      * @return int|null
     */
     public function getOwnersCount(): ?int {
@@ -126,7 +126,7 @@ class TeamSummary implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the guestsCount property value. Count of guests in a team.
+     * Sets the guestsCount property value. The guestsCount property
      *  @param int|null $value Value to set for the guestsCount property.
     */
     public function setGuestsCount(?int $value ): void {
@@ -134,7 +134,7 @@ class TeamSummary implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the membersCount property value. Count of members in a team.
+     * Sets the membersCount property value. The membersCount property
      *  @param int|null $value Value to set for the membersCount property.
     */
     public function setMembersCount(?int $value ): void {
@@ -150,7 +150,7 @@ class TeamSummary implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the ownersCount property value. Count of owners in a team.
+     * Sets the ownersCount property value. The ownersCount property
      *  @param int|null $value Value to set for the ownersCount property.
     */
     public function setOwnersCount(?int $value ): void {

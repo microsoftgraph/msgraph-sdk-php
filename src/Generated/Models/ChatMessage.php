@@ -45,7 +45,7 @@ class ChatMessage extends Entity implements Parsable
     private ?string $etag = null;
     
     /**
-     * @var EventMessageDetail|null $eventDetail Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
+     * @var EventMessageDetail|null $eventDetail Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
     */
     private ?EventMessageDetail $eventDetail = null;
     
@@ -80,7 +80,7 @@ class ChatMessage extends Entity implements Parsable
     private ?string $locale = null;
     
     /**
-     * @var array<ChatMessageMention>|null $mentions List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
+     * @var array<ChatMessageMention>|null $mentions List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
     */
     private ?array $mentions = null;
     
@@ -198,7 +198,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Gets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
+     * Gets the eventDetail property value. Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
      * @return EventMessageDetail|null
     */
     public function getEventDetail(): ?EventMessageDetail {
@@ -287,7 +287,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Gets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
+     * Gets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
      * @return array<ChatMessageMention>|null
     */
     public function getMentions(): ?array {
@@ -446,7 +446,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Sets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
+     * Sets the eventDetail property value. Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
      *  @param EventMessageDetail|null $value Value to set for the eventDetail property.
     */
     public function setEventDetail(?EventMessageDetail $value ): void {
@@ -502,7 +502,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Sets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
+     * Sets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
      *  @param array<ChatMessageMention>|null $value Value to set for the mentions property.
     */
     public function setMentions(?array $value ): void {

@@ -20,12 +20,12 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     private ?string $recipientActionMessage = null;
     
     /**
-     * @var string|null $recipientUserId User id of the recipient of the offer shift request.
+     * @var string|null $recipientUserId User ID of the recipient of the offer shift request.
     */
     private ?string $recipientUserId = null;
     
     /**
-     * @var string|null $senderShiftId User id of the sender of the offer shift request.
+     * @var string|null $senderShiftId User ID of the sender of the offer shift request.
     */
     private ?string $senderShiftId = null;
     
@@ -84,7 +84,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     }
 
     /**
-     * Gets the recipientUserId property value. User id of the recipient of the offer shift request.
+     * Gets the recipientUserId property value. User ID of the recipient of the offer shift request.
      * @return string|null
     */
     public function getRecipientUserId(): ?string {
@@ -92,7 +92,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     }
 
     /**
-     * Gets the senderShiftId property value. User id of the sender of the offer shift request.
+     * Gets the senderShiftId property value. User ID of the sender of the offer shift request.
      * @return string|null
     */
     public function getSenderShiftId(): ?string {
@@ -128,7 +128,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     }
 
     /**
-     * Sets the recipientUserId property value. User id of the recipient of the offer shift request.
+     * Sets the recipientUserId property value. User ID of the recipient of the offer shift request.
      *  @param string|null $value Value to set for the recipientUserId property.
     */
     public function setRecipientUserId(?string $value ): void {
@@ -136,7 +136,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     }
 
     /**
-     * Sets the senderShiftId property value. User id of the sender of the offer shift request.
+     * Sets the senderShiftId property value. User ID of the sender of the offer shift request.
      *  @param string|null $value Value to set for the senderShiftId property.
     */
     public function setSenderShiftId(?string $value ): void {

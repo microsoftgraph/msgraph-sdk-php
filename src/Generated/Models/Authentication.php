@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Authentication extends Entity implements Parsable 
 {
     /**
-     * @var array<EmailAuthenticationMethod>|null $emailMethods Represents the email addresses registered to a user for authentication.
+     * @var array<EmailAuthenticationMethod>|null $emailMethods The email address registered to a user for authentication.
     */
     private ?array $emailMethods = null;
     
@@ -29,22 +29,22 @@ class Authentication extends Entity implements Parsable
     private ?array $microsoftAuthenticatorMethods = null;
     
     /**
-     * @var array<LongRunningOperation>|null $operations The operations property
+     * @var array<LongRunningOperation>|null $operations Represents the status of a long-running operation.
     */
     private ?array $operations = null;
     
     /**
-     * @var array<PasswordAuthenticationMethod>|null $passwordMethods Represents the details of the password authentication method registered to a user for authentication.
+     * @var array<PasswordAuthenticationMethod>|null $passwordMethods Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
     */
     private ?array $passwordMethods = null;
     
     /**
-     * @var array<PhoneAuthenticationMethod>|null $phoneMethods Represents the phone registered to a user for authentication.
+     * @var array<PhoneAuthenticationMethod>|null $phoneMethods The phone numbers registered to a user for authentication.
     */
     private ?array $phoneMethods = null;
     
     /**
-     * @var array<SoftwareOathAuthenticationMethod>|null $softwareOathMethods The softwareOathMethods property
+     * @var array<SoftwareOathAuthenticationMethod>|null $softwareOathMethods The software OATH TOTP applications registered to a user for authentication.
     */
     private ?array $softwareOathMethods = null;
     
@@ -76,7 +76,7 @@ class Authentication extends Entity implements Parsable
     }
 
     /**
-     * Gets the emailMethods property value. Represents the email addresses registered to a user for authentication.
+     * Gets the emailMethods property value. The email address registered to a user for authentication.
      * @return array<EmailAuthenticationMethod>|null
     */
     public function getEmailMethods(): ?array {
@@ -128,7 +128,7 @@ class Authentication extends Entity implements Parsable
     }
 
     /**
-     * Gets the operations property value. The operations property
+     * Gets the operations property value. Represents the status of a long-running operation.
      * @return array<LongRunningOperation>|null
     */
     public function getOperations(): ?array {
@@ -136,7 +136,7 @@ class Authentication extends Entity implements Parsable
     }
 
     /**
-     * Gets the passwordMethods property value. Represents the details of the password authentication method registered to a user for authentication.
+     * Gets the passwordMethods property value. Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
      * @return array<PasswordAuthenticationMethod>|null
     */
     public function getPasswordMethods(): ?array {
@@ -144,7 +144,7 @@ class Authentication extends Entity implements Parsable
     }
 
     /**
-     * Gets the phoneMethods property value. Represents the phone registered to a user for authentication.
+     * Gets the phoneMethods property value. The phone numbers registered to a user for authentication.
      * @return array<PhoneAuthenticationMethod>|null
     */
     public function getPhoneMethods(): ?array {
@@ -152,7 +152,7 @@ class Authentication extends Entity implements Parsable
     }
 
     /**
-     * Gets the softwareOathMethods property value. The softwareOathMethods property
+     * Gets the softwareOathMethods property value. The software OATH TOTP applications registered to a user for authentication.
      * @return array<SoftwareOathAuthenticationMethod>|null
     */
     public function getSoftwareOathMethods(): ?array {
@@ -194,7 +194,7 @@ class Authentication extends Entity implements Parsable
     }
 
     /**
-     * Sets the emailMethods property value. Represents the email addresses registered to a user for authentication.
+     * Sets the emailMethods property value. The email address registered to a user for authentication.
      *  @param array<EmailAuthenticationMethod>|null $value Value to set for the emailMethods property.
     */
     public function setEmailMethods(?array $value ): void {
@@ -226,7 +226,7 @@ class Authentication extends Entity implements Parsable
     }
 
     /**
-     * Sets the operations property value. The operations property
+     * Sets the operations property value. Represents the status of a long-running operation.
      *  @param array<LongRunningOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value ): void {
@@ -234,7 +234,7 @@ class Authentication extends Entity implements Parsable
     }
 
     /**
-     * Sets the passwordMethods property value. Represents the details of the password authentication method registered to a user for authentication.
+     * Sets the passwordMethods property value. Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
      *  @param array<PasswordAuthenticationMethod>|null $value Value to set for the passwordMethods property.
     */
     public function setPasswordMethods(?array $value ): void {
@@ -242,7 +242,7 @@ class Authentication extends Entity implements Parsable
     }
 
     /**
-     * Sets the phoneMethods property value. Represents the phone registered to a user for authentication.
+     * Sets the phoneMethods property value. The phone numbers registered to a user for authentication.
      *  @param array<PhoneAuthenticationMethod>|null $value Value to set for the phoneMethods property.
     */
     public function setPhoneMethods(?array $value ): void {
@@ -250,7 +250,7 @@ class Authentication extends Entity implements Parsable
     }
 
     /**
-     * Sets the softwareOathMethods property value. The softwareOathMethods property
+     * Sets the softwareOathMethods property value. The software OATH TOTP applications registered to a user for authentication.
      *  @param array<SoftwareOathAuthenticationMethod>|null $value Value to set for the softwareOathMethods property.
     */
     public function setSoftwareOathMethods(?array $value ): void {

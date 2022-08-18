@@ -20,7 +20,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     private ?UserIdentity $appliedBy = null;
     
     /**
-     * @var DateTime|null $appliedDateTime The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
+     * @var DateTime|null $appliedDateTime The timestamp when the approval decision was applied.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't applied the decision or it was automatically applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
     */
     private ?DateTime $appliedDateTime = null;
     
@@ -45,7 +45,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     private ?Identity $principal = null;
     
     /**
-     * @var string|null $principalLink Link to the principal object. For example: https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
+     * @var string|null $principalLink A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
     */
     private ?string $principalLink = null;
     
@@ -65,7 +65,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     private ?string $resourceLink = null;
     
     /**
-     * @var UserIdentity|null $reviewedBy The identifier of the reviewer. Supports $select. Read-only.
+     * @var UserIdentity|null $reviewedBy The identifier of the reviewer.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Supports $select. Read-only.
     */
     private ?UserIdentity $reviewedBy = null;
     
@@ -108,7 +108,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the appliedDateTime property value. The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
+     * Gets the appliedDateTime property value. The timestamp when the approval decision was applied.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't applied the decision or it was automatically applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
      * @return DateTime|null
     */
     public function getAppliedDateTime(): ?DateTime {
@@ -171,7 +171,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the principalLink property value. Link to the principal object. For example: https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
+     * Gets the principalLink property value. A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
      * @return string|null
     */
     public function getPrincipalLink(): ?string {
@@ -203,7 +203,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the reviewedBy property value. The identifier of the reviewer. Supports $select. Read-only.
+     * Gets the reviewedBy property value. The identifier of the reviewer.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Supports $select. Read-only.
      * @return UserIdentity|null
     */
     public function getReviewedBy(): ?UserIdentity {
@@ -256,7 +256,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     }
 
     /**
-     * Sets the appliedDateTime property value. The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
+     * Sets the appliedDateTime property value. The timestamp when the approval decision was applied.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't applied the decision or it was automatically applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
      *  @param DateTime|null $value Value to set for the appliedDateTime property.
     */
     public function setAppliedDateTime(?DateTime $value ): void {
@@ -296,7 +296,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     }
 
     /**
-     * Sets the principalLink property value. Link to the principal object. For example: https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
+     * Sets the principalLink property value. A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
      *  @param string|null $value Value to set for the principalLink property.
     */
     public function setPrincipalLink(?string $value ): void {
@@ -328,7 +328,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     }
 
     /**
-     * Sets the reviewedBy property value. The identifier of the reviewer. Supports $select. Read-only.
+     * Sets the reviewedBy property value. The identifier of the reviewer.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Supports $select. Read-only.
      *  @param UserIdentity|null $value Value to set for the reviewedBy property.
     */
     public function setReviewedBy(?UserIdentity $value ): void {

@@ -34,7 +34,7 @@ class Participant extends Entity implements Parsable
     private ?string $metadata = null;
     
     /**
-     * @var RecordingInfo|null $recordingInfo Information on whether the participant has recording capability.
+     * @var RecordingInfo|null $recordingInfo Information about whether the participant has recording capability.
     */
     private ?RecordingInfo $recordingInfo = null;
     
@@ -112,7 +112,7 @@ class Participant extends Entity implements Parsable
     }
 
     /**
-     * Gets the recordingInfo property value. Information on whether the participant has recording capability.
+     * Gets the recordingInfo property value. Information about whether the participant has recording capability.
      * @return RecordingInfo|null
     */
     public function getRecordingInfo(): ?RecordingInfo {
@@ -174,7 +174,7 @@ class Participant extends Entity implements Parsable
     }
 
     /**
-     * Sets the recordingInfo property value. Information on whether the participant has recording capability.
+     * Sets the recordingInfo property value. Information about whether the participant has recording capability.
      *  @param RecordingInfo|null $value Value to set for the recordingInfo property.
     */
     public function setRecordingInfo(?RecordingInfo $value ): void {

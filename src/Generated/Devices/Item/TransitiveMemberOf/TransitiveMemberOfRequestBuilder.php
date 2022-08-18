@@ -100,7 +100,7 @@ class TransitiveMemberOfRequestBuilder
     }
 
     /**
-     * Groups and administrative units that this device is a member of. This operation is transitive. Supports $expand.
+     * Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand.
      * @param TransitiveMemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +125,7 @@ class TransitiveMemberOfRequestBuilder
     }
 
     /**
-     * Groups and administrative units that this device is a member of. This operation is transitive. Supports $expand.
+     * Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand.
      * @param TransitiveMemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

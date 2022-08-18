@@ -92,7 +92,7 @@ class DirectoryObjectItemRequestBuilder
     }
 
     /**
-     * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
+     * The groups and directory roles that the user is a member of. Read-only. Nullable. Supports $expand.
      * @param DirectoryObjectItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -117,7 +117,7 @@ class DirectoryObjectItemRequestBuilder
     }
 
     /**
-     * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
+     * The groups and directory roles that the user is a member of. Read-only. Nullable. Supports $expand.
      * @param DirectoryObjectItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

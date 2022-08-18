@@ -41,7 +41,7 @@ class RecurrenceRange implements AdditionalDataHolder, Parsable
     private ?Date $startDate = null;
     
     /**
-     * @var RecurrenceRangeType|null $type The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
+     * @var RecurrenceRangeType|null $type The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
     */
     private ?RecurrenceRangeType $type = null;
     
@@ -127,7 +127,7 @@ class RecurrenceRange implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the type property value. The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
+     * Gets the type property value. The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
      * @return RecurrenceRangeType|null
     */
     public function getType(): ?RecurrenceRangeType {
@@ -197,7 +197,7 @@ class RecurrenceRange implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the type property value. The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
+     * Sets the type property value. The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
      *  @param RecurrenceRangeType|null $value Value to set for the type property.
     */
     public function setType(?RecurrenceRangeType $value ): void {

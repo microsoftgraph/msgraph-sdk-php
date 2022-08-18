@@ -9,12 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements Parsable 
 {
     /**
-     * @var string|null $memberType Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
+     * @var string|null $memberType How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
     */
     private ?string $memberType = null;
     
     /**
-     * @var RequestSchedule|null $scheduleInfo The schedule object of the eligible role assignment request.
+     * @var RequestSchedule|null $scheduleInfo The period of the role eligibility.
     */
     private ?RequestSchedule $scheduleInfo = null;
     
@@ -48,7 +48,7 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements 
     }
 
     /**
-     * Gets the memberType property value. Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
+     * Gets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
      * @return string|null
     */
     public function getMemberType(): ?string {
@@ -56,7 +56,7 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements 
     }
 
     /**
-     * Gets the scheduleInfo property value. The schedule object of the eligible role assignment request.
+     * Gets the scheduleInfo property value. The period of the role eligibility.
      * @return RequestSchedule|null
     */
     public function getScheduleInfo(): ?RequestSchedule {
@@ -74,7 +74,7 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements 
     }
 
     /**
-     * Sets the memberType property value. Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
+     * Sets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
      *  @param string|null $value Value to set for the memberType property.
     */
     public function setMemberType(?string $value ): void {
@@ -82,7 +82,7 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements 
     }
 
     /**
-     * Sets the scheduleInfo property value. The schedule object of the eligible role assignment request.
+     * Sets the scheduleInfo property value. The period of the role eligibility.
      *  @param RequestSchedule|null $value Value to set for the scheduleInfo property.
     */
     public function setScheduleInfo(?RequestSchedule $value ): void {

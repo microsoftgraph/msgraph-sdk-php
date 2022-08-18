@@ -9,17 +9,17 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserSettings extends Entity implements Parsable 
 {
     /**
-     * @var bool|null $contributionToContentDiscoveryAsOrganizationDisabled Reflects the Office Delve organization level setting. When set to true, the organization doesn't have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
+     * @var bool|null $contributionToContentDiscoveryAsOrganizationDisabled The contributionToContentDiscoveryAsOrganizationDisabled property
     */
     private ?bool $contributionToContentDiscoveryAsOrganizationDisabled = null;
     
     /**
-     * @var bool|null $contributionToContentDiscoveryDisabled When set to true, documents in the user's Office Delve are disabled. Users can control this setting in Office Delve.
+     * @var bool|null $contributionToContentDiscoveryDisabled The contributionToContentDiscoveryDisabled property
     */
     private ?bool $contributionToContentDiscoveryDisabled = null;
     
     /**
-     * @var ShiftPreferences|null $shiftPreferences The shift preferences for the user.
+     * @var ShiftPreferences|null $shiftPreferences The shiftPreferences property
     */
     private ?ShiftPreferences $shiftPreferences = null;
     
@@ -41,7 +41,7 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the Office Delve organization level setting. When set to true, the organization doesn't have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
+     * Gets the contributionToContentDiscoveryAsOrganizationDisabled property value. The contributionToContentDiscoveryAsOrganizationDisabled property
      * @return bool|null
     */
     public function getContributionToContentDiscoveryAsOrganizationDisabled(): ?bool {
@@ -49,7 +49,7 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the contributionToContentDiscoveryDisabled property value. When set to true, documents in the user's Office Delve are disabled. Users can control this setting in Office Delve.
+     * Gets the contributionToContentDiscoveryDisabled property value. The contributionToContentDiscoveryDisabled property
      * @return bool|null
     */
     public function getContributionToContentDiscoveryDisabled(): ?bool {
@@ -70,7 +70,7 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the shiftPreferences property value. The shift preferences for the user.
+     * Gets the shiftPreferences property value. The shiftPreferences property
      * @return ShiftPreferences|null
     */
     public function getShiftPreferences(): ?ShiftPreferences {
@@ -89,7 +89,7 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the Office Delve organization level setting. When set to true, the organization doesn't have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
+     * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. The contributionToContentDiscoveryAsOrganizationDisabled property
      *  @param bool|null $value Value to set for the contributionToContentDiscoveryAsOrganizationDisabled property.
     */
     public function setContributionToContentDiscoveryAsOrganizationDisabled(?bool $value ): void {
@@ -97,7 +97,7 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the contributionToContentDiscoveryDisabled property value. When set to true, documents in the user's Office Delve are disabled. Users can control this setting in Office Delve.
+     * Sets the contributionToContentDiscoveryDisabled property value. The contributionToContentDiscoveryDisabled property
      *  @param bool|null $value Value to set for the contributionToContentDiscoveryDisabled property.
     */
     public function setContributionToContentDiscoveryDisabled(?bool $value ): void {
@@ -105,7 +105,7 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the shiftPreferences property value. The shift preferences for the user.
+     * Sets the shiftPreferences property value. The shiftPreferences property
      *  @param ShiftPreferences|null $value Value to set for the shiftPreferences property.
     */
     public function setShiftPreferences(?ShiftPreferences $value ): void {

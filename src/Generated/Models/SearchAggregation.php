@@ -15,12 +15,12 @@ class SearchAggregation implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var array<SearchBucket>|null $buckets Defines the actual buckets of the computed aggregation.
+     * @var array<SearchBucket>|null $buckets The buckets property
     */
     private ?array $buckets = null;
     
     /**
-     * @var string|null $field Defines on which field the aggregation was computed on.
+     * @var string|null $field The field property
     */
     private ?string $field = null;
     
@@ -55,7 +55,7 @@ class SearchAggregation implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the buckets property value. Defines the actual buckets of the computed aggregation.
+     * Gets the buckets property value. The buckets property
      * @return array<SearchBucket>|null
     */
     public function getBuckets(): ?array {
@@ -63,7 +63,7 @@ class SearchAggregation implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the field property value. Defines on which field the aggregation was computed on.
+     * Gets the field property value. The field property
      * @return string|null
     */
     public function getField(): ?string {
@@ -111,7 +111,7 @@ class SearchAggregation implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the buckets property value. Defines the actual buckets of the computed aggregation.
+     * Sets the buckets property value. The buckets property
      *  @param array<SearchBucket>|null $value Value to set for the buckets property.
     */
     public function setBuckets(?array $value ): void {
@@ -119,7 +119,7 @@ class SearchAggregation implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the field property value. Defines on which field the aggregation was computed on.
+     * Sets the field property value. The field property
      *  @param string|null $value Value to set for the field property.
     */
     public function setField(?string $value ): void {

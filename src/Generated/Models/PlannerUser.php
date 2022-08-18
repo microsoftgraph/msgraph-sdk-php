@@ -14,7 +14,7 @@ class PlannerUser extends Entity implements Parsable
     private ?array $plans = null;
     
     /**
-     * @var array<PlannerTask>|null $tasks Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * @var array<PlannerTask>|null $tasks Read-only. Nullable. Returns the plannerPlans shared with the user.
     */
     private ?array $tasks = null;
     
@@ -56,7 +56,7 @@ class PlannerUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the tasks property value. Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Gets the tasks property value. Read-only. Nullable. Returns the plannerPlans shared with the user.
      * @return array<PlannerTask>|null
     */
     public function getTasks(): ?array {
@@ -82,7 +82,7 @@ class PlannerUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the tasks property value. Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Sets the tasks property value. Read-only. Nullable. Returns the plannerPlans shared with the user.
      *  @param array<PlannerTask>|null $value Value to set for the tasks property.
     */
     public function setTasks(?array $value ): void {

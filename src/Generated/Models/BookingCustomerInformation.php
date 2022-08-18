@@ -14,17 +14,17 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
     private ?string $customerId = null;
     
     /**
-     * @var array<BookingQuestionAnswer>|null $customQuestionAnswers It consists of the list of custom questions and answers given by the customer as part of the appointment.
+     * @var array<BookingQuestionAnswer>|null $customQuestionAnswers It consists of the list of custom questions and answers given by the customer as part of the appointment
     */
     private ?array $customQuestionAnswers = null;
     
     /**
-     * @var string|null $emailAddress The SMTP address of the bookingCustomer who is booking the appointment.
+     * @var string|null $emailAddress The SMTP address of the bookingCustomer who is booking the appointment
     */
     private ?string $emailAddress = null;
     
     /**
-     * @var Location|null $location Represents location information for the bookingCustomer who is booking the appointment.
+     * @var Location|null $location Represents location information for the bookingCustomer who is booking the appointment.
     */
     private ?Location $location = null;
     
@@ -74,7 +74,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
     }
 
     /**
-     * Gets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment.
+     * Gets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment
      * @return array<BookingQuestionAnswer>|null
     */
     public function getCustomQuestionAnswers(): ?array {
@@ -82,7 +82,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
     }
 
     /**
-     * Gets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment.
+     * Gets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment
      * @return string|null
     */
     public function getEmailAddress(): ?string {
@@ -108,7 +108,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
     }
 
     /**
-     * Gets the location property value. Represents location information for the bookingCustomer who is booking the appointment.
+     * Gets the location property value. Represents location information for the bookingCustomer who is booking the appointment.
      * @return Location|null
     */
     public function getLocation(): ?Location {
@@ -172,7 +172,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
     }
 
     /**
-     * Sets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment.
+     * Sets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment
      *  @param array<BookingQuestionAnswer>|null $value Value to set for the customQuestionAnswers property.
     */
     public function setCustomQuestionAnswers(?array $value ): void {
@@ -180,7 +180,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
     }
 
     /**
-     * Sets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment.
+     * Sets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment
      *  @param string|null $value Value to set for the emailAddress property.
     */
     public function setEmailAddress(?string $value ): void {
@@ -188,7 +188,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
     }
 
     /**
-     * Sets the location property value. Represents location information for the bookingCustomer who is booking the appointment.
+     * Sets the location property value. Represents location information for the bookingCustomer who is booking the appointment.
      *  @param Location|null $value Value to set for the location property.
     */
     public function setLocation(?Location $value ): void {

@@ -74,7 +74,7 @@ class PlannerBucketItemRequestBuilder
     }
 
     /**
-     * Collection of buckets in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of buckets in the plan.
      * @param PlannerBucketItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -141,7 +141,7 @@ class PlannerBucketItemRequestBuilder
     }
 
     /**
-     * Collection of buckets in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of buckets in the plan.
      * @param PlannerBucketItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

@@ -20,12 +20,12 @@ class MediaInfo implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var string|null $resourceId Optional, used to uniquely identity the resource. If passed the prompt uri will be cached against this resourceId as key.
+     * @var string|null $resourceId Optional. Used to uniquely identity the resource. If passed in, the prompt uri will be cached against this resourceId as a key.
     */
     private ?string $resourceId = null;
     
     /**
-     * @var string|null $uri Path to the prompt to be played. Currently only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate is only supported.
+     * @var string|null $uri Path to the prompt that will be played. Currently supports only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate.
     */
     private ?string $uri = null;
     
@@ -76,7 +76,7 @@ class MediaInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the resourceId property value. Optional, used to uniquely identity the resource. If passed the prompt uri will be cached against this resourceId as key.
+     * Gets the resourceId property value. Optional. Used to uniquely identity the resource. If passed in, the prompt uri will be cached against this resourceId as a key.
      * @return string|null
     */
     public function getResourceId(): ?string {
@@ -84,7 +84,7 @@ class MediaInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the uri property value. Path to the prompt to be played. Currently only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate is only supported.
+     * Gets the uri property value. Path to the prompt that will be played. Currently supports only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate.
      * @return string|null
     */
     public function getUri(): ?string {
@@ -119,7 +119,7 @@ class MediaInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the resourceId property value. Optional, used to uniquely identity the resource. If passed the prompt uri will be cached against this resourceId as key.
+     * Sets the resourceId property value. Optional. Used to uniquely identity the resource. If passed in, the prompt uri will be cached against this resourceId as a key.
      *  @param string|null $value Value to set for the resourceId property.
     */
     public function setResourceId(?string $value ): void {
@@ -127,7 +127,7 @@ class MediaInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the uri property value. Path to the prompt to be played. Currently only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate is only supported.
+     * Sets the uri property value. Path to the prompt that will be played. Currently supports only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate.
      *  @param string|null $value Value to set for the uri property.
     */
     public function setUri(?string $value ): void {

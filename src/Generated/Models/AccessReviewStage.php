@@ -15,7 +15,7 @@ class AccessReviewStage extends Entity implements Parsable
     private ?array $decisions = null;
     
     /**
-     * @var DateTime|null $endDateTime DateTime when review stage is scheduled to end. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. This property is the cumulative total of the durationInDays for all stages. Read-only.
+     * @var DateTime|null $endDateTime The date and time in ISO 8601 format and UTC time when the review stage is scheduled to end. This property is the cumulative total of the durationInDays for all stages. Read-only.
     */
     private ?DateTime $endDateTime = null;
     
@@ -30,7 +30,7 @@ class AccessReviewStage extends Entity implements Parsable
     private ?array $reviewers = null;
     
     /**
-     * @var DateTime|null $startDateTime DateTime when review stage is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * @var DateTime|null $startDateTime The date and time in ISO 8601 format and UTC time when the review stage is scheduled to start. Read-only.
     */
     private ?DateTime $startDateTime = null;
     
@@ -65,7 +65,7 @@ class AccessReviewStage extends Entity implements Parsable
     }
 
     /**
-     * Gets the endDateTime property value. DateTime when review stage is scheduled to end. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. This property is the cumulative total of the durationInDays for all stages. Read-only.
+     * Gets the endDateTime property value. The date and time in ISO 8601 format and UTC time when the review stage is scheduled to end. This property is the cumulative total of the durationInDays for all stages. Read-only.
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
@@ -105,7 +105,7 @@ class AccessReviewStage extends Entity implements Parsable
     }
 
     /**
-     * Gets the startDateTime property value. DateTime when review stage is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Gets the startDateTime property value. The date and time in ISO 8601 format and UTC time when the review stage is scheduled to start. Read-only.
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
@@ -143,7 +143,7 @@ class AccessReviewStage extends Entity implements Parsable
     }
 
     /**
-     * Sets the endDateTime property value. DateTime when review stage is scheduled to end. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. This property is the cumulative total of the durationInDays for all stages. Read-only.
+     * Sets the endDateTime property value. The date and time in ISO 8601 format and UTC time when the review stage is scheduled to end. This property is the cumulative total of the durationInDays for all stages. Read-only.
      *  @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value ): void {
@@ -167,7 +167,7 @@ class AccessReviewStage extends Entity implements Parsable
     }
 
     /**
-     * Sets the startDateTime property value. DateTime when review stage is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Sets the startDateTime property value. The date and time in ISO 8601 format and UTC time when the review stage is scheduled to start. Read-only.
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value ): void {

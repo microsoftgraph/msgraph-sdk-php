@@ -26,7 +26,7 @@ class Message extends OutlookItem implements Parsable
     private ?ItemBody $body = null;
     
     /**
-     * @var string|null $bodyPreview The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
+     * @var string|null $bodyPreview The first 255 characters of the message body. It is in text format.
     */
     private ?string $bodyPreview = null;
     
@@ -212,7 +212,7 @@ class Message extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the bodyPreview property value. The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
+     * Gets the bodyPreview property value. The first 255 characters of the message body. It is in text format.
      * @return string|null
     */
     public function getBodyPreview(): ?string {
@@ -530,7 +530,7 @@ class Message extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the bodyPreview property value. The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
+     * Sets the bodyPreview property value. The first 255 characters of the message body. It is in text format.
      *  @param string|null $value Value to set for the bodyPreview property.
     */
     public function setBodyPreview(?string $value ): void {

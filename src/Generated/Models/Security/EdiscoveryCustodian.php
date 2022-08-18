@@ -35,7 +35,7 @@ class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     private ?array $unifiedGroupSources = null;
     
     /**
-     * @var array<UserSource>|null $userSources Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * @var array<UserSource>|null $userSources Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
     */
     private ?array $userSources = null;
     
@@ -113,7 +113,7 @@ class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     }
 
     /**
-     * Gets the userSources property value. Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * Gets the userSources property value. Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @return array<UserSource>|null
     */
     public function getUserSources(): ?array {
@@ -175,7 +175,7 @@ class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     }
 
     /**
-     * Sets the userSources property value. Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * Sets the userSources property value. Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      *  @param array<UserSource>|null $value Value to set for the userSources property.
     */
     public function setUserSources(?array $value ): void {

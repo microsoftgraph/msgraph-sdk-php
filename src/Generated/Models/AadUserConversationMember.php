@@ -24,7 +24,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
     private ?User $user = null;
     
     /**
-     * @var string|null $userId The GUID of the user.
+     * @var string|null $userId The guid of the user.
     */
     private ?string $userId = null;
     
@@ -84,7 +84,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
     }
 
     /**
-     * Gets the userId property value. The GUID of the user.
+     * Gets the userId property value. The guid of the user.
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -128,7 +128,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
     }
 
     /**
-     * Sets the userId property value. The GUID of the user.
+     * Sets the userId property value. The guid of the user.
      *  @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value ): void {

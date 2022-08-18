@@ -15,7 +15,7 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $name The name of the strongly typed property defined as part of a schema extension.
+     * @var string|null $name The name of the strongly-typed property defined as part of a schema extension.
     */
     private ?string $name = null;
     
@@ -68,7 +68,7 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the name property value. The name of the strongly typed property defined as part of a schema extension.
+     * Gets the name property value. The name of the strongly-typed property defined as part of a schema extension.
      * @return string|null
     */
     public function getName(): ?string {
@@ -111,7 +111,7 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the name property value. The name of the strongly typed property defined as part of a schema extension.
+     * Sets the name property value. The name of the strongly-typed property defined as part of a schema extension.
      *  @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value ): void {

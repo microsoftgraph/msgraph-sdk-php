@@ -15,7 +15,7 @@ class PasswordResetResponse implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $newPassword The newPassword property
+     * @var string|null $newPassword The Azure AD-generated password.
     */
     private ?string $newPassword = null;
     
@@ -62,7 +62,7 @@ class PasswordResetResponse implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the newPassword property value. The newPassword property
+     * Gets the newPassword property value. The Azure AD-generated password.
      * @return string|null
     */
     public function getNewPassword(): ?string {
@@ -96,7 +96,7 @@ class PasswordResetResponse implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the newPassword property value. The newPassword property
+     * Sets the newPassword property value. The Azure AD-generated password.
      *  @param string|null $value Value to set for the newPassword property.
     */
     public function setNewPassword(?string $value ): void {

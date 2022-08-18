@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Approval extends Entity implements Parsable 
 {
     /**
-     * @var array<ApprovalStage>|null $stages Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.
+     * @var array<ApprovalStage>|null $stages A collection of stages in the approval decision.
     */
     private ?array $stages = null;
     
@@ -42,7 +42,7 @@ class Approval extends Entity implements Parsable
     }
 
     /**
-     * Gets the stages property value. Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.
+     * Gets the stages property value. A collection of stages in the approval decision.
      * @return array<ApprovalStage>|null
     */
     public function getStages(): ?array {
@@ -59,7 +59,7 @@ class Approval extends Entity implements Parsable
     }
 
     /**
-     * Sets the stages property value. Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.
+     * Sets the stages property value. A collection of stages in the approval decision.
      *  @param array<ApprovalStage>|null $value Value to set for the stages property.
     */
     public function setStages(?array $value ): void {

@@ -24,7 +24,7 @@ class Domain extends Entity implements Parsable
     private ?array $domainNameReferences = null;
     
     /**
-     * @var array<InternalDomainFederation>|null $federationConfiguration Domain settings configured by customer when federated with Azure AD. Supports $expand.
+     * @var array<InternalDomainFederation>|null $federationConfiguration Domain settings configured by a customer when federated with Azure AD. Supports $expand.
     */
     private ?array $federationConfiguration = null;
     
@@ -84,7 +84,7 @@ class Domain extends Entity implements Parsable
     private ?DomainState $state = null;
     
     /**
-     * @var array<string>|null $supportedServices The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline,SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable.
+     * @var array<string>|null $supportedServices The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable.
     */
     private ?array $supportedServices = null;
     
@@ -135,7 +135,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Gets the federationConfiguration property value. Domain settings configured by customer when federated with Azure AD. Supports $expand.
+     * Gets the federationConfiguration property value. Domain settings configured by a customer when federated with Azure AD. Supports $expand.
      * @return array<InternalDomainFederation>|null
     */
     public function getFederationConfiguration(): ?array {
@@ -258,7 +258,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Gets the supportedServices property value. The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline,SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable.
+     * Gets the supportedServices property value. The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable.
      * @return array<string>|null
     */
     public function getSupportedServices(): ?array {
@@ -323,7 +323,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Sets the federationConfiguration property value. Domain settings configured by customer when federated with Azure AD. Supports $expand.
+     * Sets the federationConfiguration property value. Domain settings configured by a customer when federated with Azure AD. Supports $expand.
      *  @param array<InternalDomainFederation>|null $value Value to set for the federationConfiguration property.
     */
     public function setFederationConfiguration(?array $value ): void {
@@ -419,7 +419,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Sets the supportedServices property value. The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline,SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable.
+     * Sets the supportedServices property value. The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable.
      *  @param array<string>|null $value Value to set for the supportedServices property.
     */
     public function setSupportedServices(?array $value ): void {

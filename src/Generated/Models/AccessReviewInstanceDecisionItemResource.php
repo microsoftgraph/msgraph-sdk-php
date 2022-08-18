@@ -20,7 +20,7 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
     private ?string $displayName = null;
     
     /**
-     * @var string|null $id Resource ID
+     * @var string|null $id Identifier of the resource
     */
     private ?string $id = null;
     
@@ -91,7 +91,7 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the id property value. Resource ID
+     * Gets the id property value. Identifier of the resource
      * @return string|null
     */
     public function getId(): ?string {
@@ -143,7 +143,7 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the id property value. Resource ID
+     * Sets the id property value. Identifier of the resource
      *  @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value ): void {

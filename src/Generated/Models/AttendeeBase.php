@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AttendeeBase extends Recipient implements Parsable 
 {
     /**
-     * @var AttendeeType|null $type The type of attendee. Possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
+     * @var AttendeeType|null $type The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
     */
     private ?AttendeeType $type = null;
     
@@ -49,7 +49,7 @@ class AttendeeBase extends Recipient implements Parsable
     }
 
     /**
-     * Gets the type property value. The type of attendee. Possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
+     * Gets the type property value. The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
      * @return AttendeeType|null
     */
     public function getType(): ?AttendeeType {
@@ -66,7 +66,7 @@ class AttendeeBase extends Recipient implements Parsable
     }
 
     /**
-     * Sets the type property value. The type of attendee. Possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
+     * Sets the type property value. The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
      *  @param AttendeeType|null $value Value to set for the type property.
     */
     public function setType(?AttendeeType $value ): void {

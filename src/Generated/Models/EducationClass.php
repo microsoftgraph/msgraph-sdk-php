@@ -34,12 +34,12 @@ class EducationClass extends Entity implements Parsable
     private ?string $classCode = null;
     
     /**
-     * @var EducationCourse|null $course Course information for the class.
+     * @var EducationCourse|null $course The course property
     */
     private ?EducationCourse $course = null;
     
     /**
-     * @var IdentitySet|null $createdBy Entity who created the class.
+     * @var IdentitySet|null $createdBy Entity who created the class
     */
     private ?IdentitySet $createdBy = null;
     
@@ -64,7 +64,7 @@ class EducationClass extends Entity implements Parsable
     private ?string $externalName = null;
     
     /**
-     * @var EducationExternalSource|null $externalSource The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
+     * @var EducationExternalSource|null $externalSource How this class was created. Possible values are: sis, manual.
     */
     private ?EducationExternalSource $externalSource = null;
     
@@ -104,7 +104,7 @@ class EducationClass extends Entity implements Parsable
     private ?array $teachers = null;
     
     /**
-     * @var EducationTerm|null $term Term for the class.
+     * @var EducationTerm|null $term Term for this class.
     */
     private ?EducationTerm $term = null;
     
@@ -166,7 +166,7 @@ class EducationClass extends Entity implements Parsable
     }
 
     /**
-     * Gets the course property value. Course information for the class.
+     * Gets the course property value. The course property
      * @return EducationCourse|null
     */
     public function getCourse(): ?EducationCourse {
@@ -174,7 +174,7 @@ class EducationClass extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. Entity who created the class.
+     * Gets the createdBy property value. Entity who created the class
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
@@ -214,7 +214,7 @@ class EducationClass extends Entity implements Parsable
     }
 
     /**
-     * Gets the externalSource property value. The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
+     * Gets the externalSource property value. How this class was created. Possible values are: sis, manual.
      * @return EducationExternalSource|null
     */
     public function getExternalSource(): ?EducationExternalSource {
@@ -308,7 +308,7 @@ class EducationClass extends Entity implements Parsable
     }
 
     /**
-     * Gets the term property value. Term for the class.
+     * Gets the term property value. Term for this class.
      * @return EducationTerm|null
     */
     public function getTerm(): ?EducationTerm {
@@ -384,7 +384,7 @@ class EducationClass extends Entity implements Parsable
     }
 
     /**
-     * Sets the course property value. Course information for the class.
+     * Sets the course property value. The course property
      *  @param EducationCourse|null $value Value to set for the course property.
     */
     public function setCourse(?EducationCourse $value ): void {
@@ -392,7 +392,7 @@ class EducationClass extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. Entity who created the class.
+     * Sets the createdBy property value. Entity who created the class
      *  @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value ): void {
@@ -432,7 +432,7 @@ class EducationClass extends Entity implements Parsable
     }
 
     /**
-     * Sets the externalSource property value. The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
+     * Sets the externalSource property value. How this class was created. Possible values are: sis, manual.
      *  @param EducationExternalSource|null $value Value to set for the externalSource property.
     */
     public function setExternalSource(?EducationExternalSource $value ): void {
@@ -496,7 +496,7 @@ class EducationClass extends Entity implements Parsable
     }
 
     /**
-     * Sets the term property value. Term for the class.
+     * Sets the term property value. Term for this class.
      *  @param EducationTerm|null $value Value to set for the term property.
     */
     public function setTerm(?EducationTerm $value ): void {

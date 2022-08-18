@@ -19,7 +19,7 @@ class PlannerTaskDetails extends Entity implements Parsable
     private ?string $description = null;
     
     /**
-     * @var PlannerPreviewType|null $previewType This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
+     * @var PlannerPreviewType|null $previewType This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
     */
     private ?PlannerPreviewType $previewType = null;
     
@@ -76,7 +76,7 @@ class PlannerTaskDetails extends Entity implements Parsable
     }
 
     /**
-     * Gets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
+     * Gets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
      * @return PlannerPreviewType|null
     */
     public function getPreviewType(): ?PlannerPreviewType {
@@ -120,7 +120,7 @@ class PlannerTaskDetails extends Entity implements Parsable
     }
 
     /**
-     * Sets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
+     * Sets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
      *  @param PlannerPreviewType|null $value Value to set for the previewType property.
     */
     public function setPreviewType(?PlannerPreviewType $value ): void {

@@ -15,7 +15,7 @@ class UnifiedRolePermission implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var array<string>|null $allowedResourceActions Set of tasks that can be performed on a resource.
+     * @var array<string>|null $allowedResourceActions Set of tasks that can be performed on a resource. Required.
     */
     private ?array $allowedResourceActions = null;
     
@@ -60,7 +60,7 @@ class UnifiedRolePermission implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the allowedResourceActions property value. Set of tasks that can be performed on a resource.
+     * Gets the allowedResourceActions property value. Set of tasks that can be performed on a resource. Required.
      * @return array<string>|null
     */
     public function getAllowedResourceActions(): ?array {
@@ -126,7 +126,7 @@ class UnifiedRolePermission implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the allowedResourceActions property value. Set of tasks that can be performed on a resource.
+     * Sets the allowedResourceActions property value. Set of tasks that can be performed on a resource. Required.
      *  @param array<string>|null $value Value to set for the allowedResourceActions property.
     */
     public function setAllowedResourceActions(?array $value ): void {

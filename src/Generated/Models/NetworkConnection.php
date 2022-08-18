@@ -16,7 +16,7 @@ class NetworkConnection implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $applicationName Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
+     * @var string|null $applicationName Name of the application managing the network connection (for example, Facebook or SMTP).
     */
     private ?string $applicationName = null;
     
@@ -146,7 +146,7 @@ class NetworkConnection implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the applicationName property value. Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
+     * Gets the applicationName property value. Name of the application managing the network connection (for example, Facebook or SMTP).
      * @return string|null
     */
     public function getApplicationName(): ?string {
@@ -382,7 +382,7 @@ class NetworkConnection implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the applicationName property value. Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
+     * Sets the applicationName property value. Name of the application managing the network connection (for example, Facebook or SMTP).
      *  @param string|null $value Value to set for the applicationName property.
     */
     public function setApplicationName(?string $value ): void {

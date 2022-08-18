@@ -99,7 +99,7 @@ class WorkbookRange extends Entity implements Parsable
     private ?Json $values = null;
     
     /**
-     * @var Json|null $valueTypes Represents the type of data of each cell. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
+     * @var Json|null $valueTypes Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
     */
     private ?Json $valueTypes = null;
     
@@ -300,7 +300,7 @@ class WorkbookRange extends Entity implements Parsable
     }
 
     /**
-     * Gets the valueTypes property value. Represents the type of data of each cell. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
+     * Gets the valueTypes property value. Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
      * @return Json|null
     */
     public function getValueTypes(): ?Json {
@@ -488,7 +488,7 @@ class WorkbookRange extends Entity implements Parsable
     }
 
     /**
-     * Sets the valueTypes property value. Represents the type of data of each cell. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
+     * Sets the valueTypes property value. Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
      *  @param Json|null $value Value to set for the valueTypes property.
     */
     public function setValueTypes(?Json $value ): void {

@@ -20,7 +20,7 @@ class DocumentSetContent implements AdditionalDataHolder, Parsable
     private ?ContentTypeInfo $contentType = null;
     
     /**
-     * @var string|null $fileName Name of the file in resource folder that should be added as a default content or a template in the document set
+     * @var string|null $fileName Name of the file in resource folder that should be added as a default content or a template in the document set.
     */
     private ?string $fileName = null;
     
@@ -82,7 +82,7 @@ class DocumentSetContent implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set
+     * Gets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set.
      * @return string|null
     */
     public function getFileName(): ?string {
@@ -134,7 +134,7 @@ class DocumentSetContent implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set
+     * Sets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set.
      *  @param string|null $value Value to set for the fileName property.
     */
     public function setFileName(?string $value ): void {

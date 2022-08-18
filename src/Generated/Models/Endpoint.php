@@ -9,27 +9,27 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Endpoint extends DirectoryObject implements Parsable 
 {
     /**
-     * @var string|null $capability Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.
+     * @var string|null $capability The capability property
     */
     private ?string $capability = null;
     
     /**
-     * @var string|null $providerId Application id of the publishing underlying service. Not nullable. Read-only.
+     * @var string|null $providerId The providerId property
     */
     private ?string $providerId = null;
     
     /**
-     * @var string|null $providerName Name of the publishing underlying service. Read-only.
+     * @var string|null $providerName The providerName property
     */
     private ?string $providerName = null;
     
     /**
-     * @var string|null $providerResourceId For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
+     * @var string|null $providerResourceId The providerResourceId property
     */
     private ?string $providerResourceId = null;
     
     /**
-     * @var string|null $uri URL of the published resource. Not nullable. Read-only.
+     * @var string|null $uri The uri property
     */
     private ?string $uri = null;
     
@@ -51,7 +51,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the capability property value. Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.
+     * Gets the capability property value. The capability property
      * @return string|null
     */
     public function getCapability(): ?string {
@@ -74,7 +74,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the providerId property value. Application id of the publishing underlying service. Not nullable. Read-only.
+     * Gets the providerId property value. The providerId property
      * @return string|null
     */
     public function getProviderId(): ?string {
@@ -82,7 +82,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the providerName property value. Name of the publishing underlying service. Read-only.
+     * Gets the providerName property value. The providerName property
      * @return string|null
     */
     public function getProviderName(): ?string {
@@ -90,7 +90,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the providerResourceId property value. For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
+     * Gets the providerResourceId property value. The providerResourceId property
      * @return string|null
     */
     public function getProviderResourceId(): ?string {
@@ -98,7 +98,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the uri property value. URL of the published resource. Not nullable. Read-only.
+     * Gets the uri property value. The uri property
      * @return string|null
     */
     public function getUri(): ?string {
@@ -119,7 +119,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the capability property value. Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.
+     * Sets the capability property value. The capability property
      *  @param string|null $value Value to set for the capability property.
     */
     public function setCapability(?string $value ): void {
@@ -127,7 +127,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the providerId property value. Application id of the publishing underlying service. Not nullable. Read-only.
+     * Sets the providerId property value. The providerId property
      *  @param string|null $value Value to set for the providerId property.
     */
     public function setProviderId(?string $value ): void {
@@ -135,7 +135,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the providerName property value. Name of the publishing underlying service. Read-only.
+     * Sets the providerName property value. The providerName property
      *  @param string|null $value Value to set for the providerName property.
     */
     public function setProviderName(?string $value ): void {
@@ -143,7 +143,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the providerResourceId property value. For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
+     * Sets the providerResourceId property value. The providerResourceId property
      *  @param string|null $value Value to set for the providerResourceId property.
     */
     public function setProviderResourceId(?string $value ): void {
@@ -151,7 +151,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the uri property value. URL of the published resource. Not nullable. Read-only.
+     * Sets the uri property value. The uri property
      *  @param string|null $value Value to set for the uri property.
     */
     public function setUri(?string $value ): void {
