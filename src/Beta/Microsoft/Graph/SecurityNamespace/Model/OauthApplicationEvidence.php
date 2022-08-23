@@ -25,6 +25,7 @@ class OauthApplicationEvidence extends AlertEvidence
 {
     /**
     * Gets the appId
+    * Unique identifier of the application.
     *
     * @return string|null The appId
     */
@@ -39,6 +40,7 @@ class OauthApplicationEvidence extends AlertEvidence
 
     /**
     * Sets the appId
+    * Unique identifier of the application.
     *
     * @param string $val The value of the appId
     *
@@ -51,6 +53,7 @@ class OauthApplicationEvidence extends AlertEvidence
     }
     /**
     * Gets the displayName
+    * Name of the application.
     *
     * @return string|null The displayName
     */
@@ -65,6 +68,7 @@ class OauthApplicationEvidence extends AlertEvidence
 
     /**
     * Sets the displayName
+    * Name of the application.
     *
     * @param string $val The value of the displayName
     *
@@ -77,6 +81,7 @@ class OauthApplicationEvidence extends AlertEvidence
     }
     /**
     * Gets the objectId
+    * The unique identifier of the application object in Azure AD.
     *
     * @return string|null The objectId
     */
@@ -91,6 +96,7 @@ class OauthApplicationEvidence extends AlertEvidence
 
     /**
     * Sets the objectId
+    * The unique identifier of the application object in Azure AD.
     *
     * @param string $val The value of the objectId
     *
@@ -103,6 +109,7 @@ class OauthApplicationEvidence extends AlertEvidence
     }
     /**
     * Gets the publisher
+    * The name of the application publisher.
     *
     * @return string|null The publisher
     */
@@ -117,6 +124,7 @@ class OauthApplicationEvidence extends AlertEvidence
 
     /**
     * Sets the publisher
+    * The name of the application publisher.
     *
     * @param string $val The value of the publisher
     *
