@@ -57,7 +57,7 @@ class IdentityContainer extends Entity
 
      /**
      * Gets the b2xUserFlows
-    * Represents entry point for B2X and self-service sign-up identity userflows.
+    * Represents entry point for B2X/self-service sign-up identity userflows.
      *
      * @return array|null The b2xUserFlows
      */
@@ -72,7 +72,7 @@ class IdentityContainer extends Entity
 
     /**
     * Sets the b2xUserFlows
-    * Represents entry point for B2X and self-service sign-up identity userflows.
+    * Represents entry point for B2X/self-service sign-up identity userflows.
     *
     * @param B2xIdentityUserFlow[] $val The b2xUserFlows
     *
@@ -87,7 +87,6 @@ class IdentityContainer extends Entity
 
      /**
      * Gets the identityProviders
-    * Represents entry point for identity provider base.
      *
      * @return array|null The identityProviders
      */
@@ -102,7 +101,6 @@ class IdentityContainer extends Entity
 
     /**
     * Sets the identityProviders
-    * Represents entry point for identity provider base.
     *
     * @param IdentityProviderBase[] $val The identityProviders
     *

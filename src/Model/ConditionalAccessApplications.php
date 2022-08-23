@@ -81,7 +81,6 @@ class ConditionalAccessApplications extends Entity
     }
     /**
     * Gets the includeAuthenticationContextClassReferences
-    * Authentication context class references include. Supported values are c1 through c25.
     *
     * @return string|null The includeAuthenticationContextClassReferences
     */
@@ -96,7 +95,6 @@ class ConditionalAccessApplications extends Entity
 
     /**
     * Sets the includeAuthenticationContextClassReferences
-    * Authentication context class references include. Supported values are c1 through c25.
     *
     * @param string $val The value of the includeAuthenticationContextClassReferences
     *
