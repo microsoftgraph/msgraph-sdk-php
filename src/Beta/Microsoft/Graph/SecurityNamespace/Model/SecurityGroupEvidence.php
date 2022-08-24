@@ -25,6 +25,7 @@ class SecurityGroupEvidence extends AlertEvidence
 {
     /**
     * Gets the displayName
+    * The name of the security group.
     *
     * @return string|null The displayName
     */
@@ -39,6 +40,7 @@ class SecurityGroupEvidence extends AlertEvidence
 
     /**
     * Sets the displayName
+    * The name of the security group.
     *
     * @param string $val The value of the displayName
     *
@@ -51,6 +53,7 @@ class SecurityGroupEvidence extends AlertEvidence
     }
     /**
     * Gets the securityGroupId
+    * Unique identifier of the security group.
     *
     * @return string|null The securityGroupId
     */
@@ -65,6 +68,7 @@ class SecurityGroupEvidence extends AlertEvidence
 
     /**
     * Sets the securityGroupId
+    * Unique identifier of the security group.
     *
     * @param string $val The value of the securityGroupId
     *

@@ -26,6 +26,7 @@ class UserEvidence extends AlertEvidence
 
     /**
     * Gets the userAccount
+    * The user account details.
     *
     * @return UserAccount|null The userAccount
     */
@@ -44,6 +45,7 @@ class UserEvidence extends AlertEvidence
 
     /**
     * Sets the userAccount
+    * The user account details.
     *
     * @param UserAccount $val The value to assign to the userAccount
     *

@@ -25,6 +25,7 @@ class IpEvidence extends AlertEvidence
 {
     /**
     * Gets the ipAddress
+    * The value of the IP Address, can be either in V4 address or V6 address format.
     *
     * @return string|null The ipAddress
     */
@@ -39,6 +40,7 @@ class IpEvidence extends AlertEvidence
 
     /**
     * Sets the ipAddress
+    * The value of the IP Address, can be either in V4 address or V6 address format.
     *
     * @param string $val The value of the ipAddress
     *
