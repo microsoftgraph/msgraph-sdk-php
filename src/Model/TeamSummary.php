@@ -25,7 +25,6 @@ class TeamSummary extends Entity
 {
     /**
     * Gets the guestsCount
-    * Count of guests in a team.
     *
     * @return int|null The guestsCount
     */
@@ -40,7 +39,6 @@ class TeamSummary extends Entity
 
     /**
     * Sets the guestsCount
-    * Count of guests in a team.
     *
     * @param int $val The value of the guestsCount
     *
@@ -53,7 +51,6 @@ class TeamSummary extends Entity
     }
     /**
     * Gets the membersCount
-    * Count of members in a team.
     *
     * @return int|null The membersCount
     */
@@ -68,7 +65,6 @@ class TeamSummary extends Entity
 
     /**
     * Sets the membersCount
-    * Count of members in a team.
     *
     * @param int $val The value of the membersCount
     *
@@ -81,7 +77,6 @@ class TeamSummary extends Entity
     }
     /**
     * Gets the ownersCount
-    * Count of owners in a team.
     *
     * @return int|null The ownersCount
     */
@@ -96,7 +91,6 @@ class TeamSummary extends Entity
 
     /**
     * Sets the ownersCount
-    * Count of owners in a team.
     *
     * @param int $val The value of the ownersCount
     *

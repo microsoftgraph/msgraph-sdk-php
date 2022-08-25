@@ -36,6 +36,7 @@ class AttributeRuleMembers extends SubjectSet
 
     /**
     * Gets the description
+    * A description of the membership rule.
     *
     * @return string|null The description
     */
@@ -50,6 +51,7 @@ class AttributeRuleMembers extends SubjectSet
 
     /**
     * Sets the description
+    * A description of the membership rule.
     *
     * @param string $val The value of the description
     *
@@ -62,6 +64,7 @@ class AttributeRuleMembers extends SubjectSet
     }
     /**
     * Gets the membershipRule
+    * Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax.
     *
     * @return string|null The membershipRule
     */
@@ -76,6 +79,7 @@ class AttributeRuleMembers extends SubjectSet
 
     /**
     * Sets the membershipRule
+    * Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax.
     *
     * @param string $val The value of the membershipRule
     *

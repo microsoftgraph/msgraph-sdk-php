@@ -25,7 +25,7 @@ class PreAuthorizedApplication extends Entity
 {
     /**
     * Gets the appId
-    * The unique identifier for the client application.
+    * The unique identifier for the application.
     *
     * @return string|null The appId
     */
@@ -40,7 +40,7 @@ class PreAuthorizedApplication extends Entity
 
     /**
     * Sets the appId
-    * The unique identifier for the client application.
+    * The unique identifier for the application.
     *
     * @param string $val The value of the appId
     *
