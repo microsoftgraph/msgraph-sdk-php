@@ -25,6 +25,7 @@ class LoggedOnUser extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the accountName
+    * User account name of the logged-on user.
     *
     * @return string|null The accountName
     */
@@ -39,6 +40,7 @@ class LoggedOnUser extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the accountName
+    * User account name of the logged-on user.
     *
     * @param string $val The value of the accountName
     *
@@ -51,6 +53,7 @@ class LoggedOnUser extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the domainName
+    * User account domain of the logged-on user.
     *
     * @return string|null The domainName
     */
@@ -65,6 +68,7 @@ class LoggedOnUser extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the domainName
+    * User account domain of the logged-on user.
     *
     * @param string $val The value of the domainName
     *

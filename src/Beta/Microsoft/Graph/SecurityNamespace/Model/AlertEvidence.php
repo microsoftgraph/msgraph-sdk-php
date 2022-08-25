@@ -26,6 +26,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the createdDateTime
+    * The time the evidence was created and added to the alert.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -44,6 +45,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the createdDateTime
+    * The time the evidence was created and added to the alert.
     *
     * @param \DateTime $val The value to assign to the createdDateTime
     *
@@ -57,6 +59,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the remediationStatus
+    * Status of the remediation action taken. The possible values are: none, remediated, prevented, blocked, notFound, active, pendingApproval, declined, notRemediated, running, unknownFutureValue.
     *
     * @return EvidenceRemediationStatus|null The remediationStatus
     */
@@ -75,6 +78,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the remediationStatus
+    * Status of the remediation action taken. The possible values are: none, remediated, prevented, blocked, notFound, active, pendingApproval, declined, notRemediated, running, unknownFutureValue.
     *
     * @param EvidenceRemediationStatus $val The value to assign to the remediationStatus
     *
@@ -87,6 +91,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the remediationStatusDetails
+    * Details about the remediation status.
     *
     * @return string|null The remediationStatusDetails
     */
@@ -101,6 +106,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the remediationStatusDetails
+    * Details about the remediation status.
     *
     * @param string $val The value of the remediationStatusDetails
     *
@@ -114,6 +120,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the roles
+    * The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'.
     *
     * @return EvidenceRole|null The roles
     */
@@ -132,6 +139,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the roles
+    * The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'.
     *
     * @param EvidenceRole $val The value to assign to the roles
     *
@@ -144,6 +152,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the tags
+    * Array of custom tags associated with an evidence instance, for example to denote a group of devices, high value assets, etc.
     *
     * @return string|null The tags
     */
@@ -158,6 +167,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tags
+    * Array of custom tags associated with an evidence instance, for example to denote a group of devices, high value assets, etc.
     *
     * @param string $val The value of the tags
     *
@@ -171,6 +181,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the verdict
+    * The decision reached by automated investigation. The possible values are: unknown, suspicious, malicious, noThreatsFound, unknownFutureValue.
     *
     * @return EvidenceVerdict|null The verdict
     */
@@ -189,6 +200,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the verdict
+    * The decision reached by automated investigation. The possible values are: unknown, suspicious, malicious, noThreatsFound, unknownFutureValue.
     *
     * @param EvidenceVerdict $val The value to assign to the verdict
     *
