@@ -699,6 +699,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the requestSignatureVerification
+    * Specifies whether this application requires Azure AD to verify the signed authentication requests.
     *
     * @return RequestSignatureVerification|null The requestSignatureVerification
     */
@@ -717,6 +718,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the requestSignatureVerification
+    * Specifies whether this application requires Azure AD to verify the signed authentication requests.
     *
     * @param RequestSignatureVerification $val The requestSignatureVerification
     *

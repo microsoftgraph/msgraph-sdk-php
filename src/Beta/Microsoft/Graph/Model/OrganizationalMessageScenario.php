@@ -31,4 +31,5 @@ class OrganizationalMessageScenario extends Enum
     */
     const ONBOARDING = "onboarding";
     const LIFECYCLE = "lifecycle";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

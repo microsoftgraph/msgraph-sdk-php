@@ -125,7 +125,7 @@ class OrganizationalMessageDetail extends Entity
 
     /**
     * Gets the frequency
-    * The frequency at which a client will see the message. Possible values are: weeklyOnce, monthlyOnce, monthlyTwice.
+    * The frequency at which a client will see the message. Possible values are: weeklyOnce, monthlyOnce, monthlyTwice, unknownFutureValue.
     *
     * @return OrganizationalMessageFrequency|null The frequency
     */
@@ -144,7 +144,7 @@ class OrganizationalMessageDetail extends Entity
 
     /**
     * Sets the frequency
-    * The frequency at which a client will see the message. Possible values are: weeklyOnce, monthlyOnce, monthlyTwice.
+    * The frequency at which a client will see the message. Possible values are: weeklyOnce, monthlyOnce, monthlyTwice, unknownFutureValue.
     *
     * @param OrganizationalMessageFrequency $val The frequency
     *
@@ -191,7 +191,7 @@ class OrganizationalMessageDetail extends Entity
 
     /**
     * Gets the scenario
-    * Indicates the scenario for the message. Possible values are: onboarding, lifecycle.
+    * Indicates the scenario for the message. Possible values are: onboarding, lifecycle, unknownFutureValue.
     *
     * @return OrganizationalMessageScenario|null The scenario
     */
@@ -210,7 +210,7 @@ class OrganizationalMessageDetail extends Entity
 
     /**
     * Sets the scenario
-    * Indicates the scenario for the message. Possible values are: onboarding, lifecycle.
+    * Indicates the scenario for the message. Possible values are: onboarding, lifecycle, unknownFutureValue.
     *
     * @param OrganizationalMessageScenario $val The scenario
     *
@@ -257,7 +257,7 @@ class OrganizationalMessageDetail extends Entity
 
     /**
     * Gets the status
-    * Indicates the deployment status of the message. Possible values are: scheduled, active, completed, cancelled.
+    * Indicates the deployment status of the message. Possible values are: scheduled, active, completed, cancelled, unknownFutureValue.
     *
     * @return OrganizationalMessageStatus|null The status
     */
@@ -276,7 +276,7 @@ class OrganizationalMessageDetail extends Entity
 
     /**
     * Sets the status
-    * Indicates the deployment status of the message. Possible values are: scheduled, active, completed, cancelled.
+    * Indicates the deployment status of the message. Possible values are: scheduled, active, completed, cancelled, unknownFutureValue.
     *
     * @param OrganizationalMessageStatus $val The status
     *
@@ -290,7 +290,7 @@ class OrganizationalMessageDetail extends Entity
 
     /**
     * Gets the surface
-    * Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding.
+    * Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding, unknownFutureValue.
     *
     * @return OrganizationalMessageSurface|null The surface
     */
@@ -309,7 +309,7 @@ class OrganizationalMessageDetail extends Entity
 
     /**
     * Sets the surface
-    * Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding.
+    * Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding, unknownFutureValue.
     *
     * @param OrganizationalMessageSurface $val The surface
     *
@@ -356,7 +356,7 @@ class OrganizationalMessageDetail extends Entity
 
     /**
     * Gets the theme
-    * Indicates the theme for the experience. Possible values are: update, training, welcomeToWindows.
+    * Indicates the theme for the experience. Possible values are: update, training, welcomeToWindows, explore, unknownFutureValue.
     *
     * @return OrganizationalMessageTheme|null The theme
     */
@@ -375,7 +375,7 @@ class OrganizationalMessageDetail extends Entity
 
     /**
     * Sets the theme
-    * Indicates the theme for the experience. Possible values are: update, training, welcomeToWindows.
+    * Indicates the theme for the experience. Possible values are: update, training, welcomeToWindows, explore, unknownFutureValue.
     *
     * @param OrganizationalMessageTheme $val The theme
     *
