@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* DeviceManagementReportFileFormat File
+* AutoRestartNotificationDismissalMethod File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* DeviceManagementReportFileFormat class
+* AutoRestartNotificationDismissalMethod class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class DeviceManagementReportFileFormat extends Enum
+class AutoRestartNotificationDismissalMethod extends Enum
 {
     /**
-    * The Enum DeviceManagementReportFileFormat
+    * The Enum AutoRestartNotificationDismissalMethod
     */
-    const CSV = "csv";
-    const PDF = "pdf";
-    const JSON = "json";
+    const NOT_CONFIGURED = "notConfigured";
+    const AUTOMATIC = "automatic";
+    const USER = "user";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
