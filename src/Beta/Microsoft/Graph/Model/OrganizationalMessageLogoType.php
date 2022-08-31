@@ -30,4 +30,5 @@ class OrganizationalMessageLogoType extends Enum
     * The Enum OrganizationalMessageLogoType
     */
     const PNG = "png";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

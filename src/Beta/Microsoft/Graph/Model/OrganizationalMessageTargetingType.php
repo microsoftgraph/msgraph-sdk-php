@@ -30,4 +30,5 @@ class OrganizationalMessageTargetingType extends Enum
     * The Enum OrganizationalMessageTargetingType
     */
     const AAD_GROUP = "aadGroup";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

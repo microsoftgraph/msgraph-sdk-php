@@ -32,4 +32,5 @@ class OrganizationalMessageSurface extends Enum
     const ACTION_CENTER = "actionCenter";
     const GET_STARTED = "getStarted";
     const SOFT_LANDING = "softLanding";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
