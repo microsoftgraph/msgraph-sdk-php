@@ -175,7 +175,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
 
     /**
     * Gets the principalId
-    * Identifier of the principal that has been granted the role eligibility. Supports $filter (eq, ne).
+    * Identifier of the principal that has been granted the role eligibility. Can be a user or a role-assignable group. You can grant only active assignments service principals.Supports $filter (eq, ne).
     *
     * @return string|null The principalId
     */
@@ -190,7 +190,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
 
     /**
     * Sets the principalId
-    * Identifier of the principal that has been granted the role eligibility. Supports $filter (eq, ne).
+    * Identifier of the principal that has been granted the role eligibility. Can be a user or a role-assignable group. You can grant only active assignments service principals.Supports $filter (eq, ne).
     *
     * @param string $val The principalId
     *

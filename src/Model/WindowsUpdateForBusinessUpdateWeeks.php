@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* DeviceManagementReportFileFormat File
+* WindowsUpdateForBusinessUpdateWeeks File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* DeviceManagementReportFileFormat class
+* WindowsUpdateForBusinessUpdateWeeks class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,16 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class DeviceManagementReportFileFormat extends Enum
+class WindowsUpdateForBusinessUpdateWeeks extends Enum
 {
     /**
-    * The Enum DeviceManagementReportFileFormat
+    * The Enum WindowsUpdateForBusinessUpdateWeeks
     */
-    const CSV = "csv";
-    const PDF = "pdf";
-    const JSON = "json";
+    const USER_DEFINED = "userDefined";
+    const FIRST_WEEK = "firstWeek";
+    const SECOND_WEEK = "secondWeek";
+    const THIRD_WEEK = "thirdWeek";
+    const FOURTH_WEEK = "fourthWeek";
+    const EVERY_WEEK = "everyWeek";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

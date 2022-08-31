@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* DeviceManagementReportFileFormat File
+* DetectedAppPlatformType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* DeviceManagementReportFileFormat class
+* DetectedAppPlatformType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,20 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class DeviceManagementReportFileFormat extends Enum
+class DetectedAppPlatformType extends Enum
 {
     /**
-    * The Enum DeviceManagementReportFileFormat
+    * The Enum DetectedAppPlatformType
     */
-    const CSV = "csv";
-    const PDF = "pdf";
-    const JSON = "json";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const UNKNOWN = "unknown";
+    const WINDOWS = "windows";
+    const WINDOWS_MOBILE = "windowsMobile";
+    const WINDOWS_HOLOGRAPHIC = "windowsHolographic";
+    const IOS = "ios";
+    const MAC_OS = "macOS";
+    const CHROME_OS = "chromeOS";
+    const ANDROID_OSP = "androidOSP";
+    const ANDROID_DEVICE_ADMINISTRATOR = "androidDeviceAdministrator";
+    const ANDROID_WORK_PROFILE = "androidWorkProfile";
+    const ANDROID_DEDICATED_AND_FULLY_MANAGED = "androidDedicatedAndFullyManaged";
 }

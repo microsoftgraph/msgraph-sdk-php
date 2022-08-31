@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* DeviceManagementReportFileFormat File
+* WindowsUpdateNotificationDisplayOption File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* DeviceManagementReportFileFormat class
+* WindowsUpdateNotificationDisplayOption class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,14 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class DeviceManagementReportFileFormat extends Enum
+class WindowsUpdateNotificationDisplayOption extends Enum
 {
     /**
-    * The Enum DeviceManagementReportFileFormat
+    * The Enum WindowsUpdateNotificationDisplayOption
     */
-    const CSV = "csv";
-    const PDF = "pdf";
-    const JSON = "json";
+    const NOT_CONFIGURED = "notConfigured";
+    const DEFAULT_NOTIFICATIONS = "defaultNotifications";
+    const RESTART_WARNINGS_ONLY = "restartWarningsOnly";
+    const DISABLE_ALL_NOTIFICATIONS = "disableAllNotifications";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
