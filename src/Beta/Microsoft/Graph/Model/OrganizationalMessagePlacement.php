@@ -34,4 +34,5 @@ class OrganizationalMessagePlacement extends Enum
     const CARD1 = "card1";
     const CARD2 = "card2";
     const CARD3 = "card3";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

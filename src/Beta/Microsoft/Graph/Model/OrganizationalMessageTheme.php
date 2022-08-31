@@ -32,4 +32,6 @@ class OrganizationalMessageTheme extends Enum
     const UPDATE = "update";
     const TRAINING = "training";
     const WELCOME_TO_WINDOWS = "welcomeToWindows";
+    const EXPLORE = "explore";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

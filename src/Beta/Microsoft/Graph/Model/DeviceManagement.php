@@ -339,6 +339,39 @@ class DeviceManagement extends Entity
     }
 
     /**
+    * Gets the dataProcessorServiceForWindowsFeaturesOnboarding
+    * A configuration entity for MEM features that utilize Data Processor Service for Windows (DPSW) data.
+    *
+    * @return DataProcessorServiceForWindowsFeaturesOnboarding|null The dataProcessorServiceForWindowsFeaturesOnboarding
+    */
+    public function getDataProcessorServiceForWindowsFeaturesOnboarding()
+    {
+        if (array_key_exists("dataProcessorServiceForWindowsFeaturesOnboarding", $this->_propDict)) {
+            if (is_a($this->_propDict["dataProcessorServiceForWindowsFeaturesOnboarding"], "\Beta\Microsoft\Graph\Model\DataProcessorServiceForWindowsFeaturesOnboarding") || is_null($this->_propDict["dataProcessorServiceForWindowsFeaturesOnboarding"])) {
+                return $this->_propDict["dataProcessorServiceForWindowsFeaturesOnboarding"];
+            } else {
+                $this->_propDict["dataProcessorServiceForWindowsFeaturesOnboarding"] = new DataProcessorServiceForWindowsFeaturesOnboarding($this->_propDict["dataProcessorServiceForWindowsFeaturesOnboarding"]);
+                return $this->_propDict["dataProcessorServiceForWindowsFeaturesOnboarding"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the dataProcessorServiceForWindowsFeaturesOnboarding
+    * A configuration entity for MEM features that utilize Data Processor Service for Windows (DPSW) data.
+    *
+    * @param DataProcessorServiceForWindowsFeaturesOnboarding $val The dataProcessorServiceForWindowsFeaturesOnboarding
+    *
+    * @return DeviceManagement
+    */
+    public function setDataProcessorServiceForWindowsFeaturesOnboarding($val)
+    {
+        $this->_propDict["dataProcessorServiceForWindowsFeaturesOnboarding"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the deviceProtectionOverview
     * Device protection overview.
     *

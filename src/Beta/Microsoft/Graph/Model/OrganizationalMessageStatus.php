@@ -33,4 +33,5 @@ class OrganizationalMessageStatus extends Enum
     const ACTIVE = "active";
     const COMPLETED = "completed";
     const CANCELLED = "cancelled";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

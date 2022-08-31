@@ -26,6 +26,7 @@ class MembershipOutlierInsight extends GovernanceInsight
 {
     /**
     * Gets the containerId
+    * Indicates the identifier of the container, for example, a group ID.
     *
     * @return string|null The containerId
     */
@@ -40,6 +41,7 @@ class MembershipOutlierInsight extends GovernanceInsight
 
     /**
     * Sets the containerId
+    * Indicates the identifier of the container, for example, a group ID.
     *
     * @param string $val The containerId
     *
@@ -53,6 +55,7 @@ class MembershipOutlierInsight extends GovernanceInsight
 
     /**
     * Gets the memberId
+    * Indicates the identifier of the user.
     *
     * @return string|null The memberId
     */
@@ -67,6 +70,7 @@ class MembershipOutlierInsight extends GovernanceInsight
 
     /**
     * Sets the memberId
+    * Indicates the identifier of the user.
     *
     * @param string $val The memberId
     *
@@ -80,6 +84,7 @@ class MembershipOutlierInsight extends GovernanceInsight
 
     /**
     * Gets the outlierContainerType
+    * Indicates the type of container. The possible values are: group, unknownFutureValue.
     *
     * @return OutlierContainerType|null The outlierContainerType
     */
@@ -98,6 +103,7 @@ class MembershipOutlierInsight extends GovernanceInsight
 
     /**
     * Sets the outlierContainerType
+    * Indicates the type of container. The possible values are: group, unknownFutureValue.
     *
     * @param OutlierContainerType $val The outlierContainerType
     *
@@ -111,6 +117,7 @@ class MembershipOutlierInsight extends GovernanceInsight
 
     /**
     * Gets the outlierMemberType
+    * Indicates the type of outlier member. The possible values are: user, unknownFutureValue.
     *
     * @return OutlierMemberType|null The outlierMemberType
     */
@@ -129,6 +136,7 @@ class MembershipOutlierInsight extends GovernanceInsight
 
     /**
     * Sets the outlierMemberType
+    * Indicates the type of outlier member. The possible values are: user, unknownFutureValue.
     *
     * @param OutlierMemberType $val The outlierMemberType
     *
@@ -142,6 +150,7 @@ class MembershipOutlierInsight extends GovernanceInsight
 
     /**
     * Gets the container
+    * Navigation link to the container directory object. For example, to a group.
     *
     * @return DirectoryObject|null The container
     */
@@ -160,6 +169,7 @@ class MembershipOutlierInsight extends GovernanceInsight
 
     /**
     * Sets the container
+    * Navigation link to the container directory object. For example, to a group.
     *
     * @param DirectoryObject $val The container
     *
@@ -173,6 +183,7 @@ class MembershipOutlierInsight extends GovernanceInsight
 
     /**
     * Gets the member
+    * Navigation link to a member object. For example, to a user.
     *
     * @return DirectoryObject|null The member
     */
@@ -191,6 +202,7 @@ class MembershipOutlierInsight extends GovernanceInsight
 
     /**
     * Sets the member
+    * Navigation link to a member object. For example, to a user.
     *
     * @param DirectoryObject $val The member
     *

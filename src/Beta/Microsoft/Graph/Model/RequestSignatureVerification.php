@@ -26,6 +26,7 @@ class RequestSignatureVerification extends Entity
 
     /**
     * Gets the allowedWeakAlgorithms
+    * Specifies whether this application accepts weak algorithms.  The possible values are: rsaSha1, unknownFutureValue.
     *
     * @return WeakAlgorithms|null The allowedWeakAlgorithms
     */
@@ -44,6 +45,7 @@ class RequestSignatureVerification extends Entity
 
     /**
     * Sets the allowedWeakAlgorithms
+    * Specifies whether this application accepts weak algorithms.  The possible values are: rsaSha1, unknownFutureValue.
     *
     * @param WeakAlgorithms $val The value to assign to the allowedWeakAlgorithms
     *
@@ -56,6 +58,7 @@ class RequestSignatureVerification extends Entity
     }
     /**
     * Gets the isSignedRequestRequired
+    * Specifies whether signed authentication requests for this application should be required.
     *
     * @return bool|null The isSignedRequestRequired
     */
@@ -70,6 +73,7 @@ class RequestSignatureVerification extends Entity
 
     /**
     * Sets the isSignedRequestRequired
+    * Specifies whether signed authentication requests for this application should be required.
     *
     * @param bool $val The value of the isSignedRequestRequired
     *
