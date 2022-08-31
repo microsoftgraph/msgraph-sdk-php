@@ -26,6 +26,7 @@ class FileEvidence extends AlertEvidence
 
     /**
     * Gets the detectionStatus
+    * The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
     *
     * @return DetectionStatus|null The detectionStatus
     */
@@ -44,6 +45,7 @@ class FileEvidence extends AlertEvidence
 
     /**
     * Sets the detectionStatus
+    * The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
     *
     * @param DetectionStatus $val The value to assign to the detectionStatus
     *
@@ -57,6 +59,7 @@ class FileEvidence extends AlertEvidence
 
     /**
     * Gets the fileDetails
+    * The file details.
     *
     * @return FileDetails|null The fileDetails
     */
@@ -75,6 +78,7 @@ class FileEvidence extends AlertEvidence
 
     /**
     * Sets the fileDetails
+    * The file details.
     *
     * @param FileDetails $val The value to assign to the fileDetails
     *
@@ -87,6 +91,7 @@ class FileEvidence extends AlertEvidence
     }
     /**
     * Gets the mdeDeviceId
+    * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
     *
     * @return string|null The mdeDeviceId
     */
@@ -101,6 +106,7 @@ class FileEvidence extends AlertEvidence
 
     /**
     * Sets the mdeDeviceId
+    * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
     *
     * @param string $val The value of the mdeDeviceId
     *

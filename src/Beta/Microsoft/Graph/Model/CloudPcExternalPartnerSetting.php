@@ -26,6 +26,7 @@ class CloudPcExternalPartnerSetting extends Entity
 {
     /**
     * Gets the enableConnection
+    * Enable or disable the connection to an external partner. If true, an external partner API will accept incoming calls from external partners. Required. Supports $filter (eq).
     *
     * @return bool|null The enableConnection
     */
@@ -40,6 +41,7 @@ class CloudPcExternalPartnerSetting extends Entity
 
     /**
     * Sets the enableConnection
+    * Enable or disable the connection to an external partner. If true, an external partner API will accept incoming calls from external partners. Required. Supports $filter (eq).
     *
     * @param bool $val The enableConnection
     *
@@ -53,6 +55,7 @@ class CloudPcExternalPartnerSetting extends Entity
 
     /**
     * Gets the lastSyncDateTime
+    * Last data sync time for this external partner. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime|null The lastSyncDateTime
     */
@@ -71,6 +74,7 @@ class CloudPcExternalPartnerSetting extends Entity
 
     /**
     * Sets the lastSyncDateTime
+    * Last data sync time for this external partner. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The lastSyncDateTime
     *
@@ -84,6 +88,7 @@ class CloudPcExternalPartnerSetting extends Entity
 
     /**
     * Gets the partnerId
+    * The external partner ID.
     *
     * @return string|null The partnerId
     */
@@ -98,6 +103,7 @@ class CloudPcExternalPartnerSetting extends Entity
 
     /**
     * Sets the partnerId
+    * The external partner ID.
     *
     * @param string $val The partnerId
     *
@@ -111,6 +117,7 @@ class CloudPcExternalPartnerSetting extends Entity
 
     /**
     * Gets the status
+    * The status of the connection to the external partner. The possible values are: notAvailable, available, healthy, unhealthy, unknownFutureValue.
     *
     * @return CloudPcExternalPartnerStatus|null The status
     */
@@ -129,6 +136,7 @@ class CloudPcExternalPartnerSetting extends Entity
 
     /**
     * Sets the status
+    * The status of the connection to the external partner. The possible values are: notAvailable, available, healthy, unhealthy, unknownFutureValue.
     *
     * @param CloudPcExternalPartnerStatus $val The status
     *
@@ -142,6 +150,7 @@ class CloudPcExternalPartnerSetting extends Entity
 
     /**
     * Gets the statusDetails
+    * Status details message.
     *
     * @return string|null The statusDetails
     */
@@ -156,6 +165,7 @@ class CloudPcExternalPartnerSetting extends Entity
 
     /**
     * Sets the statusDetails
+    * Status details message.
     *
     * @param string $val The statusDetails
     *

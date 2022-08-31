@@ -465,7 +465,7 @@ class PolicyRoot extends Entity
 
      /**
      * Gets the roleManagementPolicies
-    * Represents the role management policies.
+    * Specifies the various policies associated with scopes and roles.
      *
      * @return array|null The roleManagementPolicies
      */
@@ -480,7 +480,7 @@ class PolicyRoot extends Entity
 
     /**
     * Sets the roleManagementPolicies
-    * Represents the role management policies.
+    * Specifies the various policies associated with scopes and roles.
     *
     * @param UnifiedRoleManagementPolicy[] $val The roleManagementPolicies
     *
@@ -495,7 +495,7 @@ class PolicyRoot extends Entity
 
      /**
      * Gets the roleManagementPolicyAssignments
-    * Represents the role management policy assignments.
+    * The assignment of a role management policy to a role definition object.
      *
      * @return array|null The roleManagementPolicyAssignments
      */
@@ -510,7 +510,7 @@ class PolicyRoot extends Entity
 
     /**
     * Sets the roleManagementPolicyAssignments
-    * Represents the role management policy assignments.
+    * The assignment of a role management policy to a role definition object.
     *
     * @param UnifiedRoleManagementPolicyAssignment[] $val The roleManagementPolicyAssignments
     *

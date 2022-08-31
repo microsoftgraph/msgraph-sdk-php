@@ -25,6 +25,7 @@ class UserAccount extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the accountName
+    * The user account's displayed name.
     *
     * @return string|null The accountName
     */
@@ -39,6 +40,7 @@ class UserAccount extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the accountName
+    * The user account's displayed name.
     *
     * @param string $val The value of the accountName
     *
@@ -51,6 +53,7 @@ class UserAccount extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the azureAdUserId
+    * The user object identifier in Azure AD.
     *
     * @return string|null The azureAdUserId
     */
@@ -65,6 +68,7 @@ class UserAccount extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the azureAdUserId
+    * The user object identifier in Azure AD.
     *
     * @param string $val The value of the azureAdUserId
     *
@@ -77,6 +81,7 @@ class UserAccount extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the domainName
+    * The name of the Active Directory domain of which the user is a member.
     *
     * @return string|null The domainName
     */
@@ -91,6 +96,7 @@ class UserAccount extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the domainName
+    * The name of the Active Directory domain of which the user is a member.
     *
     * @param string $val The value of the domainName
     *
@@ -103,6 +109,7 @@ class UserAccount extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userPrincipalName
+    * The user principal name of the account in Azure AD.
     *
     * @return string|null The userPrincipalName
     */
@@ -117,6 +124,7 @@ class UserAccount extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userPrincipalName
+    * The user principal name of the account in Azure AD.
     *
     * @param string $val The value of the userPrincipalName
     *
@@ -129,6 +137,7 @@ class UserAccount extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userSid
+    * The local security identifier of the user account.
     *
     * @return string|null The userSid
     */
@@ -143,6 +152,7 @@ class UserAccount extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userSid
+    * The local security identifier of the user account.
     *
     * @param string $val The value of the userSid
     *

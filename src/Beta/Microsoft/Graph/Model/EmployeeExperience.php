@@ -58,6 +58,7 @@ class EmployeeExperience implements \JsonSerializable
 
      /**
      * Gets the learningProviders
+    * A collection of learning providers.
      *
      * @return array|null The learningProviders
      */
@@ -72,6 +73,7 @@ class EmployeeExperience implements \JsonSerializable
 
     /**
     * Sets the learningProviders
+    * A collection of learning providers.
     *
     * @param LearningProvider[] $val The learningProviders
     *

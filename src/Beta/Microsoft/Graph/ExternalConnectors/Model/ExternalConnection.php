@@ -25,6 +25,39 @@ namespace Beta\Microsoft\Graph\ExternalConnectors\Model;
 class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
+    * Gets the activitySettings
+    * Collects configurable settings related to activities involving connector content.
+    *
+    * @return ActivitySettings|null The activitySettings
+    */
+    public function getActivitySettings()
+    {
+        if (array_key_exists("activitySettings", $this->_propDict)) {
+            if (is_a($this->_propDict["activitySettings"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\ActivitySettings") || is_null($this->_propDict["activitySettings"])) {
+                return $this->_propDict["activitySettings"];
+            } else {
+                $this->_propDict["activitySettings"] = new ActivitySettings($this->_propDict["activitySettings"]);
+                return $this->_propDict["activitySettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the activitySettings
+    * Collects configurable settings related to activities involving connector content.
+    *
+    * @param ActivitySettings $val The activitySettings
+    *
+    * @return ExternalConnection
+    */
+    public function setActivitySettings($val)
+    {
+        $this->_propDict["activitySettings"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the complianceSettings
     *
     * @return ComplianceSettings|null The complianceSettings

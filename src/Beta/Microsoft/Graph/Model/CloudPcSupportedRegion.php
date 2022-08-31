@@ -55,6 +55,7 @@ class CloudPcSupportedRegion extends Entity
 
     /**
     * Gets the regionStatus
+    * The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
     *
     * @return CloudPcSupportedRegionStatus|null The regionStatus
     */
@@ -73,6 +74,7 @@ class CloudPcSupportedRegion extends Entity
 
     /**
     * Sets the regionStatus
+    * The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
     *
     * @param CloudPcSupportedRegionStatus $val The regionStatus
     *
@@ -81,6 +83,37 @@ class CloudPcSupportedRegion extends Entity
     public function setRegionStatus($val)
     {
         $this->_propDict["regionStatus"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the supportedSolution
+    *
+    * @return CloudPcManagementService|null The supportedSolution
+    */
+    public function getSupportedSolution()
+    {
+        if (array_key_exists("supportedSolution", $this->_propDict)) {
+            if (is_a($this->_propDict["supportedSolution"], "\Beta\Microsoft\Graph\Model\CloudPcManagementService") || is_null($this->_propDict["supportedSolution"])) {
+                return $this->_propDict["supportedSolution"];
+            } else {
+                $this->_propDict["supportedSolution"] = new CloudPcManagementService($this->_propDict["supportedSolution"]);
+                return $this->_propDict["supportedSolution"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the supportedSolution
+    *
+    * @param CloudPcManagementService $val The supportedSolution
+    *
+    * @return CloudPcSupportedRegion
+    */
+    public function setSupportedSolution($val)
+    {
+        $this->_propDict["supportedSolution"] = $val;
         return $this;
     }
 

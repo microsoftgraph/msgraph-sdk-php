@@ -27,7 +27,7 @@ class Authentication extends Entity
 
      /**
      * Gets the emailMethods
-    * Represents the email addresses registered to a user for authentication.
+    * The email address registered to a user for authentication.
      *
      * @return array|null The emailMethods
      */
@@ -42,7 +42,7 @@ class Authentication extends Entity
 
     /**
     * Sets the emailMethods
-    * Represents the email addresses registered to a user for authentication.
+    * The email address registered to a user for authentication.
     *
     * @param EmailAuthenticationMethod[] $val The emailMethods
     *
@@ -147,6 +147,7 @@ class Authentication extends Entity
 
      /**
      * Gets the operations
+    * Represents the status of a long-running operation.
      *
      * @return array|null The operations
      */
@@ -161,6 +162,7 @@ class Authentication extends Entity
 
     /**
     * Sets the operations
+    * Represents the status of a long-running operation.
     *
     * @param LongRunningOperation[] $val The operations
     *
@@ -175,7 +177,7 @@ class Authentication extends Entity
 
      /**
      * Gets the passwordMethods
-    * Represents the details of the password authentication method registered to a user for authentication.
+    * Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
      *
      * @return array|null The passwordMethods
      */
@@ -190,7 +192,7 @@ class Authentication extends Entity
 
     /**
     * Sets the passwordMethods
-    * Represents the details of the password authentication method registered to a user for authentication.
+    * Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
     *
     * @param PasswordAuthenticationMethod[] $val The passwordMethods
     *
@@ -205,7 +207,7 @@ class Authentication extends Entity
 
      /**
      * Gets the phoneMethods
-    * Represents the phone registered to a user for authentication.
+    * The phone numbers registered to a user for authentication.
      *
      * @return array|null The phoneMethods
      */
@@ -220,7 +222,7 @@ class Authentication extends Entity
 
     /**
     * Sets the phoneMethods
-    * Represents the phone registered to a user for authentication.
+    * The phone numbers registered to a user for authentication.
     *
     * @param PhoneAuthenticationMethod[] $val The phoneMethods
     *
@@ -235,6 +237,7 @@ class Authentication extends Entity
 
      /**
      * Gets the softwareOathMethods
+    * The software OATH TOTP applications registered to a user for authentication.
      *
      * @return array|null The softwareOathMethods
      */
@@ -249,6 +252,7 @@ class Authentication extends Entity
 
     /**
     * Sets the softwareOathMethods
+    * The software OATH TOTP applications registered to a user for authentication.
     *
     * @param SoftwareOathAuthenticationMethod[] $val The softwareOathMethods
     *

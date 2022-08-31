@@ -87,6 +87,34 @@ class IdentityContainer implements \JsonSerializable
 
 
      /**
+     * Gets the authenticationEventListeners
+     *
+     * @return array|null The authenticationEventListeners
+     */
+    public function getAuthenticationEventListeners()
+    {
+        if (array_key_exists("authenticationEventListeners", $this->_propDict)) {
+           return $this->_propDict["authenticationEventListeners"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the authenticationEventListeners
+    *
+    * @param AuthenticationEventListener[] $val The authenticationEventListeners
+    *
+    * @return IdentityContainer
+    */
+    public function setAuthenticationEventListeners($val)
+    {
+        $this->_propDict["authenticationEventListeners"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the b2cUserFlows
     * Represents entry point for B2C identity userflows.
      *
@@ -142,6 +170,34 @@ class IdentityContainer implements \JsonSerializable
     public function setB2xUserFlows($val)
     {
         $this->_propDict["b2xUserFlows"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the customAuthenticationExtensions
+     *
+     * @return array|null The customAuthenticationExtensions
+     */
+    public function getCustomAuthenticationExtensions()
+    {
+        if (array_key_exists("customAuthenticationExtensions", $this->_propDict)) {
+           return $this->_propDict["customAuthenticationExtensions"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customAuthenticationExtensions
+    *
+    * @param CustomAuthenticationExtension[] $val The customAuthenticationExtensions
+    *
+    * @return IdentityContainer
+    */
+    public function setCustomAuthenticationExtensions($val)
+    {
+        $this->_propDict["customAuthenticationExtensions"] = $val;
         return $this;
     }
 

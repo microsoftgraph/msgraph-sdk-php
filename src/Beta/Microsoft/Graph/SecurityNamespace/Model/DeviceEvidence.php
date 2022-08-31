@@ -25,6 +25,7 @@ class DeviceEvidence extends AlertEvidence
 {
     /**
     * Gets the azureAdDeviceId
+    * A unique identifier assigned to a device by Azure Active Directory (Azure AD) when device is Azure AD-joined.
     *
     * @return string|null The azureAdDeviceId
     */
@@ -39,6 +40,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the azureAdDeviceId
+    * A unique identifier assigned to a device by Azure Active Directory (Azure AD) when device is Azure AD-joined.
     *
     * @param string $val The value of the azureAdDeviceId
     *
@@ -52,6 +54,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Gets the defenderAvStatus
+    * State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
     *
     * @return DefenderAvStatus|null The defenderAvStatus
     */
@@ -70,6 +73,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the defenderAvStatus
+    * State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
     *
     * @param DefenderAvStatus $val The value to assign to the defenderAvStatus
     *
@@ -82,6 +86,7 @@ class DeviceEvidence extends AlertEvidence
     }
     /**
     * Gets the deviceDnsName
+    * The fully qualified domain name (FQDN) for the device.
     *
     * @return string|null The deviceDnsName
     */
@@ -96,6 +101,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the deviceDnsName
+    * The fully qualified domain name (FQDN) for the device.
     *
     * @param string $val The value of the deviceDnsName
     *
@@ -109,6 +115,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Gets the firstSeenDateTime
+    * The date and time when the device was first seen.
     *
     * @return \DateTime|null The firstSeenDateTime
     */
@@ -127,6 +134,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the firstSeenDateTime
+    * The date and time when the device was first seen.
     *
     * @param \DateTime $val The value to assign to the firstSeenDateTime
     *
@@ -140,6 +148,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Gets the healthStatus
+    * The health state of the device.The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
     *
     * @return DeviceHealthStatus|null The healthStatus
     */
@@ -158,6 +167,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the healthStatus
+    * The health state of the device.The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
     *
     * @param DeviceHealthStatus $val The value to assign to the healthStatus
     *
@@ -171,6 +181,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Gets the loggedOnUsers
+    * Users that were logged on the machine during the time of the alert.
     *
     * @return LoggedOnUser|null The loggedOnUsers
     */
@@ -189,6 +200,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the loggedOnUsers
+    * Users that were logged on the machine during the time of the alert.
     *
     * @param LoggedOnUser $val The value to assign to the loggedOnUsers
     *
@@ -201,6 +213,7 @@ class DeviceEvidence extends AlertEvidence
     }
     /**
     * Gets the mdeDeviceId
+    * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
     *
     * @return string|null The mdeDeviceId
     */
@@ -215,6 +228,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the mdeDeviceId
+    * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
     *
     * @param string $val The value of the mdeDeviceId
     *
@@ -228,6 +242,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Gets the onboardingStatus
+    * The status of the machine onboarding to Microsoft Defender for Endpoint.The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
     *
     * @return OnboardingStatus|null The onboardingStatus
     */
@@ -246,6 +261,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the onboardingStatus
+    * The status of the machine onboarding to Microsoft Defender for Endpoint.The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
     *
     * @param OnboardingStatus $val The value to assign to the onboardingStatus
     *
@@ -258,6 +274,7 @@ class DeviceEvidence extends AlertEvidence
     }
     /**
     * Gets the osBuild
+    * The build version for the operating system the device is running.
     *
     * @return int|null The osBuild
     */
@@ -272,6 +289,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the osBuild
+    * The build version for the operating system the device is running.
     *
     * @param int $val The value of the osBuild
     *
@@ -284,6 +302,7 @@ class DeviceEvidence extends AlertEvidence
     }
     /**
     * Gets the osPlatform
+    * The operating system platform the device is running.
     *
     * @return string|null The osPlatform
     */
@@ -298,6 +317,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the osPlatform
+    * The operating system platform the device is running.
     *
     * @param string $val The value of the osPlatform
     *
@@ -310,6 +330,7 @@ class DeviceEvidence extends AlertEvidence
     }
     /**
     * Gets the rbacGroupId
+    * The ID of the role-based access control (RBAC) device group.
     *
     * @return int|null The rbacGroupId
     */
@@ -324,6 +345,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the rbacGroupId
+    * The ID of the role-based access control (RBAC) device group.
     *
     * @param int $val The value of the rbacGroupId
     *
@@ -336,6 +358,7 @@ class DeviceEvidence extends AlertEvidence
     }
     /**
     * Gets the rbacGroupName
+    * The name of the RBAC device group.
     *
     * @return string|null The rbacGroupName
     */
@@ -350,6 +373,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the rbacGroupName
+    * The name of the RBAC device group.
     *
     * @param string $val The value of the rbacGroupName
     *
@@ -363,6 +387,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Gets the riskScore
+    * Risk score as evaluated by Microsoft Defender for Endpoint. The possible values are: none, informational, low, medium, high, unknownFutureValue.
     *
     * @return DeviceRiskScore|null The riskScore
     */
@@ -381,6 +406,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the riskScore
+    * Risk score as evaluated by Microsoft Defender for Endpoint. The possible values are: none, informational, low, medium, high, unknownFutureValue.
     *
     * @param DeviceRiskScore $val The value to assign to the riskScore
     *
@@ -393,6 +419,7 @@ class DeviceEvidence extends AlertEvidence
     }
     /**
     * Gets the version
+    * The version of the operating system platform.
     *
     * @return string|null The version
     */
@@ -407,6 +434,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the version
+    * The version of the operating system platform.
     *
     * @param string $val The value of the version
     *
@@ -420,6 +448,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Gets the vmMetadata
+    * Metadata of the virtual machine (VM) on which Microsoft Defender for Endpoint is running.
     *
     * @return VmMetadata|null The vmMetadata
     */
@@ -438,6 +467,7 @@ class DeviceEvidence extends AlertEvidence
 
     /**
     * Sets the vmMetadata
+    * Metadata of the virtual machine (VM) on which Microsoft Defender for Endpoint is running.
     *
     * @param VmMetadata $val The value to assign to the vmMetadata
     *

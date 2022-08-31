@@ -54,7 +54,7 @@ class ParticipantInfo extends Entity
 
     /**
     * Gets the endpointType
-    * The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
+    * The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only.
     *
     * @return EndpointType|null The endpointType
     */
@@ -73,7 +73,7 @@ class ParticipantInfo extends Entity
 
     /**
     * Sets the endpointType
-    * The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
+    * The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only.
     *
     * @param EndpointType $val The value to assign to the endpointType
     *

@@ -25,6 +25,7 @@ class CloudPcHealthCheckItem extends Entity
 {
     /**
     * Gets the additionalDetails
+    * Additional message for this health check.
     *
     * @return string|null The additionalDetails
     */
@@ -39,6 +40,7 @@ class CloudPcHealthCheckItem extends Entity
 
     /**
     * Sets the additionalDetails
+    * Additional message for this health check.
     *
     * @param string $val The value of the additionalDetails
     *
@@ -51,6 +53,7 @@ class CloudPcHealthCheckItem extends Entity
     }
     /**
     * Gets the displayName
+    * The connectivity health check item name.
     *
     * @return string|null The displayName
     */
@@ -65,6 +68,7 @@ class CloudPcHealthCheckItem extends Entity
 
     /**
     * Sets the displayName
+    * The connectivity health check item name.
     *
     * @param string $val The value of the displayName
     *
@@ -78,6 +82,7 @@ class CloudPcHealthCheckItem extends Entity
 
     /**
     * Gets the lastHealthCheckDateTime
+    * Timestamp when the last check occurs. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastHealthCheckDateTime
     */
@@ -96,6 +101,7 @@ class CloudPcHealthCheckItem extends Entity
 
     /**
     * Sets the lastHealthCheckDateTime
+    * Timestamp when the last check occurs. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the lastHealthCheckDateTime
     *
@@ -109,6 +115,7 @@ class CloudPcHealthCheckItem extends Entity
 
     /**
     * Gets the result
+    * The result of this health check item. Possible values are: unknown, success, failure.
     *
     * @return CloudPcConnectivityEventResult|null The result
     */
@@ -127,6 +134,7 @@ class CloudPcHealthCheckItem extends Entity
 
     /**
     * Sets the result
+    * The result of this health check item. Possible values are: unknown, success, failure.
     *
     * @param CloudPcConnectivityEventResult $val The value to assign to the result
     *

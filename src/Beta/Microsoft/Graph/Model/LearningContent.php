@@ -22,41 +22,11 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class LearningContent implements \JsonSerializable
+class LearningContent extends Entity
 {
     /**
-    * The array of properties available
-    * to the model
-    *
-    * @var array $_propDict
-    */
-    protected $_propDict;
-
-    /**
-    * Construct a new LearningContent
-    *
-    * @param array $propDict A list of properties to set
-    */
-    function __construct($propDict = array())
-    {
-        if (!is_array($propDict)) {
-           $propDict = array();
-        }
-        $this->_propDict = $propDict;
-    }
-
-    /**
-    * Gets the property dictionary of the LearningContent
-    *
-    * @return array The list of properties
-    */
-    public function getProperties()
-    {
-        return $this->_propDict;
-    }
-
-    /**
     * Gets the additionalTags
+    * Keywords, topics, and other tags associated with the learning content. Optional.
     *
     * @return string|null The additionalTags
     */
@@ -71,6 +41,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the additionalTags
+    * Keywords, topics, and other tags associated with the learning content. Optional.
     *
     * @param string $val The additionalTags
     *
@@ -84,6 +55,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Gets the contentWebUrl
+    * The content web URL for the learning content. Required.
     *
     * @return string|null The contentWebUrl
     */
@@ -98,6 +70,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the contentWebUrl
+    * The content web URL for the learning content. Required.
     *
     * @param string $val The contentWebUrl
     *
@@ -111,6 +84,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Gets the contributor
+    * The author, creator, or contributor of the learning content. Optional.
     *
     * @return string|null The contributor
     */
@@ -125,6 +99,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the contributor
+    * The author, creator, or contributor of the learning content. Optional.
     *
     * @param string $val The contributor
     *
@@ -138,6 +113,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Gets the createdDateTime
+    * The date when the learning content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -156,6 +132,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the createdDateTime
+    * The date when the learning content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -169,6 +146,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Gets the description
+    * The description or summary for the learning content. Optional.
     *
     * @return string|null The description
     */
@@ -183,6 +161,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the description
+    * The description or summary for the learning content. Optional.
     *
     * @param string $val The description
     *
@@ -196,6 +175,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Gets the duration
+    * The duration of the learning content in seconds. Optional.
     *
     * @return \DateInterval|null The duration
     */
@@ -214,6 +194,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the duration
+    * The duration of the learning content in seconds. Optional.
     *
     * @param \DateInterval $val The duration
     *
@@ -227,6 +208,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Gets the externalId
+    * Unique external content ID for the learning content. Required.
     *
     * @return string|null The externalId
     */
@@ -241,6 +223,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the externalId
+    * Unique external content ID for the learning content. Required.
     *
     * @param string $val The externalId
     *
@@ -254,6 +237,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Gets the format
+    * The format of the learning content. For example, Course, Video, Book, Book Summary, Audiobook Summary. Optional.
     *
     * @return string|null The format
     */
@@ -268,6 +252,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the format
+    * The format of the learning content. For example, Course, Video, Book, Book Summary, Audiobook Summary. Optional.
     *
     * @param string $val The format
     *
@@ -281,6 +266,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Gets the isActive
+    * Indicates whether the content is active or not. Inactive content will not show up in the UI. The default value is true. Optional.
     *
     * @return bool|null The isActive
     */
@@ -295,6 +281,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the isActive
+    * Indicates whether the content is active or not. Inactive content will not show up in the UI. The default value is true. Optional.
     *
     * @param bool $val The isActive
     *
@@ -308,6 +295,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Gets the isPremium
+    * Indicates whether the learning content requires the user to sign-in on the learning provider platform or not. The default value is false. Optional.
     *
     * @return bool|null The isPremium
     */
@@ -322,6 +310,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the isPremium
+    * Indicates whether the learning content requires the user to sign-in on the learning provider platform or not. The default value is false. Optional.
     *
     * @param bool $val The isPremium
     *
@@ -335,6 +324,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Gets the isSearchable
+    * Indicates whether the learning content is searchable or not. The default value is true. Optional.
     *
     * @return bool|null The isSearchable
     */
@@ -349,6 +339,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the isSearchable
+    * Indicates whether the learning content is searchable or not. The default value is true. Optional.
     *
     * @param bool $val The isSearchable
     *
@@ -362,6 +353,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Gets the languageTag
+    * The language of the learning content, for example, en-us or fr-fr. Required.
     *
     * @return string|null The languageTag
     */
@@ -376,6 +368,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the languageTag
+    * The language of the learning content, for example, en-us or fr-fr. Required.
     *
     * @param string $val The languageTag
     *
@@ -389,6 +382,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Gets the lastModifiedDateTime
+    * The date when the learning content was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -407,6 +401,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the lastModifiedDateTime
+    * The date when the learning content was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -420,6 +415,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Gets the numberOfPages
+    * The number of pages of the learning content, for example, 9. Optional.
     *
     * @return int|null The numberOfPages
     */
@@ -434,6 +430,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the numberOfPages
+    * The number of pages of the learning content, for example, 9. Optional.
     *
     * @param int $val The numberOfPages
     *
@@ -447,6 +444,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Gets the skillTags
+    * The skills tags associated with the learning content. Optional.
     *
     * @return string|null The skillTags
     */
@@ -461,6 +459,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the skillTags
+    * The skills tags associated with the learning content. Optional.
     *
     * @param string $val The skillTags
     *
@@ -474,6 +473,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Gets the sourceName
+    * The source name of the learning content, such as LinkedIn Learning or Coursera. Optional.
     *
     * @return string|null The sourceName
     */
@@ -488,6 +488,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the sourceName
+    * The source name of the learning content, such as LinkedIn Learning or Coursera. Optional.
     *
     * @param string $val The sourceName
     *
@@ -501,6 +502,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Gets the thumbnailWebUrl
+    * The URL of learning content thumbnail image. Optional.
     *
     * @return string|null The thumbnailWebUrl
     */
@@ -515,6 +517,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the thumbnailWebUrl
+    * The URL of learning content thumbnail image. Optional.
     *
     * @param string $val The thumbnailWebUrl
     *
@@ -528,6 +531,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Gets the title
+    * The title of the learning content. Required.
     *
     * @return string|null The title
     */
@@ -542,6 +546,7 @@ class LearningContent implements \JsonSerializable
 
     /**
     * Sets the title
+    * The title of the learning content. Required.
     *
     * @param string $val The title
     *
@@ -553,51 +558,4 @@ class LearningContent implements \JsonSerializable
         return $this;
     }
 
-    /**
-    * Gets the ODataType
-    *
-    * @return string|null The ODataType
-    */
-    public function getODataType()
-    {
-        if (array_key_exists('@odata.type', $this->_propDict)) {
-            return $this->_propDict["@odata.type"];
-        }
-        return null;
-    }
-
-    /**
-    * Sets the ODataType
-    *
-    * @param string $val The ODataType
-    *
-    * @return LearningContent
-    */
-    public function setODataType($val)
-    {
-        $this->_propDict["@odata.type"] = $val;
-        return $this;
-    }
-
-    /**
-    * Serializes the object by property array
-    * Manually serialize DateTime into RFC3339 format
-    *
-    * @return array The list of properties
-    */
-    #[\ReturnTypeWillChange]
-    public function jsonSerialize()
-    {
-        $serializableProperties = $this->getProperties();
-        foreach ($serializableProperties as $property => $val) {
-            if (is_a($val, "\DateTime")) {
-                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
-            } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
-                $serializableProperties[$property] = $val->value();
-            } else if (is_a($val, "\Entity")) {
-                $serializableProperties[$property] = $val->jsonSerialize();
-            }
-        }
-        return $serializableProperties;
-    }
 }

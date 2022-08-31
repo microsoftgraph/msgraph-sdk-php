@@ -82,6 +82,7 @@ class AccessPackageAutomaticRequestSettings extends Entity
     }
     /**
     * Gets the requestAccessForAllowedTargets
+    * If set to true, automatic assignments will be created for targets in the allowed target scope.
     *
     * @return bool|null The requestAccessForAllowedTargets
     */
@@ -96,6 +97,7 @@ class AccessPackageAutomaticRequestSettings extends Entity
 
     /**
     * Sets the requestAccessForAllowedTargets
+    * If set to true, automatic assignments will be created for targets in the allowed target scope.
     *
     * @param bool $val The value of the requestAccessForAllowedTargets
     *

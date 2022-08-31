@@ -25,6 +25,7 @@ class AzureCommunicationServicesUserIdentity extends Identity
 {
     /**
     * Gets the azureCommunicationServicesResourceId
+    * The Azure Communication Services resource ID associated with the user.
     *
     * @return string|null The azureCommunicationServicesResourceId
     */
@@ -39,6 +40,7 @@ class AzureCommunicationServicesUserIdentity extends Identity
 
     /**
     * Sets the azureCommunicationServicesResourceId
+    * The Azure Communication Services resource ID associated with the user.
     *
     * @param string $val The value of the azureCommunicationServicesResourceId
     *

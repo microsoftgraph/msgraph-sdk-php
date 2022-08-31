@@ -595,6 +595,37 @@ class User extends DirectoryObject
     }
 
     /**
+    * Gets the employeeLeaveDateTime
+    *
+    * @return \DateTime|null The employeeLeaveDateTime
+    */
+    public function getEmployeeLeaveDateTime()
+    {
+        if (array_key_exists("employeeLeaveDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["employeeLeaveDateTime"], "\DateTime") || is_null($this->_propDict["employeeLeaveDateTime"])) {
+                return $this->_propDict["employeeLeaveDateTime"];
+            } else {
+                $this->_propDict["employeeLeaveDateTime"] = new \DateTime($this->_propDict["employeeLeaveDateTime"]);
+                return $this->_propDict["employeeLeaveDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the employeeLeaveDateTime
+    *
+    * @param \DateTime $val The employeeLeaveDateTime
+    *
+    * @return User
+    */
+    public function setEmployeeLeaveDateTime($val)
+    {
+        $this->_propDict["employeeLeaveDateTime"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the employeeOrgData
     * Represents organization data (e.g. division and costCenter) associated with a user. Supports $filter (eq, ne, not , ge, le, in).
     *
@@ -2500,6 +2531,34 @@ class User extends DirectoryObject
 
 
      /**
+     * Gets the appRoleAssignedResources
+     *
+     * @return array|null The appRoleAssignedResources
+     */
+    public function getAppRoleAssignedResources()
+    {
+        if (array_key_exists("appRoleAssignedResources", $this->_propDict)) {
+           return $this->_propDict["appRoleAssignedResources"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the appRoleAssignedResources
+    *
+    * @param ServicePrincipal[] $val The appRoleAssignedResources
+    *
+    * @return User
+    */
+    public function setAppRoleAssignedResources($val)
+    {
+        $this->_propDict["appRoleAssignedResources"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the appRoleAssignments
     * Represents the app roles a user has been granted for an application. Supports $expand.
      *
@@ -2591,7 +2650,6 @@ class User extends DirectoryObject
 
      /**
      * Gets the licenseDetails
-    * A collection of this user's license details. Read-only.
      *
      * @return array|null The licenseDetails
      */
@@ -2606,7 +2664,6 @@ class User extends DirectoryObject
 
     /**
     * Sets the licenseDetails
-    * A collection of this user's license details. Read-only.
     *
     * @param LicenseDetails[] $val The licenseDetails
     *
@@ -4015,7 +4072,6 @@ class User extends DirectoryObject
 
      /**
      * Gets the activities
-    * The user's activities across devices. Read-only. Nullable.
      *
      * @return array|null The activities
      */
@@ -4030,7 +4086,6 @@ class User extends DirectoryObject
 
     /**
     * Sets the activities
-    * The user's activities across devices. Read-only. Nullable.
     *
     * @param UserActivity[] $val The activities
     *
@@ -4131,7 +4186,6 @@ class User extends DirectoryObject
 
     /**
     * Gets the authentication
-    * The authentication methods that are supported for the user.
     *
     * @return Authentication|null The authentication
     */
@@ -4150,7 +4204,6 @@ class User extends DirectoryObject
 
     /**
     * Sets the authentication
-    * The authentication methods that are supported for the user.
     *
     * @param Authentication $val The authentication
     *

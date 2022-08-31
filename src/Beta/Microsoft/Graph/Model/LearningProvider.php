@@ -26,6 +26,7 @@ class LearningProvider extends Entity
 {
     /**
     * Gets the displayName
+    * The display name that appears in Viva Learning. Required.
     *
     * @return string|null The displayName
     */
@@ -40,6 +41,7 @@ class LearningProvider extends Entity
 
     /**
     * Sets the displayName
+    * The display name that appears in Viva Learning. Required.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class LearningProvider extends Entity
 
     /**
     * Gets the isEnabled
+    * The state of the provider. Optional.
     *
     * @return bool|null The isEnabled
     */
@@ -67,6 +70,7 @@ class LearningProvider extends Entity
 
     /**
     * Sets the isEnabled
+    * The state of the provider. Optional.
     *
     * @param bool $val The isEnabled
     *
@@ -80,6 +84,7 @@ class LearningProvider extends Entity
 
     /**
     * Gets the loginWebUrl
+    * Authentication URL to access the courses for the provider. Optional.
     *
     * @return string|null The loginWebUrl
     */
@@ -94,6 +99,7 @@ class LearningProvider extends Entity
 
     /**
     * Sets the loginWebUrl
+    * Authentication URL to access the courses for the provider. Optional.
     *
     * @param string $val The loginWebUrl
     *
@@ -107,6 +113,7 @@ class LearningProvider extends Entity
 
     /**
     * Gets the longLogoWebUrlForDarkTheme
+    * The long logo URL for the dark mode, which needs to be a publicly accessible image. This image would be saved to the Blob storage of Viva Learning for rendering within the Viva Learning app. Required.
     *
     * @return string|null The longLogoWebUrlForDarkTheme
     */
@@ -121,6 +128,7 @@ class LearningProvider extends Entity
 
     /**
     * Sets the longLogoWebUrlForDarkTheme
+    * The long logo URL for the dark mode, which needs to be a publicly accessible image. This image would be saved to the Blob storage of Viva Learning for rendering within the Viva Learning app. Required.
     *
     * @param string $val The longLogoWebUrlForDarkTheme
     *
@@ -134,6 +142,7 @@ class LearningProvider extends Entity
 
     /**
     * Gets the longLogoWebUrlForLightTheme
+    * The long logo URL for the light mode, which needs to be a publicly accessible image. This image would be saved to the Blob storage of Viva Learning for rendering  within the Viva Learning app. Required.
     *
     * @return string|null The longLogoWebUrlForLightTheme
     */
@@ -148,6 +157,7 @@ class LearningProvider extends Entity
 
     /**
     * Sets the longLogoWebUrlForLightTheme
+    * The long logo URL for the light mode, which needs to be a publicly accessible image. This image would be saved to the Blob storage of Viva Learning for rendering  within the Viva Learning app. Required.
     *
     * @param string $val The longLogoWebUrlForLightTheme
     *
@@ -161,6 +171,7 @@ class LearningProvider extends Entity
 
     /**
     * Gets the squareLogoWebUrlForDarkTheme
+    * The square logo URL for the dark mode, which needs to be a publicly accessible image. This image would be saved to the Blob storage of Viva Learning for rendering within the Viva Learning app. Required.
     *
     * @return string|null The squareLogoWebUrlForDarkTheme
     */
@@ -175,6 +186,7 @@ class LearningProvider extends Entity
 
     /**
     * Sets the squareLogoWebUrlForDarkTheme
+    * The square logo URL for the dark mode, which needs to be a publicly accessible image. This image would be saved to the Blob storage of Viva Learning for rendering within the Viva Learning app. Required.
     *
     * @param string $val The squareLogoWebUrlForDarkTheme
     *
@@ -188,6 +200,7 @@ class LearningProvider extends Entity
 
     /**
     * Gets the squareLogoWebUrlForLightTheme
+    * The square logo URL for the light mode, which needs to be a publicly accessible image. This image would be saved to the Blob storage of Viva Learning for rendering within the Viva Learning app. Required.
     *
     * @return string|null The squareLogoWebUrlForLightTheme
     */
@@ -202,6 +215,7 @@ class LearningProvider extends Entity
 
     /**
     * Sets the squareLogoWebUrlForLightTheme
+    * The square logo URL for the light mode, which needs to be a publicly accessible image. This image would be saved to the Blob storage of Viva Learning for rendering within the Viva Learning app. Required.
     *
     * @param string $val The squareLogoWebUrlForLightTheme
     *
@@ -216,6 +230,7 @@ class LearningProvider extends Entity
 
      /**
      * Gets the learningContents
+    * Learning catalog items for the provider.
      *
      * @return array|null The learningContents
      */
@@ -230,6 +245,7 @@ class LearningProvider extends Entity
 
     /**
     * Sets the learningContents
+    * Learning catalog items for the provider.
     *
     * @param LearningContent[] $val The learningContents
     *

@@ -56,6 +56,37 @@ class IdentityGovernance implements \JsonSerializable
     }
 
     /**
+    * Gets the lifecycleWorkflows
+    *
+    * @return \Beta\Microsoft\Graph\IdentityGovernance\Model\LifecycleWorkflowsContainer|null The lifecycleWorkflows
+    */
+    public function getLifecycleWorkflows()
+    {
+        if (array_key_exists("lifecycleWorkflows", $this->_propDict)) {
+            if (is_a($this->_propDict["lifecycleWorkflows"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\LifecycleWorkflowsContainer") || is_null($this->_propDict["lifecycleWorkflows"])) {
+                return $this->_propDict["lifecycleWorkflows"];
+            } else {
+                $this->_propDict["lifecycleWorkflows"] = new \Beta\Microsoft\Graph\IdentityGovernance\Model\LifecycleWorkflowsContainer($this->_propDict["lifecycleWorkflows"]);
+                return $this->_propDict["lifecycleWorkflows"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the lifecycleWorkflows
+    *
+    * @param \Beta\Microsoft\Graph\IdentityGovernance\Model\LifecycleWorkflowsContainer $val The lifecycleWorkflows
+    *
+    * @return IdentityGovernance
+    */
+    public function setLifecycleWorkflows($val)
+    {
+        $this->_propDict["lifecycleWorkflows"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the accessReviews
     *
     * @return AccessReviewSet|null The accessReviews
