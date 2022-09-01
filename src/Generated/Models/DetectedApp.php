@@ -24,6 +24,16 @@ class DetectedApp extends Entity implements Parsable
     private ?array $managedDevices = null;
     
     /**
+     * @var DetectedAppPlatformType|null $platform Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0).
+    */
+    private ?DetectedAppPlatformType $platform = null;
+    
+    /**
+     * @var string|null $publisher Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string.
+    */
+    private ?string $publisher = null;
+    
+    /**
      * @var int|null $sizeInByte Discovered application size in bytes. Read-only
     */
     private ?int $sizeInByte = null;
@@ -76,6 +86,8 @@ class DetectedApp extends Entity implements Parsable
             'deviceCount' => function (ParseNode $n) use ($o) { $o->setDeviceCount($n->getIntegerValue()); },
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'managedDevices' => function (ParseNode $n) use ($o) { $o->setManagedDevices($n->getCollectionOfObjectValues(array(ManagedDevice::class, 'createFromDiscriminatorValue'))); },
+            'platform' => function (ParseNode $n) use ($o) { $o->setPlatform($n->getEnumValue(DetectedAppPlatformType::class)); },
+            'publisher' => function (ParseNode $n) use ($o) { $o->setPublisher($n->getStringValue()); },
             'sizeInByte' => function (ParseNode $n) use ($o) { $o->setSizeInByte($n->getIntegerValue()); },
             'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getStringValue()); },
         ]);
@@ -87,6 +99,22 @@ class DetectedApp extends Entity implements Parsable
     */
     public function getManagedDevices(): ?array {
         return $this->managedDevices;
+    }
+
+    /**
+     * Gets the platform property value. Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0).
+     * @return DetectedAppPlatformType|null
+    */
+    public function getPlatform(): ?DetectedAppPlatformType {
+        return $this->platform;
+    }
+
+    /**
+     * Gets the publisher property value. Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string.
+     * @return string|null
+    */
+    public function getPublisher(): ?string {
+        return $this->publisher;
     }
 
     /**
@@ -114,6 +142,8 @@ class DetectedApp extends Entity implements Parsable
         $writer->writeIntegerValue('deviceCount', $this->deviceCount);
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeCollectionOfObjectValues('managedDevices', $this->managedDevices);
+        $writer->writeEnumValue('platform', $this->platform);
+        $writer->writeStringValue('publisher', $this->publisher);
         $writer->writeIntegerValue('sizeInByte', $this->sizeInByte);
         $writer->writeStringValue('version', $this->version);
     }
@@ -140,6 +170,22 @@ class DetectedApp extends Entity implements Parsable
     */
     public function setManagedDevices(?array $value ): void {
         $this->managedDevices = $value;
+    }
+
+    /**
+     * Sets the platform property value. Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0).
+     *  @param DetectedAppPlatformType|null $value Value to set for the platform property.
+    */
+    public function setPlatform(?DetectedAppPlatformType $value ): void {
+        $this->platform = $value;
+    }
+
+    /**
+     * Sets the publisher property value. Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string.
+     *  @param string|null $value Value to set for the publisher property.
+    */
+    public function setPublisher(?string $value ): void {
+        $this->publisher = $value;
     }
 
     /**

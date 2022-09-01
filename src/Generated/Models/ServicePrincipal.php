@@ -184,7 +184,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     private ?string $preferredSingleSignOnMode = null;
     
     /**
-     * @var string|null $preferredTokenSigningKeyThumbprint The preferredTokenSigningKeyThumbprint property
+     * @var string|null $preferredTokenSigningKeyThumbprint Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
     */
     private ?string $preferredTokenSigningKeyThumbprint = null;
     
@@ -242,6 +242,11 @@ class ServicePrincipal extends DirectoryObject implements Parsable
      * @var array<DirectoryObject>|null $transitiveMemberOf The transitiveMemberOf property
     */
     private ?array $transitiveMemberOf = null;
+    
+    /**
+     * @var VerifiedPublisher|null $verifiedPublisher Specifies the verified publisher of the application which this service principal represents.
+    */
+    private ?VerifiedPublisher $verifiedPublisher = null;
     
     /**
      * Instantiates a new servicePrincipal and sets the default values.
@@ -474,6 +479,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
             'tokenIssuancePolicies' => function (ParseNode $n) use ($o) { $o->setTokenIssuancePolicies($n->getCollectionOfObjectValues(array(TokenIssuancePolicy::class, 'createFromDiscriminatorValue'))); },
             'tokenLifetimePolicies' => function (ParseNode $n) use ($o) { $o->setTokenLifetimePolicies($n->getCollectionOfObjectValues(array(TokenLifetimePolicy::class, 'createFromDiscriminatorValue'))); },
             'transitiveMemberOf' => function (ParseNode $n) use ($o) { $o->setTransitiveMemberOf($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
+            'verifiedPublisher' => function (ParseNode $n) use ($o) { $o->setVerifiedPublisher($n->getObjectValue(array(VerifiedPublisher::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -598,7 +604,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the preferredTokenSigningKeyThumbprint property value. The preferredTokenSigningKeyThumbprint property
+     * Gets the preferredTokenSigningKeyThumbprint property value. Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
      * @return string|null
     */
     public function getPreferredTokenSigningKeyThumbprint(): ?string {
@@ -694,6 +700,14 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the verifiedPublisher property value. Specifies the verified publisher of the application which this service principal represents.
+     * @return VerifiedPublisher|null
+    */
+    public function getVerifiedPublisher(): ?VerifiedPublisher {
+        return $this->verifiedPublisher;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -746,6 +760,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('tokenIssuancePolicies', $this->tokenIssuancePolicies);
         $writer->writeCollectionOfObjectValues('tokenLifetimePolicies', $this->tokenLifetimePolicies);
         $writer->writeCollectionOfObjectValues('transitiveMemberOf', $this->transitiveMemberOf);
+        $writer->writeObjectValue('verifiedPublisher', $this->verifiedPublisher);
     }
 
     /**
@@ -1029,7 +1044,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the preferredTokenSigningKeyThumbprint property value. The preferredTokenSigningKeyThumbprint property
+     * Sets the preferredTokenSigningKeyThumbprint property value. Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
      *  @param string|null $value Value to set for the preferredTokenSigningKeyThumbprint property.
     */
     public function setPreferredTokenSigningKeyThumbprint(?string $value ): void {
@@ -1122,6 +1137,14 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     */
     public function setTransitiveMemberOf(?array $value ): void {
         $this->transitiveMemberOf = $value;
+    }
+
+    /**
+     * Sets the verifiedPublisher property value. Specifies the verified publisher of the application which this service principal represents.
+     *  @param VerifiedPublisher|null $value Value to set for the verifiedPublisher property.
+    */
+    public function setVerifiedPublisher(?VerifiedPublisher $value ): void {
+        $this->verifiedPublisher = $value;
     }
 
 }

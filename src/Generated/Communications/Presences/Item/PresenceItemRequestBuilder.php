@@ -6,7 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\Presences\Item\ClearPresence\ClearPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Presences\Item\ClearUserPreferredPresence\ClearUserPreferredPresenceRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Presences\Item\SetPresence\SetPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Presences\Item\SetUserPreferredPresence\SetUserPreferredPresenceRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Presence;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -27,6 +29,13 @@ class PresenceItemRequestBuilder
     }
     
     /**
+     * The clearUserPreferredPresence property
+    */
+    public function clearUserPreferredPresence(): ClearUserPreferredPresenceRequestBuilder {
+        return new ClearUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -41,6 +50,13 @@ class PresenceItemRequestBuilder
     */
     public function setPresence(): SetPresenceRequestBuilder {
         return new SetPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The setUserPreferredPresence property
+    */
+    public function setUserPreferredPresence(): SetUserPreferredPresenceRequestBuilder {
+        return new SetUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

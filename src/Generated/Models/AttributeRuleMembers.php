@@ -9,12 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AttributeRuleMembers extends SubjectSet implements Parsable 
 {
     /**
-     * @var string|null $description The description property
+     * @var string|null $description A description of the membership rule.
     */
     private ?string $description = null;
     
     /**
-     * @var string|null $membershipRule The membershipRule property
+     * @var string|null $membershipRule Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax.
     */
     private ?string $membershipRule = null;
     
@@ -36,7 +36,7 @@ class AttributeRuleMembers extends SubjectSet implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A description of the membership rule.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -56,7 +56,7 @@ class AttributeRuleMembers extends SubjectSet implements Parsable
     }
 
     /**
-     * Gets the membershipRule property value. The membershipRule property
+     * Gets the membershipRule property value. Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax.
      * @return string|null
     */
     public function getMembershipRule(): ?string {
@@ -74,7 +74,7 @@ class AttributeRuleMembers extends SubjectSet implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A description of the membership rule.
      *  @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value ): void {
@@ -82,7 +82,7 @@ class AttributeRuleMembers extends SubjectSet implements Parsable
     }
 
     /**
-     * Sets the membershipRule property value. The membershipRule property
+     * Sets the membershipRule property value. Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax.
      *  @param string|null $value Value to set for the membershipRule property.
     */
     public function setMembershipRule(?string $value ): void {

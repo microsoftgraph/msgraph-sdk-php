@@ -49,7 +49,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
     private ?DirectoryObject $principal = null;
     
     /**
-     * @var string|null $principalId Identifier of the principal that has been granted the role eligibility. Supports $filter (eq, ne).
+     * @var string|null $principalId Identifier of the principal that has been granted the role eligibility. Can be a user or a role-assignable group. You can grant only active assignments service principals.Supports $filter (eq, ne).
     */
     private ?string $principalId = null;
     
@@ -190,7 +190,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Gets the principalId property value. Identifier of the principal that has been granted the role eligibility. Supports $filter (eq, ne).
+     * Gets the principalId property value. Identifier of the principal that has been granted the role eligibility. Can be a user or a role-assignable group. You can grant only active assignments service principals.Supports $filter (eq, ne).
      * @return string|null
     */
     public function getPrincipalId(): ?string {
@@ -333,7 +333,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Sets the principalId property value. Identifier of the principal that has been granted the role eligibility. Supports $filter (eq, ne).
+     * Sets the principalId property value. Identifier of the principal that has been granted the role eligibility. Can be a user or a role-assignable group. You can grant only active assignments service principals.Supports $filter (eq, ne).
      *  @param string|null $value Value to set for the principalId property.
     */
     public function setPrincipalId(?string $value ): void {

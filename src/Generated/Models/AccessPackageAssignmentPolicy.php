@@ -20,7 +20,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     private ?AllowedTargetScope $allowedTargetScope = null;
     
     /**
-     * @var AccessPackageAutomaticRequestSettings|null $automaticRequestSettings The automaticRequestSettings property
+     * @var AccessPackageAutomaticRequestSettings|null $automaticRequestSettings This property is only present for an auto assignment policy; if absent, this is a request-based policy.
     */
     private ?AccessPackageAutomaticRequestSettings $automaticRequestSettings = null;
     
@@ -108,7 +108,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the automaticRequestSettings property value. The automaticRequestSettings property
+     * Gets the automaticRequestSettings property value. This property is only present for an auto assignment policy; if absent, this is a request-based policy.
      * @return AccessPackageAutomaticRequestSettings|null
     */
     public function getAutomaticRequestSettings(): ?AccessPackageAutomaticRequestSettings {
@@ -256,7 +256,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the automaticRequestSettings property value. The automaticRequestSettings property
+     * Sets the automaticRequestSettings property value. This property is only present for an auto assignment policy; if absent, this is a request-based policy.
      *  @param AccessPackageAutomaticRequestSettings|null $value Value to set for the automaticRequestSettings property.
     */
     public function setAutomaticRequestSettings(?AccessPackageAutomaticRequestSettings $value ): void {

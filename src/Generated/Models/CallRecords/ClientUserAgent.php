@@ -9,6 +9,16 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ClientUserAgent extends UserAgent implements Parsable 
 {
     /**
+     * @var string|null $azureADAppId The unique identifier of the Azure AD application used by this endpoint.
+    */
+    private ?string $azureADAppId = null;
+    
+    /**
+     * @var string|null $communicationServiceId Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
+    */
+    private ?string $communicationServiceId = null;
+    
+    /**
      * @var ClientPlatform|null $platform The platform property
     */
     private ?ClientPlatform $platform = null;
@@ -36,12 +46,30 @@ class ClientUserAgent extends UserAgent implements Parsable
     }
 
     /**
+     * Gets the azureADAppId property value. The unique identifier of the Azure AD application used by this endpoint.
+     * @return string|null
+    */
+    public function getAzureADAppId(): ?string {
+        return $this->azureADAppId;
+    }
+
+    /**
+     * Gets the communicationServiceId property value. Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
+     * @return string|null
+    */
+    public function getCommunicationServiceId(): ?string {
+        return $this->communicationServiceId;
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'azureADAppId' => function (ParseNode $n) use ($o) { $o->setAzureADAppId($n->getStringValue()); },
+            'communicationServiceId' => function (ParseNode $n) use ($o) { $o->setCommunicationServiceId($n->getStringValue()); },
             'platform' => function (ParseNode $n) use ($o) { $o->setPlatform($n->getEnumValue(ClientPlatform::class)); },
             'productFamily' => function (ParseNode $n) use ($o) { $o->setProductFamily($n->getEnumValue(ProductFamily::class)); },
         ]);
@@ -69,8 +97,26 @@ class ClientUserAgent extends UserAgent implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('azureADAppId', $this->azureADAppId);
+        $writer->writeStringValue('communicationServiceId', $this->communicationServiceId);
         $writer->writeEnumValue('platform', $this->platform);
         $writer->writeEnumValue('productFamily', $this->productFamily);
+    }
+
+    /**
+     * Sets the azureADAppId property value. The unique identifier of the Azure AD application used by this endpoint.
+     *  @param string|null $value Value to set for the azureADAppId property.
+    */
+    public function setAzureADAppId(?string $value ): void {
+        $this->azureADAppId = $value;
+    }
+
+    /**
+     * Sets the communicationServiceId property value. Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
+     *  @param string|null $value Value to set for the communicationServiceId property.
+    */
+    public function setCommunicationServiceId(?string $value ): void {
+        $this->communicationServiceId = $value;
     }
 
     /**
