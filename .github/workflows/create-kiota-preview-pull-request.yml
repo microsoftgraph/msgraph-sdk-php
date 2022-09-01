@@ -1,23 +1,20 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 
-# This action will automatically create a pull request against dev if the pushed branch
-# has a branch path spec likev 1.0/pipelinebuild/*. Configure this action by updating the
+# This action will automatically create a pull request against feat/kiota-preview if the pushed branch
+# has a branch path spec like kiota/v1.0/pipelinebuild/*. Configure this action by updating the
 # environment variable values[0].
 
-name: "create pull request"
+name: "create Kiota Preview pull request"
 
 # Controls when the action will run. Triggers the workflow on push
-# events but only for branches with the following branch spec: "v1.0/pipelinebuild/*"
+# events but only for branches with the following branch spec: kiota/v1.0/pipelinebuild/*
 on:
   push:
     branches:
-      - "v1.0/pipelinebuild/*"
+      - "kiota/v1.0/pipelinebuild/*"
     paths:
-      - 'src/Model/**/*.php'
-      - 'src/**/Model/**/*.php'
-      - '!src/Core/GraphConstants.php'
-      - '!src/Beta/**/*.php'
+      - 'src/Generated/**'
 
 defaults:
   run:
@@ -25,7 +22,7 @@ defaults:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  bump-minor-version:
+  bump-sdk-version:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -36,13 +33,13 @@ jobs:
         git config --global user.name "Microsoft Graph DevX Tooling"
 
     - name: Run increment script
-      run: php scripts/BumpStableSdkVersion.php
+      run: php scripts/BumpPreviewSdkVersion.php
 
     - name: Commit and push changes if any
-      run: if git commit -am "Bump up minor version"; then git push origin $GITHUB_REF; fi
+      run: if git commit -am "Bump SDK version"; then git push origin $GITHUB_REF; fi
 
   create-pull-request:
-    needs: bump-minor-version
+    needs: bump-sdk-version
 
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -57,10 +54,10 @@ jobs:
     - name: Create PR using the GitHub REST API via hub
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        MESSAGE_TITLE: Generated models using Typewriter
-        MESSAGE_BODY: "This pull request was automatically created by the GitHub Action, **${{github.workflow}}**. \n\n The commit hash is _${{github.sha}}_. \n\n **Important** Check for unexpected deletions or changes in this PR. See [v1.0_metadata.xml](https://github.com/microsoftgraph/msgraph-metadata/blob/master/v1.0_metadata.xml) for metadata changes. \n\n Make sure the version number is incremented in /src/Core/GraphConstants.php. Compare the version against the latest release on [packagist.org](https://packagist.org/packages/microsoft/microsoft-graph) and update the version in src/Core/GraphConstants."
+        MESSAGE_TITLE: Generated models and request builders using Kiota
+        MESSAGE_BODY: "This pull request was automatically created by the GitHub Action, **${{github.workflow}}**. \n\n The commit hash is _${{github.sha}}_. \n\n **Important** Check for unexpected deletions or changes in this PR. See [v1.0 openapi.yml](https://github.com/microsoftgraph/msgraph-metadata/blob/master/openapi/v1.0/openapi.yaml) for metadata changes. \n\n Make sure the version number is incremented in /src/GraphConstants.php. Compare the version against the latest Release Candidate on [packagist.org](https://packagist.org/packages/microsoft/microsoft-graph) and update the version in src/GraphConstants."
         LABELS: generated
-        BASE: dev
+        BASE: feat/kiota-preview
       run: |
         curl -fsSL https://github.com/github/hub/raw/master/script/get | bash -s 2.14.1
         bin/hub pull-request -b "$BASE" -h "$GITHUB_REF" -m "$MESSAGE_TITLE" -m "$MESSAGE_BODY" -r "$REVIEWERS" -l "$LABELS"
