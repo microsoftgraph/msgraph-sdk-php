@@ -31,7 +31,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Par
     private ?bool $removeAccessWhenTargetLeavesAllowedTargets = null;
     
     /**
-     * @var bool|null $requestAccessForAllowedTargets The requestAccessForAllowedTargets property
+     * @var bool|null $requestAccessForAllowedTargets If set to true, automatic assignments will be created for targets in the allowed target scope.
     */
     private ?bool $requestAccessForAllowedTargets = null;
     
@@ -99,7 +99,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Par
     }
 
     /**
-     * Gets the requestAccessForAllowedTargets property value. The requestAccessForAllowedTargets property
+     * Gets the requestAccessForAllowedTargets property value. If set to true, automatic assignments will be created for targets in the allowed target scope.
      * @return bool|null
     */
     public function getRequestAccessForAllowedTargets(): ?bool {
@@ -151,7 +151,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Par
     }
 
     /**
-     * Sets the requestAccessForAllowedTargets property value. The requestAccessForAllowedTargets property
+     * Sets the requestAccessForAllowedTargets property value. If set to true, automatic assignments will be created for targets in the allowed target scope.
      *  @param bool|null $value Value to set for the requestAccessForAllowedTargets property.
     */
     public function setRequestAccessForAllowedTargets(?bool $value ): void {

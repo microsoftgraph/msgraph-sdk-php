@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollmentConfiguration implements Parsable 
 {
     /**
-     * @var Enablement|null $enhancedBiometricsState The enhancedBiometricsState property
+     * @var Enablement|null $enhancedBiometricsState Possible values of a property
     */
     private ?Enablement $enhancedBiometricsState = null;
     
@@ -59,7 +59,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     private ?bool $securityDeviceRequired = null;
     
     /**
-     * @var Enablement|null $state The state property
+     * @var Enablement|null $state Possible values of a property
     */
     private ?Enablement $state = null;
     
@@ -86,7 +86,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     }
 
     /**
-     * Gets the enhancedBiometricsState property value. The enhancedBiometricsState property
+     * Gets the enhancedBiometricsState property value. Possible values of a property
      * @return Enablement|null
     */
     public function getEnhancedBiometricsState(): ?Enablement {
@@ -188,7 +188,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     }
 
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. Possible values of a property
      * @return Enablement|null
     */
     public function getState(): ?Enablement {
@@ -224,7 +224,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     }
 
     /**
-     * Sets the enhancedBiometricsState property value. The enhancedBiometricsState property
+     * Sets the enhancedBiometricsState property value. Possible values of a property
      *  @param Enablement|null $value Value to set for the enhancedBiometricsState property.
     */
     public function setEnhancedBiometricsState(?Enablement $value ): void {
@@ -304,7 +304,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     }
 
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. Possible values of a property
      *  @param Enablement|null $value Value to set for the state property.
     */
     public function setState(?Enablement $value ): void {
