@@ -27,6 +27,7 @@ class LifecycleWorkflowsContainer extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the customTaskExtensions
+    * The customTaskExtension instance.
      *
      * @return array|null The customTaskExtensions
      */
@@ -41,6 +42,7 @@ class LifecycleWorkflowsContainer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the customTaskExtensions
+    * The customTaskExtension instance.
     *
     * @param CustomTaskExtension[] $val The customTaskExtensions
     *
@@ -54,6 +56,7 @@ class LifecycleWorkflowsContainer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the deletedItems
+    * Deleted workflows in your lifecycle workflows instance.
     *
     * @return \Beta\Microsoft\Graph\Model\DeletedItemContainer|null The deletedItems
     */
@@ -72,6 +75,7 @@ class LifecycleWorkflowsContainer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the deletedItems
+    * Deleted workflows in your lifecycle workflows instance.
     *
     * @param \Beta\Microsoft\Graph\Model\DeletedItemContainer $val The deletedItems
     *
@@ -85,6 +89,7 @@ class LifecycleWorkflowsContainer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the settings
+    * The settings of the lifecycle workflows instance.
     *
     * @return LifecycleManagementSettings|null The settings
     */
@@ -103,6 +108,7 @@ class LifecycleWorkflowsContainer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the settings
+    * The settings of the lifecycle workflows instance.
     *
     * @param LifecycleManagementSettings $val The settings
     *
@@ -117,6 +123,7 @@ class LifecycleWorkflowsContainer extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the taskDefinitions
+    * The definition of tasks within the lifecycle workflows instance.
      *
      * @return array|null The taskDefinitions
      */
@@ -131,6 +138,7 @@ class LifecycleWorkflowsContainer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the taskDefinitions
+    * The definition of tasks within the lifecycle workflows instance.
     *
     * @param TaskDefinition[] $val The taskDefinitions
     *
@@ -145,6 +153,7 @@ class LifecycleWorkflowsContainer extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the workflows
+    * The workflows in the lifecycle workflows instance.
      *
      * @return array|null The workflows
      */
@@ -159,6 +168,7 @@ class LifecycleWorkflowsContainer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the workflows
+    * The workflows in the lifecycle workflows instance.
     *
     * @param Workflow[] $val The workflows
     *
@@ -173,6 +183,7 @@ class LifecycleWorkflowsContainer extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the workflowTemplates
+    * The workflow templates in the lifecycle workflow instance.
      *
      * @return array|null The workflowTemplates
      */
@@ -187,6 +198,7 @@ class LifecycleWorkflowsContainer extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the workflowTemplates
+    * The workflow templates in the lifecycle workflow instance.
     *
     * @param WorkflowTemplate[] $val The workflowTemplates
     *

@@ -26,6 +26,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the completedDateTime
+    * The date time that the run completed. Value is null if the workflow hasn't completed. Optional.
     *
     * @return \DateTime|null The completedDateTime
     */
@@ -44,6 +45,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the completedDateTime
+    * The date time that the run completed. Value is null if the workflow hasn't completed. Optional.
     *
     * @param \DateTime $val The completedDateTime
     *
@@ -57,6 +59,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the failedTasksCount
+    * The number of tasks that failed in the run execution. Required.
     *
     * @return int|null The failedTasksCount
     */
@@ -71,6 +74,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the failedTasksCount
+    * The number of tasks that failed in the run execution. Required.
     *
     * @param int $val The failedTasksCount
     *
@@ -84,6 +88,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the failedUsersCount
+    * The number of users that failed in the run execution. Required.
     *
     * @return int|null The failedUsersCount
     */
@@ -98,6 +103,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the failedUsersCount
+    * The number of users that failed in the run execution. Required.
     *
     * @param int $val The failedUsersCount
     *
@@ -111,6 +117,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastUpdatedDateTime
+    * The datetime that the run was last updated. Optional.
     *
     * @return \DateTime|null The lastUpdatedDateTime
     */
@@ -129,6 +136,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastUpdatedDateTime
+    * The datetime that the run was last updated. Optional.
     *
     * @param \DateTime $val The lastUpdatedDateTime
     *
@@ -142,6 +150,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the processingStatus
+    * The run execution status. The possible values are: queued, inProgress, completed, completedWithErrors, canceled, failed, unknownFutureValue. Required.
     *
     * @return LifecycleWorkflowProcessingStatus|null The processingStatus
     */
@@ -160,6 +169,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the processingStatus
+    * The run execution status. The possible values are: queued, inProgress, completed, completedWithErrors, canceled, failed, unknownFutureValue. Required.
     *
     * @param LifecycleWorkflowProcessingStatus $val The processingStatus
     *
@@ -173,6 +183,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the scheduledDateTime
+    * The date time that the run is scheduled to be executed for a workflow. Required.
     *
     * @return \DateTime|null The scheduledDateTime
     */
@@ -191,6 +202,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the scheduledDateTime
+    * The date time that the run is scheduled to be executed for a workflow. Required.
     *
     * @param \DateTime $val The scheduledDateTime
     *
@@ -204,6 +216,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the startedDateTime
+    * The date time that the run execution started. Optional.
     *
     * @return \DateTime|null The startedDateTime
     */
@@ -222,6 +235,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the startedDateTime
+    * The date time that the run execution started. Optional.
     *
     * @param \DateTime $val The startedDateTime
     *
@@ -235,6 +249,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the successfulUsersCount
+    * The number of successfully completed users in the run. Required.
     *
     * @return int|null The successfulUsersCount
     */
@@ -249,6 +264,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the successfulUsersCount
+    * The number of successfully completed users in the run. Required.
     *
     * @param int $val The successfulUsersCount
     *
@@ -289,6 +305,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the totalUnprocessedTasksCount
+    * The total number of unprocessed tasks in the run execution. Required.
     *
     * @return int|null The totalUnprocessedTasksCount
     */
@@ -303,6 +320,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the totalUnprocessedTasksCount
+    * The total number of unprocessed tasks in the run execution. Required.
     *
     * @param int $val The totalUnprocessedTasksCount
     *
@@ -316,6 +334,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the totalUsersCount
+    * The total number of users in the workflow execution. Required.
     *
     * @return int|null The totalUsersCount
     */
@@ -330,6 +349,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the totalUsersCount
+    * The total number of users in the workflow execution. Required.
     *
     * @param int $val The totalUsersCount
     *
@@ -343,6 +363,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the workflowExecutionType
+    * The execution type of the workflows associated with the run. The possible values are: scheduled, onDemand, unknownFutureValue. Required.
     *
     * @return WorkflowExecutionType|null The workflowExecutionType
     */
@@ -361,6 +382,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the workflowExecutionType
+    * The execution type of the workflows associated with the run. The possible values are: scheduled, onDemand, unknownFutureValue. Required.
     *
     * @param WorkflowExecutionType $val The workflowExecutionType
     *
@@ -375,6 +397,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the taskProcessingResults
+    * The related taskProcessingResults.
      *
      * @return array|null The taskProcessingResults
      */
@@ -389,6 +412,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the taskProcessingResults
+    * The related taskProcessingResults.
     *
     * @param TaskProcessingResult[] $val The taskProcessingResults
     *
@@ -403,6 +427,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the userProcessingResults
+    * The associated individual user execution.
      *
      * @return array|null The userProcessingResults
      */
@@ -417,6 +442,7 @@ class Run extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userProcessingResults
+    * The associated individual user execution.
     *
     * @param UserProcessingResult[] $val The userProcessingResults
     *

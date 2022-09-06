@@ -25,6 +25,7 @@ class Parameter extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the name
+    * The name of the parameter.
     *
     * @return string|null The name
     */
@@ -39,6 +40,7 @@ class Parameter extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the name
+    * The name of the parameter.
     *
     * @param string $val The value of the name
     *
@@ -51,6 +53,7 @@ class Parameter extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the values
+    * The values of the parameter.
     *
     * @return string|null The values
     */
@@ -65,6 +68,7 @@ class Parameter extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the values
+    * The values of the parameter.
     *
     * @param string $val The value of the values
     *
@@ -78,6 +82,7 @@ class Parameter extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the valueType
+    * The value type of the parameter. The possible values are: enum, string, int, bool, unknownFutureValue.
     *
     * @return ValueType|null The valueType
     */
@@ -96,6 +101,7 @@ class Parameter extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the valueType
+    * The value type of the parameter. The possible values are: enum, string, int, bool, unknownFutureValue.
     *
     * @param ValueType $val The value to assign to the valueType
     *

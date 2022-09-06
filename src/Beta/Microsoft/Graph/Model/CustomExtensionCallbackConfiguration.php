@@ -26,6 +26,7 @@ class CustomExtensionCallbackConfiguration extends Entity
 
     /**
     * Gets the timeoutDuration
+    * Callback time out in ISO 8601 time duration. Accepted time durations are between five minutes to three hours. For example, PT5M for five minutes and PT3H for three hours.
     *
     * @return \DateInterval|null The timeoutDuration
     */
@@ -44,6 +45,7 @@ class CustomExtensionCallbackConfiguration extends Entity
 
     /**
     * Sets the timeoutDuration
+    * Callback time out in ISO 8601 time duration. Accepted time durations are between five minutes to three hours. For example, PT5M for five minutes and PT3H for three hours.
     *
     * @param \DateInterval $val The value to assign to the timeoutDuration
     *
