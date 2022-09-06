@@ -26,6 +26,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the category
+    * The category of the HR function that the tasks created using this definition can be used with. The possible values are: joiner, leaver.
     *
     * @return LifecycleTaskCategory|null The category
     */
@@ -44,6 +45,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the category
+    * The category of the HR function that the tasks created using this definition can be used with. The possible values are: joiner, leaver.
     *
     * @param LifecycleTaskCategory $val The category
     *
@@ -84,6 +86,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the description
+    * The description of the taskDefinition.
     *
     * @return string|null The description
     */
@@ -98,6 +101,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the description
+    * The description of the taskDefinition.
     *
     * @param string $val The description
     *
@@ -111,6 +115,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the displayName
+    * The display name of the taskDefinition.
     *
     * @return string|null The displayName
     */
@@ -125,6 +130,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the displayName
+    * The display name of the taskDefinition.
     *
     * @param string $val The displayName
     *
@@ -139,6 +145,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the parameters
+    * The parameters that must be supplied when creating a task.
      *
      * @return array|null The parameters
      */
@@ -153,6 +160,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the parameters
+    * The parameters that must be supplied when creating a task.
     *
     * @param Parameter[] $val The parameters
     *
@@ -166,6 +174,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the version
+    * The version number of the taskDefinition. New records are pushed when we add support for new parameters.
     *
     * @return int|null The version
     */
@@ -180,6 +189,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the version
+    * The version number of the taskDefinition. New records are pushed when we add support for new parameters.
     *
     * @param int $val The version
     *

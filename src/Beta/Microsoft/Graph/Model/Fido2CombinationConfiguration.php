@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* RuleBasedSubjectSet File
+* Fido2CombinationConfiguration File
 * PHP version 7
 *
 * @category  Library
@@ -11,9 +11,10 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
+namespace Beta\Microsoft\Graph\Model;
+
 /**
-* RuleBasedSubjectSet class
+* Fido2CombinationConfiguration class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,34 +22,33 @@ namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class RuleBasedSubjectSet extends \Beta\Microsoft\Graph\Model\SubjectSet
+class Fido2CombinationConfiguration extends AuthenticationCombinationConfiguration
 {
     /**
-    * Gets the rule
-    * The rule for the subject set.
+    * Gets the allowedAAGUIDs
     *
-    * @return string|null The rule
+    * @return string|null The allowedAAGUIDs
     */
-    public function getRule()
+    public function getAllowedAAGUIDs()
     {
-        if (array_key_exists("rule", $this->_propDict)) {
-            return $this->_propDict["rule"];
+        if (array_key_exists("allowedAAGUIDs", $this->_propDict)) {
+            return $this->_propDict["allowedAAGUIDs"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the rule
-    * The rule for the subject set.
+    * Sets the allowedAAGUIDs
     *
-    * @param string $val The value of the rule
+    * @param string $val The allowedAAGUIDs
     *
-    * @return RuleBasedSubjectSet
+    * @return Fido2CombinationConfiguration
     */
-    public function setRule($val)
+    public function setAllowedAAGUIDs($val)
     {
-        $this->_propDict["rule"] = $val;
+        $this->_propDict["allowedAAGUIDs"] = $val;
         return $this;
     }
+
 }

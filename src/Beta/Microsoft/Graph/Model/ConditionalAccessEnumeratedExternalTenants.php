@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* RuleBasedSubjectSet File
+* ConditionalAccessEnumeratedExternalTenants File
 * PHP version 7
 *
 * @category  Library
@@ -11,9 +11,9 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
+namespace Beta\Microsoft\Graph\Model;
 /**
-* RuleBasedSubjectSet class
+* ConditionalAccessEnumeratedExternalTenants class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,34 +21,32 @@ namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class RuleBasedSubjectSet extends \Beta\Microsoft\Graph\Model\SubjectSet
+class ConditionalAccessEnumeratedExternalTenants extends ConditionalAccessExternalTenants
 {
     /**
-    * Gets the rule
-    * The rule for the subject set.
+    * Gets the members
     *
-    * @return string|null The rule
+    * @return string|null The members
     */
-    public function getRule()
+    public function getMembers()
     {
-        if (array_key_exists("rule", $this->_propDict)) {
-            return $this->_propDict["rule"];
+        if (array_key_exists("members", $this->_propDict)) {
+            return $this->_propDict["members"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the rule
-    * The rule for the subject set.
+    * Sets the members
     *
-    * @param string $val The value of the rule
+    * @param string $val The value of the members
     *
-    * @return RuleBasedSubjectSet
+    * @return ConditionalAccessEnumeratedExternalTenants
     */
-    public function setRule($val)
+    public function setMembers($val)
     {
-        $this->_propDict["rule"] = $val;
+        $this->_propDict["members"] = $val;
         return $this;
     }
 }

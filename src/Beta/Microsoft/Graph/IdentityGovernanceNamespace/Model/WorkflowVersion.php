@@ -26,6 +26,7 @@ class WorkflowVersion extends WorkflowBase
 {
     /**
     * Gets the versionNumber
+    * The version of the workflow.
     *
     * @return int|null The versionNumber
     */
@@ -40,6 +41,7 @@ class WorkflowVersion extends WorkflowBase
 
     /**
     * Sets the versionNumber
+    * The version of the workflow.
     *
     * @param int $val The versionNumber
     *

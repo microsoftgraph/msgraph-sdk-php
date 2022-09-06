@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* DeletedItemContainer File
+* AuthenticationCombinationConfiguration File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* DeletedItemContainer class
+* AuthenticationCombinationConfiguration class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,35 +22,33 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class DeletedItemContainer extends Entity
+class AuthenticationCombinationConfiguration extends Entity
 {
 
      /**
-     * Gets the workflows
-    * Deleted workflows that end up in the deletedItemsContainer.
+     * Gets the appliesToCombinations
      *
-     * @return array|null The workflows
+     * @return array|null The appliesToCombinations
      */
-    public function getWorkflows()
+    public function getAppliesToCombinations()
     {
-        if (array_key_exists("workflows", $this->_propDict)) {
-           return $this->_propDict["workflows"];
+        if (array_key_exists("appliesToCombinations", $this->_propDict)) {
+           return $this->_propDict["appliesToCombinations"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the workflows
-    * Deleted workflows that end up in the deletedItemsContainer.
+    * Sets the appliesToCombinations
     *
-    * @param \Beta\Microsoft\Graph\IdentityGovernance\Model\Workflow[] $val The workflows
+    * @param AuthenticationMethodModes[] $val The appliesToCombinations
     *
-    * @return DeletedItemContainer
+    * @return AuthenticationCombinationConfiguration
     */
-    public function setWorkflows($val)
+    public function setAppliesToCombinations($val)
     {
-        $this->_propDict["workflows"] = $val;
+        $this->_propDict["appliesToCombinations"] = $val;
         return $this;
     }
 

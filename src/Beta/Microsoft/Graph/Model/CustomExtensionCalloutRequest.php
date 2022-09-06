@@ -26,6 +26,7 @@ class CustomExtensionCalloutRequest extends Entity
 
     /**
     * Gets the data
+    * Contains the data that will be provided to the external system.
     *
     * @return CustomExtensionData|null The data
     */
@@ -44,6 +45,7 @@ class CustomExtensionCalloutRequest extends Entity
 
     /**
     * Sets the data
+    * Contains the data that will be provided to the external system.
     *
     * @param CustomExtensionData $val The value to assign to the data
     *
@@ -56,6 +58,7 @@ class CustomExtensionCalloutRequest extends Entity
     }
     /**
     * Gets the source
+    * Identifies the source system or event context related to the callout request.
     *
     * @return string|null The source
     */
@@ -70,6 +73,7 @@ class CustomExtensionCalloutRequest extends Entity
 
     /**
     * Sets the source
+    * Identifies the source system or event context related to the callout request.
     *
     * @param string $val The value of the source
     *
@@ -82,6 +86,7 @@ class CustomExtensionCalloutRequest extends Entity
     }
     /**
     * Gets the type
+    * Describes the type of event related to the callout request.
     *
     * @return string|null The type
     */
@@ -96,6 +101,7 @@ class CustomExtensionCalloutRequest extends Entity
 
     /**
     * Sets the type
+    * Describes the type of event related to the callout request.
     *
     * @param string $val The value of the type
     *

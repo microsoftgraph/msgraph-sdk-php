@@ -26,6 +26,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the completedDateTime
+    * The date time that the associated run completed. Value is null if the run has not completed.
     *
     * @return \DateTime|null The completedDateTime
     */
@@ -44,6 +45,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the completedDateTime
+    * The date time that the associated run completed. Value is null if the run has not completed.
     *
     * @param \DateTime $val The completedDateTime
     *
@@ -57,6 +59,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the failedUsersCount
+    * The number of users in the run execution for which the associated task failed.
     *
     * @return int|null The failedUsersCount
     */
@@ -71,6 +74,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the failedUsersCount
+    * The number of users in the run execution for which the associated task failed.
     *
     * @param int $val The failedUsersCount
     *
@@ -84,6 +88,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastUpdatedDateTime
+    * The date and time that the task report was last updated.
     *
     * @return \DateTime|null The lastUpdatedDateTime
     */
@@ -102,6 +107,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastUpdatedDateTime
+    * The date and time that the task report was last updated.
     *
     * @param \DateTime $val The lastUpdatedDateTime
     *
@@ -115,6 +121,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the processingStatus
+    * The processing status of the associated task based on the taskProcessingResults. The possible values are based on the number of queued, inProgress, completed, completedWithErrors, canceled, failed, and unknownFutureValue.
     *
     * @return LifecycleWorkflowProcessingStatus|null The processingStatus
     */
@@ -133,6 +140,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the processingStatus
+    * The processing status of the associated task based on the taskProcessingResults. The possible values are based on the number of queued, inProgress, completed, completedWithErrors, canceled, failed, and unknownFutureValue.
     *
     * @param LifecycleWorkflowProcessingStatus $val The processingStatus
     *
@@ -146,6 +154,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the runId
+    * The unique identifier of the associated run.
     *
     * @return string|null The runId
     */
@@ -160,6 +169,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the runId
+    * The unique identifier of the associated run.
     *
     * @param string $val The runId
     *
@@ -173,6 +183,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the startedDateTime
+    * The date time that the associated run started. Value is null if the run has not started.
     *
     * @return \DateTime|null The startedDateTime
     */
@@ -191,6 +202,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the startedDateTime
+    * The date time that the associated run started. Value is null if the run has not started.
     *
     * @param \DateTime $val The startedDateTime
     *
@@ -204,6 +216,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the successfulUsersCount
+    * The number of users in the run execution for which the associated task succeeded.
     *
     * @return int|null The successfulUsersCount
     */
@@ -218,6 +231,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the successfulUsersCount
+    * The number of users in the run execution for which the associated task succeeded.
     *
     * @param int $val The successfulUsersCount
     *
@@ -231,6 +245,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the totalUsersCount
+    * The total number of users in the run execution for which the associated task was scheduled to execute.
     *
     * @return int|null The totalUsersCount
     */
@@ -245,6 +260,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the totalUsersCount
+    * The total number of users in the run execution for which the associated task was scheduled to execute.
     *
     * @param int $val The totalUsersCount
     *
@@ -258,6 +274,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the unprocessedUsersCount
+    * The number of users in the run execution for which the associated task is queued, in progress, or canceled.
     *
     * @return int|null The unprocessedUsersCount
     */
@@ -272,6 +289,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the unprocessedUsersCount
+    * The number of users in the run execution for which the associated task is queued, in progress, or canceled.
     *
     * @param int $val The unprocessedUsersCount
     *
@@ -285,6 +303,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the task
+    * The related lifecycle workflow task.
     *
     * @return Task|null The task
     */
@@ -303,6 +322,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the task
+    * The related lifecycle workflow task.
     *
     * @param Task $val The task
     *
@@ -316,6 +336,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the taskDefinition
+    * The taskDefinition associated with the related lifecycle workflow task.
     *
     * @return TaskDefinition|null The taskDefinition
     */
@@ -334,6 +355,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the taskDefinition
+    * The taskDefinition associated with the related lifecycle workflow task.
     *
     * @param TaskDefinition $val The taskDefinition
     *
@@ -348,6 +370,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the taskProcessingResults
+    * The related lifecycle workflow taskProcessingResults.
      *
      * @return array|null The taskProcessingResults
      */
@@ -362,6 +385,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the taskProcessingResults
+    * The related lifecycle workflow taskProcessingResults.
     *
     * @param TaskProcessingResult[] $val The taskProcessingResults
     *

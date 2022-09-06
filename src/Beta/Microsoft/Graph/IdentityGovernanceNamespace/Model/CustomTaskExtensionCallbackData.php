@@ -26,6 +26,7 @@ class CustomTaskExtensionCallbackData extends \Beta\Microsoft\Graph\Model\Custom
 
     /**
     * Gets the operationStatus
+    * Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
     *
     * @return CustomTaskExtensionOperationStatus|null The operationStatus
     */
@@ -44,6 +45,7 @@ class CustomTaskExtensionCallbackData extends \Beta\Microsoft\Graph\Model\Custom
 
     /**
     * Sets the operationStatus
+    * Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
     *
     * @param CustomTaskExtensionOperationStatus $val The value to assign to the operationStatus
     *
