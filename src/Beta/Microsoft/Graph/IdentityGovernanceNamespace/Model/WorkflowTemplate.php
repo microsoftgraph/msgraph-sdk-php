@@ -26,6 +26,7 @@ class WorkflowTemplate extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the category
+    * The category of the workflow template. The possible values are: joiner, leaver.
     *
     * @return LifecycleWorkflowCategory|null The category
     */
@@ -44,6 +45,7 @@ class WorkflowTemplate extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the category
+    * The category of the workflow template. The possible values are: joiner, leaver.
     *
     * @param LifecycleWorkflowCategory $val The category
     *
@@ -57,6 +59,7 @@ class WorkflowTemplate extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the description
+    * The description of the workflowTemplate.
     *
     * @return string|null The description
     */
@@ -71,6 +74,7 @@ class WorkflowTemplate extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the description
+    * The description of the workflowTemplate.
     *
     * @param string $val The description
     *
@@ -84,6 +88,7 @@ class WorkflowTemplate extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the displayName
+    * The display name of the workflowTemplate. Supports  orderby.
     *
     * @return string|null The displayName
     */
@@ -98,6 +103,7 @@ class WorkflowTemplate extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the displayName
+    * The display name of the workflowTemplate. Supports  orderby.
     *
     * @param string $val The displayName
     *
@@ -111,6 +117,7 @@ class WorkflowTemplate extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the executionConditions
+    * Conditions describing when to execute the workflow and the criteria to identify in-scope subject set.
     *
     * @return WorkflowExecutionConditions|null The executionConditions
     */
@@ -129,6 +136,7 @@ class WorkflowTemplate extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the executionConditions
+    * Conditions describing when to execute the workflow and the criteria to identify in-scope subject set.
     *
     * @param WorkflowExecutionConditions $val The executionConditions
     *
@@ -143,6 +151,7 @@ class WorkflowTemplate extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the tasks
+    * Represents the configured tasks to execute and their execution sequence within a workflow. This relationship is expanded by default.
      *
      * @return array|null The tasks
      */
@@ -157,6 +166,7 @@ class WorkflowTemplate extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tasks
+    * Represents the configured tasks to execute and their execution sequence within a workflow. This relationship is expanded by default.
     *
     * @param Task[] $val The tasks
     *

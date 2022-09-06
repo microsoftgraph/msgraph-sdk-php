@@ -37,6 +37,7 @@ class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions
 
     /**
     * Gets the scope
+    * Defines who the workflow runs for.
     *
     * @return \Beta\Microsoft\Graph\Model\SubjectSet|null The scope
     */
@@ -55,6 +56,7 @@ class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions
 
     /**
     * Sets the scope
+    * Defines who the workflow runs for.
     *
     * @param \Beta\Microsoft\Graph\Model\SubjectSet $val The value to assign to the scope
     *
@@ -68,6 +70,7 @@ class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions
 
     /**
     * Gets the trigger
+    * What triggers a workflow to run.
     *
     * @return WorkflowExecutionTrigger|null The trigger
     */
@@ -86,6 +89,7 @@ class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions
 
     /**
     * Sets the trigger
+    * What triggers a workflow to run.
     *
     * @param WorkflowExecutionTrigger $val The value to assign to the trigger
     *

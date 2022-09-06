@@ -26,6 +26,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the completedDateTime
+    * The date time that the workflow execution for a user completed. Value is null if the workflow hasn't completed. Supports $filter(lt, gt) and $orderby.
     *
     * @return \DateTime|null The completedDateTime
     */
@@ -44,6 +45,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the completedDateTime
+    * The date time that the workflow execution for a user completed. Value is null if the workflow hasn't completed. Supports $filter(lt, gt) and $orderby.
     *
     * @param \DateTime $val The completedDateTime
     *
@@ -57,6 +59,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the failedTasksCount
+    * The number of tasks that failed in the workflow execution.
     *
     * @return int|null The failedTasksCount
     */
@@ -71,6 +74,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the failedTasksCount
+    * The number of tasks that failed in the workflow execution.
     *
     * @param int $val The failedTasksCount
     *
@@ -84,6 +88,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the processingStatus
+    * The workflow execution status. The possible values are: queued, inProgress, completed, completedWithErrors, canceled, failed, unknownFutureValue.
     *
     * @return LifecycleWorkflowProcessingStatus|null The processingStatus
     */
@@ -102,6 +107,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the processingStatus
+    * The workflow execution status. The possible values are: queued, inProgress, completed, completedWithErrors, canceled, failed, unknownFutureValue.
     *
     * @param LifecycleWorkflowProcessingStatus $val The processingStatus
     *
@@ -115,6 +121,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the scheduledDateTime
+    * The date time that the workflow is scheduled to be executed for a user.
     *
     * @return \DateTime|null The scheduledDateTime
     */
@@ -133,6 +140,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the scheduledDateTime
+    * The date time that the workflow is scheduled to be executed for a user.
     *
     * @param \DateTime $val The scheduledDateTime
     *
@@ -146,6 +154,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the startedDateTime
+    * The date time that the workflow execution started. Value is null if the workflow execution has not started. Supports $filter(lt, gt) and $orderby.
     *
     * @return \DateTime|null The startedDateTime
     */
@@ -164,6 +173,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the startedDateTime
+    * The date time that the workflow execution started. Value is null if the workflow execution has not started. Supports $filter(lt, gt) and $orderby.
     *
     * @param \DateTime $val The startedDateTime
     *
@@ -177,6 +187,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the totalTasksCount
+    * The total number of tasks that in the workflow execution.
     *
     * @return int|null The totalTasksCount
     */
@@ -191,6 +202,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the totalTasksCount
+    * The total number of tasks that in the workflow execution.
     *
     * @param int $val The totalTasksCount
     *
@@ -204,6 +216,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the totalUnprocessedTasksCount
+    * The total number of unprocessed tasks for the workflow.
     *
     * @return int|null The totalUnprocessedTasksCount
     */
@@ -218,6 +231,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the totalUnprocessedTasksCount
+    * The total number of unprocessed tasks for the workflow.
     *
     * @param int $val The totalUnprocessedTasksCount
     *
@@ -231,6 +245,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the workflowExecutionType
+    * Describes the execution type of the workflow. The possible values are: scheduled, onDemand, unknownFutureValue. Supports $filter(eq, ne).
     *
     * @return WorkflowExecutionType|null The workflowExecutionType
     */
@@ -249,6 +264,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the workflowExecutionType
+    * Describes the execution type of the workflow. The possible values are: scheduled, onDemand, unknownFutureValue. Supports $filter(eq, ne).
     *
     * @param WorkflowExecutionType $val The workflowExecutionType
     *
@@ -262,6 +278,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the workflowVersion
+    * The version of the workflow that was executed.
     *
     * @return int|null The workflowVersion
     */
@@ -276,6 +293,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the workflowVersion
+    * The version of the workflow that was executed.
     *
     * @param int $val The workflowVersion
     *
@@ -289,6 +307,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the subject
+    * The unique identifier of the AAD user targeted for the taskProcessingResult.
     *
     * @return \Beta\Microsoft\Graph\Model\User|null The subject
     */
@@ -307,6 +326,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the subject
+    * The unique identifier of the AAD user targeted for the taskProcessingResult.
     *
     * @param \Beta\Microsoft\Graph\Model\User $val The subject
     *
@@ -321,6 +341,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the taskProcessingResults
+    * The associated individual task execution.
      *
      * @return array|null The taskProcessingResults
      */
@@ -335,6 +356,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the taskProcessingResults
+    * The associated individual task execution.
     *
     * @param TaskProcessingResult[] $val The taskProcessingResults
     *

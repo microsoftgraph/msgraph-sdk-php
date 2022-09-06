@@ -57,6 +57,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Gets the category
+    * The category of the workflow. The possible values are: joiner, leaver, unknownFutureValue.
     *
     * @return LifecycleWorkflowCategory|null The category
     */
@@ -75,6 +76,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Sets the category
+    * The category of the workflow. The possible values are: joiner, leaver, unknownFutureValue.
     *
     * @param LifecycleWorkflowCategory $val The category
     *
@@ -88,6 +90,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Gets the createdDateTime
+    * When a workflow was created.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -106,6 +109,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Sets the createdDateTime
+    * When a workflow was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -119,6 +123,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Gets the description
+    * A string that describes the purpose of the workflow.
     *
     * @return string|null The description
     */
@@ -133,6 +138,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Sets the description
+    * A string that describes the purpose of the workflow.
     *
     * @param string $val The description
     *
@@ -146,6 +152,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Gets the displayName
+    * A string to identify the workflow.
     *
     * @return string|null The displayName
     */
@@ -160,6 +167,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Sets the displayName
+    * A string to identify the workflow.
     *
     * @param string $val The displayName
     *
@@ -173,6 +181,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Gets the executionConditions
+    * Defines when and for who the workflow will run.
     *
     * @return WorkflowExecutionConditions|null The executionConditions
     */
@@ -191,6 +200,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Sets the executionConditions
+    * Defines when and for who the workflow will run.
     *
     * @param WorkflowExecutionConditions $val The executionConditions
     *
@@ -204,6 +214,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Gets the lastModifiedDateTime
+    * When the workflow was last modified.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -222,6 +233,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Sets the lastModifiedDateTime
+    * When the workflow was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -235,6 +247,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Gets the createdBy
+    * The user who created the workflow.
     *
     * @return \Beta\Microsoft\Graph\Model\User|null The createdBy
     */
@@ -253,6 +266,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Sets the createdBy
+    * The user who created the workflow.
     *
     * @param \Beta\Microsoft\Graph\Model\User $val The createdBy
     *
@@ -266,6 +280,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Gets the lastModifiedBy
+    * The user who last modified the workflow.
     *
     * @return \Beta\Microsoft\Graph\Model\User|null The lastModifiedBy
     */
@@ -284,6 +299,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Sets the lastModifiedBy
+    * The user who last modified the workflow.
     *
     * @param \Beta\Microsoft\Graph\Model\User $val The lastModifiedBy
     *
@@ -298,6 +314,7 @@ class WorkflowBase implements \JsonSerializable
 
      /**
      * Gets the tasks
+    * The tasks in the workflow.
      *
      * @return array|null The tasks
      */
@@ -312,6 +329,7 @@ class WorkflowBase implements \JsonSerializable
 
     /**
     * Sets the tasks
+    * The tasks in the workflow.
     *
     * @param Task[] $val The tasks
     *
