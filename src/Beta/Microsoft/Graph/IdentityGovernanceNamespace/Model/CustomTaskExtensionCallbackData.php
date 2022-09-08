@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
 /**
 * CustomTaskExtensionCallbackData class
 *
@@ -33,7 +33,7 @@ class CustomTaskExtensionCallbackData extends \Beta\Microsoft\Graph\Model\Custom
     public function getOperationStatus()
     {
         if (array_key_exists("operationStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["operationStatus"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\CustomTaskExtensionOperationStatus") || is_null($this->_propDict["operationStatus"])) {
+            if (is_a($this->_propDict["operationStatus"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\CustomTaskExtensionOperationStatus") || is_null($this->_propDict["operationStatus"])) {
                 return $this->_propDict["operationStatus"];
             } else {
                 $this->_propDict["operationStatus"] = new CustomTaskExtensionOperationStatus($this->_propDict["operationStatus"]);

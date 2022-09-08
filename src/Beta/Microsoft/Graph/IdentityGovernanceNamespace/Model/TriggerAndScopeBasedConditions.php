@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
 /**
 * TriggerAndScopeBasedConditions class
 *
@@ -77,7 +77,7 @@ class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions
     public function getTrigger()
     {
         if (array_key_exists("trigger", $this->_propDict)) {
-            if (is_a($this->_propDict["trigger"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\WorkflowExecutionTrigger") || is_null($this->_propDict["trigger"])) {
+            if (is_a($this->_propDict["trigger"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\WorkflowExecutionTrigger") || is_null($this->_propDict["trigger"])) {
                 return $this->_propDict["trigger"];
             } else {
                 $this->_propDict["trigger"] = new WorkflowExecutionTrigger($this->_propDict["trigger"]);

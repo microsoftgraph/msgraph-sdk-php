@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
 
 /**
 * WorkflowTemplate class
@@ -33,7 +33,7 @@ class WorkflowTemplate extends \Beta\Microsoft\Graph\Model\Entity
     public function getCategory()
     {
         if (array_key_exists("category", $this->_propDict)) {
-            if (is_a($this->_propDict["category"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\LifecycleWorkflowCategory") || is_null($this->_propDict["category"])) {
+            if (is_a($this->_propDict["category"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\LifecycleWorkflowCategory") || is_null($this->_propDict["category"])) {
                 return $this->_propDict["category"];
             } else {
                 $this->_propDict["category"] = new LifecycleWorkflowCategory($this->_propDict["category"]);
@@ -124,7 +124,7 @@ class WorkflowTemplate extends \Beta\Microsoft\Graph\Model\Entity
     public function getExecutionConditions()
     {
         if (array_key_exists("executionConditions", $this->_propDict)) {
-            if (is_a($this->_propDict["executionConditions"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\WorkflowExecutionConditions") || is_null($this->_propDict["executionConditions"])) {
+            if (is_a($this->_propDict["executionConditions"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\WorkflowExecutionConditions") || is_null($this->_propDict["executionConditions"])) {
                 return $this->_propDict["executionConditions"];
             } else {
                 $this->_propDict["executionConditions"] = new WorkflowExecutionConditions($this->_propDict["executionConditions"]);
