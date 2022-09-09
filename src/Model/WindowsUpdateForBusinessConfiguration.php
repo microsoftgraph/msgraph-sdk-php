@@ -55,7 +55,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the automaticUpdateMode
-    * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
+    * The Automatic Update Mode. Possible values are: UserDefined, NotifyDownload, AutoInstallAtMaintenanceTime, AutoInstallAndRebootAtMaintenanceTime, AutoInstallAndRebootAtScheduledTime, AutoInstallAndRebootWithoutEndUserControl, WindowsDefault. UserDefined is the default value, no intent. Returned by default. Query parameters are not supported. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
     *
     * @return AutomaticUpdateMode|null The automaticUpdateMode
     */
@@ -74,7 +74,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the automaticUpdateMode
-    * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
+    * The Automatic Update Mode. Possible values are: UserDefined, NotifyDownload, AutoInstallAtMaintenanceTime, AutoInstallAndRebootAtMaintenanceTime, AutoInstallAndRebootAtScheduledTime, AutoInstallAndRebootWithoutEndUserControl, WindowsDefault. UserDefined is the default value, no intent. Returned by default. Query parameters are not supported. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
     *
     * @param AutomaticUpdateMode $val The automaticUpdateMode
     *
@@ -88,7 +88,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the autoRestartNotificationDismissal
-    * Specify the method by which the auto-restart required notification is dismissed. Possible values are: NotConfigured, Automatic, User. Returned by default. Query parameters are not supported.
+    * Specify the method by which the auto-restart required notification is dismissed. Possible values are: NotConfigured, Automatic, User. Returned by default. Query parameters are not supported. Possible values are: notConfigured, automatic, user, unknownFutureValue.
     *
     * @return AutoRestartNotificationDismissalMethod|null The autoRestartNotificationDismissal
     */
@@ -107,7 +107,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the autoRestartNotificationDismissal
-    * Specify the method by which the auto-restart required notification is dismissed. Possible values are: NotConfigured, Automatic, User. Returned by default. Query parameters are not supported.
+    * Specify the method by which the auto-restart required notification is dismissed. Possible values are: NotConfigured, Automatic, User. Returned by default. Query parameters are not supported. Possible values are: notConfigured, automatic, user, unknownFutureValue.
     *
     * @param AutoRestartNotificationDismissalMethod $val The autoRestartNotificationDismissal
     *
@@ -121,7 +121,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the businessReadyUpdatesOnly
-    * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
+    * Determines which branch devices will receive their updates from. Possible values are: UserDefined, All, BusinessReadyOnly, WindowsInsiderBuildFast, WindowsInsiderBuildSlow, WindowsInsiderBuildRelease. Returned by default. Query parameters are not supported. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
     *
     * @return WindowsUpdateType|null The businessReadyUpdatesOnly
     */
@@ -140,7 +140,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the businessReadyUpdatesOnly
-    * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
+    * Determines which branch devices will receive their updates from. Possible values are: UserDefined, All, BusinessReadyOnly, WindowsInsiderBuildFast, WindowsInsiderBuildSlow, WindowsInsiderBuildRelease. Returned by default. Query parameters are not supported. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
     *
     * @param WindowsUpdateType $val The businessReadyUpdatesOnly
     *
@@ -241,7 +241,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the deliveryOptimizationMode
-    * Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+    * The Delivery Optimization Mode. Possible values are: UserDefined, HttpOnly, HttpWithPeeringNat, HttpWithPeeringPrivateGroup, HttpWithInternetPeering, SimpleDownload, BypassMode. UserDefined allows the user to set. Returned by default. Query parameters are not supported. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
     *
     * @return WindowsDeliveryOptimizationMode|null The deliveryOptimizationMode
     */
@@ -260,7 +260,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the deliveryOptimizationMode
-    * Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+    * The Delivery Optimization Mode. Possible values are: UserDefined, HttpOnly, HttpWithPeeringNat, HttpWithPeeringPrivateGroup, HttpWithInternetPeering, SimpleDownload, BypassMode. UserDefined allows the user to set. Returned by default. Query parameters are not supported. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
     *
     * @param WindowsDeliveryOptimizationMode $val The deliveryOptimizationMode
     *
@@ -274,7 +274,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the driversExcluded
-    * Exclude Windows update Drivers
+    * When TRUE, excludes Windows update Drivers. When FALSE, does not exclude Windows update Drivers. Returned by default. Query parameters are not supported.
     *
     * @return bool|null The driversExcluded
     */
@@ -289,7 +289,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the driversExcluded
-    * Exclude Windows update Drivers
+    * When TRUE, excludes Windows update Drivers. When FALSE, does not exclude Windows update Drivers. Returned by default. Query parameters are not supported.
     *
     * @param bool $val The driversExcluded
     *
@@ -390,7 +390,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the featureUpdatesDeferralPeriodInDays
-    * Defer Feature Updates by these many days
+    * Defer Feature Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
     *
     * @return int|null The featureUpdatesDeferralPeriodInDays
     */
@@ -405,7 +405,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the featureUpdatesDeferralPeriodInDays
-    * Defer Feature Updates by these many days
+    * Defer Feature Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
     *
     * @param int $val The featureUpdatesDeferralPeriodInDays
     *
@@ -419,7 +419,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the featureUpdatesPaused
-    * Pause Feature Updates
+    * When TRUE, assigned devices are paused from receiving feature updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Feature Updates. Returned by default. Query parameters are not supported.s
     *
     * @return bool|null The featureUpdatesPaused
     */
@@ -434,7 +434,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the featureUpdatesPaused
-    * Pause Feature Updates
+    * When TRUE, assigned devices are paused from receiving feature updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Feature Updates. Returned by default. Query parameters are not supported.s
     *
     * @param bool $val The featureUpdatesPaused
     *
@@ -448,7 +448,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the featureUpdatesPauseExpiryDateTime
-    * Feature Updates Pause Expiry datetime
+    * The Feature Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
     *
     * @return \DateTime|null The featureUpdatesPauseExpiryDateTime
     */
@@ -467,7 +467,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the featureUpdatesPauseExpiryDateTime
-    * Feature Updates Pause Expiry datetime
+    * The Feature Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
     *
     * @param \DateTime $val The featureUpdatesPauseExpiryDateTime
     *
@@ -605,7 +605,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the installationSchedule
-    * Installation schedule
+    * The Installation Schedule. Possible values are: ActiveHoursStart, ActiveHoursEnd, ScheduledInstallDay, ScheduledInstallTime. Returned by default. Query parameters are not supported.
     *
     * @return WindowsUpdateInstallScheduleType|null The installationSchedule
     */
@@ -624,7 +624,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the installationSchedule
-    * Installation schedule
+    * The Installation Schedule. Possible values are: ActiveHoursStart, ActiveHoursEnd, ScheduledInstallDay, ScheduledInstallTime. Returned by default. Query parameters are not supported.
     *
     * @param WindowsUpdateInstallScheduleType $val The installationSchedule
     *
@@ -638,7 +638,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the microsoftUpdateServiceAllowed
-    * Allow Microsoft Update Service
+    * When TRUE, allows Microsoft Update Service. When FALSE, does not allow Microsoft Update Service. Returned by default. Query parameters are not supported.
     *
     * @return bool|null The microsoftUpdateServiceAllowed
     */
@@ -653,7 +653,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the microsoftUpdateServiceAllowed
-    * Allow Microsoft Update Service
+    * When TRUE, allows Microsoft Update Service. When FALSE, does not allow Microsoft Update Service. Returned by default. Query parameters are not supported.
     *
     * @param bool $val The microsoftUpdateServiceAllowed
     *
@@ -696,7 +696,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the prereleaseFeatures
-    * The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
+    * The Pre-Release Features. Possible values are: UserDefined, SettingsOnly, SettingsAndExperimentations, NotAllowed. UserDefined is the default value, no intent. Returned by default. Query parameters are not supported. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
     *
     * @return PrereleaseFeatures|null The prereleaseFeatures
     */
@@ -715,7 +715,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the prereleaseFeatures
-    * The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
+    * The Pre-Release Features. Possible values are: UserDefined, SettingsOnly, SettingsAndExperimentations, NotAllowed. UserDefined is the default value, no intent. Returned by default. Query parameters are not supported. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
     *
     * @param PrereleaseFeatures $val The prereleaseFeatures
     *
@@ -729,7 +729,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the qualityUpdatesDeferralPeriodInDays
-    * Defer Quality Updates by these many days
+    * Defer Quality Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
     *
     * @return int|null The qualityUpdatesDeferralPeriodInDays
     */
@@ -744,7 +744,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the qualityUpdatesDeferralPeriodInDays
-    * Defer Quality Updates by these many days
+    * Defer Quality Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
     *
     * @param int $val The qualityUpdatesDeferralPeriodInDays
     *
@@ -758,7 +758,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the qualityUpdatesPaused
-    * Pause Quality Updates
+    * When TRUE, assigned devices are paused from receiving quality updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Quality Updates. Returned by default. Query parameters are not supported.
     *
     * @return bool|null The qualityUpdatesPaused
     */
@@ -773,7 +773,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the qualityUpdatesPaused
-    * Pause Quality Updates
+    * When TRUE, assigned devices are paused from receiving quality updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Quality Updates. Returned by default. Query parameters are not supported.
     *
     * @param bool $val The qualityUpdatesPaused
     *
@@ -787,7 +787,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the qualityUpdatesPauseExpiryDateTime
-    * Quality Updates Pause Expiry datetime
+    * The Quality Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
     *
     * @return \DateTime|null The qualityUpdatesPauseExpiryDateTime
     */
@@ -806,7 +806,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the qualityUpdatesPauseExpiryDateTime
-    * Quality Updates Pause Expiry datetime
+    * The Quality Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
     *
     * @param \DateTime $val The qualityUpdatesPauseExpiryDateTime
     *
@@ -1002,7 +1002,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the updateNotificationLevel
-    * Specifies what Windows Update notifications users see. Possible values are: NotConfigured, DefaultNotifications, RestartWarningsOnly, DisableAllNotifications. Returned by default. Query parameters are not supported.
+    * Specifies what Windows Update notifications users see. Possible values are: NotConfigured, DefaultNotifications, RestartWarningsOnly, DisableAllNotifications. Returned by default. Query parameters are not supported. Possible values are: notConfigured, defaultNotifications, restartWarningsOnly, disableAllNotifications, unknownFutureValue.
     *
     * @return WindowsUpdateNotificationDisplayOption|null The updateNotificationLevel
     */
@@ -1021,7 +1021,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the updateNotificationLevel
-    * Specifies what Windows Update notifications users see. Possible values are: NotConfigured, DefaultNotifications, RestartWarningsOnly, DisableAllNotifications. Returned by default. Query parameters are not supported.
+    * Specifies what Windows Update notifications users see. Possible values are: NotConfigured, DefaultNotifications, RestartWarningsOnly, DisableAllNotifications. Returned by default. Query parameters are not supported. Possible values are: notConfigured, defaultNotifications, restartWarningsOnly, disableAllNotifications, unknownFutureValue.
     *
     * @param WindowsUpdateNotificationDisplayOption $val The updateNotificationLevel
     *
@@ -1035,7 +1035,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the updateWeeks
-    * Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported.
+    * Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue.
     *
     * @return WindowsUpdateForBusinessUpdateWeeks|null The updateWeeks
     */
@@ -1054,7 +1054,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the updateWeeks
-    * Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported.
+    * Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue.
     *
     * @param WindowsUpdateForBusinessUpdateWeeks $val The updateWeeks
     *
@@ -1068,7 +1068,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the userPauseAccess
-    * Specifies whether to enable end user’s access to pause software updates. Possible values are: NotConfigured, Enabled, Disabled. Returned by default. Query parameters are not supported.
+    * Specifies whether to enable end user’s access to pause software updates. Possible values are: NotConfigured, Enabled, Disabled. Returned by default. Query parameters are not supported. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement|null The userPauseAccess
     */
@@ -1087,7 +1087,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the userPauseAccess
-    * Specifies whether to enable end user’s access to pause software updates. Possible values are: NotConfigured, Enabled, Disabled. Returned by default. Query parameters are not supported.
+    * Specifies whether to enable end user’s access to pause software updates. Possible values are: NotConfigured, Enabled, Disabled. Returned by default. Query parameters are not supported. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The userPauseAccess
     *
@@ -1101,7 +1101,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Gets the userWindowsUpdateScanAccess
-    * Specifies whether to disable user’s access to scan Windows Update. Possible values are: NotConfigured, Enabled, Disabled. Returned by default. Query parameters are not supported.
+    * Specifies whether to disable user’s access to scan Windows Update. Possible values are: NotConfigured, Enabled, Disabled. Returned by default. Query parameters are not supported. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement|null The userWindowsUpdateScanAccess
     */
@@ -1120,7 +1120,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
     /**
     * Sets the userWindowsUpdateScanAccess
-    * Specifies whether to disable user’s access to scan Windows Update. Possible values are: NotConfigured, Enabled, Disabled. Returned by default. Query parameters are not supported.
+    * Specifies whether to disable user’s access to scan Windows Update. Possible values are: NotConfigured, Enabled, Disabled. Returned by default. Query parameters are not supported. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The userWindowsUpdateScanAccess
     *
