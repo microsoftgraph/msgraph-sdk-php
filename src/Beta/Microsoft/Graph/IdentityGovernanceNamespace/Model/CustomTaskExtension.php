@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
 
 /**
 * CustomTaskExtension class

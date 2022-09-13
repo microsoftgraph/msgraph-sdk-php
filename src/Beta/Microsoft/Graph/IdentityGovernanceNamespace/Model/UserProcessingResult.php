@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
 
 /**
 * UserProcessingResult class
@@ -95,7 +95,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
     public function getProcessingStatus()
     {
         if (array_key_exists("processingStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["processingStatus"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\LifecycleWorkflowProcessingStatus") || is_null($this->_propDict["processingStatus"])) {
+            if (is_a($this->_propDict["processingStatus"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\LifecycleWorkflowProcessingStatus") || is_null($this->_propDict["processingStatus"])) {
                 return $this->_propDict["processingStatus"];
             } else {
                 $this->_propDict["processingStatus"] = new LifecycleWorkflowProcessingStatus($this->_propDict["processingStatus"]);
@@ -252,7 +252,7 @@ class UserProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
     public function getWorkflowExecutionType()
     {
         if (array_key_exists("workflowExecutionType", $this->_propDict)) {
-            if (is_a($this->_propDict["workflowExecutionType"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\WorkflowExecutionType") || is_null($this->_propDict["workflowExecutionType"])) {
+            if (is_a($this->_propDict["workflowExecutionType"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\WorkflowExecutionType") || is_null($this->_propDict["workflowExecutionType"])) {
                 return $this->_propDict["workflowExecutionType"];
             } else {
                 $this->_propDict["workflowExecutionType"] = new WorkflowExecutionType($this->_propDict["workflowExecutionType"]);

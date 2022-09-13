@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
 /**
 * Parameter class
 *
@@ -89,7 +89,7 @@ class Parameter extends \Beta\Microsoft\Graph\Model\Entity
     public function getValueType()
     {
         if (array_key_exists("valueType", $this->_propDict)) {
-            if (is_a($this->_propDict["valueType"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\ValueType") || is_null($this->_propDict["valueType"])) {
+            if (is_a($this->_propDict["valueType"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\ValueType") || is_null($this->_propDict["valueType"])) {
                 return $this->_propDict["valueType"];
             } else {
                 $this->_propDict["valueType"] = new ValueType($this->_propDict["valueType"]);

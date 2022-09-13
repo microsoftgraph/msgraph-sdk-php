@@ -64,6 +64,7 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion
     }
     /**
     * Gets the regexPattern
+    * This is the regex pattern that the corresponding text answer must follow.
     *
     * @return string|null The regexPattern
     */
@@ -78,6 +79,7 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion
 
     /**
     * Sets the regexPattern
+    * This is the regex pattern that the corresponding text answer must follow.
     *
     * @param string $val The value of the regexPattern
     *

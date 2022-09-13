@@ -570,6 +570,37 @@ class DeviceManagement extends Entity
     }
 
     /**
+    * Gets the monitoring
+    *
+    * @return \Beta\Microsoft\Graph\DeviceManagement\Model\Monitoring|null The monitoring
+    */
+    public function getMonitoring()
+    {
+        if (array_key_exists("monitoring", $this->_propDict)) {
+            if (is_a($this->_propDict["monitoring"], "\Beta\Microsoft\Graph\DeviceManagement\Model\Monitoring") || is_null($this->_propDict["monitoring"])) {
+                return $this->_propDict["monitoring"];
+            } else {
+                $this->_propDict["monitoring"] = new \Beta\Microsoft\Graph\DeviceManagement\Model\Monitoring($this->_propDict["monitoring"]);
+                return $this->_propDict["monitoring"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the monitoring
+    *
+    * @param \Beta\Microsoft\Graph\DeviceManagement\Model\Monitoring $val The monitoring
+    *
+    * @return DeviceManagement
+    */
+    public function setMonitoring($val)
+    {
+        $this->_propDict["monitoring"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the virtualEndpoint
     *
     * @return VirtualEndpoint|null The virtualEndpoint

@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
 /**
 * CustomTaskExtensionCalloutData class
 *
@@ -63,7 +63,7 @@ class CustomTaskExtensionCalloutData extends \Beta\Microsoft\Graph\Model\CustomE
     public function getTask()
     {
         if (array_key_exists("task", $this->_propDict)) {
-            if (is_a($this->_propDict["task"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\Task") || is_null($this->_propDict["task"])) {
+            if (is_a($this->_propDict["task"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\Task") || is_null($this->_propDict["task"])) {
                 return $this->_propDict["task"];
             } else {
                 $this->_propDict["task"] = new Task($this->_propDict["task"]);
@@ -94,7 +94,7 @@ class CustomTaskExtensionCalloutData extends \Beta\Microsoft\Graph\Model\CustomE
     public function getTaskProcessingresult()
     {
         if (array_key_exists("taskProcessingresult", $this->_propDict)) {
-            if (is_a($this->_propDict["taskProcessingresult"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\TaskProcessingResult") || is_null($this->_propDict["taskProcessingresult"])) {
+            if (is_a($this->_propDict["taskProcessingresult"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\TaskProcessingResult") || is_null($this->_propDict["taskProcessingresult"])) {
                 return $this->_propDict["taskProcessingresult"];
             } else {
                 $this->_propDict["taskProcessingresult"] = new TaskProcessingResult($this->_propDict["taskProcessingresult"]);
@@ -125,7 +125,7 @@ class CustomTaskExtensionCalloutData extends \Beta\Microsoft\Graph\Model\CustomE
     public function getWorkflow()
     {
         if (array_key_exists("workflow", $this->_propDict)) {
-            if (is_a($this->_propDict["workflow"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\Workflow") || is_null($this->_propDict["workflow"])) {
+            if (is_a($this->_propDict["workflow"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\Workflow") || is_null($this->_propDict["workflow"])) {
                 return $this->_propDict["workflow"];
             } else {
                 $this->_propDict["workflow"] = new Workflow($this->_propDict["workflow"]);

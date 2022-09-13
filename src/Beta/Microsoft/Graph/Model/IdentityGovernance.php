@@ -58,15 +58,15 @@ class IdentityGovernance implements \JsonSerializable
     /**
     * Gets the lifecycleWorkflows
     *
-    * @return \Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\LifecycleWorkflowsContainer|null The lifecycleWorkflows
+    * @return \Beta\Microsoft\Graph\IdentityGovernance\Model\LifecycleWorkflowsContainer|null The lifecycleWorkflows
     */
     public function getLifecycleWorkflows()
     {
         if (array_key_exists("lifecycleWorkflows", $this->_propDict)) {
-            if (is_a($this->_propDict["lifecycleWorkflows"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\LifecycleWorkflowsContainer") || is_null($this->_propDict["lifecycleWorkflows"])) {
+            if (is_a($this->_propDict["lifecycleWorkflows"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\LifecycleWorkflowsContainer") || is_null($this->_propDict["lifecycleWorkflows"])) {
                 return $this->_propDict["lifecycleWorkflows"];
             } else {
-                $this->_propDict["lifecycleWorkflows"] = new \Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\LifecycleWorkflowsContainer($this->_propDict["lifecycleWorkflows"]);
+                $this->_propDict["lifecycleWorkflows"] = new \Beta\Microsoft\Graph\IdentityGovernance\Model\LifecycleWorkflowsContainer($this->_propDict["lifecycleWorkflows"]);
                 return $this->_propDict["lifecycleWorkflows"];
             }
         }
@@ -76,7 +76,7 @@ class IdentityGovernance implements \JsonSerializable
     /**
     * Sets the lifecycleWorkflows
     *
-    * @param \Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\LifecycleWorkflowsContainer $val The lifecycleWorkflows
+    * @param \Beta\Microsoft\Graph\IdentityGovernance\Model\LifecycleWorkflowsContainer $val The lifecycleWorkflows
     *
     * @return IdentityGovernance
     */

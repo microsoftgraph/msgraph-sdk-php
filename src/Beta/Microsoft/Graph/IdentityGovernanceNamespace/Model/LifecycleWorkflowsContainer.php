@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
 
 /**
 * LifecycleWorkflowsContainer class
@@ -96,7 +96,7 @@ class LifecycleWorkflowsContainer extends \Beta\Microsoft\Graph\Model\Entity
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\LifecycleManagementSettings") || is_null($this->_propDict["settings"])) {
+            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\LifecycleManagementSettings") || is_null($this->_propDict["settings"])) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new LifecycleManagementSettings($this->_propDict["settings"]);

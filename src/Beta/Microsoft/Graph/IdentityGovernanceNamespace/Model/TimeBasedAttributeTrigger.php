@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
 /**
 * TimeBasedAttributeTrigger class
 *
@@ -61,7 +61,7 @@ class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger
     public function getTimeBasedAttribute()
     {
         if (array_key_exists("timeBasedAttribute", $this->_propDict)) {
-            if (is_a($this->_propDict["timeBasedAttribute"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\WorkflowTriggerTimeBasedAttribute") || is_null($this->_propDict["timeBasedAttribute"])) {
+            if (is_a($this->_propDict["timeBasedAttribute"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\WorkflowTriggerTimeBasedAttribute") || is_null($this->_propDict["timeBasedAttribute"])) {
                 return $this->_propDict["timeBasedAttribute"];
             } else {
                 $this->_propDict["timeBasedAttribute"] = new WorkflowTriggerTimeBasedAttribute($this->_propDict["timeBasedAttribute"]);

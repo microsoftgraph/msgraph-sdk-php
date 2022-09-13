@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
 
 /**
 * TaskReport class
@@ -128,7 +128,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
     public function getProcessingStatus()
     {
         if (array_key_exists("processingStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["processingStatus"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\LifecycleWorkflowProcessingStatus") || is_null($this->_propDict["processingStatus"])) {
+            if (is_a($this->_propDict["processingStatus"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\LifecycleWorkflowProcessingStatus") || is_null($this->_propDict["processingStatus"])) {
                 return $this->_propDict["processingStatus"];
             } else {
                 $this->_propDict["processingStatus"] = new LifecycleWorkflowProcessingStatus($this->_propDict["processingStatus"]);
@@ -310,7 +310,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
     public function getTask()
     {
         if (array_key_exists("task", $this->_propDict)) {
-            if (is_a($this->_propDict["task"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\Task") || is_null($this->_propDict["task"])) {
+            if (is_a($this->_propDict["task"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\Task") || is_null($this->_propDict["task"])) {
                 return $this->_propDict["task"];
             } else {
                 $this->_propDict["task"] = new Task($this->_propDict["task"]);
@@ -343,7 +343,7 @@ class TaskReport extends \Beta\Microsoft\Graph\Model\Entity
     public function getTaskDefinition()
     {
         if (array_key_exists("taskDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["taskDefinition"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\TaskDefinition") || is_null($this->_propDict["taskDefinition"])) {
+            if (is_a($this->_propDict["taskDefinition"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\TaskDefinition") || is_null($this->_propDict["taskDefinition"])) {
                 return $this->_propDict["taskDefinition"];
             } else {
                 $this->_propDict["taskDefinition"] = new TaskDefinition($this->_propDict["taskDefinition"]);

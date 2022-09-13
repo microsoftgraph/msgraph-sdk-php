@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AzureADLicenseType File
+* OperatorType File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\DeviceManagement\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* AzureADLicenseType class
+* OperatorType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +24,16 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AzureADLicenseType extends Enum
+class OperatorType extends Enum
 {
     /**
-    * The Enum AzureADLicenseType
+    * The Enum OperatorType
     */
-    const NONE = "none";
-    const FREE = "free";
-    const BASIC = "basic";
-    const PREMIUM_P1 = "premiumP1";
-    const PREMIUM_P2 = "premiumP2";
+    const GREATER_OR_EQUAL = "greaterOrEqual";
+    const EQUAL = "equal";
+    const GREATER = "greater";
+    const LESS = "less";
+    const LESS_OR_EQUAL = "lessOrEqual";
+    const NOT_EQUAL = "notEqual";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
