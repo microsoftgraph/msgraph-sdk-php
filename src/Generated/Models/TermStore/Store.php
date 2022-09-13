@@ -25,7 +25,7 @@ class Store extends Entity implements Parsable
     private ?array $languageTags = null;
     
     /**
-     * @var array<Set>|null $sets Collection of all sets available in the term store.
+     * @var array<Set>|null $sets Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
     */
     private ?array $sets = null;
     
@@ -85,7 +85,7 @@ class Store extends Entity implements Parsable
     }
 
     /**
-     * Gets the sets property value. Collection of all sets available in the term store.
+     * Gets the sets property value. Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
      * @return array<Set>|null
     */
     public function getSets(): ?array {
@@ -129,7 +129,7 @@ class Store extends Entity implements Parsable
     }
 
     /**
-     * Sets the sets property value. Collection of all sets available in the term store.
+     * Sets the sets property value. Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
      *  @param array<Set>|null $value Value to set for the sets property.
     */
     public function setSets(?array $value ): void {

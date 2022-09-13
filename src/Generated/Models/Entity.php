@@ -395,6 +395,7 @@ class Entity implements AdditionalDataHolder, Parsable
                 case '#microsoft.graph.permissionGrantPolicy': return new PermissionGrantPolicy();
                 case '#microsoft.graph.person': return new Person();
                 case '#microsoft.graph.phoneAuthenticationMethod': return new PhoneAuthenticationMethod();
+                case '#microsoft.graph.pinnedChatMessageInfo': return new PinnedChatMessageInfo();
                 case '#microsoft.graph.place': return new Place();
                 case '#microsoft.graph.planner': return new Planner();
                 case '#microsoft.graph.plannerAssignedToTaskBoardTaskFormat': return new PlannerAssignedToTaskBoardTaskFormat();
@@ -438,7 +439,6 @@ class Entity implements AdditionalDataHolder, Parsable
                 case '#microsoft.graph.request': return new Request();
                 case '#microsoft.graph.resourceOperation': return new ResourceOperation();
                 case '#microsoft.graph.resourceSpecificPermissionGrant': return new ResourceSpecificPermissionGrant();
-                case '#microsoft.graph.restrictedSignIn': return new RestrictedSignIn();
                 case '#microsoft.graph.richLongRunningOperation': return new RichLongRunningOperation();
                 case '#microsoft.graph.riskDetection': return new RiskDetection();
                 case '#microsoft.graph.riskyUser': return new RiskyUser();

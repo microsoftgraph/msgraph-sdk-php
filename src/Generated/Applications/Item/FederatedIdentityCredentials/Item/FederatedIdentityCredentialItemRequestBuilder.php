@@ -65,7 +65,7 @@ class FederatedIdentityCredentialItemRequestBuilder
     }
 
     /**
-     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      * @param FederatedIdentityCredentialItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -132,7 +132,7 @@ class FederatedIdentityCredentialItemRequestBuilder
     }
 
     /**
-     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      * @param FederatedIdentityCredentialItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

@@ -51,7 +51,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     private ?WindowsDeliveryOptimizationMode $deliveryOptimizationMode = null;
     
     /**
-     * @var bool|null $driversExcluded Exclude Windows update Drivers
+     * @var bool|null $driversExcluded When TRUE, excludes Windows update Drivers. When FALSE, does not exclude Windows update Drivers. Returned by default. Query parameters are not supported.
     */
     private ?bool $driversExcluded = null;
     
@@ -71,17 +71,17 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     private ?int $engagedRestartTransitionScheduleInDays = null;
     
     /**
-     * @var int|null $featureUpdatesDeferralPeriodInDays Defer Feature Updates by these many days
+     * @var int|null $featureUpdatesDeferralPeriodInDays Defer Feature Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
     */
     private ?int $featureUpdatesDeferralPeriodInDays = null;
     
     /**
-     * @var bool|null $featureUpdatesPaused Pause Feature Updates
+     * @var bool|null $featureUpdatesPaused When TRUE, assigned devices are paused from receiving feature updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Feature Updates. Returned by default. Query parameters are not supported.s
     */
     private ?bool $featureUpdatesPaused = null;
     
     /**
-     * @var DateTime|null $featureUpdatesPauseExpiryDateTime Feature Updates Pause Expiry datetime
+     * @var DateTime|null $featureUpdatesPauseExpiryDateTime The Feature Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
     */
     private ?DateTime $featureUpdatesPauseExpiryDateTime = null;
     
@@ -106,12 +106,12 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     private ?bool $featureUpdatesWillBeRolledBack = null;
     
     /**
-     * @var WindowsUpdateInstallScheduleType|null $installationSchedule Installation schedule
+     * @var WindowsUpdateInstallScheduleType|null $installationSchedule The Installation Schedule. Possible values are: ActiveHoursStart, ActiveHoursEnd, ScheduledInstallDay, ScheduledInstallTime. Returned by default. Query parameters are not supported.
     */
     private ?WindowsUpdateInstallScheduleType $installationSchedule = null;
     
     /**
-     * @var bool|null $microsoftUpdateServiceAllowed Allow Microsoft Update Service
+     * @var bool|null $microsoftUpdateServiceAllowed When TRUE, allows Microsoft Update Service. When FALSE, does not allow Microsoft Update Service. Returned by default. Query parameters are not supported.
     */
     private ?bool $microsoftUpdateServiceAllowed = null;
     
@@ -126,17 +126,17 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     private ?PrereleaseFeatures $prereleaseFeatures = null;
     
     /**
-     * @var int|null $qualityUpdatesDeferralPeriodInDays Defer Quality Updates by these many days
+     * @var int|null $qualityUpdatesDeferralPeriodInDays Defer Quality Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
     */
     private ?int $qualityUpdatesDeferralPeriodInDays = null;
     
     /**
-     * @var bool|null $qualityUpdatesPaused Pause Quality Updates
+     * @var bool|null $qualityUpdatesPaused When TRUE, assigned devices are paused from receiving quality updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Quality Updates. Returned by default. Query parameters are not supported.
     */
     private ?bool $qualityUpdatesPaused = null;
     
     /**
-     * @var DateTime|null $qualityUpdatesPauseExpiryDateTime Quality Updates Pause Expiry datetime
+     * @var DateTime|null $qualityUpdatesPauseExpiryDateTime The Quality Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
     */
     private ?DateTime $qualityUpdatesPauseExpiryDateTime = null;
     
@@ -176,7 +176,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     private ?WindowsUpdateNotificationDisplayOption $updateNotificationLevel = null;
     
     /**
-     * @var WindowsUpdateForBusinessUpdateWeeks|null $updateWeeks Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported.
+     * @var WindowsUpdateForBusinessUpdateWeeks|null $updateWeeks Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue.
     */
     private ?WindowsUpdateForBusinessUpdateWeeks $updateWeeks = null;
     
@@ -272,7 +272,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Gets the driversExcluded property value. Exclude Windows update Drivers
+     * Gets the driversExcluded property value. When TRUE, excludes Windows update Drivers. When FALSE, does not exclude Windows update Drivers. Returned by default. Query parameters are not supported.
      * @return bool|null
     */
     public function getDriversExcluded(): ?bool {
@@ -304,7 +304,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Gets the featureUpdatesDeferralPeriodInDays property value. Defer Feature Updates by these many days
+     * Gets the featureUpdatesDeferralPeriodInDays property value. Defer Feature Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
      * @return int|null
     */
     public function getFeatureUpdatesDeferralPeriodInDays(): ?int {
@@ -312,7 +312,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Gets the featureUpdatesPaused property value. Pause Feature Updates
+     * Gets the featureUpdatesPaused property value. When TRUE, assigned devices are paused from receiving feature updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Feature Updates. Returned by default. Query parameters are not supported.s
      * @return bool|null
     */
     public function getFeatureUpdatesPaused(): ?bool {
@@ -320,7 +320,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Gets the featureUpdatesPauseExpiryDateTime property value. Feature Updates Pause Expiry datetime
+     * Gets the featureUpdatesPauseExpiryDateTime property value. The Feature Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
      * @return DateTime|null
     */
     public function getFeatureUpdatesPauseExpiryDateTime(): ?DateTime {
@@ -406,7 +406,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Gets the installationSchedule property value. Installation schedule
+     * Gets the installationSchedule property value. The Installation Schedule. Possible values are: ActiveHoursStart, ActiveHoursEnd, ScheduledInstallDay, ScheduledInstallTime. Returned by default. Query parameters are not supported.
      * @return WindowsUpdateInstallScheduleType|null
     */
     public function getInstallationSchedule(): ?WindowsUpdateInstallScheduleType {
@@ -414,7 +414,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Gets the microsoftUpdateServiceAllowed property value. Allow Microsoft Update Service
+     * Gets the microsoftUpdateServiceAllowed property value. When TRUE, allows Microsoft Update Service. When FALSE, does not allow Microsoft Update Service. Returned by default. Query parameters are not supported.
      * @return bool|null
     */
     public function getMicrosoftUpdateServiceAllowed(): ?bool {
@@ -438,7 +438,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Gets the qualityUpdatesDeferralPeriodInDays property value. Defer Quality Updates by these many days
+     * Gets the qualityUpdatesDeferralPeriodInDays property value. Defer Quality Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
      * @return int|null
     */
     public function getQualityUpdatesDeferralPeriodInDays(): ?int {
@@ -446,7 +446,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Gets the qualityUpdatesPaused property value. Pause Quality Updates
+     * Gets the qualityUpdatesPaused property value. When TRUE, assigned devices are paused from receiving quality updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Quality Updates. Returned by default. Query parameters are not supported.
      * @return bool|null
     */
     public function getQualityUpdatesPaused(): ?bool {
@@ -454,7 +454,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Gets the qualityUpdatesPauseExpiryDateTime property value. Quality Updates Pause Expiry datetime
+     * Gets the qualityUpdatesPauseExpiryDateTime property value. The Quality Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
      * @return DateTime|null
     */
     public function getQualityUpdatesPauseExpiryDateTime(): ?DateTime {
@@ -518,7 +518,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Gets the updateWeeks property value. Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported.
+     * Gets the updateWeeks property value. Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue.
      * @return WindowsUpdateForBusinessUpdateWeeks|null
     */
     public function getUpdateWeeks(): ?WindowsUpdateForBusinessUpdateWeeks {
@@ -650,7 +650,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Sets the driversExcluded property value. Exclude Windows update Drivers
+     * Sets the driversExcluded property value. When TRUE, excludes Windows update Drivers. When FALSE, does not exclude Windows update Drivers. Returned by default. Query parameters are not supported.
      *  @param bool|null $value Value to set for the driversExcluded property.
     */
     public function setDriversExcluded(?bool $value ): void {
@@ -682,7 +682,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Sets the featureUpdatesDeferralPeriodInDays property value. Defer Feature Updates by these many days
+     * Sets the featureUpdatesDeferralPeriodInDays property value. Defer Feature Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
      *  @param int|null $value Value to set for the featureUpdatesDeferralPeriodInDays property.
     */
     public function setFeatureUpdatesDeferralPeriodInDays(?int $value ): void {
@@ -690,7 +690,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Sets the featureUpdatesPaused property value. Pause Feature Updates
+     * Sets the featureUpdatesPaused property value. When TRUE, assigned devices are paused from receiving feature updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Feature Updates. Returned by default. Query parameters are not supported.s
      *  @param bool|null $value Value to set for the featureUpdatesPaused property.
     */
     public function setFeatureUpdatesPaused(?bool $value ): void {
@@ -698,7 +698,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Sets the featureUpdatesPauseExpiryDateTime property value. Feature Updates Pause Expiry datetime
+     * Sets the featureUpdatesPauseExpiryDateTime property value. The Feature Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
      *  @param DateTime|null $value Value to set for the featureUpdatesPauseExpiryDateTime property.
     */
     public function setFeatureUpdatesPauseExpiryDateTime(?DateTime $value ): void {
@@ -738,7 +738,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Sets the installationSchedule property value. Installation schedule
+     * Sets the installationSchedule property value. The Installation Schedule. Possible values are: ActiveHoursStart, ActiveHoursEnd, ScheduledInstallDay, ScheduledInstallTime. Returned by default. Query parameters are not supported.
      *  @param WindowsUpdateInstallScheduleType|null $value Value to set for the installationSchedule property.
     */
     public function setInstallationSchedule(?WindowsUpdateInstallScheduleType $value ): void {
@@ -746,7 +746,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Sets the microsoftUpdateServiceAllowed property value. Allow Microsoft Update Service
+     * Sets the microsoftUpdateServiceAllowed property value. When TRUE, allows Microsoft Update Service. When FALSE, does not allow Microsoft Update Service. Returned by default. Query parameters are not supported.
      *  @param bool|null $value Value to set for the microsoftUpdateServiceAllowed property.
     */
     public function setMicrosoftUpdateServiceAllowed(?bool $value ): void {
@@ -770,7 +770,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Sets the qualityUpdatesDeferralPeriodInDays property value. Defer Quality Updates by these many days
+     * Sets the qualityUpdatesDeferralPeriodInDays property value. Defer Quality Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
      *  @param int|null $value Value to set for the qualityUpdatesDeferralPeriodInDays property.
     */
     public function setQualityUpdatesDeferralPeriodInDays(?int $value ): void {
@@ -778,7 +778,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Sets the qualityUpdatesPaused property value. Pause Quality Updates
+     * Sets the qualityUpdatesPaused property value. When TRUE, assigned devices are paused from receiving quality updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Quality Updates. Returned by default. Query parameters are not supported.
      *  @param bool|null $value Value to set for the qualityUpdatesPaused property.
     */
     public function setQualityUpdatesPaused(?bool $value ): void {
@@ -786,7 +786,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Sets the qualityUpdatesPauseExpiryDateTime property value. Quality Updates Pause Expiry datetime
+     * Sets the qualityUpdatesPauseExpiryDateTime property value. The Quality Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
      *  @param DateTime|null $value Value to set for the qualityUpdatesPauseExpiryDateTime property.
     */
     public function setQualityUpdatesPauseExpiryDateTime(?DateTime $value ): void {
@@ -850,7 +850,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Sets the updateWeeks property value. Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported.
+     * Sets the updateWeeks property value. Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue.
      *  @param WindowsUpdateForBusinessUpdateWeeks|null $value Value to set for the updateWeeks property.
     */
     public function setUpdateWeeks(?WindowsUpdateForBusinessUpdateWeeks $value ): void {

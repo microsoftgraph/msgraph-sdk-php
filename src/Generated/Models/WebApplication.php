@@ -40,6 +40,11 @@ class WebApplication implements AdditionalDataHolder, Parsable
     private ?array $redirectUris = null;
     
     /**
+     * @var array<RedirectUriSettings>|null $redirectUriSettings The redirectUriSettings property
+    */
+    private ?array $redirectUriSettings = null;
+    
+    /**
      * Instantiates a new webApplication and sets the default values.
     */
     public function __construct() {
@@ -76,6 +81,7 @@ class WebApplication implements AdditionalDataHolder, Parsable
             'logoutUrl' => function (ParseNode $n) use ($o) { $o->setLogoutUrl($n->getStringValue()); },
             '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'redirectUris' => function (ParseNode $n) use ($o) { $o->setRedirectUris($n->getCollectionOfPrimitiveValues()); },
+            'redirectUriSettings' => function (ParseNode $n) use ($o) { $o->setRedirectUriSettings($n->getCollectionOfObjectValues(array(RedirectUriSettings::class, 'createFromDiscriminatorValue'))); },
         ];
     }
 
@@ -120,6 +126,14 @@ class WebApplication implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the redirectUriSettings property value. The redirectUriSettings property
+     * @return array<RedirectUriSettings>|null
+    */
+    public function getRedirectUriSettings(): ?array {
+        return $this->redirectUriSettings;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -129,6 +143,7 @@ class WebApplication implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('logoutUrl', $this->logoutUrl);
         $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeCollectionOfPrimitiveValues('redirectUris', $this->redirectUris);
+        $writer->writeCollectionOfObjectValues('redirectUriSettings', $this->redirectUriSettings);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -178,6 +193,14 @@ class WebApplication implements AdditionalDataHolder, Parsable
     */
     public function setRedirectUris(?array $value ): void {
         $this->redirectUris = $value;
+    }
+
+    /**
+     * Sets the redirectUriSettings property value. The redirectUriSettings property
+     *  @param array<RedirectUriSettings>|null $value Value to set for the redirectUriSettings property.
+    */
+    public function setRedirectUriSettings(?array $value ): void {
+        $this->redirectUriSettings = $value;
     }
 
 }
