@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
 /**
 * TaskReportSummary class
 *
@@ -25,6 +25,7 @@ class TaskReportSummary extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the failedTasks
+    * The number of failed tasks in a report.
     *
     * @return int|null The failedTasks
     */
@@ -39,6 +40,7 @@ class TaskReportSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the failedTasks
+    * The number of failed tasks in a report.
     *
     * @param int $val The value of the failedTasks
     *
@@ -51,6 +53,7 @@ class TaskReportSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the successfulTasks
+    * The total number of successful tasks in a report.
     *
     * @return int|null The successfulTasks
     */
@@ -65,6 +68,7 @@ class TaskReportSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the successfulTasks
+    * The total number of successful tasks in a report.
     *
     * @param int $val The value of the successfulTasks
     *
@@ -77,6 +81,7 @@ class TaskReportSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the totalTasks
+    * The total number of tasks in a report.
     *
     * @return int|null The totalTasks
     */
@@ -91,6 +96,7 @@ class TaskReportSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the totalTasks
+    * The total number of tasks in a report.
     *
     * @param int $val The value of the totalTasks
     *
@@ -103,6 +109,7 @@ class TaskReportSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the unprocessedTasks
+    * The number of unprocessed tasks in a report.
     *
     * @return int|null The unprocessedTasks
     */
@@ -117,6 +124,7 @@ class TaskReportSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the unprocessedTasks
+    * The number of unprocessed tasks in a report.
     *
     * @param int $val The value of the unprocessedTasks
     *

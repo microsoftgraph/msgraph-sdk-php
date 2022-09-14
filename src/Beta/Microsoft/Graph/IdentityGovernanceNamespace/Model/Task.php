@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
 
 /**
 * Task class
@@ -27,6 +27,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the arguments
+    * Arguments included within the task.
      *
      * @return array|null The arguments
      */
@@ -41,6 +42,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the arguments
+    * Arguments included within the task.
     *
     * @param \Beta\Microsoft\Graph\Model\KeyValuePair[] $val The arguments
     *
@@ -54,13 +56,14 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the category
+    * The category of the task. The possible values are: joiner, leaver, unknownFutureValue. This property is multi-valued and the same task can apply to both joiner and leaver categories.
     *
     * @return LifecycleTaskCategory|null The category
     */
     public function getCategory()
     {
         if (array_key_exists("category", $this->_propDict)) {
-            if (is_a($this->_propDict["category"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\LifecycleTaskCategory") || is_null($this->_propDict["category"])) {
+            if (is_a($this->_propDict["category"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\LifecycleTaskCategory") || is_null($this->_propDict["category"])) {
                 return $this->_propDict["category"];
             } else {
                 $this->_propDict["category"] = new LifecycleTaskCategory($this->_propDict["category"]);
@@ -72,6 +75,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the category
+    * The category of the task. The possible values are: joiner, leaver, unknownFutureValue. This property is multi-valued and the same task can apply to both joiner and leaver categories.
     *
     * @param LifecycleTaskCategory $val The category
     *
@@ -85,6 +89,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the continueOnError
+    * A boolean value that determines if the failure of this task stops the subsequent workflows from running.
     *
     * @return bool|null The continueOnError
     */
@@ -99,6 +104,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the continueOnError
+    * A boolean value that determines if the failure of this task stops the subsequent workflows from running.
     *
     * @param bool $val The continueOnError
     *
@@ -112,6 +118,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the description
+    * A string that describes the purpose of the task for administrative use.
     *
     * @return string|null The description
     */
@@ -126,6 +133,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the description
+    * A string that describes the purpose of the task for administrative use.
     *
     * @param string $val The description
     *
@@ -139,6 +147,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the displayName
+    * A unique string that identifies the task. Supports $filter(eq) and orderBy.
     *
     * @return string|null The displayName
     */
@@ -153,6 +162,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the displayName
+    * A unique string that identifies the task. Supports $filter(eq) and orderBy.
     *
     * @param string $val The displayName
     *
@@ -166,6 +176,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the executionSequence
+    * An integer that states in what order the task will run in a workflow.
     *
     * @return int|null The executionSequence
     */
@@ -180,6 +191,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the executionSequence
+    * An integer that states in what order the task will run in a workflow.
     *
     * @param int $val The executionSequence
     *
@@ -193,6 +205,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isEnabled
+    * A boolean value that denotes whether the task is set to run or not. Supports $filter(eq, ne) and orderBy.
     *
     * @return bool|null The isEnabled
     */
@@ -207,6 +220,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isEnabled
+    * A boolean value that denotes whether the task is set to run or not. Supports $filter(eq, ne) and orderBy.
     *
     * @param bool $val The isEnabled
     *
@@ -220,6 +234,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the taskDefinitionId
+    * A unique template identifier for the task. For more information about the tasks that Lifecycle Workflows currently supports and their unique identifiers, see supported tasks
     *
     * @return string|null The taskDefinitionId
     */
@@ -234,6 +249,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the taskDefinitionId
+    * A unique template identifier for the task. For more information about the tasks that Lifecycle Workflows currently supports and their unique identifiers, see supported tasks
     *
     * @param string $val The taskDefinitionId
     *
@@ -248,6 +264,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the taskProcessingResults
+    * The result of processing the task.
      *
      * @return array|null The taskProcessingResults
      */
@@ -262,6 +279,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the taskProcessingResults
+    * The result of processing the task.
     *
     * @param TaskProcessingResult[] $val The taskProcessingResults
     *

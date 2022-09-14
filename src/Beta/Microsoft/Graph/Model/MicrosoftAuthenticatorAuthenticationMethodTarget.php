@@ -59,7 +59,6 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
 
     /**
     * Gets the displayAppInformationRequiredState
-    * Determines whether the user is shown additional context in their Authenticator app notification. In the body of the Authenticator notification, the user will be shown the app they are signing into along with the location that the authentication request originated from. Possible values are: enabled, disabled, default.
     *
     * @return AdvancedConfigState|null The displayAppInformationRequiredState
     */
@@ -78,7 +77,6 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
 
     /**
     * Sets the displayAppInformationRequiredState
-    * Determines whether the user is shown additional context in their Authenticator app notification. In the body of the Authenticator notification, the user will be shown the app they are signing into along with the location that the authentication request originated from. Possible values are: enabled, disabled, default.
     *
     * @param AdvancedConfigState $val The displayAppInformationRequiredState
     *
@@ -92,7 +90,6 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
 
     /**
     * Gets the numberMatchingRequiredState
-    * Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications. Possible values are: enabled, disabled, default.
     *
     * @return AdvancedConfigState|null The numberMatchingRequiredState
     */
@@ -111,7 +108,6 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
 
     /**
     * Sets the numberMatchingRequiredState
-    * Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications. Possible values are: enabled, disabled, default.
     *
     * @param AdvancedConfigState $val The numberMatchingRequiredState
     *

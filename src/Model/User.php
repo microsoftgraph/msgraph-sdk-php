@@ -1513,6 +1513,35 @@ class User extends DirectoryObject
     }
 
     /**
+    * Gets the securityIdentifier
+    * Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith).
+    *
+    * @return string|null The securityIdentifier
+    */
+    public function getSecurityIdentifier()
+    {
+        if (array_key_exists("securityIdentifier", $this->_propDict)) {
+            return $this->_propDict["securityIdentifier"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the securityIdentifier
+    * Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith).
+    *
+    * @param string $val The securityIdentifier
+    *
+    * @return User
+    */
+    public function setSecurityIdentifier($val)
+    {
+        $this->_propDict["securityIdentifier"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the showInAddressList
     * Do not use in Microsoft Graph. Manage this property through the Microsoft 365 admin center instead. Represents whether the user should be included in the Outlook global address list. See Known issue.
     *

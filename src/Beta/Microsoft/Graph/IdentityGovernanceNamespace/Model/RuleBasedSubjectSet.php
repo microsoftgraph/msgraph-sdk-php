@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
 /**
 * RuleBasedSubjectSet class
 *
@@ -25,6 +25,7 @@ class RuleBasedSubjectSet extends \Beta\Microsoft\Graph\Model\SubjectSet
 {
     /**
     * Gets the rule
+    * The rule for the subject set.
     *
     * @return string|null The rule
     */
@@ -39,6 +40,7 @@ class RuleBasedSubjectSet extends \Beta\Microsoft\Graph\Model\SubjectSet
 
     /**
     * Sets the rule
+    * The rule for the subject set.
     *
     * @param string $val The value of the rule
     *

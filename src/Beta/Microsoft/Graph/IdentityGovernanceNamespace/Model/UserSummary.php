@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
 /**
 * UserSummary class
 *
@@ -25,6 +25,7 @@ class UserSummary extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the failedTasks
+    * The number of failed tasks for users in a user summary.
     *
     * @return int|null The failedTasks
     */
@@ -39,6 +40,7 @@ class UserSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the failedTasks
+    * The number of failed tasks for users in a user summary.
     *
     * @param int $val The value of the failedTasks
     *
@@ -51,6 +53,7 @@ class UserSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the failedUsers
+    * The number of failed users in a user summary.
     *
     * @return int|null The failedUsers
     */
@@ -65,6 +68,7 @@ class UserSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the failedUsers
+    * The number of failed users in a user summary.
     *
     * @param int $val The value of the failedUsers
     *
@@ -77,6 +81,7 @@ class UserSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the successfulUsers
+    * The number of successful users in a user summary.
     *
     * @return int|null The successfulUsers
     */
@@ -91,6 +96,7 @@ class UserSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the successfulUsers
+    * The number of successful users in a user summary.
     *
     * @param int $val The value of the successfulUsers
     *
@@ -103,6 +109,7 @@ class UserSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the totalTasks
+    * The total tasks of users in a user summary.
     *
     * @return int|null The totalTasks
     */
@@ -117,6 +124,7 @@ class UserSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the totalTasks
+    * The total tasks of users in a user summary.
     *
     * @param int $val The value of the totalTasks
     *
@@ -129,6 +137,7 @@ class UserSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the totalUsers
+    * The total number of users in a user summary
     *
     * @return int|null The totalUsers
     */
@@ -143,6 +152,7 @@ class UserSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the totalUsers
+    * The total number of users in a user summary
     *
     * @param int $val The value of the totalUsers
     *

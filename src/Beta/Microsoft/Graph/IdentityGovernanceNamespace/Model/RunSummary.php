@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
 /**
 * RunSummary class
 *
@@ -25,6 +25,7 @@ class RunSummary extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the failedRuns
+    * The number of failed workflow runs.
     *
     * @return int|null The failedRuns
     */
@@ -39,6 +40,7 @@ class RunSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the failedRuns
+    * The number of failed workflow runs.
     *
     * @param int $val The value of the failedRuns
     *
@@ -51,6 +53,7 @@ class RunSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the failedTasks
+    * The number of failed tasks of a workflow.
     *
     * @return int|null The failedTasks
     */
@@ -65,6 +68,7 @@ class RunSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the failedTasks
+    * The number of failed tasks of a workflow.
     *
     * @param int $val The value of the failedTasks
     *
@@ -77,6 +81,7 @@ class RunSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the successfulRuns
+    * The number of successful workflow runs.
     *
     * @return int|null The successfulRuns
     */
@@ -91,6 +96,7 @@ class RunSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the successfulRuns
+    * The number of successful workflow runs.
     *
     * @param int $val The value of the successfulRuns
     *
@@ -103,6 +109,7 @@ class RunSummary extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the totalRuns
+    * The total number of runs for a workflow.
     *
     * @return int|null The totalRuns
     */
@@ -117,6 +124,7 @@ class RunSummary extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the totalRuns
+    * The total number of runs for a workflow.
     *
     * @param int $val The value of the totalRuns
     *

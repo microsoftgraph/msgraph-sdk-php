@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
 /**
 * TimeBasedAttributeTrigger class
 *
@@ -25,6 +25,7 @@ class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger
 {
     /**
     * Gets the offsetInDays
+    * How many days before or after the time-based attribute specified the workflow should trigger. For example, if the attribute is employeeHireDate and offsetInDays is -1, then the workflow should trigger one day before the employee hire date.
     *
     * @return int|null The offsetInDays
     */
@@ -39,6 +40,7 @@ class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger
 
     /**
     * Sets the offsetInDays
+    * How many days before or after the time-based attribute specified the workflow should trigger. For example, if the attribute is employeeHireDate and offsetInDays is -1, then the workflow should trigger one day before the employee hire date.
     *
     * @param int $val The value of the offsetInDays
     *
@@ -52,13 +54,14 @@ class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger
 
     /**
     * Gets the timeBasedAttribute
+    * Determines which time-based identity property to reference. The possible values are: employeeHireDate, employeeLeaveDateTime, unknownFutureValue.
     *
     * @return WorkflowTriggerTimeBasedAttribute|null The timeBasedAttribute
     */
     public function getTimeBasedAttribute()
     {
         if (array_key_exists("timeBasedAttribute", $this->_propDict)) {
-            if (is_a($this->_propDict["timeBasedAttribute"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\WorkflowTriggerTimeBasedAttribute") || is_null($this->_propDict["timeBasedAttribute"])) {
+            if (is_a($this->_propDict["timeBasedAttribute"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\WorkflowTriggerTimeBasedAttribute") || is_null($this->_propDict["timeBasedAttribute"])) {
                 return $this->_propDict["timeBasedAttribute"];
             } else {
                 $this->_propDict["timeBasedAttribute"] = new WorkflowTriggerTimeBasedAttribute($this->_propDict["timeBasedAttribute"]);
@@ -70,6 +73,7 @@ class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger
 
     /**
     * Sets the timeBasedAttribute
+    * Determines which time-based identity property to reference. The possible values are: employeeHireDate, employeeLeaveDateTime, unknownFutureValue.
     *
     * @param WorkflowTriggerTimeBasedAttribute $val The value to assign to the timeBasedAttribute
     *
