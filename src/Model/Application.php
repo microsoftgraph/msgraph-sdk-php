@@ -242,6 +242,33 @@ class Application extends DirectoryObject
     }
 
     /**
+    * Gets the defaultRedirectUri
+    *
+    * @return string|null The defaultRedirectUri
+    */
+    public function getDefaultRedirectUri()
+    {
+        if (array_key_exists("defaultRedirectUri", $this->_propDict)) {
+            return $this->_propDict["defaultRedirectUri"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the defaultRedirectUri
+    *
+    * @param string $val The defaultRedirectUri
+    *
+    * @return Application
+    */
+    public function setDefaultRedirectUri($val)
+    {
+        $this->_propDict["defaultRedirectUri"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the description
     * Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
     *
@@ -1094,7 +1121,7 @@ class Application extends DirectoryObject
 
      /**
      * Gets the federatedIdentityCredentials
-    * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+    * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      *
      * @return array|null The federatedIdentityCredentials
      */
@@ -1109,7 +1136,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the federatedIdentityCredentials
-    * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+    * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
     *
     * @param FederatedIdentityCredential[] $val The federatedIdentityCredentials
     *
