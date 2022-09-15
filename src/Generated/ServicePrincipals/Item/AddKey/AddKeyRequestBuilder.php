@@ -45,11 +45,11 @@ class AddKeyRequestBuilder
 
     /**
      * Invoke action addKey
-     * @param KeyCredentialPostRequestBody $body 
+     * @param AddKeyPostRequestBody $body 
      * @param AddKeyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createPostRequestInformation(KeyCredentialPostRequestBody $body, ?AddKeyRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function createPostRequestInformation(AddKeyPostRequestBody $body, ?AddKeyRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -69,12 +69,12 @@ class AddKeyRequestBuilder
 
     /**
      * Invoke action addKey
-     * @param KeyCredentialPostRequestBody $body 
+     * @param AddKeyPostRequestBody $body 
      * @param AddKeyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
     */
-    public function post(KeyCredentialPostRequestBody $body, ?AddKeyRequestBuilderPostRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+    public function post(AddKeyPostRequestBody $body, ?AddKeyRequestBuilderPostRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
         $requestInfo = $this->createPostRequestInformation($body, $requestConfiguration);
         try {
             $errorMappings = [

@@ -51,6 +51,11 @@ class Application extends DirectoryObject implements Parsable
     private ?DirectoryObject $createdOnBehalfOf = null;
     
     /**
+     * @var string|null $defaultRedirectUri The defaultRedirectUri property
+    */
+    private ?string $defaultRedirectUri = null;
+    
+    /**
      * @var string|null $description Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
     */
     private ?string $description = null;
@@ -71,7 +76,7 @@ class Application extends DirectoryObject implements Parsable
     private ?array $extensionProperties = null;
     
     /**
-     * @var array<FederatedIdentityCredential>|null $federatedIdentityCredentials Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * @var array<FederatedIdentityCredential>|null $federatedIdentityCredentials Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
     */
     private ?array $federatedIdentityCredentials = null;
     
@@ -292,6 +297,14 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the defaultRedirectUri property value. The defaultRedirectUri property
+     * @return string|null
+    */
+    public function getDefaultRedirectUri(): ?string {
+        return $this->defaultRedirectUri;
+    }
+
+    /**
      * Gets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
      * @return string|null
     */
@@ -324,7 +337,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Gets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      * @return array<FederatedIdentityCredential>|null
     */
     public function getFederatedIdentityCredentials(): ?array {
@@ -346,6 +359,7 @@ class Application extends DirectoryObject implements Parsable
             'certification' => function (ParseNode $n) use ($o) { $o->setCertification($n->getObjectValue(array(Certification::class, 'createFromDiscriminatorValue'))); },
             'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
             'createdOnBehalfOf' => function (ParseNode $n) use ($o) { $o->setCreatedOnBehalfOf($n->getObjectValue(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
+            'defaultRedirectUri' => function (ParseNode $n) use ($o) { $o->setDefaultRedirectUri($n->getStringValue()); },
             'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
             'disabledByMicrosoftStatus' => function (ParseNode $n) use ($o) { $o->setDisabledByMicrosoftStatus($n->getStringValue()); },
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
@@ -611,6 +625,7 @@ class Application extends DirectoryObject implements Parsable
         $writer->writeObjectValue('certification', $this->certification);
         $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
         $writer->writeObjectValue('createdOnBehalfOf', $this->createdOnBehalfOf);
+        $writer->writeStringValue('defaultRedirectUri', $this->defaultRedirectUri);
         $writer->writeStringValue('description', $this->description);
         $writer->writeStringValue('disabledByMicrosoftStatus', $this->disabledByMicrosoftStatus);
         $writer->writeStringValue('displayName', $this->displayName);
@@ -710,6 +725,14 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
+     * Sets the defaultRedirectUri property value. The defaultRedirectUri property
+     *  @param string|null $value Value to set for the defaultRedirectUri property.
+    */
+    public function setDefaultRedirectUri(?string $value ): void {
+        $this->defaultRedirectUri = $value;
+    }
+
+    /**
      * Sets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
      *  @param string|null $value Value to set for the description property.
     */
@@ -742,7 +765,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Sets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      *  @param array<FederatedIdentityCredential>|null $value Value to set for the federatedIdentityCredentials property.
     */
     public function setFederatedIdentityCredentials(?array $value ): void {

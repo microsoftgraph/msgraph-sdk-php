@@ -54,6 +54,8 @@ class EventMessageDetail implements AdditionalDataHolder, Parsable
                 case '#microsoft.graph.membersDeletedEventMessageDetail': return new MembersDeletedEventMessageDetail();
                 case '#microsoft.graph.membersJoinedEventMessageDetail': return new MembersJoinedEventMessageDetail();
                 case '#microsoft.graph.membersLeftEventMessageDetail': return new MembersLeftEventMessageDetail();
+                case '#microsoft.graph.messagePinnedEventMessageDetail': return new MessagePinnedEventMessageDetail();
+                case '#microsoft.graph.messageUnpinnedEventMessageDetail': return new MessageUnpinnedEventMessageDetail();
                 case '#microsoft.graph.tabUpdatedEventMessageDetail': return new TabUpdatedEventMessageDetail();
                 case '#microsoft.graph.teamArchivedEventMessageDetail': return new TeamArchivedEventMessageDetail();
                 case '#microsoft.graph.teamCreatedEventMessageDetail': return new TeamCreatedEventMessageDetail();

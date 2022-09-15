@@ -34,7 +34,7 @@ class ManagedDeviceOverview extends Entity implements Parsable
     private ?int $mdmEnrolledCount = null;
     
     /**
-     * Instantiates a new managedDeviceOverview and sets the default values.
+     * Instantiates a new ManagedDeviceOverview and sets the default values.
     */
     public function __construct() {
         parent::__construct();

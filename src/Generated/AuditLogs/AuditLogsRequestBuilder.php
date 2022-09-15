@@ -9,8 +9,6 @@ use Microsoft\Graph\Generated\AuditLogs\DirectoryAudits\DirectoryAuditsRequestBu
 use Microsoft\Graph\Generated\AuditLogs\DirectoryAudits\Item\DirectoryAuditItemRequestBuilder;
 use Microsoft\Graph\Generated\AuditLogs\Provisioning\Item\ProvisioningObjectSummaryItemRequestBuilder;
 use Microsoft\Graph\Generated\AuditLogs\Provisioning\ProvisioningRequestBuilder;
-use Microsoft\Graph\Generated\AuditLogs\RestrictedSignIns\Item\RestrictedSignInItemRequestBuilder;
-use Microsoft\Graph\Generated\AuditLogs\RestrictedSignIns\RestrictedSignInsRequestBuilder;
 use Microsoft\Graph\Generated\AuditLogs\SignIns\Item\SignInItemRequestBuilder;
 use Microsoft\Graph\Generated\AuditLogs\SignIns\SignInsRequestBuilder;
 use Microsoft\Graph\Generated\Models\AuditLogRoot;
@@ -48,13 +46,6 @@ class AuditLogsRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * The restrictedSignIns property
-    */
-    public function restrictedSignIns(): RestrictedSignInsRequestBuilder {
-        return new RestrictedSignInsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * The signIns property
@@ -186,17 +177,6 @@ class AuditLogsRequestBuilder
         $urlTplParams = $this->pathParameters;
         $urlTplParams['provisioningObjectSummary%2Did'] = $id;
         return new ProvisioningObjectSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Gets an item from the Microsoft\Graph\Generated.auditLogs.restrictedSignIns.item collection
-     * @param string $id Unique identifier of the item
-     * @return RestrictedSignInItemRequestBuilder
-    */
-    public function restrictedSignInsById(string $id): RestrictedSignInItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['restrictedSignIn%2Did'] = $id;
-        return new RestrictedSignInItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -19,11 +19,6 @@ class AuditLogRoot extends Entity implements Parsable
     private ?array $provisioning = null;
     
     /**
-     * @var array<RestrictedSignIn>|null $restrictedSignIns The restrictedSignIns property
-    */
-    private ?array $restrictedSignIns = null;
-    
-    /**
      * @var array<SignIn>|null $signIns The signIns property
     */
     private ?array $signIns = null;
@@ -62,7 +57,6 @@ class AuditLogRoot extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'directoryAudits' => function (ParseNode $n) use ($o) { $o->setDirectoryAudits($n->getCollectionOfObjectValues(array(DirectoryAudit::class, 'createFromDiscriminatorValue'))); },
             'provisioning' => function (ParseNode $n) use ($o) { $o->setProvisioning($n->getCollectionOfObjectValues(array(ProvisioningObjectSummary::class, 'createFromDiscriminatorValue'))); },
-            'restrictedSignIns' => function (ParseNode $n) use ($o) { $o->setRestrictedSignIns($n->getCollectionOfObjectValues(array(RestrictedSignIn::class, 'createFromDiscriminatorValue'))); },
             'signIns' => function (ParseNode $n) use ($o) { $o->setSignIns($n->getCollectionOfObjectValues(array(SignIn::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
@@ -73,14 +67,6 @@ class AuditLogRoot extends Entity implements Parsable
     */
     public function getProvisioning(): ?array {
         return $this->provisioning;
-    }
-
-    /**
-     * Gets the restrictedSignIns property value. The restrictedSignIns property
-     * @return array<RestrictedSignIn>|null
-    */
-    public function getRestrictedSignIns(): ?array {
-        return $this->restrictedSignIns;
     }
 
     /**
@@ -99,7 +85,6 @@ class AuditLogRoot extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('directoryAudits', $this->directoryAudits);
         $writer->writeCollectionOfObjectValues('provisioning', $this->provisioning);
-        $writer->writeCollectionOfObjectValues('restrictedSignIns', $this->restrictedSignIns);
         $writer->writeCollectionOfObjectValues('signIns', $this->signIns);
     }
 
@@ -117,14 +102,6 @@ class AuditLogRoot extends Entity implements Parsable
     */
     public function setProvisioning(?array $value ): void {
         $this->provisioning = $value;
-    }
-
-    /**
-     * Sets the restrictedSignIns property value. The restrictedSignIns property
-     *  @param array<RestrictedSignIn>|null $value Value to set for the restrictedSignIns property.
-    */
-    public function setRestrictedSignIns(?array $value ): void {
-        $this->restrictedSignIns = $value;
     }
 
     /**

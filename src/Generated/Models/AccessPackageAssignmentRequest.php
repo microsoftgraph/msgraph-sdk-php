@@ -15,7 +15,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     private ?AccessPackage $accessPackage = null;
     
     /**
-     * @var AccessPackageAssignment|null $assignment For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
+     * @var AccessPackageAssignment|null $assignment For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created.  For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
     */
     private ?AccessPackageAssignment $assignment = null;
     
@@ -35,7 +35,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     private ?AccessPackageSubject $requestor = null;
     
     /**
-     * @var AccessPackageRequestType|null $requestType The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set.
+     * @var AccessPackageRequestType|null $requestType The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of userAdd, userUpdate or userRemove. This property cannot be changed once set.
     */
     private ?AccessPackageRequestType $requestType = null;
     
@@ -80,7 +80,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the assignment property value. For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
+     * Gets the assignment property value. For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created.  For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
      * @return AccessPackageAssignment|null
     */
     public function getAssignment(): ?AccessPackageAssignment {
@@ -131,7 +131,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set.
+     * Gets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of userAdd, userUpdate or userRemove. This property cannot be changed once set.
      * @return AccessPackageRequestType|null
     */
     public function getRequestType(): ?AccessPackageRequestType {
@@ -188,7 +188,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the assignment property value. For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
+     * Sets the assignment property value. For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created.  For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
      *  @param AccessPackageAssignment|null $value Value to set for the assignment property.
     */
     public function setAssignment(?AccessPackageAssignment $value ): void {
@@ -220,7 +220,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set.
+     * Sets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of userAdd, userUpdate or userRemove. This property cannot be changed once set.
      *  @param AccessPackageRequestType|null $value Value to set for the requestType property.
     */
     public function setRequestType(?AccessPackageRequestType $value ): void {
