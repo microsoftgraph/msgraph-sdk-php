@@ -525,6 +525,11 @@ class User extends DirectoryObject implements Parsable
     private ?array $scopedRoleMemberOf = null;
     
     /**
+     * @var string|null $securityIdentifier Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith).
+    */
+    private ?string $securityIdentifier = null;
+    
+    /**
      * @var UserSettings|null $settings The settings property
     */
     private ?UserSettings $settings = null;
@@ -1044,6 +1049,7 @@ class User extends DirectoryObject implements Parsable
             'responsibilities' => function (ParseNode $n) use ($o) { $o->setResponsibilities($n->getCollectionOfPrimitiveValues()); },
             'schools' => function (ParseNode $n) use ($o) { $o->setSchools($n->getCollectionOfPrimitiveValues()); },
             'scopedRoleMemberOf' => function (ParseNode $n) use ($o) { $o->setScopedRoleMemberOf($n->getCollectionOfObjectValues(array(ScopedRoleMembership::class, 'createFromDiscriminatorValue'))); },
+            'securityIdentifier' => function (ParseNode $n) use ($o) { $o->setSecurityIdentifier($n->getStringValue()); },
             'settings' => function (ParseNode $n) use ($o) { $o->setSettings($n->getObjectValue(array(UserSettings::class, 'createFromDiscriminatorValue'))); },
             'showInAddressList' => function (ParseNode $n) use ($o) { $o->setShowInAddressList($n->getBooleanValue()); },
             'signInSessionsValidFromDateTime' => function (ParseNode $n) use ($o) { $o->setSignInSessionsValidFromDateTime($n->getDateTimeValue()); },
@@ -1557,6 +1563,14 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the securityIdentifier property value. Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith).
+     * @return string|null
+    */
+    public function getSecurityIdentifier(): ?string {
+        return $this->securityIdentifier;
+    }
+
+    /**
      * Gets the settings property value. The settings property
      * @return UserSettings|null
     */
@@ -1769,6 +1783,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeCollectionOfPrimitiveValues('responsibilities', $this->responsibilities);
         $writer->writeCollectionOfPrimitiveValues('schools', $this->schools);
         $writer->writeCollectionOfObjectValues('scopedRoleMemberOf', $this->scopedRoleMemberOf);
+        $writer->writeStringValue('securityIdentifier', $this->securityIdentifier);
         $writer->writeObjectValue('settings', $this->settings);
         $writer->writeBooleanValue('showInAddressList', $this->showInAddressList);
         $writer->writeDateTimeValue('signInSessionsValidFromDateTime', $this->signInSessionsValidFromDateTime);
@@ -2606,6 +2621,14 @@ class User extends DirectoryObject implements Parsable
     */
     public function setScopedRoleMemberOf(?array $value ): void {
         $this->scopedRoleMemberOf = $value;
+    }
+
+    /**
+     * Sets the securityIdentifier property value. Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith).
+     *  @param string|null $value Value to set for the securityIdentifier property.
+    */
+    public function setSecurityIdentifier(?string $value ): void {
+        $this->securityIdentifier = $value;
     }
 
     /**

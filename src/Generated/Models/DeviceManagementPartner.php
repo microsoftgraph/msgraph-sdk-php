@@ -50,7 +50,7 @@ class DeviceManagementPartner extends Entity implements Parsable
     private ?DateTime $whenPartnerDevicesWillBeRemovedDateTime = null;
     
     /**
-     * Instantiates a new deviceManagementPartner and sets the default values.
+     * Instantiates a new DeviceManagementPartner and sets the default values.
     */
     public function __construct() {
         parent::__construct();

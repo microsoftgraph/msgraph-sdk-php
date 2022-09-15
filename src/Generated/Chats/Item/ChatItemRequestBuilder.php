@@ -11,6 +11,8 @@ use Microsoft\Graph\Generated\Chats\Item\Members\Item\ConversationMemberItemRequ
 use Microsoft\Graph\Generated\Chats\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Messages\Item\ChatMessageItemRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Messages\MessagesRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\PinnedMessages\Item\PinnedChatMessageInfoItemRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\PinnedMessages\PinnedMessagesRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Tabs\Item\TeamsTabItemRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Tabs\TabsRequestBuilder;
@@ -51,6 +53,13 @@ class ChatItemRequestBuilder
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * The pinnedMessages property
+    */
+    public function pinnedMessages(): PinnedMessagesRequestBuilder {
+        return new PinnedMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -245,6 +254,17 @@ class ChatItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
+    }
+
+    /**
+     * Gets an item from the Microsoft\Graph\Generated.chats.item.pinnedMessages.item collection
+     * @param string $id Unique identifier of the item
+     * @return PinnedChatMessageInfoItemRequestBuilder
+    */
+    public function pinnedMessagesById(string $id): PinnedChatMessageInfoItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['pinnedChatMessageInfo%2Did'] = $id;
+        return new PinnedChatMessageInfoItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

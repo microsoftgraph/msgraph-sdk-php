@@ -54,7 +54,7 @@ class AcceptedSendersRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/acceptedSenders{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}';
+        $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/acceptedSenders{?%24top*,%24skip*,%24filter*,%24count*,%24orderby,%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }

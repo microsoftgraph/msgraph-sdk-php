@@ -45,6 +45,11 @@ class Chat extends Entity implements Parsable
     private ?TeamworkOnlineMeetingInfo $onlineMeetingInfo = null;
     
     /**
+     * @var array<PinnedChatMessageInfo>|null $pinnedMessages The pinnedMessages property
+    */
+    private ?array $pinnedMessages = null;
+    
+    /**
      * @var array<TeamsTab>|null $tabs A collection of all the tabs in the chat. Nullable.
     */
     private ?array $tabs = null;
@@ -111,6 +116,7 @@ class Chat extends Entity implements Parsable
             'members' => function (ParseNode $n) use ($o) { $o->setMembers($n->getCollectionOfObjectValues(array(ConversationMember::class, 'createFromDiscriminatorValue'))); },
             'messages' => function (ParseNode $n) use ($o) { $o->setMessages($n->getCollectionOfObjectValues(array(ChatMessage::class, 'createFromDiscriminatorValue'))); },
             'onlineMeetingInfo' => function (ParseNode $n) use ($o) { $o->setOnlineMeetingInfo($n->getObjectValue(array(TeamworkOnlineMeetingInfo::class, 'createFromDiscriminatorValue'))); },
+            'pinnedMessages' => function (ParseNode $n) use ($o) { $o->setPinnedMessages($n->getCollectionOfObjectValues(array(PinnedChatMessageInfo::class, 'createFromDiscriminatorValue'))); },
             'tabs' => function (ParseNode $n) use ($o) { $o->setTabs($n->getCollectionOfObjectValues(array(TeamsTab::class, 'createFromDiscriminatorValue'))); },
             'tenantId' => function (ParseNode $n) use ($o) { $o->setTenantId($n->getStringValue()); },
             'topic' => function (ParseNode $n) use ($o) { $o->setTopic($n->getStringValue()); },
@@ -159,6 +165,14 @@ class Chat extends Entity implements Parsable
     }
 
     /**
+     * Gets the pinnedMessages property value. The pinnedMessages property
+     * @return array<PinnedChatMessageInfo>|null
+    */
+    public function getPinnedMessages(): ?array {
+        return $this->pinnedMessages;
+    }
+
+    /**
      * Gets the tabs property value. A collection of all the tabs in the chat. Nullable.
      * @return array<TeamsTab>|null
     */
@@ -203,6 +217,7 @@ class Chat extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('members', $this->members);
         $writer->writeCollectionOfObjectValues('messages', $this->messages);
         $writer->writeObjectValue('onlineMeetingInfo', $this->onlineMeetingInfo);
+        $writer->writeCollectionOfObjectValues('pinnedMessages', $this->pinnedMessages);
         $writer->writeCollectionOfObjectValues('tabs', $this->tabs);
         $writer->writeStringValue('tenantId', $this->tenantId);
         $writer->writeStringValue('topic', $this->topic);
@@ -263,6 +278,14 @@ class Chat extends Entity implements Parsable
     */
     public function setOnlineMeetingInfo(?TeamworkOnlineMeetingInfo $value ): void {
         $this->onlineMeetingInfo = $value;
+    }
+
+    /**
+     * Sets the pinnedMessages property value. The pinnedMessages property
+     *  @param array<PinnedChatMessageInfo>|null $value Value to set for the pinnedMessages property.
+    */
+    public function setPinnedMessages(?array $value ): void {
+        $this->pinnedMessages = $value;
     }
 
     /**
