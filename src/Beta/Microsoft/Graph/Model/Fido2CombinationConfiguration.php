@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* RestrictedSignIn File
+* Fido2CombinationConfiguration File
 * PHP version 7
 *
 * @category  Library
@@ -11,10 +11,10 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\Model;
 
 /**
-* RestrictedSignIn class
+* Fido2CombinationConfiguration class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,32 +22,32 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class RestrictedSignIn extends SignIn
+class Fido2CombinationConfiguration extends AuthenticationCombinationConfiguration
 {
     /**
-    * Gets the targetTenantId
+    * Gets the allowedAAGUIDs
     *
-    * @return string|null The targetTenantId
+    * @return string|null The allowedAAGUIDs
     */
-    public function getTargetTenantId()
+    public function getAllowedAAGUIDs()
     {
-        if (array_key_exists("targetTenantId", $this->_propDict)) {
-            return $this->_propDict["targetTenantId"];
+        if (array_key_exists("allowedAAGUIDs", $this->_propDict)) {
+            return $this->_propDict["allowedAAGUIDs"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the targetTenantId
+    * Sets the allowedAAGUIDs
     *
-    * @param string $val The targetTenantId
+    * @param string $val The allowedAAGUIDs
     *
-    * @return RestrictedSignIn
+    * @return Fido2CombinationConfiguration
     */
-    public function setTargetTenantId($val)
+    public function setAllowedAAGUIDs($val)
     {
-        $this->_propDict["targetTenantId"] = $val;
+        $this->_propDict["allowedAAGUIDs"] = $val;
         return $this;
     }
 

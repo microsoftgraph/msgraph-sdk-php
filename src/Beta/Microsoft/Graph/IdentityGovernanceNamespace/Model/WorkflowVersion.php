@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
 
 /**
 * WorkflowVersion class
@@ -26,6 +26,7 @@ class WorkflowVersion extends WorkflowBase
 {
     /**
     * Gets the versionNumber
+    * The version of the workflow.
     *
     * @return int|null The versionNumber
     */
@@ -40,6 +41,7 @@ class WorkflowVersion extends WorkflowBase
 
     /**
     * Sets the versionNumber
+    * The version of the workflow.
     *
     * @param int $val The versionNumber
     *

@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
 /**
 * TriggerAndScopeBasedConditions class
 *
@@ -37,6 +37,7 @@ class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions
 
     /**
     * Gets the scope
+    * Defines who the workflow runs for.
     *
     * @return \Beta\Microsoft\Graph\Model\SubjectSet|null The scope
     */
@@ -55,6 +56,7 @@ class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions
 
     /**
     * Sets the scope
+    * Defines who the workflow runs for.
     *
     * @param \Beta\Microsoft\Graph\Model\SubjectSet $val The value to assign to the scope
     *
@@ -68,13 +70,14 @@ class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions
 
     /**
     * Gets the trigger
+    * What triggers a workflow to run.
     *
     * @return WorkflowExecutionTrigger|null The trigger
     */
     public function getTrigger()
     {
         if (array_key_exists("trigger", $this->_propDict)) {
-            if (is_a($this->_propDict["trigger"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\WorkflowExecutionTrigger") || is_null($this->_propDict["trigger"])) {
+            if (is_a($this->_propDict["trigger"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\WorkflowExecutionTrigger") || is_null($this->_propDict["trigger"])) {
                 return $this->_propDict["trigger"];
             } else {
                 $this->_propDict["trigger"] = new WorkflowExecutionTrigger($this->_propDict["trigger"]);
@@ -86,6 +89,7 @@ class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions
 
     /**
     * Sets the trigger
+    * What triggers a workflow to run.
     *
     * @param WorkflowExecutionTrigger $val The value to assign to the trigger
     *

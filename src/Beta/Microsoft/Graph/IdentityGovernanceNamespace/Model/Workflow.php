@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
 
 /**
 * Workflow class
@@ -26,6 +26,7 @@ class Workflow extends WorkflowBase
 {
     /**
     * Gets the deletedDateTime
+    * The time and date a workflow is deleted. Supports $filter(lt,gt) and $orderby.
     *
     * @return \DateTime|null The deletedDateTime
     */
@@ -44,6 +45,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Sets the deletedDateTime
+    * The time and date a workflow is deleted. Supports $filter(lt,gt) and $orderby.
     *
     * @param \DateTime $val The deletedDateTime
     *
@@ -57,6 +59,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Gets the id
+    * Identifier used for individually addressing a specific workflow. Supports $filter(eq).
     *
     * @return string|null The id
     */
@@ -71,6 +74,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Sets the id
+    * Identifier used for individually addressing a specific workflow. Supports $filter(eq).
     *
     * @param string $val The id
     *
@@ -84,6 +88,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Gets the isEnabled
+    * If true, the workflow engine creates and processes taskProcessingResults on the users scoped to the workflow. Supports $filter(eq,ne) and orderby.
     *
     * @return bool|null The isEnabled
     */
@@ -98,6 +103,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Sets the isEnabled
+    * If true, the workflow engine creates and processes taskProcessingResults on the users scoped to the workflow. Supports $filter(eq,ne) and orderby.
     *
     * @param bool $val The isEnabled
     *
@@ -111,6 +117,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Gets the isSchedulingEnabled
+    * If true, the workflow engine executes the workflow on the schedule defined by tenant settings.
     *
     * @return bool|null The isSchedulingEnabled
     */
@@ -125,6 +132,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Sets the isSchedulingEnabled
+    * If true, the workflow engine executes the workflow on the schedule defined by tenant settings.
     *
     * @param bool $val The isSchedulingEnabled
     *
@@ -138,6 +146,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Gets the nextScheduleRunDateTime
+    * The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderby.
     *
     * @return \DateTime|null The nextScheduleRunDateTime
     */
@@ -156,6 +165,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Sets the nextScheduleRunDateTime
+    * The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderby.
     *
     * @param \DateTime $val The nextScheduleRunDateTime
     *
@@ -169,6 +179,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Gets the version
+    * The current version number of the workflow. Value is 1 when the workflow is first created. Supports $filter(eq).
     *
     * @return int|null The version
     */
@@ -183,6 +194,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Sets the version
+    * The current version number of the workflow. Value is 1 when the workflow is first created. Supports $filter(eq).
     *
     * @param int $val The version
     *
@@ -197,6 +209,7 @@ class Workflow extends WorkflowBase
 
      /**
      * Gets the executionScope
+    * The unique identifier of the Azure AD identity that last modified the workflow object..
      *
      * @return array|null The executionScope
      */
@@ -211,6 +224,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Sets the executionScope
+    * The unique identifier of the Azure AD identity that last modified the workflow object..
     *
     * @param \Beta\Microsoft\Graph\Model\User[] $val The executionScope
     *
@@ -253,6 +267,7 @@ class Workflow extends WorkflowBase
 
      /**
      * Gets the taskReports
+    * Represents the aggregation of task execution data for tasks within a workflow object.
      *
      * @return array|null The taskReports
      */
@@ -267,6 +282,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Sets the taskReports
+    * Represents the aggregation of task execution data for tasks within a workflow object.
     *
     * @param TaskReport[] $val The taskReports
     *
@@ -309,6 +325,7 @@ class Workflow extends WorkflowBase
 
      /**
      * Gets the versions
+    * The workflow versions that are available.
      *
      * @return array|null The versions
      */
@@ -323,6 +340,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Sets the versions
+    * The workflow versions that are available.
     *
     * @param WorkflowVersion[] $val The versions
     *

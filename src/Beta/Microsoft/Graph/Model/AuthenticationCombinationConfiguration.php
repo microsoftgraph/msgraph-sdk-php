@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* RestrictedSignIn File
+* AuthenticationCombinationConfiguration File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* RestrictedSignIn class
+* AuthenticationCombinationConfiguration class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,32 +22,33 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class RestrictedSignIn extends SignIn
+class AuthenticationCombinationConfiguration extends Entity
 {
-    /**
-    * Gets the targetTenantId
-    *
-    * @return string|null The targetTenantId
-    */
-    public function getTargetTenantId()
+
+     /**
+     * Gets the appliesToCombinations
+     *
+     * @return array|null The appliesToCombinations
+     */
+    public function getAppliesToCombinations()
     {
-        if (array_key_exists("targetTenantId", $this->_propDict)) {
-            return $this->_propDict["targetTenantId"];
+        if (array_key_exists("appliesToCombinations", $this->_propDict)) {
+           return $this->_propDict["appliesToCombinations"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the targetTenantId
+    * Sets the appliesToCombinations
     *
-    * @param string $val The targetTenantId
+    * @param AuthenticationMethodModes[] $val The appliesToCombinations
     *
-    * @return RestrictedSignIn
+    * @return AuthenticationCombinationConfiguration
     */
-    public function setTargetTenantId($val)
+    public function setAppliesToCombinations($val)
     {
-        $this->_propDict["targetTenantId"] = $val;
+        $this->_propDict["appliesToCombinations"] = $val;
         return $this;
     }
 

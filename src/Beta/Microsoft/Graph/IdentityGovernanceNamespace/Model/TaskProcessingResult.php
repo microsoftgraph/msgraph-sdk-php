@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\IdentityGovernance\Model;
+namespace Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model;
 
 /**
 * TaskProcessingResult class
@@ -26,6 +26,7 @@ class TaskProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the completedDateTime
+    * The date time when taskProcessingResult execution ended. Value is null if task execution is still in progress.
     *
     * @return \DateTime|null The completedDateTime
     */
@@ -44,6 +45,7 @@ class TaskProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the completedDateTime
+    * The date time when taskProcessingResult execution ended. Value is null if task execution is still in progress.
     *
     * @param \DateTime $val The completedDateTime
     *
@@ -57,6 +59,7 @@ class TaskProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the createdDateTime
+    * The date time when the taskProcessingResult was created. Supports $filter(lt, gt) and orderBy.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -75,6 +78,7 @@ class TaskProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the createdDateTime
+    * The date time when the taskProcessingResult was created. Supports $filter(lt, gt) and orderBy.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -88,6 +92,7 @@ class TaskProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the failureReason
+    * Describes why the taskProcessingResult has failed.
     *
     * @return string|null The failureReason
     */
@@ -102,6 +107,7 @@ class TaskProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the failureReason
+    * Describes why the taskProcessingResult has failed.
     *
     * @param string $val The failureReason
     *
@@ -115,13 +121,14 @@ class TaskProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the processingStatus
+    * Describes the execution status of the taskProcessingResult. The possible values are: queued, inProgress, completed, completedWithErrors, canceled, failed, unknownFutureValue. Supports $filter(eq).
     *
     * @return LifecycleWorkflowProcessingStatus|null The processingStatus
     */
     public function getProcessingStatus()
     {
         if (array_key_exists("processingStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["processingStatus"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\LifecycleWorkflowProcessingStatus") || is_null($this->_propDict["processingStatus"])) {
+            if (is_a($this->_propDict["processingStatus"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\LifecycleWorkflowProcessingStatus") || is_null($this->_propDict["processingStatus"])) {
                 return $this->_propDict["processingStatus"];
             } else {
                 $this->_propDict["processingStatus"] = new LifecycleWorkflowProcessingStatus($this->_propDict["processingStatus"]);
@@ -133,6 +140,7 @@ class TaskProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the processingStatus
+    * Describes the execution status of the taskProcessingResult. The possible values are: queued, inProgress, completed, completedWithErrors, canceled, failed, unknownFutureValue. Supports $filter(eq).
     *
     * @param LifecycleWorkflowProcessingStatus $val The processingStatus
     *
@@ -146,6 +154,7 @@ class TaskProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the startedDateTime
+    * The date time when taskProcessingResult execution started. Value is null if task execution has not yet started. Supports $filter(lt, gt) and orderBy.
     *
     * @return \DateTime|null The startedDateTime
     */
@@ -164,6 +173,7 @@ class TaskProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the startedDateTime
+    * The date time when taskProcessingResult execution started. Value is null if task execution has not yet started. Supports $filter(lt, gt) and orderBy.
     *
     * @param \DateTime $val The startedDateTime
     *
@@ -177,6 +187,7 @@ class TaskProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the subject
+    * The unique identifier of the Azure AD user targeted for the task execution.
     *
     * @return \Beta\Microsoft\Graph\Model\User|null The subject
     */
@@ -195,6 +206,7 @@ class TaskProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the subject
+    * The unique identifier of the Azure AD user targeted for the task execution.
     *
     * @param \Beta\Microsoft\Graph\Model\User $val The subject
     *
@@ -208,13 +220,14 @@ class TaskProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the task
+    * The related workflow task
     *
     * @return Task|null The task
     */
     public function getTask()
     {
         if (array_key_exists("task", $this->_propDict)) {
-            if (is_a($this->_propDict["task"], "\Beta\Microsoft\Graph\IdentityGovernance\Model\Task") || is_null($this->_propDict["task"])) {
+            if (is_a($this->_propDict["task"], "\Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\Task") || is_null($this->_propDict["task"])) {
                 return $this->_propDict["task"];
             } else {
                 $this->_propDict["task"] = new Task($this->_propDict["task"]);
@@ -226,6 +239,7 @@ class TaskProcessingResult extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the task
+    * The related workflow task
     *
     * @param Task $val The task
     *

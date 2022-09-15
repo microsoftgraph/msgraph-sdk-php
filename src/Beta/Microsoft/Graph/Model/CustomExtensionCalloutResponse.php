@@ -26,6 +26,7 @@ class CustomExtensionCalloutResponse extends Entity
 
     /**
     * Gets the data
+    * Contains the data the external system provides to the custom extension endpoint.
     *
     * @return CustomExtensionData|null The data
     */
@@ -44,6 +45,7 @@ class CustomExtensionCalloutResponse extends Entity
 
     /**
     * Sets the data
+    * Contains the data the external system provides to the custom extension endpoint.
     *
     * @param CustomExtensionData $val The value to assign to the data
     *
@@ -56,6 +58,7 @@ class CustomExtensionCalloutResponse extends Entity
     }
     /**
     * Gets the source
+    * Identifies the external system or event context related to the response.
     *
     * @return string|null The source
     */
@@ -70,6 +73,7 @@ class CustomExtensionCalloutResponse extends Entity
 
     /**
     * Sets the source
+    * Identifies the external system or event context related to the response.
     *
     * @param string $val The value of the source
     *
@@ -82,6 +86,7 @@ class CustomExtensionCalloutResponse extends Entity
     }
     /**
     * Gets the type
+    * Describes the type of event related to the response.
     *
     * @return string|null The type
     */
@@ -96,6 +101,7 @@ class CustomExtensionCalloutResponse extends Entity
 
     /**
     * Sets the type
+    * Describes the type of event related to the response.
     *
     * @param string $val The value of the type
     *

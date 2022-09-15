@@ -27,6 +27,7 @@ class DeletedItemContainer extends Entity
 
      /**
      * Gets the workflows
+    * Deleted workflows that end up in the deletedItemsContainer.
      *
      * @return array|null The workflows
      */
@@ -41,8 +42,9 @@ class DeletedItemContainer extends Entity
 
     /**
     * Sets the workflows
+    * Deleted workflows that end up in the deletedItemsContainer.
     *
-    * @param \Beta\Microsoft\Graph\IdentityGovernance\Model\Workflow[] $val The workflows
+    * @param \Beta\Microsoft\Graph\IdentityGovernanceNamespace\Model\Workflow[] $val The workflows
     *
     * @return DeletedItemContainer
     */
