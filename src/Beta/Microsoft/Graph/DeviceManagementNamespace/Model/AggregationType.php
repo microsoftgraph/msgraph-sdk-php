@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AzureADLicenseType File
+* AggregationType File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\DeviceManagementNamespace\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* AzureADLicenseType class
+* AggregationType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +24,14 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AzureADLicenseType extends Enum
+class AggregationType extends Enum
 {
     /**
-    * The Enum AzureADLicenseType
+    * The Enum AggregationType
     */
-    const NONE = "none";
-    const FREE = "free";
-    const BASIC = "basic";
-    const PREMIUM_P1 = "premiumP1";
-    const PREMIUM_P2 = "premiumP2";
+    const COUNT = "count";
+    const PERCENTAGE = "percentage";
+    const AFFECTED_CLOUD_PC_COUNT = "affectedCloudPcCount";
+    const AFFECTED_CLOUD_PC_PERCENTAGE = "affectedCloudPcPercentage";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

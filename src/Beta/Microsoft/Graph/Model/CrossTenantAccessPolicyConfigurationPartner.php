@@ -279,6 +279,37 @@ class CrossTenantAccessPolicyConfigurationPartner implements \JsonSerializable
     }
 
     /**
+    * Gets the tenantRestrictions
+    *
+    * @return CrossTenantAccessPolicyTenantRestrictions|null The tenantRestrictions
+    */
+    public function getTenantRestrictions()
+    {
+        if (array_key_exists("tenantRestrictions", $this->_propDict)) {
+            if (is_a($this->_propDict["tenantRestrictions"], "\Beta\Microsoft\Graph\Model\CrossTenantAccessPolicyTenantRestrictions") || is_null($this->_propDict["tenantRestrictions"])) {
+                return $this->_propDict["tenantRestrictions"];
+            } else {
+                $this->_propDict["tenantRestrictions"] = new CrossTenantAccessPolicyTenantRestrictions($this->_propDict["tenantRestrictions"]);
+                return $this->_propDict["tenantRestrictions"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the tenantRestrictions
+    *
+    * @param CrossTenantAccessPolicyTenantRestrictions $val The tenantRestrictions
+    *
+    * @return CrossTenantAccessPolicyConfigurationPartner
+    */
+    public function setTenantRestrictions($val)
+    {
+        $this->_propDict["tenantRestrictions"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the ODataType
     *
     * @return string|null The ODataType

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* RestrictedSignIn File
+* CloudPcDiskEncryptionState File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,10 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
+use Microsoft\Graph\Core\Enum;
+
 /**
-* RestrictedSignIn class
+* CloudPcDiskEncryptionState class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,33 +24,14 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class RestrictedSignIn extends SignIn
+class CloudPcDiskEncryptionState extends Enum
 {
     /**
-    * Gets the targetTenantId
-    *
-    * @return string|null The targetTenantId
+    * The Enum CloudPcDiskEncryptionState
     */
-    public function getTargetTenantId()
-    {
-        if (array_key_exists("targetTenantId", $this->_propDict)) {
-            return $this->_propDict["targetTenantId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the targetTenantId
-    *
-    * @param string $val The targetTenantId
-    *
-    * @return RestrictedSignIn
-    */
-    public function setTargetTenantId($val)
-    {
-        $this->_propDict["targetTenantId"] = $val;
-        return $this;
-    }
-
+    const NOT_AVAILABLE = "notAvailable";
+    const NOT_ENCRYPED = "notEncryped";
+    const ENCRYPTED_USING_PLATFORM_MANAGED_KEY = "encryptedUsingPlatformManagedKey";
+    const ENCRYPTED_USING_CUSTOMER_MANAGED_KEY = "encryptedUsingCustomerManagedKey";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

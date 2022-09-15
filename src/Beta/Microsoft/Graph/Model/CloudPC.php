@@ -87,6 +87,37 @@ class CloudPC extends Entity
     }
 
     /**
+    * Gets the diskEncryptionState
+    *
+    * @return CloudPcDiskEncryptionState|null The diskEncryptionState
+    */
+    public function getDiskEncryptionState()
+    {
+        if (array_key_exists("diskEncryptionState", $this->_propDict)) {
+            if (is_a($this->_propDict["diskEncryptionState"], "\Beta\Microsoft\Graph\Model\CloudPcDiskEncryptionState") || is_null($this->_propDict["diskEncryptionState"])) {
+                return $this->_propDict["diskEncryptionState"];
+            } else {
+                $this->_propDict["diskEncryptionState"] = new CloudPcDiskEncryptionState($this->_propDict["diskEncryptionState"]);
+                return $this->_propDict["diskEncryptionState"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the diskEncryptionState
+    *
+    * @param CloudPcDiskEncryptionState $val The diskEncryptionState
+    *
+    * @return CloudPC
+    */
+    public function setDiskEncryptionState($val)
+    {
+        $this->_propDict["diskEncryptionState"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the displayName
     * The display name of the Cloud PC.
     *
