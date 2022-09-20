@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* MeetingChatMode File
+* AuthenticationEventHandlerResult File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* MeetingChatMode class
+* AuthenticationEventHandlerResult class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class MeetingChatMode extends Enum
+class AuthenticationEventHandlerResult extends Entity
 {
-    /**
-    * The Enum MeetingChatMode
-    */
-    const ENABLED = "enabled";
-    const DISABLED = "disabled";
-    const LIMITED = "limited";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
