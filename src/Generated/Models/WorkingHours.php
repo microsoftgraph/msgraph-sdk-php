@@ -16,7 +16,7 @@ class WorkingHours implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var array<string>|null $daysOfWeek The days of the week on which the user works.
+     * @var array<DayOfWeek>|null $daysOfWeek The days of the week on which the user works.
     */
     private ?array $daysOfWeek = null;
     
@@ -67,7 +67,7 @@ class WorkingHours implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the daysOfWeek property value. The days of the week on which the user works.
-     * @return array<string>|null
+     * @return array<DayOfWeek>|null
     */
     public function getDaysOfWeek(): ?array {
         return $this->daysOfWeek;
@@ -88,7 +88,7 @@ class WorkingHours implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'daysOfWeek' => function (ParseNode $n) use ($o) { $o->setDaysOfWeek($n->getCollectionOfPrimitiveValues()); },
+            'daysOfWeek' => function (ParseNode $n) use ($o) { $o->setDaysOfWeek($n->getCollectionOfEnumValues(DayOfWeek::class)); },
             'endTime' => function (ParseNode $n) use ($o) { $o->setEndTime($n->getTimeValue()); },
             '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'startTime' => function (ParseNode $n) use ($o) { $o->setStartTime($n->getTimeValue()); },
@@ -125,7 +125,7 @@ class WorkingHours implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('daysOfWeek', $this->daysOfWeek);
+        $writer->writeCollectionOfEnumValues('daysOfWeek', $this->daysOfWeek);
         $writer->writeTimeValue('endTime', $this->endTime);
         $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeTimeValue('startTime', $this->startTime);
@@ -143,7 +143,7 @@ class WorkingHours implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the daysOfWeek property value. The days of the week on which the user works.
-     *  @param array<string>|null $value Value to set for the daysOfWeek property.
+     *  @param array<DayOfWeek>|null $value Value to set for the daysOfWeek property.
     */
     public function setDaysOfWeek(?array $value ): void {
         $this->daysOfWeek = $value;

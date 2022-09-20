@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Calendar extends Entity implements Parsable 
 {
     /**
-     * @var array<string>|null $allowedOnlineMeetingProviders Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+     * @var array<OnlineMeetingProviderType>|null $allowedOnlineMeetingProviders Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
     */
     private ?array $allowedOnlineMeetingProviders = null;
     
@@ -117,7 +117,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Gets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
-     * @return array<string>|null
+     * @return array<OnlineMeetingProviderType>|null
     */
     public function getAllowedOnlineMeetingProviders(): ?array {
         return $this->allowedOnlineMeetingProviders;
@@ -202,7 +202,7 @@ class Calendar extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowedOnlineMeetingProviders' => function (ParseNode $n) use ($o) { $o->setAllowedOnlineMeetingProviders($n->getCollectionOfPrimitiveValues()); },
+            'allowedOnlineMeetingProviders' => function (ParseNode $n) use ($o) { $o->setAllowedOnlineMeetingProviders($n->getCollectionOfEnumValues(OnlineMeetingProviderType::class)); },
             'calendarPermissions' => function (ParseNode $n) use ($o) { $o->setCalendarPermissions($n->getCollectionOfObjectValues(array(CalendarPermission::class, 'createFromDiscriminatorValue'))); },
             'calendarView' => function (ParseNode $n) use ($o) { $o->setCalendarView($n->getCollectionOfObjectValues(array(Event::class, 'createFromDiscriminatorValue'))); },
             'canEdit' => function (ParseNode $n) use ($o) { $o->setCanEdit($n->getBooleanValue()); },
@@ -293,7 +293,7 @@ class Calendar extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfPrimitiveValues('allowedOnlineMeetingProviders', $this->allowedOnlineMeetingProviders);
+        $writer->writeCollectionOfEnumValues('allowedOnlineMeetingProviders', $this->allowedOnlineMeetingProviders);
         $writer->writeCollectionOfObjectValues('calendarPermissions', $this->calendarPermissions);
         $writer->writeCollectionOfObjectValues('calendarView', $this->calendarView);
         $writer->writeBooleanValue('canEdit', $this->canEdit);
@@ -315,7 +315,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
-     *  @param array<string>|null $value Value to set for the allowedOnlineMeetingProviders property.
+     *  @param array<OnlineMeetingProviderType>|null $value Value to set for the allowedOnlineMeetingProviders property.
     */
     public function setAllowedOnlineMeetingProviders(?array $value ): void {
         $this->allowedOnlineMeetingProviders = $value;

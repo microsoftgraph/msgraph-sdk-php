@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedAppProtection extends ManagedAppPolicy implements Parsable 
 {
     /**
-     * @var array<string>|null $allowedDataStorageLocations Data storage locations where a user may store managed data.
+     * @var array<ManagedAppDataStorageLocation>|null $allowedDataStorageLocations Data storage locations where a user may store managed data.
     */
     private ?array $allowedDataStorageLocations = null;
     
@@ -173,7 +173,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Gets the allowedDataStorageLocations property value. Data storage locations where a user may store managed data.
-     * @return array<string>|null
+     * @return array<ManagedAppDataStorageLocation>|null
     */
     public function getAllowedDataStorageLocations(): ?array {
         return $this->allowedDataStorageLocations;
@@ -242,7 +242,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowedDataStorageLocations' => function (ParseNode $n) use ($o) { $o->setAllowedDataStorageLocations($n->getCollectionOfPrimitiveValues()); },
+            'allowedDataStorageLocations' => function (ParseNode $n) use ($o) { $o->setAllowedDataStorageLocations($n->getCollectionOfEnumValues(ManagedAppDataStorageLocation::class)); },
             'allowedInboundDataTransferSources' => function (ParseNode $n) use ($o) { $o->setAllowedInboundDataTransferSources($n->getEnumValue(ManagedAppDataTransferLevel::class)); },
             'allowedOutboundClipboardSharingLevel' => function (ParseNode $n) use ($o) { $o->setAllowedOutboundClipboardSharingLevel($n->getEnumValue(ManagedAppClipboardSharingLevel::class)); },
             'allowedOutboundDataTransferDestinations' => function (ParseNode $n) use ($o) { $o->setAllowedOutboundDataTransferDestinations($n->getEnumValue(ManagedAppDataTransferLevel::class)); },
@@ -430,7 +430,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfPrimitiveValues('allowedDataStorageLocations', $this->allowedDataStorageLocations);
+        $writer->writeCollectionOfEnumValues('allowedDataStorageLocations', $this->allowedDataStorageLocations);
         $writer->writeEnumValue('allowedInboundDataTransferSources', $this->allowedInboundDataTransferSources);
         $writer->writeEnumValue('allowedOutboundClipboardSharingLevel', $this->allowedOutboundClipboardSharingLevel);
         $writer->writeEnumValue('allowedOutboundDataTransferDestinations', $this->allowedOutboundDataTransferDestinations);
@@ -461,7 +461,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the allowedDataStorageLocations property value. Data storage locations where a user may store managed data.
-     *  @param array<string>|null $value Value to set for the allowedDataStorageLocations property.
+     *  @param array<ManagedAppDataStorageLocation>|null $value Value to set for the allowedDataStorageLocations property.
     */
     public function setAllowedDataStorageLocations(?array $value ): void {
         $this->allowedDataStorageLocations = $value;

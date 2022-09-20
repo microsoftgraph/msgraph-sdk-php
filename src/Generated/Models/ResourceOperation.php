@@ -24,7 +24,7 @@ class ResourceOperation extends Entity implements Parsable
     private ?string $resourceName = null;
     
     /**
-     * Instantiates a new ResourceOperation and sets the default values.
+     * Instantiates a new resourceOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

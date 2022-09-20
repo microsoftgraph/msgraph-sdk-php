@@ -40,7 +40,7 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
     private ?PrintDuplexMode $duplexMode = null;
     
     /**
-     * @var array<string>|null $finishings The default set of finishings to apply to print jobs. Valid values are described in the following table.
+     * @var array<PrintFinishing>|null $finishings The default set of finishings to apply to print jobs. Valid values are described in the following table.
     */
     private ?array $finishings = null;
     
@@ -181,7 +181,7 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
             'copiesPerJob' => function (ParseNode $n) use ($o) { $o->setCopiesPerJob($n->getIntegerValue()); },
             'dpi' => function (ParseNode $n) use ($o) { $o->setDpi($n->getIntegerValue()); },
             'duplexMode' => function (ParseNode $n) use ($o) { $o->setDuplexMode($n->getEnumValue(PrintDuplexMode::class)); },
-            'finishings' => function (ParseNode $n) use ($o) { $o->setFinishings($n->getCollectionOfPrimitiveValues()); },
+            'finishings' => function (ParseNode $n) use ($o) { $o->setFinishings($n->getCollectionOfEnumValues(PrintFinishing::class)); },
             'fitPdfToPage' => function (ParseNode $n) use ($o) { $o->setFitPdfToPage($n->getBooleanValue()); },
             'inputBin' => function (ParseNode $n) use ($o) { $o->setInputBin($n->getStringValue()); },
             'mediaColor' => function (ParseNode $n) use ($o) { $o->setMediaColor($n->getStringValue()); },
@@ -199,7 +199,7 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the finishings property value. The default set of finishings to apply to print jobs. Valid values are described in the following table.
-     * @return array<string>|null
+     * @return array<PrintFinishing>|null
     */
     public function getFinishings(): ?array {
         return $this->finishings;
@@ -311,7 +311,7 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
         $writer->writeIntegerValue('copiesPerJob', $this->copiesPerJob);
         $writer->writeIntegerValue('dpi', $this->dpi);
         $writer->writeEnumValue('duplexMode', $this->duplexMode);
-        $writer->writeCollectionOfPrimitiveValues('finishings', $this->finishings);
+        $writer->writeCollectionOfEnumValues('finishings', $this->finishings);
         $writer->writeBooleanValue('fitPdfToPage', $this->fitPdfToPage);
         $writer->writeStringValue('inputBin', $this->inputBin);
         $writer->writeStringValue('mediaColor', $this->mediaColor);
@@ -377,7 +377,7 @@ class PrinterDefaults implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the finishings property value. The default set of finishings to apply to print jobs. Valid values are described in the following table.
-     *  @param array<string>|null $value Value to set for the finishings property.
+     *  @param array<PrintFinishing>|null $value Value to set for the finishings property.
     */
     public function setFinishings(?array $value ): void {
         $this->finishings = $value;

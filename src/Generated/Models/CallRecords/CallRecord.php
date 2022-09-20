@@ -27,7 +27,7 @@ class CallRecord extends Entity implements Parsable
     private ?DateTime $lastModifiedDateTime = null;
     
     /**
-     * @var array<string>|null $modalities List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
+     * @var array<Modality>|null $modalities List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
     */
     private ?array $modalities = null;
     
@@ -96,7 +96,7 @@ class CallRecord extends Entity implements Parsable
             'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
             'joinWebUrl' => function (ParseNode $n) use ($o) { $o->setJoinWebUrl($n->getStringValue()); },
             'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'modalities' => function (ParseNode $n) use ($o) { $o->setModalities($n->getCollectionOfPrimitiveValues()); },
+            'modalities' => function (ParseNode $n) use ($o) { $o->setModalities($n->getCollectionOfEnumValues(Modality::class)); },
             'organizer' => function (ParseNode $n) use ($o) { $o->setOrganizer($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
             'participants' => function (ParseNode $n) use ($o) { $o->setParticipants($n->getCollectionOfObjectValues(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
             'sessions' => function (ParseNode $n) use ($o) { $o->setSessions($n->getCollectionOfObjectValues(array(Session::class, 'createFromDiscriminatorValue'))); },
@@ -124,7 +124,7 @@ class CallRecord extends Entity implements Parsable
 
     /**
      * Gets the modalities property value. List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
-     * @return array<string>|null
+     * @return array<Modality>|null
     */
     public function getModalities(): ?array {
         return $this->modalities;
@@ -187,7 +187,7 @@ class CallRecord extends Entity implements Parsable
         $writer->writeDateTimeValue('endDateTime', $this->endDateTime);
         $writer->writeStringValue('joinWebUrl', $this->joinWebUrl);
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
-        $writer->writeCollectionOfPrimitiveValues('modalities', $this->modalities);
+        $writer->writeCollectionOfEnumValues('modalities', $this->modalities);
         $writer->writeObjectValue('organizer', $this->organizer);
         $writer->writeCollectionOfObjectValues('participants', $this->participants);
         $writer->writeCollectionOfObjectValues('sessions', $this->sessions);
@@ -222,7 +222,7 @@ class CallRecord extends Entity implements Parsable
 
     /**
      * Sets the modalities property value. List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
-     *  @param array<string>|null $value Value to set for the modalities property.
+     *  @param array<Modality>|null $value Value to set for the modalities property.
     */
     public function setModalities(?array $value ): void {
         $this->modalities = $value;

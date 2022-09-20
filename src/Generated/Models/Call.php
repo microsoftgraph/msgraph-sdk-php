@@ -39,6 +39,11 @@ class Call extends Entity implements Parsable
     private ?ChatInfo $chatInfo = null;
     
     /**
+     * @var array<ContentSharingSession>|null $contentSharingSessions The contentSharingSessions property
+    */
+    private ?array $contentSharingSessions = null;
+    
+    /**
      * @var CallDirection|null $direction The direction of the call. The possible value are incoming or outgoing. Read-only.
     */
     private ?CallDirection $direction = null;
@@ -79,7 +84,7 @@ class Call extends Entity implements Parsable
     private ?array $participants = null;
     
     /**
-     * @var array<string>|null $requestedModalities The requestedModalities property
+     * @var array<Modality>|null $requestedModalities The requestedModalities property
     */
     private ?array $requestedModalities = null;
     
@@ -189,6 +194,14 @@ class Call extends Entity implements Parsable
     }
 
     /**
+     * Gets the contentSharingSessions property value. The contentSharingSessions property
+     * @return array<ContentSharingSession>|null
+    */
+    public function getContentSharingSessions(): ?array {
+        return $this->contentSharingSessions;
+    }
+
+    /**
      * Gets the direction property value. The direction of the call. The possible value are incoming or outgoing. Read-only.
      * @return CallDirection|null
     */
@@ -209,6 +222,7 @@ class Call extends Entity implements Parsable
             'callOptions' => function (ParseNode $n) use ($o) { $o->setCallOptions($n->getObjectValue(array(CallOptions::class, 'createFromDiscriminatorValue'))); },
             'callRoutes' => function (ParseNode $n) use ($o) { $o->setCallRoutes($n->getCollectionOfObjectValues(array(CallRoute::class, 'createFromDiscriminatorValue'))); },
             'chatInfo' => function (ParseNode $n) use ($o) { $o->setChatInfo($n->getObjectValue(array(ChatInfo::class, 'createFromDiscriminatorValue'))); },
+            'contentSharingSessions' => function (ParseNode $n) use ($o) { $o->setContentSharingSessions($n->getCollectionOfObjectValues(array(ContentSharingSession::class, 'createFromDiscriminatorValue'))); },
             'direction' => function (ParseNode $n) use ($o) { $o->setDirection($n->getEnumValue(CallDirection::class)); },
             'incomingContext' => function (ParseNode $n) use ($o) { $o->setIncomingContext($n->getObjectValue(array(IncomingContext::class, 'createFromDiscriminatorValue'))); },
             'mediaConfig' => function (ParseNode $n) use ($o) { $o->setMediaConfig($n->getObjectValue(array(MediaConfig::class, 'createFromDiscriminatorValue'))); },
@@ -217,7 +231,7 @@ class Call extends Entity implements Parsable
             'myParticipantId' => function (ParseNode $n) use ($o) { $o->setMyParticipantId($n->getStringValue()); },
             'operations' => function (ParseNode $n) use ($o) { $o->setOperations($n->getCollectionOfObjectValues(array(CommsOperation::class, 'createFromDiscriminatorValue'))); },
             'participants' => function (ParseNode $n) use ($o) { $o->setParticipants($n->getCollectionOfObjectValues(array(Participant::class, 'createFromDiscriminatorValue'))); },
-            'requestedModalities' => function (ParseNode $n) use ($o) { $o->setRequestedModalities($n->getCollectionOfPrimitiveValues()); },
+            'requestedModalities' => function (ParseNode $n) use ($o) { $o->setRequestedModalities($n->getCollectionOfEnumValues(Modality::class)); },
             'resultInfo' => function (ParseNode $n) use ($o) { $o->setResultInfo($n->getObjectValue(array(ResultInfo::class, 'createFromDiscriminatorValue'))); },
             'source' => function (ParseNode $n) use ($o) { $o->setSource($n->getObjectValue(array(ParticipantInfo::class, 'createFromDiscriminatorValue'))); },
             'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(CallState::class)); },
@@ -287,7 +301,7 @@ class Call extends Entity implements Parsable
 
     /**
      * Gets the requestedModalities property value. The requestedModalities property
-     * @return array<string>|null
+     * @return array<Modality>|null
     */
     public function getRequestedModalities(): ?array {
         return $this->requestedModalities;
@@ -369,6 +383,7 @@ class Call extends Entity implements Parsable
         $writer->writeObjectValue('callOptions', $this->callOptions);
         $writer->writeCollectionOfObjectValues('callRoutes', $this->callRoutes);
         $writer->writeObjectValue('chatInfo', $this->chatInfo);
+        $writer->writeCollectionOfObjectValues('contentSharingSessions', $this->contentSharingSessions);
         $writer->writeEnumValue('direction', $this->direction);
         $writer->writeObjectValue('incomingContext', $this->incomingContext);
         $writer->writeObjectValue('mediaConfig', $this->mediaConfig);
@@ -377,7 +392,7 @@ class Call extends Entity implements Parsable
         $writer->writeStringValue('myParticipantId', $this->myParticipantId);
         $writer->writeCollectionOfObjectValues('operations', $this->operations);
         $writer->writeCollectionOfObjectValues('participants', $this->participants);
-        $writer->writeCollectionOfPrimitiveValues('requestedModalities', $this->requestedModalities);
+        $writer->writeCollectionOfEnumValues('requestedModalities', $this->requestedModalities);
         $writer->writeObjectValue('resultInfo', $this->resultInfo);
         $writer->writeObjectValue('source', $this->source);
         $writer->writeEnumValue('state', $this->state);
@@ -434,6 +449,14 @@ class Call extends Entity implements Parsable
     */
     public function setChatInfo(?ChatInfo $value ): void {
         $this->chatInfo = $value;
+    }
+
+    /**
+     * Sets the contentSharingSessions property value. The contentSharingSessions property
+     *  @param array<ContentSharingSession>|null $value Value to set for the contentSharingSessions property.
+    */
+    public function setContentSharingSessions(?array $value ): void {
+        $this->contentSharingSessions = $value;
     }
 
     /**
@@ -502,7 +525,7 @@ class Call extends Entity implements Parsable
 
     /**
      * Sets the requestedModalities property value. The requestedModalities property
-     *  @param array<string>|null $value Value to set for the requestedModalities property.
+     *  @param array<Modality>|null $value Value to set for the requestedModalities property.
     */
     public function setRequestedModalities(?array $value ): void {
         $this->requestedModalities = $value;

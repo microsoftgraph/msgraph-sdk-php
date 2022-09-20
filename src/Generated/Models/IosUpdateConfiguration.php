@@ -20,7 +20,7 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
     private ?Time $activeHoursStart = null;
     
     /**
-     * @var array<string>|null $scheduledInstallDays Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
+     * @var array<DayOfWeek>|null $scheduledInstallDays Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
     */
     private ?array $scheduledInstallDays = null;
     
@@ -71,14 +71,14 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'activeHoursEnd' => function (ParseNode $n) use ($o) { $o->setActiveHoursEnd($n->getTimeValue()); },
             'activeHoursStart' => function (ParseNode $n) use ($o) { $o->setActiveHoursStart($n->getTimeValue()); },
-            'scheduledInstallDays' => function (ParseNode $n) use ($o) { $o->setScheduledInstallDays($n->getCollectionOfPrimitiveValues()); },
+            'scheduledInstallDays' => function (ParseNode $n) use ($o) { $o->setScheduledInstallDays($n->getCollectionOfEnumValues(DayOfWeek::class)); },
             'utcTimeOffsetInMinutes' => function (ParseNode $n) use ($o) { $o->setUtcTimeOffsetInMinutes($n->getIntegerValue()); },
         ]);
     }
 
     /**
      * Gets the scheduledInstallDays property value. Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
-     * @return array<string>|null
+     * @return array<DayOfWeek>|null
     */
     public function getScheduledInstallDays(): ?array {
         return $this->scheduledInstallDays;
@@ -100,7 +100,7 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
         parent::serialize($writer);
         $writer->writeTimeValue('activeHoursEnd', $this->activeHoursEnd);
         $writer->writeTimeValue('activeHoursStart', $this->activeHoursStart);
-        $writer->writeCollectionOfPrimitiveValues('scheduledInstallDays', $this->scheduledInstallDays);
+        $writer->writeCollectionOfEnumValues('scheduledInstallDays', $this->scheduledInstallDays);
         $writer->writeIntegerValue('utcTimeOffsetInMinutes', $this->utcTimeOffsetInMinutes);
     }
 
@@ -122,7 +122,7 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
 
     /**
      * Sets the scheduledInstallDays property value. Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
-     *  @param array<string>|null $value Value to set for the scheduledInstallDays property.
+     *  @param array<DayOfWeek>|null $value Value to set for the scheduledInstallDays property.
     */
     public function setScheduledInstallDays(?array $value ): void {
         $this->scheduledInstallDays = $value;
