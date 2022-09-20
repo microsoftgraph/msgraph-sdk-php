@@ -20,7 +20,7 @@ class RecurrencePattern implements AdditionalDataHolder, Parsable
     private ?int $dayOfMonth = null;
     
     /**
-     * @var array<string>|null $daysOfWeek A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
+     * @var array<DayOfWeek>|null $daysOfWeek A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
     */
     private ?array $daysOfWeek = null;
     
@@ -89,7 +89,7 @@ class RecurrencePattern implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the daysOfWeek property value. A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
-     * @return array<string>|null
+     * @return array<DayOfWeek>|null
     */
     public function getDaysOfWeek(): ?array {
         return $this->daysOfWeek;
@@ -103,7 +103,7 @@ class RecurrencePattern implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'dayOfMonth' => function (ParseNode $n) use ($o) { $o->setDayOfMonth($n->getIntegerValue()); },
-            'daysOfWeek' => function (ParseNode $n) use ($o) { $o->setDaysOfWeek($n->getCollectionOfPrimitiveValues()); },
+            'daysOfWeek' => function (ParseNode $n) use ($o) { $o->setDaysOfWeek($n->getCollectionOfEnumValues(DayOfWeek::class)); },
             'firstDayOfWeek' => function (ParseNode $n) use ($o) { $o->setFirstDayOfWeek($n->getEnumValue(DayOfWeek::class)); },
             'index' => function (ParseNode $n) use ($o) { $o->setIndex($n->getEnumValue(WeekIndex::class)); },
             'interval' => function (ParseNode $n) use ($o) { $o->setInterval($n->getIntegerValue()); },
@@ -167,7 +167,7 @@ class RecurrencePattern implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeIntegerValue('dayOfMonth', $this->dayOfMonth);
-        $writer->writeCollectionOfPrimitiveValues('daysOfWeek', $this->daysOfWeek);
+        $writer->writeCollectionOfEnumValues('daysOfWeek', $this->daysOfWeek);
         $writer->writeEnumValue('firstDayOfWeek', $this->firstDayOfWeek);
         $writer->writeEnumValue('index', $this->index);
         $writer->writeIntegerValue('interval', $this->interval);
@@ -195,7 +195,7 @@ class RecurrencePattern implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the daysOfWeek property value. A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
-     *  @param array<string>|null $value Value to set for the daysOfWeek property.
+     *  @param array<DayOfWeek>|null $value Value to set for the daysOfWeek property.
     */
     public function setDaysOfWeek(?array $value ): void {
         $this->daysOfWeek = $value;

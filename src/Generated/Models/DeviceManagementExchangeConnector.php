@@ -55,7 +55,7 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
     private ?string $version = null;
     
     /**
-     * Instantiates a new DeviceManagementExchangeConnector and sets the default values.
+     * Instantiates a new deviceManagementExchangeConnector and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -4,6 +4,7 @@ namespace Microsoft\Graph\Generated\Communications\Calls\Item\Answer;
 
 use Microsoft\Graph\Generated\Models\IncomingCallOptions;
 use Microsoft\Graph\Generated\Models\MediaConfig;
+use Microsoft\Graph\Generated\Models\Modality;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -12,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AnswerPostRequestBody implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var array<string>|null $acceptedModalities The acceptedModalities property
+     * @var array<Modality>|null $acceptedModalities The acceptedModalities property
     */
     private ?array $acceptedModalities = null;
     
@@ -59,7 +60,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the acceptedModalities property value. The acceptedModalities property
-     * @return array<string>|null
+     * @return array<Modality>|null
     */
     public function getAcceptedModalities(): ?array {
         return $this->acceptedModalities;
@@ -96,7 +97,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'acceptedModalities' => function (ParseNode $n) use ($o) { $o->setAcceptedModalities($n->getCollectionOfPrimitiveValues()); },
+            'acceptedModalities' => function (ParseNode $n) use ($o) { $o->setAcceptedModalities($n->getCollectionOfEnumValues(Modality::class)); },
             'callbackUri' => function (ParseNode $n) use ($o) { $o->setCallbackUri($n->getStringValue()); },
             'callOptions' => function (ParseNode $n) use ($o) { $o->setCallOptions($n->getObjectValue(array(IncomingCallOptions::class, 'createFromDiscriminatorValue'))); },
             'mediaConfig' => function (ParseNode $n) use ($o) { $o->setMediaConfig($n->getObjectValue(array(MediaConfig::class, 'createFromDiscriminatorValue'))); },
@@ -125,7 +126,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('acceptedModalities', $this->acceptedModalities);
+        $writer->writeCollectionOfEnumValues('acceptedModalities', $this->acceptedModalities);
         $writer->writeStringValue('callbackUri', $this->callbackUri);
         $writer->writeObjectValue('callOptions', $this->callOptions);
         $writer->writeObjectValue('mediaConfig', $this->mediaConfig);
@@ -135,7 +136,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the acceptedModalities property value. The acceptedModalities property
-     *  @param array<string>|null $value Value to set for the acceptedModalities property.
+     *  @param array<Modality>|null $value Value to set for the acceptedModalities property.
     */
     public function setAcceptedModalities(?array $value ): void {
         $this->acceptedModalities = $value;

@@ -80,7 +80,7 @@ class SignIn extends Entity implements Parsable
     private ?RiskDetail $riskDetail = null;
     
     /**
-     * @var array<string>|null $riskEventTypes Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).
+     * @var array<RiskEventType>|null $riskEventTypes Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).
     */
     private ?array $riskEventTypes = null;
     
@@ -226,7 +226,7 @@ class SignIn extends Entity implements Parsable
             'resourceDisplayName' => function (ParseNode $n) use ($o) { $o->setResourceDisplayName($n->getStringValue()); },
             'resourceId' => function (ParseNode $n) use ($o) { $o->setResourceId($n->getStringValue()); },
             'riskDetail' => function (ParseNode $n) use ($o) { $o->setRiskDetail($n->getEnumValue(RiskDetail::class)); },
-            'riskEventTypes' => function (ParseNode $n) use ($o) { $o->setRiskEventTypes($n->getCollectionOfPrimitiveValues()); },
+            'riskEventTypes' => function (ParseNode $n) use ($o) { $o->setRiskEventTypes($n->getCollectionOfEnumValues(RiskEventType::class)); },
             'riskEventTypes_v2' => function (ParseNode $n) use ($o) { $o->setRiskEventTypes_v2($n->getCollectionOfPrimitiveValues()); },
             'riskLevelAggregated' => function (ParseNode $n) use ($o) { $o->setRiskLevelAggregated($n->getEnumValue(RiskLevel::class)); },
             'riskLevelDuringSignIn' => function (ParseNode $n) use ($o) { $o->setRiskLevelDuringSignIn($n->getEnumValue(RiskLevel::class)); },
@@ -288,7 +288,7 @@ class SignIn extends Entity implements Parsable
 
     /**
      * Gets the riskEventTypes property value. Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).
-     * @return array<string>|null
+     * @return array<RiskEventType>|null
     */
     public function getRiskEventTypes(): ?array {
         return $this->riskEventTypes;
@@ -378,7 +378,7 @@ class SignIn extends Entity implements Parsable
         $writer->writeStringValue('resourceDisplayName', $this->resourceDisplayName);
         $writer->writeStringValue('resourceId', $this->resourceId);
         $writer->writeEnumValue('riskDetail', $this->riskDetail);
-        $writer->writeCollectionOfPrimitiveValues('riskEventTypes', $this->riskEventTypes);
+        $writer->writeCollectionOfEnumValues('riskEventTypes', $this->riskEventTypes);
         $writer->writeCollectionOfPrimitiveValues('riskEventTypes_v2', $this->riskEventTypes_v2);
         $writer->writeEnumValue('riskLevelAggregated', $this->riskLevelAggregated);
         $writer->writeEnumValue('riskLevelDuringSignIn', $this->riskLevelDuringSignIn);
@@ -503,7 +503,7 @@ class SignIn extends Entity implements Parsable
 
     /**
      * Sets the riskEventTypes property value. Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).
-     *  @param array<string>|null $value Value to set for the riskEventTypes property.
+     *  @param array<RiskEventType>|null $value Value to set for the riskEventTypes property.
     */
     public function setRiskEventTypes(?array $value ): void {
         $this->riskEventTypes = $value;

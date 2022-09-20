@@ -14,7 +14,7 @@ class AuthenticationMethodConfiguration extends Entity implements Parsable
     private ?AuthenticationMethodState $state = null;
     
     /**
-     * Instantiates a new AuthenticationMethodConfiguration and sets the default values.
+     * Instantiates a new authenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -35,6 +35,7 @@ class AuthenticationMethodConfiguration extends Entity implements Parsable
                 case '#microsoft.graph.fido2AuthenticationMethodConfiguration': return new Fido2AuthenticationMethodConfiguration();
                 case '#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration': return new MicrosoftAuthenticatorAuthenticationMethodConfiguration();
                 case '#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration': return new TemporaryAccessPassAuthenticationMethodConfiguration();
+                case '#microsoft.graph.x509CertificateAuthenticationMethodConfiguration': return new X509CertificateAuthenticationMethodConfiguration();
             }
         }
         return new AuthenticationMethodConfiguration();

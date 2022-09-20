@@ -24,7 +24,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity implements P
     private ?int $deviceCount = null;
     
     /**
-     * Instantiates a new WindowsInformationProtectionAppLearningSummary and sets the default values.
+     * Instantiates a new windowsInformationProtectionAppLearningSummary and sets the default values.
     */
     public function __construct() {
         parent::__construct();

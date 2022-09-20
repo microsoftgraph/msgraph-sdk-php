@@ -20,6 +20,11 @@ class CallOptions implements AdditionalDataHolder, Parsable
     private ?bool $hideBotAfterEscalation = null;
     
     /**
+     * @var bool|null $isContentSharingNotificationEnabled The isContentSharingNotificationEnabled property
+    */
+    private ?bool $isContentSharingNotificationEnabled = null;
+    
+    /**
      * @var string|null $odataType The OdataType property
     */
     private ?string $odataType = null;
@@ -65,6 +70,7 @@ class CallOptions implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'hideBotAfterEscalation' => function (ParseNode $n) use ($o) { $o->setHideBotAfterEscalation($n->getBooleanValue()); },
+            'isContentSharingNotificationEnabled' => function (ParseNode $n) use ($o) { $o->setIsContentSharingNotificationEnabled($n->getBooleanValue()); },
             '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
@@ -75,6 +81,14 @@ class CallOptions implements AdditionalDataHolder, Parsable
     */
     public function getHideBotAfterEscalation(): ?bool {
         return $this->hideBotAfterEscalation;
+    }
+
+    /**
+     * Gets the isContentSharingNotificationEnabled property value. The isContentSharingNotificationEnabled property
+     * @return bool|null
+    */
+    public function getIsContentSharingNotificationEnabled(): ?bool {
+        return $this->isContentSharingNotificationEnabled;
     }
 
     /**
@@ -91,6 +105,7 @@ class CallOptions implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('hideBotAfterEscalation', $this->hideBotAfterEscalation);
+        $writer->writeBooleanValue('isContentSharingNotificationEnabled', $this->isContentSharingNotificationEnabled);
         $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -109,6 +124,14 @@ class CallOptions implements AdditionalDataHolder, Parsable
     */
     public function setHideBotAfterEscalation(?bool $value ): void {
         $this->hideBotAfterEscalation = $value;
+    }
+
+    /**
+     * Sets the isContentSharingNotificationEnabled property value. The isContentSharingNotificationEnabled property
+     *  @param bool|null $value Value to set for the isContentSharingNotificationEnabled property.
+    */
+    public function setIsContentSharingNotificationEnabled(?bool $value ): void {
+        $this->isContentSharingNotificationEnabled = $value;
     }
 
     /**

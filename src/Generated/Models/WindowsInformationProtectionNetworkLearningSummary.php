@@ -19,7 +19,7 @@ class WindowsInformationProtectionNetworkLearningSummary extends Entity implemen
     private ?string $url = null;
     
     /**
-     * Instantiates a new WindowsInformationProtectionNetworkLearningSummary and sets the default values.
+     * Instantiates a new windowsInformationProtectionNetworkLearningSummary and sets the default values.
     */
     public function __construct() {
         parent::__construct();

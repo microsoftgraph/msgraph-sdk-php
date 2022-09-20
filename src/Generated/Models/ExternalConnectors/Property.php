@@ -40,7 +40,7 @@ class Property implements AdditionalDataHolder, Parsable
     private ?bool $isSearchable = null;
     
     /**
-     * @var array<string>|null $labels Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional.
+     * @var array<Label>|null $labels Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional.
     */
     private ?array $labels = null;
     
@@ -104,7 +104,7 @@ class Property implements AdditionalDataHolder, Parsable
             'isRefinable' => function (ParseNode $n) use ($o) { $o->setIsRefinable($n->getBooleanValue()); },
             'isRetrievable' => function (ParseNode $n) use ($o) { $o->setIsRetrievable($n->getBooleanValue()); },
             'isSearchable' => function (ParseNode $n) use ($o) { $o->setIsSearchable($n->getBooleanValue()); },
-            'labels' => function (ParseNode $n) use ($o) { $o->setLabels($n->getCollectionOfPrimitiveValues()); },
+            'labels' => function (ParseNode $n) use ($o) { $o->setLabels($n->getCollectionOfEnumValues(Label::class)); },
             'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
             '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(PropertyType::class)); },
@@ -145,7 +145,7 @@ class Property implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional.
-     * @return array<string>|null
+     * @return array<Label>|null
     */
     public function getLabels(): ?array {
         return $this->labels;
@@ -185,7 +185,7 @@ class Property implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('isRefinable', $this->isRefinable);
         $writer->writeBooleanValue('isRetrievable', $this->isRetrievable);
         $writer->writeBooleanValue('isSearchable', $this->isSearchable);
-        $writer->writeCollectionOfPrimitiveValues('labels', $this->labels);
+        $writer->writeCollectionOfEnumValues('labels', $this->labels);
         $writer->writeStringValue('name', $this->name);
         $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('type', $this->type);
@@ -242,7 +242,7 @@ class Property implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional.
-     *  @param array<string>|null $value Value to set for the labels property.
+     *  @param array<Label>|null $value Value to set for the labels property.
     */
     public function setLabels(?array $value ): void {
         $this->labels = $value;

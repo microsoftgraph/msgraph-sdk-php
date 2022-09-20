@@ -2,6 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Me\Calendar\AllowedCalendarSharingRolesWithUser;
 
+use Microsoft\Graph\Generated\Models\CalendarRoleType;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -15,7 +16,7 @@ class AllowedCalendarSharingRolesWithUserResponse implements AdditionalDataHolde
     private array $additionalData;
     
     /**
-     * @var array<string>|null $value The value property
+     * @var array<CalendarRoleType>|null $value The value property
     */
     private ?array $value = null;
     
@@ -50,13 +51,13 @@ class AllowedCalendarSharingRolesWithUserResponse implements AdditionalDataHolde
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfPrimitiveValues()); },
+            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfEnumValues(CalendarRoleType::class)); },
         ];
     }
 
     /**
      * Gets the value property value. The value property
-     * @return array<string>|null
+     * @return array<CalendarRoleType>|null
     */
     public function getValue(): ?array {
         return $this->value;
@@ -67,7 +68,7 @@ class AllowedCalendarSharingRolesWithUserResponse implements AdditionalDataHolde
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('value', $this->value);
+        $writer->writeCollectionOfEnumValues('value', $this->value);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -81,7 +82,7 @@ class AllowedCalendarSharingRolesWithUserResponse implements AdditionalDataHolde
 
     /**
      * Sets the value property value. The value property
-     *  @param array<string>|null $value Value to set for the value property.
+     *  @param array<CalendarRoleType>|null $value Value to set for the value property.
     */
     public function setValue(?array $value ): void {
         $this->value = $value;

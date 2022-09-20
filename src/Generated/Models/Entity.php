@@ -147,6 +147,7 @@ class Entity implements AdditionalDataHolder, Parsable
                 case '#microsoft.graph.connectedOrganization': return new ConnectedOrganization();
                 case '#microsoft.graph.contact': return new Contact();
                 case '#microsoft.graph.contactFolder': return new ContactFolder();
+                case '#microsoft.graph.contentSharingSession': return new ContentSharingSession();
                 case '#microsoft.graph.contentType': return new ContentType();
                 case '#microsoft.graph.contract': return new Contract();
                 case '#microsoft.graph.conversation': return new Conversation();
@@ -656,6 +657,7 @@ class Entity implements AdditionalDataHolder, Parsable
                 case '#microsoft.graph.workbookWorksheet': return new WorkbookWorksheet();
                 case '#microsoft.graph.workbookWorksheetProtection': return new WorkbookWorksheetProtection();
                 case '#microsoft.graph.workforceIntegration': return new WorkforceIntegration();
+                case '#microsoft.graph.x509CertificateAuthenticationMethodConfiguration': return new X509CertificateAuthenticationMethodConfiguration();
             }
         }
         return new Entity();

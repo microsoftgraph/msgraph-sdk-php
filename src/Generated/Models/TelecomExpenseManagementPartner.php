@@ -35,7 +35,7 @@ class TelecomExpenseManagementPartner extends Entity implements Parsable
     private ?string $url = null;
     
     /**
-     * Instantiates a new TelecomExpenseManagementPartner and sets the default values.
+     * Instantiates a new telecomExpenseManagementPartner and sets the default values.
     */
     public function __construct() {
         parent::__construct();

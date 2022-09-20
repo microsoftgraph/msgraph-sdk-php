@@ -40,7 +40,7 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
     private ?string $topicIdentifier = null;
     
     /**
-     * Instantiates a new ApplePushNotificationCertificate and sets the default values.
+     * Instantiates a new applePushNotificationCertificate and sets the default values.
     */
     public function __construct() {
         parent::__construct();

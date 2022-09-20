@@ -15,12 +15,12 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var array<string>|null $excludePlatforms Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
+     * @var array<ConditionalAccessDevicePlatform>|null $excludePlatforms Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
     */
     private ?array $excludePlatforms = null;
     
     /**
-     * @var array<string>|null $includePlatforms Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
+     * @var array<ConditionalAccessDevicePlatform>|null $includePlatforms Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
     */
     private ?array $includePlatforms = null;
     
@@ -56,7 +56,7 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
-     * @return array<string>|null
+     * @return array<ConditionalAccessDevicePlatform>|null
     */
     public function getExcludePlatforms(): ?array {
         return $this->excludePlatforms;
@@ -69,15 +69,15 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'excludePlatforms' => function (ParseNode $n) use ($o) { $o->setExcludePlatforms($n->getCollectionOfPrimitiveValues()); },
-            'includePlatforms' => function (ParseNode $n) use ($o) { $o->setIncludePlatforms($n->getCollectionOfPrimitiveValues()); },
+            'excludePlatforms' => function (ParseNode $n) use ($o) { $o->setExcludePlatforms($n->getCollectionOfEnumValues(ConditionalAccessDevicePlatform::class)); },
+            'includePlatforms' => function (ParseNode $n) use ($o) { $o->setIncludePlatforms($n->getCollectionOfEnumValues(ConditionalAccessDevicePlatform::class)); },
             '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
 
     /**
      * Gets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
-     * @return array<string>|null
+     * @return array<ConditionalAccessDevicePlatform>|null
     */
     public function getIncludePlatforms(): ?array {
         return $this->includePlatforms;
@@ -96,8 +96,8 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('excludePlatforms', $this->excludePlatforms);
-        $writer->writeCollectionOfPrimitiveValues('includePlatforms', $this->includePlatforms);
+        $writer->writeCollectionOfEnumValues('excludePlatforms', $this->excludePlatforms);
+        $writer->writeCollectionOfEnumValues('includePlatforms', $this->includePlatforms);
         $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -112,7 +112,7 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
-     *  @param array<string>|null $value Value to set for the excludePlatforms property.
+     *  @param array<ConditionalAccessDevicePlatform>|null $value Value to set for the excludePlatforms property.
     */
     public function setExcludePlatforms(?array $value ): void {
         $this->excludePlatforms = $value;
@@ -120,7 +120,7 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
-     *  @param array<string>|null $value Value to set for the includePlatforms property.
+     *  @param array<ConditionalAccessDevicePlatform>|null $value Value to set for the includePlatforms property.
     */
     public function setIncludePlatforms(?array $value ): void {
         $this->includePlatforms = $value;

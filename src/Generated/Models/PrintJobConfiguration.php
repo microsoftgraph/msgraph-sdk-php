@@ -45,7 +45,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
     private ?PrinterFeedOrientation $feedOrientation = null;
     
     /**
-     * @var array<string>|null $finishings Finishing processes to use when printing.
+     * @var array<PrintFinishing>|null $finishings Finishing processes to use when printing.
     */
     private ?array $finishings = null;
     
@@ -200,7 +200,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
             'dpi' => function (ParseNode $n) use ($o) { $o->setDpi($n->getIntegerValue()); },
             'duplexMode' => function (ParseNode $n) use ($o) { $o->setDuplexMode($n->getEnumValue(PrintDuplexMode::class)); },
             'feedOrientation' => function (ParseNode $n) use ($o) { $o->setFeedOrientation($n->getEnumValue(PrinterFeedOrientation::class)); },
-            'finishings' => function (ParseNode $n) use ($o) { $o->setFinishings($n->getCollectionOfPrimitiveValues()); },
+            'finishings' => function (ParseNode $n) use ($o) { $o->setFinishings($n->getCollectionOfEnumValues(PrintFinishing::class)); },
             'fitPdfToPage' => function (ParseNode $n) use ($o) { $o->setFitPdfToPage($n->getBooleanValue()); },
             'inputBin' => function (ParseNode $n) use ($o) { $o->setInputBin($n->getStringValue()); },
             'margin' => function (ParseNode $n) use ($o) { $o->setMargin($n->getObjectValue(array(PrintMargin::class, 'createFromDiscriminatorValue'))); },
@@ -219,7 +219,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the finishings property value. Finishing processes to use when printing.
-     * @return array<string>|null
+     * @return array<PrintFinishing>|null
     */
     public function getFinishings(): ?array {
         return $this->finishings;
@@ -340,7 +340,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
         $writer->writeIntegerValue('dpi', $this->dpi);
         $writer->writeEnumValue('duplexMode', $this->duplexMode);
         $writer->writeEnumValue('feedOrientation', $this->feedOrientation);
-        $writer->writeCollectionOfPrimitiveValues('finishings', $this->finishings);
+        $writer->writeCollectionOfEnumValues('finishings', $this->finishings);
         $writer->writeBooleanValue('fitPdfToPage', $this->fitPdfToPage);
         $writer->writeStringValue('inputBin', $this->inputBin);
         $writer->writeObjectValue('margin', $this->margin);
@@ -415,7 +415,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the finishings property value. Finishing processes to use when printing.
-     *  @param array<string>|null $value Value to set for the finishings property.
+     *  @param array<PrintFinishing>|null $value Value to set for the finishings property.
     */
     public function setFinishings(?array $value ): void {
         $this->finishings = $value;

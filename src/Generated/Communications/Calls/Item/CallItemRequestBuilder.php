@@ -10,6 +10,8 @@ use Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\Audio
 use Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\Item\AudioRoutingGroupItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\CancelMediaProcessing\CancelMediaProcessingRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\ChangeScreenSharingRole\ChangeScreenSharingRoleRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\ContentSharingSessions\ContentSharingSessionsRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\ContentSharingSessions\Item\ContentSharingSessionItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\KeepAlive\KeepAliveRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Mute\MuteRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Operations\Item\CommsOperationItemRequestBuilder;
@@ -62,6 +64,13 @@ class CallItemRequestBuilder
     */
     public function changeScreenSharingRole(): ChangeScreenSharingRoleRequestBuilder {
         return new ChangeScreenSharingRoleRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The contentSharingSessions property
+    */
+    public function contentSharingSessions(): ContentSharingSessionsRequestBuilder {
+        return new ContentSharingSessionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -183,6 +192,17 @@ class CallItemRequestBuilder
         $this->urlTemplate = '{+baseurl}/communications/calls/{call%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+    }
+
+    /**
+     * Gets an item from the Microsoft\Graph\Generated.communications.calls.item.contentSharingSessions.item collection
+     * @param string $id Unique identifier of the item
+     * @return ContentSharingSessionItemRequestBuilder
+    */
+    public function contentSharingSessionsById(string $id): ContentSharingSessionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['contentSharingSession%2Did'] = $id;
+        return new ContentSharingSessionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

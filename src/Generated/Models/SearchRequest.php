@@ -35,7 +35,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     private ?bool $enableTopResults = null;
     
     /**
-     * @var array<string>|null $entityTypes The entityTypes property
+     * @var array<EntityType>|null $entityTypes The entityTypes property
     */
     private ?array $entityTypes = null;
     
@@ -138,7 +138,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the entityTypes property value. The entityTypes property
-     * @return array<string>|null
+     * @return array<EntityType>|null
     */
     public function getEntityTypes(): ?array {
         return $this->entityTypes;
@@ -155,7 +155,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
             'aggregations' => function (ParseNode $n) use ($o) { $o->setAggregations($n->getCollectionOfObjectValues(array(AggregationOption::class, 'createFromDiscriminatorValue'))); },
             'contentSources' => function (ParseNode $n) use ($o) { $o->setContentSources($n->getCollectionOfPrimitiveValues()); },
             'enableTopResults' => function (ParseNode $n) use ($o) { $o->setEnableTopResults($n->getBooleanValue()); },
-            'entityTypes' => function (ParseNode $n) use ($o) { $o->setEntityTypes($n->getCollectionOfPrimitiveValues()); },
+            'entityTypes' => function (ParseNode $n) use ($o) { $o->setEntityTypes($n->getCollectionOfEnumValues(EntityType::class)); },
             'fields' => function (ParseNode $n) use ($o) { $o->setFields($n->getCollectionOfPrimitiveValues()); },
             'from' => function (ParseNode $n) use ($o) { $o->setFrom($n->getIntegerValue()); },
             '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
@@ -240,7 +240,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
         $writer->writeCollectionOfObjectValues('aggregations', $this->aggregations);
         $writer->writeCollectionOfPrimitiveValues('contentSources', $this->contentSources);
         $writer->writeBooleanValue('enableTopResults', $this->enableTopResults);
-        $writer->writeCollectionOfPrimitiveValues('entityTypes', $this->entityTypes);
+        $writer->writeCollectionOfEnumValues('entityTypes', $this->entityTypes);
         $writer->writeCollectionOfPrimitiveValues('fields', $this->fields);
         $writer->writeIntegerValue('from', $this->from);
         $writer->writeStringValue('@odata.type', $this->odataType);
@@ -294,7 +294,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the entityTypes property value. The entityTypes property
-     *  @param array<string>|null $value Value to set for the entityTypes property.
+     *  @param array<EntityType>|null $value Value to set for the entityTypes property.
     */
     public function setEntityTypes(?array $value ): void {
         $this->entityTypes = $value;

@@ -20,7 +20,7 @@ class PrinterStatus implements AdditionalDataHolder, Parsable
     private ?string $description = null;
     
     /**
-     * @var array<string>|null $details The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
+     * @var array<PrinterProcessingStateDetail>|null $details The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
     */
     private ?array $details = null;
     
@@ -69,7 +69,7 @@ class PrinterStatus implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the details property value. The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
-     * @return array<string>|null
+     * @return array<PrinterProcessingStateDetail>|null
     */
     public function getDetails(): ?array {
         return $this->details;
@@ -83,7 +83,7 @@ class PrinterStatus implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'details' => function (ParseNode $n) use ($o) { $o->setDetails($n->getCollectionOfPrimitiveValues()); },
+            'details' => function (ParseNode $n) use ($o) { $o->setDetails($n->getCollectionOfEnumValues(PrinterProcessingStateDetail::class)); },
             '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(PrinterProcessingState::class)); },
         ];
@@ -111,7 +111,7 @@ class PrinterStatus implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('description', $this->description);
-        $writer->writeCollectionOfPrimitiveValues('details', $this->details);
+        $writer->writeCollectionOfEnumValues('details', $this->details);
         $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeEnumValue('state', $this->state);
         $writer->writeAdditionalData($this->additionalData);
@@ -135,7 +135,7 @@ class PrinterStatus implements AdditionalDataHolder, Parsable
 
     /**
      * Sets the details property value. The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
-     *  @param array<string>|null $value Value to set for the details property.
+     *  @param array<PrinterProcessingStateDetail>|null $value Value to set for the details property.
     */
     public function setDetails(?array $value ): void {
         $this->details = $value;

@@ -31,7 +31,7 @@ class Session extends Entity implements Parsable
     private ?FailureInfo $failureInfo = null;
     
     /**
-     * @var array<string>|null $modalities List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
+     * @var array<Modality>|null $modalities List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
     */
     private ?array $modalities = null;
     
@@ -105,7 +105,7 @@ class Session extends Entity implements Parsable
             'caller' => function (ParseNode $n) use ($o) { $o->setCaller($n->getObjectValue(array(Endpoint::class, 'createFromDiscriminatorValue'))); },
             'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
             'failureInfo' => function (ParseNode $n) use ($o) { $o->setFailureInfo($n->getObjectValue(array(FailureInfo::class, 'createFromDiscriminatorValue'))); },
-            'modalities' => function (ParseNode $n) use ($o) { $o->setModalities($n->getCollectionOfPrimitiveValues()); },
+            'modalities' => function (ParseNode $n) use ($o) { $o->setModalities($n->getCollectionOfEnumValues(Modality::class)); },
             'segments' => function (ParseNode $n) use ($o) { $o->setSegments($n->getCollectionOfObjectValues(array(Segment::class, 'createFromDiscriminatorValue'))); },
             'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
         ]);
@@ -113,7 +113,7 @@ class Session extends Entity implements Parsable
 
     /**
      * Gets the modalities property value. List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
-     * @return array<string>|null
+     * @return array<Modality>|null
     */
     public function getModalities(): ?array {
         return $this->modalities;
@@ -145,7 +145,7 @@ class Session extends Entity implements Parsable
         $writer->writeObjectValue('caller', $this->caller);
         $writer->writeDateTimeValue('endDateTime', $this->endDateTime);
         $writer->writeObjectValue('failureInfo', $this->failureInfo);
-        $writer->writeCollectionOfPrimitiveValues('modalities', $this->modalities);
+        $writer->writeCollectionOfEnumValues('modalities', $this->modalities);
         $writer->writeCollectionOfObjectValues('segments', $this->segments);
         $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
     }
@@ -184,7 +184,7 @@ class Session extends Entity implements Parsable
 
     /**
      * Sets the modalities property value. List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
-     *  @param array<string>|null $value Value to set for the modalities property.
+     *  @param array<Modality>|null $value Value to set for the modalities property.
     */
     public function setModalities(?array $value ): void {
         $this->modalities = $value;
