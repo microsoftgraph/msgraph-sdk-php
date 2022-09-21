@@ -16,6 +16,7 @@ const SDK_VERSION_VAR_NAME = "SDK_VERSION"; # Name of version variable in GraphC
 const PACKAGE_NAME = "microsoft/microsoft-graph";
 const PACKAGIST_ENDPOINT = "https://packagist.org/packages/".PACKAGE_NAME.".json";
 const README_FILEPATH = "./README.md";
+const DOCS_FILEPATH = "./docs/classes/Microsoft-Graph-Core-GraphConstants.html";
 
 /**
  * Gets latest stable packagist version if $stable == true, else gets the latest Release Candidate
@@ -136,4 +137,21 @@ function updateGraphConstants(string $filePath, string $bumpedVersion)
         return;
     }
     echo "Could not read contents at {$filePath}\n";
+}
+
+function updateDocs(string $packagistVersion, string $bumpedVersion)
+{
+    echo "Reading contents at ".DOCS_FILEPATH."...\n";
+    $fileContents = file_get_contents(DOCS_FILEPATH);
+    if ($fileContents) {
+        $pattern = '/'.$packagistVersion.'/';
+        $updatedContents = preg_replace($pattern, $bumpedVersion, $fileContents, -1, $numReplacements);
+        if (!$numReplacements) {
+            echo "Unable to find and replace SDK version\n";
+            return;
+        }
+        echo file_put_contents(DOCS_FILEPATH, $updatedContents) ? "Successfully updated ".DOCS_FILEPATH."\n" : "Failed to update ".DOCS_FILEPATH."\n";
+        return;
+    }
+    echo "Could not read contents at ".DOCS_FILEPATH."\n";
 }
