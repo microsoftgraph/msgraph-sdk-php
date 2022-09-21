@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* MeetingChatMode File
+* X509CertificateRuleType File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* MeetingChatMode class
+* X509CertificateRuleType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class MeetingChatMode extends Enum
+class X509CertificateRuleType extends Enum
 {
     /**
-    * The Enum MeetingChatMode
+    * The Enum X509CertificateRuleType
     */
-    const ENABLED = "enabled";
-    const DISABLED = "disabled";
-    const LIMITED = "limited";
+    const ISSUER_SUBJECT = "issuerSubject";
+    const POLICY_OID = "policyOID";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
