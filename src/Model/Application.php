@@ -148,7 +148,7 @@ class Application extends DirectoryObject
 
      /**
      * Gets the appRoles
-    * The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
+    * The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
      *
      * @return array|null The appRoles
      */
@@ -163,7 +163,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the appRoles
-    * The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
+    * The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
     *
     * @param AppRole[] $val The appRoles
     *
