@@ -139,9 +139,7 @@ class Certification implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('certificationDetailsUrl', $this->certificationDetailsUrl);
         $writer->writeDateTimeValue('certificationExpirationDateTime', $this->certificationExpirationDateTime);
-        $writer->writeBooleanValue('isCertifiedByMicrosoft', $this->isCertifiedByMicrosoft);
         $writer->writeBooleanValue('isPublisherAttested', $this->isPublisherAttested);
         $writer->writeDateTimeValue('lastCertificationDateTime', $this->lastCertificationDateTime);
         $writer->writeStringValue('@odata.type', $this->odataType);

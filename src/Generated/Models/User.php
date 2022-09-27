@@ -55,6 +55,11 @@ class User extends DirectoryObject implements Parsable
     private ?Authentication $authentication = null;
     
     /**
+     * @var AuthorizationInfo|null $authorizationInfo The authorizationInfo property
+    */
+    private ?AuthorizationInfo $authorizationInfo = null;
+    
+    /**
      * @var DateTime|null $birthday The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.
     */
     private ?DateTime $birthday = null;
@@ -684,6 +689,14 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the authorizationInfo property value. The authorizationInfo property
+     * @return AuthorizationInfo|null
+    */
+    public function getAuthorizationInfo(): ?AuthorizationInfo {
+        return $this->authorizationInfo;
+    }
+
+    /**
      * Gets the birthday property value. The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.
      * @return DateTime|null
     */
@@ -955,6 +968,7 @@ class User extends DirectoryObject implements Parsable
             'assignedLicenses' => function (ParseNode $n) use ($o) { $o->setAssignedLicenses($n->getCollectionOfObjectValues(array(AssignedLicense::class, 'createFromDiscriminatorValue'))); },
             'assignedPlans' => function (ParseNode $n) use ($o) { $o->setAssignedPlans($n->getCollectionOfObjectValues(array(AssignedPlan::class, 'createFromDiscriminatorValue'))); },
             'authentication' => function (ParseNode $n) use ($o) { $o->setAuthentication($n->getObjectValue(array(Authentication::class, 'createFromDiscriminatorValue'))); },
+            'authorizationInfo' => function (ParseNode $n) use ($o) { $o->setAuthorizationInfo($n->getObjectValue(array(AuthorizationInfo::class, 'createFromDiscriminatorValue'))); },
             'birthday' => function (ParseNode $n) use ($o) { $o->setBirthday($n->getDateTimeValue()); },
             'businessPhones' => function (ParseNode $n) use ($o) { $o->setBusinessPhones($n->getCollectionOfPrimitiveValues()); },
             'calendar' => function (ParseNode $n) use ($o) { $o->setCalendar($n->getObjectValue(array(Calendar::class, 'createFromDiscriminatorValue'))); },
@@ -1689,6 +1703,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('assignedLicenses', $this->assignedLicenses);
         $writer->writeCollectionOfObjectValues('assignedPlans', $this->assignedPlans);
         $writer->writeObjectValue('authentication', $this->authentication);
+        $writer->writeObjectValue('authorizationInfo', $this->authorizationInfo);
         $writer->writeDateTimeValue('birthday', $this->birthday);
         $writer->writeCollectionOfPrimitiveValues('businessPhones', $this->businessPhones);
         $writer->writeObjectValue('calendar', $this->calendar);
@@ -1869,6 +1884,14 @@ class User extends DirectoryObject implements Parsable
     */
     public function setAuthentication(?Authentication $value ): void {
         $this->authentication = $value;
+    }
+
+    /**
+     * Sets the authorizationInfo property value. The authorizationInfo property
+     *  @param AuthorizationInfo|null $value Value to set for the authorizationInfo property.
+    */
+    public function setAuthorizationInfo(?AuthorizationInfo $value ): void {
+        $this->authorizationInfo = $value;
     }
 
     /**

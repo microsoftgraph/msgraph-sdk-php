@@ -43,7 +43,7 @@ class ChangePasswordRequestBuilder
     }
 
     /**
-     * Invoke action changePassword
+     * Enable the user to update their password. Any user can update their password without belonging to any administrator role.
      * @param ChangePasswordPostRequestBody $body 
      * @param ChangePasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -66,7 +66,7 @@ class ChangePasswordRequestBuilder
     }
 
     /**
-     * Invoke action changePassword
+     * Enable the user to update their password. Any user can update their password without belonging to any administrator role.
      * @param ChangePasswordPostRequestBody $body 
      * @param ChangePasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

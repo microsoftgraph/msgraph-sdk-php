@@ -161,7 +161,6 @@ class ExternalConnection extends Entity implements Parsable
         $writer->writeStringValue('name', $this->name);
         $writer->writeCollectionOfObjectValues('operations', $this->operations);
         $writer->writeObjectValue('schema', $this->schema);
-        $writer->writeEnumValue('state', $this->state);
     }
 
     /**

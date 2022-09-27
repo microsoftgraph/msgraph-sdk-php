@@ -29,6 +29,11 @@ class ReportRoot extends Entity implements Parsable
     private ?array $monthlyPrintUsageByUser = null;
     
     /**
+     * @var SecurityReportsRoot|null $security The security property
+    */
+    private ?SecurityReportsRoot $security = null;
+    
+    /**
      * Instantiates a new ReportRoot and sets the default values.
     */
     public function __construct() {
@@ -72,6 +77,7 @@ class ReportRoot extends Entity implements Parsable
             'dailyPrintUsageByUser' => function (ParseNode $n) use ($o) { $o->setDailyPrintUsageByUser($n->getCollectionOfObjectValues(array(PrintUsageByUser::class, 'createFromDiscriminatorValue'))); },
             'monthlyPrintUsageByPrinter' => function (ParseNode $n) use ($o) { $o->setMonthlyPrintUsageByPrinter($n->getCollectionOfObjectValues(array(PrintUsageByPrinter::class, 'createFromDiscriminatorValue'))); },
             'monthlyPrintUsageByUser' => function (ParseNode $n) use ($o) { $o->setMonthlyPrintUsageByUser($n->getCollectionOfObjectValues(array(PrintUsageByUser::class, 'createFromDiscriminatorValue'))); },
+            'security' => function (ParseNode $n) use ($o) { $o->setSecurity($n->getObjectValue(array(SecurityReportsRoot::class, 'createFromDiscriminatorValue'))); },
         ]);
     }
 
@@ -92,6 +98,14 @@ class ReportRoot extends Entity implements Parsable
     }
 
     /**
+     * Gets the security property value. The security property
+     * @return SecurityReportsRoot|null
+    */
+    public function getSecurity(): ?SecurityReportsRoot {
+        return $this->security;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -101,6 +115,7 @@ class ReportRoot extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('dailyPrintUsageByUser', $this->dailyPrintUsageByUser);
         $writer->writeCollectionOfObjectValues('monthlyPrintUsageByPrinter', $this->monthlyPrintUsageByPrinter);
         $writer->writeCollectionOfObjectValues('monthlyPrintUsageByUser', $this->monthlyPrintUsageByUser);
+        $writer->writeObjectValue('security', $this->security);
     }
 
     /**
@@ -133,6 +148,14 @@ class ReportRoot extends Entity implements Parsable
     */
     public function setMonthlyPrintUsageByUser(?array $value ): void {
         $this->monthlyPrintUsageByUser = $value;
+    }
+
+    /**
+     * Sets the security property value. The security property
+     *  @param SecurityReportsRoot|null $value Value to set for the security property.
+    */
+    public function setSecurity(?SecurityReportsRoot $value ): void {
+        $this->security = $value;
     }
 
 }

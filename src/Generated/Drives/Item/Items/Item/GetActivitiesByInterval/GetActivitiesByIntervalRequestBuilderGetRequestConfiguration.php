@@ -16,4 +16,9 @@ class GetActivitiesByIntervalRequestBuilderGetRequestConfiguration
     */
     public ?array $options = null;
     
+    /**
+     * @var GetActivitiesByIntervalRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?GetActivitiesByIntervalRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

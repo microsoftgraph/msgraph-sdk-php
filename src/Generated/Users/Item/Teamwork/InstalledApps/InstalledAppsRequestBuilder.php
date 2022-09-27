@@ -47,13 +47,13 @@ class InstalledAppsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/users/{user%2Did}/teamwork/installedApps{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/users/{user%2Did}/teamwork/installedApps{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * The apps installed in the personal scope of this user.
+     * Retrieve the list of apps installed in the personal scope of the specified user.
      * @param InstalledAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class InstalledAppsRequestBuilder
     }
 
     /**
-     * Create new navigation property to installedApps for users
+     * Install an app in the personal scope of the specified user.
      * @param UserScopeTeamsAppInstallation $body 
      * @param InstalledAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class InstalledAppsRequestBuilder
     }
 
     /**
-     * The apps installed in the personal scope of this user.
+     * Retrieve the list of apps installed in the personal scope of the specified user.
      * @param InstalledAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class InstalledAppsRequestBuilder
     }
 
     /**
-     * Create new navigation property to installedApps for users
+     * Install an app in the personal scope of the specified user.
      * @param UserScopeTeamsAppInstallation $body 
      * @param InstalledAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

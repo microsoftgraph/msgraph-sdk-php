@@ -16,4 +16,9 @@ class GetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilderGetReques
     */
     public ?array $options = null;
     
+    /**
+     * @var GetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?GetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

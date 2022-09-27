@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\Calls\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Communications\Calls\Item\AddLargeGalleryView\AddLargeGalleryViewRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Answer\AnswerRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\AudioRoutingGroupsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\Item\AudioRoutingGroupItemRequestBuilder;
@@ -38,6 +39,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class CallItemRequestBuilder 
 {
+    /**
+     * The addLargeGalleryView property
+    */
+    public function addLargeGalleryView(): AddLargeGalleryViewRequestBuilder {
+        return new AddLargeGalleryViewRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * The answer property
     */
@@ -262,6 +270,7 @@ class CallItemRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
+        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
@@ -348,7 +357,7 @@ class CallItemRequestBuilder
                     '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
                     '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
-            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, array(Call::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

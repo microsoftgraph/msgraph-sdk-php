@@ -43,7 +43,7 @@ class CopyToDefaultContentLocationRequestBuilder
     }
 
     /**
-     * Invoke action copyToDefaultContentLocation
+     * Copy a file to a default content location in a [content type][contentType]. The file can then be added as a default file or template via a POST operation.
      * @param CopyToDefaultContentLocationPostRequestBody $body 
      * @param CopyToDefaultContentLocationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -66,7 +66,7 @@ class CopyToDefaultContentLocationRequestBuilder
     }
 
     /**
-     * Invoke action copyToDefaultContentLocation
+     * Copy a file to a default content location in a [content type][contentType]. The file can then be added as a default file or template via a POST operation.
      * @param CopyToDefaultContentLocationPostRequestBody $body 
      * @param CopyToDefaultContentLocationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

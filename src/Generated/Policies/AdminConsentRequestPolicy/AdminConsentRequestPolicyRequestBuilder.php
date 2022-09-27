@@ -65,7 +65,7 @@ class AdminConsentRequestPolicyRequestBuilder
     }
 
     /**
-     * The policy by which consent requests are created and managed for the entire tenant.
+     * Read the properties and relationships of an adminConsentRequestPolicy object.
      * @param AdminConsentRequestPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -90,7 +90,7 @@ class AdminConsentRequestPolicyRequestBuilder
     }
 
     /**
-     * Update the navigation property adminConsentRequestPolicy in policies
+     * Update the properties of an adminConsentRequestPolicy object.
      * @param AdminConsentRequestPolicy $body 
      * @param AdminConsentRequestPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -100,6 +100,7 @@ class AdminConsentRequestPolicyRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
+        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
@@ -132,7 +133,7 @@ class AdminConsentRequestPolicyRequestBuilder
     }
 
     /**
-     * The policy by which consent requests are created and managed for the entire tenant.
+     * Read the properties and relationships of an adminConsentRequestPolicy object.
      * @param AdminConsentRequestPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -151,7 +152,7 @@ class AdminConsentRequestPolicyRequestBuilder
     }
 
     /**
-     * Update the navigation property adminConsentRequestPolicy in policies
+     * Update the properties of an adminConsentRequestPolicy object.
      * @param AdminConsentRequestPolicy $body 
      * @param AdminConsentRequestPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -164,7 +165,7 @@ class AdminConsentRequestPolicyRequestBuilder
                     '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
                     '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
-            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, array(AdminConsentRequestPolicy::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

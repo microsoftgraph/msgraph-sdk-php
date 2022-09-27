@@ -47,13 +47,13 @@ class StaffMembersRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/staffMembers{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/staffMembers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * All the staff members that provide services in this business. Read-only. Nullable.
+     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
      * @param StaffMembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class StaffMembersRequestBuilder
     }
 
     /**
-     * Create new navigation property to staffMembers for solutions
+     * Create a new bookingStaffMember in the specified bookingBusiness.
      * @param BookingStaffMemberBase $body 
      * @param StaffMembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class StaffMembersRequestBuilder
     }
 
     /**
-     * All the staff members that provide services in this business. Read-only. Nullable.
+     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
      * @param StaffMembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class StaffMembersRequestBuilder
     }
 
     /**
-     * Create new navigation property to staffMembers for solutions
+     * Create a new bookingStaffMember in the specified bookingBusiness.
      * @param BookingStaffMemberBase $body 
      * @param StaffMembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

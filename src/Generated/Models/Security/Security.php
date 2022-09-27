@@ -15,6 +15,11 @@ class Security extends Entity implements Parsable
     private ?array $alerts = null;
     
     /**
+     * @var AttackSimulationRoot|null $attackSimulation The attackSimulation property
+    */
+    private ?AttackSimulationRoot $attackSimulation = null;
+    
+    /**
      * @var CasesRoot|null $cases The cases property
     */
     private ?CasesRoot $cases = null;
@@ -55,6 +60,14 @@ class Security extends Entity implements Parsable
     }
 
     /**
+     * Gets the attackSimulation property value. The attackSimulation property
+     * @return AttackSimulationRoot|null
+    */
+    public function getAttackSimulation(): ?AttackSimulationRoot {
+        return $this->attackSimulation;
+    }
+
+    /**
      * Gets the cases property value. The cases property
      * @return CasesRoot|null
     */
@@ -70,6 +83,7 @@ class Security extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'alerts' => function (ParseNode $n) use ($o) { $o->setAlerts($n->getCollectionOfObjectValues(array(Alert::class, 'createFromDiscriminatorValue'))); },
+            'attackSimulation' => function (ParseNode $n) use ($o) { $o->setAttackSimulation($n->getObjectValue(array(AttackSimulationRoot::class, 'createFromDiscriminatorValue'))); },
             'cases' => function (ParseNode $n) use ($o) { $o->setCases($n->getObjectValue(array(CasesRoot::class, 'createFromDiscriminatorValue'))); },
             'secureScoreControlProfiles' => function (ParseNode $n) use ($o) { $o->setSecureScoreControlProfiles($n->getCollectionOfObjectValues(array(SecureScoreControlProfile::class, 'createFromDiscriminatorValue'))); },
             'secureScores' => function (ParseNode $n) use ($o) { $o->setSecureScores($n->getCollectionOfObjectValues(array(SecureScore::class, 'createFromDiscriminatorValue'))); },
@@ -99,6 +113,7 @@ class Security extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('alerts', $this->alerts);
+        $writer->writeObjectValue('attackSimulation', $this->attackSimulation);
         $writer->writeObjectValue('cases', $this->cases);
         $writer->writeCollectionOfObjectValues('secureScoreControlProfiles', $this->secureScoreControlProfiles);
         $writer->writeCollectionOfObjectValues('secureScores', $this->secureScores);
@@ -110,6 +125,14 @@ class Security extends Entity implements Parsable
     */
     public function setAlerts(?array $value ): void {
         $this->alerts = $value;
+    }
+
+    /**
+     * Sets the attackSimulation property value. The attackSimulation property
+     *  @param AttackSimulationRoot|null $value Value to set for the attackSimulation property.
+    */
+    public function setAttackSimulation(?AttackSimulationRoot $value ): void {
+        $this->attackSimulation = $value;
     }
 
     /**

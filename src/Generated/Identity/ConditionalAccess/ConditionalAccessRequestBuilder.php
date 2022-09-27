@@ -5,6 +5,8 @@ namespace Microsoft\Graph\Generated\Identity\ConditionalAccess;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationContextClassReferences\AuthenticationContextClassReferencesRequestBuilder;
+use Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationContextClassReferences\Item\AuthenticationContextClassReferenceItemRequestBuilder;
 use Microsoft\Graph\Generated\Identity\ConditionalAccess\NamedLocations\Item\NamedLocationItemRequestBuilder;
 use Microsoft\Graph\Generated\Identity\ConditionalAccess\NamedLocations\NamedLocationsRequestBuilder;
 use Microsoft\Graph\Generated\Identity\ConditionalAccess\Policies\Item\ConditionalAccessPolicyItemRequestBuilder;
@@ -21,6 +23,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ConditionalAccessRequestBuilder 
 {
+    /**
+     * The authenticationContextClassReferences property
+    */
+    public function authenticationContextClassReferences(): AuthenticationContextClassReferencesRequestBuilder {
+        return new AuthenticationContextClassReferencesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * The namedLocations property
     */
@@ -50,6 +59,17 @@ class ConditionalAccessRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Gets an item from the Microsoft\Graph\Generated.identity.conditionalAccess.authenticationContextClassReferences.item collection
+     * @param string $id Unique identifier of the item
+     * @return AuthenticationContextClassReferenceItemRequestBuilder
+    */
+    public function authenticationContextClassReferencesById(string $id): AuthenticationContextClassReferenceItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['authenticationContextClassReference%2Did'] = $id;
+        return new AuthenticationContextClassReferenceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ConditionalAccessRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
@@ -118,6 +138,7 @@ class ConditionalAccessRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
+        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
@@ -193,7 +214,7 @@ class ConditionalAccessRequestBuilder
                     '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
                     '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
-            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, array(ConditionalAccessRoot::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

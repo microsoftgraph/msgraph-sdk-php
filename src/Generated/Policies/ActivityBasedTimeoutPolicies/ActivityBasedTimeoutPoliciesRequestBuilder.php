@@ -47,13 +47,13 @@ class ActivityBasedTimeoutPoliciesRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/policies/activityBasedTimeoutPolicies{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/policies/activityBasedTimeoutPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * The policy that controls the idle time out for web sessions for applications.
+     * Get a list of activityBasedTimeoutPolicy objects.
      * @param ActivityBasedTimeoutPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class ActivityBasedTimeoutPoliciesRequestBuilder
     }
 
     /**
-     * Create new navigation property to activityBasedTimeoutPolicies for policies
+     * Create a new activityBasedTimeoutPolicy object.
      * @param ActivityBasedTimeoutPolicy $body 
      * @param ActivityBasedTimeoutPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class ActivityBasedTimeoutPoliciesRequestBuilder
     }
 
     /**
-     * The policy that controls the idle time out for web sessions for applications.
+     * Get a list of activityBasedTimeoutPolicy objects.
      * @param ActivityBasedTimeoutPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class ActivityBasedTimeoutPoliciesRequestBuilder
     }
 
     /**
-     * Create new navigation property to activityBasedTimeoutPolicies for policies
+     * Create a new activityBasedTimeoutPolicy object.
      * @param ActivityBasedTimeoutPolicy $body 
      * @param ActivityBasedTimeoutPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

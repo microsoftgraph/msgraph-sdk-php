@@ -47,6 +47,7 @@ class Identity implements AdditionalDataHolder, Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.emailIdentity': return new EmailIdentity();
                 case '#microsoft.graph.initiator': return new Initiator();
                 case '#microsoft.graph.provisionedIdentity': return new ProvisionedIdentity();
                 case '#microsoft.graph.provisioningServicePrincipal': return new ProvisioningServicePrincipal();

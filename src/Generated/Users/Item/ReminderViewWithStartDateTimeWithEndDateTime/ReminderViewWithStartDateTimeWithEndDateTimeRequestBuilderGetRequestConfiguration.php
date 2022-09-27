@@ -16,4 +16,9 @@ class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfig
     */
     public ?array $options = null;
     
+    /**
+     * @var ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

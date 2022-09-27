@@ -128,8 +128,6 @@ class SharedInsight extends Entity implements Parsable
         $writer->writeObjectValue('lastShared', $this->lastShared);
         $writer->writeObjectValue('lastSharedMethod', $this->lastSharedMethod);
         $writer->writeObjectValue('resource', $this->resource);
-        $writer->writeObjectValue('resourceReference', $this->resourceReference);
-        $writer->writeObjectValue('resourceVisualization', $this->resourceVisualization);
         $writer->writeCollectionOfObjectValues('sharingHistory', $this->sharingHistory);
     }
 

@@ -40,7 +40,7 @@ class GetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
      * @param DateTime|null $toDateTime Usage: toDateTime='{toDateTime}'
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?DateTime $fromDateTime = null, ?DateTime $toDateTime = null) {
-        $this->urlTemplate = '{+baseurl}/communications/callRecords/microsoft.graph.callRecords.getPstnCalls(fromDateTime=\'{fromDateTime}\',toDateTime=\'{toDateTime}\')';
+        $this->urlTemplate = '{+baseurl}/communications/callRecords/microsoft.graph.callRecords.getPstnCalls(fromDateTime=\'{fromDateTime}\',toDateTime=\'{toDateTime}\'){?%24top,%24skip,%24search,%24filter,%24count}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
         $urlTplParams = $pathParameters;
@@ -63,6 +63,9 @@ class GetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->queryParameters !== null) {
+                $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
             if ($requestConfiguration->options !== null) {
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);

@@ -65,7 +65,7 @@ class ProgressTaskBoardFormatRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
+     * Retrieve the properties and relationships of **plannerProgressTaskBoardTaskFormat** object.
      * @param ProgressTaskBoardFormatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -90,7 +90,7 @@ class ProgressTaskBoardFormatRequestBuilder
     }
 
     /**
-     * Update the navigation property progressTaskBoardFormat in groups
+     * Update the properties of **plannerProgressTaskBoardTaskFormat** object.
      * @param PlannerProgressTaskBoardTaskFormat $body 
      * @param ProgressTaskBoardFormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -100,6 +100,7 @@ class ProgressTaskBoardFormatRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
+        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
@@ -132,7 +133,7 @@ class ProgressTaskBoardFormatRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
+     * Retrieve the properties and relationships of **plannerProgressTaskBoardTaskFormat** object.
      * @param ProgressTaskBoardFormatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -151,7 +152,7 @@ class ProgressTaskBoardFormatRequestBuilder
     }
 
     /**
-     * Update the navigation property progressTaskBoardFormat in groups
+     * Update the properties of **plannerProgressTaskBoardTaskFormat** object.
      * @param PlannerProgressTaskBoardTaskFormat $body 
      * @param ProgressTaskBoardFormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -164,7 +165,7 @@ class ProgressTaskBoardFormatRequestBuilder
                     '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
                     '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
-            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, array(PlannerProgressTaskBoardTaskFormat::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
