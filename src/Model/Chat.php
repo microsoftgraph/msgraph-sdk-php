@@ -336,6 +336,7 @@ class Chat extends Entity
 
      /**
      * Gets the pinnedMessages
+    * A collection of all the pinned messages in the chat. Nullable.
      *
      * @return array|null The pinnedMessages
      */
@@ -350,6 +351,7 @@ class Chat extends Entity
 
     /**
     * Sets the pinnedMessages
+    * A collection of all the pinned messages in the chat. Nullable.
     *
     * @param PinnedChatMessageInfo[] $val The pinnedMessages
     *
