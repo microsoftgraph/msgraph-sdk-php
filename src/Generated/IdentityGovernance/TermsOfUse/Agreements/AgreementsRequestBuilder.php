@@ -47,13 +47,13 @@ class AgreementsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/identityGovernance/termsOfUse/agreements{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/identityGovernance/termsOfUse/agreements{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Retrieve a list of agreement objects.
      * @param AgreementsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class AgreementsRequestBuilder
     }
 
     /**
-     * Create new navigation property to agreements for identityGovernance
+     * Create a new agreement object.
      * @param Agreement $body 
      * @param AgreementsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class AgreementsRequestBuilder
     }
 
     /**
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Retrieve a list of agreement objects.
      * @param AgreementsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class AgreementsRequestBuilder
     }
 
     /**
-     * Create new navigation property to agreements for identityGovernance
+     * Create a new agreement object.
      * @param Agreement $body 
      * @param AgreementsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

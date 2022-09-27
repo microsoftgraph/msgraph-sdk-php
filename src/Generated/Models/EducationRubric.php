@@ -110,13 +110,9 @@ class EducationRubric extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
             'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getObjectValue(array(EducationItemBody::class, 'createFromDiscriminatorValue'))); },
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'grading' => function (ParseNode $n) use ($o) { $o->setGrading($n->getObjectValue(array(EducationAssignmentGradeType::class, 'createFromDiscriminatorValue'))); },
-            'lastModifiedBy' => function (ParseNode $n) use ($o) { $o->setLastModifiedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
             'levels' => function (ParseNode $n) use ($o) { $o->setLevels($n->getCollectionOfObjectValues(array(RubricLevel::class, 'createFromDiscriminatorValue'))); },
             'qualities' => function (ParseNode $n) use ($o) { $o->setQualities($n->getCollectionOfObjectValues(array(RubricQuality::class, 'createFromDiscriminatorValue'))); },
         ]);
@@ -168,31 +164,11 @@ class EducationRubric extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('createdBy', $this->createdBy);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
         $writer->writeObjectValue('description', $this->description);
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeObjectValue('grading', $this->grading);
-        $writer->writeObjectValue('lastModifiedBy', $this->lastModifiedBy);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
         $writer->writeCollectionOfObjectValues('levels', $this->levels);
         $writer->writeCollectionOfObjectValues('qualities', $this->qualities);
-    }
-
-    /**
-     * Sets the createdBy property value. The user who created this resource.
-     *  @param IdentitySet|null $value Value to set for the createdBy property.
-    */
-    public function setCreatedBy(?IdentitySet $value ): void {
-        $this->createdBy = $value;
-    }
-
-    /**
-     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
-    */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
     }
 
     /**
@@ -217,22 +193,6 @@ class EducationRubric extends Entity implements Parsable
     */
     public function setGrading(?EducationAssignmentGradeType $value ): void {
         $this->grading = $value;
-    }
-
-    /**
-     * Sets the lastModifiedBy property value. The last user to modify the resource.
-     *  @param IdentitySet|null $value Value to set for the lastModifiedBy property.
-    */
-    public function setLastModifiedBy(?IdentitySet $value ): void {
-        $this->lastModifiedBy = $value;
-    }
-
-    /**
-     * Sets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
-    */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
     }
 
     /**

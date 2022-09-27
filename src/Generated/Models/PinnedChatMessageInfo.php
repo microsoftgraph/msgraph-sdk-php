@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PinnedChatMessageInfo extends Entity implements Parsable 
 {
     /**
-     * @var ChatMessage|null $message The message property
+     * @var ChatMessage|null $message Represents details about the chat message that is pinned.
     */
     private ?ChatMessage $message = null;
     
@@ -42,7 +42,7 @@ class PinnedChatMessageInfo extends Entity implements Parsable
     }
 
     /**
-     * Gets the message property value. The message property
+     * Gets the message property value. Represents details about the chat message that is pinned.
      * @return ChatMessage|null
     */
     public function getMessage(): ?ChatMessage {
@@ -59,7 +59,7 @@ class PinnedChatMessageInfo extends Entity implements Parsable
     }
 
     /**
-     * Sets the message property value. The message property
+     * Sets the message property value. Represents details about the chat message that is pinned.
      *  @param ChatMessage|null $value Value to set for the message property.
     */
     public function setMessage(?ChatMessage $value ): void {

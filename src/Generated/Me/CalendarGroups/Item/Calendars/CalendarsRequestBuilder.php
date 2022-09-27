@@ -47,13 +47,13 @@ class CalendarsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/me/calendarGroups/{calendarGroup%2Did}/calendars{?%24top*,%24skip*,%24filter*,%24count*,%24orderby,%24select}';
+        $this->urlTemplate = '{+baseurl}/me/calendarGroups/{calendarGroup%2Did}/calendars{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * The calendars in the calendar group. Navigation property. Read-only. Nullable.
+     * Retrieve a list of calendars belonging to a calendar group.
      * @param CalendarsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class CalendarsRequestBuilder
     }
 
     /**
-     * Create new navigation property to calendars for me
+     * Use this API to create a new calendar in a calendar group for a user.
      * @param Calendar $body 
      * @param CalendarsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class CalendarsRequestBuilder
     }
 
     /**
-     * The calendars in the calendar group. Navigation property. Read-only. Nullable.
+     * Retrieve a list of calendars belonging to a calendar group.
      * @param CalendarsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class CalendarsRequestBuilder
     }
 
     /**
-     * Create new navigation property to calendars for me
+     * Use this API to create a new calendar in a calendar group for a user.
      * @param Calendar $body 
      * @param CalendarsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

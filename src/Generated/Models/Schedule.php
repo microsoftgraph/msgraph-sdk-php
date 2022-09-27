@@ -141,8 +141,6 @@ class Schedule extends Entity implements Parsable
             'openShiftChangeRequests' => function (ParseNode $n) use ($o) { $o->setOpenShiftChangeRequests($n->getCollectionOfObjectValues(array(OpenShiftChangeRequest::class, 'createFromDiscriminatorValue'))); },
             'openShifts' => function (ParseNode $n) use ($o) { $o->setOpenShifts($n->getCollectionOfObjectValues(array(OpenShift::class, 'createFromDiscriminatorValue'))); },
             'openShiftsEnabled' => function (ParseNode $n) use ($o) { $o->setOpenShiftsEnabled($n->getBooleanValue()); },
-            'provisionStatus' => function (ParseNode $n) use ($o) { $o->setProvisionStatus($n->getEnumValue(OperationStatus::class)); },
-            'provisionStatusCode' => function (ParseNode $n) use ($o) { $o->setProvisionStatusCode($n->getStringValue()); },
             'schedulingGroups' => function (ParseNode $n) use ($o) { $o->setSchedulingGroups($n->getCollectionOfObjectValues(array(SchedulingGroup::class, 'createFromDiscriminatorValue'))); },
             'shifts' => function (ParseNode $n) use ($o) { $o->setShifts($n->getCollectionOfObjectValues(array(Shift::class, 'createFromDiscriminatorValue'))); },
             'swapShiftsChangeRequests' => function (ParseNode $n) use ($o) { $o->setSwapShiftsChangeRequests($n->getCollectionOfObjectValues(array(SwapShiftsChangeRequest::class, 'createFromDiscriminatorValue'))); },
@@ -313,8 +311,6 @@ class Schedule extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('openShiftChangeRequests', $this->openShiftChangeRequests);
         $writer->writeCollectionOfObjectValues('openShifts', $this->openShifts);
         $writer->writeBooleanValue('openShiftsEnabled', $this->openShiftsEnabled);
-        $writer->writeEnumValue('provisionStatus', $this->provisionStatus);
-        $writer->writeStringValue('provisionStatusCode', $this->provisionStatusCode);
         $writer->writeCollectionOfObjectValues('schedulingGroups', $this->schedulingGroups);
         $writer->writeCollectionOfObjectValues('shifts', $this->shifts);
         $writer->writeCollectionOfObjectValues('swapShiftsChangeRequests', $this->swapShiftsChangeRequests);
@@ -374,22 +370,6 @@ class Schedule extends Entity implements Parsable
     */
     public function setOpenShiftsEnabled(?bool $value ): void {
         $this->openShiftsEnabled = $value;
-    }
-
-    /**
-     * Sets the provisionStatus property value. The status of the schedule provisioning. The possible values are notStarted, running, completed, failed.
-     *  @param OperationStatus|null $value Value to set for the provisionStatus property.
-    */
-    public function setProvisionStatus(?OperationStatus $value ): void {
-        $this->provisionStatus = $value;
-    }
-
-    /**
-     * Sets the provisionStatusCode property value. Additional information about why schedule provisioning failed.
-     *  @param string|null $value Value to set for the provisionStatusCode property.
-    */
-    public function setProvisionStatusCode(?string $value ): void {
-        $this->provisionStatusCode = $value;
     }
 
     /**

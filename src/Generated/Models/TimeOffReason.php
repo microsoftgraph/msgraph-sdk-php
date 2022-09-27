@@ -24,7 +24,7 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
     private ?bool $isActive = null;
     
     /**
-     * Instantiates a new TimeOffReason and sets the default values.
+     * Instantiates a new timeOffReason and sets the default values.
     */
     public function __construct() {
         parent::__construct();

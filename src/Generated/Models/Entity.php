@@ -59,6 +59,7 @@ class Entity implements AdditionalDataHolder, Parsable
                 case '#microsoft.graph.accessReviewStage': return new AccessReviewStage();
                 case '#microsoft.graph.activityBasedTimeoutPolicy': return new ActivityBasedTimeoutPolicy();
                 case '#microsoft.graph.activityHistoryItem': return new ActivityHistoryItem();
+                case '#microsoft.graph.addLargeGalleryViewOperation': return new AddLargeGalleryViewOperation();
                 case '#microsoft.graph.adminConsentRequestPolicy': return new AdminConsentRequestPolicy();
                 case '#microsoft.graph.administrativeUnit': return new AdministrativeUnit();
                 case '#microsoft.graph.agreement': return new Agreement();
@@ -527,6 +528,8 @@ class Entity implements AdditionalDataHolder, Parsable
                 case '#microsoft.graph.teamwork': return new Teamwork();
                 case '#microsoft.graph.teamworkBot': return new TeamworkBot();
                 case '#microsoft.graph.teamworkHostedContent': return new TeamworkHostedContent();
+                case '#microsoft.graph.teamworkTag': return new TeamworkTag();
+                case '#microsoft.graph.teamworkTagMember': return new TeamworkTagMember();
                 case '#microsoft.graph.telecomExpenseManagementPartner': return new TelecomExpenseManagementPartner();
                 case '#microsoft.graph.temporaryAccessPassAuthenticationMethod': return new TemporaryAccessPassAuthenticationMethod();
                 case '#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration': return new TemporaryAccessPassAuthenticationMethodConfiguration();

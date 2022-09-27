@@ -47,13 +47,13 @@ class AppointmentsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/appointments{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/appointments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @param AppointmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class AppointmentsRequestBuilder
     }
 
     /**
-     * Create new navigation property to appointments for solutions
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param BookingAppointment $body 
      * @param AppointmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class AppointmentsRequestBuilder
     }
 
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @param AppointmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class AppointmentsRequestBuilder
     }
 
     /**
-     * Create new navigation property to appointments for solutions
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param BookingAppointment $body 
      * @param AppointmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

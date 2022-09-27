@@ -366,7 +366,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'accountsBlockAddingNonMicrosoftAccountEmail' => function (ParseNode $n) use ($o) { $o->setAccountsBlockAddingNonMicrosoftAccountEmail($n->getBooleanValue()); },
-            'applyOnlyToWindows81' => function (ParseNode $n) use ($o) { $o->setApplyOnlyToWindows81($n->getBooleanValue()); },
             'browserBlockAutofill' => function (ParseNode $n) use ($o) { $o->setBrowserBlockAutofill($n->getBooleanValue()); },
             'browserBlockAutomaticDetectionOfIntranetSites' => function (ParseNode $n) use ($o) { $o->setBrowserBlockAutomaticDetectionOfIntranetSites($n->getBooleanValue()); },
             'browserBlockEnterpriseModeAccess' => function (ParseNode $n) use ($o) { $o->setBrowserBlockEnterpriseModeAccess($n->getBooleanValue()); },
@@ -504,7 +503,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeBooleanValue('accountsBlockAddingNonMicrosoftAccountEmail', $this->accountsBlockAddingNonMicrosoftAccountEmail);
-        $writer->writeBooleanValue('applyOnlyToWindows81', $this->applyOnlyToWindows81);
         $writer->writeBooleanValue('browserBlockAutofill', $this->browserBlockAutofill);
         $writer->writeBooleanValue('browserBlockAutomaticDetectionOfIntranetSites', $this->browserBlockAutomaticDetectionOfIntranetSites);
         $writer->writeBooleanValue('browserBlockEnterpriseModeAccess', $this->browserBlockEnterpriseModeAccess);
@@ -544,14 +542,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     */
     public function setAccountsBlockAddingNonMicrosoftAccountEmail(?bool $value ): void {
         $this->accountsBlockAddingNonMicrosoftAccountEmail = $value;
-    }
-
-    /**
-     * Sets the applyOnlyToWindows81 property value. Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
-     *  @param bool|null $value Value to set for the applyOnlyToWindows81 property.
-    */
-    public function setApplyOnlyToWindows81(?bool $value ): void {
-        $this->applyOnlyToWindows81 = $value;
     }
 
     /**

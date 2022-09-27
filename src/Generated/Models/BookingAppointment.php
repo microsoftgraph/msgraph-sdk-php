@@ -191,9 +191,7 @@ class BookingAppointment extends Entity implements Parsable
             'additionalInformation' => function (ParseNode $n) use ($o) { $o->setAdditionalInformation($n->getStringValue()); },
             'customers' => function (ParseNode $n) use ($o) { $o->setCustomers($n->getCollectionOfObjectValues(array(BookingCustomerInformationBase::class, 'createFromDiscriminatorValue'))); },
             'customerTimeZone' => function (ParseNode $n) use ($o) { $o->setCustomerTimeZone($n->getStringValue()); },
-            'duration' => function (ParseNode $n) use ($o) { $o->setDuration($n->getDateIntervalValue()); },
             'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
-            'filledAttendeesCount' => function (ParseNode $n) use ($o) { $o->setFilledAttendeesCount($n->getIntegerValue()); },
             'isLocationOnline' => function (ParseNode $n) use ($o) { $o->setIsLocationOnline($n->getBooleanValue()); },
             'joinWebUrl' => function (ParseNode $n) use ($o) { $o->setJoinWebUrl($n->getStringValue()); },
             'maximumAttendeesCount' => function (ParseNode $n) use ($o) { $o->setMaximumAttendeesCount($n->getIntegerValue()); },
@@ -367,9 +365,7 @@ class BookingAppointment extends Entity implements Parsable
         $writer->writeStringValue('additionalInformation', $this->additionalInformation);
         $writer->writeCollectionOfObjectValues('customers', $this->customers);
         $writer->writeStringValue('customerTimeZone', $this->customerTimeZone);
-        $writer->writeDateIntervalValue('duration', $this->duration);
         $writer->writeObjectValue('endDateTime', $this->endDateTime);
-        $writer->writeIntegerValue('filledAttendeesCount', $this->filledAttendeesCount);
         $writer->writeBooleanValue('isLocationOnline', $this->isLocationOnline);
         $writer->writeStringValue('joinWebUrl', $this->joinWebUrl);
         $writer->writeIntegerValue('maximumAttendeesCount', $this->maximumAttendeesCount);
@@ -414,27 +410,11 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the duration property value. The length of the appointment, denoted in ISO8601 format.
-     *  @param DateInterval|null $value Value to set for the duration property.
-    */
-    public function setDuration(?DateInterval $value ): void {
-        $this->duration = $value;
-    }
-
-    /**
      * Sets the endDateTime property value. The endDateTime property
      *  @param DateTimeTimeZone|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTimeTimeZone $value ): void {
         $this->endDateTime = $value;
-    }
-
-    /**
-     * Sets the filledAttendeesCount property value. The current number of customers in the appointment
-     *  @param int|null $value Value to set for the filledAttendeesCount property.
-    */
-    public function setFilledAttendeesCount(?int $value ): void {
-        $this->filledAttendeesCount = $value;
     }
 
     /**

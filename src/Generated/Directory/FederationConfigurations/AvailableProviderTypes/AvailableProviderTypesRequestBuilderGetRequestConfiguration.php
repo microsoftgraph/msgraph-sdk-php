@@ -16,4 +16,9 @@ class AvailableProviderTypesRequestBuilderGetRequestConfiguration
     */
     public ?array $options = null;
     
+    /**
+     * @var AvailableProviderTypesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?AvailableProviderTypesRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

@@ -43,7 +43,7 @@ class GrantRequestBuilder
     }
 
     /**
-     * Invoke action grant
+     * Grant users access to a link represented by a [permission][].
      * @param GrantPostRequestBody $body 
      * @param GrantRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -67,7 +67,7 @@ class GrantRequestBuilder
     }
 
     /**
-     * Invoke action grant
+     * Grant users access to a link represented by a [permission][].
      * @param GrantPostRequestBody $body 
      * @param GrantRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

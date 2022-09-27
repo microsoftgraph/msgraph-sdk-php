@@ -48,13 +48,13 @@ class AdministrativeUnitsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/directory/administrativeUnits{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/directory/administrativeUnits{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * Conceptual container for user and group directory objects.
+     * Retrieve a list of administrativeUnit objects.
      * @param AdministrativeUnitsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -79,7 +79,7 @@ class AdministrativeUnitsRequestBuilder
     }
 
     /**
-     * Create new navigation property to administrativeUnits for directory
+     * Use this API to create a new administrativeUnit.
      * @param AdministrativeUnit $body 
      * @param AdministrativeUnitsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -111,7 +111,7 @@ class AdministrativeUnitsRequestBuilder
     }
 
     /**
-     * Conceptual container for user and group directory objects.
+     * Retrieve a list of administrativeUnit objects.
      * @param AdministrativeUnitsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -130,7 +130,7 @@ class AdministrativeUnitsRequestBuilder
     }
 
     /**
-     * Create new navigation property to administrativeUnits for directory
+     * Use this API to create a new administrativeUnit.
      * @param AdministrativeUnit $body 
      * @param AdministrativeUnitsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

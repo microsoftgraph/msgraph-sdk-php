@@ -207,9 +207,7 @@ class BookingBusiness extends Entity implements Parsable
             'defaultCurrencyIso' => function (ParseNode $n) use ($o) { $o->setDefaultCurrencyIso($n->getStringValue()); },
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
-            'isPublished' => function (ParseNode $n) use ($o) { $o->setIsPublished($n->getBooleanValue()); },
             'phone' => function (ParseNode $n) use ($o) { $o->setPhone($n->getStringValue()); },
-            'publicUrl' => function (ParseNode $n) use ($o) { $o->setPublicUrl($n->getStringValue()); },
             'schedulingPolicy' => function (ParseNode $n) use ($o) { $o->setSchedulingPolicy($n->getObjectValue(array(BookingSchedulingPolicy::class, 'createFromDiscriminatorValue'))); },
             'services' => function (ParseNode $n) use ($o) { $o->setServices($n->getCollectionOfObjectValues(array(BookingService::class, 'createFromDiscriminatorValue'))); },
             'staffMembers' => function (ParseNode $n) use ($o) { $o->setStaffMembers($n->getCollectionOfObjectValues(array(BookingStaffMemberBase::class, 'createFromDiscriminatorValue'))); },
@@ -289,9 +287,7 @@ class BookingBusiness extends Entity implements Parsable
         $writer->writeStringValue('defaultCurrencyIso', $this->defaultCurrencyIso);
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeStringValue('email', $this->email);
-        $writer->writeBooleanValue('isPublished', $this->isPublished);
         $writer->writeStringValue('phone', $this->phone);
-        $writer->writeStringValue('publicUrl', $this->publicUrl);
         $writer->writeObjectValue('schedulingPolicy', $this->schedulingPolicy);
         $writer->writeCollectionOfObjectValues('services', $this->services);
         $writer->writeCollectionOfObjectValues('staffMembers', $this->staffMembers);
@@ -379,27 +375,11 @@ class BookingBusiness extends Entity implements Parsable
     }
 
     /**
-     * Sets the isPublished property value. The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.
-     *  @param bool|null $value Value to set for the isPublished property.
-    */
-    public function setIsPublished(?bool $value ): void {
-        $this->isPublished = $value;
-    }
-
-    /**
      * Sets the phone property value. The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
      *  @param string|null $value Value to set for the phone property.
     */
     public function setPhone(?string $value ): void {
         $this->phone = $value;
-    }
-
-    /**
-     * Sets the publicUrl property value. The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
-     *  @param string|null $value Value to set for the publicUrl property.
-    */
-    public function setPublicUrl(?string $value ): void {
-        $this->publicUrl = $value;
     }
 
     /**

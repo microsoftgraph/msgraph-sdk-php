@@ -47,13 +47,13 @@ class UserFlowAttributesRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/identity/userFlowAttributes{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/identity/userFlowAttributes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve a list of identityUserFlowAttribute objects.
      * @param UserFlowAttributesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class UserFlowAttributesRequestBuilder
     }
 
     /**
-     * Create new navigation property to userFlowAttributes for identity
+     * Create a new identityUserFlowAttribute object.
      * @param IdentityUserFlowAttribute $body 
      * @param UserFlowAttributesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class UserFlowAttributesRequestBuilder
     }
 
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve a list of identityUserFlowAttribute objects.
      * @param UserFlowAttributesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class UserFlowAttributesRequestBuilder
     }
 
     /**
-     * Create new navigation property to userFlowAttributes for identity
+     * Create a new identityUserFlowAttribute object.
      * @param IdentityUserFlowAttribute $body 
      * @param UserFlowAttributesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

@@ -16,4 +16,9 @@ class SharedWithMeRequestBuilderGetRequestConfiguration
     */
     public ?array $options = null;
     
+    /**
+     * @var SharedWithMeRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?SharedWithMeRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

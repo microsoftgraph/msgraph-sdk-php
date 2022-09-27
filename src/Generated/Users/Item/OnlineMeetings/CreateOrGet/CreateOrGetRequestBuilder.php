@@ -44,7 +44,7 @@ class CreateOrGetRequestBuilder
     }
 
     /**
-     * Invoke action createOrGet
+     * Create an onlineMeeting object with a custom specified external ID. If the external ID already exists, this API will return the onlineMeeting object with that external ID. 
      * @param CreateOrGetPostRequestBody $body 
      * @param CreateOrGetRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -68,7 +68,7 @@ class CreateOrGetRequestBuilder
     }
 
     /**
-     * Invoke action createOrGet
+     * Create an onlineMeeting object with a custom specified external ID. If the external ID already exists, this API will return the onlineMeeting object with that external ID. 
      * @param CreateOrGetPostRequestBody $body 
      * @param CreateOrGetRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

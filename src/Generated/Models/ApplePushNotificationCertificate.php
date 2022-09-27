@@ -97,7 +97,6 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'appleIdentifier' => function (ParseNode $n) use ($o) { $o->setAppleIdentifier($n->getStringValue()); },
             'certificate' => function (ParseNode $n) use ($o) { $o->setCertificate($n->getStringValue()); },
-            'certificateSerialNumber' => function (ParseNode $n) use ($o) { $o->setCertificateSerialNumber($n->getStringValue()); },
             'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
             'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
             'topicIdentifier' => function (ParseNode $n) use ($o) { $o->setTopicIdentifier($n->getStringValue()); },
@@ -128,7 +127,6 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('appleIdentifier', $this->appleIdentifier);
         $writer->writeStringValue('certificate', $this->certificate);
-        $writer->writeStringValue('certificateSerialNumber', $this->certificateSerialNumber);
         $writer->writeDateTimeValue('expirationDateTime', $this->expirationDateTime);
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
         $writer->writeStringValue('topicIdentifier', $this->topicIdentifier);
@@ -148,14 +146,6 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
     */
     public function setCertificate(?string $value ): void {
         $this->certificate = $value;
-    }
-
-    /**
-     * Sets the certificateSerialNumber property value. Certificate serial number. This property is read-only.
-     *  @param string|null $value Value to set for the certificateSerialNumber property.
-    */
-    public function setCertificateSerialNumber(?string $value ): void {
-        $this->certificateSerialNumber = $value;
     }
 
     /**

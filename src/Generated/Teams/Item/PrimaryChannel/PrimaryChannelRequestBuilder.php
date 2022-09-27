@@ -8,7 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\Channel;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\CompleteMigration\CompleteMigrationRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalName\DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\FilesFolder\FilesFolderRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Members\Item\ConversationMemberItemRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Members\MembersRequestBuilder;
@@ -134,7 +134,7 @@ class PrimaryChannelRequestBuilder
     }
 
     /**
-     * The general channel for the team.
+     * Get the default channel, **General**, of a team.
      * @param PrimaryChannelRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -169,6 +169,7 @@ class PrimaryChannelRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
+        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
@@ -202,14 +203,14 @@ class PrimaryChannelRequestBuilder
 
     /**
      * Provides operations to call the doesUserHaveAccess method.
-     * @return DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder
+     * @return DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder
     */
-    public function doesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalName(): DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder {
-        return new DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName(): DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder {
+        return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
 
     /**
-     * The general channel for the team.
+     * Get the default channel, **General**, of a team.
      * @param PrimaryChannelRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -263,7 +264,7 @@ class PrimaryChannelRequestBuilder
                     '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
                     '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
-            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, array(Channel::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

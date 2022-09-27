@@ -80,7 +80,6 @@ class SharingDetail implements AdditionalDataHolder, Parsable
             '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
             'sharedBy' => function (ParseNode $n) use ($o) { $o->setSharedBy($n->getObjectValue(array(InsightIdentity::class, 'createFromDiscriminatorValue'))); },
             'sharedDateTime' => function (ParseNode $n) use ($o) { $o->setSharedDateTime($n->getDateTimeValue()); },
-            'sharingReference' => function (ParseNode $n) use ($o) { $o->setSharingReference($n->getObjectValue(array(ResourceReference::class, 'createFromDiscriminatorValue'))); },
             'sharingSubject' => function (ParseNode $n) use ($o) { $o->setSharingSubject($n->getStringValue()); },
             'sharingType' => function (ParseNode $n) use ($o) { $o->setSharingType($n->getStringValue()); },
         ];
@@ -142,7 +141,6 @@ class SharingDetail implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('sharedBy', $this->sharedBy);
         $writer->writeDateTimeValue('sharedDateTime', $this->sharedDateTime);
-        $writer->writeObjectValue('sharingReference', $this->sharingReference);
         $writer->writeStringValue('sharingSubject', $this->sharingSubject);
         $writer->writeStringValue('sharingType', $this->sharingType);
         $writer->writeAdditionalData($this->additionalData);
@@ -178,14 +176,6 @@ class SharingDetail implements AdditionalDataHolder, Parsable
     */
     public function setSharedDateTime(?DateTime $value ): void {
         $this->sharedDateTime = $value;
-    }
-
-    /**
-     * Sets the sharingReference property value. The sharingReference property
-     *  @param ResourceReference|null $value Value to set for the sharingReference property.
-    */
-    public function setSharingReference(?ResourceReference $value ): void {
-        $this->sharingReference = $value;
     }
 
     /**

@@ -47,13 +47,13 @@ class HomeRealmDiscoveryPoliciesRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/policies/homeRealmDiscoveryPolicies{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/policies/homeRealmDiscoveryPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * The policy to control Azure AD authentication behavior for federated users.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @param HomeRealmDiscoveryPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class HomeRealmDiscoveryPoliciesRequestBuilder
     }
 
     /**
-     * Create new navigation property to homeRealmDiscoveryPolicies for policies
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param HomeRealmDiscoveryPolicy $body 
      * @param HomeRealmDiscoveryPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class HomeRealmDiscoveryPoliciesRequestBuilder
     }
 
     /**
-     * The policy to control Azure AD authentication behavior for federated users.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @param HomeRealmDiscoveryPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class HomeRealmDiscoveryPoliciesRequestBuilder
     }
 
     /**
-     * Create new navigation property to homeRealmDiscoveryPolicies for policies
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param HomeRealmDiscoveryPolicy $body 
      * @param HomeRealmDiscoveryPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

@@ -47,13 +47,13 @@ class MasterCategoriesRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/me/outlook/masterCategories{?%24top*,%24skip*,%24filter*,%24count*,%24orderby,%24select}';
+        $this->urlTemplate = '{+baseurl}/me/outlook/masterCategories{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * A list of categories defined for the user.
+     * Get all the categories that have been defined for the user.
      * @param MasterCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class MasterCategoriesRequestBuilder
     }
 
     /**
-     * Create new navigation property to masterCategories for me
+     * Create an outlookCategory object in the user's master list of categories.
      * @param OutlookCategory $body 
      * @param MasterCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class MasterCategoriesRequestBuilder
     }
 
     /**
-     * A list of categories defined for the user.
+     * Get all the categories that have been defined for the user.
      * @param MasterCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class MasterCategoriesRequestBuilder
     }
 
     /**
-     * Create new navigation property to masterCategories for me
+     * Create an outlookCategory object in the user's master list of categories.
      * @param OutlookCategory $body 
      * @param MasterCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

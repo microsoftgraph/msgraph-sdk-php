@@ -274,27 +274,18 @@ class EducationAssignment extends Entity implements Parsable
             'addToCalendarAction' => function (ParseNode $n) use ($o) { $o->setAddToCalendarAction($n->getEnumValue(EducationAddToCalendarOptions::class)); },
             'allowLateSubmissions' => function (ParseNode $n) use ($o) { $o->setAllowLateSubmissions($n->getBooleanValue()); },
             'allowStudentsToAddResourcesToSubmission' => function (ParseNode $n) use ($o) { $o->setAllowStudentsToAddResourcesToSubmission($n->getBooleanValue()); },
-            'assignDateTime' => function (ParseNode $n) use ($o) { $o->setAssignDateTime($n->getDateTimeValue()); },
-            'assignedDateTime' => function (ParseNode $n) use ($o) { $o->setAssignedDateTime($n->getDateTimeValue()); },
             'assignTo' => function (ParseNode $n) use ($o) { $o->setAssignTo($n->getObjectValue(array(EducationAssignmentRecipient::class, 'createFromDiscriminatorValue'))); },
             'categories' => function (ParseNode $n) use ($o) { $o->setCategories($n->getCollectionOfObjectValues(array(EducationCategory::class, 'createFromDiscriminatorValue'))); },
             'classId' => function (ParseNode $n) use ($o) { $o->setClassId($n->getStringValue()); },
             'closeDateTime' => function (ParseNode $n) use ($o) { $o->setCloseDateTime($n->getDateTimeValue()); },
-            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'dueDateTime' => function (ParseNode $n) use ($o) { $o->setDueDateTime($n->getDateTimeValue()); },
             'grading' => function (ParseNode $n) use ($o) { $o->setGrading($n->getObjectValue(array(EducationAssignmentGradeType::class, 'createFromDiscriminatorValue'))); },
             'instructions' => function (ParseNode $n) use ($o) { $o->setInstructions($n->getObjectValue(array(EducationItemBody::class, 'createFromDiscriminatorValue'))); },
-            'lastModifiedBy' => function (ParseNode $n) use ($o) { $o->setLastModifiedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
             'notificationChannelUrl' => function (ParseNode $n) use ($o) { $o->setNotificationChannelUrl($n->getStringValue()); },
             'resources' => function (ParseNode $n) use ($o) { $o->setResources($n->getCollectionOfObjectValues(array(EducationAssignmentResource::class, 'createFromDiscriminatorValue'))); },
-            'resourcesFolderUrl' => function (ParseNode $n) use ($o) { $o->setResourcesFolderUrl($n->getStringValue()); },
             'rubric' => function (ParseNode $n) use ($o) { $o->setRubric($n->getObjectValue(array(EducationRubric::class, 'createFromDiscriminatorValue'))); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(EducationAssignmentStatus::class)); },
             'submissions' => function (ParseNode $n) use ($o) { $o->setSubmissions($n->getCollectionOfObjectValues(array(EducationSubmission::class, 'createFromDiscriminatorValue'))); },
-            'webUrl' => function (ParseNode $n) use ($o) { $o->setWebUrl($n->getStringValue()); },
         ]);
     }
 
@@ -396,27 +387,18 @@ class EducationAssignment extends Entity implements Parsable
         $writer->writeEnumValue('addToCalendarAction', $this->addToCalendarAction);
         $writer->writeBooleanValue('allowLateSubmissions', $this->allowLateSubmissions);
         $writer->writeBooleanValue('allowStudentsToAddResourcesToSubmission', $this->allowStudentsToAddResourcesToSubmission);
-        $writer->writeDateTimeValue('assignDateTime', $this->assignDateTime);
-        $writer->writeDateTimeValue('assignedDateTime', $this->assignedDateTime);
         $writer->writeObjectValue('assignTo', $this->assignTo);
         $writer->writeCollectionOfObjectValues('categories', $this->categories);
         $writer->writeStringValue('classId', $this->classId);
         $writer->writeDateTimeValue('closeDateTime', $this->closeDateTime);
-        $writer->writeObjectValue('createdBy', $this->createdBy);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeDateTimeValue('dueDateTime', $this->dueDateTime);
         $writer->writeObjectValue('grading', $this->grading);
         $writer->writeObjectValue('instructions', $this->instructions);
-        $writer->writeObjectValue('lastModifiedBy', $this->lastModifiedBy);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
         $writer->writeStringValue('notificationChannelUrl', $this->notificationChannelUrl);
         $writer->writeCollectionOfObjectValues('resources', $this->resources);
-        $writer->writeStringValue('resourcesFolderUrl', $this->resourcesFolderUrl);
         $writer->writeObjectValue('rubric', $this->rubric);
-        $writer->writeEnumValue('status', $this->status);
         $writer->writeCollectionOfObjectValues('submissions', $this->submissions);
-        $writer->writeStringValue('webUrl', $this->webUrl);
     }
 
     /**
@@ -452,22 +434,6 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the assignDateTime property value. The date when the assignment should become active.  If in the future, the assignment isn't shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the assignDateTime property.
-    */
-    public function setAssignDateTime(?DateTime $value ): void {
-        $this->assignDateTime = $value;
-    }
-
-    /**
-     * Sets the assignedDateTime property value. The moment that the assignment was published to students and the assignment shows up on the students timeline.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the assignedDateTime property.
-    */
-    public function setAssignedDateTime(?DateTime $value ): void {
-        $this->assignedDateTime = $value;
-    }
-
-    /**
      * Sets the assignTo property value. Which users, or whole class should receive a submission object once the assignment is published.
      *  @param EducationAssignmentRecipient|null $value Value to set for the assignTo property.
     */
@@ -497,22 +463,6 @@ class EducationAssignment extends Entity implements Parsable
     */
     public function setCloseDateTime(?DateTime $value ): void {
         $this->closeDateTime = $value;
-    }
-
-    /**
-     * Sets the createdBy property value. Who created the assignment.
-     *  @param IdentitySet|null $value Value to set for the createdBy property.
-    */
-    public function setCreatedBy(?IdentitySet $value ): void {
-        $this->createdBy = $value;
-    }
-
-    /**
-     * Sets the createdDateTime property value. Moment when the assignment was created.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
-    */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
     }
 
     /**
@@ -548,22 +498,6 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. Who last modified the assignment.
-     *  @param IdentitySet|null $value Value to set for the lastModifiedBy property.
-    */
-    public function setLastModifiedBy(?IdentitySet $value ): void {
-        $this->lastModifiedBy = $value;
-    }
-
-    /**
-     * Sets the lastModifiedDateTime property value. Moment when the assignment was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
-    */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
-    }
-
-    /**
      * Sets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn't allowed after the assignment has been published.
      *  @param string|null $value Value to set for the notificationChannelUrl property.
     */
@@ -580,14 +514,6 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the resourcesFolderUrl property value. Folder URL where all the file resources for this assignment are stored.
-     *  @param string|null $value Value to set for the resourcesFolderUrl property.
-    */
-    public function setResourcesFolderUrl(?string $value ): void {
-        $this->resourcesFolderUrl = $value;
-    }
-
-    /**
      * Sets the rubric property value. When set, the grading rubric attached to this assignment.
      *  @param EducationRubric|null $value Value to set for the rubric property.
     */
@@ -596,27 +522,11 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Status of the Assignment.  You can't PATCH this value.  Possible values are: draft, scheduled, published, assigned.
-     *  @param EducationAssignmentStatus|null $value Value to set for the status property.
-    */
-    public function setStatus(?EducationAssignmentStatus $value ): void {
-        $this->status = $value;
-    }
-
-    /**
      * Sets the submissions property value. Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
      *  @param array<EducationSubmission>|null $value Value to set for the submissions property.
     */
     public function setSubmissions(?array $value ): void {
         $this->submissions = $value;
-    }
-
-    /**
-     * Sets the webUrl property value. The deep link URL for the given assignment.
-     *  @param string|null $value Value to set for the webUrl property.
-    */
-    public function setWebUrl(?string $value ): void {
-        $this->webUrl = $value;
     }
 
 }

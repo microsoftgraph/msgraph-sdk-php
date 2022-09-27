@@ -16,4 +16,9 @@ class GetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilderGetRequestConfigur
     */
     public ?array $options = null;
     
+    /**
+     * @var GetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?GetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

@@ -16,4 +16,9 @@ class SupportedLanguagesRequestBuilderGetRequestConfiguration
     */
     public ?array $options = null;
     
+    /**
+     * @var SupportedLanguagesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?SupportedLanguagesRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

@@ -43,7 +43,7 @@ class ForceDeleteRequestBuilder
     }
 
     /**
-     * Invoke action forceDelete
+     * Deletes a domain using an asynchronous long-running operation. Prior to calling forceDelete, you must update or remove any references to **Exchange** as the provisioning service. The following actions are performed as part of this operation: After the domain deletion completes, API operations for the deleted domain will return a HTTP 404 status code. To verify deletion of a domain, you can perform a get domain operation.
      * @param ForceDeletePostRequestBody $body 
      * @param ForceDeleteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -66,7 +66,7 @@ class ForceDeleteRequestBuilder
     }
 
     /**
-     * Invoke action forceDelete
+     * Deletes a domain using an asynchronous long-running operation. Prior to calling forceDelete, you must update or remove any references to **Exchange** as the provisioning service. The following actions are performed as part of this operation: After the domain deletion completes, API operations for the deleted domain will return a HTTP 404 status code. To verify deletion of a domain, you can perform a get domain operation.
      * @param ForceDeletePostRequestBody $body 
      * @param ForceDeleteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

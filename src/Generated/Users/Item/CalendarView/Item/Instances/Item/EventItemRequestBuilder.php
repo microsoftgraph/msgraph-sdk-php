@@ -155,27 +155,6 @@ class EventItemRequestBuilder
     }
 
     /**
-     * Delete navigation property instances for users
-     * @param EventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function createDeleteRequestInformation(?EventItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::DELETE;
-        if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
-        }
-        return $requestInfo;
-    }
-
-    /**
      * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
      * @param EventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -198,48 +177,6 @@ class EventItemRequestBuilder
             }
         }
         return $requestInfo;
-    }
-
-    /**
-     * Update the navigation property instances in users
-     * @param Event $body 
-     * @param EventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function createPatchRequestInformation(Event $body, ?EventItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::PATCH;
-        if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
-        }
-        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
-        return $requestInfo;
-    }
-
-    /**
-     * Delete navigation property instances for users
-     * @param EventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return Promise
-    */
-    public function delete(?EventItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createDeleteRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            ];
-            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
     }
 
     /**
@@ -281,26 +218,6 @@ class EventItemRequestBuilder
         $urlTplParams = $this->pathParameters;
         $urlTplParams['multiValueLegacyExtendedProperty%2Did'] = $id;
         return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Update the navigation property instances in users
-     * @param Event $body 
-     * @param EventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return Promise
-    */
-    public function patch(Event $body, ?EventItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createPatchRequestInformation($body, $requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-            ];
-            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
     }
 
     /**

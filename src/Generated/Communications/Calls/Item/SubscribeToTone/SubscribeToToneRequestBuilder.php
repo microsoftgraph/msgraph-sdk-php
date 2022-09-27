@@ -44,7 +44,7 @@ class SubscribeToToneRequestBuilder
     }
 
     /**
-     * Invoke action subscribeToTone
+     * Subscribe to DTMF (dual-tone multi-frequency signaling). This allows you to be notified when the user presses keys on a 'dialpad'.
      * @param SubscribeToTonePostRequestBody $body 
      * @param SubscribeToToneRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -68,7 +68,7 @@ class SubscribeToToneRequestBuilder
     }
 
     /**
-     * Invoke action subscribeToTone
+     * Subscribe to DTMF (dual-tone multi-frequency signaling). This allows you to be notified when the user presses keys on a 'dialpad'.
      * @param SubscribeToTonePostRequestBody $body 
      * @param SubscribeToToneRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

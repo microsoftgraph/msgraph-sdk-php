@@ -16,4 +16,9 @@ class GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfigur
     */
     public ?array $options = null;
     
+    /**
+     * @var GetApplicableContentTypesForListWithListIdRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?GetApplicableContentTypesForListWithListIdRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

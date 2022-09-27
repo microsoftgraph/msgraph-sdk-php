@@ -47,13 +47,13 @@ class TimeOffReasonsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/schedule/timeOffReasons{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select}';
+        $this->urlTemplate = '{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/schedule/timeOffReasons{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * The set of reasons for a time off in the schedule.
+     * Get the list of timeOffReasons in a schedule.
      * @param TimeOffReasonsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class TimeOffReasonsRequestBuilder
     }
 
     /**
-     * Create new navigation property to timeOffReasons for users
+     * Create a new timeOffReason.
      * @param TimeOffReason $body 
      * @param TimeOffReasonsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class TimeOffReasonsRequestBuilder
     }
 
     /**
-     * The set of reasons for a time off in the schedule.
+     * Get the list of timeOffReasons in a schedule.
      * @param TimeOffReasonsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class TimeOffReasonsRequestBuilder
     }
 
     /**
-     * Create new navigation property to timeOffReasons for users
+     * Create a new timeOffReason.
      * @param TimeOffReason $body 
      * @param TimeOffReasonsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

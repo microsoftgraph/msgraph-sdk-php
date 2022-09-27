@@ -104,19 +104,9 @@ class EducationSubmission extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'outcomes' => function (ParseNode $n) use ($o) { $o->setOutcomes($n->getCollectionOfObjectValues(array(EducationOutcome::class, 'createFromDiscriminatorValue'))); },
-            'reassignedBy' => function (ParseNode $n) use ($o) { $o->setReassignedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'reassignedDateTime' => function (ParseNode $n) use ($o) { $o->setReassignedDateTime($n->getDateTimeValue()); },
             'recipient' => function (ParseNode $n) use ($o) { $o->setRecipient($n->getObjectValue(array(EducationSubmissionRecipient::class, 'createFromDiscriminatorValue'))); },
             'resources' => function (ParseNode $n) use ($o) { $o->setResources($n->getCollectionOfObjectValues(array(EducationSubmissionResource::class, 'createFromDiscriminatorValue'))); },
-            'resourcesFolderUrl' => function (ParseNode $n) use ($o) { $o->setResourcesFolderUrl($n->getStringValue()); },
-            'returnedBy' => function (ParseNode $n) use ($o) { $o->setReturnedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'returnedDateTime' => function (ParseNode $n) use ($o) { $o->setReturnedDateTime($n->getDateTimeValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(EducationSubmissionStatus::class)); },
-            'submittedBy' => function (ParseNode $n) use ($o) { $o->setSubmittedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'submittedDateTime' => function (ParseNode $n) use ($o) { $o->setSubmittedDateTime($n->getDateTimeValue()); },
             'submittedResources' => function (ParseNode $n) use ($o) { $o->setSubmittedResources($n->getCollectionOfObjectValues(array(EducationSubmissionResource::class, 'createFromDiscriminatorValue'))); },
-            'unsubmittedBy' => function (ParseNode $n) use ($o) { $o->setUnsubmittedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'unsubmittedDateTime' => function (ParseNode $n) use ($o) { $o->setUnsubmittedDateTime($n->getDateTimeValue()); },
         ]);
     }
 
@@ -239,19 +229,9 @@ class EducationSubmission extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('outcomes', $this->outcomes);
-        $writer->writeObjectValue('reassignedBy', $this->reassignedBy);
-        $writer->writeDateTimeValue('reassignedDateTime', $this->reassignedDateTime);
         $writer->writeObjectValue('recipient', $this->recipient);
         $writer->writeCollectionOfObjectValues('resources', $this->resources);
-        $writer->writeStringValue('resourcesFolderUrl', $this->resourcesFolderUrl);
-        $writer->writeObjectValue('returnedBy', $this->returnedBy);
-        $writer->writeDateTimeValue('returnedDateTime', $this->returnedDateTime);
-        $writer->writeEnumValue('status', $this->status);
-        $writer->writeObjectValue('submittedBy', $this->submittedBy);
-        $writer->writeDateTimeValue('submittedDateTime', $this->submittedDateTime);
         $writer->writeCollectionOfObjectValues('submittedResources', $this->submittedResources);
-        $writer->writeObjectValue('unsubmittedBy', $this->unsubmittedBy);
-        $writer->writeDateTimeValue('unsubmittedDateTime', $this->unsubmittedDateTime);
     }
 
     /**
@@ -260,22 +240,6 @@ class EducationSubmission extends Entity implements Parsable
     */
     public function setOutcomes(?array $value ): void {
         $this->outcomes = $value;
-    }
-
-    /**
-     * Sets the reassignedBy property value. User who moved the status of this submission to reassigned.
-     *  @param IdentitySet|null $value Value to set for the reassignedBy property.
-    */
-    public function setReassignedBy(?IdentitySet $value ): void {
-        $this->reassignedBy = $value;
-    }
-
-    /**
-     * Sets the reassignedDateTime property value. Moment in time when the submission was reassigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the reassignedDateTime property.
-    */
-    public function setReassignedDateTime(?DateTime $value ): void {
-        $this->reassignedDateTime = $value;
     }
 
     /**
@@ -295,75 +259,11 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
-     * Sets the resourcesFolderUrl property value. Folder where all file resources for this submission need to be stored.
-     *  @param string|null $value Value to set for the resourcesFolderUrl property.
-    */
-    public function setResourcesFolderUrl(?string $value ): void {
-        $this->resourcesFolderUrl = $value;
-    }
-
-    /**
-     * Sets the returnedBy property value. User who moved the status of this submission to returned.
-     *  @param IdentitySet|null $value Value to set for the returnedBy property.
-    */
-    public function setReturnedBy(?IdentitySet $value ): void {
-        $this->returnedBy = $value;
-    }
-
-    /**
-     * Sets the returnedDateTime property value. Moment in time when the submission was returned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the returnedDateTime property.
-    */
-    public function setReturnedDateTime(?DateTime $value ): void {
-        $this->returnedDateTime = $value;
-    }
-
-    /**
-     * Sets the status property value. Read-only. Possible values are: working, submitted, released, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
-     *  @param EducationSubmissionStatus|null $value Value to set for the status property.
-    */
-    public function setStatus(?EducationSubmissionStatus $value ): void {
-        $this->status = $value;
-    }
-
-    /**
-     * Sets the submittedBy property value. User who moved the resource into the submitted state.
-     *  @param IdentitySet|null $value Value to set for the submittedBy property.
-    */
-    public function setSubmittedBy(?IdentitySet $value ): void {
-        $this->submittedBy = $value;
-    }
-
-    /**
-     * Sets the submittedDateTime property value. Moment in time when the submission was moved into the submitted state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the submittedDateTime property.
-    */
-    public function setSubmittedDateTime(?DateTime $value ): void {
-        $this->submittedDateTime = $value;
-    }
-
-    /**
      * Sets the submittedResources property value. The submittedResources property
      *  @param array<EducationSubmissionResource>|null $value Value to set for the submittedResources property.
     */
     public function setSubmittedResources(?array $value ): void {
         $this->submittedResources = $value;
-    }
-
-    /**
-     * Sets the unsubmittedBy property value. User who moved the resource from submitted into the working state.
-     *  @param IdentitySet|null $value Value to set for the unsubmittedBy property.
-    */
-    public function setUnsubmittedBy(?IdentitySet $value ): void {
-        $this->unsubmittedBy = $value;
-    }
-
-    /**
-     * Sets the unsubmittedDateTime property value. Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the unsubmittedDateTime property.
-    */
-    public function setUnsubmittedDateTime(?DateTime $value ): void {
-        $this->unsubmittedDateTime = $value;
     }
 
 }

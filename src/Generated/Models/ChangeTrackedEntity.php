@@ -74,9 +74,6 @@ class ChangeTrackedEntity extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'lastModifiedBy' => function (ParseNode $n) use ($o) { $o->setLastModifiedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
         ]);
     }
 
@@ -102,33 +99,6 @@ class ChangeTrackedEntity extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeObjectValue('lastModifiedBy', $this->lastModifiedBy);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
-    }
-
-    /**
-     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
-    */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
-    }
-
-    /**
-     * Sets the lastModifiedBy property value. Identity of the person who last modified the entity.
-     *  @param IdentitySet|null $value Value to set for the lastModifiedBy property.
-    */
-    public function setLastModifiedBy(?IdentitySet $value ): void {
-        $this->lastModifiedBy = $value;
-    }
-
-    /**
-     * Sets the lastModifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
-    */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
     }
 
 }

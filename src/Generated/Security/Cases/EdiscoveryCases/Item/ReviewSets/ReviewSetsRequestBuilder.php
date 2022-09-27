@@ -47,13 +47,13 @@ class ReviewSetsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/reviewSets{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/reviewSets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * Returns a list of eDiscoveryReviewSet objects in the case.
+     * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case.
      * @param ReviewSetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class ReviewSetsRequestBuilder
     }
 
     /**
-     * Create new navigation property to reviewSets for security
+     * Create a new ediscoveryReviewSet object.
      * @param EdiscoveryReviewSet $body 
      * @param ReviewSetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class ReviewSetsRequestBuilder
     }
 
     /**
-     * Returns a list of eDiscoveryReviewSet objects in the case.
+     * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case.
      * @param ReviewSetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class ReviewSetsRequestBuilder
     }
 
     /**
-     * Create new navigation property to reviewSets for security
+     * Create a new ediscoveryReviewSet object.
      * @param EdiscoveryReviewSet $body 
      * @param ReviewSetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

@@ -503,60 +503,19 @@ class ManagedDevice extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activationLockBypassCode' => function (ParseNode $n) use ($o) { $o->setActivationLockBypassCode($n->getStringValue()); },
-            'androidSecurityPatchLevel' => function (ParseNode $n) use ($o) { $o->setAndroidSecurityPatchLevel($n->getStringValue()); },
-            'azureADDeviceId' => function (ParseNode $n) use ($o) { $o->setAzureADDeviceId($n->getStringValue()); },
-            'azureADRegistered' => function (ParseNode $n) use ($o) { $o->setAzureADRegistered($n->getBooleanValue()); },
-            'complianceGracePeriodExpirationDateTime' => function (ParseNode $n) use ($o) { $o->setComplianceGracePeriodExpirationDateTime($n->getDateTimeValue()); },
             'complianceState' => function (ParseNode $n) use ($o) { $o->setComplianceState($n->getEnumValue(ComplianceState::class)); },
-            'configurationManagerClientEnabledFeatures' => function (ParseNode $n) use ($o) { $o->setConfigurationManagerClientEnabledFeatures($n->getObjectValue(array(ConfigurationManagerClientEnabledFeatures::class, 'createFromDiscriminatorValue'))); },
-            'deviceActionResults' => function (ParseNode $n) use ($o) { $o->setDeviceActionResults($n->getCollectionOfObjectValues(array(DeviceActionResult::class, 'createFromDiscriminatorValue'))); },
             'deviceCategory' => function (ParseNode $n) use ($o) { $o->setDeviceCategory($n->getObjectValue(array(DeviceCategory::class, 'createFromDiscriminatorValue'))); },
-            'deviceCategoryDisplayName' => function (ParseNode $n) use ($o) { $o->setDeviceCategoryDisplayName($n->getStringValue()); },
             'deviceCompliancePolicyStates' => function (ParseNode $n) use ($o) { $o->setDeviceCompliancePolicyStates($n->getCollectionOfObjectValues(array(DeviceCompliancePolicyState::class, 'createFromDiscriminatorValue'))); },
             'deviceConfigurationStates' => function (ParseNode $n) use ($o) { $o->setDeviceConfigurationStates($n->getCollectionOfObjectValues(array(DeviceConfigurationState::class, 'createFromDiscriminatorValue'))); },
             'deviceEnrollmentType' => function (ParseNode $n) use ($o) { $o->setDeviceEnrollmentType($n->getEnumValue(DeviceEnrollmentType::class)); },
-            'deviceHealthAttestationState' => function (ParseNode $n) use ($o) { $o->setDeviceHealthAttestationState($n->getObjectValue(array(DeviceHealthAttestationState::class, 'createFromDiscriminatorValue'))); },
-            'deviceName' => function (ParseNode $n) use ($o) { $o->setDeviceName($n->getStringValue()); },
             'deviceRegistrationState' => function (ParseNode $n) use ($o) { $o->setDeviceRegistrationState($n->getEnumValue(DeviceRegistrationState::class)); },
-            'easActivated' => function (ParseNode $n) use ($o) { $o->setEasActivated($n->getBooleanValue()); },
-            'easActivationDateTime' => function (ParseNode $n) use ($o) { $o->setEasActivationDateTime($n->getDateTimeValue()); },
-            'easDeviceId' => function (ParseNode $n) use ($o) { $o->setEasDeviceId($n->getStringValue()); },
-            'emailAddress' => function (ParseNode $n) use ($o) { $o->setEmailAddress($n->getStringValue()); },
-            'enrolledDateTime' => function (ParseNode $n) use ($o) { $o->setEnrolledDateTime($n->getDateTimeValue()); },
-            'ethernetMacAddress' => function (ParseNode $n) use ($o) { $o->setEthernetMacAddress($n->getStringValue()); },
             'exchangeAccessState' => function (ParseNode $n) use ($o) { $o->setExchangeAccessState($n->getEnumValue(DeviceManagementExchangeAccessState::class)); },
             'exchangeAccessStateReason' => function (ParseNode $n) use ($o) { $o->setExchangeAccessStateReason($n->getEnumValue(DeviceManagementExchangeAccessStateReason::class)); },
-            'exchangeLastSuccessfulSyncDateTime' => function (ParseNode $n) use ($o) { $o->setExchangeLastSuccessfulSyncDateTime($n->getDateTimeValue()); },
-            'freeStorageSpaceInBytes' => function (ParseNode $n) use ($o) { $o->setFreeStorageSpaceInBytes($n->getIntegerValue()); },
-            'iccid' => function (ParseNode $n) use ($o) { $o->setIccid($n->getStringValue()); },
-            'imei' => function (ParseNode $n) use ($o) { $o->setImei($n->getStringValue()); },
-            'isEncrypted' => function (ParseNode $n) use ($o) { $o->setIsEncrypted($n->getBooleanValue()); },
-            'isSupervised' => function (ParseNode $n) use ($o) { $o->setIsSupervised($n->getBooleanValue()); },
-            'jailBroken' => function (ParseNode $n) use ($o) { $o->setJailBroken($n->getStringValue()); },
-            'lastSyncDateTime' => function (ParseNode $n) use ($o) { $o->setLastSyncDateTime($n->getDateTimeValue()); },
             'managedDeviceName' => function (ParseNode $n) use ($o) { $o->setManagedDeviceName($n->getStringValue()); },
             'managedDeviceOwnerType' => function (ParseNode $n) use ($o) { $o->setManagedDeviceOwnerType($n->getEnumValue(ManagedDeviceOwnerType::class)); },
             'managementAgent' => function (ParseNode $n) use ($o) { $o->setManagementAgent($n->getEnumValue(ManagementAgentType::class)); },
-            'manufacturer' => function (ParseNode $n) use ($o) { $o->setManufacturer($n->getStringValue()); },
-            'meid' => function (ParseNode $n) use ($o) { $o->setMeid($n->getStringValue()); },
-            'model' => function (ParseNode $n) use ($o) { $o->setModel($n->getStringValue()); },
             'notes' => function (ParseNode $n) use ($o) { $o->setNotes($n->getStringValue()); },
-            'operatingSystem' => function (ParseNode $n) use ($o) { $o->setOperatingSystem($n->getStringValue()); },
-            'osVersion' => function (ParseNode $n) use ($o) { $o->setOsVersion($n->getStringValue()); },
             'partnerReportedThreatState' => function (ParseNode $n) use ($o) { $o->setPartnerReportedThreatState($n->getEnumValue(ManagedDevicePartnerReportedHealthState::class)); },
-            'phoneNumber' => function (ParseNode $n) use ($o) { $o->setPhoneNumber($n->getStringValue()); },
-            'physicalMemoryInBytes' => function (ParseNode $n) use ($o) { $o->setPhysicalMemoryInBytes($n->getIntegerValue()); },
-            'remoteAssistanceSessionErrorDetails' => function (ParseNode $n) use ($o) { $o->setRemoteAssistanceSessionErrorDetails($n->getStringValue()); },
-            'remoteAssistanceSessionUrl' => function (ParseNode $n) use ($o) { $o->setRemoteAssistanceSessionUrl($n->getStringValue()); },
-            'serialNumber' => function (ParseNode $n) use ($o) { $o->setSerialNumber($n->getStringValue()); },
-            'subscriberCarrier' => function (ParseNode $n) use ($o) { $o->setSubscriberCarrier($n->getStringValue()); },
-            'totalStorageSpaceInBytes' => function (ParseNode $n) use ($o) { $o->setTotalStorageSpaceInBytes($n->getIntegerValue()); },
-            'udid' => function (ParseNode $n) use ($o) { $o->setUdid($n->getStringValue()); },
-            'userDisplayName' => function (ParseNode $n) use ($o) { $o->setUserDisplayName($n->getStringValue()); },
-            'userId' => function (ParseNode $n) use ($o) { $o->setUserId($n->getStringValue()); },
-            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
-            'wiFiMacAddress' => function (ParseNode $n) use ($o) { $o->setWiFiMacAddress($n->getStringValue()); },
         ]);
     }
 
@@ -798,100 +757,19 @@ class ManagedDevice extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('activationLockBypassCode', $this->activationLockBypassCode);
-        $writer->writeStringValue('androidSecurityPatchLevel', $this->androidSecurityPatchLevel);
-        $writer->writeStringValue('azureADDeviceId', $this->azureADDeviceId);
-        $writer->writeBooleanValue('azureADRegistered', $this->azureADRegistered);
-        $writer->writeDateTimeValue('complianceGracePeriodExpirationDateTime', $this->complianceGracePeriodExpirationDateTime);
         $writer->writeEnumValue('complianceState', $this->complianceState);
-        $writer->writeObjectValue('configurationManagerClientEnabledFeatures', $this->configurationManagerClientEnabledFeatures);
-        $writer->writeCollectionOfObjectValues('deviceActionResults', $this->deviceActionResults);
         $writer->writeObjectValue('deviceCategory', $this->deviceCategory);
-        $writer->writeStringValue('deviceCategoryDisplayName', $this->deviceCategoryDisplayName);
         $writer->writeCollectionOfObjectValues('deviceCompliancePolicyStates', $this->deviceCompliancePolicyStates);
         $writer->writeCollectionOfObjectValues('deviceConfigurationStates', $this->deviceConfigurationStates);
         $writer->writeEnumValue('deviceEnrollmentType', $this->deviceEnrollmentType);
-        $writer->writeObjectValue('deviceHealthAttestationState', $this->deviceHealthAttestationState);
-        $writer->writeStringValue('deviceName', $this->deviceName);
         $writer->writeEnumValue('deviceRegistrationState', $this->deviceRegistrationState);
-        $writer->writeBooleanValue('easActivated', $this->easActivated);
-        $writer->writeDateTimeValue('easActivationDateTime', $this->easActivationDateTime);
-        $writer->writeStringValue('easDeviceId', $this->easDeviceId);
-        $writer->writeStringValue('emailAddress', $this->emailAddress);
-        $writer->writeDateTimeValue('enrolledDateTime', $this->enrolledDateTime);
-        $writer->writeStringValue('ethernetMacAddress', $this->ethernetMacAddress);
         $writer->writeEnumValue('exchangeAccessState', $this->exchangeAccessState);
         $writer->writeEnumValue('exchangeAccessStateReason', $this->exchangeAccessStateReason);
-        $writer->writeDateTimeValue('exchangeLastSuccessfulSyncDateTime', $this->exchangeLastSuccessfulSyncDateTime);
-        $writer->writeIntegerValue('freeStorageSpaceInBytes', $this->freeStorageSpaceInBytes);
-        $writer->writeStringValue('iccid', $this->iccid);
-        $writer->writeStringValue('imei', $this->imei);
-        $writer->writeBooleanValue('isEncrypted', $this->isEncrypted);
-        $writer->writeBooleanValue('isSupervised', $this->isSupervised);
-        $writer->writeStringValue('jailBroken', $this->jailBroken);
-        $writer->writeDateTimeValue('lastSyncDateTime', $this->lastSyncDateTime);
         $writer->writeStringValue('managedDeviceName', $this->managedDeviceName);
         $writer->writeEnumValue('managedDeviceOwnerType', $this->managedDeviceOwnerType);
         $writer->writeEnumValue('managementAgent', $this->managementAgent);
-        $writer->writeStringValue('manufacturer', $this->manufacturer);
-        $writer->writeStringValue('meid', $this->meid);
-        $writer->writeStringValue('model', $this->model);
         $writer->writeStringValue('notes', $this->notes);
-        $writer->writeStringValue('operatingSystem', $this->operatingSystem);
-        $writer->writeStringValue('osVersion', $this->osVersion);
         $writer->writeEnumValue('partnerReportedThreatState', $this->partnerReportedThreatState);
-        $writer->writeStringValue('phoneNumber', $this->phoneNumber);
-        $writer->writeIntegerValue('physicalMemoryInBytes', $this->physicalMemoryInBytes);
-        $writer->writeStringValue('remoteAssistanceSessionErrorDetails', $this->remoteAssistanceSessionErrorDetails);
-        $writer->writeStringValue('remoteAssistanceSessionUrl', $this->remoteAssistanceSessionUrl);
-        $writer->writeStringValue('serialNumber', $this->serialNumber);
-        $writer->writeStringValue('subscriberCarrier', $this->subscriberCarrier);
-        $writer->writeIntegerValue('totalStorageSpaceInBytes', $this->totalStorageSpaceInBytes);
-        $writer->writeStringValue('udid', $this->udid);
-        $writer->writeStringValue('userDisplayName', $this->userDisplayName);
-        $writer->writeStringValue('userId', $this->userId);
-        $writer->writeStringValue('userPrincipalName', $this->userPrincipalName);
-        $writer->writeStringValue('wiFiMacAddress', $this->wiFiMacAddress);
-    }
-
-    /**
-     * Sets the activationLockBypassCode property value. Code that allows the Activation Lock on a device to be bypassed. This property is read-only.
-     *  @param string|null $value Value to set for the activationLockBypassCode property.
-    */
-    public function setActivationLockBypassCode(?string $value ): void {
-        $this->activationLockBypassCode = $value;
-    }
-
-    /**
-     * Sets the androidSecurityPatchLevel property value. Android security patch level. This property is read-only.
-     *  @param string|null $value Value to set for the androidSecurityPatchLevel property.
-    */
-    public function setAndroidSecurityPatchLevel(?string $value ): void {
-        $this->androidSecurityPatchLevel = $value;
-    }
-
-    /**
-     * Sets the azureADDeviceId property value. The unique identifier for the Azure Active Directory device. Read only. This property is read-only.
-     *  @param string|null $value Value to set for the azureADDeviceId property.
-    */
-    public function setAzureADDeviceId(?string $value ): void {
-        $this->azureADDeviceId = $value;
-    }
-
-    /**
-     * Sets the azureADRegistered property value. Whether the device is Azure Active Directory registered. This property is read-only.
-     *  @param bool|null $value Value to set for the azureADRegistered property.
-    */
-    public function setAzureADRegistered(?bool $value ): void {
-        $this->azureADRegistered = $value;
-    }
-
-    /**
-     * Sets the complianceGracePeriodExpirationDateTime property value. The DateTime when device compliance grace period expires. This property is read-only.
-     *  @param DateTime|null $value Value to set for the complianceGracePeriodExpirationDateTime property.
-    */
-    public function setComplianceGracePeriodExpirationDateTime(?DateTime $value ): void {
-        $this->complianceGracePeriodExpirationDateTime = $value;
     }
 
     /**
@@ -903,35 +781,11 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the configurationManagerClientEnabledFeatures property value. ConfigrMgr client enabled features. This property is read-only.
-     *  @param ConfigurationManagerClientEnabledFeatures|null $value Value to set for the configurationManagerClientEnabledFeatures property.
-    */
-    public function setConfigurationManagerClientEnabledFeatures(?ConfigurationManagerClientEnabledFeatures $value ): void {
-        $this->configurationManagerClientEnabledFeatures = $value;
-    }
-
-    /**
-     * Sets the deviceActionResults property value. List of ComplexType deviceActionResult objects. This property is read-only.
-     *  @param array<DeviceActionResult>|null $value Value to set for the deviceActionResults property.
-    */
-    public function setDeviceActionResults(?array $value ): void {
-        $this->deviceActionResults = $value;
-    }
-
-    /**
      * Sets the deviceCategory property value. Device category
      *  @param DeviceCategory|null $value Value to set for the deviceCategory property.
     */
     public function setDeviceCategory(?DeviceCategory $value ): void {
         $this->deviceCategory = $value;
-    }
-
-    /**
-     * Sets the deviceCategoryDisplayName property value. Device category display name. This property is read-only.
-     *  @param string|null $value Value to set for the deviceCategoryDisplayName property.
-    */
-    public function setDeviceCategoryDisplayName(?string $value ): void {
-        $this->deviceCategoryDisplayName = $value;
     }
 
     /**
@@ -959,75 +813,11 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the deviceHealthAttestationState property value. The device health attestation state. This property is read-only.
-     *  @param DeviceHealthAttestationState|null $value Value to set for the deviceHealthAttestationState property.
-    */
-    public function setDeviceHealthAttestationState(?DeviceHealthAttestationState $value ): void {
-        $this->deviceHealthAttestationState = $value;
-    }
-
-    /**
-     * Sets the deviceName property value. Name of the device. This property is read-only.
-     *  @param string|null $value Value to set for the deviceName property.
-    */
-    public function setDeviceName(?string $value ): void {
-        $this->deviceName = $value;
-    }
-
-    /**
      * Sets the deviceRegistrationState property value. Device registration status.
      *  @param DeviceRegistrationState|null $value Value to set for the deviceRegistrationState property.
     */
     public function setDeviceRegistrationState(?DeviceRegistrationState $value ): void {
         $this->deviceRegistrationState = $value;
-    }
-
-    /**
-     * Sets the easActivated property value. Whether the device is Exchange ActiveSync activated. This property is read-only.
-     *  @param bool|null $value Value to set for the easActivated property.
-    */
-    public function setEasActivated(?bool $value ): void {
-        $this->easActivated = $value;
-    }
-
-    /**
-     * Sets the easActivationDateTime property value. Exchange ActivationSync activation time of the device. This property is read-only.
-     *  @param DateTime|null $value Value to set for the easActivationDateTime property.
-    */
-    public function setEasActivationDateTime(?DateTime $value ): void {
-        $this->easActivationDateTime = $value;
-    }
-
-    /**
-     * Sets the easDeviceId property value. Exchange ActiveSync Id of the device. This property is read-only.
-     *  @param string|null $value Value to set for the easDeviceId property.
-    */
-    public function setEasDeviceId(?string $value ): void {
-        $this->easDeviceId = $value;
-    }
-
-    /**
-     * Sets the emailAddress property value. Email(s) for the user associated with the device. This property is read-only.
-     *  @param string|null $value Value to set for the emailAddress property.
-    */
-    public function setEmailAddress(?string $value ): void {
-        $this->emailAddress = $value;
-    }
-
-    /**
-     * Sets the enrolledDateTime property value. Enrollment time of the device. This property is read-only.
-     *  @param DateTime|null $value Value to set for the enrolledDateTime property.
-    */
-    public function setEnrolledDateTime(?DateTime $value ): void {
-        $this->enrolledDateTime = $value;
-    }
-
-    /**
-     * Sets the ethernetMacAddress property value. Ethernet MAC. This property is read-only.
-     *  @param string|null $value Value to set for the ethernetMacAddress property.
-    */
-    public function setEthernetMacAddress(?string $value ): void {
-        $this->ethernetMacAddress = $value;
     }
 
     /**
@@ -1044,70 +834,6 @@ class ManagedDevice extends Entity implements Parsable
     */
     public function setExchangeAccessStateReason(?DeviceManagementExchangeAccessStateReason $value ): void {
         $this->exchangeAccessStateReason = $value;
-    }
-
-    /**
-     * Sets the exchangeLastSuccessfulSyncDateTime property value. Last time the device contacted Exchange. This property is read-only.
-     *  @param DateTime|null $value Value to set for the exchangeLastSuccessfulSyncDateTime property.
-    */
-    public function setExchangeLastSuccessfulSyncDateTime(?DateTime $value ): void {
-        $this->exchangeLastSuccessfulSyncDateTime = $value;
-    }
-
-    /**
-     * Sets the freeStorageSpaceInBytes property value. Free Storage in Bytes. This property is read-only.
-     *  @param int|null $value Value to set for the freeStorageSpaceInBytes property.
-    */
-    public function setFreeStorageSpaceInBytes(?int $value ): void {
-        $this->freeStorageSpaceInBytes = $value;
-    }
-
-    /**
-     * Sets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. This property is read-only.
-     *  @param string|null $value Value to set for the iccid property.
-    */
-    public function setIccid(?string $value ): void {
-        $this->iccid = $value;
-    }
-
-    /**
-     * Sets the imei property value. IMEI. This property is read-only.
-     *  @param string|null $value Value to set for the imei property.
-    */
-    public function setImei(?string $value ): void {
-        $this->imei = $value;
-    }
-
-    /**
-     * Sets the isEncrypted property value. Device encryption status. This property is read-only.
-     *  @param bool|null $value Value to set for the isEncrypted property.
-    */
-    public function setIsEncrypted(?bool $value ): void {
-        $this->isEncrypted = $value;
-    }
-
-    /**
-     * Sets the isSupervised property value. Device supervised status. This property is read-only.
-     *  @param bool|null $value Value to set for the isSupervised property.
-    */
-    public function setIsSupervised(?bool $value ): void {
-        $this->isSupervised = $value;
-    }
-
-    /**
-     * Sets the jailBroken property value. whether the device is jail broken or rooted. This property is read-only.
-     *  @param string|null $value Value to set for the jailBroken property.
-    */
-    public function setJailBroken(?string $value ): void {
-        $this->jailBroken = $value;
-    }
-
-    /**
-     * Sets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. This property is read-only.
-     *  @param DateTime|null $value Value to set for the lastSyncDateTime property.
-    */
-    public function setLastSyncDateTime(?DateTime $value ): void {
-        $this->lastSyncDateTime = $value;
     }
 
     /**
@@ -1135,30 +861,6 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the manufacturer property value. Manufacturer of the device. This property is read-only.
-     *  @param string|null $value Value to set for the manufacturer property.
-    */
-    public function setManufacturer(?string $value ): void {
-        $this->manufacturer = $value;
-    }
-
-    /**
-     * Sets the meid property value. MEID. This property is read-only.
-     *  @param string|null $value Value to set for the meid property.
-    */
-    public function setMeid(?string $value ): void {
-        $this->meid = $value;
-    }
-
-    /**
-     * Sets the model property value. Model of the device. This property is read-only.
-     *  @param string|null $value Value to set for the model property.
-    */
-    public function setModel(?string $value ): void {
-        $this->model = $value;
-    }
-
-    /**
      * Sets the notes property value. Notes on the device created by IT Admin
      *  @param string|null $value Value to set for the notes property.
     */
@@ -1167,123 +869,11 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the operatingSystem property value. Operating system of the device. Windows, iOS, etc. This property is read-only.
-     *  @param string|null $value Value to set for the operatingSystem property.
-    */
-    public function setOperatingSystem(?string $value ): void {
-        $this->operatingSystem = $value;
-    }
-
-    /**
-     * Sets the osVersion property value. Operating system version of the device. This property is read-only.
-     *  @param string|null $value Value to set for the osVersion property.
-    */
-    public function setOsVersion(?string $value ): void {
-        $this->osVersion = $value;
-    }
-
-    /**
      * Sets the partnerReportedThreatState property value. Available health states for the Device Health API
      *  @param ManagedDevicePartnerReportedHealthState|null $value Value to set for the partnerReportedThreatState property.
     */
     public function setPartnerReportedThreatState(?ManagedDevicePartnerReportedHealthState $value ): void {
         $this->partnerReportedThreatState = $value;
-    }
-
-    /**
-     * Sets the phoneNumber property value. Phone number of the device. This property is read-only.
-     *  @param string|null $value Value to set for the phoneNumber property.
-    */
-    public function setPhoneNumber(?string $value ): void {
-        $this->phoneNumber = $value;
-    }
-
-    /**
-     * Sets the physicalMemoryInBytes property value. Total Memory in Bytes. This property is read-only.
-     *  @param int|null $value Value to set for the physicalMemoryInBytes property.
-    */
-    public function setPhysicalMemoryInBytes(?int $value ): void {
-        $this->physicalMemoryInBytes = $value;
-    }
-
-    /**
-     * Sets the remoteAssistanceSessionErrorDetails property value. An error string that identifies issues when creating Remote Assistance session objects. This property is read-only.
-     *  @param string|null $value Value to set for the remoteAssistanceSessionErrorDetails property.
-    */
-    public function setRemoteAssistanceSessionErrorDetails(?string $value ): void {
-        $this->remoteAssistanceSessionErrorDetails = $value;
-    }
-
-    /**
-     * Sets the remoteAssistanceSessionUrl property value. Url that allows a Remote Assistance session to be established with the device. This property is read-only.
-     *  @param string|null $value Value to set for the remoteAssistanceSessionUrl property.
-    */
-    public function setRemoteAssistanceSessionUrl(?string $value ): void {
-        $this->remoteAssistanceSessionUrl = $value;
-    }
-
-    /**
-     * Sets the serialNumber property value. SerialNumber. This property is read-only.
-     *  @param string|null $value Value to set for the serialNumber property.
-    */
-    public function setSerialNumber(?string $value ): void {
-        $this->serialNumber = $value;
-    }
-
-    /**
-     * Sets the subscriberCarrier property value. Subscriber Carrier. This property is read-only.
-     *  @param string|null $value Value to set for the subscriberCarrier property.
-    */
-    public function setSubscriberCarrier(?string $value ): void {
-        $this->subscriberCarrier = $value;
-    }
-
-    /**
-     * Sets the totalStorageSpaceInBytes property value. Total Storage in Bytes. This property is read-only.
-     *  @param int|null $value Value to set for the totalStorageSpaceInBytes property.
-    */
-    public function setTotalStorageSpaceInBytes(?int $value ): void {
-        $this->totalStorageSpaceInBytes = $value;
-    }
-
-    /**
-     * Sets the udid property value. Unique Device Identifier for iOS and macOS devices. This property is read-only.
-     *  @param string|null $value Value to set for the udid property.
-    */
-    public function setUdid(?string $value ): void {
-        $this->udid = $value;
-    }
-
-    /**
-     * Sets the userDisplayName property value. User display name. This property is read-only.
-     *  @param string|null $value Value to set for the userDisplayName property.
-    */
-    public function setUserDisplayName(?string $value ): void {
-        $this->userDisplayName = $value;
-    }
-
-    /**
-     * Sets the userId property value. Unique Identifier for the user associated with the device. This property is read-only.
-     *  @param string|null $value Value to set for the userId property.
-    */
-    public function setUserId(?string $value ): void {
-        $this->userId = $value;
-    }
-
-    /**
-     * Sets the userPrincipalName property value. Device user principal name. This property is read-only.
-     *  @param string|null $value Value to set for the userPrincipalName property.
-    */
-    public function setUserPrincipalName(?string $value ): void {
-        $this->userPrincipalName = $value;
-    }
-
-    /**
-     * Sets the wiFiMacAddress property value. Wi-Fi MAC. This property is read-only.
-     *  @param string|null $value Value to set for the wiFiMacAddress property.
-    */
-    public function setWiFiMacAddress(?string $value ): void {
-        $this->wiFiMacAddress = $value;
     }
 
 }

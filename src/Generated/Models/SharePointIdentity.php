@@ -14,7 +14,7 @@ class SharePointIdentity extends Identity implements Parsable
     private ?string $loginName = null;
     
     /**
-     * Instantiates a new SharePointIdentity and sets the default values.
+     * Instantiates a new sharePointIdentity and sets the default values.
     */
     public function __construct() {
         parent::__construct();

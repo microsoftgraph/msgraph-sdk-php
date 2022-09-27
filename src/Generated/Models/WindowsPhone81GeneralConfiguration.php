@@ -249,7 +249,6 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'applyOnlyToWindowsPhone81' => function (ParseNode $n) use ($o) { $o->setApplyOnlyToWindowsPhone81($n->getBooleanValue()); },
             'appsBlockCopyPaste' => function (ParseNode $n) use ($o) { $o->setAppsBlockCopyPaste($n->getBooleanValue()); },
             'bluetoothBlocked' => function (ParseNode $n) use ($o) { $o->setBluetoothBlocked($n->getBooleanValue()); },
             'cameraBlocked' => function (ParseNode $n) use ($o) { $o->setCameraBlocked($n->getBooleanValue()); },
@@ -447,7 +446,6 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('applyOnlyToWindowsPhone81', $this->applyOnlyToWindowsPhone81);
         $writer->writeBooleanValue('appsBlockCopyPaste', $this->appsBlockCopyPaste);
         $writer->writeBooleanValue('bluetoothBlocked', $this->bluetoothBlocked);
         $writer->writeBooleanValue('cameraBlocked', $this->cameraBlocked);
@@ -476,14 +474,6 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
         $writer->writeBooleanValue('wifiBlocked', $this->wifiBlocked);
         $writer->writeBooleanValue('wifiBlockHotspotReporting', $this->wifiBlockHotspotReporting);
         $writer->writeBooleanValue('windowsStoreBlocked', $this->windowsStoreBlocked);
-    }
-
-    /**
-     * Sets the applyOnlyToWindowsPhone81 property value. Value indicating whether this policy only applies to Windows Phone 8.1. This property is read-only.
-     *  @param bool|null $value Value to set for the applyOnlyToWindowsPhone81 property.
-    */
-    public function setApplyOnlyToWindowsPhone81(?bool $value ): void {
-        $this->applyOnlyToWindowsPhone81 = $value;
     }
 
     /**

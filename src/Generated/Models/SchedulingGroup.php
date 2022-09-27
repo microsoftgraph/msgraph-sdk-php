@@ -24,7 +24,7 @@ class SchedulingGroup extends ChangeTrackedEntity implements Parsable
     private ?array $userIds = null;
     
     /**
-     * Instantiates a new SchedulingGroup and sets the default values.
+     * Instantiates a new schedulingGroup and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -56,7 +56,6 @@ class SchedulingGroup extends ChangeTrackedEntity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'isActive' => function (ParseNode $n) use ($o) { $o->setIsActive($n->getBooleanValue()); },
             'userIds' => function (ParseNode $n) use ($o) { $o->setUserIds($n->getCollectionOfPrimitiveValues()); },
         ]);
     }
@@ -84,7 +83,6 @@ class SchedulingGroup extends ChangeTrackedEntity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeBooleanValue('isActive', $this->isActive);
         $writer->writeCollectionOfPrimitiveValues('userIds', $this->userIds);
     }
 
@@ -94,14 +92,6 @@ class SchedulingGroup extends ChangeTrackedEntity implements Parsable
     */
     public function setDisplayName(?string $value ): void {
         $this->displayName = $value;
-    }
-
-    /**
-     * Sets the isActive property value. Indicates whether the schedulingGroup can be used when creating new entities or updating existing ones. Required.
-     *  @param bool|null $value Value to set for the isActive property.
-    */
-    public function setIsActive(?bool $value ): void {
-        $this->isActive = $value;
     }
 
     /**

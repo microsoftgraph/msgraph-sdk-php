@@ -16,4 +16,9 @@ class GetManagedAppDiagnosticStatusesRequestBuilderGetRequestConfiguration
     */
     public ?array $options = null;
     
+    /**
+     * @var GetManagedAppDiagnosticStatusesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?GetManagedAppDiagnosticStatusesRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

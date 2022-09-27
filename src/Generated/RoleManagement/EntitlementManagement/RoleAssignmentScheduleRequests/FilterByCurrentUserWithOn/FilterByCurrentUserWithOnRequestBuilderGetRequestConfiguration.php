@@ -16,4 +16,9 @@ class FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration
     */
     public ?array $options = null;
     
+    /**
+     * @var FilterByCurrentUserWithOnRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?FilterByCurrentUserWithOnRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

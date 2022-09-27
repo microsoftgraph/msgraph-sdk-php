@@ -31,7 +31,7 @@ class Application extends DirectoryObject implements Parsable
     private ?string $applicationTemplateId = null;
     
     /**
-     * @var array<AppRole>|null $appRoles The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
+     * @var array<AppRole>|null $appRoles The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
     */
     private ?array $appRoles = null;
     
@@ -216,7 +216,7 @@ class Application extends DirectoryObject implements Parsable
     private ?WebApplication $web = null;
     
     /**
-     * Instantiates a new application and sets the default values.
+     * Instantiates a new Application and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -265,7 +265,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the appRoles property value. The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
+     * Gets the appRoles property value. The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
      * @return array<AppRole>|null
     */
     public function getAppRoles(): ?array {
@@ -693,7 +693,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the appRoles property value. The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
+     * Sets the appRoles property value. The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
      *  @param array<AppRole>|null $value Value to set for the appRoles property.
     */
     public function setAppRoles(?array $value ): void {

@@ -16,4 +16,9 @@ class GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeReques
     */
     public ?array $options = null;
     
+    /**
+     * @var GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

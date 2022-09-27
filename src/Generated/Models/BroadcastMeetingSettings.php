@@ -20,6 +20,11 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable
     private ?BroadcastMeetingAudience $allowedAudience = null;
     
     /**
+     * @var BroadcastMeetingCaptionSettings|null $captions Caption settings of a Teams live event.
+    */
+    private ?BroadcastMeetingCaptionSettings $captions = null;
+    
+    /**
      * @var bool|null $isAttendeeReportEnabled Indicates whether attendee report is enabled for this Teams live event. Default value is false.
     */
     private ?bool $isAttendeeReportEnabled = null;
@@ -78,6 +83,14 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the captions property value. Caption settings of a Teams live event.
+     * @return BroadcastMeetingCaptionSettings|null
+    */
+    public function getCaptions(): ?BroadcastMeetingCaptionSettings {
+        return $this->captions;
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable>
     */
@@ -85,6 +98,7 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'allowedAudience' => function (ParseNode $n) use ($o) { $o->setAllowedAudience($n->getEnumValue(BroadcastMeetingAudience::class)); },
+            'captions' => function (ParseNode $n) use ($o) { $o->setCaptions($n->getObjectValue(array(BroadcastMeetingCaptionSettings::class, 'createFromDiscriminatorValue'))); },
             'isAttendeeReportEnabled' => function (ParseNode $n) use ($o) { $o->setIsAttendeeReportEnabled($n->getBooleanValue()); },
             'isQuestionAndAnswerEnabled' => function (ParseNode $n) use ($o) { $o->setIsQuestionAndAnswerEnabled($n->getBooleanValue()); },
             'isRecordingEnabled' => function (ParseNode $n) use ($o) { $o->setIsRecordingEnabled($n->getBooleanValue()); },
@@ -139,6 +153,7 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeEnumValue('allowedAudience', $this->allowedAudience);
+        $writer->writeObjectValue('captions', $this->captions);
         $writer->writeBooleanValue('isAttendeeReportEnabled', $this->isAttendeeReportEnabled);
         $writer->writeBooleanValue('isQuestionAndAnswerEnabled', $this->isQuestionAndAnswerEnabled);
         $writer->writeBooleanValue('isRecordingEnabled', $this->isRecordingEnabled);
@@ -161,6 +176,14 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable
     */
     public function setAllowedAudience(?BroadcastMeetingAudience $value ): void {
         $this->allowedAudience = $value;
+    }
+
+    /**
+     * Sets the captions property value. Caption settings of a Teams live event.
+     *  @param BroadcastMeetingCaptionSettings|null $value Value to set for the captions property.
+    */
+    public function setCaptions(?BroadcastMeetingCaptionSettings $value ): void {
+        $this->captions = $value;
     }
 
     /**

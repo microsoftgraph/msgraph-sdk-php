@@ -93,9 +93,7 @@ class Certification implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'certificationDetailsUrl' => function (ParseNode $n) use ($o) { $o->setCertificationDetailsUrl($n->getStringValue()); },
             'certificationExpirationDateTime' => function (ParseNode $n) use ($o) { $o->setCertificationExpirationDateTime($n->getDateTimeValue()); },
-            'isCertifiedByMicrosoft' => function (ParseNode $n) use ($o) { $o->setIsCertifiedByMicrosoft($n->getBooleanValue()); },
             'isPublisherAttested' => function (ParseNode $n) use ($o) { $o->setIsPublisherAttested($n->getBooleanValue()); },
             'lastCertificationDateTime' => function (ParseNode $n) use ($o) { $o->setLastCertificationDateTime($n->getDateTimeValue()); },
             '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
@@ -139,9 +137,7 @@ class Certification implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('certificationDetailsUrl', $this->certificationDetailsUrl);
         $writer->writeDateTimeValue('certificationExpirationDateTime', $this->certificationExpirationDateTime);
-        $writer->writeBooleanValue('isCertifiedByMicrosoft', $this->isCertifiedByMicrosoft);
         $writer->writeBooleanValue('isPublisherAttested', $this->isPublisherAttested);
         $writer->writeDateTimeValue('lastCertificationDateTime', $this->lastCertificationDateTime);
         $writer->writeStringValue('@odata.type', $this->odataType);
@@ -157,27 +153,11 @@ class Certification implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the certificationDetailsUrl property value. URL that shows certification details for the application.
-     *  @param string|null $value Value to set for the certificationDetailsUrl property.
-    */
-    public function setCertificationDetailsUrl(?string $value ): void {
-        $this->certificationDetailsUrl = $value;
-    }
-
-    /**
      * Sets the certificationExpirationDateTime property value. The timestamp when the current certification for the application will expire.
      *  @param DateTime|null $value Value to set for the certificationExpirationDateTime property.
     */
     public function setCertificationExpirationDateTime(?DateTime $value ): void {
         $this->certificationExpirationDateTime = $value;
-    }
-
-    /**
-     * Sets the isCertifiedByMicrosoft property value. Indicates whether the application is certified by Microsoft.
-     *  @param bool|null $value Value to set for the isCertifiedByMicrosoft property.
-    */
-    public function setIsCertifiedByMicrosoft(?bool $value ): void {
-        $this->isCertifiedByMicrosoft = $value;
     }
 
     /**

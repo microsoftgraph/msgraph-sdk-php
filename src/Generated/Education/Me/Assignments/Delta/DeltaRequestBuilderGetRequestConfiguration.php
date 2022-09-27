@@ -16,4 +16,9 @@ class DeltaRequestBuilderGetRequestConfiguration
     */
     public ?array $options = null;
     
+    /**
+     * @var DeltaRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?DeltaRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

@@ -16,4 +16,9 @@ class AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration
     */
     public ?array $options = null;
     
+    /**
+     * @var AllowedCalendarSharingRolesWithUserRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?AllowedCalendarSharingRolesWithUserRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

@@ -115,11 +115,7 @@ class EducationResource implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'lastModifiedBy' => function (ParseNode $n) use ($o) { $o->setLastModifiedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
             '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
         ];
     }
@@ -153,11 +149,7 @@ class EducationResource implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('createdBy', $this->createdBy);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
         $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeObjectValue('lastModifiedBy', $this->lastModifiedBy);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
         $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeAdditionalData($this->additionalData);
     }
@@ -171,43 +163,11 @@ class EducationResource implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the createdBy property value. The individual who created the resource.
-     *  @param IdentitySet|null $value Value to set for the createdBy property.
-    */
-    public function setCreatedBy(?IdentitySet $value ): void {
-        $this->createdBy = $value;
-    }
-
-    /**
-     * Sets the createdDateTime property value. Moment in time when the resource was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
-    */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
-    }
-
-    /**
      * Sets the displayName property value. Display name of resource.
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
         $this->displayName = $value;
-    }
-
-    /**
-     * Sets the lastModifiedBy property value. The last user to modify the resource.
-     *  @param IdentitySet|null $value Value to set for the lastModifiedBy property.
-    */
-    public function setLastModifiedBy(?IdentitySet $value ): void {
-        $this->lastModifiedBy = $value;
-    }
-
-    /**
-     * Sets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
-    */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
     }
 
     /**

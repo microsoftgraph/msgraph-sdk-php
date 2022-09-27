@@ -381,7 +381,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
             'featureUpdatesDeferralPeriodInDays' => function (ParseNode $n) use ($o) { $o->setFeatureUpdatesDeferralPeriodInDays($n->getIntegerValue()); },
             'featureUpdatesPaused' => function (ParseNode $n) use ($o) { $o->setFeatureUpdatesPaused($n->getBooleanValue()); },
             'featureUpdatesPauseExpiryDateTime' => function (ParseNode $n) use ($o) { $o->setFeatureUpdatesPauseExpiryDateTime($n->getDateTimeValue()); },
-            'featureUpdatesPauseStartDate' => function (ParseNode $n) use ($o) { $o->setFeatureUpdatesPauseStartDate($n->getDateValue()); },
             'featureUpdatesRollbackStartDateTime' => function (ParseNode $n) use ($o) { $o->setFeatureUpdatesRollbackStartDateTime($n->getDateTimeValue()); },
             'featureUpdatesRollbackWindowInDays' => function (ParseNode $n) use ($o) { $o->setFeatureUpdatesRollbackWindowInDays($n->getIntegerValue()); },
             'featureUpdatesWillBeRolledBack' => function (ParseNode $n) use ($o) { $o->setFeatureUpdatesWillBeRolledBack($n->getBooleanValue()); },
@@ -392,7 +391,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
             'qualityUpdatesDeferralPeriodInDays' => function (ParseNode $n) use ($o) { $o->setQualityUpdatesDeferralPeriodInDays($n->getIntegerValue()); },
             'qualityUpdatesPaused' => function (ParseNode $n) use ($o) { $o->setQualityUpdatesPaused($n->getBooleanValue()); },
             'qualityUpdatesPauseExpiryDateTime' => function (ParseNode $n) use ($o) { $o->setQualityUpdatesPauseExpiryDateTime($n->getDateTimeValue()); },
-            'qualityUpdatesPauseStartDate' => function (ParseNode $n) use ($o) { $o->setQualityUpdatesPauseStartDate($n->getDateValue()); },
             'qualityUpdatesRollbackStartDateTime' => function (ParseNode $n) use ($o) { $o->setQualityUpdatesRollbackStartDateTime($n->getDateTimeValue()); },
             'qualityUpdatesWillBeRolledBack' => function (ParseNode $n) use ($o) { $o->setQualityUpdatesWillBeRolledBack($n->getBooleanValue()); },
             'scheduleImminentRestartWarningInMinutes' => function (ParseNode $n) use ($o) { $o->setScheduleImminentRestartWarningInMinutes($n->getIntegerValue()); },
@@ -562,7 +560,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
         $writer->writeIntegerValue('featureUpdatesDeferralPeriodInDays', $this->featureUpdatesDeferralPeriodInDays);
         $writer->writeBooleanValue('featureUpdatesPaused', $this->featureUpdatesPaused);
         $writer->writeDateTimeValue('featureUpdatesPauseExpiryDateTime', $this->featureUpdatesPauseExpiryDateTime);
-        $writer->writeDateValue('featureUpdatesPauseStartDate', $this->featureUpdatesPauseStartDate);
         $writer->writeDateTimeValue('featureUpdatesRollbackStartDateTime', $this->featureUpdatesRollbackStartDateTime);
         $writer->writeIntegerValue('featureUpdatesRollbackWindowInDays', $this->featureUpdatesRollbackWindowInDays);
         $writer->writeBooleanValue('featureUpdatesWillBeRolledBack', $this->featureUpdatesWillBeRolledBack);
@@ -573,7 +570,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
         $writer->writeIntegerValue('qualityUpdatesDeferralPeriodInDays', $this->qualityUpdatesDeferralPeriodInDays);
         $writer->writeBooleanValue('qualityUpdatesPaused', $this->qualityUpdatesPaused);
         $writer->writeDateTimeValue('qualityUpdatesPauseExpiryDateTime', $this->qualityUpdatesPauseExpiryDateTime);
-        $writer->writeDateValue('qualityUpdatesPauseStartDate', $this->qualityUpdatesPauseStartDate);
         $writer->writeDateTimeValue('qualityUpdatesRollbackStartDateTime', $this->qualityUpdatesRollbackStartDateTime);
         $writer->writeBooleanValue('qualityUpdatesWillBeRolledBack', $this->qualityUpdatesWillBeRolledBack);
         $writer->writeIntegerValue('scheduleImminentRestartWarningInMinutes', $this->scheduleImminentRestartWarningInMinutes);
@@ -706,14 +702,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     }
 
     /**
-     * Sets the featureUpdatesPauseStartDate property value. The Feature Updates Pause start date. This value is the time when the admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. This property is read-only.
-     *  @param Date|null $value Value to set for the featureUpdatesPauseStartDate property.
-    */
-    public function setFeatureUpdatesPauseStartDate(?Date $value ): void {
-        $this->featureUpdatesPauseStartDate = $value;
-    }
-
-    /**
      * Sets the featureUpdatesRollbackStartDateTime property value. The Feature Updates Rollback Start datetime.This value is the time when the admin rolled back the Feature update for the ring.Returned by default.Query parameters are not supported.
      *  @param DateTime|null $value Value to set for the featureUpdatesRollbackStartDateTime property.
     */
@@ -791,14 +779,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
     */
     public function setQualityUpdatesPauseExpiryDateTime(?DateTime $value ): void {
         $this->qualityUpdatesPauseExpiryDateTime = $value;
-    }
-
-    /**
-     * Sets the qualityUpdatesPauseStartDate property value. The Quality Updates Pause start date. This value is the time when the admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. This property is read-only.
-     *  @param Date|null $value Value to set for the qualityUpdatesPauseStartDate property.
-    */
-    public function setQualityUpdatesPauseStartDate(?Date $value ): void {
-        $this->qualityUpdatesPauseStartDate = $value;
     }
 
     /**

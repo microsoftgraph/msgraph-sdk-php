@@ -16,4 +16,9 @@ class SearchWithQRequestBuilderGetRequestConfiguration
     */
     public ?array $options = null;
     
+    /**
+     * @var SearchWithQRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?SearchWithQRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

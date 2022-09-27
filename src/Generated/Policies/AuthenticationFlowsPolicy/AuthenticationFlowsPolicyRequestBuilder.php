@@ -65,7 +65,7 @@ class AuthenticationFlowsPolicyRequestBuilder
     }
 
     /**
-     * The policy configuration of the self-service sign-up experience of external users.
+     * Read the properties and relationships of an authenticationFlowsPolicy object.
      * @param AuthenticationFlowsPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -90,7 +90,7 @@ class AuthenticationFlowsPolicyRequestBuilder
     }
 
     /**
-     * Update the navigation property authenticationFlowsPolicy in policies
+     * Update the **selfServiceSignUp** property of an authenticationFlowsPolicy object. The properties **id**, **type**, and **description** cannot be modified.
      * @param AuthenticationFlowsPolicy $body 
      * @param AuthenticationFlowsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -100,6 +100,7 @@ class AuthenticationFlowsPolicyRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
+        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
@@ -132,7 +133,7 @@ class AuthenticationFlowsPolicyRequestBuilder
     }
 
     /**
-     * The policy configuration of the self-service sign-up experience of external users.
+     * Read the properties and relationships of an authenticationFlowsPolicy object.
      * @param AuthenticationFlowsPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -151,7 +152,7 @@ class AuthenticationFlowsPolicyRequestBuilder
     }
 
     /**
-     * Update the navigation property authenticationFlowsPolicy in policies
+     * Update the **selfServiceSignUp** property of an authenticationFlowsPolicy object. The properties **id**, **type**, and **description** cannot be modified.
      * @param AuthenticationFlowsPolicy $body 
      * @param AuthenticationFlowsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -164,7 +165,7 @@ class AuthenticationFlowsPolicyRequestBuilder
                     '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
                     '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
-            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, array(AuthenticationFlowsPolicy::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

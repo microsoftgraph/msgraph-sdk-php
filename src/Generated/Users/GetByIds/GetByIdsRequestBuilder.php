@@ -43,7 +43,7 @@ class GetByIdsRequestBuilder
     }
 
     /**
-     * Invoke action getByIds
+     * Return the directory objects specified in a list of IDs. Some common uses for this function are to:
      * @param GetByIdsPostRequestBody $body 
      * @param GetByIdsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -67,7 +67,7 @@ class GetByIdsRequestBuilder
     }
 
     /**
-     * Invoke action getByIds
+     * Return the directory objects specified in a list of IDs. Some common uses for this function are to:
      * @param GetByIdsPostRequestBody $body 
      * @param GetByIdsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

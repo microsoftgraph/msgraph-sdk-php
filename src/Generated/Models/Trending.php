@@ -60,8 +60,6 @@ class Trending extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
             'resource' => function (ParseNode $n) use ($o) { $o->setResource($n->getObjectValue(array(Entity::class, 'createFromDiscriminatorValue'))); },
-            'resourceReference' => function (ParseNode $n) use ($o) { $o->setResourceReference($n->getObjectValue(array(ResourceReference::class, 'createFromDiscriminatorValue'))); },
-            'resourceVisualization' => function (ParseNode $n) use ($o) { $o->setResourceVisualization($n->getObjectValue(array(ResourceVisualization::class, 'createFromDiscriminatorValue'))); },
             'weight' => function (ParseNode $n) use ($o) { $o->setWeight($n->getFloatValue()); },
         ]);
     }
@@ -114,8 +112,6 @@ class Trending extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
         $writer->writeObjectValue('resource', $this->resource);
-        $writer->writeObjectValue('resourceReference', $this->resourceReference);
-        $writer->writeObjectValue('resourceVisualization', $this->resourceVisualization);
         $writer->writeFloatValue('weight', $this->weight);
     }
 
@@ -133,22 +129,6 @@ class Trending extends Entity implements Parsable
     */
     public function setResource(?Entity $value ): void {
         $this->resource = $value;
-    }
-
-    /**
-     * Sets the resourceReference property value. Reference properties of the trending document, such as the url and type of the document.
-     *  @param ResourceReference|null $value Value to set for the resourceReference property.
-    */
-    public function setResourceReference(?ResourceReference $value ): void {
-        $this->resourceReference = $value;
-    }
-
-    /**
-     * Sets the resourceVisualization property value. Properties that you can use to visualize the document in your experience.
-     *  @param ResourceVisualization|null $value Value to set for the resourceVisualization property.
-    */
-    public function setResourceVisualization(?ResourceVisualization $value ): void {
-        $this->resourceVisualization = $value;
     }
 
     /**

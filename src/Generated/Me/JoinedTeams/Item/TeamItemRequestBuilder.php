@@ -25,6 +25,8 @@ use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Photo\PhotoRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\PrimaryChannelRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\ScheduleRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Tags\Item\TeamworkTagItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Tags\TagsRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Template\TemplateRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Unarchive\UnarchiveRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -148,6 +150,13 @@ class TeamItemRequestBuilder
     }
     
     /**
+     * The tags property
+    */
+    public function tags(): TagsRequestBuilder {
+        return new TagsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * The template property
     */
     public function template(): TemplateRequestBuilder {
@@ -256,6 +265,7 @@ class TeamItemRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
+        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
@@ -364,10 +374,21 @@ class TeamItemRequestBuilder
                     '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
                     '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
-            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, array(Team::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
+    }
+
+    /**
+     * Gets an item from the Microsoft\Graph\Generated.me.joinedTeams.item.tags.item collection
+     * @param string $id Unique identifier of the item
+     * @return TeamworkTagItemRequestBuilder
+    */
+    public function tagsById(string $id): TeamworkTagItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['teamworkTag%2Did'] = $id;
+        return new TeamworkTagItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

@@ -60,7 +60,6 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'recipientActionDateTime' => function (ParseNode $n) use ($o) { $o->setRecipientActionDateTime($n->getDateTimeValue()); },
             'recipientActionMessage' => function (ParseNode $n) use ($o) { $o->setRecipientActionMessage($n->getStringValue()); },
             'recipientUserId' => function (ParseNode $n) use ($o) { $o->setRecipientUserId($n->getStringValue()); },
             'senderShiftId' => function (ParseNode $n) use ($o) { $o->setSenderShiftId($n->getStringValue()); },
@@ -105,18 +104,9 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('recipientActionDateTime', $this->recipientActionDateTime);
         $writer->writeStringValue('recipientActionMessage', $this->recipientActionMessage);
         $writer->writeStringValue('recipientUserId', $this->recipientUserId);
         $writer->writeStringValue('senderShiftId', $this->senderShiftId);
-    }
-
-    /**
-     * Sets the recipientActionDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the recipientActionDateTime property.
-    */
-    public function setRecipientActionDateTime(?DateTime $value ): void {
-        $this->recipientActionDateTime = $value;
     }
 
     /**

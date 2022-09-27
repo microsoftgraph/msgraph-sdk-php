@@ -14,7 +14,7 @@ class TeamworkConversationIdentity extends Identity implements Parsable
     private ?TeamworkConversationIdentityType $conversationIdentityType = null;
     
     /**
-     * Instantiates a new TeamworkConversationIdentity and sets the default values.
+     * Instantiates a new teamworkConversationIdentity and sets the default values.
     */
     public function __construct() {
         parent::__construct();

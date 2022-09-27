@@ -44,7 +44,7 @@ class UnmuteRequestBuilder
     }
 
     /**
-     * Invoke action unmute
+     * Allow the application to unmute itself. This is a server unmute, meaning that the server will start sending audio packets for this participant to other participants again. For more information about how to handle unmute operations, see unmuteParticipantOperation.
      * @param UnmutePostRequestBody $body 
      * @param UnmuteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -68,7 +68,7 @@ class UnmuteRequestBuilder
     }
 
     /**
-     * Invoke action unmute
+     * Allow the application to unmute itself. This is a server unmute, meaning that the server will start sending audio packets for this participant to other participants again. For more information about how to handle unmute operations, see unmuteParticipantOperation.
      * @param UnmutePostRequestBody $body 
      * @param UnmuteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

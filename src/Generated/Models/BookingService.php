@@ -218,7 +218,6 @@ class BookingService extends Entity implements Parsable
             'schedulingPolicy' => function (ParseNode $n) use ($o) { $o->setSchedulingPolicy($n->getObjectValue(array(BookingSchedulingPolicy::class, 'createFromDiscriminatorValue'))); },
             'smsNotificationsEnabled' => function (ParseNode $n) use ($o) { $o->setSmsNotificationsEnabled($n->getBooleanValue()); },
             'staffMemberIds' => function (ParseNode $n) use ($o) { $o->setStaffMemberIds($n->getCollectionOfPrimitiveValues()); },
-            'webUrl' => function (ParseNode $n) use ($o) { $o->setWebUrl($n->getStringValue()); },
         ]);
     }
 
@@ -326,7 +325,6 @@ class BookingService extends Entity implements Parsable
         $writer->writeObjectValue('schedulingPolicy', $this->schedulingPolicy);
         $writer->writeBooleanValue('smsNotificationsEnabled', $this->smsNotificationsEnabled);
         $writer->writeCollectionOfPrimitiveValues('staffMemberIds', $this->staffMemberIds);
-        $writer->writeStringValue('webUrl', $this->webUrl);
     }
 
     /**
@@ -471,14 +469,6 @@ class BookingService extends Entity implements Parsable
     */
     public function setStaffMemberIds(?array $value ): void {
         $this->staffMemberIds = $value;
-    }
-
-    /**
-     * Sets the webUrl property value. The URL a customer uses to access the service.
-     *  @param string|null $value Value to set for the webUrl property.
-    */
-    public function setWebUrl(?string $value ): void {
-        $this->webUrl = $value;
     }
 
 }
