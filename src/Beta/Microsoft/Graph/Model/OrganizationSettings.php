@@ -56,6 +56,37 @@ class OrganizationSettings extends Entity
     }
 
     /**
+    * Gets the contactInsights
+    *
+    * @return InsightsSettings|null The contactInsights
+    */
+    public function getContactInsights()
+    {
+        if (array_key_exists("contactInsights", $this->_propDict)) {
+            if (is_a($this->_propDict["contactInsights"], "\Beta\Microsoft\Graph\Model\InsightsSettings") || is_null($this->_propDict["contactInsights"])) {
+                return $this->_propDict["contactInsights"];
+            } else {
+                $this->_propDict["contactInsights"] = new InsightsSettings($this->_propDict["contactInsights"]);
+                return $this->_propDict["contactInsights"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the contactInsights
+    *
+    * @param InsightsSettings $val The contactInsights
+    *
+    * @return OrganizationSettings
+    */
+    public function setContactInsights($val)
+    {
+        $this->_propDict["contactInsights"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the itemInsights
     * Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. List itemInsights returns the settings to display or return item insights in an organization.
     *

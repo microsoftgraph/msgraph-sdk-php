@@ -87,6 +87,37 @@ class PlannerTaskDetails extends PlannerDelta
     }
 
     /**
+    * Gets the notes
+    *
+    * @return ItemBody|null The notes
+    */
+    public function getNotes()
+    {
+        if (array_key_exists("notes", $this->_propDict)) {
+            if (is_a($this->_propDict["notes"], "\Beta\Microsoft\Graph\Model\ItemBody") || is_null($this->_propDict["notes"])) {
+                return $this->_propDict["notes"];
+            } else {
+                $this->_propDict["notes"] = new ItemBody($this->_propDict["notes"]);
+                return $this->_propDict["notes"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the notes
+    *
+    * @param ItemBody $val The notes
+    *
+    * @return PlannerTaskDetails
+    */
+    public function setNotes($val)
+    {
+        $this->_propDict["notes"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the previewType
     * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
     *
