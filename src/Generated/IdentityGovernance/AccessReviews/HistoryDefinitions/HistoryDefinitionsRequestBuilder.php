@@ -47,13 +47,13 @@ class HistoryDefinitionsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/identityGovernance/accessReviews/historyDefinitions{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/identityGovernance/accessReviews/historyDefinitions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * Represents a collection of access review history data and the scopes used to collect that data.
+     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
      * @param HistoryDefinitionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class HistoryDefinitionsRequestBuilder
     }
 
     /**
-     * Create new navigation property to historyDefinitions for identityGovernance
+     * Create a new accessReviewHistoryDefinition object.
      * @param AccessReviewHistoryDefinition $body 
      * @param HistoryDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class HistoryDefinitionsRequestBuilder
     }
 
     /**
-     * Represents a collection of access review history data and the scopes used to collect that data.
+     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
      * @param HistoryDefinitionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class HistoryDefinitionsRequestBuilder
     }
 
     /**
-     * Create new navigation property to historyDefinitions for identityGovernance
+     * Create a new accessReviewHistoryDefinition object.
      * @param AccessReviewHistoryDefinition $body 
      * @param HistoryDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

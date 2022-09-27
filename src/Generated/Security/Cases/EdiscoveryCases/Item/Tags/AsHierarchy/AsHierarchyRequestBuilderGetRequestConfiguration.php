@@ -16,4 +16,9 @@ class AsHierarchyRequestBuilderGetRequestConfiguration
     */
     public ?array $options = null;
     
+    /**
+     * @var AsHierarchyRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?AsHierarchyRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

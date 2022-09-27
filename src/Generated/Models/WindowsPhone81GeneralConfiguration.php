@@ -447,7 +447,6 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('applyOnlyToWindowsPhone81', $this->applyOnlyToWindowsPhone81);
         $writer->writeBooleanValue('appsBlockCopyPaste', $this->appsBlockCopyPaste);
         $writer->writeBooleanValue('bluetoothBlocked', $this->bluetoothBlocked);
         $writer->writeBooleanValue('cameraBlocked', $this->cameraBlocked);

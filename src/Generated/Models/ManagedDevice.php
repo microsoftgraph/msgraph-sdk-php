@@ -280,7 +280,7 @@ class ManagedDevice extends Entity implements Parsable
     private ?string $wiFiMacAddress = null;
     
     /**
-     * Instantiates a new managedDevice and sets the default values.
+     * Instantiates a new ManagedDevice and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -798,60 +798,19 @@ class ManagedDevice extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('activationLockBypassCode', $this->activationLockBypassCode);
-        $writer->writeStringValue('androidSecurityPatchLevel', $this->androidSecurityPatchLevel);
-        $writer->writeStringValue('azureADDeviceId', $this->azureADDeviceId);
-        $writer->writeBooleanValue('azureADRegistered', $this->azureADRegistered);
-        $writer->writeDateTimeValue('complianceGracePeriodExpirationDateTime', $this->complianceGracePeriodExpirationDateTime);
         $writer->writeEnumValue('complianceState', $this->complianceState);
-        $writer->writeObjectValue('configurationManagerClientEnabledFeatures', $this->configurationManagerClientEnabledFeatures);
-        $writer->writeCollectionOfObjectValues('deviceActionResults', $this->deviceActionResults);
         $writer->writeObjectValue('deviceCategory', $this->deviceCategory);
-        $writer->writeStringValue('deviceCategoryDisplayName', $this->deviceCategoryDisplayName);
         $writer->writeCollectionOfObjectValues('deviceCompliancePolicyStates', $this->deviceCompliancePolicyStates);
         $writer->writeCollectionOfObjectValues('deviceConfigurationStates', $this->deviceConfigurationStates);
         $writer->writeEnumValue('deviceEnrollmentType', $this->deviceEnrollmentType);
-        $writer->writeObjectValue('deviceHealthAttestationState', $this->deviceHealthAttestationState);
-        $writer->writeStringValue('deviceName', $this->deviceName);
         $writer->writeEnumValue('deviceRegistrationState', $this->deviceRegistrationState);
-        $writer->writeBooleanValue('easActivated', $this->easActivated);
-        $writer->writeDateTimeValue('easActivationDateTime', $this->easActivationDateTime);
-        $writer->writeStringValue('easDeviceId', $this->easDeviceId);
-        $writer->writeStringValue('emailAddress', $this->emailAddress);
-        $writer->writeDateTimeValue('enrolledDateTime', $this->enrolledDateTime);
-        $writer->writeStringValue('ethernetMacAddress', $this->ethernetMacAddress);
         $writer->writeEnumValue('exchangeAccessState', $this->exchangeAccessState);
         $writer->writeEnumValue('exchangeAccessStateReason', $this->exchangeAccessStateReason);
-        $writer->writeDateTimeValue('exchangeLastSuccessfulSyncDateTime', $this->exchangeLastSuccessfulSyncDateTime);
-        $writer->writeIntegerValue('freeStorageSpaceInBytes', $this->freeStorageSpaceInBytes);
-        $writer->writeStringValue('iccid', $this->iccid);
-        $writer->writeStringValue('imei', $this->imei);
-        $writer->writeBooleanValue('isEncrypted', $this->isEncrypted);
-        $writer->writeBooleanValue('isSupervised', $this->isSupervised);
-        $writer->writeStringValue('jailBroken', $this->jailBroken);
-        $writer->writeDateTimeValue('lastSyncDateTime', $this->lastSyncDateTime);
         $writer->writeStringValue('managedDeviceName', $this->managedDeviceName);
         $writer->writeEnumValue('managedDeviceOwnerType', $this->managedDeviceOwnerType);
         $writer->writeEnumValue('managementAgent', $this->managementAgent);
-        $writer->writeStringValue('manufacturer', $this->manufacturer);
-        $writer->writeStringValue('meid', $this->meid);
-        $writer->writeStringValue('model', $this->model);
         $writer->writeStringValue('notes', $this->notes);
-        $writer->writeStringValue('operatingSystem', $this->operatingSystem);
-        $writer->writeStringValue('osVersion', $this->osVersion);
         $writer->writeEnumValue('partnerReportedThreatState', $this->partnerReportedThreatState);
-        $writer->writeStringValue('phoneNumber', $this->phoneNumber);
-        $writer->writeIntegerValue('physicalMemoryInBytes', $this->physicalMemoryInBytes);
-        $writer->writeStringValue('remoteAssistanceSessionErrorDetails', $this->remoteAssistanceSessionErrorDetails);
-        $writer->writeStringValue('remoteAssistanceSessionUrl', $this->remoteAssistanceSessionUrl);
-        $writer->writeStringValue('serialNumber', $this->serialNumber);
-        $writer->writeStringValue('subscriberCarrier', $this->subscriberCarrier);
-        $writer->writeIntegerValue('totalStorageSpaceInBytes', $this->totalStorageSpaceInBytes);
-        $writer->writeStringValue('udid', $this->udid);
-        $writer->writeStringValue('userDisplayName', $this->userDisplayName);
-        $writer->writeStringValue('userId', $this->userId);
-        $writer->writeStringValue('userPrincipalName', $this->userPrincipalName);
-        $writer->writeStringValue('wiFiMacAddress', $this->wiFiMacAddress);
     }
 
     /**

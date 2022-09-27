@@ -239,19 +239,9 @@ class EducationSubmission extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('outcomes', $this->outcomes);
-        $writer->writeObjectValue('reassignedBy', $this->reassignedBy);
-        $writer->writeDateTimeValue('reassignedDateTime', $this->reassignedDateTime);
         $writer->writeObjectValue('recipient', $this->recipient);
         $writer->writeCollectionOfObjectValues('resources', $this->resources);
-        $writer->writeStringValue('resourcesFolderUrl', $this->resourcesFolderUrl);
-        $writer->writeObjectValue('returnedBy', $this->returnedBy);
-        $writer->writeDateTimeValue('returnedDateTime', $this->returnedDateTime);
-        $writer->writeEnumValue('status', $this->status);
-        $writer->writeObjectValue('submittedBy', $this->submittedBy);
-        $writer->writeDateTimeValue('submittedDateTime', $this->submittedDateTime);
         $writer->writeCollectionOfObjectValues('submittedResources', $this->submittedResources);
-        $writer->writeObjectValue('unsubmittedBy', $this->unsubmittedBy);
-        $writer->writeDateTimeValue('unsubmittedDateTime', $this->unsubmittedDateTime);
     }
 
     /**

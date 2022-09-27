@@ -504,7 +504,6 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeBooleanValue('accountsBlockAddingNonMicrosoftAccountEmail', $this->accountsBlockAddingNonMicrosoftAccountEmail);
-        $writer->writeBooleanValue('applyOnlyToWindows81', $this->applyOnlyToWindows81);
         $writer->writeBooleanValue('browserBlockAutofill', $this->browserBlockAutofill);
         $writer->writeBooleanValue('browserBlockAutomaticDetectionOfIntranetSites', $this->browserBlockAutomaticDetectionOfIntranetSites);
         $writer->writeBooleanValue('browserBlockEnterpriseModeAccess', $this->browserBlockEnterpriseModeAccess);

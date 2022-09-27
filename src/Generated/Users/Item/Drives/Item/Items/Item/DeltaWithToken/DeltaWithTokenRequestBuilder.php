@@ -38,7 +38,7 @@ class DeltaWithTokenRequestBuilder
      * @param string|null $token Usage: token='{token}'
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $token = null) {
-        $this->urlTemplate = '{+baseurl}/users/{user%2Did}/drives/{drive%2Did}/items/{driveItem%2Did}/microsoft.graph.delta(token=\'{token}\')';
+        $this->urlTemplate = '{+baseurl}/users/{user%2Did}/drives/{drive%2Did}/items/{driveItem%2Did}/microsoft.graph.delta(token=\'{token}\'){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
         $urlTplParams = $pathParameters;
@@ -60,6 +60,9 @@ class DeltaWithTokenRequestBuilder
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->queryParameters !== null) {
+                $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
             if ($requestConfiguration->options !== null) {
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);

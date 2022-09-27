@@ -14,7 +14,7 @@ class Todo extends Entity implements Parsable
     private ?array $lists = null;
     
     /**
-     * Instantiates a new todo and sets the default values.
+     * Instantiates a new Todo and sets the default values.
     */
     public function __construct() {
         parent::__construct();

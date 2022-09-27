@@ -73,7 +73,7 @@ class DefaultRequestBuilder
     }
 
     /**
-     * Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
+     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (**isServiceDefault** is `true`) or may be customized in your tenant (**isServiceDefault** is `false`).
      * @param DefaultRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -98,7 +98,7 @@ class DefaultRequestBuilder
     }
 
     /**
-     * Update the navigation property default in policies
+     * Update the default configuration of a cross-tenant access policy.
      * @param CrossTenantAccessPolicyConfigurationDefault $body 
      * @param DefaultRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -108,6 +108,7 @@ class DefaultRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
+        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
@@ -140,7 +141,7 @@ class DefaultRequestBuilder
     }
 
     /**
-     * Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
+     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (**isServiceDefault** is `true`) or may be customized in your tenant (**isServiceDefault** is `false`).
      * @param DefaultRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -159,7 +160,7 @@ class DefaultRequestBuilder
     }
 
     /**
-     * Update the navigation property default in policies
+     * Update the default configuration of a cross-tenant access policy.
      * @param CrossTenantAccessPolicyConfigurationDefault $body 
      * @param DefaultRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -172,7 +173,7 @@ class DefaultRequestBuilder
                     '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
                     '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
             ];
-            return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, array(CrossTenantAccessPolicyConfigurationDefault::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

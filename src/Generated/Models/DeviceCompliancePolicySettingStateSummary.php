@@ -64,7 +64,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
     private ?int $unknownDeviceCount = null;
     
     /**
-     * Instantiates a new deviceCompliancePolicySettingStateSummary and sets the default values.
+     * Instantiates a new DeviceCompliancePolicySettingStateSummary and sets the default values.
     */
     public function __construct() {
         parent::__construct();

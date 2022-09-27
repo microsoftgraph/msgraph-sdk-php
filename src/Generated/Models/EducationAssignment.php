@@ -396,27 +396,18 @@ class EducationAssignment extends Entity implements Parsable
         $writer->writeEnumValue('addToCalendarAction', $this->addToCalendarAction);
         $writer->writeBooleanValue('allowLateSubmissions', $this->allowLateSubmissions);
         $writer->writeBooleanValue('allowStudentsToAddResourcesToSubmission', $this->allowStudentsToAddResourcesToSubmission);
-        $writer->writeDateTimeValue('assignDateTime', $this->assignDateTime);
-        $writer->writeDateTimeValue('assignedDateTime', $this->assignedDateTime);
         $writer->writeObjectValue('assignTo', $this->assignTo);
         $writer->writeCollectionOfObjectValues('categories', $this->categories);
         $writer->writeStringValue('classId', $this->classId);
         $writer->writeDateTimeValue('closeDateTime', $this->closeDateTime);
-        $writer->writeObjectValue('createdBy', $this->createdBy);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeDateTimeValue('dueDateTime', $this->dueDateTime);
         $writer->writeObjectValue('grading', $this->grading);
         $writer->writeObjectValue('instructions', $this->instructions);
-        $writer->writeObjectValue('lastModifiedBy', $this->lastModifiedBy);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
         $writer->writeStringValue('notificationChannelUrl', $this->notificationChannelUrl);
         $writer->writeCollectionOfObjectValues('resources', $this->resources);
-        $writer->writeStringValue('resourcesFolderUrl', $this->resourcesFolderUrl);
         $writer->writeObjectValue('rubric', $this->rubric);
-        $writer->writeEnumValue('status', $this->status);
         $writer->writeCollectionOfObjectValues('submissions', $this->submissions);
-        $writer->writeStringValue('webUrl', $this->webUrl);
     }
 
     /**

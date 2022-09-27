@@ -45,7 +45,7 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
     private ?AccessReviewHistoryStatus $status = null;
     
     /**
-     * Instantiates a new accessReviewHistoryInstance and sets the default values.
+     * Instantiates a new AccessReviewHistoryInstance and sets the default values.
     */
     public function __construct() {
         parent::__construct();

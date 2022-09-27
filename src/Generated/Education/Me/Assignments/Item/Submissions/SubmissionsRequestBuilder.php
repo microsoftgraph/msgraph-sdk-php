@@ -47,13 +47,13 @@ class SubmissionsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/education/me/assignments/{educationAssignment%2Did}/submissions{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/education/me/assignments/{educationAssignment%2Did}/submissions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
+     * List all the submissions associated with an assignment.  A teacher or an application with application permissions can get all the submissions while a student can only get submissions that they are associated with.
      * @param SubmissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +102,7 @@ class SubmissionsRequestBuilder
     }
 
     /**
-     * Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
+     * List all the submissions associated with an assignment.  A teacher or an application with application permissions can get all the submissions while a student can only get submissions that they are associated with.
      * @param SubmissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

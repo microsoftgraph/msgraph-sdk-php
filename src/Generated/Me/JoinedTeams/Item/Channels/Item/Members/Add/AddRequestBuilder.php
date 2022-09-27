@@ -43,7 +43,7 @@ class AddRequestBuilder
     }
 
     /**
-     * Invoke action add
+     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created.
      * @param AddPostRequestBody $body 
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -67,7 +67,7 @@ class AddRequestBuilder
     }
 
     /**
-     * Invoke action add
+     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created.
      * @param AddPostRequestBody $body 
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

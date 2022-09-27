@@ -142,7 +142,6 @@ class SharingDetail implements AdditionalDataHolder, Parsable
         $writer->writeStringValue('@odata.type', $this->odataType);
         $writer->writeObjectValue('sharedBy', $this->sharedBy);
         $writer->writeDateTimeValue('sharedDateTime', $this->sharedDateTime);
-        $writer->writeObjectValue('sharingReference', $this->sharingReference);
         $writer->writeStringValue('sharingSubject', $this->sharingSubject);
         $writer->writeStringValue('sharingType', $this->sharingType);
         $writer->writeAdditionalData($this->additionalData);

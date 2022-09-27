@@ -43,7 +43,7 @@ class UnpublishRequestBuilder
     }
 
     /**
-     * Prevents the general public from seeing the scheduling page of this business.
+     * Make the scheduling page of this business not available to external customers. Set the **isPublished** property to `false`, and the **publicUrl** property to `null`.
      * @param UnpublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -64,7 +64,7 @@ class UnpublishRequestBuilder
     }
 
     /**
-     * Prevents the general public from seeing the scheduling page of this business.
+     * Make the scheduling page of this business not available to external customers. Set the **isPublished** property to `false`, and the **publicUrl** property to `null`.
      * @param UnpublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

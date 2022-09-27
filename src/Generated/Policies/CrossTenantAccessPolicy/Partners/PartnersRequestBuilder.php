@@ -47,13 +47,13 @@ class PartnersRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/policies/crossTenantAccessPolicy/partners{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/policies/crossTenantAccessPolicy/partners{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * Defines partner-specific configurations for external Azure Active Directory organizations.
+     * Get a list of all partner configurations within a cross-tenant access policy.
      * @param PartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class PartnersRequestBuilder
     }
 
     /**
-     * Create new navigation property to partners for policies
+     * Create a new partner configuration in a cross-tenant access policy.
      * @param CrossTenantAccessPolicyConfigurationPartner $body 
      * @param PartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class PartnersRequestBuilder
     }
 
     /**
-     * Defines partner-specific configurations for external Azure Active Directory organizations.
+     * Get a list of all partner configurations within a cross-tenant access policy.
      * @param PartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class PartnersRequestBuilder
     }
 
     /**
-     * Create new navigation property to partners for policies
+     * Create a new partner configuration in a cross-tenant access policy.
      * @param CrossTenantAccessPolicyConfigurationPartner $body 
      * @param PartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

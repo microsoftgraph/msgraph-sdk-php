@@ -44,7 +44,7 @@ class LastEstimateStatisticsOperationRequestBuilder
     }
 
     /**
-     * The last estimate operation associated with the eDiscovery search.
+     * Get the last  ediscoveryEstimateOperation objects and their properties.
      * @param LastEstimateStatisticsOperationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -69,7 +69,7 @@ class LastEstimateStatisticsOperationRequestBuilder
     }
 
     /**
-     * The last estimate operation associated with the eDiscovery search.
+     * Get the last  ediscoveryEstimateOperation objects and their properties.
      * @param LastEstimateStatisticsOperationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

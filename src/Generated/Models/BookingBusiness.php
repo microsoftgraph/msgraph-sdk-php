@@ -289,9 +289,7 @@ class BookingBusiness extends Entity implements Parsable
         $writer->writeStringValue('defaultCurrencyIso', $this->defaultCurrencyIso);
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeStringValue('email', $this->email);
-        $writer->writeBooleanValue('isPublished', $this->isPublished);
         $writer->writeStringValue('phone', $this->phone);
-        $writer->writeStringValue('publicUrl', $this->publicUrl);
         $writer->writeObjectValue('schedulingPolicy', $this->schedulingPolicy);
         $writer->writeCollectionOfObjectValues('services', $this->services);
         $writer->writeCollectionOfObjectValues('staffMembers', $this->staffMembers);

@@ -47,13 +47,13 @@ class UnifiedGroupSourcesRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/unifiedGroupSources{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/unifiedGroupSources{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * Data source entity for groups associated with the custodian.
+     * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian.
      * @param UnifiedGroupSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class UnifiedGroupSourcesRequestBuilder
     }
 
     /**
-     * Create new navigation property to unifiedGroupSources for security
+     * Create a new unifiedGroupSource object associated with an eDiscovery custodian.
      * @param UnifiedGroupSource $body 
      * @param UnifiedGroupSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class UnifiedGroupSourcesRequestBuilder
     }
 
     /**
-     * Data source entity for groups associated with the custodian.
+     * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian.
      * @param UnifiedGroupSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class UnifiedGroupSourcesRequestBuilder
     }
 
     /**
-     * Create new navigation property to unifiedGroupSources for security
+     * Create a new unifiedGroupSource object associated with an eDiscovery custodian.
      * @param UnifiedGroupSource $body 
      * @param UnifiedGroupSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

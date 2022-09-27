@@ -48,13 +48,13 @@ class AccessPackagesRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/identityGovernance/entitlementManagement/accessPackages{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/identityGovernance/entitlementManagement/accessPackages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+     * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
      * @param AccessPackagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -79,7 +79,7 @@ class AccessPackagesRequestBuilder
     }
 
     /**
-     * Create new navigation property to accessPackages for identityGovernance
+     * Create a new accessPackage object. The access package will be added to an existing accessPackageCatalog.
      * @param AccessPackage $body 
      * @param AccessPackagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -112,7 +112,7 @@ class AccessPackagesRequestBuilder
     }
 
     /**
-     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+     * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
      * @param AccessPackagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -131,7 +131,7 @@ class AccessPackagesRequestBuilder
     }
 
     /**
-     * Create new navigation property to accessPackages for identityGovernance
+     * Create a new accessPackage object. The access package will be added to an existing accessPackageCatalog.
      * @param AccessPackage $body 
      * @param AccessPackagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

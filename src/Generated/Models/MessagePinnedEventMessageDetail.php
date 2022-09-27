@@ -10,12 +10,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MessagePinnedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var DateTime|null $eventDateTime The eventDateTime property
+     * @var DateTime|null $eventDateTime Date and time when the event occurred.
     */
     private ?DateTime $eventDateTime = null;
     
     /**
-     * @var IdentitySet|null $initiator The initiator property
+     * @var IdentitySet|null $initiator Initiator of the event.
     */
     private ?IdentitySet $initiator = null;
     
@@ -37,7 +37,7 @@ class MessagePinnedEventMessageDetail extends EventMessageDetail implements Pars
     }
 
     /**
-     * Gets the eventDateTime property value. The eventDateTime property
+     * Gets the eventDateTime property value. Date and time when the event occurred.
      * @return DateTime|null
     */
     public function getEventDateTime(): ?DateTime {
@@ -57,7 +57,7 @@ class MessagePinnedEventMessageDetail extends EventMessageDetail implements Pars
     }
 
     /**
-     * Gets the initiator property value. The initiator property
+     * Gets the initiator property value. Initiator of the event.
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
@@ -75,7 +75,7 @@ class MessagePinnedEventMessageDetail extends EventMessageDetail implements Pars
     }
 
     /**
-     * Sets the eventDateTime property value. The eventDateTime property
+     * Sets the eventDateTime property value. Date and time when the event occurred.
      *  @param DateTime|null $value Value to set for the eventDateTime property.
     */
     public function setEventDateTime(?DateTime $value ): void {
@@ -83,7 +83,7 @@ class MessagePinnedEventMessageDetail extends EventMessageDetail implements Pars
     }
 
     /**
-     * Sets the initiator property value. The initiator property
+     * Sets the initiator property value. Initiator of the event.
      *  @param IdentitySet|null $value Value to set for the initiator property.
     */
     public function setInitiator(?IdentitySet $value ): void {

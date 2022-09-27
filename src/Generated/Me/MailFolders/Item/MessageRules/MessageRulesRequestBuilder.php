@@ -47,13 +47,13 @@ class MessageRulesRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/me/mailFolders/{mailFolder%2Did}/messageRules{?%24top*,%24skip*,%24filter*,%24count*,%24orderby,%24select}';
+        $this->urlTemplate = '{+baseurl}/me/mailFolders/{mailFolder%2Did}/messageRules{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * The collection of rules that apply to the user's Inbox folder.
+     * Get all the messageRule objects defined for the user's inbox.
      * @param MessageRulesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class MessageRulesRequestBuilder
     }
 
     /**
-     * Create new navigation property to messageRules for me
+     * Create a messageRule object by specifying a set of conditions and actions.  Outlook carries out those actions if an incoming message in the user's Inbox meets the specified conditions.
      * @param MessageRule $body 
      * @param MessageRulesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class MessageRulesRequestBuilder
     }
 
     /**
-     * The collection of rules that apply to the user's Inbox folder.
+     * Get all the messageRule objects defined for the user's inbox.
      * @param MessageRulesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class MessageRulesRequestBuilder
     }
 
     /**
-     * Create new navigation property to messageRules for me
+     * Create a messageRule object by specifying a set of conditions and actions.  Outlook carries out those actions if an incoming message in the user's Inbox meets the specified conditions.
      * @param MessageRule $body 
      * @param MessageRulesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

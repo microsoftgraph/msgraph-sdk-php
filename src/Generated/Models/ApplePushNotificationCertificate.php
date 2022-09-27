@@ -128,7 +128,6 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('appleIdentifier', $this->appleIdentifier);
         $writer->writeStringValue('certificate', $this->certificate);
-        $writer->writeStringValue('certificateSerialNumber', $this->certificateSerialNumber);
         $writer->writeDateTimeValue('expirationDateTime', $this->expirationDateTime);
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
         $writer->writeStringValue('topicIdentifier', $this->topicIdentifier);

@@ -16,4 +16,9 @@ class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestB
     */
     public ?array $options = null;
     
+    /**
+     * @var GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

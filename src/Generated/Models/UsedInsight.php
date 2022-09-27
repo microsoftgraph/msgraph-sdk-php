@@ -99,8 +99,6 @@ class UsedInsight extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('lastUsed', $this->lastUsed);
         $writer->writeObjectValue('resource', $this->resource);
-        $writer->writeObjectValue('resourceReference', $this->resourceReference);
-        $writer->writeObjectValue('resourceVisualization', $this->resourceVisualization);
     }
 
     /**

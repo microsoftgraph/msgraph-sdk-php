@@ -45,7 +45,7 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
     private ?string $resourceId = null;
     
     /**
-     * Instantiates a new appRoleAssignment and sets the default values.
+     * Instantiates a new AppRoleAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

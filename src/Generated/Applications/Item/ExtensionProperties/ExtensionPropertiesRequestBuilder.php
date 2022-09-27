@@ -47,13 +47,13 @@ class ExtensionPropertiesRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/applications/{application%2Did}/extensionProperties{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/applications/{application%2Did}/extensionProperties{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
+     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
      * @param ExtensionPropertiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class ExtensionPropertiesRequestBuilder
     }
 
     /**
-     * Create new navigation property to extensionProperties for applications
+     * Create a new directory extension definition, represented by an extensionProperty object.
      * @param ExtensionProperty $body 
      * @param ExtensionPropertiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class ExtensionPropertiesRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
+     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
      * @param ExtensionPropertiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class ExtensionPropertiesRequestBuilder
     }
 
     /**
-     * Create new navigation property to extensionProperties for applications
+     * Create a new directory extension definition, represented by an extensionProperty object.
      * @param ExtensionProperty $body 
      * @param ExtensionPropertiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

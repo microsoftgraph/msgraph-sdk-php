@@ -41,7 +41,7 @@ class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestB
      * @param string|null $userId Usage: userId='{userId}'
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?DateTime $endDateTime = null, ?DateTime $startDateTime = null, ?string $userId = null) {
-        $this->urlTemplate = '{+baseurl}/reports/microsoft.graph.getUserArchivedPrintJobs(userId=\'{userId}\',startDateTime=\'{startDateTime}\',endDateTime=\'{endDateTime}\')';
+        $this->urlTemplate = '{+baseurl}/reports/microsoft.graph.getUserArchivedPrintJobs(userId=\'{userId}\',startDateTime=\'{startDateTime}\',endDateTime=\'{endDateTime}\'){?%24top,%24skip,%24search,%24filter,%24count}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
         $urlTplParams = $pathParameters;
@@ -65,6 +65,9 @@ class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestB
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->queryParameters !== null) {
+                $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
             if ($requestConfiguration->options !== null) {
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);

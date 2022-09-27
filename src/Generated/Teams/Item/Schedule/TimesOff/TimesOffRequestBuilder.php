@@ -47,13 +47,13 @@ class TimesOffRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/teams/{team%2Did}/schedule/timesOff{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select}';
+        $this->urlTemplate = '{+baseurl}/teams/{team%2Did}/schedule/timesOff{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * The instances of times off in the schedule.
+     * Get the list of timeOff instances in a schedule.
      * @param TimesOffRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class TimesOffRequestBuilder
     }
 
     /**
-     * Create new navigation property to timesOff for teams
+     * Create a new timeOff instance in a schedule.
      * @param TimeOff $body 
      * @param TimesOffRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class TimesOffRequestBuilder
     }
 
     /**
-     * The instances of times off in the schedule.
+     * Get the list of timeOff instances in a schedule.
      * @param TimesOffRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class TimesOffRequestBuilder
     }
 
     /**
-     * Create new navigation property to timesOff for teams
+     * Create a new timeOff instance in a schedule.
      * @param TimeOff $body 
      * @param TimesOffRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

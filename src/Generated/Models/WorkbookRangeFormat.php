@@ -54,7 +54,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     private ?bool $wrapText = null;
     
     /**
-     * Instantiates a new workbookRangeFormat and sets the default values.
+     * Instantiates a new WorkbookRangeFormat and sets the default values.
     */
     public function __construct() {
         parent::__construct();

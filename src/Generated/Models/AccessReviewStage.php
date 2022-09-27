@@ -40,7 +40,7 @@ class AccessReviewStage extends Entity implements Parsable
     private ?string $status = null;
     
     /**
-     * Instantiates a new accessReviewStage and sets the default values.
+     * Instantiates a new AccessReviewStage and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -75,7 +75,7 @@ class Post extends OutlookItem implements Parsable
     private ?array $singleValueExtendedProperties = null;
     
     /**
-     * Instantiates a new Post and sets the default values.
+     * Instantiates a new post and sets the default values.
     */
     public function __construct() {
         parent::__construct();

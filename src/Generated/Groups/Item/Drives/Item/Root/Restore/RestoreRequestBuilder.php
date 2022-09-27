@@ -44,7 +44,7 @@ class RestoreRequestBuilder
     }
 
     /**
-     * Invoke action restore
+     * Restore a driveItem that has been deleted and is currently in the recycle bin. **NOTE**: This functionality is currently only available for OneDrive Personal.
      * @param RestorePostRequestBody $body 
      * @param RestoreRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -68,7 +68,7 @@ class RestoreRequestBuilder
     }
 
     /**
-     * Invoke action restore
+     * Restore a driveItem that has been deleted and is currently in the recycle bin. **NOTE**: This functionality is currently only available for OneDrive Personal.
      * @param RestorePostRequestBody $body 
      * @param RestoreRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

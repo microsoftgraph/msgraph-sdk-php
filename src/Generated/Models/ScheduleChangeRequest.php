@@ -165,12 +165,8 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeEnumValue('assignedTo', $this->assignedTo);
-        $writer->writeDateTimeValue('managerActionDateTime', $this->managerActionDateTime);
         $writer->writeStringValue('managerActionMessage', $this->managerActionMessage);
-        $writer->writeStringValue('managerUserId', $this->managerUserId);
-        $writer->writeDateTimeValue('senderDateTime', $this->senderDateTime);
         $writer->writeStringValue('senderMessage', $this->senderMessage);
-        $writer->writeStringValue('senderUserId', $this->senderUserId);
         $writer->writeEnumValue('state', $this->state);
     }
 

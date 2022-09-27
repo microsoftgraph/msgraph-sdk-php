@@ -24,7 +24,7 @@ class BookingCustomQuestion extends Entity implements Parsable
     private ?string $displayName = null;
     
     /**
-     * Instantiates a new bookingCustomQuestion and sets the default values.
+     * Instantiates a new BookingCustomQuestion and sets the default values.
     */
     public function __construct() {
         parent::__construct();

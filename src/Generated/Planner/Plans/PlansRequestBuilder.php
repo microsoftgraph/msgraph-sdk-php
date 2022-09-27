@@ -47,13 +47,13 @@ class PlansRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/planner/plans{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/planner/plans{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified plans
+     * Retrieve a list of **plannerplan** objects.
      * @param PlansRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class PlansRequestBuilder
     }
 
     /**
-     * Create new navigation property to plans for planner
+     * Use this API to create a new **plannerPlan**.
      * @param PlannerPlan $body 
      * @param PlansRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class PlansRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified plans
+     * Retrieve a list of **plannerplan** objects.
      * @param PlansRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class PlansRequestBuilder
     }
 
     /**
-     * Create new navigation property to plans for planner
+     * Use this API to create a new **plannerPlan**.
      * @param PlannerPlan $body 
      * @param PlansRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

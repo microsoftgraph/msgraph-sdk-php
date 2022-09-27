@@ -48,13 +48,13 @@ class AssignmentsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/education/classes/{educationClass%2Did}/assignments{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/education/classes/{educationClass%2Did}/assignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * All assignments associated with this class. Nullable.
+     * Retrieve a list of assignment objects.  A teacher or an application executing with application permissions can see all assignment objects for the class. Students can only see assignments that are assigned to them.
      * @param AssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -79,7 +79,7 @@ class AssignmentsRequestBuilder
     }
 
     /**
-     * Create new navigation property to assignments for education
+     * Create a new assignment.  Only teachers in a class can create an assignment. Assignments start in the Draft state, which means that students will not see the assignment until publication.
      * @param EducationAssignment $body 
      * @param AssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -111,7 +111,7 @@ class AssignmentsRequestBuilder
     }
 
     /**
-     * All assignments associated with this class. Nullable.
+     * Retrieve a list of assignment objects.  A teacher or an application executing with application permissions can see all assignment objects for the class. Students can only see assignments that are assigned to them.
      * @param AssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -130,7 +130,7 @@ class AssignmentsRequestBuilder
     }
 
     /**
-     * Create new navigation property to assignments for education
+     * Create a new assignment.  Only teachers in a class can create an assignment. Assignments start in the Draft state, which means that students will not see the assignment until publication.
      * @param EducationAssignment $body 
      * @param AssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

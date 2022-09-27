@@ -44,7 +44,7 @@ class CopyToNotebookRequestBuilder
     }
 
     /**
-     * Invoke action copyToNotebook
+     * For Copy operations, you follow an asynchronous calling pattern:  First call the Copy action, and then poll the operation endpoint for the result.
      * @param CopyToNotebookPostRequestBody $body 
      * @param CopyToNotebookRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -68,7 +68,7 @@ class CopyToNotebookRequestBuilder
     }
 
     /**
-     * Invoke action copyToNotebook
+     * For Copy operations, you follow an asynchronous calling pattern:  First call the Copy action, and then poll the operation endpoint for the result.
      * @param CopyToNotebookPostRequestBody $body 
      * @param CopyToNotebookRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

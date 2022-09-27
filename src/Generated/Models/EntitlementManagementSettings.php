@@ -20,7 +20,7 @@ class EntitlementManagementSettings extends Entity implements Parsable
     private ?AccessPackageExternalUserLifecycleAction $externalUserLifecycleAction = null;
     
     /**
-     * Instantiates a new entitlementManagementSettings and sets the default values.
+     * Instantiates a new EntitlementManagementSettings and sets the default values.
     */
     public function __construct() {
         parent::__construct();

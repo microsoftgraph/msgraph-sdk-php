@@ -105,7 +105,7 @@ class BookingService extends Entity implements Parsable
     private ?string $webUrl = null;
     
     /**
-     * Instantiates a new bookingService and sets the default values.
+     * Instantiates a new BookingService and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -326,7 +326,6 @@ class BookingService extends Entity implements Parsable
         $writer->writeObjectValue('schedulingPolicy', $this->schedulingPolicy);
         $writer->writeBooleanValue('smsNotificationsEnabled', $this->smsNotificationsEnabled);
         $writer->writeCollectionOfPrimitiveValues('staffMemberIds', $this->staffMemberIds);
-        $writer->writeStringValue('webUrl', $this->webUrl);
     }
 
     /**

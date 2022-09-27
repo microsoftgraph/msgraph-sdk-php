@@ -29,7 +29,7 @@ class WorkbookRangeBorder extends Entity implements Parsable
     private ?string $weight = null;
     
     /**
-     * Instantiates a new workbookRangeBorder and sets the default values.
+     * Instantiates a new WorkbookRangeBorder and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -16,4 +16,9 @@ class GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetRequestConfiguration
     */
     public ?array $options = null;
     
+    /**
+     * @var GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

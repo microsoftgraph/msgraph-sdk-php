@@ -50,7 +50,7 @@ class ExternalConnection extends Entity implements Parsable
     private ?ConnectionState $state = null;
     
     /**
-     * Instantiates a new externalConnection and sets the default values.
+     * Instantiates a new ExternalConnection and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -161,7 +161,6 @@ class ExternalConnection extends Entity implements Parsable
         $writer->writeStringValue('name', $this->name);
         $writer->writeCollectionOfObjectValues('operations', $this->operations);
         $writer->writeObjectValue('schema', $this->schema);
-        $writer->writeEnumValue('state', $this->state);
     }
 
     /**

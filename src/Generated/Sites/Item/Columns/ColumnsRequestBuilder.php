@@ -47,13 +47,13 @@ class ColumnsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/sites/{site%2Did}/columns{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/sites/{site%2Did}/columns{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * The collection of column definitions reusable across lists under this site.
+     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [site][site].
      * @param ColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class ColumnsRequestBuilder
     }
 
     /**
-     * Create new navigation property to columns for sites
+     * Create a column for a [site][site] with a request that specifies a [columnDefinition][columnDefinition].
      * @param ColumnDefinition $body 
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class ColumnsRequestBuilder
     }
 
     /**
-     * The collection of column definitions reusable across lists under this site.
+     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [site][site].
      * @param ColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class ColumnsRequestBuilder
     }
 
     /**
-     * Create new navigation property to columns for sites
+     * Create a column for a [site][site] with a request that specifies a [columnDefinition][columnDefinition].
      * @param ColumnDefinition $body 
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

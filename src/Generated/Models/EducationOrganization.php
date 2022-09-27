@@ -29,7 +29,7 @@ class EducationOrganization extends Entity implements Parsable
     private ?string $externalSourceDetail = null;
     
     /**
-     * Instantiates a new educationOrganization and sets the default values.
+     * Instantiates a new EducationOrganization and sets the default values.
     */
     public function __construct() {
         parent::__construct();

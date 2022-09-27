@@ -44,7 +44,7 @@ class SetUpResourcesFolderRequestBuilder
     }
 
     /**
-     * Invoke action setUpResourcesFolder
+     * Create a SharePoint folder to upload files for a given educationAssignment.  The teacher determines the resources to upload in the assignment's folder. 
      * @param SetUpResourcesFolderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -66,7 +66,7 @@ class SetUpResourcesFolderRequestBuilder
     }
 
     /**
-     * Invoke action setUpResourcesFolder
+     * Create a SharePoint folder to upload files for a given educationAssignment.  The teacher determines the resources to upload in the assignment's folder. 
      * @param SetUpResourcesFolderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

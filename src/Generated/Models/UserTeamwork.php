@@ -19,7 +19,7 @@ class UserTeamwork extends Entity implements Parsable
     private ?array $installedApps = null;
     
     /**
-     * Instantiates a new userTeamwork and sets the default values.
+     * Instantiates a new UserTeamwork and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -43,7 +43,7 @@ class SendActivityNotificationRequestBuilder
     }
 
     /**
-     * Invoke action sendActivityNotification
+     * Send an activity feed notification in scope of a chat. For more details about sending notifications and the requirements for doing so, see sending Teams activity notifications.
      * @param SendActivityNotificationPostRequestBody $body 
      * @param SendActivityNotificationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -66,7 +66,7 @@ class SendActivityNotificationRequestBuilder
     }
 
     /**
-     * Invoke action sendActivityNotification
+     * Send an activity feed notification in scope of a chat. For more details about sending notifications and the requirements for doing so, see sending Teams activity notifications.
      * @param SendActivityNotificationPostRequestBody $body 
      * @param SendActivityNotificationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

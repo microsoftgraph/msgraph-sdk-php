@@ -40,7 +40,7 @@ class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequest
      * @param string|null $startDateTime Usage: startDateTime='{startDateTime}'
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $endDateTime = null, ?string $interval = null, ?string $startDateTime = null) {
-        $this->urlTemplate = '{+baseurl}/drive/list/items/{listItem%2Did}/microsoft.graph.getActivitiesByInterval(startDateTime=\'{startDateTime}\',endDateTime=\'{endDateTime}\',interval=\'{interval}\')';
+        $this->urlTemplate = '{+baseurl}/drive/list/items/{listItem%2Did}/microsoft.graph.getActivitiesByInterval(startDateTime=\'{startDateTime}\',endDateTime=\'{endDateTime}\',interval=\'{interval}\'){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
         $urlTplParams = $pathParameters;
@@ -64,6 +64,9 @@ class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequest
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->queryParameters !== null) {
+                $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
             if ($requestConfiguration->options !== null) {
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);

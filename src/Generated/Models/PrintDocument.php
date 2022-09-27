@@ -24,7 +24,7 @@ class PrintDocument extends Entity implements Parsable
     private ?int $size = null;
     
     /**
-     * Instantiates a new printDocument and sets the default values.
+     * Instantiates a new PrintDocument and sets the default values.
     */
     public function __construct() {
         parent::__construct();

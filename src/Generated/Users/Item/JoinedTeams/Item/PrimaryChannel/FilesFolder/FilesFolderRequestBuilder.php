@@ -52,7 +52,7 @@ class FilesFolderRequestBuilder
     }
 
     /**
-     * Metadata for the location where the channel's files are stored.
+     * Get the metadata for the location where the files of a channel are stored. 
      * @param FilesFolderRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -77,7 +77,7 @@ class FilesFolderRequestBuilder
     }
 
     /**
-     * Metadata for the location where the channel's files are stored.
+     * Get the metadata for the location where the files of a channel are stored. 
      * @param FilesFolderRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

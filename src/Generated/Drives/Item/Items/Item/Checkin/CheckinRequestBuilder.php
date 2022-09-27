@@ -43,7 +43,7 @@ class CheckinRequestBuilder
     }
 
     /**
-     * Invoke action checkin
+     * Check in a checked out **driveItem** resource, which makes the version of the document available to others.
      * @param CheckinPostRequestBody $body 
      * @param CheckinRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -66,7 +66,7 @@ class CheckinRequestBuilder
     }
 
     /**
-     * Invoke action checkin
+     * Check in a checked out **driveItem** resource, which makes the version of the document available to others.
      * @param CheckinPostRequestBody $body 
      * @param CheckinRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
