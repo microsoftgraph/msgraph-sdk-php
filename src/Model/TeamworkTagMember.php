@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Identity File
+* TeamworkTagMember File
 * PHP version 7
 *
 * @category  Library
@@ -11,9 +11,10 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Microsoft\Graph\Model;
+
 /**
-* Identity class
+* TeamworkTagMember class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,11 +22,10 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Identity extends Entity
+class TeamworkTagMember extends Entity
 {
     /**
     * Gets the displayName
-    * The display name of the identity. This property is read-only.
     *
     * @return string|null The displayName
     */
@@ -40,43 +40,69 @@ class Identity extends Entity
 
     /**
     * Sets the displayName
-    * The display name of the identity. This property is read-only.
     *
-    * @param string $val The value of the displayName
+    * @param string $val The displayName
     *
-    * @return Identity
+    * @return TeamworkTagMember
     */
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
         return $this;
     }
+
     /**
-    * Gets the id
-    * The identifier of the identity. This property is read-only.
+    * Gets the tenantId
     *
-    * @return string|null The id
+    * @return string|null The tenantId
     */
-    public function getId()
+    public function getTenantId()
     {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
+        if (array_key_exists("tenantId", $this->_propDict)) {
+            return $this->_propDict["tenantId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the id
-    * The identifier of the identity. This property is read-only.
+    * Sets the tenantId
     *
-    * @param string $val The value of the id
+    * @param string $val The tenantId
     *
-    * @return Identity
+    * @return TeamworkTagMember
     */
-    public function setId($val)
+    public function setTenantId($val)
     {
-        $this->_propDict["id"] = $val;
+        $this->_propDict["tenantId"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the userId
+    *
+    * @return string|null The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userId
+    *
+    * @param string $val The userId
+    *
+    * @return TeamworkTagMember
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
+        return $this;
+    }
+
 }
