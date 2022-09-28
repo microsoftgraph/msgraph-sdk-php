@@ -120,6 +120,11 @@ class Team extends Entity implements Parsable
     private ?TeamSummary $summary = null;
     
     /**
+     * @var array<TeamworkTag>|null $tags The tags property
+    */
+    private ?array $tags = null;
+    
+    /**
      * @var TeamsTemplate|null $template The template this team was created from. See available templates.
     */
     private ?TeamsTemplate $template = null;
@@ -233,6 +238,7 @@ class Team extends Entity implements Parsable
             'schedule' => function (ParseNode $n) use ($o) { $o->setSchedule($n->getObjectValue(array(Schedule::class, 'createFromDiscriminatorValue'))); },
             'specialization' => function (ParseNode $n) use ($o) { $o->setSpecialization($n->getEnumValue(TeamSpecialization::class)); },
             'summary' => function (ParseNode $n) use ($o) { $o->setSummary($n->getObjectValue(array(TeamSummary::class, 'createFromDiscriminatorValue'))); },
+            'tags' => function (ParseNode $n) use ($o) { $o->setTags($n->getCollectionOfObjectValues(array(TeamworkTag::class, 'createFromDiscriminatorValue'))); },
             'template' => function (ParseNode $n) use ($o) { $o->setTemplate($n->getObjectValue(array(TeamsTemplate::class, 'createFromDiscriminatorValue'))); },
             'tenantId' => function (ParseNode $n) use ($o) { $o->setTenantId($n->getStringValue()); },
             'visibility' => function (ParseNode $n) use ($o) { $o->setVisibility($n->getEnumValue(TeamVisibilityType::class)); },
@@ -369,6 +375,14 @@ class Team extends Entity implements Parsable
     }
 
     /**
+     * Gets the tags property value. The tags property
+     * @return array<TeamworkTag>|null
+    */
+    public function getTags(): ?array {
+        return $this->tags;
+    }
+
+    /**
      * Gets the template property value. The template this team was created from. See available templates.
      * @return TeamsTemplate|null
     */
@@ -428,6 +442,7 @@ class Team extends Entity implements Parsable
         $writer->writeObjectValue('schedule', $this->schedule);
         $writer->writeEnumValue('specialization', $this->specialization);
         $writer->writeObjectValue('summary', $this->summary);
+        $writer->writeCollectionOfObjectValues('tags', $this->tags);
         $writer->writeObjectValue('template', $this->template);
         $writer->writeStringValue('tenantId', $this->tenantId);
         $writer->writeEnumValue('visibility', $this->visibility);
@@ -608,6 +623,14 @@ class Team extends Entity implements Parsable
     */
     public function setSummary(?TeamSummary $value ): void {
         $this->summary = $value;
+    }
+
+    /**
+     * Sets the tags property value. The tags property
+     *  @param array<TeamworkTag>|null $value Value to set for the tags property.
+    */
+    public function setTags(?array $value ): void {
+        $this->tags = $value;
     }
 
     /**

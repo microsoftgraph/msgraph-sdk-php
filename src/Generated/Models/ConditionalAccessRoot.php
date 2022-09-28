@@ -9,6 +9,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConditionalAccessRoot extends Entity implements Parsable 
 {
     /**
+     * @var array<AuthenticationContextClassReference>|null $authenticationContextClassReferences The authenticationContextClassReferences property
+    */
+    private ?array $authenticationContextClassReferences = null;
+    
+    /**
      * @var array<NamedLocation>|null $namedLocations Read-only. Nullable. Returns a collection of the specified named locations.
     */
     private ?array $namedLocations = null;
@@ -36,12 +41,21 @@ class ConditionalAccessRoot extends Entity implements Parsable
     }
 
     /**
+     * Gets the authenticationContextClassReferences property value. The authenticationContextClassReferences property
+     * @return array<AuthenticationContextClassReference>|null
+    */
+    public function getAuthenticationContextClassReferences(): ?array {
+        return $this->authenticationContextClassReferences;
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'authenticationContextClassReferences' => function (ParseNode $n) use ($o) { $o->setAuthenticationContextClassReferences($n->getCollectionOfObjectValues(array(AuthenticationContextClassReference::class, 'createFromDiscriminatorValue'))); },
             'namedLocations' => function (ParseNode $n) use ($o) { $o->setNamedLocations($n->getCollectionOfObjectValues(array(NamedLocation::class, 'createFromDiscriminatorValue'))); },
             'policies' => function (ParseNode $n) use ($o) { $o->setPolicies($n->getCollectionOfObjectValues(array(ConditionalAccessPolicy::class, 'createFromDiscriminatorValue'))); },
         ]);
@@ -69,8 +83,17 @@ class ConditionalAccessRoot extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('authenticationContextClassReferences', $this->authenticationContextClassReferences);
         $writer->writeCollectionOfObjectValues('namedLocations', $this->namedLocations);
         $writer->writeCollectionOfObjectValues('policies', $this->policies);
+    }
+
+    /**
+     * Sets the authenticationContextClassReferences property value. The authenticationContextClassReferences property
+     *  @param array<AuthenticationContextClassReference>|null $value Value to set for the authenticationContextClassReferences property.
+    */
+    public function setAuthenticationContextClassReferences(?array $value ): void {
+        $this->authenticationContextClassReferences = $value;
     }
 
     /**

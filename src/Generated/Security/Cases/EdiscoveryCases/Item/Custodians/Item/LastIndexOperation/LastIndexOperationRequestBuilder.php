@@ -44,7 +44,7 @@ class LastIndexOperationRequestBuilder
     }
 
     /**
-     * Operation entity that represents the latest indexing for the custodian.
+     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
      * @param LastIndexOperationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -69,7 +69,7 @@ class LastIndexOperationRequestBuilder
     }
 
     /**
-     * Operation entity that represents the latest indexing for the custodian.
+     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
      * @param LastIndexOperationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

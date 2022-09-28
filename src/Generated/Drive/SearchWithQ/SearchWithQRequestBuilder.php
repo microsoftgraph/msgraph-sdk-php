@@ -38,7 +38,7 @@ class SearchWithQRequestBuilder
      * @param string|null $q Usage: q='{q}'
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $q = null) {
-        $this->urlTemplate = '{+baseurl}/drive/microsoft.graph.search(q=\'{q}\')';
+        $this->urlTemplate = '{+baseurl}/drive/microsoft.graph.search(q=\'{q}\'){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
         $urlTplParams = $pathParameters;
@@ -60,6 +60,9 @@ class SearchWithQRequestBuilder
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+            }
+            if ($requestConfiguration->queryParameters !== null) {
+                $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
             if ($requestConfiguration->options !== null) {
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);

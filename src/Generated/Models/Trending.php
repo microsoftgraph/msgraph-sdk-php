@@ -114,8 +114,6 @@ class Trending extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
         $writer->writeObjectValue('resource', $this->resource);
-        $writer->writeObjectValue('resourceReference', $this->resourceReference);
-        $writer->writeObjectValue('resourceVisualization', $this->resourceVisualization);
         $writer->writeFloatValue('weight', $this->weight);
     }
 

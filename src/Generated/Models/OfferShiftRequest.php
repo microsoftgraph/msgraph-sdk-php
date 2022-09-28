@@ -105,7 +105,6 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('recipientActionDateTime', $this->recipientActionDateTime);
         $writer->writeStringValue('recipientActionMessage', $this->recipientActionMessage);
         $writer->writeStringValue('recipientUserId', $this->recipientUserId);
         $writer->writeStringValue('senderShiftId', $this->senderShiftId);

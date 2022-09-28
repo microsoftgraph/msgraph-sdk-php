@@ -84,7 +84,6 @@ class SchedulingGroup extends ChangeTrackedEntity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeBooleanValue('isActive', $this->isActive);
         $writer->writeCollectionOfPrimitiveValues('userIds', $this->userIds);
     }
 

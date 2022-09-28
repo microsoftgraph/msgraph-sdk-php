@@ -43,7 +43,7 @@ class SnoozeReminderRequestBuilder
     }
 
     /**
-     * Invoke action snoozeReminder
+     * Postpone a reminder for an event in a user calendar until a new time.
      * @param SnoozeReminderPostRequestBody $body 
      * @param SnoozeReminderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -66,7 +66,7 @@ class SnoozeReminderRequestBuilder
     }
 
     /**
-     * Invoke action snoozeReminder
+     * Postpone a reminder for an event in a user calendar until a new time.
      * @param SnoozeReminderPostRequestBody $body 
      * @param SnoozeReminderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

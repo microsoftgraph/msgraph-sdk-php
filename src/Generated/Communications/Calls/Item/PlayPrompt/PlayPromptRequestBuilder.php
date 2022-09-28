@@ -44,7 +44,7 @@ class PlayPromptRequestBuilder
     }
 
     /**
-     * Invoke action playPrompt
+     * Play a prompt in the call. For more information about how to handle operations, see commsOperation
      * @param PlayPromptPostRequestBody $body 
      * @param PlayPromptRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -68,7 +68,7 @@ class PlayPromptRequestBuilder
     }
 
     /**
-     * Invoke action playPrompt
+     * Play a prompt in the call. For more information about how to handle operations, see commsOperation
      * @param PlayPromptPostRequestBody $body 
      * @param PlayPromptRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

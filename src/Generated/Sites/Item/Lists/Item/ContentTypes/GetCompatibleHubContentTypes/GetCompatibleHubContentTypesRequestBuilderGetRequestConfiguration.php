@@ -16,4 +16,9 @@ class GetCompatibleHubContentTypesRequestBuilderGetRequestConfiguration
     */
     public ?array $options = null;
     
+    /**
+     * @var GetCompatibleHubContentTypesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?GetCompatibleHubContentTypesRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

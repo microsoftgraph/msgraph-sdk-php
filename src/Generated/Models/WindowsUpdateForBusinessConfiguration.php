@@ -562,7 +562,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
         $writer->writeIntegerValue('featureUpdatesDeferralPeriodInDays', $this->featureUpdatesDeferralPeriodInDays);
         $writer->writeBooleanValue('featureUpdatesPaused', $this->featureUpdatesPaused);
         $writer->writeDateTimeValue('featureUpdatesPauseExpiryDateTime', $this->featureUpdatesPauseExpiryDateTime);
-        $writer->writeDateValue('featureUpdatesPauseStartDate', $this->featureUpdatesPauseStartDate);
         $writer->writeDateTimeValue('featureUpdatesRollbackStartDateTime', $this->featureUpdatesRollbackStartDateTime);
         $writer->writeIntegerValue('featureUpdatesRollbackWindowInDays', $this->featureUpdatesRollbackWindowInDays);
         $writer->writeBooleanValue('featureUpdatesWillBeRolledBack', $this->featureUpdatesWillBeRolledBack);
@@ -573,7 +572,6 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
         $writer->writeIntegerValue('qualityUpdatesDeferralPeriodInDays', $this->qualityUpdatesDeferralPeriodInDays);
         $writer->writeBooleanValue('qualityUpdatesPaused', $this->qualityUpdatesPaused);
         $writer->writeDateTimeValue('qualityUpdatesPauseExpiryDateTime', $this->qualityUpdatesPauseExpiryDateTime);
-        $writer->writeDateValue('qualityUpdatesPauseStartDate', $this->qualityUpdatesPauseStartDate);
         $writer->writeDateTimeValue('qualityUpdatesRollbackStartDateTime', $this->qualityUpdatesRollbackStartDateTime);
         $writer->writeBooleanValue('qualityUpdatesWillBeRolledBack', $this->qualityUpdatesWillBeRolledBack);
         $writer->writeIntegerValue('scheduleImminentRestartWarningInMinutes', $this->scheduleImminentRestartWarningInMinutes);

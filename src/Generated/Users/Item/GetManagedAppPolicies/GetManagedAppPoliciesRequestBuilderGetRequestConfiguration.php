@@ -16,4 +16,9 @@ class GetManagedAppPoliciesRequestBuilderGetRequestConfiguration
     */
     public ?array $options = null;
     
+    /**
+     * @var GetManagedAppPoliciesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?GetManagedAppPoliciesRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

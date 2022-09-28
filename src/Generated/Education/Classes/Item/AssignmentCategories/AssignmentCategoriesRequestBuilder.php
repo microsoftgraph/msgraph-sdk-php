@@ -48,13 +48,13 @@ class AssignmentCategoriesRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/education/classes/{educationClass%2Did}/assignmentCategories{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/education/classes/{educationClass%2Did}/assignmentCategories{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * All categories associated with this class. Nullable.
+     * Retrieve a list of educationCategory objects.
      * @param AssignmentCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -79,7 +79,7 @@ class AssignmentCategoriesRequestBuilder
     }
 
     /**
-     * Create new navigation property to assignmentCategories for education
+     * Creates a new educationCategory on an educationClass.
      * @param EducationCategory $body 
      * @param AssignmentCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -111,7 +111,7 @@ class AssignmentCategoriesRequestBuilder
     }
 
     /**
-     * All categories associated with this class. Nullable.
+     * Retrieve a list of educationCategory objects.
      * @param AssignmentCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -130,7 +130,7 @@ class AssignmentCategoriesRequestBuilder
     }
 
     /**
-     * Create new navigation property to assignmentCategories for education
+     * Creates a new educationCategory on an educationClass.
      * @param EducationCategory $body 
      * @param AssignmentCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

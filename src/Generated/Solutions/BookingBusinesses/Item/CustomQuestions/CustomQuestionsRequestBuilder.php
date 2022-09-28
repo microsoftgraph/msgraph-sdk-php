@@ -47,13 +47,13 @@ class CustomQuestionsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/customQuestions{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/customQuestions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * All the custom questions of this business. Read-only. Nullable.
+     * Get the bookingCustomQuestion resources associated with a bookingBusiness.
      * @param CustomQuestionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class CustomQuestionsRequestBuilder
     }
 
     /**
-     * Create new navigation property to customQuestions for solutions
+     * Create a new bookingCustomQuestion object.
      * @param BookingCustomQuestion $body 
      * @param CustomQuestionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class CustomQuestionsRequestBuilder
     }
 
     /**
-     * All the custom questions of this business. Read-only. Nullable.
+     * Get the bookingCustomQuestion resources associated with a bookingBusiness.
      * @param CustomQuestionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class CustomQuestionsRequestBuilder
     }
 
     /**
-     * Create new navigation property to customQuestions for solutions
+     * Create a new bookingCustomQuestion object.
      * @param BookingCustomQuestion $body 
      * @param CustomQuestionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

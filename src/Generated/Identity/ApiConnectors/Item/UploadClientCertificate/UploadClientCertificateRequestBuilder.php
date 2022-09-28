@@ -44,7 +44,7 @@ class UploadClientCertificateRequestBuilder
     }
 
     /**
-     * Invoke action uploadClientCertificate
+     * Upload a PKCS 12 format key (.pfx) to an API connector's authentication configuration. The input is a base-64 encoded value of the PKCS 12 certificate contents. This method returns an apiConnector.
      * @param UploadClientCertificatePostRequestBody $body 
      * @param UploadClientCertificateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -68,7 +68,7 @@ class UploadClientCertificateRequestBuilder
     }
 
     /**
-     * Invoke action uploadClientCertificate
+     * Upload a PKCS 12 format key (.pfx) to an API connector's authentication configuration. The input is a base-64 encoded value of the PKCS 12 certificate contents. This method returns an apiConnector.
      * @param UploadClientCertificatePostRequestBody $body 
      * @param UploadClientCertificateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

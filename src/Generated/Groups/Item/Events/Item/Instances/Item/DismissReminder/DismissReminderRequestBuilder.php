@@ -43,7 +43,7 @@ class DismissReminderRequestBuilder
     }
 
     /**
-     * Invoke action dismissReminder
+     * Dismiss a reminder that has been triggered for an event in a user calendar.
      * @param DismissReminderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -64,7 +64,7 @@ class DismissReminderRequestBuilder
     }
 
     /**
-     * Invoke action dismissReminder
+     * Dismiss a reminder that has been triggered for an event in a user calendar.
      * @param DismissReminderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

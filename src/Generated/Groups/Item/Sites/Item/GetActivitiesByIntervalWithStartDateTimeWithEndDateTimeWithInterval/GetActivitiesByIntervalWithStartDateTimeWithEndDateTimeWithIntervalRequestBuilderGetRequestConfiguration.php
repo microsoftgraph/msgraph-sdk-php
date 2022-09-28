@@ -16,4 +16,9 @@ class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequest
     */
     public ?array $options = null;
     
+    /**
+     * @var GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

@@ -16,4 +16,9 @@ class SupportedTimeZonesWithTimeZoneStandardRequestBuilderGetRequestConfiguratio
     */
     public ?array $options = null;
     
+    /**
+     * @var SupportedTimeZonesWithTimeZoneStandardRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?SupportedTimeZonesWithTimeZoneStandardRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

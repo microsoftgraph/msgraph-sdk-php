@@ -41,6 +41,7 @@ class CommsOperation extends Entity implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.addLargeGalleryViewOperation': return new AddLargeGalleryViewOperation();
                 case '#microsoft.graph.cancelMediaProcessingOperation': return new CancelMediaProcessingOperation();
                 case '#microsoft.graph.inviteParticipantsOperation': return new InviteParticipantsOperation();
                 case '#microsoft.graph.muteParticipantOperation': return new MuteParticipantOperation();

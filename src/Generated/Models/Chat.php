@@ -45,7 +45,7 @@ class Chat extends Entity implements Parsable
     private ?TeamworkOnlineMeetingInfo $onlineMeetingInfo = null;
     
     /**
-     * @var array<PinnedChatMessageInfo>|null $pinnedMessages The pinnedMessages property
+     * @var array<PinnedChatMessageInfo>|null $pinnedMessages A collection of all the pinned messages in the chat. Nullable.
     */
     private ?array $pinnedMessages = null;
     
@@ -165,7 +165,7 @@ class Chat extends Entity implements Parsable
     }
 
     /**
-     * Gets the pinnedMessages property value. The pinnedMessages property
+     * Gets the pinnedMessages property value. A collection of all the pinned messages in the chat. Nullable.
      * @return array<PinnedChatMessageInfo>|null
     */
     public function getPinnedMessages(): ?array {
@@ -281,7 +281,7 @@ class Chat extends Entity implements Parsable
     }
 
     /**
-     * Sets the pinnedMessages property value. The pinnedMessages property
+     * Sets the pinnedMessages property value. A collection of all the pinned messages in the chat. Nullable.
      *  @param array<PinnedChatMessageInfo>|null $value Value to set for the pinnedMessages property.
     */
     public function setPinnedMessages(?array $value ): void {

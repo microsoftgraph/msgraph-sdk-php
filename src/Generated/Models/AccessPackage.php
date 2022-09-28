@@ -10,6 +10,11 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackage extends Entity implements Parsable 
 {
     /**
+     * @var array<AccessPackage>|null $accessPackagesIncompatibleWith The accessPackagesIncompatibleWith property
+    */
+    private ?array $accessPackagesIncompatibleWith = null;
+    
+    /**
      * @var array<AccessPackageAssignmentPolicy>|null $assignmentPolicies The assignmentPolicies property
     */
     private ?array $assignmentPolicies = null;
@@ -33,6 +38,16 @@ class AccessPackage extends Entity implements Parsable
      * @var string|null $displayName The display name of the access package. Supports $filter (eq, contains).
     */
     private ?string $displayName = null;
+    
+    /**
+     * @var array<AccessPackage>|null $incompatibleAccessPackages The incompatibleAccessPackages property
+    */
+    private ?array $incompatibleAccessPackages = null;
+    
+    /**
+     * @var array<Group>|null $incompatibleGroups The incompatibleGroups property
+    */
+    private ?array $incompatibleGroups = null;
     
     /**
      * @var bool|null $isHidden Whether the access package is hidden from the requestor.
@@ -59,6 +74,14 @@ class AccessPackage extends Entity implements Parsable
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackage {
         return new AccessPackage();
+    }
+
+    /**
+     * Gets the accessPackagesIncompatibleWith property value. The accessPackagesIncompatibleWith property
+     * @return array<AccessPackage>|null
+    */
+    public function getAccessPackagesIncompatibleWith(): ?array {
+        return $this->accessPackagesIncompatibleWith;
     }
 
     /**
@@ -108,14 +131,33 @@ class AccessPackage extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'accessPackagesIncompatibleWith' => function (ParseNode $n) use ($o) { $o->setAccessPackagesIncompatibleWith($n->getCollectionOfObjectValues(array(AccessPackage::class, 'createFromDiscriminatorValue'))); },
             'assignmentPolicies' => function (ParseNode $n) use ($o) { $o->setAssignmentPolicies($n->getCollectionOfObjectValues(array(AccessPackageAssignmentPolicy::class, 'createFromDiscriminatorValue'))); },
             'catalog' => function (ParseNode $n) use ($o) { $o->setCatalog($n->getObjectValue(array(AccessPackageCatalog::class, 'createFromDiscriminatorValue'))); },
             'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
             'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'incompatibleAccessPackages' => function (ParseNode $n) use ($o) { $o->setIncompatibleAccessPackages($n->getCollectionOfObjectValues(array(AccessPackage::class, 'createFromDiscriminatorValue'))); },
+            'incompatibleGroups' => function (ParseNode $n) use ($o) { $o->setIncompatibleGroups($n->getCollectionOfObjectValues(array(Group::class, 'createFromDiscriminatorValue'))); },
             'isHidden' => function (ParseNode $n) use ($o) { $o->setIsHidden($n->getBooleanValue()); },
             'modifiedDateTime' => function (ParseNode $n) use ($o) { $o->setModifiedDateTime($n->getDateTimeValue()); },
         ]);
+    }
+
+    /**
+     * Gets the incompatibleAccessPackages property value. The incompatibleAccessPackages property
+     * @return array<AccessPackage>|null
+    */
+    public function getIncompatibleAccessPackages(): ?array {
+        return $this->incompatibleAccessPackages;
+    }
+
+    /**
+     * Gets the incompatibleGroups property value. The incompatibleGroups property
+     * @return array<Group>|null
+    */
+    public function getIncompatibleGroups(): ?array {
+        return $this->incompatibleGroups;
     }
 
     /**
@@ -140,13 +182,24 @@ class AccessPackage extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('accessPackagesIncompatibleWith', $this->accessPackagesIncompatibleWith);
         $writer->writeCollectionOfObjectValues('assignmentPolicies', $this->assignmentPolicies);
         $writer->writeObjectValue('catalog', $this->catalog);
         $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
         $writer->writeStringValue('description', $this->description);
         $writer->writeStringValue('displayName', $this->displayName);
+        $writer->writeCollectionOfObjectValues('incompatibleAccessPackages', $this->incompatibleAccessPackages);
+        $writer->writeCollectionOfObjectValues('incompatibleGroups', $this->incompatibleGroups);
         $writer->writeBooleanValue('isHidden', $this->isHidden);
         $writer->writeDateTimeValue('modifiedDateTime', $this->modifiedDateTime);
+    }
+
+    /**
+     * Sets the accessPackagesIncompatibleWith property value. The accessPackagesIncompatibleWith property
+     *  @param array<AccessPackage>|null $value Value to set for the accessPackagesIncompatibleWith property.
+    */
+    public function setAccessPackagesIncompatibleWith(?array $value ): void {
+        $this->accessPackagesIncompatibleWith = $value;
     }
 
     /**
@@ -187,6 +240,22 @@ class AccessPackage extends Entity implements Parsable
     */
     public function setDisplayName(?string $value ): void {
         $this->displayName = $value;
+    }
+
+    /**
+     * Sets the incompatibleAccessPackages property value. The incompatibleAccessPackages property
+     *  @param array<AccessPackage>|null $value Value to set for the incompatibleAccessPackages property.
+    */
+    public function setIncompatibleAccessPackages(?array $value ): void {
+        $this->incompatibleAccessPackages = $value;
+    }
+
+    /**
+     * Sets the incompatibleGroups property value. The incompatibleGroups property
+     *  @param array<Group>|null $value Value to set for the incompatibleGroups property.
+    */
+    public function setIncompatibleGroups(?array $value ): void {
+        $this->incompatibleGroups = $value;
     }
 
     /**

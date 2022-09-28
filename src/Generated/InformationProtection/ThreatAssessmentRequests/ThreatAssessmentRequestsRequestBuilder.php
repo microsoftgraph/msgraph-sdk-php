@@ -47,13 +47,13 @@ class ThreatAssessmentRequestsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/informationProtection/threatAssessmentRequests{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/informationProtection/threatAssessmentRequests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * Get threatAssessmentRequests from informationProtection
+     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
      * @param ThreatAssessmentRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class ThreatAssessmentRequestsRequestBuilder
     }
 
     /**
-     * Create new navigation property to threatAssessmentRequests for informationProtection
+     * Create a new threat assessment request. A threat assessment request can be one of the following types:
      * @param ThreatAssessmentRequest $body 
      * @param ThreatAssessmentRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class ThreatAssessmentRequestsRequestBuilder
     }
 
     /**
-     * Get threatAssessmentRequests from informationProtection
+     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
      * @param ThreatAssessmentRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class ThreatAssessmentRequestsRequestBuilder
     }
 
     /**
-     * Create new navigation property to threatAssessmentRequests for informationProtection
+     * Create a new threat assessment request. A threat assessment request can be one of the following types:
      * @param ThreatAssessmentRequest $body 
      * @param ThreatAssessmentRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

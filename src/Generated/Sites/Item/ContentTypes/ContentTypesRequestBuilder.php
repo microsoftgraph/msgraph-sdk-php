@@ -64,13 +64,13 @@ class ContentTypesRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/sites/{site%2Did}/contentTypes{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/sites/{site%2Did}/contentTypes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * The collection of content types defined for this site.
+     * Get the collection of [contentType][contentType] resources in a [site][].
      * @param ContentTypesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +95,7 @@ class ContentTypesRequestBuilder
     }
 
     /**
-     * Create new navigation property to contentTypes for sites
+     * Create a new [contentType][] in a [site][].
      * @param ContentType $body 
      * @param ContentTypesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -119,7 +119,7 @@ class ContentTypesRequestBuilder
     }
 
     /**
-     * The collection of content types defined for this site.
+     * Get the collection of [contentType][contentType] resources in a [site][].
      * @param ContentTypesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -146,7 +146,7 @@ class ContentTypesRequestBuilder
     }
 
     /**
-     * Create new navigation property to contentTypes for sites
+     * Create a new [contentType][] in a [site][].
      * @param ContentType $body 
      * @param ContentTypesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

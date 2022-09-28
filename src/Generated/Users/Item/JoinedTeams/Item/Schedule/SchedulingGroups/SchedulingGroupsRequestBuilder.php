@@ -47,13 +47,13 @@ class SchedulingGroupsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/schedule/schedulingGroups{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select}';
+        $this->urlTemplate = '{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/schedule/schedulingGroups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * The logical grouping of users in the schedule (usually by role).
+     * Get the list of schedulingGroups in this schedule.
      * @param SchedulingGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class SchedulingGroupsRequestBuilder
     }
 
     /**
-     * Create new navigation property to schedulingGroups for users
+     * Create a new schedulingGroup.
      * @param SchedulingGroup $body 
      * @param SchedulingGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class SchedulingGroupsRequestBuilder
     }
 
     /**
-     * The logical grouping of users in the schedule (usually by role).
+     * Get the list of schedulingGroups in this schedule.
      * @param SchedulingGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class SchedulingGroupsRequestBuilder
     }
 
     /**
-     * Create new navigation property to schedulingGroups for users
+     * Create a new schedulingGroup.
      * @param SchedulingGroup $body 
      * @param SchedulingGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

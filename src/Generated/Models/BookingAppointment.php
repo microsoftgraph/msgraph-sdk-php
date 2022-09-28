@@ -367,9 +367,7 @@ class BookingAppointment extends Entity implements Parsable
         $writer->writeStringValue('additionalInformation', $this->additionalInformation);
         $writer->writeCollectionOfObjectValues('customers', $this->customers);
         $writer->writeStringValue('customerTimeZone', $this->customerTimeZone);
-        $writer->writeDateIntervalValue('duration', $this->duration);
         $writer->writeObjectValue('endDateTime', $this->endDateTime);
-        $writer->writeIntegerValue('filledAttendeesCount', $this->filledAttendeesCount);
         $writer->writeBooleanValue('isLocationOnline', $this->isLocationOnline);
         $writer->writeStringValue('joinWebUrl', $this->joinWebUrl);
         $writer->writeIntegerValue('maximumAttendeesCount', $this->maximumAttendeesCount);

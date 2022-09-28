@@ -47,13 +47,13 @@ class DocumentSetVersionsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/drives/{drive%2Did}/list/items/{listItem%2Did}/documentSetVersions{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/drives/{drive%2Did}/list/items/{listItem%2Did}/documentSetVersions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * Version information for a document set version created by a user.
+     * Get a list of the versions of a document set item in a list.
      * @param DocumentSetVersionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class DocumentSetVersionsRequestBuilder
     }
 
     /**
-     * Create new navigation property to documentSetVersions for groups
+     * Create a new version of a document set item in a list.
      * @param DocumentSetVersion $body 
      * @param DocumentSetVersionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class DocumentSetVersionsRequestBuilder
     }
 
     /**
-     * Version information for a document set version created by a user.
+     * Get a list of the versions of a document set item in a list.
      * @param DocumentSetVersionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class DocumentSetVersionsRequestBuilder
     }
 
     /**
-     * Create new navigation property to documentSetVersions for groups
+     * Create a new version of a document set item in a list.
      * @param DocumentSetVersion $body 
      * @param DocumentSetVersionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

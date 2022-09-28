@@ -16,4 +16,9 @@ class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetRequestConf
     */
     public ?array $options = null;
     
+    /**
+     * @var GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetQueryParameters $queryParameters = null;
+    
 }

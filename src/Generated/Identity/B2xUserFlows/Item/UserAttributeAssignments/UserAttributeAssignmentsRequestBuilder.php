@@ -56,13 +56,13 @@ class UserAttributeAssignmentsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
 
     /**
-     * The user attribute assignments included in the user flow.
+     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
      * @param UserAttributeAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -87,7 +87,7 @@ class UserAttributeAssignmentsRequestBuilder
     }
 
     /**
-     * Create new navigation property to userAttributeAssignments for identity
+     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
      * @param IdentityUserFlowAttributeAssignment $body 
      * @param UserAttributeAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -111,7 +111,7 @@ class UserAttributeAssignmentsRequestBuilder
     }
 
     /**
-     * The user attribute assignments included in the user flow.
+     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
      * @param UserAttributeAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -138,7 +138,7 @@ class UserAttributeAssignmentsRequestBuilder
     }
 
     /**
-     * Create new navigation property to userAttributeAssignments for identity
+     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
      * @param IdentityUserFlowAttributeAssignment $body 
      * @param UserAttributeAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

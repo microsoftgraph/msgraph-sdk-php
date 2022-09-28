@@ -313,8 +313,6 @@ class Schedule extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('openShiftChangeRequests', $this->openShiftChangeRequests);
         $writer->writeCollectionOfObjectValues('openShifts', $this->openShifts);
         $writer->writeBooleanValue('openShiftsEnabled', $this->openShiftsEnabled);
-        $writer->writeEnumValue('provisionStatus', $this->provisionStatus);
-        $writer->writeStringValue('provisionStatusCode', $this->provisionStatusCode);
         $writer->writeCollectionOfObjectValues('schedulingGroups', $this->schedulingGroups);
         $writer->writeCollectionOfObjectValues('shifts', $this->shifts);
         $writer->writeCollectionOfObjectValues('swapShiftsChangeRequests', $this->swapShiftsChangeRequests);
