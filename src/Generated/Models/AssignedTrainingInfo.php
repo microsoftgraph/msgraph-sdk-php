@@ -15,17 +15,17 @@ class AssignedTrainingInfo implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var int|null $assignedUserCount The assignedUserCount property
+     * @var int|null $assignedUserCount Number of users who were assigned the training in an attack simulation and training campaign.
     */
     private ?int $assignedUserCount = null;
     
     /**
-     * @var int|null $completedUserCount The completedUserCount property
+     * @var int|null $completedUserCount Number of users who completed the training in an attack simulation and training campaign.
     */
     private ?int $completedUserCount = null;
     
     /**
-     * @var string|null $displayName The displayName property
+     * @var string|null $displayName Display name of the training in an attack simulation and training campaign.
     */
     private ?string $displayName = null;
     
@@ -60,7 +60,7 @@ class AssignedTrainingInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the assignedUserCount property value. The assignedUserCount property
+     * Gets the assignedUserCount property value. Number of users who were assigned the training in an attack simulation and training campaign.
      * @return int|null
     */
     public function getAssignedUserCount(): ?int {
@@ -68,7 +68,7 @@ class AssignedTrainingInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the completedUserCount property value. The completedUserCount property
+     * Gets the completedUserCount property value. Number of users who completed the training in an attack simulation and training campaign.
      * @return int|null
     */
     public function getCompletedUserCount(): ?int {
@@ -76,7 +76,7 @@ class AssignedTrainingInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of the training in an attack simulation and training campaign.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -126,7 +126,7 @@ class AssignedTrainingInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the assignedUserCount property value. The assignedUserCount property
+     * Sets the assignedUserCount property value. Number of users who were assigned the training in an attack simulation and training campaign.
      *  @param int|null $value Value to set for the assignedUserCount property.
     */
     public function setAssignedUserCount(?int $value ): void {
@@ -134,7 +134,7 @@ class AssignedTrainingInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the completedUserCount property value. The completedUserCount property
+     * Sets the completedUserCount property value. Number of users who completed the training in an attack simulation and training campaign.
      *  @param int|null $value Value to set for the completedUserCount property.
     */
     public function setCompletedUserCount(?int $value ): void {
@@ -142,7 +142,7 @@ class AssignedTrainingInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of the training in an attack simulation and training campaign.
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {

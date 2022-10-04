@@ -15,12 +15,12 @@ class SimulationEventsContent implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var float|null $compromisedRate The compromisedRate property
+     * @var float|null $compromisedRate Actual percentage of users who fell for the simulated attack in an attack simulation and training campaign.
     */
     private ?float $compromisedRate = null;
     
     /**
-     * @var array<SimulationEvent>|null $events The events property
+     * @var array<SimulationEvent>|null $events List of simulation events in an attack simulation and training campaign.
     */
     private ?array $events = null;
     
@@ -55,7 +55,7 @@ class SimulationEventsContent implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the compromisedRate property value. The compromisedRate property
+     * Gets the compromisedRate property value. Actual percentage of users who fell for the simulated attack in an attack simulation and training campaign.
      * @return float|null
     */
     public function getCompromisedRate(): ?float {
@@ -63,7 +63,7 @@ class SimulationEventsContent implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the events property value. The events property
+     * Gets the events property value. List of simulation events in an attack simulation and training campaign.
      * @return array<SimulationEvent>|null
     */
     public function getEvents(): ?array {
@@ -111,7 +111,7 @@ class SimulationEventsContent implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the compromisedRate property value. The compromisedRate property
+     * Sets the compromisedRate property value. Actual percentage of users who fell for the simulated attack in an attack simulation and training campaign.
      *  @param float|null $value Value to set for the compromisedRate property.
     */
     public function setCompromisedRate(?float $value ): void {
@@ -119,7 +119,7 @@ class SimulationEventsContent implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the events property value. The events property
+     * Sets the events property value. List of simulation events in an attack simulation and training campaign.
      *  @param array<SimulationEvent>|null $value Value to set for the events property.
     */
     public function setEvents(?array $value ): void {

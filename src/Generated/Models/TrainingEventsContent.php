@@ -15,7 +15,7 @@ class TrainingEventsContent implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var array<AssignedTrainingInfo>|null $assignedTrainingsInfos The assignedTrainingsInfos property
+     * @var array<AssignedTrainingInfo>|null $assignedTrainingsInfos List of assigned trainings and their information in an attack simulation and training campaign.
     */
     private ?array $assignedTrainingsInfos = null;
     
@@ -25,7 +25,7 @@ class TrainingEventsContent implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var int|null $trainingsAssignedUserCount The trainingsAssignedUserCount property
+     * @var int|null $trainingsAssignedUserCount Number of users who were assigned trainings in an attack simulation and training campaign.
     */
     private ?int $trainingsAssignedUserCount = null;
     
@@ -55,7 +55,7 @@ class TrainingEventsContent implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the assignedTrainingsInfos property value. The assignedTrainingsInfos property
+     * Gets the assignedTrainingsInfos property value. List of assigned trainings and their information in an attack simulation and training campaign.
      * @return array<AssignedTrainingInfo>|null
     */
     public function getAssignedTrainingsInfos(): ?array {
@@ -84,7 +84,7 @@ class TrainingEventsContent implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the trainingsAssignedUserCount property value. The trainingsAssignedUserCount property
+     * Gets the trainingsAssignedUserCount property value. Number of users who were assigned trainings in an attack simulation and training campaign.
      * @return int|null
     */
     public function getTrainingsAssignedUserCount(): ?int {
@@ -111,7 +111,7 @@ class TrainingEventsContent implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the assignedTrainingsInfos property value. The assignedTrainingsInfos property
+     * Sets the assignedTrainingsInfos property value. List of assigned trainings and their information in an attack simulation and training campaign.
      *  @param array<AssignedTrainingInfo>|null $value Value to set for the assignedTrainingsInfos property.
     */
     public function setAssignedTrainingsInfos(?array $value ): void {
@@ -127,7 +127,7 @@ class TrainingEventsContent implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the trainingsAssignedUserCount property value. The trainingsAssignedUserCount property
+     * Sets the trainingsAssignedUserCount property value. Number of users who were assigned trainings in an attack simulation and training campaign.
      *  @param int|null $value Value to set for the trainingsAssignedUserCount property.
     */
     public function setTrainingsAssignedUserCount(?int $value ): void {

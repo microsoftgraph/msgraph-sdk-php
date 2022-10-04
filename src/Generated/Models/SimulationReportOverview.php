@@ -20,22 +20,22 @@ class SimulationReportOverview implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var array<RecommendedAction>|null $recommendedActions The recommendedActions property
+     * @var array<RecommendedAction>|null $recommendedActions List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.
     */
     private ?array $recommendedActions = null;
     
     /**
-     * @var int|null $resolvedTargetsCount The resolvedTargetsCount property
+     * @var int|null $resolvedTargetsCount Number of valid users in the attack simulation and training campaign.
     */
     private ?int $resolvedTargetsCount = null;
     
     /**
-     * @var SimulationEventsContent|null $simulationEventsContent The simulationEventsContent property
+     * @var SimulationEventsContent|null $simulationEventsContent Summary of simulation events in the attack simulation and training campaign.
     */
     private ?SimulationEventsContent $simulationEventsContent = null;
     
     /**
-     * @var TrainingEventsContent|null $trainingEventsContent The trainingEventsContent property
+     * @var TrainingEventsContent|null $trainingEventsContent Summary of assigned trainings in the attack simulation and training campaign.
     */
     private ?TrainingEventsContent $trainingEventsContent = null;
     
@@ -88,7 +88,7 @@ class SimulationReportOverview implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the recommendedActions property value. The recommendedActions property
+     * Gets the recommendedActions property value. List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.
      * @return array<RecommendedAction>|null
     */
     public function getRecommendedActions(): ?array {
@@ -96,7 +96,7 @@ class SimulationReportOverview implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the resolvedTargetsCount property value. The resolvedTargetsCount property
+     * Gets the resolvedTargetsCount property value. Number of valid users in the attack simulation and training campaign.
      * @return int|null
     */
     public function getResolvedTargetsCount(): ?int {
@@ -104,7 +104,7 @@ class SimulationReportOverview implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the simulationEventsContent property value. The simulationEventsContent property
+     * Gets the simulationEventsContent property value. Summary of simulation events in the attack simulation and training campaign.
      * @return SimulationEventsContent|null
     */
     public function getSimulationEventsContent(): ?SimulationEventsContent {
@@ -112,7 +112,7 @@ class SimulationReportOverview implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the trainingEventsContent property value. The trainingEventsContent property
+     * Gets the trainingEventsContent property value. Summary of assigned trainings in the attack simulation and training campaign.
      * @return TrainingEventsContent|null
     */
     public function getTrainingEventsContent(): ?TrainingEventsContent {
@@ -149,7 +149,7 @@ class SimulationReportOverview implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the recommendedActions property value. The recommendedActions property
+     * Sets the recommendedActions property value. List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.
      *  @param array<RecommendedAction>|null $value Value to set for the recommendedActions property.
     */
     public function setRecommendedActions(?array $value ): void {
@@ -157,7 +157,7 @@ class SimulationReportOverview implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the resolvedTargetsCount property value. The resolvedTargetsCount property
+     * Sets the resolvedTargetsCount property value. Number of valid users in the attack simulation and training campaign.
      *  @param int|null $value Value to set for the resolvedTargetsCount property.
     */
     public function setResolvedTargetsCount(?int $value ): void {
@@ -165,7 +165,7 @@ class SimulationReportOverview implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the simulationEventsContent property value. The simulationEventsContent property
+     * Sets the simulationEventsContent property value. Summary of simulation events in the attack simulation and training campaign.
      *  @param SimulationEventsContent|null $value Value to set for the simulationEventsContent property.
     */
     public function setSimulationEventsContent(?SimulationEventsContent $value ): void {
@@ -173,7 +173,7 @@ class SimulationReportOverview implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the trainingEventsContent property value. The trainingEventsContent property
+     * Sets the trainingEventsContent property value. Summary of assigned trainings in the attack simulation and training campaign.
      *  @param TrainingEventsContent|null $value Value to set for the trainingEventsContent property.
     */
     public function setTrainingEventsContent(?TrainingEventsContent $value ): void {

@@ -24,7 +24,7 @@ class Call extends Entity implements Parsable
     private ?string $callChainId = null;
     
     /**
-     * @var CallOptions|null $callOptions The callOptions property
+     * @var CallOptions|null $callOptions Contains the optional features for the call.
     */
     private ?CallOptions $callOptions = null;
     
@@ -49,7 +49,7 @@ class Call extends Entity implements Parsable
     private ?CallDirection $direction = null;
     
     /**
-     * @var IncomingContext|null $incomingContext The incomingContext property
+     * @var IncomingContext|null $incomingContext Call context associated with an incoming call.
     */
     private ?IncomingContext $incomingContext = null;
     
@@ -84,32 +84,32 @@ class Call extends Entity implements Parsable
     private ?array $participants = null;
     
     /**
-     * @var array<Modality>|null $requestedModalities The requestedModalities property
+     * @var array<Modality>|null $requestedModalities The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
     */
     private ?array $requestedModalities = null;
     
     /**
-     * @var ResultInfo|null $resultInfo The resultInfo property
+     * @var ResultInfo|null $resultInfo The result information. For example can hold termination reason. Read-only.
     */
     private ?ResultInfo $resultInfo = null;
     
     /**
-     * @var ParticipantInfo|null $source The source property
+     * @var ParticipantInfo|null $source The originator of the call.
     */
     private ?ParticipantInfo $source = null;
     
     /**
-     * @var CallState|null $state The state property
+     * @var CallState|null $state The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
     */
     private ?CallState $state = null;
     
     /**
-     * @var string|null $subject The subject property
+     * @var string|null $subject The subject of the conversation.
     */
     private ?string $subject = null;
     
     /**
-     * @var array<InvitationParticipantInfo>|null $targets The targets property
+     * @var array<InvitationParticipantInfo>|null $targets The targets of the call. Required information for creating peer to peer call.
     */
     private ?array $targets = null;
     
@@ -124,7 +124,7 @@ class Call extends Entity implements Parsable
     private ?ToneInfo $toneInfo = null;
     
     /**
-     * @var CallTranscriptionInfo|null $transcription The transcription property
+     * @var CallTranscriptionInfo|null $transcription The transcription information for the call. Read-only.
     */
     private ?CallTranscriptionInfo $transcription = null;
     
@@ -170,7 +170,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the callOptions property value. The callOptions property
+     * Gets the callOptions property value. Contains the optional features for the call.
      * @return CallOptions|null
     */
     public function getCallOptions(): ?CallOptions {
@@ -244,7 +244,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the incomingContext property value. The incomingContext property
+     * Gets the incomingContext property value. Call context associated with an incoming call.
      * @return IncomingContext|null
     */
     public function getIncomingContext(): ?IncomingContext {
@@ -300,7 +300,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the requestedModalities property value. The requestedModalities property
+     * Gets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
      * @return array<Modality>|null
     */
     public function getRequestedModalities(): ?array {
@@ -308,7 +308,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the resultInfo property value. The resultInfo property
+     * Gets the resultInfo property value. The result information. For example can hold termination reason. Read-only.
      * @return ResultInfo|null
     */
     public function getResultInfo(): ?ResultInfo {
@@ -316,7 +316,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the source property value. The source property
+     * Gets the source property value. The originator of the call.
      * @return ParticipantInfo|null
     */
     public function getSource(): ?ParticipantInfo {
@@ -324,7 +324,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
      * @return CallState|null
     */
     public function getState(): ?CallState {
@@ -332,7 +332,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the subject property value. The subject property
+     * Gets the subject property value. The subject of the conversation.
      * @return string|null
     */
     public function getSubject(): ?string {
@@ -340,7 +340,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the targets property value. The targets property
+     * Gets the targets property value. The targets of the call. Required information for creating peer to peer call.
      * @return array<InvitationParticipantInfo>|null
     */
     public function getTargets(): ?array {
@@ -364,7 +364,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the transcription property value. The transcription property
+     * Gets the transcription property value. The transcription information for the call. Read-only.
      * @return CallTranscriptionInfo|null
     */
     public function getTranscription(): ?CallTranscriptionInfo {
@@ -428,7 +428,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the callOptions property value. The callOptions property
+     * Sets the callOptions property value. Contains the optional features for the call.
      *  @param CallOptions|null $value Value to set for the callOptions property.
     */
     public function setCallOptions(?CallOptions $value ): void {
@@ -468,7 +468,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the incomingContext property value. The incomingContext property
+     * Sets the incomingContext property value. Call context associated with an incoming call.
      *  @param IncomingContext|null $value Value to set for the incomingContext property.
     */
     public function setIncomingContext(?IncomingContext $value ): void {
@@ -524,7 +524,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the requestedModalities property value. The requestedModalities property
+     * Sets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
      *  @param array<Modality>|null $value Value to set for the requestedModalities property.
     */
     public function setRequestedModalities(?array $value ): void {
@@ -532,7 +532,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the resultInfo property value. The resultInfo property
+     * Sets the resultInfo property value. The result information. For example can hold termination reason. Read-only.
      *  @param ResultInfo|null $value Value to set for the resultInfo property.
     */
     public function setResultInfo(?ResultInfo $value ): void {
@@ -540,7 +540,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the source property value. The source property
+     * Sets the source property value. The originator of the call.
      *  @param ParticipantInfo|null $value Value to set for the source property.
     */
     public function setSource(?ParticipantInfo $value ): void {
@@ -548,7 +548,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
      *  @param CallState|null $value Value to set for the state property.
     */
     public function setState(?CallState $value ): void {
@@ -556,7 +556,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. The subject of the conversation.
      *  @param string|null $value Value to set for the subject property.
     */
     public function setSubject(?string $value ): void {
@@ -564,7 +564,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the targets property value. The targets property
+     * Sets the targets property value. The targets of the call. Required information for creating peer to peer call.
      *  @param array<InvitationParticipantInfo>|null $value Value to set for the targets property.
     */
     public function setTargets(?array $value ): void {
@@ -588,7 +588,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the transcription property value. The transcription property
+     * Sets the transcription property value. The transcription information for the call. Read-only.
      *  @param CallTranscriptionInfo|null $value Value to set for the transcription property.
     */
     public function setTranscription(?CallTranscriptionInfo $value ): void {

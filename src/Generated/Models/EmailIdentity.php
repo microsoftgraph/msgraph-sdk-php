@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EmailIdentity extends Identity implements Parsable 
 {
     /**
-     * @var string|null $email The email property
+     * @var string|null $email Email address of the user.
     */
     private ?string $email = null;
     
@@ -31,7 +31,7 @@ class EmailIdentity extends Identity implements Parsable
     }
 
     /**
-     * Gets the email property value. The email property
+     * Gets the email property value. Email address of the user.
      * @return string|null
     */
     public function getEmail(): ?string {
@@ -59,7 +59,7 @@ class EmailIdentity extends Identity implements Parsable
     }
 
     /**
-     * Sets the email property value. The email property
+     * Sets the email property value. Email address of the user.
      *  @param string|null $value Value to set for the email property.
     */
     public function setEmail(?string $value ): void {

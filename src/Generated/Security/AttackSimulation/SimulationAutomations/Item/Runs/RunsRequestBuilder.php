@@ -53,7 +53,7 @@ class RunsRequestBuilder
     }
 
     /**
-     * Get runs from security
+     * Get a list of the attack simulation automation runs for a tenant.
      * @param RunsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +102,7 @@ class RunsRequestBuilder
     }
 
     /**
-     * Get runs from security
+     * Get a list of the attack simulation automation runs for a tenant.
      * @param RunsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

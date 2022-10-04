@@ -20,12 +20,12 @@ class SimulationReport implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var SimulationReportOverview|null $overview The overview property
+     * @var SimulationReportOverview|null $overview Overview of an attack simulation and training campaign.
     */
     private ?SimulationReportOverview $overview = null;
     
     /**
-     * @var array<UserSimulationDetails>|null $simulationUsers The simulationUsers property
+     * @var array<UserSimulationDetails>|null $simulationUsers The tenant users and their online actions in an attack simulation and training campaign.
     */
     private ?array $simulationUsers = null;
     
@@ -76,7 +76,7 @@ class SimulationReport implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the overview property value. The overview property
+     * Gets the overview property value. Overview of an attack simulation and training campaign.
      * @return SimulationReportOverview|null
     */
     public function getOverview(): ?SimulationReportOverview {
@@ -84,7 +84,7 @@ class SimulationReport implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the simulationUsers property value. The simulationUsers property
+     * Gets the simulationUsers property value. The tenant users and their online actions in an attack simulation and training campaign.
      * @return array<UserSimulationDetails>|null
     */
     public function getSimulationUsers(): ?array {
@@ -119,7 +119,7 @@ class SimulationReport implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the overview property value. The overview property
+     * Sets the overview property value. Overview of an attack simulation and training campaign.
      *  @param SimulationReportOverview|null $value Value to set for the overview property.
     */
     public function setOverview(?SimulationReportOverview $value ): void {
@@ -127,7 +127,7 @@ class SimulationReport implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the simulationUsers property value. The simulationUsers property
+     * Sets the simulationUsers property value. The tenant users and their online actions in an attack simulation and training campaign.
      *  @param array<UserSimulationDetails>|null $value Value to set for the simulationUsers property.
     */
     public function setSimulationUsers(?array $value ): void {

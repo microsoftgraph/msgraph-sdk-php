@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConditionalAccessRoot extends Entity implements Parsable 
 {
     /**
-     * @var array<AuthenticationContextClassReference>|null $authenticationContextClassReferences The authenticationContextClassReferences property
+     * @var array<AuthenticationContextClassReference>|null $authenticationContextClassReferences Read-only. Nullable. Returns a collection of the specified authentication context class references.
     */
     private ?array $authenticationContextClassReferences = null;
     
@@ -41,7 +41,7 @@ class ConditionalAccessRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the authenticationContextClassReferences property value. The authenticationContextClassReferences property
+     * Gets the authenticationContextClassReferences property value. Read-only. Nullable. Returns a collection of the specified authentication context class references.
      * @return array<AuthenticationContextClassReference>|null
     */
     public function getAuthenticationContextClassReferences(): ?array {
@@ -89,7 +89,7 @@ class ConditionalAccessRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the authenticationContextClassReferences property value. The authenticationContextClassReferences property
+     * Sets the authenticationContextClassReferences property value. Read-only. Nullable. Returns a collection of the specified authentication context class references.
      *  @param array<AuthenticationContextClassReference>|null $value Value to set for the authenticationContextClassReferences property.
     */
     public function setAuthenticationContextClassReferences(?array $value ): void {

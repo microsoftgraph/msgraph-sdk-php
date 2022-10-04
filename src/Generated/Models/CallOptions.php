@@ -15,12 +15,12 @@ class CallOptions implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var bool|null $hideBotAfterEscalation The hideBotAfterEscalation property
+     * @var bool|null $hideBotAfterEscalation Indicates whether to hide the app after the call is escalated.
     */
     private ?bool $hideBotAfterEscalation = null;
     
     /**
-     * @var bool|null $isContentSharingNotificationEnabled The isContentSharingNotificationEnabled property
+     * @var bool|null $isContentSharingNotificationEnabled Indicates whether content sharing notifications should be enabled for the call.
     */
     private ?bool $isContentSharingNotificationEnabled = null;
     
@@ -76,7 +76,7 @@ class CallOptions implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the hideBotAfterEscalation property value. The hideBotAfterEscalation property
+     * Gets the hideBotAfterEscalation property value. Indicates whether to hide the app after the call is escalated.
      * @return bool|null
     */
     public function getHideBotAfterEscalation(): ?bool {
@@ -84,7 +84,7 @@ class CallOptions implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the isContentSharingNotificationEnabled property value. The isContentSharingNotificationEnabled property
+     * Gets the isContentSharingNotificationEnabled property value. Indicates whether content sharing notifications should be enabled for the call.
      * @return bool|null
     */
     public function getIsContentSharingNotificationEnabled(): ?bool {
@@ -119,7 +119,7 @@ class CallOptions implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the hideBotAfterEscalation property value. The hideBotAfterEscalation property
+     * Sets the hideBotAfterEscalation property value. Indicates whether to hide the app after the call is escalated.
      *  @param bool|null $value Value to set for the hideBotAfterEscalation property.
     */
     public function setHideBotAfterEscalation(?bool $value ): void {
@@ -127,7 +127,7 @@ class CallOptions implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the isContentSharingNotificationEnabled property value. The isContentSharingNotificationEnabled property
+     * Sets the isContentSharingNotificationEnabled property value. Indicates whether content sharing notifications should be enabled for the call.
      *  @param bool|null $value Value to set for the isContentSharingNotificationEnabled property.
     */
     public function setIsContentSharingNotificationEnabled(?bool $value ): void {

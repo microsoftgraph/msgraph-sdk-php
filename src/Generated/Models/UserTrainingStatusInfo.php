@@ -16,17 +16,17 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var DateTime|null $assignedDateTime The assignedDateTime property
+     * @var DateTime|null $assignedDateTime Date and time of assignment of the training to the user.
     */
     private ?DateTime $assignedDateTime = null;
     
     /**
-     * @var DateTime|null $completionDateTime The completionDateTime property
+     * @var DateTime|null $completionDateTime Date and time of completion of the training by the user.
     */
     private ?DateTime $completionDateTime = null;
     
     /**
-     * @var string|null $displayName The displayName property
+     * @var string|null $displayName Display name of the assigned training.
     */
     private ?string $displayName = null;
     
@@ -36,7 +36,7 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var TrainingStatus|null $trainingStatus The trainingStatus property
+     * @var TrainingStatus|null $trainingStatus The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
     */
     private ?TrainingStatus $trainingStatus = null;
     
@@ -66,7 +66,7 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the assignedDateTime property value. The assignedDateTime property
+     * Gets the assignedDateTime property value. Date and time of assignment of the training to the user.
      * @return DateTime|null
     */
     public function getAssignedDateTime(): ?DateTime {
@@ -74,7 +74,7 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the completionDateTime property value. The completionDateTime property
+     * Gets the completionDateTime property value. Date and time of completion of the training by the user.
      * @return DateTime|null
     */
     public function getCompletionDateTime(): ?DateTime {
@@ -82,7 +82,7 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of the assigned training.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -113,7 +113,7 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the trainingStatus property value. The trainingStatus property
+     * Gets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @return TrainingStatus|null
     */
     public function getTrainingStatus(): ?TrainingStatus {
@@ -142,7 +142,7 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the assignedDateTime property value. The assignedDateTime property
+     * Sets the assignedDateTime property value. Date and time of assignment of the training to the user.
      *  @param DateTime|null $value Value to set for the assignedDateTime property.
     */
     public function setAssignedDateTime(?DateTime $value ): void {
@@ -150,7 +150,7 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the completionDateTime property value. The completionDateTime property
+     * Sets the completionDateTime property value. Date and time of completion of the training by the user.
      *  @param DateTime|null $value Value to set for the completionDateTime property.
     */
     public function setCompletionDateTime(?DateTime $value ): void {
@@ -158,7 +158,7 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of the assigned training.
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -174,7 +174,7 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the trainingStatus property value. The trainingStatus property
+     * Sets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      *  @param TrainingStatus|null $value Value to set for the trainingStatus property.
     */
     public function setTrainingStatus(?TrainingStatus $value ): void {
