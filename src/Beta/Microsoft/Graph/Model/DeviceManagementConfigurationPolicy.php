@@ -240,6 +240,39 @@ class DeviceManagementConfigurationPolicy extends Entity
     }
 
     /**
+    * Gets the priorityMetaData
+    * Indicates the priority of each policies that are selected by the admin during enrollment process
+    *
+    * @return DeviceManagementPriorityMetaData|null The priorityMetaData
+    */
+    public function getPriorityMetaData()
+    {
+        if (array_key_exists("priorityMetaData", $this->_propDict)) {
+            if (is_a($this->_propDict["priorityMetaData"], "\Beta\Microsoft\Graph\Model\DeviceManagementPriorityMetaData") || is_null($this->_propDict["priorityMetaData"])) {
+                return $this->_propDict["priorityMetaData"];
+            } else {
+                $this->_propDict["priorityMetaData"] = new DeviceManagementPriorityMetaData($this->_propDict["priorityMetaData"]);
+                return $this->_propDict["priorityMetaData"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the priorityMetaData
+    * Indicates the priority of each policies that are selected by the admin during enrollment process
+    *
+    * @param DeviceManagementPriorityMetaData $val The priorityMetaData
+    *
+    * @return DeviceManagementConfigurationPolicy
+    */
+    public function setPriorityMetaData($val)
+    {
+        $this->_propDict["priorityMetaData"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
     *

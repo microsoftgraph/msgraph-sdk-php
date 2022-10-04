@@ -859,6 +859,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Gets the publisherName
+    * The name of the Azure AD tenant that published the application.
     *
     * @return string|null The publisherName
     */
@@ -873,6 +874,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Sets the publisherName
+    * The name of the Azure AD tenant that published the application.
     *
     * @param string $val The publisherName
     *
