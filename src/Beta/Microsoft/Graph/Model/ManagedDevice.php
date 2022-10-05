@@ -2059,7 +2059,7 @@ class ManagedDevice extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tag IDs for this Device instance.
     *
-    * @return string|null The roleScopeTagIds
+    * @return array|null The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -2074,7 +2074,7 @@ class ManagedDevice extends Entity
     * Sets the roleScopeTagIds
     * List of Scope Tag IDs for this Device instance.
     *
-    * @param string $val The roleScopeTagIds
+    * @param string[] $val The roleScopeTagIds
     *
     * @return ManagedDevice
     */

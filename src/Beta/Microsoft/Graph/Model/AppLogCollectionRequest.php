@@ -61,7 +61,7 @@ class AppLogCollectionRequest extends Entity
     * Gets the customLogFolders
     * List of log folders.
     *
-    * @return string|null The customLogFolders
+    * @return array|null The customLogFolders
     */
     public function getCustomLogFolders()
     {
@@ -76,7 +76,7 @@ class AppLogCollectionRequest extends Entity
     * Sets the customLogFolders
     * List of log folders.
     *
-    * @param string $val The customLogFolders
+    * @param string[] $val The customLogFolders
     *
     * @return AppLogCollectionRequest
     */

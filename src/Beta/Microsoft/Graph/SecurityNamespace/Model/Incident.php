@@ -372,7 +372,7 @@ class Incident extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the tags
     * Array of custom tags associated with an incident.
     *
-    * @return string|null The tags
+    * @return array|null The tags
     */
     public function getTags()
     {
@@ -387,7 +387,7 @@ class Incident extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the tags
     * Array of custom tags associated with an incident.
     *
-    * @param string $val The tags
+    * @param string[] $val The tags
     *
     * @return Incident
     */

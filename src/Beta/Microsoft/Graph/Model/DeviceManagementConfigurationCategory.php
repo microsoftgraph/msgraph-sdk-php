@@ -57,7 +57,7 @@ class DeviceManagementConfigurationCategory extends Entity
     * Gets the childCategoryIds
     * List of child ids of the category.
     *
-    * @return string|null The childCategoryIds
+    * @return array|null The childCategoryIds
     */
     public function getChildCategoryIds()
     {
@@ -72,7 +72,7 @@ class DeviceManagementConfigurationCategory extends Entity
     * Sets the childCategoryIds
     * List of child ids of the category.
     *
-    * @param string $val The childCategoryIds
+    * @param string[] $val The childCategoryIds
     *
     * @return DeviceManagementConfigurationCategory
     */
