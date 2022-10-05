@@ -54,6 +54,7 @@ class ConditionalAccessUsers extends Entity
 
     /**
     * Gets the excludeGuestsOrExternalUsers
+    * Internal guests or external users excluded in the policy scope. Optionally populated.
     *
     * @return ConditionalAccessGuestsOrExternalUsers|null The excludeGuestsOrExternalUsers
     */
@@ -72,6 +73,7 @@ class ConditionalAccessUsers extends Entity
 
     /**
     * Sets the excludeGuestsOrExternalUsers
+    * Internal guests or external users excluded in the policy scope. Optionally populated.
     *
     * @param ConditionalAccessGuestsOrExternalUsers $val The value to assign to the excludeGuestsOrExternalUsers
     *
@@ -169,6 +171,7 @@ class ConditionalAccessUsers extends Entity
 
     /**
     * Gets the includeGuestsOrExternalUsers
+    * Internal guests or external users included in the policy scope. Optionally populated.
     *
     * @return ConditionalAccessGuestsOrExternalUsers|null The includeGuestsOrExternalUsers
     */
@@ -187,6 +190,7 @@ class ConditionalAccessUsers extends Entity
 
     /**
     * Sets the includeGuestsOrExternalUsers
+    * Internal guests or external users included in the policy scope. Optionally populated.
     *
     * @param ConditionalAccessGuestsOrExternalUsers $val The value to assign to the includeGuestsOrExternalUsers
     *

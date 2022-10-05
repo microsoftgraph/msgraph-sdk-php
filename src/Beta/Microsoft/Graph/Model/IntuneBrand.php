@@ -665,6 +665,34 @@ class IntuneBrand extends Entity
         return $this;
     }
     /**
+    * Gets the showConfigurationManagerApps
+    * Boolean that indicates if ConfigurationManagerApps will be shown in Company Portal
+    *
+    * @return bool|null The showConfigurationManagerApps
+    */
+    public function getShowConfigurationManagerApps()
+    {
+        if (array_key_exists("showConfigurationManagerApps", $this->_propDict)) {
+            return $this->_propDict["showConfigurationManagerApps"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the showConfigurationManagerApps
+    * Boolean that indicates if ConfigurationManagerApps will be shown in Company Portal
+    *
+    * @param bool $val The value of the showConfigurationManagerApps
+    *
+    * @return IntuneBrand
+    */
+    public function setShowConfigurationManagerApps($val)
+    {
+        $this->_propDict["showConfigurationManagerApps"] = $val;
+        return $this;
+    }
+    /**
     * Gets the showDisplayNameNextToLogo
     * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
     *
