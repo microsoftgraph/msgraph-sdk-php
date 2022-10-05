@@ -267,6 +267,37 @@ class VirtualEndpoint extends Entity
         return $this;
     }
 
+    /**
+    * Gets the reports
+    *
+    * @return CloudPcReports|null The reports
+    */
+    public function getReports()
+    {
+        if (array_key_exists("reports", $this->_propDict)) {
+            if (is_a($this->_propDict["reports"], "\Beta\Microsoft\Graph\Model\CloudPcReports") || is_null($this->_propDict["reports"])) {
+                return $this->_propDict["reports"];
+            } else {
+                $this->_propDict["reports"] = new CloudPcReports($this->_propDict["reports"]);
+                return $this->_propDict["reports"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the reports
+    *
+    * @param CloudPcReports $val The reports
+    *
+    * @return VirtualEndpoint
+    */
+    public function setReports($val)
+    {
+        $this->_propDict["reports"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the servicePlans

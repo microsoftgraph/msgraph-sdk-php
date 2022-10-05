@@ -57,6 +57,7 @@ class OrganizationSettings extends Entity
 
     /**
     * Gets the contactInsights
+    * Contains the properties that are configured by an administrator as a tenant-level privacy control whether to identify duplicate contacts among a user's contacts list and suggest the user to merge those contacts to have a cleaner contacts list. List contactInsights returns the settings to display or return contact insights in an organization.
     *
     * @return InsightsSettings|null The contactInsights
     */
@@ -75,6 +76,7 @@ class OrganizationSettings extends Entity
 
     /**
     * Sets the contactInsights
+    * Contains the properties that are configured by an administrator as a tenant-level privacy control whether to identify duplicate contacts among a user's contacts list and suggest the user to merge those contacts to have a cleaner contacts list. List contactInsights returns the settings to display or return contact insights in an organization.
     *
     * @param InsightsSettings $val The contactInsights
     *

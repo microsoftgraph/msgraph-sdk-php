@@ -354,6 +354,37 @@ class SearchRequest extends Entity
         $this->_propDict["resultTemplateOptions"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the sharePointOneDriveOptions
+    *
+    * @return SharePointOneDriveOptions|null The sharePointOneDriveOptions
+    */
+    public function getSharePointOneDriveOptions()
+    {
+        if (array_key_exists("sharePointOneDriveOptions", $this->_propDict)) {
+            if (is_a($this->_propDict["sharePointOneDriveOptions"], "\Beta\Microsoft\Graph\Model\SharePointOneDriveOptions") || is_null($this->_propDict["sharePointOneDriveOptions"])) {
+                return $this->_propDict["sharePointOneDriveOptions"];
+            } else {
+                $this->_propDict["sharePointOneDriveOptions"] = new SharePointOneDriveOptions($this->_propDict["sharePointOneDriveOptions"]);
+                return $this->_propDict["sharePointOneDriveOptions"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sharePointOneDriveOptions
+    *
+    * @param SharePointOneDriveOptions $val The value to assign to the sharePointOneDriveOptions
+    *
+    * @return SearchRequest The SearchRequest
+    */
+    public function setSharePointOneDriveOptions($val)
+    {
+        $this->_propDict["sharePointOneDriveOptions"] = $val;
+         return $this;
+    }
     /**
     * Gets the size
     * The size of the page to be retrieved. Optional.
