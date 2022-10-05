@@ -504,6 +504,39 @@ class DeviceManagement extends Entity
     }
 
     /**
+    * Gets the userExperienceAnalyticsAnomalySeverityOverview
+    * The user experience analytics anomaly severity overview entity contains the count information for each severity of anomaly.
+    *
+    * @return UserExperienceAnalyticsAnomalySeverityOverview|null The userExperienceAnalyticsAnomalySeverityOverview
+    */
+    public function getUserExperienceAnalyticsAnomalySeverityOverview()
+    {
+        if (array_key_exists("userExperienceAnalyticsAnomalySeverityOverview", $this->_propDict)) {
+            if (is_a($this->_propDict["userExperienceAnalyticsAnomalySeverityOverview"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsAnomalySeverityOverview") || is_null($this->_propDict["userExperienceAnalyticsAnomalySeverityOverview"])) {
+                return $this->_propDict["userExperienceAnalyticsAnomalySeverityOverview"];
+            } else {
+                $this->_propDict["userExperienceAnalyticsAnomalySeverityOverview"] = new UserExperienceAnalyticsAnomalySeverityOverview($this->_propDict["userExperienceAnalyticsAnomalySeverityOverview"]);
+                return $this->_propDict["userExperienceAnalyticsAnomalySeverityOverview"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsAnomalySeverityOverview
+    * The user experience analytics anomaly severity overview entity contains the count information for each severity of anomaly.
+    *
+    * @param UserExperienceAnalyticsAnomalySeverityOverview $val The userExperienceAnalyticsAnomalySeverityOverview
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsAnomalySeverityOverview($val)
+    {
+        $this->_propDict["userExperienceAnalyticsAnomalySeverityOverview"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the userExperienceAnalyticsSettings
     * User experience analytics device settings
     *
@@ -2644,6 +2677,66 @@ class DeviceManagement extends Entity
     public function setTenantAttachRBAC($val)
     {
         $this->_propDict["tenantAttachRBAC"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsAnomaly
+    * The user experience analytics anomaly entity contains anomaly details.
+     *
+     * @return array|null The userExperienceAnalyticsAnomaly
+     */
+    public function getUserExperienceAnalyticsAnomaly()
+    {
+        if (array_key_exists("userExperienceAnalyticsAnomaly", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsAnomaly"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsAnomaly
+    * The user experience analytics anomaly entity contains anomaly details.
+    *
+    * @param UserExperienceAnalyticsAnomaly[] $val The userExperienceAnalyticsAnomaly
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsAnomaly($val)
+    {
+        $this->_propDict["userExperienceAnalyticsAnomaly"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the userExperienceAnalyticsAnomalyDevice
+    * The user experience analytics anomaly entity contains device details.
+     *
+     * @return array|null The userExperienceAnalyticsAnomalyDevice
+     */
+    public function getUserExperienceAnalyticsAnomalyDevice()
+    {
+        if (array_key_exists("userExperienceAnalyticsAnomalyDevice", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsAnomalyDevice"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsAnomalyDevice
+    * The user experience analytics anomaly entity contains device details.
+    *
+    * @param UserExperienceAnalyticsAnomalyDevice[] $val The userExperienceAnalyticsAnomalyDevice
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsAnomalyDevice($val)
+    {
+        $this->_propDict["userExperienceAnalyticsAnomalyDevice"] = $val;
         return $this;
     }
 

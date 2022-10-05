@@ -819,6 +819,37 @@ class Application extends DirectoryObject
     }
 
     /**
+    * Gets the servicePrincipalLockConfiguration
+    *
+    * @return ServicePrincipalLockConfiguration|null The servicePrincipalLockConfiguration
+    */
+    public function getServicePrincipalLockConfiguration()
+    {
+        if (array_key_exists("servicePrincipalLockConfiguration", $this->_propDict)) {
+            if (is_a($this->_propDict["servicePrincipalLockConfiguration"], "\Beta\Microsoft\Graph\Model\ServicePrincipalLockConfiguration") || is_null($this->_propDict["servicePrincipalLockConfiguration"])) {
+                return $this->_propDict["servicePrincipalLockConfiguration"];
+            } else {
+                $this->_propDict["servicePrincipalLockConfiguration"] = new ServicePrincipalLockConfiguration($this->_propDict["servicePrincipalLockConfiguration"]);
+                return $this->_propDict["servicePrincipalLockConfiguration"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the servicePrincipalLockConfiguration
+    *
+    * @param ServicePrincipalLockConfiguration $val The servicePrincipalLockConfiguration
+    *
+    * @return Application
+    */
+    public function setServicePrincipalLockConfiguration($val)
+    {
+        $this->_propDict["servicePrincipalLockConfiguration"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the signInAudience
     * Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, not).
     *

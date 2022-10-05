@@ -299,7 +299,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
 
     /**
     * Gets the templateFamily
-    * TemplateFamily for this template. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl, baseline.
+    * TemplateFamily for this template. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl, enrollmentConfiguration, baseline.
     *
     * @return DeviceManagementConfigurationTemplateFamily|null The templateFamily
     */
@@ -318,7 +318,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
 
     /**
     * Sets the templateFamily
-    * TemplateFamily for this template. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl, baseline.
+    * TemplateFamily for this template. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl, enrollmentConfiguration, baseline.
     *
     * @param DeviceManagementConfigurationTemplateFamily $val The templateFamily
     *

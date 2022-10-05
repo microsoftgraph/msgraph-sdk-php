@@ -319,6 +319,39 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     }
 
     /**
+    * Gets the requiredPasswordComplexity
+    * Indicates the required device password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android 12+. Possible values are: none, low, medium, high.
+    *
+    * @return AndroidRequiredPasswordComplexity|null The requiredPasswordComplexity
+    */
+    public function getRequiredPasswordComplexity()
+    {
+        if (array_key_exists("requiredPasswordComplexity", $this->_propDict)) {
+            if (is_a($this->_propDict["requiredPasswordComplexity"], "\Beta\Microsoft\Graph\Model\AndroidRequiredPasswordComplexity") || is_null($this->_propDict["requiredPasswordComplexity"])) {
+                return $this->_propDict["requiredPasswordComplexity"];
+            } else {
+                $this->_propDict["requiredPasswordComplexity"] = new AndroidRequiredPasswordComplexity($this->_propDict["requiredPasswordComplexity"]);
+                return $this->_propDict["requiredPasswordComplexity"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the requiredPasswordComplexity
+    * Indicates the required device password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android 12+. Possible values are: none, low, medium, high.
+    *
+    * @param AndroidRequiredPasswordComplexity $val The requiredPasswordComplexity
+    *
+    * @return AndroidWorkProfileGeneralDeviceConfiguration
+    */
+    public function setRequiredPasswordComplexity($val)
+    {
+        $this->_propDict["requiredPasswordComplexity"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the securityRequireVerifyApps
     * Require the Android Verify apps feature is turned on.
     *
@@ -1255,6 +1288,39 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     public function setWorkProfilePasswordSignInFailureCountBeforeFactoryReset($val)
     {
         $this->_propDict["workProfilePasswordSignInFailureCountBeforeFactoryReset"] = intval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the workProfileRequiredPasswordComplexity
+    * Indicates the required work profile password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android 12+. Possible values are: none, low, medium, high.
+    *
+    * @return AndroidRequiredPasswordComplexity|null The workProfileRequiredPasswordComplexity
+    */
+    public function getWorkProfileRequiredPasswordComplexity()
+    {
+        if (array_key_exists("workProfileRequiredPasswordComplexity", $this->_propDict)) {
+            if (is_a($this->_propDict["workProfileRequiredPasswordComplexity"], "\Beta\Microsoft\Graph\Model\AndroidRequiredPasswordComplexity") || is_null($this->_propDict["workProfileRequiredPasswordComplexity"])) {
+                return $this->_propDict["workProfileRequiredPasswordComplexity"];
+            } else {
+                $this->_propDict["workProfileRequiredPasswordComplexity"] = new AndroidRequiredPasswordComplexity($this->_propDict["workProfileRequiredPasswordComplexity"]);
+                return $this->_propDict["workProfileRequiredPasswordComplexity"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the workProfileRequiredPasswordComplexity
+    * Indicates the required work profile password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android 12+. Possible values are: none, low, medium, high.
+    *
+    * @param AndroidRequiredPasswordComplexity $val The workProfileRequiredPasswordComplexity
+    *
+    * @return AndroidWorkProfileGeneralDeviceConfiguration
+    */
+    public function setWorkProfileRequiredPasswordComplexity($val)
+    {
+        $this->_propDict["workProfileRequiredPasswordComplexity"] = $val;
         return $this;
     }
 

@@ -26,7 +26,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the category
-    * The category of the HR function that the tasks created using this definition can be used with. The possible values are: joiner, leaver.
+    * The category of the HR function that the tasks created using this definition can be used with. The possible values are: joiner, leaver. This is a multi-valued enumeration whose allowed combinations are joiner, joiner,leaver, or leaver. Supports $filter (eq).
     *
     * @return LifecycleTaskCategory|null The category
     */
@@ -45,7 +45,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the category
-    * The category of the HR function that the tasks created using this definition can be used with. The possible values are: joiner, leaver.
+    * The category of the HR function that the tasks created using this definition can be used with. The possible values are: joiner, leaver. This is a multi-valued enumeration whose allowed combinations are joiner, joiner,leaver, or leaver. Supports $filter (eq).
     *
     * @param LifecycleTaskCategory $val The category
     *
@@ -115,7 +115,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the displayName
-    * The display name of the taskDefinition.
+    * The display name of the taskDefinition`.
     *
     * @return string|null The displayName
     */
@@ -130,7 +130,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the displayName
-    * The display name of the taskDefinition.
+    * The display name of the taskDefinition`.
     *
     * @param string $val The displayName
     *
@@ -145,7 +145,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the parameters
-    * The parameters that must be supplied when creating a task.
+    * The parameters that must be supplied when creating a workflow task object.
      *
      * @return array|null The parameters
      */
@@ -160,7 +160,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the parameters
-    * The parameters that must be supplied when creating a task.
+    * The parameters that must be supplied when creating a workflow task object.
     *
     * @param Parameter[] $val The parameters
     *

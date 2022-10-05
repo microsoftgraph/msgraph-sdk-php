@@ -32,4 +32,5 @@ class PlannerContainerType extends Enum
     const GROUP = "group";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
     const ROSTER = "roster";
+    const PROJECT = "project";
 }
